@@ -236,6 +236,9 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private String expireTime;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -282,6 +285,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             this.diskPerformanceLevel = builder.diskPerformanceLevel;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.expireTime = builder.expireTime;
             this.payType = builder.payType;
             this.privateConnectUrl = builder.privateConnectUrl;
             this.projectId = builder.projectId;
@@ -345,6 +349,13 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
          */
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
         /**
@@ -445,6 +456,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
             private String diskPerformanceLevel; 
             private String engine; 
             private String engineVersion; 
+            private String expireTime; 
             private String payType; 
             private String privateConnectUrl; 
             private String projectId; 
@@ -469,6 +481,7 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
                 this.diskPerformanceLevel = model.diskPerformanceLevel;
                 this.engine = model.engine;
                 this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
                 this.payType = model.payType;
                 this.privateConnectUrl = model.privateConnectUrl;
                 this.projectId = model.projectId;
@@ -547,6 +560,14 @@ public class ListSupabaseProjectsResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
                 return this;
             }
 

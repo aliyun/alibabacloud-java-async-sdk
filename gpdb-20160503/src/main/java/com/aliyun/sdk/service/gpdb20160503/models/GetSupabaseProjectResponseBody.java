@@ -35,6 +35,12 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceVersion")
+    private String instanceVersion;
+
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    private String payType;
+
     @com.aliyun.core.annotation.NameInMap("PrivateConnectUrl")
     private String privateConnectUrl;
 
@@ -65,6 +71,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Long storageSize;
 
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -81,6 +90,8 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.instanceVersion = builder.instanceVersion;
+        this.payType = builder.payType;
         this.privateConnectUrl = builder.privateConnectUrl;
         this.projectId = builder.projectId;
         this.projectName = builder.projectName;
@@ -91,6 +102,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         this.securityIpList = builder.securityIpList;
         this.status = builder.status;
         this.storageSize = builder.storageSize;
+        this.storageType = builder.storageType;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -148,6 +160,20 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return instanceVersion
+     */
+    public String getInstanceVersion() {
+        return this.instanceVersion;
+    }
+
+    /**
+     * @return payType
+     */
+    public String getPayType() {
+        return this.payType;
     }
 
     /**
@@ -221,6 +247,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -248,6 +281,8 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         private String diskPerformanceLevel; 
         private String engine; 
         private String engineVersion; 
+        private String instanceVersion; 
+        private String payType; 
         private String privateConnectUrl; 
         private String projectId; 
         private String projectName; 
@@ -258,6 +293,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         private String securityIpList; 
         private String status; 
         private Long storageSize; 
+        private String storageType; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -272,6 +308,8 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
             this.diskPerformanceLevel = model.diskPerformanceLevel;
             this.engine = model.engine;
             this.engineVersion = model.engineVersion;
+            this.instanceVersion = model.instanceVersion;
+            this.payType = model.payType;
             this.privateConnectUrl = model.privateConnectUrl;
             this.projectId = model.projectId;
             this.projectName = model.projectName;
@@ -282,6 +320,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
             this.securityIpList = model.securityIpList;
             this.status = model.status;
             this.storageSize = model.storageSize;
+            this.storageType = model.storageType;
             this.vSwitchId = model.vSwitchId;
             this.vpcId = model.vpcId;
             this.zoneId = model.zoneId;
@@ -354,6 +393,22 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * InstanceVersion.
+         */
+        public Builder instanceVersion(String instanceVersion) {
+            this.instanceVersion = instanceVersion;
+            return this;
+        }
+
+        /**
+         * PayType.
+         */
+        public Builder payType(String payType) {
+            this.payType = payType;
             return this;
         }
 
@@ -467,6 +522,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
          */
         public Builder storageSize(Long storageSize) {
             this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.storageType = storageType;
             return this;
         }
 

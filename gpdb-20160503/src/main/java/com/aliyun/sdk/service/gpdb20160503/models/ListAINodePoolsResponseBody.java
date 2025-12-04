@@ -119,6 +119,9 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private AINodeInfos(Builder builder) {
             this.bindObject = builder.bindObject;
             this.bindStatus = builder.bindStatus;
@@ -127,6 +130,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             this.nodeName = builder.nodeName;
             this.nodeSpec = builder.nodeSpec;
             this.updateTime = builder.updateTime;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -186,6 +190,13 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String bindObject; 
             private String bindStatus; 
@@ -194,6 +205,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
             private String nodeName; 
             private String nodeSpec; 
             private String updateTime; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -206,6 +218,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
                 this.nodeName = model.nodeName;
                 this.nodeSpec = model.nodeSpec;
                 this.updateTime = model.updateTime;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -311,6 +324,14 @@ public class ListAINodePoolsResponseBody extends TeaModel {
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
