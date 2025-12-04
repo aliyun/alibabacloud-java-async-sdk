@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of CancelRestartInstance  CancelRestartInstanceRequest
+     * @return CancelRestartInstanceResponse
+     */
+    CompletableFuture<CancelRestartInstanceResponse> cancelRestartInstance(CancelRestartInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * @param request the request parameters of CheckClickhouseToRDS  CheckClickhouseToRDSRequest
      * @return CheckClickhouseToRDSResponse
      */
@@ -131,6 +143,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>An ApsaraDB for ClickHouse cluster is dependent on an SLB instance at the network layer. You can bind a domain name to the IP address of an ApsaraDB for ClickHouse node to provide external connectivity service and provide failover capabilities. The SLB instance forwards requests to the nodes in the ApsaraDB for ClickHouse cluster and balances the request traffic among the nodes. The SLB instance checks the availability of backend nodes. If the SLB instance detects that a node is unavailable by checking the health status of all nodes, the SLB instance automatically isolates the unavailable node. This ensures that the request traffic is balanced among available nodes.</p>
+     * 
+     * @param request the request parameters of CreateSLB  CreateSLBRequest
+     * @return CreateSLBResponse
+     */
+    CompletableFuture<CreateSLBResponse> createSLB(CreateSLBRequest request);
+
+    /**
+     * <b>description</b> :
      * <blockquote>
      * <p> This operation is applicable only to ApsaraDB for ClickHouse clusters of V20.8 or later that were created after December 1, 2021,</p>
      * </blockquote>
@@ -158,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
+     * @return DeleteBackupPolicyResponse
+     */
+    CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request);
+
+    /**
      * <b>description</b> :
      * <p><em>Warning</em>* After an ApsaraDB for ClickHouse cluster is deleted, all data in the cluster is deleted and cannot be recovered. Exercise caution when performing this operation.</p>
      * 
@@ -165,6 +193,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBClusterResponse
      */
     CompletableFuture<DeleteDBClusterResponse> deleteDBCluster(DeleteDBClusterRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Description</h2>
+     * <p>After an SLB instance is released, simple load balancing is performed on inbound traffic based on the domain name. The health status of all nodes is no longer checked. As a result, unavailable nodes may fail to be detected, and normal requests may be routed to the unavailable nodes. This causes the failures of some read and write requests.</p>
+     * 
+     * @param request the request parameters of DeleteSLB  DeleteSLBRequest
+     * @return DeleteSLBResponse
+     */
+    CompletableFuture<DeleteSLBResponse> deleteSLB(DeleteSLBRequest request);
 
     /**
      * @param request the request parameters of DeleteSyndb  DeleteSyndbRequest
@@ -195,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAllDataSourcesResponse
      */
     CompletableFuture<DescribeAllDataSourcesResponse> describeAllDataSources(DescribeAllDataSourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAutoRenewAttribute  DescribeAutoRenewAttributeRequest
+     * @return DescribeAutoRenewAttributeResponse
+     */
+    CompletableFuture<DescribeAutoRenewAttributeResponse> describeAutoRenewAttribute(DescribeAutoRenewAttributeRequest request);
 
     /**
      * <b>description</b> :
@@ -336,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
 
     /**
+     * @param request the request parameters of DescribeSlowLogTrend  DescribeSlowLogTrendRequest
+     * @return DescribeSlowLogTrendResponse
+     */
+    CompletableFuture<DescribeSlowLogTrendResponse> describeSlowLogTrend(DescribeSlowLogTrendRequest request);
+
+    /**
      * @param request the request parameters of DescribeSynDbTables  DescribeSynDbTablesRequest
      * @return DescribeSynDbTablesResponse
      */
@@ -381,6 +431,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccountDescriptionResponse
      */
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
+     * @return ModifyAutoRenewAttributeResponse
+     */
+    CompletableFuture<ModifyAutoRenewAttributeResponse> modifyAutoRenewAttribute(ModifyAutoRenewAttributeRequest request);
 
     /**
      * <b>description</b> :
