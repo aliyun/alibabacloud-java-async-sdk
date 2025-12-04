@@ -23,8 +23,11 @@ public class DeleteErRouteMapRequest extends Request {
     private String erId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ErRouteMapId")
+    private String erRouteMapId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ErRouteMapIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> erRouteMapIds;
 
     @com.aliyun.core.annotation.Body
@@ -35,6 +38,7 @@ public class DeleteErRouteMapRequest extends Request {
     private DeleteErRouteMapRequest(Builder builder) {
         super(builder);
         this.erId = builder.erId;
+        this.erRouteMapId = builder.erRouteMapId;
         this.erRouteMapIds = builder.erRouteMapIds;
         this.regionId = builder.regionId;
     }
@@ -60,6 +64,13 @@ public class DeleteErRouteMapRequest extends Request {
     }
 
     /**
+     * @return erRouteMapId
+     */
+    public String getErRouteMapId() {
+        return this.erRouteMapId;
+    }
+
+    /**
      * @return erRouteMapIds
      */
     public java.util.List<String> getErRouteMapIds() {
@@ -75,6 +86,7 @@ public class DeleteErRouteMapRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteErRouteMapRequest, Builder> {
         private String erId; 
+        private String erRouteMapId; 
         private java.util.List<String> erRouteMapIds; 
         private String regionId; 
 
@@ -85,6 +97,7 @@ public class DeleteErRouteMapRequest extends Request {
         private Builder(DeleteErRouteMapRequest request) {
             super(request);
             this.erId = request.erId;
+            this.erRouteMapId = request.erRouteMapId;
             this.erRouteMapIds = request.erRouteMapIds;
             this.regionId = request.regionId;
         } 
@@ -103,8 +116,16 @@ public class DeleteErRouteMapRequest extends Request {
         }
 
         /**
+         * ErRouteMapId.
+         */
+        public Builder erRouteMapId(String erRouteMapId) {
+            this.putBodyParameter("ErRouteMapId", erRouteMapId);
+            this.erRouteMapId = erRouteMapId;
+            return this;
+        }
+
+        /**
          * <p>routing policy Instance ID List</p>
-         * <p>This parameter is required.</p>
          */
         public Builder erRouteMapIds(java.util.List<String> erRouteMapIds) {
             this.putBodyParameter("ErRouteMapIds", erRouteMapIds);

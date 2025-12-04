@@ -623,6 +623,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryVccResponse> retryVcc(RetryVccRequest request);
 
     /**
+     * @param request the request parameters of SwitchVccConnection  SwitchVccConnectionRequest
+     * @return SwitchVccConnectionResponse
+     */
+    CompletableFuture<SwitchVccConnectionResponse> switchVccConnection(SwitchVccConnectionRequest request);
+
+    /**
      * @param request the request parameters of UnAssignPrivateIpAddress  UnAssignPrivateIpAddressRequest
      * @return UnAssignPrivateIpAddressResponse
      */
