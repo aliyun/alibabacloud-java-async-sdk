@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
+     * @param request the request parameters of CreateGeneralConfig  CreateGeneralConfigRequest
+     * @return CreateGeneralConfigResponse
+     */
+    CompletableFuture<CreateGeneralConfigResponse> createGeneralConfig(CreateGeneralConfigRequest request);
+
+    /**
      * @param request the request parameters of CreateGeneratedContent  CreateGeneratedContentRequest
      * @return CreateGeneratedContentResponse
      */
@@ -168,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteFactAuditUrlResponse
      */
     CompletableFuture<DeleteFactAuditUrlResponse> deleteFactAuditUrl(DeleteFactAuditUrlRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGeneralConfig  DeleteGeneralConfigRequest
+     * @return DeleteGeneralConfigResponse
+     */
+    CompletableFuture<DeleteGeneralConfigResponse> deleteGeneralConfig(DeleteGeneralConfigRequest request);
 
     /**
      * @param request the request parameters of DeleteGeneratedContent  DeleteGeneratedContentRequest
@@ -446,6 +458,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFileContentLengthResponse> getFileContentLength(GetFileContentLengthRequest request);
 
     /**
+     * @param request the request parameters of GetGeneralConfig  GetGeneralConfigRequest
+     * @return GetGeneralConfigResponse
+     */
+    CompletableFuture<GetGeneralConfigResponse> getGeneralConfig(GetGeneralConfigRequest request);
+
+    /**
      * @param request the request parameters of GetGeneratedContent  GetGeneratedContentRequest
      * @return GetGeneratedContentResponse
      */
@@ -620,10 +638,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDocsResponse> listDocs(ListDocsRequest request);
 
     /**
+     * @param request the request parameters of ListDocumentRetrieve  ListDocumentRetrieveRequest
+     * @return ListDocumentRetrieveResponse
+     */
+    CompletableFuture<ListDocumentRetrieveResponse> listDocumentRetrieve(ListDocumentRetrieveRequest request);
+
+    /**
      * @param request the request parameters of ListFreshViewPoints  ListFreshViewPointsRequest
      * @return ListFreshViewPointsResponse
      */
     CompletableFuture<ListFreshViewPointsResponse> listFreshViewPoints(ListFreshViewPointsRequest request);
+
+    /**
+     * @param request the request parameters of ListGeneralConfigs  ListGeneralConfigsRequest
+     * @return ListGeneralConfigsResponse
+     */
+    CompletableFuture<ListGeneralConfigsResponse> listGeneralConfigs(ListGeneralConfigsRequest request);
 
     /**
      * @param request the request parameters of ListGeneratedContents  ListGeneratedContentsRequest
@@ -932,6 +962,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunMultiDocIntroductionResponseBody> runMultiDocIntroductionWithResponseIterable(RunMultiDocIntroductionRequest request);
 
     /**
+     * @param request the request parameters of RunQuickWriting  RunQuickWritingRequest
+     * @return RunQuickWritingResponse
+     */
+    CompletableFuture<RunQuickWritingResponse> runQuickWriting(RunQuickWritingRequest request);
+
+    ResponseIterable<RunQuickWritingResponseBody> runQuickWritingWithResponseIterable(RunQuickWritingRequest request);
+
+    /**
      * @param request the request parameters of RunSearchGeneration  RunSearchGenerationRequest
      * @return RunSearchGenerationResponse
      */
@@ -986,6 +1024,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunTitleGenerationResponse> runTitleGeneration(RunTitleGenerationRequest request);
 
     ResponseIterable<RunTitleGenerationResponseBody> runTitleGenerationWithResponseIterable(RunTitleGenerationRequest request);
+
+    /**
+     * @param request the request parameters of RunTopicSelectionMerge  RunTopicSelectionMergeRequest
+     * @return RunTopicSelectionMergeResponse
+     */
+    CompletableFuture<RunTopicSelectionMergeResponse> runTopicSelectionMerge(RunTopicSelectionMergeRequest request);
+
+    ResponseIterable<RunTopicSelectionMergeResponseBody> runTopicSelectionMergeWithResponseIterable(RunTopicSelectionMergeRequest request);
 
     /**
      * @param request the request parameters of RunTranslateGeneration  RunTranslateGenerationRequest
@@ -1170,6 +1216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDatasetDocumentResponse
      */
     CompletableFuture<UpdateDatasetDocumentResponse> updateDatasetDocument(UpdateDatasetDocumentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGeneralConfig  UpdateGeneralConfigRequest
+     * @return UpdateGeneralConfigResponse
+     */
+    CompletableFuture<UpdateGeneralConfigResponse> updateGeneralConfig(UpdateGeneralConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateGeneratedContent  UpdateGeneratedContentRequest
