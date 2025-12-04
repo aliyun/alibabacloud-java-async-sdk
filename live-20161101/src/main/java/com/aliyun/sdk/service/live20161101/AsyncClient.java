@@ -2684,6 +2684,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLiveRecordVodConfigsResponse> describeLiveRecordVodConfigs(DescribeLiveRecordVodConfigsRequest request);
 
     /**
+     * @param request the request parameters of DescribeLiveRtcRecordUsageData  DescribeLiveRtcRecordUsageDataRequest
+     * @return DescribeLiveRtcRecordUsageDataResponse
+     */
+    CompletableFuture<DescribeLiveRtcRecordUsageDataResponse> describeLiveRtcRecordUsageData(DescribeLiveRtcRecordUsageDataRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is applicable to the streaming domains.</p>
      * <h2>QPS limit</h2>
