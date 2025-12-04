@@ -95,6 +95,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelCall  CancelCallRequest
+     * @return CancelCallResponse
+     */
+    @Override
+    public CompletableFuture<CancelCallResponse> cancelCall(CancelCallRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelCall").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelCallResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelCallResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -781,6 +799,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryVirtualNumberRelationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryVmsRealNumberCallConnectionRateInfo  QueryVmsRealNumberCallConnectionRateInfoRequest
+     * @return QueryVmsRealNumberCallConnectionRateInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryVmsRealNumberCallConnectionRateInfoResponse> queryVmsRealNumberCallConnectionRateInfo(QueryVmsRealNumberCallConnectionRateInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryVmsRealNumberCallConnectionRateInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryVmsRealNumberCallConnectionRateInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryVmsRealNumberCallConnectionRateInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryVmsVirtualNumberRelationByPage  QueryVmsVirtualNumberRelationByPageRequest
+     * @return QueryVmsVirtualNumberRelationByPageResponse
+     */
+    @Override
+    public CompletableFuture<QueryVmsVirtualNumberRelationByPageResponse> queryVmsVirtualNumberRelationByPage(QueryVmsVirtualNumberRelationByPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryVmsVirtualNumberRelationByPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryVmsVirtualNumberRelationByPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryVmsVirtualNumberRelationByPageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

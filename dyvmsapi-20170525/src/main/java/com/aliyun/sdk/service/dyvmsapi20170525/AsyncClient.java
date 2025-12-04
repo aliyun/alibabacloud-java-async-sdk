@@ -51,6 +51,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchRobotSmartCallResponse> batchRobotSmartCall(BatchRobotSmartCallRequest request);
 
     /**
+     * @param request the request parameters of CancelCall  CancelCallRequest
+     * @return CancelCallResponse
+     */
+    CompletableFuture<CancelCallResponse> cancelCall(CancelCallRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account.</p>
@@ -345,6 +351,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryVirtualNumberRelationResponse
      */
     CompletableFuture<QueryVirtualNumberRelationResponse> queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request);
+
+    /**
+     * @param request the request parameters of QueryVmsRealNumberCallConnectionRateInfo  QueryVmsRealNumberCallConnectionRateInfoRequest
+     * @return QueryVmsRealNumberCallConnectionRateInfoResponse
+     */
+    CompletableFuture<QueryVmsRealNumberCallConnectionRateInfoResponse> queryVmsRealNumberCallConnectionRateInfo(QueryVmsRealNumberCallConnectionRateInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryVmsVirtualNumberRelationByPage  QueryVmsVirtualNumberRelationByPageRequest
+     * @return QueryVmsVirtualNumberRelationByPageResponse
+     */
+    CompletableFuture<QueryVmsVirtualNumberRelationByPageResponse> queryVmsVirtualNumberRelationByPage(QueryVmsVirtualNumberRelationByPageRequest request);
 
     /**
      * @param request the request parameters of QueryVoiceFileAuditInfo  QueryVoiceFileAuditInfoRequest
