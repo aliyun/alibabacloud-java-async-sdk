@@ -398,6 +398,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobId")
         private String jobId;
 
+        @com.aliyun.core.annotation.NameInMap("jobType")
+        private String jobType;
+
         @com.aliyun.core.annotation.NameInMap("logFile")
         private java.util.Map<String, ?> logFile;
 
@@ -435,6 +438,7 @@ public class GetJobResponseBody extends TeaModel {
             this.executeType = builder.executeType;
             this.isPassAssertCheck = builder.isPassAssertCheck;
             this.jobId = builder.jobId;
+            this.jobType = builder.jobType;
             this.logFile = builder.logFile;
             this.output = builder.output;
             this.outputJsonPlan = builder.outputJsonPlan;
@@ -518,6 +522,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobType
+         */
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        /**
          * @return logFile
          */
         public java.util.Map<String, ?> getLogFile() {
@@ -590,6 +601,7 @@ public class GetJobResponseBody extends TeaModel {
             private String executeType; 
             private Boolean isPassAssertCheck; 
             private String jobId; 
+            private String jobType; 
             private java.util.Map<String, ?> logFile; 
             private String output; 
             private Object outputJsonPlan; 
@@ -613,6 +625,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.executeType = model.executeType;
                 this.isPassAssertCheck = model.isPassAssertCheck;
                 this.jobId = model.jobId;
+                this.jobType = model.jobType;
                 this.logFile = model.logFile;
                 this.output = model.output;
                 this.outputJsonPlan = model.outputJsonPlan;
@@ -693,6 +706,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * jobType.
+             */
+            public Builder jobType(String jobType) {
+                this.jobType = jobType;
                 return this;
             }
 

@@ -23,6 +23,10 @@ public class ListJobsRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobType")
+    private String jobType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -42,6 +46,7 @@ public class ListJobsRequest extends Request {
     private ListJobsRequest(Builder builder) {
         super(builder);
         this.taskId = builder.taskId;
+        this.jobType = builder.jobType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -66,6 +71,13 @@ public class ListJobsRequest extends Request {
      */
     public String getTaskId() {
         return this.taskId;
+    }
+
+    /**
+     * @return jobType
+     */
+    public String getJobType() {
+        return this.jobType;
     }
 
     /**
@@ -98,6 +110,7 @@ public class ListJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListJobsRequest, Builder> {
         private String taskId; 
+        private String jobType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String status; 
@@ -110,6 +123,7 @@ public class ListJobsRequest extends Request {
         private Builder(ListJobsRequest request) {
             super(request);
             this.taskId = request.taskId;
+            this.jobType = request.jobType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -125,6 +139,15 @@ public class ListJobsRequest extends Request {
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * jobType.
+         */
+        public Builder jobType(String jobType) {
+            this.putQueryParameter("jobType", jobType);
+            this.jobType = jobType;
             return this;
         }
 
