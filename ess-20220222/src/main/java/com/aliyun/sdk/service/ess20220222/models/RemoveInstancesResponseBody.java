@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveInstancesResponseBody</p>
  */
 public class RemoveInstancesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("IgnoredInstances")
+    private java.util.List<IgnoredInstances> ignoredInstances;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class RemoveInstancesResponseBody extends TeaModel {
     private String scalingActivityId;
 
     private RemoveInstancesResponseBody(Builder builder) {
+        this.ignoredInstances = builder.ignoredInstances;
         this.requestId = builder.requestId;
         this.scalingActivityId = builder.scalingActivityId;
     }
@@ -41,6 +45,13 @@ public class RemoveInstancesResponseBody extends TeaModel {
     }
 
     /**
+     * @return ignoredInstances
+     */
+    public java.util.List<IgnoredInstances> getIgnoredInstances() {
+        return this.ignoredInstances;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class RemoveInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<IgnoredInstances> ignoredInstances; 
         private String requestId; 
         private String scalingActivityId; 
 
@@ -62,9 +74,18 @@ public class RemoveInstancesResponseBody extends TeaModel {
         } 
 
         private Builder(RemoveInstancesResponseBody model) {
+            this.ignoredInstances = model.ignoredInstances;
             this.requestId = model.requestId;
             this.scalingActivityId = model.scalingActivityId;
         } 
+
+        /**
+         * IgnoredInstances.
+         */
+        public Builder ignoredInstances(java.util.List<IgnoredInstances> ignoredInstances) {
+            this.ignoredInstances = ignoredInstances;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>
@@ -94,4 +115,100 @@ public class RemoveInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveInstancesResponseBody</p>
+     */
+    public static class IgnoredInstances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private IgnoredInstances(Builder builder) {
+            this.code = builder.code;
+            this.instanceId = builder.instanceId;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IgnoredInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String instanceId; 
+            private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(IgnoredInstances model) {
+                this.code = model.code;
+                this.instanceId = model.instanceId;
+                this.message = model.message;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public IgnoredInstances build() {
+                return new IgnoredInstances(this);
+            } 
+
+        } 
+
+    }
 }

@@ -421,9 +421,13 @@ public class ScaleWithAdjustmentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("IgnoredLifecycleHookIds")
         private java.util.List<String> ignoredLifecycleHookIds;
 
+        @com.aliyun.core.annotation.NameInMap("LifecycleHookResult")
+        private String lifecycleHookResult;
+
         private LifecycleHookContext(Builder builder) {
             this.disableLifecycleHook = builder.disableLifecycleHook;
             this.ignoredLifecycleHookIds = builder.ignoredLifecycleHookIds;
+            this.lifecycleHookResult = builder.lifecycleHookResult;
         }
 
         public static Builder builder() {
@@ -448,9 +452,17 @@ public class ScaleWithAdjustmentRequest extends Request {
             return this.ignoredLifecycleHookIds;
         }
 
+        /**
+         * @return lifecycleHookResult
+         */
+        public String getLifecycleHookResult() {
+            return this.lifecycleHookResult;
+        }
+
         public static final class Builder {
             private Boolean disableLifecycleHook; 
             private java.util.List<String> ignoredLifecycleHookIds; 
+            private String lifecycleHookResult; 
 
             private Builder() {
             } 
@@ -458,6 +470,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private Builder(LifecycleHookContext model) {
                 this.disableLifecycleHook = model.disableLifecycleHook;
                 this.ignoredLifecycleHookIds = model.ignoredLifecycleHookIds;
+                this.lifecycleHookResult = model.lifecycleHookResult;
             } 
 
             /**
@@ -480,6 +493,14 @@ public class ScaleWithAdjustmentRequest extends Request {
              */
             public Builder ignoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
+                return this;
+            }
+
+            /**
+             * LifecycleHookResult.
+             */
+            public Builder lifecycleHookResult(String lifecycleHookResult) {
+                this.lifecycleHookResult = lifecycleHookResult;
                 return this;
             }
 
