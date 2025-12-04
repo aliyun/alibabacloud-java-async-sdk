@@ -12,26 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link MigrateSingleZoneToMultiZoneRequest} extends {@link RequestModel}
+ * {@link UpdateLindormInstanceAttributeRequest} extends {@link RequestModel}
  *
- * <p>MigrateSingleZoneToMultiZoneRequest</p>
+ * <p>UpdateLindormInstanceAttributeRequest</p>
  */
-public class MigrateSingleZoneToMultiZoneRequest extends Request {
+public class UpdateLindormInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ArbitraryVSwitchId")
-    private String arbitraryVSwitchId;
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ArbitraryZoneId")
-    private String arbitraryZoneId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DryRun")
-    private Boolean dryRun;
+    @com.aliyun.core.annotation.NameInMap("InstanceAlias")
+    private String instanceAlias;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -60,35 +56,24 @@ public class MigrateSingleZoneToMultiZoneRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
-    private String standbyVSwitchId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
-    private String standbyZoneId;
-
-    private MigrateSingleZoneToMultiZoneRequest(Builder builder) {
+    private UpdateLindormInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.arbitraryVSwitchId = builder.arbitraryVSwitchId;
-        this.arbitraryZoneId = builder.arbitraryZoneId;
-        this.dryRun = builder.dryRun;
+        this.deletionProtection = builder.deletionProtection;
+        this.instanceAlias = builder.instanceAlias;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
-        this.standbyVSwitchId = builder.standbyVSwitchId;
-        this.standbyZoneId = builder.standbyZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static MigrateSingleZoneToMultiZoneRequest create() {
+    public static UpdateLindormInstanceAttributeRequest create() {
         return builder().build();
     }
 
@@ -105,24 +90,17 @@ public class MigrateSingleZoneToMultiZoneRequest extends Request {
     }
 
     /**
-     * @return arbitraryVSwitchId
+     * @return deletionProtection
      */
-    public String getArbitraryVSwitchId() {
-        return this.arbitraryVSwitchId;
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
-     * @return arbitraryZoneId
+     * @return instanceAlias
      */
-    public String getArbitraryZoneId() {
-        return this.arbitraryZoneId;
-    }
-
-    /**
-     * @return dryRun
-     */
-    public Boolean getDryRun() {
-        return this.dryRun;
+    public String getInstanceAlias() {
+        return this.instanceAlias;
     }
 
     /**
@@ -167,52 +145,32 @@ public class MigrateSingleZoneToMultiZoneRequest extends Request {
         return this.securityToken;
     }
 
-    /**
-     * @return standbyVSwitchId
-     */
-    public String getStandbyVSwitchId() {
-        return this.standbyVSwitchId;
-    }
-
-    /**
-     * @return standbyZoneId
-     */
-    public String getStandbyZoneId() {
-        return this.standbyZoneId;
-    }
-
-    public static final class Builder extends Request.Builder<MigrateSingleZoneToMultiZoneRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateLindormInstanceAttributeRequest, Builder> {
         private String regionId; 
-        private String arbitraryVSwitchId; 
-        private String arbitraryZoneId; 
-        private Boolean dryRun; 
+        private Boolean deletionProtection; 
+        private String instanceAlias; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
-        private String standbyVSwitchId; 
-        private String standbyZoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(MigrateSingleZoneToMultiZoneRequest request) {
+        private Builder(UpdateLindormInstanceAttributeRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.arbitraryVSwitchId = request.arbitraryVSwitchId;
-            this.arbitraryZoneId = request.arbitraryZoneId;
-            this.dryRun = request.dryRun;
+            this.deletionProtection = request.deletionProtection;
+            this.instanceAlias = request.instanceAlias;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
-            this.standbyVSwitchId = request.standbyVSwitchId;
-            this.standbyZoneId = request.standbyZoneId;
         } 
 
         /**
@@ -225,34 +183,28 @@ public class MigrateSingleZoneToMultiZoneRequest extends Request {
         }
 
         /**
-         * ArbitraryVSwitchId.
+         * DeletionProtection.
          */
-        public Builder arbitraryVSwitchId(String arbitraryVSwitchId) {
-            this.putQueryParameter("ArbitraryVSwitchId", arbitraryVSwitchId);
-            this.arbitraryVSwitchId = arbitraryVSwitchId;
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 
         /**
-         * ArbitraryZoneId.
+         * InstanceAlias.
          */
-        public Builder arbitraryZoneId(String arbitraryZoneId) {
-            this.putQueryParameter("ArbitraryZoneId", arbitraryZoneId);
-            this.arbitraryZoneId = arbitraryZoneId;
-            return this;
-        }
-
-        /**
-         * DryRun.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder instanceAlias(String instanceAlias) {
+            this.putQueryParameter("InstanceAlias", instanceAlias);
+            this.instanceAlias = instanceAlias;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ld-bp1z3506imz2f****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -305,27 +257,9 @@ public class MigrateSingleZoneToMultiZoneRequest extends Request {
             return this;
         }
 
-        /**
-         * StandbyVSwitchId.
-         */
-        public Builder standbyVSwitchId(String standbyVSwitchId) {
-            this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
-            this.standbyVSwitchId = standbyVSwitchId;
-            return this;
-        }
-
-        /**
-         * StandbyZoneId.
-         */
-        public Builder standbyZoneId(String standbyZoneId) {
-            this.putQueryParameter("StandbyZoneId", standbyZoneId);
-            this.standbyZoneId = standbyZoneId;
-            return this;
-        }
-
         @Override
-        public MigrateSingleZoneToMultiZoneRequest build() {
-            return new MigrateSingleZoneToMultiZoneRequest(this);
+        public UpdateLindormInstanceAttributeRequest build() {
+            return new UpdateLindormInstanceAttributeRequest(this);
         } 
 
     } 

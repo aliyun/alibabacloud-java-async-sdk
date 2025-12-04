@@ -194,10 +194,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLindormV2InstanceResponse> getLindormV2Instance(GetLindormV2InstanceRequest request);
 
     /**
+     * @param request the request parameters of GetLindormV2InstanceDetails  GetLindormV2InstanceDetailsRequest
+     * @return GetLindormV2InstanceDetailsResponse
+     */
+    CompletableFuture<GetLindormV2InstanceDetailsResponse> getLindormV2InstanceDetails(GetLindormV2InstanceDetailsRequest request);
+
+    /**
      * @param request the request parameters of GetLindormV2InstanceEngineList  GetLindormV2InstanceEngineListRequest
      * @return GetLindormV2InstanceEngineListResponse
      */
     CompletableFuture<GetLindormV2InstanceEngineListResponse> getLindormV2InstanceEngineList(GetLindormV2InstanceEngineListRequest request);
+
+    /**
+     * @param request the request parameters of GetLindormV2InstanceForTerraform  GetLindormV2InstanceForTerraformRequest
+     * @return GetLindormV2InstanceForTerraformResponse
+     */
+    CompletableFuture<GetLindormV2InstanceForTerraformResponse> getLindormV2InstanceForTerraform(GetLindormV2InstanceForTerraformRequest request);
+
+    /**
+     * @param request the request parameters of GetLindormV2InstanceSecurityGroups  GetLindormV2InstanceSecurityGroupsRequest
+     * @return GetLindormV2InstanceSecurityGroupsResponse
+     */
+    CompletableFuture<GetLindormV2InstanceSecurityGroupsResponse> getLindormV2InstanceSecurityGroups(GetLindormV2InstanceSecurityGroupsRequest request);
 
     /**
      * @param request the request parameters of GetLindormV2StorageUsage  GetLindormV2StorageUsageRequest
@@ -276,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyLindormV2InstanceResponse> modifyLindormV2Instance(ModifyLindormV2InstanceRequest request);
 
     /**
+     * @param request the request parameters of ModifyLindormV2InstanceSecurityGroups  ModifyLindormV2InstanceSecurityGroupsRequest
+     * @return ModifyLindormV2InstanceSecurityGroupsResponse
+     */
+    CompletableFuture<ModifyLindormV2InstanceSecurityGroupsResponse> modifyLindormV2InstanceSecurityGroups(ModifyLindormV2InstanceSecurityGroupsRequest request);
+
+    /**
      * @param request the request parameters of ModifyLindormV2WhiteIpList  ModifyLindormV2WhiteIpListRequest
      * @return ModifyLindormV2WhiteIpListResponse
      */
@@ -292,6 +316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OpenComputePreCheckResponse
      */
     CompletableFuture<OpenComputePreCheckResponse> openComputePreCheck(OpenComputePreCheckRequest request);
+
+    /**
+     * @param request the request parameters of OpenLdpsColumnarIndex  OpenLdpsColumnarIndexRequest
+     * @return OpenLdpsColumnarIndexResponse
+     */
+    CompletableFuture<OpenLdpsColumnarIndexResponse> openLdpsColumnarIndex(OpenLdpsColumnarIndexRequest request);
 
     /**
      * @param request the request parameters of ReleaseLindormInstance  ReleaseLindormInstanceRequest
@@ -373,6 +403,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateLdpsComputeGroupResponse
      */
     CompletableFuture<UpdateLdpsComputeGroupResponse> updateLdpsComputeGroup(UpdateLdpsComputeGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLindormInstanceAttribute  UpdateLindormInstanceAttributeRequest
+     * @return UpdateLindormInstanceAttributeResponse
+     */
+    CompletableFuture<UpdateLindormInstanceAttributeResponse> updateLindormInstanceAttribute(UpdateLindormInstanceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLindormV2Instance  UpdateLindormV2InstanceRequest
+     * @return UpdateLindormV2InstanceResponse
+     */
+    CompletableFuture<UpdateLindormV2InstanceResponse> updateLindormV2Instance(UpdateLindormV2InstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateLindormV2InstanceParameter  UpdateLindormV2InstanceParameterRequest

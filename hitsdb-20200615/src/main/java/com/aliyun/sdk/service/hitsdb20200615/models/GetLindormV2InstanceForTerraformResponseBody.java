@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+ * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
  *
- * <p>GetLindormV2InstanceResponseBody</p>
+ * <p>GetLindormV2InstanceForTerraformResponseBody</p>
  */
-public class GetLindormV2InstanceResponseBody extends TeaModel {
+public class GetLindormV2InstanceForTerraformResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
@@ -128,7 +128,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    private GetLindormV2InstanceResponseBody(Builder builder) {
+    private GetLindormV2InstanceForTerraformResponseBody(Builder builder) {
         this.aliUid = builder.aliUid;
         this.arbiterVSwitchId = builder.arbiterVSwitchId;
         this.arbiterZoneId = builder.arbiterZoneId;
@@ -172,7 +172,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetLindormV2InstanceResponseBody create() {
+    public static GetLindormV2InstanceForTerraformResponseBody create() {
         return builder().build();
     }
 
@@ -481,7 +481,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetLindormV2InstanceResponseBody model) {
+        private Builder(GetLindormV2InstanceForTerraformResponseBody model) {
             this.aliUid = model.aliUid;
             this.arbiterVSwitchId = model.arbiterVSwitchId;
             this.arbiterZoneId = model.arbiterZoneId;
@@ -817,17 +817,17 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public GetLindormV2InstanceResponseBody build() {
-            return new GetLindormV2InstanceResponseBody(this);
+        public GetLindormV2InstanceForTerraformResponseBody build() {
+            return new GetLindormV2InstanceForTerraformResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
      *
-     * <p>GetLindormV2InstanceResponseBody</p>
+     * <p>GetLindormV2InstanceForTerraformResponseBody</p>
      */
     public static class ConnectAddressList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
@@ -921,9 +921,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
      *
-     * <p>GetLindormV2InstanceResponseBody</p>
+     * <p>GetLindormV2InstanceForTerraformResponseBody</p>
      */
     public static class NodeGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -1185,19 +1185,13 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
      *
-     * <p>GetLindormV2InstanceResponseBody</p>
+     * <p>GetLindormV2InstanceForTerraformResponseBody</p>
      */
     public static class EngineList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectAddressList")
         private java.util.List<ConnectAddressList> connectAddressList;
-
-        @com.aliyun.core.annotation.NameInMap("EnableBackup")
-        private String enableBackup;
-
-        @com.aliyun.core.annotation.NameInMap("EnableCDC")
-        private String enableCDC;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -1216,8 +1210,6 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
         private EngineList(Builder builder) {
             this.connectAddressList = builder.connectAddressList;
-            this.enableBackup = builder.enableBackup;
-            this.enableCDC = builder.enableCDC;
             this.engine = builder.engine;
             this.isLastVersion = builder.isLastVersion;
             this.latestVersion = builder.latestVersion;
@@ -1238,20 +1230,6 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public java.util.List<ConnectAddressList> getConnectAddressList() {
             return this.connectAddressList;
-        }
-
-        /**
-         * @return enableBackup
-         */
-        public String getEnableBackup() {
-            return this.enableBackup;
-        }
-
-        /**
-         * @return enableCDC
-         */
-        public String getEnableCDC() {
-            return this.enableCDC;
         }
 
         /**
@@ -1291,8 +1269,6 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ConnectAddressList> connectAddressList; 
-            private String enableBackup; 
-            private String enableCDC; 
             private String engine; 
             private Boolean isLastVersion; 
             private String latestVersion; 
@@ -1304,8 +1280,6 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
             private Builder(EngineList model) {
                 this.connectAddressList = model.connectAddressList;
-                this.enableBackup = model.enableBackup;
-                this.enableCDC = model.enableCDC;
                 this.engine = model.engine;
                 this.isLastVersion = model.isLastVersion;
                 this.latestVersion = model.latestVersion;
@@ -1318,22 +1292,6 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
              */
             public Builder connectAddressList(java.util.List<ConnectAddressList> connectAddressList) {
                 this.connectAddressList = connectAddressList;
-                return this;
-            }
-
-            /**
-             * EnableBackup.
-             */
-            public Builder enableBackup(String enableBackup) {
-                this.enableBackup = enableBackup;
-                return this;
-            }
-
-            /**
-             * EnableCDC.
-             */
-            public Builder enableCDC(String enableCDC) {
-                this.enableCDC = enableCDC;
                 return this;
             }
 
@@ -1386,9 +1344,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
      *
-     * <p>GetLindormV2InstanceResponseBody</p>
+     * <p>GetLindormV2InstanceForTerraformResponseBody</p>
      */
     public static class StorageUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityByDiskCategory")
@@ -1461,9 +1419,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     * {@link GetLindormV2InstanceForTerraformResponseBody} extends {@link TeaModel}
      *
-     * <p>GetLindormV2InstanceResponseBody</p>
+     * <p>GetLindormV2InstanceForTerraformResponseBody</p>
      */
     public static class WhiteIpList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")

@@ -550,6 +550,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLindormV2InstanceDetails  GetLindormV2InstanceDetailsRequest
+     * @return GetLindormV2InstanceDetailsResponse
+     */
+    @Override
+    public CompletableFuture<GetLindormV2InstanceDetailsResponse> getLindormV2InstanceDetails(GetLindormV2InstanceDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLindormV2InstanceDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLindormV2InstanceDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLindormV2InstanceDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetLindormV2InstanceEngineList  GetLindormV2InstanceEngineListRequest
      * @return GetLindormV2InstanceEngineListResponse
      */
@@ -562,6 +580,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetLindormV2InstanceEngineListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetLindormV2InstanceForTerraform  GetLindormV2InstanceForTerraformRequest
+     * @return GetLindormV2InstanceForTerraformResponse
+     */
+    @Override
+    public CompletableFuture<GetLindormV2InstanceForTerraformResponse> getLindormV2InstanceForTerraform(GetLindormV2InstanceForTerraformRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLindormV2InstanceForTerraform").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLindormV2InstanceForTerraformResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLindormV2InstanceForTerraformResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetLindormV2InstanceSecurityGroups  GetLindormV2InstanceSecurityGroupsRequest
+     * @return GetLindormV2InstanceSecurityGroupsResponse
+     */
+    @Override
+    public CompletableFuture<GetLindormV2InstanceSecurityGroupsResponse> getLindormV2InstanceSecurityGroups(GetLindormV2InstanceSecurityGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLindormV2InstanceSecurityGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLindormV2InstanceSecurityGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLindormV2InstanceSecurityGroupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -788,6 +842,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyLindormV2InstanceSecurityGroups  ModifyLindormV2InstanceSecurityGroupsRequest
+     * @return ModifyLindormV2InstanceSecurityGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLindormV2InstanceSecurityGroupsResponse> modifyLindormV2InstanceSecurityGroups(ModifyLindormV2InstanceSecurityGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLindormV2InstanceSecurityGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLindormV2InstanceSecurityGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLindormV2InstanceSecurityGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyLindormV2WhiteIpList  ModifyLindormV2WhiteIpListRequest
      * @return ModifyLindormV2WhiteIpListResponse
      */
@@ -836,6 +908,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OpenComputePreCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenLdpsColumnarIndex  OpenLdpsColumnarIndexRequest
+     * @return OpenLdpsColumnarIndexResponse
+     */
+    @Override
+    public CompletableFuture<OpenLdpsColumnarIndexResponse> openLdpsColumnarIndex(OpenLdpsColumnarIndexRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenLdpsColumnarIndex").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenLdpsColumnarIndexResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenLdpsColumnarIndexResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1049,6 +1139,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateLdpsComputeGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateLindormInstanceAttribute  UpdateLindormInstanceAttributeRequest
+     * @return UpdateLindormInstanceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLindormInstanceAttributeResponse> updateLindormInstanceAttribute(UpdateLindormInstanceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateLindormInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLindormInstanceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLindormInstanceAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateLindormV2Instance  UpdateLindormV2InstanceRequest
+     * @return UpdateLindormV2InstanceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLindormV2InstanceResponse> updateLindormV2Instance(UpdateLindormV2InstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateLindormV2Instance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLindormV2InstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLindormV2InstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

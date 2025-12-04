@@ -254,6 +254,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
+        @com.aliyun.core.annotation.NameInMap("CreateErrorCode")
+        private String createErrorCode;
+
         @com.aliyun.core.annotation.NameInMap("CreateMilliseconds")
         private Long createMilliseconds;
 
@@ -328,6 +331,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
         private InstanceList(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.createErrorCode = builder.createErrorCode;
             this.createMilliseconds = builder.createMilliseconds;
             this.createTime = builder.createTime;
             this.enableColumn = builder.enableColumn;
@@ -367,6 +371,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
          */
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return createErrorCode
+         */
+        public String getCreateErrorCode() {
+            return this.createErrorCode;
         }
 
         /**
@@ -539,6 +550,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long aliUid; 
+            private String createErrorCode; 
             private Long createMilliseconds; 
             private String createTime; 
             private Boolean enableColumn; 
@@ -569,6 +581,7 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
             private Builder(InstanceList model) {
                 this.aliUid = model.aliUid;
+                this.createErrorCode = model.createErrorCode;
                 this.createMilliseconds = model.createMilliseconds;
                 this.createTime = model.createTime;
                 this.enableColumn = model.enableColumn;
@@ -603,6 +616,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * CreateErrorCode.
+             */
+            public Builder createErrorCode(String createErrorCode) {
+                this.createErrorCode = createErrorCode;
                 return this;
             }
 
