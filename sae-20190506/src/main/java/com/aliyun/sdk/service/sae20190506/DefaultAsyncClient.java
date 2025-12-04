@@ -1423,6 +1423,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableArms  DisableArmsRequest
+     * @return DisableArmsResponse
+     */
+    @Override
+    public CompletableFuture<DisableArmsResponse> disableArms(DisableArmsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableArms").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/arms/disableArms").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableArmsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableArmsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DowngradeApplicationApmService  DowngradeApplicationApmServiceRequest
      * @return DowngradeApplicationApmServiceResponse
      */

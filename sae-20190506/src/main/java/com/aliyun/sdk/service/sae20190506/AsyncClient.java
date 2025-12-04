@@ -515,6 +515,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request);
 
     /**
+     * @param request the request parameters of DisableArms  DisableArmsRequest
+     * @return DisableArmsResponse
+     */
+    CompletableFuture<DisableArmsResponse> disableArms(DisableArmsRequest request);
+
+    /**
      * @param request the request parameters of DowngradeApplicationApmService  DowngradeApplicationApmServiceRequest
      * @return DowngradeApplicationApmServiceResponse
      */
