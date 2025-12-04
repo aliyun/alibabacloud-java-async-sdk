@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNotificationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageEncoding")
+    private String messageEncoding;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotificationArn")
     @com.aliyun.core.annotation.Validation(required = true)
     private String notificationArn;
@@ -50,6 +54,7 @@ public class CreateNotificationConfigurationRequest extends Request {
 
     private CreateNotificationConfigurationRequest(Builder builder) {
         super(builder);
+        this.messageEncoding = builder.messageEncoding;
         this.notificationArn = builder.notificationArn;
         this.notificationTypes = builder.notificationTypes;
         this.ownerId = builder.ownerId;
@@ -70,6 +75,13 @@ public class CreateNotificationConfigurationRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return messageEncoding
+     */
+    public String getMessageEncoding() {
+        return this.messageEncoding;
     }
 
     /**
@@ -122,6 +134,7 @@ public class CreateNotificationConfigurationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNotificationConfigurationRequest, Builder> {
+        private String messageEncoding; 
         private String notificationArn; 
         private java.util.List<String> notificationTypes; 
         private Long ownerId; 
@@ -136,6 +149,7 @@ public class CreateNotificationConfigurationRequest extends Request {
 
         private Builder(CreateNotificationConfigurationRequest request) {
             super(request);
+            this.messageEncoding = request.messageEncoding;
             this.notificationArn = request.notificationArn;
             this.notificationTypes = request.notificationTypes;
             this.ownerId = request.ownerId;
@@ -144,6 +158,15 @@ public class CreateNotificationConfigurationRequest extends Request {
             this.scalingGroupId = request.scalingGroupId;
             this.timeZone = request.timeZone;
         } 
+
+        /**
+         * MessageEncoding.
+         */
+        public Builder messageEncoding(String messageEncoding) {
+            this.putQueryParameter("MessageEncoding", messageEncoding);
+            this.messageEncoding = messageEncoding;
+            return this;
+        }
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>

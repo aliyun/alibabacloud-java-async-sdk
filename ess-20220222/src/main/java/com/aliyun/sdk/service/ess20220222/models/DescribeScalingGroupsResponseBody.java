@@ -1177,8 +1177,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("AutoRebalance")
+        private Boolean autoRebalance;
+
         @com.aliyun.core.annotation.NameInMap("AzBalance")
         private Boolean azBalance;
+
+        @com.aliyun.core.annotation.NameInMap("BalanceMode")
+        private String balanceMode;
 
         @com.aliyun.core.annotation.NameInMap("CapacityOptions")
         private CapacityOptions capacityOptions;
@@ -1359,7 +1365,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.activeScalingConfigurationId = builder.activeScalingConfigurationId;
             this.albServerGroups = builder.albServerGroups;
             this.allocationStrategy = builder.allocationStrategy;
+            this.autoRebalance = builder.autoRebalance;
             this.azBalance = builder.azBalance;
+            this.balanceMode = builder.balanceMode;
             this.capacityOptions = builder.capacityOptions;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.creationTime = builder.creationTime;
@@ -1457,10 +1465,24 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoRebalance
+         */
+        public Boolean getAutoRebalance() {
+            return this.autoRebalance;
+        }
+
+        /**
          * @return azBalance
          */
         public Boolean getAzBalance() {
             return this.azBalance;
+        }
+
+        /**
+         * @return balanceMode
+         */
+        public String getBalanceMode() {
+            return this.balanceMode;
         }
 
         /**
@@ -1874,7 +1896,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private String activeScalingConfigurationId; 
             private java.util.List<AlbServerGroups> albServerGroups; 
             private String allocationStrategy; 
+            private Boolean autoRebalance; 
             private Boolean azBalance; 
+            private String balanceMode; 
             private CapacityOptions capacityOptions; 
             private Boolean compensateWithOnDemand; 
             private String creationTime; 
@@ -1942,7 +1966,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
                 this.activeScalingConfigurationId = model.activeScalingConfigurationId;
                 this.albServerGroups = model.albServerGroups;
                 this.allocationStrategy = model.allocationStrategy;
+                this.autoRebalance = model.autoRebalance;
                 this.azBalance = model.azBalance;
+                this.balanceMode = model.balanceMode;
                 this.capacityOptions = model.capacityOptions;
                 this.compensateWithOnDemand = model.compensateWithOnDemand;
                 this.creationTime = model.creationTime;
@@ -2049,6 +2075,21 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid value:</p>
+             * <ul>
+             * <li>false: Auto rebalancing is disabled for the scaling group.</li>
+             * <li>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder autoRebalance(Boolean autoRebalance) {
+                this.autoRebalance = autoRebalance;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether instances in the scaling group are evenly distributed across the specified zones. This parameter takes effect only if you set <code>MultiAZPolicy</code> to <code>COMPOSABLE</code>. Valid values:</p>
              * <ul>
              * <li>true</li>
@@ -2060,6 +2101,21 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder azBalance(Boolean azBalance) {
                 this.azBalance = azBalance;
+                return this;
+            }
+
+            /**
+             * <p>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid value:</p>
+             * <ul>
+             * <li>Default value: BalancedBestEffort. If a resource fails to be created in a zone, the resource is downgraded to another zone. This ensures best-effort delivery of the resource.</li>
+             * <li>BalancedOnly: If a resource fails to be created in a zone, the resource is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BalancedBestEffort</p>
+             */
+            public Builder balanceMode(String balanceMode) {
+                this.balanceMode = balanceMode;
                 return this;
             }
 

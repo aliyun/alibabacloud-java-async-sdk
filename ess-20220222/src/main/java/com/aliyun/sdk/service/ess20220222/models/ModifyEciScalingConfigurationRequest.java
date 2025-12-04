@@ -171,6 +171,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     private java.util.List<String> ntpServers;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Override")
+    private Boolean override;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -266,6 +270,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         this.loadBalancerWeight = builder.loadBalancerWeight;
         this.memory = builder.memory;
         this.ntpServers = builder.ntpServers;
+        this.override = builder.override;
         this.ownerId = builder.ownerId;
         this.ramRoleName = builder.ramRoleName;
         this.resourceGroupId = builder.resourceGroupId;
@@ -555,6 +560,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return override
+     */
+    public Boolean getOverride() {
+        return this.override;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -690,6 +702,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         private Integer loadBalancerWeight; 
         private Float memory; 
         private java.util.List<String> ntpServers; 
+        private Boolean override; 
         private Long ownerId; 
         private String ramRoleName; 
         private String resourceGroupId; 
@@ -748,6 +761,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             this.loadBalancerWeight = request.loadBalancerWeight;
             this.memory = request.memory;
             this.ntpServers = request.ntpServers;
+            this.override = request.override;
             this.ownerId = request.ownerId;
             this.ramRoleName = request.ramRoleName;
             this.resourceGroupId = request.resourceGroupId;
@@ -1232,6 +1246,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         public Builder ntpServers(java.util.List<String> ntpServers) {
             this.putQueryParameter("NtpServers", ntpServers);
             this.ntpServers = ntpServers;
+            return this;
+        }
+
+        /**
+         * Override.
+         */
+        public Builder override(Boolean override) {
+            this.putQueryParameter("Override", override);
+            this.override = override;
             return this;
         }
 

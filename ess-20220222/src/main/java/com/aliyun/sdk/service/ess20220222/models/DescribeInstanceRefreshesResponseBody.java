@@ -169,15 +169,373 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceRefreshesResponseBody</p>
      */
+    public static class Checkpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Integer percentage;
+
+        private Checkpoints(Builder builder) {
+            this.percentage = builder.percentage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Checkpoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        public static final class Builder {
+            private Integer percentage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Checkpoints model) {
+                this.percentage = model.percentage;
+            } 
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            public Checkpoints build() {
+                return new Checkpoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
+    public static class EnvironmentVars extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldRefFieldPath")
+        private String fieldRefFieldPath;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private EnvironmentVars(Builder builder) {
+            this.fieldRefFieldPath = builder.fieldRefFieldPath;
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnvironmentVars create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldRefFieldPath
+         */
+        public String getFieldRefFieldPath() {
+            return this.fieldRefFieldPath;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String fieldRefFieldPath; 
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.fieldRefFieldPath = model.fieldRefFieldPath;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * FieldRefFieldPath.
+             */
+            public Builder fieldRefFieldPath(String fieldRefFieldPath) {
+                this.fieldRefFieldPath = fieldRefFieldPath;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public EnvironmentVars build() {
+                return new EnvironmentVars(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
+    public static class Containers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Args")
+        private java.util.List<String> args;
+
+        @com.aliyun.core.annotation.NameInMap("Commands")
+        private java.util.List<String> commands;
+
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
+        private java.util.List<EnvironmentVars> environmentVars;
+
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private Containers(Builder builder) {
+            this.args = builder.args;
+            this.commands = builder.commands;
+            this.environmentVars = builder.environmentVars;
+            this.image = builder.image;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Containers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return args
+         */
+        public java.util.List<String> getArgs() {
+            return this.args;
+        }
+
+        /**
+         * @return commands
+         */
+        public java.util.List<String> getCommands() {
+            return this.commands;
+        }
+
+        /**
+         * @return environmentVars
+         */
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
+            private java.util.List<EnvironmentVars> environmentVars; 
+            private String image; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.args = model.args;
+                this.commands = model.commands;
+                this.environmentVars = model.environmentVars;
+                this.image = model.image;
+                this.name = model.name;
+            } 
+
+            /**
+             * Args.
+             */
+            public Builder args(java.util.List<String> args) {
+                this.args = args;
+                return this;
+            }
+
+            /**
+             * Commands.
+             */
+            public Builder commands(java.util.List<String> commands) {
+                this.commands = commands;
+                return this;
+            }
+
+            /**
+             * EnvironmentVars.
+             */
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
+                this.environmentVars = environmentVars;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Containers build() {
+                return new Containers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
+    public static class LaunchTemplateOverrides extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        private LaunchTemplateOverrides(Builder builder) {
+            this.instanceType = builder.instanceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LaunchTemplateOverrides create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public static final class Builder {
+            private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LaunchTemplateOverrides model) {
+                this.instanceType = model.instanceType;
+            } 
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            public LaunchTemplateOverrides build() {
+                return new LaunchTemplateOverrides(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
     public static class DesiredConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Containers")
+        private java.util.List<Containers> containers;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
+        private String launchTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
+        private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides;
+
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
+        private String launchTemplateVersion;
 
         @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
         private String scalingConfigurationId;
 
         private DesiredConfiguration(Builder builder) {
+            this.containers = builder.containers;
             this.imageId = builder.imageId;
+            this.launchTemplateId = builder.launchTemplateId;
+            this.launchTemplateOverrides = builder.launchTemplateOverrides;
+            this.launchTemplateVersion = builder.launchTemplateVersion;
             this.scalingConfigurationId = builder.scalingConfigurationId;
         }
 
@@ -190,10 +548,38 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         /**
+         * @return containers
+         */
+        public java.util.List<Containers> getContainers() {
+            return this.containers;
+        }
+
+        /**
          * @return imageId
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return launchTemplateId
+         */
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        /**
+         * @return launchTemplateOverrides
+         */
+        public java.util.List<LaunchTemplateOverrides> getLaunchTemplateOverrides() {
+            return this.launchTemplateOverrides;
+        }
+
+        /**
+         * @return launchTemplateVersion
+         */
+        public String getLaunchTemplateVersion() {
+            return this.launchTemplateVersion;
         }
 
         /**
@@ -204,16 +590,32 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Containers> containers; 
             private String imageId; 
+            private String launchTemplateId; 
+            private java.util.List<LaunchTemplateOverrides> launchTemplateOverrides; 
+            private String launchTemplateVersion; 
             private String scalingConfigurationId; 
 
             private Builder() {
             } 
 
             private Builder(DesiredConfiguration model) {
+                this.containers = model.containers;
                 this.imageId = model.imageId;
+                this.launchTemplateId = model.launchTemplateId;
+                this.launchTemplateOverrides = model.launchTemplateOverrides;
+                this.launchTemplateVersion = model.launchTemplateVersion;
                 this.scalingConfigurationId = model.scalingConfigurationId;
             } 
+
+            /**
+             * Containers.
+             */
+            public Builder containers(java.util.List<Containers> containers) {
+                this.containers = containers;
+                return this;
+            }
 
             /**
              * <p>The ID of the image file that provides the image resource for Auto Scaling to create instances.</p>
@@ -223,6 +625,30 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateId.
+             */
+            public Builder launchTemplateId(String launchTemplateId) {
+                this.launchTemplateId = launchTemplateId;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateOverrides.
+             */
+            public Builder launchTemplateOverrides(java.util.List<LaunchTemplateOverrides> launchTemplateOverrides) {
+                this.launchTemplateOverrides = launchTemplateOverrides;
+                return this;
+            }
+
+            /**
+             * LaunchTemplateVersion.
+             */
+            public Builder launchTemplateVersion(String launchTemplateVersion) {
+                this.launchTemplateVersion = launchTemplateVersion;
                 return this;
             }
 
@@ -251,6 +677,12 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
      * <p>DescribeInstanceRefreshesResponseBody</p>
      */
     public static class InstanceRefreshTasks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheckpointPauseTime")
+        private Integer checkpointPauseTime;
+
+        @com.aliyun.core.annotation.NameInMap("Checkpoints")
+        private java.util.List<Checkpoints> checkpoints;
+
         @com.aliyun.core.annotation.NameInMap("DesiredConfiguration")
         private DesiredConfiguration desiredConfiguration;
 
@@ -291,6 +723,8 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         private Integer totalNeedUpdateCapacity;
 
         private InstanceRefreshTasks(Builder builder) {
+            this.checkpointPauseTime = builder.checkpointPauseTime;
+            this.checkpoints = builder.checkpoints;
             this.desiredConfiguration = builder.desiredConfiguration;
             this.detail = builder.detail;
             this.endTime = builder.endTime;
@@ -312,6 +746,20 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
         public static InstanceRefreshTasks create() {
             return builder().build();
+        }
+
+        /**
+         * @return checkpointPauseTime
+         */
+        public Integer getCheckpointPauseTime() {
+            return this.checkpointPauseTime;
+        }
+
+        /**
+         * @return checkpoints
+         */
+        public java.util.List<Checkpoints> getCheckpoints() {
+            return this.checkpoints;
         }
 
         /**
@@ -406,6 +854,8 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer checkpointPauseTime; 
+            private java.util.List<Checkpoints> checkpoints; 
             private DesiredConfiguration desiredConfiguration; 
             private String detail; 
             private String endTime; 
@@ -424,6 +874,8 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
             } 
 
             private Builder(InstanceRefreshTasks model) {
+                this.checkpointPauseTime = model.checkpointPauseTime;
+                this.checkpoints = model.checkpoints;
                 this.desiredConfiguration = model.desiredConfiguration;
                 this.detail = model.detail;
                 this.endTime = model.endTime;
@@ -438,6 +890,22 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.totalNeedUpdateCapacity = model.totalNeedUpdateCapacity;
             } 
+
+            /**
+             * CheckpointPauseTime.
+             */
+            public Builder checkpointPauseTime(Integer checkpointPauseTime) {
+                this.checkpointPauseTime = checkpointPauseTime;
+                return this;
+            }
+
+            /**
+             * Checkpoints.
+             */
+            public Builder checkpoints(java.util.List<Checkpoints> checkpoints) {
+                this.checkpoints = checkpoints;
+                return this;
+            }
 
             /**
              * <p>The desired configurations of the instance refresh task.</p>

@@ -26,8 +26,16 @@ public class ModifyScalingGroupRequest extends Request {
     private String allocationStrategy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRebalance")
+    private Boolean autoRebalance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AzBalance")
     private Boolean azBalance;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BalanceMode")
+    private String balanceMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CapacityOptions")
@@ -159,7 +167,9 @@ public class ModifyScalingGroupRequest extends Request {
         super(builder);
         this.activeScalingConfigurationId = builder.activeScalingConfigurationId;
         this.allocationStrategy = builder.allocationStrategy;
+        this.autoRebalance = builder.autoRebalance;
         this.azBalance = builder.azBalance;
+        this.balanceMode = builder.balanceMode;
         this.capacityOptions = builder.capacityOptions;
         this.compensateWithOnDemand = builder.compensateWithOnDemand;
         this.customPolicyARN = builder.customPolicyARN;
@@ -221,10 +231,24 @@ public class ModifyScalingGroupRequest extends Request {
     }
 
     /**
+     * @return autoRebalance
+     */
+    public Boolean getAutoRebalance() {
+        return this.autoRebalance;
+    }
+
+    /**
      * @return azBalance
      */
     public Boolean getAzBalance() {
         return this.azBalance;
+    }
+
+    /**
+     * @return balanceMode
+     */
+    public String getBalanceMode() {
+        return this.balanceMode;
     }
 
     /**
@@ -447,7 +471,9 @@ public class ModifyScalingGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyScalingGroupRequest, Builder> {
         private String activeScalingConfigurationId; 
         private String allocationStrategy; 
+        private Boolean autoRebalance; 
         private Boolean azBalance; 
+        private String balanceMode; 
         private CapacityOptions capacityOptions; 
         private Boolean compensateWithOnDemand; 
         private String customPolicyARN; 
@@ -488,7 +514,9 @@ public class ModifyScalingGroupRequest extends Request {
             super(request);
             this.activeScalingConfigurationId = request.activeScalingConfigurationId;
             this.allocationStrategy = request.allocationStrategy;
+            this.autoRebalance = request.autoRebalance;
             this.azBalance = request.azBalance;
+            this.balanceMode = request.balanceMode;
             this.capacityOptions = request.capacityOptions;
             this.compensateWithOnDemand = request.compensateWithOnDemand;
             this.customPolicyARN = request.customPolicyARN;
@@ -552,6 +580,23 @@ public class ModifyScalingGroupRequest extends Request {
         }
 
         /**
+         * <p>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid values:</p>
+         * <ul>
+         * <li>false: Auto rebalancing is disabled for the scaling group.</li>
+         * <li>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder autoRebalance(Boolean autoRebalance) {
+            this.putQueryParameter("AutoRebalance", autoRebalance);
+            this.autoRebalance = autoRebalance;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to evenly distribute instances in the scaling group across zones. This parameter takes effect only when you set the <code>MultiAZPolicy</code> parameter to <code>COMPOSABLE</code>. Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -565,6 +610,23 @@ public class ModifyScalingGroupRequest extends Request {
         public Builder azBalance(Boolean azBalance) {
             this.putQueryParameter("AzBalance", azBalance);
             this.azBalance = azBalance;
+            return this;
+        }
+
+        /**
+         * <p>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid values:</p>
+         * <ul>
+         * <li>BalancedBestEffort: If a resource fails to be created in a zone, the resource is downgraded to another zone. This ensures best-effort delivery of the resource.</li>
+         * <li>BalancedOnly: If a resource fails to be created in a zone, the resource is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</li>
+         * </ul>
+         * <p>Default value: BalancedBestEffort.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BalancedBestEffort</p>
+         */
+        public Builder balanceMode(String balanceMode) {
+            this.putQueryParameter("BalanceMode", balanceMode);
+            this.balanceMode = balanceMode;
             return this;
         }
 

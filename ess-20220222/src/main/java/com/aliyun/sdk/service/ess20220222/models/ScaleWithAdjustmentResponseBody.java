@@ -106,7 +106,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         }
 
         /**
-         * PlanResult.
+         * <p>The elastic planning result returned when the ExecutionMode is set to PlanOnly.</p>
          */
         public Builder planResult(PlanResult planResult) {
             this.planResult = planResult;
@@ -233,7 +233,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -241,7 +244,14 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Prepaid</strong>: subscription.</li>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -249,7 +259,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.u1-c1m8.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -257,7 +270,15 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * <p>The spot policy of instances. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
+             * <li>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -265,7 +286,10 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -319,7 +343,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceAllocations.
+             * <p>The resource allocation information in the elastic planning result.</p>
              */
             public Builder resourceAllocations(java.util.List<ResourceAllocations> resourceAllocations) {
                 this.resourceAllocations = resourceAllocations;

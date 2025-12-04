@@ -290,7 +290,15 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * ExecutionMode.
+         * <p>The execution mode. Valid values:</p>
+         * <ul>
+         * <li>None: If this is not specified, auto scaling is performed.</li>
+         * <li>PlanOnly: Scaling is not triggered. Only elastic planning is performed. The planning result is returned in PlanResult, including the instance type, zone ID, billing type, and number of created instances.</li>
+         * </ul>
+         * <p>Default value: None.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PlanOnly</p>
          */
         public Builder executionMode(String executionMode) {
             this.putQueryParameter("ExecutionMode", executionMode);
@@ -340,7 +348,10 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * ParallelTask.
+         * <p>Whether the current scale-out task supports concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelTask(Boolean parallelTask) {
             this.putQueryParameter("ParallelTask", parallelTask);
@@ -371,13 +382,13 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
+         * <p>Specifies whether to trigger the scaling task in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid Values:</p>
          * <ul>
-         * <li>true: triggers the scaling activity in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
-         * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
+         * <li>true: triggers the scaling task in a synchronous manner. A scaling activity is triggered at the time when the scaling rule is executed.</li>
+         * <li>false: does not trigger the scaling task in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number and determines whether to trigger the scaling activity based on the check result.</li>
          * </ul>
          * <blockquote>
-         * <p> For more information about the expected number of instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
          * </blockquote>
          * <p>Default value: false.</p>
          * 
@@ -532,7 +543,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length. Format requirement: <code>[0-9a-zA-Z]</code> and underscores (_). It cannot start with a digit.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -665,7 +676,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             } 
 
             /**
-             * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
+             * <p>The argument that corresponds to the startup command of the container. You can specify up to 10 arguments.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -681,7 +692,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs that you want to allocate to the container.</p>
+             * <p>The number of vCPUs that you want to allocate to the container. Unit: vCPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -711,7 +722,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
+             * <p>The name of container N. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>container-1</p>
@@ -815,7 +826,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * <p>The number of vCPUs that you want to allocate to the instance.</p>
+             * <p>The number of vCPUs that you want to allocate to the instance. Unit: vCPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

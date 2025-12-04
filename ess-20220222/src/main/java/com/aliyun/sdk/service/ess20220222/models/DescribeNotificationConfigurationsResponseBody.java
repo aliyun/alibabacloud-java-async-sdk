@@ -98,6 +98,9 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
      * <p>DescribeNotificationConfigurationsResponseBody</p>
      */
     public static class NotificationConfigurationModels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MessageEncoding")
+        private String messageEncoding;
+
         @com.aliyun.core.annotation.NameInMap("NotificationArn")
         private String notificationArn;
 
@@ -111,6 +114,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         private String timeZone;
 
         private NotificationConfigurationModels(Builder builder) {
+            this.messageEncoding = builder.messageEncoding;
             this.notificationArn = builder.notificationArn;
             this.notificationTypes = builder.notificationTypes;
             this.scalingGroupId = builder.scalingGroupId;
@@ -123,6 +127,13 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
         public static NotificationConfigurationModels create() {
             return builder().build();
+        }
+
+        /**
+         * @return messageEncoding
+         */
+        public String getMessageEncoding() {
+            return this.messageEncoding;
         }
 
         /**
@@ -154,6 +165,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String messageEncoding; 
             private String notificationArn; 
             private java.util.List<String> notificationTypes; 
             private String scalingGroupId; 
@@ -163,11 +175,20 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             } 
 
             private Builder(NotificationConfigurationModels model) {
+                this.messageEncoding = model.messageEncoding;
                 this.notificationArn = model.notificationArn;
                 this.notificationTypes = model.notificationTypes;
                 this.scalingGroupId = model.scalingGroupId;
                 this.timeZone = model.timeZone;
             } 
+
+            /**
+             * MessageEncoding.
+             */
+            public Builder messageEncoding(String messageEncoding) {
+                this.messageEncoding = messageEncoding;
+                return this;
+            }
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The value is in one of the following formats:</p>
