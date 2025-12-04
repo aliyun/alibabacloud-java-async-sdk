@@ -97,6 +97,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAdvancedQueryTemplateResponse> deleteAdvancedQueryTemplate(DeleteAdvancedQueryTemplateRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataEventSelector  DeleteDataEventSelectorRequest
+     * @return DeleteDataEventSelectorResponse
+     */
+    CompletableFuture<DeleteDataEventSelectorResponse> deleteDataEventSelector(DeleteDataEventSelectorRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic describes how to delete a data backfill task whose ID is <code>16602</code>.</p>
      * 
@@ -232,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAdvancedQueryTemplateResponse> getAdvancedQueryTemplate(GetAdvancedQueryTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetDataEventSelector  GetDataEventSelectorRequest
+     * @return GetDataEventSelectorResponse
+     */
+    CompletableFuture<GetDataEventSelectorResponse> getDataEventSelector(GetDataEventSelectorRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to query the details of a data backfill task whose ID is <code>16602</code>. The return result shows that historical events for a trail named <code>trail-name</code> are delivered to Simple Log Service and the task is complete.</p>
      * 
@@ -266,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTrailStatusResponse> getTrailStatus(GetTrailStatusRequest request);
 
     /**
+     * @param request the request parameters of ListDataEventSelectors  ListDataEventSelectorsRequest
+     * @return ListDataEventSelectorsResponse
+     */
+    CompletableFuture<ListDataEventSelectorsResponse> listDataEventSelectors(ListDataEventSelectorsRequest request);
+
+    /**
      * @param request the request parameters of ListDataEventServices  ListDataEventServicesRequest
      * @return ListDataEventServicesResponse
      */
@@ -291,6 +309,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return LookupEventsResponse
      */
     CompletableFuture<LookupEventsResponse> lookupEvents(LookupEventsRequest request);
+
+    /**
+     * @param request the request parameters of PutDataEventSelector  PutDataEventSelectorRequest
+     * @return PutDataEventSelectorResponse
+     */
+    CompletableFuture<PutDataEventSelectorResponse> putDataEventSelector(PutDataEventSelectorRequest request);
 
     /**
      * <b>description</b> :
