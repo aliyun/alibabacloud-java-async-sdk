@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -31,7 +27,6 @@ public class ListCustomAgentRequest extends Request {
 
     private ListCustomAgentRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -50,13 +45,6 @@ public class ListCustomAgentRequest extends Request {
     }
 
     /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -71,7 +59,6 @@ public class ListCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCustomAgentRequest, Builder> {
-        private String apiId; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -81,19 +68,9 @@ public class ListCustomAgentRequest extends Request {
 
         private Builder(ListCustomAgentRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * PageNumber.

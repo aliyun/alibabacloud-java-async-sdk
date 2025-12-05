@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMessagesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
@@ -35,7 +31,6 @@ public class GetMessagesRequest extends Request {
 
     private GetMessagesRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.conversationId = builder.conversationId;
         this.firstId = builder.firstId;
         this.limit = builder.limit;
@@ -52,13 +47,6 @@ public class GetMessagesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
     }
 
     /**
@@ -83,7 +71,6 @@ public class GetMessagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetMessagesRequest, Builder> {
-        private String apiId; 
         private String conversationId; 
         private String firstId; 
         private Long limit; 
@@ -94,20 +81,10 @@ public class GetMessagesRequest extends Request {
 
         private Builder(GetMessagesRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.conversationId = request.conversationId;
             this.firstId = request.firstId;
             this.limit = request.limit;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * ConversationId.

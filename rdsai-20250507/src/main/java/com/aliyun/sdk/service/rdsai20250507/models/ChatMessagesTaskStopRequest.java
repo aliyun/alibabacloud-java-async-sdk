@@ -18,17 +18,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatMessagesTaskStopRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private ChatMessagesTaskStopRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.taskId = builder.taskId;
     }
 
@@ -46,13 +41,6 @@ public class ChatMessagesTaskStopRequest extends Request {
     }
 
     /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
-    }
-
-    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -60,7 +48,6 @@ public class ChatMessagesTaskStopRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatMessagesTaskStopRequest, Builder> {
-        private String apiId; 
         private String taskId; 
 
         private Builder() {
@@ -69,18 +56,8 @@ public class ChatMessagesTaskStopRequest extends Request {
 
         private Builder(ChatMessagesTaskStopRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.taskId = request.taskId;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * <p>This parameter is required.</p>

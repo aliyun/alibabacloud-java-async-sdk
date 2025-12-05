@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyMessagesFeedbacksRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
@@ -35,7 +31,6 @@ public class ModifyMessagesFeedbacksRequest extends Request {
 
     private ModifyMessagesFeedbacksRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.content = builder.content;
         this.messageId = builder.messageId;
         this.rating = builder.rating;
@@ -52,13 +47,6 @@ public class ModifyMessagesFeedbacksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
     }
 
     /**
@@ -83,7 +71,6 @@ public class ModifyMessagesFeedbacksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyMessagesFeedbacksRequest, Builder> {
-        private String apiId; 
         private String content; 
         private String messageId; 
         private String rating; 
@@ -94,20 +81,10 @@ public class ModifyMessagesFeedbacksRequest extends Request {
 
         private Builder(ModifyMessagesFeedbacksRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.content = request.content;
             this.messageId = request.messageId;
             this.rating = request.rating;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * Content.

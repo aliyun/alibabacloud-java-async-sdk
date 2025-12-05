@@ -18,11 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomAgentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String customAgentId;
@@ -45,7 +40,6 @@ public class UpdateCustomAgentRequest extends Request {
 
     private UpdateCustomAgentRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.customAgentId = builder.customAgentId;
         this.enableTools = builder.enableTools;
         this.name = builder.name;
@@ -64,13 +58,6 @@ public class UpdateCustomAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
     }
 
     /**
@@ -109,7 +96,6 @@ public class UpdateCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomAgentRequest, Builder> {
-        private String apiId; 
         private String customAgentId; 
         private Boolean enableTools; 
         private String name; 
@@ -122,25 +108,12 @@ public class UpdateCustomAgentRequest extends Request {
 
         private Builder(UpdateCustomAgentRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.customAgentId = request.customAgentId;
             this.enableTools = request.enableTools;
             this.name = request.name;
             this.systemPrompt = request.systemPrompt;
             this.tools = request.tools;
         } 
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * <p>AgentId。</p>

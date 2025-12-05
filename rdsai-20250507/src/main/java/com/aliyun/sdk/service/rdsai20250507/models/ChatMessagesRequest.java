@@ -18,11 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatMessagesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
@@ -36,12 +31,11 @@ public class ChatMessagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 8192)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 65536)
     private String query;
 
     private ChatMessagesRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.conversationId = builder.conversationId;
         this.inputs = builder.inputs;
         this.parentMessageId = builder.parentMessageId;
@@ -59,13 +53,6 @@ public class ChatMessagesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
     }
 
     /**
@@ -97,7 +84,6 @@ public class ChatMessagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatMessagesRequest, Builder> {
-        private String apiId; 
         private String conversationId; 
         private Inputs inputs; 
         private String parentMessageId; 
@@ -109,24 +95,11 @@ public class ChatMessagesRequest extends Request {
 
         private Builder(ChatMessagesRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.conversationId = request.conversationId;
             this.inputs = request.inputs;
             this.parentMessageId = request.parentMessageId;
             this.query = request.query;
         } 
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>app-iBuGU1VxEY42zrQRQfNA****</p>
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * ConversationId.

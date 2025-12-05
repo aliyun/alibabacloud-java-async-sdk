@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableTools")
     private Boolean enableTools;
 
@@ -40,7 +36,6 @@ public class CreateCustomAgentRequest extends Request {
 
     private CreateCustomAgentRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.enableTools = builder.enableTools;
         this.name = builder.name;
         this.systemPrompt = builder.systemPrompt;
@@ -58,13 +53,6 @@ public class CreateCustomAgentRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
     }
 
     /**
@@ -96,7 +84,6 @@ public class CreateCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCustomAgentRequest, Builder> {
-        private String apiId; 
         private Boolean enableTools; 
         private String name; 
         private String systemPrompt; 
@@ -108,21 +95,11 @@ public class CreateCustomAgentRequest extends Request {
 
         private Builder(CreateCustomAgentRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.enableTools = request.enableTools;
             this.name = request.name;
             this.systemPrompt = request.systemPrompt;
             this.tools = request.tools;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * EnableTools.

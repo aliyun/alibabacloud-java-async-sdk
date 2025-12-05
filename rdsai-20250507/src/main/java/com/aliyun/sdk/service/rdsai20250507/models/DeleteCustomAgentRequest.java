@@ -18,16 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteCustomAgentRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApiId")
-    private String apiId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomAgentId")
     private String customAgentId;
 
     private DeleteCustomAgentRequest(Builder builder) {
         super(builder);
-        this.apiId = builder.apiId;
         this.customAgentId = builder.customAgentId;
     }
 
@@ -45,13 +40,6 @@ public class DeleteCustomAgentRequest extends Request {
     }
 
     /**
-     * @return apiId
-     */
-    public String getApiId() {
-        return this.apiId;
-    }
-
-    /**
      * @return customAgentId
      */
     public String getCustomAgentId() {
@@ -59,7 +47,6 @@ public class DeleteCustomAgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteCustomAgentRequest, Builder> {
-        private String apiId; 
         private String customAgentId; 
 
         private Builder() {
@@ -68,18 +55,8 @@ public class DeleteCustomAgentRequest extends Request {
 
         private Builder(DeleteCustomAgentRequest request) {
             super(request);
-            this.apiId = request.apiId;
             this.customAgentId = request.customAgentId;
         } 
-
-        /**
-         * ApiId.
-         */
-        public Builder apiId(String apiId) {
-            this.putQueryParameter("ApiId", apiId);
-            this.apiId = apiId;
-            return this;
-        }
 
         /**
          * <p>AgentId。</p>
