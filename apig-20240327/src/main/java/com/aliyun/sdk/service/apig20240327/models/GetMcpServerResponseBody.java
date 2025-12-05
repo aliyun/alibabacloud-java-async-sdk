@@ -352,6 +352,318 @@ public class GetMcpServerResponseBody extends TeaModel {
      *
      * <p>GetMcpServerResponseBody</p>
      */
+    public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("port")
+        private Integer port;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        @com.aliyun.core.annotation.NameInMap("serviceId")
+        private String serviceId;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("weight")
+        private Integer weight;
+
+        private Services(Builder builder) {
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+            this.serviceId = builder.serviceId;
+            this.version = builder.version;
+            this.weight = builder.weight;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Services create() {
+            return builder().build();
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return serviceId
+         */
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return weight
+         */
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public static final class Builder {
+            private Integer port; 
+            private String protocol; 
+            private String serviceId; 
+            private String version; 
+            private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Services model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.serviceId = model.serviceId;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * <p>The protocol. Valid values: HTTP and HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * serviceId.
+             */
+            public Builder serviceId(String serviceId) {
+                this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * weight.
+             */
+            public Builder weight(Integer weight) {
+                this.weight = weight;
+                return this;
+            }
+
+            public Services build() {
+                return new Services(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpServerResponseBody</p>
+     */
+    public static class BackendConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("scene")
+        private String scene;
+
+        @com.aliyun.core.annotation.NameInMap("services")
+        private java.util.List<Services> services;
+
+        private BackendConfig(Builder builder) {
+            this.scene = builder.scene;
+            this.services = builder.services;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
+        }
+
+        /**
+         * @return services
+         */
+        public java.util.List<Services> getServices() {
+            return this.services;
+        }
+
+        public static final class Builder {
+            private String scene; 
+            private java.util.List<Services> services; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendConfig model) {
+                this.scene = model.scene;
+                this.services = model.services;
+            } 
+
+            /**
+             * scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * services.
+             */
+            public Builder services(java.util.List<Services> services) {
+                this.services = services;
+                return this;
+            }
+
+            public BackendConfig build() {
+                return new BackendConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpServerResponseBody</p>
+     */
+    public static class GrayMcpServerConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("backendConfig")
+        private BackendConfig backendConfig;
+
+        @com.aliyun.core.annotation.NameInMap("match")
+        private HttpRouteMatch match;
+
+        @com.aliyun.core.annotation.NameInMap("routeId")
+        private String routeId;
+
+        private GrayMcpServerConfigs(Builder builder) {
+            this.backendConfig = builder.backendConfig;
+            this.match = builder.match;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GrayMcpServerConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backendConfig
+         */
+        public BackendConfig getBackendConfig() {
+            return this.backendConfig;
+        }
+
+        /**
+         * @return match
+         */
+        public HttpRouteMatch getMatch() {
+            return this.match;
+        }
+
+        /**
+         * @return routeId
+         */
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private BackendConfig backendConfig; 
+            private HttpRouteMatch match; 
+            private String routeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(GrayMcpServerConfigs model) {
+                this.backendConfig = model.backendConfig;
+                this.match = model.match;
+                this.routeId = model.routeId;
+            } 
+
+            /**
+             * backendConfig.
+             */
+            public Builder backendConfig(BackendConfig backendConfig) {
+                this.backendConfig = backendConfig;
+                return this;
+            }
+
+            /**
+             * match.
+             */
+            public Builder match(HttpRouteMatch match) {
+                this.match = match;
+                return this;
+            }
+
+            /**
+             * routeId.
+             */
+            public Builder routeId(String routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public GrayMcpServerConfigs build() {
+                return new GrayMcpServerConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMcpServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMcpServerResponseBody</p>
+     */
     public static class NacosMcpSyncInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("importInstanceId")
         private String importInstanceId;
@@ -488,6 +800,9 @@ public class GetMcpServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("grayMcpServerConfigs")
+        private java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs;
+
         @com.aliyun.core.annotation.NameInMap("match")
         private HttpRouteMatch match;
 
@@ -532,6 +847,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             this.environmentId = builder.environmentId;
             this.exposedUriPath = builder.exposedUriPath;
             this.gatewayId = builder.gatewayId;
+            this.grayMcpServerConfigs = builder.grayMcpServerConfigs;
             this.match = builder.match;
             this.mcpServerConfig = builder.mcpServerConfig;
             this.mcpServerConfigPluginAttachmentId = builder.mcpServerConfigPluginAttachmentId;
@@ -624,6 +940,13 @@ public class GetMcpServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return grayMcpServerConfigs
+         */
+        public java.util.List<GrayMcpServerConfigs> getGrayMcpServerConfigs() {
+            return this.grayMcpServerConfigs;
+        }
+
+        /**
          * @return match
          */
         public HttpRouteMatch getMatch() {
@@ -711,6 +1034,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             private String environmentId; 
             private String exposedUriPath; 
             private String gatewayId; 
+            private java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs; 
             private HttpRouteMatch match; 
             private String mcpServerConfig; 
             private String mcpServerConfigPluginAttachmentId; 
@@ -737,6 +1061,7 @@ public class GetMcpServerResponseBody extends TeaModel {
                 this.environmentId = model.environmentId;
                 this.exposedUriPath = model.exposedUriPath;
                 this.gatewayId = model.gatewayId;
+                this.grayMcpServerConfigs = model.grayMcpServerConfigs;
                 this.match = model.match;
                 this.mcpServerConfig = model.mcpServerConfig;
                 this.mcpServerConfigPluginAttachmentId = model.mcpServerConfigPluginAttachmentId;
@@ -847,6 +1172,14 @@ public class GetMcpServerResponseBody extends TeaModel {
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * grayMcpServerConfigs.
+             */
+            public Builder grayMcpServerConfigs(java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs) {
+                this.grayMcpServerConfigs = grayMcpServerConfigs;
                 return this;
             }
 
