@@ -724,6 +724,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDeploymentsByIp  GetDeploymentsByIpRequest
+     * @return GetDeploymentsByIpResponse
+     */
+    @Override
+    public CompletableFuture<GetDeploymentsByIpResponse> getDeploymentsByIp(GetDeploymentsByIpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDeploymentsByIp").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/deployments/getDeployments/byIp").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDeploymentsByIpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDeploymentsByIpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDeploymentsByLabel  GetDeploymentsByLabelRequest
+     * @return GetDeploymentsByLabelResponse
+     */
+    @Override
+    public CompletableFuture<GetDeploymentsByLabelResponse> getDeploymentsByLabel(GetDeploymentsByLabelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDeploymentsByLabel").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/deployments/getDeployments/byLabel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDeploymentsByLabelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDeploymentsByLabelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDeploymentsByName  GetDeploymentsByNameRequest
+     * @return GetDeploymentsByNameResponse
+     */
+    @Override
+    public CompletableFuture<GetDeploymentsByNameResponse> getDeploymentsByName(GetDeploymentsByNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDeploymentsByName").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/deployments/name/{deploymentName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDeploymentsByNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDeploymentsByNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetEvents  GetEventsRequest
      * @return GetEventsResponse
      */
@@ -970,6 +1024,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUdfArtifactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetValidateDeploymentDraftResult  GetValidateDeploymentDraftResultRequest
+     * @return GetValidateDeploymentDraftResultResponse
+     */
+    @Override
+    public CompletableFuture<GetValidateDeploymentDraftResultResponse> getValidateDeploymentDraftResult(GetValidateDeploymentDraftResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetValidateDeploymentDraftResult").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/deployment-drafts/tickets/{ticketId}/async-validate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetValidateDeploymentDraftResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetValidateDeploymentDraftResultResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1565,6 +1637,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateVariableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ValidateDeploymentDraftAsync  ValidateDeploymentDraftAsyncRequest
+     * @return ValidateDeploymentDraftAsyncResponse
+     */
+    @Override
+    public CompletableFuture<ValidateDeploymentDraftAsyncResponse> validateDeploymentDraftAsync(ValidateDeploymentDraftAsyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ValidateDeploymentDraftAsync").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/deployment-drafts/async-validate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidateDeploymentDraftAsyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ValidateDeploymentDraftAsyncResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

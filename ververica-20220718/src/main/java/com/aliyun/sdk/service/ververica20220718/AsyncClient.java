@@ -248,6 +248,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeploymentDraftLockResponse> getDeploymentDraftLock(GetDeploymentDraftLockRequest request);
 
     /**
+     * @param request the request parameters of GetDeploymentsByIp  GetDeploymentsByIpRequest
+     * @return GetDeploymentsByIpResponse
+     */
+    CompletableFuture<GetDeploymentsByIpResponse> getDeploymentsByIp(GetDeploymentsByIpRequest request);
+
+    /**
+     * @param request the request parameters of GetDeploymentsByLabel  GetDeploymentsByLabelRequest
+     * @return GetDeploymentsByLabelResponse
+     */
+    CompletableFuture<GetDeploymentsByLabelResponse> getDeploymentsByLabel(GetDeploymentsByLabelRequest request);
+
+    /**
+     * @param request the request parameters of GetDeploymentsByName  GetDeploymentsByNameRequest
+     * @return GetDeploymentsByNameResponse
+     */
+    CompletableFuture<GetDeploymentsByNameResponse> getDeploymentsByName(GetDeploymentsByNameRequest request);
+
+    /**
      * @param request the request parameters of GetEvents  GetEventsRequest
      * @return GetEventsResponse
      */
@@ -330,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUdfArtifactsResponse
      */
     CompletableFuture<GetUdfArtifactsResponse> getUdfArtifacts(GetUdfArtifactsRequest request);
+
+    /**
+     * @param request the request parameters of GetValidateDeploymentDraftResult  GetValidateDeploymentDraftResultRequest
+     * @return GetValidateDeploymentDraftResultResponse
+     */
+    CompletableFuture<GetValidateDeploymentDraftResultResponse> getValidateDeploymentDraftResult(GetValidateDeploymentDraftResultRequest request);
 
     /**
      * @param request the request parameters of HotUpdateJob  HotUpdateJobRequest
@@ -529,6 +553,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateVariableResponse
      */
     CompletableFuture<UpdateVariableResponse> updateVariable(UpdateVariableRequest request);
+
+    /**
+     * @param request the request parameters of ValidateDeploymentDraftAsync  ValidateDeploymentDraftAsyncRequest
+     * @return ValidateDeploymentDraftAsyncResponse
+     */
+    CompletableFuture<ValidateDeploymentDraftAsyncResponse> validateDeploymentDraftAsync(ValidateDeploymentDraftAsyncRequest request);
 
     /**
      * @param request the request parameters of ValidateSqlStatement  ValidateSqlStatementRequest
