@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dybaseapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTokenForMnsQueueResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTokenForMnsQueueResponseBody</p>
@@ -36,6 +42,10 @@ public class QueryTokenForMnsQueueResponseBody extends TeaModel {
 
     public static QueryTokenForMnsQueueResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class QueryTokenForMnsQueueResponseBody extends TeaModel {
         private String message; 
         private MessageTokenDTO messageTokenDTO; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryTokenForMnsQueueResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.messageTokenDTO = model.messageTokenDTO;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -110,6 +130,12 @@ public class QueryTokenForMnsQueueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTokenForMnsQueueResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTokenForMnsQueueResponseBody</p>
+     */
     public static class MessageTokenDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
@@ -183,6 +209,17 @@ public class QueryTokenForMnsQueueResponseBody extends TeaModel {
             private String createTime; 
             private String expireTime; 
             private String securityToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageTokenDTO model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.securityToken = model.securityToken;
+            } 
 
             /**
              * AccessKeyId.

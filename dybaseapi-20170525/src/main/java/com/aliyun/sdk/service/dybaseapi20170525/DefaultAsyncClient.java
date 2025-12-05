@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of QueryTokenForMnsQueue  QueryTokenForMnsQueueRequest
+     * @return QueryTokenForMnsQueueResponse
+     */
     @Override
     public CompletableFuture<QueryTokenForMnsQueueResponse> queryTokenForMnsQueue(QueryTokenForMnsQueueRequest request) {
         try {

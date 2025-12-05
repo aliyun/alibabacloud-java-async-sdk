@@ -19,6 +19,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+     * @param request the request parameters of QueryTokenForMnsQueue  QueryTokenForMnsQueueRequest
+     * @return QueryTokenForMnsQueueResponse
+     */
     CompletableFuture<QueryTokenForMnsQueueResponse> queryTokenForMnsQueue(QueryTokenForMnsQueueRequest request);
 
 }
