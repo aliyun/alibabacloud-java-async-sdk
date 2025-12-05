@@ -53,6 +53,10 @@ public class CreateDatabaseRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceMemberId")
+    private Long instanceMemberId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
     private String networkDomainId;
 
@@ -87,6 +91,7 @@ public class CreateDatabaseRequest extends Request {
         this.databasePublicAddress = builder.databasePublicAddress;
         this.databaseType = builder.databaseType;
         this.instanceId = builder.instanceId;
+        this.instanceMemberId = builder.instanceMemberId;
         this.networkDomainId = builder.networkDomainId;
         this.polarDBEndpointType = builder.polarDBEndpointType;
         this.regionId = builder.regionId;
@@ -165,6 +170,13 @@ public class CreateDatabaseRequest extends Request {
     }
 
     /**
+     * @return instanceMemberId
+     */
+    public Long getInstanceMemberId() {
+        return this.instanceMemberId;
+    }
+
+    /**
      * @return networkDomainId
      */
     public String getNetworkDomainId() {
@@ -215,6 +227,7 @@ public class CreateDatabaseRequest extends Request {
         private String databasePublicAddress; 
         private String databaseType; 
         private String instanceId; 
+        private Long instanceMemberId; 
         private String networkDomainId; 
         private String polarDBEndpointType; 
         private String regionId; 
@@ -236,6 +249,7 @@ public class CreateDatabaseRequest extends Request {
             this.databasePublicAddress = request.databasePublicAddress;
             this.databaseType = request.databaseType;
             this.instanceId = request.instanceId;
+            this.instanceMemberId = request.instanceMemberId;
             this.networkDomainId = request.networkDomainId;
             this.polarDBEndpointType = request.polarDBEndpointType;
             this.regionId = request.regionId;
@@ -359,6 +373,15 @@ public class CreateDatabaseRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceMemberId.
+         */
+        public Builder instanceMemberId(Long instanceMemberId) {
+            this.putQueryParameter("InstanceMemberId", instanceMemberId);
+            this.instanceMemberId = instanceMemberId;
             return this;
         }
 

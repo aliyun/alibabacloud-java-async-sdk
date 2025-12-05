@@ -45,6 +45,10 @@ public class CreateHostRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceMemberId")
+    private Long instanceMemberId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceRegionId")
     private String instanceRegionId;
 
@@ -78,6 +82,7 @@ public class CreateHostRequest extends Request {
         this.hostPrivateAddress = builder.hostPrivateAddress;
         this.hostPublicAddress = builder.hostPublicAddress;
         this.instanceId = builder.instanceId;
+        this.instanceMemberId = builder.instanceMemberId;
         this.instanceRegionId = builder.instanceRegionId;
         this.networkDomainId = builder.networkDomainId;
         this.OSType = builder.OSType;
@@ -142,6 +147,13 @@ public class CreateHostRequest extends Request {
     }
 
     /**
+     * @return instanceMemberId
+     */
+    public Long getInstanceMemberId() {
+        return this.instanceMemberId;
+    }
+
+    /**
      * @return instanceRegionId
      */
     public String getInstanceRegionId() {
@@ -190,6 +202,7 @@ public class CreateHostRequest extends Request {
         private String hostPrivateAddress; 
         private String hostPublicAddress; 
         private String instanceId; 
+        private Long instanceMemberId; 
         private String instanceRegionId; 
         private String networkDomainId; 
         private String OSType; 
@@ -209,6 +222,7 @@ public class CreateHostRequest extends Request {
             this.hostPrivateAddress = request.hostPrivateAddress;
             this.hostPublicAddress = request.hostPublicAddress;
             this.instanceId = request.instanceId;
+            this.instanceMemberId = request.instanceMemberId;
             this.instanceRegionId = request.instanceRegionId;
             this.networkDomainId = request.networkDomainId;
             this.OSType = request.OSType;
@@ -302,6 +316,15 @@ public class CreateHostRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceMemberId.
+         */
+        public Builder instanceMemberId(Long instanceMemberId) {
+            this.putQueryParameter("InstanceMemberId", instanceMemberId);
+            this.instanceMemberId = instanceMemberId;
             return this;
         }
 
