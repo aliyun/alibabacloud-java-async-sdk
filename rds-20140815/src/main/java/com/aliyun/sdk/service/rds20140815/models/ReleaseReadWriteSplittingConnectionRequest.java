@@ -31,6 +31,10 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RWAddressType")
+    private String RWAddressType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,6 +47,7 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.RWAddressType = builder.RWAddressType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -82,6 +87,13 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
     }
 
     /**
+     * @return RWAddressType
+     */
+    public String getRWAddressType() {
+        return this.RWAddressType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -99,6 +111,7 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String RWAddressType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -111,6 +124,7 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.RWAddressType = request.RWAddressType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -143,6 +157,15 @@ public class ReleaseReadWriteSplittingConnectionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RWAddressType.
+         */
+        public Builder RWAddressType(String RWAddressType) {
+            this.putQueryParameter("RWAddressType", RWAddressType);
+            this.RWAddressType = RWAddressType;
             return this;
         }
 

@@ -102,7 +102,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D</p>
+         * <p>87BDAE8C-xxxx-4A26-BBCC-7D1DD31D630D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
