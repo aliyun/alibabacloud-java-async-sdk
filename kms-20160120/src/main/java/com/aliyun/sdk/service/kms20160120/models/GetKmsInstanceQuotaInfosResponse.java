@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateCertificateResponse} extends {@link TeaModel}
+ * {@link GetKmsInstanceQuotaInfosResponse} extends {@link TeaModel}
  *
- * <p>CreateCertificateResponse</p>
+ * <p>GetKmsInstanceQuotaInfosResponse</p>
  */
-public class CreateCertificateResponse extends Response {
+public class GetKmsInstanceQuotaInfosResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateCertificateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateCertificateResponseBody body;
+    private GetKmsInstanceQuotaInfosResponseBody body;
 
-    private CreateCertificateResponse(BuilderImpl builder) {
+    private GetKmsInstanceQuotaInfosResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateCertificateResponse create() {
+    public static GetKmsInstanceQuotaInfosResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateCertificateResponse extends Response {
     /**
      * @return body
      */
-    public CreateCertificateResponseBody getBody() {
+    public GetKmsInstanceQuotaInfosResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<GetKmsInstanceQuotaInfosResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateCertificateResponseBody body);
+        Builder body(GetKmsInstanceQuotaInfosResponseBody body);
 
         @Override
-        CreateCertificateResponse build();
+        GetKmsInstanceQuotaInfosResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateCertificateResponse, Builder>
+            extends Response.BuilderImpl<GetKmsInstanceQuotaInfosResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateCertificateResponseBody body; 
+        private GetKmsInstanceQuotaInfosResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateCertificateResponse response) {
+        private BuilderImpl(GetKmsInstanceQuotaInfosResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateCertificateResponseBody body) {
+        public Builder body(GetKmsInstanceQuotaInfosResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateCertificateResponse build() {
-            return new CreateCertificateResponse(this);
+        public GetKmsInstanceQuotaInfosResponse build() {
+            return new GetKmsInstanceQuotaInfosResponse(this);
         } 
 
     } 

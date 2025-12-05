@@ -44,6 +44,9 @@ public class DescribeSecretResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NextRotationDate")
     private String nextRotationDate;
 
+    @com.aliyun.core.annotation.NameInMap("OwingService")
+    private String owingService;
+
     @com.aliyun.core.annotation.NameInMap("PlannedDeleteTime")
     private String plannedDeleteTime;
 
@@ -75,6 +78,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         this.extendedConfig = builder.extendedConfig;
         this.lastRotationDate = builder.lastRotationDate;
         this.nextRotationDate = builder.nextRotationDate;
+        this.owingService = builder.owingService;
         this.plannedDeleteTime = builder.plannedDeleteTime;
         this.requestId = builder.requestId;
         this.rotationInterval = builder.rotationInterval;
@@ -160,6 +164,13 @@ public class DescribeSecretResponseBody extends TeaModel {
     }
 
     /**
+     * @return owingService
+     */
+    public String getOwingService() {
+        return this.owingService;
+    }
+
+    /**
      * @return plannedDeleteTime
      */
     public String getPlannedDeleteTime() {
@@ -218,6 +229,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         private String extendedConfig; 
         private String lastRotationDate; 
         private String nextRotationDate; 
+        private String owingService; 
         private String plannedDeleteTime; 
         private String requestId; 
         private String rotationInterval; 
@@ -239,6 +251,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             this.extendedConfig = model.extendedConfig;
             this.lastRotationDate = model.lastRotationDate;
             this.nextRotationDate = model.nextRotationDate;
+            this.owingService = model.owingService;
             this.plannedDeleteTime = model.plannedDeleteTime;
             this.requestId = model.requestId;
             this.rotationInterval = model.rotationInterval;
@@ -361,6 +374,14 @@ public class DescribeSecretResponseBody extends TeaModel {
          */
         public Builder nextRotationDate(String nextRotationDate) {
             this.nextRotationDate = nextRotationDate;
+            return this;
+        }
+
+        /**
+         * OwingService.
+         */
+        public Builder owingService(String owingService) {
+            this.owingService = owingService;
             return this;
         }
 

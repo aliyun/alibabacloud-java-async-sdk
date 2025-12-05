@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListKmsInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private String filters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -27,6 +31,7 @@ public class ListKmsInstancesRequest extends Request {
 
     private ListKmsInstancesRequest(Builder builder) {
         super(builder);
+        this.filters = builder.filters;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -45,6 +50,13 @@ public class ListKmsInstancesRequest extends Request {
     }
 
     /**
+     * @return filters
+     */
+    public String getFilters() {
+        return this.filters;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -59,6 +71,7 @@ public class ListKmsInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListKmsInstancesRequest, Builder> {
+        private String filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -68,9 +81,19 @@ public class ListKmsInstancesRequest extends Request {
 
         private Builder(ListKmsInstancesRequest request) {
             super(request);
+            this.filters = request.filters;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * Filters.
+         */
+        public Builder filters(String filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
+            return this;
+        }
 
         /**
          * <p>The page number. Default value: 1.</p>

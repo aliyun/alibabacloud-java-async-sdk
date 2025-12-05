@@ -305,8 +305,20 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyNum")
         private Long keyNum;
 
+        @com.aliyun.core.annotation.NameInMap("Log")
+        private Long log;
+
+        @com.aliyun.core.annotation.NameInMap("LogStorage")
+        private Long logStorage;
+
+        @com.aliyun.core.annotation.NameInMap("ProductType")
+        private String productType;
+
         @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
+
+        @com.aliyun.core.annotation.NameInMap("SaleStatus")
+        private String saleStatus;
 
         @com.aliyun.core.annotation.NameInMap("SecretNum")
         private String secretNum;
@@ -327,10 +339,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         private Long vpcNum;
 
         @com.aliyun.core.annotation.NameInMap("VswitchIds")
-        private String vswitchIds;
+        private java.util.List<String> vswitchIds;
 
         @com.aliyun.core.annotation.NameInMap("ZoneIds")
-        private String zoneIds;
+        private java.util.List<String> zoneIds;
 
         private KmsInstance(Builder builder) {
             this.bindVpcs = builder.bindVpcs;
@@ -341,7 +353,11 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.keyNum = builder.keyNum;
+            this.log = builder.log;
+            this.logStorage = builder.logStorage;
+            this.productType = builder.productType;
             this.productVersion = builder.productVersion;
+            this.saleStatus = builder.saleStatus;
             this.secretNum = builder.secretNum;
             this.spec = builder.spec;
             this.startDate = builder.startDate;
@@ -417,10 +433,38 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return log
+         */
+        public Long getLog() {
+            return this.log;
+        }
+
+        /**
+         * @return logStorage
+         */
+        public Long getLogStorage() {
+            return this.logStorage;
+        }
+
+        /**
+         * @return productType
+         */
+        public String getProductType() {
+            return this.productType;
+        }
+
+        /**
          * @return productVersion
          */
         public String getProductVersion() {
             return this.productVersion;
+        }
+
+        /**
+         * @return saleStatus
+         */
+        public String getSaleStatus() {
+            return this.saleStatus;
         }
 
         /**
@@ -468,14 +512,14 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         /**
          * @return vswitchIds
          */
-        public String getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
         /**
          * @return zoneIds
          */
-        public String getZoneIds() {
+        public java.util.List<String> getZoneIds() {
             return this.zoneIds;
         }
 
@@ -488,15 +532,19 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private Long keyNum; 
+            private Long log; 
+            private Long logStorage; 
+            private String productType; 
             private String productVersion; 
+            private String saleStatus; 
             private String secretNum; 
             private Long spec; 
             private String startDate; 
             private String status; 
             private String vpcId; 
             private Long vpcNum; 
-            private String vswitchIds; 
-            private String zoneIds; 
+            private java.util.List<String> vswitchIds; 
+            private java.util.List<String> zoneIds; 
 
             private Builder() {
             } 
@@ -510,7 +558,11 @@ public class GetKmsInstanceResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.keyNum = model.keyNum;
+                this.log = model.log;
+                this.logStorage = model.logStorage;
+                this.productType = model.productType;
                 this.productVersion = model.productVersion;
+                this.saleStatus = model.saleStatus;
                 this.secretNum = model.secretNum;
                 this.spec = model.spec;
                 this.startDate = model.startDate;
@@ -607,10 +659,42 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * Log.
+             */
+            public Builder log(Long log) {
+                this.log = log;
+                return this;
+            }
+
+            /**
+             * LogStorage.
+             */
+            public Builder logStorage(Long logStorage) {
+                this.logStorage = logStorage;
+                return this;
+            }
+
+            /**
+             * ProductType.
+             */
+            public Builder productType(String productType) {
+                this.productType = productType;
+                return this;
+            }
+
+            /**
              * ProductVersion.
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
+                return this;
+            }
+
+            /**
+             * SaleStatus.
+             */
+            public Builder saleStatus(String saleStatus) {
+                this.saleStatus = saleStatus;
                 return this;
             }
 
@@ -693,7 +777,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>vsw-bp1i512amda6d10a0****</p>
              */
-            public Builder vswitchIds(String vswitchIds) {
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
                 return this;
             }
@@ -704,7 +788,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>&quot;cn-hangzhou-k&quot;,       &quot;cn-hangzhou-j&quot;</p>
              */
-            public Builder zoneIds(String zoneIds) {
+            public Builder zoneIds(java.util.List<String> zoneIds) {
                 this.zoneIds = zoneIds;
                 return this;
             }

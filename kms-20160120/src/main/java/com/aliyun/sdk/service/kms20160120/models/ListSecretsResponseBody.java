@@ -302,6 +302,9 @@ public class ListSecretsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("OwingService")
+        private String owingService;
+
         @com.aliyun.core.annotation.NameInMap("PlannedDeleteTime")
         private String plannedDeleteTime;
 
@@ -319,6 +322,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
         private Secret(Builder builder) {
             this.createTime = builder.createTime;
+            this.owingService = builder.owingService;
             this.plannedDeleteTime = builder.plannedDeleteTime;
             this.secretName = builder.secretName;
             this.secretType = builder.secretType;
@@ -339,6 +343,13 @@ public class ListSecretsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return owingService
+         */
+        public String getOwingService() {
+            return this.owingService;
         }
 
         /**
@@ -378,6 +389,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String owingService; 
             private String plannedDeleteTime; 
             private String secretName; 
             private String secretType; 
@@ -389,6 +401,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
             private Builder(Secret model) {
                 this.createTime = model.createTime;
+                this.owingService = model.owingService;
                 this.plannedDeleteTime = model.plannedDeleteTime;
                 this.secretName = model.secretName;
                 this.secretType = model.secretType;
@@ -404,6 +417,14 @@ public class ListSecretsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * OwingService.
+             */
+            public Builder owingService(String owingService) {
+                this.owingService = owingService;
                 return this;
             }
 
