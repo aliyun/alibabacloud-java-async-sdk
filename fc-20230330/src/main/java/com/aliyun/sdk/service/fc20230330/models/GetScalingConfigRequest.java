@@ -73,7 +73,10 @@ public class GetScalingConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -82,7 +85,10 @@ public class GetScalingConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The alias of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

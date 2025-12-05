@@ -23,6 +23,9 @@ public class ScalingConfigStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("currentInstances")
     private Long currentInstances;
 
+    @com.aliyun.core.annotation.NameInMap("enableOnDemandScaling")
+    private Boolean enableOnDemandScaling;
+
     @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
@@ -44,6 +47,7 @@ public class ScalingConfigStatus extends TeaModel {
     private ScalingConfigStatus(Builder builder) {
         this.currentError = builder.currentError;
         this.currentInstances = builder.currentInstances;
+        this.enableOnDemandScaling = builder.enableOnDemandScaling;
         this.functionArn = builder.functionArn;
         this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
         this.minInstances = builder.minInstances;
@@ -76,6 +80,13 @@ public class ScalingConfigStatus extends TeaModel {
      */
     public Long getCurrentInstances() {
         return this.currentInstances;
+    }
+
+    /**
+     * @return enableOnDemandScaling
+     */
+    public Boolean getEnableOnDemandScaling() {
+        return this.enableOnDemandScaling;
     }
 
     /**
@@ -123,6 +134,7 @@ public class ScalingConfigStatus extends TeaModel {
     public static final class Builder {
         private String currentError; 
         private Long currentInstances; 
+        private Boolean enableOnDemandScaling; 
         private String functionArn; 
         private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
         private Long minInstances; 
@@ -136,6 +148,7 @@ public class ScalingConfigStatus extends TeaModel {
         private Builder(ScalingConfigStatus model) {
             this.currentError = model.currentError;
             this.currentInstances = model.currentInstances;
+            this.enableOnDemandScaling = model.enableOnDemandScaling;
             this.functionArn = model.functionArn;
             this.horizontalScalingPolicies = model.horizontalScalingPolicies;
             this.minInstances = model.minInstances;
@@ -157,6 +170,14 @@ public class ScalingConfigStatus extends TeaModel {
          */
         public Builder currentInstances(Long currentInstances) {
             this.currentInstances = currentInstances;
+            return this;
+        }
+
+        /**
+         * enableOnDemandScaling.
+         */
+        public Builder enableOnDemandScaling(Boolean enableOnDemandScaling) {
+            this.enableOnDemandScaling = enableOnDemandScaling;
             return this;
         }
 

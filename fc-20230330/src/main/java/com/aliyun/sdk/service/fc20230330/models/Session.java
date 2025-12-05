@@ -23,6 +23,9 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
+    @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
+    private Boolean disableSessionIdReuse;
+
     @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
@@ -53,6 +56,7 @@ public class Session extends TeaModel {
     private Session(Builder builder) {
         this.containerId = builder.containerId;
         this.createdTime = builder.createdTime;
+        this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.functionName = builder.functionName;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.nasConfig = builder.nasConfig;
@@ -88,6 +92,13 @@ public class Session extends TeaModel {
      */
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    /**
+     * @return disableSessionIdReuse
+     */
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     /**
@@ -156,6 +167,7 @@ public class Session extends TeaModel {
     public static final class Builder {
         private String containerId; 
         private String createdTime; 
+        private Boolean disableSessionIdReuse; 
         private String functionName; 
         private String lastModifiedTime; 
         private NASConfig nasConfig; 
@@ -172,6 +184,7 @@ public class Session extends TeaModel {
         private Builder(Session model) {
             this.containerId = model.containerId;
             this.createdTime = model.createdTime;
+            this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.functionName = model.functionName;
             this.lastModifiedTime = model.lastModifiedTime;
             this.nasConfig = model.nasConfig;
@@ -196,6 +209,14 @@ public class Session extends TeaModel {
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
+            return this;
+        }
+
+        /**
+         * disableSessionIdReuse.
+         */
+        public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
+            this.disableSessionIdReuse = disableSessionIdReuse;
             return this;
         }
 

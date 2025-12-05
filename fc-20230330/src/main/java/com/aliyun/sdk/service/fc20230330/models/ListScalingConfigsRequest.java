@@ -87,7 +87,10 @@ public class ListScalingConfigsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -96,7 +99,10 @@ public class ListScalingConfigsRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The number of scaling settings to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -105,7 +111,10 @@ public class ListScalingConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

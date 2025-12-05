@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CookieSessionAffinityConfig</p>
  */
 public class CookieSessionAffinityConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
+    private Boolean disableSessionIdReuse;
+
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyPerInstance")
     private Long sessionConcurrencyPerInstance;
 
@@ -27,6 +30,7 @@ public class CookieSessionAffinityConfig extends TeaModel {
     private Long sessionTTLInSeconds;
 
     private CookieSessionAffinityConfig(Builder builder) {
+        this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
@@ -42,6 +46,13 @@ public class CookieSessionAffinityConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return disableSessionIdReuse
+     */
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
     }
 
     /**
@@ -66,6 +77,7 @@ public class CookieSessionAffinityConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean disableSessionIdReuse; 
         private Long sessionConcurrencyPerInstance; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
@@ -74,10 +86,19 @@ public class CookieSessionAffinityConfig extends TeaModel {
         } 
 
         private Builder(CookieSessionAffinityConfig model) {
+            this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
         } 
+
+        /**
+         * disableSessionIdReuse.
+         */
+        public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
+            this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
 
         /**
          * sessionConcurrencyPerInstance.

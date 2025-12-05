@@ -87,7 +87,10 @@ public class GetSessionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function to which the session belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFunction</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -96,7 +99,10 @@ public class GetSessionRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-sessionid-index1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putPathParameter("sessionId", sessionId);
@@ -105,7 +111,10 @@ public class GetSessionRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias or version associated with the queried session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliasName1</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

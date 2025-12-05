@@ -73,7 +73,10 @@ public class DeleteScalingConfigRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -82,7 +85,10 @@ public class DeleteScalingConfigRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LATEST</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

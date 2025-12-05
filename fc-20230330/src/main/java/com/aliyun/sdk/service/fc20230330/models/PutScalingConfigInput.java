@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutScalingConfigInput</p>
  */
 public class PutScalingConfigInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("enableOnDemandScaling")
+    private Boolean enableOnDemandScaling;
+
     @com.aliyun.core.annotation.NameInMap("horizontalScalingPolicies")
     private java.util.List<ScalingPolicy> horizontalScalingPolicies;
 
@@ -30,6 +33,7 @@ public class PutScalingConfigInput extends TeaModel {
     private java.util.List<ScheduledPolicy> scheduledPolicies;
 
     private PutScalingConfigInput(Builder builder) {
+        this.enableOnDemandScaling = builder.enableOnDemandScaling;
         this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
         this.minInstances = builder.minInstances;
         this.residentPoolId = builder.residentPoolId;
@@ -46,6 +50,13 @@ public class PutScalingConfigInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableOnDemandScaling
+     */
+    public Boolean getEnableOnDemandScaling() {
+        return this.enableOnDemandScaling;
     }
 
     /**
@@ -77,6 +88,7 @@ public class PutScalingConfigInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean enableOnDemandScaling; 
         private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
         private Long minInstances; 
         private String residentPoolId; 
@@ -86,11 +98,20 @@ public class PutScalingConfigInput extends TeaModel {
         } 
 
         private Builder(PutScalingConfigInput model) {
+            this.enableOnDemandScaling = model.enableOnDemandScaling;
             this.horizontalScalingPolicies = model.horizontalScalingPolicies;
             this.minInstances = model.minInstances;
             this.residentPoolId = model.residentPoolId;
             this.scheduledPolicies = model.scheduledPolicies;
         } 
+
+        /**
+         * enableOnDemandScaling.
+         */
+        public Builder enableOnDemandScaling(Boolean enableOnDemandScaling) {
+            this.enableOnDemandScaling = enableOnDemandScaling;
+            return this;
+        }
 
         /**
          * horizontalScalingPolicies.

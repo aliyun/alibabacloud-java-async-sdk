@@ -59,7 +59,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request details for updating the resource group.</p>
          */
         public Builder body(ChangeResourceGroupInput body) {
             this.putBodyParameter("body", body);

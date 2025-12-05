@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSessionInput</p>
  */
 public class UpdateSessionInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
+    private Boolean disableSessionIdReuse;
+
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutInSeconds")
     private Long sessionIdleTimeoutInSeconds;
 
@@ -24,6 +27,7 @@ public class UpdateSessionInput extends TeaModel {
     private Long sessionTTLInSeconds;
 
     private UpdateSessionInput(Builder builder) {
+        this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
     }
@@ -41,6 +45,13 @@ public class UpdateSessionInput extends TeaModel {
     }
 
     /**
+     * @return disableSessionIdReuse
+     */
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
+    }
+
+    /**
      * @return sessionIdleTimeoutInSeconds
      */
     public Long getSessionIdleTimeoutInSeconds() {
@@ -55,6 +66,7 @@ public class UpdateSessionInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean disableSessionIdReuse; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
 
@@ -62,9 +74,18 @@ public class UpdateSessionInput extends TeaModel {
         } 
 
         private Builder(UpdateSessionInput model) {
+            this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
         } 
+
+        /**
+         * disableSessionIdReuse.
+         */
+        public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
+            this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
 
         /**
          * sessionIdleTimeoutInSeconds.

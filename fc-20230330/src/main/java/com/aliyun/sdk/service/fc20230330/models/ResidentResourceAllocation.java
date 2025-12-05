@@ -23,6 +23,9 @@ public class ResidentResourceAllocation extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instanceCount")
     private Integer instanceCount;
 
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    private String instanceType;
+
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
@@ -41,6 +44,7 @@ public class ResidentResourceAllocation extends TeaModel {
     private ResidentResourceAllocation(Builder builder) {
         this.functionName = builder.functionName;
         this.instanceCount = builder.instanceCount;
+        this.instanceType = builder.instanceType;
         this.qualifier = builder.qualifier;
         this.totalCpuCores = builder.totalCpuCores;
         this.totalDiskSize = builder.totalDiskSize;
@@ -72,6 +76,13 @@ public class ResidentResourceAllocation extends TeaModel {
      */
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -112,6 +123,7 @@ public class ResidentResourceAllocation extends TeaModel {
     public static final class Builder {
         private String functionName; 
         private Integer instanceCount; 
+        private String instanceType; 
         private String qualifier; 
         private Double totalCpuCores; 
         private Double totalDiskSize; 
@@ -124,6 +136,7 @@ public class ResidentResourceAllocation extends TeaModel {
         private Builder(ResidentResourceAllocation model) {
             this.functionName = model.functionName;
             this.instanceCount = model.instanceCount;
+            this.instanceType = model.instanceType;
             this.qualifier = model.qualifier;
             this.totalCpuCores = model.totalCpuCores;
             this.totalDiskSize = model.totalDiskSize;
@@ -144,6 +157,14 @@ public class ResidentResourceAllocation extends TeaModel {
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * instanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
 

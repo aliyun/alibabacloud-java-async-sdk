@@ -20,6 +20,9 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("affinityHeaderFieldName")
     private String affinityHeaderFieldName;
 
+    @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
+    private Boolean disableSessionIdReuse;
+
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyPerInstance")
     private Long sessionConcurrencyPerInstance;
 
@@ -31,6 +34,7 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
 
     private HeaderFieldSessionAffinityConfig(Builder builder) {
         this.affinityHeaderFieldName = builder.affinityHeaderFieldName;
+        this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.sessionConcurrencyPerInstance = builder.sessionConcurrencyPerInstance;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
@@ -56,6 +60,13 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
     }
 
     /**
+     * @return disableSessionIdReuse
+     */
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
+    }
+
+    /**
      * @return sessionConcurrencyPerInstance
      */
     public Long getSessionConcurrencyPerInstance() {
@@ -78,6 +89,7 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
 
     public static final class Builder {
         private String affinityHeaderFieldName; 
+        private Boolean disableSessionIdReuse; 
         private Long sessionConcurrencyPerInstance; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
@@ -87,6 +99,7 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
 
         private Builder(HeaderFieldSessionAffinityConfig model) {
             this.affinityHeaderFieldName = model.affinityHeaderFieldName;
+            this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.sessionConcurrencyPerInstance = model.sessionConcurrencyPerInstance;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
@@ -97,6 +110,14 @@ public class HeaderFieldSessionAffinityConfig extends TeaModel {
          */
         public Builder affinityHeaderFieldName(String affinityHeaderFieldName) {
             this.affinityHeaderFieldName = affinityHeaderFieldName;
+            return this;
+        }
+
+        /**
+         * disableSessionIdReuse.
+         */
+        public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
+            this.disableSessionIdReuse = disableSessionIdReuse;
             return this;
         }
 

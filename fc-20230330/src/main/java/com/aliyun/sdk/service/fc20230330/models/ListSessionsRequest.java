@@ -130,7 +130,10 @@ public class ListSessionsRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -139,7 +142,10 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The number of sessions to be returned. If this parameter is not specified, 20 sessions are returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -148,7 +154,10 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNCNhYmM=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -157,7 +166,10 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>The function alias or version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliasName1</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -166,7 +178,10 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The SessionId value to filter. If specified, all session information associated with this session ID in Active or Expired states is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-session-id-1</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);
@@ -175,7 +190,10 @@ public class ListSessionsRequest extends Request {
         }
 
         /**
-         * sessionStatus.
+         * <p>The session status to filter. By default, information for all sessions in the Active and Expired states is returned. You can specify Active to retrieve only active sessions, or Expired to retrieve only expired sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.putQueryParameter("sessionStatus", sessionStatus);

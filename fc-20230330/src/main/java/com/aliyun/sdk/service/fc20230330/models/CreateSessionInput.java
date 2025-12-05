@@ -17,8 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSessionInput</p>
  */
 public class CreateSessionInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
+    private Boolean disableSessionIdReuse;
+
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
+
+    @com.aliyun.core.annotation.NameInMap("sessionId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String sessionId;
 
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutInSeconds")
     private Long sessionIdleTimeoutInSeconds;
@@ -27,7 +34,9 @@ public class CreateSessionInput extends TeaModel {
     private Long sessionTTLInSeconds;
 
     private CreateSessionInput(Builder builder) {
+        this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.nasConfig = builder.nasConfig;
+        this.sessionId = builder.sessionId;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
     }
@@ -45,10 +54,24 @@ public class CreateSessionInput extends TeaModel {
     }
 
     /**
+     * @return disableSessionIdReuse
+     */
+    public Boolean getDisableSessionIdReuse() {
+        return this.disableSessionIdReuse;
+    }
+
+    /**
      * @return nasConfig
      */
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     /**
@@ -66,7 +89,9 @@ public class CreateSessionInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean disableSessionIdReuse; 
         private NASConfig nasConfig; 
+        private String sessionId; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
 
@@ -74,16 +99,34 @@ public class CreateSessionInput extends TeaModel {
         } 
 
         private Builder(CreateSessionInput model) {
+            this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.nasConfig = model.nasConfig;
+            this.sessionId = model.sessionId;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
         } 
+
+        /**
+         * disableSessionIdReuse.
+         */
+        public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
+            this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
 
         /**
          * nasConfig.
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * sessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.sessionId = sessionId;
             return this;
         }
 

@@ -87,7 +87,10 @@ public class CreateSessionRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-func</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -96,7 +99,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>Creates session configurations.</p>
          */
         public Builder body(CreateSessionInput body) {
             this.putBodyParameter("body", body);
@@ -105,7 +108,10 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * <p>Specifies the version or alias to which the sesion belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliasName1</p>
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

@@ -59,7 +59,10 @@ public class EnableFunctionInvocationRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * <p>The name of the function that you want to allow for invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloworld</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
