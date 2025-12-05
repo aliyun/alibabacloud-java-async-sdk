@@ -35,6 +35,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
+    @com.aliyun.core.annotation.NameInMap("ProcessStatus")
+    private String processStatus;
+
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -54,6 +57,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.inDebt = builder.inDebt;
         this.instanceId = builder.instanceId;
         this.payType = builder.payType;
+        this.processStatus = builder.processStatus;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.startTime = builder.startTime;
@@ -115,6 +119,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return processStatus
+     */
+    public String getProcessStatus() {
+        return this.processStatus;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -149,6 +160,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String inDebt; 
         private String instanceId; 
         private String payType; 
+        private String processStatus; 
         private String regionId; 
         private String requestId; 
         private Long startTime; 
@@ -164,6 +176,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.inDebt = model.inDebt;
             this.instanceId = model.instanceId;
             this.payType = model.payType;
+            this.processStatus = model.processStatus;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.startTime = model.startTime;
@@ -238,6 +251,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Builder payType(String payType) {
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * ProcessStatus.
+         */
+        public Builder processStatus(String processStatus) {
+            this.processStatus = processStatus;
             return this;
         }
 
