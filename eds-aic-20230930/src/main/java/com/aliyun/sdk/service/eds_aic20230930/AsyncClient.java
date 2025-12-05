@@ -407,6 +407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstancePropertiesResponse> getInstanceProperties(GetInstancePropertiesRequest request);
 
     /**
+     * @param request the request parameters of ImportImage  ImportImageRequest
+     * @return ImportImageResponse
+     */
+    CompletableFuture<ImportImageResponse> importImage(ImportImageRequest request);
+
+    /**
      * <b>description</b> :
      * <p>To avoid authorization errors that could cause ADB connection failures, you must import the public key of an ADB key pair.</p>
      * 

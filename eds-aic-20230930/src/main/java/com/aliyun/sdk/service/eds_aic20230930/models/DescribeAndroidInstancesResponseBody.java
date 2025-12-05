@@ -707,6 +707,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindUserId")
         private String bindUserId;
 
+        @com.aliyun.core.annotation.NameInMap("BizImageType")
+        private String bizImageType;
+
         @com.aliyun.core.annotation.NameInMap("BizTags")
         private java.util.List<BizTags> bizTags;
 
@@ -834,6 +837,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.bandwidthPackageId = builder.bandwidthPackageId;
             this.bandwidthPackageType = builder.bandwidthPackageType;
             this.bindUserId = builder.bindUserId;
+            this.bizImageType = builder.bizImageType;
             this.bizTags = builder.bizTags;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
@@ -964,6 +968,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public String getBindUserId() {
             return this.bindUserId;
+        }
+
+        /**
+         * @return bizImageType
+         */
+        public String getBizImageType() {
+            return this.bizImageType;
         }
 
         /**
@@ -1245,6 +1256,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String bandwidthPackageId; 
             private String bandwidthPackageType; 
             private String bindUserId; 
+            private String bizImageType; 
             private java.util.List<BizTags> bizTags; 
             private String chargeType; 
             private String cpu; 
@@ -1300,6 +1312,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.bandwidthPackageId = model.bandwidthPackageId;
                 this.bandwidthPackageType = model.bandwidthPackageType;
                 this.bindUserId = model.bindUserId;
+                this.bizImageType = model.bizImageType;
                 this.bizTags = model.bizTags;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
@@ -1460,6 +1473,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder bindUserId(String bindUserId) {
                 this.bindUserId = bindUserId;
+                return this;
+            }
+
+            /**
+             * BizImageType.
+             */
+            public Builder bizImageType(String bizImageType) {
+                this.bizImageType = bizImageType;
                 return this;
             }
 
