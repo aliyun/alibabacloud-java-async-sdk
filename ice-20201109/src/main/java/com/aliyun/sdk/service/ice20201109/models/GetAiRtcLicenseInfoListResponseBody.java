@@ -132,7 +132,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>httpStatusCode</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -148,7 +154,7 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseInfoList.
+         * <p>An array of AiRtcLicenseInfoDTO objects, each representing a license batch.</p>
          */
         public Builder licenseInfoList(java.util.List<AiRtcLicenseInfoDTO> licenseInfoList) {
             this.licenseInfoList = licenseInfoList;
@@ -156,7 +162,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B117AF5-2A16-412C-B127-FA6175ED1***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class GetAiRtcLicenseInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

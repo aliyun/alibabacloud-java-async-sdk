@@ -128,21 +128,45 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("MediaUrl")
         private String mediaUrl;
 
+        @com.aliyun.core.annotation.NameInMap("TimelineIn")
+        private Float timelineIn;
+
+        @com.aliyun.core.annotation.NameInMap("TimelineOut")
+        private Float timelineOut;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
 
         private ParamList(Builder builder) {
             this.content = builder.content;
             this.coverUrl = builder.coverUrl;
+            this.height = builder.height;
             this.key = builder.key;
             this.mediaUrl = builder.mediaUrl;
+            this.timelineIn = builder.timelineIn;
+            this.timelineOut = builder.timelineOut;
             this.type = builder.type;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
         }
 
         public static Builder builder() {
@@ -168,6 +192,13 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
          * @return key
          */
         public String getKey() {
@@ -182,18 +213,59 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         }
 
         /**
+         * @return timelineIn
+         */
+        public Float getTimelineIn() {
+            return this.timelineIn;
+        }
+
+        /**
+         * @return timelineOut
+         */
+        public Float getTimelineOut() {
+            return this.timelineOut;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
             return this.type;
         }
 
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
         public static final class Builder {
             private String content; 
             private String coverUrl; 
+            private Integer height; 
             private String key; 
             private String mediaUrl; 
+            private Float timelineIn; 
+            private Float timelineOut; 
             private String type; 
+            private Integer width; 
+            private Integer x; 
+            private Integer y; 
 
             private Builder() {
             } 
@@ -201,9 +273,15 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             private Builder(ParamList model) {
                 this.content = model.content;
                 this.coverUrl = model.coverUrl;
+                this.height = model.height;
                 this.key = model.key;
                 this.mediaUrl = model.mediaUrl;
+                this.timelineIn = model.timelineIn;
+                this.timelineOut = model.timelineOut;
                 this.type = model.type;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
             } 
 
             /**
@@ -219,6 +297,14 @@ public class GetTemplateParamsResponseBody extends TeaModel {
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
                 return this;
             }
 
@@ -242,6 +328,22 @@ public class GetTemplateParamsResponseBody extends TeaModel {
             }
 
             /**
+             * TimelineIn.
+             */
+            public Builder timelineIn(Float timelineIn) {
+                this.timelineIn = timelineIn;
+                return this;
+            }
+
+            /**
+             * TimelineOut.
+             */
+            public Builder timelineOut(Float timelineOut) {
+                this.timelineOut = timelineOut;
+                return this;
+            }
+
+            /**
              * <p>The material type.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -255,6 +357,30 @@ public class GetTemplateParamsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
                 return this;
             }
 

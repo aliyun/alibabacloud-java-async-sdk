@@ -87,7 +87,10 @@ public class ActiveAiRtcLicenseRequest extends Request {
         } 
 
         /**
-         * AuthCode.
+         * <p>The authorization code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iU1IeJech7***</p>
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -96,7 +99,10 @@ public class ActiveAiRtcLicenseRequest extends Request {
         }
 
         /**
-         * DeviceId.
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-***</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -105,7 +111,10 @@ public class ActiveAiRtcLicenseRequest extends Request {
         }
 
         /**
-         * LicenseItemId.
+         * <p>The batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17712***</p>
          */
         public Builder licenseItemId(String licenseItemId) {
             this.putQueryParameter("LicenseItemId", licenseItemId);

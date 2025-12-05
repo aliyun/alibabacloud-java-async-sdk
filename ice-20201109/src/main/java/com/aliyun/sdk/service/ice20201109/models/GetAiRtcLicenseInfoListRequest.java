@@ -129,7 +129,10 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         } 
 
         /**
-         * LicenseItemId.
+         * <p>The ID of the batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17712***</p>
          */
         public Builder licenseItemId(String licenseItemId) {
             this.putQueryParameter("LicenseItemId", licenseItemId);
@@ -138,7 +141,10 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         }
 
         /**
-         * NeedTotalCount.
+         * <p>Specifies whether to include the total count of records in the response. Defaults to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotalCount(Boolean needTotalCount) {
             this.putQueryParameter("NeedTotalCount", needTotalCount);
@@ -147,7 +153,10 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -156,7 +165,10 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +177,14 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the batch. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: Active</li>
+         * <li><code>2</code>: Expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -174,7 +193,14 @@ public class GetAiRtcLicenseInfoListRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of license. Valid values:</p>
+         * <ul>
+         * <li><code>1</code>: Audio call</li>
+         * <li><code>2</code>: Vision call</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

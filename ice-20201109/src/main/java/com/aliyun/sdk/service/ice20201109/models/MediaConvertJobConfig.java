@@ -266,19 +266,19 @@ public class MediaConvertJobConfig extends TeaModel {
      * <p>MediaConvertJobConfig</p>
      */
     public static class Excludes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Language")
+        private String language;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @com.aliyun.core.annotation.NameInMap("language")
-        private String language;
-
         private Excludes(Builder builder) {
+            this.language = builder.language;
             this.name = builder.name;
             this.type = builder.type;
-            this.language = builder.language;
         }
 
         public static Builder builder() {
@@ -287,6 +287,13 @@ public class MediaConvertJobConfig extends TeaModel {
 
         public static Excludes create() {
             return builder().build();
+        }
+
+        /**
+         * @return language
+         */
+        public String getLanguage() {
+            return this.language;
         }
 
         /**
@@ -303,26 +310,27 @@ public class MediaConvertJobConfig extends TeaModel {
             return this.type;
         }
 
-        /**
-         * @return language
-         */
-        public String getLanguage() {
-            return this.language;
-        }
-
         public static final class Builder {
+            private String language; 
             private String name; 
             private String type; 
-            private String language; 
 
             private Builder() {
             } 
 
             private Builder(Excludes model) {
+                this.language = model.language;
                 this.name = model.name;
                 this.type = model.type;
-                this.language = model.language;
             } 
+
+            /**
+             * Language.
+             */
+            public Builder language(String language) {
+                this.language = language;
+                return this;
+            }
 
             /**
              * Name.
@@ -337,14 +345,6 @@ public class MediaConvertJobConfig extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
-                return this;
-            }
-
-            /**
-             * language.
-             */
-            public Builder language(String language) {
-                this.language = language;
                 return this;
             }
 

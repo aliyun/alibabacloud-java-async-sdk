@@ -119,7 +119,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * License.
+         * <p>The license information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a659a06659a***</p>
          */
         public Builder license(String license) {
             this.license = license;
@@ -143,7 +152,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F9C14FE-1147-15AC-8EDF-A590FF12***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class ActiveAiRtcLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
