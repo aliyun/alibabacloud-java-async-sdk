@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterSceneRunningDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetJMeterSceneRunningDataResponseBody</p>
  */
 public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DocumentUrl")
+    @com.aliyun.core.annotation.NameInMap("DocumentUrl")
     private String documentUrl;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningData")
+    @com.aliyun.core.annotation.NameInMap("RunningData")
     private RunningData runningData;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetJMeterSceneRunningDataResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
 
     public static GetJMeterSceneRunningDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         private RunningData runningData; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJMeterSceneRunningDataResponseBody model) {
+            this.code = model.code;
+            this.documentUrl = model.documentUrl;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.runningData = model.runningData;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +143,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * DocumentUrl.
+         * <p>The URL that is used to access the document.</p>
          */
         public Builder documentUrl(String documentUrl) {
             this.documentUrl = documentUrl;
@@ -126,7 +151,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +162,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +170,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +181,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * RunningData.
+         * <p>The running data.</p>
          */
         public Builder runningData(RunningData runningData) {
             this.runningData = runningData;
@@ -158,7 +189,14 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,56 +209,62 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetJMeterSceneRunningDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJMeterSceneRunningDataResponseBody</p>
+     */
     public static class RunningData extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("AgentIdList")
-        private java.util.List < String > agentIdList;
+        @com.aliyun.core.annotation.NameInMap("AgentIdList")
+        private java.util.List<String> agentIdList;
 
-        @NameInMap("AllSampleStat")
-        private java.util.Map < String, ? > allSampleStat;
+        @com.aliyun.core.annotation.NameInMap("AllSampleStat")
+        private java.util.Map<String, ?> allSampleStat;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Integer concurrency;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("HasError")
+        @com.aliyun.core.annotation.NameInMap("HasError")
         private Boolean hasError;
 
-        @NameInMap("HasReport")
+        @com.aliyun.core.annotation.NameInMap("HasReport")
         private Boolean hasReport;
 
-        @NameInMap("HoldFor")
+        @com.aliyun.core.annotation.NameInMap("HoldFor")
         private Integer holdFor;
 
-        @NameInMap("IsDebugging")
+        @com.aliyun.core.annotation.NameInMap("IsDebugging")
         private Boolean isDebugging;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("SampleStatList")
-        private java.util.List < java.util.Map<String, ?>> sampleStatList;
+        @com.aliyun.core.annotation.NameInMap("SampleStatList")
+        private java.util.List<java.util.Map<String, ?>> sampleStatList;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StartTimeTS")
+        @com.aliyun.core.annotation.NameInMap("StartTimeTS")
         private Long startTimeTS;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Vum")
+        @com.aliyun.core.annotation.NameInMap("Vum")
         private Long vum;
 
         private RunningData(Builder builder) {
@@ -261,14 +305,14 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         /**
          * @return agentIdList
          */
-        public java.util.List < String > getAgentIdList() {
+        public java.util.List<String> getAgentIdList() {
             return this.agentIdList;
         }
 
         /**
          * @return allSampleStat
          */
-        public java.util.Map < String, ? > getAllSampleStat() {
+        public java.util.Map<String, ?> getAllSampleStat() {
             return this.allSampleStat;
         }
 
@@ -324,7 +368,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
         /**
          * @return sampleStatList
          */
-        public java.util.List < java.util.Map<String, ?>> getSampleStatList() {
+        public java.util.List<java.util.Map<String, ?>> getSampleStatList() {
             return this.sampleStatList;
         }
 
@@ -372,8 +416,8 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer agentCount; 
-            private java.util.List < String > agentIdList; 
-            private java.util.Map < String, ? > allSampleStat; 
+            private java.util.List<String> agentIdList; 
+            private java.util.Map<String, ?> allSampleStat; 
             private Integer concurrency; 
             private String errorMessage; 
             private Boolean hasError; 
@@ -381,7 +425,7 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             private Integer holdFor; 
             private Boolean isDebugging; 
             private String reportId; 
-            private java.util.List < java.util.Map<String, ?>> sampleStatList; 
+            private java.util.List<java.util.Map<String, ?>> sampleStatList; 
             private String sceneId; 
             private String sceneName; 
             private String stageName; 
@@ -389,8 +433,34 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             private String status; 
             private Long vum; 
 
+            private Builder() {
+            } 
+
+            private Builder(RunningData model) {
+                this.agentCount = model.agentCount;
+                this.agentIdList = model.agentIdList;
+                this.allSampleStat = model.allSampleStat;
+                this.concurrency = model.concurrency;
+                this.errorMessage = model.errorMessage;
+                this.hasError = model.hasError;
+                this.hasReport = model.hasReport;
+                this.holdFor = model.holdFor;
+                this.isDebugging = model.isDebugging;
+                this.reportId = model.reportId;
+                this.sampleStatList = model.sampleStatList;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.stageName = model.stageName;
+                this.startTimeTS = model.startTimeTS;
+                this.status = model.status;
+                this.vum = model.vum;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of stress testing engines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -398,23 +468,29 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * AgentIdList.
+             * <p>The stress testing engines.</p>
              */
-            public Builder agentIdList(java.util.List < String > agentIdList) {
+            public Builder agentIdList(java.util.List<String> agentIdList) {
                 this.agentIdList = agentIdList;
                 return this;
             }
 
             /**
-             * AllSampleStat.
+             * <p>The sampling status of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;failTps&quot;:0,&quot;successRtAvg&quot;:33,&quot;successRtMin&quot;:29,&quot;successRtSum&quot;:99407,         &quot;rtAvg&quot;:33.459104678559406,&quot;rtMin&quot;:29,&quot;failRtMax&quot;:0,&quot;duration&quot;:997,         &quot;samplerId&quot;:-1, &quot;successRtMax&quot;:133,&quot;fullStat&quot;:{       &quot;requestBytesSum&quot;:629926,&quot;successRtAvg&quot;:33,&quot;successRtMin&quot;:29,&quot;successRtSum&quot;:174551,&quot;count&quot;:5206,&quot;rtSeg99&quot;:53, &quot;successTps&quot;:2397.9732842008293,&quot;rtSeg90&quot;:36, &quot;rtSeg50&quot;:32,            &quot;rtSeg99Sum&quot;:53,&quot;rtAvg&quot;:33.528812908182864, &quot;rtMin&quot;:29,             &quot;failRtMax&quot;:0,&quot;duration&quot;:2171, &quot;successCount&quot;:5206,            &quot;rtSegStatCount&quot;:1,&quot;tps&quot;:2397.9732842008293 }, &quot;successCount&quot;:2971, &quot;failRtSum&quot;:0,&quot;failCount&quot;:0,&quot;count&quot;:2971,&quot;concurrency&quot;:100, &quot;successTps&quot;:2979.939819458375,&quot;tps&quot;:2979.939819458375,&quot;failRtAvg&quot;:0,         &quot;failRtMin&quot;:0,  &quot;rtMax&quot;:133}</p>
              */
-            public Builder allSampleStat(java.util.Map < String, ? > allSampleStat) {
+            public Builder allSampleStat(java.util.Map<String, ?> allSampleStat) {
                 this.allSampleStat = allSampleStat;
                 return this;
             }
 
             /**
-             * Concurrency.
+             * <p>The concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -422,7 +498,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned for the stress testing process. If the request was successful, this parameter is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Engine lease failed.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -430,7 +509,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * HasError.
+             * <p>Indicates whether an error occurs in the stress testing process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasError(Boolean hasError) {
                 this.hasError = hasError;
@@ -438,7 +520,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * HasReport.
+             * <p>Indicates whether the report is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasReport(Boolean hasReport) {
                 this.hasReport = hasReport;
@@ -446,7 +531,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * HoldFor.
+             * <p>The duration of the stress testing plan. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder holdFor(Integer holdFor) {
                 this.holdFor = holdFor;
@@ -454,7 +542,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * IsDebugging.
+             * <p>Indicates whether a debugging is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDebugging(Boolean isDebugging) {
                 this.isDebugging = isDebugging;
@@ -462,7 +553,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The stress testing task ID. This ID also means the report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYYPLDKS</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -470,15 +564,18 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * SampleStatList.
+             * <p>The status of samplers.</p>
              */
-            public Builder sampleStatList(java.util.List < java.util.Map<String, ?>> sampleStatList) {
+            public Builder sampleStatList(java.util.List<java.util.Map<String, ?>> sampleStatList) {
                 this.sampleStatList = sampleStatList;
                 return this;
             }
 
             /**
-             * SceneId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYYPZIH</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -486,7 +583,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -494,7 +594,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * <p>The current stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>任务执行</p>
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -502,7 +605,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimeTS.
+             * <p>The timestamp when the stress testing is scheduled to start. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639970040000</p>
              */
             public Builder startTimeTS(Long startTimeTS) {
                 this.startTimeTS = startTimeTS;
@@ -510,7 +616,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The stress testing status of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -518,7 +627,10 @@ public class GetJMeterSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Vum.
+             * <p>The consumed Virtual User Minutes (VUM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vum(Long vum) {
                 this.vum = vum;

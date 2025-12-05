@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AdjustJMeterSceneSpeedRequest} extends {@link RequestModel}
  *
  * <p>AdjustJMeterSceneSpeedRequest</p>
  */
 public class AdjustJMeterSceneSpeedRequest extends Request {
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("Speed")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer speed;
 
     private AdjustJMeterSceneSpeedRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * <p>The ID of the report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYYPZIH</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -79,7 +88,11 @@ public class AdjustJMeterSceneSpeedRequest extends Request {
         }
 
         /**
-         * Speed.
+         * <p>The load to which you want to adjust.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder speed(Integer speed) {
             this.putQueryParameter("Speed", speed);

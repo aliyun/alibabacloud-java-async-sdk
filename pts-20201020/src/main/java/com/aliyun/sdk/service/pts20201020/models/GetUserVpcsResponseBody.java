@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserVpcsResponseBody</p>
  */
 public class GetUserVpcsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Vpcs")
-    private java.util.List < Vpcs> vpcs;
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
+    private java.util.List<Vpcs> vpcs;
 
     private GetUserVpcsResponseBody(Builder builder) {
         this.code = builder.code;
@@ -57,6 +62,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
 
     public static GetUserVpcsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -118,7 +127,7 @@ public class GetUserVpcsResponseBody extends TeaModel {
     /**
      * @return vpcs
      */
-    public java.util.List < Vpcs> getVpcs() {
+    public java.util.List<Vpcs> getVpcs() {
         return this.vpcs;
     }
 
@@ -131,10 +140,28 @@ public class GetUserVpcsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < Vpcs> vpcs; 
+        private java.util.List<Vpcs> vpcs; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserVpcsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.vpcs = model.vpcs;
+        } 
 
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +180,7 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +188,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +199,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +210,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEE46204-E1CF-5F48-B094-67362DD4B73F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +221,14 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +236,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -198,9 +247,9 @@ public class GetUserVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs.
+         * <p>The VPCs.</p>
          */
-        public Builder vpcs(java.util.List < Vpcs> vpcs) {
+        public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.vpcs = vpcs;
             return this;
         }
@@ -211,29 +260,35 @@ public class GetUserVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RouterTableIds")
-        private java.util.List < String > routerTableIds;
+        @com.aliyun.core.annotation.NameInMap("RouterTableIds")
+        private java.util.List<String> routerTableIds;
 
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Vpcs(Builder builder) {
@@ -286,14 +341,14 @@ public class GetUserVpcsResponseBody extends TeaModel {
         /**
          * @return routerTableIds
          */
-        public java.util.List < String > getRouterTableIds() {
+        public java.util.List<String> getRouterTableIds() {
             return this.routerTableIds;
         }
 
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -316,13 +371,30 @@ public class GetUserVpcsResponseBody extends TeaModel {
             private String description; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < String > routerTableIds; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> routerTableIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.cidrBlock = model.cidrBlock;
+                this.description = model.description;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.routerTableIds = model.routerTableIds;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+            } 
+
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.80.0/20</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -330,7 +402,7 @@ public class GetUserVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the VPC.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +410,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +421,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm3fzmgkehpewjertna</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -354,23 +432,26 @@ public class GetUserVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * RouterTableIds.
+             * <p>The IDs of the route tables.</p>
              */
-            public Builder routerTableIds(java.util.List < String > routerTableIds) {
+            public Builder routerTableIds(java.util.List<String> routerTableIds) {
                 this.routerTableIds = routerTableIds;
                 return this;
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitches.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6gc56wdjpafoiwej6adqb4qn72xtw</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -378,7 +459,10 @@ public class GetUserVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shanghai-vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

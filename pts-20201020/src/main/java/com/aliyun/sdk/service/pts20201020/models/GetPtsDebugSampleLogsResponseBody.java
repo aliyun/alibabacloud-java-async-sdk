@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsDebugSampleLogsResponseBody} extends {@link TeaModel}
  *
  * <p>GetPtsDebugSampleLogsResponseBody</p>
  */
 public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SamplingLogs")
-    private java.util.List < SamplingLogs> samplingLogs;
+    @com.aliyun.core.annotation.NameInMap("SamplingLogs")
+    private java.util.List<SamplingLogs> samplingLogs;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetPtsDebugSampleLogsResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
 
     public static GetPtsDebugSampleLogsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -93,7 +102,7 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
     /**
      * @return samplingLogs
      */
-    public java.util.List < SamplingLogs> getSamplingLogs() {
+    public java.util.List<SamplingLogs> getSamplingLogs() {
         return this.samplingLogs;
     }
 
@@ -117,12 +126,29 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SamplingLogs> samplingLogs; 
+        private java.util.List<SamplingLogs> samplingLogs; 
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPtsDebugSampleLogsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.samplingLogs = model.samplingLogs;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4001</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +156,7 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +164,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +175,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +186,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,15 +197,22 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * SamplingLogs.
+         * <p>The sampling logs.</p>
          */
-        public Builder samplingLogs(java.util.List < SamplingLogs> samplingLogs) {
+        public Builder samplingLogs(java.util.List<SamplingLogs> samplingLogs) {
             this.samplingLogs = samplingLogs;
             return this;
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +220,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -191,62 +236,68 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPtsDebugSampleLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsDebugSampleLogsResponseBody</p>
+     */
     public static class SamplingLogs extends TeaModel {
-        @NameInMap("ChainId")
+        @com.aliyun.core.annotation.NameInMap("ChainId")
         private String chainId;
 
-        @NameInMap("ChainName")
+        @com.aliyun.core.annotation.NameInMap("ChainName")
         private String chainName;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private String checkResult;
 
-        @NameInMap("ExportConfig")
+        @com.aliyun.core.annotation.NameInMap("ExportConfig")
         private String exportConfig;
 
-        @NameInMap("ExportContent")
+        @com.aliyun.core.annotation.NameInMap("ExportContent")
         private String exportContent;
 
-        @NameInMap("HttpRequestBody")
+        @com.aliyun.core.annotation.NameInMap("HttpRequestBody")
         private String httpRequestBody;
 
-        @NameInMap("HttpRequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("HttpRequestHeaders")
         private String httpRequestHeaders;
 
-        @NameInMap("HttpRequestMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpRequestMethod")
         private String httpRequestMethod;
 
-        @NameInMap("HttpRequestUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpRequestUrl")
         private String httpRequestUrl;
 
-        @NameInMap("HttpResponseBody")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseBody")
         private String httpResponseBody;
 
-        @NameInMap("HttpResponseFailMsg")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseFailMsg")
         private String httpResponseFailMsg;
 
-        @NameInMap("HttpResponseHeaders")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseHeaders")
         private String httpResponseHeaders;
 
-        @NameInMap("HttpResponseStatus")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseStatus")
         private String httpResponseStatus;
 
-        @NameInMap("HttpStartTime")
+        @com.aliyun.core.annotation.NameInMap("HttpStartTime")
         private Long httpStartTime;
 
-        @NameInMap("HttpTiming")
+        @com.aliyun.core.annotation.NameInMap("HttpTiming")
         private String httpTiming;
 
-        @NameInMap("ImportContent")
+        @com.aliyun.core.annotation.NameInMap("ImportContent")
         private String importContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Rt")
+        @com.aliyun.core.annotation.NameInMap("Rt")
         private String rt;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private SamplingLogs(Builder builder) {
@@ -433,8 +484,36 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             private String rt; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(SamplingLogs model) {
+                this.chainId = model.chainId;
+                this.chainName = model.chainName;
+                this.checkResult = model.checkResult;
+                this.exportConfig = model.exportConfig;
+                this.exportContent = model.exportContent;
+                this.httpRequestBody = model.httpRequestBody;
+                this.httpRequestHeaders = model.httpRequestHeaders;
+                this.httpRequestMethod = model.httpRequestMethod;
+                this.httpRequestUrl = model.httpRequestUrl;
+                this.httpResponseBody = model.httpResponseBody;
+                this.httpResponseFailMsg = model.httpResponseFailMsg;
+                this.httpResponseHeaders = model.httpResponseHeaders;
+                this.httpResponseStatus = model.httpResponseStatus;
+                this.httpStartTime = model.httpStartTime;
+                this.httpTiming = model.httpTiming;
+                this.importContent = model.importContent;
+                this.nodeId = model.nodeId;
+                this.rt = model.rt;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
-             * ChainId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65354719</p>
              */
             public Builder chainId(String chainId) {
                 this.chainId = chainId;
@@ -442,7 +521,7 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ChainName.
+             * <p>The name of the session.</p>
              */
             public Builder chainName(String chainName) {
                 this.chainName = chainName;
@@ -450,7 +529,7 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckResult.
+             * <p>The assertion check result.</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -458,7 +537,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExportConfig.
+             * <p>The parameter export configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;skuId&quot;:&quot;{R:json@$.page.list[0].skuId}&quot;}</p>
              */
             public Builder exportConfig(String exportConfig) {
                 this.exportConfig = exportConfig;
@@ -466,7 +548,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExportContent.
+             * <p>The exported parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;skuId&quot;:&quot;1&quot;}</p>
              */
             public Builder exportContent(String exportContent) {
                 this.exportContent = exportContent;
@@ -474,7 +559,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpRequestBody.
+             * <p>The body of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;loginacct&quot;:&quot;acce&quot;}</p>
              */
             public Builder httpRequestBody(String httpRequestBody) {
                 this.httpRequestBody = httpRequestBody;
@@ -482,7 +570,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpRequestHeaders.
+             * <p>The request headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;v2&quot;,&quot;sensitive&quot;:false,&quot;value&quot;:&quot;1&quot;},{&quot;name&quot;:&quot;x-pts-test&quot;,&quot;sensitive&quot;:false,&quot;value&quot;:&quot;2&quot;}]</p>
              */
             public Builder httpRequestHeaders(String httpRequestHeaders) {
                 this.httpRequestHeaders = httpRequestHeaders;
@@ -490,7 +581,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpRequestMethod.
+             * <p>The request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder httpRequestMethod(String httpRequestMethod) {
                 this.httpRequestMethod = httpRequestMethod;
@@ -498,7 +592,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpRequestUrl.
+             * <p>The endpoint that specifies where the request is directed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">http://www.example.com</a></p>
              */
             public Builder httpRequestUrl(String httpRequestUrl) {
                 this.httpRequestUrl = httpRequestUrl;
@@ -506,7 +603,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpResponseBody.
+             * <p>The response body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;timestamp&quot;:1679903049155,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;No message available&quot;,&quot;path&quot;:&quot;/&quot;}</p>
              */
             public Builder httpResponseBody(String httpResponseBody) {
                 this.httpResponseBody = httpResponseBody;
@@ -514,7 +614,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpResponseFailMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder httpResponseFailMsg(String httpResponseFailMsg) {
                 this.httpResponseFailMsg = httpResponseFailMsg;
@@ -522,7 +625,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpResponseHeaders.
+             * <p>The response headers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;valuePos&quot;:18,&quot;name&quot;:&quot;transfer-encoding&quot;,&quot;buffer&quot;:{&quot;empty&quot;:false,&quot;full&quot;:false},&quot;sensitive&quot;:false,&quot;value&quot;:&quot;chunked&quot;},{&quot;valuePos&quot;:13,&quot;name&quot;:&quot;Content-Type&quot;,&quot;buffer&quot;:{&quot;empty&quot;:false,&quot;full&quot;:false},&quot;sensitive&quot;:false,&quot;value&quot;:&quot;application/json;charset=UTF-8&quot;},{&quot;valuePos&quot;:5,&quot;name&quot;:&quot;Date&quot;,&quot;buffer&quot;:{&quot;empty&quot;:false,&quot;full&quot;:false},&quot;sensitive&quot;:false,&quot;value&quot;:&quot;Mon, 27 Mar 2023 07:44:08 GMT&quot;}]</p>
              */
             public Builder httpResponseHeaders(String httpResponseHeaders) {
                 this.httpResponseHeaders = httpResponseHeaders;
@@ -530,7 +636,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpResponseStatus.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpResponseStatus(String httpResponseStatus) {
                 this.httpResponseStatus = httpResponseStatus;
@@ -538,7 +647,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStartTime.
+             * <p>The time when the request was sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder httpStartTime(Long httpStartTime) {
                 this.httpStartTime = httpStartTime;
@@ -546,7 +658,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpTiming.
+             * <p>The HTTP timing information in a waterfall format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;traceId&quot;:&quot;0:1:10a94f66pts-2069351-allsparktask&quot;,&quot;requests&quot;:[{&quot;lease&quot;:{&quot;conn&quot;:{&quot;duration&quot;:-1,&quot;finish&quot;:-1,&quot;operation&quot;:&quot;conn&quot;,&quot;start&quot;:-1},&quot;dns&quot;:{&quot;duration&quot;:-1,&quot;finish&quot;:-1,&quot;operation&quot;:&quot;dns&quot;,&quot;start&quot;:-1},&quot;duration&quot;:-1,&quot;finish&quot;:-1,&quot;operation&quot;:&quot;lease&quot;,&quot;start&quot;:32277914755},&quot;recv&quot;:{&quot;duration&quot;:225975,&quot;finish&quot;:32283700284,&quot;message&quot;:&quot;&quot;,&quot;operation&quot;:&quot;recv&quot;,&quot;start&quot;:32283474309},&quot;sent&quot;:{&quot;duration&quot;:594179,&quot;finish&quot;:32278776504,&quot;message&quot;:&quot;&quot;,&quot;operation&quot;:&quot;sent&quot;,&quot;start&quot;:32278182325},&quot;tag&quot;:&quot;GET <a href="http://tomcodemall.com:30080/api/product/skuinfo/list?key=2&vv=4&t4=%EF%BB%BF101%22%7D%5D,%22message%22:%22%22%7D">http://tomcodemall.com:30080/api/product/skuinfo/list?key=2&amp;vv=4&amp;t4=%EF%BB%BF101&quot;}],&quot;message&quot;:&quot;&quot;}</a></p>
              */
             public Builder httpTiming(String httpTiming) {
                 this.httpTiming = httpTiming;
@@ -554,7 +669,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportContent.
+             * <p>The imported parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder importContent(String importContent) {
                 this.importContent = importContent;
@@ -562,7 +680,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1345531</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -570,7 +691,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * <p>The response time. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>230</p>
              */
             public Builder rt(String rt) {
                 this.rt = rt;
@@ -578,7 +702,10 @@ public class GetPtsDebugSampleLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650253024471</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

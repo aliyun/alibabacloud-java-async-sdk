@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveEnvRequest} extends {@link RequestModel}
  *
  * <p>SaveEnvRequest</p>
  */
 public class SaveEnvRequest extends Request {
-    @Query
-    @NameInMap("Env")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Env env;
 
     private SaveEnvRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class SaveEnvRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,8 @@ public class SaveEnvRequest extends Request {
         } 
 
         /**
-         * Env.
+         * <p>The JMeter environment.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder env(Env env) {
             String envShrink = shrink(env, "Env", "json");
@@ -71,13 +77,19 @@ public class SaveEnvRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveEnvRequest} extends {@link TeaModel}
+     *
+     * <p>SaveEnvRequest</p>
+     */
     public static class Files extends TeaModel {
-        @NameInMap("FileName")
-        @Validation(required = true, maxLength = 100, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
         private String fileName;
 
-        @NameInMap("FileOssAddress")
-        @Validation(required = true, maxLength = 200, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 200, minLength = 1)
         private String fileOssAddress;
 
         private Files(Builder builder) {
@@ -111,8 +123,20 @@ public class SaveEnvRequest extends Request {
             private String fileName; 
             private String fileOssAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+            } 
+
             /**
-             * FileName.
+             * <p>The name of the file. Make sure that the file name is the same as the file name in the value of <strong>FileOssAddress</strong>.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>json.jar</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -120,7 +144,14 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The Object Storage Service (OSS) URL of the file. Make sure that the file is accessible from the Internet.</p>
+             * <blockquote>
+             * <p> Only OSS URLs in the China (Shanghai) region are supported.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -134,17 +165,23 @@ public class SaveEnvRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveEnvRequest} extends {@link TeaModel}
+     *
+     * <p>SaveEnvRequest</p>
+     */
     public static class Properties extends TeaModel {
-        @NameInMap("Description")
-        @Validation(maxLength = 1024)
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024)
         private String description;
 
-        @NameInMap("Name")
-        @Validation(maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024, minLength = 1)
         private String name;
 
-        @NameInMap("Value")
-        @Validation(maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024, minLength = 1)
         private String value;
 
         private Properties(Builder builder) {
@@ -187,8 +224,20 @@ public class SaveEnvRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>远程主机</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -196,7 +245,10 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_hosts</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +256,10 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -218,25 +273,31 @@ public class SaveEnvRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveEnvRequest} extends {@link TeaModel}
+     *
+     * <p>SaveEnvRequest</p>
+     */
     public static class Env extends TeaModel {
-        @NameInMap("EnvId")
-        @Validation(maxLength = 20)
+        @com.aliyun.core.annotation.NameInMap("EnvId")
+        @com.aliyun.core.annotation.Validation(maxLength = 20)
         private String envId;
 
-        @NameInMap("EnvName")
-        @Validation(required = true, maxLength = 50, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("EnvName")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 1)
         private String envName;
 
-        @NameInMap("Files")
-        @Validation(required = true)
-        private java.util.List < Files> files;
+        @com.aliyun.core.annotation.NameInMap("Files")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<Files> files;
 
-        @NameInMap("JmeterPluginLabel")
-        @Validation(maxLength = 32)
+        @com.aliyun.core.annotation.NameInMap("JmeterPluginLabel")
+        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String jmeterPluginLabel;
 
-        @NameInMap("Properties")
-        private java.util.List < Properties> properties;
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.List<Properties> properties;
 
         private Env(Builder builder) {
             this.envId = builder.envId;
@@ -271,7 +332,7 @@ public class SaveEnvRequest extends Request {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -285,19 +346,33 @@ public class SaveEnvRequest extends Request {
         /**
          * @return properties
          */
-        public java.util.List < Properties> getProperties() {
+        public java.util.List<Properties> getProperties() {
             return this.properties;
         }
 
         public static final class Builder {
             private String envId; 
             private String envName; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private String jmeterPluginLabel; 
-            private java.util.List < Properties> properties; 
+            private java.util.List<Properties> properties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Env model) {
+                this.envId = model.envId;
+                this.envName = model.envName;
+                this.files = model.files;
+                this.jmeterPluginLabel = model.jmeterPluginLabel;
+                this.properties = model.properties;
+            } 
 
             /**
-             * EnvId.
+             * <p>The ID of the JMeter environment. To create a JMeter environment, leave this parameter empty. To update a JMeter environment, specify the ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10YPA8H</p>
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -305,7 +380,11 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * EnvName.
+             * <p>The name of the environment.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-create</p>
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -313,15 +392,19 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * Files.
+             * <p>The files on which the environment depends.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }
 
             /**
-             * JmeterPluginLabel.
+             * <p>The extension label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jmeterPluginLabel(String jmeterPluginLabel) {
                 this.jmeterPluginLabel = jmeterPluginLabel;
@@ -329,9 +412,9 @@ public class SaveEnvRequest extends Request {
             }
 
             /**
-             * Properties.
+             * <p>The JMeter attributes.</p>
              */
-            public Builder properties(java.util.List < Properties> properties) {
+            public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
                 return this;
             }

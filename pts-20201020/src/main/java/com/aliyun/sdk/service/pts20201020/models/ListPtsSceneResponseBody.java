@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPtsSceneResponseBody} extends {@link TeaModel}
  *
  * <p>ListPtsSceneResponseBody</p>
  */
 public class ListPtsSceneResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneViewList")
-    private java.util.List < SceneViewList> sceneViewList;
+    @com.aliyun.core.annotation.NameInMap("SceneViewList")
+    private java.util.List<SceneViewList> sceneViewList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListPtsSceneResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListPtsSceneResponseBody extends TeaModel {
 
     public static ListPtsSceneResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class ListPtsSceneResponseBody extends TeaModel {
     /**
      * @return sceneViewList
      */
-    public java.util.List < SceneViewList> getSceneViewList() {
+    public java.util.List<SceneViewList> getSceneViewList() {
         return this.sceneViewList;
     }
 
@@ -94,11 +103,26 @@ public class ListPtsSceneResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < SceneViewList> sceneViewList; 
+        private java.util.List<SceneViewList> sceneViewList; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPtsSceneResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sceneViewList = model.sceneViewList;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, no data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4001</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,10 @@ public class ListPtsSceneResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the request was successful, no data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +141,7 @@ public class ListPtsSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, no data is returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +149,10 @@ public class ListPtsSceneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6F2ED8-E31B-497F-85AB-C4E358A5F667</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,15 +160,22 @@ public class ListPtsSceneResponseBody extends TeaModel {
         }
 
         /**
-         * SceneViewList.
+         * <p>The returned scenarios.</p>
          */
-        public Builder sceneViewList(java.util.List < SceneViewList> sceneViewList) {
+        public Builder sceneViewList(java.util.List<SceneViewList> sceneViewList) {
             this.sceneViewList = sceneViewList;
             return this;
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,17 +188,23 @@ public class ListPtsSceneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPtsSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPtsSceneResponseBody</p>
+     */
     public static class SceneViewList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SceneViewList(Builder builder) {
@@ -213,8 +256,21 @@ public class ListPtsSceneResponseBody extends TeaModel {
             private String sceneName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneViewList model) {
+                this.createTime = model.createTime;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the PTS scenario was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-26 15:28:39</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +278,10 @@ public class ListPtsSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DFGVS3S</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -230,7 +289,7 @@ public class ListPtsSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The scenario name.</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -238,7 +297,10 @@ public class ListPtsSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the PTS scenario. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Draft WaitStart Debugging Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

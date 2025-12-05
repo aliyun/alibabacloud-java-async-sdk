@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDebuggingJMeterSceneResponseBody} extends {@link TeaModel}
  *
  * <p>StartDebuggingJMeterSceneResponseBody</p>
  */
 public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private StartDebuggingJMeterSceneResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
 
     public static StartDebuggingJMeterSceneResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(StartDebuggingJMeterSceneResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,10 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +141,7 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +149,10 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the debugging report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MH0SU1I</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -130,7 +160,10 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,14 @@ public class StartDebuggingJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

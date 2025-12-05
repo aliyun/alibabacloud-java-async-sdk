@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJMeterReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJMeterReportsResponseBody</p>
  */
 public class ListJMeterReportsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Reports")
-    private java.util.List < Reports> reports;
+    @com.aliyun.core.annotation.NameInMap("Reports")
+    private java.util.List<Reports> reports;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListJMeterReportsResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
 
     public static ListJMeterReportsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,7 +106,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
     /**
      * @return reports
      */
-    public java.util.List < Reports> getReports() {
+    public java.util.List<Reports> getReports() {
         return this.reports;
     }
 
@@ -128,13 +137,31 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Reports> reports; 
+        private java.util.List<Reports> reports; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJMeterReportsResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.reports = model.reports;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +180,7 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +188,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the returned report page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +199,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of returned reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -174,15 +210,18 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Reports.
+         * <p>The reports.</p>
          */
-        public Builder reports(java.util.List < Reports> reports) {
+        public Builder reports(java.util.List<Reports> reports) {
             this.reports = reports;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of reports returned based on the condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -211,20 +260,26 @@ public class ListJMeterReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListJMeterReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListJMeterReportsResponseBody</p>
+     */
     public static class Reports extends TeaModel {
-        @NameInMap("ActualStartTime")
+        @com.aliyun.core.annotation.NameInMap("ActualStartTime")
         private Long actualStartTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ReportName")
+        @com.aliyun.core.annotation.NameInMap("ReportName")
         private String reportName;
 
-        @NameInMap("Vum")
+        @com.aliyun.core.annotation.NameInMap("Vum")
         private Long vum;
 
         private Reports(Builder builder) {
@@ -285,8 +340,22 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             private String reportName; 
             private Long vum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reports model) {
+                this.actualStartTime = model.actualStartTime;
+                this.duration = model.duration;
+                this.reportId = model.reportId;
+                this.reportName = model.reportName;
+                this.vum = model.vum;
+            } 
+
             /**
-             * ActualStartTime.
+             * <p>The start time of the stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637157073000</p>
              */
             public Builder actualStartTime(Long actualStartTime) {
                 this.actualStartTime = actualStartTime;
@@ -294,7 +363,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The stress testing duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10分钟</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -302,7 +374,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7R4RE352</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -310,7 +385,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportName.
+             * <p>The report name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reportName(String reportName) {
                 this.reportName = reportName;
@@ -318,7 +396,10 @@ public class ListJMeterReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Vum.
+             * <p>The consumed Virtual User Minutes (VUM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder vum(Long vum) {
                 this.vum = vum;

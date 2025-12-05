@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StopDebugPtsSceneResponse} extends {@link TeaModel}
+ * {@link ListVpcConfigsResponse} extends {@link TeaModel}
  *
- * <p>StopDebugPtsSceneResponse</p>
+ * <p>ListVpcConfigsResponse</p>
  */
-public class StopDebugPtsSceneResponse extends Response {
+public class ListVpcConfigsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class StopDebugPtsSceneResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private StopDebugPtsSceneResponseBody body;
+    private ListVpcConfigsResponseBody body;
 
-    private StopDebugPtsSceneResponse(BuilderImpl builder) {
+    private ListVpcConfigsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StopDebugPtsSceneResponse create() {
+    public static ListVpcConfigsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class StopDebugPtsSceneResponse extends Response {
     /**
      * @return body
      */
-    public StopDebugPtsSceneResponseBody getBody() {
+    public ListVpcConfigsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StopDebugPtsSceneResponse, Builder> {
+    public interface Builder extends Response.Builder<ListVpcConfigsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StopDebugPtsSceneResponseBody body);
+        Builder body(ListVpcConfigsResponseBody body);
 
         @Override
-        StopDebugPtsSceneResponse build();
+        ListVpcConfigsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopDebugPtsSceneResponse, Builder>
+            extends Response.BuilderImpl<ListVpcConfigsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private StopDebugPtsSceneResponseBody body; 
+        private ListVpcConfigsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopDebugPtsSceneResponse response) {
+        private BuilderImpl(ListVpcConfigsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class StopDebugPtsSceneResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StopDebugPtsSceneResponseBody body) {
+        public Builder body(ListVpcConfigsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StopDebugPtsSceneResponse build() {
-            return new StopDebugPtsSceneResponse(this);
+        public ListVpcConfigsResponse build() {
+            return new ListVpcConfigsResponse(this);
         } 
 
     } 

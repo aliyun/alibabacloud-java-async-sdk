@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterSamplingLogsRequest} extends {@link RequestModel}
  *
  * <p>GetJMeterSamplingLogsRequest</p>
  */
 public class GetJMeterSamplingLogsRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
     private Long agentId;
 
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("MaxRT")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxRT")
     private Integer maxRT;
 
-    @Query
-    @NameInMap("MinRT")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinRT")
     private Integer minRT;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 10000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @Query
-    @NameInMap("SamplerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SamplerId")
     private Integer samplerId;
 
-    @Query
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @Query
-    @NameInMap("Thread")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Thread")
     private String thread;
 
     private GetJMeterSamplingLogsRequest(Builder builder) {
@@ -92,7 +97,7 @@ public class GetJMeterSamplingLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -225,7 +230,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The ID of the load generator. This parameter is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14238000</p>
          */
         public Builder agentId(Long agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -234,7 +242,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637157073000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -243,7 +254,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637157076000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +266,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword. You can use the keyword in the value of <strong>SceneName</strong> for fuzzy searching or use the value of <strong>SceneID</strong> for exact searching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -261,7 +278,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * MaxRT.
+         * <p>The maximum response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxRT(Integer maxRT) {
             this.putQueryParameter("MaxRT", maxRT);
@@ -270,7 +290,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * MinRT.
+         * <p>The minimum response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minRT(Integer minRT) {
             this.putQueryParameter("MinRT", minRT);
@@ -279,7 +302,11 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -288,7 +315,11 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -297,7 +328,11 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7R4RE352</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -306,7 +341,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * ResponseCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder responseCode(String responseCode) {
             this.putQueryParameter("ResponseCode", responseCode);
@@ -315,7 +353,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * SamplerId.
+         * <p>The ID of the sampler. The value starts from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder samplerId(Integer samplerId) {
             this.putQueryParameter("SamplerId", samplerId);
@@ -324,7 +365,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * Success.
+         * <p>Specifies whether the sampling is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.putQueryParameter("Success", success);
@@ -333,7 +377,10 @@ public class GetJMeterSamplingLogsRequest extends Request {
         }
 
         /**
-         * Thread.
+         * <p>The name of the thread. Fuzzy searching is supported. If you specify multiple threads, separate the threads with spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder thread(String thread) {
             this.putQueryParameter("Thread", thread);

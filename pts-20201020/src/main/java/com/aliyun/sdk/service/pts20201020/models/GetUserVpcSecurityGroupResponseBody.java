@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserVpcSecurityGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserVpcSecurityGroupResponseBody</p>
  */
 public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroupCount")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupCount")
     private Integer securityGroupCount;
 
-    @NameInMap("SecurityGroupList")
-    private java.util.List < SecurityGroupList> securityGroupList;
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupList")
+    private java.util.List<SecurityGroupList> securityGroupList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUserVpcSecurityGroupResponseBody(Builder builder) {
@@ -57,6 +62,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
 
     public static GetUserVpcSecurityGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -111,7 +120,7 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
     /**
      * @return securityGroupList
      */
-    public java.util.List < SecurityGroupList> getSecurityGroupList() {
+    public java.util.List<SecurityGroupList> getSecurityGroupList() {
         return this.securityGroupList;
     }
 
@@ -130,11 +139,29 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer securityGroupCount; 
-        private java.util.List < SecurityGroupList> securityGroupList; 
+        private java.util.List<SecurityGroupList> securityGroupList; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetUserVpcSecurityGroupResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.securityGroupCount = model.securityGroupCount;
+            this.securityGroupList = model.securityGroupList;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +180,7 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +188,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +199,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +210,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61B15017-1A68-5C47-834F-87E2BBC44F2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +221,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupCount.
+         * <p>The number of security groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder securityGroupCount(Integer securityGroupCount) {
             this.securityGroupCount = securityGroupCount;
@@ -190,15 +232,22 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupList.
+         * <p>The security groups.</p>
          */
-        public Builder securityGroupList(java.util.List < SecurityGroupList> securityGroupList) {
+        public Builder securityGroupList(java.util.List<SecurityGroupList> securityGroupList) {
             this.securityGroupList = securityGroupList;
             return this;
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -211,17 +260,23 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserVpcSecurityGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserVpcSecurityGroupResponseBody</p>
+     */
     public static class SecurityGroupList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SecurityGroupList(Builder builder) {
@@ -273,8 +328,18 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
             private String securityGroupName; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupList model) {
+                this.description = model.description;
+                this.securityGroupId = model.securityGroupId;
+                this.securityGroupName = model.securityGroupName;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the security group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -282,7 +347,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp16bt3zuugxpfjkasdfvthxth8</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -290,7 +358,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-security-group</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -298,7 +369,10 @@ public class GetUserVpcSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6tar2ohlasdhsatjln37h30bv</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterSampleMetricsRequest} extends {@link RequestModel}
  *
  * <p>GetJMeterSampleMetricsRequest</p>
  */
 public class GetJMeterSampleMetricsRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("SamplerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SamplerId")
     private Integer samplerId;
 
     private GetJMeterSampleMetricsRequest(Builder builder) {
@@ -45,7 +50,7 @@ public class GetJMeterSampleMetricsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,10 @@ public class GetJMeterSampleMetricsRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637157070000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -106,7 +114,10 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637157073000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -115,7 +126,11 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The report ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7R4RE352</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -124,7 +139,10 @@ public class GetJMeterSampleMetricsRequest extends Request {
         }
 
         /**
-         * SamplerId.
+         * <p>The sampler ID. This parameter value starts from 0. If this parameter value is -1, the data of the whole scenario is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder samplerId(Integer samplerId) {
             this.putQueryParameter("SamplerId", samplerId);

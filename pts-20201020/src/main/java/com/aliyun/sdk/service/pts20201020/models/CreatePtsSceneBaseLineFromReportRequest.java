@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePtsSceneBaseLineFromReportRequest} extends {@link RequestModel}
  *
  * <p>CreatePtsSceneBaseLineFromReportRequest</p>
  */
 public class CreatePtsSceneBaseLineFromReportRequest extends Request {
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private CreatePtsSceneBaseLineFromReportRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class CreatePtsSceneBaseLineFromReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class CreatePtsSceneBaseLineFromReportRequest extends Request {
         } 
 
         /**
-         * ReportId.
+         * <p>The ID of the report. For more information, see the <a href="https://help.aliyun.com/document_detail/201321.html">table</a> provided in this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HNB78HB</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -79,7 +88,11 @@ public class CreatePtsSceneBaseLineFromReportRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene. For more information, see the <a href="https://help.aliyun.com/document_detail/201321.html">table</a> provided in this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCB78HB</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

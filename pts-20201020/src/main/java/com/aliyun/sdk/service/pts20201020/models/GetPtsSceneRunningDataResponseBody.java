@@ -1,87 +1,92 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsSceneRunningDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetPtsSceneRunningDataResponseBody</p>
  */
 public class GetPtsSceneRunningDataResponseBody extends TeaModel {
-    @NameInMap("AgentLocation")
-    private java.util.List < AgentLocation> agentLocation;
+    @com.aliyun.core.annotation.NameInMap("AgentLocation")
+    private java.util.List<AgentLocation> agentLocation;
 
-    @NameInMap("AliveAgents")
+    @com.aliyun.core.annotation.NameInMap("AliveAgents")
     private Integer aliveAgents;
 
-    @NameInMap("AverageRt")
+    @com.aliyun.core.annotation.NameInMap("AverageRt")
     private Long averageRt;
 
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @NameInMap("ChainMonitorDataList")
-    private java.util.List < ChainMonitorDataList> chainMonitorDataList;
+    @com.aliyun.core.annotation.NameInMap("ChainMonitorDataList")
+    private java.util.List<ChainMonitorDataList> chainMonitorDataList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Integer concurrency;
 
-    @NameInMap("ConcurrencyLimit")
+    @com.aliyun.core.annotation.NameInMap("ConcurrencyLimit")
     private Integer concurrencyLimit;
 
-    @NameInMap("FailedBusinessCount")
+    @com.aliyun.core.annotation.NameInMap("FailedBusinessCount")
     private Long failedBusinessCount;
 
-    @NameInMap("FailedRequestCount")
+    @com.aliyun.core.annotation.NameInMap("FailedRequestCount")
     private Long failedRequestCount;
 
-    @NameInMap("HasReport")
+    @com.aliyun.core.annotation.NameInMap("HasReport")
     private Boolean hasReport;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestBps")
+    @com.aliyun.core.annotation.NameInMap("RequestBps")
     private String requestBps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseBps")
+    @com.aliyun.core.annotation.NameInMap("ResponseBps")
     private String responseBps;
 
-    @NameInMap("Seg90Rt")
+    @com.aliyun.core.annotation.NameInMap("Seg90Rt")
     private Long seg90Rt;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalAgents")
+    @com.aliyun.core.annotation.NameInMap("TotalAgents")
     private Integer totalAgents;
 
-    @NameInMap("TotalRealQps")
+    @com.aliyun.core.annotation.NameInMap("TotalRealQps")
     private Integer totalRealQps;
 
-    @NameInMap("TotalRequestCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRequestCount")
     private Long totalRequestCount;
 
-    @NameInMap("TpsLimit")
+    @com.aliyun.core.annotation.NameInMap("TpsLimit")
     private Integer tpsLimit;
 
-    @NameInMap("Vum")
+    @com.aliyun.core.annotation.NameInMap("Vum")
     private Long vum;
 
     private GetPtsSceneRunningDataResponseBody(Builder builder) {
@@ -119,10 +124,14 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentLocation
      */
-    public java.util.List < AgentLocation> getAgentLocation() {
+    public java.util.List<AgentLocation> getAgentLocation() {
         return this.agentLocation;
     }
 
@@ -150,7 +159,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     /**
      * @return chainMonitorDataList
      */
-    public java.util.List < ChainMonitorDataList> getChainMonitorDataList() {
+    public java.util.List<ChainMonitorDataList> getChainMonitorDataList() {
         return this.chainMonitorDataList;
     }
 
@@ -288,11 +297,11 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AgentLocation> agentLocation; 
+        private java.util.List<AgentLocation> agentLocation; 
         private Integer aliveAgents; 
         private Long averageRt; 
         private Long beginTime; 
-        private java.util.List < ChainMonitorDataList> chainMonitorDataList; 
+        private java.util.List<ChainMonitorDataList> chainMonitorDataList; 
         private String code; 
         private Integer concurrency; 
         private Integer concurrencyLimit; 
@@ -313,16 +322,49 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         private Integer tpsLimit; 
         private Long vum; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPtsSceneRunningDataResponseBody model) {
+            this.agentLocation = model.agentLocation;
+            this.aliveAgents = model.aliveAgents;
+            this.averageRt = model.averageRt;
+            this.beginTime = model.beginTime;
+            this.chainMonitorDataList = model.chainMonitorDataList;
+            this.code = model.code;
+            this.concurrency = model.concurrency;
+            this.concurrencyLimit = model.concurrencyLimit;
+            this.failedBusinessCount = model.failedBusinessCount;
+            this.failedRequestCount = model.failedRequestCount;
+            this.hasReport = model.hasReport;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestBps = model.requestBps;
+            this.requestId = model.requestId;
+            this.responseBps = model.responseBps;
+            this.seg90Rt = model.seg90Rt;
+            this.status = model.status;
+            this.success = model.success;
+            this.totalAgents = model.totalAgents;
+            this.totalRealQps = model.totalRealQps;
+            this.totalRequestCount = model.totalRequestCount;
+            this.tpsLimit = model.tpsLimit;
+            this.vum = model.vum;
+        } 
+
         /**
-         * AgentLocation.
+         * <p>The location information of stress testers.</p>
          */
-        public Builder agentLocation(java.util.List < AgentLocation> agentLocation) {
+        public Builder agentLocation(java.util.List<AgentLocation> agentLocation) {
             this.agentLocation = agentLocation;
             return this;
         }
 
         /**
-         * AliveAgents.
+         * <p>The number of healthy engines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder aliveAgents(Integer aliveAgents) {
             this.aliveAgents = aliveAgents;
@@ -330,7 +372,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * AverageRt.
+         * <p>The average RT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         public Builder averageRt(Long averageRt) {
             this.averageRt = averageRt;
@@ -338,7 +383,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * BeginTime.
+         * <p>The start time of the stress testing that is displayed as a timestamp. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651895518339</p>
          */
         public Builder beginTime(Long beginTime) {
             this.beginTime = beginTime;
@@ -346,15 +394,18 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * ChainMonitorDataList.
+         * <p>The stress testing details of the GetPtsSceneRunningData operation.</p>
          */
-        public Builder chainMonitorDataList(java.util.List < ChainMonitorDataList> chainMonitorDataList) {
+        public Builder chainMonitorDataList(java.util.List<ChainMonitorDataList> chainMonitorDataList) {
             this.chainMonitorDataList = chainMonitorDataList;
             return this;
         }
 
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4001</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -362,7 +413,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Concurrency.
+         * <p>The total concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.concurrency = concurrency;
@@ -370,7 +424,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * ConcurrencyLimit.
+         * <p>The maximum concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder concurrencyLimit(Integer concurrencyLimit) {
             this.concurrencyLimit = concurrencyLimit;
@@ -378,7 +435,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * FailedBusinessCount.
+         * <p>The total number of failed businesses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78</p>
          */
         public Builder failedBusinessCount(Long failedBusinessCount) {
             this.failedBusinessCount = failedBusinessCount;
@@ -386,7 +446,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * FailedRequestCount.
+         * <p>The number of failed requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder failedRequestCount(Long failedRequestCount) {
             this.failedRequestCount = failedRequestCount;
@@ -394,7 +457,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * HasReport.
+         * <p>Indicates whether a report is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasReport(Boolean hasReport) {
             this.hasReport = hasReport;
@@ -402,7 +468,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -410,7 +479,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -418,7 +490,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestBps.
+         * <p>The size of the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89kb</p>
          */
         public Builder requestBps(String requestBps) {
             this.requestBps = requestBps;
@@ -426,7 +501,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -434,7 +512,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * ResponseBps.
+         * <p>The size of the response body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8kb</p>
          */
         public Builder responseBps(String responseBps) {
             this.responseBps = responseBps;
@@ -442,7 +523,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Seg90Rt.
+         * <p>The 90th percentile of reaction time (RT).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         public Builder seg90Rt(Long seg90Rt) {
             this.seg90Rt = seg90Rt;
@@ -450,7 +534,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The scenario status. The default parameter value is 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -458,7 +545,14 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -466,7 +560,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAgents.
+         * <p>The total number of stress testers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalAgents(Integer totalAgents) {
             this.totalAgents = totalAgents;
@@ -474,7 +571,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRealQps.
+         * <p>The total number of queries per second (QPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalRealQps(Integer totalRealQps) {
             this.totalRealQps = totalRealQps;
@@ -482,7 +582,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRequestCount.
+         * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8900</p>
          */
         public Builder totalRequestCount(Long totalRequestCount) {
             this.totalRequestCount = totalRequestCount;
@@ -490,7 +593,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * TpsLimit.
+         * <p>The maximum transactions per second (TPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder tpsLimit(Integer tpsLimit) {
             this.tpsLimit = tpsLimit;
@@ -498,7 +604,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         }
 
         /**
-         * Vum.
+         * <p>The consumed Virtual User Minutes (VUM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder vum(Long vum) {
             this.vum = vum;
@@ -511,17 +620,23 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPtsSceneRunningDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneRunningDataResponseBody</p>
+     */
     public static class AgentLocation extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private AgentLocation(Builder builder) {
@@ -573,8 +688,21 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             private String province; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(AgentLocation model) {
+                this.count = model.count;
+                this.isp = model.isp;
+                this.province = model.province;
+                this.region = model.region;
+            } 
+
             /**
-             * Count.
+             * <p>The number of stress testers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -582,7 +710,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The provider of the stress tester.</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -590,7 +718,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province in which the stress tester resides.</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -598,7 +726,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the stress tester resides.</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -612,17 +740,23 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsSceneRunningDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneRunningDataResponseBody</p>
+     */
     public static class CheckPointResult extends TeaModel {
-        @NameInMap("FailedBusinessCount")
+        @com.aliyun.core.annotation.NameInMap("FailedBusinessCount")
         private Long failedBusinessCount;
 
-        @NameInMap("FailedBusinessQps")
+        @com.aliyun.core.annotation.NameInMap("FailedBusinessQps")
         private Float failedBusinessQps;
 
-        @NameInMap("SucceedBusinessCount")
+        @com.aliyun.core.annotation.NameInMap("SucceedBusinessCount")
         private Long succeedBusinessCount;
 
-        @NameInMap("SucceedBusinessQps")
+        @com.aliyun.core.annotation.NameInMap("SucceedBusinessQps")
         private Float succeedBusinessQps;
 
         private CheckPointResult(Builder builder) {
@@ -674,8 +808,21 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             private Long succeedBusinessCount; 
             private Float succeedBusinessQps; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckPointResult model) {
+                this.failedBusinessCount = model.failedBusinessCount;
+                this.failedBusinessQps = model.failedBusinessQps;
+                this.succeedBusinessCount = model.succeedBusinessCount;
+                this.succeedBusinessQps = model.succeedBusinessQps;
+            } 
+
             /**
-             * FailedBusinessCount.
+             * <p>The number of failed businesses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder failedBusinessCount(Long failedBusinessCount) {
                 this.failedBusinessCount = failedBusinessCount;
@@ -683,7 +830,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * FailedBusinessQps.
+             * <p>The RPS of failed businesses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder failedBusinessQps(Float failedBusinessQps) {
                 this.failedBusinessQps = failedBusinessQps;
@@ -691,7 +841,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * SucceedBusinessCount.
+             * <p>The number of successful businesses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>908</p>
              */
             public Builder succeedBusinessCount(Long succeedBusinessCount) {
                 this.succeedBusinessCount = succeedBusinessCount;
@@ -699,7 +852,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * SucceedBusinessQps.
+             * <p>The RPS of the successful businesses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder succeedBusinessQps(Float succeedBusinessQps) {
                 this.succeedBusinessQps = succeedBusinessQps;
@@ -713,50 +869,56 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsSceneRunningDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneRunningDataResponseBody</p>
+     */
     public static class ChainMonitorDataList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AverageRt")
+        @com.aliyun.core.annotation.NameInMap("AverageRt")
         private Integer averageRt;
 
-        @NameInMap("CheckPointResult")
+        @com.aliyun.core.annotation.NameInMap("CheckPointResult")
         private CheckPointResult checkPointResult;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Float concurrency;
 
-        @NameInMap("ConfigQps")
+        @com.aliyun.core.annotation.NameInMap("ConfigQps")
         private Integer configQps;
 
-        @NameInMap("Count2XX")
+        @com.aliyun.core.annotation.NameInMap("Count2XX")
         private Long count2XX;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
 
-        @NameInMap("FailedQps")
+        @com.aliyun.core.annotation.NameInMap("FailedQps")
         private Float failedQps;
 
-        @NameInMap("MaxRt")
+        @com.aliyun.core.annotation.NameInMap("MaxRt")
         private Integer maxRt;
 
-        @NameInMap("MinRt")
+        @com.aliyun.core.annotation.NameInMap("MinRt")
         private Integer minRt;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Qps2XX")
+        @com.aliyun.core.annotation.NameInMap("Qps2XX")
         private Float qps2XX;
 
-        @NameInMap("RealQps")
+        @com.aliyun.core.annotation.NameInMap("RealQps")
         private Float realQps;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private Long timePoint;
 
         private ChainMonitorDataList(Builder builder) {
@@ -907,8 +1069,32 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             private Float realQps; 
             private Long timePoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChainMonitorDataList model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.averageRt = model.averageRt;
+                this.checkPointResult = model.checkPointResult;
+                this.concurrency = model.concurrency;
+                this.configQps = model.configQps;
+                this.count2XX = model.count2XX;
+                this.failedCount = model.failedCount;
+                this.failedQps = model.failedQps;
+                this.maxRt = model.maxRt;
+                this.minRt = model.minRt;
+                this.nodeId = model.nodeId;
+                this.qps2XX = model.qps2XX;
+                this.realQps = model.realQps;
+                this.timePoint = model.timePoint;
+            } 
+
             /**
-             * ApiId.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ANBDC8B</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -916,7 +1102,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The API name.</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -924,7 +1110,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * AverageRt.
+             * <p>The average RT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46</p>
              */
             public Builder averageRt(Integer averageRt) {
                 this.averageRt = averageRt;
@@ -932,7 +1121,7 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * CheckPointResult.
+             * <p>The check point results.</p>
              */
             public Builder checkPointResult(CheckPointResult checkPointResult) {
                 this.checkPointResult = checkPointResult;
@@ -940,7 +1129,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder concurrency(Float concurrency) {
                 this.concurrency = concurrency;
@@ -948,7 +1140,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigQps.
+             * <p>The RPS of successful and failed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder configQps(Integer configQps) {
                 this.configQps = configQps;
@@ -956,7 +1151,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Count2XX.
+             * <p>The number of successful requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7890</p>
              */
             public Builder count2XX(Long count2XX) {
                 this.count2XX = count2XX;
@@ -964,7 +1162,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The total number of failed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -972,7 +1173,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * FailedQps.
+             * <p>The RPS of failed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder failedQps(Float failedQps) {
                 this.failedQps = failedQps;
@@ -980,7 +1184,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRt.
+             * <p>The maximum RT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder maxRt(Integer maxRt) {
                 this.maxRt = maxRt;
@@ -988,7 +1195,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * MinRt.
+             * <p>The minimum RT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder minRt(Integer minRt) {
                 this.minRt = minRt;
@@ -996,7 +1206,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78509</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -1004,7 +1217,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * Qps2XX.
+             * <p>The Requests Per Second (RPS) of successful requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder qps2XX(Float qps2XX) {
                 this.qps2XX = qps2XX;
@@ -1012,7 +1228,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * RealQps.
+             * <p>The actual RPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder realQps(Float realQps) {
                 this.realQps = realQps;
@@ -1020,7 +1239,10 @@ public class GetPtsSceneRunningDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * <p>The point in time at which the stress testing is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1278908899</p>
              */
             public Builder timePoint(Long timePoint) {
                 this.timePoint = timePoint;

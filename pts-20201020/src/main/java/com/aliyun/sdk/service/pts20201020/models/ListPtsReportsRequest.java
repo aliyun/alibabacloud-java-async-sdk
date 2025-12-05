@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPtsReportsRequest} extends {@link RequestModel}
  *
  * <p>ListPtsReportsRequest</p>
  */
 public class ListPtsReportsRequest extends Request {
-    @Body
-    @NameInMap("BeginTime")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation()
     private Long beginTime;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation()
     private Long endTime;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
     private ListPtsReportsRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class ListPtsReportsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,7 +147,10 @@ public class ListPtsReportsRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The timestamp when the stress testing starts. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115303000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -151,7 +159,10 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The timestamp when the stress testing ends. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115306000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -160,7 +171,10 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The report keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -169,7 +183,11 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. The page number starts from 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -178,7 +196,11 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of reports to return per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -187,7 +209,10 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7RLPM3Y2</p>
          */
         public Builder reportId(String reportId) {
             this.putBodyParameter("ReportId", reportId);
@@ -196,7 +221,10 @@ public class ListPtsReportsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scenario whose report you want to view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1PDAL8H</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);

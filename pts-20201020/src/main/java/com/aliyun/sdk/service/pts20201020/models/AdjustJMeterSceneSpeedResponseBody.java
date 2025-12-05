@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AdjustJMeterSceneSpeedResponseBody} extends {@link TeaModel}
  *
  * <p>AdjustJMeterSceneSpeedResponseBody</p>
  */
 public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AdjustJMeterSceneSpeedResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
 
     public static AdjustJMeterSceneSpeedResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(AdjustJMeterSceneSpeedResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.reportId = model.reportId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,10 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +141,10 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +152,10 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * ReportId.
+         * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYYPZIH</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -130,7 +163,10 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E31DDA77-6745-4925-B423-4E89VV34221A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +174,14 @@ public class AdjustJMeterSceneSpeedResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

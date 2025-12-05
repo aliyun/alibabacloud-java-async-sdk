@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvsRequest} extends {@link RequestModel}
  *
  * <p>ListEnvsRequest</p>
  */
 public class ListEnvsRequest extends Request {
-    @Query
-    @NameInMap("EnvId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvId")
     private String envId;
 
-    @Query
-    @NameInMap("EnvName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvName")
     private String envName;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 10000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 5)
     private Integer pageSize;
 
     private ListEnvsRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class ListEnvsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,10 @@ public class ListEnvsRequest extends Request {
         } 
 
         /**
-         * EnvId.
+         * <p>The ID of the environment. If you specify this parameter, the operation returns the information about the environment identified by the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10YPA8H</p>
          */
         public Builder envId(String envId) {
             this.putQueryParameter("EnvId", envId);
@@ -107,7 +115,10 @@ public class ListEnvsRequest extends Request {
         }
 
         /**
-         * EnvName.
+         * <p>The keyword of the environment name. If you specify this parameter, the operation returns the information about the environments whose names contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-create</p>
          */
         public Builder envName(String envName) {
             this.putQueryParameter("EnvName", envName);
@@ -116,7 +127,11 @@ public class ListEnvsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +140,11 @@ public class ListEnvsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of environments per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

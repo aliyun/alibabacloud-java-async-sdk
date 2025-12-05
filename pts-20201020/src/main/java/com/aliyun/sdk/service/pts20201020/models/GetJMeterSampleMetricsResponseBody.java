@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterSampleMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>GetJMeterSampleMetricsResponseBody</p>
  */
 public class GetJMeterSampleMetricsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SampleMetricList")
-    private java.util.List < String > sampleMetricList;
+    @com.aliyun.core.annotation.NameInMap("SampleMetricList")
+    private java.util.List<String> sampleMetricList;
 
-    @NameInMap("SamplerMap")
-    private java.util.Map < String, ? > samplerMap;
+    @com.aliyun.core.annotation.NameInMap("SamplerMap")
+    private java.util.Map<String, ?> samplerMap;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetJMeterSampleMetricsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
 
     public static GetJMeterSampleMetricsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,14 +80,14 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
     /**
      * @return sampleMetricList
      */
-    public java.util.List < String > getSampleMetricList() {
+    public java.util.List<String> getSampleMetricList() {
         return this.sampleMetricList;
     }
 
     /**
      * @return samplerMap
      */
-    public java.util.Map < String, ? > getSamplerMap() {
+    public java.util.Map<String, ?> getSamplerMap() {
         return this.samplerMap;
     }
 
@@ -93,12 +102,27 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < String > sampleMetricList; 
-        private java.util.Map < String, ? > samplerMap; 
+        private java.util.List<String> sampleMetricList; 
+        private java.util.Map<String, ?> samplerMap; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJMeterSampleMetricsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sampleMetricList = model.sampleMetricList;
+            this.samplerMap = model.samplerMap;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,7 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +138,10 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,23 +149,33 @@ public class GetJMeterSampleMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * SampleMetricList.
+         * <p>The metrics of the samplers.</p>
          */
-        public Builder sampleMetricList(java.util.List < String > sampleMetricList) {
+        public Builder sampleMetricList(java.util.List<String> sampleMetricList) {
             this.sampleMetricList = sampleMetricList;
             return this;
         }
 
         /**
-         * SamplerMap.
+         * <p>The sampler list. You can find the sampler to be queried based on this list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{0:&quot;Http Request&quot;}</p>
          */
-        public Builder samplerMap(java.util.Map < String, ? > samplerMap) {
+        public Builder samplerMap(java.util.Map<String, ?> samplerMap) {
             this.samplerMap = samplerMap;
             return this;
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

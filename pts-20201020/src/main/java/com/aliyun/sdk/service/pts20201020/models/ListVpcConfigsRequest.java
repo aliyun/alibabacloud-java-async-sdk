@@ -12,33 +12,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetUserVpcVSwitchRequest} extends {@link RequestModel}
+ * {@link ListVpcConfigsRequest} extends {@link RequestModel}
  *
- * <p>GetUserVpcVSwitchRequest</p>
+ * <p>ListVpcConfigsRequest</p>
  */
-public class GetUserVpcVSwitchRequest extends Request {
+public class ListVpcConfigsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private String configId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigName")
+    private String configName;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483646, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    private GetUserVpcVSwitchRequest(Builder builder) {
+    private ListVpcConfigsRequest(Builder builder) {
         super(builder);
+        this.configId = builder.configId;
+        this.configName = builder.configName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -49,13 +57,27 @@ public class GetUserVpcVSwitchRequest extends Request {
         return new Builder();
     }
 
-    public static GetUserVpcVSwitchRequest create() {
+    public static ListVpcConfigsRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    /**
+     * @return configName
+     */
+    public String getConfigName() {
+        return this.configName;
     }
 
     /**
@@ -86,7 +108,9 @@ public class GetUserVpcVSwitchRequest extends Request {
         return this.vpcId;
     }
 
-    public static final class Builder extends Request.Builder<GetUserVpcVSwitchRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListVpcConfigsRequest, Builder> {
+        private String configId; 
+        private String configName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -96,8 +120,10 @@ public class GetUserVpcVSwitchRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserVpcVSwitchRequest request) {
+        private Builder(ListVpcConfigsRequest request) {
             super(request);
+            this.configId = request.configId;
+            this.configName = request.configName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -105,7 +131,24 @@ public class GetUserVpcVSwitchRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return.</p>
+         * ConfigId.
+         */
+        public Builder configId(String configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
+            return this;
+        }
+
+        /**
+         * ConfigName.
+         */
+        public Builder configName(String configName) {
+            this.putQueryParameter("ConfigName", configName);
+            this.configName = configName;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,11 +161,10 @@ public class GetUserVpcVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,11 +173,7 @@ public class GetUserVpcVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -144,11 +182,7 @@ public class GetUserVpcVSwitchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-2ze22scdz2ebdfjasdfjkqhf4pyj</p>
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -157,8 +191,8 @@ public class GetUserVpcVSwitchRequest extends Request {
         }
 
         @Override
-        public GetUserVpcVSwitchRequest build() {
-            return new GetUserVpcVSwitchRequest(this);
+        public ListVpcConfigsRequest build() {
+            return new ListVpcConfigsRequest(this);
         } 
 
     } 

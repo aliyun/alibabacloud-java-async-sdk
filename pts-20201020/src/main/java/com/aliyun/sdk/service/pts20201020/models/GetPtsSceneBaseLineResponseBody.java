@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsSceneBaseLineResponseBody} extends {@link TeaModel}
  *
  * <p>GetPtsSceneBaseLineResponseBody</p>
  */
 public class GetPtsSceneBaseLineResponseBody extends TeaModel {
-    @NameInMap("Baseline")
+    @com.aliyun.core.annotation.NameInMap("Baseline")
     private Baseline baseline;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPtsSceneBaseLineResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
 
     public static GetPtsSceneBaseLineResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         private String sceneId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPtsSceneBaseLineResponseBody model) {
+            this.baseline = model.baseline;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sceneId = model.sceneId;
+            this.success = model.success;
+        } 
+
         /**
-         * Baseline.
+         * <p>Baseline data</p>
          */
         public Builder baseline(Baseline baseline) {
             this.baseline = baseline;
@@ -118,7 +140,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +151,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +162,7 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>null</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +170,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F7D2CE0-AE4C-4143-955A-8E4595AF86A6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +181,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NHG67BF</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -158,7 +192,14 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false:</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,41 +212,47 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPtsSceneBaseLineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneBaseLineResponseBody</p>
+     */
     public static class ApiBaselines extends TeaModel {
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Float avgRt;
 
-        @NameInMap("AvgTps")
+        @com.aliyun.core.annotation.NameInMap("AvgTps")
         private Float avgTps;
 
-        @NameInMap("FailCountBiz")
+        @com.aliyun.core.annotation.NameInMap("FailCountBiz")
         private Long failCountBiz;
 
-        @NameInMap("FailCountReq")
+        @com.aliyun.core.annotation.NameInMap("FailCountReq")
         private Long failCountReq;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaxRt")
+        @com.aliyun.core.annotation.NameInMap("MaxRt")
         private Integer maxRt;
 
-        @NameInMap("MinRt")
+        @com.aliyun.core.annotation.NameInMap("MinRt")
         private Integer minRt;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Seg90Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg90Rt")
         private Float seg90Rt;
 
-        @NameInMap("Seg99Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg99Rt")
         private Float seg99Rt;
 
-        @NameInMap("SuccessRateBiz")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateBiz")
         private Float successRateBiz;
 
-        @NameInMap("SuccessRateReq")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateReq")
         private Float successRateReq;
 
         private ApiBaselines(Builder builder) {
@@ -329,8 +376,29 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             private Float successRateBiz; 
             private Float successRateReq; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiBaselines model) {
+                this.avgRt = model.avgRt;
+                this.avgTps = model.avgTps;
+                this.failCountBiz = model.failCountBiz;
+                this.failCountReq = model.failCountReq;
+                this.id = model.id;
+                this.maxRt = model.maxRt;
+                this.minRt = model.minRt;
+                this.name = model.name;
+                this.seg90Rt = model.seg90Rt;
+                this.seg99Rt = model.seg99Rt;
+                this.successRateBiz = model.successRateBiz;
+                this.successRateReq = model.successRateReq;
+            } 
+
             /**
-             * AvgRt.
+             * <p>Average RT</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgRt(Float avgRt) {
                 this.avgRt = avgRt;
@@ -338,7 +406,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTps.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgTps(Float avgTps) {
                 this.avgTps = avgTps;
@@ -346,7 +417,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountBiz.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder failCountBiz(Long failCountBiz) {
                 this.failCountBiz = failCountBiz;
@@ -354,7 +428,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountReq.
+             * <p>Failures</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder failCountReq(Long failCountReq) {
                 this.failCountReq = failCountReq;
@@ -362,7 +439,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76543</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -370,7 +450,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxRt(Integer maxRt) {
                 this.maxRt = maxRt;
@@ -378,7 +461,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * MinRt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder minRt(Integer minRt) {
                 this.minRt = minRt;
@@ -386,7 +472,7 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the API operation.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -394,7 +480,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Seg90Rt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder seg90Rt(Float seg90Rt) {
                 this.seg90Rt = seg90Rt;
@@ -402,7 +491,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Seg99Rt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder seg99Rt(Float seg99Rt) {
                 this.seg99Rt = seg99Rt;
@@ -410,7 +502,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateBiz.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder successRateBiz(Float successRateBiz) {
                 this.successRateBiz = successRateBiz;
@@ -418,7 +513,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateReq.
+             * <p>request success rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder successRateReq(Float successRateReq) {
                 this.successRateReq = successRateReq;
@@ -432,29 +530,35 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsSceneBaseLineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneBaseLineResponseBody</p>
+     */
     public static class SceneBaseline extends TeaModel {
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Float avgRt;
 
-        @NameInMap("AvgTps")
+        @com.aliyun.core.annotation.NameInMap("AvgTps")
         private Float avgTps;
 
-        @NameInMap("FailCountBiz")
+        @com.aliyun.core.annotation.NameInMap("FailCountBiz")
         private Long failCountBiz;
 
-        @NameInMap("FailCountReq")
+        @com.aliyun.core.annotation.NameInMap("FailCountReq")
         private Long failCountReq;
 
-        @NameInMap("Seg90Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg90Rt")
         private Float seg90Rt;
 
-        @NameInMap("Seg99Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg99Rt")
         private Float seg99Rt;
 
-        @NameInMap("SuccessRateBiz")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateBiz")
         private Float successRateBiz;
 
-        @NameInMap("SuccessRateReq")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateReq")
         private Float successRateReq;
 
         private SceneBaseline(Builder builder) {
@@ -542,8 +646,25 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             private Float successRateBiz; 
             private Float successRateReq; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneBaseline model) {
+                this.avgRt = model.avgRt;
+                this.avgTps = model.avgTps;
+                this.failCountBiz = model.failCountBiz;
+                this.failCountReq = model.failCountReq;
+                this.seg90Rt = model.seg90Rt;
+                this.seg99Rt = model.seg99Rt;
+                this.successRateBiz = model.successRateBiz;
+                this.successRateReq = model.successRateReq;
+            } 
+
             /**
-             * AvgRt.
+             * <p>Average RT</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgRt(Float avgRt) {
                 this.avgRt = avgRt;
@@ -551,7 +672,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTps.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgTps(Float avgTps) {
                 this.avgTps = avgTps;
@@ -559,7 +683,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountBiz.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder failCountBiz(Long failCountBiz) {
                 this.failCountBiz = failCountBiz;
@@ -567,7 +694,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountReq.
+             * <p>Failures</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder failCountReq(Long failCountReq) {
                 this.failCountReq = failCountReq;
@@ -575,7 +705,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Seg90Rt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder seg90Rt(Float seg90Rt) {
                 this.seg90Rt = seg90Rt;
@@ -583,7 +716,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * Seg99Rt.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder seg99Rt(Float seg99Rt) {
                 this.seg99Rt = seg99Rt;
@@ -591,7 +727,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateBiz.
+             * <p>null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder successRateBiz(Float successRateBiz) {
                 this.successRateBiz = successRateBiz;
@@ -599,7 +738,10 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateReq.
+             * <p>request success rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.9</p>
              */
             public Builder successRateReq(Float successRateReq) {
                 this.successRateReq = successRateReq;
@@ -613,14 +755,20 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsSceneBaseLineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsSceneBaseLineResponseBody</p>
+     */
     public static class Baseline extends TeaModel {
-        @NameInMap("ApiBaselines")
-        private java.util.List < ApiBaselines> apiBaselines;
+        @com.aliyun.core.annotation.NameInMap("ApiBaselines")
+        private java.util.List<ApiBaselines> apiBaselines;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SceneBaseline")
+        @com.aliyun.core.annotation.NameInMap("SceneBaseline")
         private SceneBaseline sceneBaseline;
 
         private Baseline(Builder builder) {
@@ -640,7 +788,7 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         /**
          * @return apiBaselines
          */
-        public java.util.List < ApiBaselines> getApiBaselines() {
+        public java.util.List<ApiBaselines> getApiBaselines() {
             return this.apiBaselines;
         }
 
@@ -659,20 +807,29 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiBaselines> apiBaselines; 
+            private java.util.List<ApiBaselines> apiBaselines; 
             private String name; 
             private SceneBaseline sceneBaseline; 
 
+            private Builder() {
+            } 
+
+            private Builder(Baseline model) {
+                this.apiBaselines = model.apiBaselines;
+                this.name = model.name;
+                this.sceneBaseline = model.sceneBaseline;
+            } 
+
             /**
-             * ApiBaselines.
+             * <p>null</p>
              */
-            public Builder apiBaselines(java.util.List < ApiBaselines> apiBaselines) {
+            public Builder apiBaselines(java.util.List<ApiBaselines> apiBaselines) {
                 this.apiBaselines = apiBaselines;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>Scenario</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -680,7 +837,7 @@ public class GetPtsSceneBaseLineResponseBody extends TeaModel {
             }
 
             /**
-             * SceneBaseline.
+             * <p>null</p>
              */
             public Builder sceneBaseline(SceneBaseline sceneBaseline) {
                 this.sceneBaseline = sceneBaseline;

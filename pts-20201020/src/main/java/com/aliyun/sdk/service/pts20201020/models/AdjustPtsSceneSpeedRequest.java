@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AdjustPtsSceneSpeedRequest} extends {@link RequestModel}
  *
  * <p>AdjustPtsSceneSpeedRequest</p>
  */
 public class AdjustPtsSceneSpeedRequest extends Request {
-    @Query
-    @NameInMap("ApiSpeedList")
-    private java.util.List < ApiSpeedList> apiSpeedList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiSpeedList")
+    private java.util.List<ApiSpeedList> apiSpeedList;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private AdjustPtsSceneSpeedRequest(Builder builder) {
@@ -35,7 +40,7 @@ public class AdjustPtsSceneSpeedRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +48,7 @@ public class AdjustPtsSceneSpeedRequest extends Request {
     /**
      * @return apiSpeedList
      */
-    public java.util.List < ApiSpeedList> getApiSpeedList() {
+    public java.util.List<ApiSpeedList> getApiSpeedList() {
         return this.apiSpeedList;
     }
 
@@ -55,7 +60,7 @@ public class AdjustPtsSceneSpeedRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AdjustPtsSceneSpeedRequest, Builder> {
-        private java.util.List < ApiSpeedList> apiSpeedList; 
+        private java.util.List<ApiSpeedList> apiSpeedList; 
         private String sceneId; 
 
         private Builder() {
@@ -69,9 +74,9 @@ public class AdjustPtsSceneSpeedRequest extends Request {
         } 
 
         /**
-         * ApiSpeedList.
+         * <p>The stress testing speed in the PTS scenario.</p>
          */
-        public Builder apiSpeedList(java.util.List < ApiSpeedList> apiSpeedList) {
+        public Builder apiSpeedList(java.util.List<ApiSpeedList> apiSpeedList) {
             String apiSpeedListShrink = shrink(apiSpeedList, "ApiSpeedList", "json");
             this.putQueryParameter("ApiSpeedList", apiSpeedListShrink);
             this.apiSpeedList = apiSpeedList;
@@ -79,7 +84,11 @@ public class AdjustPtsSceneSpeedRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scenario ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYXXX12H</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -94,11 +103,17 @@ public class AdjustPtsSceneSpeedRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AdjustPtsSceneSpeedRequest} extends {@link TeaModel}
+     *
+     * <p>AdjustPtsSceneSpeedRequest</p>
+     */
     public static class ApiSpeedList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private Long speed;
 
         private ApiSpeedList(Builder builder) {
@@ -132,8 +147,19 @@ public class AdjustPtsSceneSpeedRequest extends Request {
             private String apiId; 
             private Long speed; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiSpeedList model) {
+                this.apiId = model.apiId;
+                this.speed = model.speed;
+            } 
+
             /**
-             * ApiId.
+             * <p>The API ID. You can find the information of the API corresponding to the ID in the Relation response parameter of the GetPtsSceneRunningData operation based on the ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYXXX12H</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -141,7 +167,10 @@ public class AdjustPtsSceneSpeedRequest extends Request {
             }
 
             /**
-             * Speed.
+             * <p>The new stress. In concurrency mode, the new stress is the concurrency. In RPS mode, the new stress is the RPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder speed(Long speed) {
                 this.speed = speed;

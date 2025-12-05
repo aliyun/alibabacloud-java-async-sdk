@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AdjustJMeterSceneSpeed  AdjustJMeterSceneSpeedRequest
+     * @return AdjustJMeterSceneSpeedResponse
+     */
     @Override
     public CompletableFuture<AdjustJMeterSceneSpeedResponse> adjustJMeterSceneSpeed(AdjustJMeterSceneSpeedRequest request) {
         try {
@@ -53,6 +57,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>In concurrency mode, only the concurrency of the first API is passed as that of a session.
+     * In requests per second (RPS) mode, the RPS of each API can be adjusted. Make sure that the RPS decreases in the API order in the same session.</p>
+     * 
+     * @param request the request parameters of AdjustPtsSceneSpeed  AdjustPtsSceneSpeedRequest
+     * @return AdjustPtsSceneSpeedResponse
+     */
     @Override
     public CompletableFuture<AdjustPtsSceneSpeedResponse> adjustPtsSceneSpeed(AdjustPtsSceneSpeedRequest request) {
         try {
@@ -67,6 +79,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePtsScene  CreatePtsSceneRequest
+     * @return CreatePtsSceneResponse
+     */
     @Override
     public CompletableFuture<CreatePtsSceneResponse> createPtsScene(CreatePtsSceneRequest request) {
         try {
@@ -81,6 +97,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePtsSceneBaseLineFromReport  CreatePtsSceneBaseLineFromReportRequest
+     * @return CreatePtsSceneBaseLineFromReportResponse
+     */
     @Override
     public CompletableFuture<CreatePtsSceneBaseLineFromReportResponse> createPtsSceneBaseLineFromReport(CreatePtsSceneBaseLineFromReportRequest request) {
         try {
@@ -95,6 +115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePtsScene  DeletePtsSceneRequest
+     * @return DeletePtsSceneResponse
+     */
     @Override
     public CompletableFuture<DeletePtsSceneResponse> deletePtsScene(DeletePtsSceneRequest request) {
         try {
@@ -109,6 +133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePtsSceneBaseLine  DeletePtsSceneBaseLineRequest
+     * @return DeletePtsSceneBaseLineResponse
+     */
     @Override
     public CompletableFuture<DeletePtsSceneBaseLineResponse> deletePtsSceneBaseLine(DeletePtsSceneBaseLineRequest request) {
         try {
@@ -123,6 +151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePtsScenes  DeletePtsScenesRequest
+     * @return DeletePtsScenesResponse
+     */
     @Override
     public CompletableFuture<DeletePtsScenesResponse> deletePtsScenes(DeletePtsScenesRequest request) {
         try {
@@ -137,6 +169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAllRegions  GetAllRegionsRequest
+     * @return GetAllRegionsResponse
+     */
     @Override
     public CompletableFuture<GetAllRegionsResponse> getAllRegions(GetAllRegionsRequest request) {
         try {
@@ -151,6 +187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJMeterLogs  GetJMeterLogsRequest
+     * @return GetJMeterLogsResponse
+     */
     @Override
     public CompletableFuture<GetJMeterLogsResponse> getJMeterLogs(GetJMeterLogsRequest request) {
         try {
@@ -165,6 +205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJMeterReportDetails  GetJMeterReportDetailsRequest
+     * @return GetJMeterReportDetailsResponse
+     */
     @Override
     public CompletableFuture<GetJMeterReportDetailsResponse> getJMeterReportDetails(GetJMeterReportDetailsRequest request) {
         try {
@@ -179,6 +223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJMeterSampleMetrics  GetJMeterSampleMetricsRequest
+     * @return GetJMeterSampleMetricsResponse
+     */
     @Override
     public CompletableFuture<GetJMeterSampleMetricsResponse> getJMeterSampleMetrics(GetJMeterSampleMetricsRequest request) {
         try {
@@ -193,6 +241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJMeterSamplingLogs  GetJMeterSamplingLogsRequest
+     * @return GetJMeterSamplingLogsResponse
+     */
     @Override
     public CompletableFuture<GetJMeterSamplingLogsResponse> getJMeterSamplingLogs(GetJMeterSamplingLogsRequest request) {
         try {
@@ -207,6 +259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJMeterSceneRunningData  GetJMeterSceneRunningDataRequest
+     * @return GetJMeterSceneRunningDataResponse
+     */
     @Override
     public CompletableFuture<GetJMeterSceneRunningDataResponse> getJMeterSceneRunningData(GetJMeterSceneRunningDataRequest request) {
         try {
@@ -221,6 +277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpenJMeterScene  GetOpenJMeterSceneRequest
+     * @return GetOpenJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<GetOpenJMeterSceneResponse> getOpenJMeterScene(GetOpenJMeterSceneRequest request) {
         try {
@@ -235,6 +295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsDebugSampleLogs  GetPtsDebugSampleLogsRequest
+     * @return GetPtsDebugSampleLogsResponse
+     */
     @Override
     public CompletableFuture<GetPtsDebugSampleLogsResponse> getPtsDebugSampleLogs(GetPtsDebugSampleLogsRequest request) {
         try {
@@ -249,6 +313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsReportDetails  GetPtsReportDetailsRequest
+     * @return GetPtsReportDetailsResponse
+     */
     @Override
     public CompletableFuture<GetPtsReportDetailsResponse> getPtsReportDetails(GetPtsReportDetailsRequest request) {
         try {
@@ -263,6 +331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsReportsBySceneId  GetPtsReportsBySceneIdRequest
+     * @return GetPtsReportsBySceneIdResponse
+     */
     @Override
     public CompletableFuture<GetPtsReportsBySceneIdResponse> getPtsReportsBySceneId(GetPtsReportsBySceneIdRequest request) {
         try {
@@ -277,6 +349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsScene  GetPtsSceneRequest
+     * @return GetPtsSceneResponse
+     */
     @Override
     public CompletableFuture<GetPtsSceneResponse> getPtsScene(GetPtsSceneRequest request) {
         try {
@@ -291,6 +367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsSceneBaseLine  GetPtsSceneBaseLineRequest
+     * @return GetPtsSceneBaseLineResponse
+     */
     @Override
     public CompletableFuture<GetPtsSceneBaseLineResponse> getPtsSceneBaseLine(GetPtsSceneBaseLineRequest request) {
         try {
@@ -305,6 +385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsSceneRunningData  GetPtsSceneRunningDataRequest
+     * @return GetPtsSceneRunningDataResponse
+     */
     @Override
     public CompletableFuture<GetPtsSceneRunningDataResponse> getPtsSceneRunningData(GetPtsSceneRunningDataRequest request) {
         try {
@@ -319,6 +403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPtsSceneRunningStatus  GetPtsSceneRunningStatusRequest
+     * @return GetPtsSceneRunningStatusResponse
+     */
     @Override
     public CompletableFuture<GetPtsSceneRunningStatusResponse> getPtsSceneRunningStatus(GetPtsSceneRunningStatusRequest request) {
         try {
@@ -333,6 +421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserVpcSecurityGroup  GetUserVpcSecurityGroupRequest
+     * @return GetUserVpcSecurityGroupResponse
+     */
     @Override
     public CompletableFuture<GetUserVpcSecurityGroupResponse> getUserVpcSecurityGroup(GetUserVpcSecurityGroupRequest request) {
         try {
@@ -347,6 +439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserVpcVSwitch  GetUserVpcVSwitchRequest
+     * @return GetUserVpcVSwitchResponse
+     */
     @Override
     public CompletableFuture<GetUserVpcVSwitchResponse> getUserVpcVSwitch(GetUserVpcVSwitchRequest request) {
         try {
@@ -361,6 +457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserVpcs  GetUserVpcsRequest
+     * @return GetUserVpcsResponse
+     */
     @Override
     public CompletableFuture<GetUserVpcsResponse> getUserVpcs(GetUserVpcsRequest request) {
         try {
@@ -375,6 +475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnvs  ListEnvsRequest
+     * @return ListEnvsResponse
+     */
     @Override
     public CompletableFuture<ListEnvsResponse> listEnvs(ListEnvsRequest request) {
         try {
@@ -389,6 +493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJMeterReports  ListJMeterReportsRequest
+     * @return ListJMeterReportsResponse
+     */
     @Override
     public CompletableFuture<ListJMeterReportsResponse> listJMeterReports(ListJMeterReportsRequest request) {
         try {
@@ -403,6 +511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOpenJMeterScenes  ListOpenJMeterScenesRequest
+     * @return ListOpenJMeterScenesResponse
+     */
     @Override
     public CompletableFuture<ListOpenJMeterScenesResponse> listOpenJMeterScenes(ListOpenJMeterScenesRequest request) {
         try {
@@ -417,6 +529,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPtsReports  ListPtsReportsRequest
+     * @return ListPtsReportsResponse
+     */
     @Override
     public CompletableFuture<ListPtsReportsResponse> listPtsReports(ListPtsReportsRequest request) {
         try {
@@ -431,6 +547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPtsScene  ListPtsSceneRequest
+     * @return ListPtsSceneResponse
+     */
     @Override
     public CompletableFuture<ListPtsSceneResponse> listPtsScene(ListPtsSceneRequest request) {
         try {
@@ -445,6 +565,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVpcConfigs  ListVpcConfigsRequest
+     * @return ListVpcConfigsResponse
+     */
+    @Override
+    public CompletableFuture<ListVpcConfigsResponse> listVpcConfigs(ListVpcConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListVpcConfigs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVpcConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVpcConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyPtsScene  ModifyPtsSceneRequest
+     * @return ModifyPtsSceneResponse
+     */
     @Override
     public CompletableFuture<ModifyPtsSceneResponse> modifyPtsScene(ModifyPtsSceneRequest request) {
         try {
@@ -459,6 +601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveEnv  RemoveEnvRequest
+     * @return RemoveEnvResponse
+     */
     @Override
     public CompletableFuture<RemoveEnvResponse> removeEnv(RemoveEnvRequest request) {
         try {
@@ -473,6 +619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveOpenJMeterScene  RemoveOpenJMeterSceneRequest
+     * @return RemoveOpenJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<RemoveOpenJMeterSceneResponse> removeOpenJMeterScene(RemoveOpenJMeterSceneRequest request) {
         try {
@@ -487,6 +637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveEnv  SaveEnvRequest
+     * @return SaveEnvResponse
+     */
     @Override
     public CompletableFuture<SaveEnvResponse> saveEnv(SaveEnvRequest request) {
         try {
@@ -501,6 +655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveOpenJMeterScene  SaveOpenJMeterSceneRequest
+     * @return SaveOpenJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<SaveOpenJMeterSceneResponse> saveOpenJMeterScene(SaveOpenJMeterSceneRequest request) {
         try {
@@ -515,6 +673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SavePtsScene  SavePtsSceneRequest
+     * @return SavePtsSceneResponse
+     */
     @Override
     public CompletableFuture<SavePtsSceneResponse> savePtsScene(SavePtsSceneRequest request) {
         try {
@@ -529,6 +691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDebugPtsScene  StartDebugPtsSceneRequest
+     * @return StartDebugPtsSceneResponse
+     */
     @Override
     public CompletableFuture<StartDebugPtsSceneResponse> startDebugPtsScene(StartDebugPtsSceneRequest request) {
         try {
@@ -543,6 +709,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDebuggingJMeterScene  StartDebuggingJMeterSceneRequest
+     * @return StartDebuggingJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<StartDebuggingJMeterSceneResponse> startDebuggingJMeterScene(StartDebuggingJMeterSceneRequest request) {
         try {
@@ -557,6 +727,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartPtsScene  StartPtsSceneRequest
+     * @return StartPtsSceneResponse
+     */
     @Override
     public CompletableFuture<StartPtsSceneResponse> startPtsScene(StartPtsSceneRequest request) {
         try {
@@ -571,6 +745,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartTestingJMeterScene  StartTestingJMeterSceneRequest
+     * @return StartTestingJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<StartTestingJMeterSceneResponse> startTestingJMeterScene(StartTestingJMeterSceneRequest request) {
         try {
@@ -585,6 +763,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopDebugPtsScene  StopDebugPtsSceneRequest
+     * @return StopDebugPtsSceneResponse
+     */
     @Override
     public CompletableFuture<StopDebugPtsSceneResponse> stopDebugPtsScene(StopDebugPtsSceneRequest request) {
         try {
@@ -599,6 +781,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopDebuggingJMeterScene  StopDebuggingJMeterSceneRequest
+     * @return StopDebuggingJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<StopDebuggingJMeterSceneResponse> stopDebuggingJMeterScene(StopDebuggingJMeterSceneRequest request) {
         try {
@@ -613,6 +799,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopPtsScene  StopPtsSceneRequest
+     * @return StopPtsSceneResponse
+     */
     @Override
     public CompletableFuture<StopPtsSceneResponse> stopPtsScene(StopPtsSceneRequest request) {
         try {
@@ -627,6 +817,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopTestingJMeterScene  StopTestingJMeterSceneRequest
+     * @return StopTestingJMeterSceneResponse
+     */
     @Override
     public CompletableFuture<StopTestingJMeterSceneResponse> stopTestingJMeterScene(StopTestingJMeterSceneRequest request) {
         try {
@@ -641,6 +835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePtsSceneBaseLine  UpdatePtsSceneBaseLineRequest
+     * @return UpdatePtsSceneBaseLineResponse
+     */
     @Override
     public CompletableFuture<UpdatePtsSceneBaseLineResponse> updatePtsSceneBaseLine(UpdatePtsSceneBaseLineRequest request) {
         try {

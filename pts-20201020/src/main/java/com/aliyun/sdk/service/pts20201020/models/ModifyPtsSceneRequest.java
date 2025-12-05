@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPtsSceneRequest} extends {@link RequestModel}
  *
  * <p>ModifyPtsSceneRequest</p>
  */
 public class ModifyPtsSceneRequest extends Request {
-    @Body
-    @NameInMap("Scene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scene;
 
     private ModifyPtsSceneRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ModifyPtsSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class ModifyPtsSceneRequest extends Request {
         } 
 
         /**
-         * Scene.
+         * <p>null</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SD6YZCI</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);

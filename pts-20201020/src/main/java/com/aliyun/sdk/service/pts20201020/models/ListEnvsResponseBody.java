@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnvsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnvsResponseBody</p>
  */
 public class ListEnvsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Envs")
-    private java.util.List < Envs> envs;
+    @com.aliyun.core.annotation.NameInMap("Envs")
+    private java.util.List<Envs> envs;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListEnvsResponseBody(Builder builder) {
@@ -59,6 +64,10 @@ public class ListEnvsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -69,7 +78,7 @@ public class ListEnvsResponseBody extends TeaModel {
     /**
      * @return envs
      */
-    public java.util.List < Envs> getEnvs() {
+    public java.util.List<Envs> getEnvs() {
         return this.envs;
     }
 
@@ -124,7 +133,7 @@ public class ListEnvsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Envs> envs; 
+        private java.util.List<Envs> envs; 
         private Integer httpStatusCode; 
         private String message; 
         private Integer pageNumber; 
@@ -133,8 +142,26 @@ public class ListEnvsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEnvsResponseBody model) {
+            this.code = model.code;
+            this.envs = model.envs;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,15 +169,18 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * Envs.
+         * <p>The environments.</p>
          */
-        public Builder envs(java.util.List < Envs> envs) {
+        public Builder envs(java.util.List<Envs> envs) {
             this.envs = envs;
             return this;
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -158,7 +188,7 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +196,10 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +207,10 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of environments per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class ListEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of environments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -211,20 +260,26 @@ public class ListEnvsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnvsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvsResponseBody</p>
+     */
     public static class Files extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
         private String fileOssAddress;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
         private Files(Builder builder) {
@@ -285,8 +340,22 @@ public class ListEnvsResponseBody extends TeaModel {
             private Long fileSize; 
             private String md5; 
 
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+                this.fileSize = model.fileSize;
+                this.md5 = model.md5;
+            } 
+
             /**
-             * FileId.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61660</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -294,7 +363,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>json.jar</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -302,7 +374,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The OSS address of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -310,7 +385,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>788</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -318,7 +396,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 checksum of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43B584026CE5E570F3DE638FA7EEF9E0</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -332,14 +413,20 @@ public class ListEnvsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvsResponseBody</p>
+     */
     public static class Properties extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Properties(Builder builder) {
@@ -382,8 +469,20 @@ public class ListEnvsResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>远程主机</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +490,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_hosts</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +501,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -413,35 +518,41 @@ public class ListEnvsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnvsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnvsResponseBody</p>
+     */
     public static class Envs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EnvId")
+        @com.aliyun.core.annotation.NameInMap("EnvId")
         private String envId;
 
-        @NameInMap("EnvName")
+        @com.aliyun.core.annotation.NameInMap("EnvName")
         private String envName;
 
-        @NameInMap("EnvVersion")
+        @com.aliyun.core.annotation.NameInMap("EnvVersion")
         private String envVersion;
 
-        @NameInMap("Files")
-        private java.util.List < Files> files;
+        @com.aliyun.core.annotation.NameInMap("Files")
+        private java.util.List<Files> files;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("Properties")
-        private java.util.List < Properties> properties;
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.List<Properties> properties;
 
-        @NameInMap("RelatedScenes")
-        private java.util.List < String > relatedScenes;
+        @com.aliyun.core.annotation.NameInMap("RelatedScenes")
+        private java.util.List<String> relatedScenes;
 
-        @NameInMap("RunningScenes")
-        private java.util.List < String > runningScenes;
+        @com.aliyun.core.annotation.NameInMap("RunningScenes")
+        private java.util.List<String> runningScenes;
 
-        @NameInMap("UsedCapacity")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
         private Long usedCapacity;
 
         private Envs(Builder builder) {
@@ -496,7 +607,7 @@ public class ListEnvsResponseBody extends TeaModel {
         /**
          * @return files
          */
-        public java.util.List < Files> getFiles() {
+        public java.util.List<Files> getFiles() {
             return this.files;
         }
 
@@ -510,21 +621,21 @@ public class ListEnvsResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.List < Properties> getProperties() {
+        public java.util.List<Properties> getProperties() {
             return this.properties;
         }
 
         /**
          * @return relatedScenes
          */
-        public java.util.List < String > getRelatedScenes() {
+        public java.util.List<String> getRelatedScenes() {
             return this.relatedScenes;
         }
 
         /**
          * @return runningScenes
          */
-        public java.util.List < String > getRunningScenes() {
+        public java.util.List<String> getRunningScenes() {
             return this.runningScenes;
         }
 
@@ -540,15 +651,34 @@ public class ListEnvsResponseBody extends TeaModel {
             private String envId; 
             private String envName; 
             private String envVersion; 
-            private java.util.List < Files> files; 
+            private java.util.List<Files> files; 
             private Long modifiedTime; 
-            private java.util.List < Properties> properties; 
-            private java.util.List < String > relatedScenes; 
-            private java.util.List < String > runningScenes; 
+            private java.util.List<Properties> properties; 
+            private java.util.List<String> relatedScenes; 
+            private java.util.List<String> runningScenes; 
             private Long usedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Envs model) {
+                this.createTime = model.createTime;
+                this.envId = model.envId;
+                this.envName = model.envName;
+                this.envVersion = model.envVersion;
+                this.files = model.files;
+                this.modifiedTime = model.modifiedTime;
+                this.properties = model.properties;
+                this.relatedScenes = model.relatedScenes;
+                this.runningScenes = model.runningScenes;
+                this.usedCapacity = model.usedCapacity;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the environment was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637053715165</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -556,7 +686,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvId.
+             * <p>The ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86S1LH</p>
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -564,7 +697,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvName.
+             * <p>The name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-create</p>
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -572,7 +708,10 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvVersion.
+             * <p>The JMeter version of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.0</p>
              */
             public Builder envVersion(String envVersion) {
                 this.envVersion = envVersion;
@@ -580,15 +719,18 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * Files.
+             * <p>The JAR files.</p>
              */
-            public Builder files(java.util.List < Files> files) {
+            public Builder files(java.util.List<Files> files) {
                 this.files = files;
                 return this;
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the environment was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637053719165</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -596,31 +738,34 @@ public class ListEnvsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The JMeter attributes.</p>
              */
-            public Builder properties(java.util.List < Properties> properties) {
+            public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
                 return this;
             }
 
             /**
-             * RelatedScenes.
+             * <p>The scenarios related to the environment.</p>
              */
-            public Builder relatedScenes(java.util.List < String > relatedScenes) {
+            public Builder relatedScenes(java.util.List<String> relatedScenes) {
                 this.relatedScenes = relatedScenes;
                 return this;
             }
 
             /**
-             * RunningScenes.
+             * <p>The IDs of the scenarios that run in the environment.</p>
              */
-            public Builder runningScenes(java.util.List < String > runningScenes) {
+            public Builder runningScenes(java.util.List<String> runningScenes) {
                 this.runningScenes = runningScenes;
                 return this;
             }
 
             /**
-             * UsedCapacity.
+             * <p>The total size of the environment file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26668</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;

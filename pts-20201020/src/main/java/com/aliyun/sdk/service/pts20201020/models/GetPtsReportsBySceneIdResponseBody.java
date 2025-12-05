@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsReportsBySceneIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetPtsReportsBySceneIdResponseBody</p>
  */
 public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportOverViewList")
-    private java.util.List < ReportOverViewList> reportOverViewList;
+    @com.aliyun.core.annotation.NameInMap("ReportOverViewList")
+    private java.util.List<ReportOverViewList> reportOverViewList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPtsReportsBySceneIdResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
 
     public static GetPtsReportsBySceneIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,7 +80,7 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
     /**
      * @return reportOverViewList
      */
-    public java.util.List < ReportOverViewList> getReportOverViewList() {
+    public java.util.List<ReportOverViewList> getReportOverViewList() {
         return this.reportOverViewList;
     }
 
@@ -93,12 +102,27 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < ReportOverViewList> reportOverViewList; 
+        private java.util.List<ReportOverViewList> reportOverViewList; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPtsReportsBySceneIdResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.reportOverViewList = model.reportOverViewList;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +141,7 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,15 +149,18 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
         }
 
         /**
-         * ReportOverViewList.
+         * <p>The reports.</p>
          */
-        public Builder reportOverViewList(java.util.List < ReportOverViewList> reportOverViewList) {
+        public Builder reportOverViewList(java.util.List<ReportOverViewList> reportOverViewList) {
             this.reportOverViewList = reportOverViewList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +168,14 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +188,29 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPtsReportsBySceneIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportsBySceneIdResponseBody</p>
+     */
     public static class ReportOverViewList extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ReportName")
+        @com.aliyun.core.annotation.NameInMap("ReportName")
         private String reportName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Vum")
+        @com.aliyun.core.annotation.NameInMap("Vum")
         private Long vum;
 
         private ReportOverViewList(Builder builder) {
@@ -237,8 +280,23 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             private String startTime; 
             private Long vum; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReportOverViewList model) {
+                this.agentCount = model.agentCount;
+                this.endTime = model.endTime;
+                this.reportId = model.reportId;
+                this.reportName = model.reportName;
+                this.startTime = model.startTime;
+                this.vum = model.vum;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of stress testers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -246,7 +304,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-26 16:38:30</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -254,7 +315,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NGGB5FV</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -262,7 +326,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             }
 
             /**
-             * ReportName.
+             * <p>The title of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTS-test-20240920094710</p>
              */
             public Builder reportName(String reportName) {
                 this.reportName = reportName;
@@ -270,7 +337,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-26 16:28:30</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -278,7 +348,10 @@ public class GetPtsReportsBySceneIdResponseBody extends TeaModel {
             }
 
             /**
-             * Vum.
+             * <p>The consumed Virtual User Minutes (VUM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vum(Long vum) {
                 this.vum = vum;

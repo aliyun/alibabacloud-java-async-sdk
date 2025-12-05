@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterLogsResponseBody} extends {@link TeaModel}
  *
  * <p>GetJMeterLogsResponseBody</p>
  */
 public class GetJMeterLogsResponseBody extends TeaModel {
-    @NameInMap("AgentCount")
+    @com.aliyun.core.annotation.NameInMap("AgentCount")
     private Integer agentCount;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Logs")
-    private java.util.List < java.util.Map<String, ?>> logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<java.util.Map<String, ?>> logs;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetJMeterLogsResponseBody(Builder builder) {
@@ -59,6 +64,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return agentCount
      */
@@ -76,7 +85,7 @@ public class GetJMeterLogsResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < java.util.Map<String, ?>> getLogs() {
+    public java.util.List<java.util.Map<String, ?>> getLogs() {
         return this.logs;
     }
 
@@ -125,7 +134,7 @@ public class GetJMeterLogsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer agentCount; 
         private String code; 
-        private java.util.List < java.util.Map<String, ?>> logs; 
+        private java.util.List<java.util.Map<String, ?>> logs; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -133,8 +142,26 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetJMeterLogsResponseBody model) {
+            this.agentCount = model.agentCount;
+            this.code = model.code;
+            this.logs = model.logs;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AgentCount.
+         * <p>The number of engines. The AgentCount value must be greater than the PageNumber value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder agentCount(Integer agentCount) {
             this.agentCount = agentCount;
@@ -142,7 +169,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -150,15 +180,18 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * <p>The returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;timeTS&quot;:1637114804326, &quot;instanceId&quot;:0, &quot;level&quot;:&quot;INFO&quot;, &quot;logger&quot;:&quot;org.apache.jmeter.util.JMeterUtils&quot;, &quot;sceneId&quot;:251546, 	&quot;planId&quot;:1501546, &quot;thread&quot;:&quot;main&quot;, &quot;time&quot;:&quot;2021-11-17T10:06Z&quot;, &quot;taskId&quot;:15015460000, &quot;logText&quot;:&quot;Setting Locale to en_EN\n&quot; }</p>
          */
-        public Builder logs(java.util.List < java.util.Map<String, ?>> logs) {
+        public Builder logs(java.util.List<java.util.Map<String, ?>> logs) {
             this.logs = logs;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +199,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +210,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +221,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +232,14 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +247,10 @@ public class GetJMeterLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

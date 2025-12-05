@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>GetPtsReportDetailsResponseBody</p>
  */
 public class GetPtsReportDetailsResponseBody extends TeaModel {
-    @NameInMap("ApiMetricsList")
-    private java.util.List < ApiMetricsList> apiMetricsList;
+    @com.aliyun.core.annotation.NameInMap("ApiMetricsList")
+    private java.util.List<ApiMetricsList> apiMetricsList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ReportOverView")
+    @com.aliyun.core.annotation.NameInMap("ReportOverView")
     private ReportOverView reportOverView;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneMetrics")
+    @com.aliyun.core.annotation.NameInMap("SceneMetrics")
     private SceneMetrics sceneMetrics;
 
-    @NameInMap("SceneSnapShot")
+    @com.aliyun.core.annotation.NameInMap("SceneSnapShot")
     private SceneSnapShot sceneSnapShot;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPtsReportDetailsResponseBody(Builder builder) {
@@ -59,10 +64,14 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiMetricsList
      */
-    public java.util.List < ApiMetricsList> getApiMetricsList() {
+    public java.util.List<ApiMetricsList> getApiMetricsList() {
         return this.apiMetricsList;
     }
 
@@ -123,7 +132,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApiMetricsList> apiMetricsList; 
+        private java.util.List<ApiMetricsList> apiMetricsList; 
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
@@ -133,16 +142,34 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         private SceneSnapShot sceneSnapShot; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPtsReportDetailsResponseBody model) {
+            this.apiMetricsList = model.apiMetricsList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.reportOverView = model.reportOverView;
+            this.requestId = model.requestId;
+            this.sceneMetrics = model.sceneMetrics;
+            this.sceneSnapShot = model.sceneSnapShot;
+            this.success = model.success;
+        } 
+
         /**
-         * ApiMetricsList.
+         * <p>The metrics for API operations in the PTS scenario</p>
          */
-        public Builder apiMetricsList(java.util.List < ApiMetricsList> apiMetricsList) {
+        public Builder apiMetricsList(java.util.List<ApiMetricsList> apiMetricsList) {
             this.apiMetricsList = apiMetricsList;
             return this;
         }
 
         /**
-         * Code.
+         * <p>The system status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -150,7 +177,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the operation is successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -158,7 +188,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +196,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportOverView.
+         * <p>The summary of the report.</p>
          */
         public Builder reportOverView(ReportOverView reportOverView) {
             this.reportOverView = reportOverView;
@@ -174,7 +204,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E3177-6745-4925-B423-4E89VV34221A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +215,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * SceneMetrics.
+         * <p>The metrics of the scenario.</p>
          */
         public Builder sceneMetrics(SceneMetrics sceneMetrics) {
             this.sceneMetrics = sceneMetrics;
@@ -190,7 +223,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * SceneSnapShot.
+         * <p>The snapshot of the scenario.</p>
          */
         public Builder sceneSnapShot(SceneSnapShot sceneSnapShot) {
             this.sceneSnapShot = sceneSnapShot;
@@ -198,7 +231,14 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -211,47 +251,53 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ApiMetricsList extends TeaModel {
-        @NameInMap("AllCount")
+        @com.aliyun.core.annotation.NameInMap("AllCount")
         private Long allCount;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Float avgRt;
 
-        @NameInMap("AvgTps")
+        @com.aliyun.core.annotation.NameInMap("AvgTps")
         private Float avgTps;
 
-        @NameInMap("FailCountBiz")
+        @com.aliyun.core.annotation.NameInMap("FailCountBiz")
         private Long failCountBiz;
 
-        @NameInMap("FailCountReq")
+        @com.aliyun.core.annotation.NameInMap("FailCountReq")
         private Long failCountReq;
 
-        @NameInMap("MaxRt")
+        @com.aliyun.core.annotation.NameInMap("MaxRt")
         private Float maxRt;
 
-        @NameInMap("MinRt")
+        @com.aliyun.core.annotation.NameInMap("MinRt")
         private Float minRt;
 
-        @NameInMap("Seg50Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg50Rt")
         private Float seg50Rt;
 
-        @NameInMap("Seg75Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg75Rt")
         private Float seg75Rt;
 
-        @NameInMap("Seg90Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg90Rt")
         private Float seg90Rt;
 
-        @NameInMap("Seg99Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg99Rt")
         private Float seg99Rt;
 
-        @NameInMap("SuccessRateBiz")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateBiz")
         private Float successRateBiz;
 
-        @NameInMap("SuccessRateReq")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateReq")
         private Float successRateReq;
 
         private ApiMetricsList(Builder builder) {
@@ -393,8 +439,31 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private Float successRateBiz; 
             private Float successRateReq; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiMetricsList model) {
+                this.allCount = model.allCount;
+                this.apiName = model.apiName;
+                this.avgRt = model.avgRt;
+                this.avgTps = model.avgTps;
+                this.failCountBiz = model.failCountBiz;
+                this.failCountReq = model.failCountReq;
+                this.maxRt = model.maxRt;
+                this.minRt = model.minRt;
+                this.seg50Rt = model.seg50Rt;
+                this.seg75Rt = model.seg75Rt;
+                this.seg90Rt = model.seg90Rt;
+                this.seg99Rt = model.seg99Rt;
+                this.successRateBiz = model.successRateBiz;
+                this.successRateReq = model.successRateReq;
+            } 
+
             /**
-             * AllCount.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11872</p>
              */
             public Builder allCount(Long allCount) {
                 this.allCount = allCount;
@@ -402,7 +471,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-API</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -410,7 +482,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRt.
+             * <p>The average response time. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170.49</p>
              */
             public Builder avgRt(Float avgRt) {
                 this.avgRt = avgRt;
@@ -418,7 +493,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTps.
+             * <p>The average TPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.61</p>
              */
             public Builder avgTps(Float avgTps) {
                 this.avgTps = avgTps;
@@ -426,7 +504,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountBiz.
+             * <p>The number of business-related failures. If a checkpoint is defined, a failure occurs when the conditions for the checkpoint are not satisfied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCountBiz(Long failCountBiz) {
                 this.failCountBiz = failCountBiz;
@@ -434,7 +515,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountReq.
+             * <p>The number of failed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCountReq(Long failCountReq) {
                 this.failCountReq = failCountReq;
@@ -442,7 +526,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRt.
+             * <p>The maximum response time. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder maxRt(Float maxRt) {
                 this.maxRt = maxRt;
@@ -450,7 +537,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MinRt.
+             * <p>The minimum response time. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162</p>
              */
             public Builder minRt(Float minRt) {
                 this.minRt = minRt;
@@ -458,7 +548,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg50Rt.
+             * <p>The 50th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168</p>
              */
             public Builder seg50Rt(Float seg50Rt) {
                 this.seg50Rt = seg50Rt;
@@ -466,7 +559,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg75Rt.
+             * <p>The 75th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169</p>
              */
             public Builder seg75Rt(Float seg75Rt) {
                 this.seg75Rt = seg75Rt;
@@ -474,7 +570,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg90Rt.
+             * <p>The 90th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170</p>
              */
             public Builder seg90Rt(Float seg90Rt) {
                 this.seg90Rt = seg90Rt;
@@ -482,7 +581,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg99Rt.
+             * <p>The 99th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>284</p>
              */
             public Builder seg99Rt(Float seg99Rt) {
                 this.seg99Rt = seg99Rt;
@@ -490,7 +592,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateBiz.
+             * <p>The business success rate. The value is the ratio of the number of successful business to the total number of business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder successRateBiz(Float successRateBiz) {
                 this.successRateBiz = successRateBiz;
@@ -498,7 +603,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateReq.
+             * <p>The request success rate. The value is the ratio of the number of successful requests to the total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successRateReq(Float successRateReq) {
                 this.successRateReq = successRateReq;
@@ -512,23 +620,29 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ReportOverView extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ReportName")
+        @com.aliyun.core.annotation.NameInMap("ReportName")
         private String reportName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Vum")
+        @com.aliyun.core.annotation.NameInMap("Vum")
         private Long vum;
 
         private ReportOverView(Builder builder) {
@@ -598,8 +712,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String startTime; 
             private Long vum; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReportOverView model) {
+                this.agentCount = model.agentCount;
+                this.endTime = model.endTime;
+                this.reportId = model.reportId;
+                this.reportName = model.reportName;
+                this.startTime = model.startTime;
+                this.vum = model.vum;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of load generators. Each load generator has an IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -607,7 +736,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the performance testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-20 10:41:33</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -615,7 +747,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The ID of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GHB56VD</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -623,7 +758,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportName.
+             * <p>The name of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTS-TEST</p>
              */
             public Builder reportName(String reportName) {
                 this.reportName = reportName;
@@ -631,7 +769,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the performance testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-20 10:39:33</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -639,7 +780,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Vum.
+             * <p>The virtual user minutes (VUM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1012</p>
              */
             public Builder vum(Long vum) {
                 this.vum = vum;
@@ -653,32 +797,38 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class SceneMetrics extends TeaModel {
-        @NameInMap("AllCount")
+        @com.aliyun.core.annotation.NameInMap("AllCount")
         private Long allCount;
 
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Float avgRt;
 
-        @NameInMap("AvgTps")
+        @com.aliyun.core.annotation.NameInMap("AvgTps")
         private Float avgTps;
 
-        @NameInMap("FailCountBiz")
+        @com.aliyun.core.annotation.NameInMap("FailCountBiz")
         private Long failCountBiz;
 
-        @NameInMap("FailCountReq")
+        @com.aliyun.core.annotation.NameInMap("FailCountReq")
         private Long failCountReq;
 
-        @NameInMap("Seg90Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg90Rt")
         private Float seg90Rt;
 
-        @NameInMap("Seg99Rt")
+        @com.aliyun.core.annotation.NameInMap("Seg99Rt")
         private Float seg99Rt;
 
-        @NameInMap("SuccessRateBiz")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateBiz")
         private Float successRateBiz;
 
-        @NameInMap("SuccessRateReq")
+        @com.aliyun.core.annotation.NameInMap("SuccessRateReq")
         private Float successRateReq;
 
         private SceneMetrics(Builder builder) {
@@ -775,8 +925,26 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private Float successRateBiz; 
             private Float successRateReq; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneMetrics model) {
+                this.allCount = model.allCount;
+                this.avgRt = model.avgRt;
+                this.avgTps = model.avgTps;
+                this.failCountBiz = model.failCountBiz;
+                this.failCountReq = model.failCountReq;
+                this.seg90Rt = model.seg90Rt;
+                this.seg99Rt = model.seg99Rt;
+                this.successRateBiz = model.successRateBiz;
+                this.successRateReq = model.successRateReq;
+            } 
+
             /**
-             * AllCount.
+             * <p>The number of requests in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11872</p>
              */
             public Builder allCount(Long allCount) {
                 this.allCount = allCount;
@@ -784,7 +952,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRt.
+             * <p>The average response time in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170.49</p>
              */
             public Builder avgRt(Float avgRt) {
                 this.avgRt = avgRt;
@@ -792,7 +963,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTps.
+             * <p>The average transactions per second (TPS) in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.61</p>
              */
             public Builder avgTps(Float avgTps) {
                 this.avgTps = avgTps;
@@ -800,7 +974,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountBiz.
+             * <p>The number of business failures in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCountBiz(Long failCountBiz) {
                 this.failCountBiz = failCountBiz;
@@ -808,7 +985,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FailCountReq.
+             * <p>The number of failed requests in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCountReq(Long failCountReq) {
                 this.failCountReq = failCountReq;
@@ -816,7 +996,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg90Rt.
+             * <p>The 90th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170</p>
              */
             public Builder seg90Rt(Float seg90Rt) {
                 this.seg90Rt = seg90Rt;
@@ -824,7 +1007,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Seg99Rt.
+             * <p>The 99th percentile response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>284</p>
              */
             public Builder seg99Rt(Float seg99Rt) {
                 this.seg99Rt = seg99Rt;
@@ -832,7 +1018,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateBiz.
+             * <p>The business success rate in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder successRateBiz(Float successRateBiz) {
                 this.successRateBiz = successRateBiz;
@@ -840,7 +1029,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRateReq.
+             * <p>The request success rate in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successRateReq(Float successRateReq) {
                 this.successRateReq = successRateReq;
@@ -854,12 +1046,18 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class DomainBindingList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Ips")
-        private java.util.List < String > ips;
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List<String> ips;
 
         private DomainBindingList(Builder builder) {
             this.domain = builder.domain;
@@ -884,16 +1082,27 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainBindingList model) {
+                this.domain = model.domain;
+                this.ips = model.ips;
+            } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -901,9 +1110,9 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>The IP addresses bound to the domain name.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -915,17 +1124,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class AdvanceSetting extends TeaModel {
-        @NameInMap("ConnectionTimeoutInSecond")
+        @com.aliyun.core.annotation.NameInMap("ConnectionTimeoutInSecond")
         private Integer connectionTimeoutInSecond;
 
-        @NameInMap("DomainBindingList")
-        private java.util.List < DomainBindingList> domainBindingList;
+        @com.aliyun.core.annotation.NameInMap("DomainBindingList")
+        private java.util.List<DomainBindingList> domainBindingList;
 
-        @NameInMap("LogRate")
+        @com.aliyun.core.annotation.NameInMap("LogRate")
         private Integer logRate;
 
-        @NameInMap("SuccessCode")
+        @com.aliyun.core.annotation.NameInMap("SuccessCode")
         private String successCode;
 
         private AdvanceSetting(Builder builder) {
@@ -953,7 +1168,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return domainBindingList
          */
-        public java.util.List < DomainBindingList> getDomainBindingList() {
+        public java.util.List<DomainBindingList> getDomainBindingList() {
             return this.domainBindingList;
         }
 
@@ -973,12 +1188,25 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer connectionTimeoutInSecond; 
-            private java.util.List < DomainBindingList> domainBindingList; 
+            private java.util.List<DomainBindingList> domainBindingList; 
             private Integer logRate; 
             private String successCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvanceSetting model) {
+                this.connectionTimeoutInSecond = model.connectionTimeoutInSecond;
+                this.domainBindingList = model.domainBindingList;
+                this.logRate = model.logRate;
+                this.successCode = model.successCode;
+            } 
+
             /**
-             * ConnectionTimeoutInSecond.
+             * <p>The timeout period of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder connectionTimeoutInSecond(Integer connectionTimeoutInSecond) {
                 this.connectionTimeoutInSecond = connectionTimeoutInSecond;
@@ -986,15 +1214,18 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainBindingList.
+             * <p>The domain name-IP address binding relationships.</p>
              */
-            public Builder domainBindingList(java.util.List < DomainBindingList> domainBindingList) {
+            public Builder domainBindingList(java.util.List<DomainBindingList> domainBindingList) {
                 this.domainBindingList = domainBindingList;
                 return this;
             }
 
             /**
-             * LogRate.
+             * <p>The log sampling rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder logRate(Integer logRate) {
                 this.logRate = logRate;
@@ -1002,7 +1233,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCode.
+             * <p>The custom success code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>429,404</p>
              */
             public Builder successCode(String successCode) {
                 this.successCode = successCode;
@@ -1016,11 +1250,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class FileParameterList extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
         private String fileOssAddress;
 
         private FileParameterList(Builder builder) {
@@ -1054,8 +1294,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String fileName; 
             private String fileOssAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileParameterList model) {
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+            } 
+
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1063,7 +1314,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.csv">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.csv</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -1077,11 +1331,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class GlobalParameterList extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private GlobalParameterList(Builder builder) {
@@ -1115,8 +1375,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String paramName; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalParameterList model) {
+                this.paramName = model.paramName;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
-             * ParamName.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -1124,7 +1395,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamValue.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user01</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -1138,11 +1412,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ApiLoadConfigList extends TeaModel {
-        @NameInMap("RpsBegin")
+        @com.aliyun.core.annotation.NameInMap("RpsBegin")
         private Integer rpsBegin;
 
-        @NameInMap("RpsLimit")
+        @com.aliyun.core.annotation.NameInMap("RpsLimit")
         private Integer rpsLimit;
 
         private ApiLoadConfigList(Builder builder) {
@@ -1176,8 +1456,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private Integer rpsBegin; 
             private Integer rpsLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiLoadConfigList model) {
+                this.rpsBegin = model.rpsBegin;
+                this.rpsLimit = model.rpsLimit;
+            } 
+
             /**
-             * RpsBegin.
+             * <p>The starting requests per second (RPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rpsBegin(Integer rpsBegin) {
                 this.rpsBegin = rpsBegin;
@@ -1185,7 +1476,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RpsLimit.
+             * <p>The maximum RPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rpsLimit(Integer rpsLimit) {
                 this.rpsLimit = rpsLimit;
@@ -1199,17 +1493,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
-        @NameInMap("AllConcurrencyBegin")
+        @com.aliyun.core.annotation.NameInMap("AllConcurrencyBegin")
         private Integer allConcurrencyBegin;
 
-        @NameInMap("AllConcurrencyLimit")
+        @com.aliyun.core.annotation.NameInMap("AllConcurrencyLimit")
         private Integer allConcurrencyLimit;
 
-        @NameInMap("AllRpsBegin")
+        @com.aliyun.core.annotation.NameInMap("AllRpsBegin")
         private Integer allRpsBegin;
 
-        @NameInMap("AllRpsLimit")
+        @com.aliyun.core.annotation.NameInMap("AllRpsLimit")
         private Integer allRpsLimit;
 
         private Configuration(Builder builder) {
@@ -1261,8 +1561,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private Integer allRpsBegin; 
             private Integer allRpsLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.allConcurrencyBegin = model.allConcurrencyBegin;
+                this.allConcurrencyLimit = model.allConcurrencyLimit;
+                this.allRpsBegin = model.allRpsBegin;
+                this.allRpsLimit = model.allRpsLimit;
+            } 
+
             /**
-             * AllConcurrencyBegin.
+             * <p>The starting number of concurrent virtual users in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allConcurrencyBegin(Integer allConcurrencyBegin) {
                 this.allConcurrencyBegin = allConcurrencyBegin;
@@ -1270,7 +1583,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AllConcurrencyLimit.
+             * <p>The maximum number of concurrent virtual users in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder allConcurrencyLimit(Integer allConcurrencyLimit) {
                 this.allConcurrencyLimit = allConcurrencyLimit;
@@ -1278,7 +1594,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AllRpsBegin.
+             * <p>The starting RPS in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allRpsBegin(Integer allRpsBegin) {
                 this.allRpsBegin = allRpsBegin;
@@ -1286,7 +1605,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AllRpsLimit.
+             * <p>The maximum RPS in the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder allRpsLimit(Integer allRpsLimit) {
                 this.allRpsLimit = allRpsLimit;
@@ -1300,11 +1622,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class RelationLoadConfigList extends TeaModel {
-        @NameInMap("ConcurrencyBegin")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyBegin")
         private Integer concurrencyBegin;
 
-        @NameInMap("ConcurrencyLimit")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyLimit")
         private Integer concurrencyLimit;
 
         private RelationLoadConfigList(Builder builder) {
@@ -1338,8 +1666,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private Integer concurrencyBegin; 
             private Integer concurrencyLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationLoadConfigList model) {
+                this.concurrencyBegin = model.concurrencyBegin;
+                this.concurrencyLimit = model.concurrencyLimit;
+            } 
+
             /**
-             * ConcurrencyBegin.
+             * <p>The starting number of concurrent virtual users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrencyBegin(Integer concurrencyBegin) {
                 this.concurrencyBegin = concurrencyBegin;
@@ -1347,7 +1686,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ConcurrencyLimit.
+             * <p>The maximum number of concurrent virtual users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder concurrencyLimit(Integer concurrencyLimit) {
                 this.concurrencyLimit = concurrencyLimit;
@@ -1361,23 +1703,29 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class LoadConfig extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("ApiLoadConfigList")
-        private java.util.List < ApiLoadConfigList> apiLoadConfigList;
+        @com.aliyun.core.annotation.NameInMap("ApiLoadConfigList")
+        private java.util.List<ApiLoadConfigList> apiLoadConfigList;
 
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private Configuration configuration;
 
-        @NameInMap("MaxRunningTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRunningTime")
         private Integer maxRunningTime;
 
-        @NameInMap("RelationLoadConfigList")
-        private java.util.List < RelationLoadConfigList> relationLoadConfigList;
+        @com.aliyun.core.annotation.NameInMap("RelationLoadConfigList")
+        private java.util.List<RelationLoadConfigList> relationLoadConfigList;
 
-        @NameInMap("TestMode")
+        @com.aliyun.core.annotation.NameInMap("TestMode")
         private String testMode;
 
         private LoadConfig(Builder builder) {
@@ -1407,7 +1755,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return apiLoadConfigList
          */
-        public java.util.List < ApiLoadConfigList> getApiLoadConfigList() {
+        public java.util.List<ApiLoadConfigList> getApiLoadConfigList() {
             return this.apiLoadConfigList;
         }
 
@@ -1428,7 +1776,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return relationLoadConfigList
          */
-        public java.util.List < RelationLoadConfigList> getRelationLoadConfigList() {
+        public java.util.List<RelationLoadConfigList> getRelationLoadConfigList() {
             return this.relationLoadConfigList;
         }
 
@@ -1441,14 +1789,29 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer agentCount; 
-            private java.util.List < ApiLoadConfigList> apiLoadConfigList; 
+            private java.util.List<ApiLoadConfigList> apiLoadConfigList; 
             private Configuration configuration; 
             private Integer maxRunningTime; 
-            private java.util.List < RelationLoadConfigList> relationLoadConfigList; 
+            private java.util.List<RelationLoadConfigList> relationLoadConfigList; 
             private String testMode; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadConfig model) {
+                this.agentCount = model.agentCount;
+                this.apiLoadConfigList = model.apiLoadConfigList;
+                this.configuration = model.configuration;
+                this.maxRunningTime = model.maxRunningTime;
+                this.relationLoadConfigList = model.relationLoadConfigList;
+                this.testMode = model.testMode;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of load generators.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -1456,15 +1819,15 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiLoadConfigList.
+             * <p>The API request load settings.</p>
              */
-            public Builder apiLoadConfigList(java.util.List < ApiLoadConfigList> apiLoadConfigList) {
+            public Builder apiLoadConfigList(java.util.List<ApiLoadConfigList> apiLoadConfigList) {
                 this.apiLoadConfigList = apiLoadConfigList;
                 return this;
             }
 
             /**
-             * Configuration.
+             * <p>The concurrency and RPS limits in the scenario.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -1472,7 +1835,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRunningTime.
+             * <p>The maximum running time. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxRunningTime(Integer maxRunningTime) {
                 this.maxRunningTime = maxRunningTime;
@@ -1480,15 +1846,18 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RelationLoadConfigList.
+             * <p>The settings of the session.</p>
              */
-            public Builder relationLoadConfigList(java.util.List < RelationLoadConfigList> relationLoadConfigList) {
+            public Builder relationLoadConfigList(java.util.List<RelationLoadConfigList> relationLoadConfigList) {
                 this.relationLoadConfigList = relationLoadConfigList;
                 return this;
             }
 
             /**
-             * TestMode.
+             * <p>The load application mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TPS</p>
              */
             public Builder testMode(String testMode) {
                 this.testMode = testMode;
@@ -1502,11 +1871,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ApiListBody extends TeaModel {
-        @NameInMap("BodyValue")
+        @com.aliyun.core.annotation.NameInMap("BodyValue")
         private String bodyValue;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
         private ApiListBody(Builder builder) {
@@ -1540,8 +1915,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String bodyValue; 
             private String contentType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiListBody model) {
+                this.bodyValue = model.bodyValue;
+                this.contentType = model.contentType;
+            } 
+
             /**
-             * BodyValue.
+             * <p>The content of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{key:value}</p>
              */
             public Builder bodyValue(String bodyValue) {
                 this.bodyValue = bodyValue;
@@ -1549,7 +1935,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ContentType.
+             * <p>The type of the request body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/x-www-form-urlencoded</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -1563,17 +1952,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class CheckPointList extends TeaModel {
-        @NameInMap("CheckPoint")
+        @com.aliyun.core.annotation.NameInMap("CheckPoint")
         private String checkPoint;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private String expectValue;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
         private CheckPointList(Builder builder) {
@@ -1625,8 +2020,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String expectValue; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckPointList model) {
+                this.checkPoint = model.checkPoint;
+                this.checkType = model.checkType;
+                this.expectValue = model.expectValue;
+                this.operator = model.operator;
+            } 
+
             /**
-             * CheckPoint.
+             * <p>The checked item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId</p>
              */
             public Builder checkPoint(String checkPoint) {
                 this.checkPoint = checkPoint;
@@ -1634,7 +2042,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>The check type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPORTED_PARAM</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -1642,7 +2053,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectValue.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -1650,7 +2064,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The check operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctn</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1664,17 +2081,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ExportList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("ExportName")
+        @com.aliyun.core.annotation.NameInMap("ExportName")
         private String exportName;
 
-        @NameInMap("ExportType")
+        @com.aliyun.core.annotation.NameInMap("ExportType")
         private String exportType;
 
-        @NameInMap("ExportValue")
+        @com.aliyun.core.annotation.NameInMap("ExportValue")
         private String exportValue;
 
         private ExportList(Builder builder) {
@@ -1726,8 +2149,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String exportType; 
             private String exportValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExportList model) {
+                this.count = model.count;
+                this.exportName = model.exportName;
+                this.exportType = model.exportType;
+                this.exportValue = model.exportValue;
+            } 
+
             /**
-             * Count.
+             * <p>The index of the export parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1735,7 +2171,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ExportName.
+             * <p>The name of the export parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId</p>
              */
             public Builder exportName(String exportName) {
                 this.exportName = exportName;
@@ -1743,7 +2182,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ExportType.
+             * <p>The source of the export parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BODY_JSON</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -1751,7 +2193,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ExportValue.
+             * <p>The actual path from which you want to extract the export parameter values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data.userId</p>
              */
             public Builder exportValue(String exportValue) {
                 this.exportValue = exportValue;
@@ -1765,11 +2210,17 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class HeaderList extends TeaModel {
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private HeaderList(Builder builder) {
@@ -1803,8 +2254,19 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String headerName; 
             private String headerValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderList model) {
+                this.headerName = model.headerName;
+                this.headerValue = model.headerValue;
+            } 
+
             /**
-             * HeaderName.
+             * <p>The name of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User-Agent</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -1812,7 +2274,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * HeaderValue.
+             * <p>The value of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTS</p>
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -1826,35 +2291,41 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class ApiList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private ApiListBody body;
 
-        @NameInMap("CheckPointList")
-        private java.util.List < CheckPointList> checkPointList;
+        @com.aliyun.core.annotation.NameInMap("CheckPointList")
+        private java.util.List<CheckPointList> checkPointList;
 
-        @NameInMap("ExportList")
-        private java.util.List < ExportList> exportList;
+        @com.aliyun.core.annotation.NameInMap("ExportList")
+        private java.util.List<ExportList> exportList;
 
-        @NameInMap("HeaderList")
-        private java.util.List < HeaderList> headerList;
+        @com.aliyun.core.annotation.NameInMap("HeaderList")
+        private java.util.List<HeaderList> headerList;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("RedirectCountLimit")
+        @com.aliyun.core.annotation.NameInMap("RedirectCountLimit")
         private Integer redirectCountLimit;
 
-        @NameInMap("TimeoutInSecond")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInSecond")
         private Integer timeoutInSecond;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private ApiList(Builder builder) {
@@ -1902,21 +2373,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return checkPointList
          */
-        public java.util.List < CheckPointList> getCheckPointList() {
+        public java.util.List<CheckPointList> getCheckPointList() {
             return this.checkPointList;
         }
 
         /**
          * @return exportList
          */
-        public java.util.List < ExportList> getExportList() {
+        public java.util.List<ExportList> getExportList() {
             return this.exportList;
         }
 
         /**
          * @return headerList
          */
-        public java.util.List < HeaderList> getHeaderList() {
+        public java.util.List<HeaderList> getHeaderList() {
             return this.headerList;
         }
 
@@ -1952,16 +2423,35 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String apiId; 
             private String apiName; 
             private ApiListBody body; 
-            private java.util.List < CheckPointList> checkPointList; 
-            private java.util.List < ExportList> exportList; 
-            private java.util.List < HeaderList> headerList; 
+            private java.util.List<CheckPointList> checkPointList; 
+            private java.util.List<ExportList> exportList; 
+            private java.util.List<HeaderList> headerList; 
             private String method; 
             private Integer redirectCountLimit; 
             private Integer timeoutInSecond; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiList model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.body = model.body;
+                this.checkPointList = model.checkPointList;
+                this.exportList = model.exportList;
+                this.headerList = model.headerList;
+                this.method = model.method;
+                this.redirectCountLimit = model.redirectCountLimit;
+                this.timeoutInSecond = model.timeoutInSecond;
+                this.url = model.url;
+            } 
+
             /**
-             * API ID。
+             * <p>The ID of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MNB45</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1969,7 +2459,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-API</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1977,7 +2470,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Body.
+             * <p>The request body.</p>
              */
             public Builder body(ApiListBody body) {
                 this.body = body;
@@ -1985,31 +2478,34 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckPointList.
+             * <p>The checkpoints of the API operation.</p>
              */
-            public Builder checkPointList(java.util.List < CheckPointList> checkPointList) {
+            public Builder checkPointList(java.util.List<CheckPointList> checkPointList) {
                 this.checkPointList = checkPointList;
                 return this;
             }
 
             /**
-             * ExportList.
+             * <p>The export parameters.</p>
              */
-            public Builder exportList(java.util.List < ExportList> exportList) {
+            public Builder exportList(java.util.List<ExportList> exportList) {
                 this.exportList = exportList;
                 return this;
             }
 
             /**
-             * HeaderList.
+             * <p>The headers.</p>
              */
-            public Builder headerList(java.util.List < HeaderList> headerList) {
+            public Builder headerList(java.util.List<HeaderList> headerList) {
                 this.headerList = headerList;
                 return this;
             }
 
             /**
-             * Method.
+             * <p>The method of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -2017,7 +2513,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectCountLimit.
+             * <p>The number of redirections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder redirectCountLimit(Integer redirectCountLimit) {
                 this.redirectCountLimit = redirectCountLimit;
@@ -2025,7 +2524,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutInSecond.
+             * <p>The timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeoutInSecond(Integer timeoutInSecond) {
                 this.timeoutInSecond = timeoutInSecond;
@@ -2033,7 +2535,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL to which the API request is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com/">http://www.example.com/</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2047,17 +2552,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class FileParameterExplainList extends TeaModel {
-        @NameInMap("BaseFile")
+        @com.aliyun.core.annotation.NameInMap("BaseFile")
         private Boolean baseFile;
 
-        @NameInMap("CycleOnce")
+        @com.aliyun.core.annotation.NameInMap("CycleOnce")
         private Boolean cycleOnce;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileParamName")
+        @com.aliyun.core.annotation.NameInMap("FileParamName")
         private String fileParamName;
 
         private FileParameterExplainList(Builder builder) {
@@ -2109,8 +2620,21 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             private String fileName; 
             private String fileParamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileParameterExplainList model) {
+                this.baseFile = model.baseFile;
+                this.cycleOnce = model.cycleOnce;
+                this.fileName = model.fileName;
+                this.fileParamName = model.fileParamName;
+            } 
+
             /**
-             * BaseFile.
+             * <p>Indicates whether the file is used as the baseline file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder baseFile(Boolean baseFile) {
                 this.baseFile = baseFile;
@@ -2118,7 +2642,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleOnce.
+             * <p>Indicates whether the parameters are used once.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder cycleOnce(Boolean cycleOnce) {
                 this.cycleOnce = cycleOnce;
@@ -2126,7 +2653,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -2134,7 +2664,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FileParamName.
+             * <p>The parameters in the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder fileParamName(String fileParamName) {
                 this.fileParamName = fileParamName;
@@ -2148,17 +2681,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class RelationList extends TeaModel {
-        @NameInMap("ApiList")
-        private java.util.List < ApiList> apiList;
+        @com.aliyun.core.annotation.NameInMap("ApiList")
+        private java.util.List<ApiList> apiList;
 
-        @NameInMap("FileParameterExplainList")
-        private java.util.List < FileParameterExplainList> fileParameterExplainList;
+        @com.aliyun.core.annotation.NameInMap("FileParameterExplainList")
+        private java.util.List<FileParameterExplainList> fileParameterExplainList;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private String relationId;
 
-        @NameInMap("RelationName")
+        @com.aliyun.core.annotation.NameInMap("RelationName")
         private String relationName;
 
         private RelationList(Builder builder) {
@@ -2179,14 +2718,14 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return apiList
          */
-        public java.util.List < ApiList> getApiList() {
+        public java.util.List<ApiList> getApiList() {
             return this.apiList;
         }
 
         /**
          * @return fileParameterExplainList
          */
-        public java.util.List < FileParameterExplainList> getFileParameterExplainList() {
+        public java.util.List<FileParameterExplainList> getFileParameterExplainList() {
             return this.fileParameterExplainList;
         }
 
@@ -2205,29 +2744,42 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiList> apiList; 
-            private java.util.List < FileParameterExplainList> fileParameterExplainList; 
+            private java.util.List<ApiList> apiList; 
+            private java.util.List<FileParameterExplainList> fileParameterExplainList; 
             private String relationId; 
             private String relationName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.apiList = model.apiList;
+                this.fileParameterExplainList = model.fileParameterExplainList;
+                this.relationId = model.relationId;
+                this.relationName = model.relationName;
+            } 
+
             /**
-             * ApiList.
+             * <p>The settings of the API operation.</p>
              */
-            public Builder apiList(java.util.List < ApiList> apiList) {
+            public Builder apiList(java.util.List<ApiList> apiList) {
                 this.apiList = apiList;
                 return this;
             }
 
             /**
-             * FileParameterExplainList.
+             * <p>The file parameters used by the session.</p>
              */
-            public Builder fileParameterExplainList(java.util.List < FileParameterExplainList> fileParameterExplainList) {
+            public Builder fileParameterExplainList(java.util.List<FileParameterExplainList> fileParameterExplainList) {
                 this.fileParameterExplainList = fileParameterExplainList;
                 return this;
             }
 
             /**
-             * RelationId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HGBN4D</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -2235,7 +2787,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RelationName.
+             * <p>The name of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-session-1</p>
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -2249,35 +2804,41 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPtsReportDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPtsReportDetailsResponseBody</p>
+     */
     public static class SceneSnapShot extends TeaModel {
-        @NameInMap("AdvanceSetting")
+        @com.aliyun.core.annotation.NameInMap("AdvanceSetting")
         private AdvanceSetting advanceSetting;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FileParameterList")
-        private java.util.List < FileParameterList> fileParameterList;
+        @com.aliyun.core.annotation.NameInMap("FileParameterList")
+        private java.util.List<FileParameterList> fileParameterList;
 
-        @NameInMap("GlobalParameterList")
-        private java.util.List < GlobalParameterList> globalParameterList;
+        @com.aliyun.core.annotation.NameInMap("GlobalParameterList")
+        private java.util.List<GlobalParameterList> globalParameterList;
 
-        @NameInMap("LoadConfig")
+        @com.aliyun.core.annotation.NameInMap("LoadConfig")
         private LoadConfig loadConfig;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RelationList")
-        private java.util.List < RelationList> relationList;
+        @com.aliyun.core.annotation.NameInMap("RelationList")
+        private java.util.List<RelationList> relationList;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SceneSnapShot(Builder builder) {
@@ -2318,14 +2879,14 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return fileParameterList
          */
-        public java.util.List < FileParameterList> getFileParameterList() {
+        public java.util.List<FileParameterList> getFileParameterList() {
             return this.fileParameterList;
         }
 
         /**
          * @return globalParameterList
          */
-        public java.util.List < GlobalParameterList> getGlobalParameterList() {
+        public java.util.List<GlobalParameterList> getGlobalParameterList() {
             return this.globalParameterList;
         }
 
@@ -2346,7 +2907,7 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         /**
          * @return relationList
          */
-        public java.util.List < RelationList> getRelationList() {
+        public java.util.List<RelationList> getRelationList() {
             return this.relationList;
         }
 
@@ -2374,17 +2935,33 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
         public static final class Builder {
             private AdvanceSetting advanceSetting; 
             private String createTime; 
-            private java.util.List < FileParameterList> fileParameterList; 
-            private java.util.List < GlobalParameterList> globalParameterList; 
+            private java.util.List<FileParameterList> fileParameterList; 
+            private java.util.List<GlobalParameterList> globalParameterList; 
             private LoadConfig loadConfig; 
             private String modifiedTime; 
-            private java.util.List < RelationList> relationList; 
+            private java.util.List<RelationList> relationList; 
             private String sceneId; 
             private String sceneName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SceneSnapShot model) {
+                this.advanceSetting = model.advanceSetting;
+                this.createTime = model.createTime;
+                this.fileParameterList = model.fileParameterList;
+                this.globalParameterList = model.globalParameterList;
+                this.loadConfig = model.loadConfig;
+                this.modifiedTime = model.modifiedTime;
+                this.relationList = model.relationList;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+            } 
+
             /**
-             * AdvanceSetting.
+             * <p>The advanced settings of the scenario.</p>
              */
             public Builder advanceSetting(AdvanceSetting advanceSetting) {
                 this.advanceSetting = advanceSetting;
@@ -2392,7 +2969,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the scenario was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-20 09:28:10</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2400,23 +2980,23 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FileParameterList.
+             * <p>The file used in the scenario.</p>
              */
-            public Builder fileParameterList(java.util.List < FileParameterList> fileParameterList) {
+            public Builder fileParameterList(java.util.List<FileParameterList> fileParameterList) {
                 this.fileParameterList = fileParameterList;
                 return this;
             }
 
             /**
-             * GlobalParameterList.
+             * <p>The global parameters.</p>
              */
-            public Builder globalParameterList(java.util.List < GlobalParameterList> globalParameterList) {
+            public Builder globalParameterList(java.util.List<GlobalParameterList> globalParameterList) {
                 this.globalParameterList = globalParameterList;
                 return this;
             }
 
             /**
-             * LoadConfig.
+             * <p>The load settings.</p>
              */
             public Builder loadConfig(LoadConfig loadConfig) {
                 this.loadConfig = loadConfig;
@@ -2424,7 +3004,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The last modification time of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-10 10:10:10</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2432,15 +3015,18 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RelationList.
+             * <p>The sessions.</p>
              */
-            public Builder relationList(java.util.List < RelationList> relationList) {
+            public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
                 return this;
             }
 
             /**
-             * SceneId.
+             * <p>The ID of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7HBNS3</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -2448,7 +3034,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PTS-TEST</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -2456,7 +3045,10 @@ public class GetPtsReportDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STOPPED</p>
              */
             public Builder status(String status) {
                 this.status = status;

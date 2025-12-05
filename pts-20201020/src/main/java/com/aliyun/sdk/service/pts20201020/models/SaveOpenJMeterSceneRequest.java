@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveOpenJMeterSceneRequest} extends {@link RequestModel}
  *
  * <p>SaveOpenJMeterSceneRequest</p>
  */
 public class SaveOpenJMeterSceneRequest extends Request {
-    @Query
-    @NameInMap("OpenJMeterScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenJMeterScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private OpenJMeterScene openJMeterScene;
 
     private SaveOpenJMeterSceneRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,8 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
         /**
-         * OpenJMeterScene.
+         * <p>The details of the scenario.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder openJMeterScene(OpenJMeterScene openJMeterScene) {
             String openJMeterSceneShrink = shrink(openJMeterScene, "OpenJMeterScene", "json");
@@ -71,15 +77,21 @@ public class SaveOpenJMeterSceneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveOpenJMeterSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SaveOpenJMeterSceneRequest</p>
+     */
     public static class DnsCacheConfig extends TeaModel {
-        @NameInMap("ClearCacheEachIteration")
+        @com.aliyun.core.annotation.NameInMap("ClearCacheEachIteration")
         private Boolean clearCacheEachIteration;
 
-        @NameInMap("DnsServers")
-        private java.util.List < String > dnsServers;
+        @com.aliyun.core.annotation.NameInMap("DnsServers")
+        private java.util.List<String> dnsServers;
 
-        @NameInMap("HostTable")
-        private java.util.Map < String, String > hostTable;
+        @com.aliyun.core.annotation.NameInMap("HostTable")
+        private java.util.Map<String, String> hostTable;
 
         private DnsCacheConfig(Builder builder) {
             this.clearCacheEachIteration = builder.clearCacheEachIteration;
@@ -105,24 +117,36 @@ public class SaveOpenJMeterSceneRequest extends Request {
         /**
          * @return dnsServers
          */
-        public java.util.List < String > getDnsServers() {
+        public java.util.List<String> getDnsServers() {
             return this.dnsServers;
         }
 
         /**
          * @return hostTable
          */
-        public java.util.Map < String, String > getHostTable() {
+        public java.util.Map<String, String> getHostTable() {
             return this.hostTable;
         }
 
         public static final class Builder {
             private Boolean clearCacheEachIteration; 
-            private java.util.List < String > dnsServers; 
-            private java.util.Map < String, String > hostTable; 
+            private java.util.List<String> dnsServers; 
+            private java.util.Map<String, String> hostTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsCacheConfig model) {
+                this.clearCacheEachIteration = model.clearCacheEachIteration;
+                this.dnsServers = model.dnsServers;
+                this.hostTable = model.hostTable;
+            } 
 
             /**
-             * ClearCacheEachIteration.
+             * <p>Specifies whether to clear the cache in each iteration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder clearCacheEachIteration(Boolean clearCacheEachIteration) {
                 this.clearCacheEachIteration = clearCacheEachIteration;
@@ -130,17 +154,17 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * DnsServers.
+             * <p>The DNS servers.</p>
              */
-            public Builder dnsServers(java.util.List < String > dnsServers) {
+            public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
                 return this;
             }
 
             /**
-             * HostTable.
+             * <p>The table that contains bound domain names.</p>
              */
-            public Builder hostTable(java.util.Map < String, String > hostTable) {
+            public Builder hostTable(java.util.Map<String, String> hostTable) {
                 this.hostTable = hostTable;
                 return this;
             }
@@ -152,28 +176,34 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveOpenJMeterSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SaveOpenJMeterSceneRequest</p>
+     */
     public static class FileList extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileName;
 
-        @NameInMap("FileOssAddress")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileOssAddress;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("SplitCsv")
+        @com.aliyun.core.annotation.NameInMap("SplitCsv")
         private Boolean splitCsv;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private FileList(Builder builder) {
@@ -252,8 +282,24 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private Boolean splitCsv; 
             private String tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+                this.fileSize = model.fileSize;
+                this.md5 = model.md5;
+                this.splitCsv = model.splitCsv;
+                this.tags = model.tags;
+            } 
+
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61232</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -261,7 +307,11 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The name of the test file.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baidu.jmx</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -269,7 +319,14 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The Object Storage Service (OSS) path that is used to access the test file over the Internet.</p>
+             * <blockquote>
+             * <p> Only test files in the China (Shanghai) region can be accessed.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.cn-shanghai.aliyuncs.com/baidu.jmx">https://test.cn-shanghai.aliyuncs.com/baidu.jmx</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -277,7 +334,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * FileSize.
+             * <p>The file size. The total file size cannot exceed 500 MB. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28880</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -285,7 +345,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 hash of the test file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DA70F97A74D76B6A3BEF9CC8AE0D89EB</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -293,7 +356,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * SplitCsv.
+             * <p>Specifies whether to split the test file. This parameter is valid only for CSV files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder splitCsv(Boolean splitCsv) {
                 this.splitCsv = splitCsv;
@@ -301,7 +367,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The file tag.</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -315,11 +381,17 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveOpenJMeterSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SaveOpenJMeterSceneRequest</p>
+     */
     public static class JMeterProperties extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private JMeterProperties(Builder builder) {
@@ -353,8 +425,19 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(JMeterProperties model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https.sessioncontext.shared</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -362,7 +445,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The values of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -376,11 +462,17 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveOpenJMeterSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SaveOpenJMeterSceneRequest</p>
+     */
     public static class RegionalCondition extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RegionalCondition(Builder builder) {
@@ -414,8 +506,19 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private Integer amount; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionalCondition model) {
+                this.amount = model.amount;
+                this.region = model.region;
+            } 
+
             /**
-             * Amount.
+             * <p>The number of stress tests. The sum of the number of stress tests in all regions must be equal to the AgentCount value of a specified scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -423,7 +526,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -437,87 +543,93 @@ public class SaveOpenJMeterSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SaveOpenJMeterSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SaveOpenJMeterSceneRequest</p>
+     */
     public static class OpenJMeterScene extends TeaModel {
-        @NameInMap("AgentCount")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer agentCount;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Integer concurrency;
 
-        @NameInMap("ConstantThroughputTimerType")
+        @com.aliyun.core.annotation.NameInMap("ConstantThroughputTimerType")
         private String constantThroughputTimerType;
 
-        @NameInMap("DnsCacheConfig")
+        @com.aliyun.core.annotation.NameInMap("DnsCacheConfig")
         private DnsCacheConfig dnsCacheConfig;
 
-        @NameInMap("Duration")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer duration;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("FileList")
-        @Validation(required = true)
-        private java.util.List < FileList> fileList;
+        @com.aliyun.core.annotation.NameInMap("FileList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<FileList> fileList;
 
-        @NameInMap("IsVpcTest")
+        @com.aliyun.core.annotation.NameInMap("IsVpcTest")
         private Boolean isVpcTest;
 
-        @NameInMap("JMeterProperties")
-        private java.util.List < JMeterProperties> jMeterProperties;
+        @com.aliyun.core.annotation.NameInMap("JMeterProperties")
+        private java.util.List<JMeterProperties> jMeterProperties;
 
-        @NameInMap("JmeterPluginLabel")
-        @Validation(maxLength = 32)
+        @com.aliyun.core.annotation.NameInMap("JmeterPluginLabel")
+        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String jmeterPluginLabel;
 
-        @NameInMap("MaxRps")
+        @com.aliyun.core.annotation.NameInMap("MaxRps")
         private Integer maxRps;
 
-        @NameInMap("Mode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mode;
 
-        @NameInMap("RampUp")
+        @com.aliyun.core.annotation.NameInMap("RampUp")
         private Integer rampUp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionalCondition")
-        private java.util.List < RegionalCondition> regionalCondition;
+        @com.aliyun.core.annotation.NameInMap("RegionalCondition")
+        private java.util.List<RegionalCondition> regionalCondition;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SceneName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sceneName;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("StartConcurrency")
+        @com.aliyun.core.annotation.NameInMap("StartConcurrency")
         private Integer startConcurrency;
 
-        @NameInMap("StartRps")
+        @com.aliyun.core.annotation.NameInMap("StartRps")
         private Integer startRps;
 
-        @NameInMap("Steps")
+        @com.aliyun.core.annotation.NameInMap("Steps")
         private Integer steps;
 
-        @NameInMap("SyncTimerType")
+        @com.aliyun.core.annotation.NameInMap("SyncTimerType")
         private String syncTimerType;
 
-        @NameInMap("TestFile")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TestFile")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String testFile;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private OpenJMeterScene(Builder builder) {
@@ -601,7 +713,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
         /**
          * @return fileList
          */
-        public java.util.List < FileList> getFileList() {
+        public java.util.List<FileList> getFileList() {
             return this.fileList;
         }
 
@@ -615,7 +727,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
         /**
          * @return jMeterProperties
          */
-        public java.util.List < JMeterProperties> getJMeterProperties() {
+        public java.util.List<JMeterProperties> getJMeterProperties() {
             return this.jMeterProperties;
         }
 
@@ -657,7 +769,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
         /**
          * @return regionalCondition
          */
-        public java.util.List < RegionalCondition> getRegionalCondition() {
+        public java.util.List<RegionalCondition> getRegionalCondition() {
             return this.regionalCondition;
         }
 
@@ -738,15 +850,15 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private DnsCacheConfig dnsCacheConfig; 
             private Integer duration; 
             private String environmentId; 
-            private java.util.List < FileList> fileList; 
+            private java.util.List<FileList> fileList; 
             private Boolean isVpcTest; 
-            private java.util.List < JMeterProperties> jMeterProperties; 
+            private java.util.List<JMeterProperties> jMeterProperties; 
             private String jmeterPluginLabel; 
             private Integer maxRps; 
             private String mode; 
             private Integer rampUp; 
             private String regionId; 
-            private java.util.List < RegionalCondition> regionalCondition; 
+            private java.util.List<RegionalCondition> regionalCondition; 
             private String sceneId; 
             private String sceneName; 
             private String securityGroupId; 
@@ -758,8 +870,43 @@ public class SaveOpenJMeterSceneRequest extends Request {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenJMeterScene model) {
+                this.agentCount = model.agentCount;
+                this.concurrency = model.concurrency;
+                this.constantThroughputTimerType = model.constantThroughputTimerType;
+                this.dnsCacheConfig = model.dnsCacheConfig;
+                this.duration = model.duration;
+                this.environmentId = model.environmentId;
+                this.fileList = model.fileList;
+                this.isVpcTest = model.isVpcTest;
+                this.jMeterProperties = model.jMeterProperties;
+                this.jmeterPluginLabel = model.jmeterPluginLabel;
+                this.maxRps = model.maxRps;
+                this.mode = model.mode;
+                this.rampUp = model.rampUp;
+                this.regionId = model.regionId;
+                this.regionalCondition = model.regionalCondition;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.securityGroupId = model.securityGroupId;
+                this.startConcurrency = model.startConcurrency;
+                this.startRps = model.startRps;
+                this.steps = model.steps;
+                this.syncTimerType = model.syncTimerType;
+                this.testFile = model.testFile;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of stress testers.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -767,7 +914,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Concurrency.
+             * <p>The maximum concurrency that is determined by the resource plans of users. You must configure this parameter when the mode is set to CONCURRENCY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -775,7 +925,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * ConstantThroughputTimerType.
+             * <p>The type of the synchronization timer with fixed throughput in JMeter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOBAL</p>
              */
             public Builder constantThroughputTimerType(String constantThroughputTimerType) {
                 this.constantThroughputTimerType = constantThroughputTimerType;
@@ -783,7 +936,7 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * DnsCacheConfig.
+             * <p>The settings of Domain Name System (DNS).</p>
              */
             public Builder dnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
                 this.dnsCacheConfig = dnsCacheConfig;
@@ -791,7 +944,11 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The stress testing duration. The maximum stress testing duration is no more than one day, Unit: seconds. Valid values: 60 to 86400.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -799,7 +956,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * EnvironmentId.
+             * <p>The ID of the environment associated with the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I8PZIH</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -807,15 +967,19 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * FileList.
+             * <p>The test files.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder fileList(java.util.List < FileList> fileList) {
+            public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
                 return this;
             }
 
             /**
-             * IsVpcTest.
+             * <p>Specifies whether the test is a virtual private cloud (VPC) test. The default value is false, which indicates a public network test. VPC-related settings take effect only when you set this parameter to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isVpcTest(Boolean isVpcTest) {
                 this.isVpcTest = isVpcTest;
@@ -823,15 +987,18 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * JMeterProperties.
+             * <p>The JMeter properties.</p>
              */
-            public Builder jMeterProperties(java.util.List < JMeterProperties> jMeterProperties) {
+            public Builder jMeterProperties(java.util.List<JMeterProperties> jMeterProperties) {
                 this.jMeterProperties = jMeterProperties;
                 return this;
             }
 
             /**
-             * JmeterPluginLabel.
+             * <p>The JMeter plug-in tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jmeterPluginLabel(String jmeterPluginLabel) {
                 this.jmeterPluginLabel = jmeterPluginLabel;
@@ -839,7 +1006,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * MaxRps.
+             * <p>The maximum RPS that takes effect in RPS mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxRps(Integer maxRps) {
                 this.maxRps = maxRps;
@@ -847,7 +1017,11 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The stress model.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONCURRENCY</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -855,7 +1029,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * RampUp.
+             * <p>The ramp-up period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder rampUp(Integer rampUp) {
                 this.rampUp = rampUp;
@@ -863,7 +1040,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID that is specified in the VPC test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -871,15 +1051,18 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * RegionalCondition.
+             * <p>The requirements for the regions of the stress testers.</p>
              */
-            public Builder regionalCondition(java.util.List < RegionalCondition> regionalCondition) {
+            public Builder regionalCondition(java.util.List<RegionalCondition> regionalCondition) {
                 this.regionalCondition = regionalCondition;
                 return this;
             }
 
             /**
-             * SceneId.
+             * <p>The scenario ID. If you do not configure this parameter, the system creates a scenario. If you configure this parameter, the system updates the scenario corresponding to the ID specified by this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYYPZIH</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -887,7 +1070,11 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * SceneName.
+             * <p>The scenario name.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -895,7 +1082,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID that is specified in the VPC test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeid0dd7bhahsgdahspaly</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -903,7 +1093,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * StartConcurrency.
+             * <p>The initial concurrency that takes effect in concurrency mode. You must configure this parameter when the mode is set to CONCURRENCY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder startConcurrency(Integer startConcurrency) {
                 this.startConcurrency = startConcurrency;
@@ -911,7 +1104,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * StartRps.
+             * <p>The initial RPS that takes effect in RPS mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder startRps(Integer startRps) {
                 this.startRps = startRps;
@@ -919,7 +1115,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * Steps.
+             * <p>The number of ramp-up steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder steps(Integer steps) {
                 this.steps = steps;
@@ -927,7 +1126,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * SyncTimerType.
+             * <p>The type of the synchronization timer in JMeter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOBAL</p>
              */
             public Builder syncTimerType(String syncTimerType) {
                 this.syncTimerType = syncTimerType;
@@ -935,7 +1137,11 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * TestFile.
+             * <p>The test file.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baidu.jmx</p>
              */
             public Builder testFile(String testFile) {
                 this.testFile = testFile;
@@ -943,7 +1149,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID that is specified in the VPC test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zehsgdhsahw1r</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -951,7 +1160,10 @@ public class SaveOpenJMeterSceneRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID that is specified in the VPC test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze2sahjdgahsebjkqhf4pyj</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

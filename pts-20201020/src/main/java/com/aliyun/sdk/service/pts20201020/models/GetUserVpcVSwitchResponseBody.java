@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserVpcVSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserVpcVSwitchResponseBody</p>
  */
 public class GetUserVpcVSwitchResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VSwitchCount")
+    @com.aliyun.core.annotation.NameInMap("VSwitchCount")
     private Integer vSwitchCount;
 
-    @NameInMap("VSwitchList")
-    private java.util.List < VSwitchList> vSwitchList;
+    @com.aliyun.core.annotation.NameInMap("VSwitchList")
+    private java.util.List<VSwitchList> vSwitchList;
 
     private GetUserVpcVSwitchResponseBody(Builder builder) {
         this.code = builder.code;
@@ -57,6 +62,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
 
     public static GetUserVpcVSwitchResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -118,7 +127,7 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
     /**
      * @return vSwitchList
      */
-    public java.util.List < VSwitchList> getVSwitchList() {
+    public java.util.List<VSwitchList> getVSwitchList() {
         return this.vSwitchList;
     }
 
@@ -131,10 +140,28 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer vSwitchCount; 
-        private java.util.List < VSwitchList> vSwitchList; 
+        private java.util.List<VSwitchList> vSwitchList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserVpcVSwitchResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.vSwitchCount = model.vSwitchCount;
+            this.vSwitchList = model.vSwitchList;
+        } 
 
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +180,7 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +188,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +199,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of returned entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +210,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0235E5FC-4C7C-5F0C-843C-FC674F15F947</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +221,14 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +236,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchCount.
+         * <p>The number of vSwitches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder vSwitchCount(Integer vSwitchCount) {
             this.vSwitchCount = vSwitchCount;
@@ -198,9 +247,9 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchList.
+         * <p>The vSwitches.</p>
          */
-        public Builder vSwitchList(java.util.List < VSwitchList> vSwitchList) {
+        public Builder vSwitchList(java.util.List<VSwitchList> vSwitchList) {
             this.vSwitchList = vSwitchList;
             return this;
         }
@@ -211,20 +260,26 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserVpcVSwitchResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserVpcVSwitchResponseBody</p>
+     */
     public static class VSwitchList extends TeaModel {
-        @NameInMap("AvailableIpAddressCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableIpAddressCount")
         private Long availableIpAddressCount;
 
-        @NameInMap("MaxAgentCount")
+        @com.aliyun.core.annotation.NameInMap("MaxAgentCount")
         private Integer maxAgentCount;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VSwitchList(Builder builder) {
@@ -285,8 +340,22 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             private String vSwitchName; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VSwitchList model) {
+                this.availableIpAddressCount = model.availableIpAddressCount;
+                this.maxAgentCount = model.maxAgentCount;
+                this.vSwitchId = model.vSwitchId;
+                this.vSwitchName = model.vSwitchName;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -294,7 +363,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * MaxAgentCount.
+             * <p>The maximum number of stress testers to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxAgentCount(Integer maxAgentCount) {
                 this.maxAgentCount = maxAgentCount;
@@ -302,7 +374,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1eil9df23rsd8l1sevebiszooj</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -310,7 +385,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The vSwitch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-vswitch</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -318,7 +396,10 @@ public class GetUserVpcVSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9bpdaebft6j23fesdf84v2f1um3a</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

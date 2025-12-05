@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJMeterReportsRequest} extends {@link RequestModel}
  *
  * <p>ListJMeterReportsRequest</p>
  */
 public class ListJMeterReportsRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation()
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation()
     private Long endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @Query
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
     private ListJMeterReportsRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class ListJMeterReportsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,7 +147,10 @@ public class ListJMeterReportsRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>The beginning of the time range to query. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115303000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -151,7 +159,10 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115306000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +171,10 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The report keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -169,7 +183,11 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the report page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -178,7 +196,11 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of reports to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +209,10 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7R4RE352</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -196,7 +221,10 @@ public class ListJMeterReportsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scenario whose report you want to view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10YPA8H</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

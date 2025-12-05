@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpenJMeterSceneResponseBody</p>
  */
 public class GetOpenJMeterSceneResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private Scene scene;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOpenJMeterSceneResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
 
     public static GetOpenJMeterSceneResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         private Scene scene; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetOpenJMeterSceneResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.scene = model.scene;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +130,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +141,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If the operation is successful, this parameter is not returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +149,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +160,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Scene.
+         * <p>The information about the scenario.</p>
          */
         public Builder scene(Scene scene) {
             this.scene = scene;
@@ -138,7 +168,14 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,23 +188,29 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenJMeterSceneResponseBody</p>
+     */
     public static class BaseInfo extends TeaModel {
-        @NameInMap("CreateName")
+        @com.aliyun.core.annotation.NameInMap("CreateName")
         private String createName;
 
-        @NameInMap("ModifyName")
+        @com.aliyun.core.annotation.NameInMap("ModifyName")
         private String modifyName;
 
-        @NameInMap("OperateType")
+        @com.aliyun.core.annotation.NameInMap("OperateType")
         private String operateType;
 
-        @NameInMap("Principal")
+        @com.aliyun.core.annotation.NameInMap("Principal")
         private String principal;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private BaseInfo(Builder builder) {
@@ -237,8 +280,23 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String remark; 
             private String resource; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaseInfo model) {
+                this.createName = model.createName;
+                this.modifyName = model.modifyName;
+                this.operateType = model.operateType;
+                this.principal = model.principal;
+                this.remark = model.remark;
+                this.resource = model.resource;
+            } 
+
             /**
-             * CreateName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder createName(String createName) {
                 this.createName = createName;
@@ -246,7 +304,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyName.
+             * <p>The name of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>里斯</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -254,7 +315,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * OperateType.
+             * <p>The type of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>保存去压测</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -262,7 +326,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Principal.
+             * <p>The person who takes charge of the performance testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-person</p>
              */
             public Builder principal(String principal) {
                 this.principal = principal;
@@ -270,7 +337,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>小心压测</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -278,7 +348,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The origin of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -292,15 +365,21 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenJMeterSceneResponseBody</p>
+     */
     public static class DnsCacheConfig extends TeaModel {
-        @NameInMap("ClearCacheEachIteration")
+        @com.aliyun.core.annotation.NameInMap("ClearCacheEachIteration")
         private Boolean clearCacheEachIteration;
 
-        @NameInMap("DnsServers")
-        private java.util.List < String > dnsServers;
+        @com.aliyun.core.annotation.NameInMap("DnsServers")
+        private java.util.List<String> dnsServers;
 
-        @NameInMap("HostTable")
-        private java.util.Map < String, ? > hostTable;
+        @com.aliyun.core.annotation.NameInMap("HostTable")
+        private java.util.Map<String, ?> hostTable;
 
         private DnsCacheConfig(Builder builder) {
             this.clearCacheEachIteration = builder.clearCacheEachIteration;
@@ -326,24 +405,36 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         /**
          * @return dnsServers
          */
-        public java.util.List < String > getDnsServers() {
+        public java.util.List<String> getDnsServers() {
             return this.dnsServers;
         }
 
         /**
          * @return hostTable
          */
-        public java.util.Map < String, ? > getHostTable() {
+        public java.util.Map<String, ?> getHostTable() {
             return this.hostTable;
         }
 
         public static final class Builder {
             private Boolean clearCacheEachIteration; 
-            private java.util.List < String > dnsServers; 
-            private java.util.Map < String, ? > hostTable; 
+            private java.util.List<String> dnsServers; 
+            private java.util.Map<String, ?> hostTable; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsCacheConfig model) {
+                this.clearCacheEachIteration = model.clearCacheEachIteration;
+                this.dnsServers = model.dnsServers;
+                this.hostTable = model.hostTable;
+            } 
 
             /**
-             * ClearCacheEachIteration.
+             * <p>Indicates whether the cache is cleared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder clearCacheEachIteration(Boolean clearCacheEachIteration) {
                 this.clearCacheEachIteration = clearCacheEachIteration;
@@ -351,17 +442,20 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * DnsServers.
+             * <p>The DNS servers</p>
              */
-            public Builder dnsServers(java.util.List < String > dnsServers) {
+            public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
                 return this;
             }
 
             /**
-             * HostTable.
+             * <p>The domain name and its bounded IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;server.com&quot;:&quot;6.6.6.6&quot;}</p>
              */
-            public Builder hostTable(java.util.Map < String, ? > hostTable) {
+            public Builder hostTable(java.util.Map<String, ?> hostTable) {
                 this.hostTable = hostTable;
                 return this;
             }
@@ -373,26 +467,32 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenJMeterSceneResponseBody</p>
+     */
     public static class FileList extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
         private String fileOssAddress;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("SplitCsv")
+        @com.aliyun.core.annotation.NameInMap("SplitCsv")
         private Boolean splitCsv;
 
         private FileList(Builder builder) {
@@ -471,8 +571,24 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String md5; 
             private Boolean splitCsv; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileList model) {
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+                this.fileSize = model.fileSize;
+                this.fileType = model.fileType;
+                this.id = model.id;
+                this.md5 = model.md5;
+                this.splitCsv = model.splitCsv;
+            } 
+
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>json.jar</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -480,7 +596,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The Object Storage Service (OSS) URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.oss-cn-shanghai.aliyuncs.com/json.jar">https://test.oss-cn-shanghai.aliyuncs.com/json.jar</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -488,7 +607,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The size of the file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -496,7 +618,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The type of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jar</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -504,7 +629,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61660</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -512,7 +640,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 value of the JAR package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43B584026CE5E570F3DE638FA7EEF9E0</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -520,7 +651,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SplitCsv.
+             * <p>Indicates whether the file is split.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder splitCsv(Boolean splitCsv) {
                 this.splitCsv = splitCsv;
@@ -534,11 +668,17 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenJMeterSceneResponseBody</p>
+     */
     public static class RegionalCondition extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RegionalCondition(Builder builder) {
@@ -572,8 +712,19 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private Integer amount; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionalCondition model) {
+                this.amount = model.amount;
+                this.region = model.region;
+            } 
+
             /**
-             * Amount.
+             * <p>The number of load generators.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -581,7 +732,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -595,80 +749,86 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpenJMeterSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpenJMeterSceneResponseBody</p>
+     */
     public static class Scene extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("BaseInfo")
+        @com.aliyun.core.annotation.NameInMap("BaseInfo")
         private BaseInfo baseInfo;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Integer concurrency;
 
-        @NameInMap("ConstantThroughputTimerType")
+        @com.aliyun.core.annotation.NameInMap("ConstantThroughputTimerType")
         private String constantThroughputTimerType;
 
-        @NameInMap("DnsCacheConfig")
+        @com.aliyun.core.annotation.NameInMap("DnsCacheConfig")
         private DnsCacheConfig dnsCacheConfig;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("FileList")
-        private java.util.List < FileList> fileList;
+        @com.aliyun.core.annotation.NameInMap("FileList")
+        private java.util.List<FileList> fileList;
 
-        @NameInMap("IsVpcTest")
+        @com.aliyun.core.annotation.NameInMap("IsVpcTest")
         private Boolean isVpcTest;
 
-        @NameInMap("MaxRps")
+        @com.aliyun.core.annotation.NameInMap("MaxRps")
         private Integer maxRps;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Pool")
+        @com.aliyun.core.annotation.NameInMap("Pool")
         private String pool;
 
-        @NameInMap("RampUp")
+        @com.aliyun.core.annotation.NameInMap("RampUp")
         private Integer rampUp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionalCondition")
-        private java.util.List < RegionalCondition> regionalCondition;
+        @com.aliyun.core.annotation.NameInMap("RegionalCondition")
+        private java.util.List<RegionalCondition> regionalCondition;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("StartConcurrency")
+        @com.aliyun.core.annotation.NameInMap("StartConcurrency")
         private Integer startConcurrency;
 
-        @NameInMap("StartRps")
+        @com.aliyun.core.annotation.NameInMap("StartRps")
         private Integer startRps;
 
-        @NameInMap("Steps")
+        @com.aliyun.core.annotation.NameInMap("Steps")
         private Integer steps;
 
-        @NameInMap("SyncTimerType")
+        @com.aliyun.core.annotation.NameInMap("SyncTimerType")
         private String syncTimerType;
 
-        @NameInMap("TestFile")
+        @com.aliyun.core.annotation.NameInMap("TestFile")
         private String testFile;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Scene(Builder builder) {
@@ -759,7 +919,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         /**
          * @return fileList
          */
-        public java.util.List < FileList> getFileList() {
+        public java.util.List<FileList> getFileList() {
             return this.fileList;
         }
 
@@ -808,7 +968,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
         /**
          * @return regionalCondition
          */
-        public java.util.List < RegionalCondition> getRegionalCondition() {
+        public java.util.List<RegionalCondition> getRegionalCondition() {
             return this.regionalCondition;
         }
 
@@ -890,14 +1050,14 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private DnsCacheConfig dnsCacheConfig; 
             private Integer duration; 
             private String environmentId; 
-            private java.util.List < FileList> fileList; 
+            private java.util.List<FileList> fileList; 
             private Boolean isVpcTest; 
             private Integer maxRps; 
             private String mode; 
             private String pool; 
             private Integer rampUp; 
             private String regionId; 
-            private java.util.List < RegionalCondition> regionalCondition; 
+            private java.util.List<RegionalCondition> regionalCondition; 
             private String sceneId; 
             private String sceneName; 
             private String securityGroupId; 
@@ -909,8 +1069,42 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scene model) {
+                this.agentCount = model.agentCount;
+                this.baseInfo = model.baseInfo;
+                this.concurrency = model.concurrency;
+                this.constantThroughputTimerType = model.constantThroughputTimerType;
+                this.dnsCacheConfig = model.dnsCacheConfig;
+                this.duration = model.duration;
+                this.environmentId = model.environmentId;
+                this.fileList = model.fileList;
+                this.isVpcTest = model.isVpcTest;
+                this.maxRps = model.maxRps;
+                this.mode = model.mode;
+                this.pool = model.pool;
+                this.rampUp = model.rampUp;
+                this.regionId = model.regionId;
+                this.regionalCondition = model.regionalCondition;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.securityGroupId = model.securityGroupId;
+                this.startConcurrency = model.startConcurrency;
+                this.startRps = model.startRps;
+                this.steps = model.steps;
+                this.syncTimerType = model.syncTimerType;
+                this.testFile = model.testFile;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of load generators. A load generator supports up to 500 concurrent virtual users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -918,7 +1112,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * BaseInfo.
+             * <p>The basic information.</p>
              */
             public Builder baseInfo(BaseInfo baseInfo) {
                 this.baseInfo = baseInfo;
@@ -926,7 +1120,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The maximum number of concurrent virtual users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -934,7 +1131,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * ConstantThroughputTimerType.
+             * <p>The type of the constant throughput timer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STAND_ALONE</p>
              */
             public Builder constantThroughputTimerType(String constantThroughputTimerType) {
                 this.constantThroughputTimerType = constantThroughputTimerType;
@@ -942,7 +1142,7 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * DnsCacheConfig.
+             * <p>The DNS settings.</p>
              */
             public Builder dnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
                 this.dnsCacheConfig = dnsCacheConfig;
@@ -950,7 +1150,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration of the performance testing. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -958,7 +1161,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentId.
+             * <p>The ID of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EEDT7</p>
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -966,15 +1172,18 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * FileList.
+             * <p>The files.</p>
              */
-            public Builder fileList(java.util.List < FileList> fileList) {
+            public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
                 return this;
             }
 
             /**
-             * IsVpcTest.
+             * <p>Indicates whether the load is from a virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isVpcTest(Boolean isVpcTest) {
                 this.isVpcTest = isVpcTest;
@@ -982,7 +1191,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRps.
+             * <p>The maximum RPS. This parameter is returned if you set Mode to tps_mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder maxRps(Integer maxRps) {
                 this.maxRps = maxRps;
@@ -990,7 +1202,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The load application mode. Valid values: concurrency_mode and tps_mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>concurrency_mode</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -998,7 +1213,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Pool.
+             * <p>The origin of the load. &quot;&quot; indicates the Internet and intranet-vpc indicates the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder pool(String pool) {
                 this.pool = pool;
@@ -1006,7 +1224,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * RampUp.
+             * <p>The period of time during which the load is gradually increased to the desired level. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rampUp(Integer rampUp) {
                 this.rampUp = rampUp;
@@ -1014,7 +1235,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID. This parameter is returned if the load is from a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1022,15 +1246,18 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * RegionalCondition.
+             * <p>Customized load generator settings for regions</p>
              */
-            public Builder regionalCondition(java.util.List < RegionalCondition> regionalCondition) {
+            public Builder regionalCondition(java.util.List<RegionalCondition> regionalCondition) {
                 this.regionalCondition = regionalCondition;
                 return this;
             }
 
             /**
-             * SceneId.
+             * <p>The ID of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYYPZIH</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -1038,7 +1265,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -1046,7 +1276,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group. This parameter is returned if the load is from a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2zeid0dd7bhahsgdahspaly</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1054,7 +1287,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * StartConcurrency.
+             * <p>The start number of concurrent virtual users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder startConcurrency(Integer startConcurrency) {
                 this.startConcurrency = startConcurrency;
@@ -1062,7 +1298,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * StartRps.
+             * <p>The start requests per second (RPS). This parameter is returned if you set Mode to tps_mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder startRps(Integer startRps) {
                 this.startRps = startRps;
@@ -1070,7 +1309,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The number of incremented users per step. If RampUp or Steps is not specified, the fixed load is used. If RampUp is specified but Steps is not specified, the load increases uniformly based on the value of RampUp. If RampUp and Steps are specified and Steps is less than RampUp, the load increases based on the value of Steps. You cannot specify Steps without specifying RampUp. If you do so, the fixed load is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder steps(Integer steps) {
                 this.steps = steps;
@@ -1078,7 +1320,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * SyncTimerType.
+             * <p>The type of the synchronization timer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOBAL</p>
              */
             public Builder syncTimerType(String syncTimerType) {
                 this.syncTimerType = syncTimerType;
@@ -1086,7 +1331,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * TestFile.
+             * <p>The test file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baidu.jmx</p>
              */
             public Builder testFile(String testFile) {
                 this.testFile = testFile;
@@ -1094,7 +1342,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch. This parameter is returned if the load is from a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zehsgdhsahw1r</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1102,7 +1353,10 @@ public class GetOpenJMeterSceneResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC. This parameter is returned if the load is from a VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze2sahjdgahsebjkqhf4pyj</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

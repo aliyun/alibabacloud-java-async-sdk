@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPtsReportDetailsRequest} extends {@link RequestModel}
  *
  * <p>GetPtsReportDetailsRequest</p>
  */
 public class GetPtsReportDetailsRequest extends Request {
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private GetPtsReportDetailsRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetPtsReportDetailsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class GetPtsReportDetailsRequest extends Request {
         } 
 
         /**
-         * PlanId.
+         * <p>The ID of the performance testing task. A task ID is generated each time a PTS scenario is started.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OH5HA3VB</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -79,7 +88,11 @@ public class GetPtsReportDetailsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G5HCVS</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

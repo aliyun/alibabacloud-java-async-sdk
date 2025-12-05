@@ -1,54 +1,59 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetJMeterLogsRequest} extends {@link RequestModel}
  *
  * <p>GetJMeterLogsRequest</p>
  */
 public class GetJMeterLogsRequest extends Request {
-    @Query
-    @NameInMap("AgentIndex")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentIndex")
     private Integer agentIndex;
 
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 10000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 200, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ReportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
-    @Query
-    @NameInMap("Thread")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Thread")
     private String thread;
 
     private GetJMeterLogsRequest(Builder builder) {
@@ -72,7 +77,7 @@ public class GetJMeterLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,7 +174,10 @@ public class GetJMeterLogsRequest extends Request {
         } 
 
         /**
-         * AgentIndex.
+         * <p>Specifies that the operational logs of the stress tester identified as number 0 are returned if the agent index is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder agentIndex(Integer agentIndex) {
             this.putQueryParameter("AgentIndex", agentIndex);
@@ -178,7 +186,10 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115306000</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -187,7 +198,10 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637115309000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -196,7 +210,10 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -205,7 +222,17 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The log level. Valid values:</p>
+         * <ul>
+         * <li>ERROR</li>
+         * <li>WARN</li>
+         * <li>INFO (default)</li>
+         * <li>DEBUG</li>
+         * <li>TRACE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -214,7 +241,11 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,7 +254,11 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +267,11 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * ReportId.
+         * <p>The report ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KS2YE3J2</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -241,7 +280,10 @@ public class GetJMeterLogsRequest extends Request {
         }
 
         /**
-         * Thread.
+         * <p>The thread name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder thread(String thread) {
             this.putQueryParameter("Thread", thread);

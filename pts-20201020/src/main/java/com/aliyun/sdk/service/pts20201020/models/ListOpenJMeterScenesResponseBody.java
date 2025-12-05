@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpenJMeterScenesResponseBody} extends {@link TeaModel}
  *
  * <p>ListOpenJMeterScenesResponseBody</p>
  */
 public class ListOpenJMeterScenesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("JMeterScene")
-    private java.util.List < JMeterScene> jMeterScene;
+    @com.aliyun.core.annotation.NameInMap("JMeterScene")
+    private java.util.List<JMeterScene> jMeterScene;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOpenJMeterScenesResponseBody(Builder builder) {
@@ -59,6 +64,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -76,7 +85,7 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     /**
      * @return jMeterScene
      */
-    public java.util.List < JMeterScene> getJMeterScene() {
+    public java.util.List<JMeterScene> getJMeterScene() {
         return this.jMeterScene;
     }
 
@@ -125,7 +134,7 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < JMeterScene> jMeterScene; 
+        private java.util.List<JMeterScene> jMeterScene; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -133,8 +142,26 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOpenJMeterScenesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.jMeterScene = model.jMeterScene;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +169,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code. If the request was successful, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,15 +180,15 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * JMeterScene.
+         * <p>The scenarios.</p>
          */
-        public Builder jMeterScene(java.util.List < JMeterScene> jMeterScene) {
+        public Builder jMeterScene(java.util.List<JMeterScene> jMeterScene) {
             this.jMeterScene = jMeterScene;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, this parameter is left empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +196,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +207,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of returned scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +218,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8E16480-15C1-555A-922F-B736A005E52D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +229,14 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +244,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -211,17 +260,23 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOpenJMeterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOpenJMeterScenesResponseBody</p>
+     */
     public static class JMeterScene extends TeaModel {
-        @NameInMap("DurationStr")
+        @com.aliyun.core.annotation.NameInMap("DurationStr")
         private String durationStr;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private JMeterScene(Builder builder) {
@@ -273,8 +328,21 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             private String sceneName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(JMeterScene model) {
+                this.durationStr = model.durationStr;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+            } 
+
             /**
-             * DurationStr.
+             * <p>The stress testing duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10分钟</p>
              */
             public Builder durationStr(String durationStr) {
                 this.durationStr = durationStr;
@@ -282,7 +350,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scenario ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYYPZIH</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -290,7 +361,10 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The scenario name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -298,7 +372,18 @@ public class ListOpenJMeterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the scenario. Valid values:</p>
+             * <ul>
+             * <li>PREPARING: The scenario is being prepared.</li>
+             * <li>PREPARED: The scenario has been prepared.</li>
+             * <li>STARTING: The scenario is starting.</li>
+             * <li>RUNNING: The scenario is running.</li>
+             * <li>STOPPING: The scenario is being stopped.</li>
+             * <li>STOPPED: The scenario waits for startup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STOPPED</p>
              */
             public Builder status(String status) {
                 this.status = status;

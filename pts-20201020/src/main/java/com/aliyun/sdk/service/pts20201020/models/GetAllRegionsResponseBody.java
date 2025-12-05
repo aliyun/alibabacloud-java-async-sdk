@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAllRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>GetAllRegionsResponseBody</p>
  */
 public class GetAllRegionsResponseBody extends TeaModel {
-    @NameInMap("AllRegions")
-    private java.util.Map < String, String > allRegions;
+    @com.aliyun.core.annotation.NameInMap("AllRegions")
+    private java.util.Map<String, String> allRegions;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAllRegionsResponseBody(Builder builder) {
@@ -47,10 +52,14 @@ public class GetAllRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allRegions
      */
-    public java.util.Map < String, String > getAllRegions() {
+    public java.util.Map<String, String> getAllRegions() {
         return this.allRegions;
     }
 
@@ -90,23 +99,38 @@ public class GetAllRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > allRegions; 
+        private java.util.Map<String, String> allRegions; 
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAllRegionsResponseBody model) {
+            this.allRegions = model.allRegions;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * AllRegions.
+         * <p>The supported regions.</p>
          */
-        public Builder allRegions(java.util.Map < String, String > allRegions) {
+        public Builder allRegions(java.util.Map<String, String> allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
         /**
-         * Code.
+         * <p>The system status code. If the request was successful, no data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +138,10 @@ public class GetAllRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +149,7 @@ public class GetAllRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, no data is returned.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +157,10 @@ public class GetAllRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73D16B8D-0FCD-5596-B7BE-A47042989318</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +168,14 @@ public class GetAllRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

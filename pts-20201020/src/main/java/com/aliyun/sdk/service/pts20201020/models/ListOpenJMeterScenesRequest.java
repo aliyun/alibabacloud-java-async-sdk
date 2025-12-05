@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpenJMeterScenesRequest} extends {@link RequestModel}
  *
  * <p>ListOpenJMeterScenesRequest</p>
  */
 public class ListOpenJMeterScenesRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @Query
-    @NameInMap("SceneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneName")
     private String sceneName;
 
     private ListOpenJMeterScenesRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class ListOpenJMeterScenesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class ListOpenJMeterScenesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -107,7 +116,11 @@ public class ListOpenJMeterScenesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of scenarios to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +129,10 @@ public class ListOpenJMeterScenesRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DYYPZIH</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -125,7 +141,10 @@ public class ListOpenJMeterScenesRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);

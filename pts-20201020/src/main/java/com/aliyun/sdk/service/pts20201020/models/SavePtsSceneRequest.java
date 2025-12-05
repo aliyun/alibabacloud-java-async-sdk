@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pts20201020.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SavePtsSceneRequest} extends {@link RequestModel}
  *
  * <p>SavePtsSceneRequest</p>
  */
 public class SavePtsSceneRequest extends Request {
-    @Query
-    @NameInMap("Scene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Scene scene;
 
     private SavePtsSceneRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class SavePtsSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,8 @@ public class SavePtsSceneRequest extends Request {
         } 
 
         /**
-         * Scene.
+         * <p>The information about the scenario.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder scene(Scene scene) {
             String sceneShrink = shrink(scene, "Scene", "json");
@@ -71,12 +77,18 @@ public class SavePtsSceneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class DomainBindingList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Ips")
-        private java.util.List < String > ips;
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List<String> ips;
 
         private DomainBindingList(Builder builder) {
             this.domain = builder.domain;
@@ -101,16 +113,27 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainBindingList model) {
+                this.domain = model.domain;
+                this.ips = model.ips;
+            } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -118,9 +141,9 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Ips.
+             * <p>The IP addresses.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -132,17 +155,23 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class AdvanceSetting extends TeaModel {
-        @NameInMap("ConnectionTimeoutInSecond")
+        @com.aliyun.core.annotation.NameInMap("ConnectionTimeoutInSecond")
         private Integer connectionTimeoutInSecond;
 
-        @NameInMap("DomainBindingList")
-        private java.util.List < DomainBindingList> domainBindingList;
+        @com.aliyun.core.annotation.NameInMap("DomainBindingList")
+        private java.util.List<DomainBindingList> domainBindingList;
 
-        @NameInMap("LogRate")
+        @com.aliyun.core.annotation.NameInMap("LogRate")
         private Integer logRate;
 
-        @NameInMap("SuccessCode")
+        @com.aliyun.core.annotation.NameInMap("SuccessCode")
         private String successCode;
 
         private AdvanceSetting(Builder builder) {
@@ -170,7 +199,7 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return domainBindingList
          */
-        public java.util.List < DomainBindingList> getDomainBindingList() {
+        public java.util.List<DomainBindingList> getDomainBindingList() {
             return this.domainBindingList;
         }
 
@@ -190,12 +219,25 @@ public class SavePtsSceneRequest extends Request {
 
         public static final class Builder {
             private Integer connectionTimeoutInSecond; 
-            private java.util.List < DomainBindingList> domainBindingList; 
+            private java.util.List<DomainBindingList> domainBindingList; 
             private Integer logRate; 
             private String successCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvanceSetting model) {
+                this.connectionTimeoutInSecond = model.connectionTimeoutInSecond;
+                this.domainBindingList = model.domainBindingList;
+                this.logRate = model.logRate;
+                this.successCode = model.successCode;
+            } 
+
             /**
-             * ConnectionTimeoutInSecond.
+             * <p>The timeout period. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder connectionTimeoutInSecond(Integer connectionTimeoutInSecond) {
                 this.connectionTimeoutInSecond = connectionTimeoutInSecond;
@@ -203,15 +245,18 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * DomainBindingList.
+             * <p>The domain name-IP address binding relationships</p>
              */
-            public Builder domainBindingList(java.util.List < DomainBindingList> domainBindingList) {
+            public Builder domainBindingList(java.util.List<DomainBindingList> domainBindingList) {
                 this.domainBindingList = domainBindingList;
                 return this;
             }
 
             /**
-             * LogRate.
+             * <p>The log sampling rate. Valid values: 1, 10, 20, 30, 40, and 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder logRate(Integer logRate) {
                 this.logRate = logRate;
@@ -219,7 +264,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * SuccessCode.
+             * <p>The success status code. Separate multiple status codes with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder successCode(String successCode) {
                 this.successCode = successCode;
@@ -233,11 +281,17 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class FileParameterList extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileOssAddress")
+        @com.aliyun.core.annotation.NameInMap("FileOssAddress")
         private String fileOssAddress;
 
         private FileParameterList(Builder builder) {
@@ -271,8 +325,19 @@ public class SavePtsSceneRequest extends Request {
             private String fileName; 
             private String fileOssAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileParameterList model) {
+                this.fileName = model.fileName;
+                this.fileOssAddress = model.fileOssAddress;
+            } 
+
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -280,7 +345,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * FileOssAddress.
+             * <p>The OSS URL of the file, which must be accessible over the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://jmeter-pts-testing-version.oss-cn-shanghai.aliyuncs.com/param-file.csv">https://jmeter-pts-testing-version.oss-cn-shanghai.aliyuncs.com/param-file.csv</a></p>
              */
             public Builder fileOssAddress(String fileOssAddress) {
                 this.fileOssAddress = fileOssAddress;
@@ -294,11 +362,17 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class GlobalParameterList extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private GlobalParameterList(Builder builder) {
@@ -332,8 +406,19 @@ public class SavePtsSceneRequest extends Request {
             private String paramName; 
             private String paramValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(GlobalParameterList model) {
+                this.paramName = model.paramName;
+                this.paramValue = model.paramValue;
+            } 
+
             /**
-             * ParamName.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -341,7 +426,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ParamValue.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11111</p>
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -355,17 +443,23 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class ApiLoadConfigList extends TeaModel {
-        @NameInMap("ApiId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiId;
 
-        @NameInMap("RpsBegin")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RpsBegin")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer rpsBegin;
 
-        @NameInMap("RpsLimit")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RpsLimit")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer rpsLimit;
 
         private ApiLoadConfigList(Builder builder) {
@@ -408,8 +502,21 @@ public class SavePtsSceneRequest extends Request {
             private Integer rpsBegin; 
             private Integer rpsLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiLoadConfigList model) {
+                this.apiId = model.apiId;
+                this.rpsBegin = model.rpsBegin;
+                this.rpsLimit = model.rpsLimit;
+            } 
+
             /**
-             * API ID。
+             * <p>The ID of the API.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -417,7 +524,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RpsBegin.
+             * <p>The starting RPS.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rpsBegin(Integer rpsBegin) {
                 this.rpsBegin = rpsBegin;
@@ -425,7 +536,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RpsLimit.
+             * <p>The maximum RPS.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rpsLimit(Integer rpsLimit) {
                 this.rpsLimit = rpsLimit;
@@ -439,17 +554,23 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class Configuration extends TeaModel {
-        @NameInMap("AllConcurrencyBegin")
+        @com.aliyun.core.annotation.NameInMap("AllConcurrencyBegin")
         private Integer allConcurrencyBegin;
 
-        @NameInMap("AllConcurrencyLimit")
+        @com.aliyun.core.annotation.NameInMap("AllConcurrencyLimit")
         private Integer allConcurrencyLimit;
 
-        @NameInMap("AllRpsBegin")
+        @com.aliyun.core.annotation.NameInMap("AllRpsBegin")
         private Integer allRpsBegin;
 
-        @NameInMap("AllRpsLimit")
+        @com.aliyun.core.annotation.NameInMap("AllRpsLimit")
         private Integer allRpsLimit;
 
         private Configuration(Builder builder) {
@@ -501,8 +622,22 @@ public class SavePtsSceneRequest extends Request {
             private Integer allRpsBegin; 
             private Integer allRpsLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.allConcurrencyBegin = model.allConcurrencyBegin;
+                this.allConcurrencyLimit = model.allConcurrencyLimit;
+                this.allRpsBegin = model.allRpsBegin;
+                this.allRpsLimit = model.allRpsLimit;
+            } 
+
             /**
-             * AllConcurrencyBegin.
+             * <p>The starting total number of concurrent virtual users in all sessions.</p>
+             * <p>The value is evenly distributed among all sessions if you set TestMode to concurrency_mode. If you do not specify this parameter, you must configure <strong>relationLoadConfig</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allConcurrencyBegin(Integer allConcurrencyBegin) {
                 this.allConcurrencyBegin = allConcurrencyBegin;
@@ -510,7 +645,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * AllConcurrencyLimit.
+             * <p>The maximum total number of concurrent virtual users in all sessions.</p>
+             * <p>The value is evenly distributed among all sessions if you set TestMode to concurrency_mode. If you do not specify this parameter, you must configure <strong>relationLoadConfig</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allConcurrencyLimit(Integer allConcurrencyLimit) {
                 this.allConcurrencyLimit = allConcurrencyLimit;
@@ -518,7 +657,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * AllRpsBegin.
+             * <p>The starting RPS for all APIs.</p>
+             * <p>The value is evenly distributed among all APIs if you set TestMode to RPS. If you do not specify this parameter, you must specify <strong>apiLoadConfig</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allRpsBegin(Integer allRpsBegin) {
                 this.allRpsBegin = allRpsBegin;
@@ -526,7 +669,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * AllRpsLimit.
+             * <p>The maximum RPS for all APIs.</p>
+             * <p>The value is evenly distributed among all APIs if you set TestMode to RPS. If you do not specify this parameter, you must specify <strong>apiLoadConfig</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder allRpsLimit(Integer allRpsLimit) {
                 this.allRpsLimit = allRpsLimit;
@@ -540,16 +687,22 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class RelationLoadConfigList extends TeaModel {
-        @NameInMap("ConcurrencyBegin")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyBegin")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer concurrencyBegin;
 
-        @NameInMap("ConcurrencyLimit")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyLimit")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer concurrencyLimit;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private String relationId;
 
         private RelationLoadConfigList(Builder builder) {
@@ -592,8 +745,21 @@ public class SavePtsSceneRequest extends Request {
             private Integer concurrencyLimit; 
             private String relationId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationLoadConfigList model) {
+                this.concurrencyBegin = model.concurrencyBegin;
+                this.concurrencyLimit = model.concurrencyLimit;
+                this.relationId = model.relationId;
+            } 
+
             /**
-             * ConcurrencyBegin.
+             * <p>The starting number of concurrent virtual users.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder concurrencyBegin(Integer concurrencyBegin) {
                 this.concurrencyBegin = concurrencyBegin;
@@ -601,7 +767,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ConcurrencyLimit.
+             * <p>The maximum number of concurrent virtual users.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder concurrencyLimit(Integer concurrencyLimit) {
                 this.concurrencyLimit = concurrencyLimit;
@@ -609,7 +779,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RelationId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -623,21 +796,27 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class VpcLoadConfig extends TeaModel {
-        @NameInMap("RegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
-        @NameInMap("VpcId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vpcId;
 
         private VpcLoadConfig(Builder builder) {
@@ -689,8 +868,22 @@ public class SavePtsSceneRequest extends Request {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcLoadConfig model) {
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -698,7 +891,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-jkasgfieiajidsjakjscb</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -706,7 +903,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-skjfhlahsljkhsfalkjdoiw</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -714,7 +915,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * VPC ID。
+             * <p>The ID of the VPC.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-akjhsdajgjsfggahjkga</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -728,38 +933,44 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class LoadConfig extends TeaModel {
-        @NameInMap("AgentCount")
+        @com.aliyun.core.annotation.NameInMap("AgentCount")
         private Integer agentCount;
 
-        @NameInMap("ApiLoadConfigList")
-        private java.util.List < ApiLoadConfigList> apiLoadConfigList;
+        @com.aliyun.core.annotation.NameInMap("ApiLoadConfigList")
+        private java.util.List<ApiLoadConfigList> apiLoadConfigList;
 
-        @NameInMap("AutoStep")
+        @com.aliyun.core.annotation.NameInMap("AutoStep")
         private Boolean autoStep;
 
-        @NameInMap("Configuration")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Configuration")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Configuration configuration;
 
-        @NameInMap("Increment")
+        @com.aliyun.core.annotation.NameInMap("Increment")
         private Integer increment;
 
-        @NameInMap("KeepTime")
+        @com.aliyun.core.annotation.NameInMap("KeepTime")
         private Integer keepTime;
 
-        @NameInMap("MaxRunningTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MaxRunningTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer maxRunningTime;
 
-        @NameInMap("RelationLoadConfigList")
-        private java.util.List < RelationLoadConfigList> relationLoadConfigList;
+        @com.aliyun.core.annotation.NameInMap("RelationLoadConfigList")
+        private java.util.List<RelationLoadConfigList> relationLoadConfigList;
 
-        @NameInMap("TestMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TestMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String testMode;
 
-        @NameInMap("VpcLoadConfig")
+        @com.aliyun.core.annotation.NameInMap("VpcLoadConfig")
         private VpcLoadConfig vpcLoadConfig;
 
         private LoadConfig(Builder builder) {
@@ -793,7 +1004,7 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return apiLoadConfigList
          */
-        public java.util.List < ApiLoadConfigList> getApiLoadConfigList() {
+        public java.util.List<ApiLoadConfigList> getApiLoadConfigList() {
             return this.apiLoadConfigList;
         }
 
@@ -835,7 +1046,7 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return relationLoadConfigList
          */
-        public java.util.List < RelationLoadConfigList> getRelationLoadConfigList() {
+        public java.util.List<RelationLoadConfigList> getRelationLoadConfigList() {
             return this.relationLoadConfigList;
         }
 
@@ -855,18 +1066,37 @@ public class SavePtsSceneRequest extends Request {
 
         public static final class Builder {
             private Integer agentCount; 
-            private java.util.List < ApiLoadConfigList> apiLoadConfigList; 
+            private java.util.List<ApiLoadConfigList> apiLoadConfigList; 
             private Boolean autoStep; 
             private Configuration configuration; 
             private Integer increment; 
             private Integer keepTime; 
             private Integer maxRunningTime; 
-            private java.util.List < RelationLoadConfigList> relationLoadConfigList; 
+            private java.util.List<RelationLoadConfigList> relationLoadConfigList; 
             private String testMode; 
             private VpcLoadConfig vpcLoadConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadConfig model) {
+                this.agentCount = model.agentCount;
+                this.apiLoadConfigList = model.apiLoadConfigList;
+                this.autoStep = model.autoStep;
+                this.configuration = model.configuration;
+                this.increment = model.increment;
+                this.keepTime = model.keepTime;
+                this.maxRunningTime = model.maxRunningTime;
+                this.relationLoadConfigList = model.relationLoadConfigList;
+                this.testMode = model.testMode;
+                this.vpcLoadConfig = model.vpcLoadConfig;
+            } 
+
             /**
-             * AgentCount.
+             * <p>The number of load generators. If the number of concurrent virtual users exceeds 250 or the RPS exceeds 2,000, you can use multiple load generators. The maximum number of load generators is limited to the total number of concurrent virtual users divided by 250 or the total RPS divided by 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder agentCount(Integer agentCount) {
                 this.agentCount = agentCount;
@@ -874,15 +1104,18 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ApiLoadConfigList.
+             * <p>The API request load settings.</p>
              */
-            public Builder apiLoadConfigList(java.util.List < ApiLoadConfigList> apiLoadConfigList) {
+            public Builder apiLoadConfigList(java.util.List<ApiLoadConfigList> apiLoadConfigList) {
                 this.apiLoadConfigList = apiLoadConfigList;
                 return this;
             }
 
             /**
-             * AutoStep.
+             * <p>Specifies whether the load is automatically incremented. This parameter takes effect only if you set <code>TestMode=concurrency_mode</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoStep(Boolean autoStep) {
                 this.autoStep = autoStep;
@@ -890,7 +1123,8 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Configuration.
+             * <p>The load level settings of the scenario.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -898,7 +1132,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Increment.
+             * <p>The increment percentage. Valid values: 10 to 100, in increments of 10.</p>
+             * <p>This parameter takes effect only if you set <code>testMode=concurrency_mode</code>and <code>autoStep=true</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder increment(Integer increment) {
                 this.increment = increment;
@@ -906,7 +1144,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * KeepTime.
+             * <p>The duration of a specific load level. Unit: minutes. The value must be less than the value of <strong>maxRunningTime</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder keepTime(Integer keepTime) {
                 this.keepTime = keepTime;
@@ -914,7 +1155,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * MaxRunningTime.
+             * <p>The duration of load application. Unit: minutes. Valid values: 1 to 1440.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxRunningTime(Integer maxRunningTime) {
                 this.maxRunningTime = maxRunningTime;
@@ -922,15 +1167,23 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RelationLoadConfigList.
+             * <p>The session settings.</p>
              */
-            public Builder relationLoadConfigList(java.util.List < RelationLoadConfigList> relationLoadConfigList) {
+            public Builder relationLoadConfigList(java.util.List<RelationLoadConfigList> relationLoadConfigList) {
                 this.relationLoadConfigList = relationLoadConfigList;
                 return this;
             }
 
             /**
-             * TestMode.
+             * <p>The load application mode. Valid values:</p>
+             * <ul>
+             * <li>concurrency_mode: concurrency mode</li>
+             * <li>tps_mode: RPS mode.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>concurrency_mode</p>
              */
             public Builder testMode(String testMode) {
                 this.testMode = testMode;
@@ -938,7 +1191,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * VpcLoadConfig.
+             * <p>The VPC settings.</p>
              */
             public Builder vpcLoadConfig(VpcLoadConfig vpcLoadConfig) {
                 this.vpcLoadConfig = vpcLoadConfig;
@@ -952,11 +1205,17 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class ApiListBody extends TeaModel {
-        @NameInMap("BodyValue")
+        @com.aliyun.core.annotation.NameInMap("BodyValue")
         private String bodyValue;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
         private ApiListBody(Builder builder) {
@@ -990,8 +1249,19 @@ public class SavePtsSceneRequest extends Request {
             private String bodyValue; 
             private String contentType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiListBody model) {
+                this.bodyValue = model.bodyValue;
+                this.contentType = model.contentType;
+            } 
+
             /**
-             * BodyValue.
+             * <p>The data in the body. For example, {&quot;key1&quot;:&quot;value2&quot;,&quot;key2&quot;:&quot;value2&quot;}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;global&quot;:&quot;${global}&quot;,&quot;name&quot;:&quot;${name}&quot;}</p>
              */
             public Builder bodyValue(String bodyValue) {
                 this.bodyValue = bodyValue;
@@ -999,7 +1269,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>The body type. Default: <code>application/x-www-form-urlencoded</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/x-www-form-urlencoded</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -1013,17 +1286,23 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class CheckPointList extends TeaModel {
-        @NameInMap("CheckPoint")
+        @com.aliyun.core.annotation.NameInMap("CheckPoint")
         private String checkPoint;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private String expectValue;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
         private CheckPointList(Builder builder) {
@@ -1075,8 +1354,22 @@ public class SavePtsSceneRequest extends Request {
             private String expectValue; 
             private String operator; 
 
+            private Builder() {
+            } 
+
+            private Builder(CheckPointList model) {
+                this.checkPoint = model.checkPoint;
+                this.checkType = model.checkType;
+                this.expectValue = model.expectValue;
+                this.operator = model.operator;
+            } 
+
             /**
-             * CheckPoint.
+             * <p>The checked item.</p>
+             * <p>This parameter specifies the fields in the header if you specify <code>CheckType=HEADER</code> or the name of the export parameter if you specify <code>CheckType=EXPORTED_PARAM</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId</p>
              */
             public Builder checkPoint(String checkPoint) {
                 this.checkPoint = checkPoint;
@@ -1084,7 +1377,16 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * CheckType.
+             * <p>The type of check. Valid values:</p>
+             * <ul>
+             * <li>BODY_TEXT: the response body</li>
+             * <li>HEADER: the response headers</li>
+             * <li>STATUS_CODE: the HTTP status code returned by the API</li>
+             * <li>EXPORTED_PARAM: a specific export parameter</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPORTED_PARAM</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -1092,7 +1394,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ExpectValue.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder expectValue(String expectValue) {
                 this.expectValue = expectValue;
@@ -1100,7 +1405,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>The operation or condition that is checked against the expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctn</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1114,17 +1422,23 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class ExportList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("ExportName")
+        @com.aliyun.core.annotation.NameInMap("ExportName")
         private String exportName;
 
-        @NameInMap("ExportType")
+        @com.aliyun.core.annotation.NameInMap("ExportType")
         private String exportType;
 
-        @NameInMap("ExportValue")
+        @com.aliyun.core.annotation.NameInMap("ExportValue")
         private String exportValue;
 
         private ExportList(Builder builder) {
@@ -1176,8 +1490,21 @@ public class SavePtsSceneRequest extends Request {
             private String exportType; 
             private String exportValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExportList model) {
+                this.count = model.count;
+                this.exportName = model.exportName;
+                this.exportType = model.exportType;
+                this.exportValue = model.exportValue;
+            } 
+
             /**
-             * Count.
+             * <p>The index of the matched item. You can specify a number or &quot;Random&quot;. If you set ExportType to BODY_TEXT, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1185,7 +1512,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ExportName.
+             * <p>The name of the export parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder exportName(String exportName) {
                 this.exportName = exportName;
@@ -1193,7 +1523,16 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ExportType.
+             * <p>The source of the export parameter. Valid values:</p>
+             * <ul>
+             * <li>BODY_TEXT: the request body in the BODY_TEXT format</li>
+             * <li>BODY_JSON: the request body in the BODY_JSON format.</li>
+             * <li>HEADER: the request header</li>
+             * <li>STATUS_CODE: the HTTP status code returned by the API</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BODY_JSON</p>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -1201,7 +1540,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ExportValue.
+             * <p>The actual path from which you want to extract the export parameter values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data.itemlist[0]</p>
              */
             public Builder exportValue(String exportValue) {
                 this.exportValue = exportValue;
@@ -1215,11 +1557,17 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class HeaderList extends TeaModel {
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private HeaderList(Builder builder) {
@@ -1253,8 +1601,19 @@ public class SavePtsSceneRequest extends Request {
             private String headerName; 
             private String headerValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderList model) {
+                this.headerName = model.headerName;
+                this.headerValue = model.headerValue;
+            } 
+
             /**
-             * HeaderName.
+             * <p>The name of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accept-Encoding</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -1262,7 +1621,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * HeaderValue.
+             * <p>The value of the header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gzip, deflate, br</p>
              */
             public Builder headerValue(String headerValue) {
                 this.headerValue = headerValue;
@@ -1276,39 +1638,45 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class ApiList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiName;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private ApiListBody body;
 
-        @NameInMap("CheckPointList")
-        private java.util.List < CheckPointList> checkPointList;
+        @com.aliyun.core.annotation.NameInMap("CheckPointList")
+        private java.util.List<CheckPointList> checkPointList;
 
-        @NameInMap("ExportList")
-        private java.util.List < ExportList> exportList;
+        @com.aliyun.core.annotation.NameInMap("ExportList")
+        private java.util.List<ExportList> exportList;
 
-        @NameInMap("HeaderList")
-        private java.util.List < HeaderList> headerList;
+        @com.aliyun.core.annotation.NameInMap("HeaderList")
+        private java.util.List<HeaderList> headerList;
 
-        @NameInMap("Method")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Method")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String method;
 
-        @NameInMap("RedirectCountLimit")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RedirectCountLimit")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer redirectCountLimit;
 
-        @NameInMap("TimeoutInSecond")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInSecond")
         private Integer timeoutInSecond;
 
-        @NameInMap("Url")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Url")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         private ApiList(Builder builder) {
@@ -1356,21 +1724,21 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return checkPointList
          */
-        public java.util.List < CheckPointList> getCheckPointList() {
+        public java.util.List<CheckPointList> getCheckPointList() {
             return this.checkPointList;
         }
 
         /**
          * @return exportList
          */
-        public java.util.List < ExportList> getExportList() {
+        public java.util.List<ExportList> getExportList() {
             return this.exportList;
         }
 
         /**
          * @return headerList
          */
-        public java.util.List < HeaderList> getHeaderList() {
+        public java.util.List<HeaderList> getHeaderList() {
             return this.headerList;
         }
 
@@ -1406,16 +1774,35 @@ public class SavePtsSceneRequest extends Request {
             private String apiId; 
             private String apiName; 
             private ApiListBody body; 
-            private java.util.List < CheckPointList> checkPointList; 
-            private java.util.List < ExportList> exportList; 
-            private java.util.List < HeaderList> headerList; 
+            private java.util.List<CheckPointList> checkPointList; 
+            private java.util.List<ExportList> exportList; 
+            private java.util.List<HeaderList> headerList; 
             private String method; 
             private Integer redirectCountLimit; 
             private Integer timeoutInSecond; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApiList model) {
+                this.apiId = model.apiId;
+                this.apiName = model.apiName;
+                this.body = model.body;
+                this.checkPointList = model.checkPointList;
+                this.exportList = model.exportList;
+                this.headerList = model.headerList;
+                this.method = model.method;
+                this.redirectCountLimit = model.redirectCountLimit;
+                this.timeoutInSecond = model.timeoutInSecond;
+                this.url = model.url;
+            } 
+
             /**
-             * API ID。
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -1423,7 +1810,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API operation.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -1431,7 +1822,7 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Body.
+             * <p>The request body.</p>
              */
             public Builder body(ApiListBody body) {
                 this.body = body;
@@ -1439,31 +1830,35 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * CheckPointList.
+             * <p>The checkpoints.</p>
              */
-            public Builder checkPointList(java.util.List < CheckPointList> checkPointList) {
+            public Builder checkPointList(java.util.List<CheckPointList> checkPointList) {
                 this.checkPointList = checkPointList;
                 return this;
             }
 
             /**
-             * ExportList.
+             * <p>The export parameters.</p>
              */
-            public Builder exportList(java.util.List < ExportList> exportList) {
+            public Builder exportList(java.util.List<ExportList> exportList) {
                 this.exportList = exportList;
                 return this;
             }
 
             /**
-             * HeaderList.
+             * <p>The headers.</p>
              */
-            public Builder headerList(java.util.List < HeaderList> headerList) {
+            public Builder headerList(java.util.List<HeaderList> headerList) {
                 this.headerList = headerList;
                 return this;
             }
 
             /**
-             * Method.
+             * <p>The request method.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -1471,7 +1866,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RedirectCountLimit.
+             * <p>The number of redirections. The value can be 0, which specifies that redirection is allowed, or 10, which specifies that redirection is not allowed. You can specify a value based on your business requirements.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder redirectCountLimit(Integer redirectCountLimit) {
                 this.redirectCountLimit = redirectCountLimit;
@@ -1479,7 +1878,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * TimeoutInSecond.
+             * <p>The timeout period of the API operation. Unit: seconds. Default: 5. Valid values: 1 to 60.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeoutInSecond(Integer timeoutInSecond) {
                 this.timeoutInSecond = timeoutInSecond;
@@ -1487,7 +1889,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>The URL to which the API request is sent.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">http://www.example.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1501,19 +1907,25 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class FileParameterExplainList extends TeaModel {
-        @NameInMap("BaseFile")
+        @com.aliyun.core.annotation.NameInMap("BaseFile")
         private Boolean baseFile;
 
-        @NameInMap("CycleOnce")
+        @com.aliyun.core.annotation.NameInMap("CycleOnce")
         private Boolean cycleOnce;
 
-        @NameInMap("FileName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileName;
 
-        @NameInMap("FileParamName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileParamName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileParamName;
 
         private FileParameterExplainList(Builder builder) {
@@ -1565,8 +1977,21 @@ public class SavePtsSceneRequest extends Request {
             private String fileName; 
             private String fileParamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileParameterExplainList model) {
+                this.baseFile = model.baseFile;
+                this.cycleOnce = model.cycleOnce;
+                this.fileName = model.fileName;
+                this.fileParamName = model.fileParamName;
+            } 
+
             /**
-             * BaseFile.
+             * <p>Specifies whether the file is used as the baseline file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder baseFile(Boolean baseFile) {
                 this.baseFile = baseFile;
@@ -1574,7 +1999,10 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * CycleOnce.
+             * <p>Specifies whether the file is used for a single execution of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cycleOnce(Boolean cycleOnce) {
                 this.cycleOnce = cycleOnce;
@@ -1582,7 +2010,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileName.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -1590,7 +2022,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * FileParamName.
+             * <p>The parameter names in the file.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name,uid,age</p>
              */
             public Builder fileParamName(String fileParamName) {
                 this.fileParamName = fileParamName;
@@ -1604,19 +2040,25 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class RelationList extends TeaModel {
-        @NameInMap("ApiList")
-        @Validation(required = true)
-        private java.util.List < ApiList> apiList;
+        @com.aliyun.core.annotation.NameInMap("ApiList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ApiList> apiList;
 
-        @NameInMap("FileParameterExplainList")
-        private java.util.List < FileParameterExplainList> fileParameterExplainList;
+        @com.aliyun.core.annotation.NameInMap("FileParameterExplainList")
+        private java.util.List<FileParameterExplainList> fileParameterExplainList;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private String relationId;
 
-        @NameInMap("RelationName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RelationName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String relationName;
 
         private RelationList(Builder builder) {
@@ -1637,14 +2079,14 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return apiList
          */
-        public java.util.List < ApiList> getApiList() {
+        public java.util.List<ApiList> getApiList() {
             return this.apiList;
         }
 
         /**
          * @return fileParameterExplainList
          */
-        public java.util.List < FileParameterExplainList> getFileParameterExplainList() {
+        public java.util.List<FileParameterExplainList> getFileParameterExplainList() {
             return this.fileParameterExplainList;
         }
 
@@ -1663,29 +2105,43 @@ public class SavePtsSceneRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ApiList> apiList; 
-            private java.util.List < FileParameterExplainList> fileParameterExplainList; 
+            private java.util.List<ApiList> apiList; 
+            private java.util.List<FileParameterExplainList> fileParameterExplainList; 
             private String relationId; 
             private String relationName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelationList model) {
+                this.apiList = model.apiList;
+                this.fileParameterExplainList = model.fileParameterExplainList;
+                this.relationId = model.relationId;
+                this.relationName = model.relationName;
+            } 
+
             /**
-             * ApiList.
+             * <p>The API operations on the session.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder apiList(java.util.List < ApiList> apiList) {
+            public Builder apiList(java.util.List<ApiList> apiList) {
                 this.apiList = apiList;
                 return this;
             }
 
             /**
-             * FileParameterExplainList.
+             * <p>The file parameters of the session.</p>
              */
-            public Builder fileParameterExplainList(java.util.List < FileParameterExplainList> fileParameterExplainList) {
+            public Builder fileParameterExplainList(java.util.List<FileParameterExplainList> fileParameterExplainList) {
                 this.fileParameterExplainList = fileParameterExplainList;
                 return this;
             }
 
             /**
-             * RelationId.
+             * <p>The ID of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -1693,7 +2149,8 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RelationName.
+             * <p>The name of the session.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder relationName(String relationName) {
                 this.relationName = relationName;
@@ -1707,29 +2164,35 @@ public class SavePtsSceneRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SavePtsSceneRequest} extends {@link TeaModel}
+     *
+     * <p>SavePtsSceneRequest</p>
+     */
     public static class Scene extends TeaModel {
-        @NameInMap("AdvanceSetting")
+        @com.aliyun.core.annotation.NameInMap("AdvanceSetting")
         private AdvanceSetting advanceSetting;
 
-        @NameInMap("FileParameterList")
-        private java.util.List < FileParameterList> fileParameterList;
+        @com.aliyun.core.annotation.NameInMap("FileParameterList")
+        private java.util.List<FileParameterList> fileParameterList;
 
-        @NameInMap("GlobalParameterList")
-        private java.util.List < GlobalParameterList> globalParameterList;
+        @com.aliyun.core.annotation.NameInMap("GlobalParameterList")
+        private java.util.List<GlobalParameterList> globalParameterList;
 
-        @NameInMap("LoadConfig")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LoadConfig")
+        @com.aliyun.core.annotation.Validation(required = true)
         private LoadConfig loadConfig;
 
-        @NameInMap("RelationList")
-        @Validation(required = true)
-        private java.util.List < RelationList> relationList;
+        @com.aliyun.core.annotation.NameInMap("RelationList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<RelationList> relationList;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SceneName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sceneName;
 
         private Scene(Builder builder) {
@@ -1760,14 +2223,14 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return fileParameterList
          */
-        public java.util.List < FileParameterList> getFileParameterList() {
+        public java.util.List<FileParameterList> getFileParameterList() {
             return this.fileParameterList;
         }
 
         /**
          * @return globalParameterList
          */
-        public java.util.List < GlobalParameterList> getGlobalParameterList() {
+        public java.util.List<GlobalParameterList> getGlobalParameterList() {
             return this.globalParameterList;
         }
 
@@ -1781,7 +2244,7 @@ public class SavePtsSceneRequest extends Request {
         /**
          * @return relationList
          */
-        public java.util.List < RelationList> getRelationList() {
+        public java.util.List<RelationList> getRelationList() {
             return this.relationList;
         }
 
@@ -1801,15 +2264,28 @@ public class SavePtsSceneRequest extends Request {
 
         public static final class Builder {
             private AdvanceSetting advanceSetting; 
-            private java.util.List < FileParameterList> fileParameterList; 
-            private java.util.List < GlobalParameterList> globalParameterList; 
+            private java.util.List<FileParameterList> fileParameterList; 
+            private java.util.List<GlobalParameterList> globalParameterList; 
             private LoadConfig loadConfig; 
-            private java.util.List < RelationList> relationList; 
+            private java.util.List<RelationList> relationList; 
             private String sceneId; 
             private String sceneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scene model) {
+                this.advanceSetting = model.advanceSetting;
+                this.fileParameterList = model.fileParameterList;
+                this.globalParameterList = model.globalParameterList;
+                this.loadConfig = model.loadConfig;
+                this.relationList = model.relationList;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+            } 
+
             /**
-             * AdvanceSetting.
+             * <p>The advanced settings.</p>
              */
             public Builder advanceSetting(AdvanceSetting advanceSetting) {
                 this.advanceSetting = advanceSetting;
@@ -1817,23 +2293,24 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * FileParameterList.
+             * <p>The file parameters.</p>
              */
-            public Builder fileParameterList(java.util.List < FileParameterList> fileParameterList) {
+            public Builder fileParameterList(java.util.List<FileParameterList> fileParameterList) {
                 this.fileParameterList = fileParameterList;
                 return this;
             }
 
             /**
-             * GlobalParameterList.
+             * <p>The global customization parameters.</p>
              */
-            public Builder globalParameterList(java.util.List < GlobalParameterList> globalParameterList) {
+            public Builder globalParameterList(java.util.List<GlobalParameterList> globalParameterList) {
                 this.globalParameterList = globalParameterList;
                 return this;
             }
 
             /**
-             * LoadConfig.
+             * <p>The load settings.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder loadConfig(LoadConfig loadConfig) {
                 this.loadConfig = loadConfig;
@@ -1841,15 +2318,19 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * RelationList.
+             * <p>The sessions.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder relationList(java.util.List < RelationList> relationList) {
+            public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
                 return this;
             }
 
             /**
-             * SceneId.
+             * <p>The ID of the scenario. To save a new scenario, leave this parameter empty. To update an existing scenario, specify the ID of the scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IUYAHGJ</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -1857,7 +2338,11 @@ public class SavePtsSceneRequest extends Request {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the scenario.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
