@@ -409,6 +409,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("RunningInstances")
         private Integer runningInstances;
 
@@ -438,6 +441,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.newSaeVersion = builder.newSaeVersion;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
+            this.resourceType = builder.resourceType;
             this.runningInstances = builder.runningInstances;
             this.scaleRuleEnabled = builder.scaleRuleEnabled;
             this.scaleRuleType = builder.scaleRuleType;
@@ -565,6 +569,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return runningInstances
          */
         public Integer getRunningInstances() {
@@ -609,6 +620,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String newSaeVersion; 
             private String programmingLanguage; 
             private String regionId; 
+            private String resourceType; 
             private Integer runningInstances; 
             private Boolean scaleRuleEnabled; 
             private String scaleRuleType; 
@@ -634,6 +646,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.newSaeVersion = model.newSaeVersion;
                 this.programmingLanguage = model.programmingLanguage;
                 this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
                 this.runningInstances = model.runningInstances;
                 this.scaleRuleEnabled = model.scaleRuleEnabled;
                 this.scaleRuleType = model.scaleRuleType;
@@ -815,6 +828,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
@@ -1020,6 +1041,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("RunningInstances")
         private Integer runningInstances;
 
@@ -1052,6 +1076,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.packageUrl = builder.packageUrl;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
+            this.resourceType = builder.resourceType;
             this.runningInstances = builder.runningInstances;
             this.tags = builder.tags;
             this.vpcId = builder.vpcId;
@@ -1220,6 +1245,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return runningInstances
          */
         public Integer getRunningInstances() {
@@ -1263,6 +1295,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String packageUrl; 
             private String programmingLanguage; 
             private String regionId; 
+            private String resourceType; 
             private Integer runningInstances; 
             private java.util.List<ApplicationsTags> tags; 
             private String vpcId; 
@@ -1293,6 +1326,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.packageUrl = model.packageUrl;
                 this.programmingLanguage = model.programmingLanguage;
                 this.regionId = model.regionId;
+                this.resourceType = model.resourceType;
                 this.runningInstances = model.runningInstances;
                 this.tags = model.tags;
                 this.vpcId = model.vpcId;
@@ -1563,6 +1597,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 
