@@ -2258,6 +2258,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ResumeTraffic  ResumeTrafficRequest
+     * @return ResumeTrafficResponse
+     */
+    @Override
+    public CompletableFuture<ResumeTrafficResponse> resumeTraffic(ResumeTrafficRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumeTraffic").setMethod(HttpMethod.PUT).setPathRegex("/pop/v1/sam/app/instanceTrafficResume").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeTrafficResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeTrafficResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RollbackApplication  RollbackApplicationRequest
      * @return RollbackApplicationResponse
      */
@@ -2366,6 +2384,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SuspendJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SuspendTraffic  SuspendTrafficRequest
+     * @return SuspendTrafficResponse
+     */
+    @Override
+    public CompletableFuture<SuspendTrafficResponse> suspendTraffic(SuspendTrafficRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SuspendTraffic").setMethod(HttpMethod.PUT).setPathRegex("/pop/v1/sam/app/instanceTrafficSuspend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SuspendTrafficResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SuspendTrafficResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

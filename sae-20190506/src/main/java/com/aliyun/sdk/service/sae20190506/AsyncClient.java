@@ -810,6 +810,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartInstancesResponse> restartInstances(RestartInstancesRequest request);
 
     /**
+     * @param request the request parameters of ResumeTraffic  ResumeTrafficRequest
+     * @return ResumeTrafficResponse
+     */
+    CompletableFuture<ResumeTrafficResponse> resumeTraffic(ResumeTrafficRequest request);
+
+    /**
      * @param request the request parameters of RollbackApplication  RollbackApplicationRequest
      * @return RollbackApplicationResponse
      */
@@ -850,6 +856,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SuspendJobResponse
      */
     CompletableFuture<SuspendJobResponse> suspendJob(SuspendJobRequest request);
+
+    /**
+     * @param request the request parameters of SuspendTraffic  SuspendTrafficRequest
+     * @return SuspendTrafficResponse
+     */
+    CompletableFuture<SuspendTrafficResponse> suspendTraffic(SuspendTrafficRequest request);
 
     /**
      * @param request the request parameters of TagResources  TagResourcesRequest
