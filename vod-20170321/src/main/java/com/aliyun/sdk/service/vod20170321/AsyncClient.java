@@ -1489,6 +1489,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppInfosResponse> getAppInfos(GetAppInfosRequest request);
 
     /**
+     * @param request the request parameters of GetAppPlayKey  GetAppPlayKeyRequest
+     * @return GetAppPlayKeyResponse
+     */
+    CompletableFuture<GetAppPlayKeyResponse> getAppPlayKey(GetAppPlayKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can query information about up to 20 auxiliary media assets in a request.</p>
      * 
@@ -2071,6 +2077,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SearchMediaResponse
      */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
+
+    /**
+     * @param request the request parameters of SetAppPlayKey  SetAppPlayKeyRequest
+     * @return SetAppPlayKeyResponse
+     */
+    CompletableFuture<SetAppPlayKeyResponse> setAppPlayKey(SetAppPlayKeyRequest request);
 
     /**
      * <b>description</b> :
