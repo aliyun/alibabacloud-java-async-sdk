@@ -137,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceVersion  CreateServiceVersionRequest
+     * @return CreateServiceVersionResponse
+     */
+    CompletableFuture<CreateServiceVersionResponse> createServiceVersion(CreateServiceVersionRequest request);
+
+    /**
      * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
      * @return DeleteConsumerResponse
      */
@@ -220,6 +226,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceResponse
      */
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteServiceVersion  DeleteServiceVersionRequest
+     * @return DeleteServiceVersionResponse
+     */
+    CompletableFuture<DeleteServiceVersionResponse> deleteServiceVersion(DeleteServiceVersionRequest request);
 
     /**
      * @param request the request parameters of DeployHttpApi  DeployHttpApiRequest
@@ -568,6 +580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolicyResponse
      */
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateServiceVersion  UpdateServiceVersionRequest
+     * @return UpdateServiceVersionResponse
+     */
+    CompletableFuture<UpdateServiceVersionResponse> updateServiceVersion(UpdateServiceVersionRequest request);
 
     /**
      * @param request the request parameters of UpgradeGateway  UpgradeGatewayRequest
