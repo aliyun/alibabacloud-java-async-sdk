@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceLinkedRoleForSelectDBResponse> createServiceLinkedRoleForSelectDB(CreateServiceLinkedRoleForSelectDBRequest request);
 
     /**
+     * @param request the request parameters of CreateVirtualCluster  CreateVirtualClusterRequest
+     * @return CreateVirtualClusterResponse
+     */
+    CompletableFuture<CreateVirtualClusterResponse> createVirtualCluster(CreateVirtualClusterRequest request);
+
+    /**
      * @param request the request parameters of DeleteDBCluster  DeleteDBClusterRequest
      * @return DeleteDBClusterResponse
      */
@@ -114,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteElasticRuleResponse
      */
     CompletableFuture<DeleteElasticRuleResponse> deleteElasticRule(DeleteElasticRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVirtualCluster  DeleteVirtualClusterRequest
+     * @return DeleteVirtualClusterResponse
+     */
+    CompletableFuture<DeleteVirtualClusterResponse> deleteVirtualCluster(DeleteVirtualClusterRequest request);
 
     /**
      * @param request the request parameters of DescribeAllDBInstanceClass  DescribeAllDBInstanceClassRequest
@@ -228,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySecurityIPListResponse
      */
     CompletableFuture<ModifySecurityIPListResponse> modifySecurityIPList(ModifySecurityIPListRequest request);
+
+    /**
+     * @param request the request parameters of ModifyVirtualCluster  ModifyVirtualClusterRequest
+     * @return ModifyVirtualClusterResponse
+     */
+    CompletableFuture<ModifyVirtualClusterResponse> modifyVirtualCluster(ModifyVirtualClusterRequest request);
 
     /**
      * @param request the request parameters of ReleaseInstancePublicConnection  ReleaseInstancePublicConnectionRequest
