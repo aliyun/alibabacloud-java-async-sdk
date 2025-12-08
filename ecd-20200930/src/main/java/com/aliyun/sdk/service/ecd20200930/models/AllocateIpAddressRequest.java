@@ -18,6 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AllocateIpAddressRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    private Integer bandwidth;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    private String internetChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
@@ -32,6 +44,9 @@ public class AllocateIpAddressRequest extends Request {
 
     private AllocateIpAddressRequest(Builder builder) {
         super(builder);
+        this.bandwidth = builder.bandwidth;
+        this.internetChargeType = builder.internetChargeType;
+        this.name = builder.name;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
@@ -48,6 +63,27 @@ public class AllocateIpAddressRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    /**
+     * @return internetChargeType
+     */
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -72,6 +108,9 @@ public class AllocateIpAddressRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AllocateIpAddressRequest, Builder> {
+        private Integer bandwidth; 
+        private String internetChargeType; 
+        private String name; 
         private String networkInterfaceId; 
         private String officeSiteId; 
         private String regionId; 
@@ -82,10 +121,40 @@ public class AllocateIpAddressRequest extends Request {
 
         private Builder(AllocateIpAddressRequest request) {
             super(request);
+            this.bandwidth = request.bandwidth;
+            this.internetChargeType = request.internetChargeType;
+            this.name = request.name;
             this.networkInterfaceId = request.networkInterfaceId;
             this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * Bandwidth.
+         */
+        public Builder bandwidth(Integer bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * InternetChargeType.
+         */
+        public Builder internetChargeType(String internetChargeType) {
+            this.putQueryParameter("InternetChargeType", internetChargeType);
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
 
         /**
          * NetworkInterfaceId.
