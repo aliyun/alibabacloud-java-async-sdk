@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AssignCertificateCount  AssignCertificateCountRequest
+     * @return AssignCertificateCountResponse
+     */
+    CompletableFuture<AssignCertificateCountResponse> assignCertificateCount(AssignCertificateCountRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the <a href="~~CreateRootCACertificate~~">CreateRootCACertificate</a> operation and an intermediate CA certificate by calling the <a href="~~CreateRootCACertificate~~">CreateSubCACertificate</a> operation. Only intermediate CA certificates can issue client certificates.</p>
      * <h2>QPS limits</h2>
@@ -240,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCAInstanceStatusResponse> getCAInstanceStatus(GetCAInstanceStatusRequest request);
 
     /**
+     * @param request the request parameters of ListAllEndEntityInstance  ListAllEndEntityInstanceRequest
+     * @return ListAllEndEntityInstanceResponse
+     */
+    CompletableFuture<ListAllEndEntityInstanceResponse> listAllEndEntityInstance(ListAllEndEntityInstanceRequest request);
+
+    /**
      * @param request the request parameters of ListCert  ListCertRequest
      * @return ListCertResponse
      */
@@ -284,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCACertificateStatusResponse
      */
     CompletableFuture<UpdateCACertificateStatusResponse> updateCACertificateStatus(UpdateCACertificateStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePcaCertificate  UpdatePcaCertificateRequest
+     * @return UpdatePcaCertificateResponse
+     */
+    CompletableFuture<UpdatePcaCertificateResponse> updatePcaCertificate(UpdatePcaCertificateRequest request);
 
     /**
      * @param request the request parameters of UploadPcaCertToCas  UploadPcaCertToCasRequest
