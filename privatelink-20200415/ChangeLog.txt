@@ -1,3 +1,6 @@
+2025-12-08 Version: 2.0.6
+- Generated java-async 2020-04-15 for Privatelink.
+
 2025-10-30 Version: 2.0.5
 - Generated java-async 2020-04-15 for Privatelink.
 

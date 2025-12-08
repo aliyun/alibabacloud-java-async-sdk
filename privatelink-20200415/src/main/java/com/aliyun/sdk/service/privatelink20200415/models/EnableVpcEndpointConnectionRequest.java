@@ -45,6 +45,10 @@ public class EnableVpcEndpointConnectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlMode")
+    private String trafficControlMode;
+
     private EnableVpcEndpointConnectionRequest(Builder builder) {
         super(builder);
         this.bandwidth = builder.bandwidth;
@@ -53,6 +57,7 @@ public class EnableVpcEndpointConnectionRequest extends Request {
         this.endpointId = builder.endpointId;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
+        this.trafficControlMode = builder.trafficControlMode;
     }
 
     public static Builder builder() {
@@ -110,6 +115,13 @@ public class EnableVpcEndpointConnectionRequest extends Request {
         return this.serviceId;
     }
 
+    /**
+     * @return trafficControlMode
+     */
+    public String getTrafficControlMode() {
+        return this.trafficControlMode;
+    }
+
     public static final class Builder extends Request.Builder<EnableVpcEndpointConnectionRequest, Builder> {
         private Integer bandwidth; 
         private String clientToken; 
@@ -117,6 +129,7 @@ public class EnableVpcEndpointConnectionRequest extends Request {
         private String endpointId; 
         private String regionId; 
         private String serviceId; 
+        private String trafficControlMode; 
 
         private Builder() {
             super();
@@ -130,6 +143,7 @@ public class EnableVpcEndpointConnectionRequest extends Request {
             this.endpointId = request.endpointId;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
+            this.trafficControlMode = request.trafficControlMode;
         } 
 
         /**
@@ -213,6 +227,15 @@ public class EnableVpcEndpointConnectionRequest extends Request {
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * TrafficControlMode.
+         */
+        public Builder trafficControlMode(String trafficControlMode) {
+            this.putQueryParameter("TrafficControlMode", trafficControlMode);
+            this.trafficControlMode = trafficControlMode;
             return this;
         }
 

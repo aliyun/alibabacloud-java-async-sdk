@@ -437,6 +437,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("TrafficControlMode")
+        private String trafficControlMode;
+
         @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List<Zones> zones;
 
@@ -450,6 +453,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceOwner = builder.resourceOwner;
             this.serviceId = builder.serviceId;
+            this.trafficControlMode = builder.trafficControlMode;
             this.zones = builder.zones;
         }
 
@@ -525,6 +529,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return trafficControlMode
+         */
+        public String getTrafficControlMode() {
+            return this.trafficControlMode;
+        }
+
+        /**
          * @return zones
          */
         public java.util.List<Zones> getZones() {
@@ -541,6 +552,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Boolean resourceOwner; 
             private String serviceId; 
+            private String trafficControlMode; 
             private java.util.List<Zones> zones; 
 
             private Builder() {
@@ -556,6 +568,7 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceOwner = model.resourceOwner;
                 this.serviceId = model.serviceId;
+                this.trafficControlMode = model.trafficControlMode;
                 this.zones = model.zones;
             } 
 
@@ -668,6 +681,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * TrafficControlMode.
+             */
+            public Builder trafficControlMode(String trafficControlMode) {
+                this.trafficControlMode = trafficControlMode;
                 return this;
             }
 
