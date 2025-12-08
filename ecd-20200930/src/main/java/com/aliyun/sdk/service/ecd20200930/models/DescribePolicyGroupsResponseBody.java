@@ -1400,6 +1400,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
      * <p>DescribePolicyGroupsResponseBody</p>
      */
     public static class DescribePolicyGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AcademicProxy")
+        private String academicProxy;
+
         @com.aliyun.core.annotation.NameInMap("AdminAccess")
         private String adminAccess;
 
@@ -1439,6 +1442,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuDownGradeDuration")
         private Integer cpuDownGradeDuration;
 
+        @com.aliyun.core.annotation.NameInMap("CpuOverload")
+        private String cpuOverload;
+
         @com.aliyun.core.annotation.NameInMap("CpuProcessors")
         private java.util.List<String> cpuProcessors;
 
@@ -1468,6 +1474,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DeviceRules")
         private java.util.List<DeviceRules> deviceRules;
+
+        @com.aliyun.core.annotation.NameInMap("DiskOverload")
+        private String diskOverload;
 
         @com.aliyun.core.annotation.NameInMap("DisplayMode")
         private String displayMode;
@@ -1532,6 +1541,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemoryDownGradeDuration")
         private Integer memoryDownGradeDuration;
 
+        @com.aliyun.core.annotation.NameInMap("MemoryOverload")
+        private String memoryOverload;
+
         @com.aliyun.core.annotation.NameInMap("MemoryProcessors")
         private java.util.List<String> memoryProcessors;
 
@@ -1562,6 +1574,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MobileWyAssistant")
         private String mobileWyAssistant;
 
+        @com.aliyun.core.annotation.NameInMap("ModelLibrary")
+        private String modelLibrary;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -1579,6 +1594,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PortProxy")
+        private String portProxy;
 
         @com.aliyun.core.annotation.NameInMap("PreemptLogin")
         private String preemptLogin;
@@ -1764,6 +1782,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String wyAssistant;
 
         private DescribePolicyGroups(Builder builder) {
+            this.academicProxy = builder.academicProxy;
             this.adminAccess = builder.adminAccess;
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
@@ -1777,6 +1796,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.colorEnhancement = builder.colorEnhancement;
             this.cpdDriveClipboard = builder.cpdDriveClipboard;
             this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
+            this.cpuOverload = builder.cpuOverload;
             this.cpuProcessors = builder.cpuProcessors;
             this.cpuProtectedMode = builder.cpuProtectedMode;
             this.cpuRateLimit = builder.cpuRateLimit;
@@ -1787,6 +1807,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.deviceConnectHint = builder.deviceConnectHint;
             this.deviceRedirects = builder.deviceRedirects;
             this.deviceRules = builder.deviceRules;
+            this.diskOverload = builder.diskOverload;
             this.displayMode = builder.displayMode;
             this.domainList = builder.domainList;
             this.domainResolveRule = builder.domainResolveRule;
@@ -1808,6 +1829,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.localDrive = builder.localDrive;
             this.maxReconnectTime = builder.maxReconnectTime;
             this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
+            this.memoryOverload = builder.memoryOverload;
             this.memoryProcessors = builder.memoryProcessors;
             this.memoryProtectedMode = builder.memoryProtectedMode;
             this.memoryRateLimit = builder.memoryRateLimit;
@@ -1818,12 +1840,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.mobileShutdown = builder.mobileShutdown;
             this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
             this.mobileWyAssistant = builder.mobileWyAssistant;
+            this.modelLibrary = builder.modelLibrary;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
+            this.portProxy = builder.portProxy;
             this.preemptLogin = builder.preemptLogin;
             this.preemptLoginUsers = builder.preemptLoginUsers;
             this.printerRedirection = builder.printerRedirection;
@@ -1893,6 +1917,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         public static DescribePolicyGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return academicProxy
+         */
+        public String getAcademicProxy() {
+            return this.academicProxy;
         }
 
         /**
@@ -1987,6 +2018,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpuOverload
+         */
+        public String getCpuOverload() {
+            return this.cpuOverload;
+        }
+
+        /**
          * @return cpuProcessors
          */
         public java.util.List<String> getCpuProcessors() {
@@ -2054,6 +2092,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List<DeviceRules> getDeviceRules() {
             return this.deviceRules;
+        }
+
+        /**
+         * @return diskOverload
+         */
+        public String getDiskOverload() {
+            return this.diskOverload;
         }
 
         /**
@@ -2204,6 +2249,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return memoryOverload
+         */
+        public String getMemoryOverload() {
+            return this.memoryOverload;
+        }
+
+        /**
          * @return memoryProcessors
          */
         public java.util.List<String> getMemoryProcessors() {
@@ -2274,6 +2326,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelLibrary
+         */
+        public String getModelLibrary() {
+            return this.modelLibrary;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -2313,6 +2372,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getPolicyStatus() {
             return this.policyStatus;
+        }
+
+        /**
+         * @return portProxy
+         */
+        public String getPortProxy() {
+            return this.portProxy;
         }
 
         /**
@@ -2743,6 +2809,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String academicProxy; 
             private String adminAccess; 
             private String appContentProtection; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
@@ -2756,6 +2823,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String colorEnhancement; 
             private String cpdDriveClipboard; 
             private Integer cpuDownGradeDuration; 
+            private String cpuOverload; 
             private java.util.List<String> cpuProcessors; 
             private String cpuProtectedMode; 
             private Integer cpuRateLimit; 
@@ -2766,6 +2834,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String deviceConnectHint; 
             private java.util.List<DeviceRedirects> deviceRedirects; 
             private java.util.List<DeviceRules> deviceRules; 
+            private String diskOverload; 
             private String displayMode; 
             private String domainList; 
             private java.util.List<DomainResolveRule> domainResolveRule; 
@@ -2787,6 +2856,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String localDrive; 
             private Integer maxReconnectTime; 
             private Integer memoryDownGradeDuration; 
+            private String memoryOverload; 
             private java.util.List<String> memoryProcessors; 
             private String memoryProtectedMode; 
             private Integer memoryRateLimit; 
@@ -2797,12 +2867,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String mobileShutdown; 
             private String mobileWuyingKeeper; 
             private String mobileWyAssistant; 
+            private String modelLibrary; 
             private String name; 
             private String netRedirect; 
             private java.util.List<NetRedirectRule> netRedirectRule; 
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
+            private String portProxy; 
             private String preemptLogin; 
             private java.util.List<String> preemptLoginUsers; 
             private String printerRedirection; 
@@ -2869,6 +2941,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(DescribePolicyGroups model) {
+                this.academicProxy = model.academicProxy;
                 this.adminAccess = model.adminAccess;
                 this.appContentProtection = model.appContentProtection;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
@@ -2882,6 +2955,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.colorEnhancement = model.colorEnhancement;
                 this.cpdDriveClipboard = model.cpdDriveClipboard;
                 this.cpuDownGradeDuration = model.cpuDownGradeDuration;
+                this.cpuOverload = model.cpuOverload;
                 this.cpuProcessors = model.cpuProcessors;
                 this.cpuProtectedMode = model.cpuProtectedMode;
                 this.cpuRateLimit = model.cpuRateLimit;
@@ -2892,6 +2966,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.deviceConnectHint = model.deviceConnectHint;
                 this.deviceRedirects = model.deviceRedirects;
                 this.deviceRules = model.deviceRules;
+                this.diskOverload = model.diskOverload;
                 this.displayMode = model.displayMode;
                 this.domainList = model.domainList;
                 this.domainResolveRule = model.domainResolveRule;
@@ -2913,6 +2988,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.localDrive = model.localDrive;
                 this.maxReconnectTime = model.maxReconnectTime;
                 this.memoryDownGradeDuration = model.memoryDownGradeDuration;
+                this.memoryOverload = model.memoryOverload;
                 this.memoryProcessors = model.memoryProcessors;
                 this.memoryProtectedMode = model.memoryProtectedMode;
                 this.memoryRateLimit = model.memoryRateLimit;
@@ -2923,12 +2999,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.mobileShutdown = model.mobileShutdown;
                 this.mobileWuyingKeeper = model.mobileWuyingKeeper;
                 this.mobileWyAssistant = model.mobileWyAssistant;
+                this.modelLibrary = model.modelLibrary;
                 this.name = model.name;
                 this.netRedirect = model.netRedirect;
                 this.netRedirectRule = model.netRedirectRule;
                 this.policyGroupId = model.policyGroupId;
                 this.policyGroupType = model.policyGroupType;
                 this.policyStatus = model.policyStatus;
+                this.portProxy = model.portProxy;
                 this.preemptLogin = model.preemptLogin;
                 this.preemptLoginUsers = model.preemptLoginUsers;
                 this.printerRedirection = model.printerRedirection;
@@ -2991,6 +3069,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.wuyingKeeper = model.wuyingKeeper;
                 this.wyAssistant = model.wyAssistant;
             } 
+
+            /**
+             * AcademicProxy.
+             */
+            public Builder academicProxy(String academicProxy) {
+                this.academicProxy = academicProxy;
+                return this;
+            }
 
             /**
              * <p>Indicates whether end users are granted the administrator permissions.</p>
@@ -3143,6 +3229,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * CpuOverload.
+             */
+            public Builder cpuOverload(String cpuOverload) {
+                this.cpuOverload = cpuOverload;
+                return this;
+            }
+
+            /**
              * <p>The process whitelist that is not restricted by the CPU usage limit.</p>
              */
             public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
@@ -3242,6 +3336,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
                 this.deviceRules = deviceRules;
+                return this;
+            }
+
+            /**
+             * DiskOverload.
+             */
+            public Builder diskOverload(String diskOverload) {
+                this.diskOverload = diskOverload;
                 return this;
             }
 
@@ -3511,6 +3613,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * MemoryOverload.
+             */
+            public Builder memoryOverload(String memoryOverload) {
+                this.memoryOverload = memoryOverload;
+                return this;
+            }
+
+            /**
              * <p>The whitelist of processes that are not restricted by the memory usage limit.</p>
              */
             public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
@@ -3639,6 +3749,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ModelLibrary.
+             */
+            public Builder modelLibrary(String modelLibrary) {
+                this.modelLibrary = modelLibrary;
+                return this;
+            }
+
+            /**
              * <p>The name of the cloud computer policy.</p>
              * 
              * <strong>example:</strong>
@@ -3719,6 +3837,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
+                return this;
+            }
+
+            /**
+             * PortProxy.
+             */
+            public Builder portProxy(String portProxy) {
+                this.portProxy = portProxy;
                 return this;
             }
 

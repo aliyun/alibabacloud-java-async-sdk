@@ -18,9 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCenterPolicyListRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcademicProxy")
+    private String academicProxy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessType")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer businessType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelLibrary")
+    private String modelLibrary;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -36,6 +44,10 @@ public class DescribeCenterPolicyListRequest extends Request {
     private java.util.List<String> policyGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortProxy")
+    private String portProxy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
@@ -46,10 +58,13 @@ public class DescribeCenterPolicyListRequest extends Request {
 
     private DescribeCenterPolicyListRequest(Builder builder) {
         super(builder);
+        this.academicProxy = builder.academicProxy;
         this.businessType = builder.businessType;
+        this.modelLibrary = builder.modelLibrary;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.policyGroupId = builder.policyGroupId;
+        this.portProxy = builder.portProxy;
         this.resourceType = builder.resourceType;
         this.scope = builder.scope;
     }
@@ -68,10 +83,24 @@ public class DescribeCenterPolicyListRequest extends Request {
     }
 
     /**
+     * @return academicProxy
+     */
+    public String getAcademicProxy() {
+        return this.academicProxy;
+    }
+
+    /**
      * @return businessType
      */
     public Integer getBusinessType() {
         return this.businessType;
+    }
+
+    /**
+     * @return modelLibrary
+     */
+    public String getModelLibrary() {
+        return this.modelLibrary;
     }
 
     /**
@@ -96,6 +125,13 @@ public class DescribeCenterPolicyListRequest extends Request {
     }
 
     /**
+     * @return portProxy
+     */
+    public String getPortProxy() {
+        return this.portProxy;
+    }
+
+    /**
      * @return resourceType
      */
     public String getResourceType() {
@@ -110,10 +146,13 @@ public class DescribeCenterPolicyListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCenterPolicyListRequest, Builder> {
+        private String academicProxy; 
         private Integer businessType; 
+        private String modelLibrary; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<String> policyGroupId; 
+        private String portProxy; 
         private String resourceType; 
         private String scope; 
 
@@ -123,13 +162,25 @@ public class DescribeCenterPolicyListRequest extends Request {
 
         private Builder(DescribeCenterPolicyListRequest request) {
             super(request);
+            this.academicProxy = request.academicProxy;
             this.businessType = request.businessType;
+            this.modelLibrary = request.modelLibrary;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.policyGroupId = request.policyGroupId;
+            this.portProxy = request.portProxy;
             this.resourceType = request.resourceType;
             this.scope = request.scope;
         } 
+
+        /**
+         * AcademicProxy.
+         */
+        public Builder academicProxy(String academicProxy) {
+            this.putQueryParameter("AcademicProxy", academicProxy);
+            this.academicProxy = academicProxy;
+            return this;
+        }
 
         /**
          * <p>The business type.</p>
@@ -146,6 +197,15 @@ public class DescribeCenterPolicyListRequest extends Request {
         public Builder businessType(Integer businessType) {
             this.putQueryParameter("BusinessType", businessType);
             this.businessType = businessType;
+            return this;
+        }
+
+        /**
+         * ModelLibrary.
+         */
+        public Builder modelLibrary(String modelLibrary) {
+            this.putQueryParameter("ModelLibrary", modelLibrary);
+            this.modelLibrary = modelLibrary;
             return this;
         }
 
@@ -179,6 +239,15 @@ public class DescribeCenterPolicyListRequest extends Request {
         public Builder policyGroupId(java.util.List<String> policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * PortProxy.
+         */
+        public Builder portProxy(String portProxy) {
+            this.putQueryParameter("PortProxy", portProxy);
+            this.portProxy = portProxy;
             return this;
         }
 

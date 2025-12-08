@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcademicProxy")
+    private String academicProxy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdminAccess")
     private String adminAccess;
 
@@ -36,6 +40,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoReconnect")
     private String autoReconnect;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessType")
@@ -83,6 +91,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private Integer cpuDownGradeDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOverload")
+    private String cpuOverload;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuProcessors")
     private java.util.List<String> cpuProcessors;
 
@@ -121,6 +133,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisconnectKeepSessionTime")
     private Integer disconnectKeepSessionTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskOverload")
+    private String diskOverload;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DisplayMode")
@@ -195,6 +211,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private Integer memoryDownGradeDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemoryOverload")
+    private String memoryOverload;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemoryProcessors")
     private java.util.List<String> memoryProcessors;
 
@@ -235,6 +255,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private String mobileWyAssistant;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelLibrary")
+    private String modelLibrary;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -258,6 +282,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String policyGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortProxy")
+    private String portProxy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrinterRedirect")
@@ -511,11 +539,13 @@ public class ModifyCenterPolicyRequest extends Request {
 
     private ModifyCenterPolicyRequest(Builder builder) {
         super(builder);
+        this.academicProxy = builder.academicProxy;
         this.adminAccess = builder.adminAccess;
         this.appContentProtection = builder.appContentProtection;
         this.authorizeAccessPolicyRule = builder.authorizeAccessPolicyRule;
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
         this.autoReconnect = builder.autoReconnect;
+        this.businessChannel = builder.businessChannel;
         this.businessType = builder.businessType;
         this.cameraRedirect = builder.cameraRedirect;
         this.clientControlMenu = builder.clientControlMenu;
@@ -527,6 +557,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.colorEnhancement = builder.colorEnhancement;
         this.cpdDriveClipboard = builder.cpdDriveClipboard;
         this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
+        this.cpuOverload = builder.cpuOverload;
         this.cpuProcessors = builder.cpuProcessors;
         this.cpuProtectedMode = builder.cpuProtectedMode;
         this.cpuRateLimit = builder.cpuRateLimit;
@@ -537,6 +568,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.deviceRules = builder.deviceRules;
         this.disconnectKeepSession = builder.disconnectKeepSession;
         this.disconnectKeepSessionTime = builder.disconnectKeepSessionTime;
+        this.diskOverload = builder.diskOverload;
         this.displayMode = builder.displayMode;
         this.domainResolveRule = builder.domainResolveRule;
         this.domainResolveRuleType = builder.domainResolveRuleType;
@@ -555,6 +587,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.localDrive = builder.localDrive;
         this.maxReconnectTime = builder.maxReconnectTime;
         this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
+        this.memoryOverload = builder.memoryOverload;
         this.memoryProcessors = builder.memoryProcessors;
         this.memoryProtectedMode = builder.memoryProtectedMode;
         this.memoryRateLimit = builder.memoryRateLimit;
@@ -565,12 +598,14 @@ public class ModifyCenterPolicyRequest extends Request {
         this.mobileShutdown = builder.mobileShutdown;
         this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
         this.mobileWyAssistant = builder.mobileWyAssistant;
+        this.modelLibrary = builder.modelLibrary;
         this.name = builder.name;
         this.netRedirect = builder.netRedirect;
         this.netRedirectRule = builder.netRedirectRule;
         this.noOperationDisconnect = builder.noOperationDisconnect;
         this.noOperationDisconnectTime = builder.noOperationDisconnectTime;
         this.policyGroupId = builder.policyGroupId;
+        this.portProxy = builder.portProxy;
         this.printerRedirect = builder.printerRedirect;
         this.qualityEnhancement = builder.qualityEnhancement;
         this.recordEventDuration = builder.recordEventDuration;
@@ -649,6 +684,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return academicProxy
+     */
+    public String getAcademicProxy() {
+        return this.academicProxy;
+    }
+
+    /**
      * @return adminAccess
      */
     public String getAdminAccess() {
@@ -681,6 +723,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getAutoReconnect() {
         return this.autoReconnect;
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -761,6 +810,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return cpuOverload
+     */
+    public String getCpuOverload() {
+        return this.cpuOverload;
+    }
+
+    /**
      * @return cpuProcessors
      */
     public java.util.List<String> getCpuProcessors() {
@@ -828,6 +884,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public Integer getDisconnectKeepSessionTime() {
         return this.disconnectKeepSessionTime;
+    }
+
+    /**
+     * @return diskOverload
+     */
+    public String getDiskOverload() {
+        return this.diskOverload;
     }
 
     /**
@@ -957,6 +1020,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return memoryOverload
+     */
+    public String getMemoryOverload() {
+        return this.memoryOverload;
+    }
+
+    /**
      * @return memoryProcessors
      */
     public java.util.List<String> getMemoryProcessors() {
@@ -1027,6 +1097,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return modelLibrary
+     */
+    public String getModelLibrary() {
+        return this.modelLibrary;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -1066,6 +1143,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    /**
+     * @return portProxy
+     */
+    public String getPortProxy() {
+        return this.portProxy;
     }
 
     /**
@@ -1503,11 +1587,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCenterPolicyRequest, Builder> {
+        private String academicProxy; 
         private String adminAccess; 
         private String appContentProtection; 
         private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
         private String autoReconnect; 
+        private String businessChannel; 
         private Integer businessType; 
         private String cameraRedirect; 
         private String clientControlMenu; 
@@ -1519,6 +1605,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String colorEnhancement; 
         private String cpdDriveClipboard; 
         private Integer cpuDownGradeDuration; 
+        private String cpuOverload; 
         private java.util.List<String> cpuProcessors; 
         private String cpuProtectedMode; 
         private Integer cpuRateLimit; 
@@ -1529,6 +1616,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private java.util.List<DeviceRules> deviceRules; 
         private String disconnectKeepSession; 
         private Integer disconnectKeepSessionTime; 
+        private String diskOverload; 
         private String displayMode; 
         private java.util.List<DomainResolveRule> domainResolveRule; 
         private String domainResolveRuleType; 
@@ -1547,6 +1635,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String localDrive; 
         private Integer maxReconnectTime; 
         private Integer memoryDownGradeDuration; 
+        private String memoryOverload; 
         private java.util.List<String> memoryProcessors; 
         private String memoryProtectedMode; 
         private Integer memoryRateLimit; 
@@ -1557,12 +1646,14 @@ public class ModifyCenterPolicyRequest extends Request {
         private String mobileShutdown; 
         private String mobileWuyingKeeper; 
         private String mobileWyAssistant; 
+        private String modelLibrary; 
         private String name; 
         private String netRedirect; 
         private java.util.List<NetRedirectRule> netRedirectRule; 
         private String noOperationDisconnect; 
         private Integer noOperationDisconnectTime; 
         private String policyGroupId; 
+        private String portProxy; 
         private String printerRedirect; 
         private String qualityEnhancement; 
         private Integer recordEventDuration; 
@@ -1632,11 +1723,13 @@ public class ModifyCenterPolicyRequest extends Request {
 
         private Builder(ModifyCenterPolicyRequest request) {
             super(request);
+            this.academicProxy = request.academicProxy;
             this.adminAccess = request.adminAccess;
             this.appContentProtection = request.appContentProtection;
             this.authorizeAccessPolicyRule = request.authorizeAccessPolicyRule;
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
             this.autoReconnect = request.autoReconnect;
+            this.businessChannel = request.businessChannel;
             this.businessType = request.businessType;
             this.cameraRedirect = request.cameraRedirect;
             this.clientControlMenu = request.clientControlMenu;
@@ -1648,6 +1741,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.colorEnhancement = request.colorEnhancement;
             this.cpdDriveClipboard = request.cpdDriveClipboard;
             this.cpuDownGradeDuration = request.cpuDownGradeDuration;
+            this.cpuOverload = request.cpuOverload;
             this.cpuProcessors = request.cpuProcessors;
             this.cpuProtectedMode = request.cpuProtectedMode;
             this.cpuRateLimit = request.cpuRateLimit;
@@ -1658,6 +1752,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.deviceRules = request.deviceRules;
             this.disconnectKeepSession = request.disconnectKeepSession;
             this.disconnectKeepSessionTime = request.disconnectKeepSessionTime;
+            this.diskOverload = request.diskOverload;
             this.displayMode = request.displayMode;
             this.domainResolveRule = request.domainResolveRule;
             this.domainResolveRuleType = request.domainResolveRuleType;
@@ -1676,6 +1771,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.localDrive = request.localDrive;
             this.maxReconnectTime = request.maxReconnectTime;
             this.memoryDownGradeDuration = request.memoryDownGradeDuration;
+            this.memoryOverload = request.memoryOverload;
             this.memoryProcessors = request.memoryProcessors;
             this.memoryProtectedMode = request.memoryProtectedMode;
             this.memoryRateLimit = request.memoryRateLimit;
@@ -1686,12 +1782,14 @@ public class ModifyCenterPolicyRequest extends Request {
             this.mobileShutdown = request.mobileShutdown;
             this.mobileWuyingKeeper = request.mobileWuyingKeeper;
             this.mobileWyAssistant = request.mobileWyAssistant;
+            this.modelLibrary = request.modelLibrary;
             this.name = request.name;
             this.netRedirect = request.netRedirect;
             this.netRedirectRule = request.netRedirectRule;
             this.noOperationDisconnect = request.noOperationDisconnect;
             this.noOperationDisconnectTime = request.noOperationDisconnectTime;
             this.policyGroupId = request.policyGroupId;
+            this.portProxy = request.portProxy;
             this.printerRedirect = request.printerRedirect;
             this.qualityEnhancement = request.qualityEnhancement;
             this.recordEventDuration = request.recordEventDuration;
@@ -1757,6 +1855,15 @@ public class ModifyCenterPolicyRequest extends Request {
         } 
 
         /**
+         * AcademicProxy.
+         */
+        public Builder academicProxy(String academicProxy) {
+            this.putQueryParameter("AcademicProxy", academicProxy);
+            this.academicProxy = academicProxy;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to grant the admin permissions to end users.</p>
          * <blockquote>
          * <p> This parameter is in private preview and only available to specific users.</p>
@@ -1818,6 +1925,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder autoReconnect(String autoReconnect) {
             this.putQueryParameter("AutoReconnect", autoReconnect);
             this.autoReconnect = autoReconnect;
+            return this;
+        }
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
             return this;
         }
 
@@ -1959,6 +2075,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * CpuOverload.
+         */
+        public Builder cpuOverload(String cpuOverload) {
+            this.putQueryParameter("CpuOverload", cpuOverload);
+            this.cpuOverload = cpuOverload;
+            return this;
+        }
+
+        /**
          * <p>The CPU processors.</p>
          */
         public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
@@ -2087,6 +2212,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder disconnectKeepSessionTime(Integer disconnectKeepSessionTime) {
             this.putQueryParameter("DisconnectKeepSessionTime", disconnectKeepSessionTime);
             this.disconnectKeepSessionTime = disconnectKeepSessionTime;
+            return this;
+        }
+
+        /**
+         * DiskOverload.
+         */
+        public Builder diskOverload(String diskOverload) {
+            this.putQueryParameter("DiskOverload", diskOverload);
+            this.diskOverload = diskOverload;
             return this;
         }
 
@@ -2346,6 +2480,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * MemoryOverload.
+         */
+        public Builder memoryOverload(String memoryOverload) {
+            this.putQueryParameter("MemoryOverload", memoryOverload);
+            this.memoryOverload = memoryOverload;
+            return this;
+        }
+
+        /**
          * <p>The memory processors.</p>
          */
         public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
@@ -2475,6 +2618,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * ModelLibrary.
+         */
+        public Builder modelLibrary(String modelLibrary) {
+            this.putQueryParameter("ModelLibrary", modelLibrary);
+            this.modelLibrary = modelLibrary;
+            return this;
+        }
+
+        /**
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
@@ -2564,6 +2716,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * PortProxy.
+         */
+        public Builder portProxy(String portProxy) {
+            this.putQueryParameter("PortProxy", portProxy);
+            this.portProxy = portProxy;
             return this;
         }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePolicyGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessChannel")
+    private String businessChannel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExternalPolicyGroupIds")
     private java.util.List<String> externalPolicyGroupIds;
 
@@ -53,6 +57,7 @@ public class DescribePolicyGroupsRequest extends Request {
 
     private DescribePolicyGroupsRequest(Builder builder) {
         super(builder);
+        this.businessChannel = builder.businessChannel;
         this.externalPolicyGroupIds = builder.externalPolicyGroupIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -74,6 +79,13 @@ public class DescribePolicyGroupsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessChannel
+     */
+    public String getBusinessChannel() {
+        return this.businessChannel;
     }
 
     /**
@@ -133,6 +145,7 @@ public class DescribePolicyGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePolicyGroupsRequest, Builder> {
+        private String businessChannel; 
         private java.util.List<String> externalPolicyGroupIds; 
         private Integer maxResults; 
         private String nextToken; 
@@ -148,6 +161,7 @@ public class DescribePolicyGroupsRequest extends Request {
 
         private Builder(DescribePolicyGroupsRequest request) {
             super(request);
+            this.businessChannel = request.businessChannel;
             this.externalPolicyGroupIds = request.externalPolicyGroupIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -157,6 +171,15 @@ public class DescribePolicyGroupsRequest extends Request {
             this.regionId = request.regionId;
             this.scope = request.scope;
         } 
+
+        /**
+         * BusinessChannel.
+         */
+        public Builder businessChannel(String businessChannel) {
+            this.putQueryParameter("BusinessChannel", businessChannel);
+            this.businessChannel = businessChannel;
+            return this;
+        }
 
         /**
          * <p>The array of cloud computer policy IDs to be excluded.</p>
