@@ -580,6 +580,9 @@ public class ListImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceCategory")
         private String resourceInstanceCategory;
 
+        @com.aliyun.core.annotation.NameInMap("Scene")
+        private String scene;
+
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
@@ -639,6 +642,7 @@ public class ListImageResponseBody extends TeaModel {
             this.productType = builder.productType;
             this.protocolType = builder.protocolType;
             this.resourceInstanceCategory = builder.resourceInstanceCategory;
+            this.scene = builder.scene;
             this.sessionType = builder.sessionType;
             this.status = builder.status;
             this.supportedLanguageList = builder.supportedLanguageList;
@@ -896,6 +900,13 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
+        }
+
+        /**
          * @return sessionType
          */
         public String getSessionType() {
@@ -986,6 +997,7 @@ public class ListImageResponseBody extends TeaModel {
             private String productType; 
             private String protocolType; 
             private String resourceInstanceCategory; 
+            private String scene; 
             private String sessionType; 
             private String status; 
             private java.util.List<String> supportedLanguageList; 
@@ -1033,6 +1045,7 @@ public class ListImageResponseBody extends TeaModel {
                 this.productType = model.productType;
                 this.protocolType = model.protocolType;
                 this.resourceInstanceCategory = model.resourceInstanceCategory;
+                this.scene = model.scene;
                 this.sessionType = model.sessionType;
                 this.status = model.status;
                 this.supportedLanguageList = model.supportedLanguageList;
@@ -1399,6 +1412,14 @@ public class ListImageResponseBody extends TeaModel {
              */
             public Builder resourceInstanceCategory(String resourceInstanceCategory) {
                 this.resourceInstanceCategory = resourceInstanceCategory;
+                return this;
+            }
+
+            /**
+             * Scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
                 return this;
             }
 
