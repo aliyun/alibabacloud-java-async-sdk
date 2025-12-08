@@ -255,7 +255,7 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         private Long beforeSize;
 
         @com.aliyun.core.annotation.NameInMap("ClassForest")
-        private java.util.List<String> classForest;
+        private String classForest;
 
         @com.aliyun.core.annotation.NameInMap("EnhanceMapping")
         private java.util.List<EnhanceMapping> enhanceMapping;
@@ -380,7 +380,7 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
         /**
          * @return classForest
          */
-        public java.util.List<String> getClassForest() {
+        public String getClassForest() {
             return this.classForest;
         }
 
@@ -483,7 +483,7 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
             private java.util.List<String> assetsFileList; 
             private String beforeMd5; 
             private Long beforeSize; 
-            private java.util.List<String> classForest; 
+            private String classForest; 
             private java.util.List<EnhanceMapping> enhanceMapping; 
             private java.util.List<String> enhanceRules; 
             private java.util.List<String> enhancedAssetsFiles; 
@@ -584,7 +584,7 @@ public class GetUserAppEnhanceProcessInMsaResponseBody extends TeaModel {
             /**
              * ClassForest.
              */
-            public Builder classForest(java.util.List<String> classForest) {
+            public Builder classForest(String classForest) {
                 this.classForest = classForest;
                 return this;
             }
