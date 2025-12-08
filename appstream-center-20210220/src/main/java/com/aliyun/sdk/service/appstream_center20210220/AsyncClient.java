@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ClientUserLogout  ClientUserLogoutRequest
+     * @return ClientUserLogoutResponse
+     */
+    CompletableFuture<ClientUserLogoutResponse> clientUserLogout(ClientUserLogoutRequest request);
+
+    /**
      * @param request the request parameters of FindIdpListByLoginIdentifier  FindIdpListByLoginIdentifierRequest
      * @return FindIdpListByLoginIdentifierResponse
      */
