@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAirflowLoginTokenResponse> createAirflowLoginToken(CreateAirflowLoginTokenRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentSession  CreateDataAgentSessionRequest
+     * @return CreateDataAgentSessionResponse
+     */
+    CompletableFuture<CreateDataAgentSessionResponse> createDataAgentSession(CreateDataAgentSessionRequest request);
+
+    /**
      * @param request the request parameters of CreateDataLakeDatabase  CreateDataLakeDatabaseRequest
      * @return CreateDataLakeDatabaseResponse
      */
@@ -102,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataLakeTableResponse
      */
     CompletableFuture<DeleteDataLakeTableResponse> deleteDataLakeTable(DeleteDataLakeTableRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDataAgentSession  DescribeDataAgentSessionRequest
+     * @return DescribeDataAgentSessionResponse
+     */
+    CompletableFuture<DescribeDataAgentSessionResponse> describeDataAgentSession(DescribeDataAgentSessionRequest request);
 
     /**
      * @param request the request parameters of GetAirflow  GetAirflowRequest
