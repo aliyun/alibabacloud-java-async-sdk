@@ -258,6 +258,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
         private String addressIpVersion;
 
+        @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
+        private Boolean autoAcceptEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Payer")
         private String payer;
 
@@ -285,6 +288,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("VpcEndpointPolicySupported")
+        private Boolean vpcEndpointPolicySupported;
+
         @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
         private Boolean zoneAffinityEnabled;
 
@@ -293,6 +299,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
         private Services(Builder builder) {
             this.addressIpVersion = builder.addressIpVersion;
+            this.autoAcceptEnabled = builder.autoAcceptEnabled;
             this.payer = builder.payer;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceDomain = builder.serviceDomain;
@@ -302,6 +309,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             this.serviceSupportIPv6 = builder.serviceSupportIPv6;
             this.serviceType = builder.serviceType;
             this.tags = builder.tags;
+            this.vpcEndpointPolicySupported = builder.vpcEndpointPolicySupported;
             this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
             this.zones = builder.zones;
         }
@@ -319,6 +327,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
          */
         public String getAddressIpVersion() {
             return this.addressIpVersion;
+        }
+
+        /**
+         * @return autoAcceptEnabled
+         */
+        public Boolean getAutoAcceptEnabled() {
+            return this.autoAcceptEnabled;
         }
 
         /**
@@ -385,6 +400,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return vpcEndpointPolicySupported
+         */
+        public Boolean getVpcEndpointPolicySupported() {
+            return this.vpcEndpointPolicySupported;
+        }
+
+        /**
          * @return zoneAffinityEnabled
          */
         public Boolean getZoneAffinityEnabled() {
@@ -400,6 +422,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressIpVersion; 
+            private Boolean autoAcceptEnabled; 
             private String payer; 
             private String resourceGroupId; 
             private String serviceDomain; 
@@ -409,6 +432,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private Boolean serviceSupportIPv6; 
             private String serviceType; 
             private java.util.List<Tags> tags; 
+            private Boolean vpcEndpointPolicySupported; 
             private Boolean zoneAffinityEnabled; 
             private java.util.List<String> zones; 
 
@@ -417,6 +441,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
             private Builder(Services model) {
                 this.addressIpVersion = model.addressIpVersion;
+                this.autoAcceptEnabled = model.autoAcceptEnabled;
                 this.payer = model.payer;
                 this.resourceGroupId = model.resourceGroupId;
                 this.serviceDomain = model.serviceDomain;
@@ -426,6 +451,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
                 this.serviceSupportIPv6 = model.serviceSupportIPv6;
                 this.serviceType = model.serviceType;
                 this.tags = model.tags;
+                this.vpcEndpointPolicySupported = model.vpcEndpointPolicySupported;
                 this.zoneAffinityEnabled = model.zoneAffinityEnabled;
                 this.zones = model.zones;
             } 
@@ -442,6 +468,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              */
             public Builder addressIpVersion(String addressIpVersion) {
                 this.addressIpVersion = addressIpVersion;
+                return this;
+            }
+
+            /**
+             * AutoAcceptEnabled.
+             */
+            public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
+                this.autoAcceptEnabled = autoAcceptEnabled;
                 return this;
             }
 
@@ -552,6 +586,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcEndpointPolicySupported.
+             */
+            public Builder vpcEndpointPolicySupported(Boolean vpcEndpointPolicySupported) {
+                this.vpcEndpointPolicySupported = vpcEndpointPolicySupported;
                 return this;
             }
 

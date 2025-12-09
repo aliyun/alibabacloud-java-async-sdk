@@ -52,6 +52,10 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetPolicy")
+    private Boolean resetPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
@@ -65,6 +69,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         this.endpointName = builder.endpointName;
         this.policyDocument = builder.policyDocument;
         this.regionId = builder.regionId;
+        this.resetPolicy = builder.resetPolicy;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -138,6 +143,13 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     }
 
     /**
+     * @return resetPolicy
+     */
+    public Boolean getResetPolicy() {
+        return this.resetPolicy;
+    }
+
+    /**
      * @return zoneAffinityEnabled
      */
     public Boolean getZoneAffinityEnabled() {
@@ -153,6 +165,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         private String endpointName; 
         private String policyDocument; 
         private String regionId; 
+        private Boolean resetPolicy; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
@@ -169,6 +182,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
             this.endpointName = request.endpointName;
             this.policyDocument = request.policyDocument;
             this.regionId = request.regionId;
+            this.resetPolicy = request.resetPolicy;
             this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
 
@@ -278,6 +292,15 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResetPolicy.
+         */
+        public Builder resetPolicy(Boolean resetPolicy) {
+            this.putQueryParameter("ResetPolicy", resetPolicy);
+            this.resetPolicy = resetPolicy;
             return this;
         }
 
