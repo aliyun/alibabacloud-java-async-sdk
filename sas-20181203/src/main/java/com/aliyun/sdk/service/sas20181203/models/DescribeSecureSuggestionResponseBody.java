@@ -23,6 +23,9 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Score")
+    private String score;
+
     @com.aliyun.core.annotation.NameInMap("Suggestions")
     private java.util.List<Suggestions> suggestions;
 
@@ -32,6 +35,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     private DescribeSecureSuggestionResponseBody(Builder builder) {
         this.calTime = builder.calTime;
         this.requestId = builder.requestId;
+        this.score = builder.score;
         this.suggestions = builder.suggestions;
         this.totalCount = builder.totalCount;
     }
@@ -63,6 +67,13 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     }
 
     /**
+     * @return score
+     */
+    public String getScore() {
+        return this.score;
+    }
+
+    /**
      * @return suggestions
      */
     public java.util.List<Suggestions> getSuggestions() {
@@ -79,6 +90,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     public static final class Builder {
         private Long calTime; 
         private String requestId; 
+        private String score; 
         private java.util.List<Suggestions> suggestions; 
         private Integer totalCount; 
 
@@ -88,6 +100,7 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         private Builder(DescribeSecureSuggestionResponseBody model) {
             this.calTime = model.calTime;
             this.requestId = model.requestId;
+            this.score = model.score;
             this.suggestions = model.suggestions;
             this.totalCount = model.totalCount;
         } 
@@ -105,6 +118,14 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Score.
+         */
+        public Builder score(String score) {
+            this.score = score;
             return this;
         }
 

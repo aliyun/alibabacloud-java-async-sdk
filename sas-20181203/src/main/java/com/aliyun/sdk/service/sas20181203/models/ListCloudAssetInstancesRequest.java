@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCloudAssetInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetQueryData")
+    private java.util.List<CloudAssetQueryData> cloudAssetQueryData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudAssetTypes")
     private java.util.List<CloudAssetTypes> cloudAssetTypes;
 
@@ -44,6 +48,7 @@ public class ListCloudAssetInstancesRequest extends Request {
 
     private ListCloudAssetInstancesRequest(Builder builder) {
         super(builder);
+        this.cloudAssetQueryData = builder.cloudAssetQueryData;
         this.cloudAssetTypes = builder.cloudAssetTypes;
         this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
@@ -63,6 +68,13 @@ public class ListCloudAssetInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cloudAssetQueryData
+     */
+    public java.util.List<CloudAssetQueryData> getCloudAssetQueryData() {
+        return this.cloudAssetQueryData;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ListCloudAssetInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCloudAssetInstancesRequest, Builder> {
+        private java.util.List<CloudAssetQueryData> cloudAssetQueryData; 
         private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private String criteria; 
         private Integer currentPage; 
@@ -121,6 +134,7 @@ public class ListCloudAssetInstancesRequest extends Request {
 
         private Builder(ListCloudAssetInstancesRequest request) {
             super(request);
+            this.cloudAssetQueryData = request.cloudAssetQueryData;
             this.cloudAssetTypes = request.cloudAssetTypes;
             this.criteria = request.criteria;
             this.currentPage = request.currentPage;
@@ -128,6 +142,15 @@ public class ListCloudAssetInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * CloudAssetQueryData.
+         */
+        public Builder cloudAssetQueryData(java.util.List<CloudAssetQueryData> cloudAssetQueryData) {
+            this.putQueryParameter("CloudAssetQueryData", cloudAssetQueryData);
+            this.cloudAssetQueryData = cloudAssetQueryData;
+            return this;
+        }
 
         /**
          * <p>The details of the cloud asset.</p>
@@ -224,6 +247,81 @@ public class ListCloudAssetInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudAssetInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>ListCloudAssetInstancesRequest</p>
+     */
+    public static class CloudAssetQueryData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private String data;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        private CloudAssetQueryData(Builder builder) {
+            this.data = builder.data;
+            this.operator = builder.operator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudAssetQueryData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public String getData() {
+            return this.data;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public static final class Builder {
+            private String data; 
+            private String operator; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudAssetQueryData model) {
+                this.data = model.data;
+                this.operator = model.operator;
+            } 
+
+            /**
+             * Data.
+             */
+            public Builder data(String data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            public CloudAssetQueryData build() {
+                return new CloudAssetQueryData(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListCloudAssetInstancesRequest} extends {@link TeaModel}
