@@ -886,6 +886,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebootRenderingInstanceResponse> rebootRenderingInstance(RebootRenderingInstanceRequest request);
 
     /**
+     * @param request the request parameters of RebootRenderingServer  RebootRenderingServerRequest
+     * @return RebootRenderingServerResponse
+     */
+    CompletableFuture<RebootRenderingServerResponse> rebootRenderingServer(RebootRenderingServerRequest request);
+
+    /**
      * @param request the request parameters of RecoverRenderingDataPackage  RecoverRenderingDataPackageRequest
      * @return RecoverRenderingDataPackageResponse
      */
