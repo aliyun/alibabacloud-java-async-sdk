@@ -34,6 +34,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanNameEn")
+    private String planNameEn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanType")
     private String planType;
 
@@ -63,6 +67,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.planNameEn = builder.planNameEn;
         this.planType = builder.planType;
         this.remainingExpireDays = builder.remainingExpireDays;
         this.sortBy = builder.sortBy;
@@ -113,6 +118,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
     }
 
     /**
+     * @return planNameEn
+     */
+    public String getPlanNameEn() {
+        return this.planNameEn;
+    }
+
+    /**
      * @return planType
      */
     public String getPlanType() {
@@ -159,6 +171,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String planNameEn; 
         private String planType; 
         private Integer remainingExpireDays; 
         private String sortBy; 
@@ -176,6 +189,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.planNameEn = request.planNameEn;
             this.planType = request.planType;
             this.remainingExpireDays = request.remainingExpireDays;
             this.sortBy = request.sortBy;
@@ -233,6 +247,15 @@ public class ListUserRatePlanInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PlanNameEn.
+         */
+        public Builder planNameEn(String planNameEn) {
+            this.putQueryParameter("PlanNameEn", planNameEn);
+            this.planNameEn = planNameEn;
             return this;
         }
 
