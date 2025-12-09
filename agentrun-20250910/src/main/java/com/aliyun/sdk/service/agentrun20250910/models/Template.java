@@ -37,7 +37,7 @@ public class Template extends TeaModel {
     private Integer diskSize;
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
-    private String environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("executionRoleArn")
     private String executionRoleArn;
@@ -71,6 +71,7 @@ public class Template extends TeaModel {
     private String sandboxIdleTimeoutInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("sandboxTTLInSeconds")
+    @Deprecated
     private String sandboxTTLInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("status")
@@ -83,7 +84,7 @@ public class Template extends TeaModel {
     private String templateArn;
 
     @com.aliyun.core.annotation.NameInMap("templateConfiguration")
-    private String templateConfiguration;
+    private java.util.Map<String, ?> templateConfiguration;
 
     @com.aliyun.core.annotation.NameInMap("templateId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -185,7 +186,7 @@ public class Template extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public String getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -290,7 +291,7 @@ public class Template extends TeaModel {
     /**
      * @return templateConfiguration
      */
-    public String getTemplateConfiguration() {
+    public java.util.Map<String, ?> getTemplateConfiguration() {
         return this.templateConfiguration;
     }
 
@@ -329,7 +330,7 @@ public class Template extends TeaModel {
         private CredentialConfiguration credentialConfiguration; 
         private String description; 
         private Integer diskSize; 
-        private String environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String lastUpdatedAt; 
         private LogConfiguration logConfiguration; 
@@ -344,7 +345,7 @@ public class Template extends TeaModel {
         private String status; 
         private String statusReason; 
         private String templateArn; 
-        private String templateConfiguration; 
+        private java.util.Map<String, ?> templateConfiguration; 
         private String templateId; 
         private String templateName; 
         private String templateType; 
@@ -433,7 +434,7 @@ public class Template extends TeaModel {
         /**
          * environmentVariables.
          */
-        public Builder environmentVariables(String environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -553,7 +554,7 @@ public class Template extends TeaModel {
         /**
          * templateConfiguration.
          */
-        public Builder templateConfiguration(String templateConfiguration) {
+        public Builder templateConfiguration(java.util.Map<String, ?> templateConfiguration) {
             this.templateConfiguration = templateConfiguration;
             return this;
         }

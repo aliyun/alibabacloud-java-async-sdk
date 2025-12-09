@@ -29,11 +29,11 @@ public class ModelService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastUpdatedAt")
     private String lastUpdatedAt;
 
-    @com.aliyun.core.annotation.NameInMap("modeServiceId")
-    private String modeServiceId;
-
     @com.aliyun.core.annotation.NameInMap("modelInfoConfigs")
     private java.util.List<ModelInfoConfig> modelInfoConfigs;
+
+    @com.aliyun.core.annotation.NameInMap("modelServiceId")
+    private String modelServiceId;
 
     @com.aliyun.core.annotation.NameInMap("modelServiceName")
     private String modelServiceName;
@@ -61,8 +61,8 @@ public class ModelService extends TeaModel {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.lastUpdatedAt = builder.lastUpdatedAt;
-        this.modeServiceId = builder.modeServiceId;
         this.modelInfoConfigs = builder.modelInfoConfigs;
+        this.modelServiceId = builder.modelServiceId;
         this.modelServiceName = builder.modelServiceName;
         this.modelType = builder.modelType;
         this.networkConfiguration = builder.networkConfiguration;
@@ -113,17 +113,17 @@ public class ModelService extends TeaModel {
     }
 
     /**
-     * @return modeServiceId
-     */
-    public String getModeServiceId() {
-        return this.modeServiceId;
-    }
-
-    /**
      * @return modelInfoConfigs
      */
     public java.util.List<ModelInfoConfig> getModelInfoConfigs() {
         return this.modelInfoConfigs;
+    }
+
+    /**
+     * @return modelServiceId
+     */
+    public String getModelServiceId() {
+        return this.modelServiceId;
     }
 
     /**
@@ -180,8 +180,8 @@ public class ModelService extends TeaModel {
         private String credentialName; 
         private String description; 
         private String lastUpdatedAt; 
-        private String modeServiceId; 
         private java.util.List<ModelInfoConfig> modelInfoConfigs; 
+        private String modelServiceId; 
         private String modelServiceName; 
         private String modelType; 
         private NetworkConfiguration networkConfiguration; 
@@ -198,8 +198,8 @@ public class ModelService extends TeaModel {
             this.credentialName = model.credentialName;
             this.description = model.description;
             this.lastUpdatedAt = model.lastUpdatedAt;
-            this.modeServiceId = model.modeServiceId;
             this.modelInfoConfigs = model.modelInfoConfigs;
+            this.modelServiceId = model.modelServiceId;
             this.modelServiceName = model.modelServiceName;
             this.modelType = model.modelType;
             this.networkConfiguration = model.networkConfiguration;
@@ -242,18 +242,18 @@ public class ModelService extends TeaModel {
         }
 
         /**
-         * modeServiceId.
-         */
-        public Builder modeServiceId(String modeServiceId) {
-            this.modeServiceId = modeServiceId;
-            return this;
-        }
-
-        /**
          * modelInfoConfigs.
          */
         public Builder modelInfoConfigs(java.util.List<ModelInfoConfig> modelInfoConfigs) {
             this.modelInfoConfigs = modelInfoConfigs;
+            return this;
+        }
+
+        /**
+         * modelServiceId.
+         */
+        public Builder modelServiceId(String modelServiceId) {
+            this.modelServiceId = modelServiceId;
             return this;
         }
 
