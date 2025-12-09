@@ -1154,6 +1154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationInfoResponse> updateApplicationInfo(UpdateApplicationInfoRequest request);
 
     /**
+     * @param request the request parameters of UpdateApplicationSsoFormParams  UpdateApplicationSsoFormParamsRequest
+     * @return UpdateApplicationSsoFormParamsResponse
+     */
+    CompletableFuture<UpdateApplicationSsoFormParamsResponse> updateApplicationSsoFormParams(UpdateApplicationSsoFormParamsRequest request);
+
+    /**
      * @param request the request parameters of UpdateApplicationTokenExpirationTime  UpdateApplicationTokenExpirationTimeRequest
      * @return UpdateApplicationTokenExpirationTimeResponse
      */
