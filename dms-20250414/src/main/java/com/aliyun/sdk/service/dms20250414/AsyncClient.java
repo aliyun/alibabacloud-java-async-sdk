@@ -110,6 +110,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAirflowResponse> getAirflow(GetAirflowRequest request);
 
     /**
+     * @param request the request parameters of GetChatContent  GetChatContentRequest
+     * @return GetChatContentResponse
+     */
+    CompletableFuture<GetChatContentResponse> getChatContent(GetChatContentRequest request);
+
+    ResponseIterable<GetChatContentResponseBody> getChatContentWithResponseIterable(GetChatContentRequest request);
+
+    /**
      * @param request the request parameters of GetDataLakeCatalog  GetDataLakeCatalogRequest
      * @return GetDataLakeCatalogResponse
      */
@@ -144,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNotebookAndSubmitTaskResponse
      */
     CompletableFuture<GetNotebookAndSubmitTaskResponse> getNotebookAndSubmitTask(GetNotebookAndSubmitTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetNotebookTaskStatus  GetNotebookTaskStatusRequest
+     * @return GetNotebookTaskStatusResponse
+     */
+    CompletableFuture<GetNotebookTaskStatusResponse> getNotebookTaskStatus(GetNotebookTaskStatusRequest request);
 
     /**
      * @param request the request parameters of ListAirflows  ListAirflowsRequest
@@ -210,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataLakeTablebaseInfoResponse
      */
     CompletableFuture<ListDataLakeTablebaseInfoResponse> listDataLakeTablebaseInfo(ListDataLakeTablebaseInfoRequest request);
+
+    /**
+     * @param request the request parameters of SendChatMessage  SendChatMessageRequest
+     * @return SendChatMessageResponse
+     */
+    CompletableFuture<SendChatMessageResponse> sendChatMessage(SendChatMessageRequest request);
 
     /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
