@@ -122,9 +122,17 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sse")
         private String sse;
 
+        @com.aliyun.core.annotation.NameInMap("vpcMcp")
+        private String vpcMcp;
+
+        @com.aliyun.core.annotation.NameInMap("vpcSse")
+        private String vpcSse;
+
         private Urls(Builder builder) {
             this.mcp = builder.mcp;
             this.sse = builder.sse;
+            this.vpcMcp = builder.vpcMcp;
+            this.vpcSse = builder.vpcSse;
         }
 
         public static Builder builder() {
@@ -149,9 +157,25 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
             return this.sse;
         }
 
+        /**
+         * @return vpcMcp
+         */
+        public String getVpcMcp() {
+            return this.vpcMcp;
+        }
+
+        /**
+         * @return vpcSse
+         */
+        public String getVpcSse() {
+            return this.vpcSse;
+        }
+
         public static final class Builder {
             private String mcp; 
             private String sse; 
+            private String vpcMcp; 
+            private String vpcSse; 
 
             private Builder() {
             } 
@@ -159,6 +183,8 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
             private Builder(Urls model) {
                 this.mcp = model.mcp;
                 this.sse = model.sse;
+                this.vpcMcp = model.vpcMcp;
+                this.vpcSse = model.vpcSse;
             } 
 
             /**
@@ -174,6 +200,22 @@ public class CreateApiMcpServerResponseBody extends TeaModel {
              */
             public Builder sse(String sse) {
                 this.sse = sse;
+                return this;
+            }
+
+            /**
+             * vpcMcp.
+             */
+            public Builder vpcMcp(String vpcMcp) {
+                this.vpcMcp = vpcMcp;
+                return this;
+            }
+
+            /**
+             * vpcSse.
+             */
+            public Builder vpcSse(String vpcSse) {
+                this.vpcSse = vpcSse;
                 return this;
             }
 

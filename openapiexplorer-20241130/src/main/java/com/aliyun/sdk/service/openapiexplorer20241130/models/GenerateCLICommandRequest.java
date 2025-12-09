@@ -24,12 +24,17 @@ public class GenerateCLICommandRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("apiParams")
+    @Deprecated
     private java.util.Map<String, ?> apiParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("apiVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String apiVersion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("jsonApiParams")
+    private String jsonApiParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("product")
@@ -45,6 +50,7 @@ public class GenerateCLICommandRequest extends Request {
         this.api = builder.api;
         this.apiParams = builder.apiParams;
         this.apiVersion = builder.apiVersion;
+        this.jsonApiParams = builder.jsonApiParams;
         this.product = builder.product;
         this.regionId = builder.regionId;
     }
@@ -84,6 +90,13 @@ public class GenerateCLICommandRequest extends Request {
     }
 
     /**
+     * @return jsonApiParams
+     */
+    public String getJsonApiParams() {
+        return this.jsonApiParams;
+    }
+
+    /**
      * @return product
      */
     public String getProduct() {
@@ -101,6 +114,7 @@ public class GenerateCLICommandRequest extends Request {
         private String api; 
         private java.util.Map<String, ?> apiParams; 
         private String apiVersion; 
+        private String jsonApiParams; 
         private String product; 
         private String regionId; 
 
@@ -113,6 +127,7 @@ public class GenerateCLICommandRequest extends Request {
             this.api = request.api;
             this.apiParams = request.apiParams;
             this.apiVersion = request.apiVersion;
+            this.jsonApiParams = request.jsonApiParams;
             this.product = request.product;
             this.regionId = request.regionId;
         } 
@@ -142,6 +157,15 @@ public class GenerateCLICommandRequest extends Request {
         public Builder apiVersion(String apiVersion) {
             this.putBodyParameter("apiVersion", apiVersion);
             this.apiVersion = apiVersion;
+            return this;
+        }
+
+        /**
+         * jsonApiParams.
+         */
+        public Builder jsonApiParams(String jsonApiParams) {
+            this.putBodyParameter("jsonApiParams", jsonApiParams);
+            this.jsonApiParams = jsonApiParams;
             return this;
         }
 

@@ -29,8 +29,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "OpenAPIExplorer";
         this.version = "2024-11-30";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "central";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-southeast-1", "openapi-mcp.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "openapi-mcp.cn-hangzhou.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -142,6 +145,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetApiMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetApiMcpServerUserConfig  GetApiMcpServerUserConfigRequest
+     * @return GetApiMcpServerUserConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetApiMcpServerUserConfigResponse> getApiMcpServerUserConfig(GetApiMcpServerUserConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetApiMcpServerUserConfig").setMethod(HttpMethod.GET).setPathRegex("/userconfig/get").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApiMcpServerUserConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApiMcpServerUserConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -295,6 +316,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateApiMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateApiMcpServerUserConfig  UpdateApiMcpServerUserConfigRequest
+     * @return UpdateApiMcpServerUserConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApiMcpServerUserConfigResponse> updateApiMcpServerUserConfig(UpdateApiMcpServerUserConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateApiMcpServerUserConfig").setMethod(HttpMethod.PATCH).setPathRegex("/userconfig/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApiMcpServerUserConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApiMcpServerUserConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -47,6 +47,10 @@ public class CreateApiMcpServerRequest extends Request {
     private Boolean enableAssumeRole;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableCustomVpcWhitelist")
+    private Boolean enableCustomVpcWhitelist;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instructions")
     private String instructions;
 
@@ -68,12 +72,20 @@ public class CreateApiMcpServerRequest extends Request {
     private java.util.List<Prompts> prompts;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("publicAccess")
+    private String publicAccess;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("systemTools")
     private java.util.List<String> systemTools;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("terraformTools")
     private java.util.List<TerraformTools> terraformTools;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcWhitelists")
+    private java.util.List<String> vpcWhitelists;
 
     private CreateApiMcpServerRequest(Builder builder) {
         super(builder);
@@ -84,13 +96,16 @@ public class CreateApiMcpServerRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.enableAssumeRole = builder.enableAssumeRole;
+        this.enableCustomVpcWhitelist = builder.enableCustomVpcWhitelist;
         this.instructions = builder.instructions;
         this.language = builder.language;
         this.name = builder.name;
         this.oauthClientId = builder.oauthClientId;
         this.prompts = builder.prompts;
+        this.publicAccess = builder.publicAccess;
         this.systemTools = builder.systemTools;
         this.terraformTools = builder.terraformTools;
+        this.vpcWhitelists = builder.vpcWhitelists;
     }
 
     public static Builder builder() {
@@ -156,6 +171,13 @@ public class CreateApiMcpServerRequest extends Request {
     }
 
     /**
+     * @return enableCustomVpcWhitelist
+     */
+    public Boolean getEnableCustomVpcWhitelist() {
+        return this.enableCustomVpcWhitelist;
+    }
+
+    /**
      * @return instructions
      */
     public String getInstructions() {
@@ -191,6 +213,13 @@ public class CreateApiMcpServerRequest extends Request {
     }
 
     /**
+     * @return publicAccess
+     */
+    public String getPublicAccess() {
+        return this.publicAccess;
+    }
+
+    /**
      * @return systemTools
      */
     public java.util.List<String> getSystemTools() {
@@ -204,6 +233,13 @@ public class CreateApiMcpServerRequest extends Request {
         return this.terraformTools;
     }
 
+    /**
+     * @return vpcWhitelists
+     */
+    public java.util.List<String> getVpcWhitelists() {
+        return this.vpcWhitelists;
+    }
+
     public static final class Builder extends Request.Builder<CreateApiMcpServerRequest, Builder> {
         private java.util.List<AdditionalApiDescriptions> additionalApiDescriptions; 
         private java.util.List<Apis> apis; 
@@ -212,13 +248,16 @@ public class CreateApiMcpServerRequest extends Request {
         private String clientToken; 
         private String description; 
         private Boolean enableAssumeRole; 
+        private Boolean enableCustomVpcWhitelist; 
         private String instructions; 
         private String language; 
         private String name; 
         private String oauthClientId; 
         private java.util.List<Prompts> prompts; 
+        private String publicAccess; 
         private java.util.List<String> systemTools; 
         private java.util.List<TerraformTools> terraformTools; 
+        private java.util.List<String> vpcWhitelists; 
 
         private Builder() {
             super();
@@ -233,13 +272,16 @@ public class CreateApiMcpServerRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.enableAssumeRole = request.enableAssumeRole;
+            this.enableCustomVpcWhitelist = request.enableCustomVpcWhitelist;
             this.instructions = request.instructions;
             this.language = request.language;
             this.name = request.name;
             this.oauthClientId = request.oauthClientId;
             this.prompts = request.prompts;
+            this.publicAccess = request.publicAccess;
             this.systemTools = request.systemTools;
             this.terraformTools = request.terraformTools;
+            this.vpcWhitelists = request.vpcWhitelists;
         } 
 
         /**
@@ -306,6 +348,15 @@ public class CreateApiMcpServerRequest extends Request {
         }
 
         /**
+         * enableCustomVpcWhitelist.
+         */
+        public Builder enableCustomVpcWhitelist(Boolean enableCustomVpcWhitelist) {
+            this.putBodyParameter("enableCustomVpcWhitelist", enableCustomVpcWhitelist);
+            this.enableCustomVpcWhitelist = enableCustomVpcWhitelist;
+            return this;
+        }
+
+        /**
          * instructions.
          */
         public Builder instructions(String instructions) {
@@ -354,6 +405,15 @@ public class CreateApiMcpServerRequest extends Request {
         }
 
         /**
+         * publicAccess.
+         */
+        public Builder publicAccess(String publicAccess) {
+            this.putBodyParameter("publicAccess", publicAccess);
+            this.publicAccess = publicAccess;
+            return this;
+        }
+
+        /**
          * systemTools.
          */
         public Builder systemTools(java.util.List<String> systemTools) {
@@ -368,6 +428,15 @@ public class CreateApiMcpServerRequest extends Request {
         public Builder terraformTools(java.util.List<TerraformTools> terraformTools) {
             this.putBodyParameter("terraformTools", terraformTools);
             this.terraformTools = terraformTools;
+            return this;
+        }
+
+        /**
+         * vpcWhitelists.
+         */
+        public Builder vpcWhitelists(java.util.List<String> vpcWhitelists) {
+            this.putBodyParameter("vpcWhitelists", vpcWhitelists);
+            this.vpcWhitelists = vpcWhitelists;
             return this;
         }
 

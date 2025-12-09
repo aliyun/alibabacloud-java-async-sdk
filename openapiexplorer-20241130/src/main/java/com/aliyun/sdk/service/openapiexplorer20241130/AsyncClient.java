@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApiMcpServerResponse> getApiMcpServer(GetApiMcpServerRequest request);
 
     /**
+     * @param request the request parameters of GetApiMcpServerUserConfig  GetApiMcpServerUserConfigRequest
+     * @return GetApiMcpServerUserConfigResponse
+     */
+    CompletableFuture<GetApiMcpServerUserConfigResponse> getApiMcpServerUserConfig(GetApiMcpServerUserConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query public information instead of special information, such as the account ownership. Permissions on this API operation cannot be granted to other members.</p>
      * 
@@ -111,5 +117,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApiMcpServerResponse
      */
     CompletableFuture<UpdateApiMcpServerResponse> updateApiMcpServer(UpdateApiMcpServerRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApiMcpServerUserConfig  UpdateApiMcpServerUserConfigRequest
+     * @return UpdateApiMcpServerUserConfigResponse
+     */
+    CompletableFuture<UpdateApiMcpServerUserConfigResponse> updateApiMcpServerUserConfig(UpdateApiMcpServerUserConfigRequest request);
 
 }

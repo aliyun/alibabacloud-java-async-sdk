@@ -941,9 +941,17 @@ public class ListApiMcpServersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sse")
         private String sse;
 
+        @com.aliyun.core.annotation.NameInMap("vpcMcp")
+        private String vpcMcp;
+
+        @com.aliyun.core.annotation.NameInMap("vpcSse")
+        private String vpcSse;
+
         private Urls(Builder builder) {
             this.mcp = builder.mcp;
             this.sse = builder.sse;
+            this.vpcMcp = builder.vpcMcp;
+            this.vpcSse = builder.vpcSse;
         }
 
         public static Builder builder() {
@@ -968,9 +976,25 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             return this.sse;
         }
 
+        /**
+         * @return vpcMcp
+         */
+        public String getVpcMcp() {
+            return this.vpcMcp;
+        }
+
+        /**
+         * @return vpcSse
+         */
+        public String getVpcSse() {
+            return this.vpcSse;
+        }
+
         public static final class Builder {
             private String mcp; 
             private String sse; 
+            private String vpcMcp; 
+            private String vpcSse; 
 
             private Builder() {
             } 
@@ -978,6 +1002,8 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             private Builder(Urls model) {
                 this.mcp = model.mcp;
                 this.sse = model.sse;
+                this.vpcMcp = model.vpcMcp;
+                this.vpcSse = model.vpcSse;
             } 
 
             /**
@@ -993,6 +1019,22 @@ public class ListApiMcpServersResponseBody extends TeaModel {
              */
             public Builder sse(String sse) {
                 this.sse = sse;
+                return this;
+            }
+
+            /**
+             * vpcMcp.
+             */
+            public Builder vpcMcp(String vpcMcp) {
+                this.vpcMcp = vpcMcp;
+                return this;
+            }
+
+            /**
+             * vpcSse.
+             */
+            public Builder vpcSse(String vpcSse) {
+                this.vpcSse = vpcSse;
                 return this;
             }
 
@@ -1031,6 +1073,9 @@ public class ListApiMcpServersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAssumeRole")
         private Boolean enableAssumeRole;
 
+        @com.aliyun.core.annotation.NameInMap("enableCustomVpcWhitelist")
+        private Boolean enableCustomVpcWhitelist;
+
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
@@ -1048,6 +1093,9 @@ public class ListApiMcpServersResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("prompts")
         private java.util.List<Prompts> prompts;
+
+        @com.aliyun.core.annotation.NameInMap("publicAccess")
+        private String publicAccess;
 
         @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
@@ -1067,6 +1115,9 @@ public class ListApiMcpServersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("urls")
         private Urls urls;
 
+        @com.aliyun.core.annotation.NameInMap("vpcWhitelists")
+        private java.util.List<String> vpcWhitelists;
+
         private ApiMcpServers(Builder builder) {
             this.additionalApiDescriptions = builder.additionalApiDescriptions;
             this.apis = builder.apis;
@@ -1075,18 +1126,21 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.enableAssumeRole = builder.enableAssumeRole;
+            this.enableCustomVpcWhitelist = builder.enableCustomVpcWhitelist;
             this.id = builder.id;
             this.instructions = builder.instructions;
             this.language = builder.language;
             this.name = builder.name;
             this.oauthClientId = builder.oauthClientId;
             this.prompts = builder.prompts;
+            this.publicAccess = builder.publicAccess;
             this.sourceType = builder.sourceType;
             this.systemMcpServerInfo = builder.systemMcpServerInfo;
             this.systemTools = builder.systemTools;
             this.terraformTools = builder.terraformTools;
             this.updateTime = builder.updateTime;
             this.urls = builder.urls;
+            this.vpcWhitelists = builder.vpcWhitelists;
         }
 
         public static Builder builder() {
@@ -1147,6 +1201,13 @@ public class ListApiMcpServersResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableCustomVpcWhitelist
+         */
+        public Boolean getEnableCustomVpcWhitelist() {
+            return this.enableCustomVpcWhitelist;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
@@ -1186,6 +1247,13 @@ public class ListApiMcpServersResponseBody extends TeaModel {
          */
         public java.util.List<Prompts> getPrompts() {
             return this.prompts;
+        }
+
+        /**
+         * @return publicAccess
+         */
+        public String getPublicAccess() {
+            return this.publicAccess;
         }
 
         /**
@@ -1230,6 +1298,13 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             return this.urls;
         }
 
+        /**
+         * @return vpcWhitelists
+         */
+        public java.util.List<String> getVpcWhitelists() {
+            return this.vpcWhitelists;
+        }
+
         public static final class Builder {
             private java.util.List<AdditionalApiDescriptions> additionalApiDescriptions; 
             private java.util.List<Apis> apis; 
@@ -1238,18 +1313,21 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private Boolean enableAssumeRole; 
+            private Boolean enableCustomVpcWhitelist; 
             private String id; 
             private String instructions; 
             private String language; 
             private String name; 
             private String oauthClientId; 
             private java.util.List<Prompts> prompts; 
+            private String publicAccess; 
             private String sourceType; 
             private SystemMcpServerInfo systemMcpServerInfo; 
             private java.util.List<String> systemTools; 
             private java.util.List<TerraformTools> terraformTools; 
             private String updateTime; 
             private Urls urls; 
+            private java.util.List<String> vpcWhitelists; 
 
             private Builder() {
             } 
@@ -1262,18 +1340,21 @@ public class ListApiMcpServersResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.enableAssumeRole = model.enableAssumeRole;
+                this.enableCustomVpcWhitelist = model.enableCustomVpcWhitelist;
                 this.id = model.id;
                 this.instructions = model.instructions;
                 this.language = model.language;
                 this.name = model.name;
                 this.oauthClientId = model.oauthClientId;
                 this.prompts = model.prompts;
+                this.publicAccess = model.publicAccess;
                 this.sourceType = model.sourceType;
                 this.systemMcpServerInfo = model.systemMcpServerInfo;
                 this.systemTools = model.systemTools;
                 this.terraformTools = model.terraformTools;
                 this.updateTime = model.updateTime;
                 this.urls = model.urls;
+                this.vpcWhitelists = model.vpcWhitelists;
             } 
 
             /**
@@ -1333,6 +1414,14 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             }
 
             /**
+             * enableCustomVpcWhitelist.
+             */
+            public Builder enableCustomVpcWhitelist(Boolean enableCustomVpcWhitelist) {
+                this.enableCustomVpcWhitelist = enableCustomVpcWhitelist;
+                return this;
+            }
+
+            /**
              * id.
              */
             public Builder id(String id) {
@@ -1381,6 +1470,14 @@ public class ListApiMcpServersResponseBody extends TeaModel {
             }
 
             /**
+             * publicAccess.
+             */
+            public Builder publicAccess(String publicAccess) {
+                this.publicAccess = publicAccess;
+                return this;
+            }
+
+            /**
              * sourceType.
              */
             public Builder sourceType(String sourceType) {
@@ -1425,6 +1522,14 @@ public class ListApiMcpServersResponseBody extends TeaModel {
              */
             public Builder urls(Urls urls) {
                 this.urls = urls;
+                return this;
+            }
+
+            /**
+             * vpcWhitelists.
+             */
+            public Builder vpcWhitelists(java.util.List<String> vpcWhitelists) {
+                this.vpcWhitelists = vpcWhitelists;
                 return this;
             }
 
