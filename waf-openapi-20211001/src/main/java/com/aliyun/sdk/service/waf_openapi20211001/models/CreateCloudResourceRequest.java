@@ -365,6 +365,9 @@ public class CreateCloudResourceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String resourceProduct;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+        private String resourceRegionId;
+
         @com.aliyun.core.annotation.NameInMap("TLSVersion")
         private String TLSVersion;
 
@@ -378,6 +381,7 @@ public class CreateCloudResourceRequest extends Request {
             this.protocol = builder.protocol;
             this.resourceInstanceId = builder.resourceInstanceId;
             this.resourceProduct = builder.resourceProduct;
+            this.resourceRegionId = builder.resourceRegionId;
             this.TLSVersion = builder.TLSVersion;
         }
 
@@ -453,6 +457,13 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
+         * @return resourceRegionId
+         */
+        public String getResourceRegionId() {
+            return this.resourceRegionId;
+        }
+
+        /**
          * @return TLSVersion
          */
         public String getTLSVersion() {
@@ -469,6 +480,7 @@ public class CreateCloudResourceRequest extends Request {
             private String protocol; 
             private String resourceInstanceId; 
             private String resourceProduct; 
+            private String resourceRegionId; 
             private String TLSVersion; 
 
             private Builder() {
@@ -484,6 +496,7 @@ public class CreateCloudResourceRequest extends Request {
                 this.protocol = model.protocol;
                 this.resourceInstanceId = model.resourceInstanceId;
                 this.resourceProduct = model.resourceProduct;
+                this.resourceRegionId = model.resourceRegionId;
                 this.TLSVersion = model.TLSVersion;
             } 
 
@@ -604,6 +617,14 @@ public class CreateCloudResourceRequest extends Request {
              */
             public Builder resourceProduct(String resourceProduct) {
                 this.resourceProduct = resourceProduct;
+                return this;
+            }
+
+            /**
+             * ResourceRegionId.
+             */
+            public Builder resourceRegionId(String resourceRegionId) {
+                this.resourceRegionId = resourceRegionId;
                 return this;
             }
 

@@ -359,6 +359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBaseSystemRulesResponse> describeBaseSystemRules(DescribeBaseSystemRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeBotRuleLabels  DescribeBotRuleLabelsRequest
+     * @return DescribeBotRuleLabelsResponse
+     */
+    CompletableFuture<DescribeBotRuleLabelsResponse> describeBotRuleLabels(DescribeBotRuleLabelsRequest request);
+
+    /**
      * @param request the request parameters of DescribeCertDetail  DescribeCertDetailRequest
      * @return DescribeCertDetailResponse
      */
