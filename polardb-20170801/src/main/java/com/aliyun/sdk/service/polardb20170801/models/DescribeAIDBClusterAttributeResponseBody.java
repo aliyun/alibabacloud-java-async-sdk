@@ -38,6 +38,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
+    @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupId")
+    private String ecsSecurityGroupId;
+
     @com.aliyun.core.annotation.NameInMap("EndpointList")
     private java.util.List<EndpointList> endpointList;
 
@@ -106,6 +109,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.DBClusterStatus = builder.DBClusterStatus;
         this.DBNodes = builder.DBNodes;
         this.DBVersion = builder.DBVersion;
+        this.ecsSecurityGroupId = builder.ecsSecurityGroupId;
         this.endpointList = builder.endpointList;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
@@ -187,6 +191,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getDBVersion() {
         return this.DBVersion;
+    }
+
+    /**
+     * @return ecsSecurityGroupId
+     */
+    public String getEcsSecurityGroupId() {
+        return this.ecsSecurityGroupId;
     }
 
     /**
@@ -337,6 +348,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String DBClusterStatus; 
         private java.util.List<DBNodes> DBNodes; 
         private String DBVersion; 
+        private String ecsSecurityGroupId; 
         private java.util.List<EndpointList> endpointList; 
         private String expireTime; 
         private Boolean expired; 
@@ -369,6 +381,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.DBClusterStatus = model.DBClusterStatus;
             this.DBNodes = model.DBNodes;
             this.DBVersion = model.DBVersion;
+            this.ecsSecurityGroupId = model.ecsSecurityGroupId;
             this.endpointList = model.endpointList;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
@@ -444,6 +457,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
+            return this;
+        }
+
+        /**
+         * EcsSecurityGroupId.
+         */
+        public Builder ecsSecurityGroupId(String ecsSecurityGroupId) {
+            this.ecsSecurityGroupId = ecsSecurityGroupId;
             return this;
         }
 

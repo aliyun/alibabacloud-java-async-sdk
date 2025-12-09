@@ -30,6 +30,10 @@ public class CreateDBClusterRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
     private String backupRetentionPolicyOnClusterDeletion;
 
@@ -139,6 +143,10 @@ public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
@@ -272,6 +280,7 @@ public class CreateDBClusterRequest extends Request {
         this.allowShutDown = builder.allowShutDown;
         this.architecture = builder.architecture;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
         this.burstingEnabled = builder.burstingEnabled;
         this.clientToken = builder.clientToken;
@@ -299,6 +308,7 @@ public class CreateDBClusterRequest extends Request {
         this.parameterGroupId = builder.parameterGroupId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.promotionCode = builder.promotionCode;
         this.provisionedIops = builder.provisionedIops;
         this.proxyClass = builder.proxyClass;
         this.proxyType = builder.proxyType;
@@ -364,6 +374,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -553,6 +570,13 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getPeriod() {
         return this.period;
+    }
+
+    /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     /**
@@ -776,6 +800,7 @@ public class CreateDBClusterRequest extends Request {
         private String allowShutDown; 
         private String architecture; 
         private Boolean autoRenew; 
+        private Boolean autoUseCoupon; 
         private String backupRetentionPolicyOnClusterDeletion; 
         private String burstingEnabled; 
         private String clientToken; 
@@ -803,6 +828,7 @@ public class CreateDBClusterRequest extends Request {
         private String parameterGroupId; 
         private String payType; 
         private String period; 
+        private String promotionCode; 
         private Long provisionedIops; 
         private String proxyClass; 
         private String proxyType; 
@@ -844,6 +870,7 @@ public class CreateDBClusterRequest extends Request {
             this.allowShutDown = request.allowShutDown;
             this.architecture = request.architecture;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
             this.burstingEnabled = request.burstingEnabled;
             this.clientToken = request.clientToken;
@@ -871,6 +898,7 @@ public class CreateDBClusterRequest extends Request {
             this.parameterGroupId = request.parameterGroupId;
             this.payType = request.payType;
             this.period = request.period;
+            this.promotionCode = request.promotionCode;
             this.provisionedIops = request.provisionedIops;
             this.proxyClass = request.proxyClass;
             this.proxyType = request.proxyType;
@@ -958,6 +986,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -1453,6 +1490,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

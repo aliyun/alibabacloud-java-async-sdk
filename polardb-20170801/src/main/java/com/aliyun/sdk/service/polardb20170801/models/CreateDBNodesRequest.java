@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -64,6 +68,10 @@ public class CreateDBNodesRequest extends Request {
     private String plannedStartTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -77,6 +85,7 @@ public class CreateDBNodesRequest extends Request {
 
     private CreateDBNodesRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.cloudProvider = builder.cloudProvider;
         this.DBClusterId = builder.DBClusterId;
@@ -88,6 +97,7 @@ public class CreateDBNodesRequest extends Request {
         this.ownerId = builder.ownerId;
         this.plannedEndTime = builder.plannedEndTime;
         this.plannedStartTime = builder.plannedStartTime;
+        this.promotionCode = builder.promotionCode;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -104,6 +114,13 @@ public class CreateDBNodesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -184,6 +201,13 @@ public class CreateDBNodesRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -205,6 +229,7 @@ public class CreateDBNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBNodesRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private String cloudProvider; 
         private String DBClusterId; 
@@ -216,6 +241,7 @@ public class CreateDBNodesRequest extends Request {
         private Long ownerId; 
         private String plannedEndTime; 
         private String plannedStartTime; 
+        private String promotionCode; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -226,6 +252,7 @@ public class CreateDBNodesRequest extends Request {
 
         private Builder(CreateDBNodesRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.cloudProvider = request.cloudProvider;
             this.DBClusterId = request.DBClusterId;
@@ -237,10 +264,20 @@ public class CreateDBNodesRequest extends Request {
             this.ownerId = request.ownerId;
             this.plannedEndTime = request.plannedEndTime;
             this.plannedStartTime = request.plannedStartTime;
+            this.promotionCode = request.promotionCode;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
@@ -398,6 +435,15 @@ public class CreateDBNodesRequest extends Request {
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
             this.plannedStartTime = plannedStartTime;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

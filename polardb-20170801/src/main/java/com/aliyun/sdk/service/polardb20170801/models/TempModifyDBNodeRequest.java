@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TempModifyDBNodeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -50,6 +54,10 @@ public class TempModifyDBNodeRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -64,6 +72,7 @@ public class TempModifyDBNodeRequest extends Request {
 
     private TempModifyDBNodeRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.DBNode = builder.DBNode;
@@ -71,6 +80,7 @@ public class TempModifyDBNodeRequest extends Request {
         this.operationType = builder.operationType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.promotionCode = builder.promotionCode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
@@ -87,6 +97,13 @@ public class TempModifyDBNodeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -139,6 +156,13 @@ public class TempModifyDBNodeRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -160,6 +184,7 @@ public class TempModifyDBNodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TempModifyDBNodeRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private String DBClusterId; 
         private java.util.List<DBNode> DBNode; 
@@ -167,6 +192,7 @@ public class TempModifyDBNodeRequest extends Request {
         private String operationType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String promotionCode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
@@ -177,6 +203,7 @@ public class TempModifyDBNodeRequest extends Request {
 
         private Builder(TempModifyDBNodeRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.DBNode = request.DBNode;
@@ -184,10 +211,20 @@ public class TempModifyDBNodeRequest extends Request {
             this.operationType = request.operationType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.promotionCode = request.promotionCode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
@@ -268,6 +305,15 @@ public class TempModifyDBNodeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

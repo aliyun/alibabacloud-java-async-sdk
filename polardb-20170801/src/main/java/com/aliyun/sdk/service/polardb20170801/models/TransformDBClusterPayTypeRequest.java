@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransformDBClusterPayTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -44,6 +48,10 @@ public class TransformDBClusterPayTypeRequest extends Request {
     private String period;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -66,12 +74,14 @@ public class TransformDBClusterPayTypeRequest extends Request {
 
     private TransformDBClusterPayTypeRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -90,6 +100,13 @@ public class TransformDBClusterPayTypeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -135,6 +152,13 @@ public class TransformDBClusterPayTypeRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -170,12 +194,14 @@ public class TransformDBClusterPayTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TransformDBClusterPayTypeRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
         private String period; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -188,18 +214,29 @@ public class TransformDBClusterPayTypeRequest extends Request {
 
         private Builder(TransformDBClusterPayTypeRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
             this.period = request.period;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.usedTime = request.usedTime;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
@@ -277,6 +314,15 @@ public class TransformDBClusterPayTypeRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

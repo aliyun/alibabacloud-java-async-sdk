@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateStoragePlanRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -33,6 +37,10 @@ public class CreateStoragePlanRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Period")
     @com.aliyun.core.annotation.Validation(required = true)
     private String period;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -59,10 +67,12 @@ public class CreateStoragePlanRequest extends Request {
 
     private CreateStoragePlanRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.promotionCode = builder.promotionCode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.storageClass = builder.storageClass;
@@ -81,6 +91,13 @@ public class CreateStoragePlanRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -109,6 +126,13 @@ public class CreateStoragePlanRequest extends Request {
      */
     public String getPeriod() {
         return this.period;
+    }
+
+    /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     /**
@@ -147,10 +171,12 @@ public class CreateStoragePlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateStoragePlanRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
         private String period; 
+        private String promotionCode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String storageClass; 
@@ -163,16 +189,27 @@ public class CreateStoragePlanRequest extends Request {
 
         private Builder(CreateStoragePlanRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.period = request.period;
+            this.promotionCode = request.promotionCode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.storageClass = request.storageClass;
             this.storageType = request.storageType;
             this.usedTime = request.usedTime;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
@@ -218,6 +255,15 @@ public class CreateStoragePlanRequest extends Request {
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

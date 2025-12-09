@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterArchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HotStandbyCluster")
     private String hotStandbyCluster;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -35,8 +43,10 @@ public class ModifyDBClusterArchRequest extends Request {
 
     private ModifyDBClusterArchRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.DBClusterId = builder.DBClusterId;
         this.hotStandbyCluster = builder.hotStandbyCluster;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.standbyAZ = builder.standbyAZ;
     }
@@ -55,6 +65,13 @@ public class ModifyDBClusterArchRequest extends Request {
     }
 
     /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
+    }
+
+    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
@@ -66,6 +83,13 @@ public class ModifyDBClusterArchRequest extends Request {
      */
     public String getHotStandbyCluster() {
         return this.hotStandbyCluster;
+    }
+
+    /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     /**
@@ -83,8 +107,10 @@ public class ModifyDBClusterArchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterArchRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String DBClusterId; 
         private String hotStandbyCluster; 
+        private String promotionCode; 
         private String regionId; 
         private String standbyAZ; 
 
@@ -94,11 +120,22 @@ public class ModifyDBClusterArchRequest extends Request {
 
         private Builder(ModifyDBClusterArchRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.DBClusterId = request.DBClusterId;
             this.hotStandbyCluster = request.hotStandbyCluster;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.standbyAZ = request.standbyAZ;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>The ID of the cluster.</p>
@@ -125,6 +162,15 @@ public class ModifyDBClusterArchRequest extends Request {
         public Builder hotStandbyCluster(String hotStandbyCluster) {
             this.putQueryParameter("HotStandbyCluster", hotStandbyCluster);
             this.hotStandbyCluster = hotStandbyCluster;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

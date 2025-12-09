@@ -41,6 +41,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CustomBucketPath")
+    private String customBucketPath;
+
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
@@ -125,6 +128,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.category = builder.category;
         this.clientDownloadPath = builder.clientDownloadPath;
         this.createTime = builder.createTime;
+        this.customBucketPath = builder.customBucketPath;
         this.DBType = builder.DBType;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
@@ -218,6 +222,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return customBucketPath
+     */
+    public String getCustomBucketPath() {
+        return this.customBucketPath;
     }
 
     /**
@@ -404,6 +415,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String category; 
         private String clientDownloadPath; 
         private String createTime; 
+        private String customBucketPath; 
         private String DBType; 
         private String expireTime; 
         private String expired; 
@@ -442,6 +454,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.category = model.category;
             this.clientDownloadPath = model.clientDownloadPath;
             this.createTime = model.createTime;
+            this.customBucketPath = model.customBucketPath;
             this.DBType = model.DBType;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
@@ -530,6 +543,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CustomBucketPath.
+         */
+        public Builder customBucketPath(String customBucketPath) {
+            this.customBucketPath = customBucketPath;
             return this;
         }
 

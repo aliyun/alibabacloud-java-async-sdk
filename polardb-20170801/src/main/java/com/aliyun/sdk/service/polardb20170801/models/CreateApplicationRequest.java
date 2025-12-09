@@ -32,6 +32,10 @@ public class CreateApplicationRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List<Components> components;
 
@@ -64,6 +68,10 @@ public class CreateApplicationRequest extends Request {
     private String polarFSInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -92,6 +100,7 @@ public class CreateApplicationRequest extends Request {
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
         this.autoRenew = builder.autoRenew;
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.components = builder.components;
         this.DBClusterId = builder.DBClusterId;
         this.description = builder.description;
@@ -100,6 +109,7 @@ public class CreateApplicationRequest extends Request {
         this.payType = builder.payType;
         this.period = builder.period;
         this.polarFSInstanceId = builder.polarFSInstanceId;
+        this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.usedTime = builder.usedTime;
@@ -140,6 +150,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -199,6 +216,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -244,6 +268,7 @@ public class CreateApplicationRequest extends Request {
         private String applicationType; 
         private String architecture; 
         private Boolean autoRenew; 
+        private Boolean autoUseCoupon; 
         private java.util.List<Components> components; 
         private String DBClusterId; 
         private String description; 
@@ -252,6 +277,7 @@ public class CreateApplicationRequest extends Request {
         private String payType; 
         private String period; 
         private String polarFSInstanceId; 
+        private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
         private String usedTime; 
@@ -268,6 +294,7 @@ public class CreateApplicationRequest extends Request {
             this.applicationType = request.applicationType;
             this.architecture = request.architecture;
             this.autoRenew = request.autoRenew;
+            this.autoUseCoupon = request.autoUseCoupon;
             this.components = request.components;
             this.DBClusterId = request.DBClusterId;
             this.description = request.description;
@@ -276,6 +303,7 @@ public class CreateApplicationRequest extends Request {
             this.payType = request.payType;
             this.period = request.period;
             this.polarFSInstanceId = request.polarFSInstanceId;
+            this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.usedTime = request.usedTime;
@@ -314,6 +342,15 @@ public class CreateApplicationRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
             return this;
         }
 
@@ -388,6 +425,15 @@ public class CreateApplicationRequest extends Request {
         public Builder polarFSInstanceId(String polarFSInstanceId) {
             this.putQueryParameter("PolarFSInstanceId", polarFSInstanceId);
             this.polarFSInstanceId = polarFSInstanceId;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 

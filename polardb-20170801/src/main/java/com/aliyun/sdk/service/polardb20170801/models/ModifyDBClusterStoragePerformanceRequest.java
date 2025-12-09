@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterStoragePerformanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
+    private Boolean autoUseCoupon;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
     private String burstingEnabled;
 
@@ -35,6 +39,10 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
     private String modifyType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Integer provisionedIops;
 
@@ -48,10 +56,12 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
 
     private ModifyDBClusterStoragePerformanceRequest(Builder builder) {
         super(builder);
+        this.autoUseCoupon = builder.autoUseCoupon;
         this.burstingEnabled = builder.burstingEnabled;
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.modifyType = builder.modifyType;
+        this.promotionCode = builder.promotionCode;
         this.provisionedIops = builder.provisionedIops;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.storageType = builder.storageType;
@@ -68,6 +78,13 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoUseCoupon
+     */
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     /**
@@ -99,6 +116,13 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return provisionedIops
      */
     public Integer getProvisionedIops() {
@@ -120,10 +144,12 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterStoragePerformanceRequest, Builder> {
+        private Boolean autoUseCoupon; 
         private String burstingEnabled; 
         private String clientToken; 
         private String DBClusterId; 
         private String modifyType; 
+        private String promotionCode; 
         private Integer provisionedIops; 
         private Long resourceOwnerId; 
         private String storageType; 
@@ -134,14 +160,25 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
 
         private Builder(ModifyDBClusterStoragePerformanceRequest request) {
             super(request);
+            this.autoUseCoupon = request.autoUseCoupon;
             this.burstingEnabled = request.burstingEnabled;
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.modifyType = request.modifyType;
+            this.promotionCode = request.promotionCode;
             this.provisionedIops = request.provisionedIops;
             this.resourceOwnerId = request.resourceOwnerId;
             this.storageType = request.storageType;
         } 
+
+        /**
+         * AutoUseCoupon.
+         */
+        public Builder autoUseCoupon(Boolean autoUseCoupon) {
+            this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
+            this.autoUseCoupon = autoUseCoupon;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</p>
@@ -189,6 +226,15 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
+            return this;
+        }
+
+        /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putQueryParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
             return this;
         }
 
