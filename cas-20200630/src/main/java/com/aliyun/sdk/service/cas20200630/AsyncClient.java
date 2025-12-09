@@ -286,6 +286,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRevokeCertificateResponse> listRevokeCertificate(ListRevokeCertificateRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
+    CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>After a CA certificate is created, the CA certificate is in the ISSUE state by default. You can call the UpdateCACertificateStatus operation to change the status of a CA certificate from ISSUE to REVOKE. If a CA certificate is in the ISSUE state, the CA certificate can be used to issue certificates. If a CA certificate is in the REVOKE state, the CA certificate cannot be used to issue certificates, and the certificates that are issued from the CA certificate become invalid.
      * Before you call this operation, make sure that you have created a root CA by calling the [CreateRootCACertificate] operation or an intermediate CA certificate by calling the [CreateSubCACertificate] operation.</p>
