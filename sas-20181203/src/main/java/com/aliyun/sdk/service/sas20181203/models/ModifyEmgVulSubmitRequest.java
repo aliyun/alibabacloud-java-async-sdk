@@ -27,6 +27,10 @@ public class ModifyEmgVulSubmitRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserAgreement")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userAgreement;
@@ -35,6 +39,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
         super(builder);
         this.lang = builder.lang;
         this.name = builder.name;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.userAgreement = builder.userAgreement;
     }
 
@@ -66,6 +71,13 @@ public class ModifyEmgVulSubmitRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return userAgreement
      */
     public String getUserAgreement() {
@@ -75,6 +87,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyEmgVulSubmitRequest, Builder> {
         private String lang; 
         private String name; 
+        private Long resourceDirectoryAccountId; 
         private String userAgreement; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.name = request.name;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.userAgreement = request.userAgreement;
         } 
 
@@ -114,6 +128,15 @@ public class ModifyEmgVulSubmitRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

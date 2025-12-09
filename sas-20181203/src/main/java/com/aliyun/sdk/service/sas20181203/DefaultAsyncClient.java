@@ -3780,6 +3780,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCloudVendorProductTemplateConfig  DescribeCloudVendorProductTemplateConfigRequest
+     * @return DescribeCloudVendorProductTemplateConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCloudVendorProductTemplateConfigResponse> describeCloudVendorProductTemplateConfig(DescribeCloudVendorProductTemplateConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCloudVendorProductTemplateConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCloudVendorProductTemplateConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCloudVendorProductTemplateConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeCloudVendorTrialConfig  DescribeCloudVendorTrialConfigRequest
      * @return DescribeCloudVendorTrialConfigResponse
      */

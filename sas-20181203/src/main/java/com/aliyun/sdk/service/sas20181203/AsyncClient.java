@@ -1296,6 +1296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCloudVendorAccountAKListResponse> describeCloudVendorAccountAKList(DescribeCloudVendorAccountAKListRequest request);
 
     /**
+     * @param request the request parameters of DescribeCloudVendorProductTemplateConfig  DescribeCloudVendorProductTemplateConfigRequest
+     * @return DescribeCloudVendorProductTemplateConfigResponse
+     */
+    CompletableFuture<DescribeCloudVendorProductTemplateConfigResponse> describeCloudVendorProductTemplateConfig(DescribeCloudVendorProductTemplateConfigRequest request);
+
+    /**
      * @param request the request parameters of DescribeCloudVendorTrialConfig  DescribeCloudVendorTrialConfigRequest
      * @return DescribeCloudVendorTrialConfigResponse
      */

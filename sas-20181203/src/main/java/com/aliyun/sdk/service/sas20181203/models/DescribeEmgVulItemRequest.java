@@ -34,6 +34,10 @@ public class DescribeEmgVulItemRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskStatus")
     private String riskStatus;
 
@@ -51,6 +55,7 @@ public class DescribeEmgVulItemRequest extends Request {
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskStatus = builder.riskStatus;
         this.scanType = builder.scanType;
         this.vulName = builder.vulName;
@@ -98,6 +103,13 @@ public class DescribeEmgVulItemRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskStatus
      */
     public String getRiskStatus() {
@@ -123,6 +135,7 @@ public class DescribeEmgVulItemRequest extends Request {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String riskStatus; 
         private String scanType; 
         private String vulName; 
@@ -137,6 +150,7 @@ public class DescribeEmgVulItemRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskStatus = request.riskStatus;
             this.scanType = request.scanType;
             this.vulName = request.vulName;
@@ -195,6 +209,15 @@ public class DescribeEmgVulItemRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
