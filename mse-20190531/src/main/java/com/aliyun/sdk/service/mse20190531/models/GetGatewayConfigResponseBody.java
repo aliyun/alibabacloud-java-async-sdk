@@ -959,6 +959,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeepaliveHeaderTimeout")
         private Integer keepaliveHeaderTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("LiteMetrics")
+        private Boolean liteMetrics;
+
         @com.aliyun.core.annotation.NameInMap("LogFilterConfig")
         private String logFilterConfig;
 
@@ -967,6 +970,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PathWithEscapedSlashes")
         private String pathWithEscapedSlashes;
+
+        @com.aliyun.core.annotation.NameInMap("PreserveExternalRequestID")
+        private Boolean preserveExternalRequestID;
 
         @com.aliyun.core.annotation.NameInMap("PreserveHeaderFormat")
         private Boolean preserveHeaderFormat;
@@ -1013,9 +1019,11 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             this.initialConnectionWindowSize = builder.initialConnectionWindowSize;
             this.initialStreamWindowSize = builder.initialStreamWindowSize;
             this.keepaliveHeaderTimeout = builder.keepaliveHeaderTimeout;
+            this.liteMetrics = builder.liteMetrics;
             this.logFilterConfig = builder.logFilterConfig;
             this.noSupportedConfigList = builder.noSupportedConfigList;
             this.pathWithEscapedSlashes = builder.pathWithEscapedSlashes;
+            this.preserveExternalRequestID = builder.preserveExternalRequestID;
             this.preserveHeaderFormat = builder.preserveHeaderFormat;
             this.slsConfigDetails = builder.slsConfigDetails;
             this.supportWaf = builder.supportWaf;
@@ -1175,6 +1183,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return liteMetrics
+         */
+        public Boolean getLiteMetrics() {
+            return this.liteMetrics;
+        }
+
+        /**
          * @return logFilterConfig
          */
         public String getLogFilterConfig() {
@@ -1193,6 +1208,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
          */
         public String getPathWithEscapedSlashes() {
             return this.pathWithEscapedSlashes;
+        }
+
+        /**
+         * @return preserveExternalRequestID
+         */
+        public Boolean getPreserveExternalRequestID() {
+            return this.preserveExternalRequestID;
         }
 
         /**
@@ -1272,9 +1294,11 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private Integer initialConnectionWindowSize; 
             private Integer initialStreamWindowSize; 
             private Integer keepaliveHeaderTimeout; 
+            private Boolean liteMetrics; 
             private String logFilterConfig; 
             private String noSupportedConfigList; 
             private String pathWithEscapedSlashes; 
+            private Boolean preserveExternalRequestID; 
             private Boolean preserveHeaderFormat; 
             private SlsConfigDetails slsConfigDetails; 
             private Boolean supportWaf; 
@@ -1308,9 +1332,11 @@ public class GetGatewayConfigResponseBody extends TeaModel {
                 this.initialConnectionWindowSize = model.initialConnectionWindowSize;
                 this.initialStreamWindowSize = model.initialStreamWindowSize;
                 this.keepaliveHeaderTimeout = model.keepaliveHeaderTimeout;
+                this.liteMetrics = model.liteMetrics;
                 this.logFilterConfig = model.logFilterConfig;
                 this.noSupportedConfigList = model.noSupportedConfigList;
                 this.pathWithEscapedSlashes = model.pathWithEscapedSlashes;
+                this.preserveExternalRequestID = model.preserveExternalRequestID;
                 this.preserveHeaderFormat = model.preserveHeaderFormat;
                 this.slsConfigDetails = model.slsConfigDetails;
                 this.supportWaf = model.supportWaf;
@@ -1482,6 +1508,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
+             * LiteMetrics.
+             */
+            public Builder liteMetrics(Boolean liteMetrics) {
+                this.liteMetrics = liteMetrics;
+                return this;
+            }
+
+            /**
              * LogFilterConfig.
              */
             public Builder logFilterConfig(String logFilterConfig) {
@@ -1502,6 +1536,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
              */
             public Builder pathWithEscapedSlashes(String pathWithEscapedSlashes) {
                 this.pathWithEscapedSlashes = pathWithEscapedSlashes;
+                return this;
+            }
+
+            /**
+             * PreserveExternalRequestID.
+             */
+            public Builder preserveExternalRequestID(Boolean preserveExternalRequestID) {
+                this.preserveExternalRequestID = preserveExternalRequestID;
                 return this;
             }
 
