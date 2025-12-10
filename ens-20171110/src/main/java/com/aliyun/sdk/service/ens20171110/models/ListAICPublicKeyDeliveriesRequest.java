@@ -130,7 +130,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-xxxx-0</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +142,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         }
 
         /**
-         * KeyGroup.
+         * <p>Public Key Grouping</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-test</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -148,7 +154,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>Public Key Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mykey</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -157,7 +166,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>Public key type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);
@@ -166,7 +178,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -175,7 +190,10 @@ public class ListAICPublicKeyDeliveriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

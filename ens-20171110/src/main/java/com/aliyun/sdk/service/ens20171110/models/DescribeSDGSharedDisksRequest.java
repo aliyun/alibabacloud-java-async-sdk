@@ -117,7 +117,10 @@ public class DescribeSDGSharedDisksRequest extends Request {
         } 
 
         /**
-         * Namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -126,7 +129,10 @@ public class DescribeSDGSharedDisksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, which is used for paged query</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -135,7 +141,10 @@ public class DescribeSDGSharedDisksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,7 +153,10 @@ public class DescribeSDGSharedDisksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-xx</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,6 +165,7 @@ public class DescribeSDGSharedDisksRequest extends Request {
         }
 
         /**
+         * <p>sdg ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

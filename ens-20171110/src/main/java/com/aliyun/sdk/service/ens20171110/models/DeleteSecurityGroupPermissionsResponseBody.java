@@ -54,7 +54,10 @@ public class DeleteSecurityGroupPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

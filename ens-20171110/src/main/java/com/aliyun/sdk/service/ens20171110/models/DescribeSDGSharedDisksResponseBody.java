@@ -106,7 +106,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>Current page number when paging</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxsxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         }
 
         /**
-         * SharedDisks.
+         * <p>Shared disk list</p>
          */
         public Builder sharedDisks(java.util.List<SharedDisks> sharedDisks) {
             this.sharedDisks = sharedDisks;
@@ -138,7 +147,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the shared disk was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-09T15:13:21+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -290,7 +305,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * <p>shared disk id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-57kvvpuj1rk2ghumlgs6</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -298,7 +316,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>Shared disk type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -306,7 +327,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -314,7 +338,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -322,7 +349,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * SdgId.
+             * <p>SdgId of the shared disk</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdg-fqehhfdjv</p>
              */
             public Builder sdgId(String sdgId) {
                 this.sdgId = sdgId;
@@ -330,7 +360,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * SharedNum.
+             * <p>Number of shared mounts</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder sharedNum(Integer sharedNum) {
                 this.sharedNum = sharedNum;
@@ -338,7 +371,10 @@ public class DescribeSDGSharedDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Shared disk status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avaliable</p>
              */
             public Builder status(String status) {
                 this.status = status;

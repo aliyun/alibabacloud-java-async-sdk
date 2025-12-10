@@ -403,6 +403,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
+        private String loginPassword;
+
         @com.aliyun.core.annotation.NameInMap("NodePortRange")
         private String nodePortRange;
 
@@ -421,6 +424,7 @@ public class CreateClusterRequest extends Request {
         private ControlPlaneConfig(Builder builder) {
             this.imageId = builder.imageId;
             this.instanceSpec = builder.instanceSpec;
+            this.loginPassword = builder.loginPassword;
             this.nodePortRange = builder.nodePortRange;
             this.runtime = builder.runtime;
             this.size = builder.size;
@@ -448,6 +452,13 @@ public class CreateClusterRequest extends Request {
          */
         public String getInstanceSpec() {
             return this.instanceSpec;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         /**
@@ -488,6 +499,7 @@ public class CreateClusterRequest extends Request {
         public static final class Builder {
             private String imageId; 
             private String instanceSpec; 
+            private String loginPassword; 
             private String nodePortRange; 
             private String runtime; 
             private Integer size; 
@@ -500,6 +512,7 @@ public class CreateClusterRequest extends Request {
             private Builder(ControlPlaneConfig model) {
                 this.imageId = model.imageId;
                 this.instanceSpec = model.instanceSpec;
+                this.loginPassword = model.loginPassword;
                 this.nodePortRange = model.nodePortRange;
                 this.runtime = model.runtime;
                 this.size = model.size;
@@ -520,6 +533,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
+                return this;
+            }
+
+            /**
+             * LoginPassword.
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
                 return this;
             }
 

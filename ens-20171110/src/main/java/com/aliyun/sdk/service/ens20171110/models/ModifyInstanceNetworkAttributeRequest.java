@@ -88,6 +88,7 @@ public class ModifyInstanceNetworkAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ENS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ModifyInstanceNetworkAttributeRequest extends Request {
         }
 
         /**
-         * PrivateIpAddress.
+         * <p>The new private IP address of the ECS instance. By default, if this parameter is empty, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -109,7 +113,15 @@ public class ModifyInstanceNetworkAttributeRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch IDs.</p>
+         * <ul>
+         * <li>If you set this parameter to the ID of the current vSwitch, the vSwitch of the ECS instance remains unchanged.</li>
+         * <li>The input ID is a new vSwitch, and the new and old vSwitches must belong to the same node.</li>
+         * <li>By default, if this parameter is not specified, a private IP address is randomly assigned from within the CIDR block of the specified vSwitch.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5rllcjb3ol6duzjdnbm1o****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

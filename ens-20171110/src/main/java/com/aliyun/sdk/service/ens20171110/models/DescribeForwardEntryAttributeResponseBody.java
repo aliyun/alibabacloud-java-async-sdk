@@ -223,7 +223,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * CreationTime.
+         * <p>The creation time. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-26T15:38:27Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -231,7 +234,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExternalIp.
+         * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36.XXX.XXX.72</p>
          */
         public Builder externalIp(String externalIp) {
             this.externalIp = externalIp;
@@ -239,7 +245,14 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExternalPort.
+         * <p>The external port or port range that is used for port forwarding.</p>
+         * <ul>
+         * <li>Valid values: 1 to 65535.</li>
+         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder externalPort(String externalPort) {
             this.externalPort = externalPort;
@@ -247,7 +260,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ForwardEntryId.
+         * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-5tfi6f0rutmd00xrhkag7****</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.forwardEntryId = forwardEntryId;
@@ -255,7 +271,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ForwardEntryName.
+         * <p>The name of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         public Builder forwardEntryName(String forwardEntryName) {
             this.forwardEntryName = forwardEntryName;
@@ -263,7 +282,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * HealthCheckPort.
+         * <p>The DNAT probe port. The port must be within the internal port range. By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder healthCheckPort(String healthCheckPort) {
             this.healthCheckPort = healthCheckPort;
@@ -271,7 +293,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternalIp.
+         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XXX.XXX.50</p>
          */
         public Builder internalIp(String internalIp) {
             this.internalIp = internalIp;
@@ -279,7 +304,14 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternalPort.
+         * <p>The internal port or port range that is used for port forwarding.</p>
+         * <ul>
+         * <li>Valid values: 1 to 65535.</li>
+         * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder internalPort(String internalPort) {
             this.internalPort = internalPort;
@@ -287,7 +319,15 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IpProtocol.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: forwards TCP packets.</li>
+         * <li><strong>UDP</strong>: forwards UDP packets.</li>
+         * <li><strong>Any</strong>: forwards all packets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Any</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = ipProtocol;
@@ -295,7 +335,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -303,7 +346,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6666C5A5-75ED-422E-A022-7121FA18C968</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -311,7 +357,10 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StandbyExternalIp.
+         * <p>The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.XXX.XXX.4</p>
          */
         public Builder standbyExternalIp(String standbyExternalIp) {
             this.standbyExternalIp = standbyExternalIp;
@@ -319,7 +368,16 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StandbyStatus.
+         * <p>The status of the secondary EIP.</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         public Builder standbyStatus(String standbyStatus) {
             this.standbyStatus = standbyStatus;
@@ -327,7 +385,15 @@ public class DescribeForwardEntryAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the DNAT entry.</p>
+         * <ul>
+         * <li>Pending: The DNAT entry is being created or modified.</li>
+         * <li>Available: The DNAT entry is available.</li>
+         * <li>Deleting: The DNAT entry is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;

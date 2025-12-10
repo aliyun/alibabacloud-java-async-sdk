@@ -105,6 +105,12 @@ public class ManageAICLoginRequest extends Request {
         } 
 
         /**
+         * <p>Manage actions</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>open</li>
+         * <li>close</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +123,7 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +136,10 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
-         * KeyGroup.
+         * <p>Public Key Grouping</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-test</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -138,7 +148,10 @@ public class ManageAICLoginRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>Public Key Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mykey</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);

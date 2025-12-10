@@ -75,6 +75,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
         } 
 
         /**
+         * <p>The security group rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
@@ -85,6 +86,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the security groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +281,10 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the storage gateway. It must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,7 +292,10 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * DestCidrIp.
+             * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.XX.XX.14/32</p>
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -295,6 +303,11 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
+             * <p>The direction in which the security group rule is applied.</p>
+             * <ul>
+             * <li>egress</li>
+             * <li>ingress</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -306,6 +319,14 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
+             * <p>Protocol type. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>ICMP: the ICMP protocol</li>
+             * <li>ICMPv6: the ICMP protocol for IPv6.</li>
+             * <li>ALL: All protocols are supported.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -317,7 +338,13 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * Ipv6DestCidrIp.
+             * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <blockquote>
+             * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>::/0</p>
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -325,7 +352,13 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * Ipv6SourceCidrIp.
+             * <p>The source IPv6 CIDR block of the security group rule. or IPv6 address.</p>
+             * <blockquote>
+             * <p> This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>::/0</p>
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -333,6 +366,11 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
+             * <p>The action specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>Accept</li>
+             * <li>Drop</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -344,6 +382,13 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
+             * <p>The destination port range of the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+             * <li>ICMPv6:-1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -355,6 +400,7 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
+             * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -366,7 +412,10 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * SourceCidrIp.
+             * <p>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -374,7 +423,16 @@ public class CreateSecurityGroupPermissionsRequest extends Request {
             }
 
             /**
-             * SourcePortRange.
+             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port range is -1/-1.</li>
+             * <li>ICMPv6:-1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port range is -1/-1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>22/22</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;

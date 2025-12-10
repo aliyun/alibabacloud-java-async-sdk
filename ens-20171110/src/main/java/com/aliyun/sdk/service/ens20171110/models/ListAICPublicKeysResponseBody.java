@@ -106,7 +106,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>Current page number when paging</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * PublicKeys.
+         * <p>Public key list</p>
          */
         public Builder publicKeys(java.util.List<PublicKeys> publicKeys) {
             this.publicKeys = publicKeys;
@@ -130,7 +136,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxsxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Public key content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fvsvshbvjfksvj</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -264,7 +279,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time of the voiceprint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-09T15:13:21+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -272,7 +290,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Public key description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -280,7 +301,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyGroup.
+             * <p>Public key grouping</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-group</p>
              */
             public Builder keyGroup(String keyGroup) {
                 this.keyGroup = keyGroup;
@@ -288,7 +312,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>Public key name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mykey</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -296,7 +323,10 @@ public class ListAICPublicKeysResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>Public key type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;

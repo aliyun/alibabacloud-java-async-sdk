@@ -60,6 +60,7 @@ public class DescribeForwardEntryAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the DNAT entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

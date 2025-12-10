@@ -41,9 +41,17 @@ public class CreateEipInstanceRequest extends Request {
     private String instanceChargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String internetChargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
+    private String ipAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Isp")
@@ -64,7 +72,9 @@ public class CreateEipInstanceRequest extends Request {
         this.description = builder.description;
         this.ensRegionId = builder.ensRegionId;
         this.instanceChargeType = builder.instanceChargeType;
+        this.instanceId = builder.instanceId;
         this.internetChargeType = builder.internetChargeType;
+        this.ipAddress = builder.ipAddress;
         this.isp = builder.isp;
         this.name = builder.name;
         this.tag = builder.tag;
@@ -119,10 +129,24 @@ public class CreateEipInstanceRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return internetChargeType
      */
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    /**
+     * @return ipAddress
+     */
+    public String getIpAddress() {
+        return this.ipAddress;
     }
 
     /**
@@ -152,7 +176,9 @@ public class CreateEipInstanceRequest extends Request {
         private String description; 
         private String ensRegionId; 
         private String instanceChargeType; 
+        private String instanceId; 
         private String internetChargeType; 
+        private String ipAddress; 
         private String isp; 
         private String name; 
         private java.util.List<Tag> tag; 
@@ -168,7 +194,9 @@ public class CreateEipInstanceRequest extends Request {
             this.description = request.description;
             this.ensRegionId = request.ensRegionId;
             this.instanceChargeType = request.instanceChargeType;
+            this.instanceId = request.instanceId;
             this.internetChargeType = request.internetChargeType;
+            this.ipAddress = request.ipAddress;
             this.isp = request.isp;
             this.name = request.name;
             this.tag = request.tag;
@@ -243,6 +271,15 @@ public class CreateEipInstanceRequest extends Request {
         }
 
         /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * <p>The metering method of the EIP. Set the value to <strong>95BandwidthByMonth</strong>.</p>
          * <p>This parameter is required.</p>
          * 
@@ -252,6 +289,15 @@ public class CreateEipInstanceRequest extends Request {
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
             this.internetChargeType = internetChargeType;
+            return this;
+        }
+
+        /**
+         * IpAddress.
+         */
+        public Builder ipAddress(String ipAddress) {
+            this.putQueryParameter("IpAddress", ipAddress);
+            this.ipAddress = ipAddress;
             return this;
         }
 

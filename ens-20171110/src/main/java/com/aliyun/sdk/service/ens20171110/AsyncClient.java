@@ -1740,6 +1740,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <ul>
+     * <li>Instance:<ul>
+     * <li>Instances that are associated with SLB are not supported.</li>
+     * </ul>
+     * </li>
+     * <li>Network:<ul>
+     * <li>Instances that are associated with EIPs are not supported.</li>
+     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
+     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
+     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances configured with secondary IP addresses are not supported.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyInstanceNetworkAttribute  ModifyInstanceNetworkAttributeRequest
      * @return ModifyInstanceNetworkAttributeResponse
      */

@@ -106,7 +106,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>Current page number when paging</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * PublicKeyDeliverInfo.
+         * <p>Public Key List</p>
          */
         public Builder publicKeyDeliverInfo(java.util.List<PublicKeyDeliverInfo> publicKeyDeliverInfo) {
             this.publicKeyDeliverInfo = publicKeyDeliverInfo;
@@ -130,7 +136,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxsxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-09T15:13:21+08:00</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -251,7 +266,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aic-xxxx-0</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +277,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyGroup.
+             * <p>Public Key Grouping</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-group</p>
              */
             public Builder keyGroup(String keyGroup) {
                 this.keyGroup = keyGroup;
@@ -267,7 +288,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * <p>Public Key Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mykey</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -275,7 +299,10 @@ public class ListAICPublicKeyDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>Public key type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;

@@ -116,7 +116,10 @@ public class ListAICPublicKeysRequest extends Request {
         } 
 
         /**
-         * KeyGroup.
+         * <p>Public key grouping</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-test</p>
          */
         public Builder keyGroup(String keyGroup) {
             this.putQueryParameter("KeyGroup", keyGroup);
@@ -125,7 +128,10 @@ public class ListAICPublicKeysRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * <p>Public key name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mykey</p>
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -134,7 +140,10 @@ public class ListAICPublicKeysRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>Public key type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);
@@ -143,7 +152,10 @@ public class ListAICPublicKeysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +164,10 @@ public class ListAICPublicKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
