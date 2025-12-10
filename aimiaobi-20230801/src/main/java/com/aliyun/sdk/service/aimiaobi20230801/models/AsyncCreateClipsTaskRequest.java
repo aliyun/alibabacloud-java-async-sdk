@@ -22,8 +22,28 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloseMusic")
+    private Boolean closeMusic;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloseSubtitle")
+    private Boolean closeSubtitle;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloseVoice")
+    private Boolean closeVoice;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ColorWords")
     private java.util.List<ColorWords> colorWords;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomVoiceUrl")
+    private String customVoiceUrl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomVoiceVolume")
+    private Integer customVoiceVolume;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Height")
@@ -36,6 +56,10 @@ public class AsyncCreateClipsTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MusicVolume")
     private Integer musicVolume;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Stickers")
+    private java.util.List<Stickers> stickers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubtitleFontSize")
@@ -66,10 +90,16 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private AsyncCreateClipsTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.closeMusic = builder.closeMusic;
+        this.closeSubtitle = builder.closeSubtitle;
+        this.closeVoice = builder.closeVoice;
         this.colorWords = builder.colorWords;
+        this.customVoiceUrl = builder.customVoiceUrl;
+        this.customVoiceVolume = builder.customVoiceVolume;
         this.height = builder.height;
         this.musicUrl = builder.musicUrl;
         this.musicVolume = builder.musicVolume;
+        this.stickers = builder.stickers;
         this.subtitleFontSize = builder.subtitleFontSize;
         this.taskId = builder.taskId;
         this.voiceStyle = builder.voiceStyle;
@@ -99,10 +129,45 @@ public class AsyncCreateClipsTaskRequest extends Request {
     }
 
     /**
+     * @return closeMusic
+     */
+    public Boolean getCloseMusic() {
+        return this.closeMusic;
+    }
+
+    /**
+     * @return closeSubtitle
+     */
+    public Boolean getCloseSubtitle() {
+        return this.closeSubtitle;
+    }
+
+    /**
+     * @return closeVoice
+     */
+    public Boolean getCloseVoice() {
+        return this.closeVoice;
+    }
+
+    /**
      * @return colorWords
      */
     public java.util.List<ColorWords> getColorWords() {
         return this.colorWords;
+    }
+
+    /**
+     * @return customVoiceUrl
+     */
+    public String getCustomVoiceUrl() {
+        return this.customVoiceUrl;
+    }
+
+    /**
+     * @return customVoiceVolume
+     */
+    public Integer getCustomVoiceVolume() {
+        return this.customVoiceVolume;
     }
 
     /**
@@ -124,6 +189,13 @@ public class AsyncCreateClipsTaskRequest extends Request {
      */
     public Integer getMusicVolume() {
         return this.musicVolume;
+    }
+
+    /**
+     * @return stickers
+     */
+    public java.util.List<Stickers> getStickers() {
+        return this.stickers;
     }
 
     /**
@@ -170,10 +242,16 @@ public class AsyncCreateClipsTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<AsyncCreateClipsTaskRequest, Builder> {
         private String regionId; 
+        private Boolean closeMusic; 
+        private Boolean closeSubtitle; 
+        private Boolean closeVoice; 
         private java.util.List<ColorWords> colorWords; 
+        private String customVoiceUrl; 
+        private Integer customVoiceVolume; 
         private Integer height; 
         private String musicUrl; 
         private Integer musicVolume; 
+        private java.util.List<Stickers> stickers; 
         private Integer subtitleFontSize; 
         private String taskId; 
         private String voiceStyle; 
@@ -188,10 +266,16 @@ public class AsyncCreateClipsTaskRequest extends Request {
         private Builder(AsyncCreateClipsTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.closeMusic = request.closeMusic;
+            this.closeSubtitle = request.closeSubtitle;
+            this.closeVoice = request.closeVoice;
             this.colorWords = request.colorWords;
+            this.customVoiceUrl = request.customVoiceUrl;
+            this.customVoiceVolume = request.customVoiceVolume;
             this.height = request.height;
             this.musicUrl = request.musicUrl;
             this.musicVolume = request.musicVolume;
+            this.stickers = request.stickers;
             this.subtitleFontSize = request.subtitleFontSize;
             this.taskId = request.taskId;
             this.voiceStyle = request.voiceStyle;
@@ -210,12 +294,57 @@ public class AsyncCreateClipsTaskRequest extends Request {
         }
 
         /**
+         * CloseMusic.
+         */
+        public Builder closeMusic(Boolean closeMusic) {
+            this.putBodyParameter("CloseMusic", closeMusic);
+            this.closeMusic = closeMusic;
+            return this;
+        }
+
+        /**
+         * CloseSubtitle.
+         */
+        public Builder closeSubtitle(Boolean closeSubtitle) {
+            this.putBodyParameter("CloseSubtitle", closeSubtitle);
+            this.closeSubtitle = closeSubtitle;
+            return this;
+        }
+
+        /**
+         * CloseVoice.
+         */
+        public Builder closeVoice(Boolean closeVoice) {
+            this.putBodyParameter("CloseVoice", closeVoice);
+            this.closeVoice = closeVoice;
+            return this;
+        }
+
+        /**
          * ColorWords.
          */
         public Builder colorWords(java.util.List<ColorWords> colorWords) {
             String colorWordsShrink = shrink(colorWords, "ColorWords", "json");
             this.putBodyParameter("ColorWords", colorWordsShrink);
             this.colorWords = colorWords;
+            return this;
+        }
+
+        /**
+         * CustomVoiceUrl.
+         */
+        public Builder customVoiceUrl(String customVoiceUrl) {
+            this.putBodyParameter("CustomVoiceUrl", customVoiceUrl);
+            this.customVoiceUrl = customVoiceUrl;
+            return this;
+        }
+
+        /**
+         * CustomVoiceVolume.
+         */
+        public Builder customVoiceVolume(Integer customVoiceVolume) {
+            this.putBodyParameter("CustomVoiceVolume", customVoiceVolume);
+            this.customVoiceVolume = customVoiceVolume;
             return this;
         }
 
@@ -243,6 +372,16 @@ public class AsyncCreateClipsTaskRequest extends Request {
         public Builder musicVolume(Integer musicVolume) {
             this.putBodyParameter("MusicVolume", musicVolume);
             this.musicVolume = musicVolume;
+            return this;
+        }
+
+        /**
+         * Stickers.
+         */
+        public Builder stickers(java.util.List<Stickers> stickers) {
+            String stickersShrink = shrink(stickers, "Stickers", "json");
+            this.putBodyParameter("Stickers", stickersShrink);
+            this.stickers = stickers;
             return this;
         }
 
@@ -488,6 +627,207 @@ public class AsyncCreateClipsTaskRequest extends Request {
 
             public ColorWords build() {
                 return new ColorWords(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AsyncCreateClipsTaskRequest} extends {@link TeaModel}
+     *
+     * <p>AsyncCreateClipsTaskRequest</p>
+     */
+    public static class Stickers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("DyncFrames")
+        private Integer dyncFrames;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("TimelineIn")
+        private Integer timelineIn;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Float x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Float y;
+
+        private Stickers(Builder builder) {
+            this.duration = builder.duration;
+            this.dyncFrames = builder.dyncFrames;
+            this.height = builder.height;
+            this.timelineIn = builder.timelineIn;
+            this.url = builder.url;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Stickers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return dyncFrames
+         */
+        public Integer getDyncFrames() {
+            return this.dyncFrames;
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return timelineIn
+         */
+        public Integer getTimelineIn() {
+            return this.timelineIn;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Float getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Float getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer duration; 
+            private Integer dyncFrames; 
+            private Integer height; 
+            private Integer timelineIn; 
+            private String url; 
+            private Integer width; 
+            private Float x; 
+            private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stickers model) {
+                this.duration = model.duration;
+                this.dyncFrames = model.dyncFrames;
+                this.height = model.height;
+                this.timelineIn = model.timelineIn;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * DyncFrames.
+             */
+            public Builder dyncFrames(Integer dyncFrames) {
+                this.dyncFrames = dyncFrames;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * TimelineIn.
+             */
+            public Builder timelineIn(Integer timelineIn) {
+                this.timelineIn = timelineIn;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Float x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Float y) {
+                this.y = y;
+                return this;
+            }
+
+            public Stickers build() {
+                return new Stickers(this);
             } 
 
         } 

@@ -361,6 +361,207 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
      *
      * <p>GetAutoClipsTaskInfoResponseBody</p>
      */
+    public static class Stickers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("DyncFrames")
+        private Integer dyncFrames;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Integer height;
+
+        @com.aliyun.core.annotation.NameInMap("TimelineIn")
+        private Integer timelineIn;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Integer width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Float x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Float y;
+
+        private Stickers(Builder builder) {
+            this.duration = builder.duration;
+            this.dyncFrames = builder.dyncFrames;
+            this.height = builder.height;
+            this.timelineIn = builder.timelineIn;
+            this.url = builder.url;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Stickers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return dyncFrames
+         */
+        public Integer getDyncFrames() {
+            return this.dyncFrames;
+        }
+
+        /**
+         * @return height
+         */
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return timelineIn
+         */
+        public Integer getTimelineIn() {
+            return this.timelineIn;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return width
+         */
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Float getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Float getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer duration; 
+            private Integer dyncFrames; 
+            private Integer height; 
+            private Integer timelineIn; 
+            private String url; 
+            private Integer width; 
+            private Float x; 
+            private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stickers model) {
+                this.duration = model.duration;
+                this.dyncFrames = model.dyncFrames;
+                this.height = model.height;
+                this.timelineIn = model.timelineIn;
+                this.url = model.url;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * DyncFrames.
+             */
+            public Builder dyncFrames(Integer dyncFrames) {
+                this.dyncFrames = dyncFrames;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Integer height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * TimelineIn.
+             */
+            public Builder timelineIn(Integer timelineIn) {
+                this.timelineIn = timelineIn;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Integer width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Float x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Float y) {
+                this.y = y;
+                return this;
+            }
+
+            public Stickers build() {
+                return new Stickers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
     public static class Clips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipId")
         private String clipId;
@@ -659,11 +860,26 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
      * <p>GetAutoClipsTaskInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloseMusic")
+        private Boolean closeMusic;
+
+        @com.aliyun.core.annotation.NameInMap("CloseSubtitle")
+        private Boolean closeSubtitle;
+
+        @com.aliyun.core.annotation.NameInMap("CloseVoice")
+        private Boolean closeVoice;
+
         @com.aliyun.core.annotation.NameInMap("ColorWords")
         private java.util.List<ColorWords> colorWords;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
+
+        @com.aliyun.core.annotation.NameInMap("CustomVoiceUrl")
+        private String customVoiceUrl;
+
+        @com.aliyun.core.annotation.NameInMap("CustomVoiceVolume")
+        private Integer customVoiceVolume;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -689,6 +905,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
+        @com.aliyun.core.annotation.NameInMap("Stickers")
+        private java.util.List<Stickers> stickers;
+
         @com.aliyun.core.annotation.NameInMap("SubtitleFontSize")
         private Integer subtitleFontSize;
 
@@ -705,8 +924,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         private Integer voiceVolume;
 
         private Data(Builder builder) {
+            this.closeMusic = builder.closeMusic;
+            this.closeSubtitle = builder.closeSubtitle;
+            this.closeVoice = builder.closeVoice;
             this.colorWords = builder.colorWords;
             this.content = builder.content;
+            this.customVoiceUrl = builder.customVoiceUrl;
+            this.customVoiceVolume = builder.customVoiceVolume;
             this.errorMessage = builder.errorMessage;
             this.mediaCloudTimeline = builder.mediaCloudTimeline;
             this.musicStyle = builder.musicStyle;
@@ -715,6 +939,7 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             this.outputVideoUrl = builder.outputVideoUrl;
             this.status = builder.status;
             this.step = builder.step;
+            this.stickers = builder.stickers;
             this.subtitleFontSize = builder.subtitleFontSize;
             this.taskId = builder.taskId;
             this.timelines = builder.timelines;
@@ -731,6 +956,27 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return closeMusic
+         */
+        public Boolean getCloseMusic() {
+            return this.closeMusic;
+        }
+
+        /**
+         * @return closeSubtitle
+         */
+        public Boolean getCloseSubtitle() {
+            return this.closeSubtitle;
+        }
+
+        /**
+         * @return closeVoice
+         */
+        public Boolean getCloseVoice() {
+            return this.closeVoice;
+        }
+
+        /**
          * @return colorWords
          */
         public java.util.List<ColorWords> getColorWords() {
@@ -742,6 +988,20 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return customVoiceUrl
+         */
+        public String getCustomVoiceUrl() {
+            return this.customVoiceUrl;
+        }
+
+        /**
+         * @return customVoiceVolume
+         */
+        public Integer getCustomVoiceVolume() {
+            return this.customVoiceVolume;
         }
 
         /**
@@ -801,6 +1061,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return stickers
+         */
+        public java.util.List<Stickers> getStickers() {
+            return this.stickers;
+        }
+
+        /**
          * @return subtitleFontSize
          */
         public Integer getSubtitleFontSize() {
@@ -836,8 +1103,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean closeMusic; 
+            private Boolean closeSubtitle; 
+            private Boolean closeVoice; 
             private java.util.List<ColorWords> colorWords; 
             private String content; 
+            private String customVoiceUrl; 
+            private Integer customVoiceVolume; 
             private String errorMessage; 
             private String mediaCloudTimeline; 
             private String musicStyle; 
@@ -846,6 +1118,7 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             private String outputVideoUrl; 
             private Integer status; 
             private String step; 
+            private java.util.List<Stickers> stickers; 
             private Integer subtitleFontSize; 
             private String taskId; 
             private java.util.List<Timelines> timelines; 
@@ -856,8 +1129,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.closeMusic = model.closeMusic;
+                this.closeSubtitle = model.closeSubtitle;
+                this.closeVoice = model.closeVoice;
                 this.colorWords = model.colorWords;
                 this.content = model.content;
+                this.customVoiceUrl = model.customVoiceUrl;
+                this.customVoiceVolume = model.customVoiceVolume;
                 this.errorMessage = model.errorMessage;
                 this.mediaCloudTimeline = model.mediaCloudTimeline;
                 this.musicStyle = model.musicStyle;
@@ -866,12 +1144,37 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
                 this.outputVideoUrl = model.outputVideoUrl;
                 this.status = model.status;
                 this.step = model.step;
+                this.stickers = model.stickers;
                 this.subtitleFontSize = model.subtitleFontSize;
                 this.taskId = model.taskId;
                 this.timelines = model.timelines;
                 this.voiceStyle = model.voiceStyle;
                 this.voiceVolume = model.voiceVolume;
             } 
+
+            /**
+             * CloseMusic.
+             */
+            public Builder closeMusic(Boolean closeMusic) {
+                this.closeMusic = closeMusic;
+                return this;
+            }
+
+            /**
+             * CloseSubtitle.
+             */
+            public Builder closeSubtitle(Boolean closeSubtitle) {
+                this.closeSubtitle = closeSubtitle;
+                return this;
+            }
+
+            /**
+             * CloseVoice.
+             */
+            public Builder closeVoice(Boolean closeVoice) {
+                this.closeVoice = closeVoice;
+                return this;
+            }
 
             /**
              * ColorWords.
@@ -886,6 +1189,22 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * CustomVoiceUrl.
+             */
+            public Builder customVoiceUrl(String customVoiceUrl) {
+                this.customVoiceUrl = customVoiceUrl;
+                return this;
+            }
+
+            /**
+             * CustomVoiceVolume.
+             */
+            public Builder customVoiceVolume(Integer customVoiceVolume) {
+                this.customVoiceVolume = customVoiceVolume;
                 return this;
             }
 
@@ -950,6 +1269,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
              */
             public Builder step(String step) {
                 this.step = step;
+                return this;
+            }
+
+            /**
+             * Stickers.
+             */
+            public Builder stickers(java.util.List<Stickers> stickers) {
+                this.stickers = stickers;
                 return this;
             }
 
