@@ -110,6 +110,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
+    @com.aliyun.core.annotation.NameInMap("PodIps")
+    private java.util.List<PodIp> podIps;
+
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
@@ -205,6 +208,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.message = builder.message;
         this.nodeErrorRecovery = builder.nodeErrorRecovery;
         this.paymentType = builder.paymentType;
+        this.podIps = builder.podIps;
         this.priority = builder.priority;
         this.proxyPath = builder.proxyPath;
         this.reasonCode = builder.reasonCode;
@@ -458,6 +462,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return podIps
+     */
+    public java.util.List<PodIp> getPodIps() {
+        return this.podIps;
+    }
+
+    /**
      * @return priority
      */
     public Long getPriority() {
@@ -636,6 +647,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String message; 
         private NodeErrorRecovery nodeErrorRecovery; 
         private String paymentType; 
+        private java.util.List<PodIp> podIps; 
         private Long priority; 
         private String proxyPath; 
         private String reasonCode; 
@@ -693,6 +705,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.message = model.message;
             this.nodeErrorRecovery = model.nodeErrorRecovery;
             this.paymentType = model.paymentType;
+            this.podIps = model.podIps;
             this.priority = model.priority;
             this.proxyPath = model.proxyPath;
             this.reasonCode = model.reasonCode;
@@ -1058,6 +1071,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * PodIps.
+         */
+        public Builder podIps(java.util.List<PodIp> podIps) {
+            this.podIps = podIps;
             return this;
         }
 
