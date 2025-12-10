@@ -149,6 +149,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinueDBClusterMigrationResponse> continueDBClusterMigration(ContinueDBClusterMigrationRequest request);
 
     /**
+     * @param request the request parameters of CreateAINodes  CreateAINodesRequest
+     * @return CreateAINodesResponse
+     */
+    CompletableFuture<CreateAINodesResponse> createAINodes(CreateAINodesRequest request);
+
+    /**
      * @param request the request parameters of CreateAccount  CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -345,6 +351,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAIDBClusterResponse
      */
     CompletableFuture<DeleteAIDBClusterResponse> deleteAIDBCluster(DeleteAIDBClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAINodes  DeleteAINodesRequest
+     * @return DeleteAINodesResponse
+     */
+    CompletableFuture<DeleteAINodesResponse> deleteAINodes(DeleteAINodesRequest request);
 
     /**
      * <b>description</b> :
