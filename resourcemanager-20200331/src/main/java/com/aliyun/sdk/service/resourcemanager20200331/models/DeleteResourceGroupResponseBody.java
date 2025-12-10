@@ -36,6 +36,10 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceGroup resourceGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroup = model.resourceGroup;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -123,6 +135,14 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionStatus model) {
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The region ID.</p>
              * 
@@ -189,6 +209,13 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RegionStatus> regionStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionStatuses model) {
+                this.regionStatus = model.regionStatus;
+            } 
 
             /**
              * RegionStatus.
@@ -308,6 +335,19 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
             private String name; 
             private RegionStatuses regionStatuses; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.accountId = model.accountId;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionStatuses = model.regionStatuses;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>

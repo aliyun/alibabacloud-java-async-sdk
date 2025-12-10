@@ -36,6 +36,10 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyVersion
      */
@@ -54,8 +58,16 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         private PolicyVersion policyVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyVersionResponseBody model) {
+            this.policyVersion = model.policyVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the policy version.</p>
+         * <p>The information about the policy version.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -63,7 +75,7 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -134,6 +146,15 @@ public class CreatePolicyVersionResponseBody extends TeaModel {
             private String createDate; 
             private Boolean isDefaultVersion; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyVersion model) {
+                this.createDate = model.createDate;
+                this.isDefaultVersion = model.isDefaultVersion;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The time when the policy version was created.</p>

@@ -40,6 +40,10 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reason
      */
@@ -66,8 +70,17 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceLinkedRoleDeletionStatusResponseBody model) {
+            this.reason = model.reason;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * <p>The reason why the deletion task failed.</p>
+         * <p>The cause for the failure of the deletion task.</p>
          */
         public Builder reason(Reason reason) {
             this.reason = reason;
@@ -75,7 +88,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>07194EB1-DB50-4513-A51D-99B30D635AEF</p>
@@ -141,6 +154,13 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> resource; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
+
             /**
              * Resource.
              */
@@ -200,8 +220,16 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private String region; 
             private Resources resources; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleUsage model) {
+                this.region = model.region;
+                this.resources = model.resources;
+            } 
+
             /**
-             * <p>The IDs of the regions in which the resources are to be queried.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>global</p>
@@ -212,7 +240,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned resources.</p>
+             * <p>The information about resources.</p>
              */
             public Builder resources(Resources resources) {
                 this.resources = resources;
@@ -257,6 +285,13 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RoleUsage> roleUsage; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleUsages model) {
+                this.roleUsage = model.roleUsage;
+            } 
 
             /**
              * RoleUsage.
@@ -317,8 +352,16 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             private String message; 
             private RoleUsages roleUsages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.message = model.message;
+                this.roleUsages = model.roleUsages;
+            } 
+
             /**
-             * <p>Failure information.</p>
+             * <p>The failure information.</p>
              * 
              * <strong>example:</strong>
              * <p>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</p>
@@ -329,7 +372,7 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Use resource information of the service linked role.</p>
+             * <p>The information about the resources that the service-linked role can use.</p>
              */
             public Builder roleUsages(RoleUsages roleUsages) {
                 this.roleUsages = roleUsages;

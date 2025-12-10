@@ -36,6 +36,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return rdAccountDeletionStatus
      */
@@ -53,6 +57,14 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
     public static final class Builder {
         private RdAccountDeletionStatus rdAccountDeletionStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountDeletionStatusResponseBody model) {
+            this.rdAccountDeletionStatus = model.rdAccountDeletionStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The deletion status of the member.</p>
@@ -122,6 +134,14 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(FailReasonList model) {
+                this.description = model.description;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The description of the check item.</p>
@@ -244,6 +264,18 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
             private String deletionType; 
             private java.util.List<FailReasonList> failReasonList; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RdAccountDeletionStatus model) {
+                this.accountId = model.accountId;
+                this.createTime = model.createTime;
+                this.deletionTime = model.deletionTime;
+                this.deletionType = model.deletionType;
+                this.failReasonList = model.failReasonList;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>

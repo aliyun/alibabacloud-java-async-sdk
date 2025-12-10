@@ -45,7 +45,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          * <p>For more information about the service name, see <a href="https://help.aliyun.com/document_detail/461722.html">Alibaba Cloud services that support service-linked roles</a>.</p>
          * <p>This parameter is required.</p>
          * 

@@ -44,7 +44,7 @@ public class ListRolesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,7 +87,7 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * <p>The language that is used to return the descriptions of the RAM roles. Valid values:</p>
+         * <p>The language in which you want to return the descriptions of the RAM roles. Valid values:</p>
          * <ul>
          * <li>en: English</li>
          * <li>zh-CN: Chinese</li>
@@ -104,7 +104,7 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>

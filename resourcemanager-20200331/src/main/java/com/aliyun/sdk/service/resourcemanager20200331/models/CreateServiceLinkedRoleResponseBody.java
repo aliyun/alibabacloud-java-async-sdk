@@ -36,6 +36,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
         private Role role; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceLinkedRoleResponseBody model) {
+            this.requestId = model.requestId;
+            this.role = model.role;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</p>
@@ -195,6 +207,20 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             private String roleName; 
             private String rolePrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.arn = model.arn;
+                this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.rolePrincipalName = model.rolePrincipalName;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
              * 
@@ -242,8 +268,8 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the role is a service-linked role. Valid values:</p>
              * <ul>
-             * <li>true: The role is a service-linked role.</li>
-             * <li>false: The role is not a service-linked role.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>

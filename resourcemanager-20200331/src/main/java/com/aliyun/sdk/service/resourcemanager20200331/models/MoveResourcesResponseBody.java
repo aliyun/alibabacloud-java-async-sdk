@@ -36,6 +36,10 @@ public class MoveResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class MoveResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Responses> responses; 
+
+        private Builder() {
+        } 
+
+        private Builder(MoveResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.responses = model.responses;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -194,6 +206,20 @@ public class MoveResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String service; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Responses model) {
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
+                this.regionId = model.regionId;
+                this.requestId = model.requestId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.service = model.service;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The error code returned.</p>

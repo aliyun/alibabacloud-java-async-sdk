@@ -36,6 +36,10 @@ public class GetRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class GetRoleResponseBody extends TeaModel {
         private String requestId; 
         private Role role; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRoleResponseBody model) {
+            this.requestId = model.requestId;
+            this.role = model.role;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -66,7 +78,7 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the RAM role.</p>
+         * <p>The information about the role.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -122,6 +134,14 @@ public class GetRoleResponseBody extends TeaModel {
         public static final class Builder {
             private String createDate; 
             private String deletionTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatestDeletionTask model) {
+                this.createDate = model.createDate;
+                this.deletionTaskId = model.deletionTaskId;
+            } 
 
             /**
              * <p>The time when the deletion task was created.</p>
@@ -304,8 +324,25 @@ public class GetRoleResponseBody extends TeaModel {
             private String rolePrincipalName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.arn = model.arn;
+                this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
+                this.latestDeletionTask = model.latestDeletionTask;
+                this.maxSessionDuration = model.maxSessionDuration;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.rolePrincipalName = model.rolePrincipalName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -316,7 +353,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+             * <p>The document of the policy in which the identity that can assume the role is specified.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -327,7 +364,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was created.</p>
+             * <p>The time when the role was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -338,7 +375,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
+             * <p>The description of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS administrator</p>
@@ -349,7 +386,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM role is a service linked role.</p>
+             * <p>Indicates whether the role is a service-linked role.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -368,7 +405,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the RAM role.</p>
+             * <p>The maximum session duration of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -379,7 +416,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
+             * <p>The ID of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>90123456789****</p>
@@ -390,7 +427,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
+             * <p>The name of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>ECSAdmin</p>
@@ -401,7 +438,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role after authorization.</p>
+             * <p>The name of the role after authorization.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
@@ -412,7 +449,7 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was updated.</p>
+             * <p>The time when the role was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2016-01-23T12:33:18Z</p>

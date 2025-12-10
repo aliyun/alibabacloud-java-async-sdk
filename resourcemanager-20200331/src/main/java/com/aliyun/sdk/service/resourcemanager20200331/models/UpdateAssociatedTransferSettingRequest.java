@@ -39,7 +39,7 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,6 +184,17 @@ public class UpdateAssociatedTransferSettingRequest extends Request {
             private String masterResourceType; 
             private String masterService; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleSettings model) {
+                this.associatedResourceType = model.associatedResourceType;
+                this.associatedService = model.associatedService;
+                this.masterResourceType = model.masterResourceType;
+                this.masterService = model.masterService;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the associated resource.</p>

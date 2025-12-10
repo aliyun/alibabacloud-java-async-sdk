@@ -36,6 +36,10 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyVersions
      */
@@ -54,8 +58,16 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         private PolicyVersions policyVersions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPolicyVersionsResponseBody model) {
+            this.policyVersions = model.policyVersions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the policy versions.</p>
+         * <p>The information about the policy version.</p>
          */
         public Builder policyVersions(PolicyVersions policyVersions) {
             this.policyVersions = policyVersions;
@@ -63,7 +75,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -134,6 +146,15 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             private String createDate; 
             private Boolean isDefaultVersion; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyVersion model) {
+                this.createDate = model.createDate;
+                this.isDefaultVersion = model.isDefaultVersion;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The time when the policy version was created.</p>
@@ -206,6 +227,13 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PolicyVersion> policyVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyVersions model) {
+                this.policyVersion = model.policyVersion;
+            } 
 
             /**
              * PolicyVersion.

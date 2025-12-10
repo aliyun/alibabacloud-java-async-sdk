@@ -36,6 +36,10 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceGroup resourceGroup; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroup = model.resourceGroup;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             private String displayName; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.accountId = model.accountId;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>

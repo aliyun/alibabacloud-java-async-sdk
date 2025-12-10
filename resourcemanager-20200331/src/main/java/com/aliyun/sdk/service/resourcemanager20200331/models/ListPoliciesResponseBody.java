@@ -48,6 +48,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,19 @@ public class ListPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +117,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +128,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the policies.</p>
+         * <p>The information about the permission policies.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -121,7 +136,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -132,7 +147,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -252,8 +267,21 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String policyType; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
-             * <p>The number of times the policy is referenced.</p>
+             * <p>The number of references to the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -264,7 +292,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
+             * <p>The time when the permission policy was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -275,7 +303,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the policy.</p>
+             * <p>The default version of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -286,7 +314,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The description of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS administrator</p>
@@ -297,7 +325,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The name of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS-Administrator</p>
@@ -308,10 +336,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy. Valid values:</p>
+             * <p>The type of the permission policy. Valid values:</p>
              * <ul>
-             * <li>Custom: custom policy</li>
-             * <li>System: system policy</li>
+             * <li>Custom</li>
+             * <li>System</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -323,7 +351,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was updated.</p>
+             * <p>The time when the permission policy was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2016-02-11T18:39:12Z</p>
@@ -371,6 +399,13 @@ public class ListPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Policy> policy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policy = model.policy;
+            } 
 
             /**
              * Policy.

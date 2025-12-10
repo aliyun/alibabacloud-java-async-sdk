@@ -101,7 +101,7 @@ public class UpdateAutoGroupingRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -432,6 +432,15 @@ public class UpdateAutoGroupingRuleRequest extends Request {
             private String autoGroupingScopeCondition; 
             private String ruleContentId; 
             private String targetResourceGroupCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleContents model) {
+                this.autoGroupingScopeCondition = model.autoGroupingScopeCondition;
+                this.ruleContentId = model.ruleContentId;
+                this.targetResourceGroupCondition = model.targetResourceGroupCondition;
+            } 
 
             /**
              * <p>The condition for the range of resources that are automatically transferred.</p>

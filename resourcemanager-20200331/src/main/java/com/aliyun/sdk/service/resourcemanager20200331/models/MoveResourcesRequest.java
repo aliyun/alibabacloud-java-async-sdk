@@ -41,7 +41,7 @@ public class MoveResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,16 @@ public class MoveResourcesRequest extends Request {
             private String resourceId; 
             private String resourceType; 
             private String service; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.service = model.service;
+            } 
 
             /**
              * <p>The region ID of the resource.</p>

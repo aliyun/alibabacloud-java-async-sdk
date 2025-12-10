@@ -36,6 +36,10 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Rule rule; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoGroupingRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.rule = model.rule;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
             private String autoGroupingScopeCondition; 
             private String ruleContentId; 
             private String targetResourceGroupCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleContents model) {
+                this.autoGroupingScopeCondition = model.autoGroupingScopeCondition;
+                this.ruleContentId = model.ruleContentId;
+                this.targetResourceGroupCondition = model.targetResourceGroupCondition;
+            } 
 
             /**
              * <p>The condition for the range of resources that are automatically transferred.</p>
@@ -374,6 +395,27 @@ public class GetAutoGroupingRuleResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
             private String ruleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.createTime = model.createTime;
+                this.excludeRegionIdsScope = model.excludeRegionIdsScope;
+                this.excludeResourceGroupIdsScope = model.excludeResourceGroupIdsScope;
+                this.excludeResourceIdsScope = model.excludeResourceIdsScope;
+                this.excludeResourceTypesScope = model.excludeResourceTypesScope;
+                this.modifyTime = model.modifyTime;
+                this.regionIdsScope = model.regionIdsScope;
+                this.resourceGroupIdsScope = model.resourceGroupIdsScope;
+                this.resourceIdsScope = model.resourceIdsScope;
+                this.resourceTypesScope = model.resourceTypesScope;
+                this.ruleContents = model.ruleContents;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+            } 
 
             /**
              * <p>The time when the rule was created.</p>

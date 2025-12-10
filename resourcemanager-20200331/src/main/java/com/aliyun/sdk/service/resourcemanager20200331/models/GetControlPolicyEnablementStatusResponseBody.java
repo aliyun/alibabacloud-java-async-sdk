@@ -36,6 +36,10 @@ public class GetControlPolicyEnablementStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enablementStatus
      */
@@ -53,6 +57,14 @@ public class GetControlPolicyEnablementStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String enablementStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetControlPolicyEnablementStatusResponseBody model) {
+            this.enablementStatus = model.enablementStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the Control Policy feature. Valid values:</p>

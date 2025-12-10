@@ -48,6 +48,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroups resourceGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resourceGroups = model.resourceGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -192,6 +207,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -252,6 +275,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -372,6 +402,19 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.accountId = model.accountId;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
              * 
@@ -489,6 +532,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourceGroup> resourceGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroups model) {
+                this.resourceGroup = model.resourceGroup;
+            } 
 
             /**
              * ResourceGroup.

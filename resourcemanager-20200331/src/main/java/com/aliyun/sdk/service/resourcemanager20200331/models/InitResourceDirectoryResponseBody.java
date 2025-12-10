@@ -36,6 +36,10 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourceDirectory resourceDirectory; 
+
+        private Builder() {
+        } 
+
+        private Builder(InitResourceDirectoryResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceDirectory = model.resourceDirectory;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
             private String masterAccountName; 
             private String resourceDirectoryId; 
             private String rootFolderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.createTime = model.createTime;
+                this.masterAccountId = model.masterAccountId;
+                this.masterAccountName = model.masterAccountName;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.rootFolderId = model.rootFolderId;
+            } 
 
             /**
              * <p>The time when the resource directory was enabled.</p>

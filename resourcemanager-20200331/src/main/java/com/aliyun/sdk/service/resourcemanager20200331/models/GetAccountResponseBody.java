@@ -36,6 +36,10 @@ public class GetAccountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return account
      */
@@ -53,6 +57,14 @@ public class GetAccountResponseBody extends TeaModel {
     public static final class Builder {
         private Account account; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountResponseBody model) {
+            this.account = model.account;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the member.</p>
@@ -122,6 +134,14 @@ public class GetAccountResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>A tag key.</p>
@@ -351,6 +371,27 @@ public class GetAccountResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Account model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.displayName = model.displayName;
+                this.emailStatus = model.emailStatus;
+                this.folderId = model.folderId;
+                this.identityInformation = model.identityInformation;
+                this.joinMethod = model.joinMethod;
+                this.joinTime = model.joinTime;
+                this.location = model.location;
+                this.modifyTime = model.modifyTime;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.resourceDirectoryPath = model.resourceDirectoryPath;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The Alibaba Cloud account ID of the member.</p>

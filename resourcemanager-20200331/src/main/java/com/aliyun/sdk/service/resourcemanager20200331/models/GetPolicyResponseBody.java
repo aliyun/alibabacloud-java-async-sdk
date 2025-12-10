@@ -36,6 +36,10 @@ public class GetPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -54,8 +58,16 @@ public class GetPolicyResponseBody extends TeaModel {
         private Policy policy; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the policy.</p>
+         * <p>The information about the permission policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -63,7 +75,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>697852FB-50D7-44D9-9774-530C31EAC572</p>
@@ -195,8 +207,22 @@ public class GetPolicyResponseBody extends TeaModel {
             private String policyType; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyDocument = model.policyDocument;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
-             * <p>The number of times the policy is referenced.</p>
+             * <p>The number of references to the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -207,7 +233,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
+             * <p>The time when the permission policy was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -218,7 +244,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version of the policy.</p>
+             * <p>The default version of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -229,7 +255,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the policy.</p>
+             * <p>The description of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS administrator</p>
@@ -240,7 +266,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the policy.</p>
+             * <p>The document of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -251,7 +277,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The name of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS-Administrator</p>
@@ -262,10 +288,10 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the policy. Valid values:</p>
+             * <p>The type of the permission policy. Valid values:</p>
              * <ul>
-             * <li>Custom: custom policy</li>
-             * <li>System: system policy</li>
+             * <li>Custom</li>
+             * <li>System</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -277,7 +303,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was updated.</p>
+             * <p>The time when the permission policy was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2016-01-23T12:33:18Z</p>

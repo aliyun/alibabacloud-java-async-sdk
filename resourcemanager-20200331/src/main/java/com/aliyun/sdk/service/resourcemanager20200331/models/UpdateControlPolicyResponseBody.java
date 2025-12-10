@@ -36,6 +36,10 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return controlPolicy
      */
@@ -53,6 +57,14 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private ControlPolicy controlPolicy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateControlPolicyResponseBody model) {
+            this.controlPolicy = model.controlPolicy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the access control policy.</p>
@@ -194,6 +206,20 @@ public class UpdateControlPolicyResponseBody extends TeaModel {
             private String policyName; 
             private String policyType; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlPolicy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.effectScope = model.effectScope;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The number of times that the access control policy is referenced.</p>

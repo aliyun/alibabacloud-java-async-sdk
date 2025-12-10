@@ -48,6 +48,10 @@ public class ListResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListResourcesResponseBody extends TeaModel {
         private String requestId; 
         private Resources resources; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -240,6 +255,18 @@ public class ListResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String service; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.createDate = model.createDate;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.service = model.service;
+            } 
+
             /**
              * <p>The time when the resource was created. The time is displayed in UTC.</p>
              * 
@@ -344,6 +371,13 @@ public class ListResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Resource> resource; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resource = model.resource;
+            } 
 
             /**
              * Resource.

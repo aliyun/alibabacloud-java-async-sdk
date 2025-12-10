@@ -36,6 +36,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroup resourceGroup; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroup = model.resourceGroup;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -123,11 +135,16 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionStatus model) {
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -135,14 +152,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group. Valid values:</p>
-             * <ul>
-             * <li>Creating: The resource group is being created.</li>
-             * <li>OK: The resource group is created.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Creating</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -187,6 +197,13 @@ public class CreateResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RegionStatus> regionStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionStatuses model) {
+                this.regionStatus = model.regionStatus;
+            } 
 
             /**
              * RegionStatus.
@@ -306,6 +323,19 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String name; 
             private RegionStatuses regionStatuses; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.accountId = model.accountId;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionStatuses = model.regionStatuses;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>

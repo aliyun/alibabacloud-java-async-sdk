@@ -70,7 +70,7 @@ public class ListResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -307,6 +307,14 @@ public class ListResourcesRequest extends Request {
         public static final class Builder {
             private String resourceType; 
             private String service; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypes model) {
+                this.resourceType = model.resourceType;
+                this.service = model.service;
+            } 
 
             /**
              * <p>The resource type.</p>

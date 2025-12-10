@@ -48,6 +48,10 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return controlPolicies
      */
@@ -89,6 +93,17 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListControlPoliciesResponseBody model) {
+            this.controlPolicies = model.controlPolicies;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The access control policies.</p>
@@ -264,6 +279,20 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             private String policyType; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(ControlPolicy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.effectScope = model.effectScope;
+                this.policyId = model.policyId;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The number of times that the access control policy is referenced.</p>
              * 
@@ -398,6 +427,13 @@ public class ListControlPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ControlPolicy> controlPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlPolicies model) {
+                this.controlPolicy = model.controlPolicy;
+            } 
 
             /**
              * ControlPolicy.

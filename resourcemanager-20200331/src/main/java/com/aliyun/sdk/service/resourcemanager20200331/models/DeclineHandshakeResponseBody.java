@@ -36,6 +36,10 @@ public class DeclineHandshakeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return handshake
      */
@@ -53,6 +57,14 @@ public class DeclineHandshakeResponseBody extends TeaModel {
     public static final class Builder {
         private Handshake handshake; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeclineHandshakeResponseBody model) {
+            this.handshake = model.handshake;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the invitation.</p>
@@ -230,6 +242,23 @@ public class DeclineHandshakeResponseBody extends TeaModel {
             private String status; 
             private String targetEntity; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Handshake model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.handshakeId = model.handshakeId;
+                this.masterAccountId = model.masterAccountId;
+                this.masterAccountName = model.masterAccountName;
+                this.modifyTime = model.modifyTime;
+                this.note = model.note;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.status = model.status;
+                this.targetEntity = model.targetEntity;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The time when the invitation was created.</p>

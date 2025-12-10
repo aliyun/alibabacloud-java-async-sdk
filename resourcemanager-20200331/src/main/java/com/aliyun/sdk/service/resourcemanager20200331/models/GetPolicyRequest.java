@@ -46,7 +46,7 @@ public class GetPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,7 @@ public class GetPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The language that is used to return the description of the system policy. Valid values:</p>
+         * <p>The language in which you want to return the description of the system permission policy. Valid values:</p>
          * <ul>
          * <li>en: English</li>
          * <li>zh-CN: Chinese</li>
@@ -106,7 +106,7 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the permission policy.</p>
          * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
@@ -120,10 +120,10 @@ public class GetPolicyRequest extends Request {
         }
 
         /**
-         * <p>The type of the policy. Valid values:</p>
+         * <p>The type of the permission policy. Valid values:</p>
          * <ul>
-         * <li>Custom: custom policy</li>
-         * <li>System: system policy</li>
+         * <li>Custom</li>
+         * <li>System</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

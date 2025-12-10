@@ -36,6 +36,10 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deletionTaskId
      */
@@ -54,6 +58,14 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         private String deletionTaskId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteServiceLinkedRoleResponseBody model) {
+            this.deletionTaskId = model.deletionTaskId;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The ID of the deletion task.</p>
          * 
@@ -66,7 +78,7 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B595E5BF-FF5F-4E7F-B95A-B90FE242FEB6</p>

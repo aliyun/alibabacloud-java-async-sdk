@@ -36,6 +36,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private ResourceGroup resourceGroup; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceGroup = model.resourceGroup;
+        } 
+
         /**
-         * <p>The information of the resource group.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
@@ -66,7 +78,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The display name of the resource group.</p>
+         * <p>The information of the resource group.</p>
          */
         public Builder resourceGroup(ResourceGroup resourceGroup) {
             this.resourceGroup = resourceGroup;
@@ -123,8 +135,16 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionStatus model) {
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-qingdao</p>
@@ -135,7 +155,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * <li>Deleting: The resource group is being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -183,6 +209,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RegionStatus> regionStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionStatuses model) {
+                this.regionStatus = model.regionStatus;
+            } 
 
             /**
              * RegionStatus.
@@ -243,8 +276,16 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * <p>The tag value.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>k1</p>
@@ -255,7 +296,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -300,6 +344,13 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -432,8 +483,22 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroup model) {
+                this.accountId = model.accountId;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionStatuses = model.regionStatuses;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
-             * <p>The identifier of the resource group.</p>
+             * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789****</p>
@@ -444,7 +509,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -455,12 +520,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group. Valid values:</p>
-             * <ul>
-             * <li>Creating: The resource group is being created.</li>
-             * <li>OK: The resource group is created.</li>
-             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
-             * </ul>
+             * <p>The display name of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>my-project</p>
@@ -471,7 +531,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that are added to the resource group.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-9gLOoK****</p>
@@ -482,7 +542,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+             * <p>The identifier of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>my-project</p>
@@ -493,13 +553,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group. Valid values:</p>
-             * <ul>
-             * <li>Creating: The resource group is being created.</li>
-             * <li>OK: The resource group is created.</li>
-             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
-             * <li>Deleting: The resource group is being deleted.</li>
-             * </ul>
+             * <p>The status of the resource group in all regions.</p>
              */
             public Builder regionStatuses(RegionStatuses regionStatuses) {
                 this.regionStatuses = regionStatuses;
@@ -507,7 +561,12 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the resource group in all regions.</p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -518,7 +577,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tags that are added to the resource group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

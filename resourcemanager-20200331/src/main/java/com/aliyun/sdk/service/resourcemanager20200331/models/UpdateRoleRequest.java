@@ -50,7 +50,7 @@ public class UpdateRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,7 @@ public class UpdateRoleRequest extends Request {
         } 
 
         /**
-         * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+         * <p>The trust policy of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
@@ -127,8 +127,8 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
-         * <p>Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.</p>
+         * <p>The maximum session time of the RAM role.</p>
+         * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
          * <p>If you do not specify this parameter, the default value is used.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class UpdateRoleRequest extends Request {
 
         /**
          * <p>The name of the RAM role.</p>
-         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.),and hyphens (-).</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

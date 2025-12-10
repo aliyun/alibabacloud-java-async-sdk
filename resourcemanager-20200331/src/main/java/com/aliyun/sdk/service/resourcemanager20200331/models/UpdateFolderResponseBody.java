@@ -36,6 +36,10 @@ public class UpdateFolderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return folder
      */
@@ -53,6 +57,14 @@ public class UpdateFolderResponseBody extends TeaModel {
     public static final class Builder {
         private Folder folder; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateFolderResponseBody model) {
+            this.folder = model.folder;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information of the folder.</p>
@@ -146,6 +158,16 @@ public class UpdateFolderResponseBody extends TeaModel {
             private String folderId; 
             private String folderName; 
             private String parentFolderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Folder model) {
+                this.createTime = model.createTime;
+                this.folderId = model.folderId;
+                this.folderName = model.folderName;
+                this.parentFolderId = model.parentFolderId;
+            } 
 
             /**
              * <p>The time when the folder was created.</p>

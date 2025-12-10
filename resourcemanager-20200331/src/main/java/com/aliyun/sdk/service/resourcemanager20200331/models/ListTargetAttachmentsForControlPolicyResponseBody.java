@@ -48,6 +48,10 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         private String requestId; 
         private TargetAttachments targetAttachments; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTargetAttachmentsForControlPolicyResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.targetAttachments = model.targetAttachments;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number of the returned page.</p>
@@ -216,6 +231,16 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
             private String targetName; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(TargetAttachment model) {
+                this.attachDate = model.attachDate;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * <p>The time when the control policy was attached to the object.</p>
              * 
@@ -303,6 +328,13 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<TargetAttachment> targetAttachment; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetAttachments model) {
+                this.targetAttachment = model.targetAttachment;
+            } 
 
             /**
              * TargetAttachment.

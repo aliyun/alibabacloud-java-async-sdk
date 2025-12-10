@@ -175,7 +175,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A maximum of 30 resource groups can be created within an Alibaba Cloud account.</p>
+     * <p>A maximum of 30 resource groups can be created within an Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateResourceGroup  CreateResourceGroupRequest
@@ -242,8 +242,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li>Before you delete a policy, you must delete all non-default versions of the policy. For more information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
-     * <li>Before you delete a policy, make sure that the policy is not referenced. This means that the policy is not attached to RAM users, RAM user groups, or RAM roles. For more information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * <li>Before you delete a permission policy, you must delete its all non-default versions. For information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before you delete a permission policy, you must make sure that the policy is not attached to a RAM user, a RAM user group, or a RAM role. For information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeletePolicy  DeletePolicyRequest
@@ -254,7 +254,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The default version of a permission policy cannot be deleted.</p>
+     * <p> The default version of a policy cannot be deleted.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeletePolicyVersion  DeletePolicyVersionRequest
@@ -353,6 +353,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableControlPolicyResponse> disableControlPolicy(DisableControlPolicyRequest request);
 
     /**
+     * @param request the request parameters of DisableResourceGroupNotification  DisableResourceGroupNotificationRequest
+     * @return DisableResourceGroupNotificationResponse
+     */
+    CompletableFuture<DisableResourceGroupNotificationResponse> disableResourceGroupNotification(DisableResourceGroupNotificationRequest request);
+
+    /**
      * @param request the request parameters of EnableAssociatedTransfer  EnableAssociatedTransferRequest
      * @return EnableAssociatedTransferResponse
      */
@@ -382,6 +388,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableResourceDirectoryResponse
      */
     CompletableFuture<EnableResourceDirectoryResponse> enableResourceDirectory(EnableResourceDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of EnableResourceGroupNotification  EnableResourceGroupNotificationRequest
+     * @return EnableResourceGroupNotificationResponse
+     */
+    CompletableFuture<EnableResourceGroupNotificationResponse> enableResourceGroupNotification(EnableResourceGroupNotificationRequest request);
 
     /**
      * <b>description</b> :
@@ -484,13 +496,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceDirectoryResponse> getResourceDirectory(GetResourceDirectoryRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/159973.html">Common parameters</a>.</p>
-     * 
      * @param request the request parameters of GetResourceGroup  GetResourceGroupRequest
      * @return GetResourceGroupResponse
      */
     CompletableFuture<GetResourceGroupResponse> getResourceGroup(GetResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceGroupAdminSetting  GetResourceGroupAdminSettingRequest
+     * @return GetResourceGroupAdminSettingResponse
+     */
+    CompletableFuture<GetResourceGroupAdminSettingResponse> getResourceGroupAdminSetting(GetResourceGroupAdminSettingRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceGroupNotificationSetting  GetResourceGroupNotificationSettingRequest
+     * @return GetResourceGroupNotificationSettingResponse
+     */
+    CompletableFuture<GetResourceGroupNotificationSettingResponse> getResourceGroupNotificationSetting(GetResourceGroupNotificationSettingRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceGroupResourceCounts  GetResourceGroupResourceCountsRequest
+     * @return GetResourceGroupResourceCountsResponse
+     */
+    CompletableFuture<GetResourceGroupResourceCountsResponse> getResourceGroupResourceCounts(GetResourceGroupResourceCountsRequest request);
 
     /**
      * @param request the request parameters of GetRole  GetRoleRequest
@@ -553,6 +580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAssociatedTransferSettingResponse
      */
     CompletableFuture<ListAssociatedTransferSettingResponse> listAssociatedTransferSetting(ListAssociatedTransferSettingRequest request);
+
+    /**
+     * @param request the request parameters of ListAutoGroupingRemediations  ListAutoGroupingRemediationsRequest
+     * @return ListAutoGroupingRemediationsResponse
+     */
+    CompletableFuture<ListAutoGroupingRemediationsResponse> listAutoGroupingRemediations(ListAutoGroupingRemediationsRequest request);
 
     /**
      * @param request the request parameters of ListAutoGroupingRules  ListAutoGroupingRulesRequest
@@ -632,9 +665,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>You can view the following information:</p>
      * <ul>
-     * <li>Policy attachment records under an Alibaba Cloud account or a resource group</li>
-     * <li>Policies attached to RAM users, RAM user groups, or RAM roles</li>
-     * <li>RAM users, RAM user groups, or RAM roles to which policies are attached under an Alibaba Cloud account or a resource group</li>
+     * <li>Policy attachment records within an Alibaba Cloud account or a resource group</li>
+     * <li>Permission policies attached to RAM users, RAM user groups, or RAM roles</li>
+     * <li>RAM users, RAM user groups, or RAM roles to which permission policies are attached within an Alibaba Cloud account or a resource group</li>
      * </ul>
      * 
      * @param request the request parameters of ListPolicyAttachments  ListPolicyAttachmentsRequest
@@ -657,6 +690,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListResourceGroupsResponse
      */
     CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListResourceGroupsWithAuthDetails  ListResourceGroupsWithAuthDetailsRequest
+     * @return ListResourceGroupsWithAuthDetailsResponse
+     */
+    CompletableFuture<ListResourceGroupsWithAuthDetailsResponse> listResourceGroupsWithAuthDetails(ListResourceGroupsWithAuthDetailsRequest request);
 
     /**
      * <b>description</b> :
@@ -899,6 +938,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateResourceGroupResponse
      */
     CompletableFuture<UpdateResourceGroupResponse> updateResourceGroup(UpdateResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResourceGroupAdminSetting  UpdateResourceGroupAdminSettingRequest
+     * @return UpdateResourceGroupAdminSettingResponse
+     */
+    CompletableFuture<UpdateResourceGroupAdminSettingResponse> updateResourceGroupAdminSetting(UpdateResourceGroupAdminSettingRequest request);
 
     /**
      * <b>description</b> :

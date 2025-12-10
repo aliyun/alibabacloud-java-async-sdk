@@ -48,6 +48,10 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return handshakes
      */
@@ -89,6 +93,17 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListHandshakesForResourceDirectoryResponseBody model) {
+            this.handshakes = model.handshakes;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of the invitations.</p>
@@ -300,6 +315,23 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
             private String targetEntity; 
             private String targetType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Handshake model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.handshakeId = model.handshakeId;
+                this.masterAccountId = model.masterAccountId;
+                this.masterAccountName = model.masterAccountName;
+                this.modifyTime = model.modifyTime;
+                this.note = model.note;
+                this.resourceDirectoryId = model.resourceDirectoryId;
+                this.status = model.status;
+                this.targetEntity = model.targetEntity;
+                this.targetType = model.targetType;
+            } 
+
             /**
              * <p>The time when the invitation was created. The time is displayed in UTC.</p>
              * 
@@ -470,6 +502,13 @@ public class ListHandshakesForResourceDirectoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Handshake> handshake; 
+
+            private Builder() {
+            } 
+
+            private Builder(Handshakes model) {
+                this.handshake = model.handshake;
+            } 
 
             /**
              * Handshake.

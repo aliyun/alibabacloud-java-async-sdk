@@ -36,6 +36,10 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policyVersion
      */
@@ -54,8 +58,16 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         private PolicyVersion policyVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyVersionResponseBody model) {
+            this.policyVersion = model.policyVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the policy version.</p>
+         * <p>The information about the policy version.</p>
          */
         public Builder policyVersion(PolicyVersion policyVersion) {
             this.policyVersion = policyVersion;
@@ -63,7 +75,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
@@ -147,6 +159,16 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             private String policyDocument; 
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyVersion model) {
+                this.createDate = model.createDate;
+                this.isDefaultVersion = model.isDefaultVersion;
+                this.policyDocument = model.policyDocument;
+                this.versionId = model.versionId;
+            } 
+
             /**
              * <p>The time when the policy version was created.</p>
              * 
@@ -170,7 +192,7 @@ public class GetPolicyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The document of the policy.</p>
+             * <p>The document of the permission policy.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>

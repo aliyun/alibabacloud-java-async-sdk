@@ -48,6 +48,10 @@ public class ListRolesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,19 @@ public class ListRolesResponseBody extends TeaModel {
         private Roles roles; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRolesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.roles = model.roles;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +117,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,7 +128,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -124,7 +139,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the RAM roles.</p>
+         * <p>The information about the roles.</p>
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -132,7 +147,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of RAM roles.</p>
+         * <p>The total number of roles.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -191,6 +206,14 @@ public class ListRolesResponseBody extends TeaModel {
         public static final class Builder {
             private String createDate; 
             private String deletionTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatestDeletionTask model) {
+                this.createDate = model.createDate;
+                this.deletionTaskId = model.deletionTaskId;
+            } 
 
             /**
              * <p>The time when the deletion task was created.</p>
@@ -361,8 +384,24 @@ public class ListRolesResponseBody extends TeaModel {
             private String rolePrincipalName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.arn = model.arn;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
+                this.latestDeletionTask = model.latestDeletionTask;
+                this.maxSessionDuration = model.maxSessionDuration;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.rolePrincipalName = model.rolePrincipalName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -373,7 +412,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was created.</p>
+             * <p>The time when the role was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -384,7 +423,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
+             * <p>The description of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS administrator</p>
@@ -395,7 +434,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM role is a service linked role.</p>
+             * <p>Indicates whether the role is a service-linked role.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -414,7 +453,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the RAM role.</p>
+             * <p>The maximum session duration of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -425,7 +464,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
+             * <p>The ID of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>90123456789****</p>
@@ -436,7 +475,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
+             * <p>The name of the role.</p>
              * 
              * <strong>example:</strong>
              * <p>ECSAdmin</p>
@@ -447,7 +486,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role after authorization.</p>
+             * <p>The name of the role after authorization.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></p>
@@ -458,7 +497,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was updated.</p>
+             * <p>The time when the role was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2016-01-23T12:33:18Z</p>
@@ -506,6 +545,13 @@ public class ListRolesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Role> role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.role = model.role;
+            } 
 
             /**
              * Role.

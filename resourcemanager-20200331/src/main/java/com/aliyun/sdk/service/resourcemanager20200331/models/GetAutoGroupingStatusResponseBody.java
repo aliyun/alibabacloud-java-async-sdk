@@ -40,6 +40,10 @@ public class GetAutoGroupingStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enableExistedResourcesTransfer
      */
@@ -65,6 +69,15 @@ public class GetAutoGroupingStatusResponseBody extends TeaModel {
         private Boolean enableExistedResourcesTransfer; 
         private String enableStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoGroupingStatusResponseBody model) {
+            this.enableExistedResourcesTransfer = model.enableExistedResourcesTransfer;
+            this.enableStatus = model.enableStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</p>

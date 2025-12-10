@@ -51,7 +51,7 @@ public class CreateRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -103,7 +103,8 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * <p>The document of the policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>
+         * <p>The document of the policy that specifies</p>
+         * <p>one or more trusted entities to assume the role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>
          * <blockquote>
          * <p> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</p>
          * </blockquote>
@@ -119,7 +120,7 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The description of the RAM role.</p>
+         * <p>The description of the role.</p>
          * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
@@ -132,8 +133,8 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
-         * <p>Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.</p>
+         * <p>The maximum session duration of the role.</p>
+         * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
          * <p>If you do not specify this parameter, the default value is used.</p>
          * 
          * <strong>example:</strong>
@@ -146,8 +147,8 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role.</p>
-         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>The name of the role.</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -36,6 +36,10 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return associatedTransferSetting
      */
@@ -53,6 +57,14 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
     public static final class Builder {
         private AssociatedTransferSetting associatedTransferSetting; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAssociatedTransferSettingResponseBody model) {
+            this.associatedTransferSetting = model.associatedTransferSetting;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The settings of the Transfer Associated Resources feature.</p>
@@ -158,6 +170,17 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             private String masterResourceType; 
             private String masterService; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleSettings model) {
+                this.associatedResourceType = model.associatedResourceType;
+                this.associatedService = model.associatedService;
+                this.masterResourceType = model.masterResourceType;
+                this.masterService = model.masterService;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The type of the associated resource.</p>
@@ -292,6 +315,16 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
             private String enableExistingResourcesTransfer; 
             private java.util.List<RuleSettings> ruleSettings; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssociatedTransferSetting model) {
+                this.accountId = model.accountId;
+                this.enableExistingResourcesTransfer = model.enableExistingResourcesTransfer;
+                this.ruleSettings = model.ruleSettings;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

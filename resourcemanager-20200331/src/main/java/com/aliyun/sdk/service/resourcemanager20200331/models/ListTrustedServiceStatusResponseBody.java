@@ -48,6 +48,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabledServicePrincipals
      */
@@ -89,6 +93,17 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTrustedServiceStatusResponseBody model) {
+            this.enabledServicePrincipals = model.enabledServicePrincipals;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The trusted services that are enabled.</p>
@@ -192,6 +207,14 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
             private String enableTime; 
             private String servicePrincipal; 
 
+            private Builder() {
+            } 
+
+            private Builder(EnabledServicePrincipal model) {
+                this.enableTime = model.enableTime;
+                this.servicePrincipal = model.servicePrincipal;
+            } 
+
             /**
              * <p>The time when the trusted service was enabled.</p>
              * 
@@ -252,6 +275,13 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<EnabledServicePrincipal> enabledServicePrincipal; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnabledServicePrincipals model) {
+                this.enabledServicePrincipal = model.enabledServicePrincipal;
+            } 
 
             /**
              * EnabledServicePrincipal.

@@ -40,7 +40,7 @@ public class GetRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class GetRoleRequest extends Request {
         } 
 
         /**
-         * <p>The language that is used to return the description of the RAM role. Valid values:</p>
+         * <p>The language in which you want to return the description of the role. Valid values:</p>
          * <ul>
          * <li>en: English</li>
          * <li>zh-CN: Chinese</li>
@@ -91,8 +91,8 @@ public class GetRoleRequest extends Request {
         }
 
         /**
-         * <p>The name of the RAM role.</p>
-         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>The name of the role.</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
