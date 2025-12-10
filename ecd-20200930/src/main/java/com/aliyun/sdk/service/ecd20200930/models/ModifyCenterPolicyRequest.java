@@ -4004,6 +4004,9 @@ public class ModifyCenterPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ClipboardSize")
         private Integer clipboardSize;
 
+        @com.aliyun.core.annotation.NameInMap("ClipboardSizeUnit")
+        private String clipboardSizeUnit;
+
         @com.aliyun.core.annotation.NameInMap("ClipboardType")
         private String clipboardType;
 
@@ -4012,6 +4015,7 @@ public class ModifyCenterPolicyRequest extends Request {
 
         private ClipboardGraineds(Builder builder) {
             this.clipboardSize = builder.clipboardSize;
+            this.clipboardSizeUnit = builder.clipboardSizeUnit;
             this.clipboardType = builder.clipboardType;
             this.grainedType = builder.grainedType;
         }
@@ -4032,6 +4036,13 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * @return clipboardSizeUnit
+         */
+        public String getClipboardSizeUnit() {
+            return this.clipboardSizeUnit;
+        }
+
+        /**
          * @return clipboardType
          */
         public String getClipboardType() {
@@ -4047,6 +4058,7 @@ public class ModifyCenterPolicyRequest extends Request {
 
         public static final class Builder {
             private Integer clipboardSize; 
+            private String clipboardSizeUnit; 
             private String clipboardType; 
             private String grainedType; 
 
@@ -4055,6 +4067,7 @@ public class ModifyCenterPolicyRequest extends Request {
 
             private Builder(ClipboardGraineds model) {
                 this.clipboardSize = model.clipboardSize;
+                this.clipboardSizeUnit = model.clipboardSizeUnit;
                 this.clipboardType = model.clipboardType;
                 this.grainedType = model.grainedType;
             } 
@@ -4064,6 +4077,14 @@ public class ModifyCenterPolicyRequest extends Request {
              */
             public Builder clipboardSize(Integer clipboardSize) {
                 this.clipboardSize = clipboardSize;
+                return this;
+            }
+
+            /**
+             * ClipboardSizeUnit.
+             */
+            public Builder clipboardSizeUnit(String clipboardSizeUnit) {
+                this.clipboardSizeUnit = clipboardSizeUnit;
                 return this;
             }
 
