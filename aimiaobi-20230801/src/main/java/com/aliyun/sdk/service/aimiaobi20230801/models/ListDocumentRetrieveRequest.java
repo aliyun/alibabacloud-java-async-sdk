@@ -21,15 +21,15 @@ public class ListDocumentRetrieveRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ElementScope")
     private String elementScope;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
@@ -41,7 +41,7 @@ public class ListDocumentRetrieveRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Office")
     private String office;
 
@@ -49,23 +49,27 @@ public class ListDocumentRetrieveRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SubContentType")
     private String subContentType;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubjectClassify")
+    private String subjectClassify;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WordSize")
     private String wordSize;
 
@@ -88,6 +92,7 @@ public class ListDocumentRetrieveRequest extends Request {
         this.source = builder.source;
         this.startDate = builder.startDate;
         this.subContentType = builder.subContentType;
+        this.subjectClassify = builder.subjectClassify;
         this.wordSize = builder.wordSize;
         this.workspaceId = builder.workspaceId;
     }
@@ -190,6 +195,13 @@ public class ListDocumentRetrieveRequest extends Request {
     }
 
     /**
+     * @return subjectClassify
+     */
+    public String getSubjectClassify() {
+        return this.subjectClassify;
+    }
+
+    /**
      * @return wordSize
      */
     public String getWordSize() {
@@ -216,6 +228,7 @@ public class ListDocumentRetrieveRequest extends Request {
         private String source; 
         private String startDate; 
         private String subContentType; 
+        private String subjectClassify; 
         private String wordSize; 
         private String workspaceId; 
 
@@ -237,6 +250,7 @@ public class ListDocumentRetrieveRequest extends Request {
             this.source = request.source;
             this.startDate = request.startDate;
             this.subContentType = request.subContentType;
+            this.subjectClassify = request.subjectClassify;
             this.wordSize = request.wordSize;
             this.workspaceId = request.workspaceId;
         } 
@@ -254,7 +268,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * ContentType.
          */
         public Builder contentType(String contentType) {
-            this.putQueryParameter("ContentType", contentType);
+            this.putBodyParameter("ContentType", contentType);
             this.contentType = contentType;
             return this;
         }
@@ -263,7 +277,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * ElementScope.
          */
         public Builder elementScope(String elementScope) {
-            this.putQueryParameter("ElementScope", elementScope);
+            this.putBodyParameter("ElementScope", elementScope);
             this.elementScope = elementScope;
             return this;
         }
@@ -272,7 +286,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * EndDate.
          */
         public Builder endDate(String endDate) {
-            this.putQueryParameter("EndDate", endDate);
+            this.putBodyParameter("EndDate", endDate);
             this.endDate = endDate;
             return this;
         }
@@ -299,7 +313,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * Office.
          */
         public Builder office(String office) {
-            this.putQueryParameter("Office", office);
+            this.putBodyParameter("Office", office);
             this.office = office;
             return this;
         }
@@ -317,7 +331,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * Region.
          */
         public Builder region(String region) {
-            this.putQueryParameter("Region", region);
+            this.putBodyParameter("Region", region);
             this.region = region;
             return this;
         }
@@ -326,7 +340,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * Source.
          */
         public Builder source(String source) {
-            this.putQueryParameter("Source", source);
+            this.putBodyParameter("Source", source);
             this.source = source;
             return this;
         }
@@ -335,7 +349,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * StartDate.
          */
         public Builder startDate(String startDate) {
-            this.putQueryParameter("StartDate", startDate);
+            this.putBodyParameter("StartDate", startDate);
             this.startDate = startDate;
             return this;
         }
@@ -344,8 +358,17 @@ public class ListDocumentRetrieveRequest extends Request {
          * SubContentType.
          */
         public Builder subContentType(String subContentType) {
-            this.putQueryParameter("SubContentType", subContentType);
+            this.putBodyParameter("SubContentType", subContentType);
             this.subContentType = subContentType;
+            return this;
+        }
+
+        /**
+         * SubjectClassify.
+         */
+        public Builder subjectClassify(String subjectClassify) {
+            this.putBodyParameter("SubjectClassify", subjectClassify);
+            this.subjectClassify = subjectClassify;
             return this;
         }
 
@@ -353,7 +376,7 @@ public class ListDocumentRetrieveRequest extends Request {
          * WordSize.
          */
         public Builder wordSize(String wordSize) {
-            this.putQueryParameter("WordSize", wordSize);
+            this.putBodyParameter("WordSize", wordSize);
             this.wordSize = wordSize;
             return this;
         }
