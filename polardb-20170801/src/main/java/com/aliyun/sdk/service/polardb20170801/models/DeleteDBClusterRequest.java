@@ -22,6 +22,10 @@ public class DeleteDBClusterRequest extends Request {
     private String backupRetentionPolicyOnClusterDeletion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudProvider")
+    private String cloudProvider;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -45,6 +49,7 @@ public class DeleteDBClusterRequest extends Request {
     private DeleteDBClusterRequest(Builder builder) {
         super(builder);
         this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
+        this.cloudProvider = builder.cloudProvider;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -70,6 +75,13 @@ public class DeleteDBClusterRequest extends Request {
      */
     public String getBackupRetentionPolicyOnClusterDeletion() {
         return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    /**
+     * @return cloudProvider
+     */
+    public String getCloudProvider() {
+        return this.cloudProvider;
     }
 
     /**
@@ -109,6 +121,7 @@ public class DeleteDBClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDBClusterRequest, Builder> {
         private String backupRetentionPolicyOnClusterDeletion; 
+        private String cloudProvider; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -122,6 +135,7 @@ public class DeleteDBClusterRequest extends Request {
         private Builder(DeleteDBClusterRequest request) {
             super(request);
             this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
+            this.cloudProvider = request.cloudProvider;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -143,6 +157,15 @@ public class DeleteDBClusterRequest extends Request {
         public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
             this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
             this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
+            return this;
+        }
+
+        /**
+         * CloudProvider.
+         */
+        public Builder cloudProvider(String cloudProvider) {
+            this.putQueryParameter("CloudProvider", cloudProvider);
+            this.cloudProvider = cloudProvider;
             return this;
         }
 

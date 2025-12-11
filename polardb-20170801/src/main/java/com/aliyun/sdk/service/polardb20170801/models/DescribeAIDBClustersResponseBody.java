@@ -323,6 +323,9 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
+        @com.aliyun.core.annotation.NameInMap("ModelType")
+        private String modelType;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -365,6 +368,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             this.expired = builder.expired;
             this.kubeClusterId = builder.kubeClusterId;
             this.lockMode = builder.lockMode;
+            this.modelType = builder.modelType;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
             this.relativeDBClusterId = builder.relativeDBClusterId;
@@ -463,6 +467,13 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelType
+         */
+        public String getModelType() {
+            return this.modelType;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -544,6 +555,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             private Boolean expired; 
             private String kubeClusterId; 
             private String lockMode; 
+            private String modelType; 
             private String payType; 
             private String regionId; 
             private String relativeDBClusterId; 
@@ -570,6 +582,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
                 this.expired = model.expired;
                 this.kubeClusterId = model.kubeClusterId;
                 this.lockMode = model.lockMode;
+                this.modelType = model.modelType;
                 this.payType = model.payType;
                 this.regionId = model.regionId;
                 this.relativeDBClusterId = model.relativeDBClusterId;
@@ -667,6 +680,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
+                return this;
+            }
+
+            /**
+             * ModelType.
+             */
+            public Builder modelType(String modelType) {
+                this.modelType = modelType;
                 return this;
             }
 

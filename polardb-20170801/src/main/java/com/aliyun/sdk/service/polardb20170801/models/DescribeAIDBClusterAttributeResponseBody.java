@@ -68,6 +68,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
 
+    @com.aliyun.core.annotation.NameInMap("ModelType")
+    private String modelType;
+
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -119,6 +122,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.lockMode = builder.lockMode;
         this.maxQPM = builder.maxQPM;
         this.modelName = builder.modelName;
+        this.modelType = builder.modelType;
         this.payType = builder.payType;
         this.publicIp = builder.publicIp;
         this.regionId = builder.regionId;
@@ -264,6 +268,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return modelType
+     */
+    public String getModelType() {
+        return this.modelType;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -358,6 +369,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String lockMode; 
         private String maxQPM; 
         private String modelName; 
+        private String modelType; 
         private String payType; 
         private String publicIp; 
         private String regionId; 
@@ -391,6 +403,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.lockMode = model.lockMode;
             this.maxQPM = model.maxQPM;
             this.modelName = model.modelName;
+            this.modelType = model.modelType;
             this.payType = model.payType;
             this.publicIp = model.publicIp;
             this.regionId = model.regionId;
@@ -537,6 +550,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelType.
+         */
+        public Builder modelType(String modelType) {
+            this.modelType = modelType;
             return this;
         }
 
