@@ -545,6 +545,9 @@ public class TextTranslateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("examples")
         private java.util.List<Examples> examples;
 
+        @com.aliyun.core.annotation.NameInMap("prefix")
+        private String prefix;
+
         @com.aliyun.core.annotation.NameInMap("sensitives")
         private java.util.List<String> sensitives;
 
@@ -559,6 +562,7 @@ public class TextTranslateRequest extends Request {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
+            this.prefix = builder.prefix;
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
             this.textTransform = builder.textTransform;
@@ -601,6 +605,13 @@ public class TextTranslateRequest extends Request {
         }
 
         /**
+         * @return prefix
+         */
+        public String getPrefix() {
+            return this.prefix;
+        }
+
+        /**
          * @return sensitives
          */
         public java.util.List<String> getSensitives() {
@@ -626,6 +637,7 @@ public class TextTranslateRequest extends Request {
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
+            private String prefix; 
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
             private TextTransform textTransform; 
@@ -638,6 +650,7 @@ public class TextTranslateRequest extends Request {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
+                this.prefix = model.prefix;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
@@ -672,6 +685,14 @@ public class TextTranslateRequest extends Request {
              */
             public Builder examples(java.util.List<Examples> examples) {
                 this.examples = examples;
+                return this;
+            }
+
+            /**
+             * prefix.
+             */
+            public Builder prefix(String prefix) {
+                this.prefix = prefix;
                 return this;
             }
 
