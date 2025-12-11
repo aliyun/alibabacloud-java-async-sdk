@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLibraryResponse> deleteLibrary(DeleteLibraryRequest request);
 
     /**
+     * @param request the request parameters of EndToEndRealTimeDialog  EndToEndRealTimeDialogRequest
+     * @return EndToEndRealTimeDialogResponse
+     */
+    CompletableFuture<EndToEndRealTimeDialogResponse> endToEndRealTimeDialog(EndToEndRealTimeDialogRequest request);
+
+    /**
      * @param request the request parameters of EvictTask  EvictTaskRequest
      * @return EvictTaskResponse
      */

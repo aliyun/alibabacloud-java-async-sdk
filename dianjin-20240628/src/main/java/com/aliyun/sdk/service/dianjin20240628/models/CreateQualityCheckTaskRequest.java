@@ -46,6 +46,10 @@ public class CreateQualityCheckTaskRequest extends Request {
     private String requestId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sceneCode")
+    private String sceneCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -58,6 +62,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         this.metaData = builder.metaData;
         this.qualityGroup = builder.qualityGroup;
         this.requestId = builder.requestId;
+        this.sceneCode = builder.sceneCode;
         this.type = builder.type;
     }
 
@@ -117,6 +122,13 @@ public class CreateQualityCheckTaskRequest extends Request {
     }
 
     /**
+     * @return sceneCode
+     */
+    public String getSceneCode() {
+        return this.sceneCode;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -130,6 +142,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         private java.util.Map<String, String> metaData; 
         private java.util.List<String> qualityGroup; 
         private String requestId; 
+        private String sceneCode; 
         private String type; 
 
         private Builder() {
@@ -144,6 +157,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             this.metaData = request.metaData;
             this.qualityGroup = request.qualityGroup;
             this.requestId = request.requestId;
+            this.sceneCode = request.sceneCode;
             this.type = request.type;
         } 
 
@@ -207,6 +221,15 @@ public class CreateQualityCheckTaskRequest extends Request {
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * sceneCode.
+         */
+        public Builder sceneCode(String sceneCode) {
+            this.putBodyParameter("sceneCode", sceneCode);
+            this.sceneCode = sceneCode;
             return this;
         }
 

@@ -239,6 +239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EndToEndRealTimeDialog  EndToEndRealTimeDialogRequest
+     * @return EndToEndRealTimeDialogResponse
+     */
+    @Override
+    public CompletableFuture<EndToEndRealTimeDialogResponse> endToEndRealTimeDialog(EndToEndRealTimeDialogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EndToEndRealTimeDialog").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/ws/realtime/dialog").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EndToEndRealTimeDialogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EndToEndRealTimeDialogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EvictTask  EvictTaskRequest
      * @return EvictTaskResponse
      */
