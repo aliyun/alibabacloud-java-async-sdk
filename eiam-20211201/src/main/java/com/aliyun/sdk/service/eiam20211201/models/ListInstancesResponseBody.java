@@ -219,6 +219,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
+        private String managedServiceCode;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+        private Boolean serviceManaged;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -227,6 +233,8 @@ public class ListInstancesResponseBody extends TeaModel {
             this.defaultEndpoint = builder.defaultEndpoint;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
+            this.managedServiceCode = builder.managedServiceCode;
+            this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
         }
 
@@ -267,6 +275,20 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedServiceCode
+         */
+        public String getManagedServiceCode() {
+            return this.managedServiceCode;
+        }
+
+        /**
+         * @return serviceManaged
+         */
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -278,6 +300,8 @@ public class ListInstancesResponseBody extends TeaModel {
             private DefaultEndpoint defaultEndpoint; 
             private String description; 
             private String instanceId; 
+            private String managedServiceCode; 
+            private Boolean serviceManaged; 
             private String status; 
 
             private Builder() {
@@ -288,6 +312,8 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.defaultEndpoint = model.defaultEndpoint;
                 this.description = model.description;
                 this.instanceId = model.instanceId;
+                this.managedServiceCode = model.managedServiceCode;
+                this.serviceManaged = model.serviceManaged;
                 this.status = model.status;
             } 
 
@@ -326,6 +352,22 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * ManagedServiceCode.
+             */
+            public Builder managedServiceCode(String managedServiceCode) {
+                this.managedServiceCode = managedServiceCode;
+                return this;
+            }
+
+            /**
+             * ServiceManaged.
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
                 return this;
             }
 
