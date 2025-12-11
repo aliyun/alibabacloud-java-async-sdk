@@ -922,6 +922,13 @@ public class ModifyDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
 
+        @com.aliyun.core.annotation.NameInMap("Http2Origin")
+        private Boolean http2Origin;
+
+        @com.aliyun.core.annotation.NameInMap("Http2OriginMaxConcurrency")
+        @com.aliyun.core.annotation.Validation(maximum = 512, minimum = 1)
+        private Integer http2OriginMaxConcurrency;
+
         @com.aliyun.core.annotation.NameInMap("Keepalive")
         private Boolean keepalive;
 
@@ -986,6 +993,8 @@ public class ModifyDomainRequest extends Request {
             this.cnameEnabled = builder.cnameEnabled;
             this.connectTimeout = builder.connectTimeout;
             this.focusHttpBackend = builder.focusHttpBackend;
+            this.http2Origin = builder.http2Origin;
+            this.http2OriginMaxConcurrency = builder.http2OriginMaxConcurrency;
             this.keepalive = builder.keepalive;
             this.keepaliveRequests = builder.keepaliveRequests;
             this.keepaliveTimeout = builder.keepaliveTimeout;
@@ -1053,6 +1062,20 @@ public class ModifyDomainRequest extends Request {
          */
         public Boolean getFocusHttpBackend() {
             return this.focusHttpBackend;
+        }
+
+        /**
+         * @return http2Origin
+         */
+        public Boolean getHttp2Origin() {
+            return this.http2Origin;
+        }
+
+        /**
+         * @return http2OriginMaxConcurrency
+         */
+        public Integer getHttp2OriginMaxConcurrency() {
+            return this.http2OriginMaxConcurrency;
         }
 
         /**
@@ -1181,6 +1204,8 @@ public class ModifyDomainRequest extends Request {
             private Boolean cnameEnabled; 
             private Integer connectTimeout; 
             private Boolean focusHttpBackend; 
+            private Boolean http2Origin; 
+            private Integer http2OriginMaxConcurrency; 
             private Boolean keepalive; 
             private Integer keepaliveRequests; 
             private Integer keepaliveTimeout; 
@@ -1209,6 +1234,8 @@ public class ModifyDomainRequest extends Request {
                 this.cnameEnabled = model.cnameEnabled;
                 this.connectTimeout = model.connectTimeout;
                 this.focusHttpBackend = model.focusHttpBackend;
+                this.http2Origin = model.http2Origin;
+                this.http2OriginMaxConcurrency = model.http2OriginMaxConcurrency;
                 this.keepalive = model.keepalive;
                 this.keepaliveRequests = model.keepaliveRequests;
                 this.keepaliveTimeout = model.keepaliveTimeout;
@@ -1294,6 +1321,22 @@ public class ModifyDomainRequest extends Request {
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
+                return this;
+            }
+
+            /**
+             * Http2Origin.
+             */
+            public Builder http2Origin(Boolean http2Origin) {
+                this.http2Origin = http2Origin;
+                return this;
+            }
+
+            /**
+             * Http2OriginMaxConcurrency.
+             */
+            public Builder http2OriginMaxConcurrency(Integer http2OriginMaxConcurrency) {
+                this.http2OriginMaxConcurrency = http2OriginMaxConcurrency;
                 return this;
             }
 
