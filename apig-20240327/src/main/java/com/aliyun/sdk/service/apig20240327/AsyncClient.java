@@ -143,6 +143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceVersionResponse> createServiceVersion(CreateServiceVersionRequest request);
 
     /**
+     * @param request the request parameters of CreateSource  CreateSourceRequest
+     * @return CreateSourceResponse
+     */
+    CompletableFuture<CreateSourceResponse> createSource(CreateSourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
      * @return DeleteConsumerResponse
      */
@@ -232,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceVersionResponse
      */
     CompletableFuture<DeleteServiceVersionResponse> deleteServiceVersion(DeleteServiceVersionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSource  DeleteSourceRequest
+     * @return DeleteSourceResponse
+     */
+    CompletableFuture<DeleteSourceResponse> deleteSource(DeleteSourceRequest request);
 
     /**
      * @param request the request parameters of DeployHttpApi  DeployHttpApiRequest
@@ -344,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceResponse
      */
     CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetSource  GetSourceRequest
+     * @return GetSourceResponse
+     */
+    CompletableFuture<GetSourceResponse> getSource(GetSourceRequest request);
 
     /**
      * @param request the request parameters of GetTraceConfig  GetTraceConfigRequest

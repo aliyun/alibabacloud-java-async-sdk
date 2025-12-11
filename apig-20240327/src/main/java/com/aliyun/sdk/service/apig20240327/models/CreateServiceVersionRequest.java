@@ -90,6 +90,7 @@ public class CreateServiceVersionRequest extends Request {
         } 
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateServiceVersionRequest extends Request {
         }
 
         /**
+         * <p>The service tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder labels(java.util.List<Labels> labels) {
@@ -111,6 +113,7 @@ public class CreateServiceVersionRequest extends Request {
         }
 
         /**
+         * <p>The version name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +186,7 @@ public class CreateServiceVersionRequest extends Request {
             } 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -194,7 +198,10 @@ public class CreateServiceVersionRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder value(String value) {
                 this.value = value;

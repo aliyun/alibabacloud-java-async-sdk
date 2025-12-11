@@ -80,7 +80,10 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class UpdateServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteServiceVersionResponseBody} extends {@link TeaModel}
+ * {@link DeleteSourceResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteServiceVersionResponseBody</p>
+ * <p>DeleteSourceResponseBody</p>
  */
-public class DeleteServiceVersionResponseBody extends TeaModel {
+public class DeleteSourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -26,7 +26,7 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private DeleteServiceVersionResponseBody(Builder builder) {
+    private DeleteSourceResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteServiceVersionResponseBody create() {
+    public static DeleteSourceResponseBody create() {
         return builder().build();
     }
 
@@ -73,17 +73,14 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DeleteServiceVersionResponseBody model) {
+        private Builder(DeleteSourceResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The status code returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ok</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -91,10 +88,7 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,18 +96,15 @@ public class DeleteServiceVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteServiceVersionResponseBody build() {
-            return new DeleteServiceVersionResponseBody(this);
+        public DeleteSourceResponseBody build() {
+            return new DeleteSourceResponseBody(this);
         } 
 
     } 
