@@ -25,12 +25,12 @@ public class InitIMConnectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("From")
     @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserAccessToken")
     private String userAccessToken;
 
@@ -121,12 +121,9 @@ public class InitIMConnectRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8XNBzDucJv</p>
          */
         public Builder from(String from) {
-            this.putQueryParameter("From", from);
+            this.putBodyParameter("From", from);
             this.from = from;
             return this;
         }
@@ -135,7 +132,7 @@ public class InitIMConnectRequest extends Request {
          * UserAccessToken.
          */
         public Builder userAccessToken(String userAccessToken) {
-            this.putQueryParameter("UserAccessToken", userAccessToken);
+            this.putBodyParameter("UserAccessToken", userAccessToken);
             this.userAccessToken = userAccessToken;
             return this;
         }

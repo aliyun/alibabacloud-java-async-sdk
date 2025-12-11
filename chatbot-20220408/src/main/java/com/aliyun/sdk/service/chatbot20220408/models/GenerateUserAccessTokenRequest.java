@@ -25,33 +25,31 @@ public class GenerateUserAccessTokenRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Email")
-    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String email;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     @com.aliyun.core.annotation.Validation(maximum = 3600)
     private Integer expireTime;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private String extraInfo;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ForeignId")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String foreignId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Nick")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nick;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Telephone")
-    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String telephone;
 
     private GenerateUserAccessTokenRequest(Builder builder) {
@@ -183,7 +181,7 @@ public class GenerateUserAccessTokenRequest extends Request {
          * Email.
          */
         public Builder email(String email) {
-            this.putQueryParameter("Email", email);
+            this.putBodyParameter("Email", email);
             this.email = email;
             return this;
         }
@@ -192,7 +190,7 @@ public class GenerateUserAccessTokenRequest extends Request {
          * ExpireTime.
          */
         public Builder expireTime(Integer expireTime) {
-            this.putQueryParameter("ExpireTime", expireTime);
+            this.putBodyParameter("ExpireTime", expireTime);
             this.expireTime = expireTime;
             return this;
         }
@@ -201,7 +199,7 @@ public class GenerateUserAccessTokenRequest extends Request {
          * ExtraInfo.
          */
         public Builder extraInfo(String extraInfo) {
-            this.putQueryParameter("ExtraInfo", extraInfo);
+            this.putBodyParameter("ExtraInfo", extraInfo);
             this.extraInfo = extraInfo;
             return this;
         }
@@ -213,16 +211,19 @@ public class GenerateUserAccessTokenRequest extends Request {
          * <p>8882022040000000171</p>
          */
         public Builder foreignId(String foreignId) {
-            this.putQueryParameter("ForeignId", foreignId);
+            this.putBodyParameter("ForeignId", foreignId);
             this.foreignId = foreignId;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder nick(String nick) {
-            this.putQueryParameter("Nick", nick);
+            this.putBodyParameter("Nick", nick);
             this.nick = nick;
             return this;
         }
@@ -231,7 +232,7 @@ public class GenerateUserAccessTokenRequest extends Request {
          * Telephone.
          */
         public Builder telephone(String telephone) {
-            this.putQueryParameter("Telephone", telephone);
+            this.putBodyParameter("Telephone", telephone);
             this.telephone = telephone;
             return this;
         }
