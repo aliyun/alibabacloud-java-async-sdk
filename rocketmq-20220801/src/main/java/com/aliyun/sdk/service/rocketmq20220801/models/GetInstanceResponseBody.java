@@ -840,6 +840,9 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class Endpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpointId")
+        private String endpointId;
+
         @com.aliyun.core.annotation.NameInMap("endpointType")
         private String endpointType;
 
@@ -850,6 +853,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private java.util.List<String> ipWhitelist;
 
         private Endpoints(Builder builder) {
+            this.endpointId = builder.endpointId;
             this.endpointType = builder.endpointType;
             this.endpointUrl = builder.endpointUrl;
             this.ipWhitelist = builder.ipWhitelist;
@@ -861,6 +865,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Endpoints create() {
             return builder().build();
+        }
+
+        /**
+         * @return endpointId
+         */
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
         /**
@@ -885,6 +896,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String endpointId; 
             private String endpointType; 
             private String endpointUrl; 
             private java.util.List<String> ipWhitelist; 
@@ -893,10 +905,19 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Endpoints model) {
+                this.endpointId = model.endpointId;
                 this.endpointType = model.endpointType;
                 this.endpointUrl = model.endpointUrl;
                 this.ipWhitelist = model.ipWhitelist;
             } 
+
+            /**
+             * endpointId.
+             */
+            public Builder endpointId(String endpointId) {
+                this.endpointId = endpointId;
+                return this;
+            }
 
             /**
              * <p>The type of the endpoint that is used to access the instance.</p>
