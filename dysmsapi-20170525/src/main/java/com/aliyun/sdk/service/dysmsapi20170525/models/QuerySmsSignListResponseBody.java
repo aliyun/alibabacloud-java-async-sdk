@@ -327,6 +327,9 @@ public class QuerySmsSignListResponseBody extends TeaModel {
      * <p>QuerySmsSignListResponseBody</p>
      */
     public static class SmsSignList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppIcpRecordId")
+        private Long appIcpRecordId;
+
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
@@ -348,10 +351,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SignName")
         private String signName;
 
+        @com.aliyun.core.annotation.NameInMap("TrademarkId")
+        private Long trademarkId;
+
         @com.aliyun.core.annotation.NameInMap("authorizationLetterAuditPass")
         private Boolean authorizationLetterAuditPass;
 
         private SmsSignList(Builder builder) {
+            this.appIcpRecordId = builder.appIcpRecordId;
             this.auditStatus = builder.auditStatus;
             this.authorizationLetterId = builder.authorizationLetterId;
             this.businessType = builder.businessType;
@@ -359,6 +366,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             this.orderId = builder.orderId;
             this.reason = builder.reason;
             this.signName = builder.signName;
+            this.trademarkId = builder.trademarkId;
             this.authorizationLetterAuditPass = builder.authorizationLetterAuditPass;
         }
 
@@ -368,6 +376,13 @@ public class QuerySmsSignListResponseBody extends TeaModel {
 
         public static SmsSignList create() {
             return builder().build();
+        }
+
+        /**
+         * @return appIcpRecordId
+         */
+        public Long getAppIcpRecordId() {
+            return this.appIcpRecordId;
         }
 
         /**
@@ -420,6 +435,13 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         /**
+         * @return trademarkId
+         */
+        public Long getTrademarkId() {
+            return this.trademarkId;
+        }
+
+        /**
          * @return authorizationLetterAuditPass
          */
         public Boolean getAuthorizationLetterAuditPass() {
@@ -427,6 +449,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long appIcpRecordId; 
             private String auditStatus; 
             private Long authorizationLetterId; 
             private String businessType; 
@@ -434,12 +457,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             private String orderId; 
             private Reason reason; 
             private String signName; 
+            private Long trademarkId; 
             private Boolean authorizationLetterAuditPass; 
 
             private Builder() {
             } 
 
             private Builder(SmsSignList model) {
+                this.appIcpRecordId = model.appIcpRecordId;
                 this.auditStatus = model.auditStatus;
                 this.authorizationLetterId = model.authorizationLetterId;
                 this.businessType = model.businessType;
@@ -447,8 +472,17 @@ public class QuerySmsSignListResponseBody extends TeaModel {
                 this.orderId = model.orderId;
                 this.reason = model.reason;
                 this.signName = model.signName;
+                this.trademarkId = model.trademarkId;
                 this.authorizationLetterAuditPass = model.authorizationLetterAuditPass;
             } 
+
+            /**
+             * AppIcpRecordId.
+             */
+            public Builder appIcpRecordId(Long appIcpRecordId) {
+                this.appIcpRecordId = appIcpRecordId;
+                return this;
+            }
 
             /**
              * <p>The approval status of the signature. Valid values:</p>
@@ -532,6 +566,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
              */
             public Builder signName(String signName) {
                 this.signName = signName;
+                return this;
+            }
+
+            /**
+             * TrademarkId.
+             */
+            public Builder trademarkId(Long trademarkId) {
+                this.trademarkId = trademarkId;
                 return this;
             }
 

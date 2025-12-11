@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSmsSignRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIcpRecordId")
+    private Long appIcpRecordId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplySceneContent")
     private String applySceneContent;
 
@@ -69,8 +73,13 @@ public class CreateSmsSignRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ThirdParty")
     private Boolean thirdParty;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrademarkId")
+    private Long trademarkId;
+
     private CreateSmsSignRequest(Builder builder) {
         super(builder);
+        this.appIcpRecordId = builder.appIcpRecordId;
         this.applySceneContent = builder.applySceneContent;
         this.authorizationLetterId = builder.authorizationLetterId;
         this.moreData = builder.moreData;
@@ -83,6 +92,7 @@ public class CreateSmsSignRequest extends Request {
         this.signSource = builder.signSource;
         this.signType = builder.signType;
         this.thirdParty = builder.thirdParty;
+        this.trademarkId = builder.trademarkId;
     }
 
     public static Builder builder() {
@@ -96,6 +106,13 @@ public class CreateSmsSignRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appIcpRecordId
+     */
+    public Long getAppIcpRecordId() {
+        return this.appIcpRecordId;
     }
 
     /**
@@ -182,7 +199,15 @@ public class CreateSmsSignRequest extends Request {
         return this.thirdParty;
     }
 
+    /**
+     * @return trademarkId
+     */
+    public Long getTrademarkId() {
+        return this.trademarkId;
+    }
+
     public static final class Builder extends Request.Builder<CreateSmsSignRequest, Builder> {
+        private Long appIcpRecordId; 
         private String applySceneContent; 
         private Long authorizationLetterId; 
         private java.util.List<String> moreData; 
@@ -195,6 +220,7 @@ public class CreateSmsSignRequest extends Request {
         private Integer signSource; 
         private Integer signType; 
         private Boolean thirdParty; 
+        private Long trademarkId; 
 
         private Builder() {
             super();
@@ -202,6 +228,7 @@ public class CreateSmsSignRequest extends Request {
 
         private Builder(CreateSmsSignRequest request) {
             super(request);
+            this.appIcpRecordId = request.appIcpRecordId;
             this.applySceneContent = request.applySceneContent;
             this.authorizationLetterId = request.authorizationLetterId;
             this.moreData = request.moreData;
@@ -214,7 +241,17 @@ public class CreateSmsSignRequest extends Request {
             this.signSource = request.signSource;
             this.signType = request.signType;
             this.thirdParty = request.thirdParty;
+            this.trademarkId = request.trademarkId;
         } 
+
+        /**
+         * AppIcpRecordId.
+         */
+        public Builder appIcpRecordId(Long appIcpRecordId) {
+            this.putQueryParameter("AppIcpRecordId", appIcpRecordId);
+            this.appIcpRecordId = appIcpRecordId;
+            return this;
+        }
 
         /**
          * <p>Application scenarios, instructions as follows:</p>
@@ -402,6 +439,15 @@ public class CreateSmsSignRequest extends Request {
         public Builder thirdParty(Boolean thirdParty) {
             this.putQueryParameter("ThirdParty", thirdParty);
             this.thirdParty = thirdParty;
+            return this;
+        }
+
+        /**
+         * TrademarkId.
+         */
+        public Builder trademarkId(Long trademarkId) {
+            this.putQueryParameter("TrademarkId", trademarkId);
+            this.trademarkId = trademarkId;
             return this;
         }
 

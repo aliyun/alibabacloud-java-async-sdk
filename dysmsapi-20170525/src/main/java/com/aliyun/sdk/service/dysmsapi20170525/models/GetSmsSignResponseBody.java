@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSmsSignResponseBody</p>
  */
 public class GetSmsSignResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppIcpRecordId")
+    private Long appIcpRecordId;
+
     @com.aliyun.core.annotation.NameInMap("ApplyScene")
     private String applyScene;
 
@@ -77,7 +80,11 @@ public class GetSmsSignResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ThirdParty")
     private Boolean thirdParty;
 
+    @com.aliyun.core.annotation.NameInMap("TrademarkId")
+    private Long trademarkId;
+
     private GetSmsSignResponseBody(Builder builder) {
+        this.appIcpRecordId = builder.appIcpRecordId;
         this.applyScene = builder.applyScene;
         this.auditInfo = builder.auditInfo;
         this.authorizationLetterAuditPass = builder.authorizationLetterAuditPass;
@@ -98,6 +105,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         this.signTag = builder.signTag;
         this.signUsage = builder.signUsage;
         this.thirdParty = builder.thirdParty;
+        this.trademarkId = builder.trademarkId;
     }
 
     public static Builder builder() {
@@ -110,6 +118,13 @@ public class GetSmsSignResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appIcpRecordId
+     */
+    public Long getAppIcpRecordId() {
+        return this.appIcpRecordId;
     }
 
     /**
@@ -252,7 +267,15 @@ public class GetSmsSignResponseBody extends TeaModel {
         return this.thirdParty;
     }
 
+    /**
+     * @return trademarkId
+     */
+    public Long getTrademarkId() {
+        return this.trademarkId;
+    }
+
     public static final class Builder {
+        private Long appIcpRecordId; 
         private String applyScene; 
         private AuditInfo auditInfo; 
         private Boolean authorizationLetterAuditPass; 
@@ -273,11 +296,13 @@ public class GetSmsSignResponseBody extends TeaModel {
         private String signTag; 
         private String signUsage; 
         private Boolean thirdParty; 
+        private Long trademarkId; 
 
         private Builder() {
         } 
 
         private Builder(GetSmsSignResponseBody model) {
+            this.appIcpRecordId = model.appIcpRecordId;
             this.applyScene = model.applyScene;
             this.auditInfo = model.auditInfo;
             this.authorizationLetterAuditPass = model.authorizationLetterAuditPass;
@@ -298,7 +323,16 @@ public class GetSmsSignResponseBody extends TeaModel {
             this.signTag = model.signTag;
             this.signUsage = model.signUsage;
             this.thirdParty = model.thirdParty;
+            this.trademarkId = model.trademarkId;
         } 
+
+        /**
+         * AppIcpRecordId.
+         */
+        public Builder appIcpRecordId(Long appIcpRecordId) {
+            this.appIcpRecordId = appIcpRecordId;
+            return this;
+        }
 
         /**
          * <p>Content of application scenarios.</p>
@@ -522,6 +556,14 @@ public class GetSmsSignResponseBody extends TeaModel {
          */
         public Builder thirdParty(Boolean thirdParty) {
             this.thirdParty = thirdParty;
+            return this;
+        }
+
+        /**
+         * TrademarkId.
+         */
+        public Builder trademarkId(Long trademarkId) {
+            this.trademarkId = trademarkId;
             return this;
         }
 
