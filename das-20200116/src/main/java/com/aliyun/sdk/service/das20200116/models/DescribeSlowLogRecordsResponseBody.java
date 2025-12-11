@@ -323,6 +323,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
+        @com.aliyun.core.annotation.NameInMap("OpType")
+        private String opType;
+
         @com.aliyun.core.annotation.NameInMap("OriginTime")
         private String originTime;
 
@@ -430,6 +433,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.logicalIOReads = builder.logicalIOReads;
             this.namespace = builder.namespace;
             this.nodeId = builder.nodeId;
+            this.opType = builder.opType;
             this.originTime = builder.originTime;
             this.physicalIOReads = builder.physicalIOReads;
             this.psql = builder.psql;
@@ -620,6 +624,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        /**
+         * @return opType
+         */
+        public String getOpType() {
+            return this.opType;
         }
 
         /**
@@ -841,6 +852,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long logicalIOReads; 
             private String namespace; 
             private String nodeId; 
+            private String opType; 
             private String originTime; 
             private Long physicalIOReads; 
             private String psql; 
@@ -896,6 +908,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.logicalIOReads = model.logicalIOReads;
                 this.namespace = model.namespace;
                 this.nodeId = model.nodeId;
+                this.opType = model.opType;
                 this.originTime = model.originTime;
                 this.physicalIOReads = model.physicalIOReads;
                 this.psql = model.psql;
@@ -1099,6 +1112,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * OpType.
+             */
+            public Builder opType(String opType) {
+                this.opType = opType;
                 return this;
             }
 
