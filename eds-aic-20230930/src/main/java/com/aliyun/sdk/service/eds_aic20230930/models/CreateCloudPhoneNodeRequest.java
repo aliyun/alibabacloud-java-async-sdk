@@ -63,6 +63,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSingleImgDisk")
+    private Boolean isSingleImgDisk;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
@@ -153,6 +157,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.downBandwidthLimit = builder.downBandwidthLimit;
         this.imageId = builder.imageId;
         this.instanceType = builder.instanceType;
+        this.isSingleImgDisk = builder.isSingleImgDisk;
         this.networkId = builder.networkId;
         this.networkInfo = builder.networkInfo;
         this.networkType = builder.networkType;
@@ -262,6 +267,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return isSingleImgDisk
+     */
+    public Boolean getIsSingleImgDisk() {
+        return this.isSingleImgDisk;
     }
 
     /**
@@ -409,6 +421,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private Integer downBandwidthLimit; 
         private String imageId; 
         private String instanceType; 
+        private Boolean isSingleImgDisk; 
         private String networkId; 
         private NetworkInfo networkInfo; 
         private String networkType; 
@@ -446,6 +459,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.downBandwidthLimit = request.downBandwidthLimit;
             this.imageId = request.imageId;
             this.instanceType = request.instanceType;
+            this.isSingleImgDisk = request.isSingleImgDisk;
             this.networkId = request.networkId;
             this.networkInfo = request.networkInfo;
             this.networkType = request.networkType;
@@ -601,6 +615,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * IsSingleImgDisk.
+         */
+        public Builder isSingleImgDisk(Boolean isSingleImgDisk) {
+            this.putQueryParameter("IsSingleImgDisk", isSingleImgDisk);
+            this.isSingleImgDisk = isSingleImgDisk;
             return this;
         }
 
