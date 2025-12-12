@@ -78,6 +78,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleRuleList")
+    private java.util.List<ScaleRuleList> scaleRuleList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScaleType")
     private String scaleType;
 
@@ -88,6 +92,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecId")
     private String specId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityMax")
+    private Long storageCapacityMax;
 
     private ModifyAutoScalingConfigRequest(Builder builder) {
         super(builder);
@@ -105,9 +113,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleRuleList = builder.scaleRuleList;
         this.scaleType = builder.scaleType;
         this.securityToken = builder.securityToken;
         this.specId = builder.specId;
+        this.storageCapacityMax = builder.storageCapacityMax;
     }
 
     public static Builder builder() {
@@ -222,6 +232,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
     }
 
     /**
+     * @return scaleRuleList
+     */
+    public java.util.List<ScaleRuleList> getScaleRuleList() {
+        return this.scaleRuleList;
+    }
+
+    /**
      * @return scaleType
      */
     public String getScaleType() {
@@ -242,6 +259,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
         return this.specId;
     }
 
+    /**
+     * @return storageCapacityMax
+     */
+    public Long getStorageCapacityMax() {
+        return this.storageCapacityMax;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAutoScalingConfigRequest, Builder> {
         private String regionId; 
         private String configId; 
@@ -257,9 +281,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List<ScaleRuleList> scaleRuleList; 
         private String scaleType; 
         private String securityToken; 
         private String specId; 
+        private Long storageCapacityMax; 
 
         private Builder() {
             super();
@@ -281,9 +307,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleRuleList = request.scaleRuleList;
             this.scaleType = request.scaleType;
             this.securityToken = request.securityToken;
             this.specId = request.specId;
+            this.storageCapacityMax = request.storageCapacityMax;
         } 
 
         /**
@@ -413,6 +441,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
         }
 
         /**
+         * ScaleRuleList.
+         */
+        public Builder scaleRuleList(java.util.List<ScaleRuleList> scaleRuleList) {
+            String scaleRuleListShrink = shrink(scaleRuleList, "ScaleRuleList", "json");
+            this.putQueryParameter("ScaleRuleList", scaleRuleListShrink);
+            this.scaleRuleList = scaleRuleList;
+            return this;
+        }
+
+        /**
          * ScaleType.
          */
         public Builder scaleType(String scaleType) {
@@ -439,6 +477,15 @@ public class ModifyAutoScalingConfigRequest extends Request {
             return this;
         }
 
+        /**
+         * StorageCapacityMax.
+         */
+        public Builder storageCapacityMax(Long storageCapacityMax) {
+            this.putQueryParameter("StorageCapacityMax", storageCapacityMax);
+            this.storageCapacityMax = storageCapacityMax;
+            return this;
+        }
+
         @Override
         public ModifyAutoScalingConfigRequest build() {
             return new ModifyAutoScalingConfigRequest(this);
@@ -446,4 +493,415 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyAutoScalingConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoScalingConfigRequest</p>
+     */
+    public static class ScaleRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
+        private String configId;
+
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ObservationWindow")
+        private Integer observationWindow;
+
+        @com.aliyun.core.annotation.NameInMap("OperationType")
+        private String operationType;
+
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        private String ruleId;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        private String ruleName;
+
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleInStep")
+        private Integer scaleInStep;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleOutStep")
+        private Integer scaleOutStep;
+
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
+        private Integer silenceTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("TargetMetric")
+        private String targetMetric;
+
+        @com.aliyun.core.annotation.NameInMap("TargetNodes")
+        private Integer targetNodes;
+
+        @com.aliyun.core.annotation.NameInMap("ThresholdLower")
+        private Integer thresholdLower;
+
+        @com.aliyun.core.annotation.NameInMap("ThresholdUpper")
+        private Integer thresholdUpper;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerCronExpr")
+        private String triggerCronExpr;
+
+        private ScaleRuleList(Builder builder) {
+            this.configId = builder.configId;
+            this.enabled = builder.enabled;
+            this.endTime = builder.endTime;
+            this.instanceId = builder.instanceId;
+            this.observationWindow = builder.observationWindow;
+            this.operationType = builder.operationType;
+            this.ruleId = builder.ruleId;
+            this.ruleName = builder.ruleName;
+            this.ruleType = builder.ruleType;
+            this.scaleInStep = builder.scaleInStep;
+            this.scaleOutStep = builder.scaleOutStep;
+            this.silenceTime = builder.silenceTime;
+            this.startTime = builder.startTime;
+            this.targetMetric = builder.targetMetric;
+            this.targetNodes = builder.targetNodes;
+            this.thresholdLower = builder.thresholdLower;
+            this.thresholdUpper = builder.thresholdUpper;
+            this.triggerCronExpr = builder.triggerCronExpr;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScaleRuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configId
+         */
+        public String getConfigId() {
+            return this.configId;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return observationWindow
+         */
+        public Integer getObservationWindow() {
+            return this.observationWindow;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return scaleInStep
+         */
+        public Integer getScaleInStep() {
+            return this.scaleInStep;
+        }
+
+        /**
+         * @return scaleOutStep
+         */
+        public Integer getScaleOutStep() {
+            return this.scaleOutStep;
+        }
+
+        /**
+         * @return silenceTime
+         */
+        public Integer getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return targetMetric
+         */
+        public String getTargetMetric() {
+            return this.targetMetric;
+        }
+
+        /**
+         * @return targetNodes
+         */
+        public Integer getTargetNodes() {
+            return this.targetNodes;
+        }
+
+        /**
+         * @return thresholdLower
+         */
+        public Integer getThresholdLower() {
+            return this.thresholdLower;
+        }
+
+        /**
+         * @return thresholdUpper
+         */
+        public Integer getThresholdUpper() {
+            return this.thresholdUpper;
+        }
+
+        /**
+         * @return triggerCronExpr
+         */
+        public String getTriggerCronExpr() {
+            return this.triggerCronExpr;
+        }
+
+        public static final class Builder {
+            private String configId; 
+            private Boolean enabled; 
+            private String endTime; 
+            private String instanceId; 
+            private Integer observationWindow; 
+            private String operationType; 
+            private String ruleId; 
+            private String ruleName; 
+            private String ruleType; 
+            private Integer scaleInStep; 
+            private Integer scaleOutStep; 
+            private Integer silenceTime; 
+            private String startTime; 
+            private String targetMetric; 
+            private Integer targetNodes; 
+            private Integer thresholdLower; 
+            private Integer thresholdUpper; 
+            private String triggerCronExpr; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleRuleList model) {
+                this.configId = model.configId;
+                this.enabled = model.enabled;
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.observationWindow = model.observationWindow;
+                this.operationType = model.operationType;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleType = model.ruleType;
+                this.scaleInStep = model.scaleInStep;
+                this.scaleOutStep = model.scaleOutStep;
+                this.silenceTime = model.silenceTime;
+                this.startTime = model.startTime;
+                this.targetMetric = model.targetMetric;
+                this.targetNodes = model.targetNodes;
+                this.thresholdLower = model.thresholdLower;
+                this.thresholdUpper = model.thresholdUpper;
+                this.triggerCronExpr = model.triggerCronExpr;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder configId(String configId) {
+                this.configId = configId;
+                return this;
+            }
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * ObservationWindow.
+             */
+            public Builder observationWindow(Integer observationWindow) {
+                this.observationWindow = observationWindow;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * RuleId.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * RuleName.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * ScaleInStep.
+             */
+            public Builder scaleInStep(Integer scaleInStep) {
+                this.scaleInStep = scaleInStep;
+                return this;
+            }
+
+            /**
+             * ScaleOutStep.
+             */
+            public Builder scaleOutStep(Integer scaleOutStep) {
+                this.scaleOutStep = scaleOutStep;
+                return this;
+            }
+
+            /**
+             * SilenceTime.
+             */
+            public Builder silenceTime(Integer silenceTime) {
+                this.silenceTime = silenceTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TargetMetric.
+             */
+            public Builder targetMetric(String targetMetric) {
+                this.targetMetric = targetMetric;
+                return this;
+            }
+
+            /**
+             * TargetNodes.
+             */
+            public Builder targetNodes(Integer targetNodes) {
+                this.targetNodes = targetNodes;
+                return this;
+            }
+
+            /**
+             * ThresholdLower.
+             */
+            public Builder thresholdLower(Integer thresholdLower) {
+                this.thresholdLower = thresholdLower;
+                return this;
+            }
+
+            /**
+             * ThresholdUpper.
+             */
+            public Builder thresholdUpper(Integer thresholdUpper) {
+                this.thresholdUpper = thresholdUpper;
+                return this;
+            }
+
+            /**
+             * TriggerCronExpr.
+             */
+            public Builder triggerCronExpr(String triggerCronExpr) {
+                this.triggerCronExpr = triggerCronExpr;
+                return this;
+            }
+
+            public ScaleRuleList build() {
+                return new ScaleRuleList(this);
+            } 
+
+        } 
+
+    }
 }

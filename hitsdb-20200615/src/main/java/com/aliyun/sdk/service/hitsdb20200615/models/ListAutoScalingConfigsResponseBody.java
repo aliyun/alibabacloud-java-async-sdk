@@ -689,6 +689,9 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecId")
         private String specId;
 
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityMax")
+        private Long storageCapacityMax;
+
         private ScaleConfigs(Builder builder) {
             this.configId = builder.configId;
             this.configName = builder.configName;
@@ -702,6 +705,7 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
             this.scaleRuleList = builder.scaleRuleList;
             this.scaleType = builder.scaleType;
             this.specId = builder.specId;
+            this.storageCapacityMax = builder.storageCapacityMax;
         }
 
         public static Builder builder() {
@@ -796,6 +800,13 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
             return this.specId;
         }
 
+        /**
+         * @return storageCapacityMax
+         */
+        public Long getStorageCapacityMax() {
+            return this.storageCapacityMax;
+        }
+
         public static final class Builder {
             private String configId; 
             private String configName; 
@@ -809,6 +820,7 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
             private java.util.List<ScaleRuleList> scaleRuleList; 
             private String scaleType; 
             private String specId; 
+            private Long storageCapacityMax; 
 
             private Builder() {
             } 
@@ -826,6 +838,7 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
                 this.scaleRuleList = model.scaleRuleList;
                 this.scaleType = model.scaleType;
                 this.specId = model.specId;
+                this.storageCapacityMax = model.storageCapacityMax;
             } 
 
             /**
@@ -921,6 +934,14 @@ public class ListAutoScalingConfigsResponseBody extends TeaModel {
              */
             public Builder specId(String specId) {
                 this.specId = specId;
+                return this;
+            }
+
+            /**
+             * StorageCapacityMax.
+             */
+            public Builder storageCapacityMax(Long storageCapacityMax) {
+                this.storageCapacityMax = storageCapacityMax;
                 return this;
             }
 

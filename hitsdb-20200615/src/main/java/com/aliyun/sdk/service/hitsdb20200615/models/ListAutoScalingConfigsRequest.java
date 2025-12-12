@@ -45,6 +45,10 @@ public class ListAutoScalingConfigsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleTypes")
+    private java.util.List<String> scaleTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -56,6 +60,7 @@ public class ListAutoScalingConfigsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleTypes = builder.scaleTypes;
         this.securityToken = builder.securityToken;
     }
 
@@ -115,6 +120,13 @@ public class ListAutoScalingConfigsRequest extends Request {
     }
 
     /**
+     * @return scaleTypes
+     */
+    public java.util.List<String> getScaleTypes() {
+        return this.scaleTypes;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -128,6 +140,7 @@ public class ListAutoScalingConfigsRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List<String> scaleTypes; 
         private String securityToken; 
 
         private Builder() {
@@ -142,6 +155,7 @@ public class ListAutoScalingConfigsRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleTypes = request.scaleTypes;
             this.securityToken = request.securityToken;
         } 
 
@@ -196,6 +210,16 @@ public class ListAutoScalingConfigsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScaleTypes.
+         */
+        public Builder scaleTypes(java.util.List<String> scaleTypes) {
+            String scaleTypesShrink = shrink(scaleTypes, "ScaleTypes", "json");
+            this.putQueryParameter("ScaleTypes", scaleTypesShrink);
+            this.scaleTypes = scaleTypes;
             return this;
         }
 

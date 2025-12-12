@@ -423,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLindormV2InstanceParameterResponse> updateLindormV2InstanceParameter(UpdateLindormV2InstanceParameterRequest request);
 
     /**
+     * @param request the request parameters of UpdateLindormV2WhiteIpList  UpdateLindormV2WhiteIpListRequest
+     * @return UpdateLindormV2WhiteIpListResponse
+     */
+    CompletableFuture<UpdateLindormV2WhiteIpListResponse> updateLindormV2WhiteIpList(UpdateLindormV2WhiteIpListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
      * 

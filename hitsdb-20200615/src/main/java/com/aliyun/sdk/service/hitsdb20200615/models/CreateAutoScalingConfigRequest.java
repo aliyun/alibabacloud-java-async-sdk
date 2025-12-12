@@ -92,6 +92,10 @@ public class CreateAutoScalingConfigRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String specId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityMax")
+    private Long storageCapacityMax;
+
     private CreateAutoScalingConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -111,6 +115,7 @@ public class CreateAutoScalingConfigRequest extends Request {
         this.scaleType = builder.scaleType;
         this.securityToken = builder.securityToken;
         this.specId = builder.specId;
+        this.storageCapacityMax = builder.storageCapacityMax;
     }
 
     public static Builder builder() {
@@ -245,6 +250,13 @@ public class CreateAutoScalingConfigRequest extends Request {
         return this.specId;
     }
 
+    /**
+     * @return storageCapacityMax
+     */
+    public Long getStorageCapacityMax() {
+        return this.storageCapacityMax;
+    }
+
     public static final class Builder extends Request.Builder<CreateAutoScalingConfigRequest, Builder> {
         private String regionId; 
         private String configName; 
@@ -263,6 +275,7 @@ public class CreateAutoScalingConfigRequest extends Request {
         private String scaleType; 
         private String securityToken; 
         private String specId; 
+        private Long storageCapacityMax; 
 
         private Builder() {
             super();
@@ -287,6 +300,7 @@ public class CreateAutoScalingConfigRequest extends Request {
             this.scaleType = request.scaleType;
             this.securityToken = request.securityToken;
             this.specId = request.specId;
+            this.storageCapacityMax = request.storageCapacityMax;
         } 
 
         /**
@@ -440,6 +454,15 @@ public class CreateAutoScalingConfigRequest extends Request {
         public Builder specId(String specId) {
             this.putQueryParameter("SpecId", specId);
             this.specId = specId;
+            return this;
+        }
+
+        /**
+         * StorageCapacityMax.
+         */
+        public Builder storageCapacityMax(Long storageCapacityMax) {
+            this.putQueryParameter("StorageCapacityMax", storageCapacityMax);
+            this.storageCapacityMax = storageCapacityMax;
             return this;
         }
 

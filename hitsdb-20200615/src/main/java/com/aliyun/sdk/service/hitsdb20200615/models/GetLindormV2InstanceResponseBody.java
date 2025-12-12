@@ -935,6 +935,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableAttachLocalDisk")
         private Boolean enableAttachLocalDisk;
 
+        @com.aliyun.core.annotation.NameInMap("IsScaleSpecGroup")
+        private Boolean isScaleSpecGroup;
+
         @com.aliyun.core.annotation.NameInMap("LocalDiskCapacity")
         private Long localDiskCapacity;
 
@@ -963,6 +966,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             this.category = builder.category;
             this.cpuCoreCount = builder.cpuCoreCount;
             this.enableAttachLocalDisk = builder.enableAttachLocalDisk;
+            this.isScaleSpecGroup = builder.isScaleSpecGroup;
             this.localDiskCapacity = builder.localDiskCapacity;
             this.localDiskCategory = builder.localDiskCategory;
             this.memorySizeGiB = builder.memorySizeGiB;
@@ -1000,6 +1004,13 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public Boolean getEnableAttachLocalDisk() {
             return this.enableAttachLocalDisk;
+        }
+
+        /**
+         * @return isScaleSpecGroup
+         */
+        public Boolean getIsScaleSpecGroup() {
+            return this.isScaleSpecGroup;
         }
 
         /**
@@ -1062,6 +1073,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             private String category; 
             private Integer cpuCoreCount; 
             private Boolean enableAttachLocalDisk; 
+            private Boolean isScaleSpecGroup; 
             private Long localDiskCapacity; 
             private String localDiskCategory; 
             private Integer memorySizeGiB; 
@@ -1078,6 +1090,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
                 this.category = model.category;
                 this.cpuCoreCount = model.cpuCoreCount;
                 this.enableAttachLocalDisk = model.enableAttachLocalDisk;
+                this.isScaleSpecGroup = model.isScaleSpecGroup;
                 this.localDiskCapacity = model.localDiskCapacity;
                 this.localDiskCategory = model.localDiskCategory;
                 this.memorySizeGiB = model.memorySizeGiB;
@@ -1109,6 +1122,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
              */
             public Builder enableAttachLocalDisk(Boolean enableAttachLocalDisk) {
                 this.enableAttachLocalDisk = enableAttachLocalDisk;
+                return this;
+            }
+
+            /**
+             * IsScaleSpecGroup.
+             */
+            public Builder isScaleSpecGroup(Boolean isScaleSpecGroup) {
+                this.isScaleSpecGroup = isScaleSpecGroup;
                 return this;
             }
 
