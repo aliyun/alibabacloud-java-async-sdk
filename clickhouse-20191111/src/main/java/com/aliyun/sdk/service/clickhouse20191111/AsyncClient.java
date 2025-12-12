@@ -26,6 +26,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of CancelAppointmentElectZookeeperLeader  CancelAppointmentElectZookeeperLeaderRequest
+     * @return CancelAppointmentElectZookeeperLeaderResponse
+     */
+    CompletableFuture<CancelAppointmentElectZookeeperLeaderResponse> cancelAppointmentElectZookeeperLeader(CancelAppointmentElectZookeeperLeaderRequest request);
+
+    /**
+     * @param request the request parameters of CancelAppointmentRestartInstanceNodeList  CancelAppointmentRestartInstanceNodeListRequest
+     * @return CancelAppointmentRestartInstanceNodeListResponse
+     */
+    CompletableFuture<CancelAppointmentRestartInstanceNodeListResponse> cancelAppointmentRestartInstanceNodeList(CancelAppointmentRestartInstanceNodeListRequest request);
+
+    /**
      * @param request the request parameters of CancelRestartInstance  CancelRestartInstanceRequest
      * @return CancelRestartInstanceResponse
      */
@@ -223,6 +241,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeActiveOperationMaintainConf  DescribeActiveOperationMaintainConfRequest
+     * @return DescribeActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintainConfResponse> describeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
+     * @return DescribeActiveOperationTasksResponse
+     */
+    CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
+
+    /**
      * @param request the request parameters of DescribeAllDataSource  DescribeAllDataSourceRequest
      * @return DescribeAllDataSourceResponse
      */
@@ -326,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterNetInfoItemsResponse> describeDBClusterNetInfoItems(DescribeDBClusterNetInfoItemsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterNodeInfos  DescribeDBClusterNodeInfosRequest
+     * @return DescribeDBClusterNodeInfosResponse
+     */
+    CompletableFuture<DescribeDBClusterNodeInfosResponse> describeDBClusterNodeInfos(DescribeDBClusterNodeInfosRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can query the performance data of a specified cluster over a specific time range based on the performance metrics. The data is collected every 30 seconds.</p>
      * <blockquote>
@@ -338,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterStatusSet  DescribeDBClusterStatusSetRequest
+     * @return DescribeDBClusterStatusSetResponse
+     */
+    CompletableFuture<DescribeDBClusterStatusSetResponse> describeDBClusterStatusSet(DescribeDBClusterStatusSetRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusters  DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
      */
@@ -348,6 +390,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBConfigResponse
      */
     CompletableFuture<DescribeDBConfigResponse> describeDBConfig(DescribeDBConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEventMetaInfo  DescribeEventMetaInfoRequest
+     * @return DescribeEventMetaInfoResponse
+     */
+    CompletableFuture<DescribeEventMetaInfoResponse> describeEventMetaInfo(DescribeEventMetaInfoRequest request);
 
     /**
      * @param request the request parameters of DescribeOSSStorage  DescribeOSSStorageRequest
@@ -415,10 +463,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTransferHistoryResponse> describeTransferHistory(DescribeTransferHistoryRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserEncryptionKeyList  DescribeUserEncryptionKeyListRequest
+     * @return DescribeUserEncryptionKeyListResponse
+     */
+    CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
+
+    /**
+     * @param request the request parameters of ElectZookeeperLeader  ElectZookeeperLeaderRequest
+     * @return ElectZookeeperLeaderResponse
+     */
+    CompletableFuture<ElectZookeeperLeaderResponse> electZookeeperLeader(ElectZookeeperLeaderRequest request);
+
+    /**
      * @param request the request parameters of KillProcess  KillProcessRequest
      * @return KillProcessResponse
      */
     CompletableFuture<KillProcessResponse> killProcess(KillProcessRequest request);
+
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
      * @param request the request parameters of ModifyAccountAuthority  ModifyAccountAuthorityRequest
@@ -431,6 +497,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccountDescriptionResponse
      */
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationMaintainConf  ModifyActiveOperationMaintainConfRequest
+     * @return ModifyActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<ModifyActiveOperationMaintainConfResponse> modifyActiveOperationMaintainConf(ModifyActiveOperationMaintainConfRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
+     * @return ModifyActiveOperationTasksResponse
+     */
+    CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     /**
      * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest
@@ -532,6 +610,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
     /**
+     * @param request the request parameters of RestartInstanceNodeList  RestartInstanceNodeListRequest
+     * @return RestartInstanceNodeListResponse
+     */
+    CompletableFuture<RestartInstanceNodeListResponse> restartInstanceNodeList(RestartInstanceNodeListRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Prerequisites</h2>
      * <ul>
@@ -546,6 +636,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TransferVersionResponse
      */
     CompletableFuture<TransferVersionResponse> transferVersion(TransferVersionRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * <b>description</b> :
