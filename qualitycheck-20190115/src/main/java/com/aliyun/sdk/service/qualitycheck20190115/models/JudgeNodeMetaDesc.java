@@ -23,6 +23,9 @@ public class JudgeNodeMetaDesc extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataType")
     private Integer dataType;
 
+    @com.aliyun.core.annotation.NameInMap("ExpressionMetaDesc")
+    private ExpressionMetaDesc expressionMetaDesc;
+
     @com.aliyun.core.annotation.NameInMap("Field")
     private String field;
 
@@ -38,6 +41,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
     private JudgeNodeMetaDesc(Builder builder) {
         this.actualValue = builder.actualValue;
         this.dataType = builder.dataType;
+        this.expressionMetaDesc = builder.expressionMetaDesc;
         this.field = builder.field;
         this.fieldType = builder.fieldType;
         this.symbol = builder.symbol;
@@ -71,6 +75,13 @@ public class JudgeNodeMetaDesc extends TeaModel {
     }
 
     /**
+     * @return expressionMetaDesc
+     */
+    public ExpressionMetaDesc getExpressionMetaDesc() {
+        return this.expressionMetaDesc;
+    }
+
+    /**
      * @return field
      */
     public String getField() {
@@ -101,6 +112,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
     public static final class Builder {
         private String actualValue; 
         private Integer dataType; 
+        private ExpressionMetaDesc expressionMetaDesc; 
         private String field; 
         private Integer fieldType; 
         private Integer symbol; 
@@ -112,6 +124,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         private Builder(JudgeNodeMetaDesc model) {
             this.actualValue = model.actualValue;
             this.dataType = model.dataType;
+            this.expressionMetaDesc = model.expressionMetaDesc;
             this.field = model.field;
             this.fieldType = model.fieldType;
             this.symbol = model.symbol;
@@ -131,6 +144,14 @@ public class JudgeNodeMetaDesc extends TeaModel {
          */
         public Builder dataType(Integer dataType) {
             this.dataType = dataType;
+            return this;
+        }
+
+        /**
+         * ExpressionMetaDesc.
+         */
+        public Builder expressionMetaDesc(ExpressionMetaDesc expressionMetaDesc) {
+            this.expressionMetaDesc = expressionMetaDesc;
             return this;
         }
 
@@ -172,4 +193,163 @@ public class JudgeNodeMetaDesc extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link JudgeNodeMetaDesc} extends {@link TeaModel}
+     *
+     * <p>JudgeNodeMetaDesc</p>
+     */
+    public static class ExpressionMetaDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LeftFieldType")
+        private Integer leftFieldType;
+
+        @com.aliyun.core.annotation.NameInMap("LeftOperand")
+        private String leftOperand;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("RightFieldType")
+        private Integer rightFieldType;
+
+        @com.aliyun.core.annotation.NameInMap("RightOperand")
+        private String rightOperand;
+
+        @com.aliyun.core.annotation.NameInMap("RoundingMode")
+        private String roundingMode;
+
+        private ExpressionMetaDesc(Builder builder) {
+            this.leftFieldType = builder.leftFieldType;
+            this.leftOperand = builder.leftOperand;
+            this.operator = builder.operator;
+            this.rightFieldType = builder.rightFieldType;
+            this.rightOperand = builder.rightOperand;
+            this.roundingMode = builder.roundingMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpressionMetaDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return leftFieldType
+         */
+        public Integer getLeftFieldType() {
+            return this.leftFieldType;
+        }
+
+        /**
+         * @return leftOperand
+         */
+        public String getLeftOperand() {
+            return this.leftOperand;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return rightFieldType
+         */
+        public Integer getRightFieldType() {
+            return this.rightFieldType;
+        }
+
+        /**
+         * @return rightOperand
+         */
+        public String getRightOperand() {
+            return this.rightOperand;
+        }
+
+        /**
+         * @return roundingMode
+         */
+        public String getRoundingMode() {
+            return this.roundingMode;
+        }
+
+        public static final class Builder {
+            private Integer leftFieldType; 
+            private String leftOperand; 
+            private String operator; 
+            private Integer rightFieldType; 
+            private String rightOperand; 
+            private String roundingMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpressionMetaDesc model) {
+                this.leftFieldType = model.leftFieldType;
+                this.leftOperand = model.leftOperand;
+                this.operator = model.operator;
+                this.rightFieldType = model.rightFieldType;
+                this.rightOperand = model.rightOperand;
+                this.roundingMode = model.roundingMode;
+            } 
+
+            /**
+             * LeftFieldType.
+             */
+            public Builder leftFieldType(Integer leftFieldType) {
+                this.leftFieldType = leftFieldType;
+                return this;
+            }
+
+            /**
+             * LeftOperand.
+             */
+            public Builder leftOperand(String leftOperand) {
+                this.leftOperand = leftOperand;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * RightFieldType.
+             */
+            public Builder rightFieldType(Integer rightFieldType) {
+                this.rightFieldType = rightFieldType;
+                return this;
+            }
+
+            /**
+             * RightOperand.
+             */
+            public Builder rightOperand(String rightOperand) {
+                this.rightOperand = rightOperand;
+                return this;
+            }
+
+            /**
+             * RoundingMode.
+             */
+            public Builder roundingMode(String roundingMode) {
+                this.roundingMode = roundingMode;
+                return this;
+            }
+
+            public ExpressionMetaDesc build() {
+                return new ExpressionMetaDesc(this);
+            } 
+
+        } 
+
+    }
 }
