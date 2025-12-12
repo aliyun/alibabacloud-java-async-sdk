@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
     /**
+     * @param request the request parameters of CancelKyuubiSparkApplication  CancelKyuubiSparkApplicationRequest
+     * @return CancelKyuubiSparkApplicationResponse
+     */
+    CompletableFuture<CancelKyuubiSparkApplicationResponse> cancelKyuubiSparkApplication(CancelKyuubiSparkApplicationRequest request);
+
+    /**
+     * @param request the request parameters of CreateKyuubiService  CreateKyuubiServiceRequest
+     * @return CreateKyuubiServiceResponse
+     */
+    CompletableFuture<CreateKyuubiServiceResponse> createKyuubiService(CreateKyuubiServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateKyuubiToken  CreateKyuubiTokenRequest
      * @return CreateKyuubiTokenResponse
      */
@@ -74,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of DeleteKyuubiService  DeleteKyuubiServiceRequest
+     * @return DeleteKyuubiServiceResponse
+     */
+    CompletableFuture<DeleteKyuubiServiceResponse> deleteKyuubiService(DeleteKyuubiServiceRequest request);
+
+    /**
      * @param request the request parameters of DeleteKyuubiToken  DeleteKyuubiTokenRequest
      * @return DeleteKyuubiTokenResponse
      */
@@ -98,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EditWorkspaceQueueResponse> editWorkspaceQueue(EditWorkspaceQueueRequest request);
 
     /**
+     * @param request the request parameters of GenerateTaskCodes  GenerateTaskCodesRequest
+     * @return GenerateTaskCodesResponse
+     */
+    CompletableFuture<GenerateTaskCodesResponse> generateTaskCodes(GenerateTaskCodesRequest request);
+
+    /**
      * @param request the request parameters of GetCuHours  GetCuHoursRequest
      * @return GetCuHoursResponse
      */
@@ -116,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
 
     /**
+     * @param request the request parameters of GetKyuubiService  GetKyuubiServiceRequest
+     * @return GetKyuubiServiceResponse
+     */
+    CompletableFuture<GetKyuubiServiceResponse> getKyuubiService(GetKyuubiServiceRequest request);
+
+    /**
      * @param request the request parameters of GetKyuubiToken  GetKyuubiTokenRequest
      * @return GetKyuubiTokenResponse
      */
@@ -132,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLivyComputeTokenResponse
      */
     CompletableFuture<GetLivyComputeTokenResponse> getLivyComputeToken(GetLivyComputeTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
+     * @return GetRunConfigurationResponse
+     */
+    CompletableFuture<GetRunConfigurationResponse> getRunConfiguration(GetRunConfigurationRequest request);
 
     /**
      * @param request the request parameters of GetSessionCluster  GetSessionClusterRequest
@@ -266,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartJobRunResponse> startJobRun(StartJobRunRequest request);
 
     /**
+     * @param request the request parameters of StartKyuubiService  StartKyuubiServiceRequest
+     * @return StartKyuubiServiceResponse
+     */
+    CompletableFuture<StartKyuubiServiceResponse> startKyuubiService(StartKyuubiServiceRequest request);
+
+    /**
      * @param request the request parameters of StartLivyCompute  StartLivyComputeRequest
      * @return StartLivyComputeResponse
      */
@@ -284,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of StopKyuubiService  StopKyuubiServiceRequest
+     * @return StopKyuubiServiceResponse
+     */
+    CompletableFuture<StopKyuubiServiceResponse> stopKyuubiService(StopKyuubiServiceRequest request);
+
+    /**
      * @param request the request parameters of StopLivyCompute  StopLivyComputeRequest
      * @return StopLivyComputeResponse
      */
@@ -300,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TerminateSqlStatementResponse
      */
     CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKyuubiService  UpdateKyuubiServiceRequest
+     * @return UpdateKyuubiServiceResponse
+     */
+    CompletableFuture<UpdateKyuubiServiceResponse> updateKyuubiService(UpdateKyuubiServiceRequest request);
 
     /**
      * @param request the request parameters of UpdateKyuubiToken  UpdateKyuubiTokenRequest
