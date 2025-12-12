@@ -48,6 +48,10 @@ public class SemanticQueryRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceURI")
+    private String sourceURI;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
     private java.util.List<String> withFields;
 
@@ -60,6 +64,7 @@ public class SemanticQueryRequest extends Request {
         this.nextToken = builder.nextToken;
         this.projectName = builder.projectName;
         this.query = builder.query;
+        this.sourceURI = builder.sourceURI;
         this.withFields = builder.withFields;
     }
 
@@ -126,6 +131,13 @@ public class SemanticQueryRequest extends Request {
     }
 
     /**
+     * @return sourceURI
+     */
+    public String getSourceURI() {
+        return this.sourceURI;
+    }
+
+    /**
      * @return withFields
      */
     public java.util.List<String> getWithFields() {
@@ -140,6 +152,7 @@ public class SemanticQueryRequest extends Request {
         private String nextToken; 
         private String projectName; 
         private String query; 
+        private String sourceURI; 
         private java.util.List<String> withFields; 
 
         private Builder() {
@@ -155,6 +168,7 @@ public class SemanticQueryRequest extends Request {
             this.nextToken = request.nextToken;
             this.projectName = request.projectName;
             this.query = request.query;
+            this.sourceURI = request.sourceURI;
             this.withFields = request.withFields;
         } 
 
@@ -234,6 +248,15 @@ public class SemanticQueryRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * SourceURI.
+         */
+        public Builder sourceURI(String sourceURI) {
+            this.putQueryParameter("SourceURI", sourceURI);
+            this.sourceURI = sourceURI;
             return this;
         }
 
