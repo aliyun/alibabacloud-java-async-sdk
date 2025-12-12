@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AttachWhitelistTemplateToInstance  AttachWhitelistTemplateToInstanceRequest
+     * @return AttachWhitelistTemplateToInstanceResponse
+     */
+    CompletableFuture<AttachWhitelistTemplateToInstanceResponse> attachWhitelistTemplateToInstance(AttachWhitelistTemplateToInstanceRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -84,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEndpointResponse
      */
     CompletableFuture<DeleteEndpointResponse> deleteEndpoint(DeleteEndpointRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWhitelistTemplate  DeleteWhitelistTemplateRequest
+     * @return DeleteWhitelistTemplateResponse
+     */
+    CompletableFuture<DeleteWhitelistTemplateResponse> deleteWhitelistTemplate(DeleteWhitelistTemplateRequest request);
 
     /**
      * @param request the request parameters of DescribeAccountAuthority  DescribeAccountAuthorityRequest
@@ -170,10 +182,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowLogTrendResponse> describeSlowLogTrend(DescribeSlowLogTrendRequest request);
 
     /**
+     * @param request the request parameters of DetachWhitelistTemplateToInstance  DetachWhitelistTemplateToInstanceRequest
+     * @return DetachWhitelistTemplateToInstanceResponse
+     */
+    CompletableFuture<DetachWhitelistTemplateToInstanceResponse> detachWhitelistTemplateToInstance(DetachWhitelistTemplateToInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetWhitelistTemplate  GetWhitelistTemplateRequest
+     * @return GetWhitelistTemplateResponse
+     */
+    CompletableFuture<GetWhitelistTemplateResponse> getWhitelistTemplate(GetWhitelistTemplateRequest request);
+
+    /**
      * @param request the request parameters of KillProcess  KillProcessRequest
      * @return KillProcessResponse
      */
     CompletableFuture<KillProcessResponse> killProcess(KillProcessRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceLinkedWhitelistTemplates  ListInstanceLinkedWhitelistTemplatesRequest
+     * @return ListInstanceLinkedWhitelistTemplatesResponse
+     */
+    CompletableFuture<ListInstanceLinkedWhitelistTemplatesResponse> listInstanceLinkedWhitelistTemplates(ListInstanceLinkedWhitelistTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListWhitelistTemplates  ListWhitelistTemplatesRequest
+     * @return ListWhitelistTemplatesResponse
+     */
+    CompletableFuture<ListWhitelistTemplatesResponse> listWhitelistTemplates(ListWhitelistTemplatesRequest request);
 
     /**
      * @param request the request parameters of ModifyAccountAuthority  ModifyAccountAuthorityRequest
@@ -246,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopDBInstanceResponse
      */
     CompletableFuture<StopDBInstanceResponse> stopDBInstance(StopDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWhitelistTemplate  UpdateWhitelistTemplateRequest
+     * @return UpdateWhitelistTemplateResponse
+     */
+    CompletableFuture<UpdateWhitelistTemplateResponse> updateWhitelistTemplate(UpdateWhitelistTemplateRequest request);
 
     /**
      * @param request the request parameters of UpgradeMinorVersion  UpgradeMinorVersionRequest
