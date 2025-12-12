@@ -888,7 +888,14 @@ public class InitFaceVerifyRequest extends Request {
         }
 
         /**
-         * H5DegradeConfirmBtn.
+         * <p>H5 Downgrade Confirmation Button Switch:</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enabled (On)</li>
+         * <li><strong>N (default)</strong>: Disabled (Off)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder h5DegradeConfirmBtn(String h5DegradeConfirmBtn) {
             this.putQueryParameter("H5DegradeConfirmBtn", h5DegradeConfirmBtn);

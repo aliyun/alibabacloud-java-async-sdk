@@ -122,6 +122,12 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
+        @com.aliyun.core.annotation.NameInMap("ReturnPicCount")
+        private Long returnPicCount;
+
+        @com.aliyun.core.annotation.NameInMap("ReturnVideoLength")
+        private Long returnVideoLength;
+
         @com.aliyun.core.annotation.NameInMap("SceneId")
         private Long sceneId;
 
@@ -146,6 +152,8 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             this.miniProgramName = builder.miniProgramName;
             this.modifier = builder.modifier;
             this.platform = builder.platform;
+            this.returnPicCount = builder.returnPicCount;
+            this.returnVideoLength = builder.returnVideoLength;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
             this.status = builder.status;
@@ -218,6 +226,20 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         }
 
         /**
+         * @return returnPicCount
+         */
+        public Long getReturnPicCount() {
+            return this.returnPicCount;
+        }
+
+        /**
+         * @return returnVideoLength
+         */
+        public Long getReturnVideoLength() {
+            return this.returnVideoLength;
+        }
+
+        /**
          * @return sceneId
          */
         public Long getSceneId() {
@@ -261,6 +283,8 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             private String miniProgramName; 
             private String modifier; 
             private String platform; 
+            private Long returnPicCount; 
+            private Long returnVideoLength; 
             private Long sceneId; 
             private String sceneName; 
             private Integer status; 
@@ -279,6 +303,8 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
                 this.miniProgramName = model.miniProgramName;
                 this.modifier = model.modifier;
                 this.platform = model.platform;
+                this.returnPicCount = model.returnPicCount;
+                this.returnVideoLength = model.returnVideoLength;
                 this.sceneId = model.sceneId;
                 this.sceneName = model.sceneName;
                 this.status = model.status;
@@ -380,6 +406,22 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
              */
             public Builder platform(String platform) {
                 this.platform = platform;
+                return this;
+            }
+
+            /**
+             * ReturnPicCount.
+             */
+            public Builder returnPicCount(Long returnPicCount) {
+                this.returnPicCount = returnPicCount;
+                return this;
+            }
+
+            /**
+             * ReturnVideoLength.
+             */
+            public Builder returnVideoLength(Long returnVideoLength) {
+                this.returnVideoLength = returnVideoLength;
                 return this;
             }
 

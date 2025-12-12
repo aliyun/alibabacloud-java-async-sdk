@@ -38,6 +38,14 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
     private String platform;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnPicCount")
+    private Long returnPicCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnVideoLength")
+    private Long returnVideoLength;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long sceneId;
@@ -61,6 +69,8 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         this.checkFileName = builder.checkFileName;
         this.miniProgramName = builder.miniProgramName;
         this.platform = builder.platform;
+        this.returnPicCount = builder.returnPicCount;
+        this.returnVideoLength = builder.returnVideoLength;
         this.sceneId = builder.sceneId;
         this.sceneName = builder.sceneName;
         this.status = builder.status;
@@ -116,6 +126,20 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
     }
 
     /**
+     * @return returnPicCount
+     */
+    public Long getReturnPicCount() {
+        return this.returnPicCount;
+    }
+
+    /**
+     * @return returnVideoLength
+     */
+    public Long getReturnVideoLength() {
+        return this.returnVideoLength;
+    }
+
+    /**
      * @return sceneId
      */
     public Long getSceneId() {
@@ -149,6 +173,8 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         private String checkFileName; 
         private String miniProgramName; 
         private String platform; 
+        private Long returnPicCount; 
+        private Long returnVideoLength; 
         private Long sceneId; 
         private String sceneName; 
         private Integer status; 
@@ -165,6 +191,8 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
             this.checkFileName = request.checkFileName;
             this.miniProgramName = request.miniProgramName;
             this.platform = request.platform;
+            this.returnPicCount = request.returnPicCount;
+            this.returnVideoLength = request.returnVideoLength;
             this.sceneId = request.sceneId;
             this.sceneName = request.sceneName;
             this.status = request.status;
@@ -240,6 +268,24 @@ public class UpdateAntCloudAuthSceneRequest extends Request {
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
             this.platform = platform;
+            return this;
+        }
+
+        /**
+         * ReturnPicCount.
+         */
+        public Builder returnPicCount(Long returnPicCount) {
+            this.putQueryParameter("ReturnPicCount", returnPicCount);
+            this.returnPicCount = returnPicCount;
+            return this;
+        }
+
+        /**
+         * ReturnVideoLength.
+         */
+        public Builder returnVideoLength(Long returnVideoLength) {
+            this.putQueryParameter("ReturnVideoLength", returnVideoLength);
+            this.returnVideoLength = returnVideoLength;
             return this;
         }
 
