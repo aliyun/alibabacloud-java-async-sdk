@@ -35,6 +35,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -47,6 +51,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
     private java.util.List<SearchCriteriaList> searchCriteriaList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -56,9 +64,11 @@ public class GetAssetsPropertyDetailRequest extends Request {
         this.currentPage = builder.currentPage;
         this.itemName = builder.itemName;
         this.lang = builder.lang;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.searchCriteriaList = builder.searchCriteriaList;
+        this.useNextToken = builder.useNextToken;
         this.uuid = builder.uuid;
     }
 
@@ -104,6 +114,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -125,6 +142,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -136,9 +160,11 @@ public class GetAssetsPropertyDetailRequest extends Request {
         private Integer currentPage; 
         private String itemName; 
         private String lang; 
+        private String nextToken; 
         private Integer pageSize; 
         private String remark; 
         private java.util.List<SearchCriteriaList> searchCriteriaList; 
+        private Boolean useNextToken; 
         private String uuid; 
 
         private Builder() {
@@ -151,9 +177,11 @@ public class GetAssetsPropertyDetailRequest extends Request {
             this.currentPage = request.currentPage;
             this.itemName = request.itemName;
             this.lang = request.lang;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.searchCriteriaList = request.searchCriteriaList;
+            this.useNextToken = request.useNextToken;
             this.uuid = request.uuid;
         } 
 
@@ -219,6 +247,15 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
          * <blockquote>
          * <p>We recommend that you do not leave this parameter empty.</p>
@@ -251,6 +288,15 @@ public class GetAssetsPropertyDetailRequest extends Request {
         public Builder searchCriteriaList(java.util.List<SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
             this.searchCriteriaList = searchCriteriaList;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

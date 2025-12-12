@@ -38,6 +38,10 @@ public class DescribePropertyScaDetailRequest extends Request {
     private Long name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -90,6 +94,10 @@ public class DescribePropertyScaDetailRequest extends Request {
     private String searchItemSub;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
@@ -104,6 +112,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.pid = builder.pid;
         this.port = builder.port;
@@ -117,6 +126,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         this.searchInfoSub = builder.searchInfoSub;
         this.searchItem = builder.searchItem;
         this.searchItemSub = builder.searchItemSub;
+        this.useNextToken = builder.useNextToken;
         this.user = builder.user;
         this.uuid = builder.uuid;
     }
@@ -167,6 +177,13 @@ public class DescribePropertyScaDetailRequest extends Request {
      */
     public Long getName() {
         return this.name;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -261,6 +278,13 @@ public class DescribePropertyScaDetailRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return user
      */
     public String getUser() {
@@ -280,6 +304,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         private Integer currentPage; 
         private String lang; 
         private Long name; 
+        private String nextToken; 
         private Integer pageSize; 
         private String pid; 
         private String port; 
@@ -293,6 +318,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         private String searchInfoSub; 
         private String searchItem; 
         private String searchItemSub; 
+        private Boolean useNextToken; 
         private String user; 
         private String uuid; 
 
@@ -307,6 +333,7 @@ public class DescribePropertyScaDetailRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.pid = request.pid;
             this.port = request.port;
@@ -320,6 +347,7 @@ public class DescribePropertyScaDetailRequest extends Request {
             this.searchInfoSub = request.searchInfoSub;
             this.searchItem = request.searchItem;
             this.searchItemSub = request.searchItemSub;
+            this.useNextToken = request.useNextToken;
             this.user = request.user;
             this.uuid = request.uuid;
         } 
@@ -405,6 +433,15 @@ public class DescribePropertyScaDetailRequest extends Request {
         public Builder name(Long name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -607,6 +644,15 @@ public class DescribePropertyScaDetailRequest extends Request {
         public Builder searchItemSub(String searchItemSub) {
             this.putQueryParameter("SearchItemSub", searchItemSub);
             this.searchItemSub = searchItemSub;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

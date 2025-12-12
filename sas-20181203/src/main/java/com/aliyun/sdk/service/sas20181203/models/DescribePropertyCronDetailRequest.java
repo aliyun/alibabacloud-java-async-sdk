@@ -26,6 +26,10 @@ public class DescribePropertyCronDetailRequest extends Request {
     private String extend;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -36,6 +40,10 @@ public class DescribePropertyCronDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
@@ -49,9 +57,11 @@ public class DescribePropertyCronDetailRequest extends Request {
         super(builder);
         this.currentPage = builder.currentPage;
         this.extend = builder.extend;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.source = builder.source;
+        this.useNextToken = builder.useNextToken;
         this.user = builder.user;
         this.uuid = builder.uuid;
     }
@@ -84,6 +94,13 @@ public class DescribePropertyCronDetailRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -105,6 +122,13 @@ public class DescribePropertyCronDetailRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return user
      */
     public String getUser() {
@@ -121,9 +145,11 @@ public class DescribePropertyCronDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePropertyCronDetailRequest, Builder> {
         private Integer currentPage; 
         private String extend; 
+        private String nextToken; 
         private Integer pageSize; 
         private String remark; 
         private String source; 
+        private Boolean useNextToken; 
         private String user; 
         private String uuid; 
 
@@ -135,9 +161,11 @@ public class DescribePropertyCronDetailRequest extends Request {
             super(request);
             this.currentPage = request.currentPage;
             this.extend = request.extend;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.source = request.source;
+            this.useNextToken = request.useNextToken;
             this.user = request.user;
             this.uuid = request.uuid;
         } 
@@ -163,6 +191,15 @@ public class DescribePropertyCronDetailRequest extends Request {
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
             this.extend = extend;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -199,6 +236,15 @@ public class DescribePropertyCronDetailRequest extends Request {
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
             this.source = source;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

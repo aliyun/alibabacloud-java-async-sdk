@@ -38,12 +38,20 @@ public class DescribePropertyUserDetailRequest extends Request {
     private Long lastLoginTimeStart;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
@@ -60,8 +68,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         this.isRoot = builder.isRoot;
         this.lastLoginTimeEnd = builder.lastLoginTimeEnd;
         this.lastLoginTimeStart = builder.lastLoginTimeStart;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
+        this.useNextToken = builder.useNextToken;
         this.user = builder.user;
         this.uuid = builder.uuid;
     }
@@ -115,6 +125,13 @@ public class DescribePropertyUserDetailRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -126,6 +143,13 @@ public class DescribePropertyUserDetailRequest extends Request {
      */
     public String getRemark() {
         return this.remark;
+    }
+
+    /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     /**
@@ -148,8 +172,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         private String isRoot; 
         private Long lastLoginTimeEnd; 
         private Long lastLoginTimeStart; 
+        private String nextToken; 
         private Integer pageSize; 
         private String remark; 
+        private Boolean useNextToken; 
         private String user; 
         private String uuid; 
 
@@ -164,8 +190,10 @@ public class DescribePropertyUserDetailRequest extends Request {
             this.isRoot = request.isRoot;
             this.lastLoginTimeEnd = request.lastLoginTimeEnd;
             this.lastLoginTimeStart = request.lastLoginTimeStart;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
+            this.useNextToken = request.useNextToken;
             this.user = request.user;
             this.uuid = request.uuid;
         } 
@@ -235,6 +263,15 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -255,6 +292,15 @@ public class DescribePropertyUserDetailRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

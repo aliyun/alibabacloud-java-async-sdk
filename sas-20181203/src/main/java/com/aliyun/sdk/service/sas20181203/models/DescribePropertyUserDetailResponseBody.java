@@ -125,6 +125,9 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
@@ -134,6 +137,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         private PageInfo(Builder builder) {
             this.count = builder.count;
             this.currentPage = builder.currentPage;
+            this.nextToken = builder.nextToken;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
         }
@@ -161,6 +165,13 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
          * @return pageSize
          */
         public Integer getPageSize() {
@@ -177,6 +188,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private Integer currentPage; 
+            private String nextToken; 
             private Integer pageSize; 
             private Integer totalCount; 
 
@@ -186,6 +198,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private Builder(PageInfo model) {
                 this.count = model.count;
                 this.currentPage = model.currentPage;
+                this.nextToken = model.nextToken;
                 this.pageSize = model.pageSize;
                 this.totalCount = model.totalCount;
             } 
@@ -209,6 +222,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 

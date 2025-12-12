@@ -34,6 +34,10 @@ public class DescribePropertyProcDetailRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -54,6 +58,10 @@ public class DescribePropertyProcDetailRequest extends Request {
     private Long resourceDirectoryAccountId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
@@ -67,11 +75,13 @@ public class DescribePropertyProcDetailRequest extends Request {
         this.currentPage = builder.currentPage;
         this.extend = builder.extend;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.procTimeEnd = builder.procTimeEnd;
         this.procTimeStart = builder.procTimeStart;
         this.remark = builder.remark;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.useNextToken = builder.useNextToken;
         this.user = builder.user;
         this.uuid = builder.uuid;
     }
@@ -118,6 +128,13 @@ public class DescribePropertyProcDetailRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -153,6 +170,13 @@ public class DescribePropertyProcDetailRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return user
      */
     public String getUser() {
@@ -171,11 +195,13 @@ public class DescribePropertyProcDetailRequest extends Request {
         private Integer currentPage; 
         private String extend; 
         private String name; 
+        private String nextToken; 
         private Integer pageSize; 
         private Long procTimeEnd; 
         private Long procTimeStart; 
         private String remark; 
         private Long resourceDirectoryAccountId; 
+        private Boolean useNextToken; 
         private String user; 
         private String uuid; 
 
@@ -189,11 +215,13 @@ public class DescribePropertyProcDetailRequest extends Request {
             this.currentPage = request.currentPage;
             this.extend = request.extend;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.procTimeEnd = request.procTimeEnd;
             this.procTimeStart = request.procTimeStart;
             this.remark = request.remark;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.useNextToken = request.useNextToken;
             this.user = request.user;
             this.uuid = request.uuid;
         } 
@@ -243,6 +271,15 @@ public class DescribePropertyProcDetailRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -306,6 +343,15 @@ public class DescribePropertyProcDetailRequest extends Request {
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 

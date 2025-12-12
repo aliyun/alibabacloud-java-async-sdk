@@ -38,6 +38,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -54,6 +58,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
     private String softwareVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseNextToken")
+    private Boolean useNextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -64,10 +72,12 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         this.installTimeEnd = builder.installTimeEnd;
         this.installTimeStart = builder.installTimeStart;
         this.name = builder.name;
+        this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.path = builder.path;
         this.remark = builder.remark;
         this.softwareVersion = builder.softwareVersion;
+        this.useNextToken = builder.useNextToken;
         this.uuid = builder.uuid;
     }
 
@@ -120,6 +130,13 @@ public class DescribePropertySoftwareDetailRequest extends Request {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -148,6 +165,13 @@ public class DescribePropertySoftwareDetailRequest extends Request {
     }
 
     /**
+     * @return useNextToken
+     */
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -160,10 +184,12 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         private Long installTimeEnd; 
         private Long installTimeStart; 
         private String name; 
+        private String nextToken; 
         private Integer pageSize; 
         private String path; 
         private String remark; 
         private String softwareVersion; 
+        private Boolean useNextToken; 
         private String uuid; 
 
         private Builder() {
@@ -177,10 +203,12 @@ public class DescribePropertySoftwareDetailRequest extends Request {
             this.installTimeEnd = request.installTimeEnd;
             this.installTimeStart = request.installTimeStart;
             this.name = request.name;
+            this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.path = request.path;
             this.remark = request.remark;
             this.softwareVersion = request.softwareVersion;
+            this.useNextToken = request.useNextToken;
             this.uuid = request.uuid;
         } 
 
@@ -245,6 +273,15 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -289,6 +326,15 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         public Builder softwareVersion(String softwareVersion) {
             this.putQueryParameter("SoftwareVersion", softwareVersion);
             this.softwareVersion = softwareVersion;
+            return this;
+        }
+
+        /**
+         * UseNextToken.
+         */
+        public Builder useNextToken(Boolean useNextToken) {
+            this.putQueryParameter("UseNextToken", useNextToken);
+            this.useNextToken = useNextToken;
             return this;
         }
 
