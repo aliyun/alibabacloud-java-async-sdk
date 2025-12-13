@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of RunContractExtract  RunContractExtractRequest
+     * @return RunContractExtractResponse
+     */
+    CompletableFuture<RunContractExtractResponse> runContractExtract(RunContractExtractRequest request);
+
+    /**
      * @param request the request parameters of RunContractResultGeneration  RunContractResultGenerationRequest
      * @return RunContractResultGenerationResponse
      */

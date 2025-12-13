@@ -41,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunContractExtract  RunContractExtractRequest
+     * @return RunContractExtractResponse
+     */
+    @Override
+    public CompletableFuture<RunContractExtractResponse> runContractExtract(RunContractExtractRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunContractExtract").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/pop/contract/extraction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunContractExtractResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunContractExtractResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RunContractResultGeneration  RunContractResultGenerationRequest
      * @return RunContractResultGenerationResponse
      */
