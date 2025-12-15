@@ -260,6 +260,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudType")
         private String cloudType;
 
+        @com.aliyun.core.annotation.NameInMap("ComputingType")
+        private String computingType;
+
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
@@ -411,6 +414,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
             this.cloudType = builder.cloudType;
+            this.computingType = builder.computingType;
             this.config = builder.config;
             this.connectionDomain = builder.connectionDomain;
             this.connections = builder.connections;
@@ -529,6 +533,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCloudType() {
             return this.cloudType;
+        }
+
+        /**
+         * @return computingType
+         */
+        public String getComputingType() {
+            return this.computingType;
         }
 
         /**
@@ -870,6 +881,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private Long capacity; 
             private String chargeType; 
             private String cloudType; 
+            private String computingType; 
             private String config; 
             private String connectionDomain; 
             private Long connections; 
@@ -931,6 +943,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
                 this.capacity = model.capacity;
                 this.chargeType = model.chargeType;
                 this.cloudType = model.cloudType;
+                this.computingType = model.computingType;
                 this.config = model.config;
                 this.connectionDomain = model.connectionDomain;
                 this.connections = model.connections;
@@ -1097,6 +1110,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder cloudType(String cloudType) {
                 this.cloudType = cloudType;
+                return this;
+            }
+
+            /**
+             * ComputingType.
+             */
+            public Builder computingType(String computingType) {
+                this.computingType = computingType;
                 return this;
             }
 

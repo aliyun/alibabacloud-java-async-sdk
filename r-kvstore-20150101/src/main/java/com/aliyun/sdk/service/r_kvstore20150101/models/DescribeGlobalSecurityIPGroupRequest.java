@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalSecurityIPGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupId")
     private String globalSecurityGroupId;
 
@@ -52,6 +56,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
 
     private DescribeGlobalSecurityIPGroupRequest(Builder builder) {
         super(builder);
+        this.engine = builder.engine;
         this.globalSecurityGroupId = builder.globalSecurityGroupId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -73,6 +78,13 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
     }
 
     /**
@@ -132,6 +144,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeGlobalSecurityIPGroupRequest, Builder> {
+        private String engine; 
         private String globalSecurityGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -147,6 +160,7 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
 
         private Builder(DescribeGlobalSecurityIPGroupRequest request) {
             super(request);
+            this.engine = request.engine;
             this.globalSecurityGroupId = request.globalSecurityGroupId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -156,6 +170,15 @@ public class DescribeGlobalSecurityIPGroupRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
 
         /**
          * <p>The ID of the IP whitelist template.</p>

@@ -274,6 +274,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeActiveOperationMaintenanceConfig  DescribeActiveOperationMaintenanceConfigRequest
+     * @return DescribeActiveOperationMaintenanceConfigResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintenanceConfigResponse> describeActiveOperationMaintenanceConfig(DescribeActiveOperationMaintenanceConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>After you have called this API operation and queried the information about a specific O&amp;M task, you can also call the <a href="https://help.aliyun.com/document_detail/473864.html">ModifyActiveOperationTask</a> operation to modify the scheduled switchover time of the O&amp;M task.</p>
      * 
@@ -281,6 +287,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeActiveOperationTaskResponse
      */
     CompletableFuture<DescribeActiveOperationTaskResponse> describeActiveOperationTask(DescribeActiveOperationTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTaskCount  DescribeActiveOperationTaskCountRequest
+     * @return DescribeActiveOperationTaskCountResponse
+     */
+    CompletableFuture<DescribeActiveOperationTaskCountResponse> describeActiveOperationTaskCount(DescribeActiveOperationTaskCountRequest request);
 
     /**
      * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
@@ -383,6 +395,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterMemberInfoResponse> describeClusterMemberInfo(DescribeClusterMemberInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstanceMonitor  DescribeDBInstanceMonitorRequest
+     * @return DescribeDBInstanceMonitorResponse
+     */
+    CompletableFuture<DescribeDBInstanceMonitorResponse> describeDBInstanceMonitor(DescribeDBInstanceMonitorRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBInstanceNetInfo  DescribeDBInstanceNetInfoRequest
      * @return DescribeDBInstanceNetInfoResponse
      */
@@ -398,6 +416,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDBNodeDirectVipInfoResponse
      */
     CompletableFuture<DescribeDBNodeDirectVipInfoResponse> describeDBNodeDirectVipInfo(DescribeDBNodeDirectVipInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDbInstanceConnectivity  DescribeDbInstanceConnectivityRequest
+     * @return DescribeDbInstanceConnectivityResponse
+     */
+    CompletableFuture<DescribeDbInstanceConnectivityResponse> describeDbInstanceConnectivity(DescribeDbInstanceConnectivityRequest request);
 
     /**
      * <b>description</b> :
@@ -467,6 +491,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
+     * @return DescribeHistoryEventsResponse
+     */
+    CompletableFuture<DescribeHistoryEventsResponse> describeHistoryEvents(DescribeHistoryEventsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHistoryEventsStat  DescribeHistoryEventsStatRequest
+     * @return DescribeHistoryEventsStatResponse
+     */
+    CompletableFuture<DescribeHistoryEventsStatResponse> describeHistoryEventsStat(DescribeHistoryEventsStatRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</p>
      * 
@@ -480,6 +516,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHistoryTasksResponse
      */
     CompletableFuture<DescribeHistoryTasksResponse> describeHistoryTasks(DescribeHistoryTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHistoryTasksStat  DescribeHistoryTasksStatRequest
+     * @return DescribeHistoryTasksStatResponse
+     */
+    CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
 
     /**
      * @param request the request parameters of DescribeInstanceAttribute  DescribeInstanceAttributeRequest
@@ -675,12 +717,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>You can call this operation to query whether the service-lined role AliyunServiceRoleForKvstore is created for Tair (Redis OSS-compatible). For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role of Tair (Redis OSS-compatible)</a>.</p>
+     * 
+     * @param request the request parameters of DescribeServiceLinkedRoleExists  DescribeServiceLinkedRoleExistsRequest
+     * @return DescribeServiceLinkedRoleExistsResponse
+     */
+    CompletableFuture<DescribeServiceLinkedRoleExistsResponse> describeServiceLinkedRoleExists(DescribeServiceLinkedRoleExistsRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>You can also query slow logs in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/95874.html">Query slow logs of an instance</a>. This operation can be called up to 100 times per minute.</p>
      * 
      * @param request the request parameters of DescribeSlowLogRecords  DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
      */
     CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTags  DescribeTagsRequest
+     * @return DescribeTagsResponse
+     */
+    CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
 
     /**
      * @param request the request parameters of DescribeTairKVCacheCustomInstanceAttribute  DescribeTairKVCacheCustomInstanceAttributeRequest
@@ -717,6 +774,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeZonesResponse
      */
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, instances must be available in the recycle bin. For more information, see <a href="https://help.aliyun.com/document_detail/86114.html">Instance recycle bin</a>.</p>
+     * <blockquote>
+     * <p>Calling this operation permanently deletes the instances and their data backups in the recycle bin.
+     * **
+     * <strong>Warning</strong> After you destroy the instance, data in the instance is permanently deleted and can no longer be restored. Proceed with caution.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DestroyInstance  DestroyInstanceRequest
+     * @return DestroyInstanceResponse
+     */
+    CompletableFuture<DestroyInstanceResponse> destroyInstance(DestroyInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -835,6 +906,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
 
     /**
+     * @param request the request parameters of ModifyActiveOperationMaintainConfig  ModifyActiveOperationMaintainConfigRequest
+     * @return ModifyActiveOperationMaintainConfigResponse
+     */
+    CompletableFuture<ModifyActiveOperationMaintainConfigResponse> modifyActiveOperationMaintainConfig(ModifyActiveOperationMaintainConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can receive notifications for Tair (Redis OSS-compatible) events such as instance migration and version upgrade by text message, phone call, email, internal message, or by using the console. You can also change the scheduled switchover time of a task by using the console. For more information, see <a href="https://help.aliyun.com/document_detail/187022.html">Query or manage pending events</a>.</p>
      * 
@@ -889,6 +966,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBInstanceConnectionStringResponse
      */
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceMonitor  ModifyDBInstanceMonitorRequest
+     * @return ModifyDBInstanceMonitorResponse
+     */
+    CompletableFuture<ModifyDBInstanceMonitorResponse> modifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEventInfo  ModifyEventInfoRequest
+     * @return ModifyEventInfoResponse
+     */
+    CompletableFuture<ModifyEventInfoResponse> modifyEventInfo(ModifyEventInfoRequest request);
 
     /**
      * @param request the request parameters of ModifyGlobalSecurityIPGroup  ModifyGlobalSecurityIPGroupRequest
@@ -1105,6 +1194,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTaskInfoResponse
      */
     CompletableFuture<ModifyTaskInfoResponse> modifyTaskInfo(ModifyTaskInfoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This operation supports only instances that use the read/write splitting architecture or the cluster architecture in proxy mode. For more information, see <a href="https://help.aliyun.com/document_detail/164224.html">Restart or rebuild proxy nodes</a>.</p>
+     * 
+     * @param request the request parameters of RebootProxy  RebootProxyRequest
+     * @return RebootProxyResponse
+     */
+    CompletableFuture<RebootProxyResponse> rebootProxy(RebootProxyRequest request);
 
     /**
      * <b>description</b> :
@@ -1327,5 +1425,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The procedure and impacts for updating the minor version of an instance varies based on the instance architecture. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Update the minor version of an instance</a>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Before you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/473781.html">DescribeEngineVersion</a> operation to query the current minor version of the proxy node.</li>
+     * <li>The connection to the instance is interrupted during the update. We recommend that perform an update during off-peak hours. Make sure your application can reconnect to the instance after the update. For more information, see <a href="https://help.aliyun.com/document_detail/56450.html">Minor version update</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpgradeProxy  UpgradeProxyRequest
+     * @return UpgradeProxyResponse
+     */
+    CompletableFuture<UpgradeProxyResponse> upgradeProxy(UpgradeProxyRequest request);
 
 }

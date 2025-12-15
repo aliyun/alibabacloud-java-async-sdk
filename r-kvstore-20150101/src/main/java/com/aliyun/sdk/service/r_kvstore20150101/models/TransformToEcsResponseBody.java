@@ -67,7 +67,10 @@ public class TransformToEcsResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20905403119****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

@@ -305,8 +305,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestroyTime")
         private String destroyTime;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticVNodeCount")
+        private Integer elasticVNodeCount;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("FixedVNodeCount")
+        private Integer fixedVNodeCount;
 
         @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
@@ -366,7 +372,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             this.computeUnitNum = builder.computeUnitNum;
             this.createTime = builder.createTime;
             this.destroyTime = builder.destroyTime;
+            this.elasticVNodeCount = builder.elasticVNodeCount;
             this.endTime = builder.endTime;
+            this.fixedVNodeCount = builder.fixedVNodeCount;
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -437,10 +445,24 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticVNodeCount
+         */
+        public Integer getElasticVNodeCount() {
+            return this.elasticVNodeCount;
+        }
+
+        /**
          * @return endTime
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return fixedVNodeCount
+         */
+        public Integer getFixedVNodeCount() {
+            return this.fixedVNodeCount;
         }
 
         /**
@@ -569,7 +591,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             private Integer computeUnitNum; 
             private String createTime; 
             private String destroyTime; 
+            private Integer elasticVNodeCount; 
             private String endTime; 
+            private Integer fixedVNodeCount; 
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
@@ -598,7 +622,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
                 this.computeUnitNum = model.computeUnitNum;
                 this.createTime = model.createTime;
                 this.destroyTime = model.destroyTime;
+                this.elasticVNodeCount = model.elasticVNodeCount;
                 this.endTime = model.endTime;
+                this.fixedVNodeCount = model.fixedVNodeCount;
                 this.instanceClass = model.instanceClass;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -667,10 +693,26 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ElasticVNodeCount.
+             */
+            public Builder elasticVNodeCount(Integer elasticVNodeCount) {
+                this.elasticVNodeCount = elasticVNodeCount;
+                return this;
+            }
+
+            /**
              * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * FixedVNodeCount.
+             */
+            public Builder fixedVNodeCount(Integer fixedVNodeCount) {
+                this.fixedVNodeCount = fixedVNodeCount;
                 return this;
             }
 

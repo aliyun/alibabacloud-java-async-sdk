@@ -136,7 +136,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReadOnlyCount")
-    @com.aliyun.core.annotation.Validation(maximum = 5, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 5)
     private Integer readOnlyCount;
 
     @com.aliyun.core.annotation.Query

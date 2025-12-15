@@ -278,6 +278,9 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ReplicaNum")
+        private String replicaNum;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -318,6 +321,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             this.networkType = builder.networkType;
             this.privateIp = builder.privateIp;
             this.regionId = builder.regionId;
+            this.replicaNum = builder.replicaNum;
             this.resourceGroupId = builder.resourceGroupId;
             this.storage = builder.storage;
             this.tags = builder.tags;
@@ -462,6 +466,13 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
+         * @return replicaNum
+         */
+        public String getReplicaNum() {
+            return this.replicaNum;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -529,6 +540,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             private String networkType; 
             private String privateIp; 
             private String regionId; 
+            private String replicaNum; 
             private String resourceGroupId; 
             private Long storage; 
             private Tags tags; 
@@ -559,6 +571,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
                 this.networkType = model.networkType;
                 this.privateIp = model.privateIp;
                 this.regionId = model.regionId;
+                this.replicaNum = model.replicaNum;
                 this.resourceGroupId = model.resourceGroupId;
                 this.storage = model.storage;
                 this.tags = model.tags;
@@ -709,6 +722,14 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ReplicaNum.
+             */
+            public Builder replicaNum(String replicaNum) {
+                this.replicaNum = replicaNum;
                 return this;
             }
 

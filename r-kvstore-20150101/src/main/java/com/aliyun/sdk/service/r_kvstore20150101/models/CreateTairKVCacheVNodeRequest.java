@@ -59,6 +59,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ElasticTimeRange")
+    private String elasticTimeRange;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceClass;
@@ -106,6 +110,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VNodeType")
+    private String vNodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -132,6 +140,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         this.computeUnitNum = builder.computeUnitNum;
         this.couponNo = builder.couponNo;
         this.dryRun = builder.dryRun;
+        this.elasticTimeRange = builder.elasticTimeRange;
         this.instanceClass = builder.instanceClass;
         this.instanceName = builder.instanceName;
         this.ownerAccount = builder.ownerAccount;
@@ -143,6 +152,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
+        this.vNodeType = builder.vNodeType;
         this.vSwitchId = builder.vSwitchId;
         this.vkName = builder.vkName;
         this.zoneId = builder.zoneId;
@@ -232,6 +242,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
     }
 
     /**
+     * @return elasticTimeRange
+     */
+    public String getElasticTimeRange() {
+        return this.elasticTimeRange;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
@@ -309,6 +326,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
     }
 
     /**
+     * @return vNodeType
+     */
+    public String getVNodeType() {
+        return this.vNodeType;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -340,6 +364,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         private Integer computeUnitNum; 
         private String couponNo; 
         private Boolean dryRun; 
+        private String elasticTimeRange; 
         private String instanceClass; 
         private String instanceName; 
         private String ownerAccount; 
@@ -351,6 +376,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         private Long resourceOwnerId; 
         private String securityToken; 
         private java.util.List<Tag> tag; 
+        private String vNodeType; 
         private String vSwitchId; 
         private String vkName; 
         private String zoneId; 
@@ -371,6 +397,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
             this.computeUnitNum = request.computeUnitNum;
             this.couponNo = request.couponNo;
             this.dryRun = request.dryRun;
+            this.elasticTimeRange = request.elasticTimeRange;
             this.instanceClass = request.instanceClass;
             this.instanceName = request.instanceName;
             this.ownerAccount = request.ownerAccount;
@@ -382,13 +409,17 @@ public class CreateTairKVCacheVNodeRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
+            this.vNodeType = request.vNodeType;
             this.vSwitchId = request.vSwitchId;
             this.vkName = request.vkName;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Set the value to <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -397,7 +428,14 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disables auto-renewal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -406,7 +444,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * AutoRenewPeriod.
+         * <p>The subscription duration that is supported by auto-renewal. Unit: month. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, and <strong>12</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required if the <strong>AutoRenew</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(String autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -415,7 +459,14 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: uses a coupon.</li>
+         * <li><strong>false</strong>: does not use a coupon.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -424,7 +475,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * <p>The extended information such as the promotional event ID and business information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000000</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -433,7 +487,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The new billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription. If you set this parameter to PrePaid, you must also specify the <strong>Period</strong> parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -442,7 +502,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests and is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -451,6 +514,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * <p>The number of compute units. Valid values: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -463,7 +527,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -472,7 +539,14 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: performs a dry run and performs the actual request. If the request passes the dry run, the instance is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -481,6 +555,16 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * ElasticTimeRange.
+         */
+        public Builder elasticTimeRange(String elasticTimeRange) {
+            this.putQueryParameter("ElasticTimeRange", elasticTimeRange);
+            this.elasticTimeRange = elasticTimeRange;
+            return this;
+        }
+
+        /**
+         * <p>Instance specification</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -493,7 +577,10 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces or the following special characters: <code>@ / : = &quot; &lt; &gt; { [ ] }</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnodetest</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -520,7 +607,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription duration. Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>. Unit: months.</p>
+         * <blockquote>
+         * <p> This parameter is required only if the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -529,6 +622,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -541,7 +635,18 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group that you want to manage.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can query resource group IDs in the console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information about a resource group</a>.</p>
+         * </li>
+         * <li><p>Before you modify the resource group to which an instance belongs, you can call the <a href="https://help.aliyun.com/document_detail/158866.html">ListResources</a> operation to view the current resource group of the instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -577,7 +682,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Details of the tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -586,6 +691,19 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * VNodeType.
+         */
+        public Builder vNodeType(String vNodeType) {
+            this.putQueryParameter("VNodeType", vNodeType);
+            this.vNodeType = vNodeType;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the vSwitch to which the instance belongs. The vSwitch must belong to the VPC of the VCluser. You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the VPC ID.</p>
+         * <blockquote>
+         * <p> The vSwitch and the instance must be deployed in the same zone.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -598,6 +716,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the VCluster that contains the VNode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -610,6 +729,7 @@ public class CreateTairKVCacheVNodeRequest extends Request {
         }
 
         /**
+         * <p>The zone ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -681,7 +801,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p> A maximum of five key-value pairs can be specified at a time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>value1_test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -689,7 +815,13 @@ public class CreateTairKVCacheVNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N of the instance.</p>
+             * <blockquote>
+             * <p> <strong>N</strong> specifies the value of the nth tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>key1_test</p>
              */
             public Builder value(String value) {
                 this.value = value;

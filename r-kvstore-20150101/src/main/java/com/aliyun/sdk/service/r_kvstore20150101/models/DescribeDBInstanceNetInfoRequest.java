@@ -27,6 +27,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetType")
+    private String netType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -50,6 +54,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.netType = builder.netType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -82,6 +87,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return netType
+     */
+    public String getNetType() {
+        return this.netType;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDBInstanceNetInfoRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private String netType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -136,6 +149,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.netType = request.netType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -162,6 +176,15 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetType.
+         */
+        public Builder netType(String netType) {
+            this.putQueryParameter("NetType", netType);
+            this.netType = netType;
             return this;
         }
 

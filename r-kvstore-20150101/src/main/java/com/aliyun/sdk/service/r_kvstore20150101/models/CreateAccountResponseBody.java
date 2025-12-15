@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccountResponseBody</p>
  */
 public class CreateAccountResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    private String accountName;
+
     @com.aliyun.core.annotation.NameInMap("AcountName")
     private String acountName;
 
@@ -27,6 +30,7 @@ public class CreateAccountResponseBody extends TeaModel {
     private String requestId;
 
     private CreateAccountResponseBody(Builder builder) {
+        this.accountName = builder.accountName;
         this.acountName = builder.acountName;
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class CreateAccountResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountName
+     */
+    public String getAccountName() {
+        return this.accountName;
     }
 
     /**
@@ -66,6 +77,7 @@ public class CreateAccountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accountName; 
         private String acountName; 
         private String instanceId; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class CreateAccountResponseBody extends TeaModel {
         } 
 
         private Builder(CreateAccountResponseBody model) {
+            this.accountName = model.accountName;
             this.acountName = model.acountName;
             this.instanceId = model.instanceId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * AccountName.
+         */
+        public Builder accountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
 
         /**
          * <p>The name of the account.</p>

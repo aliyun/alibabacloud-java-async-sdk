@@ -165,7 +165,7 @@ public class CreateTairInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShardCount")
-    @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 128, minimum = 1)
     private Integer shardCount;
 
     @com.aliyun.core.annotation.Query

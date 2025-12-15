@@ -1,0 +1,184 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.r_kvstore20150101.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeHistoryTasksStatResponseBody</p>
+ */
+public class DescribeHistoryTasksStatResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private DescribeHistoryTasksStatResponseBody(Builder builder) {
+        this.items = builder.items;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeHistoryTasksStatResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return items
+     */
+    public java.util.List<Items> getItems() {
+        return this.items;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List<Items> items; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHistoryTasksStatResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * <p>The task list.</p>
+         */
+        public Builder items(java.util.List<Items> items) {
+            this.items = items;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABAF95F6-35C1-4177-AF3A-70969EBD****</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DescribeHistoryTasksStatResponseBody build() {
+            return new DescribeHistoryTasksStatResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link DescribeHistoryTasksStatResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHistoryTasksStatResponseBody</p>
+     */
+    public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private Items(Builder builder) {
+            this.status = builder.status;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.status = model.status;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * <p>The task state.</p>
+             * <ul>
+             * <li><strong>Scheduled</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Succeed</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Cancelling</strong></li>
+             * <li><strong>Canceled</strong></li>
+             * <li><strong>Waiting</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduled</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The total number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+}

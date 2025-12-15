@@ -145,7 +145,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the Tair VNode instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tv-2zeb1ce76fee****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -153,7 +156,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeId.
+         * <p>The ID of the VNode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vn-03a49876edb****</p>
          */
         public Builder nodeId(String nodeId) {
             this.nodeId = nodeId;
@@ -161,7 +167,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20905403119****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -169,7 +178,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -177,7 +189,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BE6E619-A657-42E3-AD2D-18F8428A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +200,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * VClusterId.
+         * <p>The ID of the VCluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vc-16965a9267*****-*****</p>
          */
         public Builder vClusterId(String vClusterId) {
             this.vClusterId = vClusterId;
@@ -193,7 +211,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * VkName.
+         * <p>The ID of the VCluster instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tk-2ze4bba3c8fe****</p>
          */
         public Builder vkName(String vkName) {
             this.vkName = vkName;
@@ -201,7 +222,10 @@ public class CreateTairKVCacheVNodeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

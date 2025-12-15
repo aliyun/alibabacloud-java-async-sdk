@@ -34,6 +34,10 @@ public class EnableAdditionalBandwidthRequest extends Request {
     private Integer autoRenewPeriod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandWidthBurst")
+    private Boolean bandWidthBurst;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private String bandwidth;
 
@@ -88,6 +92,7 @@ public class EnableAdditionalBandwidthRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
+        this.bandWidthBurst = builder.bandWidthBurst;
         this.bandwidth = builder.bandwidth;
         this.chargeType = builder.chargeType;
         this.couponNo = builder.couponNo;
@@ -141,6 +146,13 @@ public class EnableAdditionalBandwidthRequest extends Request {
      */
     public Integer getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    /**
+     * @return bandWidthBurst
+     */
+    public Boolean getBandWidthBurst() {
+        return this.bandWidthBurst;
     }
 
     /**
@@ -232,6 +244,7 @@ public class EnableAdditionalBandwidthRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
+        private Boolean bandWidthBurst; 
         private String bandwidth; 
         private String chargeType; 
         private String couponNo; 
@@ -255,6 +268,7 @@ public class EnableAdditionalBandwidthRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
+            this.bandWidthBurst = request.bandWidthBurst;
             this.bandwidth = request.bandwidth;
             this.chargeType = request.chargeType;
             this.couponNo = request.couponNo;
@@ -325,6 +339,15 @@ public class EnableAdditionalBandwidthRequest extends Request {
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
             this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
+         * BandWidthBurst.
+         */
+        public Builder bandWidthBurst(Boolean bandWidthBurst) {
+            this.putQueryParameter("BandWidthBurst", bandWidthBurst);
+            this.bandWidthBurst = bandWidthBurst;
             return this;
         }
 

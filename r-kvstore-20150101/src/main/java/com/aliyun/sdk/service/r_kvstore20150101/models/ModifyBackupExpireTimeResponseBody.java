@@ -54,7 +54,10 @@ public class ModifyBackupExpireTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B560AAD5-5027-51AD-A0D4-FA4DB1A76F40</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
