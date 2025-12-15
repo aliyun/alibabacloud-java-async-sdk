@@ -35,6 +35,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
+    @com.aliyun.core.annotation.NameInMap("Eni")
+    private String eni;
+
     @com.aliyun.core.annotation.NameInMap("InstanceVersion")
     private String instanceVersion;
 
@@ -90,6 +93,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.eni = builder.eni;
         this.instanceVersion = builder.instanceVersion;
         this.payType = builder.payType;
         this.privateConnectUrl = builder.privateConnectUrl;
@@ -160,6 +164,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return eni
+     */
+    public String getEni() {
+        return this.eni;
     }
 
     /**
@@ -281,6 +292,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         private String diskPerformanceLevel; 
         private String engine; 
         private String engineVersion; 
+        private String eni; 
         private String instanceVersion; 
         private String payType; 
         private String privateConnectUrl; 
@@ -308,6 +320,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
             this.diskPerformanceLevel = model.diskPerformanceLevel;
             this.engine = model.engine;
             this.engineVersion = model.engineVersion;
+            this.eni = model.eni;
             this.instanceVersion = model.instanceVersion;
             this.payType = model.payType;
             this.privateConnectUrl = model.privateConnectUrl;
@@ -393,6 +406,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * Eni.
+         */
+        public Builder eni(String eni) {
+            this.eni = eni;
             return this;
         }
 
