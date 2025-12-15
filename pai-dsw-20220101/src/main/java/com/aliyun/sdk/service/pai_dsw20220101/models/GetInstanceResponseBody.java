@@ -104,6 +104,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("MigrationOptions")
+    private java.util.Map<String, ?> migrationOptions;
+
     @com.aliyun.core.annotation.NameInMap("NodeErrorRecovery")
     private NodeErrorRecovery nodeErrorRecovery;
 
@@ -206,6 +209,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.labels = builder.labels;
         this.latestSnapshot = builder.latestSnapshot;
         this.message = builder.message;
+        this.migrationOptions = builder.migrationOptions;
         this.nodeErrorRecovery = builder.nodeErrorRecovery;
         this.paymentType = builder.paymentType;
         this.podIps = builder.podIps;
@@ -448,6 +452,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return migrationOptions
+     */
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
+    }
+
+    /**
      * @return nodeErrorRecovery
      */
     public NodeErrorRecovery getNodeErrorRecovery() {
@@ -645,6 +656,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private java.util.List<Labels> labels; 
         private LatestSnapshot latestSnapshot; 
         private String message; 
+        private java.util.Map<String, ?> migrationOptions; 
         private NodeErrorRecovery nodeErrorRecovery; 
         private String paymentType; 
         private java.util.List<PodIp> podIps; 
@@ -703,6 +715,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.labels = model.labels;
             this.latestSnapshot = model.latestSnapshot;
             this.message = model.message;
+            this.migrationOptions = model.migrationOptions;
             this.nodeErrorRecovery = model.nodeErrorRecovery;
             this.paymentType = model.paymentType;
             this.podIps = model.podIps;
@@ -1048,6 +1061,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * MigrationOptions.
+         */
+        public Builder migrationOptions(java.util.Map<String, ?> migrationOptions) {
+            this.migrationOptions = migrationOptions;
             return this;
         }
 

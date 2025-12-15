@@ -29,6 +29,9 @@ public class ListInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("MigrationOptions")
+    private java.util.Map<String, ?> migrationOptions;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -43,6 +46,7 @@ public class ListInstancesResponseBody extends TeaModel {
         this.httpStatusCode = builder.httpStatusCode;
         this.instances = builder.instances;
         this.message = builder.message;
+        this.migrationOptions = builder.migrationOptions;
         this.requestId = builder.requestId;
         this.success = builder.success;
         this.totalCount = builder.totalCount;
@@ -89,6 +93,13 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     /**
+     * @return migrationOptions
+     */
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -114,6 +125,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private java.util.List<Instances> instances; 
         private String message; 
+        private java.util.Map<String, ?> migrationOptions; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -126,6 +138,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.httpStatusCode = model.httpStatusCode;
             this.instances = model.instances;
             this.message = model.message;
+            this.migrationOptions = model.migrationOptions;
             this.requestId = model.requestId;
             this.success = model.success;
             this.totalCount = model.totalCount;
@@ -177,6 +190,14 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * MigrationOptions.
+         */
+        public Builder migrationOptions(java.util.Map<String, ?> migrationOptions) {
+            this.migrationOptions = migrationOptions;
             return this;
         }
 

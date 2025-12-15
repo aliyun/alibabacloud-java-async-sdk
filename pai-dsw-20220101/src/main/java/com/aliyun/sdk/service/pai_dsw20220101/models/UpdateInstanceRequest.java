@@ -71,6 +71,10 @@ public class UpdateInstanceRequest extends Request {
     private Boolean disassociateForwardInfos;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateMigrationOptions")
+    private Boolean disassociateMigrationOptions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateSpot")
     private Boolean disassociateSpot;
 
@@ -113,6 +117,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MigrationOptions")
+    private java.util.Map<String, ?> migrationOptions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OversoldType")
@@ -165,6 +173,7 @@ public class UpdateInstanceRequest extends Request {
         this.disassociateDriver = builder.disassociateDriver;
         this.disassociateEnvironmentVariables = builder.disassociateEnvironmentVariables;
         this.disassociateForwardInfos = builder.disassociateForwardInfos;
+        this.disassociateMigrationOptions = builder.disassociateMigrationOptions;
         this.disassociateSpot = builder.disassociateSpot;
         this.disassociateUserCommand = builder.disassociateUserCommand;
         this.disassociateVpc = builder.disassociateVpc;
@@ -176,6 +185,7 @@ public class UpdateInstanceRequest extends Request {
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
+        this.migrationOptions = builder.migrationOptions;
         this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
@@ -292,6 +302,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return disassociateMigrationOptions
+     */
+    public Boolean getDisassociateMigrationOptions() {
+        return this.disassociateMigrationOptions;
+    }
+
+    /**
      * @return disassociateSpot
      */
     public Boolean getDisassociateSpot() {
@@ -366,6 +383,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return migrationOptions
+     */
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
     }
 
     /**
@@ -445,6 +469,7 @@ public class UpdateInstanceRequest extends Request {
         private Boolean disassociateDriver; 
         private Boolean disassociateEnvironmentVariables; 
         private Boolean disassociateForwardInfos; 
+        private Boolean disassociateMigrationOptions; 
         private Boolean disassociateSpot; 
         private Boolean disassociateUserCommand; 
         private Boolean disassociateVpc; 
@@ -456,6 +481,7 @@ public class UpdateInstanceRequest extends Request {
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
+        private java.util.Map<String, ?> migrationOptions; 
         private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
@@ -485,6 +511,7 @@ public class UpdateInstanceRequest extends Request {
             this.disassociateDriver = request.disassociateDriver;
             this.disassociateEnvironmentVariables = request.disassociateEnvironmentVariables;
             this.disassociateForwardInfos = request.disassociateForwardInfos;
+            this.disassociateMigrationOptions = request.disassociateMigrationOptions;
             this.disassociateSpot = request.disassociateSpot;
             this.disassociateUserCommand = request.disassociateUserCommand;
             this.disassociateVpc = request.disassociateVpc;
@@ -496,6 +523,7 @@ public class UpdateInstanceRequest extends Request {
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
+            this.migrationOptions = request.migrationOptions;
             this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
@@ -656,6 +684,15 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * DisassociateMigrationOptions.
+         */
+        public Builder disassociateMigrationOptions(Boolean disassociateMigrationOptions) {
+            this.putBodyParameter("DisassociateMigrationOptions", disassociateMigrationOptions);
+            this.disassociateMigrationOptions = disassociateMigrationOptions;
+            return this;
+        }
+
+        /**
          * DisassociateSpot.
          */
         public Builder disassociateSpot(Boolean disassociateSpot) {
@@ -776,6 +813,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * MigrationOptions.
+         */
+        public Builder migrationOptions(java.util.Map<String, ?> migrationOptions) {
+            this.putBodyParameter("MigrationOptions", migrationOptions);
+            this.migrationOptions = migrationOptions;
             return this;
         }
 

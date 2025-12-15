@@ -78,6 +78,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MigrationOptions")
+    private java.util.Map<String, ?> migrationOptions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OversoldType")
     private String oversoldType;
 
@@ -138,6 +142,7 @@ public class CreateInstanceRequest extends Request {
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
         this.labels = builder.labels;
+        this.migrationOptions = builder.migrationOptions;
         this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
@@ -270,6 +275,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return migrationOptions
+     */
+    public java.util.Map<String, ?> getMigrationOptions() {
+        return this.migrationOptions;
+    }
+
+    /**
      * @return oversoldType
      */
     public String getOversoldType() {
@@ -362,6 +374,7 @@ public class CreateInstanceRequest extends Request {
         private String imageUrl; 
         private String instanceName; 
         private java.util.List<Labels> labels; 
+        private java.util.Map<String, ?> migrationOptions; 
         private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
@@ -395,6 +408,7 @@ public class CreateInstanceRequest extends Request {
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
             this.labels = request.labels;
+            this.migrationOptions = request.migrationOptions;
             this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
@@ -579,6 +593,15 @@ public class CreateInstanceRequest extends Request {
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * MigrationOptions.
+         */
+        public Builder migrationOptions(java.util.Map<String, ?> migrationOptions) {
+            this.putBodyParameter("MigrationOptions", migrationOptions);
+            this.migrationOptions = migrationOptions;
             return this;
         }
 
