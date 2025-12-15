@@ -276,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListQueuesResponse> listQueues(ListQueuesRequest request);
 
     /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
+    CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    /**
      * @param request the request parameters of ListSharedStorages  ListSharedStoragesRequest
      * @return ListSharedStoragesResponse
      */

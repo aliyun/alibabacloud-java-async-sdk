@@ -102,7 +102,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return.</p>
+         * <p>The page number.</p>
          * <p>Pages start from page 1.</p>
          * <p>Default value: 1.</p>
          * 

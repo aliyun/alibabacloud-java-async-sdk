@@ -377,8 +377,8 @@ public class UpdateQueueRequest extends Request {
             /**
              * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
              * <ul>
-             * <li>true: deletion protection is enabled.</li>
-             * <li>false: disables ASM.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class UpdateQueueRequest extends Request {
             }
 
             /**
-             * <p>The nodes for which deletion protection is enabled in the queue.</p>
+             * <p>List of excluded compute nodes in the queue.</p>
              */
             public Builder keepAliveNodes(java.util.List<String> keepAliveNodes) {
                 this.keepAliveNodes = keepAliveNodes;

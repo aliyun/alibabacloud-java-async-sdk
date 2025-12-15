@@ -174,7 +174,7 @@ public class ListSoftwaresRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

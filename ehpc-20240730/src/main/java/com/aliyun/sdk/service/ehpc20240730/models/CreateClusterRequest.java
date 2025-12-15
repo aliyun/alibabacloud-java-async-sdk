@@ -1039,7 +1039,7 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The domain name resolution type.</p>
-             * <p>Valid value:</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li>NIS</li>
              * </ul>
@@ -1124,7 +1124,7 @@ public class CreateClusterRequest extends Request {
 
             /**
              * <p>The type of the domain account.</p>
-             * <p>Valid value:</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li>NIS</li>
              * </ul>

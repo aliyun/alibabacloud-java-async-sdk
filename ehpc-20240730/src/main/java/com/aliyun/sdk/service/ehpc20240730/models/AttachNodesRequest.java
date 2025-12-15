@@ -89,7 +89,7 @@ public class AttachNodesRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class AttachNodesRequest extends Request {
         }
 
         /**
-         * <p>The compute node information.</p>
+         * <p>The list of compute nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder computeNode(ComputeNode computeNode) {
@@ -198,7 +198,7 @@ public class AttachNodesRequest extends Request {
             }
 
             /**
-             * <p>The instance IDs.</p>
+             * <p>The IDs of ECS instances.</p>
              * <p>This parameter is required.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {

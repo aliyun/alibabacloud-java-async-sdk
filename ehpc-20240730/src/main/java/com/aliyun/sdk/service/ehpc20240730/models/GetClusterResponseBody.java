@@ -981,9 +981,120 @@ public class GetClusterResponseBody extends TeaModel {
      *
      * <p>GetClusterResponseBody</p>
      */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        private SystemDisk(Builder builder) {
+            this.category = builder.category;
+            this.level = builder.level;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String level; 
+            private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.category = model.category;
+                this.level = model.level;
+                this.size = model.size;
+            } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterResponseBody</p>
+     */
     public static class ManagerNode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+        private Long autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Long duration;
+
+        @com.aliyun.core.annotation.NameInMap("EnableHt")
+        private Boolean enableHt;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
+
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
@@ -994,11 +1105,36 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Long period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
+        private Float spotPriceLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
+        private SystemDisk systemDisk;
+
         private ManagerNode(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.duration = builder.duration;
+            this.enableHt = builder.enableHt;
             this.expiredTime = builder.expiredTime;
+            this.imageId = builder.imageId;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
+            this.spotPriceLimit = builder.spotPriceLimit;
+            this.spotStrategy = builder.spotStrategy;
+            this.systemDisk = builder.systemDisk;
         }
 
         public static Builder builder() {
@@ -1010,10 +1146,45 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Long getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return duration
+         */
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return enableHt
+         */
+        public Boolean getEnableHt() {
+            return this.enableHt;
+        }
+
+        /**
          * @return expiredTime
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
         }
 
         /**
@@ -1037,21 +1208,108 @@ public class GetClusterResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
+         * @return spotPriceLimit
+         */
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        /**
+         * @return systemDisk
+         */
+        public SystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
         public static final class Builder {
+            private Boolean autoRenew; 
+            private Long autoRenewPeriod; 
+            private Long duration; 
+            private Boolean enableHt; 
             private String expiredTime; 
+            private String imageId; 
             private String instanceChargeType; 
             private String instanceId; 
             private String instanceType; 
+            private Long period; 
+            private String periodUnit; 
+            private Float spotPriceLimit; 
+            private String spotStrategy; 
+            private SystemDisk systemDisk; 
 
             private Builder() {
             } 
 
             private Builder(ManagerNode model) {
+                this.autoRenew = model.autoRenew;
+                this.autoRenewPeriod = model.autoRenewPeriod;
+                this.duration = model.duration;
+                this.enableHt = model.enableHt;
                 this.expiredTime = model.expiredTime;
+                this.imageId = model.imageId;
                 this.instanceChargeType = model.instanceChargeType;
                 this.instanceId = model.instanceId;
                 this.instanceType = model.instanceType;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.systemDisk = model.systemDisk;
             } 
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * AutoRenewPeriod.
+             */
+            public Builder autoRenewPeriod(Long autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * Duration.
+             */
+            public Builder duration(Long duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * EnableHt.
+             */
+            public Builder enableHt(Boolean enableHt) {
+                this.enableHt = enableHt;
+                return this;
+            }
 
             /**
              * <p>The expiration time of the management node.</p>
@@ -1061,6 +1319,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
                 return this;
             }
 
@@ -1098,6 +1364,46 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * PeriodUnit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * SpotPriceLimit.
+             */
+            public Builder spotPriceLimit(Float spotPriceLimit) {
+                this.spotPriceLimit = spotPriceLimit;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * SystemDisk.
+             */
+            public Builder systemDisk(SystemDisk systemDisk) {
+                this.systemDisk = systemDisk;
                 return this;
             }
 
