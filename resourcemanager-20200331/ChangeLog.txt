@@ -1,3 +1,6 @@
+2025-12-15 Version: 1.0.10
+- Generated java-async 2020-03-31 for ResourceManager.
+
 2025-12-10 Version: 1.0.9
 - Generated java-async 2020-03-31 for ResourceManager.
 

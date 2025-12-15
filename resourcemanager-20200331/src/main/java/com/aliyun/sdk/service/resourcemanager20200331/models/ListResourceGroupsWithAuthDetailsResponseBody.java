@@ -143,7 +143,10 @@ public class ListResourceGroupsWithAuthDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4141780B-4E3D-5D2A-A8F4-44D6D34F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

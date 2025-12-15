@@ -173,7 +173,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         } 
 
         /**
-         * EarliestRemediationTime.
+         * <p>The earliest remediation time. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01 00:00:00</p>
          */
         public Builder earliestRemediationTime(String earliestRemediationTime) {
             this.putQueryParameter("EarliestRemediationTime", earliestRemediationTime);
@@ -182,7 +185,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * LatestRemediationTime.
+         * <p>The latest remediation time. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-01 00:00:00</p>
          */
         public Builder latestRemediationTime(String latestRemediationTime) {
             this.putQueryParameter("LatestRemediationTime", latestRemediationTime);
@@ -191,7 +197,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of data entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +209,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TGlzdFJlc291cm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -209,7 +221,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID,</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-23v38****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -218,7 +233,11 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type,</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -227,6 +246,7 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +259,11 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * Service.
+         * <p>The ID of the Alibaba Cloud service.</p>
+         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -248,7 +272,10 @@ public class ListAutoGroupingRemediationsRequest extends Request {
         }
 
         /**
-         * TargetResourceGroupId.
+         * <p>The ID of the new resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz26emqhc****</p>
          */
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.putQueryParameter("TargetResourceGroupId", targetResourceGroupId);

@@ -67,7 +67,10 @@ public class GetResourceGroupNotificationSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F70D09B-0EE5-54A6-A09A-1EBDB9297172</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetResourceGroupNotificationSettingResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupNotificationEnableStatus.
+         * <p>Indicates whether the group event notification is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceGroupNotificationEnableStatus(Boolean resourceGroupNotificationEnableStatus) {
             this.resourceGroupNotificationEnableStatus = resourceGroupNotificationEnableStatus;

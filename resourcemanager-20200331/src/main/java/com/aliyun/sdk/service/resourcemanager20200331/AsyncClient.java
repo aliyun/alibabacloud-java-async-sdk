@@ -682,6 +682,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPolicyVersionsResponse> listPolicyVersions(ListPolicyVersionsRequest request);
 
     /**
+     * @param request the request parameters of ListResourceGroupCapability  ListResourceGroupCapabilityRequest
+     * @return ListResourceGroupCapabilityResponse
+     */
+    CompletableFuture<ListResourceGroupCapabilityResponse> listResourceGroupCapability(ListResourceGroupCapabilityRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
      * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
@@ -762,6 +768,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTrustedServiceStatusResponse
      */
     CompletableFuture<ListTrustedServiceStatusResponse> listTrustedServiceStatus(ListTrustedServiceStatusRequest request);
+
+    /**
+     * @param request the request parameters of LookupResourceGroupEvents  LookupResourceGroupEventsRequest
+     * @return LookupResourceGroupEventsResponse
+     */
+    CompletableFuture<LookupResourceGroupEventsResponse> lookupResourceGroupEvents(LookupResourceGroupEventsRequest request);
 
     /**
      * @param request the request parameters of MoveAccount  MoveAccountRequest

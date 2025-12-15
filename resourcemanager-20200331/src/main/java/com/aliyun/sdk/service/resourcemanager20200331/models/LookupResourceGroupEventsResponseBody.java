@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAutoGroupingRemediationsResponseBody} extends {@link TeaModel}
+ * {@link LookupResourceGroupEventsResponseBody} extends {@link TeaModel}
  *
- * <p>ListAutoGroupingRemediationsResponseBody</p>
+ * <p>LookupResourceGroupEventsResponseBody</p>
  */
-public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
+public class LookupResourceGroupEventsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Events")
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @com.aliyun.core.annotation.NameInMap("Remediations")
-    private java.util.List<Remediations> remediations;
-
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ListAutoGroupingRemediationsResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
+    private LookupResourceGroupEventsResponseBody(Builder builder) {
+        this.events = builder.events;
         this.nextToken = builder.nextToken;
-        this.remediations = builder.remediations;
         this.requestId = builder.requestId;
     }
 
@@ -40,7 +36,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListAutoGroupingRemediationsResponseBody create() {
+    public static LookupResourceGroupEventsResponseBody create() {
         return builder().build();
     }
 
@@ -49,10 +45,10 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     }
 
     /**
-     * @return maxResults
+     * @return events
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public java.util.List<Events> getEvents() {
+        return this.events;
     }
 
     /**
@@ -63,13 +59,6 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     }
 
     /**
-     * @return remediations
-     */
-    public java.util.List<Remediations> getRemediations() {
-        return this.remediations;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -77,38 +66,29 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer maxResults; 
+        private java.util.List<Events> events; 
         private String nextToken; 
-        private java.util.List<Remediations> remediations; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(ListAutoGroupingRemediationsResponseBody model) {
-            this.maxResults = model.maxResults;
+        private Builder(LookupResourceGroupEventsResponseBody model) {
+            this.events = model.events;
             this.nextToken = model.nextToken;
-            this.remediations = model.remediations;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100. Default value: 10.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * Events.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
+        public Builder events(java.util.List<Events> events) {
+            this.events = events;
             return this;
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TGlzdFJlc291cm****</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -116,35 +96,99 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remediation records.</p>
-         */
-        public Builder remediations(java.util.List<Remediations> remediations) {
-            this.remediations = remediations;
-            return this;
-        }
-
-        /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6F959E33-7B6D-5F58-BB0B-ED616DC7C70B</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ListAutoGroupingRemediationsResponseBody build() {
-            return new ListAutoGroupingRemediationsResponseBody(this);
+        public LookupResourceGroupEventsResponseBody build() {
+            return new LookupResourceGroupEventsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListAutoGroupingRemediationsResponseBody} extends {@link TeaModel}
+     * {@link LookupResourceGroupEventsResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAutoGroupingRemediationsResponseBody</p>
+     * <p>LookupResourceGroupEventsResponseBody</p>
+     */
+    public static class SourceResourceGroupInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupDisplayName")
+        private String resourceGroupDisplayName;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        private SourceResourceGroupInfo(Builder builder) {
+            this.resourceGroupDisplayName = builder.resourceGroupDisplayName;
+            this.resourceGroupId = builder.resourceGroupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceResourceGroupInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceGroupDisplayName
+         */
+        public String getResourceGroupDisplayName() {
+            return this.resourceGroupDisplayName;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public static final class Builder {
+            private String resourceGroupDisplayName; 
+            private String resourceGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceResourceGroupInfo model) {
+                this.resourceGroupDisplayName = model.resourceGroupDisplayName;
+                this.resourceGroupId = model.resourceGroupId;
+            } 
+
+            /**
+             * ResourceGroupDisplayName.
+             */
+            public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
+                this.resourceGroupDisplayName = resourceGroupDisplayName;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            public SourceResourceGroupInfo build() {
+                return new SourceResourceGroupInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link LookupResourceGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>LookupResourceGroupEventsResponseBody</p>
      */
     public static class TargetResourceGroupInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupDisplayName")
@@ -193,10 +237,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource group name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ProjectA</p>
+             * ResourceGroupDisplayName.
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -204,10 +245,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfmygrk****wfa</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -223,19 +261,25 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListAutoGroupingRemediationsResponseBody} extends {@link TeaModel}
+     * {@link LookupResourceGroupEventsResponseBody} extends {@link TeaModel}
      *
-     * <p>ListAutoGroupingRemediationsResponseBody</p>
+     * <p>LookupResourceGroupEventsResponseBody</p>
      */
-    public static class Remediations extends TeaModel {
+    public static class Events extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
+        private String changeType;
+
+        @com.aliyun.core.annotation.NameInMap("EventTime")
+        private String eventTime;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @com.aliyun.core.annotation.NameInMap("RemediationId")
-        private String remediationId;
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupDisplayName")
+        private String resourceGroupDisplayName;
 
-        @com.aliyun.core.annotation.NameInMap("RemediationTime")
-        private String remediationTime;
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -246,16 +290,22 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
+        @com.aliyun.core.annotation.NameInMap("SourceResourceGroupInfo")
+        private SourceResourceGroupInfo sourceResourceGroupInfo;
+
         @com.aliyun.core.annotation.NameInMap("TargetResourceGroupInfo")
         private TargetResourceGroupInfo targetResourceGroupInfo;
 
-        private Remediations(Builder builder) {
+        private Events(Builder builder) {
+            this.changeType = builder.changeType;
+            this.eventTime = builder.eventTime;
             this.regionId = builder.regionId;
-            this.remediationId = builder.remediationId;
-            this.remediationTime = builder.remediationTime;
+            this.resourceGroupDisplayName = builder.resourceGroupDisplayName;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
             this.service = builder.service;
+            this.sourceResourceGroupInfo = builder.sourceResourceGroupInfo;
             this.targetResourceGroupInfo = builder.targetResourceGroupInfo;
         }
 
@@ -263,8 +313,22 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Remediations create() {
+        public static Events create() {
             return builder().build();
+        }
+
+        /**
+         * @return changeType
+         */
+        public String getChangeType() {
+            return this.changeType;
+        }
+
+        /**
+         * @return eventTime
+         */
+        public String getEventTime() {
+            return this.eventTime;
         }
 
         /**
@@ -275,17 +339,17 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return remediationId
+         * @return resourceGroupDisplayName
          */
-        public String getRemediationId() {
-            return this.remediationId;
+        public String getResourceGroupDisplayName() {
+            return this.resourceGroupDisplayName;
         }
 
         /**
-         * @return remediationTime
+         * @return resourceGroupId
          */
-        public String getRemediationTime() {
-            return this.remediationTime;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -310,6 +374,13 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceResourceGroupInfo
+         */
+        public SourceResourceGroupInfo getSourceResourceGroupInfo() {
+            return this.sourceResourceGroupInfo;
+        }
+
+        /**
          * @return targetResourceGroupInfo
          */
         public TargetResourceGroupInfo getTargetResourceGroupInfo() {
@@ -317,32 +388,51 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String changeType; 
+            private String eventTime; 
             private String regionId; 
-            private String remediationId; 
-            private String remediationTime; 
+            private String resourceGroupDisplayName; 
+            private String resourceGroupId; 
             private String resourceId; 
             private String resourceType; 
             private String service; 
+            private SourceResourceGroupInfo sourceResourceGroupInfo; 
             private TargetResourceGroupInfo targetResourceGroupInfo; 
 
             private Builder() {
             } 
 
-            private Builder(Remediations model) {
+            private Builder(Events model) {
+                this.changeType = model.changeType;
+                this.eventTime = model.eventTime;
                 this.regionId = model.regionId;
-                this.remediationId = model.remediationId;
-                this.remediationTime = model.remediationTime;
+                this.resourceGroupDisplayName = model.resourceGroupDisplayName;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceId = model.resourceId;
                 this.resourceType = model.resourceType;
                 this.service = model.service;
+                this.sourceResourceGroupInfo = model.sourceResourceGroupInfo;
                 this.targetResourceGroupInfo = model.targetResourceGroupInfo;
             } 
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao</p>
+             * ChangeType.
+             */
+            public Builder changeType(String changeType) {
+                this.changeType = changeType;
+                return this;
+            }
+
+            /**
+             * EventTime.
+             */
+            public Builder eventTime(String eventTime) {
+                this.eventTime = eventTime;
+                return this;
+            }
+
+            /**
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,32 +440,23 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remediation record ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0028d4****cfe94956ef6708a373f396fbc840e306f</p>
+             * ResourceGroupDisplayName.
              */
-            public Builder remediationId(String remediationId) {
-                this.remediationId = remediationId;
+            public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
+                this.resourceGroupDisplayName = resourceGroupDisplayName;
                 return this;
             }
 
             /**
-             * <p>The remediation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-01-01 00:00:00</p>
+             * ResourceGroupId.
              */
-            public Builder remediationTime(String remediationTime) {
-                this.remediationTime = remediationTime;
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
             /**
-             * <p>The resource ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-uf664f66v1****drkea4</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -383,11 +464,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
-             * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -395,11 +472,7 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud service.</p>
-             * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs</p>
+             * Service.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -407,15 +480,23 @@ public class ListAutoGroupingRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the new resource group.</p>
+             * SourceResourceGroupInfo.
+             */
+            public Builder sourceResourceGroupInfo(SourceResourceGroupInfo sourceResourceGroupInfo) {
+                this.sourceResourceGroupInfo = sourceResourceGroupInfo;
+                return this;
+            }
+
+            /**
+             * TargetResourceGroupInfo.
              */
             public Builder targetResourceGroupInfo(TargetResourceGroupInfo targetResourceGroupInfo) {
                 this.targetResourceGroupInfo = targetResourceGroupInfo;
                 return this;
             }
 
-            public Remediations build() {
-                return new Remediations(this);
+            public Events build() {
+                return new Events(this);
             } 
 
         } 
