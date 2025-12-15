@@ -1,3 +1,6 @@
+2025-12-15 Version: 3.0.14
+- Generated java-async 2021-09-01 for appstream-center.
+
 2025-12-08 Version: 3.0.13
 - Generated java-async 2021-09-01 for appstream-center.
 

@@ -47,6 +47,10 @@ public class CreateWuyingServerRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HostName")
+    private String hostName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdempotenceToken")
     private String idempotenceToken;
 
@@ -78,7 +82,7 @@ public class CreateWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SavingPlanId")
     private String savingPlanId;
 
@@ -123,6 +127,7 @@ public class CreateWuyingServerRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.dataDisk = builder.dataDisk;
+        this.hostName = builder.hostName;
         this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
         this.networkStrategyType = builder.networkStrategyType;
@@ -202,6 +207,13 @@ public class CreateWuyingServerRequest extends Request {
      */
     public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return hostName
+     */
+    public String getHostName() {
+        return this.hostName;
     }
 
     /**
@@ -331,6 +343,7 @@ public class CreateWuyingServerRequest extends Request {
         private String bizRegionId; 
         private String chargeType; 
         private java.util.List<DataDisk> dataDisk; 
+        private String hostName; 
         private String idempotenceToken; 
         private String imageId; 
         private String networkStrategyType; 
@@ -362,6 +375,7 @@ public class CreateWuyingServerRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.dataDisk = request.dataDisk;
+            this.hostName = request.hostName;
             this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
             this.networkStrategyType = request.networkStrategyType;
@@ -463,6 +477,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putBodyParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
+            return this;
+        }
+
+        /**
+         * HostName.
+         */
+        public Builder hostName(String hostName) {
+            this.putBodyParameter("HostName", hostName);
+            this.hostName = hostName;
             return this;
         }
 
@@ -574,7 +597,7 @@ public class CreateWuyingServerRequest extends Request {
          * SavingPlanId.
          */
         public Builder savingPlanId(String savingPlanId) {
-            this.putQueryParameter("SavingPlanId", savingPlanId);
+            this.putBodyParameter("SavingPlanId", savingPlanId);
             this.savingPlanId = savingPlanId;
             return this;
         }
