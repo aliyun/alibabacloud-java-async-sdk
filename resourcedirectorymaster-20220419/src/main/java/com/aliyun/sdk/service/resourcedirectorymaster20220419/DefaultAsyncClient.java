@@ -825,6 +825,48 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</p>
+     * 
+     * @param request the request parameters of ListAuthorizedAccounts  ListAuthorizedAccountsRequest
+     * @return ListAuthorizedAccountsResponse
+     */
+    @Override
+    public CompletableFuture<ListAuthorizedAccountsResponse> listAuthorizedAccounts(ListAuthorizedAccountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAuthorizedAccounts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAuthorizedAccountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAuthorizedAccountsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</p>
+     * 
+     * @param request the request parameters of ListAuthorizedFolders  ListAuthorizedFoldersRequest
+     * @return ListAuthorizedFoldersResponse
+     */
+    @Override
+    public CompletableFuture<ListAuthorizedFoldersResponse> listAuthorizedFolders(ListAuthorizedFoldersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAuthorizedFolders").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAuthorizedFoldersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAuthorizedFoldersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListControlPolicies  ListControlPoliciesRequest
      * @return ListControlPoliciesResponse
      */

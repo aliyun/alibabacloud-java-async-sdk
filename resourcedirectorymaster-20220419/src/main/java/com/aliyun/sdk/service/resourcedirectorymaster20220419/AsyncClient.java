@@ -325,6 +325,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAncestorsResponse> listAncestors(ListAncestorsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</p>
+     * 
+     * @param request the request parameters of ListAuthorizedAccounts  ListAuthorizedAccountsRequest
+     * @return ListAuthorizedAccountsResponse
+     */
+    CompletableFuture<ListAuthorizedAccountsResponse> listAuthorizedAccounts(ListAuthorizedAccountsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</p>
+     * 
+     * @param request the request parameters of ListAuthorizedFolders  ListAuthorizedFoldersRequest
+     * @return ListAuthorizedFoldersResponse
+     */
+    CompletableFuture<ListAuthorizedFoldersResponse> listAuthorizedFolders(ListAuthorizedFoldersRequest request);
+
+    /**
      * @param request the request parameters of ListControlPolicies  ListControlPoliciesRequest
      * @return ListControlPoliciesResponse
      */
