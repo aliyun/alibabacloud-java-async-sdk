@@ -27,9 +27,13 @@ public class UpdateCloudAppInfoRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String description;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Patch")
     private Patch patch;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgLabels")
+    private java.util.List<String> pkgLabels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StablePatchId")
@@ -40,6 +44,7 @@ public class UpdateCloudAppInfoRequest extends Request {
         this.appId = builder.appId;
         this.description = builder.description;
         this.patch = builder.patch;
+        this.pkgLabels = builder.pkgLabels;
         this.stablePatchId = builder.stablePatchId;
     }
 
@@ -78,6 +83,13 @@ public class UpdateCloudAppInfoRequest extends Request {
     }
 
     /**
+     * @return pkgLabels
+     */
+    public java.util.List<String> getPkgLabels() {
+        return this.pkgLabels;
+    }
+
+    /**
      * @return stablePatchId
      */
     public String getStablePatchId() {
@@ -88,6 +100,7 @@ public class UpdateCloudAppInfoRequest extends Request {
         private String appId; 
         private String description; 
         private Patch patch; 
+        private java.util.List<String> pkgLabels; 
         private String stablePatchId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class UpdateCloudAppInfoRequest extends Request {
             this.appId = request.appId;
             this.description = request.description;
             this.patch = request.patch;
+            this.pkgLabels = request.pkgLabels;
             this.stablePatchId = request.stablePatchId;
         } 
 
@@ -128,8 +142,18 @@ public class UpdateCloudAppInfoRequest extends Request {
          */
         public Builder patch(Patch patch) {
             String patchShrink = shrink(patch, "Patch", "json");
-            this.putQueryParameter("Patch", patchShrink);
+            this.putBodyParameter("Patch", patchShrink);
             this.patch = patch;
+            return this;
+        }
+
+        /**
+         * PkgLabels.
+         */
+        public Builder pkgLabels(java.util.List<String> pkgLabels) {
+            String pkgLabelsShrink = shrink(pkgLabels, "PkgLabels", "json");
+            this.putQueryParameter("PkgLabels", pkgLabelsShrink);
+            this.pkgLabels = pkgLabels;
             return this;
         }
 
@@ -156,6 +180,9 @@ public class UpdateCloudAppInfoRequest extends Request {
      * <p>UpdateCloudAppInfoRequest</p>
      */
     public static class Patch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsStablePatch")
+        private Boolean asStablePatch;
+
         @com.aliyun.core.annotation.NameInMap("DownloadURL")
         private String downloadURL;
 
@@ -166,10 +193,19 @@ public class UpdateCloudAppInfoRequest extends Request {
         @com.aliyun.core.annotation.Validation(maxLength = 50, minLength = 1)
         private String patchName;
 
+        @com.aliyun.core.annotation.NameInMap("PkgFormat")
+        private String pkgFormat;
+
+        @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
+        private String renderingInstanceId;
+
         private Patch(Builder builder) {
+            this.asStablePatch = builder.asStablePatch;
             this.downloadURL = builder.downloadURL;
             this.md5 = builder.md5;
             this.patchName = builder.patchName;
+            this.pkgFormat = builder.pkgFormat;
+            this.renderingInstanceId = builder.renderingInstanceId;
         }
 
         public static Builder builder() {
@@ -178,6 +214,13 @@ public class UpdateCloudAppInfoRequest extends Request {
 
         public static Patch create() {
             return builder().build();
+        }
+
+        /**
+         * @return asStablePatch
+         */
+        public Boolean getAsStablePatch() {
+            return this.asStablePatch;
         }
 
         /**
@@ -201,19 +244,47 @@ public class UpdateCloudAppInfoRequest extends Request {
             return this.patchName;
         }
 
+        /**
+         * @return pkgFormat
+         */
+        public String getPkgFormat() {
+            return this.pkgFormat;
+        }
+
+        /**
+         * @return renderingInstanceId
+         */
+        public String getRenderingInstanceId() {
+            return this.renderingInstanceId;
+        }
+
         public static final class Builder {
+            private Boolean asStablePatch; 
             private String downloadURL; 
             private String md5; 
             private String patchName; 
+            private String pkgFormat; 
+            private String renderingInstanceId; 
 
             private Builder() {
             } 
 
             private Builder(Patch model) {
+                this.asStablePatch = model.asStablePatch;
                 this.downloadURL = model.downloadURL;
                 this.md5 = model.md5;
                 this.patchName = model.patchName;
+                this.pkgFormat = model.pkgFormat;
+                this.renderingInstanceId = model.renderingInstanceId;
             } 
+
+            /**
+             * AsStablePatch.
+             */
+            public Builder asStablePatch(Boolean asStablePatch) {
+                this.asStablePatch = asStablePatch;
+                return this;
+            }
 
             /**
              * DownloadURL.
@@ -236,6 +307,22 @@ public class UpdateCloudAppInfoRequest extends Request {
              */
             public Builder patchName(String patchName) {
                 this.patchName = patchName;
+                return this;
+            }
+
+            /**
+             * PkgFormat.
+             */
+            public Builder pkgFormat(String pkgFormat) {
+                this.pkgFormat = pkgFormat;
+                return this;
+            }
+
+            /**
+             * RenderingInstanceId.
+             */
+            public Builder renderingInstanceId(String renderingInstanceId) {
+                this.renderingInstanceId = renderingInstanceId;
                 return this;
             }
 

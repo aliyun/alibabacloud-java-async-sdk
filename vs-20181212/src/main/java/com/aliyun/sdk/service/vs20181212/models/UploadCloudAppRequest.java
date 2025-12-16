@@ -47,6 +47,10 @@ public class UploadCloudAppRequest extends Request {
     private String pkgFormat;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgLabels")
+    private java.util.List<String> pkgLabels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PkgType")
     private String pkgType;
 
@@ -58,6 +62,7 @@ public class UploadCloudAppRequest extends Request {
         this.downloadUrl = builder.downloadUrl;
         this.md5 = builder.md5;
         this.pkgFormat = builder.pkgFormat;
+        this.pkgLabels = builder.pkgLabels;
         this.pkgType = builder.pkgType;
     }
 
@@ -117,6 +122,13 @@ public class UploadCloudAppRequest extends Request {
     }
 
     /**
+     * @return pkgLabels
+     */
+    public java.util.List<String> getPkgLabels() {
+        return this.pkgLabels;
+    }
+
+    /**
      * @return pkgType
      */
     public String getPkgType() {
@@ -130,6 +142,7 @@ public class UploadCloudAppRequest extends Request {
         private String downloadUrl; 
         private String md5; 
         private String pkgFormat; 
+        private java.util.List<String> pkgLabels; 
         private String pkgType; 
 
         private Builder() {
@@ -144,6 +157,7 @@ public class UploadCloudAppRequest extends Request {
             this.downloadUrl = request.downloadUrl;
             this.md5 = request.md5;
             this.pkgFormat = request.pkgFormat;
+            this.pkgLabels = request.pkgLabels;
             this.pkgType = request.pkgType;
         } 
 
@@ -210,6 +224,16 @@ public class UploadCloudAppRequest extends Request {
         public Builder pkgFormat(String pkgFormat) {
             this.putQueryParameter("PkgFormat", pkgFormat);
             this.pkgFormat = pkgFormat;
+            return this;
+        }
+
+        /**
+         * PkgLabels.
+         */
+        public Builder pkgLabels(java.util.List<String> pkgLabels) {
+            String pkgLabelsShrink = shrink(pkgLabels, "PkgLabels", "json");
+            this.putQueryParameter("PkgLabels", pkgLabelsShrink);
+            this.pkgLabels = pkgLabels;
             return this;
         }
 

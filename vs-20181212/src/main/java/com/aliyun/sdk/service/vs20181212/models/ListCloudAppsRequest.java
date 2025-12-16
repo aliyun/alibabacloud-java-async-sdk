@@ -34,6 +34,10 @@ public class ListCloudAppsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LatestVersionOnly")
+    private Boolean latestVersionOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -43,6 +47,10 @@ public class ListCloudAppsRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PkgLabel")
+    private String pkgLabel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PkgType")
     private String pkgType;
 
@@ -50,16 +58,23 @@ public class ListCloudAppsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private ListCloudAppsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.appVersion = builder.appVersion;
         this.endTime = builder.endTime;
+        this.latestVersionOnly = builder.latestVersionOnly;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.pkgLabel = builder.pkgLabel;
         this.pkgType = builder.pkgType;
         this.startTime = builder.startTime;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -104,6 +119,13 @@ public class ListCloudAppsRequest extends Request {
     }
 
     /**
+     * @return latestVersionOnly
+     */
+    public Boolean getLatestVersionOnly() {
+        return this.latestVersionOnly;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -115,6 +137,13 @@ public class ListCloudAppsRequest extends Request {
      */
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return pkgLabel
+     */
+    public String getPkgLabel() {
+        return this.pkgLabel;
     }
 
     /**
@@ -131,15 +160,25 @@ public class ListCloudAppsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListCloudAppsRequest, Builder> {
         private String appId; 
         private String appName; 
         private String appVersion; 
         private String endTime; 
+        private Boolean latestVersionOnly; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String pkgLabel; 
         private String pkgType; 
         private String startTime; 
+        private String status; 
 
         private Builder() {
             super();
@@ -151,10 +190,13 @@ public class ListCloudAppsRequest extends Request {
             this.appName = request.appName;
             this.appVersion = request.appVersion;
             this.endTime = request.endTime;
+            this.latestVersionOnly = request.latestVersionOnly;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.pkgLabel = request.pkgLabel;
             this.pkgType = request.pkgType;
             this.startTime = request.startTime;
+            this.status = request.status;
         } 
 
         /**
@@ -194,6 +236,15 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
+         * LatestVersionOnly.
+         */
+        public Builder latestVersionOnly(Boolean latestVersionOnly) {
+            this.putQueryParameter("LatestVersionOnly", latestVersionOnly);
+            this.latestVersionOnly = latestVersionOnly;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
@@ -212,6 +263,15 @@ public class ListCloudAppsRequest extends Request {
         }
 
         /**
+         * PkgLabel.
+         */
+        public Builder pkgLabel(String pkgLabel) {
+            this.putQueryParameter("PkgLabel", pkgLabel);
+            this.pkgLabel = pkgLabel;
+            return this;
+        }
+
+        /**
          * PkgType.
          */
         public Builder pkgType(String pkgType) {
@@ -226,6 +286,15 @@ public class ListCloudAppsRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
