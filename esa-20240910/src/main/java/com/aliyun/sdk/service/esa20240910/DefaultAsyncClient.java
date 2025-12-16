@@ -404,6 +404,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateEdgeContainerAppImageSecret  CreateEdgeContainerAppImageSecretRequest
+     * @return CreateEdgeContainerAppImageSecretResponse
+     */
+    @Override
+    public CompletableFuture<CreateEdgeContainerAppImageSecretResponse> createEdgeContainerAppImageSecret(CreateEdgeContainerAppImageSecretRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEdgeContainerAppImageSecret").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEdgeContainerAppImageSecretResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEdgeContainerAppImageSecretResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateEdgeContainerAppRecord  CreateEdgeContainerAppRecordRequest
      * @return CreateEdgeContainerAppRecordResponse
      */
@@ -1306,6 +1324,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEdgeContainerAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEdgeContainerAppImageSecret  DeleteEdgeContainerAppImageSecretRequest
+     * @return DeleteEdgeContainerAppImageSecretResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEdgeContainerAppImageSecretResponse> deleteEdgeContainerAppImageSecret(DeleteEdgeContainerAppImageSecretRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEdgeContainerAppImageSecret").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEdgeContainerAppImageSecretResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEdgeContainerAppImageSecretResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2704,6 +2740,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEdgeContainerAppResourceCapacity  GetEdgeContainerAppResourceCapacityRequest
+     * @return GetEdgeContainerAppResourceCapacityResponse
+     */
+    @Override
+    public CompletableFuture<GetEdgeContainerAppResourceCapacityResponse> getEdgeContainerAppResourceCapacity(GetEdgeContainerAppResourceCapacityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEdgeContainerAppResourceCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEdgeContainerAppResourceCapacityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEdgeContainerAppResourceCapacityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetEdgeContainerAppResourceReserve  GetEdgeContainerAppResourceReserveRequest
      * @return GetEdgeContainerAppResourceReserveResponse
      */
@@ -4052,6 +4106,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListESAIPInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEdgeContainerAppImageSecrets  ListEdgeContainerAppImageSecretsRequest
+     * @return ListEdgeContainerAppImageSecretsResponse
+     */
+    @Override
+    public CompletableFuture<ListEdgeContainerAppImageSecretsResponse> listEdgeContainerAppImageSecrets(ListEdgeContainerAppImageSecretsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEdgeContainerAppImageSecrets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEdgeContainerAppImageSecretsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEdgeContainerAppImageSecretsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

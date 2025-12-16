@@ -97,6 +97,81 @@ public class GetWafQuotaResponseBody extends TeaModel {
      *
      * <p>GetWafQuotaResponseBody</p>
      */
+    public static class Captcha extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("NumberTotal")
+        private WafQuotaInteger numberTotal;
+
+        private Captcha(Builder builder) {
+            this.enable = builder.enable;
+            this.numberTotal = builder.numberTotal;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Captcha create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return numberTotal
+         */
+        public WafQuotaInteger getNumberTotal() {
+            return this.numberTotal;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private WafQuotaInteger numberTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(Captcha model) {
+                this.enable = model.enable;
+                this.numberTotal = model.numberTotal;
+            } 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * NumberTotal.
+             */
+            public Builder numberTotal(WafQuotaInteger numberTotal) {
+                this.numberTotal = numberTotal;
+                return this;
+            }
+
+            public Captcha build() {
+                return new Captcha(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWafQuotaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWafQuotaResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -482,6 +557,9 @@ public class GetWafQuotaResponseBody extends TeaModel {
      * <p>GetWafQuotaResponseBody</p>
      */
     public static class Quota extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Captcha")
+        private Captcha captcha;
+
         @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
@@ -495,6 +573,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         private ScenePolicy scenePolicy;
 
         private Quota(Builder builder) {
+            this.captcha = builder.captcha;
             this.list = builder.list;
             this.managedRulesGroup = builder.managedRulesGroup;
             this.page = builder.page;
@@ -507,6 +586,13 @@ public class GetWafQuotaResponseBody extends TeaModel {
 
         public static Quota create() {
             return builder().build();
+        }
+
+        /**
+         * @return captcha
+         */
+        public Captcha getCaptcha() {
+            return this.captcha;
         }
 
         /**
@@ -538,6 +624,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Captcha captcha; 
             private List list; 
             private ManagedRulesGroup managedRulesGroup; 
             private Page page; 
@@ -547,11 +634,20 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             private Builder(Quota model) {
+                this.captcha = model.captcha;
                 this.list = model.list;
                 this.managedRulesGroup = model.managedRulesGroup;
                 this.page = model.page;
                 this.scenePolicy = model.scenePolicy;
             } 
+
+            /**
+             * Captcha.
+             */
+            public Builder captcha(Captcha captcha) {
+                this.captcha = captcha;
+                return this;
+            }
 
             /**
              * <p>Quota information related to custom lists.</p>

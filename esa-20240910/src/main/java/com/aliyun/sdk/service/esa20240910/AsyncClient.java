@@ -144,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEdgeContainerAppResponse> createEdgeContainerApp(CreateEdgeContainerAppRequest request);
 
     /**
+     * @param request the request parameters of CreateEdgeContainerAppImageSecret  CreateEdgeContainerAppImageSecretRequest
+     * @return CreateEdgeContainerAppImageSecretResponse
+     */
+    CompletableFuture<CreateEdgeContainerAppImageSecretResponse> createEdgeContainerAppImageSecret(CreateEdgeContainerAppImageSecretRequest request);
+
+    /**
      * @param request the request parameters of CreateEdgeContainerAppRecord  CreateEdgeContainerAppRecordRequest
      * @return CreateEdgeContainerAppRecordResponse
      */
@@ -474,6 +480,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEdgeContainerAppResponse
      */
     CompletableFuture<DeleteEdgeContainerAppResponse> deleteEdgeContainerApp(DeleteEdgeContainerAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEdgeContainerAppImageSecret  DeleteEdgeContainerAppImageSecretRequest
+     * @return DeleteEdgeContainerAppImageSecretResponse
+     */
+    CompletableFuture<DeleteEdgeContainerAppImageSecretResponse> deleteEdgeContainerAppImageSecret(DeleteEdgeContainerAppImageSecretRequest request);
 
     /**
      * @param request the request parameters of DeleteEdgeContainerAppRecord  DeleteEdgeContainerAppRecordRequest
@@ -968,6 +980,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEdgeContainerAppLogRiverResponse> getEdgeContainerAppLogRiver(GetEdgeContainerAppLogRiverRequest request);
 
     /**
+     * @param request the request parameters of GetEdgeContainerAppResourceCapacity  GetEdgeContainerAppResourceCapacityRequest
+     * @return GetEdgeContainerAppResourceCapacityResponse
+     */
+    CompletableFuture<GetEdgeContainerAppResourceCapacityResponse> getEdgeContainerAppResourceCapacity(GetEdgeContainerAppResourceCapacityRequest request);
+
+    /**
      * @param request the request parameters of GetEdgeContainerAppResourceReserve  GetEdgeContainerAppResourceReserveRequest
      * @return GetEdgeContainerAppResourceReserveResponse
      */
@@ -1444,6 +1462,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListESAIPInfoResponse
      */
     CompletableFuture<ListESAIPInfoResponse> listESAIPInfo(ListESAIPInfoRequest request);
+
+    /**
+     * @param request the request parameters of ListEdgeContainerAppImageSecrets  ListEdgeContainerAppImageSecretsRequest
+     * @return ListEdgeContainerAppImageSecretsResponse
+     */
+    CompletableFuture<ListEdgeContainerAppImageSecretsResponse> listEdgeContainerAppImageSecrets(ListEdgeContainerAppImageSecretsRequest request);
 
     /**
      * @param request the request parameters of ListEdgeContainerAppRecords  ListEdgeContainerAppRecordsRequest
