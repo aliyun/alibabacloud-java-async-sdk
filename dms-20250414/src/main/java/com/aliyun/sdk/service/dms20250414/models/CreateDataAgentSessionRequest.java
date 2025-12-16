@@ -186,6 +186,9 @@ public class CreateDataAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("McpServerIds")
+        private java.util.List<String> mcpServerIds;
+
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
@@ -194,6 +197,7 @@ public class CreateDataAgentSessionRequest extends Request {
             this.customAgentStage = builder.customAgentStage;
             this.enableSearch = builder.enableSearch;
             this.language = builder.language;
+            this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
         }
 
@@ -234,6 +238,13 @@ public class CreateDataAgentSessionRequest extends Request {
         }
 
         /**
+         * @return mcpServerIds
+         */
+        public java.util.List<String> getMcpServerIds() {
+            return this.mcpServerIds;
+        }
+
+        /**
          * @return mode
          */
         public String getMode() {
@@ -245,6 +256,7 @@ public class CreateDataAgentSessionRequest extends Request {
             private String customAgentStage; 
             private Boolean enableSearch; 
             private String language; 
+            private java.util.List<String> mcpServerIds; 
             private String mode; 
 
             private Builder() {
@@ -255,6 +267,7 @@ public class CreateDataAgentSessionRequest extends Request {
                 this.customAgentStage = model.customAgentStage;
                 this.enableSearch = model.enableSearch;
                 this.language = model.language;
+                this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
             } 
 
@@ -287,6 +300,14 @@ public class CreateDataAgentSessionRequest extends Request {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * McpServerIds.
+             */
+            public Builder mcpServerIds(java.util.List<String> mcpServerIds) {
+                this.mcpServerIds = mcpServerIds;
                 return this;
             }
 
