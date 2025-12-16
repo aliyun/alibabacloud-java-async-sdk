@@ -27,6 +27,10 @@ public class DescribeVaultsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replication")
+    private Boolean replication;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -47,6 +51,10 @@ public class DescribeVaultsRequest extends Request {
     private String vaultName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultOwnerId")
+    private Long vaultOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultRegionId")
     private String vaultRegionId;
 
@@ -58,11 +66,13 @@ public class DescribeVaultsRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.replication = builder.replication;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.tag = builder.tag;
         this.vaultId = builder.vaultId;
         this.vaultName = builder.vaultName;
+        this.vaultOwnerId = builder.vaultOwnerId;
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultType = builder.vaultType;
     }
@@ -92,6 +102,13 @@ public class DescribeVaultsRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return replication
+     */
+    public Boolean getReplication() {
+        return this.replication;
     }
 
     /**
@@ -130,6 +147,13 @@ public class DescribeVaultsRequest extends Request {
     }
 
     /**
+     * @return vaultOwnerId
+     */
+    public Long getVaultOwnerId() {
+        return this.vaultOwnerId;
+    }
+
+    /**
      * @return vaultRegionId
      */
     public String getVaultRegionId() {
@@ -146,11 +170,13 @@ public class DescribeVaultsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVaultsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean replication; 
         private String resourceGroupId; 
         private String status; 
         private java.util.List<Tag> tag; 
         private String vaultId; 
         private String vaultName; 
+        private Long vaultOwnerId; 
         private String vaultRegionId; 
         private String vaultType; 
 
@@ -162,11 +188,13 @@ public class DescribeVaultsRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.replication = request.replication;
             this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
             this.tag = request.tag;
             this.vaultId = request.vaultId;
             this.vaultName = request.vaultName;
+            this.vaultOwnerId = request.vaultOwnerId;
             this.vaultRegionId = request.vaultRegionId;
             this.vaultType = request.vaultType;
         } 
@@ -192,6 +220,15 @@ public class DescribeVaultsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Replication.
+         */
+        public Builder replication(Boolean replication) {
+            this.putQueryParameter("Replication", replication);
+            this.replication = replication;
             return this;
         }
 
@@ -258,6 +295,15 @@ public class DescribeVaultsRequest extends Request {
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
             this.vaultName = vaultName;
+            return this;
+        }
+
+        /**
+         * VaultOwnerId.
+         */
+        public Builder vaultOwnerId(Long vaultOwnerId) {
+            this.putQueryParameter("VaultOwnerId", vaultOwnerId);
+            this.vaultOwnerId = vaultOwnerId;
             return this;
         }
 

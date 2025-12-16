@@ -30,6 +30,10 @@ public class CreateVaultRequest extends Request {
     private String kmsKeyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replication")
+    private Boolean replication;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vaultName;
@@ -56,6 +60,7 @@ public class CreateVaultRequest extends Request {
         this.description = builder.description;
         this.encryptType = builder.encryptType;
         this.kmsKeyId = builder.kmsKeyId;
+        this.replication = builder.replication;
         this.vaultName = builder.vaultName;
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultStorageClass = builder.vaultStorageClass;
@@ -98,6 +103,13 @@ public class CreateVaultRequest extends Request {
     }
 
     /**
+     * @return replication
+     */
+    public Boolean getReplication() {
+        return this.replication;
+    }
+
+    /**
      * @return vaultName
      */
     public String getVaultName() {
@@ -136,6 +148,7 @@ public class CreateVaultRequest extends Request {
         private String description; 
         private String encryptType; 
         private String kmsKeyId; 
+        private Boolean replication; 
         private String vaultName; 
         private String vaultRegionId; 
         private String vaultStorageClass; 
@@ -151,6 +164,7 @@ public class CreateVaultRequest extends Request {
             this.description = request.description;
             this.encryptType = request.encryptType;
             this.kmsKeyId = request.kmsKeyId;
+            this.replication = request.replication;
             this.vaultName = request.vaultName;
             this.vaultRegionId = request.vaultRegionId;
             this.vaultStorageClass = request.vaultStorageClass;
@@ -195,6 +209,15 @@ public class CreateVaultRequest extends Request {
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
             this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
+         * Replication.
+         */
+        public Builder replication(Boolean replication) {
+            this.putQueryParameter("Replication", replication);
+            this.replication = replication;
             return this;
         }
 

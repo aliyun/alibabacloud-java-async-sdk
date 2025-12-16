@@ -192,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVaultResponse> createVault(CreateVaultRequest request);
 
     /**
+     * @param request the request parameters of CreateVaultReplication  CreateVaultReplicationRequest
+     * @return CreateVaultReplicationResponse
+     */
+    CompletableFuture<CreateVaultReplicationResponse> createVaultReplication(CreateVaultReplicationRequest request);
+
+    /**
      * @param request the request parameters of DeleteAirEcsInstance  DeleteAirEcsInstanceRequest
      * @return DeleteAirEcsInstanceResponse
      */
@@ -300,6 +306,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteVaultResponse
      */
     CompletableFuture<DeleteVaultResponse> deleteVault(DeleteVaultRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVaultReplication  DeleteVaultReplicationRequest
+     * @return DeleteVaultReplicationResponse
+     */
+    CompletableFuture<DeleteVaultReplicationResponse> deleteVaultReplication(DeleteVaultReplicationRequest request);
 
     /**
      * @param request the request parameters of DescribeBackupClients  DescribeBackupClientsRequest
