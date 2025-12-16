@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeviceRegisterResponse> deviceRegister(DeviceRegisterRequest request);
 
     /**
+     * @param request the request parameters of GetPassThroughAuthInfo  GetPassThroughAuthInfoRequest
+     * @return GetPassThroughAuthInfoResponse
+     */
+    CompletableFuture<GetPassThroughAuthInfoResponse> getPassThroughAuthInfo(GetPassThroughAuthInfoRequest request);
+
+    /**
      * @param request the request parameters of GetToken  GetTokenRequest
      * @return GetTokenResponse
      */

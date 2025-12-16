@@ -94,6 +94,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPassThroughAuthInfo  GetPassThroughAuthInfoRequest
+     * @return GetPassThroughAuthInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetPassThroughAuthInfoResponse> getPassThroughAuthInfo(GetPassThroughAuthInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPassThroughAuthInfo").setMethod(HttpMethod.POST).setPathRegex("/open/api/auth/v1/token/getPassThroughAuthInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPassThroughAuthInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPassThroughAuthInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetToken  GetTokenRequest
      * @return GetTokenResponse
      */
