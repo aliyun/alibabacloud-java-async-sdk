@@ -291,6 +291,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAntAndCloudAuthUserStatusResponse> describeAntAndCloudAuthUserStatus(DescribeAntAndCloudAuthUserStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeAuthVerify  DescribeAuthVerifyRequest
+     * @return DescribeAuthVerifyResponse
+     */
+    CompletableFuture<DescribeAuthVerifyResponse> describeAuthVerify(DescribeAuthVerifyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</p>
      * 
@@ -668,6 +674,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return Id2MetaVerifyResponse
      */
     CompletableFuture<Id2MetaVerifyResponse> id2MetaVerify(Id2MetaVerifyRequest request);
+
+    /**
+     * @param request the request parameters of InitAuthVerify  InitAuthVerifyRequest
+     * @return InitAuthVerifyResponse
+     */
+    CompletableFuture<InitAuthVerifyResponse> initAuthVerify(InitAuthVerifyRequest request);
 
     /**
      * <b>description</b> :
