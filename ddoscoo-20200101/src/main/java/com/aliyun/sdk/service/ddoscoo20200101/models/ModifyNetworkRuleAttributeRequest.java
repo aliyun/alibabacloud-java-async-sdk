@@ -41,6 +41,10 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Module")
+    private String module;
+
     private ModifyNetworkRuleAttributeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -48,6 +52,7 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         this.forwardProtocol = builder.forwardProtocol;
         this.frontendPort = builder.frontendPort;
         this.instanceId = builder.instanceId;
+        this.module = builder.module;
     }
 
     public static Builder builder() {
@@ -98,12 +103,20 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return module
+     */
+    public String getModule() {
+        return this.module;
+    }
+
     public static final class Builder extends Request.Builder<ModifyNetworkRuleAttributeRequest, Builder> {
         private String regionId; 
         private String config; 
         private String forwardProtocol; 
         private Integer frontendPort; 
         private String instanceId; 
+        private String module; 
 
         private Builder() {
             super();
@@ -116,6 +129,7 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
             this.forwardProtocol = request.forwardProtocol;
             this.frontendPort = request.frontendPort;
             this.instanceId = request.instanceId;
+            this.module = request.module;
         } 
 
         /**
@@ -211,6 +225,15 @@ public class ModifyNetworkRuleAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Module.
+         */
+        public Builder module(String module) {
+            this.putQueryParameter("Module", module);
+            this.module = module;
             return this;
         }
 
