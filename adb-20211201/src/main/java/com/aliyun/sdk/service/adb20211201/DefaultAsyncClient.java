@@ -1432,6 +1432,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeAutoRenewalAttribute  DescribeAutoRenewalAttributeRequest
+     * @return DescribeAutoRenewalAttributeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAutoRenewalAttributeResponse> describeAutoRenewalAttribute(DescribeAutoRenewalAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAutoRenewalAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAutoRenewalAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAutoRenewalAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAvailableAdvices  DescribeAvailableAdvicesRequest
      * @return DescribeAvailableAdvicesResponse
      */
@@ -4236,6 +4254,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAuditLogConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAutoRenewalAttribute  ModifyAutoRenewalAttributeRequest
+     * @return ModifyAutoRenewalAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAutoRenewalAttributeResponse> modifyAutoRenewalAttribute(ModifyAutoRenewalAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAutoRenewalAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAutoRenewalAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAutoRenewalAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

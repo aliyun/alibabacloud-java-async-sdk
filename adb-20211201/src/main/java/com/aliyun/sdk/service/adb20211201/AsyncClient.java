@@ -586,6 +586,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAuditLogRecordsResponse> describeAuditLogRecords(DescribeAuditLogRecordsRequest request);
 
     /**
+     * @param request the request parameters of DescribeAutoRenewalAttribute  DescribeAutoRenewalAttributeRequest
+     * @return DescribeAutoRenewalAttributeResponse
+     */
+    CompletableFuture<DescribeAutoRenewalAttributeResponse> describeAutoRenewalAttribute(DescribeAutoRenewalAttributeRequest request);
+
+    /**
      * @param request the request parameters of DescribeAvailableAdvices  DescribeAvailableAdvicesRequest
      * @return DescribeAvailableAdvicesResponse
      */
@@ -1778,6 +1784,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAuditLogConfigResponse
      */
     CompletableFuture<ModifyAuditLogConfigResponse> modifyAuditLogConfig(ModifyAuditLogConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAutoRenewalAttribute  ModifyAutoRenewalAttributeRequest
+     * @return ModifyAutoRenewalAttributeResponse
+     */
+    CompletableFuture<ModifyAutoRenewalAttributeResponse> modifyAutoRenewalAttribute(ModifyAutoRenewalAttributeRequest request);
 
     /**
      * <b>description</b> :
