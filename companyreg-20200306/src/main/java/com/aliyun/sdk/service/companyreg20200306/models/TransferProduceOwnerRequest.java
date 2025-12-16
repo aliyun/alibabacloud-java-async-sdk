@@ -28,8 +28,11 @@ public class TransferProduceOwnerRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmployeeCode")
+    private String employeeCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PersonId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer personId;
 
     @com.aliyun.core.annotation.Query
@@ -40,6 +43,7 @@ public class TransferProduceOwnerRequest extends Request {
         super(builder);
         this.bizId = builder.bizId;
         this.bizType = builder.bizType;
+        this.employeeCode = builder.employeeCode;
         this.personId = builder.personId;
         this.remark = builder.remark;
     }
@@ -72,6 +76,13 @@ public class TransferProduceOwnerRequest extends Request {
     }
 
     /**
+     * @return employeeCode
+     */
+    public String getEmployeeCode() {
+        return this.employeeCode;
+    }
+
+    /**
      * @return personId
      */
     public Integer getPersonId() {
@@ -88,6 +99,7 @@ public class TransferProduceOwnerRequest extends Request {
     public static final class Builder extends Request.Builder<TransferProduceOwnerRequest, Builder> {
         private String bizId; 
         private String bizType; 
+        private String employeeCode; 
         private Integer personId; 
         private String remark; 
 
@@ -99,6 +111,7 @@ public class TransferProduceOwnerRequest extends Request {
             super(request);
             this.bizId = request.bizId;
             this.bizType = request.bizType;
+            this.employeeCode = request.employeeCode;
             this.personId = request.personId;
             this.remark = request.remark;
         } 
@@ -128,10 +141,16 @@ public class TransferProduceOwnerRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15565</p>
+         * EmployeeCode.
+         */
+        public Builder employeeCode(String employeeCode) {
+            this.putQueryParameter("EmployeeCode", employeeCode);
+            this.employeeCode = employeeCode;
+            return this;
+        }
+
+        /**
+         * PersonId.
          */
         public Builder personId(Integer personId) {
             this.putQueryParameter("PersonId", personId);
