@@ -161,7 +161,10 @@ public class GetOverviewRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The value must be a UNIX timestamp (in seconds). If left empty, the current time is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684166400</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +173,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The application group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -179,6 +185,11 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>0: the basic job data.</li>
+         * <li>1: the job running data.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +202,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The unique identifier (UID) of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -200,7 +214,10 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
@@ -209,6 +226,11 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li>query: queries data in a time range.</li>
+         * <li>query_range: queries time series data in a time range.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +243,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +256,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The value must be a UNIX timestamp (in seconds).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

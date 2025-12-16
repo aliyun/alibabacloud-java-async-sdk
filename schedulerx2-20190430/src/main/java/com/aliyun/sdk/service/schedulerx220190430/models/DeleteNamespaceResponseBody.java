@@ -93,7 +93,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned only if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The system namespace cannot be deleted</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401107</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

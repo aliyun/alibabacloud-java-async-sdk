@@ -149,6 +149,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         } 
 
         /**
+         * <p>The list of task IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder jobIdList(java.util.List<Long> jobIdList) {
@@ -159,7 +160,10 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
-         * NamespaceSource.
+         * <p>The source of the namespace. Required only for specific third-party cases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schedulerx</p>
          */
         public Builder namespaceSource(String namespaceSource) {
             this.putBodyParameter("NamespaceSource", namespaceSource);
@@ -168,6 +172,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
+         * <p>The source application group to which the task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +185,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
+         * <p>The source namespace where the task resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +198,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +211,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
+         * <p>The ID of the destination application group to which the task will be synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +224,7 @@ public class ManageSchedulerxJobSyncRequest extends Request {
         }
 
         /**
+         * <p>The destination namespace to which the task will be synchronized.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

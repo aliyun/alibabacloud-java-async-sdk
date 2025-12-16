@@ -95,6 +95,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRouteStrategyResponse> createRouteStrategy(CreateRouteStrategyRequest request);
 
     /**
+     * @param request the request parameters of CreateSchedulerxCalendar  CreateSchedulerxCalendarRequest
+     * @return CreateSchedulerxCalendarResponse
+     */
+    CompletableFuture<CreateSchedulerxCalendarResponse> createSchedulerxCalendar(CreateSchedulerxCalendarRequest request);
+
+    /**
+     * @param request the request parameters of CreateSchedulerxNotificationPolicy  CreateSchedulerxNotificationPolicyRequest
+     * @return CreateSchedulerxNotificationPolicyResponse
+     */
+    CompletableFuture<CreateSchedulerxNotificationPolicyResponse> createSchedulerxNotificationPolicy(CreateSchedulerxNotificationPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateWorkflow  CreateWorkflowRequest
      * @return CreateWorkflowResponse
      */
@@ -123,6 +135,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRouteStrategyResponse
      */
     CompletableFuture<DeleteRouteStrategyResponse> deleteRouteStrategy(DeleteRouteStrategyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSchedulerxCalendar  DeleteSchedulerxCalendarRequest
+     * @return DeleteSchedulerxCalendarResponse
+     */
+    CompletableFuture<DeleteSchedulerxCalendarResponse> deleteSchedulerxCalendar(DeleteSchedulerxCalendarRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSchedulerxNotificationPolicy  DeleteSchedulerxNotificationPolicyRequest
+     * @return DeleteSchedulerxNotificationPolicyResponse
+     */
+    CompletableFuture<DeleteSchedulerxNotificationPolicyResponse> deleteSchedulerxNotificationPolicy(DeleteSchedulerxNotificationPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
@@ -293,16 +317,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
     /**
+     * @param request the request parameters of ListWorkFlows  ListWorkFlowsRequest
+     * @return ListWorkFlowsResponse
+     */
+    CompletableFuture<ListWorkFlowsResponse> listWorkFlows(ListWorkFlowsRequest request);
+
+    /**
      * @param request the request parameters of ListWorkflowInstance  ListWorkflowInstanceRequest
      * @return ListWorkflowInstanceResponse
      */
     CompletableFuture<ListWorkflowInstanceResponse> listWorkflowInstance(ListWorkflowInstanceRequest request);
 
     /**
+     * @param request the request parameters of ManageSchedulerxCalendar  ManageSchedulerxCalendarRequest
+     * @return ManageSchedulerxCalendarResponse
+     */
+    CompletableFuture<ManageSchedulerxCalendarResponse> manageSchedulerxCalendar(ManageSchedulerxCalendarRequest request);
+
+    /**
      * @param request the request parameters of ManageSchedulerxJobSync  ManageSchedulerxJobSyncRequest
      * @return ManageSchedulerxJobSyncResponse
      */
     CompletableFuture<ManageSchedulerxJobSyncResponse> manageSchedulerxJobSync(ManageSchedulerxJobSyncRequest request);
+
+    /**
+     * @param request the request parameters of ManageSchedulerxNotificationPolicy  ManageSchedulerxNotificationPolicyRequest
+     * @return ManageSchedulerxNotificationPolicyResponse
+     */
+    CompletableFuture<ManageSchedulerxNotificationPolicyResponse> manageSchedulerxNotificationPolicy(ManageSchedulerxNotificationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ReadSchedulerxCalendar  ReadSchedulerxCalendarRequest
+     * @return ReadSchedulerxCalendarResponse
+     */
+    CompletableFuture<ReadSchedulerxCalendarResponse> readSchedulerxCalendar(ReadSchedulerxCalendarRequest request);
 
     /**
      * @param request the request parameters of ReadSchedulerxDesignateDetail  ReadSchedulerxDesignateDetailRequest
@@ -315,6 +363,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReadSchedulerxDesignateInfoResponse
      */
     CompletableFuture<ReadSchedulerxDesignateInfoResponse> readSchedulerxDesignateInfo(ReadSchedulerxDesignateInfoRequest request);
+
+    /**
+     * @param request the request parameters of ReadSchedulerxNotificationPolicy  ReadSchedulerxNotificationPolicyRequest
+     * @return ReadSchedulerxNotificationPolicyResponse
+     */
+    CompletableFuture<ReadSchedulerxNotificationPolicyResponse> readSchedulerxNotificationPolicy(ReadSchedulerxNotificationPolicyRequest request);
 
     /**
      * @param request the request parameters of RerunJob  RerunJobRequest

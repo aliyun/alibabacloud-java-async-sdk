@@ -26,6 +26,10 @@ public class UpdateAppGroupRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLog")
+    private Boolean enableLog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
@@ -60,6 +64,7 @@ public class UpdateAppGroupRequest extends Request {
         super(builder);
         this.appVersion = builder.appVersion;
         this.description = builder.description;
+        this.enableLog = builder.enableLog;
         this.groupId = builder.groupId;
         this.maxConcurrency = builder.maxConcurrency;
         this.monitorConfigJson = builder.monitorConfigJson;
@@ -94,6 +99,13 @@ public class UpdateAppGroupRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableLog
+     */
+    public Boolean getEnableLog() {
+        return this.enableLog;
     }
 
     /**
@@ -148,6 +160,7 @@ public class UpdateAppGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAppGroupRequest, Builder> {
         private Integer appVersion; 
         private String description; 
+        private Boolean enableLog; 
         private String groupId; 
         private Integer maxConcurrency; 
         private String monitorConfigJson; 
@@ -164,6 +177,7 @@ public class UpdateAppGroupRequest extends Request {
             super(request);
             this.appVersion = request.appVersion;
             this.description = request.description;
+            this.enableLog = request.enableLog;
             this.groupId = request.groupId;
             this.maxConcurrency = request.maxConcurrency;
             this.monitorConfigJson = request.monitorConfigJson;
@@ -194,6 +208,15 @@ public class UpdateAppGroupRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableLog.
+         */
+        public Builder enableLog(Boolean enableLog) {
+            this.putQueryParameter("EnableLog", enableLog);
+            this.enableLog = enableLog;
             return this;
         }
 

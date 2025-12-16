@@ -106,7 +106,10 @@ public class GetOverviewResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,7 +117,15 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned in JSON format. Valid data types:</p>
+         * <ul>
+         * <li>Basic job data.</li>
+         * <li>Job running data.</li>
+         * <li>Time series data for job execution: includes triggering statistics, records of successful and failed executions, and their associated timestamps within a specific time range.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;schedulerx_job_counter_disable&quot;: &quot;4&quot;,&quot;schedulerx_job_trigger_counter_running&quot;: &quot;0&quot;,&quot;schedulerx_job_counter_enable&quot;: &quot;70&quot;,&quot;schedulerx_job_counter_all&quot;: &quot;74&quot;,&quot;schedulerx_worker_counter&quot;: &quot;2&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +133,10 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Additional information. Returned only if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No access permission for the namespace [***]</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,7 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
@@ -141,7 +155,14 @@ public class GetOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

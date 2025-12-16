@@ -106,7 +106,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -114,9 +117,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The information about the jobs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -124,7 +125,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information returned only if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job is not existed, jobId=302</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +136,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +147,12 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>true</p>
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -232,7 +244,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-12 14:52:42</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +255,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1272118248844842</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -248,7 +266,23 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptContent.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash</p>
+             * <h1>The following are predefined variables provided by the system. You can use them to obtain information about the job run.</h1>
+             * <p>echo &quot;Job parameters: #{schedulerx.jobParameters}&quot;
+             * echo &quot;Shard index: #{schedulerx.shardingId}&quot;
+             * echo &quot;Shard parameters: #{schedulerx.shardingParameters}&quot;
+             * echo &quot;Total number of shards: #{schedulerx.shardingNum}&quot;
+             * echo &quot;Current retry count: #{schedulerx.attempt}&quot;
+             * echo &quot;Trigger type: #{schedulerx.triggerType}&quot;
+             * echo &quot;Scheduled timestamp: #{schedulerx.scheduleTime}&quot;
+             * echo &quot;Data timestamp: #{schedulerx.dataTime}&quot;</p>
+             * <h1>The output of the last line will be returned as the result</h1>
+             * <p>echo &quot;hello world&quot;</p>
+             * <h1>exit 1 indicates failure</h1>
+             * <p>exit 0</p>
              */
             public Builder scriptContent(String scriptContent) {
                 this.scriptContent = scriptContent;
@@ -256,7 +290,10 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * VersionesDescription.
+             * <p>The description of the script version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init version</p>
              */
             public Builder versionesDescription(String versionesDescription) {
                 this.versionesDescription = versionesDescription;
@@ -310,9 +347,7 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The information about the job&quot;s historical scripts.</p>
              */
             public Builder jobScriptHistoryInfos(java.util.List<JobScriptHistoryInfos> jobScriptHistoryInfos) {
                 this.jobScriptHistoryInfos = jobScriptHistoryInfos;

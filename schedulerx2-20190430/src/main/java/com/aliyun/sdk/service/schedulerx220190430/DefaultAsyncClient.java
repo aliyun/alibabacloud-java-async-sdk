@@ -216,6 +216,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSchedulerxCalendar  CreateSchedulerxCalendarRequest
+     * @return CreateSchedulerxCalendarResponse
+     */
+    @Override
+    public CompletableFuture<CreateSchedulerxCalendarResponse> createSchedulerxCalendar(CreateSchedulerxCalendarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSchedulerxCalendar").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSchedulerxCalendarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSchedulerxCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSchedulerxNotificationPolicy  CreateSchedulerxNotificationPolicyRequest
+     * @return CreateSchedulerxNotificationPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateSchedulerxNotificationPolicyResponse> createSchedulerxNotificationPolicy(CreateSchedulerxNotificationPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSchedulerxNotificationPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSchedulerxNotificationPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSchedulerxNotificationPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateWorkflow  CreateWorkflowRequest
      * @return CreateWorkflowResponse
      */
@@ -300,6 +336,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRouteStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSchedulerxCalendar  DeleteSchedulerxCalendarRequest
+     * @return DeleteSchedulerxCalendarResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSchedulerxCalendarResponse> deleteSchedulerxCalendar(DeleteSchedulerxCalendarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSchedulerxCalendar").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSchedulerxCalendarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSchedulerxCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSchedulerxNotificationPolicy  DeleteSchedulerxNotificationPolicyRequest
+     * @return DeleteSchedulerxNotificationPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSchedulerxNotificationPolicyResponse> deleteSchedulerxNotificationPolicy(DeleteSchedulerxNotificationPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSchedulerxNotificationPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSchedulerxNotificationPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSchedulerxNotificationPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -750,6 +822,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListWorkFlows  ListWorkFlowsRequest
+     * @return ListWorkFlowsResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkFlowsResponse> listWorkFlows(ListWorkFlowsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListWorkFlows").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkFlowsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkFlowsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListWorkflowInstance  ListWorkflowInstanceRequest
      * @return ListWorkflowInstanceResponse
      */
@@ -768,6 +858,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ManageSchedulerxCalendar  ManageSchedulerxCalendarRequest
+     * @return ManageSchedulerxCalendarResponse
+     */
+    @Override
+    public CompletableFuture<ManageSchedulerxCalendarResponse> manageSchedulerxCalendar(ManageSchedulerxCalendarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageSchedulerxCalendar").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageSchedulerxCalendarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManageSchedulerxCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ManageSchedulerxJobSync  ManageSchedulerxJobSyncRequest
      * @return ManageSchedulerxJobSyncResponse
      */
@@ -780,6 +888,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ManageSchedulerxJobSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ManageSchedulerxNotificationPolicy  ManageSchedulerxNotificationPolicyRequest
+     * @return ManageSchedulerxNotificationPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ManageSchedulerxNotificationPolicyResponse> manageSchedulerxNotificationPolicy(ManageSchedulerxNotificationPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageSchedulerxNotificationPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageSchedulerxNotificationPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManageSchedulerxNotificationPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReadSchedulerxCalendar  ReadSchedulerxCalendarRequest
+     * @return ReadSchedulerxCalendarResponse
+     */
+    @Override
+    public CompletableFuture<ReadSchedulerxCalendarResponse> readSchedulerxCalendar(ReadSchedulerxCalendarRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReadSchedulerxCalendar").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReadSchedulerxCalendarResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReadSchedulerxCalendarResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -816,6 +960,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReadSchedulerxDesignateInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReadSchedulerxNotificationPolicy  ReadSchedulerxNotificationPolicyRequest
+     * @return ReadSchedulerxNotificationPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ReadSchedulerxNotificationPolicyResponse> readSchedulerxNotificationPolicy(ReadSchedulerxNotificationPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReadSchedulerxNotificationPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReadSchedulerxNotificationPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReadSchedulerxNotificationPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -189,6 +189,9 @@ public class ListGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableLog")
+        private Boolean enableLog;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -201,6 +204,7 @@ public class ListGroupsResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.appVersion = builder.appVersion;
             this.description = builder.description;
+            this.enableLog = builder.enableLog;
             this.groupId = builder.groupId;
             this.namespace = builder.namespace;
         }
@@ -249,6 +253,13 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLog
+         */
+        public Boolean getEnableLog() {
+            return this.enableLog;
+        }
+
+        /**
          * @return groupId
          */
         public String getGroupId() {
@@ -268,6 +279,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private String appName; 
             private Integer appVersion; 
             private String description; 
+            private Boolean enableLog; 
             private String groupId; 
             private String namespace; 
 
@@ -280,6 +292,7 @@ public class ListGroupsResponseBody extends TeaModel {
                 this.appName = model.appName;
                 this.appVersion = model.appVersion;
                 this.description = model.description;
+                this.enableLog = model.enableLog;
                 this.groupId = model.groupId;
                 this.namespace = model.namespace;
             } 
@@ -336,6 +349,14 @@ public class ListGroupsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableLog.
+             */
+            public Builder enableLog(Boolean enableLog) {
+                this.enableLog = enableLog;
                 return this;
             }
 

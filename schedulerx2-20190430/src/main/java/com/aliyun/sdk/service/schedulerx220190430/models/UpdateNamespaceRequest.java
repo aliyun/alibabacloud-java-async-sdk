@@ -103,7 +103,10 @@ public class UpdateNamespaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -112,6 +115,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +128,10 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -133,6 +140,7 @@ public class UpdateNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

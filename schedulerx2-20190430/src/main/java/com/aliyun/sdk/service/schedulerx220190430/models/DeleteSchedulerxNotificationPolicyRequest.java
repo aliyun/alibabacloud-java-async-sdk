@@ -12,24 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteNamespaceRequest} extends {@link RequestModel}
+ * {@link DeleteSchedulerxNotificationPolicyRequest} extends {@link RequestModel}
  *
- * <p>DeleteNamespaceRequest</p>
+ * <p>DeleteSchedulerxNotificationPolicyRequest</p>
  */
-public class DeleteNamespaceRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Namespace")
+public class DeleteSchedulerxNotificationPolicyRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String namespace;
+    private String policyName;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DeleteNamespaceRequest(Builder builder) {
+    private DeleteSchedulerxNotificationPolicyRequest(Builder builder) {
         super(builder);
-        this.namespace = builder.namespace;
+        this.policyName = builder.policyName;
         this.regionId = builder.regionId;
     }
 
@@ -37,7 +37,7 @@ public class DeleteNamespaceRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteNamespaceRequest create() {
+    public static DeleteSchedulerxNotificationPolicyRequest create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class DeleteNamespaceRequest extends Request {
     }
 
     /**
-     * @return namespace
+     * @return policyName
      */
-    public String getNamespace() {
-        return this.namespace;
+    public String getPolicyName() {
+        return this.policyName;
     }
 
     /**
@@ -60,30 +60,30 @@ public class DeleteNamespaceRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteNamespaceRequest, Builder> {
-        private String namespace; 
+    public static final class Builder extends Request.Builder<DeleteSchedulerxNotificationPolicyRequest, Builder> {
+        private String policyName; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteNamespaceRequest request) {
+        private Builder(DeleteSchedulerxNotificationPolicyRequest request) {
             super(request);
-            this.namespace = request.namespace;
+            this.policyName = request.policyName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
+         * <p>The name of the notification policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
+         * <p>test-weekdays</p>
          */
-        public Builder namespace(String namespace) {
-            this.putQueryParameter("Namespace", namespace);
-            this.namespace = namespace;
+        public Builder policyName(String policyName) {
+            this.putBodyParameter("PolicyName", policyName);
+            this.policyName = policyName;
             return this;
         }
 
@@ -95,14 +95,14 @@ public class DeleteNamespaceRequest extends Request {
          * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
+            this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         @Override
-        public DeleteNamespaceRequest build() {
-            return new DeleteNamespaceRequest(this);
+        public DeleteSchedulerxNotificationPolicyRequest build() {
+            return new DeleteSchedulerxNotificationPolicyRequest(this);
         } 
 
     } 

@@ -119,7 +119,7 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denial details.</p>
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +127,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -145,7 +148,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned only if an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobId=xxx is not existed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +159,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +170,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -292,7 +304,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthAction.
+             * <p>The authentication operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edas:ReadSchedulerxDesignateInfo</p>
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -300,7 +315,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * <p>The principal name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>209312833131416xxx</p>
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -308,7 +326,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * <p>The principal account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1827811800526xxx</p>
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -316,7 +337,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * <p>The principal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubUser</p>
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -324,7 +348,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * <p>The encoded diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AQFn/cLPZ/3Cz0YxQkZBMjVGLTY0REUtNTlGNS05NzUwLTgyMUE4M0MwMTFDRQ==</p>
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -332,7 +359,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * <p>The permission denial type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImplicitDeny</p>
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -340,7 +370,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccountLevelIdentityBasedPolicy</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -550,7 +583,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CpuLoad1.
+             * <p>The most recent value of CPU workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpuLoad1(Double cpuLoad1) {
                 this.cpuLoad1 = cpuLoad1;
@@ -558,7 +594,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuLoad5.
+             * <p>The average of the latest five values of CPU workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpuLoad5(Double cpuLoad5) {
                 this.cpuLoad5 = cpuLoad5;
@@ -566,7 +605,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CpuProcessors.
+             * <p>The number of available CPU processors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuProcessors(Integer cpuProcessors) {
                 this.cpuProcessors = cpuProcessors;
@@ -574,7 +616,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskMax.
+             * <p>The total disk capacity in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder diskMax(Integer diskMax) {
                 this.diskMax = diskMax;
@@ -582,7 +627,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsage.
+             * <p>The disk usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.19142496008515167</p>
              */
             public Builder diskUsage(Double diskUsage) {
                 this.diskUsage = diskUsage;
@@ -590,7 +638,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsed.
+             * <p>The used disk space in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>148</p>
              */
             public Builder diskUsed(Integer diskUsed) {
                 this.diskUsed = diskUsed;
@@ -598,7 +649,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExecCount.
+             * <p>The number of job executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder execCount(Long execCount) {
                 this.execCount = execCount;
@@ -606,7 +660,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Heap1Usage.
+             * <p>The most recent value of heap memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.06072874493927125</p>
              */
             public Builder heap1Usage(Double heap1Usage) {
                 this.heap1Usage = heap1Usage;
@@ -614,7 +671,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Heap1Used.
+             * <p>The most recent value of used heap memory in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder heap1Used(Double heap1Used) {
                 this.heap1Used = heap1Used;
@@ -622,7 +682,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Heap5Usage.
+             * <p>The average of the latest five values of heap memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.06477732793522267</p>
              */
             public Builder heap5Usage(Double heap5Usage) {
                 this.heap5Usage = heap5Usage;
@@ -630,7 +693,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HeapMax.
+             * <p>The maximum heap memory in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder heapMax(Integer heapMax) {
                 this.heapMax = heapMax;
@@ -638,7 +704,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SharePoolAvailableSize.
+             * <p>The number of available resources in the shared pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder sharePoolAvailableSize(Integer sharePoolAvailableSize) {
                 this.sharePoolAvailableSize = sharePoolAvailableSize;
@@ -646,7 +715,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SharePoolQueueSize.
+             * <p>The queue size in the shared pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sharePoolQueueSize(Integer sharePoolQueueSize) {
                 this.sharePoolQueueSize = sharePoolQueueSize;
@@ -791,7 +863,16 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Busy.
+             * <p>The status of the workers. Valid values:</p>
+             * <ul>
+             * <li>FREE: idle.</li>
+             * <li>LOAD5_BUSY: The average of the latest five values of CPU workload is too high.</li>
+             * <li>HEAP5_BUSY: The average of the latest five values of heap memory usage is too high.</li>
+             * <li>DISK_BUSY: The disk usage is too high.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE</p>
              */
             public Builder busy(String busy) {
                 this.busy = busy;
@@ -799,7 +880,14 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Checked.
+             * <p>Indicates whether the workers are specified.</p>
+             * <ul>
+             * <li>true: The workers are specified.</li>
+             * <li>false: The workers are not specified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checked(Boolean checked) {
                 this.checked = checked;
@@ -807,7 +895,14 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The information returned based on the value of the DesignateType parameter.</p>
+             * <ul>
+             * <li>If you set the DesignateType parameter to 2, the tags of the workers are returned.</li>
+             * <li>If you set the DesignateType parameter to 1, the IP addresses of the workers are returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10.52.169.25</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -815,7 +910,7 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>The metric values.</p>
              */
             public Builder metrics(Metrics metrics) {
                 this.metrics = metrics;
@@ -823,7 +918,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Offline.
+             * <p>Indicates whether the workers are offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fasle</p>
              */
             public Builder offline(Boolean offline) {
                 this.offline = offline;
@@ -831,7 +929,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -839,7 +940,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Starter.
+             * <p>The startup method of the workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pod</p>
              */
             public Builder starter(String starter) {
                 this.starter = starter;
@@ -847,7 +951,10 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the workers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.12.5</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -937,7 +1044,17 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DesignateType.
+             * <p>The information type of the specified workers.</p>
+             * <ul>
+             * <li>1: the IP address of the specified workers.</li>
+             * <li>2: the tags of the specified workers.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The default value of the DesignateType parameter is 1.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder designateType(Integer designateType) {
                 this.designateType = designateType;
@@ -945,7 +1062,17 @@ public class ReadSchedulerxDesignateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Transferable.
+             * <p>Indicates whether to enable failover for the workers. If you set this parameter to true, the job is scheduled to other workers when the specified workers go offline.</p>
+             * <ul>
+             * <li>true: enables failover for the workers.</li>
+             * <li>false: disables failover for the workers.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The default value of the Transferable parameter is false.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder transferable(Boolean transferable) {
                 this.transferable = transferable;

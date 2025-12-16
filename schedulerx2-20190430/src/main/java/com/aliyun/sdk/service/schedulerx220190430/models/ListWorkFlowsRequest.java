@@ -12,20 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListJobScriptHistoryRequest} extends {@link RequestModel}
+ * {@link ListWorkFlowsRequest} extends {@link RequestModel}
  *
- * <p>ListJobScriptHistoryRequest</p>
+ * <p>ListWorkFlowsRequest</p>
  */
-public class ListJobScriptHistoryRequest extends Request {
+public class ListWorkFlowsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long jobId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -37,24 +32,43 @@ public class ListJobScriptHistoryRequest extends Request {
     private String namespaceSource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Integer pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private ListJobScriptHistoryRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
+    private String workflowName;
+
+    private ListWorkFlowsRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
-        this.jobId = builder.jobId;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
+        this.pageNum = builder.pageNum;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.status = builder.status;
+        this.workflowName = builder.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListJobScriptHistoryRequest create() {
+    public static ListWorkFlowsRequest create() {
         return builder().build();
     }
 
@@ -68,13 +82,6 @@ public class ListJobScriptHistoryRequest extends Request {
      */
     public String getGroupId() {
         return this.groupId;
-    }
-
-    /**
-     * @return jobId
-     */
-    public Long getJobId() {
-        return this.jobId;
     }
 
     /**
@@ -92,38 +99,72 @@ public class ListJobScriptHistoryRequest extends Request {
     }
 
     /**
+     * @return pageNum
+     */
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListJobScriptHistoryRequest, Builder> {
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return workflowName
+     */
+    public String getWorkflowName() {
+        return this.workflowName;
+    }
+
+    public static final class Builder extends Request.Builder<ListWorkFlowsRequest, Builder> {
         private String groupId; 
-        private Long jobId; 
         private String namespace; 
         private String namespaceSource; 
+        private Integer pageNum; 
+        private Integer pageSize; 
         private String regionId; 
+        private Integer status; 
+        private String workflowName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListJobScriptHistoryRequest request) {
+        private Builder(ListWorkFlowsRequest request) {
             super(request);
             this.groupId = request.groupId;
-            this.jobId = request.jobId;
             this.namespace = request.namespace;
             this.namespaceSource = request.namespaceSource;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.status = request.status;
+            this.workflowName = request.workflowName;
         } 
 
         /**
-         * <p>The application ID. You can obtain the application ID on the Applications page in the SchedulerX console.</p>
+         * <p>The ID of the application group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>testSchedulerx.defaultGroup</p>
+         * <p>hxm.test</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -132,24 +173,11 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
-         * <p>The job ID. You can obtain the job ID on the Tasks page in the SchedulerX console.</p>
+         * <p>The namespace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>92583</p>
-         */
-        public Builder jobId(Long jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
-
-        /**
-         * <p>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
+         * <p>4a06d5ea-f576-4326-842c-fb14ea043d8d</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -158,7 +186,7 @@ public class ListJobScriptHistoryRequest extends Request {
         }
 
         /**
-         * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+         * <p>The source of the namespace. This parameter is required only for special sources.</p>
          * 
          * <strong>example:</strong>
          * <p>schedulerx</p>
@@ -166,6 +194,30 @@ public class ListJobScriptHistoryRequest extends Request {
         public Builder namespaceSource(String namespaceSource) {
             this.putQueryParameter("NamespaceSource", namespaceSource);
             this.namespaceSource = namespaceSource;
+            return this;
+        }
+
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNum(Integer pageNum) {
+            this.putQueryParameter("PageNum", pageNum);
+            this.pageNum = pageNum;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -182,9 +234,37 @@ public class ListJobScriptHistoryRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The job status.</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the job.</li>
+         * <li><strong>1</strong>: enables the routing policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test3</p>
+         */
+        public Builder workflowName(String workflowName) {
+            this.putQueryParameter("WorkflowName", workflowName);
+            this.workflowName = workflowName;
+            return this;
+        }
+
         @Override
-        public ListJobScriptHistoryRequest build() {
-            return new ListJobScriptHistoryRequest(this);
+        public ListWorkFlowsRequest build() {
+            return new ListWorkFlowsRequest(this);
         } 
 
     } 

@@ -189,6 +189,9 @@ public class GetAppGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableLog")
+        private Boolean enableLog;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
@@ -213,6 +216,7 @@ public class GetAppGroupResponseBody extends TeaModel {
             this.appVersion = builder.appVersion;
             this.curJobs = builder.curJobs;
             this.description = builder.description;
+            this.enableLog = builder.enableLog;
             this.groupId = builder.groupId;
             this.maxJobs = builder.maxJobs;
             this.monitorConfigJson = builder.monitorConfigJson;
@@ -265,6 +269,13 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLog
+         */
+        public Boolean getEnableLog() {
+            return this.enableLog;
+        }
+
+        /**
          * @return groupId
          */
         public String getGroupId() {
@@ -312,6 +323,7 @@ public class GetAppGroupResponseBody extends TeaModel {
             private String appVersion; 
             private Integer curJobs; 
             private String description; 
+            private Boolean enableLog; 
             private String groupId; 
             private Integer maxJobs; 
             private String monitorConfigJson; 
@@ -328,6 +340,7 @@ public class GetAppGroupResponseBody extends TeaModel {
                 this.appVersion = model.appVersion;
                 this.curJobs = model.curJobs;
                 this.description = model.description;
+                this.enableLog = model.enableLog;
                 this.groupId = model.groupId;
                 this.maxJobs = model.maxJobs;
                 this.monitorConfigJson = model.monitorConfigJson;
@@ -388,6 +401,14 @@ public class GetAppGroupResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableLog.
+             */
+            public Builder enableLog(Boolean enableLog) {
+                this.enableLog = enableLog;
                 return this;
             }
 
