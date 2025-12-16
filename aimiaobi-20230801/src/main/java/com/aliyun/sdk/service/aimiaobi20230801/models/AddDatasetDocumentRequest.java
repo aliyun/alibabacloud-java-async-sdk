@@ -178,6 +178,294 @@ public class AddDatasetDocumentRequest extends Request {
      *
      * <p>AddDatasetDocumentRequest</p>
      */
+    public static class AsrSentences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private AsrSentences(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AsrSentences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsrSentences model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public AsrSentences build() {
+                return new AsrSentences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddDatasetDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>AddDatasetDocumentRequest</p>
+     */
+    public static class VideoShots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private VideoShots(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoShots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoShots model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public VideoShots build() {
+                return new VideoShots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddDatasetDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>AddDatasetDocumentRequest</p>
+     */
+    public static class Metadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrSentences")
+        private java.util.List<AsrSentences> asrSentences;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("VideoShots")
+        private java.util.List<VideoShots> videoShots;
+
+        private Metadata(Builder builder) {
+            this.asrSentences = builder.asrSentences;
+            this.text = builder.text;
+            this.videoShots = builder.videoShots;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Metadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asrSentences
+         */
+        public java.util.List<AsrSentences> getAsrSentences() {
+            return this.asrSentences;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return videoShots
+         */
+        public java.util.List<VideoShots> getVideoShots() {
+            return this.videoShots;
+        }
+
+        public static final class Builder {
+            private java.util.List<AsrSentences> asrSentences; 
+            private String text; 
+            private java.util.List<VideoShots> videoShots; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.asrSentences = model.asrSentences;
+                this.text = model.text;
+                this.videoShots = model.videoShots;
+            } 
+
+            /**
+             * AsrSentences.
+             */
+            public Builder asrSentences(java.util.List<AsrSentences> asrSentences) {
+                this.asrSentences = asrSentences;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * VideoShots.
+             */
+            public Builder videoShots(java.util.List<VideoShots> videoShots) {
+                this.videoShots = videoShots;
+                return this;
+            }
+
+            public Metadata build() {
+                return new Metadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddDatasetDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>AddDatasetDocumentRequest</p>
+     */
     public static class MultimodalMedias extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
@@ -299,6 +587,9 @@ public class AddDatasetDocumentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Extend3")
         private String extend3;
 
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private Metadata metadata;
+
         @com.aliyun.core.annotation.NameInMap("MultimodalIndexName")
         private String multimodalIndexName;
 
@@ -329,6 +620,7 @@ public class AddDatasetDocumentRequest extends Request {
             this.extend1 = builder.extend1;
             this.extend2 = builder.extend2;
             this.extend3 = builder.extend3;
+            this.metadata = builder.metadata;
             this.multimodalIndexName = builder.multimodalIndexName;
             this.multimodalMedias = builder.multimodalMedias;
             this.pubTime = builder.pubTime;
@@ -403,6 +695,13 @@ public class AddDatasetDocumentRequest extends Request {
         }
 
         /**
+         * @return metadata
+         */
+        public Metadata getMetadata() {
+            return this.metadata;
+        }
+
+        /**
          * @return multimodalIndexName
          */
         public String getMultimodalIndexName() {
@@ -460,6 +759,7 @@ public class AddDatasetDocumentRequest extends Request {
             private String extend1; 
             private String extend2; 
             private String extend3; 
+            private Metadata metadata; 
             private String multimodalIndexName; 
             private java.util.List<MultimodalMedias> multimodalMedias; 
             private String pubTime; 
@@ -480,6 +780,7 @@ public class AddDatasetDocumentRequest extends Request {
                 this.extend1 = model.extend1;
                 this.extend2 = model.extend2;
                 this.extend3 = model.extend3;
+                this.metadata = model.metadata;
                 this.multimodalIndexName = model.multimodalIndexName;
                 this.multimodalMedias = model.multimodalMedias;
                 this.pubTime = model.pubTime;
@@ -550,6 +851,14 @@ public class AddDatasetDocumentRequest extends Request {
              */
             public Builder extend3(String extend3) {
                 this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * Metadata.
+             */
+            public Builder metadata(Metadata metadata) {
+                this.metadata = metadata;
                 return this;
             }
 

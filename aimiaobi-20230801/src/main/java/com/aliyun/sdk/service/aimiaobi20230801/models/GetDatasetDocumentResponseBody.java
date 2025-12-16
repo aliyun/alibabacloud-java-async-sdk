@@ -178,6 +178,294 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
      *
      * <p>GetDatasetDocumentResponseBody</p>
      */
+    public static class AsrSentences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private AsrSentences(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AsrSentences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsrSentences model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public AsrSentences build() {
+                return new AsrSentences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetDocumentResponseBody</p>
+     */
+    public static class VideoShots extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private VideoShots(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoShots create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endTime; 
+            private Long startTime; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoShots model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+                this.text = model.text;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public VideoShots build() {
+                return new VideoShots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetDocumentResponseBody</p>
+     */
+    public static class Metadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrSentences")
+        private java.util.List<AsrSentences> asrSentences;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("VideoShots")
+        private java.util.List<VideoShots> videoShots;
+
+        private Metadata(Builder builder) {
+            this.asrSentences = builder.asrSentences;
+            this.text = builder.text;
+            this.videoShots = builder.videoShots;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Metadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asrSentences
+         */
+        public java.util.List<AsrSentences> getAsrSentences() {
+            return this.asrSentences;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return videoShots
+         */
+        public java.util.List<VideoShots> getVideoShots() {
+            return this.videoShots;
+        }
+
+        public static final class Builder {
+            private java.util.List<AsrSentences> asrSentences; 
+            private String text; 
+            private java.util.List<VideoShots> videoShots; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.asrSentences = model.asrSentences;
+                this.text = model.text;
+                this.videoShots = model.videoShots;
+            } 
+
+            /**
+             * AsrSentences.
+             */
+            public Builder asrSentences(java.util.List<AsrSentences> asrSentences) {
+                this.asrSentences = asrSentences;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * VideoShots.
+             */
+            public Builder videoShots(java.util.List<VideoShots> videoShots) {
+                this.videoShots = videoShots;
+                return this;
+            }
+
+            public Metadata build() {
+                return new Metadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetDocumentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -188,14 +476,23 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
+        @com.aliyun.core.annotation.NameInMap("DocType")
+        private String docType;
+
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private Metadata metadata;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
         @com.aliyun.core.annotation.NameInMap("SourceFrom")
         private String sourceFrom;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
@@ -210,9 +507,12 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             this.content = builder.content;
             this.disableHandleMultimodalMedia = builder.disableHandleMultimodalMedia;
             this.docId = builder.docId;
+            this.docType = builder.docType;
             this.docUuid = builder.docUuid;
+            this.metadata = builder.metadata;
             this.pubTime = builder.pubTime;
             this.sourceFrom = builder.sourceFrom;
+            this.status = builder.status;
             this.summary = builder.summary;
             this.title = builder.title;
             this.url = builder.url;
@@ -248,10 +548,24 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * @return docType
+         */
+        public String getDocType() {
+            return this.docType;
+        }
+
+        /**
          * @return docUuid
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return metadata
+         */
+        public Metadata getMetadata() {
+            return this.metadata;
         }
 
         /**
@@ -266,6 +580,13 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
          */
         public String getSourceFrom() {
             return this.sourceFrom;
+        }
+
+        /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
         }
 
         /**
@@ -293,9 +614,12 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             private String content; 
             private Boolean disableHandleMultimodalMedia; 
             private String docId; 
+            private String docType; 
             private String docUuid; 
+            private Metadata metadata; 
             private String pubTime; 
             private String sourceFrom; 
+            private Integer status; 
             private String summary; 
             private String title; 
             private String url; 
@@ -307,9 +631,12 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
                 this.content = model.content;
                 this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
                 this.docId = model.docId;
+                this.docType = model.docType;
                 this.docUuid = model.docUuid;
+                this.metadata = model.metadata;
                 this.pubTime = model.pubTime;
                 this.sourceFrom = model.sourceFrom;
+                this.status = model.status;
                 this.summary = model.summary;
                 this.title = model.title;
                 this.url = model.url;
@@ -340,10 +667,26 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             }
 
             /**
+             * DocType.
+             */
+            public Builder docType(String docType) {
+                this.docType = docType;
+                return this;
+            }
+
+            /**
              * DocUuid.
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Metadata.
+             */
+            public Builder metadata(Metadata metadata) {
+                this.metadata = metadata;
                 return this;
             }
 
@@ -360,6 +703,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
              */
             public Builder sourceFrom(String sourceFrom) {
                 this.sourceFrom = sourceFrom;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 

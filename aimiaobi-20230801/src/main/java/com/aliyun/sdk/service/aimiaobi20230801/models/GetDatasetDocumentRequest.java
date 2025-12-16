@@ -38,6 +38,10 @@ public class GetDatasetDocumentRequest extends Request {
     private String docUuid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeFields")
+    private java.util.List<String> includeFields;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -49,6 +53,7 @@ public class GetDatasetDocumentRequest extends Request {
         this.datasetName = builder.datasetName;
         this.docId = builder.docId;
         this.docUuid = builder.docUuid;
+        this.includeFields = builder.includeFields;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -101,6 +106,13 @@ public class GetDatasetDocumentRequest extends Request {
     }
 
     /**
+     * @return includeFields
+     */
+    public java.util.List<String> getIncludeFields() {
+        return this.includeFields;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -113,6 +125,7 @@ public class GetDatasetDocumentRequest extends Request {
         private String datasetName; 
         private String docId; 
         private String docUuid; 
+        private java.util.List<String> includeFields; 
         private String workspaceId; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class GetDatasetDocumentRequest extends Request {
             this.datasetName = request.datasetName;
             this.docId = request.docId;
             this.docUuid = request.docUuid;
+            this.includeFields = request.includeFields;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -171,6 +185,16 @@ public class GetDatasetDocumentRequest extends Request {
         public Builder docUuid(String docUuid) {
             this.putBodyParameter("DocUuid", docUuid);
             this.docUuid = docUuid;
+            return this;
+        }
+
+        /**
+         * IncludeFields.
+         */
+        public Builder includeFields(java.util.List<String> includeFields) {
+            String includeFieldsShrink = shrink(includeFields, "IncludeFields", "json");
+            this.putBodyParameter("IncludeFields", includeFieldsShrink);
+            this.includeFields = includeFields;
             return this;
         }
 
