@@ -500,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationAdvancedConfig  GetApplicationAdvancedConfigRequest
+     * @return GetApplicationAdvancedConfigResponse
+     */
+    CompletableFuture<GetApplicationAdvancedConfigResponse> getApplicationAdvancedConfig(GetApplicationAdvancedConfigRequest request);
+
+    /**
      * @param request the request parameters of GetApplicationFederatedCredential  GetApplicationFederatedCredentialRequest
      * @return GetApplicationFederatedCredentialResponse
      */
@@ -1116,6 +1122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnlockUserResponse
      */
     CompletableFuture<UnlockUserResponse> unlockUser(UnlockUserRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApplicationAdvancedConfig  UpdateApplicationAdvancedConfigRequest
+     * @return UpdateApplicationAdvancedConfigResponse
+     */
+    CompletableFuture<UpdateApplicationAdvancedConfigResponse> updateApplicationAdvancedConfig(UpdateApplicationAdvancedConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateApplicationAuthorizationType  UpdateApplicationAuthorizationTypeRequest

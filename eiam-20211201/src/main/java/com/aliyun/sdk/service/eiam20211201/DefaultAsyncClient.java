@@ -1432,6 +1432,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApplicationAdvancedConfig  GetApplicationAdvancedConfigRequest
+     * @return GetApplicationAdvancedConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetApplicationAdvancedConfigResponse> getApplicationAdvancedConfig(GetApplicationAdvancedConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApplicationAdvancedConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApplicationAdvancedConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApplicationAdvancedConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetApplicationFederatedCredential  GetApplicationFederatedCredentialRequest
      * @return GetApplicationFederatedCredentialResponse
      */
@@ -3244,6 +3262,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnlockUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateApplicationAdvancedConfig  UpdateApplicationAdvancedConfigRequest
+     * @return UpdateApplicationAdvancedConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateApplicationAdvancedConfigResponse> updateApplicationAdvancedConfig(UpdateApplicationAdvancedConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateApplicationAdvancedConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateApplicationAdvancedConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateApplicationAdvancedConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
