@@ -488,6 +488,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.  * @param request  the request parameters of DescribeClientCertificateForSerialNumber  DescribeClientCertificateForSerialNumberRequest
+     * @return DescribeClientCertificateForSerialNumberResponse
+     */
+    @Deprecated
+    @Override
+    public CompletableFuture<DescribeClientCertificateForSerialNumberResponse> describeClientCertificateForSerialNumber(DescribeClientCertificateForSerialNumberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClientCertificateForSerialNumber").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClientCertificateForSerialNumberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClientCertificateForSerialNumberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.</p>
      * <h2>Limits</h2>
@@ -505,6 +524,43 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeClientCertificateStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeClientCertificateStatusForSerialNumber  DescribeClientCertificateStatusForSerialNumberRequest
+     * @return DescribeClientCertificateStatusForSerialNumberResponse
+     */
+    @Override
+    public CompletableFuture<DescribeClientCertificateStatusForSerialNumberResponse> describeClientCertificateStatusForSerialNumber(DescribeClientCertificateStatusForSerialNumberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeClientCertificateStatusForSerialNumber").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeClientCertificateStatusForSerialNumberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeClientCertificateStatusForSerialNumberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.  * @param request  the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
+     * @return DescribePcaAndExternalCACertificateListResponse
+     */
+    @Deprecated
+    @Override
+    public CompletableFuture<DescribePcaAndExternalCACertificateListResponse> describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePcaAndExternalCACertificateList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePcaAndExternalCACertificateListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePcaAndExternalCACertificateListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -546,6 +602,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAllEndEntityInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCACertificateLog  ListCACertificateLogRequest
+     * @return ListCACertificateLogResponse
+     */
+    @Override
+    public CompletableFuture<ListCACertificateLogResponse> listCACertificateLog(ListCACertificateLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCACertificateLog").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCACertificateLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCACertificateLogResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

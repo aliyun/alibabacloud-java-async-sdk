@@ -27,10 +27,15 @@ public class DescribeCertificatePrivateKeyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeCertificatePrivateKeyRequest(Builder builder) {
         super(builder);
         this.encryptedCode = builder.encryptedCode;
         this.identifier = builder.identifier;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class DescribeCertificatePrivateKeyRequest extends Request {
         return this.identifier;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCertificatePrivateKeyRequest, Builder> {
         private String encryptedCode; 
         private String identifier; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class DescribeCertificatePrivateKeyRequest extends Request {
             super(request);
             this.encryptedCode = request.encryptedCode;
             this.identifier = request.identifier;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -101,6 +115,15 @@ public class DescribeCertificatePrivateKeyRequest extends Request {
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
             this.identifier = identifier;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

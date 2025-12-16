@@ -224,6 +224,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClientCertificateResponse> describeClientCertificate(DescribeClientCertificateRequest request);
 
     /**
+     * @deprecated OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.  * @param request  the request parameters of DescribeClientCertificateForSerialNumber  DescribeClientCertificateForSerialNumberRequest
+     * @return DescribeClientCertificateForSerialNumberResponse
+     */
+    @Deprecated
+    CompletableFuture<DescribeClientCertificateForSerialNumberResponse> describeClientCertificateForSerialNumber(DescribeClientCertificateForSerialNumberRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.</p>
      * <h2>Limits</h2>
@@ -233,6 +240,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeClientCertificateStatusResponse
      */
     CompletableFuture<DescribeClientCertificateStatusResponse> describeClientCertificateStatus(DescribeClientCertificateStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeClientCertificateStatusForSerialNumber  DescribeClientCertificateStatusForSerialNumberRequest
+     * @return DescribeClientCertificateStatusForSerialNumberResponse
+     */
+    CompletableFuture<DescribeClientCertificateStatusForSerialNumberResponse> describeClientCertificateStatusForSerialNumber(DescribeClientCertificateStatusForSerialNumberRequest request);
+
+    /**
+     * @deprecated OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.  * @param request  the request parameters of DescribePcaAndExternalCACertificateList  DescribePcaAndExternalCACertificateListRequest
+     * @return DescribePcaAndExternalCACertificateListResponse
+     */
+    @Deprecated
+    CompletableFuture<DescribePcaAndExternalCACertificateListResponse> describePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request);
 
     /**
      * <b>description</b> :
@@ -250,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAllEndEntityInstanceResponse
      */
     CompletableFuture<ListAllEndEntityInstanceResponse> listAllEndEntityInstance(ListAllEndEntityInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListCACertificateLog  ListCACertificateLogRequest
+     * @return ListCACertificateLogResponse
+     */
+    CompletableFuture<ListCACertificateLogResponse> listCACertificateLog(ListCACertificateLogRequest request);
 
     /**
      * @param request the request parameters of ListCert  ListCertRequest
