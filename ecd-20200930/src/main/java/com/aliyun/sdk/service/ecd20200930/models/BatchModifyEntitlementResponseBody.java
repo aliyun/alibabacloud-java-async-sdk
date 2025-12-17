@@ -75,7 +75,10 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * DesktopId.
+             * <p>The cloud computer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-e94kzikmpljjx99pl</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -162,7 +168,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * <p>The authorized user IDs for the cloud computer.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -170,7 +176,18 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * InnerStatus.
+             * <p>The assign result for each cloud computer.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FAILED</li>
+             * <li>NOT_STARTED</li>
+             * <li>STARTED</li>
+             * <li>PROCESSING</li>
+             * <li>FINISHED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder innerStatus(String innerStatus) {
                 this.innerStatus = innerStatus;
@@ -258,7 +275,18 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FAILED</li>
+             * <li>NOT_STARTED</li>
+             * <li>STARTED</li>
+             * <li>PROCESSING</li>
+             * <li>FINISHED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FINISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -266,7 +294,10 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B2F4F018-0EDF-159C-B285-117B5F1C****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

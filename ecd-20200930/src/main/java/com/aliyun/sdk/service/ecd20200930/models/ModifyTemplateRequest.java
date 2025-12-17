@@ -403,7 +403,17 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * DefaultLanguage.
+         * <p>The default language of the cloud computer during startup. This parameter takes effect only when the cloud computer is created from a system image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en-US: English.</li>
+         * <li>zh-HK: Chinese, Traditional (Hong Kong, China).</li>
+         * <li>zh-CN: Simplified Chinese.</li>
+         * <li>ja-JP: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder defaultLanguage(String defaultLanguage) {
             this.putBodyParameter("DefaultLanguage", defaultLanguage);
@@ -412,7 +422,14 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The template description. It must meet the following criteria:</p>
+         * <ul>
+         * <li>It can be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -421,7 +438,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -448,7 +468,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>The ID of the policy group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-gx2x1dhsmthe9****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putBodyParameter("PolicyGroupId", policyGroupId);
@@ -466,7 +489,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * RegionConfigList.
+         * <p>The regions by which you can search for cloud computer templates. When this parameter takes effect, cloud computer templates are matched based on the specified regions.</p>
+         * <blockquote>
+         * <p> You can specify up to 20 regions.</p>
+         * </blockquote>
          */
         public Builder regionConfigList(java.util.List<RegionConfigList> regionConfigList) {
             this.putBodyParameter("RegionConfigList", regionConfigList);
@@ -475,7 +501,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-a5fqjjqaejt***</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -484,7 +513,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * ResourceTagList.
+         * <p>The tags added to cloud computers. Specify tags in key-value pairs. You can specify up to 20 tags.</p>
          */
         public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
             this.putBodyParameter("ResourceTagList", resourceTagList);
@@ -502,7 +531,19 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * SystemDiskPerformanceLevel.
+         * <p>The performance level (PL) of the system disk.</p>
+         * <blockquote>
+         * <p> Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PL1: a PL1 ESSD.</li>
+         * <li>PL0: a PL0 ESSD.</li>
+         * <li>AutoPL: an AutoPL ESSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoPL</p>
          */
         public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
             this.putBodyParameter("SystemDiskPerformanceLevel", systemDiskPerformanceLevel);
@@ -511,7 +552,13 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * SystemDiskSize.
+         * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</p>
+         * <blockquote>
+         * <p> The system disk size must be at least as large as the configured image size.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -520,6 +567,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -532,7 +580,12 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name. It must meet the following criteria:</p>
+         * <ul>
+         * <li>It can be 2 to 126 characters in length.</li>
+         * <li>It must begin with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</li>
+         * </ul>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);
@@ -541,7 +594,10 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * TimerGroupId.
+         * <p>The ID of the scheduled task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bcc-dweha*****</p>
          */
         public Builder timerGroupId(String timerGroupId) {
             this.putBodyParameter("TimerGroupId", timerGroupId);
@@ -619,8 +675,8 @@ public class ModifyTemplateRequest extends Request {
             } 
 
             /**
-             * <p>The PL of the data disk. Default value: <code>AutoPL</code>.</p>
-             * <p>Valid values:</p>
+             * <p>The PL of the data disk. Default value: <code>AutoPL</code>.
+             * Valid values:</p>
              * <ul>
              * <li>PL1: a PL1 ESSD</li>
              * <li>PL0: a PL0 ESSD</li>
@@ -633,7 +689,7 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB. Valid range: 40 to 2040 GiB with an increment of 10 GiB.</p>
+             * <p>The size of the data disk. Unit: GiB.Valid range: 40 to 2040 GiB with an increment of 10 GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -768,7 +824,10 @@ public class ModifyTemplateRequest extends Request {
             } 
 
             /**
-             * OfficeSiteId.
+             * <p>The office network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-709****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -776,7 +835,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -784,7 +846,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * ResourceInstanceType.
+             * <p>The ID of the cloud computer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eds.enterprise_office.8c16g</p>
              */
             public Builder resourceInstanceType(String resourceInstanceType) {
                 this.resourceInstanceType = resourceInstanceType;
@@ -792,7 +857,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * SnapshotPolicyId.
+             * <p>The ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-35fvn8m2*****</p>
              */
             public Builder snapshotPolicyId(String snapshotPolicyId) {
                 this.snapshotPolicyId = snapshotPolicyId;
@@ -800,7 +868,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * SubnetId.
+             * <p>The subnet ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-adjrehad1****</p>
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
@@ -808,7 +879,15 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * VolumeEncryptionEnable.
+             * <p>Specifies whether to enable disk encryption.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>false (default): disables disk encryption.</li>
+             * <li>true: enables disk encryption.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder volumeEncryptionEnable(Boolean volumeEncryptionEnable) {
                 this.volumeEncryptionEnable = volumeEncryptionEnable;
@@ -816,7 +895,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * VolumeEncryptionKey.
+             * <p>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a7b3c0c8-b3a2-4876-b1cc-116dddc9****</p>
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
@@ -883,7 +965,10 @@ public class ModifyTemplateRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -891,7 +976,10 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>design</p>
              */
             public Builder value(String value) {
                 this.value = value;

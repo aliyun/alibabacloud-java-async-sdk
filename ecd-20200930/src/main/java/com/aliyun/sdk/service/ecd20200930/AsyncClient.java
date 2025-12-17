@@ -142,6 +142,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachEndUserResponse> attachEndUser(AttachEndUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  The cloud computers for which you want to change their policies must be in the Running state.</p>
+     * <ul>
+     * <li>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <code>ManagementFlags</code> response parameter indicates the assignment of the cloud computer. A value of <code>ASSIGNING</code> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</li>
+     * <li>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchModifyEntitlement  BatchModifyEntitlementRequest
      * @return BatchModifyEntitlementResponse
      */
@@ -943,6 +950,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalDesktopRecordsResponse> describeGlobalDesktopRecords(DescribeGlobalDesktopRecordsRequest request);
 
     /**
+     * @param request the request parameters of DescribeGlobalTimerBatches  DescribeGlobalTimerBatchesRequest
+     * @return DescribeGlobalTimerBatchesResponse
+     */
+    CompletableFuture<DescribeGlobalTimerBatchesResponse> describeGlobalTimerBatches(DescribeGlobalTimerBatchesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGlobalTimerRecords  DescribeGlobalTimerRecordsRequest
+     * @return DescribeGlobalTimerRecordsResponse
+     */
+    CompletableFuture<DescribeGlobalTimerRecordsResponse> describeGlobalTimerRecords(DescribeGlobalTimerRecordsRequest request);
+
+    /**
      * @param request the request parameters of DescribeGuestApplications  DescribeGuestApplicationsRequest
      * @return DescribeGuestApplicationsResponse
      */
@@ -1719,6 +1738,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySecurityGroupAttributeResponse> modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
      * @return ModifyTemplateResponse
      */

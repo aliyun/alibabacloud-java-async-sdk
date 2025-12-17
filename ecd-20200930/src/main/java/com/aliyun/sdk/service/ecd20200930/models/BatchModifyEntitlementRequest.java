@@ -147,6 +147,7 @@ public class BatchModifyEntitlementRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the cloud computers for which you want to modify end users.</p>
          * <p>This parameter is required.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
@@ -156,7 +157,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>The IDs of the users.</p>
          */
         public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -165,7 +166,10 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * MaxDesktopPerUser.
+         * <p>The number of cloud computers allocated to each user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxDesktopPerUser(Integer maxDesktopPerUser) {
             this.putQueryParameter("MaxDesktopPerUser", maxDesktopPerUser);
@@ -174,7 +178,10 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * MaxUserPerDesktop.
+         * <p>The number of users assigned to each cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxUserPerDesktop(Integer maxUserPerDesktop) {
             this.putQueryParameter("MaxUserPerDesktop", maxUserPerDesktop);
@@ -183,7 +190,10 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * Preview.
+         * <p>Whether to preview the assign results instead of actually assigning cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder preview(Boolean preview) {
             this.putQueryParameter("Preview", preview);
@@ -192,6 +202,7 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region. Call the DescribeRegions operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +215,12 @@ public class BatchModifyEntitlementRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>The disproportional assignment policy. Valid values:</p>
+         * <p>AVERAGE: The system preferentially guarantees that each user is assigned with at least a cloud computer. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned a cloud computer.</p>
+         * <p>CENTRAL: The system preferentially assigns the designated number of cloud computers to each user. If the number of selected cloud computers cannot be proportionally assigned to the selected users, ensure that each user is assigned the specified number of cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVERAGE</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
