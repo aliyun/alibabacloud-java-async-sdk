@@ -480,7 +480,7 @@ public class RemoveInstancesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to disable the lifecycle hook. Valid Values:</p>
+             * <p>Specifies whether to disable the lifecycle hook. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>

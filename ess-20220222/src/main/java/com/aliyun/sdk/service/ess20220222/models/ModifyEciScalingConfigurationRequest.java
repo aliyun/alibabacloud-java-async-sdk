@@ -1250,7 +1250,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Override.
+         * <p>Specifies whether to override existing data. Valid Values:</p>
+         * <p>true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);

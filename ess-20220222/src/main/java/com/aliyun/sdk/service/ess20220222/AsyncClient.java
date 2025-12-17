@@ -477,6 +477,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAlarmResponse> deleteAlarm(DeleteAlarmRequest request);
 
     /**
+     * @param request the request parameters of DeleteDiagnoseReport  DeleteDiagnoseReportRequest
+     * @return DeleteDiagnoseReportResponse
+     */
+    CompletableFuture<DeleteDiagnoseReportResponse> deleteDiagnoseReport(DeleteDiagnoseReportRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You cannot call this operation to delete a scaling configuration in the following scenarios:</p>
      * <ul>
