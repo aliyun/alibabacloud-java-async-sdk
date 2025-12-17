@@ -27,6 +27,10 @@ public class RunVideoAnalysisRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("addDocumentParam")
+    private AddDocumentParam addDocumentParam;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoRoleRecognitionVideoUrl")
     private String autoRoleRecognitionVideoUrl;
 
@@ -118,6 +122,7 @@ public class RunVideoAnalysisRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.workspaceId = builder.workspaceId;
+        this.addDocumentParam = builder.addDocumentParam;
         this.autoRoleRecognitionVideoUrl = builder.autoRoleRecognitionVideoUrl;
         this.excludeGenerateOptions = builder.excludeGenerateOptions;
         this.faceIdentitySimilarityMinScore = builder.faceIdentitySimilarityMinScore;
@@ -167,6 +172,13 @@ public class RunVideoAnalysisRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return addDocumentParam
+     */
+    public AddDocumentParam getAddDocumentParam() {
+        return this.addDocumentParam;
     }
 
     /**
@@ -326,6 +338,7 @@ public class RunVideoAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunVideoAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
+        private AddDocumentParam addDocumentParam; 
         private String autoRoleRecognitionVideoUrl; 
         private java.util.List<String> excludeGenerateOptions; 
         private Float faceIdentitySimilarityMinScore; 
@@ -357,6 +370,7 @@ public class RunVideoAnalysisRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.workspaceId = request.workspaceId;
+            this.addDocumentParam = request.addDocumentParam;
             this.autoRoleRecognitionVideoUrl = request.autoRoleRecognitionVideoUrl;
             this.excludeGenerateOptions = request.excludeGenerateOptions;
             this.faceIdentitySimilarityMinScore = request.faceIdentitySimilarityMinScore;
@@ -399,6 +413,16 @@ public class RunVideoAnalysisRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * addDocumentParam.
+         */
+        public Builder addDocumentParam(AddDocumentParam addDocumentParam) {
+            String addDocumentParamShrink = shrink(addDocumentParam, "addDocumentParam", "json");
+            this.putBodyParameter("addDocumentParam", addDocumentParamShrink);
+            this.addDocumentParam = addDocumentParam;
             return this;
         }
 
@@ -613,6 +637,177 @@ public class RunVideoAnalysisRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisRequest</p>
+     */
+    public static class Document extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("docId")
+        private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        private Document(Builder builder) {
+            this.docId = builder.docId;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Document create() {
+            return builder().build();
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String docId; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Document model) {
+                this.docId = model.docId;
+                this.title = model.title;
+            } 
+
+            /**
+             * docId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Document build() {
+                return new Document(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunVideoAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>RunVideoAnalysisRequest</p>
+     */
+    public static class AddDocumentParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("datasetId")
+        private Long datasetId;
+
+        @com.aliyun.core.annotation.NameInMap("datasetName")
+        private String datasetName;
+
+        @com.aliyun.core.annotation.NameInMap("document")
+        private Document document;
+
+        private AddDocumentParam(Builder builder) {
+            this.datasetId = builder.datasetId;
+            this.datasetName = builder.datasetName;
+            this.document = builder.document;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddDocumentParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return datasetId
+         */
+        public Long getDatasetId() {
+            return this.datasetId;
+        }
+
+        /**
+         * @return datasetName
+         */
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        /**
+         * @return document
+         */
+        public Document getDocument() {
+            return this.document;
+        }
+
+        public static final class Builder {
+            private Long datasetId; 
+            private String datasetName; 
+            private Document document; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddDocumentParam model) {
+                this.datasetId = model.datasetId;
+                this.datasetName = model.datasetName;
+                this.document = model.document;
+            } 
+
+            /**
+             * datasetId.
+             */
+            public Builder datasetId(Long datasetId) {
+                this.datasetId = datasetId;
+                return this;
+            }
+
+            /**
+             * datasetName.
+             */
+            public Builder datasetName(String datasetName) {
+                this.datasetName = datasetName;
+                return this;
+            }
+
+            /**
+             * document.
+             */
+            public Builder document(Document document) {
+                this.document = document;
+                return this;
+            }
+
+            public AddDocumentParam build() {
+                return new AddDocumentParam(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RunVideoAnalysisRequest} extends {@link TeaModel}

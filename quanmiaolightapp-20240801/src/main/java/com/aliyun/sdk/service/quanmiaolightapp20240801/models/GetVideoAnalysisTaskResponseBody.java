@@ -361,7 +361,148 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
      *
      * <p>GetVideoAnalysisTaskResponseBody</p>
      */
+    public static class AddDatasetDocumentsResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("docId")
+        private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("docUuid")
+        private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private Long status;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        private AddDatasetDocumentsResult(Builder builder) {
+            this.docId = builder.docId;
+            this.docUuid = builder.docUuid;
+            this.errorMessage = builder.errorMessage;
+            this.status = builder.status;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddDatasetDocumentsResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return docId
+         */
+        public String getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return docUuid
+         */
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return status
+         */
+        public Long getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String docId; 
+            private String docUuid; 
+            private String errorMessage; 
+            private Long status; 
+            private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddDatasetDocumentsResult model) {
+                this.docId = model.docId;
+                this.docUuid = model.docUuid;
+                this.errorMessage = model.errorMessage;
+                this.status = model.status;
+                this.title = model.title;
+            } 
+
+            /**
+             * docId.
+             */
+            public Builder docId(String docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * docUuid.
+             */
+            public Builder docUuid(String docUuid) {
+                this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(Long status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public AddDatasetDocumentsResult build() {
+                return new AddDatasetDocumentsResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
     public static class Usage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("imageTokens")
+        private Long imageTokens;
+
         @com.aliyun.core.annotation.NameInMap("inputTokens")
         private Long inputTokens;
 
@@ -372,6 +513,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         private Long totalTokens;
 
         private Usage(Builder builder) {
+            this.imageTokens = builder.imageTokens;
             this.inputTokens = builder.inputTokens;
             this.outputTokens = builder.outputTokens;
             this.totalTokens = builder.totalTokens;
@@ -383,6 +525,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
 
         public static Usage create() {
             return builder().build();
+        }
+
+        /**
+         * @return imageTokens
+         */
+        public Long getImageTokens() {
+            return this.imageTokens;
         }
 
         /**
@@ -407,6 +556,7 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long imageTokens; 
             private Long inputTokens; 
             private Long outputTokens; 
             private Long totalTokens; 
@@ -415,10 +565,19 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             } 
 
             private Builder(Usage model) {
+                this.imageTokens = model.imageTokens;
                 this.inputTokens = model.inputTokens;
                 this.outputTokens = model.outputTokens;
                 this.totalTokens = model.totalTokens;
             } 
+
+            /**
+             * imageTokens.
+             */
+            public Builder imageTokens(Long imageTokens) {
+                this.imageTokens = imageTokens;
+                return this;
+            }
 
             /**
              * inputTokens.
@@ -659,6 +818,282 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
 
             public VideoAnalysisResult build() {
                 return new VideoAnalysisResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputExpense")
+        private Double inputExpense;
+
+        @com.aliyun.core.annotation.NameInMap("inputToken")
+        private Long inputToken;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("outputExpense")
+        private Double outputExpense;
+
+        @com.aliyun.core.annotation.NameInMap("outputToken")
+        private Long outputToken;
+
+        @com.aliyun.core.annotation.NameInMap("time")
+        private Long time;
+
+        @com.aliyun.core.annotation.NameInMap("timeExpense")
+        private Double timeExpense;
+
+        @com.aliyun.core.annotation.NameInMap("totalExpense")
+        private Double totalExpense;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Items(Builder builder) {
+            this.inputExpense = builder.inputExpense;
+            this.inputToken = builder.inputToken;
+            this.name = builder.name;
+            this.outputExpense = builder.outputExpense;
+            this.outputToken = builder.outputToken;
+            this.time = builder.time;
+            this.timeExpense = builder.timeExpense;
+            this.totalExpense = builder.totalExpense;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputExpense
+         */
+        public Double getInputExpense() {
+            return this.inputExpense;
+        }
+
+        /**
+         * @return inputToken
+         */
+        public Long getInputToken() {
+            return this.inputToken;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return outputExpense
+         */
+        public Double getOutputExpense() {
+            return this.outputExpense;
+        }
+
+        /**
+         * @return outputToken
+         */
+        public Long getOutputToken() {
+            return this.outputToken;
+        }
+
+        /**
+         * @return time
+         */
+        public Long getTime() {
+            return this.time;
+        }
+
+        /**
+         * @return timeExpense
+         */
+        public Double getTimeExpense() {
+            return this.timeExpense;
+        }
+
+        /**
+         * @return totalExpense
+         */
+        public Double getTotalExpense() {
+            return this.totalExpense;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Double inputExpense; 
+            private Long inputToken; 
+            private String name; 
+            private Double outputExpense; 
+            private Long outputToken; 
+            private Long time; 
+            private Double timeExpense; 
+            private Double totalExpense; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.inputExpense = model.inputExpense;
+                this.inputToken = model.inputToken;
+                this.name = model.name;
+                this.outputExpense = model.outputExpense;
+                this.outputToken = model.outputToken;
+                this.time = model.time;
+                this.timeExpense = model.timeExpense;
+                this.totalExpense = model.totalExpense;
+                this.type = model.type;
+            } 
+
+            /**
+             * inputExpense.
+             */
+            public Builder inputExpense(Double inputExpense) {
+                this.inputExpense = inputExpense;
+                return this;
+            }
+
+            /**
+             * inputToken.
+             */
+            public Builder inputToken(Long inputToken) {
+                this.inputToken = inputToken;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * outputExpense.
+             */
+            public Builder outputExpense(Double outputExpense) {
+                this.outputExpense = outputExpense;
+                return this;
+            }
+
+            /**
+             * outputToken.
+             */
+            public Builder outputToken(Long outputToken) {
+                this.outputToken = outputToken;
+                return this;
+            }
+
+            /**
+             * time.
+             */
+            public Builder time(Long time) {
+                this.time = time;
+                return this;
+            }
+
+            /**
+             * timeExpense.
+             */
+            public Builder timeExpense(Double timeExpense) {
+                this.timeExpense = timeExpense;
+                return this;
+            }
+
+            /**
+             * totalExpense.
+             */
+            public Builder totalExpense(Double totalExpense) {
+                this.totalExpense = totalExpense;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetVideoAnalysisTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVideoAnalysisTaskResponseBody</p>
+     */
+    public static class VideoCalculatorResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("items")
+        private java.util.List<Items> items;
+
+        private VideoCalculatorResult(Builder builder) {
+            this.items = builder.items;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoCalculatorResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return items
+         */
+        public java.util.List<Items> getItems() {
+            return this.items;
+        }
+
+        public static final class Builder {
+            private java.util.List<Items> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoCalculatorResult model) {
+                this.items = model.items;
+            } 
+
+            /**
+             * items.
+             */
+            public Builder items(java.util.List<Items> items) {
+                this.items = items;
+                return this;
+            }
+
+            public VideoCalculatorResult build() {
+                return new VideoCalculatorResult(this);
             } 
 
         } 
@@ -2354,11 +2789,17 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
      * <p>GetVideoAnalysisTaskResponseBody</p>
      */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("addDatasetDocumentsResult")
+        private AddDatasetDocumentsResult addDatasetDocumentsResult;
+
         @com.aliyun.core.annotation.NameInMap("resultJsonFileUrl")
         private String resultJsonFileUrl;
 
         @com.aliyun.core.annotation.NameInMap("videoAnalysisResult")
         private VideoAnalysisResult videoAnalysisResult;
+
+        @com.aliyun.core.annotation.NameInMap("videoCalculatorResult")
+        private VideoCalculatorResult videoCalculatorResult;
 
         @com.aliyun.core.annotation.NameInMap("videoCaptionResult")
         private VideoCaptionResult videoCaptionResult;
@@ -2379,8 +2820,10 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         private VideoTitleGenerateResult videoTitleGenerateResult;
 
         private Output(Builder builder) {
+            this.addDatasetDocumentsResult = builder.addDatasetDocumentsResult;
             this.resultJsonFileUrl = builder.resultJsonFileUrl;
             this.videoAnalysisResult = builder.videoAnalysisResult;
+            this.videoCalculatorResult = builder.videoCalculatorResult;
             this.videoCaptionResult = builder.videoCaptionResult;
             this.videoGenerateResult = builder.videoGenerateResult;
             this.videoGenerateResults = builder.videoGenerateResults;
@@ -2398,6 +2841,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return addDatasetDocumentsResult
+         */
+        public AddDatasetDocumentsResult getAddDatasetDocumentsResult() {
+            return this.addDatasetDocumentsResult;
+        }
+
+        /**
          * @return resultJsonFileUrl
          */
         public String getResultJsonFileUrl() {
@@ -2409,6 +2859,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
          */
         public VideoAnalysisResult getVideoAnalysisResult() {
             return this.videoAnalysisResult;
+        }
+
+        /**
+         * @return videoCalculatorResult
+         */
+        public VideoCalculatorResult getVideoCalculatorResult() {
+            return this.videoCalculatorResult;
         }
 
         /**
@@ -2454,8 +2911,10 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AddDatasetDocumentsResult addDatasetDocumentsResult; 
             private String resultJsonFileUrl; 
             private VideoAnalysisResult videoAnalysisResult; 
+            private VideoCalculatorResult videoCalculatorResult; 
             private VideoCaptionResult videoCaptionResult; 
             private VideoGenerateResult videoGenerateResult; 
             private java.util.List<VideoGenerateResults> videoGenerateResults; 
@@ -2467,8 +2926,10 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             } 
 
             private Builder(Output model) {
+                this.addDatasetDocumentsResult = model.addDatasetDocumentsResult;
                 this.resultJsonFileUrl = model.resultJsonFileUrl;
                 this.videoAnalysisResult = model.videoAnalysisResult;
+                this.videoCalculatorResult = model.videoCalculatorResult;
                 this.videoCaptionResult = model.videoCaptionResult;
                 this.videoGenerateResult = model.videoGenerateResult;
                 this.videoGenerateResults = model.videoGenerateResults;
@@ -2476,6 +2937,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
                 this.videoRoleRecognitionResult = model.videoRoleRecognitionResult;
                 this.videoTitleGenerateResult = model.videoTitleGenerateResult;
             } 
+
+            /**
+             * addDatasetDocumentsResult.
+             */
+            public Builder addDatasetDocumentsResult(AddDatasetDocumentsResult addDatasetDocumentsResult) {
+                this.addDatasetDocumentsResult = addDatasetDocumentsResult;
+                return this;
+            }
 
             /**
              * resultJsonFileUrl.
@@ -2490,6 +2959,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
              */
             public Builder videoAnalysisResult(VideoAnalysisResult videoAnalysisResult) {
                 this.videoAnalysisResult = videoAnalysisResult;
+                return this;
+            }
+
+            /**
+             * videoCalculatorResult.
+             */
+            public Builder videoCalculatorResult(VideoCalculatorResult videoCalculatorResult) {
+                this.videoCalculatorResult = videoCalculatorResult;
                 return this;
             }
 
