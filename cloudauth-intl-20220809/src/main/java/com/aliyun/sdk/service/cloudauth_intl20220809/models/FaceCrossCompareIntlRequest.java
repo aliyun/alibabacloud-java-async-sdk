@@ -43,7 +43,7 @@ public class FaceCrossCompareIntlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceAFacePicture")
     private String sourceAFacePicture;
 
@@ -51,7 +51,7 @@ public class FaceCrossCompareIntlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceAFacePictureUrl")
     private String sourceAFacePictureUrl;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceBFacePicture")
     private String sourceBFacePicture;
 
@@ -59,7 +59,7 @@ public class FaceCrossCompareIntlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceBFacePictureUrl")
     private String sourceBFacePictureUrl;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceCFacePicture")
     private String sourceCFacePicture;
 
@@ -291,13 +291,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoded portrait photo.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>base64</p>
+         * SourceAFacePicture.
          */
         public Builder sourceAFacePicture(String sourceAFacePicture) {
-            this.putQueryParameter("SourceAFacePicture", sourceAFacePicture);
+            this.putBodyParameter("SourceAFacePicture", sourceAFacePicture);
             this.sourceAFacePicture = sourceAFacePicture;
             return this;
         }
@@ -315,13 +312,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoded portrait photo.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>base64</p>
+         * SourceBFacePicture.
          */
         public Builder sourceBFacePicture(String sourceBFacePicture) {
-            this.putQueryParameter("SourceBFacePicture", sourceBFacePicture);
+            this.putBodyParameter("SourceBFacePicture", sourceBFacePicture);
             this.sourceBFacePicture = sourceBFacePicture;
             return this;
         }
@@ -339,13 +333,10 @@ public class FaceCrossCompareIntlRequest extends Request {
         }
 
         /**
-         * <p>Base64 encoded portrait photo.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>base64</p>
+         * SourceCFacePicture.
          */
         public Builder sourceCFacePicture(String sourceCFacePicture) {
-            this.putQueryParameter("SourceCFacePicture", sourceCFacePicture);
+            this.putBodyParameter("SourceCFacePicture", sourceCFacePicture);
             this.sourceCFacePicture = sourceCFacePicture;
             return this;
         }

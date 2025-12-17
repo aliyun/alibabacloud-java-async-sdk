@@ -61,12 +61,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</p>
+     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.  * @description Based on the operator\\"s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\\"s usual residence.
      * 
      * @param request the request parameters of AddressVerifyIntl  AddressVerifyIntlRequest
      * @return AddressVerifyIntlResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddressVerifyIntlResponse> addressVerifyIntl(AddressVerifyIntlRequest request) {
         try {
@@ -350,6 +350,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DownloadVerifyRecordIntl  DownloadVerifyRecordIntlRequest
+     * @return DownloadVerifyRecordIntlResponse
+     */
+    @Override
+    public CompletableFuture<DownloadVerifyRecordIntlResponse> downloadVerifyRecordIntl(DownloadVerifyRecordIntlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadVerifyRecordIntl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadVerifyRecordIntlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadVerifyRecordIntlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EkycVerify  EkycVerifyRequest
      * @return EkycVerifyResponse
      */
@@ -393,7 +411,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<FaceCrossCompareIntlResponse> faceCrossCompareIntl(FaceCrossCompareIntlRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FaceCrossCompareIntl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FaceCrossCompareIntl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FaceCrossCompareIntlResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -458,9 +476,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of FraudResultCallBack  FraudResultCallBackRequest
+     * @deprecated OpenAPI FraudResultCallBack is deprecated  * @param request  the request parameters of FraudResultCallBack  FraudResultCallBackRequest
      * @return FraudResultCallBackResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<FraudResultCallBackResponse> fraudResultCallBack(FraudResultCallBackRequest request) {
         try {

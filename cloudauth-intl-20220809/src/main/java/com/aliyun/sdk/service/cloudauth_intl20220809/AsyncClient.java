@@ -29,12 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddressCompareIntlResponse> addressCompareIntl(AddressCompareIntlRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</p>
+     * @deprecated OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.  * @description Based on the operator\\"s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\\"s usual residence.
      * 
      * @param request the request parameters of AddressVerifyIntl  AddressVerifyIntlRequest
      * @return AddressVerifyIntlResponse
      */
+    @Deprecated
     CompletableFuture<AddressVerifyIntlResponse> addressVerifyIntl(AddressVerifyIntlRequest request);
 
     /**
@@ -138,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocOcrMaxResponse> docOcrMax(DocOcrMaxRequest request);
 
     /**
+     * @param request the request parameters of DownloadVerifyRecordIntl  DownloadVerifyRecordIntlRequest
+     * @return DownloadVerifyRecordIntlResponse
+     */
+    CompletableFuture<DownloadVerifyRecordIntlResponse> downloadVerifyRecordIntl(DownloadVerifyRecordIntlRequest request);
+
+    /**
      * @param request the request parameters of EkycVerify  EkycVerifyRequest
      * @return EkycVerifyResponse
      */
@@ -174,9 +180,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FaceLivenessResponse> faceLiveness(FaceLivenessRequest request);
 
     /**
-     * @param request the request parameters of FraudResultCallBack  FraudResultCallBackRequest
+     * @deprecated OpenAPI FraudResultCallBack is deprecated  * @param request  the request parameters of FraudResultCallBack  FraudResultCallBackRequest
      * @return FraudResultCallBackResponse
      */
+    @Deprecated
     CompletableFuture<FraudResultCallBackResponse> fraudResultCallBack(FraudResultCallBackRequest request);
 
     /**
