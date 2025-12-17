@@ -600,6 +600,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
 
     /**
+     * @param request the request parameters of UpdateService  UpdateServiceRequest
+     * @return UpdateServiceResponse
+     */
+    CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
+
+    /**
      * @param request the request parameters of UpdateServiceVersion  UpdateServiceVersionRequest
      * @return UpdateServiceVersionResponse
      */
