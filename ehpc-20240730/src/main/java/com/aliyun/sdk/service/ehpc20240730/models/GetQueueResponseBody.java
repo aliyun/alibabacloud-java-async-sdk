@@ -104,6 +104,9 @@ public class GetQueueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeNodes")
         private java.util.List<NodeTemplate> computeNodes;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("EnableScaleIn")
         private Boolean enableScaleIn;
 
@@ -144,12 +147,16 @@ public class GetQueueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedNodePoolId")
         private String reservedNodePoolId;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List<String> vSwitchIds;
 
         private Queue(Builder builder) {
             this.allocationStrategy = builder.allocationStrategy;
             this.computeNodes = builder.computeNodes;
+            this.createTime = builder.createTime;
             this.enableScaleIn = builder.enableScaleIn;
             this.enableScaleOut = builder.enableScaleOut;
             this.hostnamePrefix = builder.hostnamePrefix;
@@ -163,6 +170,7 @@ public class GetQueueResponseBody extends TeaModel {
             this.queueName = builder.queueName;
             this.ramRole = builder.ramRole;
             this.reservedNodePoolId = builder.reservedNodePoolId;
+            this.updateTime = builder.updateTime;
             this.vSwitchIds = builder.vSwitchIds;
         }
 
@@ -186,6 +194,13 @@ public class GetQueueResponseBody extends TeaModel {
          */
         public java.util.List<NodeTemplate> getComputeNodes() {
             return this.computeNodes;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -280,6 +295,13 @@ public class GetQueueResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return vSwitchIds
          */
         public java.util.List<String> getVSwitchIds() {
@@ -289,6 +311,7 @@ public class GetQueueResponseBody extends TeaModel {
         public static final class Builder {
             private String allocationStrategy; 
             private java.util.List<NodeTemplate> computeNodes; 
+            private String createTime; 
             private Boolean enableScaleIn; 
             private Boolean enableScaleOut; 
             private String hostnamePrefix; 
@@ -302,6 +325,7 @@ public class GetQueueResponseBody extends TeaModel {
             private String queueName; 
             private String ramRole; 
             private String reservedNodePoolId; 
+            private String updateTime; 
             private java.util.List<String> vSwitchIds; 
 
             private Builder() {
@@ -310,6 +334,7 @@ public class GetQueueResponseBody extends TeaModel {
             private Builder(Queue model) {
                 this.allocationStrategy = model.allocationStrategy;
                 this.computeNodes = model.computeNodes;
+                this.createTime = model.createTime;
                 this.enableScaleIn = model.enableScaleIn;
                 this.enableScaleOut = model.enableScaleOut;
                 this.hostnamePrefix = model.hostnamePrefix;
@@ -323,6 +348,7 @@ public class GetQueueResponseBody extends TeaModel {
                 this.queueName = model.queueName;
                 this.ramRole = model.ramRole;
                 this.reservedNodePoolId = model.reservedNodePoolId;
+                this.updateTime = model.updateTime;
                 this.vSwitchIds = model.vSwitchIds;
             } 
 
@@ -342,6 +368,14 @@ public class GetQueueResponseBody extends TeaModel {
              */
             public Builder computeNodes(java.util.List<NodeTemplate> computeNodes) {
                 this.computeNodes = computeNodes;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -495,6 +529,14 @@ public class GetQueueResponseBody extends TeaModel {
              */
             public Builder reservedNodePoolId(String reservedNodePoolId) {
                 this.reservedNodePoolId = reservedNodePoolId;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 
