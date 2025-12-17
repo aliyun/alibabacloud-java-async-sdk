@@ -67,7 +67,7 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * AppInstanceGroupModel.
+         * <p>The delivery group.</p>
          */
         public Builder appInstanceGroupModel(AppInstanceGroupModel appInstanceGroupModel) {
             this.appInstanceGroupModel = appInstanceGroupModel;
@@ -75,7 +75,10 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-9ciijz60n4xsv****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -162,7 +168,10 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodePoolId.
+             * <p>The ID of the resource group. This parameter is returned if a resource group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-ew7va2g1wl3vm****</p>
              */
             public Builder nodePoolId(String nodePoolId) {
                 this.nodePoolId = nodePoolId;
@@ -170,7 +179,10 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

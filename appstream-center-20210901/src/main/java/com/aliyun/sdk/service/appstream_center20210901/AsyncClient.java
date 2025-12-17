@@ -32,6 +32,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeInstanceGroupResponse> authorizeInstanceGroup(AuthorizeInstanceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+     * A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</p>
+     * 
      * @param request the request parameters of CreateAppInstanceGroup  CreateAppInstanceGroupRequest
      * @return CreateAppInstanceGroupResponse
      */

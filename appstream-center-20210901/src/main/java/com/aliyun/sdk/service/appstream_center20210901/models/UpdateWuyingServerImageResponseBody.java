@@ -67,7 +67,10 @@ public class UpdateWuyingServerImageResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateWuyingServerImageResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the update task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ota-be7jzm29wrrz5****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

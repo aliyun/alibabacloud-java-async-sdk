@@ -445,6 +445,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The image ID of the application. To obtain the image ID, log on to the <a href="https://appstreaming.console.aliyun.com/">App Streaming console</a>. In the left-side navigation pane, choose <strong>Maintenance</strong> &gt; <strong>Custom Images</strong> or Maintenance &gt; <strong>System Images</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -457,7 +458,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppInstanceGroupName.
+         * <p>The name of the delivery group.</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putBodyParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -466,7 +467,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppPackageType.
+         * <p>Package type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>browser.package.5.250.appstreaming.general.basic</p>
          */
         public Builder appPackageType(String appPackageType) {
             this.putBodyParameter("AppPackageType", appPackageType);
@@ -475,7 +479,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AppPolicyId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-0clfzcy0adpcf****</p>
          */
         public Builder appPolicyId(String appPolicyId) {
             this.putBodyParameter("AppPolicyId", appPolicyId);
@@ -496,7 +503,15 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false: manual payment. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -505,7 +520,15 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false: manual payment. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -514,6 +537,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -526,6 +555,11 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The sales mode.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Node: by resource</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -538,6 +572,12 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -550,7 +590,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>Cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cls-d39iq73l5c0a8****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -559,7 +602,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>The network settings.</p>
+         * <blockquote>
+         * <p> If you want to use this parameter, submit a ticket.</p>
+         * </blockquote>
          */
         public Builder network(Network network) {
             String networkShrink = shrink(network, "Network", "json");
@@ -569,7 +615,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * NodePool.
+         * <p>The node pool object.</p>
          */
         public Builder nodePool(NodePool nodePool) {
             String nodePoolShrink = shrink(nodePool, "NodePool", "json");
@@ -579,6 +625,32 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The subscription duration of resources. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>. The unit of this parameter is specified by <code>PeriodUnit</code>.</p>
+         * <ul>
+         * <li><p>Valid value if you set <code>PeriodUnit</code> to <code>Week</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>6</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to 1.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -591,6 +663,19 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The unit of the subscription duration. This parameter is available if you set <code>ChargeType</code> to <code>PrePaid</code>.</p>
+         * <blockquote>
+         * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify an invalid value combination for Period and PeriodUnit, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to <code>Month</code>.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * <li>Week</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -603,7 +688,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * PreOpenAppId.
+         * <p>The ID of the pre-open application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cag-b2ron*******</p>
          */
         public Builder preOpenAppId(String preOpenAppId) {
             this.putBodyParameter("PreOpenAppId", preOpenAppId);
@@ -612,6 +700,11 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -624,7 +717,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17440009****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putBodyParameter("PromotionId", promotionId);
@@ -643,7 +739,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * SecurityPolicy.
+         * <p>The security policy.</p>
          */
         public Builder securityPolicy(SecurityPolicy securityPolicy) {
             String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
@@ -653,6 +749,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The period of time during which the application can be recycled. The recycling period is the period of time between the time when the end user disconnects from the application and the time when processes exit the application. If you do not want to recycle the application, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. The value must be an integer. Default value: <code>15</code>. Unit: minutes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -665,7 +762,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * StoragePolicy.
+         * <p>The storage policy.</p>
          */
         public Builder storagePolicy(StoragePolicy storagePolicy) {
             String storagePolicyShrink = shrink(storagePolicy, "StoragePolicy", "json");
@@ -675,7 +772,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * SubPayType.
+         * <p>Payment method subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postPaid</p>
          */
         public Builder subPayType(String subPayType) {
             this.putBodyParameter("SubPayType", subPayType);
@@ -684,7 +784,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * UserDefinePolicy.
+         * <p>The custom policy.</p>
          */
         public Builder userDefinePolicy(UserDefinePolicy userDefinePolicy) {
             String userDefinePolicyShrink = shrink(userDefinePolicy, "UserDefinePolicy", "json");
@@ -694,7 +794,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>List of authorized user group IDs.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -703,7 +803,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * UserInfo.
+         * <p>The information about the user that you want to add to the assigned user list of the delivery group. This parameter is required if you configure <code>Users</code>.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -713,7 +813,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>The users that you want to add to the assigned user list of the delivery group.</p>
          */
         public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
@@ -722,7 +822,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * VideoPolicy.
+         * <p>Display policy.</p>
          */
         public Builder videoPolicy(VideoPolicy videoPolicy) {
             String videoPolicyShrink = shrink(videoPolicy, "VideoPolicy", "json");
@@ -791,7 +891,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -799,7 +902,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * Policy.
+             * <p>The policy used for the domain name.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>allow</li>
+             * <li>block</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -866,7 +977,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Destination.
+             * <p>The destination. The value is a CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139.196.XX.XX/32</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -874,7 +988,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The network egress mode.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Shared: accesses the network by using NAT Gateway.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Shared</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -993,7 +1114,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * DomainRules.
+             * <p>The domain name rules.</p>
              */
             public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
@@ -1001,7 +1122,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * IpExpireMinutes.
+             * <p>The validity period of the public IP address. If the specified value is exceeded, the IP address is updated at next logon. Minimum value: 60. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ipExpireMinutes(Integer ipExpireMinutes) {
                 this.ipExpireMinutes = ipExpireMinutes;
@@ -1009,7 +1133,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>Office Network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong+dir-842567****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1017,7 +1144,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * Routes.
+             * <p>The route settings. This parameter is available only if you set <code>StrategyType</code> to <code>Mixed</code>.</p>
              */
             public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
@@ -1025,7 +1152,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StrategyType.
+             * <p>The type of the network policy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Mixed: the hybrid mode. In this mode, a device is deployed in one virtual private cloud (VPC). Two NICs are provided and an independent public IP address is configured for the device.</li>
+             * <li>Shared: the shared mode. In this mode, a single NIC is provided for a device and the network is accessed by using NAT Gateway.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Shared</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -1033,7 +1168,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>List of virtual switch IDs.</p>
+             * <ul>
+             * <li>Valid only for custom office networks.</li>
+             * </ul>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1113,7 +1251,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Amount.
+             * <p>The number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -1121,7 +1262,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time period. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1129,7 +1273,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time period. Format: HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1209,7 +1356,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * RecurrenceType.
+             * <p>The schedule type of the scaling policy. This parameter must be configured together with <code>RecurrenceValues</code>.``</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Weekly: The scaling policy is executed on specific days each week.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>weekly</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -1217,7 +1371,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * RecurrenceValues.
+             * <p>The days of each week on which the scaling policy is executed.</p>
              */
             public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
@@ -1225,7 +1379,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * TimerPeriods.
+             * <p>The time periods during which the scaling policy can be executed. The time periods must meet the following requirements:</p>
+             * <ul>
+             * <li>Up to three time periods can be added.</li>
+             * <li>Time periods cannot be overlapped.</li>
+             * <li>The interval between two consecutive time periods must be greater than or equal to 5 minutes.</li>
+             * <li>Each time period must be greater than or equal to 15 minutes.</li>
+             * <li>The total length of the time periods that you specify cannot be greater than a day.</li>
+             * </ul>
              */
             public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
@@ -1435,7 +1596,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * MaxIdleAppInstanceAmount.
+             * <p>Maximum number of idle sessions. When this value is specified, auto-scaling is triggered only if the session utilization exceeds <code>ScalingUsageThreshold</code> and the current number of idle sessions in the delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, it is considered that sufficient idle sessions are available, and no auto-scaling will occur. This parameter allows flexible control over elastic scaling behavior and helps reduce usage costs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
                 this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
@@ -1443,7 +1607,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * MaxScalingAmount.
+             * <p>The maximum number of resources that can be created for scale-out. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxScalingAmount(Integer maxScalingAmount) {
                 this.maxScalingAmount = maxScalingAmount;
@@ -1451,7 +1618,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * NodeAmount.
+             * <p>The number of resources that you want to purchase. Valid values: 1 to 100.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is required if the resources are subscription resources.</p>
+             * </li>
+             * <li><p>If the resources are pay-as-you-go resources, this parameter is required only if you set <code>StrategyType</code> to <code>NODE_FIXED</code> or <code>NODE_SCALING_BY_USAGE</code>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -1459,7 +1637,17 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * NodeCapacity.
+             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, the user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+             * <ul>
+             * <li>appstreaming.general.4c8g: 1 to 2</li>
+             * <li>appstreaming.general.8c16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeCapacity(Integer nodeCapacity) {
                 this.nodeCapacity = nodeCapacity;
@@ -1467,7 +1655,18 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * NodeInstanceType.
+             * <p>The ID of the resource type that you want to purchase. You can call the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> operation to obtain the ID.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>appstreaming.vgpu.8c16g.4g: WUYING - Graphics_8 vCPUs, 16 GiB Memory, 4 GiB GPU Memory</li>
+             * <li>appstreaming.general.8c16g: WUYING - General_8 vCPUs, 16 GiB Memory</li>
+             * <li>appstreaming.general.4c8g: WUYING - General_4 vCPUs, 8 GiB Memory</li>
+             * <li>appstreaming.vgpu.14c93g.12g: WUYING - Graphics_14 vCPUs, 93 GiB Memory, 12 GiB GPU Memory.</li>
+             * <li>appstreaming.vgpu.8c31g.16g: WUYING - Graphics_8 vCPUs, 31 GiB Memory, 16 GiB GPU Memory</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.general.4c8g</p>
              */
             public Builder nodeInstanceType(String nodeInstanceType) {
                 this.nodeInstanceType = nodeInstanceType;
@@ -1475,7 +1674,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * RecurrenceSchedules.
+             * <p>The schedules of the scaling policy. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
              */
             public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
@@ -1483,7 +1682,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * ScalingDownAfterIdleMinutes.
+             * <p>The maximum retention period of a resource to which no session is connected. If no session is connected to a resource, the resource is automatically scaled in after the specified retention period elapses. Valid values: 5 to 120. Default value: 5. Unit: minutes. If one of the following situations occurs, the resource is not scaled in.</p>
+             * <ul>
+             * <li>If automatic scale-out is triggered after the resource is scaled in, the scale-in is not executed. This prevents repeated scale-in and scale-out.</li>
+             * <li>If automatic scale-out is triggered due to an increase in the number of sessions during the specified period of time, the resource is not scaled in and the countdown restarts.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder scalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
                 this.scalingDownAfterIdleMinutes = scalingDownAfterIdleMinutes;
@@ -1491,7 +1697,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * ScalingStep.
+             * <p>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scalingStep(Integer scalingStep) {
                 this.scalingStep = scalingStep;
@@ -1499,7 +1708,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * ScalingUsageThreshold.
+             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <code>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</code>. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>. Valid values: 0 to 100. Default value: 85.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder scalingUsageThreshold(String scalingUsageThreshold) {
                 this.scalingUsageThreshold = scalingUsageThreshold;
@@ -1507,7 +1719,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StrategyDisableDate.
+             * <p>The expiration date of the scaling policy. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be from 7 days to 1 year. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-08</p>
              */
             public Builder strategyDisableDate(String strategyDisableDate) {
                 this.strategyDisableDate = strategyDisableDate;
@@ -1515,7 +1730,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StrategyEnableDate.
+             * <p>The effective date of the scaling policy. Format: yyyy-MM-dd. The date must be the same as or later than the current date. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01</p>
              */
             public Builder strategyEnableDate(String strategyEnableDate) {
                 this.strategyEnableDate = strategyEnableDate;
@@ -1523,7 +1741,26 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StrategyType.
+             * <p>The scaling policy of resources.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p><code>NODE_FIXED</code>: fixed number of resources. This value is applicable to pay-as-you-go resources and subscription resources.</p>
+             * </li>
+             * <li><p><code>NODE_SCALING_BY_USAGE</code>: auto scaling. This value is applicable to pay-as-you-go resources and subscription resources.</p>
+             * </li>
+             * <li><p><code>NODE_SCALING_BY_SCHEDULE</code>: scheduled scaling. This value is applicable only to pay-as-you-go resources.</p>
+             * </li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NODE_FIXED: fixed number of resources</li>
+             * <li>NODE_SCALING_BY_SCHEDULE: scheduled scaling</li>
+             * <li>NODE_SCALING_BY_USAGE: auto scaling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NODE_FIXED</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -1531,7 +1768,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * WarmUp.
+             * <p>Specifies whether to enable the warmup policy for resources. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder warmUp(Boolean warmUp) {
                 this.warmUp = warmUp;
@@ -1666,14 +1906,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether only one app can be opened in a session.</p>
+             * <p>Only one application is allowed to be opened within a single session.</p>
              * <ul>
-             * <li>After you enable this feature, the system assigns a session to each app if you open multiple apps in a delivery group. This consumes a larger number of sessions.</li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>When enabled, launching multiple applications from the delivery group will allocate a separate session for each application, resulting in higher session consumption.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1685,7 +1920,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * PersistentAppInstanceScheduleMode.
+             * <p>Persistent session scheduling mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DYNAMIC</p>
              */
             public Builder persistentAppInstanceScheduleMode(String persistentAppInstanceScheduleMode) {
                 this.persistentAppInstanceScheduleMode = persistentAppInstanceScheduleMode;
@@ -1693,14 +1931,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable pre-open for sessions.</p>
+             * <p>Session pre-launch toggle.</p>
              * <ul>
-             * <li>Default value: true</li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>If not specified, the default value is true.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1801,7 +2034,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * ResetAfterUnbind.
+             * <p>Specifies whether to reset after unbinding from a delivery group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder resetAfterUnbind(Boolean resetAfterUnbind) {
                 this.resetAfterUnbind = resetAfterUnbind;
@@ -1809,7 +2050,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * SkipUserAuthCheck.
+             * <p>Specifies whether to skip user permission verification.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false: This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipUserAuthCheck(Boolean skipUserAuthCheck) {
                 this.skipUserAuthCheck = skipUserAuthCheck;
@@ -1889,7 +2138,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * RemoteStoragePath.
+             * <p>Remote storage path for user data roaming.</p>
+             * <ul>
+             * <li>If left empty, the default value is the delivery group ID.</li>
+             * <li>For cross-delivery-group (within the same VPC) user data roaming, the same value must be configured for all participating delivery groups.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ID20250101</p>
              */
             public Builder remoteStoragePath(String remoteStoragePath) {
                 this.remoteStoragePath = remoteStoragePath;
@@ -1897,7 +2153,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * RemoteStorageType.
+             * <p>Remote storage type used for user data roaming.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAS</p>
              */
             public Builder remoteStorageType(String remoteStorageType) {
                 this.remoteStorageType = remoteStorageType;
@@ -1905,7 +2164,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * UserProfileSwitch.
+             * <p>User data roaming toggle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userProfileSwitch(Boolean userProfileSwitch) {
                 this.userProfileSwitch = userProfileSwitch;
@@ -1972,7 +2234,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * StorageTypeList.
+             * <p>The storage types.</p>
              */
             public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
@@ -1980,7 +2242,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * UserProfile.
+             * <p>User data roaming configuration.</p>
              */
             public Builder userProfile(UserProfile userProfile) {
                 this.userProfile = userProfile;
@@ -2034,7 +2296,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * CustomConfig.
+             * <p>The content of the custom policy. The content must meet the specifications of image versions. To use this parameter, submit a ticket to apply to enable the whitelist feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;target&quot;:&quot;agent&quot;,&quot;config&quot;:{&quot;abc&quot;:&quot;xxx&quot;}}]</p>
              */
             public Builder customConfig(String customConfig) {
                 this.customConfig = customConfig;
@@ -2088,7 +2353,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Type.
+             * <p>The account type of the user.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Simple: convenience account</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2207,7 +2479,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * FrameRate.
+             * <p>Frame rate (FPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder frameRate(Integer frameRate) {
                 this.frameRate = frameRate;
@@ -2215,7 +2490,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * SessionResolutionHeight.
+             * <p>Resolution height, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder sessionResolutionHeight(Integer sessionResolutionHeight) {
                 this.sessionResolutionHeight = sessionResolutionHeight;
@@ -2223,7 +2501,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * SessionResolutionWidth.
+             * <p>Resolution width, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
                 this.sessionResolutionWidth = sessionResolutionWidth;
@@ -2231,7 +2512,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * StreamingMode.
+             * <p>Streaming mode. Combined with the Webrtc parameter, it indicates the protocol type.</p>
+             * <ul>
+             * <li>When Webrtc=true and StreamingMode=video, it indicates a WebRTC stream.</li>
+             * <li>When Webrtc=false and StreamingMode=video, it indicates a video stream.</li>
+             * <li>When Webrtc=false and StreamingMode=mix, it indicates a mixed stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>video</p>
              */
             public Builder streamingMode(String streamingMode) {
                 this.streamingMode = streamingMode;
@@ -2239,7 +2528,16 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * TerminalResolutionAdaptive.
+             * <p>Whether to use adaptive resolution.</p>
+             * <ul>
+             * <li><p>true: The session resolution follows changes in the terminal&quot;s display area. In this case, SessionResolutionWidth and SessionResolutionHeight represent the maximum values for resolution adjustment.</p>
+             * </li>
+             * <li><p>false: The session resolution does not follow changes in the terminal&quot;s display area. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder terminalResolutionAdaptive(Boolean terminalResolutionAdaptive) {
                 this.terminalResolutionAdaptive = terminalResolutionAdaptive;
@@ -2247,7 +2545,15 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * Webrtc.
+             * <p>Whether to enable WebRTC. Combined with the StreamingMode parameter, it indicates the protocol type.</p>
+             * <ul>
+             * <li>When Webrtc=true and StreamingMode=video, it indicates a WebRTC stream.</li>
+             * <li>When Webrtc=false and StreamingMode=video, it indicates a video stream.</li>
+             * <li>When Webrtc=false and StreamingMode=mix, it indicates a mixed stream.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder webrtc(Boolean webrtc) {
                 this.webrtc = webrtc;

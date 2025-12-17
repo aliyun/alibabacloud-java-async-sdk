@@ -87,7 +87,10 @@ public class UpdateWuyingServerImageRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-0aae4rgk9****6e8p</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -96,7 +99,10 @@ public class UpdateWuyingServerImageRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type. Set this parameter to WuyingServer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -105,7 +111,10 @@ public class UpdateWuyingServerImageRequest extends Request {
         }
 
         /**
-         * WuyingServerId.
+         * <p>The ID of the workstation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-0bw2f11****dial</p>
          */
         public Builder wuyingServerId(String wuyingServerId) {
             this.putBodyParameter("WuyingServerId", wuyingServerId);

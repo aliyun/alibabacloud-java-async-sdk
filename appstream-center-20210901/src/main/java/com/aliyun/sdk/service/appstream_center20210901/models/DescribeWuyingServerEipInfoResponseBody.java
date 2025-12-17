@@ -98,6 +98,9 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
      * <p>DescribeWuyingServerEipInfoResponseBody</p>
      */
     public static class EipInfoModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EipId")
+        private String eipId;
+
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
@@ -108,6 +111,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         private String serverPortRange;
 
         private EipInfoModel(Builder builder) {
+            this.eipId = builder.eipId;
             this.ipAddress = builder.ipAddress;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.serverPortRange = builder.serverPortRange;
@@ -119,6 +123,13 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
 
         public static EipInfoModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return eipId
+         */
+        public String getEipId() {
+            return this.eipId;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String eipId; 
             private String ipAddress; 
             private String networkInterfaceId; 
             private String serverPortRange; 
@@ -151,10 +163,19 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             } 
 
             private Builder(EipInfoModel model) {
+                this.eipId = model.eipId;
                 this.ipAddress = model.ipAddress;
                 this.networkInterfaceId = model.networkInterfaceId;
                 this.serverPortRange = model.serverPortRange;
             } 
+
+            /**
+             * EipId.
+             */
+            public Builder eipId(String eipId) {
+                this.eipId = eipId;
+                return this;
+            }
 
             /**
              * <p>The public IP address.</p>
