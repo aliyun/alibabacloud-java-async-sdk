@@ -26,6 +26,9 @@ public class UpdateModelProxyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("executionRoleArn")
+    private String executionRoleArn;
+
     @com.aliyun.core.annotation.NameInMap("logConfiguration")
     private LogConfiguration logConfiguration;
 
@@ -39,6 +42,7 @@ public class UpdateModelProxyInput extends TeaModel {
         this.armsConfiguration = builder.armsConfiguration;
         this.credentialName = builder.credentialName;
         this.description = builder.description;
+        this.executionRoleArn = builder.executionRoleArn;
         this.logConfiguration = builder.logConfiguration;
         this.networkConfiguration = builder.networkConfiguration;
         this.proxyConfig = builder.proxyConfig;
@@ -78,6 +82,13 @@ public class UpdateModelProxyInput extends TeaModel {
     }
 
     /**
+     * @return executionRoleArn
+     */
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
+    }
+
+    /**
      * @return logConfiguration
      */
     public LogConfiguration getLogConfiguration() {
@@ -102,6 +113,7 @@ public class UpdateModelProxyInput extends TeaModel {
         private ArmsConfiguration armsConfiguration; 
         private String credentialName; 
         private String description; 
+        private String executionRoleArn; 
         private LogConfiguration logConfiguration; 
         private NetworkConfiguration networkConfiguration; 
         private ProxyConfig proxyConfig; 
@@ -113,6 +125,7 @@ public class UpdateModelProxyInput extends TeaModel {
             this.armsConfiguration = model.armsConfiguration;
             this.credentialName = model.credentialName;
             this.description = model.description;
+            this.executionRoleArn = model.executionRoleArn;
             this.logConfiguration = model.logConfiguration;
             this.networkConfiguration = model.networkConfiguration;
             this.proxyConfig = model.proxyConfig;
@@ -139,6 +152,14 @@ public class UpdateModelProxyInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * executionRoleArn.
+         */
+        public Builder executionRoleArn(String executionRoleArn) {
+            this.executionRoleArn = executionRoleArn;
             return this;
         }
 

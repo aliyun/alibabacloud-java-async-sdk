@@ -32,6 +32,9 @@ public class ModelProxy extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("endpoint")
     private String endpoint;
 
+    @com.aliyun.core.annotation.NameInMap("executionRoleArn")
+    private String executionRoleArn;
+
     @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
@@ -80,6 +83,7 @@ public class ModelProxy extends TeaModel {
         this.credentialName = builder.credentialName;
         this.description = builder.description;
         this.endpoint = builder.endpoint;
+        this.executionRoleArn = builder.executionRoleArn;
         this.functionName = builder.functionName;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.litellmVersion = builder.litellmVersion;
@@ -141,6 +145,13 @@ public class ModelProxy extends TeaModel {
      */
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    /**
+     * @return executionRoleArn
+     */
+    public String getExecutionRoleArn() {
+        return this.executionRoleArn;
     }
 
     /**
@@ -247,6 +258,7 @@ public class ModelProxy extends TeaModel {
         private String credentialName; 
         private String description; 
         private String endpoint; 
+        private String executionRoleArn; 
         private String functionName; 
         private String lastUpdatedAt; 
         private String litellmVersion; 
@@ -271,6 +283,7 @@ public class ModelProxy extends TeaModel {
             this.credentialName = model.credentialName;
             this.description = model.description;
             this.endpoint = model.endpoint;
+            this.executionRoleArn = model.executionRoleArn;
             this.functionName = model.functionName;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.litellmVersion = model.litellmVersion;
@@ -324,6 +337,14 @@ public class ModelProxy extends TeaModel {
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
+            return this;
+        }
+
+        /**
+         * executionRoleArn.
+         */
+        public Builder executionRoleArn(String executionRoleArn) {
+            this.executionRoleArn = executionRoleArn;
             return this;
         }
 
