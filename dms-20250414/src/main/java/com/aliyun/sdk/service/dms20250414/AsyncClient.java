@@ -238,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataLakeTablebaseInfoResponse> listDataLakeTablebaseInfo(ListDataLakeTablebaseInfoRequest request);
 
     /**
+     * @param request the request parameters of ListFileUpload  ListFileUploadRequest
+     * @return ListFileUploadResponse
+     */
+    CompletableFuture<ListFileUploadResponse> listFileUpload(ListFileUploadRequest request);
+
+    /**
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
      * @return SendChatMessageResponse
      */
