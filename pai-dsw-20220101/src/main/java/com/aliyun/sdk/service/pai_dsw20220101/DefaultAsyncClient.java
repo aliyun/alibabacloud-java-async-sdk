@@ -130,6 +130,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSanityCheckTask  CreateSanityCheckTaskRequest
+     * @return CreateSanityCheckTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateSanityCheckTaskResponse> createSanityCheckTask(CreateSanityCheckTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSanityCheckTask").setMethod(HttpMethod.POST).setPathRegex("/api/v2/sanitychecks/{CheckType}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSanityCheckTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSanityCheckTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteIdleInstanceCuller  DeleteIdleInstanceCullerRequest
      * @return DeleteIdleInstanceCullerResponse
      */
@@ -397,6 +415,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetResourceGroupStatisticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSanityCheckTask  GetSanityCheckTaskRequest
+     * @return GetSanityCheckTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetSanityCheckTaskResponse> getSanityCheckTask(GetSanityCheckTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSanityCheckTask").setMethod(HttpMethod.GET).setPathRegex("/api/v2/sanitychecks/{CheckType}/{TaskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSanityCheckTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSanityCheckTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceSnapshotResponse> createInstanceSnapshot(CreateInstanceSnapshotRequest request);
 
     /**
+     * @param request the request parameters of CreateSanityCheckTask  CreateSanityCheckTaskRequest
+     * @return CreateSanityCheckTaskResponse
+     */
+    CompletableFuture<CreateSanityCheckTaskResponse> createSanityCheckTask(CreateSanityCheckTaskRequest request);
+
+    /**
      * @param request the request parameters of DeleteIdleInstanceCuller  DeleteIdleInstanceCullerRequest
      * @return DeleteIdleInstanceCullerResponse
      */
@@ -141,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceGroupStatisticsResponse
      */
     CompletableFuture<GetResourceGroupStatisticsResponse> getResourceGroupStatistics(GetResourceGroupStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of GetSanityCheckTask  GetSanityCheckTaskRequest
+     * @return GetSanityCheckTaskResponse
+     */
+    CompletableFuture<GetSanityCheckTaskResponse> getSanityCheckTask(GetSanityCheckTaskRequest request);
 
     /**
      * @param request the request parameters of GetToken  GetTokenRequest
