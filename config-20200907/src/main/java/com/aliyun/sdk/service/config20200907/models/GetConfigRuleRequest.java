@@ -24,6 +24,7 @@ public class GetConfigRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
+    @Deprecated
     private java.util.List<Tag> tag;
 
     private GetConfigRuleRequest(Builder builder) {

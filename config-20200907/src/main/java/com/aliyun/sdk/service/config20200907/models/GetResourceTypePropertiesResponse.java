@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDeliveryChannelResponse} extends {@link TeaModel}
+ * {@link GetResourceTypePropertiesResponse} extends {@link TeaModel}
  *
- * <p>UpdateDeliveryChannelResponse</p>
+ * <p>GetResourceTypePropertiesResponse</p>
  */
-public class UpdateDeliveryChannelResponse extends Response {
+public class GetResourceTypePropertiesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateDeliveryChannelResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateDeliveryChannelResponseBody body;
+    private GetResourceTypePropertiesResponseBody body;
 
-    private UpdateDeliveryChannelResponse(BuilderImpl builder) {
+    private GetResourceTypePropertiesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateDeliveryChannelResponse create() {
+    public static GetResourceTypePropertiesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateDeliveryChannelResponse extends Response {
     /**
      * @return body
      */
-    public UpdateDeliveryChannelResponseBody getBody() {
+    public GetResourceTypePropertiesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateDeliveryChannelResponse, Builder> {
+    public interface Builder extends Response.Builder<GetResourceTypePropertiesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateDeliveryChannelResponseBody body);
+        Builder body(GetResourceTypePropertiesResponseBody body);
 
         @Override
-        UpdateDeliveryChannelResponse build();
+        GetResourceTypePropertiesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateDeliveryChannelResponse, Builder>
+            extends Response.BuilderImpl<GetResourceTypePropertiesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateDeliveryChannelResponseBody body; 
+        private GetResourceTypePropertiesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateDeliveryChannelResponse response) {
+        private BuilderImpl(GetResourceTypePropertiesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateDeliveryChannelResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateDeliveryChannelResponseBody body) {
+        public Builder body(GetResourceTypePropertiesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateDeliveryChannelResponse build() {
-            return new UpdateDeliveryChannelResponse(this);
+        public GetResourceTypePropertiesResponse build() {
+            return new GetResourceTypePropertiesResponse(this);
         } 
 
     } 

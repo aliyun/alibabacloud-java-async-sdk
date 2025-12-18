@@ -47,6 +47,10 @@ public class ListDiscoveredResourcesRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    private String resourceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
@@ -63,6 +67,7 @@ public class ListDiscoveredResourcesRequest extends Request {
         this.regions = builder.regions;
         this.resourceDeleted = builder.resourceDeleted;
         this.resourceId = builder.resourceId;
+        this.resourceName = builder.resourceName;
         this.resourceTypes = builder.resourceTypes;
         this.startUpdateTimestamp = builder.startUpdateTimestamp;
     }
@@ -130,6 +135,13 @@ public class ListDiscoveredResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
      * @return resourceTypes
      */
     public String getResourceTypes() {
@@ -151,6 +163,7 @@ public class ListDiscoveredResourcesRequest extends Request {
         private String regions; 
         private Integer resourceDeleted; 
         private String resourceId; 
+        private String resourceName; 
         private String resourceTypes; 
         private Long startUpdateTimestamp; 
 
@@ -167,6 +180,7 @@ public class ListDiscoveredResourcesRequest extends Request {
             this.regions = request.regions;
             this.resourceDeleted = request.resourceDeleted;
             this.resourceId = request.resourceId;
+            this.resourceName = request.resourceName;
             this.resourceTypes = request.resourceTypes;
             this.startUpdateTimestamp = request.startUpdateTimestamp;
         } 
@@ -262,6 +276,15 @@ public class ListDiscoveredResourcesRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceName.
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
             return this;
         }
 

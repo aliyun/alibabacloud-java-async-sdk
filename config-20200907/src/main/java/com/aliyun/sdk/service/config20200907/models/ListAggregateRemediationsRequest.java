@@ -24,7 +24,6 @@ public class ListAggregateRemediationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigRuleIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleIds;
 
     private ListAggregateRemediationsRequest(Builder builder) {
@@ -91,7 +90,6 @@ public class ListAggregateRemediationsRequest extends Request {
         /**
          * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
          * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cr-6b7c626622af00b4****</p>

@@ -24,6 +24,7 @@ public class GetAggregatorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
+    @Deprecated
     private java.util.List<Tag> tag;
 
     private GetAggregatorRequest(Builder builder) {

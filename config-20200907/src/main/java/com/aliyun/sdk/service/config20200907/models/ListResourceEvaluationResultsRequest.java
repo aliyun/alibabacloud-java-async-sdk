@@ -42,6 +42,14 @@ public class ListResourceEvaluationResultsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private Integer riskLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
     private ListResourceEvaluationResultsRequest(Builder builder) {
         super(builder);
         this.complianceType = builder.complianceType;
@@ -50,6 +58,8 @@ public class ListResourceEvaluationResultsRequest extends Request {
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
+        this.riskLevel = builder.riskLevel;
+        this.sortBy = builder.sortBy;
     }
 
     public static Builder builder() {
@@ -107,6 +117,20 @@ public class ListResourceEvaluationResultsRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return riskLevel
+     */
+    public Integer getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceEvaluationResultsRequest, Builder> {
         private String complianceType; 
         private Integer maxResults; 
@@ -114,6 +138,8 @@ public class ListResourceEvaluationResultsRequest extends Request {
         private String region; 
         private String resourceId; 
         private String resourceType; 
+        private Integer riskLevel; 
+        private String sortBy; 
 
         private Builder() {
             super();
@@ -127,6 +153,8 @@ public class ListResourceEvaluationResultsRequest extends Request {
             this.region = request.region;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
+            this.riskLevel = request.riskLevel;
+            this.sortBy = request.sortBy;
         } 
 
         /**
@@ -208,6 +236,24 @@ public class ListResourceEvaluationResultsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * RiskLevel.
+         */
+        public Builder riskLevel(Integer riskLevel) {
+            this.putQueryParameter("RiskLevel", riskLevel);
+            this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
             return this;
         }
 

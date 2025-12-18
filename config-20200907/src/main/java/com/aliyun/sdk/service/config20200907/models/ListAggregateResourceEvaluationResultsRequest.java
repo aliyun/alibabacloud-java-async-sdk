@@ -47,6 +47,14 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private Integer riskLevel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
     private ListAggregateResourceEvaluationResultsRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
@@ -56,6 +64,8 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
+        this.riskLevel = builder.riskLevel;
+        this.sortBy = builder.sortBy;
     }
 
     public static Builder builder() {
@@ -120,6 +130,20 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return riskLevel
+     */
+    public Integer getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
     public static final class Builder extends Request.Builder<ListAggregateResourceEvaluationResultsRequest, Builder> {
         private String aggregatorId; 
         private String complianceType; 
@@ -128,6 +152,8 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
         private String region; 
         private String resourceId; 
         private String resourceType; 
+        private Integer riskLevel; 
+        private String sortBy; 
 
         private Builder() {
             super();
@@ -142,6 +168,8 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
             this.region = request.region;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
+            this.riskLevel = request.riskLevel;
+            this.sortBy = request.sortBy;
         } 
 
         /**
@@ -237,6 +265,24 @@ public class ListAggregateResourceEvaluationResultsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * RiskLevel.
+         */
+        public Builder riskLevel(Integer riskLevel) {
+            this.putQueryParameter("RiskLevel", riskLevel);
+            this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
             return this;
         }
 

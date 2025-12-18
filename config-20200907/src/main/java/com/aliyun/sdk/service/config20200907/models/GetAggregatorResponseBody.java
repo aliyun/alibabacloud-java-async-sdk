@@ -344,6 +344,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
+        @com.aliyun.core.annotation.NameInMap("FolderName")
+        private String folderName;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -358,6 +361,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             this.aggregatorType = builder.aggregatorType;
             this.description = builder.description;
             this.folderId = builder.folderId;
+            this.folderName = builder.folderName;
             this.tags = builder.tags;
         }
 
@@ -440,6 +444,13 @@ public class GetAggregatorResponseBody extends TeaModel {
         }
 
         /**
+         * @return folderName
+         */
+        public String getFolderName() {
+            return this.folderName;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -457,6 +468,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             private String aggregatorType; 
             private String description; 
             private String folderId; 
+            private String folderName; 
             private java.util.List<Tags> tags; 
 
             private Builder() {
@@ -473,6 +485,7 @@ public class GetAggregatorResponseBody extends TeaModel {
                 this.aggregatorType = model.aggregatorType;
                 this.description = model.description;
                 this.folderId = model.folderId;
+                this.folderName = model.folderName;
                 this.tags = model.tags;
             } 
 
@@ -590,6 +603,14 @@ public class GetAggregatorResponseBody extends TeaModel {
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
+                return this;
+            }
+
+            /**
+             * FolderName.
+             */
+            public Builder folderName(String folderName) {
+                this.folderName = folderName;
                 return this;
             }
 

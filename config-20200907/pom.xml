@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-config20200907</artifactId>
-  <version>1.0.13</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>alibabacloud-config20200907</name>
   <description>Alibaba Cloud Config (20200907) Async SDK for Java
@@ -104,12 +104,11 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.8.0</version>
+        <version>0.9.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
-          <waitUntil>published</waitUntil>
         </configuration>
       </plugin>
     </plugins>

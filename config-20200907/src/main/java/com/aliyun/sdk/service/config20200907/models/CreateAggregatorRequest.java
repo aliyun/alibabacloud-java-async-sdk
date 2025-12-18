@@ -36,7 +36,6 @@ public class CreateAggregatorRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -211,7 +210,6 @@ public class CreateAggregatorRequest extends Request {
 
         /**
          * <p>The description of the account group.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Aggregator description.</p>

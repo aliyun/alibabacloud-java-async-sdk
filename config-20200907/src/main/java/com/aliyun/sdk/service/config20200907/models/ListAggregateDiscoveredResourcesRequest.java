@@ -57,6 +57,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
+    private String resourceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     @Deprecated
     private Long resourceOwnerId;
@@ -80,6 +84,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         this.resourceAccountId = builder.resourceAccountId;
         this.resourceDeleted = builder.resourceDeleted;
         this.resourceId = builder.resourceId;
+        this.resourceName = builder.resourceName;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceTypes = builder.resourceTypes;
         this.startUpdateTimestamp = builder.startUpdateTimestamp;
@@ -162,6 +167,13 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceName
+     */
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -192,6 +204,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         private Long resourceAccountId; 
         private Integer resourceDeleted; 
         private String resourceId; 
+        private String resourceName; 
         private Long resourceOwnerId; 
         private String resourceTypes; 
         private Long startUpdateTimestamp; 
@@ -211,6 +224,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
             this.resourceAccountId = request.resourceAccountId;
             this.resourceDeleted = request.resourceDeleted;
             this.resourceId = request.resourceId;
+            this.resourceName = request.resourceName;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceTypes = request.resourceTypes;
             this.startUpdateTimestamp = request.startUpdateTimestamp;
@@ -333,6 +347,15 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceName.
+         */
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("ResourceName", resourceName);
+            this.resourceName = resourceName;
             return this;
         }
 

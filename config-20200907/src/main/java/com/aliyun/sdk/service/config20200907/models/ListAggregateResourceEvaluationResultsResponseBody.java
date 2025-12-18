@@ -119,6 +119,9 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+        private Integer resourceOwnerId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -130,6 +133,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
+            this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceType = builder.resourceType;
         }
 
@@ -191,6 +195,13 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
         }
 
         /**
+         * @return resourceOwnerId
+         */
+        public Integer getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -205,6 +216,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
             private String regionId; 
             private String resourceId; 
             private String resourceName; 
+            private Integer resourceOwnerId; 
             private String resourceType; 
 
             private Builder() {
@@ -218,6 +230,7 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
                 this.regionId = model.regionId;
                 this.resourceId = model.resourceId;
                 this.resourceName = model.resourceName;
+                this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceType = model.resourceType;
             } 
 
@@ -298,6 +311,14 @@ public class ListAggregateResourceEvaluationResultsResponseBody extends TeaModel
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * ResourceOwnerId.
+             */
+            public Builder resourceOwnerId(Integer resourceOwnerId) {
+                this.resourceOwnerId = resourceOwnerId;
                 return this;
             }
 

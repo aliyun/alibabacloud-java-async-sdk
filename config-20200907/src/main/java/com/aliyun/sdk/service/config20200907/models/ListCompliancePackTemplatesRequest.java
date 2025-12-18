@@ -22,6 +22,10 @@ public class ListCompliancePackTemplatesRequest extends Request {
     private String compliancePackTemplateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterType")
+    private String filterType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -34,12 +38,18 @@ public class ListCompliancePackTemplatesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleRiskLevel")
+    private Integer ruleRiskLevel;
+
     private ListCompliancePackTemplatesRequest(Builder builder) {
         super(builder);
         this.compliancePackTemplateId = builder.compliancePackTemplateId;
+        this.filterType = builder.filterType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceTypes = builder.resourceTypes;
+        this.ruleRiskLevel = builder.ruleRiskLevel;
     }
 
     public static Builder builder() {
@@ -63,6 +73,13 @@ public class ListCompliancePackTemplatesRequest extends Request {
     }
 
     /**
+     * @return filterType
+     */
+    public String getFilterType() {
+        return this.filterType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -83,11 +100,20 @@ public class ListCompliancePackTemplatesRequest extends Request {
         return this.resourceTypes;
     }
 
+    /**
+     * @return ruleRiskLevel
+     */
+    public Integer getRuleRiskLevel() {
+        return this.ruleRiskLevel;
+    }
+
     public static final class Builder extends Request.Builder<ListCompliancePackTemplatesRequest, Builder> {
         private String compliancePackTemplateId; 
+        private String filterType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceTypes; 
+        private Integer ruleRiskLevel; 
 
         private Builder() {
             super();
@@ -96,9 +122,11 @@ public class ListCompliancePackTemplatesRequest extends Request {
         private Builder(ListCompliancePackTemplatesRequest request) {
             super(request);
             this.compliancePackTemplateId = request.compliancePackTemplateId;
+            this.filterType = request.filterType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceTypes = request.resourceTypes;
+            this.ruleRiskLevel = request.ruleRiskLevel;
         } 
 
         /**
@@ -110,6 +138,15 @@ public class ListCompliancePackTemplatesRequest extends Request {
         public Builder compliancePackTemplateId(String compliancePackTemplateId) {
             this.putQueryParameter("CompliancePackTemplateId", compliancePackTemplateId);
             this.compliancePackTemplateId = compliancePackTemplateId;
+            return this;
+        }
+
+        /**
+         * FilterType.
+         */
+        public Builder filterType(String filterType) {
+            this.putQueryParameter("FilterType", filterType);
+            this.filterType = filterType;
             return this;
         }
 
@@ -148,6 +185,15 @@ public class ListCompliancePackTemplatesRequest extends Request {
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
             this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
+         * RuleRiskLevel.
+         */
+        public Builder ruleRiskLevel(Integer ruleRiskLevel) {
+            this.putQueryParameter("RuleRiskLevel", ruleRiskLevel);
+            this.ruleRiskLevel = ruleRiskLevel;
             return this;
         }
 

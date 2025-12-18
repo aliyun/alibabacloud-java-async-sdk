@@ -491,6 +491,9 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
+        private String createDate;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -518,6 +521,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             this.configRuleName = builder.configRuleName;
             this.configRuleState = builder.configRuleState;
             this.createBy = builder.createBy;
+            this.createDate = builder.createDate;
             this.description = builder.description;
             this.resourceTypesScope = builder.resourceTypesScope;
             this.riskLevel = builder.riskLevel;
@@ -591,6 +595,13 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return createDate
+         */
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -641,6 +652,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private String configRuleName; 
             private String configRuleState; 
             private CreateBy createBy; 
+            private String createDate; 
             private String description; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
@@ -660,6 +672,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
                 this.configRuleName = model.configRuleName;
                 this.configRuleState = model.configRuleState;
                 this.createBy = model.createBy;
+                this.createDate = model.createDate;
                 this.description = model.description;
                 this.resourceTypesScope = model.resourceTypesScope;
                 this.riskLevel = model.riskLevel;
@@ -753,6 +766,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
              */
             public Builder createBy(CreateBy createBy) {
                 this.createBy = createBy;
+                return this;
+            }
+
+            /**
+             * CreateDate.
+             */
+            public Builder createDate(String createDate) {
+                this.createDate = createDate;
                 return this;
             }
 

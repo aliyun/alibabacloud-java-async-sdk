@@ -101,15 +101,31 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
+        @com.aliyun.core.annotation.NameInMap("CompliantCount")
+        private Integer compliantCount;
+
+        @com.aliyun.core.annotation.NameInMap("IgnoredCount")
+        private Integer ignoredCount;
+
+        @com.aliyun.core.annotation.NameInMap("InsufficientDataCount")
+        private Integer insufficientDataCount;
+
         @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
+
+        @com.aliyun.core.annotation.NameInMap("NotApplicableCount")
+        private Integer notApplicableCount;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ResourceComplianceResult(Builder builder) {
             this.compliancePackId = builder.compliancePackId;
+            this.compliantCount = builder.compliantCount;
+            this.ignoredCount = builder.ignoredCount;
+            this.insufficientDataCount = builder.insufficientDataCount;
             this.nonCompliantCount = builder.nonCompliantCount;
+            this.notApplicableCount = builder.notApplicableCount;
             this.totalCount = builder.totalCount;
         }
 
@@ -129,10 +145,38 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
         }
 
         /**
+         * @return compliantCount
+         */
+        public Integer getCompliantCount() {
+            return this.compliantCount;
+        }
+
+        /**
+         * @return ignoredCount
+         */
+        public Integer getIgnoredCount() {
+            return this.ignoredCount;
+        }
+
+        /**
+         * @return insufficientDataCount
+         */
+        public Integer getInsufficientDataCount() {
+            return this.insufficientDataCount;
+        }
+
+        /**
          * @return nonCompliantCount
          */
         public Integer getNonCompliantCount() {
             return this.nonCompliantCount;
+        }
+
+        /**
+         * @return notApplicableCount
+         */
+        public Integer getNotApplicableCount() {
+            return this.notApplicableCount;
         }
 
         /**
@@ -144,7 +188,11 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
 
         public static final class Builder {
             private String compliancePackId; 
+            private Integer compliantCount; 
+            private Integer ignoredCount; 
+            private Integer insufficientDataCount; 
             private Integer nonCompliantCount; 
+            private Integer notApplicableCount; 
             private Integer totalCount; 
 
             private Builder() {
@@ -152,7 +200,11 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
 
             private Builder(ResourceComplianceResult model) {
                 this.compliancePackId = model.compliancePackId;
+                this.compliantCount = model.compliantCount;
+                this.ignoredCount = model.ignoredCount;
+                this.insufficientDataCount = model.insufficientDataCount;
                 this.nonCompliantCount = model.nonCompliantCount;
+                this.notApplicableCount = model.notApplicableCount;
                 this.totalCount = model.totalCount;
             } 
 
@@ -168,6 +220,30 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
+             * CompliantCount.
+             */
+            public Builder compliantCount(Integer compliantCount) {
+                this.compliantCount = compliantCount;
+                return this;
+            }
+
+            /**
+             * IgnoredCount.
+             */
+            public Builder ignoredCount(Integer ignoredCount) {
+                this.ignoredCount = ignoredCount;
+                return this;
+            }
+
+            /**
+             * InsufficientDataCount.
+             */
+            public Builder insufficientDataCount(Integer insufficientDataCount) {
+                this.insufficientDataCount = insufficientDataCount;
+                return this;
+            }
+
+            /**
              * <p>The number of non-compliant resources.</p>
              * 
              * <strong>example:</strong>
@@ -175,6 +251,14 @@ public class GetResourceComplianceByPackResponseBody extends TeaModel {
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
+                return this;
+            }
+
+            /**
+             * NotApplicableCount.
+             */
+            public Builder notApplicableCount(Integer notApplicableCount) {
+                this.notApplicableCount = notApplicableCount;
                 return this;
             }
 

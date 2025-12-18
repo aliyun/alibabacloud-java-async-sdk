@@ -79,6 +79,7 @@ public class UpdateAggregateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
+    @Deprecated
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body

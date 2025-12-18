@@ -113,6 +113,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
         private Integer resourceDeleted;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -148,6 +152,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             this.region = builder.region;
             this.resourceCreationTime = builder.resourceCreationTime;
             this.resourceDeleted = builder.resourceDeleted;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
             this.resourceStatus = builder.resourceStatus;
@@ -200,6 +205,13 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
          */
         public Integer getResourceDeleted() {
             return this.resourceDeleted;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -271,6 +283,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             private String region; 
             private Long resourceCreationTime; 
             private Integer resourceDeleted; 
+            private String resourceGroupId; 
             private String resourceId; 
             private String resourceName; 
             private String resourceStatus; 
@@ -290,6 +303,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
                 this.region = model.region;
                 this.resourceCreationTime = model.resourceCreationTime;
                 this.resourceDeleted = model.resourceDeleted;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceId = model.resourceId;
                 this.resourceName = model.resourceName;
                 this.resourceStatus = model.resourceStatus;
@@ -357,6 +371,17 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
              */
             public Builder resourceDeleted(Integer resourceDeleted) {
                 this.resourceDeleted = resourceDeleted;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmvoh45rhxxxx</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

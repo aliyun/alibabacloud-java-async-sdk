@@ -56,6 +56,10 @@ public class ListConfigRulesRequest extends Request {
     private Integer riskLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -70,6 +74,7 @@ public class ListConfigRulesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceTypes = builder.resourceTypes;
         this.riskLevel = builder.riskLevel;
+        this.sortBy = builder.sortBy;
         this.tag = builder.tag;
     }
 
@@ -150,6 +155,13 @@ public class ListConfigRulesRequest extends Request {
     }
 
     /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -166,6 +178,7 @@ public class ListConfigRulesRequest extends Request {
         private Integer pageSize; 
         private String resourceTypes; 
         private Integer riskLevel; 
+        private String sortBy; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -183,6 +196,7 @@ public class ListConfigRulesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceTypes = request.resourceTypes;
             this.riskLevel = request.riskLevel;
+            this.sortBy = request.sortBy;
             this.tag = request.tag;
         } 
 
@@ -315,6 +329,15 @@ public class ListConfigRulesRequest extends Request {
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
             this.riskLevel = riskLevel;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
             return this;
         }
 

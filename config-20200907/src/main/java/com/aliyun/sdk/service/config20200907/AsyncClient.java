@@ -169,15 +169,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConfigRuleResponse> createConfigRule(CreateConfigRuleRequest request);
 
     /**
-     * @deprecated OpenAPI CreateDeliveryChannel is deprecated, please use Config::2020-09-07::CreateConfigDeliveryChannel,Config::2020-09-07::CreateAggregateConfigDeliveryChannel instead.  * @description In this example, a delivery channel is created. The type of the delivery channel is `OSS`, the Alibaba Cloud Resource Name (ARN) of the delivery destination is `acs:oss:cn-shanghai:100931896542****:new-bucket`, and the ARN of the role that is assigned to the delivery channel is `acs:ram::100931896542****:role/aliyunserviceroleforconfig`. The returned result shows that the delivery channel is created, and the ID of the delivery channel is `cdc-8e45ff4e06a3a8****`.
-     * 
-     * @param request the request parameters of CreateDeliveryChannel  CreateDeliveryChannelRequest
-     * @return CreateDeliveryChannelResponse
-     */
-    @Deprecated
-    CompletableFuture<CreateDeliveryChannelResponse> createDeliveryChannel(CreateDeliveryChannelRequest request);
-
-    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a remediation template for the rule <code>cr-8a973ac2e2be00a2****</code>. The returned result shows that a remediation template is created and the ID of the remediation template is <code>crr-909ba2d4716700eb****</code>.</p>
      * 
@@ -301,6 +292,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRemediationsResponse> deleteRemediations(DeleteRemediationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDiscoveredResourceBatch  DescribeDiscoveredResourceBatchRequest
+     * @return DescribeDiscoveredResourceBatchResponse
+     */
+    CompletableFuture<DescribeDiscoveredResourceBatchResponse> describeDiscoveredResourceBatch(DescribeDiscoveredResourceBatchRequest request);
+
+    /**
+     * @param request the request parameters of DescribeIntegratedServiceStatus  DescribeIntegratedServiceStatusRequest
+     * @return DescribeIntegratedServiceStatusResponse
+     */
+    CompletableFuture<DescribeIntegratedServiceStatusResponse> describeIntegratedServiceStatus(DescribeIntegratedServiceStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeRemediation  DescribeRemediationRequest
      * @return DescribeRemediationResponse
      */
@@ -329,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachConfigRuleToCompliancePackResponse
      */
     CompletableFuture<DetachConfigRuleToCompliancePackResponse> detachConfigRuleToCompliancePack(DetachConfigRuleToCompliancePackRequest request);
+
+    /**
+     * @param request the request parameters of DryRunConfigRule  DryRunConfigRuleRequest
+     * @return DryRunConfigRuleResponse
+     */
+    CompletableFuture<DryRunConfigRuleResponse> dryRunConfigRule(DryRunConfigRuleRequest request);
 
     /**
      * @param request the request parameters of EvaluatePreConfigRules  EvaluatePreConfigRulesRequest
@@ -774,6 +783,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceComplianceTimelineResponse> getResourceComplianceTimeline(GetResourceComplianceTimelineRequest request);
 
     /**
+     * @param request the request parameters of GetResourceConfigurationSample  GetResourceConfigurationSampleRequest
+     * @return GetResourceConfigurationSampleResponse
+     */
+    CompletableFuture<GetResourceConfigurationSampleResponse> getResourceConfigurationSample(GetResourceConfigurationSampleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The sample request in this topic shows you how to query the configuration timeline of the <code>new-bucket</code> resource that resides in the <code>cn-hangzhou</code> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <code>1624961112000</code>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</p>
      * 
@@ -793,6 +808,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceInventoryResponse
      */
     CompletableFuture<GetResourceInventoryResponse> getResourceInventory(GetResourceInventoryRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceTypeProperties  GetResourceTypePropertiesRequest
+     * @return GetResourceTypePropertiesResponse
+     */
+    CompletableFuture<GetResourceTypePropertiesResponse> getResourceTypeProperties(GetResourceTypePropertiesRequest request);
 
     /**
      * <b>description</b> :
@@ -873,6 +894,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAggregateDiscoveredResourcesResponse
      */
     CompletableFuture<ListAggregateDiscoveredResourcesResponse> listAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListAggregateRecommendManagedRules  ListAggregateRecommendManagedRulesRequest
+     * @return ListAggregateRecommendManagedRulesResponse
+     */
+    CompletableFuture<ListAggregateRecommendManagedRulesResponse> listAggregateRecommendManagedRules(ListAggregateRecommendManagedRulesRequest request);
 
     /**
      * <b>description</b> :
@@ -975,6 +1002,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConfigRuleEvaluationStatisticsResponse> listConfigRuleEvaluationStatistics(ListConfigRuleEvaluationStatisticsRequest request);
 
     /**
+     * @param request the request parameters of ListConfigRuleOperators  ListConfigRuleOperatorsRequest
+     * @return ListConfigRuleOperatorsResponse
+     */
+    CompletableFuture<ListConfigRuleOperatorsResponse> listConfigRuleOperators(ListConfigRuleOperatorsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</p>
      * 
@@ -1022,6 +1055,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPreManagedRulesResponse
      */
     CompletableFuture<ListPreManagedRulesResponse> listPreManagedRules(ListPreManagedRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListRecommendManagedRules  ListRecommendManagedRulesRequest
+     * @return ListRecommendManagedRulesResponse
+     */
+    CompletableFuture<ListRecommendManagedRulesResponse> listRecommendManagedRules(ListRecommendManagedRulesRequest request);
 
     /**
      * <b>description</b> :
@@ -1164,6 +1203,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartConfigRuleEvaluationResponse> startConfigRuleEvaluation(StartConfigRuleEvaluationRequest request);
 
     /**
+     * @param request the request parameters of StartConfigRuleEvaluationByResource  StartConfigRuleEvaluationByResourceRequest
+     * @return StartConfigRuleEvaluationByResourceResponse
+     */
+    CompletableFuture<StartConfigRuleEvaluationByResourceResponse> startConfigRuleEvaluationByResource(StartConfigRuleEvaluationByResourceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</p>
      * 
@@ -1284,15 +1329,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConfigurationRecorderResponse
      */
     CompletableFuture<UpdateConfigurationRecorderResponse> updateConfigurationRecorder(UpdateConfigurationRecorderRequest request);
-
-    /**
-     * @deprecated OpenAPI UpdateDeliveryChannel is deprecated, please use Config::2020-09-07::UpdateConfigDeliveryChannel,Config::2020-09-07::UpdateAggregateConfigDeliveryChannel instead.  * @description This topic provides an example on how to change the status of the delivery channel whose ID is `cdc-8e45ff4e06a3a8****` to 0, which indicates that the delivery channel is disabled. After the delivery channel is disabled, Cloud Config retains the last delivery configuration and stops resource data delivery.
-     * 
-     * @param request the request parameters of UpdateDeliveryChannel  UpdateDeliveryChannelRequest
-     * @return UpdateDeliveryChannelResponse
-     */
-    @Deprecated
-    CompletableFuture<UpdateDeliveryChannelResponse> updateDeliveryChannel(UpdateDeliveryChannelRequest request);
 
     /**
      * @param request the request parameters of UpdateIntegratedServiceStatus  UpdateIntegratedServiceStatusRequest

@@ -212,19 +212,35 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
+        @com.aliyun.core.annotation.NameInMap("CompliantCount")
+        private Integer compliantCount;
+
         @com.aliyun.core.annotation.NameInMap("ConfigRuleCompliances")
         private java.util.List<ConfigRuleCompliances> configRuleCompliances;
 
+        @com.aliyun.core.annotation.NameInMap("IgnoredCount")
+        private Integer ignoredCount;
+
+        @com.aliyun.core.annotation.NameInMap("InsufficientDataCount")
+        private Integer insufficientDataCount;
+
         @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
+
+        @com.aliyun.core.annotation.NameInMap("NotApplicableCount")
+        private Integer notApplicableCount;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ConfigRuleComplianceResult(Builder builder) {
             this.compliancePackId = builder.compliancePackId;
+            this.compliantCount = builder.compliantCount;
             this.configRuleCompliances = builder.configRuleCompliances;
+            this.ignoredCount = builder.ignoredCount;
+            this.insufficientDataCount = builder.insufficientDataCount;
             this.nonCompliantCount = builder.nonCompliantCount;
+            this.notApplicableCount = builder.notApplicableCount;
             this.totalCount = builder.totalCount;
         }
 
@@ -244,6 +260,13 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         }
 
         /**
+         * @return compliantCount
+         */
+        public Integer getCompliantCount() {
+            return this.compliantCount;
+        }
+
+        /**
          * @return configRuleCompliances
          */
         public java.util.List<ConfigRuleCompliances> getConfigRuleCompliances() {
@@ -251,10 +274,31 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
         }
 
         /**
+         * @return ignoredCount
+         */
+        public Integer getIgnoredCount() {
+            return this.ignoredCount;
+        }
+
+        /**
+         * @return insufficientDataCount
+         */
+        public Integer getInsufficientDataCount() {
+            return this.insufficientDataCount;
+        }
+
+        /**
          * @return nonCompliantCount
          */
         public Integer getNonCompliantCount() {
             return this.nonCompliantCount;
+        }
+
+        /**
+         * @return notApplicableCount
+         */
+        public Integer getNotApplicableCount() {
+            return this.notApplicableCount;
         }
 
         /**
@@ -266,8 +310,12 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
         public static final class Builder {
             private String compliancePackId; 
+            private Integer compliantCount; 
             private java.util.List<ConfigRuleCompliances> configRuleCompliances; 
+            private Integer ignoredCount; 
+            private Integer insufficientDataCount; 
             private Integer nonCompliantCount; 
+            private Integer notApplicableCount; 
             private Integer totalCount; 
 
             private Builder() {
@@ -275,8 +323,12 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
             private Builder(ConfigRuleComplianceResult model) {
                 this.compliancePackId = model.compliancePackId;
+                this.compliantCount = model.compliantCount;
                 this.configRuleCompliances = model.configRuleCompliances;
+                this.ignoredCount = model.ignoredCount;
+                this.insufficientDataCount = model.insufficientDataCount;
                 this.nonCompliantCount = model.nonCompliantCount;
+                this.notApplicableCount = model.notApplicableCount;
                 this.totalCount = model.totalCount;
             } 
 
@@ -292,10 +344,34 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
+             * CompliantCount.
+             */
+            public Builder compliantCount(Integer compliantCount) {
+                this.compliantCount = compliantCount;
+                return this;
+            }
+
+            /**
              * <p>The rule enabled in the compliance package and the compliance evaluation result returned by the rule.</p>
              */
             public Builder configRuleCompliances(java.util.List<ConfigRuleCompliances> configRuleCompliances) {
                 this.configRuleCompliances = configRuleCompliances;
+                return this;
+            }
+
+            /**
+             * IgnoredCount.
+             */
+            public Builder ignoredCount(Integer ignoredCount) {
+                this.ignoredCount = ignoredCount;
+                return this;
+            }
+
+            /**
+             * InsufficientDataCount.
+             */
+            public Builder insufficientDataCount(Integer insufficientDataCount) {
+                this.insufficientDataCount = insufficientDataCount;
                 return this;
             }
 
@@ -307,6 +383,14 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
+                return this;
+            }
+
+            /**
+             * NotApplicableCount.
+             */
+            public Builder notApplicableCount(Integer notApplicableCount) {
+                this.notApplicableCount = notApplicableCount;
                 return this;
             }
 

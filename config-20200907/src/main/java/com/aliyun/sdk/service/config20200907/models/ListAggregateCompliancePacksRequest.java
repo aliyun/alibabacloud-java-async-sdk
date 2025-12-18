@@ -32,6 +32,10 @@ public class ListAggregateCompliancePacksRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private Integer riskLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -44,6 +48,7 @@ public class ListAggregateCompliancePacksRequest extends Request {
         this.aggregatorId = builder.aggregatorId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.riskLevel = builder.riskLevel;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -83,6 +88,13 @@ public class ListAggregateCompliancePacksRequest extends Request {
     }
 
     /**
+     * @return riskLevel
+     */
+    public Integer getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -100,6 +112,7 @@ public class ListAggregateCompliancePacksRequest extends Request {
         private String aggregatorId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer riskLevel; 
         private String status; 
         private java.util.List<Tag> tag; 
 
@@ -112,6 +125,7 @@ public class ListAggregateCompliancePacksRequest extends Request {
             this.aggregatorId = request.aggregatorId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.riskLevel = request.riskLevel;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -153,6 +167,15 @@ public class ListAggregateCompliancePacksRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RiskLevel.
+         */
+        public Builder riskLevel(Integer riskLevel) {
+            this.putQueryParameter("RiskLevel", riskLevel);
+            this.riskLevel = riskLevel;
             return this;
         }
 

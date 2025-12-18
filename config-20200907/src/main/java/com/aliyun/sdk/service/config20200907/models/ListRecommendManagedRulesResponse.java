@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDeliveryChannelResponse} extends {@link TeaModel}
+ * {@link ListRecommendManagedRulesResponse} extends {@link TeaModel}
  *
- * <p>CreateDeliveryChannelResponse</p>
+ * <p>ListRecommendManagedRulesResponse</p>
  */
-public class CreateDeliveryChannelResponse extends Response {
+public class ListRecommendManagedRulesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateDeliveryChannelResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDeliveryChannelResponseBody body;
+    private ListRecommendManagedRulesResponseBody body;
 
-    private CreateDeliveryChannelResponse(BuilderImpl builder) {
+    private ListRecommendManagedRulesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDeliveryChannelResponse create() {
+    public static ListRecommendManagedRulesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateDeliveryChannelResponse extends Response {
     /**
      * @return body
      */
-    public CreateDeliveryChannelResponseBody getBody() {
+    public ListRecommendManagedRulesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDeliveryChannelResponse, Builder> {
+    public interface Builder extends Response.Builder<ListRecommendManagedRulesResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDeliveryChannelResponseBody body);
+        Builder body(ListRecommendManagedRulesResponseBody body);
 
         @Override
-        CreateDeliveryChannelResponse build();
+        ListRecommendManagedRulesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDeliveryChannelResponse, Builder>
+            extends Response.BuilderImpl<ListRecommendManagedRulesResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateDeliveryChannelResponseBody body; 
+        private ListRecommendManagedRulesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDeliveryChannelResponse response) {
+        private BuilderImpl(ListRecommendManagedRulesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateDeliveryChannelResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDeliveryChannelResponseBody body) {
+        public Builder body(ListRecommendManagedRulesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDeliveryChannelResponse build() {
-            return new CreateDeliveryChannelResponse(this);
+        public ListRecommendManagedRulesResponse build() {
+            return new ListRecommendManagedRulesResponse(this);
         } 
 
     } 

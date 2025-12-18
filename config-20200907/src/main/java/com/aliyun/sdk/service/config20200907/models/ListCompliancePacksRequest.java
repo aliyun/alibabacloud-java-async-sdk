@@ -27,6 +27,10 @@ public class ListCompliancePacksRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private Integer riskLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -38,6 +42,7 @@ public class ListCompliancePacksRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.riskLevel = builder.riskLevel;
         this.status = builder.status;
         this.tag = builder.tag;
     }
@@ -70,6 +75,13 @@ public class ListCompliancePacksRequest extends Request {
     }
 
     /**
+     * @return riskLevel
+     */
+    public Integer getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -86,6 +98,7 @@ public class ListCompliancePacksRequest extends Request {
     public static final class Builder extends Request.Builder<ListCompliancePacksRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer riskLevel; 
         private String status; 
         private java.util.List<Tag> tag; 
 
@@ -97,6 +110,7 @@ public class ListCompliancePacksRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.riskLevel = request.riskLevel;
             this.status = request.status;
             this.tag = request.tag;
         } 
@@ -124,6 +138,15 @@ public class ListCompliancePacksRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RiskLevel.
+         */
+        public Builder riskLevel(Integer riskLevel) {
+            this.putQueryParameter("RiskLevel", riskLevel);
+            this.riskLevel = riskLevel;
             return this;
         }
 

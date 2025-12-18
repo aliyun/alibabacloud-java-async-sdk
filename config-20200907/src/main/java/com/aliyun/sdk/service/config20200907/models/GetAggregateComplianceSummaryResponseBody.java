@@ -233,6 +233,15 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliantCount")
         private Integer compliantCount;
 
+        @com.aliyun.core.annotation.NameInMap("HighRiskRuleNonCompliantResourceCount")
+        private Integer highRiskRuleNonCompliantResourceCount;
+
+        @com.aliyun.core.annotation.NameInMap("LowRiskRuleNonCompliantResourceCount")
+        private Integer lowRiskRuleNonCompliantResourceCount;
+
+        @com.aliyun.core.annotation.NameInMap("MediumRiskRuleNonCompliantResourceCount")
+        private Integer mediumRiskRuleNonCompliantResourceCount;
+
         @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
@@ -242,6 +251,9 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         private ComplianceSummaryByResource(Builder builder) {
             this.complianceSummaryTimestamp = builder.complianceSummaryTimestamp;
             this.compliantCount = builder.compliantCount;
+            this.highRiskRuleNonCompliantResourceCount = builder.highRiskRuleNonCompliantResourceCount;
+            this.lowRiskRuleNonCompliantResourceCount = builder.lowRiskRuleNonCompliantResourceCount;
+            this.mediumRiskRuleNonCompliantResourceCount = builder.mediumRiskRuleNonCompliantResourceCount;
             this.nonCompliantCount = builder.nonCompliantCount;
             this.totalCount = builder.totalCount;
         }
@@ -269,6 +281,27 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return highRiskRuleNonCompliantResourceCount
+         */
+        public Integer getHighRiskRuleNonCompliantResourceCount() {
+            return this.highRiskRuleNonCompliantResourceCount;
+        }
+
+        /**
+         * @return lowRiskRuleNonCompliantResourceCount
+         */
+        public Integer getLowRiskRuleNonCompliantResourceCount() {
+            return this.lowRiskRuleNonCompliantResourceCount;
+        }
+
+        /**
+         * @return mediumRiskRuleNonCompliantResourceCount
+         */
+        public Integer getMediumRiskRuleNonCompliantResourceCount() {
+            return this.mediumRiskRuleNonCompliantResourceCount;
+        }
+
+        /**
          * @return nonCompliantCount
          */
         public Integer getNonCompliantCount() {
@@ -285,6 +318,9 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long complianceSummaryTimestamp; 
             private Integer compliantCount; 
+            private Integer highRiskRuleNonCompliantResourceCount; 
+            private Integer lowRiskRuleNonCompliantResourceCount; 
+            private Integer mediumRiskRuleNonCompliantResourceCount; 
             private Integer nonCompliantCount; 
             private Long totalCount; 
 
@@ -294,6 +330,9 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
             private Builder(ComplianceSummaryByResource model) {
                 this.complianceSummaryTimestamp = model.complianceSummaryTimestamp;
                 this.compliantCount = model.compliantCount;
+                this.highRiskRuleNonCompliantResourceCount = model.highRiskRuleNonCompliantResourceCount;
+                this.lowRiskRuleNonCompliantResourceCount = model.lowRiskRuleNonCompliantResourceCount;
+                this.mediumRiskRuleNonCompliantResourceCount = model.mediumRiskRuleNonCompliantResourceCount;
                 this.nonCompliantCount = model.nonCompliantCount;
                 this.totalCount = model.totalCount;
             } 
@@ -317,6 +356,30 @@ public class GetAggregateComplianceSummaryResponseBody extends TeaModel {
              */
             public Builder compliantCount(Integer compliantCount) {
                 this.compliantCount = compliantCount;
+                return this;
+            }
+
+            /**
+             * HighRiskRuleNonCompliantResourceCount.
+             */
+            public Builder highRiskRuleNonCompliantResourceCount(Integer highRiskRuleNonCompliantResourceCount) {
+                this.highRiskRuleNonCompliantResourceCount = highRiskRuleNonCompliantResourceCount;
+                return this;
+            }
+
+            /**
+             * LowRiskRuleNonCompliantResourceCount.
+             */
+            public Builder lowRiskRuleNonCompliantResourceCount(Integer lowRiskRuleNonCompliantResourceCount) {
+                this.lowRiskRuleNonCompliantResourceCount = lowRiskRuleNonCompliantResourceCount;
+                return this;
+            }
+
+            /**
+             * MediumRiskRuleNonCompliantResourceCount.
+             */
+            public Builder mediumRiskRuleNonCompliantResourceCount(Integer mediumRiskRuleNonCompliantResourceCount) {
+                this.mediumRiskRuleNonCompliantResourceCount = mediumRiskRuleNonCompliantResourceCount;
                 return this;
             }
 
