@@ -115,6 +115,10 @@ public class CreateDBInstanceRequest extends Request {
     private String sourceDBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
@@ -172,6 +176,7 @@ public class CreateDBInstanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceDBClusterId = builder.sourceDBClusterId;
+        this.tags = builder.tags;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
         this.vSwitchBak = builder.vSwitchBak;
@@ -350,6 +355,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -428,6 +440,7 @@ public class CreateDBInstanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sourceDBClusterId; 
+        private java.util.List<Tags> tags; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchBak; 
@@ -465,6 +478,7 @@ public class CreateDBInstanceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceDBClusterId = request.sourceDBClusterId;
+            this.tags = request.tags;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
             this.vSwitchBak = request.vSwitchBak;
@@ -805,6 +819,15 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>The subscription duration of the subscription cluster.</p>
          * <blockquote>
          * <p> This parameter is required only when PayType is set to Prepaid.</p>
@@ -916,4 +939,79 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

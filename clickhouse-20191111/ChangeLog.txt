@@ -1,3 +1,6 @@
+2025-12-18 Version: 1.0.15
+- Generated java-async 2019-11-11 for clickhouse.
+
 2025-12-12 Version: 1.0.14
 - Generated java-async 2019-11-11 for clickhouse.
 
