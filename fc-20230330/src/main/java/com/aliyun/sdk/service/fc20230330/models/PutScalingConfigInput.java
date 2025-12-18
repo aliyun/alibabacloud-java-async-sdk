@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutScalingConfigInput</p>
  */
 public class PutScalingConfigInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("enableMixMode")
+    private Boolean enableMixMode;
+
     @com.aliyun.core.annotation.NameInMap("enableOnDemandScaling")
     private Boolean enableOnDemandScaling;
 
@@ -26,6 +29,9 @@ public class PutScalingConfigInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("minInstances")
     private Long minInstances;
 
+    @com.aliyun.core.annotation.NameInMap("requestDispatchPolicy")
+    private String requestDispatchPolicy;
+
     @com.aliyun.core.annotation.NameInMap("residentPoolId")
     private String residentPoolId;
 
@@ -33,9 +39,11 @@ public class PutScalingConfigInput extends TeaModel {
     private java.util.List<ScheduledPolicy> scheduledPolicies;
 
     private PutScalingConfigInput(Builder builder) {
+        this.enableMixMode = builder.enableMixMode;
         this.enableOnDemandScaling = builder.enableOnDemandScaling;
         this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
         this.minInstances = builder.minInstances;
+        this.requestDispatchPolicy = builder.requestDispatchPolicy;
         this.residentPoolId = builder.residentPoolId;
         this.scheduledPolicies = builder.scheduledPolicies;
     }
@@ -50,6 +58,13 @@ public class PutScalingConfigInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return enableMixMode
+     */
+    public Boolean getEnableMixMode() {
+        return this.enableMixMode;
     }
 
     /**
@@ -74,6 +89,13 @@ public class PutScalingConfigInput extends TeaModel {
     }
 
     /**
+     * @return requestDispatchPolicy
+     */
+    public String getRequestDispatchPolicy() {
+        return this.requestDispatchPolicy;
+    }
+
+    /**
      * @return residentPoolId
      */
     public String getResidentPoolId() {
@@ -88,9 +110,11 @@ public class PutScalingConfigInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean enableMixMode; 
         private Boolean enableOnDemandScaling; 
         private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
         private Long minInstances; 
+        private String requestDispatchPolicy; 
         private String residentPoolId; 
         private java.util.List<ScheduledPolicy> scheduledPolicies; 
 
@@ -98,12 +122,22 @@ public class PutScalingConfigInput extends TeaModel {
         } 
 
         private Builder(PutScalingConfigInput model) {
+            this.enableMixMode = model.enableMixMode;
             this.enableOnDemandScaling = model.enableOnDemandScaling;
             this.horizontalScalingPolicies = model.horizontalScalingPolicies;
             this.minInstances = model.minInstances;
+            this.requestDispatchPolicy = model.requestDispatchPolicy;
             this.residentPoolId = model.residentPoolId;
             this.scheduledPolicies = model.scheduledPolicies;
         } 
+
+        /**
+         * enableMixMode.
+         */
+        public Builder enableMixMode(Boolean enableMixMode) {
+            this.enableMixMode = enableMixMode;
+            return this;
+        }
 
         /**
          * enableOnDemandScaling.
@@ -126,6 +160,14 @@ public class PutScalingConfigInput extends TeaModel {
          */
         public Builder minInstances(Long minInstances) {
             this.minInstances = minInstances;
+            return this;
+        }
+
+        /**
+         * requestDispatchPolicy.
+         */
+        public Builder requestDispatchPolicy(String requestDispatchPolicy) {
+            this.requestDispatchPolicy = requestDispatchPolicy;
             return this;
         }
 

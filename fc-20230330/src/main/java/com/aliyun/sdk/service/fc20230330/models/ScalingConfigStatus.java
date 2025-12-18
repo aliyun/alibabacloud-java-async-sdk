@@ -23,6 +23,9 @@ public class ScalingConfigStatus extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("currentInstances")
     private Long currentInstances;
 
+    @com.aliyun.core.annotation.NameInMap("enableMixMode")
+    private Boolean enableMixMode;
+
     @com.aliyun.core.annotation.NameInMap("enableOnDemandScaling")
     private Boolean enableOnDemandScaling;
 
@@ -34,6 +37,9 @@ public class ScalingConfigStatus extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("minInstances")
     private Long minInstances;
+
+    @com.aliyun.core.annotation.NameInMap("requestDispatchPolicy")
+    private String requestDispatchPolicy;
 
     @com.aliyun.core.annotation.NameInMap("residentPoolId")
     private String residentPoolId;
@@ -47,10 +53,12 @@ public class ScalingConfigStatus extends TeaModel {
     private ScalingConfigStatus(Builder builder) {
         this.currentError = builder.currentError;
         this.currentInstances = builder.currentInstances;
+        this.enableMixMode = builder.enableMixMode;
         this.enableOnDemandScaling = builder.enableOnDemandScaling;
         this.functionArn = builder.functionArn;
         this.horizontalScalingPolicies = builder.horizontalScalingPolicies;
         this.minInstances = builder.minInstances;
+        this.requestDispatchPolicy = builder.requestDispatchPolicy;
         this.residentPoolId = builder.residentPoolId;
         this.scheduledPolicies = builder.scheduledPolicies;
         this.targetInstances = builder.targetInstances;
@@ -83,6 +91,13 @@ public class ScalingConfigStatus extends TeaModel {
     }
 
     /**
+     * @return enableMixMode
+     */
+    public Boolean getEnableMixMode() {
+        return this.enableMixMode;
+    }
+
+    /**
      * @return enableOnDemandScaling
      */
     public Boolean getEnableOnDemandScaling() {
@@ -111,6 +126,13 @@ public class ScalingConfigStatus extends TeaModel {
     }
 
     /**
+     * @return requestDispatchPolicy
+     */
+    public String getRequestDispatchPolicy() {
+        return this.requestDispatchPolicy;
+    }
+
+    /**
      * @return residentPoolId
      */
     public String getResidentPoolId() {
@@ -134,10 +156,12 @@ public class ScalingConfigStatus extends TeaModel {
     public static final class Builder {
         private String currentError; 
         private Long currentInstances; 
+        private Boolean enableMixMode; 
         private Boolean enableOnDemandScaling; 
         private String functionArn; 
         private java.util.List<ScalingPolicy> horizontalScalingPolicies; 
         private Long minInstances; 
+        private String requestDispatchPolicy; 
         private String residentPoolId; 
         private java.util.List<ScheduledPolicy> scheduledPolicies; 
         private Long targetInstances; 
@@ -148,10 +172,12 @@ public class ScalingConfigStatus extends TeaModel {
         private Builder(ScalingConfigStatus model) {
             this.currentError = model.currentError;
             this.currentInstances = model.currentInstances;
+            this.enableMixMode = model.enableMixMode;
             this.enableOnDemandScaling = model.enableOnDemandScaling;
             this.functionArn = model.functionArn;
             this.horizontalScalingPolicies = model.horizontalScalingPolicies;
             this.minInstances = model.minInstances;
+            this.requestDispatchPolicy = model.requestDispatchPolicy;
             this.residentPoolId = model.residentPoolId;
             this.scheduledPolicies = model.scheduledPolicies;
             this.targetInstances = model.targetInstances;
@@ -170,6 +196,14 @@ public class ScalingConfigStatus extends TeaModel {
          */
         public Builder currentInstances(Long currentInstances) {
             this.currentInstances = currentInstances;
+            return this;
+        }
+
+        /**
+         * enableMixMode.
+         */
+        public Builder enableMixMode(Boolean enableMixMode) {
+            this.enableMixMode = enableMixMode;
             return this;
         }
 
@@ -202,6 +236,14 @@ public class ScalingConfigStatus extends TeaModel {
          */
         public Builder minInstances(Long minInstances) {
             this.minInstances = minInstances;
+            return this;
+        }
+
+        /**
+         * requestDispatchPolicy.
+         */
+        public Builder requestDispatchPolicy(String requestDispatchPolicy) {
+            this.requestDispatchPolicy = requestDispatchPolicy;
             return this;
         }
 

@@ -29,6 +29,9 @@ public class InstanceInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    private String resourceType;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -40,6 +43,7 @@ public class InstanceInfo extends TeaModel {
         this.destroyedTimeMs = builder.destroyedTimeMs;
         this.instanceId = builder.instanceId;
         this.qualifier = builder.qualifier;
+        this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.versionId = builder.versionId;
     }
@@ -85,6 +89,13 @@ public class InstanceInfo extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -103,6 +114,7 @@ public class InstanceInfo extends TeaModel {
         private Long destroyedTimeMs; 
         private String instanceId; 
         private String qualifier; 
+        private String resourceType; 
         private String status; 
         private String versionId; 
 
@@ -114,6 +126,7 @@ public class InstanceInfo extends TeaModel {
             this.destroyedTimeMs = model.destroyedTimeMs;
             this.instanceId = model.instanceId;
             this.qualifier = model.qualifier;
+            this.resourceType = model.resourceType;
             this.status = model.status;
             this.versionId = model.versionId;
         } 
@@ -147,6 +160,14 @@ public class InstanceInfo extends TeaModel {
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
+            return this;
+        }
+
+        /**
+         * resourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 
