@@ -933,6 +933,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHDMLastAliyunResourceSyncResultResponse> getHDMLastAliyunResourceSyncResult(GetHDMLastAliyunResourceSyncResultRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceGroupInspectReportDetail  GetInstanceGroupInspectReportDetailRequest
+     * @return GetInstanceGroupInspectReportDetailResponse
+     */
+    CompletableFuture<GetInstanceGroupInspectReportDetailResponse> getInstanceGroupInspectReportDetail(GetInstanceGroupInspectReportDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceGroupInspectReportList  GetInstanceGroupInspectReportListRequest
+     * @return GetInstanceGroupInspectReportListResponse
+     */
+    CompletableFuture<GetInstanceGroupInspectReportListResponse> getInstanceGroupInspectReportList(GetInstanceGroupInspectReportListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Database Autonomy Service (DAS) provides the inspection and scoring feature. This feature allows you to inspect and score the health status of your instance on a regular basis. This helps you obtain information about the status of your databases. For more information, see <a href="https://help.aliyun.com/document_detail/205659.html">Inspection and scoring</a>.
      * Before you call this operation, take note of the following items:</p>
