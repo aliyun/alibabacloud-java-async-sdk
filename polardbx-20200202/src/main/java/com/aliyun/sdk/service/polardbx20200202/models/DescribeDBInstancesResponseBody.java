@@ -419,6 +419,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
+        private String engineVersion;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
@@ -528,6 +531,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.dnNodeClassCode = builder.dnNodeClassCode;
             this.dnNodeCount = builder.dnNodeCount;
             this.engine = builder.engine;
+            this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
             this.id = builder.id;
@@ -678,6 +682,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getEngine() {
             return this.engine;
+        }
+
+        /**
+         * @return engineVersion
+         */
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         /**
@@ -907,6 +918,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String dnNodeClassCode; 
             private Integer dnNodeCount; 
             private String engine; 
+            private String engineVersion; 
             private String expireTime; 
             private Boolean expired; 
             private String id; 
@@ -958,6 +970,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.dnNodeClassCode = model.dnNodeClassCode;
                 this.dnNodeCount = model.dnNodeCount;
                 this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
                 this.expireTime = model.expireTime;
                 this.expired = model.expired;
                 this.id = model.id;
@@ -1115,6 +1128,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * EngineVersion.
+             */
+            public Builder engineVersion(String engineVersion) {
+                this.engineVersion = engineVersion;
                 return this;
             }
 

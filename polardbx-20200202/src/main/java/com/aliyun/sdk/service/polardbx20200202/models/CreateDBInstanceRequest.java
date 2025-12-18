@@ -49,6 +49,10 @@ public class CreateDBInstanceRequest extends Request {
     private Integer DNNodeCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DnClass")
     private String dnClass;
 
@@ -145,6 +149,7 @@ public class CreateDBInstanceRequest extends Request {
         this.DBNodeClass = builder.DBNodeClass;
         this.DBNodeCount = builder.DBNodeCount;
         this.DNNodeCount = builder.DNNodeCount;
+        this.description = builder.description;
         this.dnClass = builder.dnClass;
         this.dnStorageSpace = builder.dnStorageSpace;
         this.engineVersion = builder.engineVersion;
@@ -228,6 +233,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public Integer getDNNodeCount() {
         return this.DNNodeCount;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -385,6 +397,7 @@ public class CreateDBInstanceRequest extends Request {
         private String DBNodeClass; 
         private Integer DBNodeCount; 
         private Integer DNNodeCount; 
+        private String description; 
         private String dnClass; 
         private String dnStorageSpace; 
         private String engineVersion; 
@@ -420,6 +433,7 @@ public class CreateDBInstanceRequest extends Request {
             this.DBNodeClass = request.DBNodeClass;
             this.DBNodeCount = request.DBNodeCount;
             this.DNNodeCount = request.DNNodeCount;
+            this.description = request.description;
             this.dnClass = request.dnClass;
             this.dnStorageSpace = request.dnStorageSpace;
             this.engineVersion = request.engineVersion;
@@ -503,6 +517,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder DNNodeCount(Integer DNNodeCount) {
             this.putQueryParameter("DNNodeCount", DNNodeCount);
             this.DNNodeCount = DNNodeCount;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

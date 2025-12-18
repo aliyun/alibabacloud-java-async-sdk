@@ -650,6 +650,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
+        private String engineVersion;
+
         @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
@@ -783,6 +786,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.dnNodeClassCode = builder.dnNodeClassCode;
             this.dnNodeCount = builder.dnNodeCount;
             this.engine = builder.engine;
+            this.engineVersion = builder.engineVersion;
             this.expireDate = builder.expireDate;
             this.expired = builder.expired;
             this.gdnInstanceName = builder.gdnInstanceName;
@@ -974,6 +978,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getEngine() {
             return this.engine;
+        }
+
+        /**
+         * @return engineVersion
+         */
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         /**
@@ -1250,6 +1261,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String dnNodeClassCode; 
             private Integer dnNodeCount; 
             private String engine; 
+            private String engineVersion; 
             private String expireDate; 
             private String expired; 
             private String gdnInstanceName; 
@@ -1312,6 +1324,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.dnNodeClassCode = model.dnNodeClassCode;
                 this.dnNodeCount = model.dnNodeCount;
                 this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
                 this.expireDate = model.expireDate;
                 this.expired = model.expired;
                 this.gdnInstanceName = model.gdnInstanceName;
@@ -1515,6 +1528,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * EngineVersion.
+             */
+            public Builder engineVersion(String engineVersion) {
+                this.engineVersion = engineVersion;
                 return this;
             }
 
