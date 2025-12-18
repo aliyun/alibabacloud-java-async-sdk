@@ -1028,6 +1028,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
 
     /**
+     * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
+     * @return SyncDepartmentResponse
+     */
+    CompletableFuture<SyncDepartmentResponse> syncDepartment(SyncDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest
+     * @return SyncDepartmentUserResponse
+     */
+    CompletableFuture<SyncDepartmentUserResponse> syncDepartmentUser(SyncDepartmentUserRequest request);
+
+    /**
      * @param request the request parameters of TransferOwnershipForAllObject  TransferOwnershipForAllObjectRequest
      * @return TransferOwnershipForAllObjectResponse
      */
