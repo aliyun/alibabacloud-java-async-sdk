@@ -307,6 +307,240 @@ public class GetResourceOverviewResponseBody extends TeaModel {
      *
      * <p>GetResourceOverviewResponseBody</p>
      */
+    public static class RiskDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("gatewayId")
+        private String gatewayId;
+
+        @com.aliyun.core.annotation.NameInMap("gatewayName")
+        private String gatewayName;
+
+        @com.aliyun.core.annotation.NameInMap("riskLevel")
+        private String riskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("riskNames")
+        private java.util.List<String> riskNames;
+
+        @com.aliyun.core.annotation.NameInMap("score")
+        private String score;
+
+        private RiskDetails(Builder builder) {
+            this.gatewayId = builder.gatewayId;
+            this.gatewayName = builder.gatewayName;
+            this.riskLevel = builder.riskLevel;
+            this.riskNames = builder.riskNames;
+            this.score = builder.score;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gatewayId
+         */
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayName
+         */
+        public String getGatewayName() {
+            return this.gatewayName;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return riskNames
+         */
+        public java.util.List<String> getRiskNames() {
+            return this.riskNames;
+        }
+
+        /**
+         * @return score
+         */
+        public String getScore() {
+            return this.score;
+        }
+
+        public static final class Builder {
+            private String gatewayId; 
+            private String gatewayName; 
+            private String riskLevel; 
+            private java.util.List<String> riskNames; 
+            private String score; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskDetails model) {
+                this.gatewayId = model.gatewayId;
+                this.gatewayName = model.gatewayName;
+                this.riskLevel = model.riskLevel;
+                this.riskNames = model.riskNames;
+                this.score = model.score;
+            } 
+
+            /**
+             * gatewayId.
+             */
+            public Builder gatewayId(String gatewayId) {
+                this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * gatewayName.
+             */
+            public Builder gatewayName(String gatewayName) {
+                this.gatewayName = gatewayName;
+                return this;
+            }
+
+            /**
+             * riskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * riskNames.
+             */
+            public Builder riskNames(java.util.List<String> riskNames) {
+                this.riskNames = riskNames;
+                return this;
+            }
+
+            /**
+             * score.
+             */
+            public Builder score(String score) {
+                this.score = score;
+                return this;
+            }
+
+            public RiskDetails build() {
+                return new RiskDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResourceOverviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceOverviewResponseBody</p>
+     */
+    public static class RiskOverview extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("count")
+        private String count;
+
+        @com.aliyun.core.annotation.NameInMap("riskDetails")
+        private java.util.List<RiskDetails> riskDetails;
+
+        @com.aliyun.core.annotation.NameInMap("riskLevel")
+        private String riskLevel;
+
+        private RiskOverview(Builder builder) {
+            this.count = builder.count;
+            this.riskDetails = builder.riskDetails;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskOverview create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public String getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return riskDetails
+         */
+        public java.util.List<RiskDetails> getRiskDetails() {
+            return this.riskDetails;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private String count; 
+            private java.util.List<RiskDetails> riskDetails; 
+            private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskOverview model) {
+                this.count = model.count;
+                this.riskDetails = model.riskDetails;
+                this.riskLevel = model.riskLevel;
+            } 
+
+            /**
+             * count.
+             */
+            public Builder count(String count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * riskDetails.
+             */
+            public Builder riskDetails(java.util.List<RiskDetails> riskDetails) {
+                this.riskDetails = riskDetails;
+                return this;
+            }
+
+            /**
+             * riskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public RiskOverview build() {
+                return new RiskOverview(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResourceOverviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceOverviewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("api")
         private Api api;
@@ -314,9 +548,13 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gateway")
         private Gateway gateway;
 
+        @com.aliyun.core.annotation.NameInMap("riskOverview")
+        private java.util.List<RiskOverview> riskOverview;
+
         private Data(Builder builder) {
             this.api = builder.api;
             this.gateway = builder.gateway;
+            this.riskOverview = builder.riskOverview;
         }
 
         public static Builder builder() {
@@ -341,9 +579,17 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             return this.gateway;
         }
 
+        /**
+         * @return riskOverview
+         */
+        public java.util.List<RiskOverview> getRiskOverview() {
+            return this.riskOverview;
+        }
+
         public static final class Builder {
             private Api api; 
             private Gateway gateway; 
+            private java.util.List<RiskOverview> riskOverview; 
 
             private Builder() {
             } 
@@ -351,6 +597,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.api = model.api;
                 this.gateway = model.gateway;
+                this.riskOverview = model.riskOverview;
             } 
 
             /**
@@ -366,6 +613,14 @@ public class GetResourceOverviewResponseBody extends TeaModel {
              */
             public Builder gateway(Gateway gateway) {
                 this.gateway = gateway;
+                return this;
+            }
+
+            /**
+             * riskOverview.
+             */
+            public Builder riskOverview(java.util.List<RiskOverview> riskOverview) {
+                this.riskOverview = riskOverview;
                 return this;
             }
 
