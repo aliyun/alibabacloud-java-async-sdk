@@ -75,7 +75,7 @@ public class GetOriginRuleRequest extends Request {
         } 
 
         /**
-         * <p>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2866989.html">ListOriginRules</a> interface.</p>
+         * <p>The ID of the configuration. You can call the <a href="https://help.aliyun.com/document_detail/2866989.html">ListSiteRoutes</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

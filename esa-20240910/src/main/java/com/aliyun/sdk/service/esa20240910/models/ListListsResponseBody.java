@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListsResponseBody</p>
  */
 public class ListListsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ItemsUsage")
+    private Long itemsUsage;
+
     @com.aliyun.core.annotation.NameInMap("Lists")
     private java.util.List<Lists> lists;
 
@@ -36,6 +39,7 @@ public class ListListsResponseBody extends TeaModel {
     private Long usage;
 
     private ListListsResponseBody(Builder builder) {
+        this.itemsUsage = builder.itemsUsage;
         this.lists = builder.lists;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -54,6 +58,13 @@ public class ListListsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return itemsUsage
+     */
+    public Long getItemsUsage() {
+        return this.itemsUsage;
     }
 
     /**
@@ -99,6 +110,7 @@ public class ListListsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long itemsUsage; 
         private java.util.List<Lists> lists; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -110,6 +122,7 @@ public class ListListsResponseBody extends TeaModel {
         } 
 
         private Builder(ListListsResponseBody model) {
+            this.itemsUsage = model.itemsUsage;
             this.lists = model.lists;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
@@ -117,6 +130,14 @@ public class ListListsResponseBody extends TeaModel {
             this.totalCount = model.totalCount;
             this.usage = model.usage;
         } 
+
+        /**
+         * ItemsUsage.
+         */
+        public Builder itemsUsage(Long itemsUsage) {
+            this.itemsUsage = itemsUsage;
+            return this;
+        }
 
         /**
          * <p>The array that contains list information, including list data after paging.</p>

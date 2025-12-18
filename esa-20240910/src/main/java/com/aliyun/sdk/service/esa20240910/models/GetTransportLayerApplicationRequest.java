@@ -75,7 +75,7 @@ public class GetTransportLayerApplicationRequest extends Request {
         } 
 
         /**
-         * <p>Application ID, which can be obtained by calling the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> interface.</p>
+         * <p>Number of forwarding rules contained in the transport layer acceleration application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetTransportLayerApplicationRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>Transport layer application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -353,7 +353,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>352816096987136</p>
@@ -364,10 +364,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <p>The configuration type to query. Valid values:</p>
          * <ul>
-         * <li>global: Query global configuration.</li>
-         * <li>rule: Query rule configuration.</li>
+         * <li>global: global configurations.</li>
+         * <li>rule: rule configurations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -379,7 +379,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rewrite the DNS resolution record for the origin request.</p>
+         * <p>The hostname that overrides the resolved hostname of an incoming request.</p>
          * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
@@ -390,7 +390,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Follow302Enable.
+         * <p>302 follow switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302Enable(String follow302Enable) {
             this.follow302Enable = follow302Enable;
@@ -398,7 +405,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Follow302MaxTries.
+         * <p>The maximum number of 302 follow times. Valid values: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder follow302MaxTries(String follow302MaxTries) {
             this.follow302MaxTries = follow302MaxTries;
@@ -406,7 +416,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Follow302RetainArgs.
+         * <p>Retains the original request parameters switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302RetainArgs(String follow302RetainArgs) {
             this.follow302RetainArgs = follow302RetainArgs;
@@ -414,7 +431,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Follow302RetainHeader.
+         * <p>Retain the original request header switch. Valid values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302RetainHeader(String follow302RetainHeader) {
             this.follow302RetainHeader = follow302RetainHeader;
@@ -422,7 +446,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Follow302TargetHost.
+         * <p>Target Host</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder follow302TargetHost(String follow302TargetHost) {
             this.follow302TargetHost = follow302TargetHost;
@@ -430,7 +457,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HOST carried in the origin request.</p>
+         * <p>The Host header in origin requests.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -441,7 +468,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Port of the origin server accessed when using the HTTP protocol for origin.</p>
+         * <p>The origin port that is accessed when the HTTP protocol is used to back to the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -452,7 +479,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Port of the origin server accessed when using the HTTPS protocol for origin.</p>
+         * <p>The origin port that is accessed when the HTTPS protocol is used to back to the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>4433</p>
@@ -463,10 +490,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>mTLS switch. Value range:</p>
+         * <p>The MTLS switch. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on</li>
+         * <li>off</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -478,7 +505,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginReadTimeout.
+         * <p>The read timeout period (in seconds) on the origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder originReadTimeout(String originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
@@ -486,11 +516,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Protocol used for the origin request. Value range:</p>
+         * <p>The protocol used for origin requests. Valid values:</p>
          * <ul>
-         * <li>http: Use HTTP protocol for origin.</li>
-         * <li>https: Use HTTPS protocol for origin.</li>
-         * <li>follow: Follow the client&quot;s protocol for origin.</li>
+         * <li>http: HTTP.</li>
+         * <li>https: HTTPS.</li>
+         * <li>follow: follows the protocol used by the client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -502,7 +532,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>SNI carried in the origin request.</p>
+         * <p>The SNI in origin requests.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -513,10 +543,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Origin certificate verification switch. Value range: </p>
+         * <p>The origin certificate verification switch. Valid values:</p>
          * <ul>
-         * <li>on: Enable. </li>
-         * <li>off: Disable.</li>
+         * <li>on</li>
+         * <li>off</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -528,11 +558,11 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Use the range chunk method for origin file download. Value range:</p>
+         * <p>Use range requests to download an object from the source. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
-         * <li>force: Force.</li>
+         * <li>on</li>
+         * <li>off</li>
+         * <li>force: enables range origin fetch by force.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -544,7 +574,16 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RangeChunkSize.
+         * <p>The size of the range part. Valid values:</p>
+         * <ul>
+         * <li>512KB</li>
+         * <li>1MB</li>
+         * <li>2MB</li>
+         * <li>4MB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1MB</p>
          */
         public Builder rangeChunkSize(String rangeChunkSize) {
             this.rangeChunkSize = rangeChunkSize;
@@ -563,10 +602,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>true: Match all incoming requests.</li>
+         * <li>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -578,10 +617,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</p>
+         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on</li>
+         * <li>off</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -593,7 +632,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when you add global configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -604,7 +643,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -615,7 +654,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version number of the configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

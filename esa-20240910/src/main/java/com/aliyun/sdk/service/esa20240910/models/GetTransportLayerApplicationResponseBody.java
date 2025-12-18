@@ -210,24 +210,13 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Transport layer application ID.</p>
+         * <p>Specific value of the origin, which needs to match the type of the origin.</p>
          * 
          * <strong>example:</strong>
          * <p>17099311410****</p>
          */
         public Builder applicationId(Long applicationId) {
             this.applicationId = applicationId;
-            return this;
-        }
-
-        /**
-         * <p>The CNAME domain corresponding to the transport layer acceleration application. This field is not empty only when the site is accessed via CNAME.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com.ialicdn.com</p>
-         */
-        public Builder cname(String cname) {
-            this.cname = cname;
             return this;
         }
 
@@ -239,7 +228,15 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>on</p>
+         * <p>example.com.ialicdn.com</p>
+         */
+        public Builder cname(String cname) {
+            this.cname = cname;
+            return this;
+        }
+
+        /**
+         * CrossBorderOptimization.
          */
         public Builder crossBorderOptimization(String crossBorderOptimization) {
             this.crossBorderOptimization = crossBorderOptimization;
@@ -247,11 +244,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Switch for IP access rules. When turned on, the IP access rules in WAF take effect on the transport layer application.</p>
-         * <ul>
-         * <li>on: Turned on.</li>
-         * <li>off: Turned off.</li>
-         * </ul>
+         * <p>#/components/schemas/WafRuleMatch2</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -262,7 +255,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>IPv6 switch.</p>
+         * <p>Ipv6 switch</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -273,7 +266,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain name of the transport layer application.</p>
+         * <p>Query Transport Layer Acceleration Application</p>
          * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
@@ -295,7 +288,12 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of forwarding rules.</p>
+         * <p>Edge port. Supports:</p>
+         * <ul>
+         * <li>A single port, such as 80.</li>
+         * <li>Port range, such as 81-85, representing ports 81, 82, 83, 84, 85.</li>
+         * <li>Combination of ports and port ranges, separated by commas, for example 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</li>
+         * </ul>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -303,7 +301,11 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of forwarding rules contained in the transport layer acceleration application.</p>
+         * <p>Forwarding rule protocol, with values:</p>
+         * <ul>
+         * <li>TCP: TCP protocol.</li>
+         * <li>UDP: UDP protocol.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -314,7 +316,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site ID.</p>
+         * <p>Details of the forwarding rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -341,14 +343,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status of the transport layer application</p>
-         * <ul>
-         * <li><strong>deploying</strong>: Deploying. In this state, modification and deletion are not allowed.</li>
-         * <li><strong>active</strong>: Active.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>active</p>
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -492,13 +487,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Client IP pass-through protocol, supporting:</p>
-             * <ul>
-             * <li><strong>off</strong>: No pass-through.</li>
-             * <li><strong>PPv1</strong>: PROXY Protocol v1, supports client IP pass-through for TCP protocol.</li>
-             * <li><strong>PPv2</strong>: PROXY Protocol v2, supports client IP pass-through for TCP and UDP protocols.</li>
-             * <li><strong>SPP</strong>: Simple Proxy Protocol, supports client IP pass-through for UDP protocol.</li>
-             * </ul>
+             * <p>The domain name of the transport layer application.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -509,10 +498,14 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Comment information of the rule.</p>
+             * <p>Switch for IP access rules. When turned on, the IP access rules in WAF take effect on the transport layer application.</p>
+             * <ul>
+             * <li>on: Turned on.</li>
+             * <li>off: Turned off.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>测试</p>
+             * <p>IPv6 switch.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -520,12 +513,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Edge port. Supports:</p>
-             * <ul>
-             * <li>A single port, such as 80.</li>
-             * <li>Port range, such as 81-85, representing ports 81, 82, 83, 84, 85.</li>
-             * <li>Combination of ports and port ranges, separated by commas, for example 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</li>
-             * </ul>
+             * <p>Comment information of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -536,10 +524,12 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Forwarding rule protocol, with values:</p>
+             * <p>Client IP pass-through protocol, supporting:</p>
              * <ul>
-             * <li>TCP: TCP protocol.</li>
-             * <li>UDP: UDP protocol.</li>
+             * <li><strong>off</strong>: No pass-through.</li>
+             * <li><strong>PPv1</strong>: PROXY Protocol v1, supports client IP pass-through for TCP protocol.</li>
+             * <li><strong>PPv2</strong>: PROXY Protocol v2, supports client IP pass-through for TCP and UDP protocols.</li>
+             * <li><strong>SPP</strong>: Simple Proxy Protocol, supports client IP pass-through for UDP protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -551,24 +541,17 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule ID.</p>
+             * <p>Status of the transport layer application</p>
+             * <ul>
+             * <li><strong>deploying</strong>: Deploying. In this state, modification and deletion are not allowed.</li>
+             * <li><strong>active</strong>: Active.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1234323***</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
-                return this;
-            }
-
-            /**
-             * <p>Specific value of the origin, which needs to match the type of the origin.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.1.1.1</p>
-             */
-            public Builder source(String source) {
-                this.source = source;
                 return this;
             }
 
@@ -580,6 +563,17 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
+             * <p>1.1.1.1</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The CNAME domain corresponding to the transport layer acceleration application. This field is not empty only when the site is accessed via CNAME.</p>
+             * 
+             * <strong>example:</strong>
              * <p>80</p>
              */
             public Builder sourcePort(String sourcePort) {
@@ -588,13 +582,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Origin type, supporting:</p>
-             * <ul>
-             * <li><strong>ip</strong>: IP.</li>
-             * <li><strong>domain</strong>: Domain name.</li>
-             * <li><strong>OP</strong>: Origin pool.</li>
-             * <li><strong>LB</strong>: Load balancer.</li>
-             * </ul>
+             * <p>Rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -672,14 +660,7 @@ public class GetTransportLayerApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the transport layer application</p>
-             * <ul>
-             * <li><strong>deploying</strong>: Deploying. In this state, modification and deletion are not allowed.</li>
-             * <li><strong>active</strong>: Active.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
