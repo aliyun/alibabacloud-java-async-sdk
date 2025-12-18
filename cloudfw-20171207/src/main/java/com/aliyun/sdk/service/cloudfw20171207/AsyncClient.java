@@ -1504,6 +1504,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAddressBookResponse> modifyAddressBook(ModifyAddressBookRequest request);
 
     /**
+     * @param request the request parameters of ModifyCfwInstance  ModifyCfwInstanceRequest
+     * @return ModifyCfwInstanceResponse
+     */
+    CompletableFuture<ModifyCfwInstanceResponse> modifyCfwInstance(ModifyCfwInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to modify the configurations of an access control policy. The policy allows Cloud Firewall to allow, deny, or monitor the traffic that passes through Cloud Firewall.</p>
      * <h2><a href="#qps"></a>Limit</h2>
