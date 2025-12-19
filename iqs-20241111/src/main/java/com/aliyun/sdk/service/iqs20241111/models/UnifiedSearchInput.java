@@ -32,6 +32,9 @@ public class UnifiedSearchInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("location")
     private String location;
 
+    @com.aliyun.core.annotation.NameInMap("locationInfo")
+    private LocationInfo locationInfo;
+
     @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
@@ -44,6 +47,7 @@ public class UnifiedSearchInput extends TeaModel {
         this.contents = builder.contents;
         this.engineType = builder.engineType;
         this.location = builder.location;
+        this.locationInfo = builder.locationInfo;
         this.query = builder.query;
         this.timeRange = builder.timeRange;
     }
@@ -96,6 +100,13 @@ public class UnifiedSearchInput extends TeaModel {
     }
 
     /**
+     * @return locationInfo
+     */
+    public LocationInfo getLocationInfo() {
+        return this.locationInfo;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -115,6 +126,7 @@ public class UnifiedSearchInput extends TeaModel {
         private RequestContents contents; 
         private String engineType; 
         private String location; 
+        private LocationInfo locationInfo; 
         private String query; 
         private String timeRange; 
 
@@ -127,6 +139,7 @@ public class UnifiedSearchInput extends TeaModel {
             this.contents = model.contents;
             this.engineType = model.engineType;
             this.location = model.location;
+            this.locationInfo = model.locationInfo;
             this.query = model.query;
             this.timeRange = model.timeRange;
         } 
@@ -168,6 +181,14 @@ public class UnifiedSearchInput extends TeaModel {
          */
         public Builder location(String location) {
             this.location = location;
+            return this;
+        }
+
+        /**
+         * locationInfo.
+         */
+        public Builder locationInfo(LocationInfo locationInfo) {
+            this.locationInfo = locationInfo;
             return this;
         }
 
