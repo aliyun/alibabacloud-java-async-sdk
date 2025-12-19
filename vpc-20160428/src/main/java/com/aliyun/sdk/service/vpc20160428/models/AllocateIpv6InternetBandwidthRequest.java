@@ -41,7 +41,6 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ipv6GatewayId;
 
     @com.aliyun.core.annotation.Query
@@ -282,7 +281,6 @@ public class AllocateIpv6InternetBandwidthRequest extends Request {
 
         /**
          * <p>The ID of the IPv6 gateway.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv6gw-uf6hcyzu65v98v3du****</p>

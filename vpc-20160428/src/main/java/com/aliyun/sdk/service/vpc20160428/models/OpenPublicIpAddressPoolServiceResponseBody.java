@@ -80,7 +80,10 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +102,10 @@ public class OpenPublicIpAddressPoolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28CF47AB-B6C0-5FA2-80C7-2B37726A92CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

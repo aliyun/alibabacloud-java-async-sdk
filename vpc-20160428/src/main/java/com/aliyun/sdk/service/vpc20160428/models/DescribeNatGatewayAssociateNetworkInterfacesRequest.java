@@ -215,7 +215,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The <strong>RequestId</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +231,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * Filter.
+         * <p>The filter information. You can specify a filter key and a filter value.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -233,7 +240,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -242,6 +252,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
+         * <p>The ID of the NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +265,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid value:</p>
+         * <ul>
+         * <li>If no value is returned for NetToken, you do not need to specify this parameter.</li>
+         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -281,6 +299,8 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
+         * <p>The region ID of the Internet NAT gateway.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +313,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazdjdhd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -320,7 +343,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
         }
 
         /**
-         * Tag.
+         * <p>The information about resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -388,7 +411,28 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
             } 
 
             /**
-             * Key.
+             * <p>The filter key.</p>
+             * <ul>
+             * <li>ResourceId</li>
+             * </ul>
+             * <blockquote>
+             * <p> Specify the service resource ID in the Value field.</p>
+             * </blockquote>
+             * <ul>
+             * <li>NetworkInterfaceId</li>
+             * </ul>
+             * <blockquote>
+             * <p> Specify the ENI ID in the Value field.</p>
+             * </blockquote>
+             * <ul>
+             * <li>ResourceOwnerId</li>
+             * </ul>
+             * <blockquote>
+             * <p> Specify the UID of the account to which the service resource belongs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -396,7 +440,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
             }
 
             /**
-             * Value.
+             * <p>Separate multiple values with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-8psre8c8936596cd****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -463,7 +510,11 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
             } 
 
             /**
-             * Key.
+             * <p>The tag key You can specify at most 20 tag keys. It cannot be an empty string,</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -471,7 +522,11 @@ public class DescribeNatGatewayAssociateNetworkInterfacesRequest extends Request
             }
 
             /**
-             * Value.
+             * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

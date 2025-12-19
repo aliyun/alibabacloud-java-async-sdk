@@ -192,7 +192,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>create time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-21 ***</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -507,8 +510,10 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             /**
              * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
              * <ul>
-             * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
-             * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+             * <li><p>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
+             * </li>
+             * <li><p>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

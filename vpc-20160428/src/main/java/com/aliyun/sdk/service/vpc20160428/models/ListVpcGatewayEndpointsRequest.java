@@ -254,7 +254,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -365,7 +365,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1gsk7h12ew7oegk****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

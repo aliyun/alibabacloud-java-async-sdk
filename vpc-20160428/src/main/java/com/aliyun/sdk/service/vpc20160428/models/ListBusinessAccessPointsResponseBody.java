@@ -97,6 +97,81 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
      *
      * <p>ListBusinessAccessPointsResponseBody</p>
      */
+    public static class OpticalModuleModels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OpticalModuleModel")
+        private String opticalModuleModel;
+
+        @com.aliyun.core.annotation.NameInMap("PortType")
+        private String portType;
+
+        private OpticalModuleModels(Builder builder) {
+            this.opticalModuleModel = builder.opticalModuleModel;
+            this.portType = builder.portType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OpticalModuleModels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return opticalModuleModel
+         */
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
+        }
+
+        /**
+         * @return portType
+         */
+        public String getPortType() {
+            return this.portType;
+        }
+
+        public static final class Builder {
+            private String opticalModuleModel; 
+            private String portType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OpticalModuleModels model) {
+                this.opticalModuleModel = model.opticalModuleModel;
+                this.portType = model.portType;
+            } 
+
+            /**
+             * OpticalModuleModel.
+             */
+            public Builder opticalModuleModel(String opticalModuleModel) {
+                this.opticalModuleModel = opticalModuleModel;
+                return this;
+            }
+
+            /**
+             * PortType.
+             */
+            public Builder portType(String portType) {
+                this.portType = portType;
+                return this;
+            }
+
+            public OpticalModuleModels build() {
+                return new OpticalModuleModels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListBusinessAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBusinessAccessPointsResponseBody</p>
+     */
     public static class BusinessAccessPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
@@ -113,6 +188,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Longitude")
         private Double longitude;
 
+        @com.aliyun.core.annotation.NameInMap("OpticalModuleModels")
+        private java.util.List<OpticalModuleModels> opticalModuleModels;
+
         @com.aliyun.core.annotation.NameInMap("SupportLineOperator")
         private String supportLineOperator;
 
@@ -125,6 +203,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             this.cloudBoxInstanceIds = builder.cloudBoxInstanceIds;
             this.latitude = builder.latitude;
             this.longitude = builder.longitude;
+            this.opticalModuleModels = builder.opticalModuleModels;
             this.supportLineOperator = builder.supportLineOperator;
             this.supportPortTypes = builder.supportPortTypes;
         }
@@ -173,6 +252,13 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return opticalModuleModels
+         */
+        public java.util.List<OpticalModuleModels> getOpticalModuleModels() {
+            return this.opticalModuleModels;
+        }
+
+        /**
          * @return supportLineOperator
          */
         public String getSupportLineOperator() {
@@ -192,6 +278,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
             private String cloudBoxInstanceIds; 
             private Double latitude; 
             private Double longitude; 
+            private java.util.List<OpticalModuleModels> opticalModuleModels; 
             private String supportLineOperator; 
             private String supportPortTypes; 
 
@@ -204,6 +291,7 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
                 this.cloudBoxInstanceIds = model.cloudBoxInstanceIds;
                 this.latitude = model.latitude;
                 this.longitude = model.longitude;
+                this.opticalModuleModels = model.opticalModuleModels;
                 this.supportLineOperator = model.supportLineOperator;
                 this.supportPortTypes = model.supportPortTypes;
             } 
@@ -263,6 +351,14 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
              */
             public Builder longitude(Double longitude) {
                 this.longitude = longitude;
+                return this;
+            }
+
+            /**
+             * OpticalModuleModels.
+             */
+            public Builder opticalModuleModels(java.util.List<OpticalModuleModels> opticalModuleModels) {
+                this.opticalModuleModels = opticalModuleModels;
                 return this;
             }
 

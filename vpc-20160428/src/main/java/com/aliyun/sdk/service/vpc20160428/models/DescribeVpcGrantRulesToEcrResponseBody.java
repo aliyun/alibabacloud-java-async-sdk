@@ -93,7 +93,7 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         } 
 
         /**
-         * GrantRuleModels.
+         * <p>The authorization information.</p>
          */
         public Builder grantRuleModels(java.util.List<GrantRuleModels> grantRuleModels) {
             this.grantRuleModels = grantRuleModels;
@@ -101,7 +101,14 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * </ul>
+         * <hr>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID that Alibaba Cloud generates for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66342E8E-5E87-5FF9-80C7-C3E3571A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances queried. If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -248,7 +261,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The creation time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-09T02:14:51Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -256,7 +272,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * EcrId.
+             * <p>The ECR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-tz7w3chlaptxr2****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -264,7 +283,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * EcrOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the ECR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192732132151****</p>
              */
             public Builder ecrOwnerId(Long ecrOwnerId) {
                 this.ecrOwnerId = ecrOwnerId;
@@ -272,7 +294,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-wz9ek66wd7tl5xqpy****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -280,7 +305,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceUid.
+             * <p>The ID of the Alibaba Cloud account to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192745367151****</p>
              */
             public Builder instanceUid(Long instanceUid) {
                 this.instanceUid = instanceUid;
@@ -288,7 +316,10 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The ID of the region where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -296,7 +327,14 @@ public class DescribeVpcGrantRulesToEcrResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
+             * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -458,6 +458,9 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OpticalModuleModel")
+        private String opticalModuleModel;
+
         @com.aliyun.core.annotation.NameInMap("PeerLocation")
         private String peerLocation;
 
@@ -478,6 +481,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
             this.description = builder.description;
             this.lineOperator = builder.lineOperator;
             this.name = builder.name;
+            this.opticalModuleModel = builder.opticalModuleModel;
             this.peerLocation = builder.peerLocation;
             this.portNum = builder.portNum;
             this.regionId = builder.regionId;
@@ -535,6 +539,13 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
         }
 
         /**
+         * @return opticalModuleModel
+         */
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
+        }
+
+        /**
          * @return peerLocation
          */
         public String getPeerLocation() {
@@ -569,6 +580,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
             private String description; 
             private String lineOperator; 
             private String name; 
+            private String opticalModuleModel; 
             private String peerLocation; 
             private Integer portNum; 
             private String regionId; 
@@ -584,6 +596,7 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
                 this.description = model.description;
                 this.lineOperator = model.lineOperator;
                 this.name = model.name;
+                this.opticalModuleModel = model.opticalModuleModel;
                 this.peerLocation = model.peerLocation;
                 this.portNum = model.portNum;
                 this.regionId = model.regionId;
@@ -669,6 +682,14 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OpticalModuleModel.
+             */
+            public Builder opticalModuleModel(String opticalModuleModel) {
+                this.opticalModuleModel = opticalModuleModel;
                 return this;
             }
 

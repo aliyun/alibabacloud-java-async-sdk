@@ -12,14 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenPublicIpAddressPoolServiceRequest} extends {@link RequestModel}
+ * {@link DeleteExpressConnectRequest} extends {@link RequestModel}
  *
- * <p>OpenPublicIpAddressPoolServiceRequest</p>
+ * <p>DeleteExpressConnectRequest</p>
  */
-public class OpenPublicIpAddressPoolServiceRequest extends Request {
+public class DeleteExpressConnectRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -42,21 +46,28 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private OpenPublicIpAddressPoolServiceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String routerInterfaceId;
+
+    private DeleteExpressConnectRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routerInterfaceId = builder.routerInterfaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static OpenPublicIpAddressPoolServiceRequest create() {
+    public static DeleteExpressConnectRequest create() {
         return builder().build();
     }
 
@@ -70,6 +81,13 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -107,41 +125,65 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<OpenPublicIpAddressPoolServiceRequest, Builder> {
+    /**
+     * @return routerInterfaceId
+     */
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteExpressConnectRequest, Builder> {
         private String clientToken; 
+        private Boolean force; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String routerInterfaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(OpenPublicIpAddressPoolServiceRequest request) {
+        private Builder(DeleteExpressConnectRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.force = request.force;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.routerInterfaceId = request.routerInterfaceId;
         } 
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-         * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
-         * </blockquote>
+         * <p>Use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-426655442455</p>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to delete the route entries associated with the Express Connect instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: forcefully deletes the snapshot</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 
@@ -164,12 +206,11 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.
-         * Call <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> to get the region ID.</p>
+         * <p>The ID of the region where the Express Connect instance is deployed. Call the <a href="https://www.alibabacloud.com/help/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,9 +236,22 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the Express Connect instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-119mfjz****</p>
+         */
+        public Builder routerInterfaceId(String routerInterfaceId) {
+            this.putQueryParameter("RouterInterfaceId", routerInterfaceId);
+            this.routerInterfaceId = routerInterfaceId;
+            return this;
+        }
+
         @Override
-        public OpenPublicIpAddressPoolServiceRequest build() {
-            return new OpenPublicIpAddressPoolServiceRequest(this);
+        public DeleteExpressConnectRequest build() {
+            return new DeleteExpressConnectRequest(this);
         } 
 
     } 

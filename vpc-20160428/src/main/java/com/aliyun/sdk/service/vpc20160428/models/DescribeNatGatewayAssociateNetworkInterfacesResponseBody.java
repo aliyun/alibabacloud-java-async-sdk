@@ -132,7 +132,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         } 
 
         /**
-         * AssociateNetworkInterfaces.
+         * <p>The ENIs associated with the VPC NAT gateway.</p>
          */
         public Builder associateNetworkInterfaces(AssociateNetworkInterfaces associateNetworkInterfaces) {
             this.associateNetworkInterfaces = associateNetworkInterfaces;
@@ -140,7 +140,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * Count.
+         * <p>Number of associated ENIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -148,7 +151,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * NatGatewayId.
+         * <p>The ID of the VPC NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -164,7 +173,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * NextToken.
+         * <p>Indicates whether the token for the next query exists. Valid value:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * <li>If the value returned of <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +188,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +199,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +268,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             } 
 
             /**
-             * IPv4Address.
+             * <p>The primary private IP address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>172.17.**.**</code></p>
              */
             public Builder iPv4Address(String iPv4Address) {
                 this.iPv4Address = iPv4Address;
@@ -254,7 +279,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * Primary.
+             * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+             * <ul>
+             * <li>true: Primary private IP address</li>
+             * <li>false: Secondary private IP addresses</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -440,7 +472,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             } 
 
             /**
-             * IPv4Sets.
+             * <p>The IPv4 addresses of the ENIs.</p>
              */
             public Builder iPv4Sets(IPv4Sets iPv4Sets) {
                 this.iPv4Sets = iPv4Sets;
@@ -448,7 +480,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The ID of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-gw8g131ef2dnbu3k****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -456,7 +491,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-8psre8c8936596cd****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -464,7 +502,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The UID of the account to which the service resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138859086900****</p>
              */
             public Builder resourceOwnerId(String resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -472,7 +513,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateLink</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -488,7 +532,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * TunnelIndex.
+             * <p>The ID of the tunnel index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41a5489ea2a0****</p>
              */
             public Builder tunnelIndex(String tunnelIndex) {
                 this.tunnelIndex = tunnelIndex;

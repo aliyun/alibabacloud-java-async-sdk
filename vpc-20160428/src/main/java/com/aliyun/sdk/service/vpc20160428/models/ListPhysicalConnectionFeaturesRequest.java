@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenPublicIpAddressPoolServiceRequest} extends {@link RequestModel}
+ * {@link ListPhysicalConnectionFeaturesRequest} extends {@link RequestModel}
  *
- * <p>OpenPublicIpAddressPoolServiceRequest</p>
+ * <p>ListPhysicalConnectionFeaturesRequest</p>
  */
-public class OpenPublicIpAddressPoolServiceRequest extends Request {
+public class ListPhysicalConnectionFeaturesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -28,6 +28,11 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String physicalConnectionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -42,11 +47,12 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private OpenPublicIpAddressPoolServiceRequest(Builder builder) {
+    private ListPhysicalConnectionFeaturesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.physicalConnectionId = builder.physicalConnectionId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -56,7 +62,7 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         return new Builder();
     }
 
-    public static OpenPublicIpAddressPoolServiceRequest create() {
+    public static ListPhysicalConnectionFeaturesRequest create() {
         return builder().build();
     }
 
@@ -87,6 +93,13 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
     }
 
     /**
+     * @return physicalConnectionId
+     */
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -107,10 +120,11 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<OpenPublicIpAddressPoolServiceRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListPhysicalConnectionFeaturesRequest, Builder> {
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String physicalConnectionId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -119,11 +133,12 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenPublicIpAddressPoolServiceRequest request) {
+        private Builder(ListPhysicalConnectionFeaturesRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.physicalConnectionId = request.physicalConnectionId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -131,13 +146,13 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-426655442455</p>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,8 +179,21 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.
-         * Call <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> to get the region ID.</p>
+         * <p>The ID of the Express Connect circuit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1qrb3044eqixog****</p>
+         */
+        public Builder physicalConnectionId(String physicalConnectionId) {
+            this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
+            this.physicalConnectionId = physicalConnectionId;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the Express Connect circuit.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,8 +224,8 @@ public class OpenPublicIpAddressPoolServiceRequest extends Request {
         }
 
         @Override
-        public OpenPublicIpAddressPoolServiceRequest build() {
-            return new OpenPublicIpAddressPoolServiceRequest(this);
+        public ListPhysicalConnectionFeaturesRequest build() {
+            return new ListPhysicalConnectionFeaturesRequest(this);
         } 
 
     } 

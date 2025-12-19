@@ -26,6 +26,10 @@ public class ListNatIpsRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpOrigin")
+    private String ipOrigin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
@@ -79,6 +83,7 @@ public class ListNatIpsRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.ipOrigin = builder.ipOrigin;
         this.maxResults = builder.maxResults;
         this.natGatewayId = builder.natGatewayId;
         this.natIpCidr = builder.natIpCidr;
@@ -118,6 +123,13 @@ public class ListNatIpsRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return ipOrigin
+     */
+    public String getIpOrigin() {
+        return this.ipOrigin;
     }
 
     /**
@@ -207,6 +219,7 @@ public class ListNatIpsRequest extends Request {
     public static final class Builder extends Request.Builder<ListNatIpsRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private String ipOrigin; 
         private String maxResults; 
         private String natGatewayId; 
         private String natIpCidr; 
@@ -228,6 +241,7 @@ public class ListNatIpsRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.ipOrigin = request.ipOrigin;
             this.maxResults = request.maxResults;
             this.natGatewayId = request.natGatewayId;
             this.natIpCidr = request.natIpCidr;
@@ -271,6 +285,15 @@ public class ListNatIpsRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IpOrigin.
+         */
+        public Builder ipOrigin(String ipOrigin) {
+            this.putQueryParameter("IpOrigin", ipOrigin);
+            this.ipOrigin = ipOrigin;
             return this;
         }
 

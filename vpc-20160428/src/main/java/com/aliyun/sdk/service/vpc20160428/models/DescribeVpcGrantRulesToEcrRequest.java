@@ -228,7 +228,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         } 
 
         /**
-         * EcrInstanceId.
+         * <p>The ID of the ECR that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-ncxadcujadncsa****</p>
          */
         public Builder ecrInstanceId(String ecrInstanceId) {
             this.putQueryParameter("EcrInstanceId", ecrInstanceId);
@@ -237,7 +240,13 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * EcrOwnerId.
+         * <p>The ID of the Alibaba Cloud account to which the ECR belongs.</p>
+         * <blockquote>
+         * <p>If you want to connect to a network instance that belongs to a different account, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192732132151****</p>
          */
         public Builder ecrOwnerId(Long ecrOwnerId) {
             this.putQueryParameter("EcrOwnerId", ecrOwnerId);
@@ -246,7 +255,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9ek66wd7tl5xqpy****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -255,7 +267,14 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The type of instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VBR</strong>: queries the permissions that are granted to a VBR.</li>
+         * <li><strong>VPC</strong>: queries the permissions that are granted from a VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -264,7 +283,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -273,7 +295,14 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -300,6 +329,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the network instance that you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +342,10 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -339,7 +372,7 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -407,7 +440,11 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>A tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +452,11 @@ public class DescribeVpcGrantRulesToEcrRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. You can enter a maximum of 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

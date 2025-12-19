@@ -358,6 +358,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OpticalModuleModel")
+        private String opticalModuleModel;
+
         @com.aliyun.core.annotation.NameInMap("OrderMode")
         private String orderMode;
 
@@ -439,6 +442,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.lineOperator = builder.lineOperator;
             this.loaStatus = builder.loaStatus;
             this.name = builder.name;
+            this.opticalModuleModel = builder.opticalModuleModel;
             this.orderMode = builder.orderMode;
             this.parentPhysicalConnectionAliUid = builder.parentPhysicalConnectionAliUid;
             this.parentPhysicalConnectionId = builder.parentPhysicalConnectionId;
@@ -587,6 +591,13 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return opticalModuleModel
+         */
+        public String getOpticalModuleModel() {
+            return this.opticalModuleModel;
         }
 
         /**
@@ -754,6 +765,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String lineOperator; 
             private String loaStatus; 
             private String name; 
+            private String opticalModuleModel; 
             private String orderMode; 
             private Long parentPhysicalConnectionAliUid; 
             private String parentPhysicalConnectionId; 
@@ -797,6 +809,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
                 this.lineOperator = model.lineOperator;
                 this.loaStatus = model.loaStatus;
                 this.name = model.name;
+                this.opticalModuleModel = model.opticalModuleModel;
                 this.orderMode = model.orderMode;
                 this.parentPhysicalConnectionAliUid = model.parentPhysicalConnectionAliUid;
                 this.parentPhysicalConnectionId = model.parentPhysicalConnectionId;
@@ -1033,6 +1046,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OpticalModuleModel.
+             */
+            public Builder opticalModuleModel(String opticalModuleModel) {
+                this.opticalModuleModel = opticalModuleModel;
                 return this;
             }
 

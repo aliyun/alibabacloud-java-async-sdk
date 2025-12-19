@@ -1003,9 +1003,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <ul>
      * <li>You cannot repeatedly call the <strong>CreateSslVpnServer</strong> operation within the specified period of time.</li>
      * </ul>
-     * <h3><a href="#"></a>Prerequisite</h3>
+     * <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
      * <ul>
-     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</li>
+     * <li>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</li>
      * <li>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</li>
      * </ul>
      * 
@@ -1364,6 +1364,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDhcpOptionsSetResponse
      */
     CompletableFuture<DeleteDhcpOptionsSetResponse> deleteDhcpOptionsSet(DeleteDhcpOptionsSetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteExpressConnect  DeleteExpressConnectRequest
+     * @return DeleteExpressConnectResponse
+     */
+    CompletableFuture<DeleteExpressConnectResponse> deleteExpressConnect(DeleteExpressConnectRequest request);
 
     /**
      * @param request the request parameters of DeleteExpressConnectTrafficQos  DeleteExpressConnectTrafficQosRequest
@@ -2150,6 +2156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGrantRulesToCenResponse> describeGrantRulesToCen(DescribeGrantRulesToCenRequest request);
 
     /**
+     * @param request the request parameters of DescribeGrantRulesToEcr  DescribeGrantRulesToEcrRequest
+     * @return DescribeGrantRulesToEcrResponse
+     */
+    CompletableFuture<DescribeGrantRulesToEcrResponse> describeGrantRulesToEcr(DescribeGrantRulesToEcrRequest request);
+
+    /**
      * @param request the request parameters of DescribeHaVips  DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
      */
@@ -2751,6 +2763,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListBusinessAccessPointsResponse> listBusinessAccessPoints(ListBusinessAccessPointsRequest request);
 
     /**
+     * @param request the request parameters of ListBusinessRegions  ListBusinessRegionsRequest
+     * @return ListBusinessRegionsResponse
+     */
+    CompletableFuture<ListBusinessRegionsResponse> listBusinessRegions(ListBusinessRegionsRequest request);
+
+    /**
      * @param request the request parameters of ListDhcpOptionsSets  ListDhcpOptionsSetsRequest
      * @return ListDhcpOptionsSetsResponse
      */
@@ -2812,6 +2830,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNatIpsResponse
      */
     CompletableFuture<ListNatIpsResponse> listNatIps(ListNatIpsRequest request);
+
+    /**
+     * @param request the request parameters of ListPhysicalConnectionFeatures  ListPhysicalConnectionFeaturesRequest
+     * @return ListPhysicalConnectionFeaturesResponse
+     */
+    CompletableFuture<ListPhysicalConnectionFeaturesResponse> listPhysicalConnectionFeatures(ListPhysicalConnectionFeaturesRequest request);
 
     /**
      * @param request the request parameters of ListPrefixLists  ListPrefixListsRequest

@@ -48,6 +48,10 @@ public class CreatePhysicalConnectionRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpticalModuleModel")
+    private String opticalModuleModel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -105,6 +109,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         this.deviceAdvancedCapacity = builder.deviceAdvancedCapacity;
         this.lineOperator = builder.lineOperator;
         this.name = builder.name;
+        this.opticalModuleModel = builder.opticalModuleModel;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.peerLocation = builder.peerLocation;
@@ -179,6 +184,13 @@ public class CreatePhysicalConnectionRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return opticalModuleModel
+     */
+    public String getOpticalModuleModel() {
+        return this.opticalModuleModel;
     }
 
     /**
@@ -273,6 +285,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         private java.util.List<String> deviceAdvancedCapacity; 
         private String lineOperator; 
         private String name; 
+        private String opticalModuleModel; 
         private String ownerAccount; 
         private Long ownerId; 
         private String peerLocation; 
@@ -299,6 +312,7 @@ public class CreatePhysicalConnectionRequest extends Request {
             this.deviceAdvancedCapacity = request.deviceAdvancedCapacity;
             this.lineOperator = request.lineOperator;
             this.name = request.name;
+            this.opticalModuleModel = request.opticalModuleModel;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.peerLocation = request.peerLocation;
@@ -407,6 +421,15 @@ public class CreatePhysicalConnectionRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OpticalModuleModel.
+         */
+        public Builder opticalModuleModel(String opticalModuleModel) {
+            this.putQueryParameter("OpticalModuleModel", opticalModuleModel);
+            this.opticalModuleModel = opticalModuleModel;
             return this;
         }
 

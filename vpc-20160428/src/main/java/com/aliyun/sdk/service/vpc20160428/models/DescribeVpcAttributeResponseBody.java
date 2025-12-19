@@ -506,7 +506,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DnsHostnameStatus.
+         * <p>Indicates whether DNS hostname is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLED</p>
          */
         public Builder dnsHostnameStatus(String dnsHostnameStatus) {
             this.dnsHostnameStatus = dnsHostnameStatus;

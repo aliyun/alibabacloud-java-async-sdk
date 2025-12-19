@@ -411,7 +411,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The version of IP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -749,7 +752,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The version of IP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
