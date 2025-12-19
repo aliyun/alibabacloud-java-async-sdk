@@ -26,6 +26,10 @@ public class DescribeManagedInstancesRequest extends Request {
     private String activationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Connected")
+    private String connected;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private java.util.List<String> instanceId;
 
@@ -94,6 +98,7 @@ public class DescribeManagedInstancesRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.activationId = builder.activationId;
+        this.connected = builder.connected;
         this.instanceId = builder.instanceId;
         this.instanceIp = builder.instanceIp;
         this.instanceName = builder.instanceName;
@@ -137,6 +142,13 @@ public class DescribeManagedInstancesRequest extends Request {
      */
     public String getActivationId() {
         return this.activationId;
+    }
+
+    /**
+     * @return connected
+     */
+    public String getConnected() {
+        return this.connected;
     }
 
     /**
@@ -254,6 +266,7 @@ public class DescribeManagedInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeManagedInstancesRequest, Builder> {
         private String sourceRegionId; 
         private String activationId; 
+        private String connected; 
         private java.util.List<String> instanceId; 
         private String instanceIp; 
         private String instanceName; 
@@ -279,6 +292,7 @@ public class DescribeManagedInstancesRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.activationId = request.activationId;
+            this.connected = request.connected;
             this.instanceId = request.instanceId;
             this.instanceIp = request.instanceIp;
             this.instanceName = request.instanceName;
@@ -315,6 +329,15 @@ public class DescribeManagedInstancesRequest extends Request {
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
             this.activationId = activationId;
+            return this;
+        }
+
+        /**
+         * Connected.
+         */
+        public Builder connected(String connected) {
+            this.putQueryParameter("Connected", connected);
+            this.connected = connected;
             return this;
         }
 
