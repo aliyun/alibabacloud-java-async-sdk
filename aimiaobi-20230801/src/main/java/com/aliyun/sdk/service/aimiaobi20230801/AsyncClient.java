@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AsyncWritingBiddingDocResponse> asyncWritingBiddingDoc(AsyncWritingBiddingDocRequest request);
 
     /**
+     * @param request the request parameters of BindPptArtifact  BindPptArtifactRequest
+     * @return BindPptArtifactResponse
+     */
+    CompletableFuture<BindPptArtifactResponse> bindPptArtifact(BindPptArtifactRequest request);
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -506,6 +512,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMaterialByIdResponse> getMaterialById(GetMaterialByIdRequest request);
 
     /**
+     * @param request the request parameters of GetPptConfig  GetPptConfigRequest
+     * @return GetPptConfigResponse
+     */
+    CompletableFuture<GetPptConfigResponse> getPptConfig(GetPptConfigRequest request);
+
+    /**
      * @param request the request parameters of GetProperties  GetPropertiesRequest
      * @return GetPropertiesResponse
      */
@@ -552,6 +564,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportInterveneFileAsyncResponse
      */
     CompletableFuture<ImportInterveneFileAsyncResponse> importInterveneFileAsync(ImportInterveneFileAsyncRequest request);
+
+    /**
+     * @param request the request parameters of InitiatePptCreation  InitiatePptCreationRequest
+     * @return InitiatePptCreationResponse
+     */
+    CompletableFuture<InitiatePptCreationResponse> initiatePptCreation(InitiatePptCreationRequest request);
 
     /**
      * @param request the request parameters of InsertInterveneGlobalReply  InsertInterveneGlobalReplyRequest
@@ -802,6 +820,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunAbbreviationContentResponseBody> runAbbreviationContentWithResponseIterable(RunAbbreviationContentRequest request);
 
     /**
+     * @param request the request parameters of RunAiHelperWriting  RunAiHelperWritingRequest
+     * @return RunAiHelperWritingResponse
+     */
+    CompletableFuture<RunAiHelperWritingResponse> runAiHelperWriting(RunAiHelperWritingRequest request);
+
+    ResponseIterable<RunAiHelperWritingResponseBody> runAiHelperWritingWithResponseIterable(RunAiHelperWritingRequest request);
+
+    /**
      * @param request the request parameters of RunBookBrainmap  RunBookBrainmapRequest
      * @return RunBookBrainmapResponse
      */
@@ -960,6 +986,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunMultiDocIntroductionResponse> runMultiDocIntroduction(RunMultiDocIntroductionRequest request);
 
     ResponseIterable<RunMultiDocIntroductionResponseBody> runMultiDocIntroductionWithResponseIterable(RunMultiDocIntroductionRequest request);
+
+    /**
+     * @param request the request parameters of RunPptOutlineGeneration  RunPptOutlineGenerationRequest
+     * @return RunPptOutlineGenerationResponse
+     */
+    CompletableFuture<RunPptOutlineGenerationResponse> runPptOutlineGeneration(RunPptOutlineGenerationRequest request);
+
+    ResponseIterable<RunPptOutlineGenerationResponseBody> runPptOutlineGenerationWithResponseIterable(RunPptOutlineGenerationRequest request);
 
     /**
      * @param request the request parameters of RunQuickWriting  RunQuickWritingRequest

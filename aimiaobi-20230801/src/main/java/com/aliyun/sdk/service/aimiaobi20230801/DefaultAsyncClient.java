@@ -185,6 +185,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindPptArtifact  BindPptArtifactRequest
+     * @return BindPptArtifactResponse
+     */
+    @Override
+    public CompletableFuture<BindPptArtifactResponse> bindPptArtifact(BindPptArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BindPptArtifact").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindPptArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindPptArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -1499,6 +1517,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPptConfig  GetPptConfigRequest
+     * @return GetPptConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetPptConfigResponse> getPptConfig(GetPptConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetPptConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPptConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPptConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetProperties  GetPropertiesRequest
      * @return GetPropertiesResponse
      */
@@ -1637,6 +1673,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ImportInterveneFileAsyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InitiatePptCreation  InitiatePptCreationRequest
+     * @return InitiatePptCreationResponse
+     */
+    @Override
+    public CompletableFuture<InitiatePptCreationResponse> initiatePptCreation(InitiatePptCreationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InitiatePptCreation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InitiatePptCreationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InitiatePptCreationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2391,6 +2445,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunAiHelperWriting  RunAiHelperWritingRequest
+     * @return RunAiHelperWritingResponse
+     */
+    @Override
+    public CompletableFuture<RunAiHelperWritingResponse> runAiHelperWriting(RunAiHelperWritingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunAiHelperWriting").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runAiHelperWriting").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunAiHelperWritingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunAiHelperWritingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunAiHelperWritingResponseBody> runAiHelperWritingWithResponseIterable(RunAiHelperWritingRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunAiHelperWriting").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runAiHelperWriting").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunAiHelperWritingResponseBodyIterator iterator = RunAiHelperWritingResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunBookBrainmap  RunBookBrainmapRequest
      * @return RunBookBrainmapResponse
      */
@@ -2945,6 +3027,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunMultiDocIntroduction").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runMultiDocIntroduction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunMultiDocIntroductionResponseBodyIterator iterator = RunMultiDocIntroductionResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunPptOutlineGeneration  RunPptOutlineGenerationRequest
+     * @return RunPptOutlineGenerationResponse
+     */
+    @Override
+    public CompletableFuture<RunPptOutlineGenerationResponse> runPptOutlineGeneration(RunPptOutlineGenerationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunPptOutlineGeneration").setMethod(HttpMethod.POST).setPathRegex("/pop/ppt/runPptOutlineGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunPptOutlineGenerationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunPptOutlineGenerationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunPptOutlineGenerationResponseBody> runPptOutlineGenerationWithResponseIterable(RunPptOutlineGenerationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunPptOutlineGeneration").setMethod(HttpMethod.POST).setPathRegex("/pop/ppt/runPptOutlineGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunPptOutlineGenerationResponseBodyIterator iterator = RunPptOutlineGenerationResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
