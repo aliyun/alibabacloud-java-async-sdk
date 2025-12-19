@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLinkageAttributesTemplateResponse> getLinkageAttributesTemplate(GetLinkageAttributesTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetOperationParams  GetOperationParamsRequest
+     * @return GetOperationParamsResponse
+     */
+    CompletableFuture<GetOperationParamsResponse> getOperationParams(GetOperationParamsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
      * 
@@ -192,6 +198,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFoCreatedAppsResponse
      */
     CompletableFuture<ListFoCreatedAppsResponse> listFoCreatedApps(ListFoCreatedAppsRequest request);
+
+    /**
+     * @param request the request parameters of ListOperations  ListOperationsRequest
+     * @return ListOperationsResponse
+     */
+    CompletableFuture<ListOperationsResponse> listOperations(ListOperationsRequest request);
+
+    /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
+    CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
