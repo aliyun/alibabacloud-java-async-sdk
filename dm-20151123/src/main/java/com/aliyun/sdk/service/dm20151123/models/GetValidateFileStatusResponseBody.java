@@ -26,6 +26,9 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DoNotMailNum")
     private String doNotMailNum;
 
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    private String fileId;
+
     @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
@@ -60,6 +63,7 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
         this.catchAllNum = builder.catchAllNum;
         this.completeTime = builder.completeTime;
         this.doNotMailNum = builder.doNotMailNum;
+        this.fileId = builder.fileId;
         this.fileName = builder.fileName;
         this.invalidNum = builder.invalidNum;
         this.percentage = builder.percentage;
@@ -103,6 +107,13 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
      */
     public String getDoNotMailNum() {
         return this.doNotMailNum;
+    }
+
+    /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
     }
 
     /**
@@ -179,6 +190,7 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
         private String catchAllNum; 
         private String completeTime; 
         private String doNotMailNum; 
+        private String fileId; 
         private String fileName; 
         private String invalidNum; 
         private String percentage; 
@@ -197,6 +209,7 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
             this.catchAllNum = model.catchAllNum;
             this.completeTime = model.completeTime;
             this.doNotMailNum = model.doNotMailNum;
+            this.fileId = model.fileId;
             this.fileName = model.fileName;
             this.invalidNum = model.invalidNum;
             this.percentage = model.percentage;
@@ -230,6 +243,14 @@ public class GetValidateFileStatusResponseBody extends TeaModel {
          */
         public Builder doNotMailNum(String doNotMailNum) {
             this.doNotMailNum = doNotMailNum;
+            return this;
+        }
+
+        /**
+         * FileId.
+         */
+        public Builder fileId(String fileId) {
+            this.fileId = fileId;
             return this;
         }
 

@@ -326,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserSuppressionResponse> listUserSuppression(ListUserSuppressionRequest request);
 
     /**
+     * @param request the request parameters of ListValidateFile  ListValidateFileRequest
+     * @return ListValidateFileResponse
+     */
+    CompletableFuture<ListValidateFileResponse> listValidateFile(ListValidateFileRequest request);
+
+    /**
      * @param request the request parameters of ModifyMailAddress  ModifyMailAddressRequest
      * @return ModifyMailAddressResponse
      */
