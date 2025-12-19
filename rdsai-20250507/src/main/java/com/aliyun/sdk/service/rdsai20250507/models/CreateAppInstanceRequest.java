@@ -50,6 +50,10 @@ public class CreateAppInstanceRequest extends Request {
     private String databasePassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitializeWithExistingData")
+    private Boolean initializeWithExistingData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
@@ -83,6 +87,7 @@ public class CreateAppInstanceRequest extends Request {
         this.dashboardPassword = builder.dashboardPassword;
         this.dashboardUsername = builder.dashboardUsername;
         this.databasePassword = builder.databasePassword;
+        this.initializeWithExistingData = builder.initializeWithExistingData;
         this.instanceClass = builder.instanceClass;
         this.publicEndpointEnabled = builder.publicEndpointEnabled;
         this.publicNetworkAccessEnabled = builder.publicNetworkAccessEnabled;
@@ -161,6 +166,13 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return initializeWithExistingData
+     */
+    public Boolean getInitializeWithExistingData() {
+        return this.initializeWithExistingData;
+    }
+
+    /**
      * @return instanceClass
      */
     public String getInstanceClass() {
@@ -211,6 +223,7 @@ public class CreateAppInstanceRequest extends Request {
         private String dashboardPassword; 
         private String dashboardUsername; 
         private String databasePassword; 
+        private Boolean initializeWithExistingData; 
         private String instanceClass; 
         private Boolean publicEndpointEnabled; 
         private Boolean publicNetworkAccessEnabled; 
@@ -232,6 +245,7 @@ public class CreateAppInstanceRequest extends Request {
             this.dashboardPassword = request.dashboardPassword;
             this.dashboardUsername = request.dashboardUsername;
             this.databasePassword = request.databasePassword;
+            this.initializeWithExistingData = request.initializeWithExistingData;
             this.instanceClass = request.instanceClass;
             this.publicEndpointEnabled = request.publicEndpointEnabled;
             this.publicNetworkAccessEnabled = request.publicNetworkAccessEnabled;
@@ -310,6 +324,15 @@ public class CreateAppInstanceRequest extends Request {
         public Builder databasePassword(String databasePassword) {
             this.putQueryParameter("DatabasePassword", databasePassword);
             this.databasePassword = databasePassword;
+            return this;
+        }
+
+        /**
+         * InitializeWithExistingData.
+         */
+        public Builder initializeWithExistingData(Boolean initializeWithExistingData) {
+            this.putQueryParameter("InitializeWithExistingData", initializeWithExistingData);
+            this.initializeWithExistingData = initializeWithExistingData;
             return this;
         }
 
