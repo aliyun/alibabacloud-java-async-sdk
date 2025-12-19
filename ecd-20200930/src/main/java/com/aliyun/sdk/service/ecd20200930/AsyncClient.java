@@ -1085,6 +1085,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request);
 
     /**
+     * @param request the request parameters of DescribeRecordFile  DescribeRecordFileRequest
+     * @return DescribeRecordFileResponse
+     */
+    CompletableFuture<DescribeRecordFileResponse> describeRecordFile(DescribeRecordFileRequest request);
+
+    /**
      * @param request the request parameters of DescribeRecordings  DescribeRecordingsRequest
      * @return DescribeRecordingsResponse
      */
