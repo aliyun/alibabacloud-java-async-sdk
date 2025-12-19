@@ -128,6 +128,9 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SelfQuotaWorkloadNum")
     private Long selfQuotaWorkloadNum;
 
+    @com.aliyun.core.annotation.NameInMap("SubNodes")
+    private java.util.List<String> subNodes;
+
     @com.aliyun.core.annotation.NameInMap("SystemReservedCPU")
     private String systemReservedCPU;
 
@@ -178,6 +181,7 @@ public class Node extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupName = builder.resourceGroupName;
         this.selfQuotaWorkloadNum = builder.selfQuotaWorkloadNum;
+        this.subNodes = builder.subNodes;
         this.systemReservedCPU = builder.systemReservedCPU;
         this.systemReservedMemory = builder.systemReservedMemory;
         this.users = builder.users;
@@ -456,6 +460,13 @@ public class Node extends TeaModel {
     }
 
     /**
+     * @return subNodes
+     */
+    public java.util.List<String> getSubNodes() {
+        return this.subNodes;
+    }
+
+    /**
      * @return systemReservedCPU
      */
     public String getSystemReservedCPU() {
@@ -521,6 +532,7 @@ public class Node extends TeaModel {
         private String resourceGroupId; 
         private String resourceGroupName; 
         private Long selfQuotaWorkloadNum; 
+        private java.util.List<String> subNodes; 
         private String systemReservedCPU; 
         private String systemReservedMemory; 
         private java.util.List<UserInfo> users; 
@@ -567,6 +579,7 @@ public class Node extends TeaModel {
             this.resourceGroupId = model.resourceGroupId;
             this.resourceGroupName = model.resourceGroupName;
             this.selfQuotaWorkloadNum = model.selfQuotaWorkloadNum;
+            this.subNodes = model.subNodes;
             this.systemReservedCPU = model.systemReservedCPU;
             this.systemReservedMemory = model.systemReservedMemory;
             this.users = model.users;
@@ -866,6 +879,14 @@ public class Node extends TeaModel {
          */
         public Builder selfQuotaWorkloadNum(Long selfQuotaWorkloadNum) {
             this.selfQuotaWorkloadNum = selfQuotaWorkloadNum;
+            return this;
+        }
+
+        /**
+         * SubNodes.
+         */
+        public Builder subNodes(java.util.List<String> subNodes) {
+            this.subNodes = subNodes;
             return this;
         }
 

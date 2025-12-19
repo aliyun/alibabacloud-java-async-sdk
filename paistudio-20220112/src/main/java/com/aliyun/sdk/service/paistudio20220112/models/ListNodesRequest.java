@@ -42,12 +42,24 @@ public class ListNodesRequest extends Request {
     private String GPUType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCount")
+    private HealthCount healthCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthRate")
+    private HealthRate healthRate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HyperNode")
     private String hyperNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HyperZone")
     private String hyperZone;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutMode")
+    private String layoutMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MachineGroupIds")
@@ -121,8 +133,11 @@ public class ListNodesRequest extends Request {
         this.filterByQuotaId = builder.filterByQuotaId;
         this.filterByResourceGroupIds = builder.filterByResourceGroupIds;
         this.GPUType = builder.GPUType;
+        this.healthCount = builder.healthCount;
+        this.healthRate = builder.healthRate;
         this.hyperNode = builder.hyperNode;
         this.hyperZone = builder.hyperZone;
+        this.layoutMode = builder.layoutMode;
         this.machineGroupIds = builder.machineGroupIds;
         this.nodeNames = builder.nodeNames;
         this.nodeStatuses = builder.nodeStatuses;
@@ -197,6 +212,20 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return healthCount
+     */
+    public HealthCount getHealthCount() {
+        return this.healthCount;
+    }
+
+    /**
+     * @return healthRate
+     */
+    public HealthRate getHealthRate() {
+        return this.healthRate;
+    }
+
+    /**
      * @return hyperNode
      */
     public String getHyperNode() {
@@ -208,6 +237,13 @@ public class ListNodesRequest extends Request {
      */
     public String getHyperZone() {
         return this.hyperZone;
+    }
+
+    /**
+     * @return layoutMode
+     */
+    public String getLayoutMode() {
+        return this.layoutMode;
     }
 
     /**
@@ -329,8 +365,11 @@ public class ListNodesRequest extends Request {
         private String filterByQuotaId; 
         private String filterByResourceGroupIds; 
         private String GPUType; 
+        private HealthCount healthCount; 
+        private HealthRate healthRate; 
         private String hyperNode; 
         private String hyperZone; 
+        private String layoutMode; 
         private String machineGroupIds; 
         private String nodeNames; 
         private String nodeStatuses; 
@@ -360,8 +399,11 @@ public class ListNodesRequest extends Request {
             this.filterByQuotaId = request.filterByQuotaId;
             this.filterByResourceGroupIds = request.filterByResourceGroupIds;
             this.GPUType = request.GPUType;
+            this.healthCount = request.healthCount;
+            this.healthRate = request.healthRate;
             this.hyperNode = request.hyperNode;
             this.hyperZone = request.hyperZone;
+            this.layoutMode = request.layoutMode;
             this.machineGroupIds = request.machineGroupIds;
             this.nodeNames = request.nodeNames;
             this.nodeStatuses = request.nodeStatuses;
@@ -435,6 +477,26 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * HealthCount.
+         */
+        public Builder healthCount(HealthCount healthCount) {
+            String healthCountShrink = shrink(healthCount, "HealthCount", "json");
+            this.putQueryParameter("HealthCount", healthCountShrink);
+            this.healthCount = healthCount;
+            return this;
+        }
+
+        /**
+         * HealthRate.
+         */
+        public Builder healthRate(HealthRate healthRate) {
+            String healthRateShrink = shrink(healthRate, "HealthRate", "json");
+            this.putQueryParameter("HealthRate", healthRateShrink);
+            this.healthRate = healthRate;
+            return this;
+        }
+
+        /**
          * HyperNode.
          */
         public Builder hyperNode(String hyperNode) {
@@ -449,6 +511,15 @@ public class ListNodesRequest extends Request {
         public Builder hyperZone(String hyperZone) {
             this.putQueryParameter("HyperZone", hyperZone);
             this.hyperZone = hyperZone;
+            return this;
+        }
+
+        /**
+         * LayoutMode.
+         */
+        public Builder layoutMode(String layoutMode) {
+            this.putQueryParameter("LayoutMode", layoutMode);
+            this.layoutMode = layoutMode;
             return this;
         }
 
@@ -603,4 +674,154 @@ public class ListNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ListNodesRequest</p>
+     */
+    public static class HealthCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Integer value;
+
+        private HealthCount(Builder builder) {
+            this.operation = builder.operation;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HealthCount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return value
+         */
+        public Integer getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String operation; 
+            private Integer value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCount model) {
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
+
+            /**
+             * operation.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Integer value) {
+                this.value = value;
+                return this;
+            }
+
+            public HealthCount build() {
+                return new HealthCount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListNodesRequest} extends {@link TeaModel}
+     *
+     * <p>ListNodesRequest</p>
+     */
+    public static class HealthRate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Integer value;
+
+        private HealthRate(Builder builder) {
+            this.operation = builder.operation;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HealthRate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return value
+         */
+        public Integer getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String operation; 
+            private Integer value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthRate model) {
+                this.operation = model.operation;
+                this.value = model.value;
+            } 
+
+            /**
+             * operation.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Integer value) {
+                this.value = value;
+                return this;
+            }
+
+            public HealthRate build() {
+                return new HealthRate(this);
+            } 
+
+        } 
+
+    }
 }
