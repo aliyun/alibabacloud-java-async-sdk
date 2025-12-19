@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindAppDomainResponse> bindAppDomain(BindAppDomainRequest request);
 
     /**
+     * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
+     * @return CreateAppInstanceResponse
+     */
+    CompletableFuture<CreateAppInstanceResponse> createAppInstance(CreateAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppInstanceTicket  CreateAppInstanceTicketRequest
+     * @return CreateAppInstanceTicketResponse
+     */
+    CompletableFuture<CreateAppInstanceTicketResponse> createAppInstanceTicket(CreateAppInstanceTicketRequest request);
+
+    /**
      * @param request the request parameters of CreateLogoTask  CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
      */
@@ -54,6 +66,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DispatchConsoleAPIForPartnerResponse
      */
     CompletableFuture<DispatchConsoleAPIForPartnerResponse> dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of GetAppInstance  GetAppInstanceRequest
+     * @return GetAppInstanceResponse
+     */
+    CompletableFuture<GetAppInstanceResponse> getAppInstance(GetAppInstanceRequest request);
 
     /**
      * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
@@ -98,6 +116,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppInstanceDomainsResponse> listAppInstanceDomains(ListAppInstanceDomainsRequest request);
 
     /**
+     * @param request the request parameters of ListAppInstances  ListAppInstancesRequest
+     * @return ListAppInstancesResponse
+     */
+    CompletableFuture<ListAppInstancesResponse> listAppInstances(ListAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAppInstanceSpec  ModifyAppInstanceSpecRequest
+     * @return ModifyAppInstanceSpecResponse
+     */
+    CompletableFuture<ModifyAppInstanceSpecResponse> modifyAppInstanceSpec(ModifyAppInstanceSpecRequest request);
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
@@ -108,6 +138,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateAppServiceForPartnerResponse
      */
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of RefreshAppInstanceTicket  RefreshAppInstanceTicketRequest
+     * @return RefreshAppInstanceTicketResponse
+     */
+    CompletableFuture<RefreshAppInstanceTicketResponse> refreshAppInstanceTicket(RefreshAppInstanceTicketRequest request);
+
+    /**
+     * @param request the request parameters of RenewAppInstance  RenewAppInstanceRequest
+     * @return RenewAppInstanceResponse
+     */
+    CompletableFuture<RenewAppInstanceResponse> renewAppInstance(RenewAppInstanceRequest request);
 
     /**
      * @param request the request parameters of SearchImage  SearchImageRequest
