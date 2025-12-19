@@ -75,7 +75,10 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
