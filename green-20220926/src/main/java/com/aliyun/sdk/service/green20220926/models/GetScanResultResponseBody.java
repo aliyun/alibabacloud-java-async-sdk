@@ -299,6 +299,9 @@ public class GetScanResultResponseBody extends TeaModel {
      * <p>GetScanResultResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("ApiLabels")
         private String apiLabels;
 
@@ -355,6 +358,9 @@ public class GetScanResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
+
+        @com.aliyun.core.annotation.NameInMap("LiveId")
+        private String liveId;
 
         @com.aliyun.core.annotation.NameInMap("MaliciousFileLevel")
         private String maliciousFileLevel;
@@ -456,6 +462,7 @@ public class GetScanResultResponseBody extends TeaModel {
         private String voiceService;
 
         private Items(Builder builder) {
+            this.accountId = builder.accountId;
             this.apiLabels = builder.apiLabels;
             this.apiRequestTime = builder.apiRequestTime;
             this.apiRiskLevel = builder.apiRiskLevel;
@@ -475,6 +482,7 @@ public class GetScanResultResponseBody extends TeaModel {
             this.imageService = builder.imageService;
             this.imageUrl = builder.imageUrl;
             this.labels = builder.labels;
+            this.liveId = builder.liveId;
             this.maliciousFileLevel = builder.maliciousFileLevel;
             this.maliciousUrlLevel = builder.maliciousUrlLevel;
             this.manualOnly = builder.manualOnly;
@@ -516,6 +524,13 @@ public class GetScanResultResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -649,6 +664,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public String getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return liveId
+         */
+        public String getLiveId() {
+            return this.liveId;
         }
 
         /**
@@ -883,6 +905,7 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String apiLabels; 
             private String apiRequestTime; 
             private String apiRiskLevel; 
@@ -902,6 +925,7 @@ public class GetScanResultResponseBody extends TeaModel {
             private String imageService; 
             private String imageUrl; 
             private String labels; 
+            private String liveId; 
             private String maliciousFileLevel; 
             private String maliciousUrlLevel; 
             private Boolean manualOnly; 
@@ -940,6 +964,7 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.accountId = model.accountId;
                 this.apiLabels = model.apiLabels;
                 this.apiRequestTime = model.apiRequestTime;
                 this.apiRiskLevel = model.apiRiskLevel;
@@ -959,6 +984,7 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.imageService = model.imageService;
                 this.imageUrl = model.imageUrl;
                 this.labels = model.labels;
+                this.liveId = model.liveId;
                 this.maliciousFileLevel = model.maliciousFileLevel;
                 this.maliciousUrlLevel = model.maliciousUrlLevel;
                 this.manualOnly = model.manualOnly;
@@ -993,6 +1019,14 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.voiceScanOpened = model.voiceScanOpened;
                 this.voiceService = model.voiceService;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>Automated review labels.</p>
@@ -1201,6 +1235,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder labels(String labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * LiveId.
+             */
+            public Builder liveId(String liveId) {
+                this.liveId = liveId;
                 return this;
             }
 
