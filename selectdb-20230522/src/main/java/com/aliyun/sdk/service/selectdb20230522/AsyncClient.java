@@ -188,6 +188,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityIPListResponse> describeSecurityIPList(DescribeSecurityIPListRequest request);
 
     /**
+     * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @return DescribeVSwitchesResponse
+     */
+    CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeZones  DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
+    CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
+
+    /**
      * @param request the request parameters of EnDisableScalingRules  EnDisableScalingRulesRequest
      * @return EnDisableScalingRulesResponse
      */
@@ -288,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeDBInstanceDeployScheme  UpgradeDBInstanceDeploySchemeRequest
+     * @return UpgradeDBInstanceDeploySchemeResponse
+     */
+    CompletableFuture<UpgradeDBInstanceDeploySchemeResponse> upgradeDBInstanceDeployScheme(UpgradeDBInstanceDeploySchemeRequest request);
 
     /**
      * @param request the request parameters of UpgradeDBInstanceEngineVersion  UpgradeDBInstanceEngineVersionRequest
