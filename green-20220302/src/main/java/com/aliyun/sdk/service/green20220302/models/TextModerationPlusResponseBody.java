@@ -737,6 +737,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
      * <p>TextModerationPlusResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("Advice")
         private java.util.List<Advice> advice;
 
@@ -774,6 +777,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private String translatedContent;
 
         private Data(Builder builder) {
+            this.accountId = builder.accountId;
             this.advice = builder.advice;
             this.attackLevel = builder.attackLevel;
             this.attackResult = builder.attackResult;
@@ -794,6 +798,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -881,6 +892,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private java.util.List<Advice> advice; 
             private String attackLevel; 
             private java.util.List<AttackResult> attackResult; 
@@ -898,6 +910,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accountId = model.accountId;
                 this.advice = model.advice;
                 this.attackLevel = model.attackLevel;
                 this.attackResult = model.attackResult;
@@ -911,6 +924,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
                 this.sensitiveResult = model.sensitiveResult;
                 this.translatedContent = model.translatedContent;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>The suggestion.</p>

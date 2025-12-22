@@ -1388,6 +1388,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      * <p>DescribeFileModerationResultResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
@@ -1407,6 +1410,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String url;
 
         private Data(Builder builder) {
+            this.accountId = builder.accountId;
             this.dataId = builder.dataId;
             this.docType = builder.docType;
             this.pageResult = builder.pageResult;
@@ -1421,6 +1425,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -1466,6 +1477,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String dataId; 
             private String docType; 
             private java.util.List<PageResult> pageResult; 
@@ -1477,6 +1489,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accountId = model.accountId;
                 this.dataId = model.dataId;
                 this.docType = model.docType;
                 this.pageResult = model.pageResult;
@@ -1484,6 +1497,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
                 this.riskLevel = model.riskLevel;
                 this.url = model.url;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>The ID of the moderated object.</p>

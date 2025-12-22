@@ -345,6 +345,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MultiModalGuardForBase64  MultiModalGuardForBase64Request
+     * @return MultiModalGuardForBase64Response
+     */
+    @Override
+    public CompletableFuture<MultiModalGuardForBase64Response> multiModalGuardForBase64(MultiModalGuardForBase64Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MultiModalGuardForBase64").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MultiModalGuardForBase64Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MultiModalGuardForBase64Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MultimodalAsyncModeration  MultimodalAsyncModerationRequest
      * @return MultimodalAsyncModerationResponse
      */

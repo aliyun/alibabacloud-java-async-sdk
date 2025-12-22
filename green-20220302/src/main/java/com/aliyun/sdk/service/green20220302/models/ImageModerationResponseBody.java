@@ -3214,6 +3214,9 @@ public class ImageModerationResponseBody extends TeaModel {
      * <p>ImageModerationResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
@@ -3230,6 +3233,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private String riskLevel;
 
         private Data(Builder builder) {
+            this.accountId = builder.accountId;
             this.dataId = builder.dataId;
             this.ext = builder.ext;
             this.manualTaskId = builder.manualTaskId;
@@ -3243,6 +3247,13 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -3281,6 +3292,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String dataId; 
             private Ext ext; 
             private String manualTaskId; 
@@ -3291,12 +3303,21 @@ public class ImageModerationResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accountId = model.accountId;
                 this.dataId = model.dataId;
                 this.ext = model.ext;
                 this.manualTaskId = model.manualTaskId;
                 this.result = model.result;
                 this.riskLevel = model.riskLevel;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>The ID of the moderated object.</p>

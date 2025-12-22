@@ -275,6 +275,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
      * <p>DescribeImageModerationResultResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
@@ -297,6 +300,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         private String riskLevel;
 
         private Data(Builder builder) {
+            this.accountId = builder.accountId;
             this.dataId = builder.dataId;
             this.frame = builder.frame;
             this.frameNum = builder.frameNum;
@@ -312,6 +316,13 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -364,6 +375,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String dataId; 
             private String frame; 
             private Integer frameNum; 
@@ -376,6 +388,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accountId = model.accountId;
                 this.dataId = model.dataId;
                 this.frame = model.frame;
                 this.frameNum = model.frameNum;
@@ -384,6 +397,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
                 this.result = model.result;
                 this.riskLevel = model.riskLevel;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
