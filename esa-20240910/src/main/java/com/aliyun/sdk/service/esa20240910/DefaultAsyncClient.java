@@ -1384,6 +1384,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteHttpDDoSIntelligentRule  DeleteHttpDDoSIntelligentRuleRequest
+     * @return DeleteHttpDDoSIntelligentRuleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteHttpDDoSIntelligentRuleResponse> deleteHttpDDoSIntelligentRule(DeleteHttpDDoSIntelligentRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteHttpDDoSIntelligentRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteHttpDDoSIntelligentRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteHttpDDoSIntelligentRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteHttpIncomingRequestHeaderModificationRule  DeleteHttpIncomingRequestHeaderModificationRuleRequest
      * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
      */
@@ -5466,6 +5484,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetHttpDDoSAttackProtectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetHttpDDoSAttackRuleAction  SetHttpDDoSAttackRuleActionRequest
+     * @return SetHttpDDoSAttackRuleActionResponse
+     */
+    @Override
+    public CompletableFuture<SetHttpDDoSAttackRuleActionResponse> setHttpDDoSAttackRuleAction(SetHttpDDoSAttackRuleActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetHttpDDoSAttackRuleAction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetHttpDDoSAttackRuleActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetHttpDDoSAttackRuleActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetHttpDDoSAttackRuleStatus  SetHttpDDoSAttackRuleStatusRequest
+     * @return SetHttpDDoSAttackRuleStatusResponse
+     */
+    @Override
+    public CompletableFuture<SetHttpDDoSAttackRuleStatusResponse> setHttpDDoSAttackRuleStatus(SetHttpDDoSAttackRuleStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetHttpDDoSAttackRuleStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetHttpDDoSAttackRuleStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetHttpDDoSAttackRuleStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

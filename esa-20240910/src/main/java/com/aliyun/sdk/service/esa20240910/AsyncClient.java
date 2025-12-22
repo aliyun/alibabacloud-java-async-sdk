@@ -500,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEdgeContainerAppVersionResponse> deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request);
 
     /**
+     * @param request the request parameters of DeleteHttpDDoSIntelligentRule  DeleteHttpDDoSIntelligentRuleRequest
+     * @return DeleteHttpDDoSIntelligentRuleResponse
+     */
+    CompletableFuture<DeleteHttpDDoSIntelligentRuleResponse> deleteHttpDDoSIntelligentRule(DeleteHttpDDoSIntelligentRuleRequest request);
+
+    /**
      * @param request the request parameters of DeleteHttpIncomingRequestHeaderModificationRule  DeleteHttpIncomingRequestHeaderModificationRuleRequest
      * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
      */
@@ -1946,6 +1952,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetHttpDDoSAttackProtectionResponse
      */
     CompletableFuture<SetHttpDDoSAttackProtectionResponse> setHttpDDoSAttackProtection(SetHttpDDoSAttackProtectionRequest request);
+
+    /**
+     * @param request the request parameters of SetHttpDDoSAttackRuleAction  SetHttpDDoSAttackRuleActionRequest
+     * @return SetHttpDDoSAttackRuleActionResponse
+     */
+    CompletableFuture<SetHttpDDoSAttackRuleActionResponse> setHttpDDoSAttackRuleAction(SetHttpDDoSAttackRuleActionRequest request);
+
+    /**
+     * @param request the request parameters of SetHttpDDoSAttackRuleStatus  SetHttpDDoSAttackRuleStatusRequest
+     * @return SetHttpDDoSAttackRuleStatusResponse
+     */
+    CompletableFuture<SetHttpDDoSAttackRuleStatusResponse> setHttpDDoSAttackRuleStatus(SetHttpDDoSAttackRuleStatusRequest request);
 
     /**
      * @param request the request parameters of SetOriginClientCertificateHostnames  SetOriginClientCertificateHostnamesRequest
