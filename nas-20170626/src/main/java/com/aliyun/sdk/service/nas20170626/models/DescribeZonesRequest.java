@@ -75,15 +75,12 @@ public class DescribeZonesRequest extends Request {
 
         /**
          * <p>The type of the file system.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
-         * <li>standard (default): General-purpose NAS file system</li>
-         * <li>extreme: Extreme NAS file system</li>
-         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+         * <li>extreme: Extreme NAS file system.</li>
+         * <li>cpfs: CPFS file system.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>standard</p>

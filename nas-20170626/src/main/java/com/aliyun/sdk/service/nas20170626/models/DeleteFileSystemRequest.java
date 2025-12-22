@@ -66,9 +66,6 @@ public class DeleteFileSystemRequest extends Request {
          * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
          * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-00cb6fa094ca****.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -161,6 +161,12 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private ProtocolServices(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -175,6 +181,8 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             this.protocolThroughput = builder.protocolThroughput;
             this.protocolType = builder.protocolType;
             this.status = builder.status;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -276,6 +284,20 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String description; 
@@ -290,6 +312,8 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             private Integer protocolThroughput; 
             private String protocolType; 
             private String status; 
+            private String vSwitchId; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -308,6 +332,8 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
                 this.protocolThroughput = model.protocolThroughput;
                 this.protocolType = model.protocolType;
                 this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -474,6 +500,22 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

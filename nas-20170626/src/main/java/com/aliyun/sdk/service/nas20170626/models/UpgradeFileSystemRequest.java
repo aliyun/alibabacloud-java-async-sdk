@@ -154,11 +154,8 @@ public class UpgradeFileSystemRequest extends Request {
          * <p>The ID of the file system.</p>
          * <ul>
          * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>, for example, cpfs-125487****.</li>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

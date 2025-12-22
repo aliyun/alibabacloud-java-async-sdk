@@ -40,6 +40,10 @@ public class DescribeProtocolMountTargetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolServiceIds")
+    private String protocolServiceIds;
+
     private DescribeProtocolMountTargetRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -47,6 +51,7 @@ public class DescribeProtocolMountTargetRequest extends Request {
         this.filters = builder.filters;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.protocolServiceIds = builder.protocolServiceIds;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class DescribeProtocolMountTargetRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return protocolServiceIds
+     */
+    public String getProtocolServiceIds() {
+        return this.protocolServiceIds;
+    }
+
     public static final class Builder extends Request.Builder<DescribeProtocolMountTargetRequest, Builder> {
         private String clientToken; 
         private String fileSystemId; 
         private java.util.List<Filters> filters; 
         private Long maxResults; 
         private String nextToken; 
+        private String protocolServiceIds; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class DescribeProtocolMountTargetRequest extends Request {
             this.filters = request.filters;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.protocolServiceIds = request.protocolServiceIds;
         } 
 
         /**
@@ -180,6 +194,15 @@ public class DescribeProtocolMountTargetRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ProtocolServiceIds.
+         */
+        public Builder protocolServiceIds(String protocolServiceIds) {
+            this.putQueryParameter("ProtocolServiceIds", protocolServiceIds);
+            this.protocolServiceIds = protocolServiceIds;
             return this;
         }
 

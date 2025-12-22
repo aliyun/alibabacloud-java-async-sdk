@@ -51,12 +51,10 @@ public class CreateProtocolServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateProtocolServiceRequest(Builder builder) {
@@ -290,7 +288,6 @@ public class CreateProtocolServiceRequest extends Request {
 
         /**
          * <p>The vSwitch ID of the protocol service.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-123****</p>
@@ -303,7 +300,6 @@ public class CreateProtocolServiceRequest extends Request {
 
         /**
          * <p>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123****</p>

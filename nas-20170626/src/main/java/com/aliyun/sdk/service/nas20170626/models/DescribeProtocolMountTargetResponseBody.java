@@ -155,6 +155,9 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -170,6 +173,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
+            this.vSwitchIds = builder.vSwitchIds;
             this.vpcId = builder.vpcId;
         }
 
@@ -259,6 +263,13 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -277,6 +288,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             private String protocolType; 
             private String status; 
             private String vSwitchId; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
 
             private Builder() {
@@ -294,6 +306,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
                 this.protocolType = model.protocolType;
                 this.status = model.status;
                 this.vSwitchId = model.vSwitchId;
+                this.vSwitchIds = model.vSwitchIds;
                 this.vpcId = model.vpcId;
             } 
 
@@ -415,6 +428,14 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
                 return this;
             }
 

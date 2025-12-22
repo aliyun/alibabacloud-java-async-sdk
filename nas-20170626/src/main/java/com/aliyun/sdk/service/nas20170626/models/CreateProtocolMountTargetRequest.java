@@ -55,12 +55,14 @@ public class CreateProtocolMountTargetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    private java.util.List<String> vSwitchIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateProtocolMountTargetRequest(Builder builder) {
@@ -74,6 +76,7 @@ public class CreateProtocolMountTargetRequest extends Request {
         this.path = builder.path;
         this.protocolServiceId = builder.protocolServiceId;
         this.vSwitchId = builder.vSwitchId;
+        this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
     }
 
@@ -154,6 +157,13 @@ public class CreateProtocolMountTargetRequest extends Request {
     }
 
     /**
+     * @return vSwitchIds
+     */
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -170,6 +180,7 @@ public class CreateProtocolMountTargetRequest extends Request {
         private String path; 
         private String protocolServiceId; 
         private String vSwitchId; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
 
         private Builder() {
@@ -187,6 +198,7 @@ public class CreateProtocolMountTargetRequest extends Request {
             this.path = request.path;
             this.protocolServiceId = request.protocolServiceId;
             this.vSwitchId = request.vSwitchId;
+            this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
         } 
 
@@ -324,7 +336,6 @@ public class CreateProtocolMountTargetRequest extends Request {
 
         /**
          * <p>The vSwitch ID of the export directory for the protocol service.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-123****</p>
@@ -336,8 +347,16 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
+         * VSwitchIds.
+         */
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+            this.putQueryParameter("VSwitchIds", vSwitchIds);
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+
+        /**
          * <p>The VPC ID of the export directory for the protocol service.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123****</p>

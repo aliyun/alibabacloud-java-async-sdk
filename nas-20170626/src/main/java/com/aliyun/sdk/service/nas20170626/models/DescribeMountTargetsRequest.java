@@ -136,11 +136,8 @@ public class DescribeMountTargetsRequest extends Request {
          * <ul>
          * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
          * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
-         * <li>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with <code>cpfs-</code>, for example, cpfs-125487****.</li>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +150,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the mount target.</p>
+         * <p>The address of the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</p>

@@ -1154,6 +1154,60 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      *
      * <p>DescribeFileSystemsResponseBody</p>
      */
+    public static class RedundancyVSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RedundancyVSwitchId")
+        private java.util.List<String> redundancyVSwitchId;
+
+        private RedundancyVSwitchIds(Builder builder) {
+            this.redundancyVSwitchId = builder.redundancyVSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RedundancyVSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return redundancyVSwitchId
+         */
+        public java.util.List<String> getRedundancyVSwitchId() {
+            return this.redundancyVSwitchId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> redundancyVSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RedundancyVSwitchIds model) {
+                this.redundancyVSwitchId = model.redundancyVSwitchId;
+            } 
+
+            /**
+             * RedundancyVSwitchId.
+             */
+            public Builder redundancyVSwitchId(java.util.List<String> redundancyVSwitchId) {
+                this.redundancyVSwitchId = redundancyVSwitchId;
+                return this;
+            }
+
+            public RedundancyVSwitchIds build() {
+                return new RedundancyVSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
     public static class SupportedFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedFeature")
         private java.util.List<String> supportedFeature;
@@ -1464,6 +1518,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuorumVswId")
         private String quorumVswId;
 
+        @com.aliyun.core.annotation.NameInMap("RedundancyType")
+        private String redundancyType;
+
+        @com.aliyun.core.annotation.NameInMap("RedundancyVSwitchIds")
+        private RedundancyVSwitchIds redundancyVSwitchIds;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1519,6 +1579,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.packages = builder.packages;
             this.protocolType = builder.protocolType;
             this.quorumVswId = builder.quorumVswId;
+            this.redundancyType = builder.redundancyType;
+            this.redundancyVSwitchIds = builder.redundancyVSwitchIds;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
@@ -1688,6 +1750,20 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return redundancyType
+         */
+        public String getRedundancyType() {
+            return this.redundancyType;
+        }
+
+        /**
+         * @return redundancyVSwitchIds
+         */
+        public RedundancyVSwitchIds getRedundancyVSwitchIds() {
+            return this.redundancyVSwitchIds;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1786,6 +1862,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Packages packages; 
             private String protocolType; 
             private String quorumVswId; 
+            private String redundancyType; 
+            private RedundancyVSwitchIds redundancyVSwitchIds; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
@@ -1823,6 +1901,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
                 this.packages = model.packages;
                 this.protocolType = model.protocolType;
                 this.quorumVswId = model.quorumVswId;
+                this.redundancyType = model.redundancyType;
+                this.redundancyVSwitchIds = model.redundancyVSwitchIds;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
@@ -1962,15 +2042,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The file system type.</p>
-             * <p>Valid values:</p>
+             * <p>The following information is displayed:</p>
              * <ul>
              * <li>standard: General-purpose NAS file system.</li>
              * <li>extreme: Extreme NAS file system.</li>
              * <li>cpfs: CPFS file system.</li>
              * </ul>
-             * <blockquote>
-             * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -2062,15 +2139,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type of the file system.</p>
-             * <p>Valid values:</p>
+             * <p>The following information is displayed:</p>
              * <ul>
              * <li>NFS: Network File System.</li>
              * <li>SMB: Server Message Block.</li>
              * <li>cpfs: The protocol type supported by the CPFS file system.</li>
              * </ul>
-             * <blockquote>
-             * <p> CPFS file systems are available only on the China site (aliyun.com).</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>NFS</p>
@@ -2088,6 +2162,22 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder quorumVswId(String quorumVswId) {
                 this.quorumVswId = quorumVswId;
+                return this;
+            }
+
+            /**
+             * RedundancyType.
+             */
+            public Builder redundancyType(String redundancyType) {
+                this.redundancyType = redundancyType;
+                return this;
+            }
+
+            /**
+             * RedundancyVSwitchIds.
+             */
+            public Builder redundancyVSwitchIds(RedundancyVSwitchIds redundancyVSwitchIds) {
+                this.redundancyVSwitchIds = redundancyVSwitchIds;
                 return this;
             }
 
@@ -2133,15 +2223,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the storage.</p>
+             * <p>The following information is displayed:</p>
              * <ul>
-             * <li>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</li>
-             * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
-             * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<blockquote>
-             * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-             * </blockquote>
-             * </li>
+             * <li>Valid values for General-purpose NAS file systems: Capacity, Performance, and Premium</li>
+             * <li>Valid values for Extreme NAS file systems: standard and advance</li>
+             * <li>Valid values for Cloud Parallel File Storage (CPFS) file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline)</li>
              * </ul>
              * 
              * <strong>example:</strong>
