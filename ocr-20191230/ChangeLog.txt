@@ -1,3 +1,6 @@
+2025-12-22 Version: 1.0.1
+- Generated java-async 2019-12-30 for ocr.
+
 2025-08-26 Version: 1.0.0
 - Generated java-async 2019-12-30 for ocr.
 
