@@ -167,6 +167,10 @@ public class DeployApplicationRequest extends Request {
     private String liveness;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LokiConfigs")
+    private String lokiConfigs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxSurgeInstanceRatio")
     private Integer maxSurgeInstanceRatio;
 
@@ -390,6 +394,7 @@ public class DeployApplicationRequest extends Request {
         this.jdk = builder.jdk;
         this.kafkaConfigs = builder.kafkaConfigs;
         this.liveness = builder.liveness;
+        this.lokiConfigs = builder.lokiConfigs;
         this.maxSurgeInstanceRatio = builder.maxSurgeInstanceRatio;
         this.maxSurgeInstances = builder.maxSurgeInstances;
         this.memory = builder.memory;
@@ -708,6 +713,13 @@ public class DeployApplicationRequest extends Request {
      */
     public String getLiveness() {
         return this.liveness;
+    }
+
+    /**
+     * @return lokiConfigs
+     */
+    public String getLokiConfigs() {
+        return this.lokiConfigs;
     }
 
     /**
@@ -1070,6 +1082,7 @@ public class DeployApplicationRequest extends Request {
         private String jdk; 
         private String kafkaConfigs; 
         private String liveness; 
+        private String lokiConfigs; 
         private Integer maxSurgeInstanceRatio; 
         private Integer maxSurgeInstances; 
         private Integer memory; 
@@ -1160,6 +1173,7 @@ public class DeployApplicationRequest extends Request {
             this.jdk = request.jdk;
             this.kafkaConfigs = request.kafkaConfigs;
             this.liveness = request.liveness;
+            this.lokiConfigs = request.lokiConfigs;
             this.maxSurgeInstanceRatio = request.maxSurgeInstanceRatio;
             this.maxSurgeInstances = request.maxSurgeInstances;
             this.memory = request.memory;
@@ -1761,6 +1775,15 @@ public class DeployApplicationRequest extends Request {
         public Builder liveness(String liveness) {
             this.putQueryParameter("Liveness", liveness);
             this.liveness = liveness;
+            return this;
+        }
+
+        /**
+         * LokiConfigs.
+         */
+        public Builder lokiConfigs(String lokiConfigs) {
+            this.putQueryParameter("LokiConfigs", lokiConfigs);
+            this.lokiConfigs = lokiConfigs;
             return this;
         }
 

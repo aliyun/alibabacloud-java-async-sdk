@@ -1937,6 +1937,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
+        @com.aliyun.core.annotation.NameInMap("LokiConfigs")
+        private String lokiConfigs;
+
         @com.aliyun.core.annotation.NameInMap("MaxSurgeInstanceRatio")
         private Integer maxSurgeInstanceRatio;
 
@@ -2145,6 +2148,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.jdk = builder.jdk;
             this.kafkaConfigs = builder.kafkaConfigs;
             this.liveness = builder.liveness;
+            this.lokiConfigs = builder.lokiConfigs;
             this.maxSurgeInstanceRatio = builder.maxSurgeInstanceRatio;
             this.maxSurgeInstances = builder.maxSurgeInstances;
             this.memory = builder.memory;
@@ -2522,6 +2526,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getLiveness() {
             return this.liveness;
+        }
+
+        /**
+         * @return lokiConfigs
+         */
+        public String getLokiConfigs() {
+            return this.lokiConfigs;
         }
 
         /**
@@ -2948,6 +2959,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String jdk; 
             private String kafkaConfigs; 
             private String liveness; 
+            private String lokiConfigs; 
             private Integer maxSurgeInstanceRatio; 
             private Integer maxSurgeInstances; 
             private Integer memory; 
@@ -3052,6 +3064,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.jdk = model.jdk;
                 this.kafkaConfigs = model.kafkaConfigs;
                 this.liveness = model.liveness;
+                this.lokiConfigs = model.lokiConfigs;
                 this.maxSurgeInstanceRatio = model.maxSurgeInstanceRatio;
                 this.maxSurgeInstances = model.maxSurgeInstances;
                 this.memory = model.memory;
@@ -3681,6 +3694,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder liveness(String liveness) {
                 this.liveness = liveness;
+                return this;
+            }
+
+            /**
+             * LokiConfigs.
+             */
+            public Builder lokiConfigs(String lokiConfigs) {
+                this.lokiConfigs = lokiConfigs;
                 return this;
             }
 

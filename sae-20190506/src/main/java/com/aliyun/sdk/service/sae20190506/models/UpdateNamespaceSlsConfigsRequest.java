@@ -29,11 +29,16 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsLogEnvTags")
+    private String slsLogEnvTags;
+
     private UpdateNamespaceSlsConfigsRequest(Builder builder) {
         super(builder);
         this.nameSpaceShortId = builder.nameSpaceShortId;
         this.namespaceId = builder.namespaceId;
         this.slsConfigs = builder.slsConfigs;
+        this.slsLogEnvTags = builder.slsLogEnvTags;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         return this.slsConfigs;
     }
 
+    /**
+     * @return slsLogEnvTags
+     */
+    public String getSlsLogEnvTags() {
+        return this.slsLogEnvTags;
+    }
+
     public static final class Builder extends Request.Builder<UpdateNamespaceSlsConfigsRequest, Builder> {
         private String nameSpaceShortId; 
         private String namespaceId; 
         private String slsConfigs; 
+        private String slsLogEnvTags; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
             this.nameSpaceShortId = request.nameSpaceShortId;
             this.namespaceId = request.namespaceId;
             this.slsConfigs = request.slsConfigs;
+            this.slsLogEnvTags = request.slsLogEnvTags;
         } 
 
         /**
@@ -135,6 +149,15 @@ public class UpdateNamespaceSlsConfigsRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * SlsLogEnvTags.
+         */
+        public Builder slsLogEnvTags(String slsLogEnvTags) {
+            this.putQueryParameter("SlsLogEnvTags", slsLogEnvTags);
+            this.slsLogEnvTags = slsLogEnvTags;
             return this;
         }
 
