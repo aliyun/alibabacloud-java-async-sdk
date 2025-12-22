@@ -275,14 +275,22 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
      * <p>GetImageDetectionTaskResultResponseBody</p>
      */
     public static class DetectionResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("detectionDetails")
         private java.util.List<DetectionDetails> detectionDetails;
+
+        @com.aliyun.core.annotation.NameInMap("portraitType")
+        private String portraitType;
 
         @com.aliyun.core.annotation.NameInMap("suggestions")
         private java.util.List<String> suggestions;
 
         private DetectionResult(Builder builder) {
+            this.description = builder.description;
             this.detectionDetails = builder.detectionDetails;
+            this.portraitType = builder.portraitType;
             this.suggestions = builder.suggestions;
         }
 
@@ -295,10 +303,24 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return detectionDetails
          */
         public java.util.List<DetectionDetails> getDetectionDetails() {
             return this.detectionDetails;
+        }
+
+        /**
+         * @return portraitType
+         */
+        public String getPortraitType() {
+            return this.portraitType;
         }
 
         /**
@@ -309,22 +331,42 @@ public class GetImageDetectionTaskResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private java.util.List<DetectionDetails> detectionDetails; 
+            private String portraitType; 
             private java.util.List<String> suggestions; 
 
             private Builder() {
             } 
 
             private Builder(DetectionResult model) {
+                this.description = model.description;
                 this.detectionDetails = model.detectionDetails;
+                this.portraitType = model.portraitType;
                 this.suggestions = model.suggestions;
             } 
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * detectionDetails.
              */
             public Builder detectionDetails(java.util.List<DetectionDetails> detectionDetails) {
                 this.detectionDetails = detectionDetails;
+                return this;
+            }
+
+            /**
+             * portraitType.
+             */
+            public Builder portraitType(String portraitType) {
+                this.portraitType = portraitType;
                 return this;
             }
 
