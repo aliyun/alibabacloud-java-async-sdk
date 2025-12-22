@@ -613,6 +613,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
 
     /**
+     * @param request the request parameters of ListClusterAddonInstanceResources  ListClusterAddonInstanceResourcesRequest
+     * @return ListClusterAddonInstanceResourcesResponse
+     */
+    CompletableFuture<ListClusterAddonInstanceResourcesResponse> listClusterAddonInstanceResources(ListClusterAddonInstanceResourcesRequest request);
+
+    /**
      * @param request the request parameters of ListClusterAddonInstances  ListClusterAddonInstancesRequest
      * @return ListClusterAddonInstancesResponse
      */
