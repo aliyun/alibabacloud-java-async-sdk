@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFinReportSummaryTaskResponse> createFinReportSummaryTask(CreateFinReportSummaryTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateImageDetectionTask  CreateImageDetectionTaskRequest
+     * @return CreateImageDetectionTaskResponse
+     */
+    CompletableFuture<CreateImageDetectionTaskResponse> createImageDetectionTask(CreateImageDetectionTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateLibrary  CreateLibraryRequest
      * @return CreateLibraryResponse
      */
@@ -72,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateQualityCheckTaskResponse
      */
     CompletableFuture<CreateQualityCheckTaskResponse> createQualityCheckTask(CreateQualityCheckTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVideoCreationTask  CreateVideoCreationTaskRequest
+     * @return CreateVideoCreationTaskResponse
+     */
+    CompletableFuture<CreateVideoCreationTaskResponse> createVideoCreationTask(CreateVideoCreationTaskRequest request);
 
     /**
      * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
@@ -164,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHistoryListByBizTypeResponse> getHistoryListByBizType(GetHistoryListByBizTypeRequest request);
 
     /**
+     * @param request the request parameters of GetImageDetectionTaskResult  GetImageDetectionTaskResultRequest
+     * @return GetImageDetectionTaskResultResponse
+     */
+    CompletableFuture<GetImageDetectionTaskResultResponse> getImageDetectionTaskResult(GetImageDetectionTaskResultRequest request);
+
+    /**
      * @param request the request parameters of GetLibrary  GetLibraryRequest
      * @return GetLibraryResponse
      */
@@ -204,6 +222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTaskStatusResponse
      */
     CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoCreationTaskResult  GetVideoCreationTaskResultRequest
+     * @return GetVideoCreationTaskResultResponse
+     */
+    CompletableFuture<GetVideoCreationTaskResultResponse> getVideoCreationTaskResult(GetVideoCreationTaskResultRequest request);
 
     /**
      * @param request the request parameters of InvokePlugin  InvokePluginRequest

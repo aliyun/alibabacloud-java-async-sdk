@@ -131,6 +131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateImageDetectionTask  CreateImageDetectionTaskRequest
+     * @return CreateImageDetectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateImageDetectionTaskResponse> createImageDetectionTask(CreateImageDetectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateImageDetectionTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/imageDetect/task/submit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateImageDetectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateImageDetectionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateLibrary  CreateLibraryRequest
      * @return CreateLibraryResponse
      */
@@ -197,6 +215,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateQualityCheckTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateVideoCreationTask  CreateVideoCreationTaskRequest
+     * @return CreateVideoCreationTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateVideoCreationTaskResponse> createVideoCreationTask(CreateVideoCreationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateVideoCreationTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/videoCreation/task/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVideoCreationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVideoCreationTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -473,6 +509,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetImageDetectionTaskResult  GetImageDetectionTaskResultRequest
+     * @return GetImageDetectionTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<GetImageDetectionTaskResultResponse> getImageDetectionTaskResult(GetImageDetectionTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetImageDetectionTaskResult").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/imageDetect/task/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetImageDetectionTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetImageDetectionTaskResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetLibrary  GetLibraryRequest
      * @return GetLibraryResponse
      */
@@ -593,6 +647,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVideoCreationTaskResult  GetVideoCreationTaskResultRequest
+     * @return GetVideoCreationTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoCreationTaskResultResponse> getVideoCreationTaskResult(GetVideoCreationTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetVideoCreationTaskResult").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/videoCreation/task/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoCreationTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoCreationTaskResultResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
