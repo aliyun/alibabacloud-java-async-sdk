@@ -850,6 +850,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListFunctions  ListFunctionsRequest
+     * @return ListFunctionsResponse
+     */
+    @Override
+    public CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListFunctions").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/functions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFunctionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFunctionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListIcebergNamespaceDetails  ListIcebergNamespaceDetailsRequest
      * @return ListIcebergNamespaceDetailsResponse
      */
@@ -1168,6 +1186,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListViewDetails  ListViewDetailsRequest
+     * @return ListViewDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListViewDetailsResponse> listViewDetails(ListViewDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListViewDetails").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/view-details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListViewDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListViewDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListViews  ListViewsRequest
+     * @return ListViewsResponse
+     */
+    @Override
+    public CompletableFuture<ListViewsResponse> listViews(ListViewsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListViews").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/views").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListViewsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListViewsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

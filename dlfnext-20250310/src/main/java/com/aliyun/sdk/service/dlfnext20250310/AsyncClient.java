@@ -290,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
+     * @param request the request parameters of ListFunctions  ListFunctionsRequest
+     * @return ListFunctionsResponse
+     */
+    CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
+
+    /**
      * @param request the request parameters of ListIcebergNamespaceDetails  ListIcebergNamespaceDetailsRequest
      * @return ListIcebergNamespaceDetailsResponse
      */
@@ -396,6 +402,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUsersResponse
      */
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
+
+    /**
+     * @param request the request parameters of ListViewDetails  ListViewDetailsRequest
+     * @return ListViewDetailsResponse
+     */
+    CompletableFuture<ListViewDetailsResponse> listViewDetails(ListViewDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ListViews  ListViewsRequest
+     * @return ListViewsResponse
+     */
+    CompletableFuture<ListViewsResponse> listViews(ListViewsRequest request);
 
     /**
      * @param request the request parameters of RefreshUserSync  RefreshUserSyncRequest
