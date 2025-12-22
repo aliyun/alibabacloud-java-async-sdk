@@ -38,6 +38,10 @@ public class ListGatewayRequest extends Request {
     private Boolean internetEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private java.util.Map<String, String> label;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
@@ -68,6 +72,7 @@ public class ListGatewayRequest extends Request {
         this.gatewayName = builder.gatewayName;
         this.gatewayType = builder.gatewayType;
         this.internetEnabled = builder.internetEnabled;
+        this.label = builder.label;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -125,6 +130,13 @@ public class ListGatewayRequest extends Request {
     }
 
     /**
+     * @return label
+     */
+    public java.util.Map<String, String> getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return order
      */
     public String getOrder() {
@@ -172,6 +184,7 @@ public class ListGatewayRequest extends Request {
         private String gatewayName; 
         private String gatewayType; 
         private Boolean internetEnabled; 
+        private java.util.Map<String, String> label; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -190,6 +203,7 @@ public class ListGatewayRequest extends Request {
             this.gatewayName = request.gatewayName;
             this.gatewayType = request.gatewayType;
             this.internetEnabled = request.internetEnabled;
+            this.label = request.label;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -246,6 +260,16 @@ public class ListGatewayRequest extends Request {
         public Builder internetEnabled(Boolean internetEnabled) {
             this.putQueryParameter("InternetEnabled", internetEnabled);
             this.internetEnabled = internetEnabled;
+            return this;
+        }
+
+        /**
+         * Label.
+         */
+        public Builder label(java.util.Map<String, String> label) {
+            String labelShrink = shrink(label, "Label", "json");
+            this.putQueryParameter("Label", labelShrink);
+            this.label = label;
             return this;
         }
 

@@ -169,6 +169,81 @@ public class ListGatewayResponseBody extends TeaModel {
      *
      * <p>ListGatewayResponseBody</p>
      */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LabelKey")
+        private String labelKey;
+
+        @com.aliyun.core.annotation.NameInMap("LabelValue")
+        private String labelValue;
+
+        private Labels(Builder builder) {
+            this.labelKey = builder.labelKey;
+            this.labelValue = builder.labelValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labelKey
+         */
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        /**
+         * @return labelValue
+         */
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+        public static final class Builder {
+            private String labelKey; 
+            private String labelValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.labelKey = model.labelKey;
+                this.labelValue = model.labelValue;
+            } 
+
+            /**
+             * LabelKey.
+             */
+            public Builder labelKey(String labelKey) {
+                this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * LabelValue.
+             */
+            public Builder labelValue(String labelValue) {
+                this.labelValue = labelValue;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayResponseBody</p>
+     */
     public static class Gateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -200,6 +275,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
+
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
@@ -223,6 +301,7 @@ public class ListGatewayResponseBody extends TeaModel {
             this.intranetDomain = builder.intranetDomain;
             this.intranetEnabled = builder.intranetEnabled;
             this.isDefault = builder.isDefault;
+            this.labels = builder.labels;
             this.replicas = builder.replicas;
             this.SSLRedirectionEnabled = builder.SSLRedirectionEnabled;
             this.status = builder.status;
@@ -308,6 +387,13 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.List<Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return replicas
          */
         public Integer getReplicas() {
@@ -346,6 +432,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private String intranetDomain; 
             private Boolean intranetEnabled; 
             private Boolean isDefault; 
+            private java.util.List<Labels> labels; 
             private Integer replicas; 
             private Boolean SSLRedirectionEnabled; 
             private String status; 
@@ -365,6 +452,7 @@ public class ListGatewayResponseBody extends TeaModel {
                 this.intranetDomain = model.intranetDomain;
                 this.intranetEnabled = model.intranetEnabled;
                 this.isDefault = model.isDefault;
+                this.labels = model.labels;
                 this.replicas = model.replicas;
                 this.SSLRedirectionEnabled = model.SSLRedirectionEnabled;
                 this.status = model.status;
@@ -479,6 +567,14 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.List<Labels> labels) {
+                this.labels = labels;
                 return this;
             }
 
