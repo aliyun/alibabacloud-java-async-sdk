@@ -664,6 +664,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreCheckCreateGadOrderResponse> preCheckCreateGadOrder(PreCheckCreateGadOrderRequest request);
 
     /**
+     * @param request the request parameters of PromoteToMaster  PromoteToMasterRequest
+     * @return PromoteToMasterResponse
+     */
+    CompletableFuture<PromoteToMasterResponse> promoteToMaster(PromoteToMasterRequest request);
+
+    /**
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
      */
