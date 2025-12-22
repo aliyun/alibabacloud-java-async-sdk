@@ -52,6 +52,10 @@ public class CreateCustomCertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String validity;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("customIdentifier")
+    private String customIdentifier;
+
     private CreateCustomCertificateRequest(Builder builder) {
         super(builder);
         this.apiPassthrough = builder.apiPassthrough;
@@ -62,6 +66,7 @@ public class CreateCustomCertificateRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.validity = builder.validity;
+        this.customIdentifier = builder.customIdentifier;
     }
 
     public static Builder builder() {
@@ -133,6 +138,13 @@ public class CreateCustomCertificateRequest extends Request {
         return this.validity;
     }
 
+    /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
+    }
+
     public static final class Builder extends Request.Builder<CreateCustomCertificateRequest, Builder> {
         private ApiPassthrough apiPassthrough; 
         private String csr; 
@@ -142,6 +154,7 @@ public class CreateCustomCertificateRequest extends Request {
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
         private String validity; 
+        private String customIdentifier; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class CreateCustomCertificateRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
             this.validity = request.validity;
+            this.customIdentifier = request.customIdentifier;
         } 
 
         /**
@@ -278,6 +292,15 @@ public class CreateCustomCertificateRequest extends Request {
         public Builder validity(String validity) {
             this.putQueryParameter("Validity", validity);
             this.validity = validity;
+            return this;
+        }
+
+        /**
+         * customIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("customIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 

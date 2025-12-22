@@ -40,6 +40,10 @@ public class CreateServerCertificateRequest extends Request {
     private String country;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+    private String customIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Days")
     private Integer days;
 
@@ -99,6 +103,7 @@ public class CreateServerCertificateRequest extends Request {
         this.beforeTime = builder.beforeTime;
         this.commonName = builder.commonName;
         this.country = builder.country;
+        this.customIdentifier = builder.customIdentifier;
         this.days = builder.days;
         this.domain = builder.domain;
         this.enableCrl = builder.enableCrl;
@@ -160,6 +165,13 @@ public class CreateServerCertificateRequest extends Request {
      */
     public String getCountry() {
         return this.country;
+    }
+
+    /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     /**
@@ -259,6 +271,7 @@ public class CreateServerCertificateRequest extends Request {
         private Long beforeTime; 
         private String commonName; 
         private String country; 
+        private String customIdentifier; 
         private Integer days; 
         private String domain; 
         private Long enableCrl; 
@@ -284,6 +297,7 @@ public class CreateServerCertificateRequest extends Request {
             this.beforeTime = request.beforeTime;
             this.commonName = request.commonName;
             this.country = request.country;
+            this.customIdentifier = request.customIdentifier;
             this.days = request.days;
             this.domain = request.domain;
             this.enableCrl = request.enableCrl;
@@ -377,6 +391,15 @@ public class CreateServerCertificateRequest extends Request {
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
             this.country = country;
+            return this;
+        }
+
+        /**
+         * CustomIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("CustomIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 

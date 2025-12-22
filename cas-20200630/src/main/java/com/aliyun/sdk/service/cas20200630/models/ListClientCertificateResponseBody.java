@@ -212,6 +212,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
+        @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+        private String customIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
 
@@ -270,6 +273,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.customIdentifier = builder.customIdentifier;
             this.days = builder.days;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
@@ -337,6 +341,13 @@ public class ListClientCertificateResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return customIdentifier
+         */
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         /**
@@ -465,6 +476,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private String customIdentifier; 
             private Integer days; 
             private String identifier; 
             private Integer keySize; 
@@ -493,6 +505,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
+                this.customIdentifier = model.customIdentifier;
                 this.days = model.days;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
@@ -585,6 +598,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * CustomIdentifier.
+             */
+            public Builder customIdentifier(String customIdentifier) {
+                this.customIdentifier = customIdentifier;
                 return this;
             }
 

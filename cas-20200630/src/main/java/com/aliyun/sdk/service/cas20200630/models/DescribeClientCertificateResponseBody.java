@@ -182,6 +182,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
+        @com.aliyun.core.annotation.NameInMap("CertChain")
+        private String certChain;
+
         @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
@@ -190,6 +193,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
+
+        @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+        private String customIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
@@ -249,9 +255,11 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
+            this.certChain = builder.certChain;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.customIdentifier = builder.customIdentifier;
             this.days = builder.days;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
@@ -302,6 +310,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return certChain
+         */
+        public String getCertChain() {
+            return this.certChain;
+        }
+
+        /**
          * @return certificateType
          */
         public String getCertificateType() {
@@ -320,6 +335,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return customIdentifier
+         */
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         /**
@@ -452,9 +474,11 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
+            private String certChain; 
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private String customIdentifier; 
             private Integer days; 
             private String identifier; 
             private Integer keySize; 
@@ -481,9 +505,11 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
                 this.afterDate = model.afterDate;
                 this.algorithm = model.algorithm;
                 this.beforeDate = model.beforeDate;
+                this.certChain = model.certChain;
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
+                this.customIdentifier = model.customIdentifier;
                 this.days = model.days;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
@@ -543,6 +569,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             }
 
             /**
+             * CertChain.
+             */
+            public Builder certChain(String certChain) {
+                this.certChain = certChain;
+                return this;
+            }
+
+            /**
              * <p>The type of the certificate. Valid values:</p>
              * <ul>
              * <li><strong>CLIENT</strong>: client certificate</li>
@@ -577,6 +611,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * CustomIdentifier.
+             */
+            public Builder customIdentifier(String customIdentifier) {
+                this.customIdentifier = customIdentifier;
                 return this;
             }
 

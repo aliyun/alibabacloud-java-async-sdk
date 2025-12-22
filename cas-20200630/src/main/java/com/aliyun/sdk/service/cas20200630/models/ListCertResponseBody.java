@@ -245,6 +245,9 @@ public class ListCertResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
+        @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+        private String customIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
@@ -284,6 +287,7 @@ public class ListCertResponseBody extends TeaModel {
             this.beforeTime = builder.beforeTime;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
+            this.customIdentifier = builder.customIdentifier;
             this.extra = builder.extra;
             this.id = builder.id;
             this.identifier = builder.identifier;
@@ -358,6 +362,13 @@ public class ListCertResponseBody extends TeaModel {
          */
         public String getCommonName() {
             return this.commonName;
+        }
+
+        /**
+         * @return customIdentifier
+         */
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         /**
@@ -439,6 +450,7 @@ public class ListCertResponseBody extends TeaModel {
             private Long beforeTime; 
             private String certificateType; 
             private String commonName; 
+            private String customIdentifier; 
             private String extra; 
             private String id; 
             private String identifier; 
@@ -462,6 +474,7 @@ public class ListCertResponseBody extends TeaModel {
                 this.beforeTime = model.beforeTime;
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
+                this.customIdentifier = model.customIdentifier;
                 this.extra = model.extra;
                 this.id = model.id;
                 this.identifier = model.identifier;
@@ -535,6 +548,14 @@ public class ListCertResponseBody extends TeaModel {
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
+                return this;
+            }
+
+            /**
+             * CustomIdentifier.
+             */
+            public Builder customIdentifier(String customIdentifier) {
+                this.customIdentifier = customIdentifier;
                 return this;
             }
 

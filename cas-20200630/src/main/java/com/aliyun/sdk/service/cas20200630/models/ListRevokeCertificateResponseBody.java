@@ -212,6 +212,9 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
+        @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+        private String customIdentifier;
+
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
@@ -264,6 +267,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.customIdentifier = builder.customIdentifier;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
@@ -329,6 +333,13 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return customIdentifier
+         */
+        public String getCustomIdentifier() {
+            return this.customIdentifier;
         }
 
         /**
@@ -443,6 +454,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private String customIdentifier; 
             private String identifier; 
             private Integer keySize; 
             private String locality; 
@@ -469,6 +481,7 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
+                this.customIdentifier = model.customIdentifier;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
@@ -555,6 +568,14 @@ public class ListRevokeCertificateResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * CustomIdentifier.
+             */
+            public Builder customIdentifier(String customIdentifier) {
+                this.customIdentifier = customIdentifier;
                 return this;
             }
 

@@ -42,6 +42,10 @@ public class CreateClientCertificateWithCsrRequest extends Request {
     private String csr;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+    private String customIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Days")
     private Integer days;
 
@@ -105,6 +109,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         this.commonName = builder.commonName;
         this.country = builder.country;
         this.csr = builder.csr;
+        this.customIdentifier = builder.customIdentifier;
         this.days = builder.days;
         this.enableCrl = builder.enableCrl;
         this.immediately = builder.immediately;
@@ -174,6 +179,13 @@ public class CreateClientCertificateWithCsrRequest extends Request {
      */
     public String getCsr() {
         return this.csr;
+    }
+
+    /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     /**
@@ -281,6 +293,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         private String commonName; 
         private String country; 
         private String csr; 
+        private String customIdentifier; 
         private Integer days; 
         private Long enableCrl; 
         private Integer immediately; 
@@ -308,6 +321,7 @@ public class CreateClientCertificateWithCsrRequest extends Request {
             this.commonName = request.commonName;
             this.country = request.country;
             this.csr = request.csr;
+            this.customIdentifier = request.customIdentifier;
             this.days = request.days;
             this.enableCrl = request.enableCrl;
             this.immediately = request.immediately;
@@ -415,6 +429,15 @@ public class CreateClientCertificateWithCsrRequest extends Request {
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
             this.csr = csr;
+            return this;
+        }
+
+        /**
+         * CustomIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("CustomIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 
