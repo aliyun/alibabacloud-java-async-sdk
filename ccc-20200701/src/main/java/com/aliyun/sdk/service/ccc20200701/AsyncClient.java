@@ -837,6 +837,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
     /**
+     * @param request the request parameters of ListFeedbacks  ListFeedbacksRequest
+     * @return ListFeedbacksResponse
+     */
+    CompletableFuture<ListFeedbacksResponse> listFeedbacks(ListFeedbacksRequest request);
+
+    /**
      * @param request the request parameters of ListFlashSmsApplications  ListFlashSmsApplicationsRequest
      * @return ListFlashSmsApplicationsResponse
      */
@@ -1385,6 +1391,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SendDtmfSignalingResponse
      */
     CompletableFuture<SendDtmfSignalingResponse> sendDtmfSignaling(SendDtmfSignalingRequest request);
+
+    /**
+     * @param request the request parameters of SendNotification  SendNotificationRequest
+     * @return SendNotificationResponse
+     */
+    CompletableFuture<SendNotificationResponse> sendNotification(SendNotificationRequest request);
 
     /**
      * @param request the request parameters of SignInGroup  SignInGroupRequest
