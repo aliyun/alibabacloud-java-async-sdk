@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddUserDefinedSg  AddUserDefinedSgRequest
+     * @return AddUserDefinedSgResponse
+     */
+    CompletableFuture<AddUserDefinedSgResponse> addUserDefinedSg(AddUserDefinedSgRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -141,6 +147,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTopicResponse
      */
     CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
+
+    /**
+     * @param request the request parameters of DeleteUserDefinedSg  DeleteUserDefinedSgRequest
+     * @return DeleteUserDefinedSgResponse
+     */
+    CompletableFuture<DeleteUserDefinedSgResponse> deleteUserDefinedSg(DeleteUserDefinedSgRequest request);
 
     /**
      * @param request the request parameters of DescribeAclResourceName  DescribeAclResourceNameRequest
@@ -310,6 +322,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTopicRemarkResponse
      */
     CompletableFuture<ModifyTopicRemarkResponse> modifyTopicRemark(ModifyTopicRemarkRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserDefinedSg  ModifyUserDefinedSgRequest
+     * @return ModifyUserDefinedSgResponse
+     */
+    CompletableFuture<ModifyUserDefinedSgResponse> modifyUserDefinedSg(ModifyUserDefinedSgRequest request);
 
     /**
      * @param request the request parameters of QueryMessage  QueryMessageRequest
