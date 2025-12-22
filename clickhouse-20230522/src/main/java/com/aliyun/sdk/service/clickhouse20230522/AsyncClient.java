@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEndpointResponse> createEndpoint(CreateEndpointRequest request);
 
     /**
+     * @param request the request parameters of CreateWhitelistTemplate  CreateWhitelistTemplateRequest
+     * @return CreateWhitelistTemplateResponse
+     */
+    CompletableFuture<CreateWhitelistTemplateResponse> createWhitelistTemplate(CreateWhitelistTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
      * @return DeleteAccountResponse
      */
