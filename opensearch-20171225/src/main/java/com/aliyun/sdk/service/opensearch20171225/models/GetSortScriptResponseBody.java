@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSortScriptResponseBody} extends {@link TeaModel}
  *
  * <p>GetSortScriptResponseBody</p>
@@ -30,6 +36,10 @@ public class GetSortScriptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetSortScriptResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSortScriptResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class GetSortScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the script.
+         * <p>The details of the script.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class GetSortScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSortScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSortScriptResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -156,8 +183,23 @@ public class GetSortScriptResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.scope = model.scope;
+                this.scriptName = model.scriptName;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
-             * The time when the script was created.
+             * <p>The time when the script was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 20:21:14</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -165,7 +207,10 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the script was last modified.
+             * <p>The time when the script was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 21:21:14</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -173,7 +218,10 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The sort phase to which the script applies.
+             * <p>The sort phase to which the script applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second_rank</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -181,7 +229,10 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the script.
+             * <p>The name of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rank_cava_20230606_v7</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -189,7 +240,10 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the script. For more information, see the description of the status response parameter in the ListSortScripts topic.
+             * <p>The status of the script. For more information, see the description of the status response parameter in the ListSortScripts topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>released</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +251,10 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the script.
+             * <p>The type of the script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cava_script</p>
              */
             public Builder type(String type) {
                 this.type = type;

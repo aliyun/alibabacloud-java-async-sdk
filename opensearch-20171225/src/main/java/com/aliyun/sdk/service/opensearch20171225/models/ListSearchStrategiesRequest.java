@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchStrategiesRequest} extends {@link RequestModel}
  *
  * <p>ListSearchStrategiesRequest</p>
@@ -35,7 +41,7 @@ public class ListSearchStrategiesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class ListSearchStrategiesRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;my_app&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -78,7 +88,11 @@ public class ListSearchStrategiesRequest extends Request {
         }
 
         /**
-         * The ID of the version.
+         * <p>The ID of the version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;110123456&quot;</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);

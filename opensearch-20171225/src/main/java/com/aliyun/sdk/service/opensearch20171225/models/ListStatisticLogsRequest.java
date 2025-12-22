@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStatisticLogsRequest} extends {@link RequestModel}
  *
  * <p>ListStatisticLogsRequest</p>
@@ -79,7 +85,7 @@ public class ListStatisticLogsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +191,11 @@ public class ListStatisticLogsRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -194,14 +204,17 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The module name. Valid values:
-         * <p>
+         * <p>The module name. Valid values:</p>
+         * <ul>
+         * <li>hot: rankings of hotwords.</li>
+         * <li>error: application error logs.</li>
+         * <li>slow-log: slow query logs.</li>
+         * </ul>
+         * <p>Set the value to hot.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   hot: rankings of hotwords.
-         * *   error: application error logs.
-         * *   slow-log: slow query logs.
-         * 
-         * Set the value to hot.
+         * <strong>example:</strong>
+         * <p>hot</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -210,10 +223,11 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The fields to query. Format: columns=wordsTopPv.
-         * <p>
+         * <p>The fields to query. Format: columns=wordsTopPv.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics in statistical reports</a>.</p>
          * 
-         * For more information, see [Metrics in statistical reports](~~187665~~).
+         * <strong>example:</strong>
+         * <p>wordsTopPv</p>
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -222,7 +236,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the distinct clause.
+         * <p>Specifies whether to use the distinct clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder distinct(Boolean distinct) {
             this.putQueryParameter("distinct", distinct);
@@ -231,7 +248,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -240,7 +260,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -249,7 +272,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The content of the query clause.
+         * <p>The content of the query clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;default:&quot;OpenSearch&quot;&quot;</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -258,7 +284,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The content of the sort clause.
+         * <p>The content of the sort clause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;-id&quot;</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -267,7 +296,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.
+         * <p>The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582214400</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -276,7 +308,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.
+         * <p>The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682222400</p>
          */
         public Builder stopTime(Integer stopTime) {
             this.putQueryParameter("stopTime", stopTime);

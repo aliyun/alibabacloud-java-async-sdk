@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceTableFieldsRequest} extends {@link RequestModel}
  *
  * <p>ListDataSourceTableFieldsRequest</p>
@@ -40,7 +46,7 @@ public class ListDataSourceTableFieldsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,14 +89,18 @@ public class ListDataSourceTableFieldsRequest extends Request {
         } 
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>rds</li>
+         * <li>polardb</li>
+         * <li>odps</li>
+         * <li>mysql</li>
+         * <li>drds</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   rds
-         * *   polardb
-         * *   odps
-         * *   mysql
-         * *   drds
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putPathParameter("dataSourceType", dataSourceType);
@@ -99,16 +109,19 @@ public class ListDataSourceTableFieldsRequest extends Request {
         }
 
         /**
-         * The parameters of the data source. The value of the params parameter is a JSON string. The value must be URL-encoded.
-         * <p>
+         * <p>The parameters of the data source. The value of the params parameter is a JSON string. The value must be URL-encoded.</p>
+         * <p>Different types of data sources use different parameters. For more information, see the following sections of the &quot;DataSource&quot; topic:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/170005.html">rds</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/170005.html">polardb</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/170005.html">odps</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/173627.html">mysql</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/173627.html">drds</a></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Different types of data sources use different parameters. For more information, see the following sections of the "DataSource" topic:
-         * 
-         * *   [rds](~~170005~~)
-         * *   [polardb](~~170005~~)
-         * *   [odps](~~170005~~)
-         * *   [mysql](~~173627~~)
-         * *   [drds](~~173627~~)
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);
@@ -117,7 +130,10 @@ public class ListDataSourceTableFieldsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the original field types of the data source.
+         * <p>Specifies whether to return the original field types of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rawType(Boolean rawType) {
             this.putQueryParameter("rawType", rawType);

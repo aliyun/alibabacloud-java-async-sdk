@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveFirstRankResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveFirstRankResponseBody</p>
@@ -30,6 +36,10 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(RemoveFirstRankResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E676FAB6-A0AC-64D9-F9D7-D0D33C930CFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the rough sort expression.
+         * <p>The information about the rough sort expression.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveFirstRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveFirstRankResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arg")
         private String arg;
@@ -120,11 +147,20 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             private String attribute; 
             private Float weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.arg = model.arg;
+                this.attribute = model.attribute;
+                this.weight = model.weight;
+            } 
+
             /**
-             * The parameters that are used by a function in the expression.
-             * <p>
+             * <p>The parameters that are used by a function in the expression. For more information, see Rough sort functions.<a href="~~170007~~"></a></p>
              * 
-             * For more information, see Rough sort functions.
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -132,10 +168,10 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute, feature function, or field to be searched for.
-             * <p>
+             * <p>The attribute, which refers to the scoring feature or search field, For more information about supported feature functions, see Rough sort functions.<a href="~~170007~~"></a></p>
              * 
-             * For more information about supported feature functions, see Rough sort functions.
+             * <strong>example:</strong>
+             * <p>static_bm25()</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -143,10 +179,10 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
-             * <p>
+             * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
              * 
-             * Valid values: \[-100000,100000] (excluding 0).
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder weight(Float weight) {
                 this.weight = weight;
@@ -160,6 +196,12 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RemoveFirstRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveFirstRankResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -168,7 +210,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.List < Meta> meta;
+        private java.util.List<Meta> meta;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -205,7 +247,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.List < Meta> getMeta() {
+        public java.util.List<Meta> getMeta() {
             return this.meta;
         }
 
@@ -219,11 +261,24 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean active; 
             private String description; 
-            private java.util.List < Meta> meta; 
+            private java.util.List<Meta> meta; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.description = model.description;
+                this.meta = model.meta;
+                this.name = model.name;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -231,7 +286,10 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -239,15 +297,18 @@ public class RemoveFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the expression.
+             * <p>The information about the expression.</p>
              */
-            public Builder meta(java.util.List < Meta> meta) {
+            public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
                 return this;
             }
 
             /**
-             * The name of the expression.
+             * <p>Parameter</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;

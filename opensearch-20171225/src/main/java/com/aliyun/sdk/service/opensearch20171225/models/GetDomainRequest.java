@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDomainRequest} extends {@link RequestModel}
  *
  * <p>GetDomainRequest</p>
@@ -35,7 +41,7 @@ public class GetDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,13 @@ public class GetDomainRequest extends Request {
         } 
 
         /**
-         * The type of the industry.
+         * <p>The type of the industry.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -78,7 +90,11 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * The name or ID of the application.
+         * <p>The name or ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putQueryParameter("appGroupIdentity", appGroupIdentity);

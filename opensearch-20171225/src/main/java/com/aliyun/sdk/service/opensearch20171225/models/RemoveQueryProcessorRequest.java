@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveQueryProcessorRequest} extends {@link RequestModel}
  *
  * <p>RemoveQueryProcessorRequest</p>
@@ -41,7 +47,7 @@ public class RemoveQueryProcessorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,11 @@ public class RemoveQueryProcessorRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +103,11 @@ public class RemoveQueryProcessorRequest extends Request {
         }
 
         /**
-         * 110157886
+         * <p>The version number</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -102,7 +116,11 @@ public class RemoveQueryProcessorRequest extends Request {
         }
 
         /**
-         * "test"
+         * <p>The name of the query analysis rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“test”</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

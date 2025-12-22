@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionResourceRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionResourceRequest</p>
@@ -46,7 +52,7 @@ public class GetFunctionResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +104,11 @@ public class GetFunctionResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +117,11 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rank</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -116,7 +130,11 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fg_json</p>
          */
         public Builder resourceName(String resourceName) {
             this.putPathParameter("resourceName", resourceName);
@@ -125,14 +143,16 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * The output level.
-         * <p>
+         * <p>The output level.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>simple</li>
+         * <li>normal</li>
+         * <li>detail</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   simple
-         * *   normal
-         * *   detail
+         * <strong>example:</strong>
+         * <p>detail</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);

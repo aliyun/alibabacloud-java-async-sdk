@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetFunctionCurrentVersionResponseBody</p>
@@ -48,6 +54,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     public static GetFunctionCurrentVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         private Result result; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetFunctionCurrentVersionResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+        } 
+
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Version.NotExist</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -125,7 +154,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request, in milliseconds.
+         * <p>The time consumed for the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -133,7 +165,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +176,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638157479281</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +187,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,7 +195,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the request.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -170,6 +211,12 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionCurrentVersionResponseBody</p>
+     */
     public static class CreateParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -208,8 +255,19 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String name; 
             private String required; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateParameters model) {
+                this.name = model.name;
+                this.required = model.required;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>params1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +275,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(String required) {
                 this.required = required;
@@ -231,6 +292,12 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionCurrentVersionResponseBody</p>
+     */
     public static class Depends extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
@@ -281,8 +348,20 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String dependency; 
             private String description; 
 
+            private Builder() {
+            } 
+
+            private Builder(Depends model) {
+                this.condition = model.condition;
+                this.dependency = model.dependency;
+                this.description = model.description;
+            } 
+
             /**
-             * The condition.
+             * <p>The condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -290,7 +369,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The dependency.
+             * <p>The dependency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder dependency(String dependency) {
                 this.dependency = dependency;
@@ -298,7 +380,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -312,6 +397,12 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionCurrentVersionResponseBody</p>
+     */
     public static class UsageParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -350,8 +441,19 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String name; 
             private String required; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageParameters model) {
+                this.name = model.name;
+                this.required = model.required;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +461,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required.
+             * <p>Indicates whether the parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder required(String required) {
                 this.required = required;
@@ -373,15 +478,21 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionCurrentVersionResponseBody</p>
+     */
     public static class VersionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateParameters")
-        private java.util.List < CreateParameters> createParameters;
+        private java.util.List<CreateParameters> createParameters;
 
         @com.aliyun.core.annotation.NameInMap("Depends")
-        private java.util.List < Depends> depends;
+        private java.util.List<Depends> depends;
 
         @com.aliyun.core.annotation.NameInMap("UsageParameters")
-        private java.util.List < UsageParameters> usageParameters;
+        private java.util.List<UsageParameters> usageParameters;
 
         private VersionConfig(Builder builder) {
             this.createParameters = builder.createParameters;
@@ -400,49 +511,64 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         /**
          * @return createParameters
          */
-        public java.util.List < CreateParameters> getCreateParameters() {
+        public java.util.List<CreateParameters> getCreateParameters() {
             return this.createParameters;
         }
 
         /**
          * @return depends
          */
-        public java.util.List < Depends> getDepends() {
+        public java.util.List<Depends> getDepends() {
             return this.depends;
         }
 
         /**
          * @return usageParameters
          */
-        public java.util.List < UsageParameters> getUsageParameters() {
+        public java.util.List<UsageParameters> getUsageParameters() {
             return this.usageParameters;
         }
 
         public static final class Builder {
-            private java.util.List < CreateParameters> createParameters; 
-            private java.util.List < Depends> depends; 
-            private java.util.List < UsageParameters> usageParameters; 
+            private java.util.List<CreateParameters> createParameters; 
+            private java.util.List<Depends> depends; 
+            private java.util.List<UsageParameters> usageParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionConfig model) {
+                this.createParameters = model.createParameters;
+                this.depends = model.depends;
+                this.usageParameters = model.usageParameters;
+            } 
 
             /**
-             * The parameters that are used to create the instance.
+             * <p>The parameters that are used to create the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[                 {                     &quot;name&quot;: &quot;params1&quot;,                     &quot;required&quot;: &quot;true&quot;,                     &quot;formItemProps&quot;: &quot;{&quot;required&quot;: true, &quot;pattern?&quot;: &quot;/^[a-zA-Z][a-zA-Z0-9_]{0,29}$/&quot;}&quot;,                     &quot;componentProps&quot;: &quot;{&quot;component&quot;: &quot;Input&quot;, &quot;attributes&quot;: {&quot;defaultValue&quot;: &quot;value1&quot;}}&quot;                 }             ]</p>
              */
-            public Builder createParameters(java.util.List < CreateParameters> createParameters) {
+            public Builder createParameters(java.util.List<CreateParameters> createParameters) {
                 this.createParameters = createParameters;
                 return this;
             }
 
             /**
-             * The dependencies of the instance.
+             * <p>The dependencies of the instance.</p>
              */
-            public Builder depends(java.util.List < Depends> depends) {
+            public Builder depends(java.util.List<Depends> depends) {
                 this.depends = depends;
                 return this;
             }
 
             /**
-             * The parameters that are used to use the instance online.
+             * <p>The parameters that are used to use the instance online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
+            public Builder usageParameters(java.util.List<UsageParameters> usageParameters) {
                 this.usageParameters = usageParameters;
                 return this;
             }
@@ -454,6 +580,12 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFunctionCurrentVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionCurrentVersionResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
@@ -540,8 +672,23 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private Long versionId; 
             private String versionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.functionName = model.functionName;
+                this.functionType = model.functionType;
+                this.modelType = model.modelType;
+                this.versionConfig = model.versionConfig;
+                this.versionId = model.versionId;
+                this.versionName = model.versionName;
+            } 
+
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctr</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -549,11 +696,14 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the feature. Valid values:
-             * <p>
+             * <p>The type of the feature. Valid values:</p>
+             * <ul>
+             * <li>PAAS</li>
+             * <li>SAAS</li>
+             * </ul>
              * 
-             * *   PAAS
-             * *   SAAS
+             * <strong>example:</strong>
+             * <p>PAAS</p>
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -561,7 +711,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the model.
+             * <p>The type of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf_checkpoint</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -569,7 +722,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information about the instance.
+             * <p>The configuration information about the instance.</p>
              */
             public Builder versionConfig(VersionConfig versionConfig) {
                 this.versionConfig = versionConfig;
@@ -577,7 +730,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -585,7 +741,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the version.
+             * <p>The name of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

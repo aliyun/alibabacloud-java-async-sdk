@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateDataSourcesRequest} extends {@link RequestModel}
  *
  * <p>ValidateDataSourcesRequest</p>
@@ -28,7 +34,7 @@ public class ValidateDataSourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +59,7 @@ public class ValidateDataSourcesRequest extends Request {
         } 
 
         /**
-         * The request parameter. For more information, see [DataSource](~~170005~~).
+         * <p>The request parameter. For more information, see <a href="https://help.aliyun.com/document_detail/170005.html">DataSource</a>.</p>
          */
         public Builder body(DataSource body) {
             this.putBodyParameter("body", body);

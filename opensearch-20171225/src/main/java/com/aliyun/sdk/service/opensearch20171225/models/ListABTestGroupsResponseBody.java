@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABTestGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListABTestGroupsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListABTestGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListABTestGroupsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABTestGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +78,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The test groups.
-         * <p>
-         * 
-         * For more information, see [ABTestGroup](~~178935~~).
+         * <p>The test groups.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178935.html">ABTestGroup</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -73,6 +92,12 @@ public class ListABTestGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListABTestGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListABTestGroupsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -147,8 +172,22 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             private Integer status; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.status = model.status;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the test group was created.
+             * <p>The time when the test group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588839490</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -156,7 +195,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the test group.
+             * <p>The ID of the test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13466</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -164,7 +206,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test group.
+             * <p>The name of the test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group_2020-5-7_15:23:3</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -172,11 +217,14 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the test group. Valid values:
-             * <p>
+             * <p>The status of the test group. Valid values:</p>
+             * <ul>
+             * <li>0: not in effect</li>
+             * <li>1: in effect</li>
+             * </ul>
              * 
-             * *   0: not in effect
-             * *   1: in effect
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -184,7 +232,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test group was last modified.
+             * <p>The time when the test group was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588839490</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

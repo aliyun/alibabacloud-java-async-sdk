@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABTestExperimentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateABTestExperimentResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateABTestExperimentResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * The experiment details.
+         * <p>The experiment details.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateABTestExperimentResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateABTestExperimentResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -84,7 +111,7 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         private Boolean online;
 
         @com.aliyun.core.annotation.NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private java.util.Map<String, ?> params;
 
         @com.aliyun.core.annotation.NameInMap("traffic")
         private Integer traffic;
@@ -141,7 +168,7 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public java.util.Map<String, ?> getParams() {
             return this.params;
         }
 
@@ -164,12 +191,28 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Boolean online; 
-            private java.util.Map < String, ? > params; 
+            private java.util.Map<String, ?> params; 
             private Integer traffic; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.online = model.online;
+                this.params = model.params;
+                this.traffic = model.traffic;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the experiment was created.
+             * <p>The time when the experiment was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -177,7 +220,10 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The experiment ID.
+             * <p>The experiment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12889</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -185,7 +231,10 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The experiment alias.
+             * <p>The experiment alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test3</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,11 +242,14 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the experiment is in effect. Valid values:
-             * <p>
+             * <p>Indicates whether the experiment is in effect. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -205,15 +257,21 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The experiment parameters.
+             * <p>The experiment parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;firstFormulaName&quot;: &quot;default&quot;}</p>
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
                 return this;
             }
 
             /**
-             * The percentage of traffic that is routed to the experiment.
+             * <p>The percentage of traffic that is routed to the experiment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -221,7 +279,10 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the experiment was last modified.
+             * <p>The time when the experiment was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589017861</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

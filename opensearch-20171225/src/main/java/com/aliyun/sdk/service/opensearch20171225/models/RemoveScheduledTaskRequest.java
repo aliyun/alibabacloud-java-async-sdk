@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveScheduledTaskRequest} extends {@link RequestModel}
  *
  * <p>RemoveScheduledTaskRequest</p>
@@ -35,7 +41,7 @@ public class RemoveScheduledTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class RemoveScheduledTaskRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -78,7 +88,11 @@ public class RemoveScheduledTaskRequest extends Request {
         }
 
         /**
-         * "2f12c585-5873-11ea-974a-7cd30ad3e268"
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“2f12c585-5873-11ea-974a-7cd30ad3e268”</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

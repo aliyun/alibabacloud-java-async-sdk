@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateABTestSceneResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateABTestSceneResponseBody</p>
@@ -30,6 +36,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateABTestSceneResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the test scenario. For more information, see [ABTestScene](~~173618~~).
+         * <p>The details of the test scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +94,12 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateABTestSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateABTestSceneResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -84,7 +114,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         private Boolean online;
 
         @com.aliyun.core.annotation.NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private java.util.Map<String, ?> params;
 
         @com.aliyun.core.annotation.NameInMap("traffic")
         private Integer traffic;
@@ -141,7 +171,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public java.util.Map<String, ?> getParams() {
             return this.params;
         }
 
@@ -164,12 +194,28 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Boolean online; 
-            private java.util.Map < String, ? > params; 
+            private java.util.Map<String, ?> params; 
             private Integer traffic; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.online = model.online;
+                this.params = model.params;
+                this.traffic = model.traffic;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the test scenario was created.
+             * <p>The time when the test scenario was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596527691</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -177,7 +223,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the test scenario.
+             * <p>The ID of the test scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20614</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -185,7 +234,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test scenario.
+             * <p>The name of the test scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kevintest22</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -193,11 +245,14 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the test. Valid values:
-             * <p>
+             * <p>The status of the test. Valid values:</p>
+             * <ul>
+             * <li>true: The test is started.</li>
+             * <li>false: The test is stopped.</li>
+             * </ul>
              * 
-             * *   true: The test is started.
-             * *   false: The test is stopped.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -205,15 +260,21 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the A/B test.
+             * <p>The parameters of the A/B test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
                 return this;
             }
 
             /**
-             * The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.
+             * <p>The percentage of traffic that is allocated to the A/B test. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -221,7 +282,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test scenario was last modified.
+             * <p>The time when the test scenario was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1596527691</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

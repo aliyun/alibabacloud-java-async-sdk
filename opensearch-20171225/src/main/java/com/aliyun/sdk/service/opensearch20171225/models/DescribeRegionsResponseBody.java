@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private DescribeRegionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DescribeRegionsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B7E42BD-1D63-2F6B-C8E0-41BACEA76EEB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -70,6 +91,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consoleUrl")
         private String consoleUrl;
@@ -132,8 +159,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String localName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.consoleUrl = model.consoleUrl;
+                this.endpoint = model.endpoint;
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * The console URL.
+             * <p>The console URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://opensearch-cn-hangzhou.console.aliyun.com">https://opensearch-cn-hangzhou.console.aliyun.com</a></p>
              */
             public Builder consoleUrl(String consoleUrl) {
                 this.consoleUrl = consoleUrl;
@@ -141,7 +181,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opensearch.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -149,7 +192,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -157,7 +203,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

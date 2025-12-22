@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ABTestScene} extends {@link TeaModel}
  *
  * <p>ABTestScene</p>
@@ -18,7 +24,7 @@ public class ABTestScene extends TeaModel {
     private Integer status;
 
     @com.aliyun.core.annotation.NameInMap("values")
-    private java.util.List < String > values;
+    private java.util.List<String> values;
 
     private ABTestScene(Builder builder) {
         this.name = builder.name;
@@ -32,6 +38,10 @@ public class ABTestScene extends TeaModel {
 
     public static ABTestScene create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -51,14 +61,23 @@ public class ABTestScene extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String name; 
         private Integer status; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ABTestScene model) {
+            this.name = model.name;
+            this.status = model.status;
+            this.values = model.values;
+        } 
 
         /**
          * name.
@@ -79,7 +98,7 @@ public class ABTestScene extends TeaModel {
         /**
          * values.
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

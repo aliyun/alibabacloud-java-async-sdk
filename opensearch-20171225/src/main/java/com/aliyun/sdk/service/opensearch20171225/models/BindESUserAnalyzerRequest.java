@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindESUserAnalyzerRequest} extends {@link RequestModel}
  *
  * <p>BindESUserAnalyzerRequest</p>
@@ -40,7 +46,7 @@ public class BindESUserAnalyzerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class BindESUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130187460</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class BindESUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-zvp2g952l000v5uxp</p>
          */
         public Builder esInstanceId(String esInstanceId) {
             this.putPathParameter("esInstanceId", esInstanceId);
@@ -101,7 +115,12 @@ public class BindESUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * <p>The request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;name&quot;: &quot;kevintest-analyzer&quot;
+         * }</p>
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);

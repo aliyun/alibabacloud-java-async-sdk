@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FirstRank} extends {@link TeaModel}
  *
  * <p>FirstRank</p>
@@ -40,6 +46,10 @@ public class FirstRank extends TeaModel {
 
     public static FirstRank create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class FirstRank extends TeaModel {
         private Object meta; 
         private String name; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(FirstRank model) {
+            this.active = model.active;
+            this.description = model.description;
+            this.meta = model.meta;
+            this.name = model.name;
+            this.type = model.type;
+        } 
 
         /**
          * active.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserAnalyzerRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserAnalyzerRequest</p>
@@ -34,7 +40,7 @@ public class DescribeUserAnalyzerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,11 @@ public class DescribeUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * The name of the analyzer.
+         * <p>The name of the analyzer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kevin_test</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -77,9 +87,13 @@ public class DescribeUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The Associated information,output properties based on hierarchy.
-         * <p>
-         * * **all**: Outputs associated app information
+         * <p>The Associated information,output properties based on hierarchy.</p>
+         * <ul>
+         * <li><strong>all</strong>: Outputs associated app information</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder with(String with) {
             this.putQueryParameter("with", with);

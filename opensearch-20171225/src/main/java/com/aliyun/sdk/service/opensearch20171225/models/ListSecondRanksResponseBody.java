@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecondRanksResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecondRanksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -34,6 +40,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListSecondRanksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSecondRanksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,18 +91,19 @@ public class ListSecondRanksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about each fine sort expression.
-         * <p>
-         * 
-         * For more information, see [SecondRank](~~170008~~).
+         * <p>The information about the fine sort expression.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -93,6 +116,12 @@ public class ListSecondRanksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecondRanksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecondRanksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -215,8 +244,26 @@ public class ListSecondRanksResponseBody extends TeaModel {
             private String name; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.created = model.created;
+                this.description = model.description;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.isSys = model.isSys;
+                this.meta = model.meta;
+                this.name = model.name;
+                this.updated = model.updated;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -224,7 +271,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was created.
+             * <p>The time when the expression was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -232,7 +282,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,7 +293,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the expression. This parameter appears only in the response.
+             * <p>The expression ID. This parameter is displayed only in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>890473</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -248,11 +304,14 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is the default one. This parameter appears only in the response. Valid values:
-             * <p>
+             * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:</p>
+             * <ul>
+             * <li>true: the expression is the default one.</li>
+             * <li>false: the expression is not the default one.</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -260,11 +319,14 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is a system expression. This parameter appears only in the response. Valid values:
-             * <p>
+             * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:</p>
+             * <ul>
+             * <li>true: The expression is a system expression.</li>
+             * <li>false:The expression is not a system expression</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSys(String isSys) {
                 this.isSys = isSys;
@@ -272,10 +334,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the fine sort expression.
-             * <p>
+             * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
              * 
-             * You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.
+             * <strong>example:</strong>
+             * <p>random()+now()</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -283,7 +345,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the expression.
+             * <p>Parameter</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tests</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +356,10 @@ public class ListSecondRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was last updated.
+             * <p>The time when the expression was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587052801</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

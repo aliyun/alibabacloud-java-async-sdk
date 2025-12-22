@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataCollectionsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -34,6 +40,10 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListDataCollectionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDataCollectionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>959D8782-B130-95EB-86CC-1F6ED447981F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,18 +91,19 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data collection tasks.
-         * <p>
-         * 
-         * For more information, see [DataCollection](~~173605~~).
+         * <p>The details of the data collection task.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173605.html">DataCollection</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of the returned data collection tasks.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -93,6 +116,12 @@ public class ListDataCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataCollectionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -215,8 +244,26 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             private String type; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.dataCollectionType = model.dataCollectionType;
+                this.id = model.id;
+                this.industryName = model.industryName;
+                this.name = model.name;
+                this.status = model.status;
+                this.sundialId = model.sundialId;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the data collection task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581065837</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -224,12 +271,15 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data that is collected by the task. Valid values:
-             * <p>
+             * <p>The type of data collected. Valid values:</p>
+             * <ul>
+             * <li>behavior: behavioral data.</li>
+             * <li>item_info: project information.</li>
+             * <li>industry_specific: industry-specific data.</li>
+             * </ul>
              * 
-             * *   behavior: behavioral data
-             * *   item_info: project data
-             * *   industry_specific: industry-specific data
+             * <strong>example:</strong>
+             * <p>BEHAVIOR</p>
              */
             public Builder dataCollectionType(String dataCollectionType) {
                 this.dataCollectionType = dataCollectionType;
@@ -237,7 +287,10 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data collection task.
+             * <p>The data collection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>286</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -245,11 +298,14 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The industry to which the data collection task applies. Valid values:
-             * <p>
+             * <p>The industry name. Valid values:</p>
+             * <ul>
+             * <li>general</li>
+             * <li>ecommerce</li>
+             * </ul>
              * 
-             * *   general
-             * *   ecommerce
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -257,7 +313,10 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data collection task.
+             * <p>The name of the data collection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os_function_test_v1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,13 +324,16 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data collection task. Valid values:
-             * <p>
+             * <p>The status of the data collection feature. Valid values:</p>
+             * <ul>
+             * <li>0: The feature is disabled.</li>
+             * <li>1: The feature is being enabled.</li>
+             * <li>2: The feature is enabled.</li>
+             * <li>3: The feature failed to be enabled.</li>
+             * </ul>
              * 
-             * *   0: disabled
-             * *   1: being enabled
-             * *   2: enabled
-             * *   3: failed to be enabled
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -279,7 +341,10 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sundial.
+             * <p>The sundial ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755</p>
              */
             public Builder sundialId(String sundialId) {
                 this.sundialId = sundialId;
@@ -287,14 +352,16 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the source from which data was collected. Valid values:</p>
+             * <ul>
+             * <li>server</li>
+             * <li>web</li>
+             * <li>app</li>
+             * </ul>
+             * <p>Only server is supported.</p>
              * 
-             * *   server
-             * *   web
-             * *   app
-             * 
-             * Note: Only server is supported.
+             * <strong>example:</strong>
+             * <p>server</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -302,7 +369,10 @@ public class ListDataCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data collection task was updated.
+             * <p>The time when the data collection task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581065904</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

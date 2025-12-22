@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABTestFixedFlowDividersResponseBody} extends {@link TeaModel}
  *
  * <p>ListABTestFixedFlowDividersResponseBody</p>
@@ -15,7 +21,7 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < String > result;
+    private java.util.List<String> result;
 
     private ListABTestFixedFlowDividersResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < String > getResult() {
+    public java.util.List<String> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > result; 
+        private java.util.List<String> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABTestFixedFlowDividersResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
         }
 
         /**
-         * The queried whitelists.
+         * result.
          */
-        public Builder result(java.util.List < String > result) {
+        public Builder result(java.util.List<String> result) {
             this.result = result;
             return this;
         }

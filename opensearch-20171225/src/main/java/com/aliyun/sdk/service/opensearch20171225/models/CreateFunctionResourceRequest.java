@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFunctionResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateFunctionResourceRequest</p>
@@ -55,7 +61,7 @@ public class CreateFunctionResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +131,11 @@ public class CreateFunctionResourceRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -134,7 +144,11 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rank</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -143,7 +157,7 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * The resource data. The data structure varies with the resource type.
+         * <p>The resource data. The data structure varies with the resource type.</p>
          */
         public Builder data(Data data) {
             this.putBodyParameter("Data", data);
@@ -152,7 +166,10 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * The description of the resource.
+         * <p>The description of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -161,7 +178,10 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * The name of the resource.
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fg_jsoon</p>
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("ResourceName", resourceName);
@@ -170,26 +190,26 @@ public class CreateFunctionResourceRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>feature_generator</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   feature_generator
+         * <!-- -->
+         * </li>
+         * <li><p>raw_file</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   raw_file
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>feature_generator</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -204,6 +224,12 @@ public class CreateFunctionResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFunctionResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionResourceRequest</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -242,8 +268,19 @@ public class CreateFunctionResourceRequest extends Request {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_item_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,26 +288,26 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * The type of the feature.
-             * <p>
+             * <p>The type of the feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>item</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   item
+             * <!-- -->
+             * </li>
+             * <li><p>user</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   user
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>item</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -284,9 +321,15 @@ public class CreateFunctionResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFunctionResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionResourceRequest</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Features")
-        private java.util.List < Features> features;
+        private java.util.List<Features> features;
 
         private Input(Builder builder) {
             this.features = builder.features;
@@ -303,17 +346,24 @@ public class CreateFunctionResourceRequest extends Request {
         /**
          * @return features
          */
-        public java.util.List < Features> getFeatures() {
+        public java.util.List<Features> getFeatures() {
             return this.features;
         }
 
         public static final class Builder {
-            private java.util.List < Features> features; 
+            private java.util.List<Features> features; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.features = model.features;
+            } 
 
             /**
-             * The input features.
+             * <p>The input features.</p>
              */
-            public Builder features(java.util.List < Features> features) {
+            public Builder features(java.util.List<Features> features) {
                 this.features = features;
                 return this;
             }
@@ -325,6 +375,12 @@ public class CreateFunctionResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFunctionResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionResourceRequest</p>
+     */
     public static class Generators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Generator")
         private String generator;
@@ -375,59 +431,64 @@ public class CreateFunctionResourceRequest extends Request {
             private Input input; 
             private String output; 
 
+            private Builder() {
+            } 
+
+            private Builder(Generators model) {
+                this.generator = model.generator;
+                this.input = model.input;
+                this.output = model.output;
+            } 
+
             /**
-             * The type of the feature generator.
-             * <p>
+             * <p>The type of the feature generator.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>lookup</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   lookup
+             * <!-- -->
+             * </li>
+             * <li><p>sequence</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>overlap</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   sequence
+             * <!-- -->
+             * </li>
+             * <li><p>raw</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>combo</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   overlap
+             * <!-- -->
+             * </li>
+             * <li><p>id</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   raw
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   combo
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   id
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder generator(String generator) {
                 this.generator = generator;
@@ -435,7 +496,7 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * The input.
+             * <p>The input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -443,7 +504,10 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * The name of the output feature.
+             * <p>The name of the output feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id_feature</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -457,12 +521,18 @@ public class CreateFunctionResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFunctionResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionResourceRequest</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Generators")
-        private java.util.List < Generators> generators;
+        private java.util.List<Generators> generators;
 
         private Data(Builder builder) {
             this.content = builder.content;
@@ -487,16 +557,27 @@ public class CreateFunctionResourceRequest extends Request {
         /**
          * @return generators
          */
-        public java.util.List < Generators> getGenerators() {
+        public java.util.List<Generators> getGenerators() {
             return this.generators;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.List < Generators> generators; 
+            private java.util.List<Generators> generators; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.generators = model.generators;
+            } 
 
             /**
-             * The content of the file that corresponds to a resource of the raw_file type.
+             * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;abc&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -504,9 +585,9 @@ public class CreateFunctionResourceRequest extends Request {
             }
 
             /**
-             * The feature generators that correspond to resources of the feature_generator type.
+             * <p>The feature generators that correspond to resources of the feature_generator type.</p>
              */
-            public Builder generators(java.util.List < Generators> generators) {
+            public Builder generators(java.util.List<Generators> generators) {
                 this.generators = generators;
                 return this;
             }

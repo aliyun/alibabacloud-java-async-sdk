@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionInstanceRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionInstanceRequest</p>
@@ -46,7 +52,7 @@ public class GetFunctionInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +104,11 @@ public class GetFunctionInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150057101</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +117,11 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -116,7 +130,11 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr_test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -125,12 +143,15 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * Specifies the richness of returned information. Valid values:
-         * <p>
+         * <p>Specifies the richness of returned information. Valid values:</p>
+         * <ul>
+         * <li>simple: displays only the basic information.</li>
+         * <li>normal: displays information such as createParameters and cron. This is the default value.</li>
+         * <li>detail: returns the details of the training task.</li>
+         * </ul>
          * 
-         * *   simple: displays only the basic information.
-         * *   normal: displays information such as createParameters and cron. This is the default value.
-         * *   detail: returns the details of the training task.
+         * <strong>example:</strong>
+         * <p>detail</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);

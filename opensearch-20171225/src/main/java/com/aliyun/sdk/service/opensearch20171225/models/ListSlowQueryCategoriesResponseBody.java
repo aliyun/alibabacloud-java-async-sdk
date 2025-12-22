@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSlowQueryCategoriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSlowQueryCategoriesResponseBody</p>
@@ -30,6 +36,10 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSlowQueryCategoriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4406F40B-A0A2-9D5D-531F-3B6936567584</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSlowQueryCategoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlowQueryCategoriesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("analyzeStatus")
         private String analyzeStatus;
@@ -120,15 +147,27 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             private Integer end; 
             private Integer start; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.analyzeStatus = model.analyzeStatus;
+                this.end = model.end;
+                this.start = model.start;
+            } 
+
             /**
-             * The status of the analysis. Valid values:
-             * <p>
+             * <p>The status of the analysis. Valid values:</p>
+             * <ul>
+             * <li>PENDING: preparing</li>
+             * <li>SUCCESS: succeeded</li>
+             * <li>RUNNING: running</li>
+             * <li>FAILED: failed</li>
+             * <li>N/A: unknown</li>
+             * </ul>
              * 
-             * *   PENDING: preparing
-             * *   SUCCESS: succeeded
-             * *   RUNNING: running
-             * *   FAILED: failed
-             * *   N/A: unknown
+             * <strong>example:</strong>
+             * <p>&quot;PENDING&quot;</p>
              */
             public Builder analyzeStatus(String analyzeStatus) {
                 this.analyzeStatus = analyzeStatus;
@@ -136,7 +175,10 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the end of the time range to query.
+             * <p>The timestamp that indicates the end of the time range to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589990340</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -144,7 +186,10 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the beginning of the time range to query.
+             * <p>The timestamp that indicates the beginning of the time range to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589986800</p>
              */
             public Builder start(Integer start) {
                 this.start = start;

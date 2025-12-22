@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseSortScriptRequest} extends {@link RequestModel}
  *
  * <p>ReleaseSortScriptRequest</p>
@@ -41,7 +47,7 @@ public class ReleaseSortScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,11 @@ public class ReleaseSortScriptRequest extends Request {
         } 
 
         /**
-         * \"\"1234\"\"
+         * <p>&quot;&quot;1234&quot;&quot;</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;1234&quot;&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +103,11 @@ public class ReleaseSortScriptRequest extends Request {
         }
 
         /**
-         * \"\"test\"\"
+         * <p>&quot;&quot;test&quot;&quot;</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;test&quot;&quot;</p>
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -102,7 +116,11 @@ public class ReleaseSortScriptRequest extends Request {
         }
 
         /**
-         * \"\"12345\"\"
+         * <p>&quot;&quot;12345&quot;&quot;</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;12345&quot;&quot;</p>
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);

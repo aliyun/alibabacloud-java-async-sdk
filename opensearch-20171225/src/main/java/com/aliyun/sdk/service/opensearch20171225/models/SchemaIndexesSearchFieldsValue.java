@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SchemaIndexesSearchFieldsValue} extends {@link TeaModel}
  *
  * <p>SchemaIndexesSearchFieldsValue</p>
@@ -21,7 +27,7 @@ public class SchemaIndexesSearchFieldsValue extends TeaModel {
     private String analyzerGeneration;
 
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < String > fields;
+    private java.util.List<String> fields;
 
     @com.aliyun.core.annotation.NameInMap("label")
     private String label;
@@ -40,6 +46,10 @@ public class SchemaIndexesSearchFieldsValue extends TeaModel {
 
     public static SchemaIndexesSearchFieldsValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -66,7 +76,7 @@ public class SchemaIndexesSearchFieldsValue extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < String > getFields() {
+    public java.util.List<String> getFields() {
         return this.fields;
     }
 
@@ -81,8 +91,19 @@ public class SchemaIndexesSearchFieldsValue extends TeaModel {
         private String analyzer; 
         private String analyzerType; 
         private String analyzerGeneration; 
-        private java.util.List < String > fields; 
+        private java.util.List<String> fields; 
         private String label; 
+
+        private Builder() {
+        } 
+
+        private Builder(SchemaIndexesSearchFieldsValue model) {
+            this.analyzer = model.analyzer;
+            this.analyzerType = model.analyzerType;
+            this.analyzerGeneration = model.analyzerGeneration;
+            this.fields = model.fields;
+            this.label = model.label;
+        } 
 
         /**
          * analyzer.
@@ -111,7 +132,7 @@ public class SchemaIndexesSearchFieldsValue extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < String > fields) {
+        public Builder fields(java.util.List<String> fields) {
             this.fields = fields;
             return this;
         }

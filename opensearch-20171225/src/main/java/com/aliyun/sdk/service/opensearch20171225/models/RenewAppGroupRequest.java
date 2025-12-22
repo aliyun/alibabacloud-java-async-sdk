@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewAppGroupRequest} extends {@link RequestModel}
  *
  * <p>RenewAppGroupRequest</p>
@@ -39,7 +45,7 @@ public class RenewAppGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,11 @@ public class RenewAppGroupRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -91,7 +101,7 @@ public class RenewAppGroupRequest extends Request {
         }
 
         /**
-         * The renewal request body.
+         * <p>The renewal request body.</p>
          */
         public Builder body(PrepayOrderInfo body) {
             this.putBodyParameter("body", body);
@@ -100,7 +110,10 @@ public class RenewAppGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74db41d8cd3c784209093aa76afbe89e</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

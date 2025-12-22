@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSummariesRequest} extends {@link RequestModel}
  *
  * <p>UpdateSummariesRequest</p>
@@ -23,7 +29,7 @@ public class UpdateSummariesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < UpdateSummariesRequestBody> body;
+    private java.util.List<UpdateSummariesRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -45,7 +51,7 @@ public class UpdateSummariesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,7 @@ public class UpdateSummariesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < UpdateSummariesRequestBody> getBody() {
+    public java.util.List<UpdateSummariesRequestBody> getBody() {
         return this.body;
     }
 
@@ -81,7 +87,7 @@ public class UpdateSummariesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateSummariesRequest, Builder> {
         private String appGroupIdentity; 
         private Integer appId; 
-        private java.util.List < UpdateSummariesRequestBody> body; 
+        private java.util.List<UpdateSummariesRequestBody> body; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -97,7 +103,11 @@ public class UpdateSummariesRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +116,11 @@ public class UpdateSummariesRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * <p>The version number of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -115,16 +129,19 @@ public class UpdateSummariesRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
-        public Builder body(java.util.List < UpdateSummariesRequestBody> body) {
+        public Builder body(java.util.List<UpdateSummariesRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         /**
-         * Specifies whether the request is a dry run.
+         * <p>Specifies whether the request is a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -139,6 +156,12 @@ public class UpdateSummariesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSummariesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSummariesRequest</p>
+     */
     public static class UpdateSummariesRequestBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("element")
         private String element;
@@ -213,8 +236,22 @@ public class UpdateSummariesRequest extends Request {
             private Integer len; 
             private Integer snippet; 
 
+            private Builder() {
+            } 
+
+            private Builder(UpdateSummariesRequestBody model) {
+                this.element = model.element;
+                this.ellipsis = model.ellipsis;
+                this.field = model.field;
+                this.len = model.len;
+                this.snippet = model.snippet;
+            } 
+
             /**
-             * The HTML tag that is used to highlight terms in red.
+             * <p>The HTML tag that is used to highlight terms in red.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;em&quot;</p>
              */
             public Builder element(String element) {
                 this.element = element;
@@ -222,7 +259,10 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * The connector that is used to connect segments.
+             * <p>The connector that is used to connect segments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;...&quot;</p>
              */
             public Builder ellipsis(String ellipsis) {
                 this.ellipsis = ellipsis;
@@ -230,7 +270,10 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * The field.
+             * <p>The field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;title&quot;</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -238,7 +281,10 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * The length of a segment.
+             * <p>The length of a segment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder len(Integer len) {
                 this.len = len;
@@ -246,7 +292,10 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * The number of segments.
+             * <p>The number of segments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder snippet(Integer snippet) {
                 this.snippet = snippet;

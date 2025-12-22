@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInterventionDictionaryRequest} extends {@link RequestModel}
  *
  * <p>CreateInterventionDictionaryRequest</p>
@@ -43,7 +49,7 @@ public class CreateInterventionDictionaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -95,12 +101,15 @@ public class CreateInterventionDictionaryRequest extends Request {
         } 
 
         /**
-         * The type of the analyzer. Valid values:
-         * <p>
+         * <p>The type of the analyzer. Valid values:</p>
+         * <ul>
+         * <li>MODEL: model-based custom analyzer.</li>
+         * <li>SYSTEM: system analyzer.</li>
+         * <li>USER: custom analyzer.</li>
+         * </ul>
          * 
-         * *   MODEL: model-based custom analyzer.
-         * *   SYSTEM: system analyzer.
-         * *   USER: custom analyzer.
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder analyzerType(String analyzerType) {
             this.putBodyParameter("analyzerType", analyzerType);
@@ -109,7 +118,10 @@ public class CreateInterventionDictionaryRequest extends Request {
         }
 
         /**
-         * The name of the intervention dictionary.
+         * <p>The name of the intervention dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ner_dict_ec</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -118,21 +130,24 @@ public class CreateInterventionDictionaryRequest extends Request {
         }
 
         /**
-         * The type of the intervention dictionary. Valid values:
-         * <p>
+         * <p>The type of the intervention dictionary. Valid values:</p>
+         * <ul>
+         * <li>stopword: an intervention dictionary for stop word filtering.</li>
+         * <li>synonym: an intervention dictionary for synonym configuration.</li>
+         * <li>correction: an intervention dictionary for spelling correction.</li>
+         * <li>category_prediction: an intervention dictionary for category prediction.</li>
+         * <li>ner: an intervention dictionary for named entity recognition (NER).</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
+         * <li>suggest_allowlist: a drop-down suggestion whitelist.</li>
+         * <li>suggest_denylist: a drop-down suggestion blacklist.</li>
+         * <li>hot_allowlist: a top search whitelist.</li>
+         * <li>hot_denylist: a top search blacklist.</li>
+         * <li>hint_allowlist: a hint whitelist.</li>
+         * <li>hint_denylist: a hint blacklist.</li>
+         * </ul>
          * 
-         * *   stopword: an intervention dictionary for stop word filtering.
-         * *   synonym: an intervention dictionary for synonym configuration.
-         * *   correction: an intervention dictionary for spelling correction.
-         * *   category_prediction: an intervention dictionary for category prediction.
-         * *   ner: an intervention dictionary for named entity recognition (NER).
-         * *   term_weighting: an intervention dictionary for term weight analysis.
-         * *   suggest_allowlist: a drop-down suggestion whitelist.
-         * *   suggest_denylist: a drop-down suggestion blacklist.
-         * *   hot_allowlist: a top search whitelist.
-         * *   hot_denylist: a top search blacklist.
-         * *   hint_allowlist: a hint whitelist.
-         * *   hint_denylist: a hint blacklist.
+         * <strong>example:</strong>
+         * <p>ner</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -141,13 +156,15 @@ public class CreateInterventionDictionaryRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

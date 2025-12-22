@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeAppResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33477D76-C380-1D84-A4AD-043F52876CB1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,10 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the version.
+         * <p>The version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +94,12 @@ public class DescribeAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxQueryClauseLength")
         private Integer maxQueryClauseLength;
@@ -108,8 +138,19 @@ public class DescribeAppResponseBody extends TeaModel {
             private Integer maxQueryClauseLength; 
             private Integer maxTimeoutMS; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.maxQueryClauseLength = model.maxQueryClauseLength;
+                this.maxTimeoutMS = model.maxTimeoutMS;
+            } 
+
             /**
-             * maxQueryClauseLength.
+             * <p>The maximum length of the query clause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder maxQueryClauseLength(Integer maxQueryClauseLength) {
                 this.maxQueryClauseLength = maxQueryClauseLength;
@@ -117,7 +158,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * maxTimeoutMS.
+             * <p>The timeout period. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>750</p>
              */
             public Builder maxTimeoutMS(Integer maxTimeoutMS) {
                 this.maxTimeoutMS = maxTimeoutMS;
@@ -131,18 +175,24 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class DataSources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fields")
-        private java.util.List < java.util.Map<String, ?>> fields;
+        private java.util.List<java.util.Map<String, ?>> fields;
 
         @com.aliyun.core.annotation.NameInMap("keyField")
         private String keyField;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.Map < String, ? > parameters;
+        private java.util.Map<String, ?> parameters;
 
         @com.aliyun.core.annotation.NameInMap("plugins")
-        private java.util.Map < String, ? > plugins;
+        private java.util.Map<String, ?> plugins;
 
         @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
@@ -174,7 +224,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < java.util.Map<String, ?>> getFields() {
+        public java.util.List<java.util.Map<String, ?>> getFields() {
             return this.fields;
         }
 
@@ -188,14 +238,14 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
         /**
          * @return plugins
          */
-        public java.util.Map < String, ? > getPlugins() {
+        public java.util.Map<String, ?> getPlugins() {
             return this.plugins;
         }
 
@@ -221,24 +271,40 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> fields; 
+            private java.util.List<java.util.Map<String, ?>> fields; 
             private String keyField; 
-            private java.util.Map < String, ? > parameters; 
-            private java.util.Map < String, ? > plugins; 
+            private java.util.Map<String, ?> parameters; 
+            private java.util.Map<String, ?> plugins; 
             private String schemaName; 
             private String tableName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSources model) {
+                this.fields = model.fields;
+                this.keyField = model.keyField;
+                this.parameters = model.parameters;
+                this.plugins = model.plugins;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+                this.type = model.type;
+            } 
+
             /**
-             * fields.
+             * <p>The information about field mappings.</p>
              */
-            public Builder fields(java.util.List < java.util.Map<String, ?>> fields) {
+            public Builder fields(java.util.List<java.util.Map<String, ?>> fields) {
                 this.fields = fields;
                 return this;
             }
 
             /**
-             * keyField.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder keyField(String keyField) {
                 this.keyField = keyField;
@@ -246,23 +312,61 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The information about the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;instanceId&quot;: &quot;rds-instance-id&quot;,
+             *   &quot;dbName&quot;: &quot;my_db&quot;,
+             *   &quot;dbTableName&quot;: &quot;my_table&quot;,
+             *   &quot;dbUser&quot;: &quot;my&quot;,
+             *   &quot;dbPassword&quot;: &quot;my_passwd&quot;,
+             *   &quot;filter&quot;:&quot;&quot;,
+             *   &quot;autoSync&quot;: true
+             * }</p>
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }
 
             /**
-             * plugins.
+             * <p>The plug-ins that are used for data processing.</p>
+             * <p>name:</p>
+             * <ul>
+             * <li>JsonKeyValueExtractor</li>
+             * <li>MultiValueSpliter</li>
+             * <li>KeyValueExtractor</li>
+             * <li>StringCatenateExtractor</li>
+             * <li>HTMLTagRemover</li>
+             * </ul>
+             * <p>parameters:</p>
+             * <ul>
+             * <li>JsonKeyValueExtractor</li>
+             * <li>MultiValueSpliter</li>
+             * <li>KeyValueExtractor</li>
+             * <li>StringCatenateExtractor</li>
+             * <li>HTMLTagRemover</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;name&quot;: &quot;JsonKeyValueExtractor&quot;,
+             *   &quot;parameters&quot;: {
+             *   &quot;key&quot;: &quot;my_field&quot;
+             * }
+             * }</p>
              */
-            public Builder plugins(java.util.Map < String, ? > plugins) {
+            public Builder plugins(java.util.Map<String, ?> plugins) {
                 this.plugins = plugins;
                 return this;
             }
 
             /**
-             * schemaName.
+             * <p>The name of the wide table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -270,7 +374,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * <p>The name of the table in the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -278,7 +385,16 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>rds</li>
+             * <li>odps</li>
+             * <li>opensearch</li>
+             * <li>polardb</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -292,15 +408,21 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Functions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("algo")
-        private java.util.List < String > algo;
+        private java.util.List<String> algo;
 
         @com.aliyun.core.annotation.NameInMap("qp")
-        private java.util.List < String > qp;
+        private java.util.List<String> qp;
 
         @com.aliyun.core.annotation.NameInMap("service")
-        private java.util.List < String > service;
+        private java.util.List<String> service;
 
         private Functions(Builder builder) {
             this.algo = builder.algo;
@@ -319,49 +441,67 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return algo
          */
-        public java.util.List < String > getAlgo() {
+        public java.util.List<String> getAlgo() {
             return this.algo;
         }
 
         /**
          * @return qp
          */
-        public java.util.List < String > getQp() {
+        public java.util.List<String> getQp() {
             return this.qp;
         }
 
         /**
          * @return service
          */
-        public java.util.List < String > getService() {
+        public java.util.List<String> getService() {
             return this.service;
         }
 
         public static final class Builder {
-            private java.util.List < String > algo; 
-            private java.util.List < String > qp; 
-            private java.util.List < String > service; 
+            private java.util.List<String> algo; 
+            private java.util.List<String> qp; 
+            private java.util.List<String> service; 
+
+            private Builder() {
+            } 
+
+            private Builder(Functions model) {
+                this.algo = model.algo;
+                this.qp = model.qp;
+                this.service = model.service;
+            } 
 
             /**
-             * Algorithm structure
+             * <p>The structure of the algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder algo(java.util.List < String > algo) {
+            public Builder algo(java.util.List<String> algo) {
                 this.algo = algo;
                 return this;
             }
 
             /**
-             * Queryprocessor description
+             * <p>The information about the layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder qp(java.util.List < String > qp) {
+            public Builder qp(java.util.List<String> qp) {
                 this.qp = qp;
                 return this;
             }
 
             /**
-             * Function description
+             * <p>The description of each feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder service(java.util.List < String > service) {
+            public Builder service(java.util.List<String> service) {
                 this.service = service;
                 return this;
             }
@@ -373,6 +513,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -423,8 +569,22 @@ public class DescribeAppResponseBody extends TeaModel {
             private Functions functions; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.category = model.category;
+                this.functions = model.functions;
+                this.name = model.name;
+            } 
+
             /**
-             * The category. By default, this parameter is left empty.
+             * <p>The type of the edition. Valid values: standard, advance, and enhanced. A value of standard indicates a standard edition. A value of advance indicates an advanced edition which is of an old version. New version is not supported for this edition. A value of enhanced indicates an advanced edition which is of a new version.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -432,7 +592,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * search functions
+             * <p>The search results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder functions(Functions functions) {
                 this.functions = functions;
@@ -440,7 +603,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name
+             * <p>The name (in English).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,6 +620,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class FirstRanks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -528,8 +700,22 @@ public class DescribeAppResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(FirstRanks model) {
+                this.active = model.active;
+                this.description = model.description;
+                this.meta = model.meta;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * active.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -537,7 +723,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -545,7 +734,17 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * <p>The information about the expression. The information can be of the array or string type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String :&quot;random()*100+now()&quot;;
+             * Array: [
+             *     {
+             *       &quot;attribute&quot;: &quot;static_bm25()&quot;,
+             *       &quot;arg&quot;: &quot;&quot;,
+             *       &quot;weight&quot;: 10
+             *     }
+             *   ]</p>
              */
             public Builder meta(Object meta) {
                 this.meta = meta;
@@ -553,7 +752,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name
+             * <p>The name of the rough sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -561,7 +763,11 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The expression type. Valid values:</p>
+             * <p>STRUCT: The content of the expression is a structure. STRING (default): custom formula.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -575,6 +781,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class QueryProcessors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -586,13 +798,13 @@ public class DescribeAppResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("indexes")
-        private java.util.List < String > indexes;
+        private java.util.List<String> indexes;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("processors")
-        private java.util.List < java.util.Map<String, ?>> processors;
+        private java.util.List<java.util.Map<String, ?>> processors;
 
         private QueryProcessors(Builder builder) {
             this.active = builder.active;
@@ -635,7 +847,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return indexes
          */
-        public java.util.List < String > getIndexes() {
+        public java.util.List<String> getIndexes() {
             return this.indexes;
         }
 
@@ -649,7 +861,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return processors
          */
-        public java.util.List < java.util.Map<String, ?>> getProcessors() {
+        public java.util.List<java.util.Map<String, ?>> getProcessors() {
             return this.processors;
         }
 
@@ -657,12 +869,27 @@ public class DescribeAppResponseBody extends TeaModel {
             private Boolean active; 
             private String category; 
             private String domain; 
-            private java.util.List < String > indexes; 
+            private java.util.List<String> indexes; 
             private String name; 
-            private java.util.List < java.util.Map<String, ?>> processors; 
+            private java.util.List<java.util.Map<String, ?>> processors; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryProcessors model) {
+                this.active = model.active;
+                this.category = model.category;
+                this.domain = model.domain;
+                this.indexes = model.indexes;
+                this.name = model.name;
+                this.processors = model.processors;
+            } 
 
             /**
-             * active.
+             * <p>Indicates whether the rule is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -670,7 +897,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The category. By default, this parameter is left empty.
+             * <p>The industry category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -678,7 +908,15 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * <p>The industry type. Valid values:</p>
+             * <ul>
+             * <li>GENERAL</li>
+             * <li>ECOMMERCE</li>
+             * <li>IT_CONTENT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -686,15 +924,18 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * indexes.
+             * <p>Then index range.</p>
              */
-            public Builder indexes(java.util.List < String > indexes) {
+            public Builder indexes(java.util.List<String> indexes) {
                 this.indexes = indexes;
                 return this;
             }
 
             /**
-             * The name
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -702,9 +943,9 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * processors.
+             * <p>The features.</p>
              */
-            public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
+            public Builder processors(java.util.List<java.util.Map<String, ?>> processors) {
                 this.processors = processors;
                 return this;
             }
@@ -716,6 +957,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
@@ -778,8 +1025,21 @@ public class DescribeAppResponseBody extends TeaModel {
             private Integer qps; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.computeResource = model.computeResource;
+                this.docSize = model.docSize;
+                this.qps = model.qps;
+                this.spec = model.spec;
+            } 
+
             /**
-             * The computing resources. Unit: logical computing units (LCUs).
+             * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -787,7 +1047,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -795,7 +1058,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The number of search requests per second. You are charged based on the number of search requests per second in the earlier billing model.
+             * <p>The number of search requests per second. You are charged based on the number of search requests per second in the earlier billing model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder qps(Integer qps) {
                 this.qps = qps;
@@ -803,16 +1069,19 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the application. Valid values:
-             * <p>
+             * <p>The specifications. Valid values:</p>
+             * <ul>
+             * <li>opensearch.share.junior: basic</li>
+             * <li>opensearch.share.common: shared general-purpose</li>
+             * <li>opensearch.share.compute: shared computing</li>
+             * <li>opensearch.share.storage: shared storage</li>
+             * <li>opensearch.private.common: exclusive general-purpose</li>
+             * <li>opensearch.private.compute: exclusive computing</li>
+             * <li>opensearch.private.storage: exclusive storage</li>
+             * </ul>
              * 
-             * *   opensearch.share.junior: basic
-             * *   opensearch.share.common: shared general-purpose
-             * *   opensearch.share.compute: shared computing
-             * *   opensearch.share.storage: shared storage
-             * *   opensearch.private.common: exclusive general-purpose
-             * *   opensearch.private.compute: exclusive computing
-             * *   opensearch.private.storage: exclusive storage
+             * <strong>example:</strong>
+             * <p>opensearch.share.common</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -826,6 +1095,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class IndexSortConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("direction")
         private String direction;
@@ -864,8 +1139,23 @@ public class DescribeAppResponseBody extends TeaModel {
             private String direction; 
             private String field; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndexSortConfig model) {
+                this.direction = model.direction;
+                this.field = model.field;
+            } 
+
             /**
-             * direction.
+             * <p>The sort method. Valid values:</p>
+             * <ul>
+             * <li>ASC</li>
+             * <li>DESC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DESC</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -873,7 +1163,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * field.
+             * <p>The sort field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field1</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -887,12 +1180,18 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Indexes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filterFields")
-        private java.util.List < String > filterFields;
+        private java.util.List<String> filterFields;
 
         @com.aliyun.core.annotation.NameInMap("searchFields")
-        private java.util.Map < String, ? > searchFields;
+        private java.util.Map<String, ?> searchFields;
 
         private Indexes(Builder builder) {
             this.filterFields = builder.filterFields;
@@ -910,33 +1209,47 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return filterFields
          */
-        public java.util.List < String > getFilterFields() {
+        public java.util.List<String> getFilterFields() {
             return this.filterFields;
         }
 
         /**
          * @return searchFields
          */
-        public java.util.Map < String, ? > getSearchFields() {
+        public java.util.Map<String, ?> getSearchFields() {
             return this.searchFields;
         }
 
         public static final class Builder {
-            private java.util.List < String > filterFields; 
-            private java.util.Map < String, ? > searchFields; 
+            private java.util.List<String> filterFields; 
+            private java.util.Map<String, ?> searchFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Indexes model) {
+                this.filterFields = model.filterFields;
+                this.searchFields = model.searchFields;
+            } 
 
             /**
-             * filterFields.
+             * <p>The attribute fields.</p>
              */
-            public Builder filterFields(java.util.List < String > filterFields) {
+            public Builder filterFields(java.util.List<String> filterFields) {
                 this.filterFields = filterFields;
                 return this;
             }
 
             /**
-             * searchFields.
+             * <p>The index fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fields&quot;: [&quot;title&quot;],
+             *   &quot;analyzer&quot;: &quot;chn_standard&quot;
+             * }</p>
              */
-            public Builder searchFields(java.util.Map < String, ? > searchFields) {
+            public Builder searchFields(java.util.Map<String, ?> searchFields) {
                 this.searchFields = searchFields;
                 return this;
             }
@@ -948,6 +1261,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class TtlField extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -986,8 +1305,19 @@ public class DescribeAppResponseBody extends TeaModel {
             private String name; 
             private Long ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(TtlField model) {
+                this.name = model.name;
+                this.ttl = model.ttl;
+            } 
+
             /**
-             * The name
+             * <p>The document time field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -995,7 +1325,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * ttl.
+             * <p>The TTL. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -1009,9 +1342,15 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexSortConfig")
-        private java.util.List < IndexSortConfig> indexSortConfig;
+        private java.util.List<IndexSortConfig> indexSortConfig;
 
         @com.aliyun.core.annotation.NameInMap("indexes")
         private Indexes indexes;
@@ -1023,13 +1362,13 @@ public class DescribeAppResponseBody extends TeaModel {
         private String routeField;
 
         @com.aliyun.core.annotation.NameInMap("routeFieldValues")
-        private java.util.List < String > routeFieldValues;
+        private java.util.List<String> routeFieldValues;
 
         @com.aliyun.core.annotation.NameInMap("secondRouteField")
         private String secondRouteField;
 
         @com.aliyun.core.annotation.NameInMap("tables")
-        private java.util.Map < String, ? > tables;
+        private java.util.Map<String, ?> tables;
 
         @com.aliyun.core.annotation.NameInMap("ttlField")
         private TtlField ttlField;
@@ -1056,7 +1395,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return indexSortConfig
          */
-        public java.util.List < IndexSortConfig> getIndexSortConfig() {
+        public java.util.List<IndexSortConfig> getIndexSortConfig() {
             return this.indexSortConfig;
         }
 
@@ -1084,7 +1423,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return routeFieldValues
          */
-        public java.util.List < String > getRouteFieldValues() {
+        public java.util.List<String> getRouteFieldValues() {
             return this.routeFieldValues;
         }
 
@@ -1098,7 +1437,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.Map < String, ? > getTables() {
+        public java.util.Map<String, ?> getTables() {
             return this.tables;
         }
 
@@ -1110,25 +1449,39 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < IndexSortConfig> indexSortConfig; 
+            private java.util.List<IndexSortConfig> indexSortConfig; 
             private Indexes indexes; 
             private String name; 
             private String routeField; 
-            private java.util.List < String > routeFieldValues; 
+            private java.util.List<String> routeFieldValues; 
             private String secondRouteField; 
-            private java.util.Map < String, ? > tables; 
+            private java.util.Map<String, ?> tables; 
             private TtlField ttlField; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schema model) {
+                this.indexSortConfig = model.indexSortConfig;
+                this.indexes = model.indexes;
+                this.name = model.name;
+                this.routeField = model.routeField;
+                this.routeFieldValues = model.routeFieldValues;
+                this.secondRouteField = model.secondRouteField;
+                this.tables = model.tables;
+                this.ttlField = model.ttlField;
+            } 
+
             /**
-             * indexSortConfig.
+             * <p>The sort configurations.</p>
              */
-            public Builder indexSortConfig(java.util.List < IndexSortConfig> indexSortConfig) {
+            public Builder indexSortConfig(java.util.List<IndexSortConfig> indexSortConfig) {
                 this.indexSortConfig = indexSortConfig;
                 return this;
             }
 
             /**
-             * indexes.
+             * <p>The index schema.</p>
              */
             public Builder indexes(Indexes indexes) {
                 this.indexes = indexes;
@@ -1136,7 +1489,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name
+             * <p>The name of the wide table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1144,7 +1500,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * routeField.
+             * <p>The name of the level-1 routing field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field1</p>
              */
             public Builder routeField(String routeField) {
                 this.routeField = routeField;
@@ -1152,15 +1511,18 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * routeFieldValues.
+             * <p>The hot values of the level-1 routing field.</p>
              */
-            public Builder routeFieldValues(java.util.List < String > routeFieldValues) {
+            public Builder routeFieldValues(java.util.List<String> routeFieldValues) {
                 this.routeFieldValues = routeFieldValues;
                 return this;
             }
 
             /**
-             * secondRouteField.
+             * <p>The name of the level-2 routing field. This parameter takes effect only when the routeFieldValues parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field2</p>
              */
             public Builder secondRouteField(String secondRouteField) {
                 this.secondRouteField = secondRouteField;
@@ -1168,15 +1530,48 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * tables.
+             * <p>The table schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;primaryTable&quot;: true,
+             *     &quot;name&quot;: &quot;main&quot;,
+             *     &quot;fields&quot;: {
+             *         &quot;id&quot;: {
+             *             &quot;name&quot;: &quot;id&quot;,
+             *             &quot;type&quot;: &quot;LITERAL&quot;,
+             *             &quot;primaryKey&quot;: true
+             *         },
+             *         &quot;title&quot;: {
+             *             &quot;name&quot;: &quot;title&quot;,
+             *             &quot;type&quot;: &quot;TEXT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;buy&quot;: {
+             *             &quot;name&quot;: &quot;buy&quot;,
+             *             &quot;type&quot;: &quot;INT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;cate_id&quot;: {
+             *             &quot;name&quot;: &quot;cate_id&quot;,
+             *             &quot;type&quot;: &quot;INT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;cate_name&quot;: {
+             *             &quot;name&quot;: &quot;cate_name&quot;,
+             *             &quot;type&quot;: &quot;LITERAL&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         }
+             *     }
+             * }</p>
              */
-            public Builder tables(java.util.Map < String, ? > tables) {
+            public Builder tables(java.util.Map<String, ?> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * ttlField.
+             * <p>The document clearing configurations.</p>
              */
             public Builder ttlField(TtlField ttlField) {
                 this.ttlField = ttlField;
@@ -1190,6 +1585,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class SchemasIndexSortConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("direction")
         private String direction;
@@ -1228,8 +1629,23 @@ public class DescribeAppResponseBody extends TeaModel {
             private String direction; 
             private String field; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemasIndexSortConfig model) {
+                this.direction = model.direction;
+                this.field = model.field;
+            } 
+
             /**
-             * direction.
+             * <p>The sort method. Valid values:</p>
+             * <ul>
+             * <li>ASC</li>
+             * <li>DESC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DESC</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -1237,7 +1653,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * field.
+             * <p>The sort field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fIeld1</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -1251,12 +1670,18 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class SchemasIndexes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filterFields")
-        private java.util.List < String > filterFields;
+        private java.util.List<String> filterFields;
 
         @com.aliyun.core.annotation.NameInMap("searchFields")
-        private java.util.Map < String, ? > searchFields;
+        private java.util.Map<String, ?> searchFields;
 
         private SchemasIndexes(Builder builder) {
             this.filterFields = builder.filterFields;
@@ -1274,33 +1699,47 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return filterFields
          */
-        public java.util.List < String > getFilterFields() {
+        public java.util.List<String> getFilterFields() {
             return this.filterFields;
         }
 
         /**
          * @return searchFields
          */
-        public java.util.Map < String, ? > getSearchFields() {
+        public java.util.Map<String, ?> getSearchFields() {
             return this.searchFields;
         }
 
         public static final class Builder {
-            private java.util.List < String > filterFields; 
-            private java.util.Map < String, ? > searchFields; 
+            private java.util.List<String> filterFields; 
+            private java.util.Map<String, ?> searchFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchemasIndexes model) {
+                this.filterFields = model.filterFields;
+                this.searchFields = model.searchFields;
+            } 
 
             /**
-             * filterFields.
+             * <p>The attribute fields.</p>
              */
-            public Builder filterFields(java.util.List < String > filterFields) {
+            public Builder filterFields(java.util.List<String> filterFields) {
                 this.filterFields = filterFields;
                 return this;
             }
 
             /**
-             * searchFields.
+             * <p>The index fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;fields&quot;: [&quot;title&quot;],
+             *   &quot;analyzer&quot;: &quot;chn_standard&quot;
+             * }</p>
              */
-            public Builder searchFields(java.util.Map < String, ? > searchFields) {
+            public Builder searchFields(java.util.Map<String, ?> searchFields) {
                 this.searchFields = searchFields;
                 return this;
             }
@@ -1312,6 +1751,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class SchemasTtlField extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1350,8 +1795,19 @@ public class DescribeAppResponseBody extends TeaModel {
             private String name; 
             private Long ttl; 
 
+            private Builder() {
+            } 
+
+            private Builder(SchemasTtlField model) {
+                this.name = model.name;
+                this.ttl = model.ttl;
+            } 
+
             /**
-             * The name
+             * <p>The document time field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fIeld1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1359,7 +1815,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * ttl.
+             * <p>The TTL. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -1373,9 +1832,15 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("indexSortConfig")
-        private java.util.List < SchemasIndexSortConfig> indexSortConfig;
+        private java.util.List<SchemasIndexSortConfig> indexSortConfig;
 
         @com.aliyun.core.annotation.NameInMap("indexes")
         private SchemasIndexes indexes;
@@ -1387,13 +1852,13 @@ public class DescribeAppResponseBody extends TeaModel {
         private String routeField;
 
         @com.aliyun.core.annotation.NameInMap("routeFieldValues")
-        private java.util.List < String > routeFieldValues;
+        private java.util.List<String> routeFieldValues;
 
         @com.aliyun.core.annotation.NameInMap("secondRouteField")
         private String secondRouteField;
 
         @com.aliyun.core.annotation.NameInMap("tables")
-        private java.util.Map < String, ? > tables;
+        private java.util.Map<String, ?> tables;
 
         @com.aliyun.core.annotation.NameInMap("ttlField")
         private SchemasTtlField ttlField;
@@ -1420,7 +1885,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return indexSortConfig
          */
-        public java.util.List < SchemasIndexSortConfig> getIndexSortConfig() {
+        public java.util.List<SchemasIndexSortConfig> getIndexSortConfig() {
             return this.indexSortConfig;
         }
 
@@ -1448,7 +1913,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return routeFieldValues
          */
-        public java.util.List < String > getRouteFieldValues() {
+        public java.util.List<String> getRouteFieldValues() {
             return this.routeFieldValues;
         }
 
@@ -1462,7 +1927,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.Map < String, ? > getTables() {
+        public java.util.Map<String, ?> getTables() {
             return this.tables;
         }
 
@@ -1474,25 +1939,39 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SchemasIndexSortConfig> indexSortConfig; 
+            private java.util.List<SchemasIndexSortConfig> indexSortConfig; 
             private SchemasIndexes indexes; 
             private String name; 
             private String routeField; 
-            private java.util.List < String > routeFieldValues; 
+            private java.util.List<String> routeFieldValues; 
             private String secondRouteField; 
-            private java.util.Map < String, ? > tables; 
+            private java.util.Map<String, ?> tables; 
             private SchemasTtlField ttlField; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schemas model) {
+                this.indexSortConfig = model.indexSortConfig;
+                this.indexes = model.indexes;
+                this.name = model.name;
+                this.routeField = model.routeField;
+                this.routeFieldValues = model.routeFieldValues;
+                this.secondRouteField = model.secondRouteField;
+                this.tables = model.tables;
+                this.ttlField = model.ttlField;
+            } 
+
             /**
-             * indexSortConfig.
+             * <p>The sort configurations.</p>
              */
-            public Builder indexSortConfig(java.util.List < SchemasIndexSortConfig> indexSortConfig) {
+            public Builder indexSortConfig(java.util.List<SchemasIndexSortConfig> indexSortConfig) {
                 this.indexSortConfig = indexSortConfig;
                 return this;
             }
 
             /**
-             * indexes.
+             * <p>The index schema.</p>
              */
             public Builder indexes(SchemasIndexes indexes) {
                 this.indexes = indexes;
@@ -1500,7 +1979,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name
+             * <p>The name of the wide table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1508,7 +1990,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * routeField.
+             * <p>The name of the level-1 routing field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field1</p>
              */
             public Builder routeField(String routeField) {
                 this.routeField = routeField;
@@ -1516,15 +2001,18 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * routeFieldValues.
+             * <p>The hot values of the level-1 routing field.</p>
              */
-            public Builder routeFieldValues(java.util.List < String > routeFieldValues) {
+            public Builder routeFieldValues(java.util.List<String> routeFieldValues) {
                 this.routeFieldValues = routeFieldValues;
                 return this;
             }
 
             /**
-             * secondRouteField.
+             * <p>The name of the level-2 routing field. This parameter takes effect only when the routeFieldValues parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field2</p>
              */
             public Builder secondRouteField(String secondRouteField) {
                 this.secondRouteField = secondRouteField;
@@ -1532,15 +2020,48 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * tables.
+             * <p>The table schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;primaryTable&quot;: true,
+             *     &quot;name&quot;: &quot;main&quot;,
+             *     &quot;fields&quot;: {
+             *         &quot;id&quot;: {
+             *             &quot;name&quot;: &quot;id&quot;,
+             *             &quot;type&quot;: &quot;LITERAL&quot;,
+             *             &quot;primaryKey&quot;: true
+             *         },
+             *         &quot;title&quot;: {
+             *             &quot;name&quot;: &quot;title&quot;,
+             *             &quot;type&quot;: &quot;TEXT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;buy&quot;: {
+             *             &quot;name&quot;: &quot;buy&quot;,
+             *             &quot;type&quot;: &quot;INT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;cate_id&quot;: {
+             *             &quot;name&quot;: &quot;cate_id&quot;,
+             *             &quot;type&quot;: &quot;INT&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         },
+             *         &quot;cate_name&quot;: {
+             *             &quot;name&quot;: &quot;cate_name&quot;,
+             *             &quot;type&quot;: &quot;LITERAL&quot;,
+             *             &quot;primaryKey&quot;: false
+             *         }
+             *     }
+             * }</p>
              */
-            public Builder tables(java.util.Map < String, ? > tables) {
+            public Builder tables(java.util.Map<String, ?> tables) {
                 this.tables = tables;
                 return this;
             }
 
             /**
-             * ttlField.
+             * <p>The document clearing configurations.</p>
              */
             public Builder ttlField(SchemasTtlField ttlField) {
                 this.ttlField = ttlField;
@@ -1554,6 +2075,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class SecondRanks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -1616,8 +2143,21 @@ public class DescribeAppResponseBody extends TeaModel {
             private Object meta; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecondRanks model) {
+                this.active = model.active;
+                this.description = model.description;
+                this.meta = model.meta;
+                this.name = model.name;
+            } 
+
             /**
-             * active.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -1625,7 +2165,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1633,7 +2176,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * <p>The fine sort expression. You can define an expression that contains fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;cate_id &gt; 0 and cate_id &lt; 1000&quot;</p>
              */
             public Builder meta(Object meta) {
                 this.meta = meta;
@@ -1641,7 +2187,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name
+             * <p>The name of the fine sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1655,6 +2204,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("element")
         private String element;
@@ -1729,8 +2284,22 @@ public class DescribeAppResponseBody extends TeaModel {
             private Integer len; 
             private String snippet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.element = model.element;
+                this.ellipsis = model.ellipsis;
+                this.field = model.field;
+                this.len = model.len;
+                this.snippet = model.snippet;
+            } 
+
             /**
-             * element.
+             * <p>The element that is used for highlighting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>em</p>
              */
             public Builder element(String element) {
                 this.element = element;
@@ -1738,7 +2307,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * ellipsis.
+             * <p>The connector that is used to connect segments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>...</p>
              */
             public Builder ellipsis(String ellipsis) {
                 this.ellipsis = ellipsis;
@@ -1746,7 +2318,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * field.
+             * <p>The field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field1</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -1754,7 +2329,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * len.
+             * <p>The length of the segment. Valid values: 1 to 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder len(Integer len) {
                 this.len = len;
@@ -1762,7 +2340,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * snippet.
+             * <p>The number of segments. Valid values: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder snippet(String snippet) {
                 this.snippet = snippet;
@@ -1776,9 +2357,15 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Summaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.List < Meta> meta;
+        private java.util.List<Meta> meta;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1799,7 +2386,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.List < Meta> getMeta() {
+        public java.util.List<Meta> getMeta() {
             return this.meta;
         }
 
@@ -1811,19 +2398,30 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Meta> meta; 
+            private java.util.List<Meta> meta; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Summaries model) {
+                this.meta = model.meta;
+                this.name = model.name;
+            } 
+
             /**
-             * meta.
+             * <p>The summary configurations.</p>
              */
-            public Builder meta(java.util.List < Meta> meta) {
+            public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
                 return this;
             }
 
             /**
-             * The name
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1837,6 +2435,12 @@ public class DescribeAppResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoSwitch")
         private Boolean autoSwitch;
@@ -1848,7 +2452,7 @@ public class DescribeAppResponseBody extends TeaModel {
         private String clusterName;
 
         @com.aliyun.core.annotation.NameInMap("dataSources")
-        private java.util.List < DataSources> dataSources;
+        private java.util.List<DataSources> dataSources;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -1857,16 +2461,16 @@ public class DescribeAppResponseBody extends TeaModel {
         private Domain domain;
 
         @com.aliyun.core.annotation.NameInMap("fetchFields")
-        private java.util.List < String > fetchFields;
+        private java.util.List<String> fetchFields;
 
         @com.aliyun.core.annotation.NameInMap("firstRanks")
-        private java.util.List < FirstRanks> firstRanks;
+        private java.util.List<FirstRanks> firstRanks;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("interpretations")
-        private java.util.Map < String, ? > interpretations;
+        private java.util.Map<String, ?> interpretations;
 
         @com.aliyun.core.annotation.NameInMap("isCurrent")
         private Boolean isCurrent;
@@ -1875,10 +2479,10 @@ public class DescribeAppResponseBody extends TeaModel {
         private Integer progressPercent;
 
         @com.aliyun.core.annotation.NameInMap("prompts")
-        private java.util.List < java.util.Map<String, ?>> prompts;
+        private java.util.List<java.util.Map<String, ?>> prompts;
 
         @com.aliyun.core.annotation.NameInMap("queryProcessors")
-        private java.util.List < QueryProcessors> queryProcessors;
+        private java.util.List<QueryProcessors> queryProcessors;
 
         @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
@@ -1887,16 +2491,16 @@ public class DescribeAppResponseBody extends TeaModel {
         private Schema schema;
 
         @com.aliyun.core.annotation.NameInMap("schemas")
-        private java.util.List < Schemas> schemas;
+        private java.util.List<Schemas> schemas;
 
         @com.aliyun.core.annotation.NameInMap("secondRanks")
-        private java.util.List < SecondRanks> secondRanks;
+        private java.util.List<SecondRanks> secondRanks;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("summaries")
-        private java.util.List < Summaries> summaries;
+        private java.util.List<Summaries> summaries;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -1957,7 +2561,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return dataSources
          */
-        public java.util.List < DataSources> getDataSources() {
+        public java.util.List<DataSources> getDataSources() {
             return this.dataSources;
         }
 
@@ -1978,14 +2582,14 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return fetchFields
          */
-        public java.util.List < String > getFetchFields() {
+        public java.util.List<String> getFetchFields() {
             return this.fetchFields;
         }
 
         /**
          * @return firstRanks
          */
-        public java.util.List < FirstRanks> getFirstRanks() {
+        public java.util.List<FirstRanks> getFirstRanks() {
             return this.firstRanks;
         }
 
@@ -1999,7 +2603,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return interpretations
          */
-        public java.util.Map < String, ? > getInterpretations() {
+        public java.util.Map<String, ?> getInterpretations() {
             return this.interpretations;
         }
 
@@ -2020,14 +2624,14 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return prompts
          */
-        public java.util.List < java.util.Map<String, ?>> getPrompts() {
+        public java.util.List<java.util.Map<String, ?>> getPrompts() {
             return this.prompts;
         }
 
         /**
          * @return queryProcessors
          */
-        public java.util.List < QueryProcessors> getQueryProcessors() {
+        public java.util.List<QueryProcessors> getQueryProcessors() {
             return this.queryProcessors;
         }
 
@@ -2048,14 +2652,14 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return schemas
          */
-        public java.util.List < Schemas> getSchemas() {
+        public java.util.List<Schemas> getSchemas() {
             return this.schemas;
         }
 
         /**
          * @return secondRanks
          */
-        public java.util.List < SecondRanks> getSecondRanks() {
+        public java.util.List<SecondRanks> getSecondRanks() {
             return this.secondRanks;
         }
 
@@ -2069,7 +2673,7 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * @return summaries
          */
-        public java.util.List < Summaries> getSummaries() {
+        public java.util.List<Summaries> getSummaries() {
             return this.summaries;
         }
 
@@ -2084,27 +2688,57 @@ public class DescribeAppResponseBody extends TeaModel {
             private Boolean autoSwitch; 
             private Cluster cluster; 
             private String clusterName; 
-            private java.util.List < DataSources> dataSources; 
+            private java.util.List<DataSources> dataSources; 
             private String description; 
             private Domain domain; 
-            private java.util.List < String > fetchFields; 
-            private java.util.List < FirstRanks> firstRanks; 
+            private java.util.List<String> fetchFields; 
+            private java.util.List<FirstRanks> firstRanks; 
             private String id; 
-            private java.util.Map < String, ? > interpretations; 
+            private java.util.Map<String, ?> interpretations; 
             private Boolean isCurrent; 
             private Integer progressPercent; 
-            private java.util.List < java.util.Map<String, ?>> prompts; 
-            private java.util.List < QueryProcessors> queryProcessors; 
+            private java.util.List<java.util.Map<String, ?>> prompts; 
+            private java.util.List<QueryProcessors> queryProcessors; 
             private Quota quota; 
             private Schema schema; 
-            private java.util.List < Schemas> schemas; 
-            private java.util.List < SecondRanks> secondRanks; 
+            private java.util.List<Schemas> schemas; 
+            private java.util.List<SecondRanks> secondRanks; 
             private String status; 
-            private java.util.List < Summaries> summaries; 
+            private java.util.List<Summaries> summaries; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.autoSwitch = model.autoSwitch;
+                this.cluster = model.cluster;
+                this.clusterName = model.clusterName;
+                this.dataSources = model.dataSources;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.fetchFields = model.fetchFields;
+                this.firstRanks = model.firstRanks;
+                this.id = model.id;
+                this.interpretations = model.interpretations;
+                this.isCurrent = model.isCurrent;
+                this.progressPercent = model.progressPercent;
+                this.prompts = model.prompts;
+                this.queryProcessors = model.queryProcessors;
+                this.quota = model.quota;
+                this.schema = model.schema;
+                this.schemas = model.schemas;
+                this.secondRanks = model.secondRanks;
+                this.status = model.status;
+                this.summaries = model.summaries;
+                this.type = model.type;
+            } 
+
             /**
-             * Indicates whether the version is automatically published to the online environment.
+             * <p>Indicates whether the version is automatically switched to an online version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoSwitch(Boolean autoSwitch) {
                 this.autoSwitch = autoSwitch;
@@ -2112,7 +2746,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * cluster.
+             * <p>The capability opening configurations.</p>
              */
             public Builder cluster(Cluster cluster) {
                 this.cluster = cluster;
@@ -2120,7 +2754,12 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -2128,15 +2767,20 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * dataSources.
+             * <p>The configurations of the data sources.</p>
              */
-            public Builder dataSources(java.util.List < DataSources> dataSources) {
+            public Builder dataSources(java.util.List<DataSources> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }
 
             /**
-             * The description of the version.
+             * <p>The description of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2144,12 +2788,15 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the industry. Valid values:
-             * <p>
+             * <p>The industry type. Valid values:</p>
+             * <ul>
+             * <li>GENERAL</li>
+             * <li>ECOMMERCE</li>
+             * <li>IT_CONTENT</li>
+             * </ul>
              * 
-             * *   GENERAL
-             * *   ECOMMERCE
-             * *   IT_CONTENT
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder domain(Domain domain) {
                 this.domain = domain;
@@ -2157,23 +2804,29 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The default display fields.
+             * <p>The default display fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder fetchFields(java.util.List < String > fetchFields) {
+            public Builder fetchFields(java.util.List<String> fetchFields) {
                 this.fetchFields = fetchFields;
                 return this;
             }
 
             /**
-             * firstRanks.
+             * <p>The configurations of rough sort.</p>
              */
-            public Builder firstRanks(java.util.List < FirstRanks> firstRanks) {
+            public Builder firstRanks(java.util.List<FirstRanks> firstRanks) {
                 this.firstRanks = firstRanks;
                 return this;
             }
 
             /**
-             * The ID of the version.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100303063</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2181,15 +2834,21 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * interpretations.
+             * <p>The industry model module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[ { &quot;table&quot;: &quot;table1&quot;, &quot;fields&quot;: [ { &quot;name&quot;: &quot;field1&quot;, &quot;interpretation&quot;: &quot;Title&quot; }, { &quot;name&quot;: &quot;field2&quot;, &quot;interpretation&quot;: &quot;Number&quot; } ] } ]</p>
              */
-            public Builder interpretations(java.util.Map < String, ? > interpretations) {
+            public Builder interpretations(java.util.Map<String, ?> interpretations) {
                 this.interpretations = interpretations;
                 return this;
             }
 
             /**
-             * isCurrent.
+             * <p>Indices whether the version is an online version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isCurrent(Boolean isCurrent) {
                 this.isCurrent = isCurrent;
@@ -2197,7 +2856,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of data import, in percentage. For example, a value of 83 indicates 83%.
+             * <p>The progress of data import, in percentage. For example, a value of 83 indicates 83%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progressPercent(Integer progressPercent) {
                 this.progressPercent = progressPercent;
@@ -2205,23 +2867,26 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * prompts.
+             * <p>The prompt configurations.</p>
              */
-            public Builder prompts(java.util.List < java.util.Map<String, ?>> prompts) {
+            public Builder prompts(java.util.List<java.util.Map<String, ?>> prompts) {
                 this.prompts = prompts;
                 return this;
             }
 
             /**
-             * queryProcessors.
+             * <p>The query intent understanding configurations.</p>
              */
-            public Builder queryProcessors(java.util.List < QueryProcessors> queryProcessors) {
+            public Builder queryProcessors(java.util.List<QueryProcessors> queryProcessors) {
                 this.queryProcessors = queryProcessors;
                 return this;
             }
 
             /**
-             * The quota information about the version.
+             * <p>The quota information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -2229,7 +2894,10 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The application schema.
+             * <p>The schema of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder schema(Schema schema) {
                 this.schema = schema;
@@ -2237,32 +2905,35 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * schemas.
+             * <p>The multi-table schema.</p>
              */
-            public Builder schemas(java.util.List < Schemas> schemas) {
+            public Builder schemas(java.util.List<Schemas> schemas) {
                 this.schemas = schemas;
                 return this;
             }
 
             /**
-             * secondRanks.
+             * <p>The configurations of fine sort.</p>
              */
-            public Builder secondRanks(java.util.List < SecondRanks> secondRanks) {
+            public Builder secondRanks(java.util.List<SecondRanks> secondRanks) {
                 this.secondRanks = secondRanks;
                 return this;
             }
 
             /**
-             * The status of the version. Valid values:
-             * <p>
+             * <p>The status of the version. Valid values:</p>
+             * <ul>
+             * <li>ok: The version is normal.</li>
+             * <li>stopped: The version is suspended.</li>
+             * <li>frozen: The version is frozen.</li>
+             * <li>initializing: The version is being initialized.</li>
+             * <li>unavailable: The version is invalid.</li>
+             * <li>data_waiting: Data is to be initialized.</li>
+             * <li>data_preparing: Data is being initialized.</li>
+             * </ul>
              * 
-             * *   ok
-             * *   stopped
-             * *   frozen
-             * *   initializing
-             * *   unavailable
-             * *   data_waiting
-             * *   data_preparing
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2270,20 +2941,23 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * summaries.
+             * <p>The summary configurations of search results.</p>
              */
-            public Builder summaries(java.util.List < Summaries> summaries) {
+            public Builder summaries(java.util.List<Summaries> summaries) {
                 this.summaries = summaries;
                 return this;
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The edition type. Valid values:</p>
+             * <ul>
+             * <li>standard: a standard edition application.</li>
+             * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
+             * <li>enhanced: an advanced edition application of a new version.</li>
+             * </ul>
              * 
-             * *   standard: a standard application.
-             * *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
-             * *   enhanced: an advanced application which is of a new application type.
+             * <strong>example:</strong>
+             * <p>enhanced</p>
              */
             public Builder type(String type) {
                 this.type = type;

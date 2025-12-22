@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScriptFileNamesResponseBody} extends {@link TeaModel}
  *
  * <p>GetScriptFileNamesResponseBody</p>
@@ -15,7 +21,7 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private GetScriptFileNamesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScriptFileNamesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The files of the script.
+         * <p>The files of the script.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -70,6 +91,12 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetScriptFileNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetScriptFileNamesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -132,8 +159,21 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             private String modifyTime; 
             private String pathName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.fileName = model.fileName;
+                this.modifyTime = model.modifyTime;
+                this.pathName = model.pathName;
+            } 
+
             /**
-             * The time when the script file was created.
+             * <p>The time when the script file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 20:21:14</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -141,7 +181,10 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the script file.
+             * <p>The name of the script file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_cava_script.cava</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -149,7 +192,10 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the script file was last modified.
+             * <p>The time when the script file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 21:21:14</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -157,7 +203,10 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The path name of the script file.
+             * <p>The path name of the script file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>src</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;

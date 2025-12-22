@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListAppGroupsRequest</p>
@@ -37,7 +43,7 @@ public class ListAppGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("type")
@@ -63,7 +69,7 @@ public class ListAppGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,7 @@ public class ListAppGroupsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -131,7 +137,7 @@ public class ListAppGroupsRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private Integer sortBy; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -151,7 +157,10 @@ public class ListAppGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. Exact match is used.
+         * <p>The ID of the instance. Exact match is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ops-cn-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -160,7 +169,10 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -169,7 +181,10 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -178,7 +193,10 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -187,7 +205,10 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;110123123&quot;</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -196,13 +217,15 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The method based on which applications are sorted. Valid values:
-         * <p>
+         * <p>The method based on which applications are sorted. Valid values:</p>
+         * <ul>
+         * <li>0: sorts applications in descending order by creation time.</li>
+         * <li>1: sorts applications in descending order by modification time.</li>
+         * </ul>
+         * <p>Default value: 0.</p>
          * 
-         * *   0: sorts applications in descending order by creation time.
-         * *   1: sorts applications in descending order by modification time.
-         * 
-         * Default value: 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sortBy(Integer sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -211,9 +234,9 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
             this.putQueryParameter("tags", tagsShrink);
             this.tags = tags;
@@ -221,11 +244,14 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * The type of the application. Valid values:
-         * <p>
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li>standard: a High-performance Search Edition application.</li>
+         * <li>enhanced: an Industry Algorithm Edition application.</li>
+         * </ul>
          * 
-         * *   standard: a High-performance Search Edition application.
-         * *   enhanced: an Industry Algorithm Edition application.
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -240,6 +266,12 @@ public class ListAppGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListAppGroupsRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -278,8 +310,19 @@ public class ListAppGroupsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>foo</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -287,7 +330,10 @@ public class ListAppGroupsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bar</p>
              */
             public Builder value(String value) {
                 this.value = value;

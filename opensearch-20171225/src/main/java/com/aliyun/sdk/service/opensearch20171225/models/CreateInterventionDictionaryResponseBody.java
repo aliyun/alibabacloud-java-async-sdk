@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInterventionDictionaryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInterventionDictionaryResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateInterventionDictionaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80326EFE-485F-46E7-B291-5A1DD08D2198</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInterventionDictionaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateInterventionDictionaryResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("analyzer")
         private String analyzer;
@@ -144,8 +171,22 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             private String type; 
             private String updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.analyzer = model.analyzer;
+                this.created = model.created;
+                this.name = model.name;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The custom analyzer.
+             * <p>The custom analyzer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dianshang</p>
              */
             public Builder analyzer(String analyzer) {
                 this.analyzer = analyzer;
@@ -153,7 +194,10 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test scenario was created.
+             * <p>The time when the test scenario was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1591086323</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -161,7 +205,10 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test group.
+             * <p>The name of the test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testb</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -169,15 +216,18 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the intervention dictionary. Valid values:
-             * <p>
+             * <p>The type of the intervention dictionary. Valid values:</p>
+             * <ul>
+             * <li>stopword: an intervention dictionary for stop word filtering</li>
+             * <li>synonym: an intervention dictionary for synonym configuration</li>
+             * <li>correction: an intervention dictionary for spelling correction</li>
+             * <li>category_prediction: an intervention dictionary for category prediction</li>
+             * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
+             * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+             * </ul>
              * 
-             * *   stopword: an intervention dictionary for stop word filtering
-             * *   synonym: an intervention dictionary for synonym configuration
-             * *   correction: an intervention dictionary for spelling correction
-             * *   category_prediction: an intervention dictionary for category prediction
-             * *   ner: an intervention dictionary for named entity recognition (NER)
-             * *   term_weighting: an intervention dictionary for term weight analysis
+             * <strong>example:</strong>
+             * <p>ner</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -185,7 +235,10 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the intervention dictionary was last updated.
+             * <p>The time when the intervention dictionary was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1591086323</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

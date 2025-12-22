@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeABTestExperimentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeABTestExperimentResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeABTestExperimentResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the test.
+         * <p>The details of the test.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeABTestExperimentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeABTestExperimentResponseBody</p>
+     */
     public static class Params extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("first_formula_name")
         private String firstFormulaName;
@@ -96,8 +123,18 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public static final class Builder {
             private String firstFormulaName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Params model) {
+                this.firstFormulaName = model.firstFormulaName;
+            } 
+
             /**
-             * The name of the rough sort policy.
+             * <p>The name of the rough sort policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder firstFormulaName(String firstFormulaName) {
                 this.firstFormulaName = firstFormulaName;
@@ -111,6 +148,12 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeABTestExperimentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeABTestExperimentResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -209,8 +252,24 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             private Integer traffic; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.online = model.online;
+                this.params = model.params;
+                this.traffic = model.traffic;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the test was created.
+             * <p>The time when the test was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588842080</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -218,7 +277,10 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the test.
+             * <p>The ID of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12888</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -226,7 +288,10 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test.
+             * <p>The name of the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,11 +299,14 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the test. Valid values:
-             * <p>
+             * <p>The status of the test. Valid values:</p>
+             * <ul>
+             * <li>true: in effect</li>
+             * <li>false: not in effect</li>
+             * </ul>
              * 
-             * *   true: in effect
-             * *   false: not in effect
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -246,7 +314,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the test.
+             * <p>The parameters of the test.</p>
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -254,7 +322,10 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of traffic that is routed to the test.
+             * <p>The percentage of traffic that is routed to the test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -262,7 +333,10 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test was last modified.
+             * <p>The time when the test was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588842080</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

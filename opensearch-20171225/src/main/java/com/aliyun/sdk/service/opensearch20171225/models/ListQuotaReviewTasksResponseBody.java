@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQuotaReviewTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListQuotaReviewTasksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -34,6 +40,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListQuotaReviewTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;3351A21F-705B-508C-9450-DA65A681547F&quot;</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,15 +91,21 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tickets. For more information, see [QuotaReviewTask](~~173609~~).
+         * <p>The information about the tickets. For more information, see <a href="https://help.aliyun.com/document_detail/173609.html">QuotaReviewTask</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +118,12 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListQuotaReviewTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListQuotaReviewTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appGroupId")
         private Integer appGroupId;
@@ -296,8 +330,33 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             private String oldSpec; 
             private Boolean pending; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appGroupId = model.appGroupId;
+                this.appGroupName = model.appGroupName;
+                this.appGroupType = model.appGroupType;
+                this.approved = model.approved;
+                this.available = model.available;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.memo = model.memo;
+                this.newComputeResource = model.newComputeResource;
+                this.newSocSize = model.newSocSize;
+                this.newSpec = model.newSpec;
+                this.oldComputeResource = model.oldComputeResource;
+                this.oldDocSize = model.oldDocSize;
+                this.oldSpec = model.oldSpec;
+                this.pending = model.pending;
+            } 
+
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120123456</p>
              */
             public Builder appGroupId(Integer appGroupId) {
                 this.appGroupId = appGroupId;
@@ -305,7 +364,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;td_test_os&quot;</p>
              */
             public Builder appGroupName(String appGroupName) {
                 this.appGroupName = appGroupName;
@@ -313,7 +375,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The application type.
+             * <p>The application type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;standard&quot;</p>
              */
             public Builder appGroupType(String appGroupType) {
                 this.appGroupType = appGroupType;
@@ -321,7 +386,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ticket is approved.
+             * <p>Indicates whether the ticket is approved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder approved(Boolean approved) {
                 this.approved = approved;
@@ -329,7 +397,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is available.
+             * <p>Indicates whether the application is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -337,7 +408,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was created.
+             * <p>The time when the ticket was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;2020-04-08T08:29:45+0000&quot;</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -345,7 +419,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ticket was last updated.
+             * <p>The time when the ticket was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;2020-04-08T08:36:36+0000&quot;</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -353,7 +430,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ticket ID.
+             * <p>The ticket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>142</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -361,7 +441,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -369,7 +452,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The computing resource quota that is applied for.
+             * <p>The computing resource quota that is applied for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder newComputeResource(Integer newComputeResource) {
                 this.newComputeResource = newComputeResource;
@@ -377,7 +463,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity quota that is applied for.
+             * <p>The storage capacity quota that is applied for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1100</p>
              */
             public Builder newSocSize(Integer newSocSize) {
                 this.newSocSize = newSocSize;
@@ -385,7 +474,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The application specifications that are applied for.
+             * <p>The application specifications that are applied for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;opensearch.private.common&quot;</p>
              */
             public Builder newSpec(String newSpec) {
                 this.newSpec = newSpec;
@@ -393,7 +485,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The original quota of computing resources.
+             * <p>The original quota of computing resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder oldComputeResource(Integer oldComputeResource) {
                 this.oldComputeResource = oldComputeResource;
@@ -401,7 +496,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The original quota of storage capacity.
+             * <p>The original quota of storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder oldDocSize(Integer oldDocSize) {
                 this.oldDocSize = oldDocSize;
@@ -409,7 +507,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The original specifications of the application.
+             * <p>The original specifications of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;opensearch.private.common&quot;</p>
              */
             public Builder oldSpec(String oldSpec) {
                 this.oldSpec = oldSpec;
@@ -417,7 +518,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the ticket is pending.
+             * <p>Indicates whether the ticket is pending.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pending(Boolean pending) {
                 this.pending = pending;

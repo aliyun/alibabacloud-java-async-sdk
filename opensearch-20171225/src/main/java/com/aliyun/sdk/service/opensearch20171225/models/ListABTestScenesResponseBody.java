@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABTestScenesResponseBody} extends {@link TeaModel}
  *
  * <p>ListABTestScenesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListABTestScenesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListABTestScenesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABTestScenesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +78,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the test scenarios.
-         * <p>
-         * 
-         * For more information, see [ABTestScene](~~173618~~).
+         * <p>The details of the test scenario.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -73,6 +92,12 @@ public class ListABTestScenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListABTestScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListABTestScenesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -90,7 +115,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         private Integer updated;
 
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Result(Builder builder) {
             this.created = builder.created;
@@ -147,7 +172,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
@@ -157,10 +182,25 @@ public class ListABTestScenesResponseBody extends TeaModel {
             private String name; 
             private Integer status; 
             private Integer updated; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.status = model.status;
+                this.updated = model.updated;
+                this.values = model.values;
+            } 
 
             /**
-             * The time when the test scenario was created.
+             * <p>The time when the test group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588836130</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -168,7 +208,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the test group.
+             * <p>The ID of the test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20404</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -176,7 +219,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test group.
+             * <p>The alias of the test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kevintest_2020-5-7_15:21:482</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -184,11 +230,14 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the test scenario. Valid values:
-             * <p>
+             * <p>The status of the test group. Valid values:</p>
+             * <ul>
+             * <li>0: not in effect</li>
+             * <li>1: in effect</li>
+             * </ul>
              * 
-             * *   0: not in effect
-             * *   1: in effect
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -196,7 +245,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test scenario was last modified.
+             * <p>The time when the test group was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588836129</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -204,9 +256,9 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test scenario.
+             * <p>The name of the test scenario.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

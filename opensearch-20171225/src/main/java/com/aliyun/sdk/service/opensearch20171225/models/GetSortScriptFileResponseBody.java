@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSortScriptFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetSortScriptFileResponseBody</p>
@@ -30,6 +36,10 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSortScriptFileResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the sort script.
+         * <p>The content of the sort script.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class GetSortScriptFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSortScriptFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSortScriptFileResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -132,8 +159,21 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             private String modifyTime; 
             private Long version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.modifyTime = model.modifyTime;
+                this.version = model.version;
+            } 
+
             /**
-             * The script content that is encoded in the Base64 format.
+             * <p>The script content that is encoded in the Base64 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YWJjZGVmZw==</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -141,7 +181,10 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the script was created.
+             * <p>The time when the script was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 20:21:14</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -149,7 +192,10 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the script was last modified.
+             * <p>The time when the script was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-04-02 21:21:14</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -157,7 +203,10 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the script content.
+             * <p>The version of the script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder version(Long version) {
                 this.version = version;

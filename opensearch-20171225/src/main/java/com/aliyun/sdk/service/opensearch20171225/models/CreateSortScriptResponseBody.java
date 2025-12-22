@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSortScriptResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSortScriptResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateSortScriptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateSortScriptResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateSortScriptResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class CreateSortScriptResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSortScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSortScriptResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
@@ -120,8 +147,20 @@ public class CreateSortScriptResponseBody extends TeaModel {
             private String scriptName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.scope = model.scope;
+                this.scriptName = model.scriptName;
+                this.type = model.type;
+            } 
+
             /**
-             * The sort phase to which the script applies.
+             * <p>The sort phase to which the script applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>second_rank</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -129,7 +168,10 @@ public class CreateSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The script name.
+             * <p>The script name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rank_cava_20230606_v7</p>
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -137,7 +179,10 @@ public class CreateSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * The script type.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cava_script</p>
              */
             public Builder type(String type) {
                 this.type = type;

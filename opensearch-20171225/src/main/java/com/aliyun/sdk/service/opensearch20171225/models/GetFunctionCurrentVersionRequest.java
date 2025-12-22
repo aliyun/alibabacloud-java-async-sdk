@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionCurrentVersionRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionCurrentVersionRequest</p>
@@ -50,7 +56,7 @@ public class GetFunctionCurrentVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,17 +117,21 @@ public class GetFunctionCurrentVersionRequest extends Request {
         } 
 
         /**
-         * The name of the feature. Valid values:
-         * <p>
+         * <p>The name of the feature. Valid values:</p>
+         * <ul>
+         * <li>ctr: click-through rate (CTR) model</li>
+         * <li>pop: popularity model</li>
+         * <li>category: category model</li>
+         * <li>hot: hotword model</li>
+         * <li>hint: shading model</li>
+         * <li>suggest: drop-down suggestion model</li>
+         * <li>analyzer: word segmentation model</li>
+         * <li>termweight: word weight model</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ctr: click-through rate (CTR) model
-         * *   pop: popularity model
-         * *   category: category model
-         * *   hot: hotword model
-         * *   hint: shading model
-         * *   suggest: drop-down suggestion model
-         * *   analyzer: word segmentation model
-         * *   termweight: word weight model
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -130,7 +140,10 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * The category. By default, this parameter is left empty.
+         * <p>The category. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -139,7 +152,10 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * The industry. By default, this parameter is left empty, which indicates General-purpose Edition.
+         * <p>The industry. By default, this parameter is left empty, which indicates General-purpose Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecommerce</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);
@@ -148,11 +164,14 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li>PAAS. This is the default value.</li>
+         * <li>SAAS.</li>
+         * </ul>
          * 
-         * *   PAAS. This is the default value.
-         * *   SAAS.
+         * <strong>example:</strong>
+         * <p>PAAS</p>
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("functionType", functionType);
@@ -161,17 +180,21 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * The type of the model. The following features correspond to different model types:
-         * <p>
+         * <p>The type of the model. The following features correspond to different model types:</p>
+         * <ul>
+         * <li>CTR model: tf_checkpoint</li>
+         * <li>Popularity model: pop</li>
+         * <li>Category model: offline_inference</li>
+         * <li>Hotword model: offline_inference</li>
+         * <li>Shading model: offline_inference</li>
+         * <li>Drop-down suggestion model: offline_inference</li>
+         * <li>Word segmentation model: text</li>
+         * <li>Word weight model: tf_checkpoint</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   CTR model: tf_checkpoint
-         * *   Popularity model: pop
-         * *   Category model: offline_inference
-         * *   Hotword model: offline_inference
-         * *   Shading model: offline_inference
-         * *   Drop-down suggestion model: offline_inference
-         * *   Word segmentation model: text
-         * *   Word weight model: tf_checkpoint
+         * <strong>example:</strong>
+         * <p>tf_checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);

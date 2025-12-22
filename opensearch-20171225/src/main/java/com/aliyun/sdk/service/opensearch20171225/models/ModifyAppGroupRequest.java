@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppGroupRequest</p>
@@ -54,7 +60,7 @@ public class ModifyAppGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +130,11 @@ public class ModifyAppGroupRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -133,7 +143,10 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The online version of the application.
+         * <p>The online version of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1223232</p>
          */
         public Builder currentVersion(String currentVersion) {
             this.putBodyParameter("currentVersion", currentVersion);
@@ -142,7 +155,10 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The description of the application.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;test&quot;</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -151,14 +167,17 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The type of the industry. Valid values:
-         * <p>
+         * <p>The type of the industry. Valid values:</p>
+         * <ul>
+         * <li>general: general.</li>
+         * <li>ecommerce: e-commerce.</li>
+         * <li>education: education.</li>
+         * <li>esports: electronic sports.</li>
+         * <li>community: content community.</li>
+         * </ul>
          * 
-         * *   general: general.
-         * *   ecommerce: e-commerce.
-         * *   education: education.
-         * *   esports: electronic sports.
-         * *   community: content community.
+         * <strong>example:</strong>
+         * <p>&quot;ecommerce&quot;</p>
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -167,7 +186,10 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -176,7 +198,10 @@ public class ModifyAppGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to verify the application before modification. Valid values: true and false.
+         * <p>Specifies whether to verify the application before modification. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

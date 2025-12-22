@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Domain} extends {@link TeaModel}
  *
  * <p>Domain</p>
@@ -15,7 +21,7 @@ public class Domain extends TeaModel {
     private String category;
 
     @com.aliyun.core.annotation.NameInMap("functions")
-    private java.util.Map < String, java.util.List<String>> functions;
+    private java.util.Map<String, java.util.List<String>> functions;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -34,6 +40,10 @@ public class Domain extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -44,7 +54,7 @@ public class Domain extends TeaModel {
     /**
      * @return functions
      */
-    public java.util.Map < String, java.util.List<String>> getFunctions() {
+    public java.util.Map<String, java.util.List<String>> getFunctions() {
         return this.functions;
     }
 
@@ -57,8 +67,17 @@ public class Domain extends TeaModel {
 
     public static final class Builder {
         private String category; 
-        private java.util.Map < String, java.util.List<String>> functions; 
+        private java.util.Map<String, java.util.List<String>> functions; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(Domain model) {
+            this.category = model.category;
+            this.functions = model.functions;
+            this.name = model.name;
+        } 
 
         /**
          * category.
@@ -71,7 +90,7 @@ public class Domain extends TeaModel {
         /**
          * functions.
          */
-        public Builder functions(java.util.Map < String, java.util.List<String>> functions) {
+        public Builder functions(java.util.Map<String, java.util.List<String>> functions) {
             this.functions = functions;
             return this;
         }

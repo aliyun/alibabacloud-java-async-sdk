@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSearchStrategiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSearchStrategiesResponseBody</p>
@@ -26,6 +32,10 @@ public class ListSearchStrategiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -36,8 +46,18 @@ public class ListSearchStrategiesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSearchStrategiesResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C6351F5-2E2E-5249-888B-88A74E1B8A65</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

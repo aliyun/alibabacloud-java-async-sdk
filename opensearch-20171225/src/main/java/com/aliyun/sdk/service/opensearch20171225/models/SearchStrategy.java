@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchStrategy} extends {@link TeaModel}
  *
  * <p>SearchStrategy</p>
@@ -24,7 +30,7 @@ public class SearchStrategy extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("searchConfigs")
-    private java.util.List < SearchConfigs> searchConfigs;
+    private java.util.List<SearchConfigs> searchConfigs;
 
     private SearchStrategy(Builder builder) {
         this.description = builder.description;
@@ -40,6 +46,10 @@ public class SearchStrategy extends TeaModel {
 
     public static SearchStrategy create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,7 +83,7 @@ public class SearchStrategy extends TeaModel {
     /**
      * @return searchConfigs
      */
-    public java.util.List < SearchConfigs> getSearchConfigs() {
+    public java.util.List<SearchConfigs> getSearchConfigs() {
         return this.searchConfigs;
     }
 
@@ -82,7 +92,18 @@ public class SearchStrategy extends TeaModel {
         private Boolean isDefault; 
         private MergeConfig mergeConfig; 
         private String name; 
-        private java.util.List < SearchConfigs> searchConfigs; 
+        private java.util.List<SearchConfigs> searchConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchStrategy model) {
+            this.description = model.description;
+            this.isDefault = model.isDefault;
+            this.mergeConfig = model.mergeConfig;
+            this.name = model.name;
+            this.searchConfigs = model.searchConfigs;
+        } 
 
         /**
          * description.
@@ -119,7 +140,7 @@ public class SearchStrategy extends TeaModel {
         /**
          * searchConfigs.
          */
-        public Builder searchConfigs(java.util.List < SearchConfigs> searchConfigs) {
+        public Builder searchConfigs(java.util.List<SearchConfigs> searchConfigs) {
             this.searchConfigs = searchConfigs;
             return this;
         }
@@ -130,6 +151,12 @@ public class SearchStrategy extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchStrategy} extends {@link TeaModel}
+     *
+     * <p>SearchStrategy</p>
+     */
     public static class MergeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("docCount")
         private Integer docCount;
@@ -168,6 +195,14 @@ public class SearchStrategy extends TeaModel {
             private Integer docCount; 
             private String rankName; 
 
+            private Builder() {
+            } 
+
+            private Builder(MergeConfig model) {
+                this.docCount = model.docCount;
+                this.rankName = model.rankName;
+            } 
+
             /**
              * docCount.
              */
@@ -191,6 +226,12 @@ public class SearchStrategy extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchStrategy} extends {@link TeaModel}
+     *
+     * <p>SearchStrategy</p>
+     */
     public static class SearchConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("firstRankName")
         private String firstRankName;
@@ -252,6 +293,16 @@ public class SearchStrategy extends TeaModel {
             private Integer mergeProportion; 
             private String queryType; 
             private String secondRankName; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchConfigs model) {
+                this.firstRankName = model.firstRankName;
+                this.mergeProportion = model.mergeProportion;
+                this.queryType = model.queryType;
+                this.secondRankName = model.secondRankName;
+            } 
 
             /**
              * firstRankName.

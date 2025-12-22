@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PrepayOrderInfo} extends {@link TeaModel}
  *
  * <p>PrepayOrderInfo</p>
@@ -34,6 +40,10 @@ public class PrepayOrderInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -59,6 +69,15 @@ public class PrepayOrderInfo extends TeaModel {
         private Boolean autoRenew; 
         private Integer duration; 
         private String pricingCycle; 
+
+        private Builder() {
+        } 
+
+        private Builder(PrepayOrderInfo model) {
+            this.autoRenew = model.autoRenew;
+            this.duration = model.duration;
+            this.pricingCycle = model.pricingCycle;
+        } 
 
         /**
          * autoRenew.

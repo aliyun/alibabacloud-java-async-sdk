@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppGroupsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -34,6 +40,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAppGroupsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,18 +91,22 @@ public class ListAppGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the application.
-         * <p>
+         * <p>The information about the application.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170000.html">AppGroup</a>.</p>
          * 
-         * For more information, see [AppGroup](~~170000~~).
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -93,6 +119,12 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppGroupsResponseBody</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
@@ -143,8 +175,20 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private Integer docSize; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.computeResource = model.computeResource;
+                this.docSize = model.docSize;
+                this.spec = model.spec;
+            } 
+
             /**
-             * The computing resources. Unit: logical computing unit (LCU).
+             * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -152,7 +196,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity. Unit: GB.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -160,16 +207,19 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications. Valid values:
-             * <p>
+             * <p>The specifications. Valid values:</p>
+             * <ul>
+             * <li>opensearch.share.junior: basic.</li>
+             * <li>opensearch.share.common: shared general-purpose.</li>
+             * <li>opensearch.share.compute: shared computing.</li>
+             * <li>opensearch.share.storage: shared storage.</li>
+             * <li>opensearch.private.common: exclusive general-purpose.</li>
+             * <li>opensearch.private.compute: exclusive computing.</li>
+             * <li>opensearch.private.storage: exclusive storage.</li>
+             * </ul>
              * 
-             * *   opensearch.share.junior: basic.
-             * *   opensearch.share.common: shared general-purpose.
-             * *   opensearch.share.compute: shared computing.
-             * *   opensearch.share.storage: shared storage.
-             * *   opensearch.private.common: exclusive general-purpose.
-             * *   opensearch.private.compute: exclusive computing.
-             * *   opensearch.private.storage: exclusive storage.
+             * <strong>example:</strong>
+             * <p>opensearch.share.common</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -183,6 +233,12 @@ public class ListAppGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -221,8 +277,19 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>foo</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +297,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bar</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -244,6 +314,12 @@ public class ListAppGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAppGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppGroupsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -306,7 +382,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         private Integer switchedTime;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -491,7 +567,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -530,16 +606,48 @@ public class ListAppGroupsResponseBody extends TeaModel {
             private Quota quota; 
             private String status; 
             private Integer switchedTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chargeType = model.chargeType;
+                this.chargingWay = model.chargingWay;
+                this.commodityCode = model.commodityCode;
+                this.created = model.created;
+                this.currentVersion = model.currentVersion;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.engineType = model.engineType;
+                this.expireOn = model.expireOn;
+                this.hasPendingQuotaReviewTask = model.hasPendingQuotaReviewTask;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.lockMode = model.lockMode;
+                this.lockedByExpiration = model.lockedByExpiration;
+                this.name = model.name;
+                this.produced = model.produced;
+                this.projectId = model.projectId;
+                this.quota = model.quota;
+                this.status = model.status;
+                this.switchedTime = model.switchedTime;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * <li>PREPAY: subscription.</li>
+             * </ul>
              * 
-             * *   POSTPAY: pay-as-you-go.
-             * *   PREPAY: subscription.
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -547,11 +655,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The billable item. Valid values:
-             * <p>
+             * <p>The billable item. Valid values:</p>
+             * <ul>
+             * <li>1: computing resources.</li>
+             * <li>2: queries per second (QPS).</li>
+             * </ul>
              * 
-             * *   1: computing resources.
-             * *   2: queries per second (QPS).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chargingWay(Integer chargingWay) {
                 this.chargingWay = chargingWay;
@@ -559,7 +670,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opensearch</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -567,7 +681,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application was created.
+             * <p>The timestamp when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1575442875</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -575,7 +692,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current online version.
+             * <p>The ID of the current online version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110116134</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -583,7 +703,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xxx&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -591,7 +714,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The industry of the application.
+             * <p>The industry of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -599,7 +725,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * engineType.
+             * <p>The engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha3</p>
              */
             public Builder engineType(String engineType) {
                 this.engineType = engineType;
@@ -607,7 +736,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application expired.
+             * <p>The time when the application expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xxx&quot;</p>
              */
             public Builder expireOn(String expireOn) {
                 this.expireOn = expireOn;
@@ -615,11 +747,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The approval state of the quotas. Valid values:
-             * <p>
+             * <p>The approval state of the quotas. Valid values:</p>
+             * <ul>
+             * <li>0: The application is in service.</li>
+             * <li>1: The quotas are being reviewed.</li>
+             * </ul>
              * 
-             * *   0: The application is in service.
-             * *   1: The quotas are being reviewed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
                 this.hasPendingQuotaReviewTask = hasPendingQuotaReviewTask;
@@ -627,7 +762,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110116134</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -635,7 +773,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xxx&quot;</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -643,12 +784,15 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The lock state. Valid values:
-             * <p>
+             * <p>The lock state. Valid values:</p>
+             * <ul>
+             * <li>Unlock: The instance is unlocked.</li>
+             * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
+             * <li>ManualLock: The instance is manually locked.</li>
+             * </ul>
              * 
-             * *   Unlock: The instance is unlocked.
-             * *   LockByExpiration: The instance is automatically locked after it expires.
-             * *   ManualLock: The instance is manually locked.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -656,7 +800,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is automatically locked after it expires.
+             * <p>Indicates whether the instance is automatically locked after it expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockedByExpiration(Integer lockedByExpiration) {
                 this.lockedByExpiration = lockedByExpiration;
@@ -664,7 +811,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os_function_test_v1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -672,11 +822,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application is created. Valid values:
-             * <p>
+             * <p>Indicates whether the application is created. Valid values:</p>
+             * <ul>
+             * <li>0: The application is being created.</li>
+             * <li>1: The application is created.</li>
+             * </ul>
              * 
-             * *   0: The application is being created.
-             * *   1: The application is created.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder produced(Integer produced) {
                 this.produced = produced;
@@ -684,7 +837,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the A/B test group.
+             * <p>The name of the A/B test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;xxx&quot;</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -692,7 +848,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the quotas of the application. For more information, see [Quota](~~170001~~).
+             * <p>The information about the quotas of the application. For more information, see <a href="https://help.aliyun.com/document_detail/170001.html">Quota</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -700,14 +859,17 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the application. Valid values:
-             * <p>
+             * <p>The state of the application. Valid values:</p>
+             * <ul>
+             * <li>producing: The application is being created.</li>
+             * <li>review_pending: The application is being reviewed.</li>
+             * <li>config_pending: The application is to be configured.</li>
+             * <li>normal: The application is in service.</li>
+             * <li>frozen: The application is frozen.</li>
+             * </ul>
              * 
-             * *   producing: The application is being created.
-             * *   review_pending: The application is being reviewed.
-             * *   config_pending: The application is to be configured.
-             * *   normal: The application is in service.
-             * *   frozen: The application is frozen.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -715,7 +877,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the current online version was published.
+             * <p>The timestamp when the current online version was published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder switchedTime(Integer switchedTime) {
                 this.switchedTime = switchedTime;
@@ -723,20 +888,22 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The application tags.
+             * <p>The application tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The type of the application. Valid values:
-             * <p>
+             * <p>The type of the application. Valid values:</p>
+             * <ul>
+             * <li>standard: a High-performance Search Edition application.</li>
+             * <li>enhanced: an Industry Algorithm Edition application.</li>
+             * </ul>
              * 
-             * *   standard: a High-performance Search Edition application.
-             * *
-             * *   enhanced: an Industry Algorithm Edition application.
+             * <strong>example:</strong>
+             * <p>enhanced</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -744,7 +911,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application was last updated.
+             * <p>The timestamp when the application was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578916076</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

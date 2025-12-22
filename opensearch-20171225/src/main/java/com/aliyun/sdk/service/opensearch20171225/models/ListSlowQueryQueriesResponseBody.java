@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSlowQueryQueriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSlowQueryQueriesResponseBody</p>
@@ -30,6 +36,10 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSlowQueryQueriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB250CA0-ACFD-C5DE-17CD-01445BFE8AE5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The return result.
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSlowQueryQueriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlowQueryQueriesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appQuery")
         private String appQuery;
@@ -132,8 +159,21 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             private Integer index; 
             private Integer start; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appQuery = model.appQuery;
+                this.end = model.end;
+                this.index = model.index;
+                this.start = model.start;
+            } 
+
             /**
-             * The content of the optimization suggestion for the query.
+             * <p>The content of the optimization suggestion for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no data</p>
              */
             public Builder appQuery(String appQuery) {
                 this.appQuery = appQuery;
@@ -141,7 +181,10 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range that was queried.
+             * <p>The end of the time range that was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589990340</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -149,7 +192,10 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the optimization suggestion.
+             * <p>The ID of the optimization suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -157,7 +203,10 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range that was queried.
+             * <p>The beginning of the time range that was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589986800</p>
              */
             public Builder start(Integer start) {
                 this.start = start;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionTaskRequest} extends {@link RequestModel}
  *
  * <p>GetFunctionTaskRequest</p>
@@ -47,7 +53,7 @@ public class GetFunctionTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,11 @@ public class GetFunctionTaskRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +118,11 @@ public class GetFunctionTaskRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -117,7 +131,11 @@ public class GetFunctionTaskRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_model_2</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -126,7 +144,11 @@ public class GetFunctionTaskRequest extends Request {
         }
 
         /**
-         * The number of iterations.
+         * <p>The number of iterations.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder generation(String generation) {
             this.putPathParameter("generation", generation);

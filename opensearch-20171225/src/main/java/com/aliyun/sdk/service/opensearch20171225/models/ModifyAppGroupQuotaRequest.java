@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppGroupQuotaRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppGroupQuotaRequest</p>
@@ -21,6 +27,10 @@ public class ModifyAppGroupQuotaRequest extends Request {
     private Quota body;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
@@ -28,6 +38,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.body = builder.body;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
     }
 
@@ -39,7 +50,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,6 +70,13 @@ public class ModifyAppGroupQuotaRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -68,6 +86,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAppGroupQuotaRequest, Builder> {
         private String appGroupIdentity; 
         private Quota body; 
+        private String clientToken; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -78,11 +97,16 @@ public class ModifyAppGroupQuotaRequest extends Request {
             super(request);
             this.appGroupIdentity = request.appGroupIdentity;
             this.body = request.body;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -91,7 +115,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(Quota body) {
             this.putBodyParameter("body", body);
@@ -100,7 +124,24 @@ public class ModifyAppGroupQuotaRequest extends Request {
         }
 
         /**
-         * Specifies whether to verify the application before modification. Valid values: true and false.
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+         * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

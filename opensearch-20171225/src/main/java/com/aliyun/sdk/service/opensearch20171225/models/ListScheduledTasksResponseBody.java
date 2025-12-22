@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScheduledTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListScheduledTasksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < java.util.Map<String, ?>> result;
+    private java.util.List<java.util.Map<String, ?>> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
@@ -34,6 +40,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < java.util.Map<String, ?>> getResult() {
+    public java.util.List<java.util.Map<String, ?>> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListScheduledTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < java.util.Map<String, ?>> result; 
+        private java.util.List<java.util.Map<String, ?>> result; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListScheduledTasksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,13 +93,16 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < java.util.Map<String, ?>> result) {
+        public Builder result(java.util.List<java.util.Map<String, ?>> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

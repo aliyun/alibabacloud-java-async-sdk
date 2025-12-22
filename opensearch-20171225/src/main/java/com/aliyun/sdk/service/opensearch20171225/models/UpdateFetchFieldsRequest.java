@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFetchFieldsRequest} extends {@link RequestModel}
  *
  * <p>UpdateFetchFieldsRequest</p>
@@ -23,7 +29,7 @@ public class UpdateFetchFieldsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < String > body;
+    private java.util.List<String> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -45,7 +51,7 @@ public class UpdateFetchFieldsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,7 @@ public class UpdateFetchFieldsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < String > getBody() {
+    public java.util.List<String> getBody() {
         return this.body;
     }
 
@@ -81,7 +87,7 @@ public class UpdateFetchFieldsRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateFetchFieldsRequest, Builder> {
         private String appGroupIdentity; 
         private Integer appId; 
-        private java.util.List < String > body; 
+        private java.util.List<String> body; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -97,7 +103,11 @@ public class UpdateFetchFieldsRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +116,11 @@ public class UpdateFetchFieldsRequest extends Request {
         }
 
         /**
-         * 110157886
+         * <p>The version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -115,16 +129,19 @@ public class UpdateFetchFieldsRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
-        public Builder body(java.util.List < String > body) {
+        public Builder body(java.util.List<String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         /**
-         * true
+         * <p>Specifies whether the request is a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

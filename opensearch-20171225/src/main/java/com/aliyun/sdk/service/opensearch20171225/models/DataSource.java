@@ -1,27 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSource} extends {@link TeaModel}
  *
  * <p>DataSource</p>
  */
 public class DataSource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < java.util.Map<String, String>> fields;
+    private java.util.List<java.util.Map<String, String>> fields;
 
     @com.aliyun.core.annotation.NameInMap("keyField")
     private String keyField;
 
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.NameInMap("plugins")
-    private java.util.Map < String, DataSourcePluginsValue > plugins;
+    private java.util.Map<String, DataSourcePluginsValue> plugins;
 
     @com.aliyun.core.annotation.NameInMap("schemaName")
     private String schemaName;
@@ -50,10 +56,14 @@ public class DataSource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
-    public java.util.List < java.util.Map<String, String>> getFields() {
+    public java.util.List<java.util.Map<String, String>> getFields() {
         return this.fields;
     }
 
@@ -67,14 +77,14 @@ public class DataSource extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
     /**
      * @return plugins
      */
-    public java.util.Map < String, DataSourcePluginsValue > getPlugins() {
+    public java.util.Map<String, DataSourcePluginsValue> getPlugins() {
         return this.plugins;
     }
 
@@ -100,18 +110,31 @@ public class DataSource extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, String>> fields; 
+        private java.util.List<java.util.Map<String, String>> fields; 
         private String keyField; 
-        private java.util.Map < String, ? > parameters; 
-        private java.util.Map < String, DataSourcePluginsValue > plugins; 
+        private java.util.Map<String, ?> parameters; 
+        private java.util.Map<String, DataSourcePluginsValue> plugins; 
         private String schemaName; 
         private String tableName; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(DataSource model) {
+            this.fields = model.fields;
+            this.keyField = model.keyField;
+            this.parameters = model.parameters;
+            this.plugins = model.plugins;
+            this.schemaName = model.schemaName;
+            this.tableName = model.tableName;
+            this.type = model.type;
+        } 
+
         /**
          * fields.
          */
-        public Builder fields(java.util.List < java.util.Map<String, String>> fields) {
+        public Builder fields(java.util.List<java.util.Map<String, String>> fields) {
             this.fields = fields;
             return this;
         }
@@ -127,7 +150,7 @@ public class DataSource extends TeaModel {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -135,7 +158,7 @@ public class DataSource extends TeaModel {
         /**
          * plugins.
          */
-        public Builder plugins(java.util.Map < String, DataSourcePluginsValue > plugins) {
+        public Builder plugins(java.util.Map<String, DataSourcePluginsValue> plugins) {
             this.plugins = plugins;
             return this;
         }

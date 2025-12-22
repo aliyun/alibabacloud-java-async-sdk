@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Schema} extends {@link TeaModel}
  *
  * <p>Schema</p>
  */
 public class Schema extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("indexSortConfig")
-    private java.util.List < IndexSortConfig> indexSortConfig;
+    private java.util.List<IndexSortConfig> indexSortConfig;
 
     @com.aliyun.core.annotation.NameInMap("indexes")
     private Indexes indexes;
@@ -24,13 +30,13 @@ public class Schema extends TeaModel {
     private String routeField;
 
     @com.aliyun.core.annotation.NameInMap("routeFieldValues")
-    private java.util.List < String > routeFieldValues;
+    private java.util.List<String> routeFieldValues;
 
     @com.aliyun.core.annotation.NameInMap("secondRouteField")
     private String secondRouteField;
 
     @com.aliyun.core.annotation.NameInMap("tables")
-    private java.util.Map < String, SchemaTablesValue > tables;
+    private java.util.Map<String, SchemaTablesValue> tables;
 
     @com.aliyun.core.annotation.NameInMap("ttlField")
     private TtlField ttlField;
@@ -54,10 +60,14 @@ public class Schema extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return indexSortConfig
      */
-    public java.util.List < IndexSortConfig> getIndexSortConfig() {
+    public java.util.List<IndexSortConfig> getIndexSortConfig() {
         return this.indexSortConfig;
     }
 
@@ -85,7 +95,7 @@ public class Schema extends TeaModel {
     /**
      * @return routeFieldValues
      */
-    public java.util.List < String > getRouteFieldValues() {
+    public java.util.List<String> getRouteFieldValues() {
         return this.routeFieldValues;
     }
 
@@ -99,7 +109,7 @@ public class Schema extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.Map < String, SchemaTablesValue > getTables() {
+    public java.util.Map<String, SchemaTablesValue> getTables() {
         return this.tables;
     }
 
@@ -111,19 +121,33 @@ public class Schema extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IndexSortConfig> indexSortConfig; 
+        private java.util.List<IndexSortConfig> indexSortConfig; 
         private Indexes indexes; 
         private String name; 
         private String routeField; 
-        private java.util.List < String > routeFieldValues; 
+        private java.util.List<String> routeFieldValues; 
         private String secondRouteField; 
-        private java.util.Map < String, SchemaTablesValue > tables; 
+        private java.util.Map<String, SchemaTablesValue> tables; 
         private TtlField ttlField; 
+
+        private Builder() {
+        } 
+
+        private Builder(Schema model) {
+            this.indexSortConfig = model.indexSortConfig;
+            this.indexes = model.indexes;
+            this.name = model.name;
+            this.routeField = model.routeField;
+            this.routeFieldValues = model.routeFieldValues;
+            this.secondRouteField = model.secondRouteField;
+            this.tables = model.tables;
+            this.ttlField = model.ttlField;
+        } 
 
         /**
          * indexSortConfig.
          */
-        public Builder indexSortConfig(java.util.List < IndexSortConfig> indexSortConfig) {
+        public Builder indexSortConfig(java.util.List<IndexSortConfig> indexSortConfig) {
             this.indexSortConfig = indexSortConfig;
             return this;
         }
@@ -155,7 +179,7 @@ public class Schema extends TeaModel {
         /**
          * routeFieldValues.
          */
-        public Builder routeFieldValues(java.util.List < String > routeFieldValues) {
+        public Builder routeFieldValues(java.util.List<String> routeFieldValues) {
             this.routeFieldValues = routeFieldValues;
             return this;
         }
@@ -171,7 +195,7 @@ public class Schema extends TeaModel {
         /**
          * tables.
          */
-        public Builder tables(java.util.Map < String, SchemaTablesValue > tables) {
+        public Builder tables(java.util.Map<String, SchemaTablesValue> tables) {
             this.tables = tables;
             return this;
         }
@@ -190,6 +214,12 @@ public class Schema extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Schema} extends {@link TeaModel}
+     *
+     * <p>Schema</p>
+     */
     public static class IndexSortConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("direction")
         private String direction;
@@ -228,6 +258,14 @@ public class Schema extends TeaModel {
             private String direction; 
             private String field; 
 
+            private Builder() {
+            } 
+
+            private Builder(IndexSortConfig model) {
+                this.direction = model.direction;
+                this.field = model.field;
+            } 
+
             /**
              * direction.
              */
@@ -251,12 +289,18 @@ public class Schema extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Schema} extends {@link TeaModel}
+     *
+     * <p>Schema</p>
+     */
     public static class Indexes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filterFields")
-        private java.util.List < String > filterFields;
+        private java.util.List<String> filterFields;
 
         @com.aliyun.core.annotation.NameInMap("searchFields")
-        private java.util.Map < String, SchemaIndexesSearchFieldsValue > searchFields;
+        private java.util.Map<String, SchemaIndexesSearchFieldsValue> searchFields;
 
         private Indexes(Builder builder) {
             this.filterFields = builder.filterFields;
@@ -274,25 +318,33 @@ public class Schema extends TeaModel {
         /**
          * @return filterFields
          */
-        public java.util.List < String > getFilterFields() {
+        public java.util.List<String> getFilterFields() {
             return this.filterFields;
         }
 
         /**
          * @return searchFields
          */
-        public java.util.Map < String, SchemaIndexesSearchFieldsValue > getSearchFields() {
+        public java.util.Map<String, SchemaIndexesSearchFieldsValue> getSearchFields() {
             return this.searchFields;
         }
 
         public static final class Builder {
-            private java.util.List < String > filterFields; 
-            private java.util.Map < String, SchemaIndexesSearchFieldsValue > searchFields; 
+            private java.util.List<String> filterFields; 
+            private java.util.Map<String, SchemaIndexesSearchFieldsValue> searchFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(Indexes model) {
+                this.filterFields = model.filterFields;
+                this.searchFields = model.searchFields;
+            } 
 
             /**
              * filterFields.
              */
-            public Builder filterFields(java.util.List < String > filterFields) {
+            public Builder filterFields(java.util.List<String> filterFields) {
                 this.filterFields = filterFields;
                 return this;
             }
@@ -300,7 +352,7 @@ public class Schema extends TeaModel {
             /**
              * searchFields.
              */
-            public Builder searchFields(java.util.Map < String, SchemaIndexesSearchFieldsValue > searchFields) {
+            public Builder searchFields(java.util.Map<String, SchemaIndexesSearchFieldsValue> searchFields) {
                 this.searchFields = searchFields;
                 return this;
             }
@@ -312,6 +364,12 @@ public class Schema extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Schema} extends {@link TeaModel}
+     *
+     * <p>Schema</p>
+     */
     public static class TtlField extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -349,6 +407,14 @@ public class Schema extends TeaModel {
         public static final class Builder {
             private String name; 
             private Long ttl; 
+
+            private Builder() {
+            } 
+
+            private Builder(TtlField model) {
+                this.name = model.name;
+                this.ttl = model.ttl;
+            } 
 
             /**
              * name.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppGroup} extends {@link TeaModel}
  *
  * <p>AppGroup</p>
@@ -52,6 +58,10 @@ public class AppGroup extends TeaModel {
 
     public static AppGroup create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,6 +129,20 @@ public class AppGroup extends TeaModel {
         private Quota quota; 
         private String resourceGroupId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(AppGroup model) {
+            this.chargeType = model.chargeType;
+            this.description = model.description;
+            this.domain = model.domain;
+            this.name = model.name;
+            this.order = model.order;
+            this.quota = model.quota;
+            this.resourceGroupId = model.resourceGroupId;
+            this.type = model.type;
+        } 
 
         /**
          * chargeType.
@@ -190,6 +214,12 @@ public class AppGroup extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppGroup} extends {@link TeaModel}
+     *
+     * <p>AppGroup</p>
+     */
     public static class Order extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoRenew")
         private Boolean autoRenew;
@@ -239,6 +269,15 @@ public class AppGroup extends TeaModel {
             private Boolean autoRenew; 
             private Long duration; 
             private String pricingCycle; 
+
+            private Builder() {
+            } 
+
+            private Builder(Order model) {
+                this.autoRenew = model.autoRenew;
+                this.duration = model.duration;
+                this.pricingCycle = model.pricingCycle;
+            } 
 
             /**
              * autoRenew.

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link App} extends {@link TeaModel}
  *
  * <p>App</p>
@@ -18,7 +24,7 @@ public class App extends TeaModel {
     private Cluster cluster;
 
     @com.aliyun.core.annotation.NameInMap("dataSources")
-    private java.util.List < DataSource > dataSources;
+    private java.util.List<DataSource> dataSources;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -27,16 +33,16 @@ public class App extends TeaModel {
     private Domain domain;
 
     @com.aliyun.core.annotation.NameInMap("fetchFields")
-    private java.util.List < String > fetchFields;
+    private java.util.List<String> fetchFields;
 
     @com.aliyun.core.annotation.NameInMap("firstRanks")
-    private java.util.List < FirstRank > firstRanks;
+    private java.util.List<FirstRank> firstRanks;
 
     @com.aliyun.core.annotation.NameInMap("networkType")
     private String networkType;
 
     @com.aliyun.core.annotation.NameInMap("queryProcessors")
-    private java.util.List < QueryProcessor > queryProcessors;
+    private java.util.List<QueryProcessor> queryProcessors;
 
     @com.aliyun.core.annotation.NameInMap("quota")
     private Quota quota;
@@ -48,13 +54,13 @@ public class App extends TeaModel {
     private Schema schema;
 
     @com.aliyun.core.annotation.NameInMap("schemas")
-    private java.util.List < Schema > schemas;
+    private java.util.List<Schema> schemas;
 
     @com.aliyun.core.annotation.NameInMap("secondRanks")
-    private java.util.List < SecondRank > secondRanks;
+    private java.util.List<SecondRank> secondRanks;
 
     @com.aliyun.core.annotation.NameInMap("summaries")
-    private java.util.List < Summary > summaries;
+    private java.util.List<Summary> summaries;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -86,6 +92,10 @@ public class App extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSwitch
      */
@@ -103,7 +113,7 @@ public class App extends TeaModel {
     /**
      * @return dataSources
      */
-    public java.util.List < DataSource > getDataSources() {
+    public java.util.List<DataSource> getDataSources() {
         return this.dataSources;
     }
 
@@ -124,14 +134,14 @@ public class App extends TeaModel {
     /**
      * @return fetchFields
      */
-    public java.util.List < String > getFetchFields() {
+    public java.util.List<String> getFetchFields() {
         return this.fetchFields;
     }
 
     /**
      * @return firstRanks
      */
-    public java.util.List < FirstRank > getFirstRanks() {
+    public java.util.List<FirstRank> getFirstRanks() {
         return this.firstRanks;
     }
 
@@ -145,7 +155,7 @@ public class App extends TeaModel {
     /**
      * @return queryProcessors
      */
-    public java.util.List < QueryProcessor > getQueryProcessors() {
+    public java.util.List<QueryProcessor> getQueryProcessors() {
         return this.queryProcessors;
     }
 
@@ -173,21 +183,21 @@ public class App extends TeaModel {
     /**
      * @return schemas
      */
-    public java.util.List < Schema > getSchemas() {
+    public java.util.List<Schema> getSchemas() {
         return this.schemas;
     }
 
     /**
      * @return secondRanks
      */
-    public java.util.List < SecondRank > getSecondRanks() {
+    public java.util.List<SecondRank> getSecondRanks() {
         return this.secondRanks;
     }
 
     /**
      * @return summaries
      */
-    public java.util.List < Summary > getSummaries() {
+    public java.util.List<Summary> getSummaries() {
         return this.summaries;
     }
 
@@ -201,20 +211,42 @@ public class App extends TeaModel {
     public static final class Builder {
         private Boolean autoSwitch; 
         private Cluster cluster; 
-        private java.util.List < DataSource > dataSources; 
+        private java.util.List<DataSource> dataSources; 
         private String description; 
         private Domain domain; 
-        private java.util.List < String > fetchFields; 
-        private java.util.List < FirstRank > firstRanks; 
+        private java.util.List<String> fetchFields; 
+        private java.util.List<FirstRank> firstRanks; 
         private String networkType; 
-        private java.util.List < QueryProcessor > queryProcessors; 
+        private java.util.List<QueryProcessor> queryProcessors; 
         private Quota quota; 
         private Boolean realtimeShared; 
         private Schema schema; 
-        private java.util.List < Schema > schemas; 
-        private java.util.List < SecondRank > secondRanks; 
-        private java.util.List < Summary > summaries; 
+        private java.util.List<Schema> schemas; 
+        private java.util.List<SecondRank> secondRanks; 
+        private java.util.List<Summary> summaries; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(App model) {
+            this.autoSwitch = model.autoSwitch;
+            this.cluster = model.cluster;
+            this.dataSources = model.dataSources;
+            this.description = model.description;
+            this.domain = model.domain;
+            this.fetchFields = model.fetchFields;
+            this.firstRanks = model.firstRanks;
+            this.networkType = model.networkType;
+            this.queryProcessors = model.queryProcessors;
+            this.quota = model.quota;
+            this.realtimeShared = model.realtimeShared;
+            this.schema = model.schema;
+            this.schemas = model.schemas;
+            this.secondRanks = model.secondRanks;
+            this.summaries = model.summaries;
+            this.type = model.type;
+        } 
 
         /**
          * autoSwitch.
@@ -235,7 +267,7 @@ public class App extends TeaModel {
         /**
          * dataSources.
          */
-        public Builder dataSources(java.util.List < DataSource > dataSources) {
+        public Builder dataSources(java.util.List<DataSource> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
@@ -259,7 +291,7 @@ public class App extends TeaModel {
         /**
          * fetchFields.
          */
-        public Builder fetchFields(java.util.List < String > fetchFields) {
+        public Builder fetchFields(java.util.List<String> fetchFields) {
             this.fetchFields = fetchFields;
             return this;
         }
@@ -267,7 +299,7 @@ public class App extends TeaModel {
         /**
          * firstRanks.
          */
-        public Builder firstRanks(java.util.List < FirstRank > firstRanks) {
+        public Builder firstRanks(java.util.List<FirstRank> firstRanks) {
             this.firstRanks = firstRanks;
             return this;
         }
@@ -283,7 +315,7 @@ public class App extends TeaModel {
         /**
          * queryProcessors.
          */
-        public Builder queryProcessors(java.util.List < QueryProcessor > queryProcessors) {
+        public Builder queryProcessors(java.util.List<QueryProcessor> queryProcessors) {
             this.queryProcessors = queryProcessors;
             return this;
         }
@@ -315,7 +347,7 @@ public class App extends TeaModel {
         /**
          * schemas.
          */
-        public Builder schemas(java.util.List < Schema > schemas) {
+        public Builder schemas(java.util.List<Schema> schemas) {
             this.schemas = schemas;
             return this;
         }
@@ -323,7 +355,7 @@ public class App extends TeaModel {
         /**
          * secondRanks.
          */
-        public Builder secondRanks(java.util.List < SecondRank > secondRanks) {
+        public Builder secondRanks(java.util.List<SecondRank> secondRanks) {
             this.secondRanks = secondRanks;
             return this;
         }
@@ -331,7 +363,7 @@ public class App extends TeaModel {
         /**
          * summaries.
          */
-        public Builder summaries(java.util.List < Summary > summaries) {
+        public Builder summaries(java.util.List<Summary> summaries) {
             this.summaries = summaries;
             return this;
         }
@@ -350,6 +382,12 @@ public class App extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link App} extends {@link TeaModel}
+     *
+     * <p>App</p>
+     */
     public static class Cluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maxQueryClauseLength")
         private Integer maxQueryClauseLength;
@@ -387,6 +425,14 @@ public class App extends TeaModel {
         public static final class Builder {
             private Integer maxQueryClauseLength; 
             private Integer maxTimeoutMS; 
+
+            private Builder() {
+            } 
+
+            private Builder(Cluster model) {
+                this.maxQueryClauseLength = model.maxQueryClauseLength;
+                this.maxTimeoutMS = model.maxTimeoutMS;
+            } 
 
             /**
              * maxQueryClauseLength.

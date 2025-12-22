@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteABTestSceneResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteABTestSceneResponseBody</p>
@@ -15,7 +21,7 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.Map < String, ? > result;
+    private java.util.Map<String, ?> result;
 
     private DeleteABTestSceneResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.Map < String, ? > getResult() {
+    public java.util.Map<String, ?> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.Map < String, ? > result; 
+        private java.util.Map<String, ?> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteABTestSceneResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,12 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
-        public Builder result(java.util.Map < String, ? > result) {
+        public Builder result(java.util.Map<String, ?> result) {
             this.result = result;
             return this;
         }

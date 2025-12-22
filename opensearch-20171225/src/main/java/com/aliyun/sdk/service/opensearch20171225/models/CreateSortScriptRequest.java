@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSortScriptRequest} extends {@link RequestModel}
  *
  * <p>CreateSortScriptRequest</p>
@@ -50,7 +56,7 @@ public class CreateSortScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,7 +117,11 @@ public class CreateSortScriptRequest extends Request {
         } 
 
         /**
-         * The application name or ID.
+         * <p>The application name or ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -120,7 +130,11 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * The ID of the report in the application.
+         * <p>The ID of the report in the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -129,7 +143,10 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * The sort phase to which the script applies.
+         * <p>The sort phase to which the script applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second_rank</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -138,7 +155,10 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * The script name.
+         * <p>The script name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rank_cava_20230606_v7</p>
          */
         public Builder scriptName(String scriptName) {
             this.putBodyParameter("scriptName", scriptName);
@@ -147,7 +167,10 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * The script type. Set the value to cava_script.
+         * <p>The script type. Set the value to cava_script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cava_script</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

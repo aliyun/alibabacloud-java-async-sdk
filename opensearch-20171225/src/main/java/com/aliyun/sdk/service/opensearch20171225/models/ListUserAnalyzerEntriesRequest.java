@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserAnalyzerEntriesRequest} extends {@link RequestModel}
  *
  * <p>ListUserAnalyzerEntriesRequest</p>
@@ -46,7 +52,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +104,11 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         } 
 
         /**
-         * The name of the analyzer.
+         * <p>The name of the analyzer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kevin_test</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -107,7 +117,10 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -116,7 +129,10 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -125,7 +141,10 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * The key to be used to query entries.
+         * <p>The key to be used to query entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kevintest</p>
          */
         public Builder word(String word) {
             this.putQueryParameter("word", word);

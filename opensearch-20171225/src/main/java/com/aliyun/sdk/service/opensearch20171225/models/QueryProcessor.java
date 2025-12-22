@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryProcessor} extends {@link TeaModel}
  *
  * <p>QueryProcessor</p>
@@ -21,13 +27,13 @@ public class QueryProcessor extends TeaModel {
     private String domain;
 
     @com.aliyun.core.annotation.NameInMap("indexes")
-    private java.util.List < String > indexes;
+    private java.util.List<String> indexes;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("processors")
-    private java.util.List < java.util.Map<String, ?>> processors;
+    private java.util.List<java.util.Map<String, ?>> processors;
 
     private QueryProcessor(Builder builder) {
         this.active = builder.active;
@@ -44,6 +50,10 @@ public class QueryProcessor extends TeaModel {
 
     public static QueryProcessor create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -70,7 +80,7 @@ public class QueryProcessor extends TeaModel {
     /**
      * @return indexes
      */
-    public java.util.List < String > getIndexes() {
+    public java.util.List<String> getIndexes() {
         return this.indexes;
     }
 
@@ -84,7 +94,7 @@ public class QueryProcessor extends TeaModel {
     /**
      * @return processors
      */
-    public java.util.List < java.util.Map<String, ?>> getProcessors() {
+    public java.util.List<java.util.Map<String, ?>> getProcessors() {
         return this.processors;
     }
 
@@ -92,9 +102,21 @@ public class QueryProcessor extends TeaModel {
         private Boolean active; 
         private String category; 
         private String domain; 
-        private java.util.List < String > indexes; 
+        private java.util.List<String> indexes; 
         private String name; 
-        private java.util.List < java.util.Map<String, ?>> processors; 
+        private java.util.List<java.util.Map<String, ?>> processors; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryProcessor model) {
+            this.active = model.active;
+            this.category = model.category;
+            this.domain = model.domain;
+            this.indexes = model.indexes;
+            this.name = model.name;
+            this.processors = model.processors;
+        } 
 
         /**
          * active.
@@ -123,7 +145,7 @@ public class QueryProcessor extends TeaModel {
         /**
          * indexes.
          */
-        public Builder indexes(java.util.List < String > indexes) {
+        public Builder indexes(java.util.List<String> indexes) {
             this.indexes = indexes;
             return this;
         }
@@ -139,7 +161,7 @@ public class QueryProcessor extends TeaModel {
         /**
          * processors.
          */
-        public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
+        public Builder processors(java.util.List<java.util.Map<String, ?>> processors) {
             this.processors = processors;
             return this;
         }

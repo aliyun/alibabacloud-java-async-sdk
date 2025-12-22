@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryProcessorsRequest} extends {@link RequestModel}
  *
  * <p>ListQueryProcessorsRequest</p>
@@ -40,7 +46,7 @@ public class ListQueryProcessorsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class ListQueryProcessorsRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * The application version number.
+         * <p>The application version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -101,12 +115,15 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * The scope of query analysis rules to be queried. Default value: 0. Valid values:
-         * <p>
+         * <p>The scope of query analysis rules to be queried. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li>0: queries all query analysis rules.</li>
+         * <li>1: queries the default query analysis rules.</li>
+         * <li>2: queries the query analysis rules that are not the default rules.</li>
+         * </ul>
          * 
-         * *   0: queries all query analysis rules.
-         * *   1: queries the default query analysis rules.
-         * *   2: queries the query analysis rules that are not the default rules.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isActive(Integer isActive) {
             this.putQueryParameter("isActive", isActive);

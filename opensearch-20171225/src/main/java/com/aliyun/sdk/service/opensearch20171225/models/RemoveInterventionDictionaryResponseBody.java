@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveInterventionDictionaryResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveInterventionDictionaryResponseBody</p>
@@ -30,6 +36,10 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(RemoveInterventionDictionaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06BBD41A-5F72-34E4-2DAF-E43B0526051D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the intervention dictionary.
+         * <p>The information about the intervention dictionary.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RemoveInterventionDictionaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>RemoveInterventionDictionaryResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("analyzer")
         private String analyzer;
@@ -144,8 +171,22 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             private String type; 
             private String updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.analyzer = model.analyzer;
+                this.created = model.created;
+                this.name = model.name;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The custom analyzer.
+             * <p>The custom analyzer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder analyzer(String analyzer) {
                 this.analyzer = analyzer;
@@ -153,7 +194,10 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the intervention dictionary was created.
+             * <p>The time when the intervention dictionary was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1539158313</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -161,7 +205,10 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the intervention dictionary.
+             * <p>Parameter</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tongyici</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -169,15 +216,18 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the intervention dictionary. Valid values:
-             * <p>
+             * <p>Type</p>
+             * <ul>
+             * <li>stopword: an intervention dictionary for stop word filtering.</li>
+             * <li>synonym: an intervention dictionary for synonym configuration.</li>
+             * <li>correction: an intervention dictionary for spelling correction.</li>
+             * <li>category_prediction: an intervention dictionary for category prediction.</li>
+             * <li>ner: an intervention dictionary for named entity recognition.</li>
+             * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
+             * </ul>
              * 
-             * *   stopword: an intervention dictionary for stop word filtering
-             * *   synonym: an intervention dictionary for synonym configuration
-             * *   correction: an intervention dictionary for spelling correction
-             * *   category_prediction: an intervention dictionary for category prediction
-             * *   ner: an intervention dictionary for named entity recognition (NER)
-             * *   term_weighting: an intervention dictionary for term weight analysis
+             * <strong>example:</strong>
+             * <p>synonym</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -185,7 +235,10 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the intervention dictionary was last updated.
+             * <p>The time when the the intervention dictionary was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1539158313</p>
              */
             public Builder updated(String updated) {
                 this.updated = updated;

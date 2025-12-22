@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSortScriptFileRequest} extends {@link RequestModel}
  *
  * <p>DeleteSortScriptFileRequest</p>
@@ -47,7 +53,7 @@ public class DeleteSortScriptFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,11 @@ public class DeleteSortScriptFileRequest extends Request {
         } 
 
         /**
-         * search
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +118,11 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * 1234567
+         * <p>The version ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -117,7 +131,11 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * cava
+         * <p>The name of the script.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cava</p>
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -126,7 +144,11 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * cavafile
+         * <p>The name of the script file to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cavafile</p>
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);

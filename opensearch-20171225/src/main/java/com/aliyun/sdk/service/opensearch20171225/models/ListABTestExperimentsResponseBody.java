@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABTestExperimentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListABTestExperimentsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListABTestExperimentsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListABTestExperimentsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +78,9 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         }
 
         /**
-         * The experiment details.\
-         * <p>
-         * For more information, see [ABTestExperiment](~~173617~~).
+         * <p>The experiment details.<br>For more information, see <a href="https://help.aliyun.com/document_detail/173617.html">ABTestExperiment</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -72,6 +91,12 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListABTestExperimentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListABTestExperimentsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -86,7 +111,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         private Boolean online;
 
         @com.aliyun.core.annotation.NameInMap("params")
-        private java.util.Map < String, ? > params;
+        private java.util.Map<String, ?> params;
 
         @com.aliyun.core.annotation.NameInMap("traffic")
         private Integer traffic;
@@ -143,7 +168,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.Map < String, ? > getParams() {
+        public java.util.Map<String, ?> getParams() {
             return this.params;
         }
 
@@ -166,12 +191,28 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Boolean online; 
-            private java.util.Map < String, ? > params; 
+            private java.util.Map<String, ?> params; 
             private Integer traffic; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.id = model.id;
+                this.name = model.name;
+                this.online = model.online;
+                this.params = model.params;
+                this.traffic = model.traffic;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the experiment was created.
+             * <p>The time when the experiment was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588842080</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -179,7 +220,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * The experiment ID.
+             * <p>The experiment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12888</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -187,7 +231,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * The group alias.
+             * <p>The group alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -195,11 +242,14 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the experiment is in effect. Valid values:
-             * <p>
+             * <p>Indicates whether the experiment is in effect. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -207,18 +257,22 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * The experiment parameters.
+             * <p>The experiment parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder params(java.util.Map < String, ? > params) {
+            public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
                 return this;
             }
 
             /**
-             * The percentage of traffic that is routed to the experiment.
-             * <p>
+             * <p>The percentage of traffic that is routed to the experiment.</p>
+             * <p>Valid values: [0,100]</p>
              * 
-             * Valid values: \[0,100]
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -226,7 +280,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the experiment was last modified.
+             * <p>The time when the experiment was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588842080</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

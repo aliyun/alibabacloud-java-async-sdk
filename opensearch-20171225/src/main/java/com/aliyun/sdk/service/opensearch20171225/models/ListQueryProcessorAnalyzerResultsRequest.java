@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryProcessorAnalyzerResultsRequest} extends {@link RequestModel}
  *
  * <p>ListQueryProcessorAnalyzerResultsRequest</p>
@@ -47,7 +53,7 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,11 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         } 
 
         /**
-         * The name of the application
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +118,11 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * The version number.
+         * <p>The version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;110157886&quot;</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -117,7 +131,11 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * The name of the test.
+         * <p>The name of the test.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;test&quot;</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -126,7 +144,11 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * The text to be tested.
+         * <p>The text to be tested.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;abcde&quot;</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("text", text);

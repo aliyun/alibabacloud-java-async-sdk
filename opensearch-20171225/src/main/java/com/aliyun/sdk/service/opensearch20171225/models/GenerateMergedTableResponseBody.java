@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateMergedTableResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateMergedTableResponseBody</p>
@@ -30,6 +36,10 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GenerateMergedTableResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCDEFGH</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,12 +91,18 @@ public class GenerateMergedTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateMergedTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateMergedTableResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fromTable")
-        private java.util.Map < String, ? > fromTable;
+        private java.util.Map<String, ?> fromTable;
 
         @com.aliyun.core.annotation.NameInMap("mergeTable")
-        private java.util.Map < String, ? > mergeTable;
+        private java.util.Map<String, ?> mergeTable;
 
         @com.aliyun.core.annotation.NameInMap("primaryKey")
         private String primaryKey;
@@ -97,14 +124,14 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         /**
          * @return fromTable
          */
-        public java.util.Map < String, ? > getFromTable() {
+        public java.util.Map<String, ?> getFromTable() {
             return this.fromTable;
         }
 
         /**
          * @return mergeTable
          */
-        public java.util.Map < String, ? > getMergeTable() {
+        public java.util.Map<String, ?> getMergeTable() {
             return this.mergeTable;
         }
 
@@ -116,28 +143,52 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > fromTable; 
-            private java.util.Map < String, ? > mergeTable; 
+            private java.util.Map<String, ?> fromTable; 
+            private java.util.Map<String, ?> mergeTable; 
             private String primaryKey; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.fromTable = model.fromTable;
+                this.mergeTable = model.mergeTable;
+                this.primaryKey = model.primaryKey;
+            } 
+
             /**
-             * The tables on which the JOIN operation is performed.
+             * <p>The tables on which the JOIN operation is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
-            public Builder fromTable(java.util.Map < String, ? > fromTable) {
+            public Builder fromTable(java.util.Map<String, ?> fromTable) {
                 this.fromTable = fromTable;
                 return this;
             }
 
             /**
-             * The wide table that is generated after the JOIN operation is performed on multiple tables.
+             * <p>The wide table that is generated after the JOIN operation is performed on multiple tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
-            public Builder mergeTable(java.util.Map < String, ? > mergeTable) {
+            public Builder mergeTable(java.util.Map<String, ?> mergeTable) {
                 this.mergeTable = mergeTable;
                 return this;
             }
 
             /**
-             * The primary key.
+             * <p>The primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;

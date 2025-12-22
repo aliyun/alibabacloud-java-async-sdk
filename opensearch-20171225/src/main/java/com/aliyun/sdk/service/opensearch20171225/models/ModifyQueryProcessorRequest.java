@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyQueryProcessorRequest} extends {@link RequestModel}
  *
  * <p>ModifyQueryProcessorRequest</p>
@@ -51,7 +57,7 @@ public class ModifyQueryProcessorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,11 @@ public class ModifyQueryProcessorRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -121,7 +131,11 @@ public class ModifyQueryProcessorRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * <p>The version number of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -130,7 +144,11 @@ public class ModifyQueryProcessorRequest extends Request {
         }
 
         /**
-         * The name of the query analysis rule
+         * <p>The name of the query analysis rule</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“test”</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -139,7 +157,23 @@ public class ModifyQueryProcessorRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * <p>The request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;domain&quot;: &quot;GENERAL&quot;,
+         *     &quot;category&quot;: &quot;&quot;,
+         *     &quot;processors&quot;: [
+         *         {
+         *             &quot;name&quot;: &quot;synonym&quot;,
+         *             &quot;useSystemDictionary&quot;: true
+         *         },
+         *         {
+         *             &quot;name&quot;: &quot;stop_word&quot;,
+         *             &quot;useSystemDictionary&quot;: true
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);
@@ -148,7 +182,10 @@ public class ModifyQueryProcessorRequest extends Request {
         }
 
         /**
-         * Specifies whether the request is a dry run.
+         * <p>Specifies whether the request is a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

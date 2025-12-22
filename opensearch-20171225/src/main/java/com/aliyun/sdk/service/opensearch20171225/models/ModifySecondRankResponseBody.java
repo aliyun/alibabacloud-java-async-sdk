@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecondRankResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecondRankResponseBody</p>
@@ -30,6 +36,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class ModifySecondRankResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifySecondRankResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5E2F73C-8241-81F8-3A62-65478C5A3111</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the fine sort expression.
+         * <p>The information about the fine sort expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +94,12 @@ public class ModifySecondRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifySecondRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifySecondRankResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -192,8 +222,26 @@ public class ModifySecondRankResponseBody extends TeaModel {
             private String name; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.created = model.created;
+                this.description = model.description;
+                this.id = model.id;
+                this.isDefault = model.isDefault;
+                this.isSys = model.isSys;
+                this.meta = model.meta;
+                this.name = model.name;
+                this.updated = model.updated;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -201,7 +249,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was created.
+             * <p>The time when the expression was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -209,7 +260,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * <p>The description of the expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;11&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +271,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The expression ID. This parameter is displayed only in the response.
+             * <p>The expression ID. This parameter is displayed only in the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>890473</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -225,11 +282,14 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:
-             * <p>
+             * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:</p>
+             * <ul>
+             * <li>true: the expression is the default one.</li>
+             * <li>false: the expression is not the default one.</li>
+             * </ul>
              * 
-             * *   true: the expression is the default one.
-             * *   false: the expression is not the default one.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -237,11 +297,14 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:
-             * <p>
+             * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:</p>
+             * <ul>
+             * <li>true: The expression is a system expression.</li>
+             * <li>false:The expression is not a system expression</li>
+             * </ul>
              * 
-             * *   true: The expression is a system expression.
-             * *   false:The expression is not a system expression
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSys(String isSys) {
                 this.isSys = isSys;
@@ -249,7 +312,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.
+             * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cate_id &gt; 0 and cate_id &lt; 1000</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -257,7 +323,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The expression name.
+             * <p>The expression name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsh_second_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,7 +334,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was updated.
+             * <p>The time when the expression was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

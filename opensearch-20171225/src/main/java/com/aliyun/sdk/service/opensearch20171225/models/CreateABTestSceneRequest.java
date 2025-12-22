@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABTestSceneRequest} extends {@link RequestModel}
  *
  * <p>CreateABTestSceneRequest</p>
@@ -39,7 +45,7 @@ public class CreateABTestSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,11 @@ public class CreateABTestSceneRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -91,7 +101,7 @@ public class CreateABTestSceneRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The ABTest scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a></p>
          */
         public Builder body(ABTestScene body) {
             this.putBodyParameter("body", body);
@@ -100,13 +110,15 @@ public class CreateABTestSceneRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
-         * <p>
+         * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+         * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

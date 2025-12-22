@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFunctionDefaultInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetFunctionDefaultInstanceResponseBody</p>
@@ -56,6 +62,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
 
     public static GetFunctionDefaultInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,8 +142,26 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         private Result result; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetFunctionDefaultInstanceResponseBody model) {
+            this.code = model.code;
+            this.functionName = model.functionName;
+            this.httpCode = model.httpCode;
+            this.instanceName = model.instanceName;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+        } 
+
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DefaultInstance.NotExist</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +169,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn_waf</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -149,7 +180,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -157,7 +191,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh-bp1oi31w1jn4ctdyv</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -165,7 +202,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The default running time.
+         * <p>The default running time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -173,7 +213,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default instance not set.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -181,7 +224,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>062BA91F-A568-5779-8A5B-9E62C9BB3DC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +235,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the request.
+         * <p>The result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Pagination&quot;: {&quot;TotalCount&quot;: 0, &quot;PageNumber&quot;: 1, &quot;PageSize&quot;: 10}, &quot;AntConsortiums&quot;: []}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -197,7 +246,10 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the request.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -210,6 +262,12 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFunctionDefaultInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFunctionDefaultInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
@@ -236,8 +294,18 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.instanceName = model.instanceName;
+            } 
+
             /**
-             * The default instance name.
+             * <p>The default instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

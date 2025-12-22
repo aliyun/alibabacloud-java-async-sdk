@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecondRankRequest} extends {@link RequestModel}
  *
  * <p>CreateSecondRankRequest</p>
@@ -45,7 +51,7 @@ public class CreateSecondRankRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,11 @@ public class CreateSecondRankRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +116,11 @@ public class CreateSecondRankRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * <p>The version number of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110157886</p>
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -115,7 +129,7 @@ public class CreateSecondRankRequest extends Request {
         }
 
         /**
-         * The request body. For more information, see [SecondRank](~~170008~~).
+         * <p>The request body. For more information, see <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
          */
         public Builder body(SecondRank body) {
             this.putBodyParameter("body", body);
@@ -124,7 +138,10 @@ public class CreateSecondRankRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run.
+         * <p>Specifies whether to perform a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

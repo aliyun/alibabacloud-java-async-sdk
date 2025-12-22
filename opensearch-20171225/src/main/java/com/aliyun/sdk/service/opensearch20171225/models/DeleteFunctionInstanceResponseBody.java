@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFunctionInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFunctionInstanceResponseBody</p>
@@ -44,6 +50,10 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
 
     public static DeleteFunctionInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteFunctionInstanceResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * The error code. If no error occurs, this parameter is left empty.
+         * <p>The error code. If no error occurs, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Instance.NotExist&quot;</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -113,7 +141,10 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request, in milliseconds.
+         * <p>The time consumed for the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -121,7 +152,10 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. If no error occurs, this parameter is left empty.
+         * <p>The error message. If no error occurs, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;instance not exist.&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +163,10 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;1081EB05-473C-5BF4-95BE-6D7CAD5E2213&quot;</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +174,14 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the request. Valid values:
-         * <p>
+         * <p>The status of the request. Valid values:</p>
+         * <ul>
+         * <li>OK: The request is successful.</li>
+         * <li>FAIL: The request fails.</li>
+         * </ul>
          * 
-         * *   OK: The request is successful.
-         * *   FAIL: The request fails.
+         * <strong>example:</strong>
+         * <p>&quot;OK&quot;</p>
          */
         public Builder status(String status) {
             this.status = status;

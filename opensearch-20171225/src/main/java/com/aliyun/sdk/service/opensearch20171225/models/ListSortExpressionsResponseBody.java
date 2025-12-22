@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSortExpressionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSortExpressionsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListSortExpressionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSortExpressionsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +78,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the rough sort or fine sort expressions that are returned.
-         * <p>
-         * 
-         * For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).
+         * <p>The information about the rough sort or fine sort expressions that are returned.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a> and <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -73,6 +92,12 @@ public class ListSortExpressionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSortExpressionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSortExpressionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -147,8 +172,22 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             private String name; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.created = model.created;
+                this.description = model.description;
+                this.name = model.name;
+                this.updated = model.updated;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -156,7 +195,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the sort expression was created.
+             * <p>The timestamp when the sort expression was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655793690</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -164,7 +206,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the sort expression.
+             * <p>The description of the sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -172,7 +217,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sort expression.
+             * <p>The name of the sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -180,7 +228,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the sort expression was updated.
+             * <p>The timestamp when the sort expression was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655793690</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

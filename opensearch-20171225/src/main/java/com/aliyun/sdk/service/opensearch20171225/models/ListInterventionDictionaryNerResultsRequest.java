@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterventionDictionaryNerResultsRequest} extends {@link RequestModel}
  *
  * <p>ListInterventionDictionaryNerResultsRequest</p>
@@ -35,7 +41,7 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         } 
 
         /**
-         * The dictionary name.
+         * <p>The dictionary name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_dict</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -78,7 +88,11 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         }
 
         /**
-         * Query keywords.
+         * <p>Query keywords.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;hello world&quot;</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

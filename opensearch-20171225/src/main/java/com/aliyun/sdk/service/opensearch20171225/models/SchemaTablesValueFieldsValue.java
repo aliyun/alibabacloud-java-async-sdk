@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SchemaTablesValueFieldsValue} extends {@link TeaModel}
  *
  * <p>SchemaTablesValueFieldsValue</p>
@@ -21,7 +27,7 @@ public class SchemaTablesValueFieldsValue extends TeaModel {
     private String type;
 
     @com.aliyun.core.annotation.NameInMap("joinWith")
-    private java.util.List < String > joinWith;
+    private java.util.List<String> joinWith;
 
     @com.aliyun.core.annotation.NameInMap("label")
     private String label;
@@ -40,6 +46,10 @@ public class SchemaTablesValueFieldsValue extends TeaModel {
 
     public static SchemaTablesValueFieldsValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -66,7 +76,7 @@ public class SchemaTablesValueFieldsValue extends TeaModel {
     /**
      * @return joinWith
      */
-    public java.util.List < String > getJoinWith() {
+    public java.util.List<String> getJoinWith() {
         return this.joinWith;
     }
 
@@ -81,8 +91,19 @@ public class SchemaTablesValueFieldsValue extends TeaModel {
         private String name; 
         private Boolean primaryKey; 
         private String type; 
-        private java.util.List < String > joinWith; 
+        private java.util.List<String> joinWith; 
         private String label; 
+
+        private Builder() {
+        } 
+
+        private Builder(SchemaTablesValueFieldsValue model) {
+            this.name = model.name;
+            this.primaryKey = model.primaryKey;
+            this.type = model.type;
+            this.joinWith = model.joinWith;
+            this.label = model.label;
+        } 
 
         /**
          * name.
@@ -111,7 +132,7 @@ public class SchemaTablesValueFieldsValue extends TeaModel {
         /**
          * joinWith.
          */
-        public Builder joinWith(java.util.List < String > joinWith) {
+        public Builder joinWith(java.util.List<String> joinWith) {
             this.joinWith = joinWith;
             return this;
         }

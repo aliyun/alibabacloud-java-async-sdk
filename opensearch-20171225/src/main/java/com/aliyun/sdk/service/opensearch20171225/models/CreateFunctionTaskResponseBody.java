@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFunctionTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFunctionTaskResponseBody</p>
@@ -44,6 +50,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
 
     public static CreateFunctionTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateFunctionTaskResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task.IsRunning</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -113,7 +141,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request, in milliseconds.
+         * <p>The time consumed for the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -121,7 +152,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +163,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638157990724</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +174,10 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the request.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateABTestSceneRequest} extends {@link RequestModel}
  *
  * <p>UpdateABTestSceneRequest</p>
@@ -45,7 +51,7 @@ public class UpdateABTestSceneRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,11 @@ public class UpdateABTestSceneRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +116,11 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * The ID of the test scenario.
+         * <p>The ID of the test scenario.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -115,7 +129,7 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(ABTestScene body) {
             this.putBodyParameter("body", body);
@@ -124,7 +138,10 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+         * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

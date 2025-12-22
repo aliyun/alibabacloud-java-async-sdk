@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCollctionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataCollctionResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataCollctionResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72FAD77B-83F9-F393-BA8E-5834E2427BF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data collection task.
+         * <p>The details of the data collection task.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataCollctionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCollctionResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
@@ -192,8 +219,26 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             private String type; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.created = model.created;
+                this.dataCollectionType = model.dataCollectionType;
+                this.id = model.id;
+                this.industryName = model.industryName;
+                this.name = model.name;
+                this.status = model.status;
+                this.sundialId = model.sundialId;
+                this.type = model.type;
+                this.updated = model.updated;
+            } 
+
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581065837</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -201,12 +246,15 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of data collected. Valid values:
-             * <p>
+             * <p>The type of data collected. Valid values:</p>
+             * <ul>
+             * <li>behavior: behavioral data.</li>
+             * <li>item_info: project information.</li>
+             * <li>industry_specific: industry-specific data.</li>
+             * </ul>
              * 
-             * *   behavior: behavioral data.
-             * *   item_info: project information.
-             * *   industry_specific: industry-specific data.
+             * <strong>example:</strong>
+             * <p>BEHAVIOR</p>
              */
             public Builder dataCollectionType(String dataCollectionType) {
                 this.dataCollectionType = dataCollectionType;
@@ -214,7 +262,10 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data collection task.
+             * <p>The ID of the data collection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>286</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -222,11 +273,14 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The industry name. Valid values:
-             * <p>
+             * <p>The industry name. Valid values:</p>
+             * <ul>
+             * <li>general</li>
+             * <li>ecommerce</li>
+             * </ul>
              * 
-             * *   general
-             * *   ecommerce
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -234,7 +288,10 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data collection task.
+             * <p>The name of the data collection task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os_function_test_v1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,13 +299,16 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data collection feature. Valid values:
-             * <p>
+             * <p>The status of the data collection feature. Valid values:</p>
+             * <ul>
+             * <li>0: The feature is disabled.</li>
+             * <li>1: The feature is being enabled.</li>
+             * <li>2: The feature is enabled.</li>
+             * <li>3: The feature failed to be enabled.</li>
+             * </ul>
              * 
-             * *   0: The feature is disabled.
-             * *   1: The feature is being enabled.
-             * *   2: The feature is enabled.
-             * *   3: The feature failed to be enabled.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -256,7 +316,10 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The sundial ID.
+             * <p>The sundial ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755</p>
              */
             public Builder sundialId(String sundialId) {
                 this.sundialId = sundialId;
@@ -264,12 +327,15 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source from which data was collected. Valid values:
-             * <p>
+             * <p>The type of the source from which data was collected. Valid values:</p>
+             * <ul>
+             * <li>server</li>
+             * <li>web</li>
+             * <li>app Note: Only server is supported.</li>
+             * </ul>
              * 
-             * *   server
-             * *   web
-             * *   app Note: Only server is supported.
+             * <strong>example:</strong>
+             * <p>server</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -277,7 +343,10 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data collection task was updated.
+             * <p>The time when the data collection task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581065904</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SchemaTablesValue} extends {@link TeaModel}
  *
  * <p>SchemaTablesValue</p>
@@ -18,7 +24,7 @@ public class SchemaTablesValue extends TeaModel {
     private Boolean primaryTable;
 
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.Map < String, SchemaTablesValueFieldsValue > fields;
+    private java.util.Map<String, SchemaTablesValueFieldsValue> fields;
 
     private SchemaTablesValue(Builder builder) {
         this.name = builder.name;
@@ -32,6 +38,10 @@ public class SchemaTablesValue extends TeaModel {
 
     public static SchemaTablesValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -51,14 +61,23 @@ public class SchemaTablesValue extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.Map < String, SchemaTablesValueFieldsValue > getFields() {
+    public java.util.Map<String, SchemaTablesValueFieldsValue> getFields() {
         return this.fields;
     }
 
     public static final class Builder {
         private String name; 
         private Boolean primaryTable; 
-        private java.util.Map < String, SchemaTablesValueFieldsValue > fields; 
+        private java.util.Map<String, SchemaTablesValueFieldsValue> fields; 
+
+        private Builder() {
+        } 
+
+        private Builder(SchemaTablesValue model) {
+            this.name = model.name;
+            this.primaryTable = model.primaryTable;
+            this.fields = model.fields;
+        } 
 
         /**
          * name.
@@ -79,7 +98,7 @@ public class SchemaTablesValue extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.Map < String, SchemaTablesValueFieldsValue > fields) {
+        public Builder fields(java.util.Map<String, SchemaTablesValueFieldsValue> fields) {
             this.fields = fields;
             return this;
         }

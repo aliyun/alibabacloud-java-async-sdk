@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -18,7 +24,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceType")
@@ -27,7 +33,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tagKey")
-    private java.util.List < String > tagKey;
+    private java.util.List<String> tagKey;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -45,7 +51,7 @@ public class UntagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +66,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -74,15 +80,15 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -97,7 +103,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the tagKey parameter is not specified. Valid values: true and false. Default value: false.
+         * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the tagKey parameter is not specified. Valid values: true and false. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -106,9 +115,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify a maximum number of 50 IDs.
+         * <p>The resource IDs. You can specify a maximum number of 50 IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "resourceId", "json");
             this.putQueryParameter("resourceId", resourceIdShrink);
             this.resourceId = resourceId;
@@ -116,7 +126,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProductVersion</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -125,9 +139,9 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of tags. You can specify a maximum number of 20 keys.
+         * <p>The keys of tags. You can specify a maximum number of 20 keys.</p>
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "tagKey", "json");
             this.putQueryParameter("tagKey", tagKeyShrink);
             this.tagKey = tagKey;

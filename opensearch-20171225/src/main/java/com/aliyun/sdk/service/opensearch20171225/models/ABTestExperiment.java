@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ABTestExperiment} extends {@link TeaModel}
  *
  * <p>ABTestExperiment</p>
@@ -18,7 +24,7 @@ public class ABTestExperiment extends TeaModel {
     private Boolean online;
 
     @com.aliyun.core.annotation.NameInMap("params")
-    private java.util.Map < String, String > params;
+    private java.util.Map<String, String> params;
 
     @com.aliyun.core.annotation.NameInMap("serialNumber")
     private Integer serialNumber;
@@ -42,6 +48,10 @@ public class ABTestExperiment extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -59,7 +69,7 @@ public class ABTestExperiment extends TeaModel {
     /**
      * @return params
      */
-    public java.util.Map < String, String > getParams() {
+    public java.util.Map<String, String> getParams() {
         return this.params;
     }
 
@@ -80,9 +90,20 @@ public class ABTestExperiment extends TeaModel {
     public static final class Builder {
         private String name; 
         private Boolean online; 
-        private java.util.Map < String, String > params; 
+        private java.util.Map<String, String> params; 
         private Integer serialNumber; 
         private Integer traffic; 
+
+        private Builder() {
+        } 
+
+        private Builder(ABTestExperiment model) {
+            this.name = model.name;
+            this.online = model.online;
+            this.params = model.params;
+            this.serialNumber = model.serialNumber;
+            this.traffic = model.traffic;
+        } 
 
         /**
          * name.
@@ -103,7 +124,7 @@ public class ABTestExperiment extends TeaModel {
         /**
          * params.
          */
-        public Builder params(java.util.Map < String, String > params) {
+        public Builder params(java.util.Map<String, String> params) {
             this.params = params;
             return this;
         }

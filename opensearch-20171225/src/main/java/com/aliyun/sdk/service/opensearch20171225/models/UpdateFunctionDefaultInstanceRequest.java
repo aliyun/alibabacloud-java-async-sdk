@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFunctionDefaultInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateFunctionDefaultInstanceRequest</p>
@@ -40,7 +46,7 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;app_group_name&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pop</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -101,7 +115,10 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;pop_test&quot;</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceAppGroupCommodityCodeResponseBody} extends {@link TeaModel}
  *
  * <p>ReplaceAppGroupCommodityCodeResponseBody</p>
@@ -30,6 +36,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ReplaceAppGroupCommodityCodeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC5F78BA-66B9-545B-9CF1-8F542E682E1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +94,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ReplaceAppGroupCommodityCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ReplaceAppGroupCommodityCodeResponseBody</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
@@ -120,8 +150,20 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             private Integer docSize; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.computeResource = model.computeResource;
+                this.docSize = model.docSize;
+                this.spec = model.spec;
+            } 
+
             /**
-             * The number of computing resources configured.
+             * <p>The number of computing resources configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -129,7 +171,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity.
+             * <p>The storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -137,7 +182,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications configured.
+             * <p>The specifications configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -151,6 +201,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ReplaceAppGroupCommodityCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ReplaceAppGroupCommodityCodeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -225,7 +281,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         private Integer updated;
 
         @com.aliyun.core.annotation.NameInMap("versions")
-        private java.util.List < String > versions;
+        private java.util.List<String> versions;
 
         private Result(Builder builder) {
             this.chargeType = builder.chargeType;
@@ -434,7 +490,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
         /**
          * @return versions
          */
-        public java.util.List < String > getVersions() {
+        public java.util.List<String> getVersions() {
             return this.versions;
         }
 
@@ -463,14 +519,48 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             private Integer switchedTime; 
             private String type; 
             private Integer updated; 
-            private java.util.List < String > versions; 
+            private java.util.List<String> versions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.chargeType = model.chargeType;
+                this.chargingWay = model.chargingWay;
+                this.commodityCode = model.commodityCode;
+                this.created = model.created;
+                this.currentVersion = model.currentVersion;
+                this.description = model.description;
+                this.expireOn = model.expireOn;
+                this.firstRankAlgoDeploymentId = model.firstRankAlgoDeploymentId;
+                this.hasPendingQuotaReviewTask = model.hasPendingQuotaReviewTask;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.lockMode = model.lockMode;
+                this.lockedByExpiration = model.lockedByExpiration;
+                this.name = model.name;
+                this.pendingSecondRankAlgoDeploymentId = model.pendingSecondRankAlgoDeploymentId;
+                this.processingOrderId = model.processingOrderId;
+                this.produced = model.produced;
+                this.projectId = model.projectId;
+                this.quota = model.quota;
+                this.secondRankAlgoDeploymentId = model.secondRankAlgoDeploymentId;
+                this.status = model.status;
+                this.switchedTime = model.switchedTime;
+                this.type = model.type;
+                this.updated = model.updated;
+                this.versions = model.versions;
+            } 
 
             /**
-             * The billing method. Valid values:
-             * <p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * <li>PREPAY: subscription.</li>
+             * </ul>
              * 
-             * *   POSTPAY: pay-as-you-go.
-             * *   PREPAY: subscription.
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -478,11 +568,14 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The billing type. Valid values:
-             * <p>
+             * <p>The billing type. Valid values:</p>
+             * <ul>
+             * <li>1: computing resources.</li>
+             * <li>2: queries per second (QPS).</li>
+             * </ul>
              * 
-             * *   1: computing resources.
-             * *   2: queries per second (QPS).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chargingWay(Integer chargingWay) {
                 this.chargingWay = chargingWay;
@@ -490,7 +583,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity.
+             * <p>The code of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>opensearch</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -498,7 +594,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application was created.
+             * <p>The timestamp when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1588054131</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -506,7 +605,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current online version.
+             * <p>The ID of the current online version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100302903</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -514,7 +616,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -522,7 +627,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder expireOn(String expireOn) {
                 this.expireOn = expireOn;
@@ -530,7 +640,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rough sort expression.
+             * <p>The ID of the rough sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder firstRankAlgoDeploymentId(Integer firstRankAlgoDeploymentId) {
                 this.firstRankAlgoDeploymentId = firstRankAlgoDeploymentId;
@@ -538,11 +651,14 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The approval state of the quotas. Valid values:
-             * <p>
+             * <p>The approval state of the quotas. Valid values:</p>
+             * <ul>
+             * <li>0: The approval status is normal.</li>
+             * <li>1: The quotas are being approved.</li>
+             * </ul>
              * 
-             * *   0: The approval status is normal.
-             * *   1: The quotas are being approved.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hasPendingQuotaReviewTask(Integer hasPendingQuotaReviewTask) {
                 this.hasPendingQuotaReviewTask = hasPendingQuotaReviewTask;
@@ -550,7 +666,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -558,7 +679,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -566,12 +692,15 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The lock state. Valid values:
-             * <p>
+             * <p>The lock state. Valid values:</p>
+             * <ul>
+             * <li>Unlock: The instance is unlocked.</li>
+             * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
+             * <li>ManualLock: The instance is manually locked.</li>
+             * </ul>
              * 
-             * *   Unlock: The instance is unlocked.
-             * *   LockByExpiration: The instance is automatically locked after it expires.
-             * *   ManualLock: The instance is manually locked.
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -579,11 +708,14 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is automatically locked after it expires. Valid values:
-             * <p>
+             * <p>Indicates whether the instance is automatically locked after it expires. Valid values:</p>
+             * <ul>
+             * <li>0: The instance is not automatically locked after it expires.</li>
+             * <li>1: The instance is automatically locked after it expires.</li>
+             * </ul>
              * 
-             * *   0: The instance is not automatically locked after it expires.
-             * *   1: The instance is automatically locked after it expires.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lockedByExpiration(Integer lockedByExpiration) {
                 this.lockedByExpiration = lockedByExpiration;
@@ -591,7 +723,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the order.
+             * <p>The name of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -599,7 +736,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the fine sort expression that is being created.
+             * <p>The ID of the fine sort expression that is being created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pendingSecondRankAlgoDeploymentId(Integer pendingSecondRankAlgoDeploymentId) {
                 this.pendingSecondRankAlgoDeploymentId = pendingSecondRankAlgoDeploymentId;
@@ -607,7 +747,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the order that is in progress.
+             * <p>The ID of the order that is in progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder processingOrderId(String processingOrderId) {
                 this.processingOrderId = processingOrderId;
@@ -615,7 +760,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the order is produced.
+             * <p>Indicates whether the order is produced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder produced(Integer produced) {
                 this.produced = produced;
@@ -623,7 +771,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the A/B test group.
+             * <p>The name of the A/B test group.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -631,7 +784,7 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information.
+             * <p>The configuration information.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -639,7 +792,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the fine sort expression.
+             * <p>The ID of the fine sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder secondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {
                 this.secondRankAlgoDeploymentId = secondRankAlgoDeploymentId;
@@ -647,7 +803,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application.
+             * <p>The status of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -655,7 +814,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the current online version was published.
+             * <p>The timestamp when the current online version was published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590486386</p>
              */
             public Builder switchedTime(Integer switchedTime) {
                 this.switchedTime = switchedTime;
@@ -663,7 +825,12 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the application.
+             * <p>The type of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -671,7 +838,10 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the application was updated.
+             * <p>The timestamp when the application was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581065904</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -679,9 +849,9 @@ public class ReplaceAppGroupCommodityCodeResponseBody extends TeaModel {
             }
 
             /**
-             * The versions.
+             * <p>The versions.</p>
              */
-            public Builder versions(java.util.List < String > versions) {
+            public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;
                 return this;
             }

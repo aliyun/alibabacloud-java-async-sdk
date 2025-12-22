@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFirstRankResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFirstRankResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateFirstRankResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class CreateFirstRankResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateFirstRankResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the rough sort expression.
+         * <p>The information about the rough sort expression.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class CreateFirstRankResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFirstRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFirstRankResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arg")
         private String arg;
@@ -120,8 +147,20 @@ public class CreateFirstRankResponseBody extends TeaModel {
             private String attribute; 
             private Float weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.arg = model.arg;
+                this.attribute = model.attribute;
+                this.weight = model.weight;
+            } 
+
             /**
-             * The parameters that are used by a function in the expression.
+             * <p>The parameters that are used by a function in the expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -129,7 +168,10 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute, feature functions, or field to be searched for.
+             * <p>The attribute, feature functions, or field to be searched for.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>static_bm25()</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -137,7 +179,10 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The weight. Valid values: \[-100000,100000]. The value cannot be 0.
+             * <p>The weight. Valid values: [-100000,100000]. The value cannot be 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder weight(Float weight) {
                 this.weight = weight;
@@ -151,12 +196,18 @@ public class CreateFirstRankResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFirstRankResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFirstRankResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.List < Meta> meta;
+        private java.util.List<Meta> meta;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -185,7 +236,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.List < Meta> getMeta() {
+        public java.util.List<Meta> getMeta() {
             return this.meta;
         }
 
@@ -198,11 +249,23 @@ public class CreateFirstRankResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean active; 
-            private java.util.List < Meta> meta; 
+            private java.util.List<Meta> meta; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.meta = model.meta;
+                this.name = model.name;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Indicates whether the expression is the default one.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -210,15 +273,18 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the expression.
+             * <p>The content of the expression.</p>
              */
-            public Builder meta(java.util.List < Meta> meta) {
+            public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
                 return this;
             }
 
             /**
-             * The name of the expression.
+             * <p>The name of the expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;

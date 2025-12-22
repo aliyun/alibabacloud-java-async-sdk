@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Summary} extends {@link TeaModel}
  *
  * <p>Summary</p>
@@ -34,6 +40,10 @@ public class Summary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return active
      */
@@ -59,6 +69,15 @@ public class Summary extends TeaModel {
         private Boolean active; 
         private Meta meta; 
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(Summary model) {
+            this.active = model.active;
+            this.meta = model.meta;
+            this.name = model.name;
+        } 
 
         /**
          * active.
@@ -90,6 +109,12 @@ public class Summary extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Summary} extends {@link TeaModel}
+     *
+     * <p>Summary</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("element")
         private String element;
@@ -163,6 +188,17 @@ public class Summary extends TeaModel {
             private String field; 
             private Integer len; 
             private String snippet; 
+
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.element = model.element;
+                this.ellipsis = model.ellipsis;
+                this.field = model.field;
+                this.len = model.len;
+                this.snippet = model.snippet;
+            } 
 
             /**
              * element.

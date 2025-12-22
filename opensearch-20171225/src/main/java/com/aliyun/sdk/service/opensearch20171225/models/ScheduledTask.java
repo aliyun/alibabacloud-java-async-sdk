@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScheduledTask} extends {@link TeaModel}
  *
  * <p>ScheduledTask</p>
@@ -56,6 +62,10 @@ public class ScheduledTask extends TeaModel {
 
     public static ScheduledTask create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -131,6 +141,21 @@ public class ScheduledTask extends TeaModel {
         private Boolean runNow; 
         private String type; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledTask model) {
+            this.autoSwitch = model.autoSwitch;
+            this.cron = model.cron;
+            this.enabled = model.enabled;
+            this.filter = model.filter;
+            this.forkedAppId = model.forkedAppId;
+            this.permanent = model.permanent;
+            this.runNow = model.runNow;
+            this.type = model.type;
+            this.version = model.version;
+        } 
 
         /**
          * autoSwitch.
@@ -210,6 +235,12 @@ public class ScheduledTask extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ScheduledTask} extends {@link TeaModel}
+     *
+     * <p>ScheduledTask</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("days")
         private Integer days;
@@ -271,6 +302,16 @@ public class ScheduledTask extends TeaModel {
             private String expression; 
             private String field; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.days = model.days;
+                this.expression = model.expression;
+                this.field = model.field;
+                this.unit = model.unit;
+            } 
 
             /**
              * days.

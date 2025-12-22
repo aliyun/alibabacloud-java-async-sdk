@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFunctionInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateFunctionInstanceRequest</p>
@@ -23,7 +29,7 @@ public class CreateFunctionInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("createParameters")
-    private java.util.List < CreateParameters> createParameters;
+    private java.util.List<CreateParameters> createParameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cron")
@@ -49,7 +55,7 @@ public class CreateFunctionInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("usageParameters")
-    private java.util.List < UsageParameters> usageParameters;
+    private java.util.List<UsageParameters> usageParameters;
 
     private CreateFunctionInstanceRequest(Builder builder) {
         super(builder);
@@ -72,7 +78,7 @@ public class CreateFunctionInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,7 +100,7 @@ public class CreateFunctionInstanceRequest extends Request {
     /**
      * @return createParameters
      */
-    public java.util.List < CreateParameters> getCreateParameters() {
+    public java.util.List<CreateParameters> getCreateParameters() {
         return this.createParameters;
     }
 
@@ -136,20 +142,20 @@ public class CreateFunctionInstanceRequest extends Request {
     /**
      * @return usageParameters
      */
-    public java.util.List < UsageParameters> getUsageParameters() {
+    public java.util.List<UsageParameters> getUsageParameters() {
         return this.usageParameters;
     }
 
     public static final class Builder extends Request.Builder<CreateFunctionInstanceRequest, Builder> {
         private String appGroupIdentity; 
         private String functionName; 
-        private java.util.List < CreateParameters> createParameters; 
+        private java.util.List<CreateParameters> createParameters; 
         private String cron; 
         private String description; 
         private String functionType; 
         private String instanceName; 
         private String modelType; 
-        private java.util.List < UsageParameters> usageParameters; 
+        private java.util.List<UsageParameters> usageParameters; 
 
         private Builder() {
             super();
@@ -169,7 +175,11 @@ public class CreateFunctionInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -178,18 +188,22 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The feature name. Valid values:
-         * <p>
+         * <p>The feature name. Valid values:</p>
+         * <ul>
+         * <li>ctr: CTR model.</li>
+         * <li>pop: popularity model.</li>
+         * <li>category: category model.</li>
+         * <li>hot: hotword model.</li>
+         * <li>hint: hint model.</li>
+         * <li>suggest: drop-down suggestion model.</li>
+         * <li>analyzer: tokenization model.</li>
+         * <li>termweight: term weight model.</li>
+         * <li>synonym: synonym model.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ctr: CTR model.
-         * *   pop: popularity model.
-         * *   category: category model.
-         * *   hot: hotword model.
-         * *   hint: hint model.
-         * *   suggest: drop-down suggestion model.
-         * *   analyzer: tokenization model.
-         * *   termweight: term weight model.
-         * *   synonym: synonym model.
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -198,16 +212,22 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters used to create the instance.
+         * <p>The parameters used to create the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[   { &quot;name&quot;: &quot;param1&quot;, &quot;value&quot;: &quot;val1&quot;   } ]</p>
          */
-        public Builder createParameters(java.util.List < CreateParameters> createParameters) {
+        public Builder createParameters(java.util.List<CreateParameters> createParameters) {
             this.putBodyParameter("createParameters", createParameters);
             this.createParameters = createParameters;
             return this;
         }
 
         /**
-         * The CRON expression used to schedule periodic training, in the format of Minutes Hours DayofMonth Month DayofWeek. The default value is empty, which specifies that no periodic training is performed. A value of 0 for DayofWeek specifies Sunday.
+         * <p>The CRON expression used to schedule periodic training, in the format of Minutes Hours DayofMonth Month DayofWeek. The default value is empty, which specifies that no periodic training is performed. A value of 0 for DayofWeek specifies Sunday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 ? * 0,1,2,3,4,5,6</p>
          */
         public Builder cron(String cron) {
             this.putBodyParameter("cron", cron);
@@ -216,7 +236,10 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test instance</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -225,10 +248,13 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The feature type.
-         * <p>
+         * <p>The feature type.</p>
+         * <ul>
+         * <li>Default value: PAAS. Training is required before you can use the feature.</li>
+         * </ul>
          * 
-         * *   Default value: PAAS. Training is required before you can use the feature.
+         * <strong>example:</strong>
+         * <p>PAAS</p>
          */
         public Builder functionType(String functionType) {
             this.putBodyParameter("functionType", functionType);
@@ -237,7 +263,11 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The instance name. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (\_). The name is case-sensitive and must start with a letter.
+         * <p>The instance name. The name must be 1 to 30 characters in length and can contain letters, digits, and underscores (_). The name is case-sensitive and must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr_test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);
@@ -246,20 +276,24 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The model type. The value varies based on the model.
-         * <p>
+         * <p>The model type. The value varies based on the model.</p>
+         * <ul>
+         * <li>Click-through rate (CTR) model: tf_checkpoint</li>
+         * <li>Popularity model: pop</li>
+         * <li>Category model: offline_inference</li>
+         * <li>Hotword model: offline_inference</li>
+         * <li>Hint model: offline_inference</li>
+         * <li>Hotword model for real-time top searches: near_realtime</li>
+         * <li>Personalized hint model: near_realtime</li>
+         * <li>Drop-down suggestion model: offline_inference</li>
+         * <li>Tokenization model: text</li>
+         * <li>Term weight model: tf_checkpoint</li>
+         * <li>Synonym model: offline_inference</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Click-through rate (CTR) model: tf_checkpoint
-         * *   Popularity model: pop
-         * *   Category model: offline_inference
-         * *   Hotword model: offline_inference
-         * *   Hint model: offline_inference
-         * *   Hotword model for real-time top searches: near_realtime
-         * *   Personalized hint model: near_realtime
-         * *   Drop-down suggestion model: offline_inference
-         * *   Tokenization model: text
-         * *   Term weight model: tf_checkpoint
-         * *   Synonym model: offline_inference
+         * <strong>example:</strong>
+         * <p>tf_checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putBodyParameter("modelType", modelType);
@@ -268,9 +302,9 @@ public class CreateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters used to use the instance.
+         * <p>The parameters used to use the instance.</p>
          */
-        public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
+        public Builder usageParameters(java.util.List<UsageParameters> usageParameters) {
             this.putBodyParameter("usageParameters", usageParameters);
             this.usageParameters = usageParameters;
             return this;
@@ -283,6 +317,12 @@ public class CreateFunctionInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFunctionInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionInstanceRequest</p>
+     */
     public static class CreateParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -321,8 +361,19 @@ public class CreateFunctionInstanceRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title_field</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +381,10 @@ public class CreateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The parameter value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -344,6 +398,12 @@ public class CreateFunctionInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFunctionInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFunctionInstanceRequest</p>
+     */
     public static class UsageParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -382,8 +442,19 @@ public class CreateFunctionInstanceRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The parameter name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allow_dict_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -391,7 +462,10 @@ public class CreateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The parameter value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

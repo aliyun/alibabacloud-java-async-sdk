@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFunctionResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFunctionResourceResponseBody</p>
@@ -44,6 +50,10 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
 
     public static DeleteFunctionResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteFunctionResourceResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * The error code returned. If no error occurs, this value is empty.
+         * <p>The error code returned. If no error occurs, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +130,10 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -113,7 +141,10 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request. Unit: milliseconds.
+         * <p>The time consumed for the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Double latency) {
             this.latency = latency;
@@ -121,7 +152,10 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +163,10 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4D487A9-A456-5AA5-A9C6-B7BF2889CF74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +174,14 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The status code. Valid values:
-         * <p>
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>OK</li>
+         * <li>FAIL</li>
+         * </ul>
          * 
-         * *   OK
-         * *   FAIL
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;

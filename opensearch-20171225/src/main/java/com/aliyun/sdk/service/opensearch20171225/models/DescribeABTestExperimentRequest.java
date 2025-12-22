@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeABTestExperimentRequest} extends {@link RequestModel}
  *
  * <p>DescribeABTestExperimentRequest</p>
@@ -47,7 +53,7 @@ public class DescribeABTestExperimentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,11 @@ public class DescribeABTestExperimentRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +118,11 @@ public class DescribeABTestExperimentRequest extends Request {
         }
 
         /**
-         * The scenario ID.
+         * <p>The scenario ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -117,7 +131,11 @@ public class DescribeABTestExperimentRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13467</p>
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -126,7 +144,11 @@ public class DescribeABTestExperimentRequest extends Request {
         }
 
         /**
-         * The experiment ID
+         * <p>The experiment ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12889</p>
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);

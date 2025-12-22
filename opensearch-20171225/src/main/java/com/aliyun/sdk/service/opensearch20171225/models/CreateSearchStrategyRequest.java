@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSearchStrategyRequest} extends {@link RequestModel}
  *
  * <p>CreateSearchStrategyRequest</p>
@@ -40,7 +46,7 @@ public class CreateSearchStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class CreateSearchStrategyRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;my_app&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class CreateSearchStrategyRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * <p>The version number of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -101,7 +115,7 @@ public class CreateSearchStrategyRequest extends Request {
         }
 
         /**
-         * The query policy.
+         * <p>The query policy.</p>
          */
         public Builder body(SearchStrategy body) {
             this.putBodyParameter("body", body);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterventionDictionariesRequest} extends {@link RequestModel}
  *
  * <p>ListInterventionDictionariesRequest</p>
@@ -38,7 +44,7 @@ public class ListInterventionDictionariesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,10 @@ public class ListInterventionDictionariesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -90,7 +99,10 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -99,15 +111,18 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * The type of the intervention dictionary. Valid values:
-         * <p>
+         * <p>The type of the intervention dictionary. Valid values:</p>
+         * <ul>
+         * <li>stopword: an intervention dictionary for stop word filtering</li>
+         * <li>synonym: an intervention dictionary for synonym configuration</li>
+         * <li>correction: an intervention dictionary for spelling correction</li>
+         * <li>category_prediction: an intervention dictionary for category prediction</li>
+         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
+         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * </ul>
          * 
-         * *   stopword: an intervention dictionary for stop word filtering
-         * *   synonym: an intervention dictionary for synonym configuration
-         * *   correction: an intervention dictionary for spelling correction
-         * *   category_prediction: an intervention dictionary for category prediction
-         * *   ner: an intervention dictionary for named entity recognition (NER)
-         * *   term_weighting: an intervention dictionary for term weight analysis
+         * <strong>example:</strong>
+         * <p>[&quot;synonym&quot;]</p>
          */
         public Builder types(String types) {
             this.putQueryParameter("types", types);

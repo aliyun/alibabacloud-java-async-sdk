@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionTasksRequest} extends {@link RequestModel}
  *
  * <p>ListFunctionTasksRequest</p>
@@ -66,7 +72,7 @@ public class ListFunctionTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,11 @@ public class ListFunctionTasksRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -163,7 +173,11 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -172,7 +186,11 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_model_2</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -181,7 +199,10 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582646399</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -190,7 +211,10 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -199,7 +223,10 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 1.
+         * <p>The number of entries to return on each page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -208,7 +235,10 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582214400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -217,12 +247,15 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>failed</li>
+         * <li>running</li>
+         * </ul>
          * 
-         * *   success
-         * *   failed
-         * *   running
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

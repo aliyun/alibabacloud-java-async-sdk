@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompileSortScriptRequest} extends {@link RequestModel}
  *
  * <p>CompileSortScriptRequest</p>
@@ -40,7 +46,7 @@ public class CompileSortScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class CompileSortScriptRequest extends Request {
         } 
 
         /**
-         * search
+         * <p>The name and ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class CompileSortScriptRequest extends Request {
         }
 
         /**
-         * script
+         * <p>The name of the script.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>script</p>
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -101,7 +115,10 @@ public class CompileSortScriptRequest extends Request {
         }
 
         /**
-         * 1234567
+         * <p>The version ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130196473</p>
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);

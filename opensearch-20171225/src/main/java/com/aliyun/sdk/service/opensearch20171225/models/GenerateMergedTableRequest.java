@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateMergedTableRequest} extends {@link RequestModel}
  *
  * <p>GenerateMergedTableRequest</p>
@@ -33,7 +39,7 @@ public class GenerateMergedTableRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,7 @@ public class GenerateMergedTableRequest extends Request {
         } 
 
         /**
-         * The request body parameters.
+         * <p>The request body parameters.</p>
          */
         public Builder body(Schema body) {
             this.putBodyParameter("body", body);
@@ -76,12 +82,12 @@ public class GenerateMergedTableRequest extends Request {
         }
 
         /**
-         * The specifications of the OpenSearch instance. This parameter is used to check whether the OpenSearch instance meets the special limits on an exclusive instance.
-         * <p>
+         * <p>The specifications of the OpenSearch instance. This parameter is used to check whether the OpenSearch instance meets the special limits on an exclusive instance.</p>
+         * <p>Default value: opensearch.share.common.</p>
+         * <p>For more information, see the description of the spec field in the Quota topic.</p>
          * 
-         * Default value: opensearch.share.common.
-         * 
-         * For more information, see the description of the spec field in the Quota topic.
+         * <strong>example:</strong>
+         * <p>&quot;opensearch.share.common&quot;</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("spec", spec);

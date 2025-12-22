@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSortScriptFileRequest} extends {@link RequestModel}
  *
  * <p>SaveSortScriptFileRequest</p>
@@ -57,7 +63,7 @@ public class SaveSortScriptFileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,11 @@ public class SaveSortScriptFileRequest extends Request {
         } 
 
         /**
-         * The name or ID of the application.
+         * <p>The name or ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;1111&quot;&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -136,7 +146,11 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * The name of the script whose content you want to update.
+         * <p>The name of the script whose content you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;11111&quot;&quot;</p>
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -145,7 +159,11 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * <p>The version number of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;111111&quot;&quot;</p>
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -154,7 +172,11 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;11111&quot;&quot;</p>
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);
@@ -163,7 +185,10 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * The script content that is encoded in the Base64 format.
+         * <p>The script content that is encoded in the Base64 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4769#0: *28194492991 a client request body is buffered to a temporary file /usr/local/webserver/openresty/nginx/client_body_temp/0000624474,</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -172,7 +197,10 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * The version number of the script content.
+         * <p>The version number of the script content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
          */
         public Builder version(Integer version) {
             this.putBodyParameter("version", version);

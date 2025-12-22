@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushInterventionDictionaryEntriesRequest} extends {@link RequestModel}
  *
  * <p>PushInterventionDictionaryEntriesRequest</p>
@@ -18,7 +24,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < java.util.Map<String, ?>> body;
+    private java.util.List<java.util.Map<String, ?>> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -39,7 +45,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < java.util.Map<String, ?>> getBody() {
+    public java.util.List<java.util.Map<String, ?>> getBody() {
         return this.body;
     }
 
@@ -67,7 +73,7 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushInterventionDictionaryEntriesRequest, Builder> {
         private String name; 
-        private java.util.List < java.util.Map<String, ?>> body; 
+        private java.util.List<java.util.Map<String, ?>> body; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -82,7 +88,11 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         } 
 
         /**
-         * The name of the intervention dictionary.
+         * <p>The name of the intervention dictionary.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_dict</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -91,22 +101,24 @@ public class PushInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
-        public Builder body(java.util.List < java.util.Map<String, ?>> body) {
+        public Builder body(java.util.List<java.util.Map<String, ?>> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         /**
-         * Specifies whether to check the validity of input parameters. Default value: false.
-         * <p>
+         * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+         * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**: checks only the validity of input parameters.
-         * *   **false**: checks the validity of input parameters and creates an attribution configuration.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

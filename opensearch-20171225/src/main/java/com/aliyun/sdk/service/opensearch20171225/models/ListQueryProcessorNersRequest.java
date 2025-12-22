@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryProcessorNersRequest} extends {@link RequestModel}
  *
  * <p>ListQueryProcessorNersRequest</p>
@@ -28,7 +34,7 @@ public class ListQueryProcessorNersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,10 +59,13 @@ public class ListQueryProcessorNersRequest extends Request {
         } 
 
         /**
-         * The type of the industry.
-         * <p>
+         * <p>The type of the industry.</p>
+         * <ul>
+         * <li>ECOMMERCE</li>
+         * </ul>
          * 
-         * *   ECOMMERCE
+         * <strong>example:</strong>
+         * <p>ECOMMERCE</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

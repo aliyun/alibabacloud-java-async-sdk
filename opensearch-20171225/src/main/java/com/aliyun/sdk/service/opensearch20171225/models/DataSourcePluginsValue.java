@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSourcePluginsValue} extends {@link TeaModel}
  *
  * <p>DataSourcePluginsValue</p>
@@ -18,7 +24,7 @@ public class DataSourcePluginsValue extends TeaModel {
     private String fromFields;
 
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     private DataSourcePluginsValue(Builder builder) {
         this.name = builder.name;
@@ -32,6 +38,10 @@ public class DataSourcePluginsValue extends TeaModel {
 
     public static DataSourcePluginsValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -51,14 +61,23 @@ public class DataSourcePluginsValue extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
     public static final class Builder {
         private String name; 
         private String fromFields; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSourcePluginsValue model) {
+            this.name = model.name;
+            this.fromFields = model.fromFields;
+            this.parameters = model.parameters;
+        } 
 
         /**
          * name.
@@ -79,7 +98,7 @@ public class DataSourcePluginsValue extends TeaModel {
         /**
          * parameters.
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }

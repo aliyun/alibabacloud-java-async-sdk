@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFunctionInstancesResponseBody</p>
@@ -27,7 +33,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -52,6 +58,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
     public static ListFunctionInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -92,7 +102,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -116,12 +126,29 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         private Long latency; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private String status; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionInstancesResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The error code. If no error occurs, the parameter is left empty.
+         * <p>The error code. If no error occurs, the parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotExist</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +156,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -137,7 +167,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request, in milliseconds.
+         * <p>The time consumed for the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -145,7 +178,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. If no error occurs, the parameter is left empty.
+         * <p>The error message. If no error occurs, the parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +189,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4D487A9-A456-5AA5-A9C6-B7BF2889CF74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,15 +200,21 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the instances.
+         * <p>The information about the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The status of the request.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;OK&quot;</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -177,7 +222,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +238,12 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFunctionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionInstancesResponseBody</p>
+     */
     public static class Belongs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -240,8 +294,20 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             private String domain; 
             private String language; 
 
+            private Builder() {
+            } 
+
+            private Builder(Belongs model) {
+                this.category = model.category;
+                this.domain = model.domain;
+                this.language = model.language;
+            } 
+
             /**
-             * The category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;general&quot;</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -249,7 +315,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The industry.
+             * <p>The industry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;ecommerce&quot;</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -257,7 +326,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The abbreviation of the language that applies.
+             * <p>The abbreviation of the language that applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;zh&quot;</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -271,6 +343,12 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionInstancesResponseBody</p>
+     */
     public static class CreateParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -309,8 +387,19 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;param1&quot;</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -318,7 +407,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;value1&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -332,6 +424,12 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionInstancesResponseBody</p>
+     */
     public static class UsageParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -370,8 +468,19 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>use_param1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -379,7 +488,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -393,12 +505,18 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionInstancesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Belongs")
         private Belongs belongs;
 
         @com.aliyun.core.annotation.NameInMap("CreateParameters")
-        private java.util.List < CreateParameters> createParameters;
+        private java.util.List<CreateParameters> createParameters;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -431,7 +549,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("UsageParameters")
-        private java.util.List < UsageParameters> usageParameters;
+        private java.util.List<UsageParameters> usageParameters;
 
         @com.aliyun.core.annotation.NameInMap("VersionId")
         private Long versionId;
@@ -471,7 +589,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         /**
          * @return createParameters
          */
-        public java.util.List < CreateParameters> getCreateParameters() {
+        public java.util.List<CreateParameters> getCreateParameters() {
             return this.createParameters;
         }
 
@@ -548,7 +666,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         /**
          * @return usageParameters
          */
-        public java.util.List < UsageParameters> getUsageParameters() {
+        public java.util.List<UsageParameters> getUsageParameters() {
             return this.usageParameters;
         }
 
@@ -561,7 +679,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Belongs belongs; 
-            private java.util.List < CreateParameters> createParameters; 
+            private java.util.List<CreateParameters> createParameters; 
             private Long createTime; 
             private String cron; 
             private String description; 
@@ -572,11 +690,34 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             private String modelType; 
             private String source; 
             private String status; 
-            private java.util.List < UsageParameters> usageParameters; 
+            private java.util.List<UsageParameters> usageParameters; 
             private Long versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.belongs = model.belongs;
+                this.createParameters = model.createParameters;
+                this.createTime = model.createTime;
+                this.cron = model.cron;
+                this.description = model.description;
+                this.extendInfo = model.extendInfo;
+                this.functionName = model.functionName;
+                this.functionType = model.functionType;
+                this.instanceName = model.instanceName;
+                this.modelType = model.modelType;
+                this.source = model.source;
+                this.status = model.status;
+                this.usageParameters = model.usageParameters;
+                this.versionId = model.versionId;
+            } 
+
             /**
-             * The information about the instance.
+             * <p>The information about the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder belongs(Belongs belongs) {
                 this.belongs = belongs;
@@ -584,15 +725,21 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the instance.
+             * <p>The parameters of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder createParameters(java.util.List < CreateParameters> createParameters) {
+            public Builder createParameters(java.util.List<CreateParameters> createParameters) {
                 this.createParameters = createParameters;
                 return this;
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -600,7 +747,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.
+             * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 3 ? * 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -608,7 +758,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot; &quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -616,7 +769,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information, which is a JSON string. It includes model evaluation information and error information.
+             * <p>The extended information, which is a JSON string. It includes model evaluation information and error information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;dataReport&quot;:{},&quot;errors&quot;:{}}&quot;</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -624,7 +780,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;ctr&quot;</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -632,7 +791,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the feature.
+             * <p>The type of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;PAAS&quot;</p>
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -640,7 +802,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;ctr_test&quot;</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -648,7 +813,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the model.
+             * <p>The type of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;tf_checkpoint&quot;</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -656,11 +824,14 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * How the instance is created. Valid values:
-             * <p>
+             * <p>How the instance is created. Valid values:</p>
+             * <ul>
+             * <li>user: The instance is created by user.</li>
+             * <li>builtin: The instance is created by system.</li>
+             * </ul>
              * 
-             * *   user: The instance is created by user.
-             * *   builtin: The instance is created by system.
+             * <strong>example:</strong>
+             * <p>&quot;user&quot;</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -668,11 +839,14 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
-             * <p>
+             * <p>The state of the instance. Valid values:</p>
+             * <ol>
+             * <li>unavailable: No model is available. Models must be trained before you can use them.</li>
+             * <li>available: Models can be used.</li>
+             * </ol>
              * 
-             * 1.  unavailable: No model is available. Models must be trained before you can use them.
-             * 2.  available: Models can be used.
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -680,15 +854,18 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are used.
+             * <p>The parameters that are used.</p>
              */
-            public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
+            public Builder usageParameters(java.util.List<UsageParameters> usageParameters) {
                 this.usageParameters = usageParameters;
                 return this;
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;

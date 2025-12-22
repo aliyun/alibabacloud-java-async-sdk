@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateABTestFixedFlowDividersRequest} extends {@link RequestModel}
  *
  * <p>UpdateABTestFixedFlowDividersRequest</p>
@@ -33,7 +39,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < String > body;
+    private java.util.List<String> body;
 
     private UpdateABTestFixedFlowDividersRequest(Builder builder) {
         super(builder);
@@ -52,7 +58,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,7 +94,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < String > getBody() {
+    public java.util.List<String> getBody() {
         return this.body;
     }
 
@@ -97,7 +103,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         private Integer sceneId; 
         private Integer groupId; 
         private Integer experimentId; 
-        private java.util.List < String > body; 
+        private java.util.List<String> body; 
 
         private Builder() {
             super();
@@ -113,7 +119,11 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -122,7 +132,11 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * The scenario ID.
+         * <p>The scenario ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -131,7 +145,11 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * The ID of the test group.
+         * <p>The ID of the test group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13467</p>
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -140,7 +158,11 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * The test ID.
+         * <p>The test ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12889</p>
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);
@@ -149,9 +171,9 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
-        public Builder body(java.util.List < String > body) {
+        public Builder body(java.util.List<String> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateAppGroupRequest</p>
@@ -29,7 +35,7 @@ public class CreateAppGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -53,7 +59,7 @@ public class CreateAppGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +95,7 @@ public class CreateAppGroupRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -105,7 +111,7 @@ public class CreateAppGroupRequest extends Request {
         private String name; 
         private Quota quota; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -123,7 +129,14 @@ public class CreateAppGroupRequest extends Request {
         } 
 
         /**
-         * chargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * <li>PREPAY: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("chargeType", chargeType);
@@ -132,7 +145,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jmbon_analyzer</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -141,7 +157,7 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * quota.
+         * <p>The quota.</p>
          */
         public Builder quota(Quota quota) {
             this.putBodyParameter("quota", quota);
@@ -150,7 +166,10 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2ij6pwxsvua</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -159,16 +178,23 @@ public class CreateAppGroupRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
         }
 
         /**
-         * type.
+         * <p>The type of the application. Valid values:</p>
+         * <ul>
+         * <li>standard</li>
+         * <li>enhanced</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enhanced</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -183,6 +209,12 @@ public class CreateAppGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppGroupRequest</p>
+     */
     public static class Quota extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("computeResource")
         private Integer computeResource;
@@ -233,8 +265,20 @@ public class CreateAppGroupRequest extends Request {
             private Integer docSize; 
             private String spec; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.computeResource = model.computeResource;
+                this.docSize = model.docSize;
+                this.spec = model.spec;
+            } 
+
             /**
-             * computeResource.
+             * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -242,7 +286,10 @@ public class CreateAppGroupRequest extends Request {
             }
 
             /**
-             * docSize.
+             * <p>The storage capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -250,7 +297,19 @@ public class CreateAppGroupRequest extends Request {
             }
 
             /**
-             * spec.
+             * <p>The specifications. Valid values:</p>
+             * <ul>
+             * <li>opensearch.share.junior: basic</li>
+             * <li>opensearch.share.common: shared general-purpose</li>
+             * <li>opensearch.share.compute: shared computing</li>
+             * <li>opensearch.share.storage: shared storage</li>
+             * <li>opensearch.private.common: exclusive general-purpose</li>
+             * <li>opensearch.private.compute: exclusive computing</li>
+             * <li>opensearch.private.storage: exclusive storage</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>opensearch.share.common</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -264,6 +323,12 @@ public class CreateAppGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAppGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppGroupRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -302,8 +367,19 @@ public class CreateAppGroupRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,7 +387,10 @@ public class CreateAppGroupRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

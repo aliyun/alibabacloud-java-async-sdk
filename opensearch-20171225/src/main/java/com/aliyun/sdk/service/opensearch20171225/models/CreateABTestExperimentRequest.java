@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABTestExperimentRequest} extends {@link RequestModel}
  *
  * <p>CreateABTestExperimentRequest</p>
@@ -51,7 +57,7 @@ public class CreateABTestExperimentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,11 @@ public class CreateABTestExperimentRequest extends Request {
         } 
 
         /**
-         * The application name.
+         * <p>The application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -121,7 +131,11 @@ public class CreateABTestExperimentRequest extends Request {
         }
 
         /**
-         * The scenario ID.
+         * <p>The scenario ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -130,7 +144,11 @@ public class CreateABTestExperimentRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13467</p>
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -139,7 +157,7 @@ public class CreateABTestExperimentRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(ABTestExperiment body) {
             this.putBodyParameter("body", body);
@@ -148,7 +166,10 @@ public class CreateABTestExperimentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+         * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

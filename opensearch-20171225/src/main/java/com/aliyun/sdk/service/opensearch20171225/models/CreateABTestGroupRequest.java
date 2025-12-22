@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateABTestGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateABTestGroupRequest</p>
@@ -45,7 +51,7 @@ public class CreateABTestGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,11 @@ public class CreateABTestGroupRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +116,10 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * The scenario ID.
+         * <p>The scenario ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -115,7 +128,7 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * The request body. For more information, see [ABTestGroup](~~178935~~).
+         * <p>The request body. For more information, see <a href="https://help.aliyun.com/document_detail/178935.html">ABTestGroup</a>.</p>
          */
         public Builder body(ABTestGroup body) {
             this.putBodyParameter("body", body);
@@ -124,13 +137,15 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of input parameters. Default value: false.
-         * <p>
+         * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+         * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**: checks only the validity of input parameters.
-         * *   **false**: checks the validity of input parameters and creates an attribution configuration.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

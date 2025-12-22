@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListFunctionResourcesRequest</p>
@@ -55,7 +61,7 @@ public class ListFunctionResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +131,11 @@ public class ListFunctionResourcesRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -134,7 +144,11 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rank</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -143,14 +157,16 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * The output level.
-         * <p>
+         * <p>The output level.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>simple</li>
+         * <li>normal</li>
+         * <li>detail</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   simple
-         * *   normal
-         * *   detail
+         * <strong>example:</strong>
+         * <p>detail</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);
@@ -159,7 +175,10 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -168,7 +187,10 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -177,26 +199,26 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>feature_generator</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   feature_generator
+         * <!-- -->
+         * </li>
+         * <li><p>raw_file</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   raw_file
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>feature_generator</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFirstRanksResponseBody} extends {@link TeaModel}
  *
  * <p>ListFirstRanksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private ListFirstRanksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListFirstRanksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFirstRanksResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +78,13 @@ public class ListFirstRanksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about each rough sort expression.
-         * <p>
+         * <p>The information about the rough sort expression.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a>.</p>
          * 
-         * For more information, see [FirstRank](~~170007~~).
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -73,6 +95,12 @@ public class ListFirstRanksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFirstRanksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFirstRanksResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arg")
         private String arg;
@@ -123,11 +151,21 @@ public class ListFirstRanksResponseBody extends TeaModel {
             private String attribute; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.arg = model.arg;
+                this.attribute = model.attribute;
+                this.weight = model.weight;
+            } 
+
             /**
-             * The parameters that are used by a function in the expression.
-             * <p>
+             * <p>The parameters that are used by a function in the expression.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</p>
              * 
-             * For more information, see [Rough sort functions](~~180765~~).
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -135,10 +173,11 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute, feature function, or field to be searched for.
-             * <p>
+             * <p>The attribute, feature function, or field to be searched for.</p>
+             * <p>For more information about supported feature functions, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</p>
              * 
-             * For more information about supported feature functions, see [Rough sort functions](~~180765~~).
+             * <strong>example:</strong>
+             * <p>static_bm25()</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -146,10 +185,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
-             * <p>
+             * <p>The weight. Valid values: -100000 to 100000. The value cannot be 0.</p>
              * 
-             * Valid values: \[-100000,100000] (excluding 0).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -163,6 +202,12 @@ public class ListFirstRanksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFirstRanksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFirstRanksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
@@ -174,7 +219,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("meta")
-        private java.util.List < Meta> meta;
+        private java.util.List<Meta> meta;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -223,7 +268,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         /**
          * @return meta
          */
-        public java.util.List < Meta> getMeta() {
+        public java.util.List<Meta> getMeta() {
             return this.meta;
         }
 
@@ -245,12 +290,27 @@ public class ListFirstRanksResponseBody extends TeaModel {
             private Boolean active; 
             private Integer created; 
             private String description; 
-            private java.util.List < Meta> meta; 
+            private java.util.List<Meta> meta; 
             private String name; 
             private Integer updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.active = model.active;
+                this.created = model.created;
+                this.description = model.description;
+                this.meta = model.meta;
+                this.name = model.name;
+                this.updated = model.updated;
+            } 
+
             /**
-             * Indicates whether the expression is the default one.
+             * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -258,7 +318,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the expression was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -266,7 +329,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,15 +340,21 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the expression.
+             * <p>The information about the expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
-            public Builder meta(java.util.List < Meta> meta) {
+            public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
                 return this;
             }
 
             /**
-             * The name of the expression.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +362,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was updated.
+             * <p>The time when the expression was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

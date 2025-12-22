@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListFunctionInstancesRequest</p>
@@ -65,7 +71,7 @@ public class ListFunctionInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +159,11 @@ public class ListFunctionInstancesRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -162,7 +172,11 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ctr</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -171,7 +185,10 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The type of the feature.
+         * <p>The type of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;PAAS&quot;</p>
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("functionType", functionType);
@@ -180,7 +197,10 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The type of the model.
+         * <p>The type of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf_checkpoint</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);
@@ -189,12 +209,15 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The richness of the returned information. Valid values:
-         * <p>
+         * <p>The richness of the returned information. Valid values:</p>
+         * <ul>
+         * <li>normal: displays information such as createParameters and cron. This is the default value.</li>
+         * <li>simple: displays only the basic information.</li>
+         * <li>detail: returns the details of the training task.</li>
+         * </ul>
          * 
-         * *   normal: displays information such as createParameters and cron. This is the default value.
-         * *   simple: displays only the basic information.
-         * *   detail: returns the details of the training task.
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);
@@ -203,7 +226,10 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -212,7 +238,10 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -221,12 +250,15 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * How the instance is created. Valid values:
-         * <p>
+         * <p>How the instance is created. Valid values:</p>
+         * <ul>
+         * <li>builtin: The instance is created by system.</li>
+         * <li>user: The instance is created by user. This is the default value.</li>
+         * <li>all: all instances</li>
+         * </ul>
          * 
-         * *   builtin: The instance is created by system.
-         * *   user: The instance is created by user. This is the default value.
-         * *   all: all instances
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

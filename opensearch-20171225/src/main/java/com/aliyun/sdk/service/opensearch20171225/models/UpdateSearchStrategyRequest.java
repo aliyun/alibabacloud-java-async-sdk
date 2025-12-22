@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSearchStrategyRequest} extends {@link RequestModel}
  *
  * <p>UpdateSearchStrategyRequest</p>
@@ -46,7 +52,7 @@ public class UpdateSearchStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +104,11 @@ public class UpdateSearchStrategyRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +117,11 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * The version number.
+         * <p>The version number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;110157886&quot;</p>
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -116,7 +130,11 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder strategyName(String strategyName) {
             this.putPathParameter("strategyName", strategyName);
@@ -125,7 +143,7 @@ public class UpdateSearchStrategyRequest extends Request {
         }
 
         /**
-         * The request body.
+         * <p>The request body.</p>
          */
         public Builder body(SearchStrategy body) {
             this.putBodyParameter("body", body);

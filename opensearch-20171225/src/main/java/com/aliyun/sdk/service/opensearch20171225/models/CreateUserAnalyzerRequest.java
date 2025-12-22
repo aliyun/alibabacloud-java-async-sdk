@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserAnalyzerRequest} extends {@link RequestModel}
  *
  * <p>CreateUserAnalyzerRequest</p>
@@ -53,7 +59,7 @@ public class CreateUserAnalyzerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,10 @@ public class CreateUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * The basic analyzer.
+         * <p>The basic analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chn_standard</p>
          */
         public Builder business(String business) {
             this.putBodyParameter("business", business);
@@ -132,7 +141,10 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The application ID of the custom analyzer.
+         * <p>The application ID of the custom analyzer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110123123</p>
          */
         public Builder businessAppGroupId(String businessAppGroupId) {
             this.putBodyParameter("businessAppGroupId", businessAppGroupId);
@@ -141,7 +153,10 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The basic analyzer type. Valid values: AUTO, MODEL, SYSTEM, and USER.
+         * <p>The basic analyzer type. Valid values: AUTO, MODEL, SYSTEM, and USER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("businessType", businessType);
@@ -150,7 +165,10 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The analyzer name.
+         * <p>The analyzer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jmbon_analyzer</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -159,7 +177,10 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * The engine type. Valid values: HA3 and ES.
+         * <p>The engine type. Valid values: HA3 and ES.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HA3</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -168,13 +189,15 @@ public class CreateUserAnalyzerRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+         * Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

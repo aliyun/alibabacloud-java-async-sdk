@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProceedingsRequest} extends {@link RequestModel}
  *
  * <p>ListProceedingsRequest</p>
@@ -34,7 +40,7 @@ public class ListProceedingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,11 @@ public class ListProceedingsRequest extends Request {
         } 
 
         /**
-         * The ID of the application instance group.
+         * <p>The ID of the application instance group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120677456</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -77,7 +87,10 @@ public class ListProceedingsRequest extends Request {
         }
 
         /**
-         * Specifies whether the filtering is complete.
+         * <p>Specifies whether the filtering is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder filterFinished(Boolean filterFinished) {
             this.putQueryParameter("filterFinished", filterFinished);

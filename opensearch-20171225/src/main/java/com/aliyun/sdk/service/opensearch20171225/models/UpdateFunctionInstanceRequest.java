@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFunctionInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateFunctionInstanceRequest</p>
@@ -28,7 +34,7 @@ public class UpdateFunctionInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("createParameters")
-    private java.util.List < CreateParameters> createParameters;
+    private java.util.List<CreateParameters> createParameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cron")
@@ -40,7 +46,7 @@ public class UpdateFunctionInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("usageParameters")
-    private java.util.List < UsageParameters> usageParameters;
+    private java.util.List<UsageParameters> usageParameters;
 
     private UpdateFunctionInstanceRequest(Builder builder) {
         super(builder);
@@ -61,7 +67,7 @@ public class UpdateFunctionInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,7 +96,7 @@ public class UpdateFunctionInstanceRequest extends Request {
     /**
      * @return createParameters
      */
-    public java.util.List < CreateParameters> getCreateParameters() {
+    public java.util.List<CreateParameters> getCreateParameters() {
         return this.createParameters;
     }
 
@@ -111,7 +117,7 @@ public class UpdateFunctionInstanceRequest extends Request {
     /**
      * @return usageParameters
      */
-    public java.util.List < UsageParameters> getUsageParameters() {
+    public java.util.List<UsageParameters> getUsageParameters() {
         return this.usageParameters;
     }
 
@@ -119,10 +125,10 @@ public class UpdateFunctionInstanceRequest extends Request {
         private String appGroupIdentity; 
         private String functionName; 
         private String instanceName; 
-        private java.util.List < CreateParameters> createParameters; 
+        private java.util.List<CreateParameters> createParameters; 
         private String cron; 
         private String description; 
-        private java.util.List < UsageParameters> usageParameters; 
+        private java.util.List<UsageParameters> usageParameters; 
 
         private Builder() {
             super();
@@ -140,7 +146,11 @@ public class UpdateFunctionInstanceRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;app_group_name&quot;</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -149,7 +159,11 @@ public class UpdateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the feature.
+         * <p>The name of the feature.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ctr&quot;</p>
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -158,7 +172,11 @@ public class UpdateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ctr_test&quot;</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -167,16 +185,22 @@ public class UpdateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that are used to create the instance.
+         * <p>The parameters that are used to create the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{             &quot;name&quot;: &quot;title_field&quot;,             &quot;value&quot;: &quot;title&quot;         }</p>
          */
-        public Builder createParameters(java.util.List < CreateParameters> createParameters) {
+        public Builder createParameters(java.util.List<CreateParameters> createParameters) {
             this.putBodyParameter("createParameters", createParameters);
             this.createParameters = createParameters;
             return this;
         }
 
         /**
-         * The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.
+         * <p>The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;0 3 ? * 0,1,3,5&quot;</p>
          */
         public Builder cron(String cron) {
             this.putBodyParameter("cron", cron);
@@ -185,7 +209,10 @@ public class UpdateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test instance</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -194,9 +221,9 @@ public class UpdateFunctionInstanceRequest extends Request {
         }
 
         /**
-         * The parameters that are used.
+         * <p>The parameters that are used.</p>
          */
-        public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
+        public Builder usageParameters(java.util.List<UsageParameters> usageParameters) {
             this.putBodyParameter("usageParameters", usageParameters);
             this.usageParameters = usageParameters;
             return this;
@@ -209,6 +236,12 @@ public class UpdateFunctionInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateFunctionInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateFunctionInstanceRequest</p>
+     */
     public static class CreateParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -247,8 +280,19 @@ public class UpdateFunctionInstanceRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title_field</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -256,7 +300,10 @@ public class UpdateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -270,6 +317,12 @@ public class UpdateFunctionInstanceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateFunctionInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateFunctionInstanceRequest</p>
+     */
     public static class UsageParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -308,8 +361,19 @@ public class UpdateFunctionInstanceRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageParameters model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allow_dict_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +381,10 @@ public class UpdateFunctionInstanceRequest extends Request {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(String value) {
                 this.value = value;

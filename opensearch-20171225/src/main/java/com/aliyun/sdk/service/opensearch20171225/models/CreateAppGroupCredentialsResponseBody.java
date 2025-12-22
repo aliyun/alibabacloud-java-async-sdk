@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppGroupCredentialsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppGroupCredentialsResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -47,6 +57,14 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Result result; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAppGroupCredentialsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * requestId.
@@ -70,6 +88,12 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppGroupCredentialsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAppGroupCredentialsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appGroupId")
         private Long appGroupId;
@@ -131,6 +155,16 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
             private Boolean enabled; 
             private String token; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appGroupId = model.appGroupId;
+                this.enabled = model.enabled;
+                this.token = model.token;
+                this.type = model.type;
+            } 
 
             /**
              * appGroupId.

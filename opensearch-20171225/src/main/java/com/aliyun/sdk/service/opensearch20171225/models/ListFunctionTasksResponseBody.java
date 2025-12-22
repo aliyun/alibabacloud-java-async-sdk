@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListFunctionTasksResponseBody</p>
@@ -27,7 +33,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -52,6 +58,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
 
     public static ListFunctionTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -92,7 +102,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -116,12 +126,29 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         private Long latency; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private String status; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionTasksResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +156,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -137,7 +167,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request, in milliseconds.
+         * <p>The time consumed for the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -145,7 +178,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fail</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +189,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638157479281</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,15 +200,21 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[         {             &quot;functionName&quot;: &quot;ctr&quot;,             &quot;progress&quot;: 100,             &quot;status&quot;: &quot;success&quot;,             &quot;startTime&quot;: 100010,             &quot;endTime&quot;: 200020,             &quot;extendInfo&quot;: &quot;{&quot;recall&quot;:91,&quot;errors&quot;:[]}&quot;,             &quot;runId&quot;: &quot;trigger__2021-03-05T12:18:41&quot;         }     ]</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The status of the request.
+         * <p>The status of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -177,7 +222,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that meet the requirements.
+         * <p>The total number of records that meet the requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +238,12 @@ public class ListFunctionTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFunctionTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionTasksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -300,8 +354,25 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             private Long startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.endTime = model.endTime;
+                this.extendInfo = model.extendInfo;
+                this.functionName = model.functionName;
+                this.generation = model.generation;
+                this.progress = model.progress;
+                this.runId = model.runId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
-             * The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.
+             * <p>The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100010</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -309,7 +380,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The value is a JSON string. It includes model evaluation information and training error information.
+             * <p>The value is a JSON string. It includes model evaluation information and training error information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;recall&quot;:91,&quot;errors&quot;:[]}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -317,7 +391,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ctr</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -325,7 +402,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of iterations.
+             * <p>The number of iterations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder generation(String generation) {
                 this.generation = generation;
@@ -333,7 +413,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The progress. 90 indicates 90%.
+             * <p>The progress. 90 indicates 90%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -341,7 +424,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger__2021-03-05T12:18:41</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -349,7 +435,10 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the start time. Unit: milliseconds.
+             * <p>The timestamp that indicates the start time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100010</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -357,12 +446,15 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>failed</li>
+             * <li>running</li>
+             * </ul>
              * 
-             * *   success
-             * *   failed
-             * *   running
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;

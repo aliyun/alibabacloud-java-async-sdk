@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListABTestFixedFlowDividersRequest} extends {@link RequestModel}
  *
  * <p>ListABTestFixedFlowDividersRequest</p>
@@ -47,7 +53,7 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,11 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“my_app_group_name”</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +118,11 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 12889
+         * <p>The scenario ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12889</p>
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -117,7 +131,11 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 13467
+         * <p>The group ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13467</p>
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -126,7 +144,11 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * 20404
+         * <p>The test ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20404</p>
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);

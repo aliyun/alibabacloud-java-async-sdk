@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFunctionResourcesResponseBody</p>
@@ -27,7 +33,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -52,6 +58,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
 
     public static ListFunctionResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -92,7 +102,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -116,12 +126,29 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         private Double latency; 
         private String message; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private String status; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListFunctionResourcesResponseBody model) {
+            this.code = model.code;
+            this.httpCode = model.httpCode;
+            this.latency = model.latency;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.status = model.status;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The error code returned. If no error occurs, this value is empty.
+         * <p>The error code returned. If no error occurs, this value is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource.InvalidResourceName</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +156,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -137,7 +167,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of time consumed for the request. Unit: milliseconds.
+         * <p>The amount of time consumed for the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder latency(Double latency) {
             this.latency = latency;
@@ -145,7 +178,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid resource name.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +189,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;3A809095-C554-5CF5-8FCE-BE19D4673790&quot;</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,15 +200,18 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The results returned.
+         * <p>The results returned.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The status of the request. Valid values: OK and FAIL.
+         * <p>The status of the request. Valid values: OK and FAIL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -177,7 +219,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records that meet the requirements.
+         * <p>The total number of records that meet the requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +235,12 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionResourcesResponseBody</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -228,8 +279,19 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_item_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,26 +299,26 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the feature.
-             * <p>
+             * <p>The type of the feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>item</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   item
+             * <!-- -->
+             * </li>
+             * <li><p>user</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   user
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>item</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -270,9 +332,15 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionResourcesResponseBody</p>
+     */
     public static class Input extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Features")
-        private java.util.List < Features> features;
+        private java.util.List<Features> features;
 
         private Input(Builder builder) {
             this.features = builder.features;
@@ -289,17 +357,24 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         /**
          * @return features
          */
-        public java.util.List < Features> getFeatures() {
+        public java.util.List<Features> getFeatures() {
             return this.features;
         }
 
         public static final class Builder {
-            private java.util.List < Features> features; 
+            private java.util.List<Features> features; 
+
+            private Builder() {
+            } 
+
+            private Builder(Input model) {
+                this.features = model.features;
+            } 
 
             /**
-             * The input features.
+             * <p>The input features.</p>
              */
-            public Builder features(java.util.List < Features> features) {
+            public Builder features(java.util.List<Features> features) {
                 this.features = features;
                 return this;
             }
@@ -311,6 +386,12 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionResourcesResponseBody</p>
+     */
     public static class Generators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Generator")
         private String generator;
@@ -361,8 +442,20 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             private Input input; 
             private String output; 
 
+            private Builder() {
+            } 
+
+            private Builder(Generators model) {
+                this.generator = model.generator;
+                this.input = model.input;
+                this.output = model.output;
+            } 
+
             /**
-             * The type of the feature generator.
+             * <p>The type of the feature generator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>combo</p>
              */
             public Builder generator(String generator) {
                 this.generator = generator;
@@ -370,7 +463,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The input.
+             * <p>The input.</p>
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -378,7 +471,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the output feature.
+             * <p>The name of the output feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature1</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -392,12 +488,18 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Generators")
-        private java.util.List < Generators> generators;
+        private java.util.List<Generators> generators;
 
         private Data(Builder builder) {
             this.content = builder.content;
@@ -422,16 +524,27 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         /**
          * @return generators
          */
-        public java.util.List < Generators> getGenerators() {
+        public java.util.List<Generators> getGenerators() {
             return this.generators;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.List < Generators> generators; 
+            private java.util.List<Generators> generators; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.generators = model.generators;
+            } 
 
             /**
-             * The content of the file that corresponds to a resource of the raw_file type.
+             * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;abc&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -439,9 +552,9 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The feature generators that correspond to resources of the feature_generator type.
+             * <p>The feature generators that correspond to resources of the feature_generator type.</p>
              */
-            public Builder generators(java.util.List < Generators> generators) {
+            public Builder generators(java.util.List<Generators> generators) {
                 this.generators = generators;
                 return this;
             }
@@ -453,6 +566,12 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFunctionResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFunctionResourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -470,7 +589,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         private Long modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("ReferencedInstances")
-        private java.util.List < String > referencedInstances;
+        private java.util.List<String> referencedInstances;
 
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
@@ -535,7 +654,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
         /**
          * @return referencedInstances
          */
-        public java.util.List < String > getReferencedInstances() {
+        public java.util.List<String> getReferencedInstances() {
             return this.referencedInstances;
         }
 
@@ -559,12 +678,29 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             private String description; 
             private String functionName; 
             private Long modifyTime; 
-            private java.util.List < String > referencedInstances; 
+            private java.util.List<String> referencedInstances; 
             private String resourceName; 
             private String resourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.createTime = model.createTime;
+                this.data = model.data;
+                this.description = model.description;
+                this.functionName = model.functionName;
+                this.modifyTime = model.modifyTime;
+                this.referencedInstances = model.referencedInstances;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+            } 
+
             /**
-             * The time when the resource was created. Unit: milliseconds.
+             * <p>The time when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -572,7 +708,7 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource data. The data structure varies with the resource type.
+             * <p>The resource data. The data structure varies with the resource type.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -580,7 +716,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource.
+             * <p>The description of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resource description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -588,7 +727,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the feature.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rank</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -596,7 +738,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was modified. Unit: milliseconds.
+             * <p>The time when the resource was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -604,15 +749,18 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm instances that are referenced.
+             * <p>The algorithm instances that are referenced.</p>
              */
-            public Builder referencedInstances(java.util.List < String > referencedInstances) {
+            public Builder referencedInstances(java.util.List<String> referencedInstances) {
                 this.referencedInstances = referencedInstances;
                 return this;
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fg_json</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -620,7 +768,10 @@ public class ListFunctionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature_generator</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

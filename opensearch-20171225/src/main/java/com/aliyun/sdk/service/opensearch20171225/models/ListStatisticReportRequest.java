@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStatisticReportRequest} extends {@link RequestModel}
  *
  * <p>ListStatisticReportRequest</p>
@@ -69,7 +75,7 @@ public class ListStatisticReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -157,7 +163,11 @@ public class ListStatisticReportRequest extends Request {
         } 
 
         /**
-         * app_group_name
+         * <p>The name of the application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_group_name</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -166,7 +176,21 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * suggest
+         * <p>The module name. Valid values:</p>
+         * <ul>
+         * <li>app: Business operation report.</li>
+         * <li>app-query: Business operation report&gt; Query analysis metric.</li>
+         * <li>abtest: A/B test report.</li>
+         * <li>suggest: Drop-down suggestion report.</li>
+         * <li>hot: Hotword report.</li>
+         * <li>hint: Shading report</li>
+         * <li>data-quality</li>
+         * <li>es: Open-source compatible instance report</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suggest</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -175,7 +199,10 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * pv,uv
+         * <p>The fields to query. Set this parameter in the format of columns=&quot;pv,uv,ipv&quot;. For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv,uv</p>
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -184,7 +211,10 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * 1582646399
+         * <p>The end timestamp of the query. By default, the end time is the current time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582646399</p>
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -193,7 +223,11 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -202,7 +236,10 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * 10
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -211,7 +248,16 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * bizType:test,sceneTag:myTag
+         * <p>The query conditions. Set this parameter in the format of k1:v1,k2:v2. Valid values:</p>
+         * <ul>
+         * <li>experimentSerialNumber: the globally unique sequence number of the test</li>
+         * <li>sceneTag: the tag of the test scenario</li>
+         * <li>bizType: the type of the business</li>
+         * <li>modelId: the ID of the algorithm model</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bizType:test,sceneTag:myTag</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -220,7 +266,10 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * 1582214400
+         * <p>The start timestamp of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1582214400</p>
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("startTime", startTime);

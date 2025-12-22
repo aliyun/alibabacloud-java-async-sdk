@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyScheduledTaskRequest} extends {@link RequestModel}
  *
  * <p>ModifyScheduledTaskRequest</p>
@@ -40,7 +46,7 @@ public class ModifyScheduledTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class ModifyScheduledTaskRequest extends Request {
         } 
 
         /**
-         * The application name or ID.
+         * <p>The application name or ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121414148</p>
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +102,11 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56e9c2e7-5a4d-481a-9f1b-b07da6909450</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -101,7 +115,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * <p>The request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request parameters.</p>
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushUserAnalyzerEntriesRequest} extends {@link RequestModel}
  *
  * <p>PushUserAnalyzerEntriesRequest</p>
@@ -18,7 +24,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("entries")
-    private java.util.List < Entries> entries;
+    private java.util.List<Entries> entries;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
@@ -39,7 +45,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
     /**
      * @return entries
      */
-    public java.util.List < Entries> getEntries() {
+    public java.util.List<Entries> getEntries() {
         return this.entries;
     }
 
@@ -67,7 +73,7 @@ public class PushUserAnalyzerEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushUserAnalyzerEntriesRequest, Builder> {
         private String name; 
-        private java.util.List < Entries> entries; 
+        private java.util.List<Entries> entries; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -82,7 +88,11 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         } 
 
         /**
-         * The name of the analyzer.
+         * <p>The name of the analyzer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“kevin_test”</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -91,16 +101,19 @@ public class PushUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * The entries of the custom analyzer.
+         * <p>The entries of the custom analyzer.</p>
          */
-        public Builder entries(java.util.List < Entries> entries) {
+        public Builder entries(java.util.List<Entries> entries) {
             this.putBodyParameter("entries", entries);
             this.entries = entries;
             return this;
         }
 
         /**
-         * Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+         * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -115,6 +128,12 @@ public class PushUserAnalyzerEntriesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushUserAnalyzerEntriesRequest} extends {@link TeaModel}
+     *
+     * <p>PushUserAnalyzerEntriesRequest</p>
+     */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cmd")
         private String cmd;
@@ -177,14 +196,26 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             private Boolean splitEnabled; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.cmd = model.cmd;
+                this.key = model.key;
+                this.splitEnabled = model.splitEnabled;
+                this.value = model.value;
+            } 
+
             /**
-             * The operation to be performed on the entries.
-             * <p>
+             * <p>The operation to be performed on the entries.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>add</li>
+             * <li>delete</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   add
-             * *   delete
+             * <strong>example:</strong>
+             * <p>&quot;add&quot;</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -192,7 +223,10 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * The key to be used to query entries.
+             * <p>The key to be used to query entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;testvalue&quot;</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -200,10 +234,11 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * Specifies whether to further analyze the terms that are generated after the search query is analyzed.
-             * <p>
+             * <p>Specifies whether to further analyze the terms that are generated after the search query is analyzed.</p>
+             * <p>Default value: true.</p>
              * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder splitEnabled(Boolean splitEnabled) {
                 this.splitEnabled = splitEnabled;
@@ -211,7 +246,10 @@ public class PushUserAnalyzerEntriesRequest extends Request {
             }
 
             /**
-             * The analysis result.
+             * <p>The analysis result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;test value&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;

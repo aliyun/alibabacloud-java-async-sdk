@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlowQueryStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlowQueryStatusResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowQueryStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C1C1C45-C64A-AD30-565F-140871D57E5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The return result.
+         * <p>The return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -70,6 +91,12 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlowQueryStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlowQueryStatusResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appGroupId")
         private String appGroupId;
@@ -120,8 +147,20 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             private String region; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appGroupId = model.appGroupId;
+                this.region = model.region;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100298370</p>
              */
             public Builder appGroupId(String appGroupId) {
                 this.appGroupId = appGroupId;
@@ -129,11 +168,14 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the slow query optimization service. Valid values:
-             * <p>
+             * <p>The network type of the slow query optimization service. Valid values:</p>
+             * <ul>
+             * <li>outer: the Internet</li>
+             * <li>internal: the internal network</li>
+             * </ul>
              * 
-             * *   outer: the Internet
-             * *   internal: the internal network
+             * <strong>example:</strong>
+             * <p>internal</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -141,12 +183,15 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the slow query optimization service. Valid values:
-             * <p>
+             * <p>The status of the slow query optimization service. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * <li>n/a</li>
+             * </ul>
              * 
-             * *   enabled
-             * *   disabled
-             * *   n/a
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

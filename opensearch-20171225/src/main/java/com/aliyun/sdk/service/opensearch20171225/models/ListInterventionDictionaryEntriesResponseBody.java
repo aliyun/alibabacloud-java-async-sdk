@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterventionDictionaryEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterventionDictionaryEntriesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -34,6 +40,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -44,7 +54,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -57,11 +67,23 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListInterventionDictionaryEntriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>516A02B7-2167-8D92-12D0-B639A2A0F3C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,18 +91,19 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about intervention entries.
-         * <p>
-         * 
-         * For more information, see [InterventionDictionaryEntry](~~173606~~).
+         * <p>The information about intervention entries.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173606.html">InterventionDictionaryEntry</a>.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -93,6 +116,12 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterventionDictionaryEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterventionDictionaryEntriesResponseBody</p>
+     */
     public static class Tokens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order")
         private Integer order;
@@ -155,8 +184,21 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             private String tagLabel; 
             private String token; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tokens model) {
+                this.order = model.order;
+                this.tag = model.tag;
+                this.tagLabel = model.tagLabel;
+                this.token = model.token;
+            } 
+
             /**
-             * The sequence number.
+             * <p>The sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -164,45 +206,48 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal name of the identified entity type. Valid values:
-             * <p>
+             * <p>The internal name of the identified entity type. Valid values:</p>
+             * <ul>
+             * <li>brand</li>
+             * <li>category</li>
+             * <li>material</li>
+             * <li>element</li>
+             * <li>style</li>
+             * <li>color</li>
+             * <li>function</li>
+             * <li>scenario</li>
+             * <li>people</li>
+             * <li>season</li>
+             * <li>model</li>
+             * <li>region</li>
+             * <li>name</li>
+             * <li>adjective</li>
+             * <li>category-modifier</li>
+             * <li>size</li>
+             * <li>quality</li>
+             * <li>suit</li>
+             * <li>new-release</li>
+             * <li>series</li>
+             * <li>marketing</li>
+             * <li>entertainment</li>
+             * <li>organization</li>
+             * <li>movie</li>
+             * <li>game</li>
+             * <li>number</li>
+             * <li>unit</li>
+             * <li>common</li>
+             * <li>new-word</li>
+             * <li>proper-noun</li>
+             * <li>symbol</li>
+             * <li>prefix</li>
+             * <li>suffix</li>
+             * <li>gift</li>
+             * <li>negative</li>
+             * <li>agent</li>
+             * </ul>
              * 
-             * *   brand
-             * *   category
-             * *   material
-             * *   element
-             * *   style
-             * *   color
-             * *   function
-             * *   scenario
-             * *   people
-             * *   season
-             * *   model
-             * *   region
-             * *   name
-             * *   adjective
-             * *   category-modifier
-             * *   size
-             * *   quality
-             * *   suit
-             * *   new-release
-             * *   series
-             * *   marketing
-             * *   entertainment
-             * *   organization
-             * *   movie
-             * *   game
-             * *   number
-             * *   unit
-             * *   common
-             * *   new-word
-             * *   proper-noun
-             * *   symbol
-             * *   prefix
-             * *   suffix
-             * *   gift
-             * *   negative
-             * *   agent
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -210,7 +255,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the internal name of the identified entity type.
+             * <p>The description of the internal name of the identified entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder tagLabel(String tagLabel) {
                 this.tagLabel = tagLabel;
@@ -218,7 +266,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The entity.
+             * <p>The entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -232,6 +283,12 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterventionDictionaryEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterventionDictionaryEntriesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cmd")
         private String cmd;
@@ -240,13 +297,13 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         private Long created;
 
         @com.aliyun.core.annotation.NameInMap("relevance")
-        private java.util.Map < String, ? > relevance;
+        private java.util.Map<String, ?> relevance;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tokens")
-        private java.util.List < Tokens> tokens;
+        private java.util.List<Tokens> tokens;
 
         @com.aliyun.core.annotation.NameInMap("updated")
         private Long updated;
@@ -289,7 +346,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         /**
          * @return relevance
          */
-        public java.util.Map < String, ? > getRelevance() {
+        public java.util.Map<String, ?> getRelevance() {
             return this.relevance;
         }
 
@@ -303,7 +360,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         /**
          * @return tokens
          */
-        public java.util.List < Tokens> getTokens() {
+        public java.util.List<Tokens> getTokens() {
             return this.tokens;
         }
 
@@ -324,18 +381,34 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private String cmd; 
             private Long created; 
-            private java.util.Map < String, ? > relevance; 
+            private java.util.Map<String, ?> relevance; 
             private String status; 
-            private java.util.List < Tokens> tokens; 
+            private java.util.List<Tokens> tokens; 
             private Long updated; 
             private String word; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.cmd = model.cmd;
+                this.created = model.created;
+                this.relevance = model.relevance;
+                this.status = model.status;
+                this.tokens = model.tokens;
+                this.updated = model.updated;
+                this.word = model.word;
+            } 
+
             /**
-             * The command. Valid values:
-             * <p>
+             * <p>The command. Valid values:</p>
+             * <ul>
+             * <li>add</li>
+             * <li>delete</li>
+             * </ul>
              * 
-             * *   add
-             * *   delete
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -343,7 +416,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the intervention entry was created.
+             * <p>The timestamp when the intervention entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536690285</p>
              */
             public Builder created(Long created) {
                 this.created = created;
@@ -351,18 +427,24 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of an intervention entry for category prediction. The field value consists of key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance to the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant. Example: {"2":1, "100":0}
+             * <p>The content of an intervention entry for category prediction. The field value consists of key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance to the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant. Example: {&quot;2&quot;:1, &quot;100&quot;:0}</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{                 &quot;100&quot;: &quot;0&quot;,                 &quot;200&quot;: &quot;2&quot;             }</p>
              */
-            public Builder relevance(java.util.Map < String, ? > relevance) {
+            public Builder relevance(java.util.Map<String, ?> relevance) {
                 this.relevance = relevance;
                 return this;
             }
 
             /**
-             * The status of the intervention entry. Valid value:
-             * <p>
+             * <p>The status of the intervention entry. Valid value:</p>
+             * <ul>
+             * <li>ACTIVE: The intervention entry takes effect.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The intervention entry takes effect.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -370,15 +452,18 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the intervention entry for term weight analysis.
+             * <p>The content of the intervention entry for term weight analysis.</p>
              */
-            public Builder tokens(java.util.List < Tokens> tokens) {
+            public Builder tokens(java.util.List<Tokens> tokens) {
                 this.tokens = tokens;
                 return this;
             }
 
             /**
-             * The timestamp when the intervention entry was last updated.
+             * <p>The timestamp when the intervention entry was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1537348987</p>
              */
             public Builder updated(Long updated) {
                 this.updated = updated;
@@ -386,7 +471,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The intervention entry.
+             * <p>The intervention entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\u8fc7\u513f</p>
              */
             public Builder word(String word) {
                 this.word = word;
