@@ -195,6 +195,9 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("ExternalData")
+        private String externalData;
+
         @com.aliyun.core.annotation.NameInMap("IdentityProviderId")
         private String identityProviderId;
 
@@ -213,6 +216,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         private UserAuthnSourceMappings(Builder builder) {
             this.authnSourceType = builder.authnSourceType;
             this.createTime = builder.createTime;
+            this.externalData = builder.externalData;
             this.identityProviderId = builder.identityProviderId;
             this.instanceId = builder.instanceId;
             this.updateTime = builder.updateTime;
@@ -240,6 +244,13 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return externalData
+         */
+        public String getExternalData() {
+            return this.externalData;
         }
 
         /**
@@ -280,6 +291,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         public static final class Builder {
             private String authnSourceType; 
             private Long createTime; 
+            private String externalData; 
             private String identityProviderId; 
             private String instanceId; 
             private Long updateTime; 
@@ -292,6 +304,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             private Builder(UserAuthnSourceMappings model) {
                 this.authnSourceType = model.authnSourceType;
                 this.createTime = model.createTime;
+                this.externalData = model.externalData;
                 this.identityProviderId = model.identityProviderId;
                 this.instanceId = model.instanceId;
                 this.updateTime = model.updateTime;
@@ -318,6 +331,14 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * ExternalData.
+             */
+            public Builder externalData(String externalData) {
+                this.externalData = externalData;
                 return this;
             }
 
