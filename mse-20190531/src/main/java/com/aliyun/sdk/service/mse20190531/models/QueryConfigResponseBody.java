@@ -197,15 +197,98 @@ public class QueryConfigResponseBody extends TeaModel {
      *
      * <p>QueryConfigResponseBody</p>
      */
+    public static class FencePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabledModules")
+        private java.util.List<String> enabledModules;
+
+        @com.aliyun.core.annotation.NameInMap("interceptPolicy")
+        private java.util.Map<String, String> interceptPolicy;
+
+        private FencePolicy(Builder builder) {
+            this.enabledModules = builder.enabledModules;
+            this.interceptPolicy = builder.interceptPolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FencePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabledModules
+         */
+        public java.util.List<String> getEnabledModules() {
+            return this.enabledModules;
+        }
+
+        /**
+         * @return interceptPolicy
+         */
+        public java.util.Map<String, String> getInterceptPolicy() {
+            return this.interceptPolicy;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> enabledModules; 
+            private java.util.Map<String, String> interceptPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(FencePolicy model) {
+                this.enabledModules = model.enabledModules;
+                this.interceptPolicy = model.interceptPolicy;
+            } 
+
+            /**
+             * enabledModules.
+             */
+            public Builder enabledModules(java.util.List<String> enabledModules) {
+                this.enabledModules = enabledModules;
+                return this;
+            }
+
+            /**
+             * interceptPolicy.
+             */
+            public Builder interceptPolicy(java.util.Map<String, String> interceptPolicy) {
+                this.interceptPolicy = interceptPolicy;
+                return this;
+            }
+
+            public FencePolicy build() {
+                return new FencePolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryConfigResponseBody</p>
+     */
     public static class NacosRunningEnv extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("emptyProtect")
         private Boolean emptyProtect;
+
+        @com.aliyun.core.annotation.NameInMap("fenceEnabled")
+        private Boolean fenceEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("fencePolicy")
+        private FencePolicy fencePolicy;
 
         @com.aliyun.core.annotation.NameInMap("grayAuth")
         private String grayAuth;
 
         private NacosRunningEnv(Builder builder) {
             this.emptyProtect = builder.emptyProtect;
+            this.fenceEnabled = builder.fenceEnabled;
+            this.fencePolicy = builder.fencePolicy;
             this.grayAuth = builder.grayAuth;
         }
 
@@ -225,6 +308,20 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return fenceEnabled
+         */
+        public Boolean getFenceEnabled() {
+            return this.fenceEnabled;
+        }
+
+        /**
+         * @return fencePolicy
+         */
+        public FencePolicy getFencePolicy() {
+            return this.fencePolicy;
+        }
+
+        /**
          * @return grayAuth
          */
         public String getGrayAuth() {
@@ -233,6 +330,8 @@ public class QueryConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean emptyProtect; 
+            private Boolean fenceEnabled; 
+            private FencePolicy fencePolicy; 
             private String grayAuth; 
 
             private Builder() {
@@ -240,6 +339,8 @@ public class QueryConfigResponseBody extends TeaModel {
 
             private Builder(NacosRunningEnv model) {
                 this.emptyProtect = model.emptyProtect;
+                this.fenceEnabled = model.fenceEnabled;
+                this.fencePolicy = model.fencePolicy;
                 this.grayAuth = model.grayAuth;
             } 
 
@@ -251,6 +352,22 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder emptyProtect(Boolean emptyProtect) {
                 this.emptyProtect = emptyProtect;
+                return this;
+            }
+
+            /**
+             * fenceEnabled.
+             */
+            public Builder fenceEnabled(Boolean fenceEnabled) {
+                this.fenceEnabled = fenceEnabled;
+                return this;
+            }
+
+            /**
+             * fencePolicy.
+             */
+            public Builder fencePolicy(FencePolicy fencePolicy) {
+                this.fencePolicy = fencePolicy;
                 return this;
             }
 
@@ -357,6 +474,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PassWord")
         private String passWord;
 
+        @com.aliyun.core.annotation.NameInMap("PrometheusSdProtocolEnabled")
+        private String prometheusSdProtocolEnabled;
+
         @com.aliyun.core.annotation.NameInMap("RestartFlag")
         private Boolean restartFlag;
 
@@ -403,6 +523,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.namingCreateServiceSupported = builder.namingCreateServiceSupported;
             this.openSuperAcl = builder.openSuperAcl;
             this.passWord = builder.passWord;
+            this.prometheusSdProtocolEnabled = builder.prometheusSdProtocolEnabled;
             this.restartFlag = builder.restartFlag;
             this.snapshotCount = builder.snapshotCount;
             this.syncLimit = builder.syncLimit;
@@ -609,6 +730,13 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return prometheusSdProtocolEnabled
+         */
+        public String getPrometheusSdProtocolEnabled() {
+            return this.prometheusSdProtocolEnabled;
+        }
+
+        /**
          * @return restartFlag
          */
         public Boolean getRestartFlag() {
@@ -678,6 +806,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean namingCreateServiceSupported; 
             private Boolean openSuperAcl; 
             private String passWord; 
+            private String prometheusSdProtocolEnabled; 
             private Boolean restartFlag; 
             private String snapshotCount; 
             private String syncLimit; 
@@ -716,6 +845,7 @@ public class QueryConfigResponseBody extends TeaModel {
                 this.namingCreateServiceSupported = model.namingCreateServiceSupported;
                 this.openSuperAcl = model.openSuperAcl;
                 this.passWord = model.passWord;
+                this.prometheusSdProtocolEnabled = model.prometheusSdProtocolEnabled;
                 this.restartFlag = model.restartFlag;
                 this.snapshotCount = model.snapshotCount;
                 this.syncLimit = model.syncLimit;
@@ -1049,6 +1179,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder passWord(String passWord) {
                 this.passWord = passWord;
+                return this;
+            }
+
+            /**
+             * PrometheusSdProtocolEnabled.
+             */
+            public Builder prometheusSdProtocolEnabled(String prometheusSdProtocolEnabled) {
+                this.prometheusSdProtocolEnabled = prometheusSdProtocolEnabled;
                 return this;
             }
 

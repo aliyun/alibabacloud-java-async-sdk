@@ -297,8 +297,14 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigTags")
+        private String configTags;
+
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
@@ -308,7 +314,9 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
         private Configurations(Builder builder) {
             this.appName = builder.appName;
+            this.configTags = builder.configTags;
             this.dataId = builder.dataId;
+            this.description = builder.description;
             this.group = builder.group;
             this.id = builder.id;
         }
@@ -329,10 +337,24 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return configTags
+         */
+        public String getConfigTags() {
+            return this.configTags;
+        }
+
+        /**
          * @return dataId
          */
         public String getDataId() {
             return this.dataId;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -351,7 +373,9 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appName; 
+            private String configTags; 
             private String dataId; 
+            private String description; 
             private String group; 
             private String id; 
 
@@ -360,7 +384,9 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
             private Builder(Configurations model) {
                 this.appName = model.appName;
+                this.configTags = model.configTags;
                 this.dataId = model.dataId;
+                this.description = model.description;
                 this.group = model.group;
                 this.id = model.id;
             } 
@@ -377,6 +403,14 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
+             * ConfigTags.
+             */
+            public Builder configTags(String configTags) {
+                this.configTags = configTags;
+                return this;
+            }
+
+            /**
              * <p>The ID of the configuration.</p>
              * 
              * <strong>example:</strong>
@@ -384,6 +418,14 @@ public class ListNacosConfigsResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
