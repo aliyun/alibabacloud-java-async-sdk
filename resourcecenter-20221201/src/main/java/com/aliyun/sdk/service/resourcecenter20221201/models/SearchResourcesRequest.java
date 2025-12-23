@@ -22,6 +22,10 @@ public class SearchResourcesRequest extends Request {
     private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDeletedResources")
+    private Boolean includeDeletedResources;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
@@ -35,15 +39,21 @@ public class SearchResourcesRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchExpression")
+    private String searchExpression;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortCriterion")
     private SortCriterion sortCriterion;
 
     private SearchResourcesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.includeDeletedResources = builder.includeDeletedResources;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
+        this.searchExpression = builder.searchExpression;
         this.sortCriterion = builder.sortCriterion;
     }
 
@@ -68,6 +78,13 @@ public class SearchResourcesRequest extends Request {
     }
 
     /**
+     * @return includeDeletedResources
+     */
+    public Boolean getIncludeDeletedResources() {
+        return this.includeDeletedResources;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -89,6 +106,13 @@ public class SearchResourcesRequest extends Request {
     }
 
     /**
+     * @return searchExpression
+     */
+    public String getSearchExpression() {
+        return this.searchExpression;
+    }
+
+    /**
      * @return sortCriterion
      */
     public SortCriterion getSortCriterion() {
@@ -97,9 +121,11 @@ public class SearchResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchResourcesRequest, Builder> {
         private java.util.List<Filter> filter; 
+        private Boolean includeDeletedResources; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
+        private String searchExpression; 
         private SortCriterion sortCriterion; 
 
         private Builder() {
@@ -109,9 +135,11 @@ public class SearchResourcesRequest extends Request {
         private Builder(SearchResourcesRequest request) {
             super(request);
             this.filter = request.filter;
+            this.includeDeletedResources = request.includeDeletedResources;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.resourceGroupId = request.resourceGroupId;
+            this.searchExpression = request.searchExpression;
             this.sortCriterion = request.sortCriterion;
         } 
 
@@ -121,6 +149,15 @@ public class SearchResourcesRequest extends Request {
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * IncludeDeletedResources.
+         */
+        public Builder includeDeletedResources(Boolean includeDeletedResources) {
+            this.putQueryParameter("IncludeDeletedResources", includeDeletedResources);
+            this.includeDeletedResources = includeDeletedResources;
             return this;
         }
 
@@ -160,6 +197,15 @@ public class SearchResourcesRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SearchExpression.
+         */
+        public Builder searchExpression(String searchExpression) {
+            this.putQueryParameter("SearchExpression", searchExpression);
+            this.searchExpression = searchExpression;
             return this;
         }
 

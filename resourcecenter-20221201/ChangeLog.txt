@@ -1,3 +1,6 @@
+2025-12-23 Version: 1.0.13
+- Generated java-async 2022-12-01 for ResourceCenter.
+
 2025-10-11 Version: 1.0.12
 - Generated java-async 2022-12-01 for ResourceCenter.
 

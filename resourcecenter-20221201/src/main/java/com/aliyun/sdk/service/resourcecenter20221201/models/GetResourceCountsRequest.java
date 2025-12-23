@@ -25,10 +25,20 @@ public class GetResourceCountsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("GroupByKey")
     private String groupByKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDeletedResources")
+    private Boolean includeDeletedResources;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchExpression")
+    private String searchExpression;
+
     private GetResourceCountsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
         this.groupByKey = builder.groupByKey;
+        this.includeDeletedResources = builder.includeDeletedResources;
+        this.searchExpression = builder.searchExpression;
     }
 
     public static Builder builder() {
@@ -58,9 +68,25 @@ public class GetResourceCountsRequest extends Request {
         return this.groupByKey;
     }
 
+    /**
+     * @return includeDeletedResources
+     */
+    public Boolean getIncludeDeletedResources() {
+        return this.includeDeletedResources;
+    }
+
+    /**
+     * @return searchExpression
+     */
+    public String getSearchExpression() {
+        return this.searchExpression;
+    }
+
     public static final class Builder extends Request.Builder<GetResourceCountsRequest, Builder> {
         private java.util.List<Filter> filter; 
         private String groupByKey; 
+        private Boolean includeDeletedResources; 
+        private String searchExpression; 
 
         private Builder() {
             super();
@@ -70,6 +96,8 @@ public class GetResourceCountsRequest extends Request {
             super(request);
             this.filter = request.filter;
             this.groupByKey = request.groupByKey;
+            this.includeDeletedResources = request.includeDeletedResources;
+            this.searchExpression = request.searchExpression;
         } 
 
         /**
@@ -97,6 +125,24 @@ public class GetResourceCountsRequest extends Request {
         public Builder groupByKey(String groupByKey) {
             this.putQueryParameter("GroupByKey", groupByKey);
             this.groupByKey = groupByKey;
+            return this;
+        }
+
+        /**
+         * IncludeDeletedResources.
+         */
+        public Builder includeDeletedResources(Boolean includeDeletedResources) {
+            this.putQueryParameter("IncludeDeletedResources", includeDeletedResources);
+            this.includeDeletedResources = includeDeletedResources;
+            return this;
+        }
+
+        /**
+         * SearchExpression.
+         */
+        public Builder searchExpression(String searchExpression) {
+            this.putQueryParameter("SearchExpression", searchExpression);
+            this.searchExpression = searchExpression;
             return this;
         }
 

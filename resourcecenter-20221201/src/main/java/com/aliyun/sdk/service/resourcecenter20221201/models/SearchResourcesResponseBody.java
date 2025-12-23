@@ -465,6 +465,9 @@ public class SearchResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Deleted")
+        private Boolean deleted;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
@@ -498,6 +501,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         private Resources(Builder builder) {
             this.accountId = builder.accountId;
             this.createTime = builder.createTime;
+            this.deleted = builder.deleted;
             this.expireTime = builder.expireTime;
             this.ipAddressAttributes = builder.ipAddressAttributes;
             this.ipAddresses = builder.ipAddresses;
@@ -530,6 +534,13 @@ public class SearchResourcesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deleted
+         */
+        public Boolean getDeleted() {
+            return this.deleted;
         }
 
         /**
@@ -605,6 +616,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String createTime; 
+            private Boolean deleted; 
             private String expireTime; 
             private java.util.List<IpAddressAttributes> ipAddressAttributes; 
             private java.util.List<String> ipAddresses; 
@@ -622,6 +634,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             private Builder(Resources model) {
                 this.accountId = model.accountId;
                 this.createTime = model.createTime;
+                this.deleted = model.deleted;
                 this.expireTime = model.expireTime;
                 this.ipAddressAttributes = model.ipAddressAttributes;
                 this.ipAddresses = model.ipAddresses;
@@ -656,6 +669,14 @@ public class SearchResourcesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Deleted.
+             */
+            public Builder deleted(Boolean deleted) {
+                this.deleted = deleted;
                 return this;
             }
 
