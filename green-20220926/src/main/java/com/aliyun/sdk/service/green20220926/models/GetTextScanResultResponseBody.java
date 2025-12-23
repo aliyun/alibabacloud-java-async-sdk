@@ -275,11 +275,17 @@ public class GetTextScanResultResponseBody extends TeaModel {
      * <p>GetTextScanResultResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("BailianRequestId")
         private String bailianRequestId;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
+
+        @com.aliyun.core.annotation.NameInMap("DataId")
+        private String dataId;
 
         @com.aliyun.core.annotation.NameInMap("ExtFeedback")
         private String extFeedback;
@@ -321,8 +327,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         private String taskId;
 
         private Items(Builder builder) {
+            this.accountId = builder.accountId;
             this.bailianRequestId = builder.bailianRequestId;
             this.content = builder.content;
+            this.dataId = builder.dataId;
             this.extFeedback = builder.extFeedback;
             this.extra = builder.extra;
             this.gmtCreate = builder.gmtCreate;
@@ -347,6 +355,13 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
+        }
+
+        /**
          * @return bailianRequestId
          */
         public String getBailianRequestId() {
@@ -358,6 +373,13 @@ public class GetTextScanResultResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return dataId
+         */
+        public String getDataId() {
+            return this.dataId;
         }
 
         /**
@@ -452,8 +474,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private String bailianRequestId; 
             private String content; 
+            private String dataId; 
             private String extFeedback; 
             private java.util.Map<String, ?> extra; 
             private String gmtCreate; 
@@ -472,8 +496,10 @@ public class GetTextScanResultResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.accountId = model.accountId;
                 this.bailianRequestId = model.bailianRequestId;
                 this.content = model.content;
+                this.dataId = model.dataId;
                 this.extFeedback = model.extFeedback;
                 this.extra = model.extra;
                 this.gmtCreate = model.gmtCreate;
@@ -488,6 +514,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
                 this.suggestion = model.suggestion;
                 this.taskId = model.taskId;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>Bailian Request ID</p>
@@ -508,6 +542,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * DataId.
+             */
+            public Builder dataId(String dataId) {
+                this.dataId = dataId;
                 return this;
             }
 
