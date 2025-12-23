@@ -905,6 +905,210 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
      *
      * <p>DescribeHotBigKeysResponseBody</p>
      */
+    public static class LargeKey extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataSize")
+        private String dataSize;
+
+        @com.aliyun.core.annotation.NameInMap("Db")
+        private String db;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("KeyType")
+        private String keyType;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        private LargeKey(Builder builder) {
+            this.dataSize = builder.dataSize;
+            this.db = builder.db;
+            this.key = builder.key;
+            this.keyType = builder.keyType;
+            this.nodeId = builder.nodeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LargeKey create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataSize
+         */
+        public String getDataSize() {
+            return this.dataSize;
+        }
+
+        /**
+         * @return db
+         */
+        public String getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return keyType
+         */
+        public String getKeyType() {
+            return this.keyType;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public static final class Builder {
+            private String dataSize; 
+            private String db; 
+            private String key; 
+            private String keyType; 
+            private String nodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LargeKey model) {
+                this.dataSize = model.dataSize;
+                this.db = model.db;
+                this.key = model.key;
+                this.keyType = model.keyType;
+                this.nodeId = model.nodeId;
+            } 
+
+            /**
+             * DataSize.
+             */
+            public Builder dataSize(String dataSize) {
+                this.dataSize = dataSize;
+                return this;
+            }
+
+            /**
+             * <p>The database in which the key is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder db(String db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * <p>The key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc:def:eng</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The type of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zset</p>
+             */
+            public Builder keyType(String keyType) {
+                this.keyType = keyType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-x****-db-0</p>
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            public LargeKey build() {
+                return new LargeKey(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeHotBigKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotBigKeysResponseBody</p>
+     */
+    public static class LargeKeys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LargeKey")
+        private java.util.List<LargeKey> largeKey;
+
+        private LargeKeys(Builder builder) {
+            this.largeKey = builder.largeKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LargeKeys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return largeKey
+         */
+        public java.util.List<LargeKey> getLargeKey() {
+            return this.largeKey;
+        }
+
+        public static final class Builder {
+            private java.util.List<LargeKey> largeKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(LargeKeys model) {
+                this.largeKey = model.largeKey;
+            } 
+
+            /**
+             * LargeKey.
+             */
+            public Builder largeKey(java.util.List<LargeKey> largeKey) {
+                this.largeKey = largeKey;
+                return this;
+            }
+
+            public LargeKeys build() {
+                return new LargeKeys(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeHotBigKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHotBigKeysResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BigKeyMsg")
         private String bigKeyMsg;
@@ -924,6 +1128,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HotKeys")
         private HotKeys hotKeys;
 
+        @com.aliyun.core.annotation.NameInMap("LargeKeyMsg")
+        private String largeKeyMsg;
+
+        @com.aliyun.core.annotation.NameInMap("LargeKeys")
+        private LargeKeys largeKeys;
+
         private Data(Builder builder) {
             this.bigKeyMsg = builder.bigKeyMsg;
             this.bigKeys = builder.bigKeys;
@@ -931,6 +1141,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             this.highTrafficKeys = builder.highTrafficKeys;
             this.hotKeyMsg = builder.hotKeyMsg;
             this.hotKeys = builder.hotKeys;
+            this.largeKeyMsg = builder.largeKeyMsg;
+            this.largeKeys = builder.largeKeys;
         }
 
         public static Builder builder() {
@@ -983,6 +1195,20 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             return this.hotKeys;
         }
 
+        /**
+         * @return largeKeyMsg
+         */
+        public String getLargeKeyMsg() {
+            return this.largeKeyMsg;
+        }
+
+        /**
+         * @return largeKeys
+         */
+        public LargeKeys getLargeKeys() {
+            return this.largeKeys;
+        }
+
         public static final class Builder {
             private String bigKeyMsg; 
             private BigKeys bigKeys; 
@@ -990,6 +1216,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             private HighTrafficKeys highTrafficKeys; 
             private String hotKeyMsg; 
             private HotKeys hotKeys; 
+            private String largeKeyMsg; 
+            private LargeKeys largeKeys; 
 
             private Builder() {
             } 
@@ -1001,6 +1229,8 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
                 this.highTrafficKeys = model.highTrafficKeys;
                 this.hotKeyMsg = model.hotKeyMsg;
                 this.hotKeys = model.hotKeys;
+                this.largeKeyMsg = model.largeKeyMsg;
+                this.largeKeys = model.largeKeys;
             } 
 
             /**
@@ -1054,6 +1284,22 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
              */
             public Builder hotKeys(HotKeys hotKeys) {
                 this.hotKeys = hotKeys;
+                return this;
+            }
+
+            /**
+             * LargeKeyMsg.
+             */
+            public Builder largeKeyMsg(String largeKeyMsg) {
+                this.largeKeyMsg = largeKeyMsg;
+                return this;
+            }
+
+            /**
+             * LargeKeys.
+             */
+            public Builder largeKeys(LargeKeys largeKeys) {
+                this.largeKeys = largeKeys;
                 return this;
             }
 
