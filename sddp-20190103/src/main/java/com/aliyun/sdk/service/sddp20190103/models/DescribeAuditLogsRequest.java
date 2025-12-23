@@ -66,6 +66,10 @@ public class DescribeAuditLogsRequest extends Request {
     private Boolean loadWhiteList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogQueryOpJson")
+    private String logQueryOpJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogSource")
     private String logSource;
 
@@ -139,6 +143,7 @@ public class DescribeAuditLogsRequest extends Request {
         this.ipType = builder.ipType;
         this.lang = builder.lang;
         this.loadWhiteList = builder.loadWhiteList;
+        this.logQueryOpJson = builder.logQueryOpJson;
         this.logSource = builder.logSource;
         this.memberAccount = builder.memberAccount;
         this.message = builder.message;
@@ -251,6 +256,13 @@ public class DescribeAuditLogsRequest extends Request {
      */
     public Boolean getLoadWhiteList() {
         return this.loadWhiteList;
+    }
+
+    /**
+     * @return logQueryOpJson
+     */
+    public String getLogQueryOpJson() {
+        return this.logQueryOpJson;
     }
 
     /**
@@ -371,6 +383,7 @@ public class DescribeAuditLogsRequest extends Request {
         private String ipType; 
         private String lang; 
         private Boolean loadWhiteList; 
+        private String logQueryOpJson; 
         private String logSource; 
         private String memberAccount; 
         private String message; 
@@ -405,6 +418,7 @@ public class DescribeAuditLogsRequest extends Request {
             this.ipType = request.ipType;
             this.lang = request.lang;
             this.loadWhiteList = request.loadWhiteList;
+            this.logQueryOpJson = request.logQueryOpJson;
             this.logSource = request.logSource;
             this.memberAccount = request.memberAccount;
             this.message = request.message;
@@ -527,6 +541,15 @@ public class DescribeAuditLogsRequest extends Request {
         public Builder loadWhiteList(Boolean loadWhiteList) {
             this.putQueryParameter("LoadWhiteList", loadWhiteList);
             this.loadWhiteList = loadWhiteList;
+            return this;
+        }
+
+        /**
+         * LogQueryOpJson.
+         */
+        public Builder logQueryOpJson(String logQueryOpJson) {
+            this.putQueryParameter("LogQueryOpJson", logQueryOpJson);
+            this.logQueryOpJson = logQueryOpJson;
             return this;
         }
 
