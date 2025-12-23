@@ -17,13 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeResourceGroupInput</p>
  */
 public class ChangeResourceGroupInput extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("newResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
     private String newResourceGroupId;
 
-    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private ChangeResourceGroupInput(Builder builder) {
@@ -80,7 +80,7 @@ public class ChangeResourceGroupInput extends TeaModel {
         } 
 
         /**
-         * newResourceGroupId.
+         * NewResourceGroupId.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.newResourceGroupId = newResourceGroupId;
@@ -88,7 +88,7 @@ public class ChangeResourceGroupInput extends TeaModel {
         }
 
         /**
-         * resourceId.
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -96,7 +96,7 @@ public class ChangeResourceGroupInput extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

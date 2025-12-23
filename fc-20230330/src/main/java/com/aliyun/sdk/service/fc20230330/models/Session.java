@@ -35,6 +35,12 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
+
+    @com.aliyun.core.annotation.NameInMap("polarFsConfig")
+    private PolarFsConfig polarFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
@@ -60,6 +66,8 @@ public class Session extends TeaModel {
         this.functionName = builder.functionName;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.nasConfig = builder.nasConfig;
+        this.ossMountConfig = builder.ossMountConfig;
+        this.polarFsConfig = builder.polarFsConfig;
         this.qualifier = builder.qualifier;
         this.sessionAffinityType = builder.sessionAffinityType;
         this.sessionId = builder.sessionId;
@@ -123,6 +131,20 @@ public class Session extends TeaModel {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
+     * @return polarFsConfig
+     */
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
+    }
+
+    /**
      * @return qualifier
      */
     public String getQualifier() {
@@ -171,6 +193,8 @@ public class Session extends TeaModel {
         private String functionName; 
         private String lastModifiedTime; 
         private NASConfig nasConfig; 
+        private OSSMountConfig ossMountConfig; 
+        private PolarFsConfig polarFsConfig; 
         private String qualifier; 
         private String sessionAffinityType; 
         private String sessionId; 
@@ -188,6 +212,8 @@ public class Session extends TeaModel {
             this.functionName = model.functionName;
             this.lastModifiedTime = model.lastModifiedTime;
             this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
+            this.polarFsConfig = model.polarFsConfig;
             this.qualifier = model.qualifier;
             this.sessionAffinityType = model.sessionAffinityType;
             this.sessionId = model.sessionId;
@@ -241,6 +267,22 @@ public class Session extends TeaModel {
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * ossMountConfig.
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * polarFsConfig.
+         */
+        public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
+            this.polarFsConfig = polarFsConfig;
             return this;
         }
 

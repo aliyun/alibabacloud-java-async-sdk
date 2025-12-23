@@ -23,6 +23,12 @@ public class CreateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
+
+    @com.aliyun.core.annotation.NameInMap("polarFsConfig")
+    private PolarFsConfig polarFsConfig;
+
     @com.aliyun.core.annotation.NameInMap("sessionId")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String sessionId;
@@ -36,6 +42,8 @@ public class CreateSessionInput extends TeaModel {
     private CreateSessionInput(Builder builder) {
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.nasConfig = builder.nasConfig;
+        this.ossMountConfig = builder.ossMountConfig;
+        this.polarFsConfig = builder.polarFsConfig;
         this.sessionId = builder.sessionId;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
@@ -68,6 +76,20 @@ public class CreateSessionInput extends TeaModel {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
+     * @return polarFsConfig
+     */
+    public PolarFsConfig getPolarFsConfig() {
+        return this.polarFsConfig;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -91,6 +113,8 @@ public class CreateSessionInput extends TeaModel {
     public static final class Builder {
         private Boolean disableSessionIdReuse; 
         private NASConfig nasConfig; 
+        private OSSMountConfig ossMountConfig; 
+        private PolarFsConfig polarFsConfig; 
         private String sessionId; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
@@ -101,6 +125,8 @@ public class CreateSessionInput extends TeaModel {
         private Builder(CreateSessionInput model) {
             this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
+            this.polarFsConfig = model.polarFsConfig;
             this.sessionId = model.sessionId;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
@@ -119,6 +145,22 @@ public class CreateSessionInput extends TeaModel {
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * ossMountConfig.
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * polarFsConfig.
+         */
+        public Builder polarFsConfig(PolarFsConfig polarFsConfig) {
+            this.polarFsConfig = polarFsConfig;
             return this;
         }
 
