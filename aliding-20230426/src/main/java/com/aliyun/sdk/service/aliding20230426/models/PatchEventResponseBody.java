@@ -20,6 +20,12 @@ public class PatchEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attendees")
     private java.util.List<Attendees> attendees;
 
+    @com.aliyun.core.annotation.NameInMap("cardInstances")
+    private java.util.List<CardInstances> cardInstances;
+
+    @com.aliyun.core.annotation.NameInMap("categories")
+    private java.util.List<Categories> categories;
+
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
@@ -29,6 +35,9 @@ public class PatchEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("end")
     private End end;
 
+    @com.aliyun.core.annotation.NameInMap("freeBusyStatus")
+    private String freeBusyStatus;
+
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
@@ -37,6 +46,9 @@ public class PatchEventResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("location")
     private Location location;
+
+    @com.aliyun.core.annotation.NameInMap("onlineMeetingInfo")
+    private OnlineMeetingInfo onlineMeetingInfo;
 
     @com.aliyun.core.annotation.NameInMap("organizer")
     private Organizer organizer;
@@ -50,29 +62,41 @@ public class PatchEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("richTextDescription")
+    private RichTextDescription richTextDescription;
+
     @com.aliyun.core.annotation.NameInMap("start")
     private Start start;
 
     @com.aliyun.core.annotation.NameInMap("summary")
     private String summary;
 
+    @com.aliyun.core.annotation.NameInMap("uiConfigs")
+    private java.util.List<UiConfigs> uiConfigs;
+
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
 
     private PatchEventResponseBody(Builder builder) {
         this.attendees = builder.attendees;
+        this.cardInstances = builder.cardInstances;
+        this.categories = builder.categories;
         this.createTime = builder.createTime;
         this.description = builder.description;
         this.end = builder.end;
+        this.freeBusyStatus = builder.freeBusyStatus;
         this.id = builder.id;
         this.isAllDay = builder.isAllDay;
         this.location = builder.location;
+        this.onlineMeetingInfo = builder.onlineMeetingInfo;
         this.organizer = builder.organizer;
         this.recurrence = builder.recurrence;
         this.reminders = builder.reminders;
         this.requestId = builder.requestId;
+        this.richTextDescription = builder.richTextDescription;
         this.start = builder.start;
         this.summary = builder.summary;
+        this.uiConfigs = builder.uiConfigs;
         this.updateTime = builder.updateTime;
     }
 
@@ -93,6 +117,20 @@ public class PatchEventResponseBody extends TeaModel {
      */
     public java.util.List<Attendees> getAttendees() {
         return this.attendees;
+    }
+
+    /**
+     * @return cardInstances
+     */
+    public java.util.List<CardInstances> getCardInstances() {
+        return this.cardInstances;
+    }
+
+    /**
+     * @return categories
+     */
+    public java.util.List<Categories> getCategories() {
+        return this.categories;
     }
 
     /**
@@ -117,6 +155,13 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     /**
+     * @return freeBusyStatus
+     */
+    public String getFreeBusyStatus() {
+        return this.freeBusyStatus;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
@@ -135,6 +180,13 @@ public class PatchEventResponseBody extends TeaModel {
      */
     public Location getLocation() {
         return this.location;
+    }
+
+    /**
+     * @return onlineMeetingInfo
+     */
+    public OnlineMeetingInfo getOnlineMeetingInfo() {
+        return this.onlineMeetingInfo;
     }
 
     /**
@@ -166,6 +218,13 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     /**
+     * @return richTextDescription
+     */
+    public RichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
+    /**
      * @return start
      */
     public Start getStart() {
@@ -180,6 +239,13 @@ public class PatchEventResponseBody extends TeaModel {
     }
 
     /**
+     * @return uiConfigs
+     */
+    public java.util.List<UiConfigs> getUiConfigs() {
+        return this.uiConfigs;
+    }
+
+    /**
      * @return updateTime
      */
     public String getUpdateTime() {
@@ -188,18 +254,24 @@ public class PatchEventResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Attendees> attendees; 
+        private java.util.List<CardInstances> cardInstances; 
+        private java.util.List<Categories> categories; 
         private String createTime; 
         private String description; 
         private End end; 
+        private String freeBusyStatus; 
         private String id; 
         private Boolean isAllDay; 
         private Location location; 
+        private OnlineMeetingInfo onlineMeetingInfo; 
         private Organizer organizer; 
         private Recurrence recurrence; 
         private java.util.List<Reminders> reminders; 
         private String requestId; 
+        private RichTextDescription richTextDescription; 
         private Start start; 
         private String summary; 
+        private java.util.List<UiConfigs> uiConfigs; 
         private String updateTime; 
 
         private Builder() {
@@ -207,18 +279,24 @@ public class PatchEventResponseBody extends TeaModel {
 
         private Builder(PatchEventResponseBody model) {
             this.attendees = model.attendees;
+            this.cardInstances = model.cardInstances;
+            this.categories = model.categories;
             this.createTime = model.createTime;
             this.description = model.description;
             this.end = model.end;
+            this.freeBusyStatus = model.freeBusyStatus;
             this.id = model.id;
             this.isAllDay = model.isAllDay;
             this.location = model.location;
+            this.onlineMeetingInfo = model.onlineMeetingInfo;
             this.organizer = model.organizer;
             this.recurrence = model.recurrence;
             this.reminders = model.reminders;
             this.requestId = model.requestId;
+            this.richTextDescription = model.richTextDescription;
             this.start = model.start;
             this.summary = model.summary;
+            this.uiConfigs = model.uiConfigs;
             this.updateTime = model.updateTime;
         } 
 
@@ -227,6 +305,22 @@ public class PatchEventResponseBody extends TeaModel {
          */
         public Builder attendees(java.util.List<Attendees> attendees) {
             this.attendees = attendees;
+            return this;
+        }
+
+        /**
+         * cardInstances.
+         */
+        public Builder cardInstances(java.util.List<CardInstances> cardInstances) {
+            this.cardInstances = cardInstances;
+            return this;
+        }
+
+        /**
+         * categories.
+         */
+        public Builder categories(java.util.List<Categories> categories) {
+            this.categories = categories;
             return this;
         }
 
@@ -255,6 +349,14 @@ public class PatchEventResponseBody extends TeaModel {
         }
 
         /**
+         * freeBusyStatus.
+         */
+        public Builder freeBusyStatus(String freeBusyStatus) {
+            this.freeBusyStatus = freeBusyStatus;
+            return this;
+        }
+
+        /**
          * id.
          */
         public Builder id(String id) {
@@ -275,6 +377,14 @@ public class PatchEventResponseBody extends TeaModel {
          */
         public Builder location(Location location) {
             this.location = location;
+            return this;
+        }
+
+        /**
+         * onlineMeetingInfo.
+         */
+        public Builder onlineMeetingInfo(OnlineMeetingInfo onlineMeetingInfo) {
+            this.onlineMeetingInfo = onlineMeetingInfo;
             return this;
         }
 
@@ -314,6 +424,14 @@ public class PatchEventResponseBody extends TeaModel {
         }
 
         /**
+         * richTextDescription.
+         */
+        public Builder richTextDescription(RichTextDescription richTextDescription) {
+            this.richTextDescription = richTextDescription;
+            return this;
+        }
+
+        /**
          * start.
          */
         public Builder start(Start start) {
@@ -326,6 +444,14 @@ public class PatchEventResponseBody extends TeaModel {
          */
         public Builder summary(String summary) {
             this.summary = summary;
+            return this;
+        }
+
+        /**
+         * uiConfigs.
+         */
+        public Builder uiConfigs(java.util.List<UiConfigs> uiConfigs) {
+            this.uiConfigs = uiConfigs;
             return this;
         }
 
@@ -476,6 +602,156 @@ public class PatchEventResponseBody extends TeaModel {
 
             public Attendees build() {
                 return new Attendees(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>PatchEventResponseBody</p>
+     */
+    public static class CardInstances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("outTrackId")
+        private String outTrackId;
+
+        @com.aliyun.core.annotation.NameInMap("scenario")
+        private String scenario;
+
+        private CardInstances(Builder builder) {
+            this.outTrackId = builder.outTrackId;
+            this.scenario = builder.scenario;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outTrackId
+         */
+        public String getOutTrackId() {
+            return this.outTrackId;
+        }
+
+        /**
+         * @return scenario
+         */
+        public String getScenario() {
+            return this.scenario;
+        }
+
+        public static final class Builder {
+            private String outTrackId; 
+            private String scenario; 
+
+            private Builder() {
+            } 
+
+            private Builder(CardInstances model) {
+                this.outTrackId = model.outTrackId;
+                this.scenario = model.scenario;
+            } 
+
+            /**
+             * outTrackId.
+             */
+            public Builder outTrackId(String outTrackId) {
+                this.outTrackId = outTrackId;
+                return this;
+            }
+
+            /**
+             * scenario.
+             */
+            public Builder scenario(String scenario) {
+                this.scenario = scenario;
+                return this;
+            }
+
+            public CardInstances build() {
+                return new CardInstances(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>PatchEventResponseBody</p>
+     */
+    public static class Categories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("categoryId")
+        private String categoryId;
+
+        @com.aliyun.core.annotation.NameInMap("displayName")
+        private String displayName;
+
+        private Categories(Builder builder) {
+            this.categoryId = builder.categoryId;
+            this.displayName = builder.displayName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Categories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return categoryId
+         */
+        public String getCategoryId() {
+            return this.categoryId;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public static final class Builder {
+            private String categoryId; 
+            private String displayName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.categoryId = model.categoryId;
+                this.displayName = model.displayName;
+            } 
+
+            /**
+             * categoryId.
+             */
+            public Builder categoryId(String categoryId) {
+                this.categoryId = categoryId;
+                return this;
+            }
+
+            /**
+             * displayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            public Categories build() {
+                return new Categories(this);
             } 
 
         } 
@@ -647,6 +923,102 @@ public class PatchEventResponseBody extends TeaModel {
 
             public Location build() {
                 return new Location(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>PatchEventResponseBody</p>
+     */
+    public static class OnlineMeetingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conferenceId")
+        private String conferenceId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private OnlineMeetingInfo(Builder builder) {
+            this.conferenceId = builder.conferenceId;
+            this.type = builder.type;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnlineMeetingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conferenceId
+         */
+        public String getConferenceId() {
+            return this.conferenceId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String conferenceId; 
+            private String type; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineMeetingInfo model) {
+                this.conferenceId = model.conferenceId;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
+            /**
+             * conferenceId.
+             */
+            public Builder conferenceId(String conferenceId) {
+                this.conferenceId = conferenceId;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public OnlineMeetingInfo build() {
+                return new OnlineMeetingInfo(this);
             } 
 
         } 
@@ -1159,6 +1531,60 @@ public class PatchEventResponseBody extends TeaModel {
      *
      * <p>PatchEventResponseBody</p>
      */
+    public static class RichTextDescription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private RichTextDescription(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RichTextDescription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(RichTextDescription model) {
+                this.text = model.text;
+            } 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public RichTextDescription build() {
+                return new RichTextDescription(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>PatchEventResponseBody</p>
+     */
     public static class Start extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
@@ -1244,6 +1670,81 @@ public class PatchEventResponseBody extends TeaModel {
 
             public Start build() {
                 return new Start(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>PatchEventResponseBody</p>
+     */
+    public static class UiConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("uiName")
+        private String uiName;
+
+        @com.aliyun.core.annotation.NameInMap("uiStatus")
+        private String uiStatus;
+
+        private UiConfigs(Builder builder) {
+            this.uiName = builder.uiName;
+            this.uiStatus = builder.uiStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UiConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return uiName
+         */
+        public String getUiName() {
+            return this.uiName;
+        }
+
+        /**
+         * @return uiStatus
+         */
+        public String getUiStatus() {
+            return this.uiStatus;
+        }
+
+        public static final class Builder {
+            private String uiName; 
+            private String uiStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(UiConfigs model) {
+                this.uiName = model.uiName;
+                this.uiStatus = model.uiStatus;
+            } 
+
+            /**
+             * uiName.
+             */
+            public Builder uiName(String uiName) {
+                this.uiName = uiName;
+                return this;
+            }
+
+            /**
+             * uiStatus.
+             */
+            public Builder uiStatus(String uiStatus) {
+                this.uiStatus = uiStatus;
+                return this;
+            }
+
+            public UiConfigs build() {
+                return new UiConfigs(this);
             } 
 
         } 

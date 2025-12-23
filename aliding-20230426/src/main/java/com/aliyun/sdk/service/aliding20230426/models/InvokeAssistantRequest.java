@@ -27,6 +27,10 @@ public class InvokeAssistantRequest extends Request {
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientEnum")
+    private String clientEnum;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extLoginUser")
     private ExtLoginUser extLoginUser;
 
@@ -59,6 +63,7 @@ public class InvokeAssistantRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.assistantId = builder.assistantId;
+        this.clientEnum = builder.clientEnum;
         this.extLoginUser = builder.extLoginUser;
         this.messages = builder.messages;
         this.originalAssistantId = builder.originalAssistantId;
@@ -93,6 +98,13 @@ public class InvokeAssistantRequest extends Request {
      */
     public String getAssistantId() {
         return this.assistantId;
+    }
+
+    /**
+     * @return clientEnum
+     */
+    public String getClientEnum() {
+        return this.clientEnum;
     }
 
     /**
@@ -147,6 +159,7 @@ public class InvokeAssistantRequest extends Request {
     public static final class Builder extends Request.Builder<InvokeAssistantRequest, Builder> {
         private String accountId; 
         private String assistantId; 
+        private String clientEnum; 
         private ExtLoginUser extLoginUser; 
         private java.util.List<Messages> messages; 
         private String originalAssistantId; 
@@ -163,6 +176,7 @@ public class InvokeAssistantRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.assistantId = request.assistantId;
+            this.clientEnum = request.clientEnum;
             this.extLoginUser = request.extLoginUser;
             this.messages = request.messages;
             this.originalAssistantId = request.originalAssistantId;
@@ -190,6 +204,15 @@ public class InvokeAssistantRequest extends Request {
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("assistantId", assistantId);
             this.assistantId = assistantId;
+            return this;
+        }
+
+        /**
+         * clientEnum.
+         */
+        public Builder clientEnum(String clientEnum) {
+            this.putBodyParameter("clientEnum", clientEnum);
+            this.clientEnum = clientEnum;
             return this;
         }
 

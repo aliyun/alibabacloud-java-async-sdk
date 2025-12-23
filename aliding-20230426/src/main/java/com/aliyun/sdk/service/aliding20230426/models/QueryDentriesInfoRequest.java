@@ -40,11 +40,6 @@ public class QueryDentriesInfoRequest extends Request {
     private TenantContext tenantContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("UnionId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String unionId;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WithThumbnail")
     private Boolean withThumbnail;
 
@@ -55,7 +50,6 @@ public class QueryDentriesInfoRequest extends Request {
         this.dentryId = builder.dentryId;
         this.spaceId = builder.spaceId;
         this.tenantContext = builder.tenantContext;
-        this.unionId = builder.unionId;
         this.withThumbnail = builder.withThumbnail;
     }
 
@@ -108,13 +102,6 @@ public class QueryDentriesInfoRequest extends Request {
     }
 
     /**
-     * @return unionId
-     */
-    public String getUnionId() {
-        return this.unionId;
-    }
-
-    /**
      * @return withThumbnail
      */
     public Boolean getWithThumbnail() {
@@ -127,7 +114,6 @@ public class QueryDentriesInfoRequest extends Request {
         private String dentryId; 
         private String spaceId; 
         private TenantContext tenantContext; 
-        private String unionId; 
         private Boolean withThumbnail; 
 
         private Builder() {
@@ -141,7 +127,6 @@ public class QueryDentriesInfoRequest extends Request {
             this.dentryId = request.dentryId;
             this.spaceId = request.spaceId;
             this.tenantContext = request.tenantContext;
-            this.unionId = request.unionId;
             this.withThumbnail = request.withThumbnail;
         } 
 
@@ -196,18 +181,6 @@ public class QueryDentriesInfoRequest extends Request {
             String tenantContextShrink = shrink(tenantContext, "TenantContext", "json");
             this.putBodyParameter("TenantContext", tenantContextShrink);
             this.tenantContext = tenantContext;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>urv3ZIAtcmmIgQzHq08YcAiEiE</p>
-         */
-        public Builder unionId(String unionId) {
-            this.putBodyParameter("UnionId", unionId);
-            this.unionId = unionId;
             return this;
         }
 

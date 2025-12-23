@@ -27,6 +27,10 @@ public class CreateThreadRequest extends Request {
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientEnum")
+    private String clientEnum;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extLoginUser")
     private ExtLoginUser extLoginUser;
 
@@ -46,6 +50,7 @@ public class CreateThreadRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.assistantId = builder.assistantId;
+        this.clientEnum = builder.clientEnum;
         this.extLoginUser = builder.extLoginUser;
         this.originalAssistantId = builder.originalAssistantId;
         this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
@@ -80,6 +85,13 @@ public class CreateThreadRequest extends Request {
     }
 
     /**
+     * @return clientEnum
+     */
+    public String getClientEnum() {
+        return this.clientEnum;
+    }
+
+    /**
      * @return extLoginUser
      */
     public ExtLoginUser getExtLoginUser() {
@@ -110,6 +122,7 @@ public class CreateThreadRequest extends Request {
     public static final class Builder extends Request.Builder<CreateThreadRequest, Builder> {
         private String accountId; 
         private String assistantId; 
+        private String clientEnum; 
         private ExtLoginUser extLoginUser; 
         private String originalAssistantId; 
         private String sourceIdOfOriginalAssistantId; 
@@ -123,6 +136,7 @@ public class CreateThreadRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.assistantId = request.assistantId;
+            this.clientEnum = request.clientEnum;
             this.extLoginUser = request.extLoginUser;
             this.originalAssistantId = request.originalAssistantId;
             this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
@@ -147,6 +161,15 @@ public class CreateThreadRequest extends Request {
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("assistantId", assistantId);
             this.assistantId = assistantId;
+            return this;
+        }
+
+        /**
+         * clientEnum.
+         */
+        public Builder clientEnum(String clientEnum) {
+            this.putBodyParameter("clientEnum", clientEnum);
+            this.clientEnum = clientEnum;
             return this;
         }
 

@@ -75,6 +75,26 @@ public class PatchEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("categories")
+    private java.util.List<Categories> categories;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("freeBusyStatus")
+    private String freeBusyStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("onlineMeetingInfo")
+    private OnlineMeetingInfo onlineMeetingInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("richTextDescription")
+    private RichTextDescription richTextDescription;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("uiConfigs")
+    private java.util.List<UiConfigs> uiConfigs;
+
     private PatchEventRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
@@ -91,6 +111,11 @@ public class PatchEventRequest extends Request {
         this.reminders = builder.reminders;
         this.start = builder.start;
         this.summary = builder.summary;
+        this.categories = builder.categories;
+        this.freeBusyStatus = builder.freeBusyStatus;
+        this.onlineMeetingInfo = builder.onlineMeetingInfo;
+        this.richTextDescription = builder.richTextDescription;
+        this.uiConfigs = builder.uiConfigs;
     }
 
     public static Builder builder() {
@@ -204,6 +229,41 @@ public class PatchEventRequest extends Request {
         return this.summary;
     }
 
+    /**
+     * @return categories
+     */
+    public java.util.List<Categories> getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * @return freeBusyStatus
+     */
+    public String getFreeBusyStatus() {
+        return this.freeBusyStatus;
+    }
+
+    /**
+     * @return onlineMeetingInfo
+     */
+    public OnlineMeetingInfo getOnlineMeetingInfo() {
+        return this.onlineMeetingInfo;
+    }
+
+    /**
+     * @return richTextDescription
+     */
+    public RichTextDescription getRichTextDescription() {
+        return this.richTextDescription;
+    }
+
+    /**
+     * @return uiConfigs
+     */
+    public java.util.List<UiConfigs> getUiConfigs() {
+        return this.uiConfigs;
+    }
+
     public static final class Builder extends Request.Builder<PatchEventRequest, Builder> {
         private AccountContext accountContext; 
         private java.util.List<Attendees> attendees; 
@@ -219,6 +279,11 @@ public class PatchEventRequest extends Request {
         private java.util.List<Reminders> reminders; 
         private Start start; 
         private String summary; 
+        private java.util.List<Categories> categories; 
+        private String freeBusyStatus; 
+        private OnlineMeetingInfo onlineMeetingInfo; 
+        private RichTextDescription richTextDescription; 
+        private java.util.List<UiConfigs> uiConfigs; 
 
         private Builder() {
             super();
@@ -240,6 +305,11 @@ public class PatchEventRequest extends Request {
             this.reminders = request.reminders;
             this.start = request.start;
             this.summary = request.summary;
+            this.categories = request.categories;
+            this.freeBusyStatus = request.freeBusyStatus;
+            this.onlineMeetingInfo = request.onlineMeetingInfo;
+            this.richTextDescription = request.richTextDescription;
+            this.uiConfigs = request.uiConfigs;
         } 
 
         /**
@@ -380,6 +450,55 @@ public class PatchEventRequest extends Request {
         public Builder summary(String summary) {
             this.putBodyParameter("Summary", summary);
             this.summary = summary;
+            return this;
+        }
+
+        /**
+         * categories.
+         */
+        public Builder categories(java.util.List<Categories> categories) {
+            String categoriesShrink = shrink(categories, "categories", "json");
+            this.putQueryParameter("categories", categoriesShrink);
+            this.categories = categories;
+            return this;
+        }
+
+        /**
+         * freeBusyStatus.
+         */
+        public Builder freeBusyStatus(String freeBusyStatus) {
+            this.putQueryParameter("freeBusyStatus", freeBusyStatus);
+            this.freeBusyStatus = freeBusyStatus;
+            return this;
+        }
+
+        /**
+         * onlineMeetingInfo.
+         */
+        public Builder onlineMeetingInfo(OnlineMeetingInfo onlineMeetingInfo) {
+            String onlineMeetingInfoShrink = shrink(onlineMeetingInfo, "onlineMeetingInfo", "json");
+            this.putQueryParameter("onlineMeetingInfo", onlineMeetingInfoShrink);
+            this.onlineMeetingInfo = onlineMeetingInfo;
+            return this;
+        }
+
+        /**
+         * richTextDescription.
+         */
+        public Builder richTextDescription(RichTextDescription richTextDescription) {
+            String richTextDescriptionShrink = shrink(richTextDescription, "richTextDescription", "json");
+            this.putQueryParameter("richTextDescription", richTextDescriptionShrink);
+            this.richTextDescription = richTextDescription;
+            return this;
+        }
+
+        /**
+         * uiConfigs.
+         */
+        public Builder uiConfigs(java.util.List<UiConfigs> uiConfigs) {
+            String uiConfigsShrink = shrink(uiConfigs, "uiConfigs", "json");
+            this.putQueryParameter("uiConfigs", uiConfigsShrink);
+            this.uiConfigs = uiConfigs;
             return this;
         }
 
@@ -1223,6 +1342,264 @@ public class PatchEventRequest extends Request {
 
             public Start build() {
                 return new Start(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
+    public static class Categories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("categoryId")
+        private String categoryId;
+
+        @com.aliyun.core.annotation.NameInMap("displayName")
+        private String displayName;
+
+        private Categories(Builder builder) {
+            this.categoryId = builder.categoryId;
+            this.displayName = builder.displayName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Categories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return categoryId
+         */
+        public String getCategoryId() {
+            return this.categoryId;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public static final class Builder {
+            private String categoryId; 
+            private String displayName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Categories model) {
+                this.categoryId = model.categoryId;
+                this.displayName = model.displayName;
+            } 
+
+            /**
+             * categoryId.
+             */
+            public Builder categoryId(String categoryId) {
+                this.categoryId = categoryId;
+                return this;
+            }
+
+            /**
+             * displayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            public Categories build() {
+                return new Categories(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
+    public static class OnlineMeetingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private OnlineMeetingInfo(Builder builder) {
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnlineMeetingInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineMeetingInfo model) {
+                this.type = model.type;
+            } 
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public OnlineMeetingInfo build() {
+                return new OnlineMeetingInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
+    public static class RichTextDescription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private RichTextDescription(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RichTextDescription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(RichTextDescription model) {
+                this.text = model.text;
+            } 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public RichTextDescription build() {
+                return new RichTextDescription(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PatchEventRequest} extends {@link TeaModel}
+     *
+     * <p>PatchEventRequest</p>
+     */
+    public static class UiConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("uiName")
+        private String uiName;
+
+        @com.aliyun.core.annotation.NameInMap("uiStatus")
+        private String uiStatus;
+
+        private UiConfigs(Builder builder) {
+            this.uiName = builder.uiName;
+            this.uiStatus = builder.uiStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UiConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return uiName
+         */
+        public String getUiName() {
+            return this.uiName;
+        }
+
+        /**
+         * @return uiStatus
+         */
+        public String getUiStatus() {
+            return this.uiStatus;
+        }
+
+        public static final class Builder {
+            private String uiName; 
+            private String uiStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(UiConfigs model) {
+                this.uiName = model.uiName;
+                this.uiStatus = model.uiStatus;
+            } 
+
+            /**
+             * uiName.
+             */
+            public Builder uiName(String uiName) {
+                this.uiName = uiName;
+                return this;
+            }
+
+            /**
+             * uiStatus.
+             */
+            public Builder uiStatus(String uiStatus) {
+                this.uiStatus = uiStatus;
+                return this;
+            }
+
+            public UiConfigs build() {
+                return new UiConfigs(this);
             } 
 
         } 
