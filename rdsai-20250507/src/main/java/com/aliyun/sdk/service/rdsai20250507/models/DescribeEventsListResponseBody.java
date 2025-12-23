@@ -239,6 +239,9 @@ public class DescribeEventsListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecoveryTime")
         private String recoveryTime;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         private Events(Builder builder) {
             this.eventCode = builder.eventCode;
             this.eventStatus = builder.eventStatus;
@@ -246,6 +249,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
             this.recoveryTime = builder.recoveryTime;
+            this.regionId = builder.regionId;
         }
 
         public static Builder builder() {
@@ -298,6 +302,13 @@ public class DescribeEventsListResponseBody extends TeaModel {
             return this.recoveryTime;
         }
 
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public static final class Builder {
             private String eventCode; 
             private String eventStatus; 
@@ -305,6 +316,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             private String instanceDescription; 
             private String instanceId; 
             private String recoveryTime; 
+            private String regionId; 
 
             private Builder() {
             } 
@@ -316,6 +328,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
                 this.instanceDescription = model.instanceDescription;
                 this.instanceId = model.instanceId;
                 this.recoveryTime = model.recoveryTime;
+                this.regionId = model.regionId;
             } 
 
             /**
@@ -363,6 +376,14 @@ public class DescribeEventsListResponseBody extends TeaModel {
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 

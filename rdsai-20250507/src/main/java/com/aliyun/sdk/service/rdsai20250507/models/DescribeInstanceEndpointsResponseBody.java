@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceEndpointsResponseBody</p>
  */
 public class DescribeInstanceEndpointsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoints")
+    private java.util.List<DBInstanceEndpoints> DBInstanceEndpoints;
+
     @com.aliyun.core.annotation.NameInMap("InstanceEndpoints")
     private java.util.List<InstanceEndpoints> instanceEndpoints;
 
@@ -27,6 +30,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeInstanceEndpointsResponseBody(Builder builder) {
+        this.DBInstanceEndpoints = builder.DBInstanceEndpoints;
         this.instanceEndpoints = builder.instanceEndpoints;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return DBInstanceEndpoints
+     */
+    public java.util.List<DBInstanceEndpoints> getDBInstanceEndpoints() {
+        return this.DBInstanceEndpoints;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<DBInstanceEndpoints> DBInstanceEndpoints; 
         private java.util.List<InstanceEndpoints> instanceEndpoints; 
         private String instanceName; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeInstanceEndpointsResponseBody model) {
+            this.DBInstanceEndpoints = model.DBInstanceEndpoints;
             this.instanceEndpoints = model.instanceEndpoints;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * DBInstanceEndpoints.
+         */
+        public Builder DBInstanceEndpoints(java.util.List<DBInstanceEndpoints> DBInstanceEndpoints) {
+            this.DBInstanceEndpoints = DBInstanceEndpoints;
+            return this;
+        }
 
         /**
          * InstanceEndpoints.
@@ -109,6 +130,102 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceEndpointsResponseBody</p>
+     */
+    public static class DBInstanceEndpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
+        private String connectionString;
+
+        @com.aliyun.core.annotation.NameInMap("IpType")
+        private String ipType;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        private DBInstanceEndpoints(Builder builder) {
+            this.connectionString = builder.connectionString;
+            this.ipType = builder.ipType;
+            this.port = builder.port;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceEndpoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionString
+         */
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        /**
+         * @return ipType
+         */
+        public String getIpType() {
+            return this.ipType;
+        }
+
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        public static final class Builder {
+            private String connectionString; 
+            private String ipType; 
+            private String port; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceEndpoints model) {
+                this.connectionString = model.connectionString;
+                this.ipType = model.ipType;
+                this.port = model.port;
+            } 
+
+            /**
+             * ConnectionString.
+             */
+            public Builder connectionString(String connectionString) {
+                this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * IpType.
+             */
+            public Builder ipType(String ipType) {
+                this.ipType = ipType;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            public DBInstanceEndpoints build() {
+                return new DBInstanceEndpoints(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeInstanceEndpointsResponseBody} extends {@link TeaModel}
