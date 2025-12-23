@@ -226,6 +226,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
      * <p>DescribeApplicationSlbsResponseBody</p>
      */
     public static class Internet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
+        private Integer connectionDrainTimeout;
+
         @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
@@ -234,6 +237,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("EnableConnectionDrain")
+        private Boolean enableConnectionDrain;
 
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
@@ -256,10 +262,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
+        private String vServerGroupId;
+
         private Internet(Builder builder) {
+            this.connectionDrainTimeout = builder.connectionDrainTimeout;
             this.cookie = builder.cookie;
             this.cookieTimeout = builder.cookieTimeout;
             this.createTime = builder.createTime;
+            this.enableConnectionDrain = builder.enableConnectionDrain;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
@@ -267,6 +278,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             this.stickySession = builder.stickySession;
             this.stickySessionType = builder.stickySessionType;
             this.targetPort = builder.targetPort;
+            this.vServerGroupId = builder.vServerGroupId;
         }
 
         public static Builder builder() {
@@ -275,6 +287,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Internet create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectionDrainTimeout
+         */
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
         }
 
         /**
@@ -296,6 +315,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableConnectionDrain
+         */
+        public Boolean getEnableConnectionDrain() {
+            return this.enableConnectionDrain;
         }
 
         /**
@@ -347,10 +373,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.targetPort;
         }
 
+        /**
+         * @return vServerGroupId
+         */
+        public String getVServerGroupId() {
+            return this.vServerGroupId;
+        }
+
         public static final class Builder {
+            private Integer connectionDrainTimeout; 
             private String cookie; 
             private Integer cookieTimeout; 
             private Long createTime; 
+            private Boolean enableConnectionDrain; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
@@ -358,14 +393,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private Boolean stickySession; 
             private String stickySessionType; 
             private Integer targetPort; 
+            private String vServerGroupId; 
 
             private Builder() {
             } 
 
             private Builder(Internet model) {
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
                 this.cookie = model.cookie;
                 this.cookieTimeout = model.cookieTimeout;
                 this.createTime = model.createTime;
+                this.enableConnectionDrain = model.enableConnectionDrain;
                 this.httpsCaCertId = model.httpsCaCertId;
                 this.httpsCertId = model.httpsCertId;
                 this.port = model.port;
@@ -373,7 +411,16 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
                 this.stickySession = model.stickySession;
                 this.stickySessionType = model.stickySessionType;
                 this.targetPort = model.targetPort;
+                this.vServerGroupId = model.vServerGroupId;
             } 
+
+            /**
+             * ConnectionDrainTimeout.
+             */
+            public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
+                this.connectionDrainTimeout = connectionDrainTimeout;
+                return this;
+            }
 
             /**
              * Cookie.
@@ -399,6 +446,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableConnectionDrain.
+             */
+            public Builder enableConnectionDrain(Boolean enableConnectionDrain) {
+                this.enableConnectionDrain = enableConnectionDrain;
                 return this;
             }
 
@@ -470,6 +525,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VServerGroupId.
+             */
+            public Builder vServerGroupId(String vServerGroupId) {
+                this.vServerGroupId = vServerGroupId;
+                return this;
+            }
+
             public Internet build() {
                 return new Internet(this);
             } 
@@ -484,6 +547,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
      * <p>DescribeApplicationSlbsResponseBody</p>
      */
     public static class Intranet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
+        private Integer connectionDrainTimeout;
+
         @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
@@ -492,6 +558,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("EnableConnectionDrain")
+        private Boolean enableConnectionDrain;
 
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
@@ -514,10 +583,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
+        private String vServerGroupId;
+
         private Intranet(Builder builder) {
+            this.connectionDrainTimeout = builder.connectionDrainTimeout;
             this.cookie = builder.cookie;
             this.cookieTimeout = builder.cookieTimeout;
             this.createTime = builder.createTime;
+            this.enableConnectionDrain = builder.enableConnectionDrain;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
@@ -525,6 +599,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             this.stickySession = builder.stickySession;
             this.stickySessionType = builder.stickySessionType;
             this.targetPort = builder.targetPort;
+            this.vServerGroupId = builder.vServerGroupId;
         }
 
         public static Builder builder() {
@@ -533,6 +608,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Intranet create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectionDrainTimeout
+         */
+        public Integer getConnectionDrainTimeout() {
+            return this.connectionDrainTimeout;
         }
 
         /**
@@ -554,6 +636,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableConnectionDrain
+         */
+        public Boolean getEnableConnectionDrain() {
+            return this.enableConnectionDrain;
         }
 
         /**
@@ -605,10 +694,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.targetPort;
         }
 
+        /**
+         * @return vServerGroupId
+         */
+        public String getVServerGroupId() {
+            return this.vServerGroupId;
+        }
+
         public static final class Builder {
+            private Integer connectionDrainTimeout; 
             private String cookie; 
             private Integer cookieTimeout; 
             private Long createTime; 
+            private Boolean enableConnectionDrain; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
@@ -616,14 +714,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private Boolean stickySession; 
             private String stickySessionType; 
             private Integer targetPort; 
+            private String vServerGroupId; 
 
             private Builder() {
             } 
 
             private Builder(Intranet model) {
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
                 this.cookie = model.cookie;
                 this.cookieTimeout = model.cookieTimeout;
                 this.createTime = model.createTime;
+                this.enableConnectionDrain = model.enableConnectionDrain;
                 this.httpsCaCertId = model.httpsCaCertId;
                 this.httpsCertId = model.httpsCertId;
                 this.port = model.port;
@@ -631,7 +732,16 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
                 this.stickySession = model.stickySession;
                 this.stickySessionType = model.stickySessionType;
                 this.targetPort = model.targetPort;
+                this.vServerGroupId = model.vServerGroupId;
             } 
+
+            /**
+             * ConnectionDrainTimeout.
+             */
+            public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
+                this.connectionDrainTimeout = connectionDrainTimeout;
+                return this;
+            }
 
             /**
              * Cookie.
@@ -657,6 +767,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableConnectionDrain.
+             */
+            public Builder enableConnectionDrain(Boolean enableConnectionDrain) {
+                this.enableConnectionDrain = enableConnectionDrain;
                 return this;
             }
 
@@ -725,6 +843,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
+                return this;
+            }
+
+            /**
+             * VServerGroupId.
+             */
+            public Builder vServerGroupId(String vServerGroupId) {
+                this.vServerGroupId = vServerGroupId;
                 return this;
             }
 
