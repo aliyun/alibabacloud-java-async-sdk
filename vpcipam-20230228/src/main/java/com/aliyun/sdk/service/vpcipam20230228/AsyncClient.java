@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddIpamMembers  AddIpamMembersRequest
+     * @return AddIpamMembersResponse
+     */
+    CompletableFuture<AddIpamMembersResponse> addIpamMembers(AddIpamMembersRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <strong>CreateIpamPool</strong> operation to create an IPAM pool.</p>
      * <ul>
@@ -209,6 +215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIpamDiscoveredResourceResponse> listIpamDiscoveredResource(ListIpamDiscoveredResourceRequest request);
 
     /**
+     * @param request the request parameters of ListIpamMembers  ListIpamMembersRequest
+     * @return ListIpamMembersResponse
+     */
+    CompletableFuture<ListIpamMembersResponse> listIpamMembers(ListIpamMembersRequest request);
+
+    /**
      * @param request the request parameters of ListIpamPoolAllocations  ListIpamPoolAllocationsRequest
      * @return ListIpamPoolAllocationsResponse
      */
@@ -276,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OpenVpcIpamServiceResponse
      */
     CompletableFuture<OpenVpcIpamServiceResponse> openVpcIpamService(OpenVpcIpamServiceRequest request);
+
+    /**
+     * @param request the request parameters of RemoveIpamMembers  RemoveIpamMembersRequest
+     * @return RemoveIpamMembersResponse
+     */
+    CompletableFuture<RemoveIpamMembersResponse> removeIpamMembers(RemoveIpamMembersRequest request);
 
     /**
      * <b>description</b> :
