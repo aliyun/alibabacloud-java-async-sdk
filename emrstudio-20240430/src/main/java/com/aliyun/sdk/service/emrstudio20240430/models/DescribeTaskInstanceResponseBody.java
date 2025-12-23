@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -89,6 +94,10 @@ public class DescribeTaskInstanceResponseBody extends TeaModel {
 
     public static DescribeTaskInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -228,6 +237,29 @@ public class DescribeTaskInstanceResponseBody extends TeaModel {
         private String taskVersion; 
         private String workflowInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTaskInstanceResponseBody model) {
+            this.dryRun = model.dryRun;
+            this.emrClusterId = model.emrClusterId;
+            this.endTime = model.endTime;
+            this.externalAppId = model.externalAppId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.retryTimes = model.retryTimes;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.submitTime = model.submitTime;
+            this.taskId = model.taskId;
+            this.taskInstanceId = model.taskInstanceId;
+            this.taskInstanceName = model.taskInstanceName;
+            this.taskParams = model.taskParams;
+            this.taskType = model.taskType;
+            this.taskVersion = model.taskVersion;
+            this.workflowInstanceId = model.workflowInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DryRun.

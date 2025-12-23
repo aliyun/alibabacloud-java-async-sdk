@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListManualTaskInstancesResponse} extends {@link TeaModel}
+ * {@link DescribeIdResponse} extends {@link TeaModel}
  *
- * <p>ListManualTaskInstancesResponse</p>
+ * <p>DescribeIdResponse</p>
  */
-public class ListManualTaskInstancesResponse extends Response {
+public class DescribeIdResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListManualTaskInstancesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListManualTaskInstancesResponseBody body;
+    private DescribeIdResponseBody body;
 
-    private ListManualTaskInstancesResponse(BuilderImpl builder) {
+    private DescribeIdResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListManualTaskInstancesResponse create() {
+    public static DescribeIdResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListManualTaskInstancesResponse extends Response {
     /**
      * @return body
      */
-    public ListManualTaskInstancesResponseBody getBody() {
+    public DescribeIdResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListManualTaskInstancesResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeIdResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListManualTaskInstancesResponseBody body);
+        Builder body(DescribeIdResponseBody body);
 
         @Override
-        ListManualTaskInstancesResponse build();
+        DescribeIdResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListManualTaskInstancesResponse, Builder>
+            extends Response.BuilderImpl<DescribeIdResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListManualTaskInstancesResponseBody body; 
+        private DescribeIdResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListManualTaskInstancesResponse response) {
+        private BuilderImpl(DescribeIdResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListManualTaskInstancesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListManualTaskInstancesResponseBody body) {
+        public Builder body(DescribeIdResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListManualTaskInstancesResponse build() {
-            return new ListManualTaskInstancesResponse(this);
+        public DescribeIdResponse build() {
+            return new DescribeIdResponse(this);
         } 
 
     } 

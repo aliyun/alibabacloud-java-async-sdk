@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,10 +24,10 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     private Schedule schedule;
 
     @com.aliyun.core.annotation.NameInMap("taskRelations")
-    private java.util.List < TaskRelations> taskRelations;
+    private java.util.List<TaskRelations> taskRelations;
 
     @com.aliyun.core.annotation.NameInMap("tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     @com.aliyun.core.annotation.NameInMap("workflow")
     private Workflow workflow;
@@ -43,6 +48,10 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -60,14 +69,14 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     /**
      * @return taskRelations
      */
-    public java.util.List < TaskRelations> getTaskRelations() {
+    public java.util.List<TaskRelations> getTaskRelations() {
         return this.taskRelations;
     }
 
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -81,9 +90,20 @@ public class DescribeWorkflowResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Schedule schedule; 
-        private java.util.List < TaskRelations> taskRelations; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<TaskRelations> taskRelations; 
+        private java.util.List<Tasks> tasks; 
         private Workflow workflow; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWorkflowResponseBody model) {
+            this.requestId = model.requestId;
+            this.schedule = model.schedule;
+            this.taskRelations = model.taskRelations;
+            this.tasks = model.tasks;
+            this.workflow = model.workflow;
+        } 
 
         /**
          * requestId.
@@ -104,7 +124,7 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         /**
          * taskRelations.
          */
-        public Builder taskRelations(java.util.List < TaskRelations> taskRelations) {
+        public Builder taskRelations(java.util.List<TaskRelations> taskRelations) {
             this.taskRelations = taskRelations;
             return this;
         }
@@ -112,7 +132,7 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         /**
          * tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -283,6 +303,23 @@ public class DescribeWorkflowResponseBody extends TeaModel {
             private String timeZone; 
             private String workflowInstancePriority; 
 
+            private Builder() {
+            } 
+
+            private Builder(Schedule model) {
+                this.alertGroupId = model.alertGroupId;
+                this.alertStrategy = model.alertStrategy;
+                this.cronExpr = model.cronExpr;
+                this.emrClusterId = model.emrClusterId;
+                this.failureStrategy = model.failureStrategy;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduleEndTime = model.scheduleEndTime;
+                this.scheduleStartTime = model.scheduleStartTime;
+                this.scheduleState = model.scheduleState;
+                this.timeZone = model.timeZone;
+                this.workflowInstancePriority = model.workflowInstancePriority;
+            } 
+
             /**
              * alertGroupId.
              */
@@ -422,6 +459,14 @@ public class DescribeWorkflowResponseBody extends TeaModel {
             private String postTaskId; 
             private String preTaskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TaskRelations model) {
+                this.postTaskId = model.postTaskId;
+                this.preTaskId = model.preTaskId;
+            } 
+
             /**
              * postTaskId.
              */
@@ -512,6 +557,16 @@ public class DescribeWorkflowResponseBody extends TeaModel {
             private String name; 
             private String taskId; 
             private Integer version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.taskId = model.taskId;
+                this.version = model.version;
+            } 
 
             /**
              * description.
@@ -679,6 +734,21 @@ public class DescribeWorkflowResponseBody extends TeaModel {
             private String updateTime; 
             private String workflowId; 
             private String workflowParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(Workflow model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.executionType = model.executionType;
+                this.name = model.name;
+                this.parentDirectoryId = model.parentDirectoryId;
+                this.timeout = model.timeout;
+                this.updateTime = model.updateTime;
+                this.workflowId = model.workflowId;
+                this.workflowParams = model.workflowParams;
+            } 
 
             /**
              * createTime.

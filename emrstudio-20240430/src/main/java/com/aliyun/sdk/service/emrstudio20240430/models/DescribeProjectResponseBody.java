@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,6 +46,10 @@ public class DescribeProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -75,8 +84,21 @@ public class DescribeProjectResponseBody extends TeaModel {
         private String projectId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeProjectResponseBody model) {
+            this.description = model.description;
+            this.name = model.name;
+            this.projectId = model.projectId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a project description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -84,7 +106,10 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project_name</p>
          */
         public Builder name(String name) {
             this.name = name;

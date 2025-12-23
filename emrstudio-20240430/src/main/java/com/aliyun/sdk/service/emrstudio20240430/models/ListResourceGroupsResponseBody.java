@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListResourceGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
@@ -43,10 +48,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,16 +88,27 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourceGroupsResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -190,6 +210,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String templateId; 
             private String templateName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedClusterTemplates model) {
+                this.clusterType = model.clusterType;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
+            } 
+
             /**
              * clusterType.
              */
@@ -277,6 +306,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String clusterName; 
             private String clusterType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedClusters model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+            } 
+
             /**
              * clusterId.
              */
@@ -352,6 +390,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String workspaceId; 
             private String workspaceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociatedWorkspaces model) {
+                this.workspaceId = model.workspaceId;
+                this.workspaceName = model.workspaceName;
+            } 
+
             /**
              * workspaceId.
              */
@@ -383,13 +429,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedClusterTemplates")
-        private java.util.List < AssociatedClusterTemplates> associatedClusterTemplates;
+        private java.util.List<AssociatedClusterTemplates> associatedClusterTemplates;
 
         @com.aliyun.core.annotation.NameInMap("associatedClusters")
-        private java.util.List < AssociatedClusters> associatedClusters;
+        private java.util.List<AssociatedClusters> associatedClusters;
 
         @com.aliyun.core.annotation.NameInMap("associatedWorkspaces")
-        private java.util.List < AssociatedWorkspaces> associatedWorkspaces;
+        private java.util.List<AssociatedWorkspaces> associatedWorkspaces;
 
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -440,21 +486,21 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         /**
          * @return associatedClusterTemplates
          */
-        public java.util.List < AssociatedClusterTemplates> getAssociatedClusterTemplates() {
+        public java.util.List<AssociatedClusterTemplates> getAssociatedClusterTemplates() {
             return this.associatedClusterTemplates;
         }
 
         /**
          * @return associatedClusters
          */
-        public java.util.List < AssociatedClusters> getAssociatedClusters() {
+        public java.util.List<AssociatedClusters> getAssociatedClusters() {
             return this.associatedClusters;
         }
 
         /**
          * @return associatedWorkspaces
          */
-        public java.util.List < AssociatedWorkspaces> getAssociatedWorkspaces() {
+        public java.util.List<AssociatedWorkspaces> getAssociatedWorkspaces() {
             return this.associatedWorkspaces;
         }
 
@@ -515,9 +561,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedClusterTemplates> associatedClusterTemplates; 
-            private java.util.List < AssociatedClusters> associatedClusters; 
-            private java.util.List < AssociatedWorkspaces> associatedWorkspaces; 
+            private java.util.List<AssociatedClusterTemplates> associatedClusterTemplates; 
+            private java.util.List<AssociatedClusters> associatedClusters; 
+            private java.util.List<AssociatedWorkspaces> associatedWorkspaces; 
             private String createTime; 
             private Integer nodeMaxCount; 
             private Integer nodeMinCount; 
@@ -527,10 +573,27 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String resourceGroupName; 
             private String resourceGroupType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.associatedClusterTemplates = model.associatedClusterTemplates;
+                this.associatedClusters = model.associatedClusters;
+                this.associatedWorkspaces = model.associatedWorkspaces;
+                this.createTime = model.createTime;
+                this.nodeMaxCount = model.nodeMaxCount;
+                this.nodeMinCount = model.nodeMinCount;
+                this.nodeType = model.nodeType;
+                this.paymentType = model.paymentType;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceGroupName = model.resourceGroupName;
+                this.resourceGroupType = model.resourceGroupType;
+            } 
+
             /**
              * associatedClusterTemplates.
              */
-            public Builder associatedClusterTemplates(java.util.List < AssociatedClusterTemplates> associatedClusterTemplates) {
+            public Builder associatedClusterTemplates(java.util.List<AssociatedClusterTemplates> associatedClusterTemplates) {
                 this.associatedClusterTemplates = associatedClusterTemplates;
                 return this;
             }
@@ -538,7 +601,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             /**
              * associatedClusters.
              */
-            public Builder associatedClusters(java.util.List < AssociatedClusters> associatedClusters) {
+            public Builder associatedClusters(java.util.List<AssociatedClusters> associatedClusters) {
                 this.associatedClusters = associatedClusters;
                 return this;
             }
@@ -546,7 +609,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             /**
              * associatedWorkspaces.
              */
-            public Builder associatedWorkspaces(java.util.List < AssociatedWorkspaces> associatedWorkspaces) {
+            public Builder associatedWorkspaces(java.util.List<AssociatedWorkspaces> associatedWorkspaces) {
                 this.associatedWorkspaces = associatedWorkspaces;
                 return this;
             }

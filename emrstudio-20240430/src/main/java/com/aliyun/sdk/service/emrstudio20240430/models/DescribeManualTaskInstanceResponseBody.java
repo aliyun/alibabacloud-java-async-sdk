@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,6 +74,10 @@ public class DescribeManualTaskInstanceResponseBody extends TeaModel {
 
     public static DescribeManualTaskInstanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -168,6 +177,24 @@ public class DescribeManualTaskInstanceResponseBody extends TeaModel {
         private String taskParams; 
         private String taskType; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeManualTaskInstanceResponseBody model) {
+            this.emrClusterId = model.emrClusterId;
+            this.endTime = model.endTime;
+            this.externalAppId = model.externalAppId;
+            this.manualTaskInstanceId = model.manualTaskInstanceId;
+            this.manualTaskInstanceName = model.manualTaskInstanceName;
+            this.resourceGroupId = model.resourceGroupId;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.submitTime = model.submitTime;
+            this.taskParams = model.taskParams;
+            this.taskType = model.taskType;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * EmrClusterId.

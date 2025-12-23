@@ -12,31 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateWorkflowResponseBody} extends {@link TeaModel}
+ * {@link GetInstanceLogResponseBody} extends {@link TeaModel}
  *
- * <p>CreateWorkflowResponseBody</p>
+ * <p>GetInstanceLogResponseBody</p>
  */
-public class CreateWorkflowResponseBody extends TeaModel {
+public class GetInstanceLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
-
-    private CreateWorkflowResponseBody(Builder builder) {
+    private GetInstanceLogResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateWorkflowResponseBody create() {
+    public static GetInstanceLogResponseBody create() {
         return builder().build();
     }
 
@@ -58,25 +54,16 @@ public class CreateWorkflowResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private Data data; 
         private String requestId; 
-        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(CreateWorkflowResponseBody model) {
+        private Builder(GetInstanceLogResponseBody model) {
             this.data = model.data;
             this.requestId = model.requestId;
-            this.success = model.success;
         } 
 
         /**
@@ -91,39 +78,35 @@ public class CreateWorkflowResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA38***</p>
+         * <p>1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        public CreateWorkflowResponseBody build() {
-            return new CreateWorkflowResponseBody(this);
+        public GetInstanceLogResponseBody build() {
+            return new GetInstanceLogResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateWorkflowResponseBody} extends {@link TeaModel}
+     * {@link GetInstanceLogResponseBody} extends {@link TeaModel}
      *
-     * <p>CreateWorkflowResponseBody</p>
+     * <p>GetInstanceLogResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("workflowId")
-        private String workflowId;
+        @com.aliyun.core.annotation.NameInMap("lineNum")
+        private Long lineNum;
+
+        @com.aliyun.core.annotation.NameInMap("message")
+        private String message;
 
         private Data(Builder builder) {
-            this.workflowId = builder.workflowId;
+            this.lineNum = builder.lineNum;
+            this.message = builder.message;
         }
 
         public static Builder builder() {
@@ -135,27 +118,44 @@ public class CreateWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * @return workflowId
+         * @return lineNum
          */
-        public String getWorkflowId() {
-            return this.workflowId;
+        public Long getLineNum() {
+            return this.lineNum;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         public static final class Builder {
-            private String workflowId; 
+            private Long lineNum; 
+            private String message; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.workflowId = model.workflowId;
+                this.lineNum = model.lineNum;
+                this.message = model.message;
             } 
 
             /**
-             * workflowId.
+             * lineNum.
              */
-            public Builder workflowId(String workflowId) {
-                this.workflowId = workflowId;
+            public Builder lineNum(Long lineNum) {
+                this.lineNum = lineNum;
+                return this;
+            }
+
+            /**
+             * message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 

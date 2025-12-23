@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateWorkflow  CreateWorkflowRequest
+     * @return CreateWorkflowResponse
+     */
     @Override
     public CompletableFuture<CreateWorkflowResponse> createWorkflow(CreateWorkflowRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
+     * @return DeleteWorkflowResponse
+     */
     @Override
     public CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request) {
         try {
@@ -67,6 +75,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeId  DescribeIdRequest
+     * @return DescribeIdResponse
+     */
+    @Override
+    public CompletableFuture<DescribeIdResponse> describeId(DescribeIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeId").setMethod(HttpMethod.GET).setPathRegex("/dolphinscheduler/v3/relatedIds").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeManualTask  DescribeManualTaskRequest
+     * @return DescribeManualTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeManualTaskResponse> describeManualTask(DescribeManualTaskRequest request) {
         try {
@@ -81,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeManualTaskInstance  DescribeManualTaskInstanceRequest
+     * @return DescribeManualTaskInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeManualTaskInstanceResponse> describeManualTaskInstance(DescribeManualTaskInstanceRequest request) {
         try {
@@ -95,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeProject  DescribeProjectRequest
+     * @return DescribeProjectResponse
+     */
     @Override
     public CompletableFuture<DescribeProjectResponse> describeProject(DescribeProjectRequest request) {
         try {
@@ -109,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTask  DescribeTaskRequest
+     * @return DescribeTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeTaskResponse> describeTask(DescribeTaskRequest request) {
         try {
@@ -123,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTaskInstance  DescribeTaskInstanceRequest
+     * @return DescribeTaskInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeTaskInstanceResponse> describeTaskInstance(DescribeTaskInstanceRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWorkflow  DescribeWorkflowRequest
+     * @return DescribeWorkflowResponse
+     */
     @Override
     public CompletableFuture<DescribeWorkflowResponse> describeWorkflow(DescribeWorkflowRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWorkflowInstance  DescribeWorkflowInstanceRequest
+     * @return DescribeWorkflowInstanceResponse
+     */
     @Override
     public CompletableFuture<DescribeWorkflowInstanceResponse> describeWorkflowInstance(DescribeWorkflowInstanceRequest request) {
         try {
@@ -165,6 +219,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceLog  GetInstanceLogRequest
+     * @return GetInstanceLogResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceLogResponse> getInstanceLog(GetInstanceLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceLog").setMethod(HttpMethod.GET).setPathRegex("/dolphinscheduler/v3/projects/{projectId}/instances/{instanceId}/log").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAlertGroups  ListAlertGroupsRequest
+     * @return ListAlertGroupsResponse
+     */
     @Override
     public CompletableFuture<ListAlertGroupsResponse> listAlertGroups(ListAlertGroupsRequest request) {
         try {
@@ -179,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListManualTaskInstances  ListManualTaskInstancesRequest
+     * @return ListManualTaskInstancesResponse
+     */
     @Override
     public CompletableFuture<ListManualTaskInstancesResponse> listManualTaskInstances(ListManualTaskInstancesRequest request) {
         try {
@@ -193,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListManualTasks  ListManualTasksRequest
+     * @return ListManualTasksResponse
+     */
     @Override
     public CompletableFuture<ListManualTasksResponse> listManualTasks(ListManualTasksRequest request) {
         try {
@@ -207,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProjects  ListProjectsRequest
+     * @return ListProjectsResponse
+     */
     @Override
     public CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request) {
         try {
@@ -221,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceGroups  ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request) {
         try {
@@ -235,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTaskInstances  ListTaskInstancesRequest
+     * @return ListTaskInstancesResponse
+     */
     @Override
     public CompletableFuture<ListTaskInstancesResponse> listTaskInstances(ListTaskInstancesRequest request) {
         try {
@@ -249,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
         try {
@@ -263,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkflowDirectories  ListWorkflowDirectoriesRequest
+     * @return ListWorkflowDirectoriesResponse
+     */
     @Override
     public CompletableFuture<ListWorkflowDirectoriesResponse> listWorkflowDirectories(ListWorkflowDirectoriesRequest request) {
         try {
@@ -277,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
+     * @return ListWorkflowInstancesResponse
+     */
     @Override
     public CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request) {
         try {
@@ -291,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListWorkflows  ListWorkflowsRequest
+     * @return ListWorkflowsResponse
+     */
     @Override
     public CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request) {
         try {
@@ -305,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateWorkflowInstance  OperateWorkflowInstanceRequest
+     * @return OperateWorkflowInstanceResponse
+     */
     @Override
     public CompletableFuture<OperateWorkflowInstanceResponse> operateWorkflowInstance(OperateWorkflowInstanceRequest request) {
         try {
@@ -319,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RunWorkflow  RunWorkflowRequest
+     * @return RunWorkflowResponse
+     */
     @Override
     public CompletableFuture<RunWorkflowResponse> runWorkflow(RunWorkflowRequest request) {
         try {
@@ -333,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
+     * @return UpdateWorkflowResponse
+     */
     @Override
     public CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request) {
         try {

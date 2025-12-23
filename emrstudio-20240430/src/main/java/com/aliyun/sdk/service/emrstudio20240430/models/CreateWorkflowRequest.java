@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class CreateWorkflowRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -353,7 +358,10 @@ public class CreateWorkflowRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-n72kong0832****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -434,7 +442,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -488,7 +499,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * taskDefinitionJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;taskId&quot;:&quot;t1&quot;,&quot;name&quot;:&quot;t1&quot;,&quot;taskParams&quot;:{&quot;rawScript&quot;:&quot;echo 1&quot;},&quot;taskType&quot;:&quot;SHELL&quot;}]</p>
          */
         public Builder taskDefinitionJson(String taskDefinitionJson) {
             this.putQueryParameter("taskDefinitionJson", taskDefinitionJson);
@@ -497,7 +511,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * taskRelationJson.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;preTaskId&quot;:&quot;0&quot;, &quot;postTaskId&quot;:&quot;t1&quot;}]</p>
          */
         public Builder taskRelationJson(String taskRelationJson) {
             this.putQueryParameter("taskRelationJson", taskRelationJson);
@@ -542,7 +559,10 @@ public class CreateWorkflowRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);

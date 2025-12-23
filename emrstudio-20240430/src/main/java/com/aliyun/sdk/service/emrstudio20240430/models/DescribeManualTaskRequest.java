@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class DescribeManualTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class DescribeManualTaskRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-3q9jo749ne5****</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -94,7 +102,10 @@ public class DescribeManualTaskRequest extends Request {
         }
 
         /**
-         * manualTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-3q9jo749ne5****</p>
          */
         public Builder manualTaskId(String manualTaskId) {
             this.putPathParameter("manualTaskId", manualTaskId);
@@ -103,7 +114,10 @@ public class DescribeManualTaskRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);

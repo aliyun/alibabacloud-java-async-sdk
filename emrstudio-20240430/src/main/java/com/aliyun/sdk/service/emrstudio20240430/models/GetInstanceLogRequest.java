@@ -12,36 +12,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeTaskInstanceRequest} extends {@link RequestModel}
+ * {@link GetInstanceLogRequest} extends {@link RequestModel}
  *
- * <p>DescribeTaskInstanceRequest</p>
+ * <p>GetInstanceLogRequest</p>
  */
-public class DescribeTaskInstanceRequest extends Request {
+public class GetInstanceLogRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("projectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("workflowInstanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String workflowInstanceId;
+    private String instanceId;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("taskInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String taskInstanceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
+    private Long limit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("skipLineNum")
+    private Long skipLineNum;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private DescribeTaskInstanceRequest(Builder builder) {
+    private GetInstanceLogRequest(Builder builder) {
         super(builder);
         this.projectId = builder.projectId;
-        this.workflowInstanceId = builder.workflowInstanceId;
-        this.taskInstanceId = builder.taskInstanceId;
+        this.instanceId = builder.instanceId;
+        this.limit = builder.limit;
+        this.skipLineNum = builder.skipLineNum;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -49,7 +53,7 @@ public class DescribeTaskInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeTaskInstanceRequest create() {
+    public static GetInstanceLogRequest create() {
         return builder().build();
     }
 
@@ -66,17 +70,24 @@ public class DescribeTaskInstanceRequest extends Request {
     }
 
     /**
-     * @return workflowInstanceId
+     * @return instanceId
      */
-    public String getWorkflowInstanceId() {
-        return this.workflowInstanceId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
-     * @return taskInstanceId
+     * @return limit
      */
-    public String getTaskInstanceId() {
-        return this.taskInstanceId;
+    public Long getLimit() {
+        return this.limit;
+    }
+
+    /**
+     * @return skipLineNum
+     */
+    public Long getSkipLineNum() {
+        return this.skipLineNum;
     }
 
     /**
@@ -86,21 +97,23 @@ public class DescribeTaskInstanceRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeTaskInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetInstanceLogRequest, Builder> {
         private String projectId; 
-        private String workflowInstanceId; 
-        private String taskInstanceId; 
+        private String instanceId; 
+        private Long limit; 
+        private Long skipLineNum; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTaskInstanceRequest request) {
+        private Builder(GetInstanceLogRequest request) {
             super(request);
             this.projectId = request.projectId;
-            this.workflowInstanceId = request.workflowInstanceId;
-            this.taskInstanceId = request.taskInstanceId;
+            this.instanceId = request.instanceId;
+            this.limit = request.limit;
+            this.skipLineNum = request.skipLineNum;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -108,7 +121,7 @@ public class DescribeTaskInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>p-3q9jo749ne5****</p>
+         * <p>p-12***</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -120,11 +133,29 @@ public class DescribeTaskInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>wi-3q9jo749ne5****</p>
+         * <p>ti-888***</p>
          */
-        public Builder workflowInstanceId(String workflowInstanceId) {
-            this.putPathParameter("workflowInstanceId", workflowInstanceId);
-            this.workflowInstanceId = workflowInstanceId;
+        public Builder instanceId(String instanceId) {
+            this.putPathParameter("instanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * limit.
+         */
+        public Builder limit(Long limit) {
+            this.putQueryParameter("limit", limit);
+            this.limit = limit;
+            return this;
+        }
+
+        /**
+         * skipLineNum.
+         */
+        public Builder skipLineNum(Long skipLineNum) {
+            this.putQueryParameter("skipLineNum", skipLineNum);
+            this.skipLineNum = skipLineNum;
             return this;
         }
 
@@ -132,19 +163,7 @@ public class DescribeTaskInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ti-3q9jo749ne5****</p>
-         */
-        public Builder taskInstanceId(String taskInstanceId) {
-            this.putPathParameter("taskInstanceId", taskInstanceId);
-            this.taskInstanceId = taskInstanceId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123***</p>
+         * <p>w-111</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
@@ -153,8 +172,8 @@ public class DescribeTaskInstanceRequest extends Request {
         }
 
         @Override
-        public DescribeTaskInstanceRequest build() {
-            return new DescribeTaskInstanceRequest(this);
+        public GetInstanceLogRequest build() {
+            return new GetInstanceLogRequest(this);
         } 
 
     } 

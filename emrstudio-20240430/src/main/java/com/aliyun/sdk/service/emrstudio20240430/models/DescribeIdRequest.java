@@ -12,24 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeProjectRequest} extends {@link RequestModel}
+ * {@link DescribeIdRequest} extends {@link RequestModel}
  *
- * <p>DescribeProjectRequest</p>
+ * <p>DescribeIdRequest</p>
  */
-public class DescribeProjectRequest extends Request {
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("projectId")
+public class DescribeIdRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String projectId;
+    private String id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private DescribeProjectRequest(Builder builder) {
+    private DescribeIdRequest(Builder builder) {
         super(builder);
-        this.projectId = builder.projectId;
+        this.id = builder.id;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -37,7 +37,7 @@ public class DescribeProjectRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeProjectRequest create() {
+    public static DescribeIdRequest create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class DescribeProjectRequest extends Request {
     }
 
     /**
-     * @return projectId
+     * @return id
      */
-    public String getProjectId() {
-        return this.projectId;
+    public String getId() {
+        return this.id;
     }
 
     /**
@@ -60,29 +60,30 @@ public class DescribeProjectRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeProjectRequest, Builder> {
-        private String projectId; 
+    public static final class Builder extends Request.Builder<DescribeIdRequest, Builder> {
+        private String id; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeProjectRequest request) {
+        private Builder(DescribeIdRequest request) {
             super(request);
-            this.projectId = request.projectId;
+            this.id = request.id;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
+         * <p>id</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>p-3q9jo749ne5****</p>
+         * <p>p-123****</p>
          */
-        public Builder projectId(String projectId) {
-            this.putPathParameter("projectId", projectId);
-            this.projectId = projectId;
+        public Builder id(String id) {
+            this.putQueryParameter("id", id);
+            this.id = id;
             return this;
         }
 
@@ -90,7 +91,7 @@ public class DescribeProjectRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>111234</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("workspaceId", workspaceId);
@@ -99,8 +100,8 @@ public class DescribeProjectRequest extends Request {
         }
 
         @Override
-        public DescribeProjectRequest build() {
-            return new DescribeProjectRequest(this);
+        public DescribeIdRequest build() {
+            return new DescribeIdRequest(this);
         } 
 
     } 

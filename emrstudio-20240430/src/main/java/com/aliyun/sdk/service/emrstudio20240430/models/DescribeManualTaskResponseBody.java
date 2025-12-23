@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -65,6 +70,10 @@ public class DescribeManualTaskResponseBody extends TeaModel {
 
     public static DescribeManualTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class DescribeManualTaskResponseBody extends TeaModel {
         private String taskType; 
         private String updateTime; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeManualTaskResponseBody model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.manualTaskId = model.manualTaskId;
+            this.manualTaskName = model.manualTaskName;
+            this.parentDirectoryId = model.parentDirectoryId;
+            this.projectId = model.projectId;
+            this.resourceIds = model.resourceIds;
+            this.taskParams = model.taskParams;
+            this.taskType = model.taskType;
+            this.updateTime = model.updateTime;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CreateTime.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emrstudio20240430.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -39,10 +44,14 @@ public class ListTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,15 +77,25 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
         private Integer totalSize; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalSize = model.totalSize;
+        } 
+
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -349,6 +368,30 @@ public class ListTasksResponseBody extends TeaModel {
             private String timeoutNotifyStrategy; 
             private String updateTime; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.delayTime = model.delayTime;
+                this.description = model.description;
+                this.failRetryInterval = model.failRetryInterval;
+                this.failRetryTimes = model.failRetryTimes;
+                this.flag = model.flag;
+                this.projectId = model.projectId;
+                this.resourceIds = model.resourceIds;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskParams = model.taskParams;
+                this.taskPriority = model.taskPriority;
+                this.taskType = model.taskType;
+                this.timeout = model.timeout;
+                this.timeoutFlag = model.timeoutFlag;
+                this.timeoutNotifyStrategy = model.timeoutNotifyStrategy;
+                this.updateTime = model.updateTime;
+                this.version = model.version;
+            } 
 
             /**
              * CreateTime.
