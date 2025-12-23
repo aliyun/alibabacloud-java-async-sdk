@@ -24,8 +24,11 @@ public class EncryptRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+    private String customIdentifier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageType")
@@ -40,6 +43,7 @@ public class EncryptRequest extends Request {
         super(builder);
         this.algorithm = builder.algorithm;
         this.certIdentifier = builder.certIdentifier;
+        this.customIdentifier = builder.customIdentifier;
         this.messageType = builder.messageType;
         this.plaintext = builder.plaintext;
     }
@@ -72,6 +76,13 @@ public class EncryptRequest extends Request {
     }
 
     /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
+    }
+
+    /**
      * @return messageType
      */
     public String getMessageType() {
@@ -88,6 +99,7 @@ public class EncryptRequest extends Request {
     public static final class Builder extends Request.Builder<EncryptRequest, Builder> {
         private String algorithm; 
         private String certIdentifier; 
+        private String customIdentifier; 
         private String messageType; 
         private String plaintext; 
 
@@ -99,6 +111,7 @@ public class EncryptRequest extends Request {
             super(request);
             this.algorithm = request.algorithm;
             this.certIdentifier = request.certIdentifier;
+            this.customIdentifier = request.customIdentifier;
             this.messageType = request.messageType;
             this.plaintext = request.plaintext;
         } 
@@ -127,7 +140,6 @@ public class EncryptRequest extends Request {
          * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
          * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-12345678****</p>
@@ -135,6 +147,15 @@ public class EncryptRequest extends Request {
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
             this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * CustomIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("CustomIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 

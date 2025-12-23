@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SignRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+    private String customIdentifier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Message")
@@ -40,6 +43,7 @@ public class SignRequest extends Request {
     private SignRequest(Builder builder) {
         super(builder);
         this.certIdentifier = builder.certIdentifier;
+        this.customIdentifier = builder.customIdentifier;
         this.message = builder.message;
         this.messageType = builder.messageType;
         this.signingAlgorithm = builder.signingAlgorithm;
@@ -66,6 +70,13 @@ public class SignRequest extends Request {
     }
 
     /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -88,6 +99,7 @@ public class SignRequest extends Request {
 
     public static final class Builder extends Request.Builder<SignRequest, Builder> {
         private String certIdentifier; 
+        private String customIdentifier; 
         private String message; 
         private String messageType; 
         private String signingAlgorithm; 
@@ -99,6 +111,7 @@ public class SignRequest extends Request {
         private Builder(SignRequest request) {
             super(request);
             this.certIdentifier = request.certIdentifier;
+            this.customIdentifier = request.customIdentifier;
             this.message = request.message;
             this.messageType = request.messageType;
             this.signingAlgorithm = request.signingAlgorithm;
@@ -110,7 +123,6 @@ public class SignRequest extends Request {
          * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
          * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ccaf0c629c2be1e2abb63bb76b</p>
@@ -118,6 +130,15 @@ public class SignRequest extends Request {
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
             this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * CustomIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("CustomIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 

@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class VerifyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomIdentifier")
+    private String customIdentifier;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Message")
@@ -45,6 +48,7 @@ public class VerifyRequest extends Request {
     private VerifyRequest(Builder builder) {
         super(builder);
         this.certIdentifier = builder.certIdentifier;
+        this.customIdentifier = builder.customIdentifier;
         this.message = builder.message;
         this.messageType = builder.messageType;
         this.signatureValue = builder.signatureValue;
@@ -69,6 +73,13 @@ public class VerifyRequest extends Request {
      */
     public String getCertIdentifier() {
         return this.certIdentifier;
+    }
+
+    /**
+     * @return customIdentifier
+     */
+    public String getCustomIdentifier() {
+        return this.customIdentifier;
     }
 
     /**
@@ -101,6 +112,7 @@ public class VerifyRequest extends Request {
 
     public static final class Builder extends Request.Builder<VerifyRequest, Builder> {
         private String certIdentifier; 
+        private String customIdentifier; 
         private String message; 
         private String messageType; 
         private String signatureValue; 
@@ -113,6 +125,7 @@ public class VerifyRequest extends Request {
         private Builder(VerifyRequest request) {
             super(request);
             this.certIdentifier = request.certIdentifier;
+            this.customIdentifier = request.customIdentifier;
             this.message = request.message;
             this.messageType = request.messageType;
             this.signatureValue = request.signatureValue;
@@ -125,7 +138,6 @@ public class VerifyRequest extends Request {
          * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
          * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>5870821-cn-hangzhou</p>
@@ -133,6 +145,15 @@ public class VerifyRequest extends Request {
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
             this.certIdentifier = certIdentifier;
+            return this;
+        }
+
+        /**
+         * CustomIdentifier.
+         */
+        public Builder customIdentifier(String customIdentifier) {
+            this.putQueryParameter("CustomIdentifier", customIdentifier);
+            this.customIdentifier = customIdentifier;
             return this;
         }
 
