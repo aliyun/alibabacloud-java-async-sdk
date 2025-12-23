@@ -829,6 +829,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopInfoResponse> describeDesktopInfo(DescribeDesktopInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeDesktopMetadata  DescribeDesktopMetadataRequest
+     * @return DescribeDesktopMetadataResponse
+     */
+    CompletableFuture<DescribeDesktopMetadataResponse> describeDesktopMetadata(DescribeDesktopMetadataRequest request);
+
+    /**
      * @param request the request parameters of DescribeDesktopOversoldGroup  DescribeDesktopOversoldGroupRequest
      * @return DescribeDesktopOversoldGroupResponse
      */
