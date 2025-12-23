@@ -182,6 +182,18 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("InnerTimerDesc")
+        private String innerTimerDesc;
+
+        @com.aliyun.core.annotation.NameInMap("InnerTimerName")
+        private String innerTimerName;
+
+        @com.aliyun.core.annotation.NameInMap("IsBind")
+        private Boolean isBind;
+
+        @com.aliyun.core.annotation.NameInMap("IsUpdate")
+        private Boolean isUpdate;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -199,6 +211,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             this.bindCountMap = builder.bindCountMap;
             this.description = builder.description;
             this.groupId = builder.groupId;
+            this.innerTimerDesc = builder.innerTimerDesc;
+            this.innerTimerName = builder.innerTimerName;
+            this.isBind = builder.isBind;
+            this.isUpdate = builder.isUpdate;
             this.name = builder.name;
             this.productType = builder.productType;
             this.status = builder.status;
@@ -242,6 +258,34 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return innerTimerDesc
+         */
+        public String getInnerTimerDesc() {
+            return this.innerTimerDesc;
+        }
+
+        /**
+         * @return innerTimerName
+         */
+        public String getInnerTimerName() {
+            return this.innerTimerName;
+        }
+
+        /**
+         * @return isBind
+         */
+        public Boolean getIsBind() {
+            return this.isBind;
+        }
+
+        /**
+         * @return isUpdate
+         */
+        public Boolean getIsUpdate() {
+            return this.isUpdate;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -274,6 +318,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
             private java.util.Map<String, Integer> bindCountMap; 
             private String description; 
             private String groupId; 
+            private String innerTimerDesc; 
+            private String innerTimerName; 
+            private Boolean isBind; 
+            private Boolean isUpdate; 
             private String name; 
             private String productType; 
             private String status; 
@@ -287,6 +335,10 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
                 this.bindCountMap = model.bindCountMap;
                 this.description = model.description;
                 this.groupId = model.groupId;
+                this.innerTimerDesc = model.innerTimerDesc;
+                this.innerTimerName = model.innerTimerName;
+                this.isBind = model.isBind;
+                this.isUpdate = model.isUpdate;
                 this.name = model.name;
                 this.productType = model.productType;
                 this.status = model.status;
@@ -331,6 +383,38 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * InnerTimerDesc.
+             */
+            public Builder innerTimerDesc(String innerTimerDesc) {
+                this.innerTimerDesc = innerTimerDesc;
+                return this;
+            }
+
+            /**
+             * InnerTimerName.
+             */
+            public Builder innerTimerName(String innerTimerName) {
+                this.innerTimerName = innerTimerName;
+                return this;
+            }
+
+            /**
+             * IsBind.
+             */
+            public Builder isBind(Boolean isBind) {
+                this.isBind = isBind;
+                return this;
+            }
+
+            /**
+             * IsUpdate.
+             */
+            public Builder isUpdate(Boolean isUpdate) {
+                this.isUpdate = isUpdate;
                 return this;
             }
 

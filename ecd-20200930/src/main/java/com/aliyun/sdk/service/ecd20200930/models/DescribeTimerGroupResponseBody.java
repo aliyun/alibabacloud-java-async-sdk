@@ -98,14 +98,23 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
      * <p>DescribeTimerGroupResponseBody</p>
      */
     public static class SegmentTimers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppointmentTimer")
+        private Long appointmentTimer;
+
         @com.aliyun.core.annotation.NameInMap("EndCronExpression")
         private String endCronExpression;
 
         @com.aliyun.core.annotation.NameInMap("Enforce")
         private Boolean enforce;
 
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
+
+        @com.aliyun.core.annotation.NameInMap("LockScreenTime")
+        private Integer lockScreenTime;
 
         @com.aliyun.core.annotation.NameInMap("NotificationTime")
         private Integer notificationTime;
@@ -132,9 +141,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         private String triggerType;
 
         private SegmentTimers(Builder builder) {
+            this.appointmentTimer = builder.appointmentTimer;
             this.endCronExpression = builder.endCronExpression;
             this.enforce = builder.enforce;
+            this.imageId = builder.imageId;
             this.interval = builder.interval;
+            this.lockScreenTime = builder.lockScreenTime;
             this.notificationTime = builder.notificationTime;
             this.operationType = builder.operationType;
             this.processWhitelist = builder.processWhitelist;
@@ -154,6 +166,13 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return appointmentTimer
+         */
+        public Long getAppointmentTimer() {
+            return this.appointmentTimer;
+        }
+
+        /**
          * @return endCronExpression
          */
         public String getEndCronExpression() {
@@ -168,10 +187,24 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
          * @return interval
          */
         public Integer getInterval() {
             return this.interval;
+        }
+
+        /**
+         * @return lockScreenTime
+         */
+        public Integer getLockScreenTime() {
+            return this.lockScreenTime;
         }
 
         /**
@@ -231,9 +264,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long appointmentTimer; 
             private String endCronExpression; 
             private Boolean enforce; 
+            private String imageId; 
             private Integer interval; 
+            private Integer lockScreenTime; 
             private Integer notificationTime; 
             private String operationType; 
             private java.util.List<String> processWhitelist; 
@@ -247,9 +283,12 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             } 
 
             private Builder(SegmentTimers model) {
+                this.appointmentTimer = model.appointmentTimer;
                 this.endCronExpression = model.endCronExpression;
                 this.enforce = model.enforce;
+                this.imageId = model.imageId;
                 this.interval = model.interval;
+                this.lockScreenTime = model.lockScreenTime;
                 this.notificationTime = model.notificationTime;
                 this.operationType = model.operationType;
                 this.processWhitelist = model.processWhitelist;
@@ -259,6 +298,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
                 this.timezone = model.timezone;
                 this.triggerType = model.triggerType;
             } 
+
+            /**
+             * AppointmentTimer.
+             */
+            public Builder appointmentTimer(Long appointmentTimer) {
+                this.appointmentTimer = appointmentTimer;
+                return this;
+            }
 
             /**
              * EndCronExpression.
@@ -277,10 +324,26 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             }
 
             /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
              * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * LockScreenTime.
+             */
+            public Builder lockScreenTime(Integer lockScreenTime) {
+                this.lockScreenTime = lockScreenTime;
                 return this;
             }
 
@@ -693,6 +756,18 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("InnerTimerDesc")
+        private String innerTimerDesc;
+
+        @com.aliyun.core.annotation.NameInMap("InnerTimerName")
+        private String innerTimerName;
+
+        @com.aliyun.core.annotation.NameInMap("IsBind")
+        private Boolean isBind;
+
+        @com.aliyun.core.annotation.NameInMap("IsUpdate")
+        private Boolean isUpdate;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -711,6 +786,10 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             this.configTimers = builder.configTimers;
             this.description = builder.description;
             this.groupId = builder.groupId;
+            this.innerTimerDesc = builder.innerTimerDesc;
+            this.innerTimerName = builder.innerTimerName;
+            this.isBind = builder.isBind;
+            this.isUpdate = builder.isUpdate;
             this.name = builder.name;
             this.productType = builder.productType;
             this.status = builder.status;
@@ -761,6 +840,34 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return innerTimerDesc
+         */
+        public String getInnerTimerDesc() {
+            return this.innerTimerDesc;
+        }
+
+        /**
+         * @return innerTimerName
+         */
+        public String getInnerTimerName() {
+            return this.innerTimerName;
+        }
+
+        /**
+         * @return isBind
+         */
+        public Boolean getIsBind() {
+            return this.isBind;
+        }
+
+        /**
+         * @return isUpdate
+         */
+        public Boolean getIsUpdate() {
+            return this.isUpdate;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -794,6 +901,10 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             private java.util.List<ConfigTimers> configTimers; 
             private String description; 
             private String groupId; 
+            private String innerTimerDesc; 
+            private String innerTimerName; 
+            private Boolean isBind; 
+            private Boolean isUpdate; 
             private String name; 
             private String productType; 
             private String status; 
@@ -808,6 +919,10 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
                 this.configTimers = model.configTimers;
                 this.description = model.description;
                 this.groupId = model.groupId;
+                this.innerTimerDesc = model.innerTimerDesc;
+                this.innerTimerName = model.innerTimerName;
+                this.isBind = model.isBind;
+                this.isUpdate = model.isUpdate;
                 this.name = model.name;
                 this.productType = model.productType;
                 this.status = model.status;
@@ -857,6 +972,38 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * InnerTimerDesc.
+             */
+            public Builder innerTimerDesc(String innerTimerDesc) {
+                this.innerTimerDesc = innerTimerDesc;
+                return this;
+            }
+
+            /**
+             * InnerTimerName.
+             */
+            public Builder innerTimerName(String innerTimerName) {
+                this.innerTimerName = innerTimerName;
+                return this;
+            }
+
+            /**
+             * IsBind.
+             */
+            public Builder isBind(Boolean isBind) {
+                this.isBind = isBind;
+                return this;
+            }
+
+            /**
+             * IsUpdate.
+             */
+            public Builder isUpdate(Boolean isUpdate) {
+                this.isUpdate = isUpdate;
                 return this;
             }
 

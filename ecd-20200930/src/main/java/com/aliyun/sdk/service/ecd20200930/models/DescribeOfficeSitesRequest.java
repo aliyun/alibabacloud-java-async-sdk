@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOfficeSitesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResults;
@@ -53,6 +57,7 @@ public class DescribeOfficeSitesRequest extends Request {
 
     private DescribeOfficeSitesRequest(Builder builder) {
         super(builder);
+        this.accountType = builder.accountType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
@@ -74,6 +79,13 @@ public class DescribeOfficeSitesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
     }
 
     /**
@@ -133,6 +145,7 @@ public class DescribeOfficeSitesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeOfficeSitesRequest, Builder> {
+        private String accountType; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> officeSiteId; 
@@ -148,6 +161,7 @@ public class DescribeOfficeSitesRequest extends Request {
 
         private Builder(DescribeOfficeSitesRequest request) {
             super(request);
+            this.accountType = request.accountType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
@@ -157,6 +171,15 @@ public class DescribeOfficeSitesRequest extends Request {
             this.status = request.status;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
 
         /**
          * <p>The number of entries to return on each page.</p>
