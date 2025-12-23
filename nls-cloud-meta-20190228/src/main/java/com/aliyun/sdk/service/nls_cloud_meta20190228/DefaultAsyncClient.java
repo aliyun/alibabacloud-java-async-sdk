@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateToken  CreateTokenRequest
+     * @return CreateTokenResponse
+     */
     @Override
     public CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request) {
         try {

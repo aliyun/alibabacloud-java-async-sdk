@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nls_cloud_meta20190228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTokenResponseBody</p>
  */
 public class CreateTokenResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private Integer errCode;
 
-    @NameInMap("ErrMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrMsg")
     private String errMsg;
 
-    @NameInMap("NlsRequestId")
+    @com.aliyun.core.annotation.NameInMap("NlsRequestId")
     private String nlsRequestId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private Token token;
 
     private CreateTokenResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateTokenResponseBody extends TeaModel {
 
     public static CreateTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateTokenResponseBody extends TeaModel {
         private String nlsRequestId; 
         private String requestId; 
         private Token token; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTokenResponseBody model) {
+            this.errCode = model.errCode;
+            this.errMsg = model.errMsg;
+            this.nlsRequestId = model.nlsRequestId;
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * ErrCode.
@@ -131,14 +151,20 @@ public class CreateTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateTokenResponseBody</p>
+     */
     public static class Token extends TeaModel {
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Integer expireTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Token(Builder builder) {
@@ -180,6 +206,15 @@ public class CreateTokenResponseBody extends TeaModel {
             private Integer expireTime; 
             private String id; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Token model) {
+                this.expireTime = model.expireTime;
+                this.id = model.id;
+                this.userId = model.userId;
+            } 
 
             /**
              * ExpireTime.
