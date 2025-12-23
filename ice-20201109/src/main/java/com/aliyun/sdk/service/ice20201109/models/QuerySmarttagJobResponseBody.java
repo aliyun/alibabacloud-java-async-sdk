@@ -26,6 +26,9 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
+    @com.aliyun.core.annotation.NameInMap("Usages")
+    private Usages usages;
+
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -33,6 +36,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         this.jobStatus = builder.jobStatus;
         this.requestId = builder.requestId;
         this.results = builder.results;
+        this.usages = builder.usages;
         this.userData = builder.userData;
     }
 
@@ -70,6 +74,13 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return usages
+     */
+    public Usages getUsages() {
+        return this.usages;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -80,6 +91,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
         private String jobStatus; 
         private String requestId; 
         private Results results; 
+        private Usages usages; 
         private String userData; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
             this.jobStatus = model.jobStatus;
             this.requestId = model.requestId;
             this.results = model.results;
+            this.usages = model.usages;
             this.userData = model.userData;
         } 
 
@@ -125,6 +138,14 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
          */
         public Builder results(Results results) {
             this.results = results;
+            return this;
+        }
+
+        /**
+         * Usages.
+         */
+        public Builder usages(Usages usages) {
+            this.usages = usages;
             return this;
         }
 
@@ -299,6 +320,162 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
             public Results build() {
                 return new Results(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
+    public static class Usage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Quota")
+        private Long quota;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Usage(Builder builder) {
+            this.quota = builder.quota;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Usage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return quota
+         */
+        public Long getQuota() {
+            return this.quota;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Long quota; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.quota = model.quota;
+                this.type = model.type;
+            } 
+
+            /**
+             * Quota.
+             */
+            public Builder quota(Long quota) {
+                this.quota = quota;
+                return this;
+            }
+
+            /**
+             * <p>The type of the analysis result.</p>
+             * <ul>
+             * <li>The type of the analysis result based on Smart tagging V1.0. Valid values:</li>
+             * </ul>
+             * <ol>
+             * <li>TextLabel: the text tag.</li>
+             * <li>VideoLabel: the video tag.</li>
+             * <li>ASR: the original result of automatic speech recognition (ASR). By default, this type of result is not returned.</li>
+             * <li>OCR: the original result of optical character recognition (OCR). By default, this type of result is not returned.</li>
+             * <li>NLP: the natural language processing (NLP)-based result. By default, this type of result is not returned.</li>
+             * </ol>
+             * <ul>
+             * <li>The type of the analysis result based on Smart tagging V2.0. Valid values:</li>
+             * </ul>
+             * <ol>
+             * <li>CPVLabel</li>
+             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
+             * </ol>
+             * <ul>
+             * <li>The type of the analysis result based on Smart tagging V2.0-custom. Valid values:</li>
+             * </ul>
+             * <ol>
+             * <li>CPVLabel</li>
+             * <li>Meta: the information about the video file, such as the title of the video. By default, this type of information is not returned.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>Meta</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Usage build() {
+                return new Usage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QuerySmarttagJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySmarttagJobResponseBody</p>
+     */
+    public static class Usages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Usage")
+        private java.util.List<Usage> usage;
+
+        private Usages(Builder builder) {
+            this.usage = builder.usage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Usages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return usage
+         */
+        public java.util.List<Usage> getUsage() {
+            return this.usage;
+        }
+
+        public static final class Builder {
+            private java.util.List<Usage> usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usages model) {
+                this.usage = model.usage;
+            } 
+
+            /**
+             * Usage.
+             */
+            public Builder usage(java.util.List<Usage> usage) {
+                this.usage = usage;
+                return this;
+            }
+
+            public Usages build() {
+                return new Usages(this);
             } 
 
         } 

@@ -244,6 +244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHotwordLibraryResponse> createHotwordLibrary(CreateHotwordLibraryRequest request);
 
     /**
+     * @param request the request parameters of CreateIpcOrder  CreateIpcOrderRequest
+     * @return CreateIpcOrderResponse
+     */
+    CompletableFuture<CreateIpcOrderResponse> createIpcOrder(CreateIpcOrderRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
@@ -1117,6 +1123,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHotwordLibraryResponse> getHotwordLibrary(GetHotwordLibraryRequest request);
 
     /**
+     * @param request the request parameters of GetIpcDeviceInfo  GetIpcDeviceInfoRequest
+     * @return GetIpcDeviceInfoResponse
+     */
+    CompletableFuture<GetIpcDeviceInfoResponse> getIpcDeviceInfo(GetIpcDeviceInfoRequest request);
+
+    /**
      * @param request the request parameters of GetLiveEditingIndexFile  GetLiveEditingIndexFileRequest
      * @return GetLiveEditingIndexFileResponse
      */
@@ -1976,6 +1988,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryIProductionJobResponse
      */
     CompletableFuture<QueryIProductionJobResponse> queryIProductionJob(QueryIProductionJobRequest request);
+
+    /**
+     * @param request the request parameters of QueryIpcQuota  QueryIpcQuotaRequest
+     * @return QueryIpcQuotaResponse
+     */
+    CompletableFuture<QueryIpcQuotaResponse> queryIpcQuota(QueryIpcQuotaRequest request);
 
     /**
      * <b>description</b> :
