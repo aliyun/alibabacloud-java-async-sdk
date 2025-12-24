@@ -164,14 +164,23 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayResultName")
+        private String displayResultName;
+
         @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("Retryable")
+        private Boolean retryable;
+
         @com.aliyun.core.annotation.NameInMap("TimerGroupId")
         private String timerGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("TimerRecordId")
+        private String timerRecordId;
 
         @com.aliyun.core.annotation.NameInMap("TimerResult")
         private String timerResult;
@@ -186,9 +195,12 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
+            this.displayResultName = builder.displayResultName;
             this.finishTime = builder.finishTime;
             this.regionId = builder.regionId;
+            this.retryable = builder.retryable;
             this.timerGroupId = builder.timerGroupId;
+            this.timerRecordId = builder.timerRecordId;
             this.timerResult = builder.timerResult;
             this.timerType = builder.timerType;
         }
@@ -244,6 +256,13 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayResultName
+         */
+        public String getDisplayResultName() {
+            return this.displayResultName;
+        }
+
+        /**
          * @return finishTime
          */
         public String getFinishTime() {
@@ -258,10 +277,24 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return retryable
+         */
+        public Boolean getRetryable() {
+            return this.retryable;
+        }
+
+        /**
          * @return timerGroupId
          */
         public String getTimerGroupId() {
             return this.timerGroupId;
+        }
+
+        /**
+         * @return timerRecordId
+         */
+        public String getTimerRecordId() {
+            return this.timerRecordId;
         }
 
         /**
@@ -285,9 +318,12 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             private String createTime; 
             private String desktopId; 
             private String desktopName; 
+            private String displayResultName; 
             private String finishTime; 
             private String regionId; 
+            private Boolean retryable; 
             private String timerGroupId; 
+            private String timerRecordId; 
             private String timerResult; 
             private String timerType; 
 
@@ -301,9 +337,12 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
+                this.displayResultName = model.displayResultName;
                 this.finishTime = model.finishTime;
                 this.regionId = model.regionId;
+                this.retryable = model.retryable;
                 this.timerGroupId = model.timerGroupId;
+                this.timerRecordId = model.timerRecordId;
                 this.timerResult = model.timerResult;
                 this.timerType = model.timerType;
             } 
@@ -369,6 +408,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * DisplayResultName.
+             */
+            public Builder displayResultName(String displayResultName) {
+                this.displayResultName = displayResultName;
+                return this;
+            }
+
+            /**
              * <p>The time when the scheduled task ended.</p>
              * 
              * <strong>example:</strong>
@@ -391,6 +438,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * Retryable.
+             */
+            public Builder retryable(Boolean retryable) {
+                this.retryable = retryable;
+                return this;
+            }
+
+            /**
              * <p>The ID of the scheduled task group.</p>
              * 
              * <strong>example:</strong>
@@ -398,6 +453,14 @@ public class DescribeGlobalTimerRecordsResponseBody extends TeaModel {
              */
             public Builder timerGroupId(String timerGroupId) {
                 this.timerGroupId = timerGroupId;
+                return this;
+            }
+
+            /**
+             * TimerRecordId.
+             */
+            public Builder timerRecordId(String timerRecordId) {
+                this.timerRecordId = timerRecordId;
                 return this;
             }
 

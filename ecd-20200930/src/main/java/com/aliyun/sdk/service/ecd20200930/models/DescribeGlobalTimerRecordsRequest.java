@@ -26,6 +26,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayResultName")
+    private String displayResultName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
@@ -46,6 +50,10 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     private String resultCategory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retryable")
+    private Boolean retryable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchRegionId")
     private String searchRegionId;
 
@@ -61,11 +69,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         super(builder);
         this.batchId = builder.batchId;
         this.desktopIds = builder.desktopIds;
+        this.displayResultName = builder.displayResultName;
         this.groupId = builder.groupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.resultCategory = builder.resultCategory;
+        this.retryable = builder.retryable;
         this.searchRegionId = builder.searchRegionId;
         this.timerResult = builder.timerResult;
         this.timerTypes = builder.timerTypes;
@@ -96,6 +106,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
      */
     public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
+    }
+
+    /**
+     * @return displayResultName
+     */
+    public String getDisplayResultName() {
+        return this.displayResultName;
     }
 
     /**
@@ -134,6 +151,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     }
 
     /**
+     * @return retryable
+     */
+    public Boolean getRetryable() {
+        return this.retryable;
+    }
+
+    /**
      * @return searchRegionId
      */
     public String getSearchRegionId() {
@@ -157,11 +181,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeGlobalTimerRecordsRequest, Builder> {
         private String batchId; 
         private java.util.List<String> desktopIds; 
+        private String displayResultName; 
         private String groupId; 
         private String maxResults; 
         private String nextToken; 
         private String regionId; 
         private String resultCategory; 
+        private Boolean retryable; 
         private String searchRegionId; 
         private String timerResult; 
         private java.util.List<String> timerTypes; 
@@ -174,11 +200,13 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
             super(request);
             this.batchId = request.batchId;
             this.desktopIds = request.desktopIds;
+            this.displayResultName = request.displayResultName;
             this.groupId = request.groupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.resultCategory = request.resultCategory;
+            this.retryable = request.retryable;
             this.searchRegionId = request.searchRegionId;
             this.timerResult = request.timerResult;
             this.timerTypes = request.timerTypes;
@@ -202,6 +230,15 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
+            return this;
+        }
+
+        /**
+         * DisplayResultName.
+         */
+        public Builder displayResultName(String displayResultName) {
+            this.putQueryParameter("DisplayResultName", displayResultName);
+            this.displayResultName = displayResultName;
             return this;
         }
 
@@ -271,6 +308,15 @@ public class DescribeGlobalTimerRecordsRequest extends Request {
         public Builder resultCategory(String resultCategory) {
             this.putQueryParameter("ResultCategory", resultCategory);
             this.resultCategory = resultCategory;
+            return this;
+        }
+
+        /**
+         * Retryable.
+         */
+        public Builder retryable(Boolean retryable) {
+            this.putQueryParameter("Retryable", retryable);
+            this.retryable = retryable;
             return this;
         }
 
