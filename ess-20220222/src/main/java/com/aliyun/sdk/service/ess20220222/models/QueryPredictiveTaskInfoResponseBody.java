@@ -1,0 +1,241 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.ess20220222.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link QueryPredictiveTaskInfoResponseBody} extends {@link TeaModel}
+ *
+ * <p>QueryPredictiveTaskInfoResponseBody</p>
+ */
+public class QueryPredictiveTaskInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TaskInfos")
+    private TaskInfos taskInfos;
+
+    private QueryPredictiveTaskInfoResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.taskInfos = builder.taskInfos;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QueryPredictiveTaskInfoResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return taskInfos
+     */
+    public TaskInfos getTaskInfos() {
+        return this.taskInfos;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private TaskInfos taskInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPredictiveTaskInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskInfos = model.taskInfos;
+        } 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskInfos.
+         */
+        public Builder taskInfos(TaskInfos taskInfos) {
+            this.taskInfos = taskInfos;
+            return this;
+        }
+
+        public QueryPredictiveTaskInfoResponseBody build() {
+            return new QueryPredictiveTaskInfoResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link QueryPredictiveTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPredictiveTaskInfoResponseBody</p>
+     */
+    public static class TaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
+        private Integer maxValue;
+
+        @com.aliyun.core.annotation.NameInMap("MinValue")
+        private Integer minValue;
+
+        @com.aliyun.core.annotation.NameInMap("Time")
+        private String time;
+
+        private TaskInfo(Builder builder) {
+            this.maxValue = builder.maxValue;
+            this.minValue = builder.minValue;
+            this.time = builder.time;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxValue
+         */
+        public Integer getMaxValue() {
+            return this.maxValue;
+        }
+
+        /**
+         * @return minValue
+         */
+        public Integer getMinValue() {
+            return this.minValue;
+        }
+
+        /**
+         * @return time
+         */
+        public String getTime() {
+            return this.time;
+        }
+
+        public static final class Builder {
+            private Integer maxValue; 
+            private Integer minValue; 
+            private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.maxValue = model.maxValue;
+                this.minValue = model.minValue;
+                this.time = model.time;
+            } 
+
+            /**
+             * MaxValue.
+             */
+            public Builder maxValue(Integer maxValue) {
+                this.maxValue = maxValue;
+                return this;
+            }
+
+            /**
+             * MinValue.
+             */
+            public Builder minValue(Integer minValue) {
+                this.minValue = minValue;
+                return this;
+            }
+
+            /**
+             * Time.
+             */
+            public Builder time(String time) {
+                this.time = time;
+                return this;
+            }
+
+            public TaskInfo build() {
+                return new TaskInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryPredictiveTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryPredictiveTaskInfoResponseBody</p>
+     */
+    public static class TaskInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TaskInfo")
+        private java.util.List<TaskInfo> taskInfo;
+
+        private TaskInfos(Builder builder) {
+            this.taskInfo = builder.taskInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return taskInfo
+         */
+        public java.util.List<TaskInfo> getTaskInfo() {
+            return this.taskInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List<TaskInfo> taskInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfos model) {
+                this.taskInfo = model.taskInfo;
+            } 
+
+            /**
+             * TaskInfo.
+             */
+            public Builder taskInfo(java.util.List<TaskInfo> taskInfo) {
+                this.taskInfo = taskInfo;
+                return this;
+            }
+
+            public TaskInfos build() {
+                return new TaskInfos(this);
+            } 
+
+        } 
+
+    }
+}

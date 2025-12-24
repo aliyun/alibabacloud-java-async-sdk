@@ -596,6 +596,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeElasticStrengthResponse> describeElasticStrength(DescribeElasticStrengthRequest request);
 
     /**
+     * @param request the request parameters of DescribeInstanceCreateAndDeleteStatistics  DescribeInstanceCreateAndDeleteStatisticsRequest
+     * @return DescribeInstanceCreateAndDeleteStatisticsResponse
+     */
+    CompletableFuture<DescribeInstanceCreateAndDeleteStatisticsResponse> describeInstanceCreateAndDeleteStatistics(DescribeInstanceCreateAndDeleteStatisticsRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstanceRefreshes  DescribeInstanceRefreshesRequest
      * @return DescribeInstanceRefreshesResponse
      */
@@ -678,6 +684,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeScalingActivityDetailResponse
      */
     CompletableFuture<DescribeScalingActivityDetailResponse> describeScalingActivityDetail(DescribeScalingActivityDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeScalingActivityStatistics  DescribeScalingActivityStatisticsRequest
+     * @return DescribeScalingActivityStatisticsResponse
+     */
+    CompletableFuture<DescribeScalingActivityStatisticsResponse> describeScalingActivityStatistics(DescribeScalingActivityStatisticsRequest request);
 
     /**
      * @param request the request parameters of DescribeScalingConfigurations  DescribeScalingConfigurationsRequest
@@ -1029,6 +1041,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyScheduledTaskResponse
      */
     CompletableFuture<ModifyScheduledTaskResponse> modifyScheduledTask(ModifyScheduledTaskRequest request);
+
+    /**
+     * @param request the request parameters of QueryHistoricalMetric  QueryHistoricalMetricRequest
+     * @return QueryHistoricalMetricResponse
+     */
+    CompletableFuture<QueryHistoricalMetricResponse> queryHistoricalMetric(QueryHistoricalMetricRequest request);
+
+    /**
+     * @param request the request parameters of QueryPredictiveMetric  QueryPredictiveMetricRequest
+     * @return QueryPredictiveMetricResponse
+     */
+    CompletableFuture<QueryPredictiveMetricResponse> queryPredictiveMetric(QueryPredictiveMetricRequest request);
+
+    /**
+     * @param request the request parameters of QueryPredictiveTaskInfo  QueryPredictiveTaskInfoRequest
+     * @return QueryPredictiveTaskInfoResponse
+     */
+    CompletableFuture<QueryPredictiveTaskInfoResponse> queryPredictiveTaskInfo(QueryPredictiveTaskInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryPredictiveValue  QueryPredictiveValueRequest
+     * @return QueryPredictiveValueResponse
+     */
+    CompletableFuture<QueryPredictiveValueResponse> queryPredictiveValue(QueryPredictiveValueRequest request);
 
     /**
      * <b>description</b> :
