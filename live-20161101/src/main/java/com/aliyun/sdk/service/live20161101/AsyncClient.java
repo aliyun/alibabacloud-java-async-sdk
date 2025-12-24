@@ -3771,6 +3771,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLiveRealtimeLogDeliveryInfosResponse> listLiveRealtimeLogDeliveryInfos(ListLiveRealtimeLogDeliveryInfosRequest request);
 
     /**
+     * @param request the request parameters of ListLiveTagResources  ListLiveTagResourcesRequest
+     * @return ListLiveTagResourcesResponse
+     */
+    CompletableFuture<ListLiveTagResourcesResponse> listLiveTagResources(ListLiveTagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
      * <p>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limit on an API operation in ApsaraVideo Live</a>.</p>
