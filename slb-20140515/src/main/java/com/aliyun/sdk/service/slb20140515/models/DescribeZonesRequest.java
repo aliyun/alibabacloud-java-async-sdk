@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeZonesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -40,6 +44,7 @@ public class DescribeZonesRequest extends Request {
 
     private DescribeZonesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -58,6 +63,13 @@ public class DescribeZonesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -96,6 +108,7 @@ public class DescribeZonesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
+        private String acceptLanguage; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -108,12 +121,22 @@ public class DescribeZonesRequest extends Request {
 
         private Builder(DescribeZonesRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AcceptLanguage.
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         /**
          * OwnerAccount.
