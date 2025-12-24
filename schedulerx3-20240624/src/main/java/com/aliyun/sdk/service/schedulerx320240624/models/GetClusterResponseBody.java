@@ -274,6 +274,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxJobNum")
         private Integer maxJobNum;
 
+        @com.aliyun.core.annotation.NameInMap("MaxWorkflowNum")
+        private Integer maxWorkflowNum;
+
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private Integer productType;
 
@@ -298,6 +301,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkerNum")
         private Integer workerNum;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowNum")
+        private Integer workflowNum;
+
         @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List<String> zones;
 
@@ -315,6 +321,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.jobNum = builder.jobNum;
             this.kubeConfig = builder.kubeConfig;
             this.maxJobNum = builder.maxJobNum;
+            this.maxWorkflowNum = builder.maxWorkflowNum;
             this.productType = builder.productType;
             this.spm = builder.spm;
             this.status = builder.status;
@@ -323,6 +330,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.versionLifecycle = builder.versionLifecycle;
             this.vpcId = builder.vpcId;
             this.workerNum = builder.workerNum;
+            this.workflowNum = builder.workflowNum;
             this.zones = builder.zones;
         }
 
@@ -426,6 +434,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxWorkflowNum
+         */
+        public Integer getMaxWorkflowNum() {
+            return this.maxWorkflowNum;
+        }
+
+        /**
          * @return productType
          */
         public Integer getProductType() {
@@ -482,6 +497,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return workflowNum
+         */
+        public Integer getWorkflowNum() {
+            return this.workflowNum;
+        }
+
+        /**
          * @return zones
          */
         public java.util.List<String> getZones() {
@@ -502,6 +524,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer jobNum; 
             private String kubeConfig; 
             private Integer maxJobNum; 
+            private Integer maxWorkflowNum; 
             private Integer productType; 
             private Integer spm; 
             private Integer status; 
@@ -510,6 +533,7 @@ public class GetClusterResponseBody extends TeaModel {
             private String versionLifecycle; 
             private String vpcId; 
             private Integer workerNum; 
+            private Integer workflowNum; 
             private java.util.List<String> zones; 
 
             private Builder() {
@@ -529,6 +553,7 @@ public class GetClusterResponseBody extends TeaModel {
                 this.jobNum = model.jobNum;
                 this.kubeConfig = model.kubeConfig;
                 this.maxJobNum = model.maxJobNum;
+                this.maxWorkflowNum = model.maxWorkflowNum;
                 this.productType = model.productType;
                 this.spm = model.spm;
                 this.status = model.status;
@@ -537,6 +562,7 @@ public class GetClusterResponseBody extends TeaModel {
                 this.versionLifecycle = model.versionLifecycle;
                 this.vpcId = model.vpcId;
                 this.workerNum = model.workerNum;
+                this.workflowNum = model.workflowNum;
                 this.zones = model.zones;
             } 
 
@@ -645,6 +671,14 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
+             * MaxWorkflowNum.
+             */
+            public Builder maxWorkflowNum(Integer maxWorkflowNum) {
+                this.maxWorkflowNum = maxWorkflowNum;
+                return this;
+            }
+
+            /**
              * ProductType.
              */
             public Builder productType(Integer productType) {
@@ -708,6 +742,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder workerNum(Integer workerNum) {
                 this.workerNum = workerNum;
+                return this;
+            }
+
+            /**
+             * WorkflowNum.
+             */
+            public Builder workflowNum(Integer workflowNum) {
+                this.workflowNum = workflowNum;
                 return this;
             }
 

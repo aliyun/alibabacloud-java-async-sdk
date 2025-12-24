@@ -184,6 +184,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataOffset")
         private Integer dataOffset;
 
+        @com.aliyun.core.annotation.NameInMap("DependentStrategy")
+        private Integer dependentStrategy;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -214,6 +217,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private Integer nodeType;
+
         @com.aliyun.core.annotation.NameInMap("NoticeConfig")
         private String noticeConfig;
 
@@ -231,6 +237,9 @@ public class ListJobsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
+
+        @com.aliyun.core.annotation.NameInMap("StartTimeType")
+        private Integer startTimeType;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -253,6 +262,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
+        private Long workflowId;
+
         @com.aliyun.core.annotation.NameInMap("Xattrs")
         private String xattrs;
 
@@ -265,6 +277,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.currentExecuteStatus = builder.currentExecuteStatus;
             this.dataOffset = builder.dataOffset;
+            this.dependentStrategy = builder.dependentStrategy;
             this.description = builder.description;
             this.executorBlockStrategy = builder.executorBlockStrategy;
             this.jobHandler = builder.jobHandler;
@@ -275,12 +288,14 @@ public class ListJobsResponseBody extends TeaModel {
             this.maxAttempt = builder.maxAttempt;
             this.maxConcurrency = builder.maxConcurrency;
             this.name = builder.name;
+            this.nodeType = builder.nodeType;
             this.noticeConfig = builder.noticeConfig;
             this.noticeContacts = builder.noticeContacts;
             this.parameters = builder.parameters;
             this.priority = builder.priority;
             this.routeStrategy = builder.routeStrategy;
             this.script = builder.script;
+            this.startTimeType = builder.startTimeType;
             this.status = builder.status;
             this.timeExpression = builder.timeExpression;
             this.timeType = builder.timeType;
@@ -288,6 +303,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.timezone = builder.timezone;
             this.updater = builder.updater;
             this.weight = builder.weight;
+            this.workflowId = builder.workflowId;
             this.xattrs = builder.xattrs;
         }
 
@@ -353,6 +369,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public Integer getDataOffset() {
             return this.dataOffset;
+        }
+
+        /**
+         * @return dependentStrategy
+         */
+        public Integer getDependentStrategy() {
+            return this.dependentStrategy;
         }
 
         /**
@@ -426,6 +449,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeType
+         */
+        public Integer getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return noticeConfig
          */
         public String getNoticeConfig() {
@@ -465,6 +495,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getScript() {
             return this.script;
+        }
+
+        /**
+         * @return startTimeType
+         */
+        public Integer getStartTimeType() {
+            return this.startTimeType;
         }
 
         /**
@@ -517,6 +554,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return workflowId
+         */
+        public Long getWorkflowId() {
+            return this.workflowId;
+        }
+
+        /**
          * @return xattrs
          */
         public String getXattrs() {
@@ -532,6 +576,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String creator; 
             private Integer currentExecuteStatus; 
             private Integer dataOffset; 
+            private Integer dependentStrategy; 
             private String description; 
             private String executorBlockStrategy; 
             private String jobHandler; 
@@ -542,12 +587,14 @@ public class ListJobsResponseBody extends TeaModel {
             private Integer maxAttempt; 
             private Integer maxConcurrency; 
             private String name; 
+            private Integer nodeType; 
             private String noticeConfig; 
             private String noticeContacts; 
             private String parameters; 
             private Integer priority; 
             private Integer routeStrategy; 
             private String script; 
+            private Integer startTimeType; 
             private Integer status; 
             private String timeExpression; 
             private Integer timeType; 
@@ -555,6 +602,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String timezone; 
             private String updater; 
             private Integer weight; 
+            private Long workflowId; 
             private String xattrs; 
 
             private Builder() {
@@ -569,6 +617,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.creator = model.creator;
                 this.currentExecuteStatus = model.currentExecuteStatus;
                 this.dataOffset = model.dataOffset;
+                this.dependentStrategy = model.dependentStrategy;
                 this.description = model.description;
                 this.executorBlockStrategy = model.executorBlockStrategy;
                 this.jobHandler = model.jobHandler;
@@ -579,12 +628,14 @@ public class ListJobsResponseBody extends TeaModel {
                 this.maxAttempt = model.maxAttempt;
                 this.maxConcurrency = model.maxConcurrency;
                 this.name = model.name;
+                this.nodeType = model.nodeType;
                 this.noticeConfig = model.noticeConfig;
                 this.noticeContacts = model.noticeContacts;
                 this.parameters = model.parameters;
                 this.priority = model.priority;
                 this.routeStrategy = model.routeStrategy;
                 this.script = model.script;
+                this.startTimeType = model.startTimeType;
                 this.status = model.status;
                 this.timeExpression = model.timeExpression;
                 this.timeType = model.timeType;
@@ -592,6 +643,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.timezone = model.timezone;
                 this.updater = model.updater;
                 this.weight = model.weight;
+                this.workflowId = model.workflowId;
                 this.xattrs = model.xattrs;
             } 
 
@@ -656,6 +708,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder dataOffset(Integer dataOffset) {
                 this.dataOffset = dataOffset;
+                return this;
+            }
+
+            /**
+             * DependentStrategy.
+             */
+            public Builder dependentStrategy(Integer dependentStrategy) {
+                this.dependentStrategy = dependentStrategy;
                 return this;
             }
 
@@ -740,6 +800,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
+             * NodeType.
+             */
+            public Builder nodeType(Integer nodeType) {
+                this.nodeType = nodeType;
+                return this;
+            }
+
+            /**
              * NoticeConfig.
              */
             public Builder noticeConfig(String noticeConfig) {
@@ -784,6 +852,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder script(String script) {
                 this.script = script;
+                return this;
+            }
+
+            /**
+             * StartTimeType.
+             */
+            public Builder startTimeType(Integer startTimeType) {
+                this.startTimeType = startTimeType;
                 return this;
             }
 
@@ -840,6 +916,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
+                return this;
+            }
+
+            /**
+             * WorkflowId.
+             */
+            public Builder workflowId(Long workflowId) {
+                this.workflowId = workflowId;
                 return this;
             }
 

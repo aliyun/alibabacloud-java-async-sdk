@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateExecutors  CreateExecutorsRequest
+     * @return CreateExecutorsResponse
+     */
+    CompletableFuture<CreateExecutorsResponse> createExecutors(CreateExecutorsRequest request);
+
+    /**
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
      */
@@ -78,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDesigateInfoResponse
      */
     CompletableFuture<GetDesigateInfoResponse> getDesigateInfo(GetDesigateInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetExecutorConfig  GetExecutorConfigRequest
+     * @return GetExecutorConfigResponse
+     */
+    CompletableFuture<GetExecutorConfigResponse> getExecutorConfig(GetExecutorConfigRequest request);
 
     /**
      * @param request the request parameters of GetJobExecution  GetJobExecutionRequest
@@ -176,6 +188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
     /**
+     * @param request the request parameters of ListK8sResource  ListK8sResourceRequest
+     * @return ListK8sResourceResponse
+     */
+    CompletableFuture<ListK8sResourceResponse> listK8sResource(ListK8sResourceRequest request);
+
+    /**
      * @param request the request parameters of ListLables  ListLablesRequest
      * @return ListLablesResponse
      */
@@ -248,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateStopJobExecutionResponse> operateStopJobExecution(OperateStopJobExecutionRequest request);
 
     /**
+     * @param request the request parameters of SyncJobs  SyncJobsRequest
+     * @return SyncJobsResponse
+     */
+    CompletableFuture<SyncJobsResponse> syncJobs(SyncJobsRequest request);
+
+    /**
      * @param request the request parameters of UpdateApp  UpdateAppRequest
      * @return UpdateAppResponse
      */
@@ -258,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateClusterResponse
      */
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExecutors  UpdateExecutorsRequest
+     * @return UpdateExecutorsResponse
+     */
+    CompletableFuture<UpdateExecutorsResponse> updateExecutors(UpdateExecutorsRequest request);
 
     /**
      * @param request the request parameters of UpdateJob  UpdateJobRequest

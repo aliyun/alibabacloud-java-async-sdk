@@ -58,6 +58,10 @@ public class ListJobsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
+    private Long workflowId;
+
     private ListJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -70,6 +74,7 @@ public class ListJobsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.workflowId = builder.workflowId;
     }
 
     public static Builder builder() {
@@ -155,6 +160,13 @@ public class ListJobsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return workflowId
+     */
+    public Long getWorkflowId() {
+        return this.workflowId;
+    }
+
     public static final class Builder extends Request.Builder<ListJobsRequest, Builder> {
         private String regionId; 
         private String appName; 
@@ -166,6 +178,7 @@ public class ListJobsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String status; 
+        private Long workflowId; 
 
         private Builder() {
             super();
@@ -183,6 +196,7 @@ public class ListJobsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.workflowId = request.workflowId;
         } 
 
         /**
@@ -275,6 +289,15 @@ public class ListJobsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * WorkflowId.
+         */
+        public Builder workflowId(Long workflowId) {
+            this.putQueryParameter("WorkflowId", workflowId);
+            this.workflowId = workflowId;
             return this;
         }
 

@@ -70,6 +70,14 @@ public class ListScheduleEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowExecutionId")
+    private Long workflowExecutionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
+    private String workflowName;
+
     private ListScheduleEventRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -85,6 +93,8 @@ public class ListScheduleEventRequest extends Request {
         this.pageSize = builder.pageSize;
         this.reverse = builder.reverse;
         this.startTime = builder.startTime;
+        this.workflowExecutionId = builder.workflowExecutionId;
+        this.workflowName = builder.workflowName;
     }
 
     public static Builder builder() {
@@ -191,6 +201,20 @@ public class ListScheduleEventRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return workflowExecutionId
+     */
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
+    }
+
+    /**
+     * @return workflowName
+     */
+    public String getWorkflowName() {
+        return this.workflowName;
+    }
+
     public static final class Builder extends Request.Builder<ListScheduleEventRequest, Builder> {
         private String regionId; 
         private String appName; 
@@ -205,6 +229,8 @@ public class ListScheduleEventRequest extends Request {
         private Integer pageSize; 
         private Boolean reverse; 
         private Long startTime; 
+        private Long workflowExecutionId; 
+        private String workflowName; 
 
         private Builder() {
             super();
@@ -225,6 +251,8 @@ public class ListScheduleEventRequest extends Request {
             this.pageSize = request.pageSize;
             this.reverse = request.reverse;
             this.startTime = request.startTime;
+            this.workflowExecutionId = request.workflowExecutionId;
+            this.workflowName = request.workflowName;
         } 
 
         /**
@@ -344,6 +372,24 @@ public class ListScheduleEventRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * WorkflowExecutionId.
+         */
+        public Builder workflowExecutionId(Long workflowExecutionId) {
+            this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
+            this.workflowExecutionId = workflowExecutionId;
+            return this;
+        }
+
+        /**
+         * WorkflowName.
+         */
+        public Builder workflowName(String workflowName) {
+            this.putQueryParameter("WorkflowName", workflowName);
+            this.workflowName = workflowName;
             return this;
         }
 

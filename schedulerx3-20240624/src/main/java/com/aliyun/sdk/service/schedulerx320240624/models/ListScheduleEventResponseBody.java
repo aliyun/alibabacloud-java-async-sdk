@@ -169,6 +169,9 @@ public class ListScheduleEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
+        @com.aliyun.core.annotation.NameInMap("EventType")
+        private String eventType;
+
         @com.aliyun.core.annotation.NameInMap("JobExecutionId")
         private String jobExecutionId;
 
@@ -181,14 +184,23 @@ public class ListScheduleEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkerAddr")
         private String workerAddr;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowExecutionId")
+        private String workflowExecutionId;
+
+        @com.aliyun.core.annotation.NameInMap("WorkflowName")
+        private String workflowName;
+
         private Records(Builder builder) {
             this.appName = builder.appName;
             this.content = builder.content;
             this.event = builder.event;
+            this.eventType = builder.eventType;
             this.jobExecutionId = builder.jobExecutionId;
             this.jobName = builder.jobName;
             this.time = builder.time;
             this.workerAddr = builder.workerAddr;
+            this.workflowExecutionId = builder.workflowExecutionId;
+            this.workflowName = builder.workflowName;
         }
 
         public static Builder builder() {
@@ -221,6 +233,13 @@ public class ListScheduleEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return eventType
+         */
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        /**
          * @return jobExecutionId
          */
         public String getJobExecutionId() {
@@ -248,14 +267,31 @@ public class ListScheduleEventResponseBody extends TeaModel {
             return this.workerAddr;
         }
 
+        /**
+         * @return workflowExecutionId
+         */
+        public String getWorkflowExecutionId() {
+            return this.workflowExecutionId;
+        }
+
+        /**
+         * @return workflowName
+         */
+        public String getWorkflowName() {
+            return this.workflowName;
+        }
+
         public static final class Builder {
             private String appName; 
             private String content; 
             private String event; 
+            private String eventType; 
             private String jobExecutionId; 
             private String jobName; 
             private String time; 
             private String workerAddr; 
+            private String workflowExecutionId; 
+            private String workflowName; 
 
             private Builder() {
             } 
@@ -264,10 +300,13 @@ public class ListScheduleEventResponseBody extends TeaModel {
                 this.appName = model.appName;
                 this.content = model.content;
                 this.event = model.event;
+                this.eventType = model.eventType;
                 this.jobExecutionId = model.jobExecutionId;
                 this.jobName = model.jobName;
                 this.time = model.time;
                 this.workerAddr = model.workerAddr;
+                this.workflowExecutionId = model.workflowExecutionId;
+                this.workflowName = model.workflowName;
             } 
 
             /**
@@ -291,6 +330,14 @@ public class ListScheduleEventResponseBody extends TeaModel {
              */
             public Builder event(String event) {
                 this.event = event;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(String eventType) {
+                this.eventType = eventType;
                 return this;
             }
 
@@ -326,6 +373,22 @@ public class ListScheduleEventResponseBody extends TeaModel {
              */
             public Builder workerAddr(String workerAddr) {
                 this.workerAddr = workerAddr;
+                return this;
+            }
+
+            /**
+             * WorkflowExecutionId.
+             */
+            public Builder workflowExecutionId(String workflowExecutionId) {
+                this.workflowExecutionId = workflowExecutionId;
+                return this;
+            }
+
+            /**
+             * WorkflowName.
+             */
+            public Builder workflowName(String workflowName) {
+                this.workflowName = workflowName;
                 return this;
             }
 

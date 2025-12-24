@@ -44,6 +44,10 @@ public class UpdateJobRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DependentStrategy")
+    private Integer dependentStrategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 300)
     private String description;
@@ -107,6 +111,10 @@ public class UpdateJobRequest extends Request {
     private Long startTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTimeType")
+    private String startTimeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TimeExpression")
     private String timeExpression;
 
@@ -130,6 +138,7 @@ public class UpdateJobRequest extends Request {
         this.calendar = builder.calendar;
         this.childJobId = builder.childJobId;
         this.clusterId = builder.clusterId;
+        this.dependentStrategy = builder.dependentStrategy;
         this.description = builder.description;
         this.executorBlockStrategy = builder.executorBlockStrategy;
         this.jobHandler = builder.jobHandler;
@@ -144,6 +153,7 @@ public class UpdateJobRequest extends Request {
         this.routeStrategy = builder.routeStrategy;
         this.script = builder.script;
         this.startTime = builder.startTime;
+        this.startTimeType = builder.startTimeType;
         this.timeExpression = builder.timeExpression;
         this.timeType = builder.timeType;
         this.timezone = builder.timezone;
@@ -203,6 +213,13 @@ public class UpdateJobRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return dependentStrategy
+     */
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     /**
@@ -304,6 +321,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return startTimeType
+     */
+    public String getStartTimeType() {
+        return this.startTimeType;
+    }
+
+    /**
      * @return timeExpression
      */
     public String getTimeExpression() {
@@ -338,6 +362,7 @@ public class UpdateJobRequest extends Request {
         private String calendar; 
         private String childJobId; 
         private String clusterId; 
+        private Integer dependentStrategy; 
         private String description; 
         private Integer executorBlockStrategy; 
         private String jobHandler; 
@@ -352,6 +377,7 @@ public class UpdateJobRequest extends Request {
         private Integer routeStrategy; 
         private String script; 
         private Long startTime; 
+        private String startTimeType; 
         private String timeExpression; 
         private Integer timeType; 
         private String timezone; 
@@ -369,6 +395,7 @@ public class UpdateJobRequest extends Request {
             this.calendar = request.calendar;
             this.childJobId = request.childJobId;
             this.clusterId = request.clusterId;
+            this.dependentStrategy = request.dependentStrategy;
             this.description = request.description;
             this.executorBlockStrategy = request.executorBlockStrategy;
             this.jobHandler = request.jobHandler;
@@ -383,6 +410,7 @@ public class UpdateJobRequest extends Request {
             this.routeStrategy = request.routeStrategy;
             this.script = request.script;
             this.startTime = request.startTime;
+            this.startTimeType = request.startTimeType;
             this.timeExpression = request.timeExpression;
             this.timeType = request.timeType;
             this.timezone = request.timezone;
@@ -446,6 +474,15 @@ public class UpdateJobRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * DependentStrategy.
+         */
+        public Builder dependentStrategy(Integer dependentStrategy) {
+            this.putBodyParameter("DependentStrategy", dependentStrategy);
+            this.dependentStrategy = dependentStrategy;
             return this;
         }
 
@@ -581,6 +618,15 @@ public class UpdateJobRequest extends Request {
         }
 
         /**
+         * StartTimeType.
+         */
+        public Builder startTimeType(String startTimeType) {
+            this.putBodyParameter("StartTimeType", startTimeType);
+            this.startTimeType = startTimeType;
+            return this;
+        }
+
+        /**
          * TimeExpression.
          */
         public Builder timeExpression(String timeExpression) {
@@ -630,6 +676,12 @@ public class UpdateJobRequest extends Request {
      * <p>UpdateJobRequest</p>
      */
     public static class NoticeConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndEarly")
+        private Integer endEarly;
+
+        @com.aliyun.core.annotation.NameInMap("EndEarlyEnable")
+        private Boolean endEarlyEnable;
+
         @com.aliyun.core.annotation.NameInMap("FailEnable")
         private Boolean failEnable;
 
@@ -655,6 +707,8 @@ public class UpdateJobRequest extends Request {
         private Boolean timeoutKillEnable;
 
         private NoticeConfig(Builder builder) {
+            this.endEarly = builder.endEarly;
+            this.endEarlyEnable = builder.endEarlyEnable;
             this.failEnable = builder.failEnable;
             this.failLimitTimes = builder.failLimitTimes;
             this.missWorkerEnable = builder.missWorkerEnable;
@@ -671,6 +725,20 @@ public class UpdateJobRequest extends Request {
 
         public static NoticeConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return endEarly
+         */
+        public Integer getEndEarly() {
+            return this.endEarly;
+        }
+
+        /**
+         * @return endEarlyEnable
+         */
+        public Boolean getEndEarlyEnable() {
+            return this.endEarlyEnable;
         }
 
         /**
@@ -730,6 +798,8 @@ public class UpdateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer endEarly; 
+            private Boolean endEarlyEnable; 
             private Boolean failEnable; 
             private Integer failLimitTimes; 
             private Boolean missWorkerEnable; 
@@ -743,6 +813,8 @@ public class UpdateJobRequest extends Request {
             } 
 
             private Builder(NoticeConfig model) {
+                this.endEarly = model.endEarly;
+                this.endEarlyEnable = model.endEarlyEnable;
                 this.failEnable = model.failEnable;
                 this.failLimitTimes = model.failLimitTimes;
                 this.missWorkerEnable = model.missWorkerEnable;
@@ -752,6 +824,22 @@ public class UpdateJobRequest extends Request {
                 this.timeoutEnable = model.timeoutEnable;
                 this.timeoutKillEnable = model.timeoutKillEnable;
             } 
+
+            /**
+             * EndEarly.
+             */
+            public Builder endEarly(Integer endEarly) {
+                this.endEarly = endEarly;
+                return this;
+            }
+
+            /**
+             * EndEarlyEnable.
+             */
+            public Builder endEarlyEnable(Boolean endEarlyEnable) {
+                this.endEarlyEnable = endEarlyEnable;
+                return this;
+            }
 
             /**
              * FailEnable.

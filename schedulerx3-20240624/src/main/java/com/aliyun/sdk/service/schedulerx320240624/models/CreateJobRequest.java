@@ -44,6 +44,14 @@ public class CreateJobRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Coordinate")
+    private Coordinate coordinate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DependentStrategy")
+    private Integer dependentStrategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 300)
     private String description;
@@ -105,6 +113,10 @@ public class CreateJobRequest extends Request {
     private Long startTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTimeType")
+    private Integer startTimeType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -133,6 +145,8 @@ public class CreateJobRequest extends Request {
         this.calendar = builder.calendar;
         this.childJobId = builder.childJobId;
         this.clusterId = builder.clusterId;
+        this.coordinate = builder.coordinate;
+        this.dependentStrategy = builder.dependentStrategy;
         this.description = builder.description;
         this.executorBlockStrategy = builder.executorBlockStrategy;
         this.jobHandler = builder.jobHandler;
@@ -147,6 +161,7 @@ public class CreateJobRequest extends Request {
         this.routeStrategy = builder.routeStrategy;
         this.script = builder.script;
         this.startTime = builder.startTime;
+        this.startTimeType = builder.startTimeType;
         this.status = builder.status;
         this.timeExpression = builder.timeExpression;
         this.timeType = builder.timeType;
@@ -207,6 +222,20 @@ public class CreateJobRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return coordinate
+     */
+    public Coordinate getCoordinate() {
+        return this.coordinate;
+    }
+
+    /**
+     * @return dependentStrategy
+     */
+    public Integer getDependentStrategy() {
+        return this.dependentStrategy;
     }
 
     /**
@@ -308,6 +337,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return startTimeType
+     */
+    public Integer getStartTimeType() {
+        return this.startTimeType;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -349,6 +385,8 @@ public class CreateJobRequest extends Request {
         private String calendar; 
         private String childJobId; 
         private String clusterId; 
+        private Coordinate coordinate; 
+        private Integer dependentStrategy; 
         private String description; 
         private Integer executorBlockStrategy; 
         private String jobHandler; 
@@ -363,6 +401,7 @@ public class CreateJobRequest extends Request {
         private Integer routeStrategy; 
         private String script; 
         private Long startTime; 
+        private Integer startTimeType; 
         private Integer status; 
         private String timeExpression; 
         private Integer timeType; 
@@ -381,6 +420,8 @@ public class CreateJobRequest extends Request {
             this.calendar = request.calendar;
             this.childJobId = request.childJobId;
             this.clusterId = request.clusterId;
+            this.coordinate = request.coordinate;
+            this.dependentStrategy = request.dependentStrategy;
             this.description = request.description;
             this.executorBlockStrategy = request.executorBlockStrategy;
             this.jobHandler = request.jobHandler;
@@ -395,6 +436,7 @@ public class CreateJobRequest extends Request {
             this.routeStrategy = request.routeStrategy;
             this.script = request.script;
             this.startTime = request.startTime;
+            this.startTimeType = request.startTimeType;
             this.status = request.status;
             this.timeExpression = request.timeExpression;
             this.timeType = request.timeType;
@@ -459,6 +501,25 @@ public class CreateJobRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * Coordinate.
+         */
+        public Builder coordinate(Coordinate coordinate) {
+            String coordinateShrink = shrink(coordinate, "Coordinate", "json");
+            this.putBodyParameter("Coordinate", coordinateShrink);
+            this.coordinate = coordinate;
+            return this;
+        }
+
+        /**
+         * DependentStrategy.
+         */
+        public Builder dependentStrategy(Integer dependentStrategy) {
+            this.putBodyParameter("DependentStrategy", dependentStrategy);
+            this.dependentStrategy = dependentStrategy;
             return this;
         }
 
@@ -597,6 +658,15 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * StartTimeType.
+         */
+        public Builder startTimeType(Integer startTimeType) {
+            this.putBodyParameter("StartTimeType", startTimeType);
+            this.startTimeType = startTimeType;
+            return this;
+        }
+
+        /**
          * Status.
          */
         public Builder status(Integer status) {
@@ -657,7 +727,130 @@ public class CreateJobRequest extends Request {
      *
      * <p>CreateJobRequest</p>
      */
+    public static class Coordinate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Height")
+        private Float height;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        private Float width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Float x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Float y;
+
+        private Coordinate(Builder builder) {
+            this.height = builder.height;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Coordinate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return height
+         */
+        public Float getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return width
+         */
+        public Float getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Float getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Float getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Float height; 
+            private Float width; 
+            private Float x; 
+            private Float y; 
+
+            private Builder() {
+            } 
+
+            private Builder(Coordinate model) {
+                this.height = model.height;
+                this.width = model.width;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * Height.
+             */
+            public Builder height(Float height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Float width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Float x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Float y) {
+                this.y = y;
+                return this;
+            }
+
+            public Coordinate build() {
+                return new Coordinate(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class NoticeConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndEarly")
+        private Integer endEarly;
+
+        @com.aliyun.core.annotation.NameInMap("EndEarlyEnable")
+        private Boolean endEarlyEnable;
+
         @com.aliyun.core.annotation.NameInMap("FailEnable")
         private Boolean failEnable;
 
@@ -683,6 +876,8 @@ public class CreateJobRequest extends Request {
         private Boolean timeoutKillEnable;
 
         private NoticeConfig(Builder builder) {
+            this.endEarly = builder.endEarly;
+            this.endEarlyEnable = builder.endEarlyEnable;
             this.failEnable = builder.failEnable;
             this.failLimitTimes = builder.failLimitTimes;
             this.missWorkerEnable = builder.missWorkerEnable;
@@ -699,6 +894,20 @@ public class CreateJobRequest extends Request {
 
         public static NoticeConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return endEarly
+         */
+        public Integer getEndEarly() {
+            return this.endEarly;
+        }
+
+        /**
+         * @return endEarlyEnable
+         */
+        public Boolean getEndEarlyEnable() {
+            return this.endEarlyEnable;
         }
 
         /**
@@ -758,6 +967,8 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer endEarly; 
+            private Boolean endEarlyEnable; 
             private Boolean failEnable; 
             private Integer failLimitTimes; 
             private Boolean missWorkerEnable; 
@@ -771,6 +982,8 @@ public class CreateJobRequest extends Request {
             } 
 
             private Builder(NoticeConfig model) {
+                this.endEarly = model.endEarly;
+                this.endEarlyEnable = model.endEarlyEnable;
                 this.failEnable = model.failEnable;
                 this.failLimitTimes = model.failLimitTimes;
                 this.missWorkerEnable = model.missWorkerEnable;
@@ -780,6 +993,22 @@ public class CreateJobRequest extends Request {
                 this.timeoutEnable = model.timeoutEnable;
                 this.timeoutKillEnable = model.timeoutKillEnable;
             } 
+
+            /**
+             * EndEarly.
+             */
+            public Builder endEarly(Integer endEarly) {
+                this.endEarly = endEarly;
+                return this;
+            }
+
+            /**
+             * EndEarlyEnable.
+             */
+            public Builder endEarlyEnable(Boolean endEarlyEnable) {
+                this.endEarlyEnable = endEarlyEnable;
+                return this;
+            }
 
             /**
              * FailEnable.

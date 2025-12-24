@@ -62,6 +62,10 @@ public class ListJobExecutionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowExecutionId")
+    private Long workflowExecutionId;
+
     private ListJobExecutionsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -75,6 +79,7 @@ public class ListJobExecutionsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.workflowExecutionId = builder.workflowExecutionId;
     }
 
     public static Builder builder() {
@@ -167,6 +172,13 @@ public class ListJobExecutionsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return workflowExecutionId
+     */
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
+    }
+
     public static final class Builder extends Request.Builder<ListJobExecutionsRequest, Builder> {
         private String regionId; 
         private String appName; 
@@ -179,6 +191,7 @@ public class ListJobExecutionsRequest extends Request {
         private Integer pageSize; 
         private String startTime; 
         private Integer status; 
+        private Long workflowExecutionId; 
 
         private Builder() {
             super();
@@ -197,6 +210,7 @@ public class ListJobExecutionsRequest extends Request {
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.workflowExecutionId = request.workflowExecutionId;
         } 
 
         /**
@@ -298,6 +312,15 @@ public class ListJobExecutionsRequest extends Request {
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * WorkflowExecutionId.
+         */
+        public Builder workflowExecutionId(Long workflowExecutionId) {
+            this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
+            this.workflowExecutionId = workflowExecutionId;
             return this;
         }
 

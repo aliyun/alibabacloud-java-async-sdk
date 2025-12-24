@@ -40,6 +40,10 @@ public class OperateRetryJobExecutionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskList")
     private java.util.List<String> taskList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerChild")
+    private Boolean triggerChild;
+
     private OperateRetryJobExecutionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -47,6 +51,7 @@ public class OperateRetryJobExecutionRequest extends Request {
         this.clusterId = builder.clusterId;
         this.jobExecutionId = builder.jobExecutionId;
         this.taskList = builder.taskList;
+        this.triggerChild = builder.triggerChild;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class OperateRetryJobExecutionRequest extends Request {
         return this.taskList;
     }
 
+    /**
+     * @return triggerChild
+     */
+    public Boolean getTriggerChild() {
+        return this.triggerChild;
+    }
+
     public static final class Builder extends Request.Builder<OperateRetryJobExecutionRequest, Builder> {
         private String regionId; 
         private String appName; 
         private String clusterId; 
         private String jobExecutionId; 
         private java.util.List<String> taskList; 
+        private Boolean triggerChild; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class OperateRetryJobExecutionRequest extends Request {
             this.clusterId = request.clusterId;
             this.jobExecutionId = request.jobExecutionId;
             this.taskList = request.taskList;
+            this.triggerChild = request.triggerChild;
         } 
 
         /**
@@ -169,6 +183,15 @@ public class OperateRetryJobExecutionRequest extends Request {
             String taskListShrink = shrink(taskList, "TaskList", "json");
             this.putQueryParameter("TaskList", taskListShrink);
             this.taskList = taskList;
+            return this;
+        }
+
+        /**
+         * TriggerChild.
+         */
+        public Builder triggerChild(Boolean triggerChild) {
+            this.putQueryParameter("TriggerChild", triggerChild);
+            this.triggerChild = triggerChild;
             return this;
         }
 

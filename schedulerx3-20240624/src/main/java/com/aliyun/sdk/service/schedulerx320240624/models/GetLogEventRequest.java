@@ -39,6 +39,10 @@ public class GetLogEventRequest extends Request {
     private String event;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
+    private String eventType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobExecutionId")
     private Long jobExecutionId;
 
@@ -66,6 +70,14 @@ public class GetLogEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowExecutionId")
+    private Long workflowExecutionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
+    private String workflowName;
+
     private GetLogEventRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -73,6 +85,7 @@ public class GetLogEventRequest extends Request {
         this.clusterId = builder.clusterId;
         this.endTime = builder.endTime;
         this.event = builder.event;
+        this.eventType = builder.eventType;
         this.jobExecutionId = builder.jobExecutionId;
         this.jobName = builder.jobName;
         this.keyword = builder.keyword;
@@ -80,6 +93,8 @@ public class GetLogEventRequest extends Request {
         this.pageSize = builder.pageSize;
         this.reverse = builder.reverse;
         this.startTime = builder.startTime;
+        this.workflowExecutionId = builder.workflowExecutionId;
+        this.workflowName = builder.workflowName;
     }
 
     public static Builder builder() {
@@ -131,6 +146,13 @@ public class GetLogEventRequest extends Request {
     }
 
     /**
+     * @return eventType
+     */
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    /**
      * @return jobExecutionId
      */
     public Long getJobExecutionId() {
@@ -179,12 +201,27 @@ public class GetLogEventRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return workflowExecutionId
+     */
+    public Long getWorkflowExecutionId() {
+        return this.workflowExecutionId;
+    }
+
+    /**
+     * @return workflowName
+     */
+    public String getWorkflowName() {
+        return this.workflowName;
+    }
+
     public static final class Builder extends Request.Builder<GetLogEventRequest, Builder> {
         private String regionId; 
         private String appName; 
         private String clusterId; 
         private Long endTime; 
         private String event; 
+        private String eventType; 
         private Long jobExecutionId; 
         private String jobName; 
         private String keyword; 
@@ -192,6 +229,8 @@ public class GetLogEventRequest extends Request {
         private Integer pageSize; 
         private Boolean reverse; 
         private Long startTime; 
+        private Long workflowExecutionId; 
+        private String workflowName; 
 
         private Builder() {
             super();
@@ -204,6 +243,7 @@ public class GetLogEventRequest extends Request {
             this.clusterId = request.clusterId;
             this.endTime = request.endTime;
             this.event = request.event;
+            this.eventType = request.eventType;
             this.jobExecutionId = request.jobExecutionId;
             this.jobName = request.jobName;
             this.keyword = request.keyword;
@@ -211,6 +251,8 @@ public class GetLogEventRequest extends Request {
             this.pageSize = request.pageSize;
             this.reverse = request.reverse;
             this.startTime = request.startTime;
+            this.workflowExecutionId = request.workflowExecutionId;
+            this.workflowName = request.workflowName;
         } 
 
         /**
@@ -258,6 +300,15 @@ public class GetLogEventRequest extends Request {
         public Builder event(String event) {
             this.putQueryParameter("Event", event);
             this.event = event;
+            return this;
+        }
+
+        /**
+         * EventType.
+         */
+        public Builder eventType(String eventType) {
+            this.putQueryParameter("EventType", eventType);
+            this.eventType = eventType;
             return this;
         }
 
@@ -321,6 +372,24 @@ public class GetLogEventRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * WorkflowExecutionId.
+         */
+        public Builder workflowExecutionId(Long workflowExecutionId) {
+            this.putQueryParameter("WorkflowExecutionId", workflowExecutionId);
+            this.workflowExecutionId = workflowExecutionId;
+            return this;
+        }
+
+        /**
+         * WorkflowName.
+         */
+        public Builder workflowName(String workflowName) {
+            this.putQueryParameter("WorkflowName", workflowName);
+            this.workflowName = workflowName;
             return this;
         }
 

@@ -224,6 +224,15 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkAddr")
         private String workAddr;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowExecutionId")
+        private String workflowExecutionId;
+
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
+        private Long workflowId;
+
+        @com.aliyun.core.annotation.NameInMap("WorkflowName")
+        private String workflowName;
+
         private Records(Builder builder) {
             this.appName = builder.appName;
             this.attempt = builder.attempt;
@@ -245,6 +254,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             this.totalTokens = builder.totalTokens;
             this.triggerType = builder.triggerType;
             this.workAddr = builder.workAddr;
+            this.workflowExecutionId = builder.workflowExecutionId;
+            this.workflowId = builder.workflowId;
+            this.workflowName = builder.workflowName;
         }
 
         public static Builder builder() {
@@ -395,6 +407,27 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             return this.workAddr;
         }
 
+        /**
+         * @return workflowExecutionId
+         */
+        public String getWorkflowExecutionId() {
+            return this.workflowExecutionId;
+        }
+
+        /**
+         * @return workflowId
+         */
+        public Long getWorkflowId() {
+            return this.workflowId;
+        }
+
+        /**
+         * @return workflowName
+         */
+        public String getWorkflowName() {
+            return this.workflowName;
+        }
+
         public static final class Builder {
             private String appName; 
             private Integer attempt; 
@@ -416,6 +449,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             private Integer totalTokens; 
             private Integer triggerType; 
             private String workAddr; 
+            private String workflowExecutionId; 
+            private Long workflowId; 
+            private String workflowName; 
 
             private Builder() {
             } 
@@ -441,6 +477,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
                 this.totalTokens = model.totalTokens;
                 this.triggerType = model.triggerType;
                 this.workAddr = model.workAddr;
+                this.workflowExecutionId = model.workflowExecutionId;
+                this.workflowId = model.workflowId;
+                this.workflowName = model.workflowName;
             } 
 
             /**
@@ -600,6 +639,30 @@ public class ListJobExecutionsResponseBody extends TeaModel {
              */
             public Builder workAddr(String workAddr) {
                 this.workAddr = workAddr;
+                return this;
+            }
+
+            /**
+             * WorkflowExecutionId.
+             */
+            public Builder workflowExecutionId(String workflowExecutionId) {
+                this.workflowExecutionId = workflowExecutionId;
+                return this;
+            }
+
+            /**
+             * WorkflowId.
+             */
+            public Builder workflowId(Long workflowId) {
+                this.workflowId = workflowId;
+                return this;
+            }
+
+            /**
+             * WorkflowName.
+             */
+            public Builder workflowName(String workflowName) {
+                this.workflowName = workflowName;
                 return this;
             }
 
