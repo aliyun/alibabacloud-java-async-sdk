@@ -28,7 +28,7 @@ public class ListUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
-    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String email;
 
     @com.aliyun.core.annotation.Query

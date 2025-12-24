@@ -406,6 +406,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateIdentityProviderStatusCheckJob  CreateIdentityProviderStatusCheckJobRequest
+     * @return CreateIdentityProviderStatusCheckJobResponse
+     */
+    @Override
+    public CompletableFuture<CreateIdentityProviderStatusCheckJobResponse> createIdentityProviderStatusCheckJob(CreateIdentityProviderStatusCheckJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateIdentityProviderStatusCheckJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateIdentityProviderStatusCheckJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateIdentityProviderStatusCheckJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -829,6 +847,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteUsers  DeleteUsersRequest
+     * @return DeleteUsersResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteWebAuthnAuthenticator  DeleteWebAuthnAuthenticatorRequest
+     * @return DeleteWebAuthnAuthenticatorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWebAuthnAuthenticatorResponse> deleteWebAuthnAuthenticator(DeleteWebAuthnAuthenticatorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteWebAuthnAuthenticator").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWebAuthnAuthenticatorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWebAuthnAuthenticatorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.</p>
      * 
@@ -1051,6 +1105,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableIdentityProviderAdvancedAbility  DisableIdentityProviderAdvancedAbilityRequest
+     * @return DisableIdentityProviderAdvancedAbilityResponse
+     */
+    @Override
+    public CompletableFuture<DisableIdentityProviderAdvancedAbilityResponse> disableIdentityProviderAdvancedAbility(DisableIdentityProviderAdvancedAbilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableIdentityProviderAdvancedAbility").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableIdentityProviderAdvancedAbilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableIdentityProviderAdvancedAbilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableIdentityProviderAuthn  DisableIdentityProviderAuthnRequest
      * @return DisableIdentityProviderAuthnResponse
      */
@@ -1099,6 +1171,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DisableInitDomainAutoRedirectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableInternalAuthenticationSource  DisableInternalAuthenticationSourceRequest
+     * @return DisableInternalAuthenticationSourceResponse
+     */
+    @Override
+    public CompletableFuture<DisableInternalAuthenticationSourceResponse> disableInternalAuthenticationSource(DisableInternalAuthenticationSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableInternalAuthenticationSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableInternalAuthenticationSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableInternalAuthenticationSourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1342,6 +1432,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableIdentityProviderAdvancedAbility  EnableIdentityProviderAdvancedAbilityRequest
+     * @return EnableIdentityProviderAdvancedAbilityResponse
+     */
+    @Override
+    public CompletableFuture<EnableIdentityProviderAdvancedAbilityResponse> enableIdentityProviderAdvancedAbility(EnableIdentityProviderAdvancedAbilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableIdentityProviderAdvancedAbility").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableIdentityProviderAdvancedAbilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableIdentityProviderAdvancedAbilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
      */
@@ -1396,6 +1504,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableInternalAuthenticationSource  EnableInternalAuthenticationSourceRequest
+     * @return EnableInternalAuthenticationSourceResponse
+     */
+    @Override
+    public CompletableFuture<EnableInternalAuthenticationSourceResponse> enableInternalAuthenticationSource(EnableInternalAuthenticationSourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableInternalAuthenticationSource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableInternalAuthenticationSourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableInternalAuthenticationSourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableUser  EnableUserRequest
      * @return EnableUserResponse
      */
@@ -1408,6 +1534,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnableUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateDownloadUrlForSynchronizationJob  GenerateDownloadUrlForSynchronizationJobRequest
+     * @return GenerateDownloadUrlForSynchronizationJobResponse
+     */
+    @Override
+    public CompletableFuture<GenerateDownloadUrlForSynchronizationJobResponse> generateDownloadUrlForSynchronizationJob(GenerateDownloadUrlForSynchronizationJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateDownloadUrlForSynchronizationJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateDownloadUrlForSynchronizationJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateDownloadUrlForSynchronizationJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateFileImportTemplate  GenerateFileImportTemplateRequest
+     * @return GenerateFileImportTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GenerateFileImportTemplateResponse> generateFileImportTemplate(GenerateFileImportTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateFileImportTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateFileImportTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateFileImportTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateUploadAuth  GenerateUploadAuthRequest
+     * @return GenerateUploadAuthResponse
+     */
+    @Override
+    public CompletableFuture<GenerateUploadAuthResponse> generateUploadAuth(GenerateUploadAuthRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateUploadAuth").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateUploadAuthResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateUploadAuthResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3043,6 +3223,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetApplicationProvisioningScopeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetApplicationProvisioningUserPrimaryOrganizationalUnit  SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    @Override
+    public CompletableFuture<SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> setApplicationProvisioningUserPrimaryOrganizationalUnit(SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetApplicationProvisioningUserPrimaryOrganizationalUnit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

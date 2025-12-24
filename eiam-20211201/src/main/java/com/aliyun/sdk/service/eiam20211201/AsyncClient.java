@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIdentityProviderResponse> createIdentityProvider(CreateIdentityProviderRequest request);
 
     /**
+     * @param request the request parameters of CreateIdentityProviderStatusCheckJob  CreateIdentityProviderStatusCheckJobRequest
+     * @return CreateIdentityProviderStatusCheckJobResponse
+     */
+    CompletableFuture<CreateIdentityProviderStatusCheckJobResponse> createIdentityProviderStatusCheckJob(CreateIdentityProviderStatusCheckJobRequest request);
+
+    /**
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -293,6 +299,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
     /**
+     * @param request the request parameters of DeleteUsers  DeleteUsersRequest
+     * @return DeleteUsersResponse
+     */
+    CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWebAuthnAuthenticator  DeleteWebAuthnAuthenticatorRequest
+     * @return DeleteWebAuthnAuthenticatorResponse
+     */
+    CompletableFuture<DeleteWebAuthnAuthenticatorResponse> deleteWebAuthnAuthenticator(DeleteWebAuthnAuthenticatorRequest request);
+
+    /**
      * <b>description</b> :
      * <p>All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.</p>
      * 
@@ -371,6 +389,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableFederatedCredentialProviderResponse> disableFederatedCredentialProvider(DisableFederatedCredentialProviderRequest request);
 
     /**
+     * @param request the request parameters of DisableIdentityProviderAdvancedAbility  DisableIdentityProviderAdvancedAbilityRequest
+     * @return DisableIdentityProviderAdvancedAbilityResponse
+     */
+    CompletableFuture<DisableIdentityProviderAdvancedAbilityResponse> disableIdentityProviderAdvancedAbility(DisableIdentityProviderAdvancedAbilityRequest request);
+
+    /**
      * @param request the request parameters of DisableIdentityProviderAuthn  DisableIdentityProviderAuthnRequest
      * @return DisableIdentityProviderAuthnResponse
      */
@@ -387,6 +411,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableInitDomainAutoRedirectResponse
      */
     CompletableFuture<DisableInitDomainAutoRedirectResponse> disableInitDomainAutoRedirect(DisableInitDomainAutoRedirectRequest request);
+
+    /**
+     * @param request the request parameters of DisableInternalAuthenticationSource  DisableInternalAuthenticationSourceRequest
+     * @return DisableInternalAuthenticationSourceResponse
+     */
+    CompletableFuture<DisableInternalAuthenticationSourceResponse> disableInternalAuthenticationSource(DisableInternalAuthenticationSourceRequest request);
 
     /**
      * @param request the request parameters of DisableUser  DisableUserRequest
@@ -470,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableFederatedCredentialProviderResponse> enableFederatedCredentialProvider(EnableFederatedCredentialProviderRequest request);
 
     /**
+     * @param request the request parameters of EnableIdentityProviderAdvancedAbility  EnableIdentityProviderAdvancedAbilityRequest
+     * @return EnableIdentityProviderAdvancedAbilityResponse
+     */
+    CompletableFuture<EnableIdentityProviderAdvancedAbilityResponse> enableIdentityProviderAdvancedAbility(EnableIdentityProviderAdvancedAbilityRequest request);
+
+    /**
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
      */
@@ -488,10 +524,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableInitDomainAutoRedirectResponse> enableInitDomainAutoRedirect(EnableInitDomainAutoRedirectRequest request);
 
     /**
+     * @param request the request parameters of EnableInternalAuthenticationSource  EnableInternalAuthenticationSourceRequest
+     * @return EnableInternalAuthenticationSourceResponse
+     */
+    CompletableFuture<EnableInternalAuthenticationSourceResponse> enableInternalAuthenticationSource(EnableInternalAuthenticationSourceRequest request);
+
+    /**
      * @param request the request parameters of EnableUser  EnableUserRequest
      * @return EnableUserResponse
      */
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
+
+    /**
+     * @param request the request parameters of GenerateDownloadUrlForSynchronizationJob  GenerateDownloadUrlForSynchronizationJobRequest
+     * @return GenerateDownloadUrlForSynchronizationJobResponse
+     */
+    CompletableFuture<GenerateDownloadUrlForSynchronizationJobResponse> generateDownloadUrlForSynchronizationJob(GenerateDownloadUrlForSynchronizationJobRequest request);
+
+    /**
+     * @param request the request parameters of GenerateFileImportTemplate  GenerateFileImportTemplateRequest
+     * @return GenerateFileImportTemplateResponse
+     */
+    CompletableFuture<GenerateFileImportTemplateResponse> generateFileImportTemplate(GenerateFileImportTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GenerateUploadAuth  GenerateUploadAuthRequest
+     * @return GenerateUploadAuthResponse
+     */
+    CompletableFuture<GenerateUploadAuthResponse> generateUploadAuth(GenerateUploadAuthRequest request);
 
     /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
@@ -1047,6 +1107,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetApplicationProvisioningScopeResponse
      */
     CompletableFuture<SetApplicationProvisioningScopeResponse> setApplicationProvisioningScope(SetApplicationProvisioningScopeRequest request);
+
+    /**
+     * @param request the request parameters of SetApplicationProvisioningUserPrimaryOrganizationalUnit  SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    CompletableFuture<SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> setApplicationProvisioningUserPrimaryOrganizationalUnit(SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest request);
 
     /**
      * <b>description</b> :
