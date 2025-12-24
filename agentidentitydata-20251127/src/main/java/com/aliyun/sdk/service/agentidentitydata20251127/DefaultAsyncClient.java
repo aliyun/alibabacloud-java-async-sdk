@@ -29,7 +29,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "AgentIdentityData";
         this.version = "2025-11-27";
-        this.endpointRule = "";
+        this.endpointRule = "regional";
         this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
