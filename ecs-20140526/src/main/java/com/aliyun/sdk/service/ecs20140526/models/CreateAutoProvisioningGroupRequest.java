@@ -50,6 +50,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String excessCapacityTerminationPolicy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionMode")
+    private String executionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HibernationOptionsConfigured")
     private Boolean hibernationOptionsConfigured;
 
@@ -169,6 +173,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.defaultTargetCapacityType = builder.defaultTargetCapacityType;
         this.description = builder.description;
         this.excessCapacityTerminationPolicy = builder.excessCapacityTerminationPolicy;
+        this.executionMode = builder.executionMode;
         this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
         this.launchTemplateConfig = builder.launchTemplateConfig;
         this.launchTemplateId = builder.launchTemplateId;
@@ -265,6 +270,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public String getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy;
+    }
+
+    /**
+     * @return executionMode
+     */
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     /**
@@ -465,6 +477,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String defaultTargetCapacityType; 
         private String description; 
         private String excessCapacityTerminationPolicy; 
+        private String executionMode; 
         private Boolean hibernationOptionsConfigured; 
         private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
         private String launchTemplateId; 
@@ -507,6 +520,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.defaultTargetCapacityType = request.defaultTargetCapacityType;
             this.description = request.description;
             this.excessCapacityTerminationPolicy = request.excessCapacityTerminationPolicy;
+            this.executionMode = request.executionMode;
             this.hibernationOptionsConfigured = request.hibernationOptionsConfigured;
             this.launchTemplateConfig = request.launchTemplateConfig;
             this.launchTemplateId = request.launchTemplateId;
@@ -639,6 +653,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
             this.putQueryParameter("ExcessCapacityTerminationPolicy", excessCapacityTerminationPolicy);
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            return this;
+        }
+
+        /**
+         * ExecutionMode.
+         */
+        public Builder executionMode(String executionMode) {
+            this.putQueryParameter("ExecutionMode", executionMode);
+            this.executionMode = executionMode;
             return this;
         }
 
