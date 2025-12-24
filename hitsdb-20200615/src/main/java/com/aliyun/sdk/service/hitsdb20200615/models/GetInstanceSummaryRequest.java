@@ -12,20 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetLindormV2StorageUsageRequest} extends {@link RequestModel}
+ * {@link GetInstanceSummaryRequest} extends {@link RequestModel}
  *
- * <p>GetLindormV2StorageUsageRequest</p>
+ * <p>GetInstanceSummaryRequest</p>
  */
-public class GetLindormV2StorageUsageRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String instanceId;
-
+public class GetInstanceSummaryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -34,6 +25,10 @@ public class GetLindormV2StorageUsageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -48,12 +43,11 @@ public class GetLindormV2StorageUsageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    private GetLindormV2StorageUsageRequest(Builder builder) {
+    private GetInstanceSummaryRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -63,27 +57,13 @@ public class GetLindormV2StorageUsageRequest extends Request {
         return new Builder();
     }
 
-    public static GetLindormV2StorageUsageRequest create() {
+    public static GetInstanceSummaryRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     /**
@@ -98,6 +78,13 @@ public class GetLindormV2StorageUsageRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -121,11 +108,10 @@ public class GetLindormV2StorageUsageRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<GetLindormV2StorageUsageRequest, Builder> {
-        private String regionId; 
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<GetInstanceSummaryRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -134,37 +120,15 @@ public class GetLindormV2StorageUsageRequest extends Request {
             super();
         } 
 
-        private Builder(GetLindormV2StorageUsageRequest request) {
+        private Builder(GetInstanceSummaryRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ld-ufxxxxxxxxxx</p>
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -181,6 +145,15 @@ public class GetLindormV2StorageUsageRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -212,8 +185,8 @@ public class GetLindormV2StorageUsageRequest extends Request {
         }
 
         @Override
-        public GetLindormV2StorageUsageRequest build() {
-            return new GetLindormV2StorageUsageRequest(this);
+        public GetInstanceSummaryRequest build() {
+            return new GetInstanceSummaryRequest(this);
         } 
 
     } 

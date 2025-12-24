@@ -137,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceSecurityGroupsResponse> getInstanceSecurityGroups(GetInstanceSecurityGroupsRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceSummary  GetInstanceSummaryRequest
+     * @return GetInstanceSummaryResponse
+     */
+    CompletableFuture<GetInstanceSummaryResponse> getInstanceSummary(GetInstanceSummaryRequest request);
+
+    /**
      * @param request the request parameters of GetLdpsComputeGroup  GetLdpsComputeGroupRequest
      * @return GetLdpsComputeGroupResponse
      */
