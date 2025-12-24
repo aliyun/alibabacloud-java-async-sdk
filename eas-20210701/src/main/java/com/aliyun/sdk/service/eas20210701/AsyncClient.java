@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayIntranetLinkedVpcPeerResponse> deleteGatewayIntranetLinkedVpcPeer(DeleteGatewayIntranetLinkedVpcPeerRequest request);
 
     /**
+     * @param request the request parameters of DeleteGatewayLabel  DeleteGatewayLabelRequest
+     * @return DeleteGatewayLabelResponse
+     */
+    CompletableFuture<DeleteGatewayLabelResponse> deleteGatewayLabel(DeleteGatewayLabelRequest request);
+
+    /**
      * @param request the request parameters of DeleteResource  DeleteResourceRequest
      * @return DeleteResourceResponse
      */
@@ -565,6 +571,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateGatewayResponse
      */
     CompletableFuture<UpdateGatewayResponse> updateGateway(UpdateGatewayRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayLabel  UpdateGatewayLabelRequest
+     * @return UpdateGatewayLabelResponse
+     */
+    CompletableFuture<UpdateGatewayLabelResponse> updateGatewayLabel(UpdateGatewayLabelRequest request);
 
     /**
      * @param request the request parameters of UpdateGroup  UpdateGroupRequest
