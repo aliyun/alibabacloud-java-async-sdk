@@ -28,11 +28,6 @@ public class DescribePopApiRequest extends Request {
     private String apiVersion;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Env")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String env;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PopCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String popCode;
@@ -41,7 +36,6 @@ public class DescribePopApiRequest extends Request {
         super(builder);
         this.apiName = builder.apiName;
         this.apiVersion = builder.apiVersion;
-        this.env = builder.env;
         this.popCode = builder.popCode;
     }
 
@@ -73,13 +67,6 @@ public class DescribePopApiRequest extends Request {
     }
 
     /**
-     * @return env
-     */
-    public String getEnv() {
-        return this.env;
-    }
-
-    /**
      * @return popCode
      */
     public String getPopCode() {
@@ -89,7 +76,6 @@ public class DescribePopApiRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePopApiRequest, Builder> {
         private String apiName; 
         private String apiVersion; 
-        private String env; 
         private String popCode; 
 
         private Builder() {
@@ -100,7 +86,6 @@ public class DescribePopApiRequest extends Request {
             super(request);
             this.apiName = request.apiName;
             this.apiVersion = request.apiVersion;
-            this.env = request.env;
             this.popCode = request.popCode;
         } 
 
@@ -130,19 +115,6 @@ public class DescribePopApiRequest extends Request {
         public Builder apiVersion(String apiVersion) {
             this.putQueryParameter("ApiVersion", apiVersion);
             this.apiVersion = apiVersion;
-            return this;
-        }
-
-        /**
-         * <p>The environment in which the API operation parameter is used. Set the value to online.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>online</p>
-         */
-        public Builder env(String env) {
-            this.putQueryParameter("Env", env);
-            this.env = env;
             return this;
         }
 

@@ -87,7 +87,14 @@ public class DescribeNotifyTemplateListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +103,10 @@ public class DescribeNotifyTemplateListRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137602425xxx8726</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -105,7 +115,14 @@ public class DescribeNotifyTemplateListRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The type of the view. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts for the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

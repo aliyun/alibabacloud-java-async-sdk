@@ -40,24 +40,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of BatchModifyInstanceStatus  BatchModifyInstanceStatusRequest
-     * @return BatchModifyInstanceStatusResponse
-     */
-    @Override
-    public CompletableFuture<BatchModifyInstanceStatusResponse> batchModifyInstanceStatus(BatchModifyInstanceStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchModifyInstanceStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchModifyInstanceStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BatchModifyInstanceStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of ComparePlaybooks  ComparePlaybooksRequest
      * @return ComparePlaybooksResponse
      */
@@ -97,6 +79,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of CopyPlaybook  CopyPlaybookRequest
      * @return CopyPlaybookResponse
      */
@@ -352,6 +337,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeGroupProductions  DescribeGroupProductionsRequest
      * @return DescribeGroupProductionsResponse
      */
@@ -406,24 +394,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeNodeUsedInfos  DescribeNodeUsedInfosRequest
-     * @return DescribeNodeUsedInfosResponse
-     */
-    @Override
-    public CompletableFuture<DescribeNodeUsedInfosResponse> describeNodeUsedInfos(DescribeNodeUsedInfosRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNodeUsedInfos").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNodeUsedInfosResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeNodeUsedInfosResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeNotifyTemplateList  DescribeNotifyTemplateListRequest
      * @return DescribeNotifyTemplateListResponse
      */
@@ -442,6 +415,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenApiInfo  DescribeOpenApiInfoRequest
      * @return DescribeOpenApiInfoResponse
      */
@@ -460,6 +436,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenApiList  DescribeOpenApiListRequest
      * @return DescribeOpenApiListResponse
      */
@@ -622,24 +601,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribePopApiItemList  DescribePopApiItemListRequest
-     * @return DescribePopApiItemListResponse
-     */
-    @Override
-    public CompletableFuture<DescribePopApiItemListResponse> describePopApiItemList(DescribePopApiItemListRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePopApiItemList").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePopApiItemListResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribePopApiItemListResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeProcessStatistics  DescribeProcessStatisticsRequest
      * @return DescribeProcessStatisticsResponse
      */
@@ -676,6 +640,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeProcessTasks  DescribeProcessTasksRequest
      * @return DescribeProcessTasksResponse
      */
@@ -784,6 +751,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., threat analysis and response log access traffic) before using this interface.</p>
+     * 
      * @param request the request parameters of DescribeVendorApiList  DescribeVendorApiListRequest
      * @return DescribeVendorApiListResponse
      */
@@ -874,24 +844,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ModifyPlaybookInstanceStatus  ModifyPlaybookInstanceStatusRequest
-     * @return ModifyPlaybookInstanceStatusResponse
-     */
-    @Override
-    public CompletableFuture<ModifyPlaybookInstanceStatusResponse> modifyPlaybookInstanceStatus(ModifyPlaybookInstanceStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPlaybookInstanceStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPlaybookInstanceStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ModifyPlaybookInstanceStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of PublishPlaybook  PublishPlaybookRequest
      * @return PublishPlaybookResponse
      */
@@ -928,24 +880,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RenamePlaybookNode  RenamePlaybookNodeRequest
-     * @return RenamePlaybookNodeResponse
-     */
-    @Override
-    public CompletableFuture<RenamePlaybookNodeResponse> renamePlaybookNode(RenamePlaybookNodeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenamePlaybookNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenamePlaybookNodeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RenamePlaybookNodeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of RevertPlaybookRelease  RevertPlaybookReleaseRequest
      * @return RevertPlaybookReleaseResponse
      */
@@ -964,6 +898,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithEmail  RunNotifyComponentWithEmailRequest
      * @return RunNotifyComponentWithEmailResponse
      */
@@ -982,6 +919,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithMessageCenter  RunNotifyComponentWithMessageCenterRequest
      * @return RunNotifyComponentWithMessageCenterResponse
      */
@@ -1000,6 +940,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithWebhook  RunNotifyComponentWithWebhookRequest
      * @return RunNotifyComponentWithWebhookResponse
      */

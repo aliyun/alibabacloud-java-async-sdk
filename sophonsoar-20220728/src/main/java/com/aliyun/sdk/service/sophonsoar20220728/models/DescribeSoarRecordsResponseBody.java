@@ -225,6 +225,102 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
      *
      * <p>DescribeSoarRecordsResponseBody</p>
      */
+    public static class OutputList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionUuid")
+        private String actionUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("NodeName")
+        private String nodeName;
+
+        private OutputList(Builder builder) {
+            this.actionUuid = builder.actionUuid;
+            this.content = builder.content;
+            this.nodeName = builder.nodeName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutputList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionUuid
+         */
+        public String getActionUuid() {
+            return this.actionUuid;
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public static final class Builder {
+            private String actionUuid; 
+            private String content; 
+            private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputList model) {
+                this.actionUuid = model.actionUuid;
+                this.content = model.content;
+                this.nodeName = model.nodeName;
+            } 
+
+            /**
+             * ActionUuid.
+             */
+            public Builder actionUuid(String actionUuid) {
+                this.actionUuid = actionUuid;
+                return this;
+            }
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * NodeName.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
+                return this;
+            }
+
+            public OutputList build() {
+                return new OutputList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSoarRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarRecordsResponseBody</p>
+     */
     public static class SoarExecuteRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -232,14 +328,14 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
+        @com.aliyun.core.annotation.NameInMap("OutputList")
+        private java.util.List<OutputList> outputList;
+
         @com.aliyun.core.annotation.NameInMap("RawEventReq")
         private String rawEventReq;
 
         @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
-
-        @com.aliyun.core.annotation.NameInMap("ResultMessage")
-        private String resultMessage;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -249,9 +345,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
-
-        @com.aliyun.core.annotation.NameInMap("TaskType")
-        private String taskType;
 
         @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
@@ -265,13 +358,12 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         private SoarExecuteRecords(Builder builder) {
             this.endTime = builder.endTime;
             this.errorMsg = builder.errorMsg;
+            this.outputList = builder.outputList;
             this.rawEventReq = builder.rawEventReq;
             this.requestUuid = builder.requestUuid;
-            this.resultMessage = builder.resultMessage;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskName = builder.taskName;
-            this.taskType = builder.taskType;
             this.taskflowMd5 = builder.taskflowMd5;
             this.triggerType = builder.triggerType;
             this.triggerUser = builder.triggerUser;
@@ -300,6 +392,13 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return outputList
+         */
+        public java.util.List<OutputList> getOutputList() {
+            return this.outputList;
+        }
+
+        /**
          * @return rawEventReq
          */
         public String getRawEventReq() {
@@ -311,13 +410,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
          */
         public String getRequestUuid() {
             return this.requestUuid;
-        }
-
-        /**
-         * @return resultMessage
-         */
-        public String getResultMessage() {
-            return this.resultMessage;
         }
 
         /**
@@ -339,13 +431,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
          */
         public String getTaskName() {
             return this.taskName;
-        }
-
-        /**
-         * @return taskType
-         */
-        public String getTaskType() {
-            return this.taskType;
         }
 
         /**
@@ -372,13 +457,12 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private Long endTime; 
             private String errorMsg; 
+            private java.util.List<OutputList> outputList; 
             private String rawEventReq; 
             private String requestUuid; 
-            private String resultMessage; 
             private Long startTime; 
             private String status; 
             private String taskName; 
-            private String taskType; 
             private String taskflowMd5; 
             private String triggerType; 
             private String triggerUser; 
@@ -389,13 +473,12 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             private Builder(SoarExecuteRecords model) {
                 this.endTime = model.endTime;
                 this.errorMsg = model.errorMsg;
+                this.outputList = model.outputList;
                 this.rawEventReq = model.rawEventReq;
                 this.requestUuid = model.requestUuid;
-                this.resultMessage = model.resultMessage;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskName = model.taskName;
-                this.taskType = model.taskType;
                 this.taskflowMd5 = model.taskflowMd5;
                 this.triggerType = model.triggerType;
                 this.triggerUser = model.triggerUser;
@@ -424,6 +507,14 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * OutputList.
+             */
+            public Builder outputList(java.util.List<OutputList> outputList) {
+                this.outputList = outputList;
+                return this;
+            }
+
+            /**
              * <p>The request parameters of the playbook task.</p>
              * 
              * <strong>example:</strong>
@@ -445,17 +536,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
              */
             public Builder requestUuid(String requestUuid) {
                 this.requestUuid = requestUuid;
-                return this;
-            }
-
-            /**
-             * <p>The return information of the playbook, defined by the user within the playbook.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Playbook finish</p>
-             */
-            public Builder resultMessage(String resultMessage) {
-                this.resultMessage = resultMessage;
                 return this;
             }
 
@@ -494,21 +574,6 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
-                return this;
-            }
-
-            /**
-             * <p>The type of the playbook task, with values:</p>
-             * <ul>
-             * <li><strong>general</strong>: Represents a general playbook task.</li>
-             * <li><strong>standard</strong>: Represents a component execution task.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
-             */
-            public Builder taskType(String taskType) {
-                this.taskType = taskType;
                 return this;
             }
 

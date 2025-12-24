@@ -24,7 +24,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetId")
-    private Integer assetId;
+    private String assetId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentName")
@@ -111,7 +111,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
     /**
      * @return assetId
      */
-    public Integer getAssetId() {
+    public String getAssetId() {
         return this.assetId;
     }
 
@@ -187,7 +187,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunNotifyComponentWithWebhookRequest, Builder> {
         private String actionName; 
-        private Integer assetId; 
+        private String assetId; 
         private String componentName; 
         private String content; 
         private String lang; 
@@ -220,6 +220,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         } 
 
         /**
+         * <p>The name of the action in the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,15 +233,19 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
-         * AssetId.
+         * <p>The ID of the resource. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
-        public Builder assetId(Integer assetId) {
+        public Builder assetId(String assetId) {
             this.putQueryParameter("AssetId", assetId);
             this.assetId = assetId;
             return this;
         }
 
         /**
+         * <p>The name of the component in the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +258,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
+         * <p>The message body sent by the DingTalk group chatbot webhook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +285,14 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -288,6 +301,12 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
+         * <p>The type of the webhook message. Valid values:</p>
+         * <ul>
+         * <li>text.</li>
+         * <li>markdown.</li>
+         * <li>actionCard.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,6 +319,7 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
+         * <p>The name of the node in the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,6 +332,10 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +348,10 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>126339xxxx805497</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -333,7 +360,14 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0 (default): the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts for the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -342,7 +376,10 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
-         * Secret.
+         * <p>The message key of the DingTalk chatbot webhook. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SECc1<em><strong><strong>e157b32b380f</strong></strong></em>***bb8c70e1a67a22072</p>
          */
         public Builder secret(String secret) {
             this.putQueryParameter("Secret", secret);
@@ -351,6 +388,10 @@ public class RunNotifyComponentWithWebhookRequest extends Request {
         }
 
         /**
+         * <p>The IDs of chatbots that are configured in the message center. Only DingTalk chatbots are supported.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListEncryptWebhooks~~">ListEncryptWebhooks</a> operation to query the chatbot IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

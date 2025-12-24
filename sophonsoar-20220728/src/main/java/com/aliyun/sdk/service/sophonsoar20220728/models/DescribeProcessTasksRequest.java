@@ -74,6 +74,10 @@ public class DescribeProcessTasksRequest extends Request {
     private String processStrategyUuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReqUuid")
+    private String reqUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
@@ -117,6 +121,7 @@ public class DescribeProcessTasksRequest extends Request {
         this.processRemoveEnd = builder.processRemoveEnd;
         this.processRemoveStart = builder.processRemoveStart;
         this.processStrategyUuid = builder.processStrategyUuid;
+        this.reqUuid = builder.reqUuid;
         this.sceneCode = builder.sceneCode;
         this.scope = builder.scope;
         this.source = builder.source;
@@ -238,6 +243,13 @@ public class DescribeProcessTasksRequest extends Request {
     }
 
     /**
+     * @return reqUuid
+     */
+    public String getReqUuid() {
+        return this.reqUuid;
+    }
+
+    /**
      * @return sceneCode
      */
     public String getSceneCode() {
@@ -301,6 +313,7 @@ public class DescribeProcessTasksRequest extends Request {
         private Long processRemoveEnd; 
         private Long processRemoveStart; 
         private String processStrategyUuid; 
+        private String reqUuid; 
         private String sceneCode; 
         private String scope; 
         private String source; 
@@ -329,6 +342,7 @@ public class DescribeProcessTasksRequest extends Request {
             this.processRemoveEnd = request.processRemoveEnd;
             this.processRemoveStart = request.processRemoveStart;
             this.processStrategyUuid = request.processStrategyUuid;
+            this.reqUuid = request.reqUuid;
             this.sceneCode = request.sceneCode;
             this.scope = request.scope;
             this.source = request.source;
@@ -341,8 +355,8 @@ public class DescribeProcessTasksRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><strong>desc</strong> (default)</li>
-         * <li><strong>asc</strong></li>
+         * <li><strong>desc</strong> (default).</li>
+         * <li><strong>asc</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -369,9 +383,9 @@ public class DescribeProcessTasksRequest extends Request {
         /**
          * <p>The type of the handling entity. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong></li>
-         * <li><strong>file</strong></li>
-         * <li><strong>process</strong></li>
+         * <li><strong>ip</strong>.</li>
+         * <li><strong>file</strong>.</li>
+         * <li><strong>process</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -384,7 +398,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EntityUuid.
+         * <p>The UUID of the handling entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69d189e2-ec17-4676-a2fe-02969234****</p>
          */
         public Builder entityUuid(String entityUuid) {
             this.putQueryParameter("EntityUuid", entityUuid);
@@ -393,7 +410,10 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * EventUuid.
+         * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1020ce1-d6a5-11e8-8298-00163e10****</p>
          */
         public Builder eventUuid(String eventUuid) {
             this.putQueryParameter("EventUuid", eventUuid);
@@ -519,6 +539,15 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
+         * ReqUuid.
+         */
+        public Builder reqUuid(String reqUuid) {
+            this.putQueryParameter("ReqUuid", reqUuid);
+            this.reqUuid = reqUuid;
+            return this;
+        }
+
+        /**
          * <p>The scenario code of the handling task.</p>
          * <blockquote>
          * <p> You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to query the scenario code of the handling task. This parameter is available when you set <strong>EnumType</strong> to <strong>process</strong>.</p>
@@ -548,11 +577,11 @@ public class DescribeProcessTasksRequest extends Request {
         /**
          * <p>The triggering source of the handling task. The value is a string array. Valid values:</p>
          * <ul>
-         * <li><strong>system</strong>: triggered when you manually handle an event</li>
-         * <li><strong>custom</strong>: triggered by an event based on an automatic response rule</li>
-         * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule</li>
-         * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook</li>
-         * <li><strong>soar-mdr</strong>: triggered by Managed Security Service</li>
+         * <li><strong>system</strong>: triggered when you manually handle an event.</li>
+         * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
+         * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
+         * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
+         * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -582,14 +611,14 @@ public class DescribeProcessTasksRequest extends Request {
         /**
          * <p>The status of the handling task. The value is a string. Valid values:</p>
          * <ul>
-         * <li><strong>11</strong>: being handled</li>
-         * <li><strong>21</strong>: being blocked</li>
-         * <li><strong>22</strong>: being quarantined</li>
-         * <li><strong>23</strong>: completed</li>
-         * <li><strong>24</strong>: added to the whitelist</li>
-         * <li><strong>20</strong>: successful</li>
-         * <li><strong>90</strong>: failed</li>
-         * <li><strong>91</strong>: unblocking failed</li>
+         * <li><strong>11</strong>: being handled.</li>
+         * <li><strong>21</strong>: being blocked.</li>
+         * <li><strong>22</strong>: being quarantined.</li>
+         * <li><strong>23</strong>: completed.</li>
+         * <li><strong>24</strong>: added to the whitelist.</li>
+         * <li><strong>20</strong>: successful.</li>
+         * <li><strong>90</strong>: failed.</li>
+         * <li><strong>91</strong>: unblocking failed.</li>
          * <li><strong>92</strong>: restoring quarantined files failed</li>
          * </ul>
          * 
@@ -603,7 +632,17 @@ public class DescribeProcessTasksRequest extends Request {
         }
 
         /**
-         * TriggerSource.
+         * <p>The triggering source of the handling task. Valid values:</p>
+         * <ul>
+         * <li><strong>system</strong>: triggered when you manually handle an event.</li>
+         * <li><strong>custom</strong>: triggered by an event based on an automatic response rule.</li>
+         * <li><strong>custom_alert</strong>: triggered by an alert based on an automatic response rule.</li>
+         * <li><strong>soar-manual</strong>: triggered when you use SOAR to manually run a playbook.</li>
+         * <li><strong>soar-mdr</strong>: triggered by Managed Security Service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder triggerSource(String triggerSource) {
             this.putQueryParameter("TriggerSource", triggerSource);
@@ -614,9 +653,9 @@ public class DescribeProcessTasksRequest extends Request {
         /**
          * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
          * <ul>
-         * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
-         * <li><strong>CFW</strong>: Cloud Firewall</li>
-         * <li><strong>Aegis</strong>: Security Center</li>
+         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+         * <li><strong>CFW</strong>: Cloud Firewall.</li>
+         * <li><strong>Aegis</strong>: Security Center.</li>
          * </ul>
          * 
          * <strong>example:</strong>

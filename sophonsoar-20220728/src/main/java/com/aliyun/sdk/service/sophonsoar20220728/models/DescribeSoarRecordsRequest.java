@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSoarRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompletedBeginTime")
+    private Long completedBeginTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompletedEndTime")
+    private Long completedEndTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndMillis")
     private Long endMillis;
 
@@ -35,8 +43,11 @@ public class DescribeSoarRecordsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryValue")
+    private String queryValue;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RequestUuid")
@@ -55,20 +66,28 @@ public class DescribeSoarRecordsRequest extends Request {
     private String taskflowMd5;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
+    private String triggerType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TriggerUser")
     private String triggerUser;
 
     private DescribeSoarRecordsRequest(Builder builder) {
         super(builder);
+        this.completedBeginTime = builder.completedBeginTime;
+        this.completedEndTime = builder.completedEndTime;
         this.endMillis = builder.endMillis;
         this.lang = builder.lang;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.playbookUuid = builder.playbookUuid;
+        this.queryValue = builder.queryValue;
         this.requestUuid = builder.requestUuid;
         this.startMillis = builder.startMillis;
         this.taskStatus = builder.taskStatus;
         this.taskflowMd5 = builder.taskflowMd5;
+        this.triggerType = builder.triggerType;
         this.triggerUser = builder.triggerUser;
     }
 
@@ -83,6 +102,20 @@ public class DescribeSoarRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return completedBeginTime
+     */
+    public Long getCompletedBeginTime() {
+        return this.completedBeginTime;
+    }
+
+    /**
+     * @return completedEndTime
+     */
+    public Long getCompletedEndTime() {
+        return this.completedEndTime;
     }
 
     /**
@@ -121,6 +154,13 @@ public class DescribeSoarRecordsRequest extends Request {
     }
 
     /**
+     * @return queryValue
+     */
+    public String getQueryValue() {
+        return this.queryValue;
+    }
+
+    /**
      * @return requestUuid
      */
     public String getRequestUuid() {
@@ -149,6 +189,13 @@ public class DescribeSoarRecordsRequest extends Request {
     }
 
     /**
+     * @return triggerType
+     */
+    public String getTriggerType() {
+        return this.triggerType;
+    }
+
+    /**
      * @return triggerUser
      */
     public String getTriggerUser() {
@@ -156,15 +203,19 @@ public class DescribeSoarRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSoarRecordsRequest, Builder> {
+        private Long completedBeginTime; 
+        private Long completedEndTime; 
         private Long endMillis; 
         private String lang; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String playbookUuid; 
+        private String queryValue; 
         private String requestUuid; 
         private Long startMillis; 
         private String taskStatus; 
         private String taskflowMd5; 
+        private String triggerType; 
         private String triggerUser; 
 
         private Builder() {
@@ -173,17 +224,39 @@ public class DescribeSoarRecordsRequest extends Request {
 
         private Builder(DescribeSoarRecordsRequest request) {
             super(request);
+            this.completedBeginTime = request.completedBeginTime;
+            this.completedEndTime = request.completedEndTime;
             this.endMillis = request.endMillis;
             this.lang = request.lang;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.playbookUuid = request.playbookUuid;
+            this.queryValue = request.queryValue;
             this.requestUuid = request.requestUuid;
             this.startMillis = request.startMillis;
             this.taskStatus = request.taskStatus;
             this.taskflowMd5 = request.taskflowMd5;
+            this.triggerType = request.triggerType;
             this.triggerUser = request.triggerUser;
         } 
+
+        /**
+         * CompletedBeginTime.
+         */
+        public Builder completedBeginTime(Long completedBeginTime) {
+            this.putQueryParameter("CompletedBeginTime", completedBeginTime);
+            this.completedBeginTime = completedBeginTime;
+            return this;
+        }
+
+        /**
+         * CompletedEndTime.
+         */
+        public Builder completedEndTime(Long completedEndTime) {
+            this.putQueryParameter("CompletedEndTime", completedEndTime);
+            this.completedEndTime = completedEndTime;
+            return this;
+        }
 
         /**
          * <p>The end time of the task execution, in 13-digit timestamp format.</p>
@@ -245,7 +318,6 @@ public class DescribeSoarRecordsRequest extends Request {
          * <blockquote>
          * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8f55e76d-b5d5-4720-9cd7-xxxxx</p>
@@ -253,6 +325,15 @@ public class DescribeSoarRecordsRequest extends Request {
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
             this.playbookUuid = playbookUuid;
+            return this;
+        }
+
+        /**
+         * QueryValue.
+         */
+        public Builder queryValue(String queryValue) {
+            this.putQueryParameter("QueryValue", queryValue);
+            this.queryValue = queryValue;
             return this;
         }
 
@@ -309,6 +390,15 @@ public class DescribeSoarRecordsRequest extends Request {
         public Builder taskflowMd5(String taskflowMd5) {
             this.putQueryParameter("TaskflowMd5", taskflowMd5);
             this.taskflowMd5 = taskflowMd5;
+            return this;
+        }
+
+        /**
+         * TriggerType.
+         */
+        public Builder triggerType(String triggerType) {
+            this.putQueryParameter("TriggerType", triggerType);
+            this.triggerType = triggerType;
             return this;
         }
 

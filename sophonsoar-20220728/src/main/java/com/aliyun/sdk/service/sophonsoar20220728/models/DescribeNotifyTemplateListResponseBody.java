@@ -80,7 +80,7 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -96,7 +96,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B3FED5B9-190A-5952-93A4-24FBF0F0C573</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +204,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The body of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dear $aliyunUID : Cloud Security Center Threat Analysis and Response has detected a newly discovered security incident $incidentName(Incident id :$incidentID) in $startTime, Please go to Cloud Security Center Console View.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -209,7 +215,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The ID of the message event corresponding to the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yundun_soar_incident_generate</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -217,7 +226,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The parameters of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;aliyunUID&quot;,&quot;incidentName&quot;,&quot;incidentID&quot;,&quot;startTime&quot;]</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -225,7 +237,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * <p>The title of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Alibaba Cloud Threat Analysis and Response] has detected a newly discovered security incident $incidentName($incidentID)</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -233,7 +248,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>incident generate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -313,7 +331,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -321,7 +342,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -329,7 +353,10 @@ public class DescribeNotifyTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -29,7 +29,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetId")
-    private Integer assetId;
+    private String assetId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelTypeList")
@@ -117,7 +117,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
     /**
      * @return assetId
      */
-    public Integer getAssetId() {
+    public String getAssetId() {
         return this.assetId;
     }
 
@@ -187,7 +187,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
     public static final class Builder extends Request.Builder<RunNotifyComponentWithMessageCenterRequest, Builder> {
         private String actionName; 
         private String aliuid; 
-        private Integer assetId; 
+        private String assetId; 
         private java.util.List<String> channelTypeList; 
         private String componentName; 
         private String eventId; 
@@ -219,6 +219,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         } 
 
         /**
+         * <p>The action name of the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +232,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
+         * <p>The user ID receiving the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,16 +245,19 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
-         * AssetId.
+         * <p>Resource instance ID. This parameter is currently deprecated and no longer in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
-        public Builder assetId(Integer assetId) {
+        public Builder assetId(String assetId) {
             this.putQueryParameter("AssetId", assetId);
             this.assetId = assetId;
             return this;
         }
 
         /**
-         * ChannelTypeList.
+         * <p>Collection of channel types. If not provided, all channels will be used by default, and it is not required to provide this parameter by default.</p>
          */
         public Builder channelTypeList(java.util.List<String> channelTypeList) {
             this.putQueryParameter("ChannelTypeList", channelTypeList);
@@ -261,6 +266,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
+         * <p>The component name of the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,6 +279,12 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
+         * <p>Cloud Pigeon&quot;s message event ID. Values:</p>
+         * <ul>
+         * <li>yundun_soar_incident_generate: Incident generation.</li>
+         * <li>yundun_soar_alert_generate: Alert generation.</li>
+         * <li>yundun_soar_incident_update: Incident update.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +297,14 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for requesting and receiving messages. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -294,6 +313,7 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
+         * <p>The node name of the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +326,15 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>Template parameters for the message event.</p>
+         * <ul>
+         * <li>For incident generation: aliyunUID, incidentName, incidentID, startTime</li>
+         * <li>For alert generation: aliyunUID, alertName, alertID, startTime</li>
+         * <li>For incident update: aliyunUID, incidentName, incidentID, startTime, endTime, status, level</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;startTime&quot;:&quot;test222&quot;,&quot;incidentName&quot;:&quot;test123&quot;,&quot;incidentID&quot;:&quot;teset123&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -315,6 +343,10 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +359,10 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The user ID when an administrator switches to another member&quot;s perspective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1467894xxx733152</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -336,7 +371,14 @@ public class RunNotifyComponentWithMessageCenterRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>View type. Values:</p>
+         * <ul>
+         * <li>0 (default): Current Alibaba Cloud account view.</li>
+         * <li>1: View for all accounts under the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

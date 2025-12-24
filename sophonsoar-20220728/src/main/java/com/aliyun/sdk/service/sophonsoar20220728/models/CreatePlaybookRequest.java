@@ -27,8 +27,16 @@ public class CreatePlaybookRequest extends Request {
     private String displayName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParams")
+    private String inputParams;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputParams")
+    private String outputParams;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskflowType")
@@ -38,7 +46,9 @@ public class CreatePlaybookRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.displayName = builder.displayName;
+        this.inputParams = builder.inputParams;
         this.lang = builder.lang;
+        this.outputParams = builder.outputParams;
         this.taskflowType = builder.taskflowType;
     }
 
@@ -70,10 +80,24 @@ public class CreatePlaybookRequest extends Request {
     }
 
     /**
+     * @return inputParams
+     */
+    public String getInputParams() {
+        return this.inputParams;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return outputParams
+     */
+    public String getOutputParams() {
+        return this.outputParams;
     }
 
     /**
@@ -86,7 +110,9 @@ public class CreatePlaybookRequest extends Request {
     public static final class Builder extends Request.Builder<CreatePlaybookRequest, Builder> {
         private String description; 
         private String displayName; 
+        private String inputParams; 
         private String lang; 
+        private String outputParams; 
         private String taskflowType; 
 
         private Builder() {
@@ -97,7 +123,9 @@ public class CreatePlaybookRequest extends Request {
             super(request);
             this.description = request.description;
             this.displayName = request.displayName;
+            this.inputParams = request.inputParams;
             this.lang = request.lang;
+            this.outputParams = request.outputParams;
             this.taskflowType = request.taskflowType;
         } 
 
@@ -127,6 +155,15 @@ public class CreatePlaybookRequest extends Request {
         }
 
         /**
+         * InputParams.
+         */
+        public Builder inputParams(String inputParams) {
+            this.putBodyParameter("InputParams", inputParams);
+            this.inputParams = inputParams;
+            return this;
+        }
+
+        /**
          * <p>Language type for receiving messages. Values:</p>
          * <ul>
          * <li><strong>zh</strong> (default): Chinese</li>
@@ -139,6 +176,15 @@ public class CreatePlaybookRequest extends Request {
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * OutputParams.
+         */
+        public Builder outputParams(String outputParams) {
+            this.putBodyParameter("OutputParams", outputParams);
+            this.outputParams = outputParams;
             return this;
         }
 

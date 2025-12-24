@@ -63,7 +63,7 @@ public class DescribePlaybooksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sort")
-    private String sort;
+    private Integer sort;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartMillis")
@@ -179,7 +179,7 @@ public class DescribePlaybooksRequest extends Request {
     /**
      * @return sort
      */
-    public String getSort() {
+    public Integer getSort() {
         return this.sort;
     }
 
@@ -202,7 +202,7 @@ public class DescribePlaybooksRequest extends Request {
         private String paramTypes; 
         private String playbookUuid; 
         private String playbookUuids; 
-        private String sort; 
+        private Integer sort; 
         private Long startMillis; 
 
         private Builder() {
@@ -369,7 +369,7 @@ public class DescribePlaybooksRequest extends Request {
          * <blockquote>
          * <p>You can use the UUID to query specific playbook information.</p>
          * <ul>
-         * <li>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> API to obtain this parameter.</li>
+         * <li>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> API to obtain this parameter.</li>
          * </ul>
          * </blockquote>
          * 
@@ -406,7 +406,7 @@ public class DescribePlaybooksRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder sort(String sort) {
+        public Builder sort(Integer sort) {
             this.putQueryParameter("Sort", sort);
             this.sort = sort;
             return this;

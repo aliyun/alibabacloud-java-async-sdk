@@ -67,7 +67,7 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Metrics.
+         * <p>The data returned.</p>
          */
         public Builder metrics(Metrics metrics) {
             this.metrics = metrics;
@@ -75,7 +75,10 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CFC0F8A-D600-5FFF-A0DF-3121C4C1B90F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * BanFileNum.
+             * <p>The number of blocked files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder banFileNum(Integer banFileNum) {
                 this.banFileNum = banFileNum;
@@ -175,7 +181,10 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * BanIpNum.
+             * <p>The number of blocked IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder banIpNum(Integer banIpNum) {
                 this.banIpNum = banIpNum;
@@ -183,7 +192,10 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * BanProcessNum.
+             * <p>The number of blocked processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder banProcessNum(Integer banProcessNum) {
                 this.banProcessNum = banProcessNum;
@@ -191,7 +203,10 @@ public class DescribeProcessStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskNum.
+             * <p>The number of handling tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskNum(Integer taskNum) {
                 this.taskNum = taskNum;

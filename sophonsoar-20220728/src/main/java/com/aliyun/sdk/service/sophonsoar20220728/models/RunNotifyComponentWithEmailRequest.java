@@ -24,8 +24,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Integer assetId;
+    private String assetId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentName")
@@ -107,7 +106,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
     /**
      * @return assetId
      */
-    public Integer getAssetId() {
+    public String getAssetId() {
         return this.assetId;
     }
 
@@ -176,7 +175,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunNotifyComponentWithEmailRequest, Builder> {
         private String actionName; 
-        private Integer assetId; 
+        private String assetId; 
         private String componentName; 
         private String content; 
         private String lang; 
@@ -207,6 +206,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         } 
 
         /**
+         * <p>The action name of the component.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,18 +219,22 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The resource instance ID of the email sender.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
          */
-        public Builder assetId(Integer assetId) {
+        public Builder assetId(String assetId) {
             this.putQueryParameter("AssetId", assetId);
             this.assetId = assetId;
             return this;
         }
 
         /**
+         * <p>The name of component in the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +247,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
+         * <p>The body of the email.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +260,14 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid value:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -264,6 +276,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
+         * <p>The name of the node in the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +289,10 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the playbook.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +305,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
+         * <p>The email addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder receivers(java.util.List<String> receivers) {
@@ -297,7 +315,10 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137602xxx718726</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -306,7 +327,14 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts for the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -315,6 +343,7 @@ public class RunNotifyComponentWithEmailRequest extends Request {
         }
 
         /**
+         * <p>The subject of the email.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

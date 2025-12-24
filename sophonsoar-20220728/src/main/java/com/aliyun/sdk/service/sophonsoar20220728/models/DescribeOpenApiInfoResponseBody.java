@@ -67,7 +67,7 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>358E012F-B516-599D-9ED0-A1A361CDE615</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeEcs</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -201,7 +207,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InputParams.
+             * <p>The input parameters of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
@@ -209,7 +218,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputParams.
+             * <p>The output parameters of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder outputParams(String outputParams) {
                 this.outputParams = outputParams;
@@ -217,7 +229,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseDemo.
+             * <p>The sample response parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder responseDemo(String responseDemo) {
                 this.responseDemo = responseDemo;
@@ -225,7 +240,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeEcs</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -233,7 +251,10 @@ public class DescribeOpenApiInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describeEcs</p>
              */
             public Builder title(String title) {
                 this.title = title;

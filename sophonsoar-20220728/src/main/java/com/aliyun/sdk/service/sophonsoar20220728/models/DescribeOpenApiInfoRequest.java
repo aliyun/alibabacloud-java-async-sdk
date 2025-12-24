@@ -132,6 +132,7 @@ public class DescribeOpenApiInfoRequest extends Request {
         } 
 
         /**
+         * <p>The operation that you want to perform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,10 @@ public class DescribeOpenApiInfoRequest extends Request {
         }
 
         /**
+         * <p>The version number of the API.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> operation to query version numbers.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +161,14 @@ public class DescribeOpenApiInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,6 +177,7 @@ public class DescribeOpenApiInfoRequest extends Request {
         }
 
         /**
+         * <p>The POP code of the Alibaba Cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +190,10 @@ public class DescribeOpenApiInfoRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592757xxx002956</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -186,7 +202,14 @@ public class DescribeOpenApiInfoRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0 (default): the view of the current Alibaba Cloud account.</li>
+         * <li>1: the view of all accounts for the enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

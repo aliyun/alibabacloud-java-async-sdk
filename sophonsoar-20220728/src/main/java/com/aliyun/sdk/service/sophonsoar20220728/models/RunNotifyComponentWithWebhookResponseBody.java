@@ -80,7 +80,10 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -88,7 +91,7 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -96,7 +99,10 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7698CFB-****-5840-8EC9-691B86729E94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +181,10 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -183,7 +192,10 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -191,7 +203,10 @@ public class RunNotifyComponentWithWebhookResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

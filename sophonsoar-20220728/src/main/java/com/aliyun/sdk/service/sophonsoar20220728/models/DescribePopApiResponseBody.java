@@ -182,6 +182,9 @@ public class DescribePopApiResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
+        @com.aliyun.core.annotation.NameInMap("Style")
+        private String style;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -190,6 +193,7 @@ public class DescribePopApiResponseBody extends TeaModel {
             this.exampleValue = builder.exampleValue;
             this.name = builder.name;
             this.required = builder.required;
+            this.style = builder.style;
             this.type = builder.type;
         }
 
@@ -230,6 +234,13 @@ public class DescribePopApiResponseBody extends TeaModel {
         }
 
         /**
+         * @return style
+         */
+        public String getStyle() {
+            return this.style;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -241,6 +252,7 @@ public class DescribePopApiResponseBody extends TeaModel {
             private String exampleValue; 
             private String name; 
             private Boolean required; 
+            private String style; 
             private String type; 
 
             private Builder() {
@@ -251,6 +263,7 @@ public class DescribePopApiResponseBody extends TeaModel {
                 this.exampleValue = model.exampleValue;
                 this.name = model.name;
                 this.required = model.required;
+                this.style = model.style;
                 this.type = model.type;
             } 
 
@@ -299,6 +312,14 @@ public class DescribePopApiResponseBody extends TeaModel {
              */
             public Builder required(Boolean required) {
                 this.required = required;
+                return this;
+            }
+
+            /**
+             * Style.
+             */
+            public Builder style(String style) {
+                this.style = style;
                 return this;
             }
 

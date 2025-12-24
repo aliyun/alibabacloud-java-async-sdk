@@ -20,11 +20,15 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckTaskInfos")
     private java.util.List<CheckTaskInfos> checkTaskInfos;
 
+    @com.aliyun.core.annotation.NameInMap("Prerequisites")
+    private java.util.List<Prerequisites> prerequisites;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyPlaybookResponseBody(Builder builder) {
         this.checkTaskInfos = builder.checkTaskInfos;
+        this.prerequisites = builder.prerequisites;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     }
 
     /**
+     * @return prerequisites
+     */
+    public java.util.List<Prerequisites> getPrerequisites() {
+        return this.prerequisites;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<CheckTaskInfos> checkTaskInfos; 
+        private java.util.List<Prerequisites> prerequisites; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
         private Builder(VerifyPlaybookResponseBody model) {
             this.checkTaskInfos = model.checkTaskInfos;
+            this.prerequisites = model.prerequisites;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class VerifyPlaybookResponseBody extends TeaModel {
          */
         public Builder checkTaskInfos(java.util.List<CheckTaskInfos> checkTaskInfos) {
             this.checkTaskInfos = checkTaskInfos;
+            return this;
+        }
+
+        /**
+         * Prerequisites.
+         */
+        public Builder prerequisites(java.util.List<Prerequisites> prerequisites) {
+            this.prerequisites = prerequisites;
             return this;
         }
 
@@ -196,6 +217,81 @@ public class VerifyPlaybookResponseBody extends TeaModel {
 
             public CheckTaskInfos build() {
                 return new CheckTaskInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VerifyPlaybookResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyPlaybookResponseBody</p>
+     */
+    public static class Prerequisites extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PrerequisiteType")
+        private String prerequisiteType;
+
+        @com.aliyun.core.annotation.NameInMap("PrerequisiteValue")
+        private String prerequisiteValue;
+
+        private Prerequisites(Builder builder) {
+            this.prerequisiteType = builder.prerequisiteType;
+            this.prerequisiteValue = builder.prerequisiteValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Prerequisites create() {
+            return builder().build();
+        }
+
+        /**
+         * @return prerequisiteType
+         */
+        public String getPrerequisiteType() {
+            return this.prerequisiteType;
+        }
+
+        /**
+         * @return prerequisiteValue
+         */
+        public String getPrerequisiteValue() {
+            return this.prerequisiteValue;
+        }
+
+        public static final class Builder {
+            private String prerequisiteType; 
+            private String prerequisiteValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Prerequisites model) {
+                this.prerequisiteType = model.prerequisiteType;
+                this.prerequisiteValue = model.prerequisiteValue;
+            } 
+
+            /**
+             * PrerequisiteType.
+             */
+            public Builder prerequisiteType(String prerequisiteType) {
+                this.prerequisiteType = prerequisiteType;
+                return this;
+            }
+
+            /**
+             * PrerequisiteValue.
+             */
+            public Builder prerequisiteValue(String prerequisiteValue) {
+                this.prerequisiteValue = prerequisiteValue;
+                return this;
+            }
+
+            public Prerequisites build() {
+                return new Prerequisites(this);
             } 
 
         } 

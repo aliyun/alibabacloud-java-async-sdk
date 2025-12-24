@@ -67,7 +67,7 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,14 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The response code. Valid values:</p>
+             * <ul>
+             * <li>200: successful.</li>
+             * <li>500: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -162,7 +172,10 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
             }
 
             /**
-             * Directories.
+             * <p>The information about the returned APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;apis&quot;:[{&quot;summary&quot;:&quot;get account information&quot;,&quot;deprecated&quot;:false,&quot;name&quot;:&quot;DescAccountSummary&quot;,&quot;title&quot;:&quot;get account information&quot;}],&quot;childrens&quot;:[],&quot;title&quot;:&quot;account&quot;}]</p>
              */
             public Builder directories(Object directories) {
                 this.directories = directories;
@@ -170,7 +183,10 @@ public class DescribeOpenApiListResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-03</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -80,7 +80,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The information about the groups.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * Page.
+         * <p>The pagination information.</p>
          */
         public Builder page(Page page) {
             this.page = page;
@@ -96,7 +96,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>358E012F-****-599D-9ED0-****61CDE615</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +165,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyName.
+             * <p>The name of the RAM policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunRAMReadOnlyAccess</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -170,7 +176,14 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the RAM policy. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: permissions.</li>
+             * <li><strong>Read-only</strong>: permissions.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -367,7 +380,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DM</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -375,7 +391,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultDomain.
+             * <p>The default requested domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm.aliyuncs.com</p>
              */
             public Builder defaultDomain(String defaultDomain) {
                 this.defaultDomain = defaultDomain;
@@ -383,7 +402,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-15</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -391,7 +413,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DM</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,7 +424,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * FullDomains.
+             * <p>The requested domain names.</p>
              */
             public Builder fullDomains(java.util.List<String> fullDomains) {
                 this.fullDomains = fullDomains;
@@ -407,7 +432,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Communication</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -415,7 +443,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DirectMail</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,7 +454,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyList.
+             * <p>The RAM policies of the cloud service.</p>
              */
             public Builder policyList(java.util.List<PolicyList> policyList) {
                 this.policyList = policyList;
@@ -431,7 +462,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * RamCode.
+             * <p>The Resource Access Management (RAM) code of the POP to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm</p>
              */
             public Builder ramCode(String ramCode) {
                 this.ramCode = ramCode;
@@ -439,7 +473,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * ShortName.
+             * <p>The short name of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DM</p>
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
@@ -447,7 +484,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The information source of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>next</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -455,7 +495,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The API versions.</p>
              */
             public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;
@@ -522,7 +562,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The name of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Communication</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -530,7 +573,7 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * Productions.
+             * <p>The information about the cloud services.</p>
              */
             public Builder productions(java.util.List<Productions> productions) {
                 this.productions = productions;
@@ -610,7 +653,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -618,7 +664,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -626,7 +675,10 @@ public class DescribeGroupProductionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

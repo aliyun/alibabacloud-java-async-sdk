@@ -129,7 +129,10 @@ public class DescribeVendorApiListRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * <p>The name of the Alibaba Cloud product interface, supporting fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddAssetCleanConfig</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -138,7 +141,10 @@ public class DescribeVendorApiListRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>Keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -147,7 +153,10 @@ public class DescribeVendorApiListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number for pagination. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +165,10 @@ public class DescribeVendorApiListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page when displaying paginated results. The default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +177,14 @@ public class DescribeVendorApiListRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>Vendor&quot;s product identifier:</p>
+         * <ul>
+         * <li><strong>waf</strong>: Web Application Firewall.</li>
+         * <li><strong>cfw</strong>: Cloud Firewall.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -174,7 +193,17 @@ public class DescribeVendorApiListRequest extends Request {
         }
 
         /**
-         * VendorCode.
+         * <p>Vendor code:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei.</li>
+         * <li><strong>Azure</strong>: Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Amazon Web Services.</li>
+         * <li><strong>Chaitin</strong>: Chaitin.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Azure</p>
          */
         public Builder vendorCode(String vendorCode) {
             this.putQueryParameter("VendorCode", vendorCode);

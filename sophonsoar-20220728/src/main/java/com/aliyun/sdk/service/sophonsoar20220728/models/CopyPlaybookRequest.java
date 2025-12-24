@@ -145,7 +145,10 @@ public class CopyPlaybookRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>playbook description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -154,6 +157,7 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
+         * <p>The display name of the playbook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +170,14 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default).</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -175,7 +186,14 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
-         * ReleaseVersion.
+         * <p>The release version of the playbook that you want to copy. Default value: 0. Valid values:</p>
+         * <ul>
+         * <li>-1: The version that is being edited.</li>
+         * <li>0: The latest online version of the current playbook.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("ReleaseVersion", releaseVersion);
@@ -184,7 +202,10 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * <p>The ID of the user who switches from the current view to the destination view by using the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137602*****718726</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putQueryParameter("RoleFor", roleFor);
@@ -193,7 +214,14 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): the view of the current account.</li>
+         * <li><strong>1</strong>: the view of the global account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -202,6 +230,10 @@ public class CopyPlaybookRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the playbook that you want to copy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

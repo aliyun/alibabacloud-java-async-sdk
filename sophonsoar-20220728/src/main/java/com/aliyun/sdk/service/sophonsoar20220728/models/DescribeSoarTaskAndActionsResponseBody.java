@@ -20,11 +20,15 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Details")
     private Details details;
 
+    @com.aliyun.core.annotation.NameInMap("Page")
+    private Page page;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSoarTaskAndActionsResponseBody(Builder builder) {
         this.details = builder.details;
+        this.page = builder.page;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     }
 
     /**
+     * @return page
+     */
+    public Page getPage() {
+        return this.page;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Details details; 
+        private Page page; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
         private Builder(DescribeSoarTaskAndActionsResponseBody model) {
             this.details = model.details;
+            this.page = model.page;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
          */
         public Builder details(Details details) {
             this.details = details;
+            return this;
+        }
+
+        /**
+         * Page.
+         */
+        public Builder page(Page page) {
+            this.page = page;
             return this;
         }
 
@@ -116,23 +137,11 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @com.aliyun.core.annotation.NameInMap("RequestUuid")
-        private String requestUuid;
-
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
-
-        @com.aliyun.core.annotation.NameInMap("TaskName")
-        private String taskName;
-
-        @com.aliyun.core.annotation.NameInMap("TaskStatus")
-        private String taskStatus;
-
-        @com.aliyun.core.annotation.NameInMap("TriggerUser")
-        private String triggerUser;
 
         private Actions(Builder builder) {
             this.action = builder.action;
@@ -141,12 +150,8 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             this.component = builder.component;
             this.endTime = builder.endTime;
             this.nodeName = builder.nodeName;
-            this.requestUuid = builder.requestUuid;
             this.startTime = builder.startTime;
             this.status = builder.status;
-            this.taskName = builder.taskName;
-            this.taskStatus = builder.taskStatus;
-            this.triggerUser = builder.triggerUser;
         }
 
         public static Builder builder() {
@@ -200,13 +205,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return requestUuid
-         */
-        public String getRequestUuid() {
-            return this.requestUuid;
-        }
-
-        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -220,27 +218,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             return this.status;
         }
 
-        /**
-         * @return taskName
-         */
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        /**
-         * @return taskStatus
-         */
-        public String getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        /**
-         * @return triggerUser
-         */
-        public String getTriggerUser() {
-            return this.triggerUser;
-        }
-
         public static final class Builder {
             private String action; 
             private String actionUuid; 
@@ -248,12 +225,8 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             private String component; 
             private Long endTime; 
             private String nodeName; 
-            private String requestUuid; 
             private Long startTime; 
             private String status; 
-            private String taskName; 
-            private String taskStatus; 
-            private String triggerUser; 
 
             private Builder() {
             } 
@@ -265,12 +238,8 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
                 this.component = model.component;
                 this.endTime = model.endTime;
                 this.nodeName = model.nodeName;
-                this.requestUuid = model.requestUuid;
                 this.startTime = model.startTime;
                 this.status = model.status;
-                this.taskName = model.taskName;
-                this.taskStatus = model.taskStatus;
-                this.triggerUser = model.triggerUser;
             } 
 
             /**
@@ -340,17 +309,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request ID of the task. The value is unique.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8dac16c6-7411-4116-8d70-xxxxxxx</p>
-             */
-            public Builder requestUuid(String requestUuid) {
-                this.requestUuid = requestUuid;
-                return this;
-            }
-
-            /**
              * <p>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</p>
              * 
              * <strong>example:</strong>
@@ -376,42 +334,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
                 return this;
             }
 
-            /**
-             * <p>The name of the task. The value is the same as the playbook UUID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ed127287-6699-4e4d-b986-xxxxxxx</p>
-             */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
-                return this;
-            }
-
-            /**
-             * <p>The status of the triggered component action.</p>
-             * <blockquote>
-             * <p> This parameter is disabled and left empty.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>NULL</p>
-             */
-            public Builder taskStatus(String taskStatus) {
-                this.taskStatus = taskStatus;
-                return this;
-            }
-
-            /**
-             * <p>The ID of the Alibaba Cloud account that is used to execute the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127xxxx4392</p>
-             */
-            public Builder triggerUser(String triggerUser) {
-                this.triggerUser = triggerUser;
-                return this;
-            }
-
             public Actions build() {
                 return new Actions(this);
             } 
@@ -426,6 +348,9 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
      * <p>DescribeSoarTaskAndActionsResponseBody</p>
      */
     public static class Details extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActionLogNum")
+        private Integer actionLogNum;
+
         @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List<Actions> actions;
 
@@ -441,12 +366,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
 
-        @com.aliyun.core.annotation.NameInMap("ResultLevel")
-        private String resultLevel;
-
-        @com.aliyun.core.annotation.NameInMap("ResultMessage")
-        private String resultMessage;
-
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
@@ -459,9 +378,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @com.aliyun.core.annotation.NameInMap("TaskTenantId")
-        private String taskTenantId;
-
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
@@ -469,18 +385,16 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         private String triggerUser;
 
         private Details(Builder builder) {
+            this.actionLogNum = builder.actionLogNum;
             this.actions = builder.actions;
             this.endTime = builder.endTime;
             this.errorMsg = builder.errorMsg;
             this.rawEventReq = builder.rawEventReq;
             this.requestUuid = builder.requestUuid;
-            this.resultLevel = builder.resultLevel;
-            this.resultMessage = builder.resultMessage;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskFlowMd5 = builder.taskFlowMd5;
             this.taskName = builder.taskName;
-            this.taskTenantId = builder.taskTenantId;
             this.triggerType = builder.triggerType;
             this.triggerUser = builder.triggerUser;
         }
@@ -491,6 +405,13 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
         public static Details create() {
             return builder().build();
+        }
+
+        /**
+         * @return actionLogNum
+         */
+        public Integer getActionLogNum() {
+            return this.actionLogNum;
         }
 
         /**
@@ -529,20 +450,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return resultLevel
-         */
-        public String getResultLevel() {
-            return this.resultLevel;
-        }
-
-        /**
-         * @return resultMessage
-         */
-        public String getResultMessage() {
-            return this.resultMessage;
-        }
-
-        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -571,13 +478,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskTenantId
-         */
-        public String getTaskTenantId() {
-            return this.taskTenantId;
-        }
-
-        /**
          * @return triggerType
          */
         public String getTriggerType() {
@@ -592,18 +492,16 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer actionLogNum; 
             private java.util.List<Actions> actions; 
             private Long endTime; 
             private String errorMsg; 
             private String rawEventReq; 
             private String requestUuid; 
-            private String resultLevel; 
-            private String resultMessage; 
             private Long startTime; 
             private String status; 
             private String taskFlowMd5; 
             private String taskName; 
-            private String taskTenantId; 
             private String triggerType; 
             private String triggerUser; 
 
@@ -611,21 +509,27 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             } 
 
             private Builder(Details model) {
+                this.actionLogNum = model.actionLogNum;
                 this.actions = model.actions;
                 this.endTime = model.endTime;
                 this.errorMsg = model.errorMsg;
                 this.rawEventReq = model.rawEventReq;
                 this.requestUuid = model.requestUuid;
-                this.resultLevel = model.resultLevel;
-                this.resultMessage = model.resultMessage;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskFlowMd5 = model.taskFlowMd5;
                 this.taskName = model.taskName;
-                this.taskTenantId = model.taskTenantId;
                 this.triggerType = model.triggerType;
                 this.triggerUser = model.triggerUser;
             } 
+
+            /**
+             * ActionLogNum.
+             */
+            public Builder actionLogNum(Integer actionLogNum) {
+                this.actionLogNum = actionLogNum;
+                return this;
+            }
 
             /**
              * <p>The list of component actions during the running of the playbook.</p>
@@ -683,28 +587,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The flag of the task. For debugging tasks, the value is <strong>DEBUG</strong>. For other tasks, the parameter is left empty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DEBUG</p>
-             */
-            public Builder resultLevel(String resultLevel) {
-                this.resultLevel = resultLevel;
-                return this;
-            }
-
-            /**
-             * <p>The returned information about the playbook. You can define the value in the playbook.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>deubug playbook finished</p>
-             */
-            public Builder resultMessage(String resultMessage) {
-                this.resultMessage = resultMessage;
-                return this;
-            }
-
-            /**
              * <p>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</p>
              * 
              * <strong>example:</strong>
@@ -754,17 +636,6 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the task belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127xxxx4392</p>
-             */
-            public Builder taskTenantId(String taskTenantId) {
-                this.taskTenantId = taskTenantId;
-                return this;
-            }
-
-            /**
              * <p>The task type. Valid values:</p>
              * <ul>
              * <li><strong>debug</strong>: a debugging task</li>
@@ -793,6 +664,102 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
             public Details build() {
                 return new Details(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSoarTaskAndActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarTaskAndActionsResponseBody</p>
+     */
+    public static class Page extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private String pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private String pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private String totalCount;
+
+        private Page(Builder builder) {
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Page create() {
+            return builder().build();
+        }
+
+        /**
+         * @return pageNumber
+         */
+        public String getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public String getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public String getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private String pageNumber; 
+            private String pageSize; 
+            private String totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(String pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(String pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(String totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public Page build() {
+                return new Page(this);
             } 
 
         } 

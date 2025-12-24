@@ -20,12 +20,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of BatchModifyInstanceStatus  BatchModifyInstanceStatusRequest
-     * @return BatchModifyInstanceStatusResponse
-     */
-    CompletableFuture<BatchModifyInstanceStatusResponse> batchModifyInstanceStatus(BatchModifyInstanceStatusRequest request);
-
-    /**
      * @param request the request parameters of ComparePlaybooks  ComparePlaybooksRequest
      * @return ComparePlaybooksResponse
      */
@@ -41,6 +35,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConvertPlaybookResponse> convertPlaybook(ConvertPlaybookRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of CopyPlaybook  CopyPlaybookRequest
      * @return CopyPlaybookResponse
      */
@@ -128,6 +125,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFieldResponse> describeField(DescribeFieldRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeGroupProductions  DescribeGroupProductionsRequest
      * @return DescribeGroupProductionsResponse
      */
@@ -146,24 +146,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNodeParamTagsResponse> describeNodeParamTags(DescribeNodeParamTagsRequest request);
 
     /**
-     * @param request the request parameters of DescribeNodeUsedInfos  DescribeNodeUsedInfosRequest
-     * @return DescribeNodeUsedInfosResponse
-     */
-    CompletableFuture<DescribeNodeUsedInfosResponse> describeNodeUsedInfos(DescribeNodeUsedInfosRequest request);
-
-    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeNotifyTemplateList  DescribeNotifyTemplateListRequest
      * @return DescribeNotifyTemplateListResponse
      */
     CompletableFuture<DescribeNotifyTemplateListResponse> describeNotifyTemplateList(DescribeNotifyTemplateListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenApiInfo  DescribeOpenApiInfoRequest
      * @return DescribeOpenApiInfoResponse
      */
     CompletableFuture<DescribeOpenApiInfoResponse> describeOpenApiInfo(DescribeOpenApiInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeOpenApiList  DescribeOpenApiListRequest
      * @return DescribeOpenApiListResponse
      */
@@ -218,12 +221,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePopApiResponse> describePopApi(DescribePopApiRequest request);
 
     /**
-     * @param request the request parameters of DescribePopApiItemList  DescribePopApiItemListRequest
-     * @return DescribePopApiItemListResponse
-     */
-    CompletableFuture<DescribePopApiItemListResponse> describePopApiItemList(DescribePopApiItemListRequest request);
-
-    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeProcessStatistics  DescribeProcessStatisticsRequest
      * @return DescribeProcessStatisticsResponse
      */
@@ -236,6 +236,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeProcessTaskCountResponse> describeProcessTaskCount(DescribeProcessTaskCountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of DescribeProcessTasks  DescribeProcessTasksRequest
      * @return DescribeProcessTasksResponse
      */
@@ -272,6 +275,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSophonCommandsResponse> describeSophonCommands(DescribeSophonCommandsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., threat analysis and response log access traffic) before using this interface.</p>
+     * 
      * @param request the request parameters of DescribeVendorApiList  DescribeVendorApiListRequest
      * @return DescribeVendorApiListResponse
      */
@@ -302,12 +308,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPlaybookInputOutputResponse> modifyPlaybookInputOutput(ModifyPlaybookInputOutputRequest request);
 
     /**
-     * @param request the request parameters of ModifyPlaybookInstanceStatus  ModifyPlaybookInstanceStatusRequest
-     * @return ModifyPlaybookInstanceStatusResponse
-     */
-    CompletableFuture<ModifyPlaybookInstanceStatusResponse> modifyPlaybookInstanceStatus(ModifyPlaybookInstanceStatusRequest request);
-
-    /**
      * @param request the request parameters of PublishPlaybook  PublishPlaybookRequest
      * @return PublishPlaybookResponse
      */
@@ -320,30 +320,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryTreeDataResponse> queryTreeData(QueryTreeDataRequest request);
 
     /**
-     * @param request the request parameters of RenamePlaybookNode  RenamePlaybookNodeRequest
-     * @return RenamePlaybookNodeResponse
-     */
-    CompletableFuture<RenamePlaybookNodeResponse> renamePlaybookNode(RenamePlaybookNodeRequest request);
-
-    /**
      * @param request the request parameters of RevertPlaybookRelease  RevertPlaybookReleaseRequest
      * @return RevertPlaybookReleaseResponse
      */
     CompletableFuture<RevertPlaybookReleaseResponse> revertPlaybookRelease(RevertPlaybookReleaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithEmail  RunNotifyComponentWithEmailRequest
      * @return RunNotifyComponentWithEmailResponse
      */
     CompletableFuture<RunNotifyComponentWithEmailResponse> runNotifyComponentWithEmail(RunNotifyComponentWithEmailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithMessageCenter  RunNotifyComponentWithMessageCenterRequest
      * @return RunNotifyComponentWithMessageCenterResponse
      */
     CompletableFuture<RunNotifyComponentWithMessageCenterResponse> runNotifyComponentWithMessageCenter(RunNotifyComponentWithMessageCenterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</p>
+     * 
      * @param request the request parameters of RunNotifyComponentWithWebhook  RunNotifyComponentWithWebhookRequest
      * @return RunNotifyComponentWithWebhookResponse
      */

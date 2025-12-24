@@ -227,6 +227,9 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Integer active;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
@@ -248,8 +251,12 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
         private Playbooks(Builder builder) {
             this.active = builder.active;
+            this.description = builder.description;
             this.displayName = builder.displayName;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -257,6 +264,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             this.ownType = builder.ownType;
             this.paramType = builder.paramType;
             this.playbookUuid = builder.playbookUuid;
+            this.tenantId = builder.tenantId;
         }
 
         public static Builder builder() {
@@ -272,6 +280,13 @@ public class DescribePlaybooksResponseBody extends TeaModel {
          */
         public Integer getActive() {
             return this.active;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -323,8 +338,16 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             return this.playbookUuid;
         }
 
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
         public static final class Builder {
             private Integer active; 
+            private String description; 
             private String displayName; 
             private Long gmtCreate; 
             private String gmtModified; 
@@ -332,12 +355,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private String ownType; 
             private String paramType; 
             private String playbookUuid; 
+            private String tenantId; 
 
             private Builder() {
             } 
 
             private Builder(Playbooks model) {
                 this.active = model.active;
+                this.description = model.description;
                 this.displayName = model.displayName;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
@@ -345,6 +370,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
                 this.ownType = model.ownType;
                 this.paramType = model.paramType;
                 this.playbookUuid = model.playbookUuid;
+                this.tenantId = model.tenantId;
             } 
 
             /**
@@ -359,6 +385,17 @@ public class DescribePlaybooksResponseBody extends TeaModel {
              */
             public Builder active(Integer active) {
                 this.active = active;
+                return this;
+            }
+
+            /**
+             * <p>The description of the playbook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis_kill_process</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -450,6 +487,17 @@ public class DescribePlaybooksResponseBody extends TeaModel {
              */
             public Builder playbookUuid(String playbookUuid) {
                 this.playbookUuid = playbookUuid;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>296004</p>
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
                 return this;
             }
 

@@ -107,10 +107,14 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InputParams")
         private String inputParams;
 
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
         private Playbooks(Builder builder) {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.inputParams = builder.inputParams;
+            this.paramType = builder.paramType;
         }
 
         public static Builder builder() {
@@ -142,10 +146,18 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
             return this.inputParams;
         }
 
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
         public static final class Builder {
             private String description; 
             private String displayName; 
             private String inputParams; 
+            private String paramType; 
 
             private Builder() {
             } 
@@ -154,6 +166,7 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
                 this.description = model.description;
                 this.displayName = model.displayName;
                 this.inputParams = model.inputParams;
+                this.paramType = model.paramType;
             } 
 
             /**
@@ -199,6 +212,14 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
              */
             public Builder inputParams(String inputParams) {
                 this.inputParams = inputParams;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
                 return this;
             }
 

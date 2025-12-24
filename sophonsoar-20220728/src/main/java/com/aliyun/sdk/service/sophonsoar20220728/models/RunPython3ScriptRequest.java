@@ -33,12 +33,17 @@ public class RunPython3ScriptRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PythonScript")
     private String pythonScript;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PythonVersion")
+    private String pythonVersion;
+
     private RunPython3ScriptRequest(Builder builder) {
         super(builder);
         this.nodeName = builder.nodeName;
         this.params = builder.params;
         this.playbookUuid = builder.playbookUuid;
         this.pythonScript = builder.pythonScript;
+        this.pythonVersion = builder.pythonVersion;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class RunPython3ScriptRequest extends Request {
         return this.pythonScript;
     }
 
+    /**
+     * @return pythonVersion
+     */
+    public String getPythonVersion() {
+        return this.pythonVersion;
+    }
+
     public static final class Builder extends Request.Builder<RunPython3ScriptRequest, Builder> {
         private String nodeName; 
         private String params; 
         private String playbookUuid; 
         private String pythonScript; 
+        private String pythonVersion; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class RunPython3ScriptRequest extends Request {
             this.params = request.params;
             this.playbookUuid = request.playbookUuid;
             this.pythonScript = request.pythonScript;
+            this.pythonVersion = request.pythonVersion;
         } 
 
         /**
@@ -158,6 +172,15 @@ public class RunPython3ScriptRequest extends Request {
         public Builder pythonScript(String pythonScript) {
             this.putBodyParameter("PythonScript", pythonScript);
             this.pythonScript = pythonScript;
+            return this;
+        }
+
+        /**
+         * PythonVersion.
+         */
+        public Builder pythonVersion(String pythonVersion) {
+            this.putQueryParameter("PythonVersion", pythonVersion);
+            this.pythonVersion = pythonVersion;
             return this;
         }
 
