@@ -239,6 +239,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountDelegatedStatusResponse> describeAccountDelegatedStatus(DescribeAccountDelegatedStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeAlarmBanner  DescribeAlarmBannerRequest
+     * @return DescribeAlarmBannerResponse
+     */
+    CompletableFuture<DescribeAlarmBannerResponse> describeAlarmBanner(DescribeAlarmBannerRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAlarmList  DescribeAlarmListRequest
+     * @return DescribeAlarmListResponse
+     */
+    CompletableFuture<DescribeAlarmListResponse> describeAlarmList(DescribeAlarmListRequest request);
+
+    /**
      * @param request the request parameters of DescribeApiExports  DescribeApiExportsRequest
      * @return DescribeApiExportsResponse
      */
@@ -357,6 +369,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeBaseSystemRulesResponse
      */
     CompletableFuture<DescribeBaseSystemRulesResponse> describeBaseSystemRules(DescribeBaseSystemRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBotAppKey  DescribeBotAppKeyRequest
+     * @return DescribeBotAppKeyResponse
+     */
+    CompletableFuture<DescribeBotAppKeyResponse> describeBotAppKey(DescribeBotAppKeyRequest request);
 
     /**
      * @param request the request parameters of DescribeBotRuleLabels  DescribeBotRuleLabelsRequest
@@ -993,6 +1011,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeTemplateResourcesResponse
      */
     CompletableFuture<DescribeTemplateResourcesResponse> describeTemplateResources(DescribeTemplateResourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeThreatEvent  DescribeThreatEventRequest
+     * @return DescribeThreatEventResponse
+     */
+    CompletableFuture<DescribeThreatEventResponse> describeThreatEvent(DescribeThreatEventRequest request);
+
+    /**
+     * @param request the request parameters of DescribeThreatEventDetail  DescribeThreatEventDetailRequest
+     * @return DescribeThreatEventDetailResponse
+     */
+    CompletableFuture<DescribeThreatEventDetailResponse> describeThreatEventDetail(DescribeThreatEventDetailRequest request);
 
     /**
      * @param request the request parameters of DescribeUserAbnormalTrend  DescribeUserAbnormalTrendRequest
