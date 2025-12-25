@@ -23,6 +23,9 @@ public class AlertRuleNotification extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customWebhooks")
     private java.util.List<String> customWebhooks;
 
+    @com.aliyun.core.annotation.NameInMap("dingCoolAppWebhooks")
+    private java.util.List<String> dingCoolAppWebhooks;
+
     @com.aliyun.core.annotation.NameInMap("dingWebhooks")
     private java.util.List<String> dingWebhooks;
 
@@ -47,6 +50,7 @@ public class AlertRuleNotification extends TeaModel {
     private AlertRuleNotification(Builder builder) {
         this.contacts = builder.contacts;
         this.customWebhooks = builder.customWebhooks;
+        this.dingCoolAppWebhooks = builder.dingCoolAppWebhooks;
         this.dingWebhooks = builder.dingWebhooks;
         this.fsWebhooks = builder.fsWebhooks;
         this.groups = builder.groups;
@@ -80,6 +84,13 @@ public class AlertRuleNotification extends TeaModel {
      */
     public java.util.List<String> getCustomWebhooks() {
         return this.customWebhooks;
+    }
+
+    /**
+     * @return dingCoolAppWebhooks
+     */
+    public java.util.List<String> getDingCoolAppWebhooks() {
+        return this.dingCoolAppWebhooks;
     }
 
     /**
@@ -134,6 +145,7 @@ public class AlertRuleNotification extends TeaModel {
     public static final class Builder {
         private java.util.List<String> contacts; 
         private java.util.List<String> customWebhooks; 
+        private java.util.List<String> dingCoolAppWebhooks; 
         private java.util.List<String> dingWebhooks; 
         private java.util.List<String> fsWebhooks; 
         private java.util.List<String> groups; 
@@ -148,6 +160,7 @@ public class AlertRuleNotification extends TeaModel {
         private Builder(AlertRuleNotification model) {
             this.contacts = model.contacts;
             this.customWebhooks = model.customWebhooks;
+            this.dingCoolAppWebhooks = model.dingCoolAppWebhooks;
             this.dingWebhooks = model.dingWebhooks;
             this.fsWebhooks = model.fsWebhooks;
             this.groups = model.groups;
@@ -170,6 +183,14 @@ public class AlertRuleNotification extends TeaModel {
          */
         public Builder customWebhooks(java.util.List<String> customWebhooks) {
             this.customWebhooks = customWebhooks;
+            return this;
+        }
+
+        /**
+         * dingCoolAppWebhooks.
+         */
+        public Builder dingCoolAppWebhooks(java.util.List<String> dingCoolAppWebhooks) {
+            this.dingCoolAppWebhooks = dingCoolAppWebhooks;
             return this;
         }
 
