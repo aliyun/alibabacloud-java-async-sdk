@@ -371,12 +371,16 @@ public class SubmitDocTranslateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("domainHint")
         private String domainHint;
 
+        @com.aliyun.core.annotation.NameInMap("paramMap")
+        private Object paramMap;
+
         @com.aliyun.core.annotation.NameInMap("terminologies")
         private java.util.List<Terminologies> terminologies;
 
         private Ext(Builder builder) {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
+            this.paramMap = builder.paramMap;
             this.terminologies = builder.terminologies;
         }
 
@@ -403,6 +407,13 @@ public class SubmitDocTranslateTaskRequest extends Request {
         }
 
         /**
+         * @return paramMap
+         */
+        public Object getParamMap() {
+            return this.paramMap;
+        }
+
+        /**
          * @return terminologies
          */
         public java.util.List<Terminologies> getTerminologies() {
@@ -412,6 +423,7 @@ public class SubmitDocTranslateTaskRequest extends Request {
         public static final class Builder {
             private Config config; 
             private String domainHint; 
+            private Object paramMap; 
             private java.util.List<Terminologies> terminologies; 
 
             private Builder() {
@@ -420,6 +432,7 @@ public class SubmitDocTranslateTaskRequest extends Request {
             private Builder(Ext model) {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
+                this.paramMap = model.paramMap;
                 this.terminologies = model.terminologies;
             } 
 
@@ -436,6 +449,14 @@ public class SubmitDocTranslateTaskRequest extends Request {
              */
             public Builder domainHint(String domainHint) {
                 this.domainHint = domainHint;
+                return this;
+            }
+
+            /**
+             * paramMap.
+             */
+            public Builder paramMap(Object paramMap) {
+                this.paramMap = paramMap;
                 return this;
             }
 

@@ -319,11 +319,15 @@ public class TermEditRequest extends Request {
      * <p>TermEditRequest</p>
      */
     public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("paramMap")
+        private Object paramMap;
+
         @com.aliyun.core.annotation.NameInMap("terms")
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<Terms> terms;
 
         private Ext(Builder builder) {
+            this.paramMap = builder.paramMap;
             this.terms = builder.terms;
         }
 
@@ -336,6 +340,13 @@ public class TermEditRequest extends Request {
         }
 
         /**
+         * @return paramMap
+         */
+        public Object getParamMap() {
+            return this.paramMap;
+        }
+
+        /**
          * @return terms
          */
         public java.util.List<Terms> getTerms() {
@@ -343,14 +354,24 @@ public class TermEditRequest extends Request {
         }
 
         public static final class Builder {
+            private Object paramMap; 
             private java.util.List<Terms> terms; 
 
             private Builder() {
             } 
 
             private Builder(Ext model) {
+                this.paramMap = model.paramMap;
                 this.terms = model.terms;
             } 
+
+            /**
+             * paramMap.
+             */
+            public Builder paramMap(Object paramMap) {
+                this.paramMap = paramMap;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>

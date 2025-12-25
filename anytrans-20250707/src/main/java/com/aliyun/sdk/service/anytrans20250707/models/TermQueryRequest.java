@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TermQueryRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ext")
+    private Ext ext;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scene")
     @com.aliyun.core.annotation.Validation(required = true)
     private String scene;
@@ -43,6 +47,7 @@ public class TermQueryRequest extends Request {
 
     private TermQueryRequest(Builder builder) {
         super(builder);
+        this.ext = builder.ext;
         this.scene = builder.scene;
         this.sourceLanguage = builder.sourceLanguage;
         this.targetLanguage = builder.targetLanguage;
@@ -61,6 +66,13 @@ public class TermQueryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ext
+     */
+    public Ext getExt() {
+        return this.ext;
     }
 
     /**
@@ -99,6 +111,7 @@ public class TermQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TermQueryRequest, Builder> {
+        private Ext ext; 
         private String scene; 
         private String sourceLanguage; 
         private String targetLanguage; 
@@ -111,12 +124,23 @@ public class TermQueryRequest extends Request {
 
         private Builder(TermQueryRequest request) {
             super(request);
+            this.ext = request.ext;
             this.scene = request.scene;
             this.sourceLanguage = request.sourceLanguage;
             this.targetLanguage = request.targetLanguage;
             this.text = request.text;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * ext.
+         */
+        public Builder ext(Ext ext) {
+            String extShrink = shrink(ext, "ext", "json");
+            this.putBodyParameter("ext", extShrink);
+            this.ext = ext;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -182,4 +206,58 @@ public class TermQueryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TermQueryRequest} extends {@link TeaModel}
+     *
+     * <p>TermQueryRequest</p>
+     */
+    public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("paramMap")
+        private Object paramMap;
+
+        private Ext(Builder builder) {
+            this.paramMap = builder.paramMap;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return paramMap
+         */
+        public Object getParamMap() {
+            return this.paramMap;
+        }
+
+        public static final class Builder {
+            private Object paramMap; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.paramMap = model.paramMap;
+            } 
+
+            /**
+             * paramMap.
+             */
+            public Builder paramMap(Object paramMap) {
+                this.paramMap = paramMap;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
 }

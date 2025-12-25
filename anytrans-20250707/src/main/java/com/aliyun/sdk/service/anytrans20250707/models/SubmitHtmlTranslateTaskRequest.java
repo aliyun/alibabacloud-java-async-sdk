@@ -554,6 +554,9 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("examples")
         private java.util.List<Examples> examples;
 
+        @com.aliyun.core.annotation.NameInMap("paramMap")
+        private Object paramMap;
+
         @com.aliyun.core.annotation.NameInMap("sensitives")
         private java.util.List<String> sensitives;
 
@@ -567,6 +570,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
+            this.paramMap = builder.paramMap;
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
             this.textTransform = builder.textTransform;
@@ -602,6 +606,13 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
         }
 
         /**
+         * @return paramMap
+         */
+        public Object getParamMap() {
+            return this.paramMap;
+        }
+
+        /**
          * @return sensitives
          */
         public java.util.List<String> getSensitives() {
@@ -626,6 +637,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
+            private Object paramMap; 
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
             private TextTransform textTransform; 
@@ -637,6 +649,7 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
+                this.paramMap = model.paramMap;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
                 this.textTransform = model.textTransform;
@@ -663,6 +676,14 @@ public class SubmitHtmlTranslateTaskRequest extends Request {
              */
             public Builder examples(java.util.List<Examples> examples) {
                 this.examples = examples;
+                return this;
+            }
+
+            /**
+             * paramMap.
+             */
+            public Builder paramMap(Object paramMap) {
+                this.paramMap = paramMap;
                 return this;
             }
 

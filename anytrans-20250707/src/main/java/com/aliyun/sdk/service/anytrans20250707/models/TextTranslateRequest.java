@@ -545,6 +545,9 @@ public class TextTranslateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("examples")
         private java.util.List<Examples> examples;
 
+        @com.aliyun.core.annotation.NameInMap("paramMap")
+        private Object paramMap;
+
         @com.aliyun.core.annotation.NameInMap("prefix")
         private String prefix;
 
@@ -562,6 +565,7 @@ public class TextTranslateRequest extends Request {
             this.config = builder.config;
             this.domainHint = builder.domainHint;
             this.examples = builder.examples;
+            this.paramMap = builder.paramMap;
             this.prefix = builder.prefix;
             this.sensitives = builder.sensitives;
             this.terminologies = builder.terminologies;
@@ -605,6 +609,13 @@ public class TextTranslateRequest extends Request {
         }
 
         /**
+         * @return paramMap
+         */
+        public Object getParamMap() {
+            return this.paramMap;
+        }
+
+        /**
          * @return prefix
          */
         public String getPrefix() {
@@ -637,6 +648,7 @@ public class TextTranslateRequest extends Request {
             private Config config; 
             private String domainHint; 
             private java.util.List<Examples> examples; 
+            private Object paramMap; 
             private String prefix; 
             private java.util.List<String> sensitives; 
             private java.util.List<Terminologies> terminologies; 
@@ -650,6 +662,7 @@ public class TextTranslateRequest extends Request {
                 this.config = model.config;
                 this.domainHint = model.domainHint;
                 this.examples = model.examples;
+                this.paramMap = model.paramMap;
                 this.prefix = model.prefix;
                 this.sensitives = model.sensitives;
                 this.terminologies = model.terminologies;
@@ -685,6 +698,14 @@ public class TextTranslateRequest extends Request {
              */
             public Builder examples(java.util.List<Examples> examples) {
                 this.examples = examples;
+                return this;
+            }
+
+            /**
+             * paramMap.
+             */
+            public Builder paramMap(Object paramMap) {
+                this.paramMap = paramMap;
                 return this;
             }
 
