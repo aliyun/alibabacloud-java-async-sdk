@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCategoriesRequest} extends {@link RequestModel}
  *
  * <p>ListCategoriesRequest</p>
  */
 public class ListCategoriesRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("ProductId")
-    @Validation(required = true, maximum = 99999999999D)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99999999999D)
     private Long productId;
 
     private ListCategoriesRequest(Builder builder) {
@@ -40,7 +45,7 @@ public class ListCategoriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,10 @@ public class ListCategoriesRequest extends Request {
         } 
 
         /**
-         * Language.
+         * <p>Multi-language, support, Chinese, English. Value definition: zh: Chinese, en: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -92,7 +100,10 @@ public class ListCategoriesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the classification question. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -101,7 +112,11 @@ public class ListCategoriesRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID of the product. You can call the ListProducts operation to obtain the product ID. The ProductId parameter is the ID of an Alibaba Cloud product. Multiple Categories are displayed for each product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18550</p>
          */
         public Builder productId(Long productId) {
             this.putBodyParameter("ProductId", productId);

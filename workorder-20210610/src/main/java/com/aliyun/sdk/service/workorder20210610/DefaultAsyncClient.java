@@ -42,6 +42,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CloseTicket  CloseTicketRequest
+     * @return CloseTicketResponse
+     */
     @Override
     public CompletableFuture<CloseTicketResponse> closeTicket(CloseTicketRequest request) {
         try {
@@ -56,6 +60,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTicket  CreateTicketRequest
+     * @return CreateTicketResponse
+     */
     @Override
     public CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request) {
         try {
@@ -70,6 +78,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EvaluateTicket  EvaluateTicketRequest
+     * @return EvaluateTicketResponse
+     */
     @Override
     public CompletableFuture<EvaluateTicketResponse> evaluateTicket(EvaluateTicketRequest request) {
         try {
@@ -84,6 +96,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAttachmentUploadUrl  GetAttachmentUploadUrlRequest
+     * @return GetAttachmentUploadUrlResponse
+     */
     @Override
     public CompletableFuture<GetAttachmentUploadUrlResponse> getAttachmentUploadUrl(GetAttachmentUploadUrlRequest request) {
         try {
@@ -98,6 +114,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMqConsumerTag  GetMqConsumerTagRequest
+     * @return GetMqConsumerTagResponse
+     */
     @Override
     public CompletableFuture<GetMqConsumerTagResponse> getMqConsumerTag(GetMqConsumerTagRequest request) {
         try {
@@ -112,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTicket  GetTicketRequest
+     * @return GetTicketResponse
+     */
     @Override
     public CompletableFuture<GetTicketResponse> getTicket(GetTicketRequest request) {
         try {
@@ -126,6 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCategories  ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
     @Override
     public CompletableFuture<ListCategoriesResponse> listCategories(ListCategoriesRequest request) {
         try {
@@ -140,6 +168,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProducts  ListProductsRequest
+     * @return ListProductsResponse
+     */
     @Override
     public CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request) {
         try {
@@ -154,6 +186,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTicketNotes  ListTicketNotesRequest
+     * @return ListTicketNotesResponse
+     */
     @Override
     public CompletableFuture<ListTicketNotesResponse> listTicketNotes(ListTicketNotesRequest request) {
         try {
@@ -168,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTickets  ListTicketsRequest
+     * @return ListTicketsResponse
+     */
     @Override
     public CompletableFuture<ListTicketsResponse> listTickets(ListTicketsRequest request) {
         try {
@@ -182,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReopenTicket  ReopenTicketRequest
+     * @return ReopenTicketResponse
+     */
     @Override
     public CompletableFuture<ReopenTicketResponse> reopenTicket(ReopenTicketRequest request) {
         try {
@@ -196,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReplyTicket  ReplyTicketRequest
+     * @return ReplyTicketResponse
+     */
     @Override
     public CompletableFuture<ReplyTicketResponse> replyTicket(ReplyTicketRequest request) {
         try {

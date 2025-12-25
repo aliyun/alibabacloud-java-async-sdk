@@ -1,35 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplyTicketRequest} extends {@link RequestModel}
  *
  * <p>ReplyTicketRequest</p>
  */
 public class ReplyTicketRequest extends Request {
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("Encrypt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Encrypt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean encrypt;
 
-    @Query
-    @NameInMap("FileNameList")
-    private java.util.List < String > fileNameList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileNameList")
+    private java.util.List<String> fileNameList;
 
-    @Body
-    @NameInMap("TicketId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TicketId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ticketId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    private String uid;
 
     private ReplyTicketRequest(Builder builder) {
         super(builder);
@@ -37,6 +46,7 @@ public class ReplyTicketRequest extends Request {
         this.encrypt = builder.encrypt;
         this.fileNameList = builder.fileNameList;
         this.ticketId = builder.ticketId;
+        this.uid = builder.uid;
     }
 
     public static Builder builder() {
@@ -47,7 +57,7 @@ public class ReplyTicketRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +79,7 @@ public class ReplyTicketRequest extends Request {
     /**
      * @return fileNameList
      */
-    public java.util.List < String > getFileNameList() {
+    public java.util.List<String> getFileNameList() {
         return this.fileNameList;
     }
 
@@ -80,11 +90,19 @@ public class ReplyTicketRequest extends Request {
         return this.ticketId;
     }
 
+    /**
+     * @return uid
+     */
+    public String getUid() {
+        return this.uid;
+    }
+
     public static final class Builder extends Request.Builder<ReplyTicketRequest, Builder> {
         private String content; 
         private Boolean encrypt; 
-        private java.util.List < String > fileNameList; 
+        private java.util.List<String> fileNameList; 
         private String ticketId; 
+        private String uid; 
 
         private Builder() {
             super();
@@ -96,10 +114,15 @@ public class ReplyTicketRequest extends Request {
             this.encrypt = request.encrypt;
             this.fileNameList = request.fileNameList;
             this.ticketId = request.ticketId;
+            this.uid = request.uid;
         } 
 
         /**
-         * Content.
+         * <p>Content of the ticket reply</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Why ECS backup failed?</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -108,7 +131,11 @@ public class ReplyTicketRequest extends Request {
         }
 
         /**
-         * Encrypt.
+         * <p>Encryption status</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypt(Boolean encrypt) {
             this.putBodyParameter("Encrypt", encrypt);
@@ -117,9 +144,9 @@ public class ReplyTicketRequest extends Request {
         }
 
         /**
-         * FileNameList.
+         * <p>The list of attachment names, GetAttachmentUploadUrl the ObjectKey field returned by the interface.</p>
          */
-        public Builder fileNameList(java.util.List < String > fileNameList) {
+        public Builder fileNameList(java.util.List<String> fileNameList) {
             String fileNameListShrink = shrink(fileNameList, "FileNameList", "simple");
             this.putQueryParameter("FileNameList", fileNameListShrink);
             this.fileNameList = fileNameList;
@@ -127,11 +154,27 @@ public class ReplyTicketRequest extends Request {
         }
 
         /**
-         * TicketId.
+         * <p>The ID of the ticket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0005PYGCW</p>
          */
         public Builder ticketId(String ticketId) {
             this.putBodyParameter("TicketId", ticketId);
             this.ticketId = ticketId;
+            return this;
+        }
+
+        /**
+         * <p>Alibaba Cloud UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1289427240739141</p>
+         */
+        public Builder uid(String uid) {
+            this.putBodyParameter("Uid", uid);
+            this.uid = uid;
             return this;
         }
 

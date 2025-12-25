@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsResponseBody</p>
  */
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProductsResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class ListProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class ListProductsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +89,27 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The return code of the request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +117,18 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return value, that is, product list</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The error message. If success is set to false, the message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +163,17 @@ public class ListProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class ProductList extends TeaModel {
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ProductList(Builder builder) {
@@ -169,8 +207,19 @@ public class ListProductsResponseBody extends TeaModel {
             private Long productId; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductList model) {
+                this.productId = model.productId;
+                this.productName = model.productName;
+            } 
+
             /**
-             * ProductId.
+             * <p>Alibaba Cloud product ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7160</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -178,7 +227,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * <p>Alibaba Cloud product name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -192,15 +244,21 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private Long directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("ProductList")
-        private java.util.List < ProductList> productList;
+        @com.aliyun.core.annotation.NameInMap("ProductList")
+        private java.util.List<ProductList> productList;
 
         private Data(Builder builder) {
             this.directoryId = builder.directoryId;
@@ -233,17 +291,29 @@ public class ListProductsResponseBody extends TeaModel {
         /**
          * @return productList
          */
-        public java.util.List < ProductList> getProductList() {
+        public java.util.List<ProductList> getProductList() {
             return this.productList;
         }
 
         public static final class Builder {
             private Long directoryId; 
             private String directoryName; 
-            private java.util.List < ProductList> productList; 
+            private java.util.List<ProductList> productList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.directoryId = model.directoryId;
+                this.directoryName = model.directoryName;
+                this.productList = model.productList;
+            } 
 
             /**
-             * DirectoryId.
+             * <p>The ID of the product catalog, which represents the product category, such as elastic computing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder directoryId(Long directoryId) {
                 this.directoryId = directoryId;
@@ -251,7 +321,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryName.
+             * <p>The name of the product catalog, which represents the product category, such as elastic computing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -259,9 +332,9 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductList.
+             * <p>List of Alibaba Cloud products</p>
              */
-            public Builder productList(java.util.List < ProductList> productList) {
+            public Builder productList(java.util.List<ProductList> productList) {
                 this.productList = productList;
                 return this;
             }

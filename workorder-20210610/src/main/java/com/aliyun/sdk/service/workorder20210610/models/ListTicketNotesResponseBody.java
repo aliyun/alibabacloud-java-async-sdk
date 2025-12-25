@@ -1,33 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTicketNotesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTicketNotesResponseBody</p>
  */
 public class ListTicketNotesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTicketNotesResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -43,6 +52,17 @@ public class ListTicketNotesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     /**
      * @return code
      */
@@ -53,7 +73,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,14 +99,38 @@ public class ListTicketNotesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTicketNotesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The return code of the request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,15 +138,18 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Return value, that is, the dialog record list data of the specified ticket</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The error message. If success is set to false, the message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +157,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +168,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +184,17 @@ public class ListTicketNotesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTicketNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketNotesResponseBody</p>
+     */
     public static class Attachments extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Attachments(Builder builder) {
@@ -169,8 +228,19 @@ public class ListTicketNotesResponseBody extends TeaModel {
             private String name; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.name = model.name;
+                this.url = model.url;
+            } 
+
             /**
-             * Name.
+             * <p>Attachment Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>003.jpg</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +248,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Temporary Accessible Attachment Address</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gts-workorder.oss-cn-beijing.aliyuncs.com/20221003/cbc00fb0-b612-4d89-a75b-8d535f750f9f/image.png">https://gts-workorder.oss-cn-beijing.aliyuncs.com/20221003/cbc00fb0-b612-4d89-a75b-8d535f750f9f/image.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -192,11 +265,17 @@ public class ListTicketNotesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketNotesResponseBody</p>
+     */
     public static class Dialog extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
         private Dialog(Builder builder) {
@@ -230,8 +309,19 @@ public class ListTicketNotesResponseBody extends TeaModel {
             private String content; 
             private String schema; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dialog model) {
+                this.content = model.content;
+                this.schema = model.schema;
+            } 
+
             /**
-             * Content.
+             * <p>Work order communication content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS backup failed</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -239,7 +329,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * <p>The ticket communication record system card will be used when the system card docking capability is opened in the future. At present, the content can be used to obtain plain text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -253,11 +346,17 @@ public class ListTicketNotesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketNotesResponseBody</p>
+     */
     public static class User extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private Integer role;
 
         private User(Builder builder) {
@@ -291,8 +390,19 @@ public class ListTicketNotesResponseBody extends TeaModel {
             private String name; 
             private Integer role; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.name = model.name;
+                this.role = model.role;
+            } 
+
             /**
-             * Name.
+             * <p>Dialog User Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +410,11 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Dialogue user role, distinguish between agent and user.
+             * 2 represents agent, 3 represents user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder role(Integer role) {
                 this.role = role;
@@ -314,29 +428,35 @@ public class ListTicketNotesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketNotesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketNotesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Attachments")
-        private java.util.List < Attachments> attachments;
+        @com.aliyun.core.annotation.NameInMap("Attachments")
+        private java.util.List<Attachments> attachments;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Dialog")
+        @com.aliyun.core.annotation.NameInMap("Dialog")
         private Dialog dialog;
 
-        @NameInMap("DialogId")
+        @com.aliyun.core.annotation.NameInMap("DialogId")
         private Long dialogId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tip")
+        @com.aliyun.core.annotation.NameInMap("Tip")
         private String tip;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private User user;
 
         private Data(Builder builder) {
@@ -361,7 +481,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         /**
          * @return attachments
          */
-        public java.util.List < Attachments> getAttachments() {
+        public java.util.List<Attachments> getAttachments() {
             return this.attachments;
         }
 
@@ -415,7 +535,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attachments> attachments; 
+            private java.util.List<Attachments> attachments; 
             private Long createTime; 
             private Dialog dialog; 
             private Long dialogId; 
@@ -424,16 +544,33 @@ public class ListTicketNotesResponseBody extends TeaModel {
             private Integer type; 
             private User user; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attachments = model.attachments;
+                this.createTime = model.createTime;
+                this.dialog = model.dialog;
+                this.dialogId = model.dialogId;
+                this.status = model.status;
+                this.tip = model.tip;
+                this.type = model.type;
+                this.user = model.user;
+            } 
+
             /**
-             * Attachments.
+             * <p>Attachment List</p>
              */
-            public Builder attachments(java.util.List < Attachments> attachments) {
+            public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
                 return this;
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the communication message was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1623396736000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -441,7 +578,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Dialog.
+             * <p>Work order communication record object</p>
              */
             public Builder dialog(Dialog dialog) {
                 this.dialog = dialog;
@@ -449,7 +586,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * DialogId.
+             * <p>The unique ID of the conversation record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999</p>
              */
             public Builder dialogId(Long dialogId) {
                 this.dialogId = dialogId;
@@ -457,7 +597,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Communication message status field, reference value Unread=1, Read=2</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -465,7 +608,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Tip.
+             * <p>Fields Not Used</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder tip(String tip) {
                 this.tip = tip;
@@ -473,7 +619,10 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Conversation Type 1 card, that is, schema 2 Text, that is, content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -481,7 +630,7 @@ public class ListTicketNotesResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>Conversation of users</p>
              */
             public Builder user(User user) {
                 this.user = user;

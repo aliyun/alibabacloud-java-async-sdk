@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAttachmentUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetAttachmentUploadUrlResponseBody</p>
  */
 public class GetAttachmentUploadUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAttachmentUploadUrlResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
 
     public static GetAttachmentUploadUrlResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAttachmentUploadUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +117,7 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned after the call succeeds.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +125,10 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. If success is set to false, the message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +136,10 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED195C2C-787F-511C-8204-714456781861</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,14 +163,20 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAttachmentUploadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAttachmentUploadUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("GetSignedUrl")
+        @com.aliyun.core.annotation.NameInMap("GetSignedUrl")
         private String getSignedUrl;
 
-        @NameInMap("ObjectKey")
+        @com.aliyun.core.annotation.NameInMap("ObjectKey")
         private String objectKey;
 
-        @NameInMap("PutSignedUrl")
+        @com.aliyun.core.annotation.NameInMap("PutSignedUrl")
         private String putSignedUrl;
 
         private Data(Builder builder) {
@@ -181,8 +219,21 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
             private String objectKey; 
             private String putSignedUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.getSignedUrl = model.getSignedUrl;
+                this.objectKey = model.objectKey;
+                this.putSignedUrl = model.putSignedUrl;
+            } 
+
             /**
-             * GetSignedUrl.
+             * <p>Query the signed URL of an OSS object</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
+             * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
              */
             public Builder getSignedUrl(String getSignedUrl) {
                 this.getSignedUrl = getSignedUrl;
@@ -190,7 +241,10 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectKey.
+             * <p>Uploaded file identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdb5d174-c282-4b2d-9048-e74ea2223127.jpg</p>
              */
             public Builder objectKey(String objectKey) {
                 this.objectKey = objectKey;
@@ -198,7 +252,11 @@ public class GetAttachmentUploadUrlResponseBody extends TeaModel {
             }
 
             /**
-             * PutSignedUrl.
+             * <p>The signed URL used to upload the object to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com">https://gts-workorder-pre.oss-cn-beijing.aliyuncs.com</a>
+             * /20220314/cabb80c3-430b-4079-a9f2-d2a0d1c2a587.png?Expires=1647328689&amp;OSSAccessKeyId=LTAI****************&amp;Signature=AbSEh26G3oYrJ8ivr4B0xzF89zk%3D</p>
              */
             public Builder putSignedUrl(String putSignedUrl) {
                 this.putSignedUrl = putSignedUrl;

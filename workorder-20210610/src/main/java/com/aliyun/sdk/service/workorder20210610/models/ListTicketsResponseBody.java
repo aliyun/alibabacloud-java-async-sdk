@@ -1,42 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTicketsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTicketsResponseBody</p>
  */
 public class ListTicketsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListTicketsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -55,6 +64,17 @@ public class ListTicketsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
     /**
      * @return code
      */
@@ -65,7 +85,7 @@ public class ListTicketsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -112,8 +132,9 @@ public class ListTicketsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -121,8 +142,34 @@ public class ListTicketsResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTicketsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Code.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>The return code of the request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,15 +177,18 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The return value is my ticket list data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message.
+         * <p>The error message. If success is set to false, the message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +196,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the paging query parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +207,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a pagination query parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +218,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the API request. The requestID is unique for each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC0AB2EC-AFBC-44BA-AE77-132A5A1EC0AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +229,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. A value of true indicates that the call is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +240,10 @@ public class ListTicketsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results, that is, the total number of my ticket records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -191,11 +256,17 @@ public class ListTicketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketsResponseBody</p>
+     */
     public static class Status extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Status(Builder builder) {
@@ -229,8 +300,19 @@ public class ListTicketsResponseBody extends TeaModel {
             private String label; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Status model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
+
             /**
-             * Label.
+             * <p>Status description, if completed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -238,7 +320,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>A status value, such as 6, represents completed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,14 +337,20 @@ public class ListTicketsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTicketsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Status status;
 
-        @NameInMap("TicketId")
+        @com.aliyun.core.annotation.NameInMap("TicketId")
         private String ticketId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {
@@ -302,8 +393,17 @@ public class ListTicketsResponseBody extends TeaModel {
             private String ticketId; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+                this.ticketId = model.ticketId;
+                this.title = model.title;
+            } 
+
             /**
-             * Status.
+             * <p>The status of the ticket. The reference values are as follows 1, &quot;assigned&quot;, &quot;Pending Response&quot;, 2, &quot;handling&quot;, &quot;handling&quot;, 3, &quot;wait_feedback&quot;, &quot;Pending feedback&quot;, 4: &quot;feedback&quot;, &quot;Feedback&quot;, 5, &quot;wait_confirm&quot;, &quot;To be confirmed&quot;, 6, &quot;confirmed&quot;, &quot;Completed&quot;</p>
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -311,7 +411,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * TicketId.
+             * <p>Work Order Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0005PYGCW</p>
              */
             public Builder ticketId(String ticketId) {
                 this.ticketId = ticketId;
@@ -319,7 +422,10 @@ public class ListTicketsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Why ECS backup failed?</p>
              */
             public Builder title(String title) {
                 this.title = title;

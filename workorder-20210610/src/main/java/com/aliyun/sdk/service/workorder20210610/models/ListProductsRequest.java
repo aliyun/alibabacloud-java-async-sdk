@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.workorder20210610.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsRequest} extends {@link RequestModel}
  *
  * <p>ListProductsRequest</p>
  */
 public class ListProductsRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private ListProductsRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class ListProductsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +73,10 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * Language.
+         * <p>The language that you use, supporting English, Chinese, and Japanese. Valid values: en, zh, and jp, which indicate English, Chinese, and Japanese, respectively.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -77,7 +85,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the product. Fuzzy search is supported. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
