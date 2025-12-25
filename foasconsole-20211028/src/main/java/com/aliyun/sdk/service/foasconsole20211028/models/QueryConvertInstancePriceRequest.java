@@ -43,9 +43,17 @@ public class QueryConvertInstancePriceRequest extends Request {
     private String pricingCycle;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
+    private Boolean usePromotionCode;
 
     private QueryConvertInstancePriceRequest(Builder builder) {
         super(builder);
@@ -54,7 +62,9 @@ public class QueryConvertInstancePriceRequest extends Request {
         this.isAutoRenew = builder.isAutoRenew;
         this.namespaceResourceSpecs = builder.namespaceResourceSpecs;
         this.pricingCycle = builder.pricingCycle;
+        this.promotionCode = builder.promotionCode;
         this.region = builder.region;
+        this.usePromotionCode = builder.usePromotionCode;
     }
 
     public static Builder builder() {
@@ -106,10 +116,24 @@ public class QueryConvertInstancePriceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
         return this.region;
+    }
+
+    /**
+     * @return usePromotionCode
+     */
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     public static final class Builder extends Request.Builder<QueryConvertInstancePriceRequest, Builder> {
@@ -118,7 +142,9 @@ public class QueryConvertInstancePriceRequest extends Request {
         private Boolean isAutoRenew; 
         private java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs; 
         private String pricingCycle; 
+        private String promotionCode; 
         private String region; 
+        private Boolean usePromotionCode; 
 
         private Builder() {
             super();
@@ -131,7 +157,9 @@ public class QueryConvertInstancePriceRequest extends Request {
             this.isAutoRenew = request.isAutoRenew;
             this.namespaceResourceSpecs = request.namespaceResourceSpecs;
             this.pricingCycle = request.pricingCycle;
+            this.promotionCode = request.promotionCode;
             this.region = request.region;
+            this.usePromotionCode = request.usePromotionCode;
         } 
 
         /**
@@ -193,6 +221,15 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putBodyParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +238,15 @@ public class QueryConvertInstancePriceRequest extends Request {
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * UsePromotionCode.
+         */
+        public Builder usePromotionCode(Boolean usePromotionCode) {
+            this.putBodyParameter("UsePromotionCode", usePromotionCode);
+            this.usePromotionCode = usePromotionCode;
             return this;
         }
 

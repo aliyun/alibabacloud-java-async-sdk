@@ -33,16 +33,26 @@ public class RenewInstanceRequest extends Request {
     private String pricingCycle;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
+    private String promotionCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
+    private Boolean usePromotionCode;
 
     private RenewInstanceRequest(Builder builder) {
         super(builder);
         this.duration = builder.duration;
         this.instanceId = builder.instanceId;
         this.pricingCycle = builder.pricingCycle;
+        this.promotionCode = builder.promotionCode;
         this.region = builder.region;
+        this.usePromotionCode = builder.usePromotionCode;
     }
 
     public static Builder builder() {
@@ -80,17 +90,33 @@ public class RenewInstanceRequest extends Request {
     }
 
     /**
+     * @return promotionCode
+     */
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
         return this.region;
     }
 
+    /**
+     * @return usePromotionCode
+     */
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
+    }
+
     public static final class Builder extends Request.Builder<RenewInstanceRequest, Builder> {
         private Integer duration; 
         private String instanceId; 
         private String pricingCycle; 
+        private String promotionCode; 
         private String region; 
+        private Boolean usePromotionCode; 
 
         private Builder() {
             super();
@@ -101,7 +127,9 @@ public class RenewInstanceRequest extends Request {
             this.duration = request.duration;
             this.instanceId = request.instanceId;
             this.pricingCycle = request.pricingCycle;
+            this.promotionCode = request.promotionCode;
             this.region = request.region;
+            this.usePromotionCode = request.usePromotionCode;
         } 
 
         /**
@@ -141,6 +169,15 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
+         * PromotionCode.
+         */
+        public Builder promotionCode(String promotionCode) {
+            this.putBodyParameter("PromotionCode", promotionCode);
+            this.promotionCode = promotionCode;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +186,15 @@ public class RenewInstanceRequest extends Request {
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * UsePromotionCode.
+         */
+        public Builder usePromotionCode(Boolean usePromotionCode) {
+            this.putBodyParameter("UsePromotionCode", usePromotionCode);
+            this.usePromotionCode = usePromotionCode;
             return this;
         }
 

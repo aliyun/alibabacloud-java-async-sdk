@@ -274,9 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ModifyInstanceVswitch  ModifyInstanceVswitchRequest
+     * @deprecated OpenAPI ModifyInstanceVswitch is deprecated  * @param request  the request parameters of ModifyInstanceVswitch  ModifyInstanceVswitchRequest
      * @return ModifyInstanceVswitchResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyInstanceVswitchResponse> modifyInstanceVswitch(ModifyInstanceVswitchRequest request) {
         try {

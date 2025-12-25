@@ -2545,6 +2545,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Elastic")
         private Boolean elastic;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticInstanceId")
+        private String elasticInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("ElasticOrderState")
         private String elasticOrderState;
 
@@ -2637,6 +2640,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.clusterUsedResources = builder.clusterUsedResources;
             this.clusterUsedStorage = builder.clusterUsedStorage;
             this.elastic = builder.elastic;
+            this.elasticInstanceId = builder.elasticInstanceId;
             this.elasticOrderState = builder.elasticOrderState;
             this.elasticResourceSpec = builder.elasticResourceSpec;
             this.ha = builder.ha;
@@ -2735,6 +2739,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Boolean getElastic() {
             return this.elastic;
+        }
+
+        /**
+         * @return elasticInstanceId
+         */
+        public String getElasticInstanceId() {
+            return this.elasticInstanceId;
         }
 
         /**
@@ -2936,6 +2947,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private ClusterUsedResources clusterUsedResources; 
             private ClusterUsedStorage clusterUsedStorage; 
             private Boolean elastic; 
+            private String elasticInstanceId; 
             private String elasticOrderState; 
             private ElasticResourceSpec elasticResourceSpec; 
             private Boolean ha; 
@@ -2977,6 +2989,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.clusterUsedResources = model.clusterUsedResources;
                 this.clusterUsedStorage = model.clusterUsedStorage;
                 this.elastic = model.elastic;
+                this.elasticInstanceId = model.elasticInstanceId;
                 this.elasticOrderState = model.elasticOrderState;
                 this.elasticResourceSpec = model.elasticResourceSpec;
                 this.ha = model.ha;
@@ -3075,6 +3088,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder elastic(Boolean elastic) {
                 this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * ElasticInstanceId.
+             */
+            public Builder elasticInstanceId(String elasticInstanceId) {
+                this.elasticInstanceId = elasticInstanceId;
                 return this;
             }
 

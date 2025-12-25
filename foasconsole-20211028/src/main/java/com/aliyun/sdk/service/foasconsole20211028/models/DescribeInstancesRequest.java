@@ -30,6 +30,14 @@ public class DescribeInstancesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    private String namespaceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
@@ -55,6 +63,8 @@ public class DescribeInstancesRequest extends Request {
         this.architectureType = builder.architectureType;
         this.chargeType = builder.chargeType;
         this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
+        this.namespaceName = builder.namespaceName;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
@@ -97,6 +107,20 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
+     * @return namespaceName
+     */
+    public String getNamespaceName() {
+        return this.namespaceName;
+    }
+
+    /**
      * @return pageIndex
      */
     public Integer getPageIndex() {
@@ -135,6 +159,8 @@ public class DescribeInstancesRequest extends Request {
         private String architectureType; 
         private String chargeType; 
         private String instanceId; 
+        private String instanceName; 
+        private String namespaceName; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String region; 
@@ -150,6 +176,8 @@ public class DescribeInstancesRequest extends Request {
             this.architectureType = request.architectureType;
             this.chargeType = request.chargeType;
             this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
+            this.namespaceName = request.namespaceName;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.region = request.region;
@@ -181,6 +209,24 @@ public class DescribeInstancesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * NamespaceName.
+         */
+        public Builder namespaceName(String namespaceName) {
+            this.putQueryParameter("NamespaceName", namespaceName);
+            this.namespaceName = namespaceName;
             return this;
         }
 

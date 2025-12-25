@@ -482,6 +482,9 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsContractActivity")
         private Boolean isContractActivity;
 
+        @com.aliyun.core.annotation.NameInMap("LxRequestId")
+        private String lxRequestId;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
@@ -509,6 +512,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
             this.isContractActivity = builder.isContractActivity;
+            this.lxRequestId = builder.lxRequestId;
             this.message = builder.message;
             this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
@@ -559,6 +563,13 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
          */
         public Boolean getIsContractActivity() {
             return this.isContractActivity;
+        }
+
+        /**
+         * @return lxRequestId
+         */
+        public String getLxRequestId() {
+            return this.lxRequestId;
         }
 
         /**
@@ -616,6 +627,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             private DepreciateInfo depreciateInfo; 
             private Float discountAmount; 
             private Boolean isContractActivity; 
+            private String lxRequestId; 
             private String message; 
             private java.util.List<OptionalPromotions> optionalPromotions; 
             private Float originalAmount; 
@@ -633,6 +645,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
                 this.depreciateInfo = model.depreciateInfo;
                 this.discountAmount = model.discountAmount;
                 this.isContractActivity = model.isContractActivity;
+                this.lxRequestId = model.lxRequestId;
                 this.message = model.message;
                 this.optionalPromotions = model.optionalPromotions;
                 this.originalAmount = model.originalAmount;
@@ -679,6 +692,14 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * LxRequestId.
+             */
+            public Builder lxRequestId(String lxRequestId) {
+                this.lxRequestId = lxRequestId;
                 return this;
             }
 
