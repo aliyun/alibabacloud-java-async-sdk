@@ -9,18 +9,14 @@
 ```xml
 <dependency>
    <groupId>com.aliyun</groupId>
-   <artifactId>clickhouse20230522</artifactId>
+   <artifactId>alibabacloud-clickhouse20230522</artifactId>
    <version>使用maven标签所示版本</version>
 </dependency>
 ```
 
 ## 问题
 
-[提交 Issue](https://github.com/aliyun/alibabacloud-java-sdk/issues/new)，不符合指南的问题可能会立即关闭。
-
-## 使用说明
-
-[快速使用](https://github.com/aliyun/alibabacloud-java-sdk/blob/master/docs/0-Examples-CN.md#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8)
+[提交 Issue](https://github.com/aliyun/alibabacloud-java-async-sdk/issues/new)，不符合指南的问题可能会立即关闭。
 
 ## 发行说明
 
@@ -28,7 +24,7 @@
 
 ## 相关
 
-- [最新源码](https://github.com/aliyun/alibabacloud-java-sdk/)
+- [最新源码](https://github.com/aliyun/alibabacloud-async-java-sdk/)
 
 ## 许可证
 
