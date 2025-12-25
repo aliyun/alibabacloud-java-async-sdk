@@ -110,6 +110,9 @@ public class ListExchangesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExchangeType")
         private String exchangeType;
 
+        @com.aliyun.core.annotation.NameInMap("Internal")
+        private Boolean internal;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -121,6 +124,7 @@ public class ListExchangesResponseBody extends TeaModel {
             this.autoDeleteState = builder.autoDeleteState;
             this.createTime = builder.createTime;
             this.exchangeType = builder.exchangeType;
+            this.internal = builder.internal;
             this.name = builder.name;
             this.vHostName = builder.vHostName;
         }
@@ -162,6 +166,13 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         /**
+         * @return internal
+         */
+        public Boolean getInternal() {
+            return this.internal;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -180,6 +191,7 @@ public class ListExchangesResponseBody extends TeaModel {
             private Boolean autoDeleteState; 
             private Long createTime; 
             private String exchangeType; 
+            private Boolean internal; 
             private String name; 
             private String vHostName; 
 
@@ -191,6 +203,7 @@ public class ListExchangesResponseBody extends TeaModel {
                 this.autoDeleteState = model.autoDeleteState;
                 this.createTime = model.createTime;
                 this.exchangeType = model.exchangeType;
+                this.internal = model.internal;
                 this.name = model.name;
                 this.vHostName = model.vHostName;
             } 
@@ -236,6 +249,14 @@ public class ListExchangesResponseBody extends TeaModel {
              */
             public Builder exchangeType(String exchangeType) {
                 this.exchangeType = exchangeType;
+                return this;
+            }
+
+            /**
+             * Internal.
+             */
+            public Builder internal(Boolean internal) {
+                this.internal = internal;
                 return this;
             }
 
