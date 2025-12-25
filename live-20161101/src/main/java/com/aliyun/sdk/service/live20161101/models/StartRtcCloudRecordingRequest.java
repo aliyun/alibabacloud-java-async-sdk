@@ -1127,6 +1127,9 @@ public class StartRtcCloudRecordingRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
+        private Long sliceDuration;
+
         @com.aliyun.core.annotation.NameInMap("SliceNamePattern")
         private String sliceNamePattern;
 
@@ -1134,6 +1137,7 @@ public class StartRtcCloudRecordingRequest extends Request {
             this.fileNamePattern = builder.fileNamePattern;
             this.filePathPrefix = builder.filePathPrefix;
             this.format = builder.format;
+            this.sliceDuration = builder.sliceDuration;
             this.sliceNamePattern = builder.sliceNamePattern;
         }
 
@@ -1167,6 +1171,13 @@ public class StartRtcCloudRecordingRequest extends Request {
         }
 
         /**
+         * @return sliceDuration
+         */
+        public Long getSliceDuration() {
+            return this.sliceDuration;
+        }
+
+        /**
          * @return sliceNamePattern
          */
         public String getSliceNamePattern() {
@@ -1177,6 +1188,7 @@ public class StartRtcCloudRecordingRequest extends Request {
             private String fileNamePattern; 
             private java.util.List<String> filePathPrefix; 
             private String format; 
+            private Long sliceDuration; 
             private String sliceNamePattern; 
 
             private Builder() {
@@ -1186,6 +1198,7 @@ public class StartRtcCloudRecordingRequest extends Request {
                 this.fileNamePattern = model.fileNamePattern;
                 this.filePathPrefix = model.filePathPrefix;
                 this.format = model.format;
+                this.sliceDuration = model.sliceDuration;
                 this.sliceNamePattern = model.sliceNamePattern;
             } 
 
@@ -1213,6 +1226,14 @@ public class StartRtcCloudRecordingRequest extends Request {
              */
             public Builder format(String format) {
                 this.format = format;
+                return this;
+            }
+
+            /**
+             * SliceDuration.
+             */
+            public Builder sliceDuration(Long sliceDuration) {
+                this.sliceDuration = sliceDuration;
                 return this;
             }
 
