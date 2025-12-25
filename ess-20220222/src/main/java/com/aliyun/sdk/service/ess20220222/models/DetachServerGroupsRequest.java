@@ -244,7 +244,6 @@ public class DetachServerGroupsRequest extends Request {
      */
     public static class ServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
@@ -306,7 +305,6 @@ public class DetachServerGroupsRequest extends Request {
 
             /**
              * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>

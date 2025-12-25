@@ -244,7 +244,6 @@ public class AttachServerGroupsRequest extends Request {
      */
     public static class ServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
@@ -256,7 +255,6 @@ public class AttachServerGroupsRequest extends Request {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("Weight")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer weight;
 
         private ServerGroups(Builder builder) {
@@ -321,7 +319,6 @@ public class AttachServerGroupsRequest extends Request {
             /**
              * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>
              * <p>Valid values: 1 to 65535.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -362,7 +359,6 @@ public class AttachServerGroupsRequest extends Request {
             /**
              * <p>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</p>
              * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
