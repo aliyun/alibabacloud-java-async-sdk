@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCreateInstancePriceRequest} extends {@link RequestModel}
  *
  * <p>QueryCreateInstancePriceRequest</p>
  */
 public class QueryCreateInstancePriceRequest extends Request {
-    @Body
-    @NameInMap("CreateInstanceRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateInstanceRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CreateInstanceRequest createInstanceRequest;
 
     private QueryCreateInstancePriceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
         /**
-         * CreateInstanceRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder createInstanceRequest(CreateInstanceRequest createInstanceRequest) {
             this.putBodyParameter("CreateInstanceRequest", createInstanceRequest);
@@ -70,11 +75,17 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -108,6 +119,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -131,11 +150,17 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -169,6 +194,14 @@ public class QueryCreateInstancePriceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -192,8 +225,14 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class Oss extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
         private Oss(Builder builder) {
@@ -218,6 +257,13 @@ public class QueryCreateInstancePriceRequest extends Request {
         public static final class Builder {
             private String bucket; 
 
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.bucket = model.bucket;
+            } 
+
             /**
              * Bucket.
              */
@@ -233,8 +279,14 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class Storage extends TeaModel {
-        @NameInMap("Oss")
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
         private Storage(Builder builder) {
@@ -259,6 +311,13 @@ public class QueryCreateInstancePriceRequest extends Request {
         public static final class Builder {
             private Oss oss; 
 
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.oss = model.oss;
+            } 
+
             /**
              * Oss.
              */
@@ -274,58 +333,64 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCreateInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryCreateInstancePriceRequest</p>
+     */
     public static class CreateInstanceRequest extends TeaModel {
-        @NameInMap("ArchitectureType")
+        @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
 
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
 
-        @NameInMap("ChargeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String chargeType;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("HaResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
         private HaResourceSpec haResourceSpec;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
         private String pricingCycle;
 
-        @NameInMap("PromotionCode")
+        @com.aliyun.core.annotation.NameInMap("PromotionCode")
         private String promotionCode;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Storage storage;
 
-        @NameInMap("UsePromotionCode")
+        @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
         private Boolean usePromotionCode;
 
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private CreateInstanceRequest(Builder builder) {
@@ -457,7 +522,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -490,9 +555,32 @@ public class QueryCreateInstancePriceRequest extends Request {
             private ResourceSpec resourceSpec; 
             private Storage storage; 
             private Boolean usePromotionCode; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateInstanceRequest model) {
+                this.architectureType = model.architectureType;
+                this.autoRenew = model.autoRenew;
+                this.chargeType = model.chargeType;
+                this.duration = model.duration;
+                this.extra = model.extra;
+                this.ha = model.ha;
+                this.haResourceSpec = model.haResourceSpec;
+                this.instanceName = model.instanceName;
+                this.pricingCycle = model.pricingCycle;
+                this.promotionCode = model.promotionCode;
+                this.region = model.region;
+                this.resourceSpec = model.resourceSpec;
+                this.storage = model.storage;
+                this.usePromotionCode = model.usePromotionCode;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ArchitectureType.
@@ -511,7 +599,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * ChargeType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -575,7 +666,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -609,13 +703,16 @@ public class QueryCreateInstancePriceRequest extends Request {
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
             /**
-             * VPC ID。
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9*******nxfmfcdi</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

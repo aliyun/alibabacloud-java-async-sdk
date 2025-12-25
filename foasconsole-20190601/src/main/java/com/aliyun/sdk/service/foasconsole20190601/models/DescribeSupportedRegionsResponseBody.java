@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportedRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupportedRegionsResponseBody</p>
  */
 public class DescribeSupportedRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    @com.aliyun.core.annotation.NameInMap("Regions")
+    private java.util.List<Regions> regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSupportedRegionsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -57,14 +66,23 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSupportedRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Regions.
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
@@ -91,11 +109,17 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSupportedRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportedRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
         private Regions(Builder builder) {
@@ -128,6 +152,14 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         public static final class Builder {
             private String region; 
             private String regionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+                this.regionName = model.regionName;
+            } 
 
             /**
              * Region.

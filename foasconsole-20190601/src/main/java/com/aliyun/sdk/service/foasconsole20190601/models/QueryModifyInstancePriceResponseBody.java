@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryModifyInstancePriceResponseBody</p>
  */
 public class QueryModifyInstancePriceResponseBody extends TeaModel {
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryModifyInstancePriceResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     public static QueryModifyInstancePriceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         private PriceInfo priceInfo; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryModifyInstancePriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * PriceInfo.
@@ -91,17 +109,182 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceResponseBody</p>
+     */
+    public static class DepreciateInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheapRate")
+        private String cheapRate;
+
+        @com.aliyun.core.annotation.NameInMap("CheapStandAmount")
+        private String cheapStandAmount;
+
+        @com.aliyun.core.annotation.NameInMap("IsShow")
+        private Boolean isShow;
+
+        @com.aliyun.core.annotation.NameInMap("MonthPrice")
+        private String monthPrice;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalStandAmount")
+        private String originalStandAmount;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private DepreciateInfo(Builder builder) {
+            this.cheapRate = builder.cheapRate;
+            this.cheapStandAmount = builder.cheapStandAmount;
+            this.isShow = builder.isShow;
+            this.monthPrice = builder.monthPrice;
+            this.originalStandAmount = builder.originalStandAmount;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepreciateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cheapRate
+         */
+        public String getCheapRate() {
+            return this.cheapRate;
+        }
+
+        /**
+         * @return cheapStandAmount
+         */
+        public String getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        /**
+         * @return isShow
+         */
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        /**
+         * @return monthPrice
+         */
+        public String getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        /**
+         * @return originalStandAmount
+         */
+        public String getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String cheapRate; 
+            private String cheapStandAmount; 
+            private Boolean isShow; 
+            private String monthPrice; 
+            private String originalStandAmount; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepreciateInfo model) {
+                this.cheapRate = model.cheapRate;
+                this.cheapStandAmount = model.cheapStandAmount;
+                this.isShow = model.isShow;
+                this.monthPrice = model.monthPrice;
+                this.originalStandAmount = model.originalStandAmount;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * CheapRate.
+             */
+            public Builder cheapRate(String cheapRate) {
+                this.cheapRate = cheapRate;
+                return this;
+            }
+
+            /**
+             * CheapStandAmount.
+             */
+            public Builder cheapStandAmount(String cheapStandAmount) {
+                this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * IsShow.
+             */
+            public Builder isShow(Boolean isShow) {
+                this.isShow = isShow;
+                return this;
+            }
+
+            /**
+             * MonthPrice.
+             */
+            public Builder monthPrice(String monthPrice) {
+                this.monthPrice = monthPrice;
+                return this;
+            }
+
+            /**
+             * OriginalStandAmount.
+             */
+            public Builder originalStandAmount(String originalStandAmount) {
+                this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public DepreciateInfo build() {
+                return new DepreciateInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceResponseBody</p>
+     */
     public static class OptionalPromotions extends TeaModel {
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionOptionNo")
+        @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
         private String promotionOptionNo;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private OptionalPromotions(Builder builder) {
@@ -153,6 +336,16 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             private String promotionOptionNo; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalPromotions model) {
+                this.promotionDesc = model.promotionDesc;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+                this.selected = model.selected;
+            } 
+
             /**
              * PromotionDesc.
              */
@@ -192,11 +385,17 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rules(Builder builder) {
@@ -230,6 +429,14 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * Description.
              */
@@ -253,39 +460,65 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryModifyInstancePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryModifyInstancePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DepreciateInfo")
+        private DepreciateInfo depreciateInfo;
+
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @com.aliyun.core.annotation.NameInMap("LxRequestId")
+        private String lxRequestId;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("OptionalPromotions")
-        private java.util.List < OptionalPromotions> optionalPromotions;
+        @com.aliyun.core.annotation.NameInMap("OptionalPromotions")
+        private java.util.List<OptionalPromotions> optionalPromotions;
 
-        @NameInMap("OriginalAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalAmount")
         private Float originalAmount;
 
-        @NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        @com.aliyun.core.annotation.NameInMap("Rules")
+        private java.util.List<Rules> rules;
 
-        @NameInMap("TradeAmount")
+        @com.aliyun.core.annotation.NameInMap("StandDiscountPrice")
+        private String standDiscountPrice;
+
+        @com.aliyun.core.annotation.NameInMap("StandPrice")
+        private String standPrice;
+
+        @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private Float tradeAmount;
 
         private PriceInfo(Builder builder) {
             this.code = builder.code;
             this.currency = builder.currency;
+            this.depreciateInfo = builder.depreciateInfo;
             this.discountAmount = builder.discountAmount;
+            this.isContractActivity = builder.isContractActivity;
+            this.lxRequestId = builder.lxRequestId;
             this.message = builder.message;
             this.optionalPromotions = builder.optionalPromotions;
             this.originalAmount = builder.originalAmount;
             this.rules = builder.rules;
+            this.standDiscountPrice = builder.standDiscountPrice;
+            this.standPrice = builder.standPrice;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -312,10 +545,31 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return depreciateInfo
+         */
+        public DepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
+        }
+
+        /**
          * @return discountAmount
          */
         public Float getDiscountAmount() {
             return this.discountAmount;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return lxRequestId
+         */
+        public String getLxRequestId() {
+            return this.lxRequestId;
         }
 
         /**
@@ -328,7 +582,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         /**
          * @return optionalPromotions
          */
-        public java.util.List < OptionalPromotions> getOptionalPromotions() {
+        public java.util.List<OptionalPromotions> getOptionalPromotions() {
             return this.optionalPromotions;
         }
 
@@ -342,8 +596,22 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
+        }
+
+        /**
+         * @return standDiscountPrice
+         */
+        public String getStandDiscountPrice() {
+            return this.standDiscountPrice;
+        }
+
+        /**
+         * @return standPrice
+         */
+        public String getStandPrice() {
+            return this.standPrice;
         }
 
         /**
@@ -356,12 +624,36 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String currency; 
+            private DepreciateInfo depreciateInfo; 
             private Float discountAmount; 
+            private Boolean isContractActivity; 
+            private String lxRequestId; 
             private String message; 
-            private java.util.List < OptionalPromotions> optionalPromotions; 
+            private java.util.List<OptionalPromotions> optionalPromotions; 
             private Float originalAmount; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
+            private String standDiscountPrice; 
+            private String standPrice; 
             private Float tradeAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.code = model.code;
+                this.currency = model.currency;
+                this.depreciateInfo = model.depreciateInfo;
+                this.discountAmount = model.discountAmount;
+                this.isContractActivity = model.isContractActivity;
+                this.lxRequestId = model.lxRequestId;
+                this.message = model.message;
+                this.optionalPromotions = model.optionalPromotions;
+                this.originalAmount = model.originalAmount;
+                this.rules = model.rules;
+                this.standDiscountPrice = model.standDiscountPrice;
+                this.standPrice = model.standPrice;
+                this.tradeAmount = model.tradeAmount;
+            } 
 
             /**
              * Code.
@@ -380,10 +672,34 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             }
 
             /**
+             * DepreciateInfo.
+             */
+            public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
+                this.depreciateInfo = depreciateInfo;
+                return this;
+            }
+
+            /**
              * DiscountAmount.
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * LxRequestId.
+             */
+            public Builder lxRequestId(String lxRequestId) {
+                this.lxRequestId = lxRequestId;
                 return this;
             }
 
@@ -398,7 +714,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             /**
              * OptionalPromotions.
              */
-            public Builder optionalPromotions(java.util.List < OptionalPromotions> optionalPromotions) {
+            public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
                 return this;
             }
@@ -414,8 +730,24 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
+                return this;
+            }
+
+            /**
+             * StandDiscountPrice.
+             */
+            public Builder standDiscountPrice(String standDiscountPrice) {
+                this.standDiscountPrice = standDiscountPrice;
+                return this;
+            }
+
+            /**
+             * StandPrice.
+             */
+            public Builder standPrice(String standPrice) {
+                this.standPrice = standPrice;
                 return this;
             }
 

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespacesResponseBody</p>
  */
 public class DescribeNamespacesResponseBody extends TeaModel {
-    @NameInMap("Namespaces")
-    private java.util.List < Namespaces> namespaces;
+    @com.aliyun.core.annotation.NameInMap("Namespaces")
+    private java.util.List<Namespaces> namespaces;
 
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeNamespacesResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return namespaces
      */
-    public java.util.List < Namespaces> getNamespaces() {
+    public java.util.List<Namespaces> getNamespaces() {
         return this.namespaces;
     }
 
@@ -101,7 +110,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Namespaces> namespaces; 
+        private java.util.List<Namespaces> namespaces; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String requestId; 
@@ -109,10 +118,23 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private Long totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNamespacesResponseBody model) {
+            this.namespaces = model.namespaces;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
          * Namespaces.
          */
-        public Builder namespaces(java.util.List < Namespaces> namespaces) {
+        public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
@@ -171,11 +193,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -209,6 +237,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -232,14 +268,20 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class ResourceUsed extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Cu")
+        @com.aliyun.core.annotation.NameInMap("Cu")
         private Float cu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Float memoryGB;
 
         private ResourceUsed(Builder builder) {
@@ -282,6 +324,15 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private Float cu; 
             private Float memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceUsed model) {
+                this.cpu = model.cpu;
+                this.cu = model.cu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -313,11 +364,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -351,6 +408,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -374,30 +439,36 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
-        @NameInMap("ResourceUsed")
+        @com.aliyun.core.annotation.NameInMap("ResourceUsed")
         private ResourceUsed resourceUsed;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Namespaces(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
@@ -470,7 +541,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -482,7 +553,21 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             private ResourceSpec resourceSpec; 
             private ResourceUsed resourceUsed; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Namespaces model) {
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ha = model.ha;
+                this.namespace = model.namespace;
+                this.resourceSpec = model.resourceSpec;
+                this.resourceUsed = model.resourceUsed;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * GmtCreate.
@@ -543,7 +628,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

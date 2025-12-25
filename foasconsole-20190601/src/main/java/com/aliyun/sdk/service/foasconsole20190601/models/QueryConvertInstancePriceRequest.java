@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryConvertInstancePriceRequest} extends {@link RequestModel}
  *
  * <p>QueryConvertInstancePriceRequest</p>
  */
 public class QueryConvertInstancePriceRequest extends Request {
-    @Body
-    @NameInMap("ConvertPostpayInstanceRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConvertPostpayInstanceRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ConvertPostpayInstanceRequest convertPostpayInstanceRequest;
 
     private QueryConvertInstancePriceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         } 
 
         /**
-         * ConvertPostpayInstanceRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder convertPostpayInstanceRequest(ConvertPostpayInstanceRequest convertPostpayInstanceRequest) {
             this.putBodyParameter("ConvertPostpayInstanceRequest", convertPostpayInstanceRequest);
@@ -70,13 +75,19 @@ public class QueryConvertInstancePriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryConvertInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryConvertInstancePriceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -110,8 +121,19 @@ public class QueryConvertInstancePriceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -119,7 +141,10 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -133,13 +158,19 @@ public class QueryConvertInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryConvertInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryConvertInstancePriceRequest</p>
+     */
     public static class NamespaceResourceSpecs extends TeaModel {
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("ResourceSpec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ResourceSpec resourceSpec;
 
         private NamespaceResourceSpecs(Builder builder) {
@@ -173,8 +204,19 @@ public class QueryConvertInstancePriceRequest extends Request {
             private String namespace; 
             private ResourceSpec resourceSpec; 
 
+            private Builder() {
+            } 
+
+            private Builder(NamespaceResourceSpecs model) {
+                this.namespace = model.namespace;
+                this.resourceSpec = model.resourceSpec;
+            } 
+
             /**
-             * Namespace.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -182,7 +224,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * ResourceSpec.
+             * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -196,29 +238,35 @@ public class QueryConvertInstancePriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryConvertInstancePriceRequest} extends {@link TeaModel}
+     *
+     * <p>QueryConvertInstancePriceRequest</p>
+     */
     public static class ConvertPostpayInstanceRequest extends TeaModel {
-        @NameInMap("Duration")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer duration;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("IsAutoRenew")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsAutoRenew")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isAutoRenew;
 
-        @NameInMap("NamespaceResourceSpecs")
-        @Validation(required = true)
-        private java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs;
+        @com.aliyun.core.annotation.NameInMap("NamespaceResourceSpecs")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs;
 
-        @NameInMap("PricingCycle")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String pricingCycle;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
         private ConvertPostpayInstanceRequest(Builder builder) {
@@ -262,7 +310,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         /**
          * @return namespaceResourceSpecs
          */
-        public java.util.List < NamespaceResourceSpecs> getNamespaceResourceSpecs() {
+        public java.util.List<NamespaceResourceSpecs> getNamespaceResourceSpecs() {
             return this.namespaceResourceSpecs;
         }
 
@@ -284,12 +332,27 @@ public class QueryConvertInstancePriceRequest extends Request {
             private Integer duration; 
             private String instanceId; 
             private Boolean isAutoRenew; 
-            private java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs; 
+            private java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs; 
             private String pricingCycle; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConvertPostpayInstanceRequest model) {
+                this.duration = model.duration;
+                this.instanceId = model.instanceId;
+                this.isAutoRenew = model.isAutoRenew;
+                this.namespaceResourceSpecs = model.namespaceResourceSpecs;
+                this.pricingCycle = model.pricingCycle;
+                this.region = model.region;
+            } 
+
             /**
-             * Duration.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -297,7 +360,10 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkserverlesspost_public_cn-******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -305,7 +371,10 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * IsAutoRenew.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAutoRenew(Boolean isAutoRenew) {
                 this.isAutoRenew = isAutoRenew;
@@ -313,15 +382,18 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * NamespaceResourceSpecs.
+             * <p>This parameter is required.</p>
              */
-            public Builder namespaceResourceSpecs(java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs) {
+            public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
                 this.namespaceResourceSpecs = namespaceResourceSpecs;
                 return this;
             }
 
             /**
-             * PricingCycle.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -329,7 +401,10 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;

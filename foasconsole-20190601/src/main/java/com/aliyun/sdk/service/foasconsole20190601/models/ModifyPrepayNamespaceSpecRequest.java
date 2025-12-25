@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayNamespaceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayNamespaceSpecRequest</p>
  */
 public class ModifyPrepayNamespaceSpecRequest extends Request {
-    @Body
-    @NameInMap("ModifyPrepayNamespaceSpecRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifyPrepayNamespaceSpecRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest modifyPrepayNamespaceSpecRequest;
 
     private ModifyPrepayNamespaceSpecRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         } 
 
         /**
-         * ModifyPrepayNamespaceSpecRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder modifyPrepayNamespaceSpecRequest(ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest modifyPrepayNamespaceSpecRequest) {
             this.putBodyParameter("ModifyPrepayNamespaceSpecRequest", modifyPrepayNamespaceSpecRequest);
@@ -70,13 +75,19 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPrepayNamespaceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayNamespaceSpecRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -110,8 +121,19 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
-             * Cpu.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -119,7 +141,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -133,21 +158,27 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPrepayNamespaceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayNamespaceSpecRequest</p>
+     */
     public static class ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest extends TeaModel {
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceSpec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ResourceSpec resourceSpec;
 
         private ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest(Builder builder) {
@@ -199,8 +230,21 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             private String region; 
             private ResourceSpec resourceSpec; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest model) {
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.region = model.region;
+                this.resourceSpec = model.resourceSpec;
+            } 
+
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkserverlesspost_public_cn-0ju2bj2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -208,7 +252,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -216,7 +263,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -224,7 +274,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
-             * ResourceSpec.
+             * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;

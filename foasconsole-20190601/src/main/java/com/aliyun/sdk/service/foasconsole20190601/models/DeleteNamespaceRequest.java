@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNamespaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteNamespaceRequest</p>
  */
 public class DeleteNamespaceRequest extends Request {
-    @Body
-    @NameInMap("DeleteNamespaceRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeleteNamespaceRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DeleteNamespaceRequestDeleteNamespaceRequest deleteNamespaceRequest;
 
     private DeleteNamespaceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DeleteNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class DeleteNamespaceRequest extends Request {
         } 
 
         /**
-         * DeleteNamespaceRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder deleteNamespaceRequest(DeleteNamespaceRequestDeleteNamespaceRequest deleteNamespaceRequest) {
             this.putBodyParameter("DeleteNamespaceRequest", deleteNamespaceRequest);
@@ -70,17 +75,23 @@ public class DeleteNamespaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteNamespaceRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteNamespaceRequest</p>
+     */
     public static class DeleteNamespaceRequestDeleteNamespaceRequest extends TeaModel {
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
         private DeleteNamespaceRequestDeleteNamespaceRequest(Builder builder) {
@@ -123,8 +134,20 @@ public class DeleteNamespaceRequest extends Request {
             private String namespace; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeleteNamespaceRequestDeleteNamespaceRequest model) {
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.region = model.region;
+            } 
+
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkserverlesspost_public_cn-0ju2bj2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -132,7 +155,10 @@ public class DeleteNamespaceRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -140,7 +166,10 @@ public class DeleteNamespaceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;

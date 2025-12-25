@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNamespaceResponseBody</p>
  */
 public class DeleteNamespaceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteNamespaceResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
 
     public static DeleteNamespaceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteNamespaceResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

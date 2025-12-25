@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNamespacesRequest</p>
  */
 public class DescribeNamespacesRequest extends Request {
-    @Query
-    @NameInMap("DescribeNamespacesRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DescribeNamespacesRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private DescribeNamespacesRequestDescribeNamespacesRequest describeNamespacesRequest;
 
     private DescribeNamespacesRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DescribeNamespacesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class DescribeNamespacesRequest extends Request {
         } 
 
         /**
-         * DescribeNamespacesRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder describeNamespacesRequest(DescribeNamespacesRequestDescribeNamespacesRequest describeNamespacesRequest) {
             this.putQueryParameter("DescribeNamespacesRequest", describeNamespacesRequest);
@@ -70,11 +75,17 @@ public class DescribeNamespacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -108,6 +119,14 @@ public class DescribeNamespacesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -131,29 +150,35 @@ public class DescribeNamespacesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNamespacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesRequest</p>
+     */
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Integer pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private DescribeNamespacesRequestDescribeNamespacesRequest(Builder builder) {
             this.ha = builder.ha;
@@ -218,7 +243,7 @@ public class DescribeNamespacesRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -229,7 +254,20 @@ public class DescribeNamespacesRequest extends Request {
             private Integer pageIndex; 
             private Integer pageSize; 
             private String region; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeNamespacesRequestDescribeNamespacesRequest model) {
+                this.ha = model.ha;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.region = model.region;
+                this.tags = model.tags;
+            } 
 
             /**
              * Ha.
@@ -240,7 +278,10 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223493C7-FCA9-13D4-B75B-AF8B32F4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +313,10 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -282,7 +326,7 @@ public class DescribeNamespacesRequest extends Request {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

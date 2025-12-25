@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
  */
 public class RenewInstanceRequest extends Request {
-    @Body
-    @NameInMap("RenewInstanceRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RenewInstanceRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private RenewInstanceRequestRenewInstanceRequest renewInstanceRequest;
 
     private RenewInstanceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class RenewInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * RenewInstanceRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder renewInstanceRequest(RenewInstanceRequestRenewInstanceRequest renewInstanceRequest) {
             this.putBodyParameter("RenewInstanceRequest", renewInstanceRequest);
@@ -70,21 +75,27 @@ public class RenewInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenewInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>RenewInstanceRequest</p>
+     */
     public static class RenewInstanceRequestRenewInstanceRequest extends TeaModel {
-        @NameInMap("Duration")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer duration;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("PricingCycle")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String pricingCycle;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
         private RenewInstanceRequestRenewInstanceRequest(Builder builder) {
@@ -136,8 +147,21 @@ public class RenewInstanceRequest extends Request {
             private String pricingCycle; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(RenewInstanceRequestRenewInstanceRequest model) {
+                this.duration = model.duration;
+                this.instanceId = model.instanceId;
+                this.pricingCycle = model.pricingCycle;
+                this.region = model.region;
+            } 
+
             /**
-             * Duration.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -145,7 +169,10 @@ public class RenewInstanceRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkserverless_public_cn-7e22ae5****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -153,7 +180,10 @@ public class RenewInstanceRequest extends Request {
             }
 
             /**
-             * PricingCycle.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -161,7 +191,10 @@ public class RenewInstanceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;

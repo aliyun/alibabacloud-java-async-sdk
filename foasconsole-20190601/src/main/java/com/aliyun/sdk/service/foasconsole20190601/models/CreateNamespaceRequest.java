@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNamespaceRequest</p>
  */
 public class CreateNamespaceRequest extends Request {
-    @Body
-    @NameInMap("CreateNamespaceRequest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateNamespaceRequest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private CreateNamespaceRequestCreateNamespaceRequest createNamespaceRequest;
 
     private CreateNamespaceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class CreateNamespaceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class CreateNamespaceRequest extends Request {
         } 
 
         /**
-         * CreateNamespaceRequest.
+         * <p>This parameter is required.</p>
          */
         public Builder createNamespaceRequest(CreateNamespaceRequestCreateNamespaceRequest createNamespaceRequest) {
             this.putBodyParameter("CreateNamespaceRequest", createNamespaceRequest);
@@ -70,11 +75,17 @@ public class CreateNamespaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNamespaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceRequest</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -108,6 +119,14 @@ public class CreateNamespaceRequest extends Request {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -131,23 +150,29 @@ public class CreateNamespaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNamespaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceRequest</p>
+     */
     public static class CreateNamespaceRequestCreateNamespaceRequest extends TeaModel {
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
         private CreateNamespaceRequestCreateNamespaceRequest(Builder builder) {
@@ -208,6 +233,17 @@ public class CreateNamespaceRequest extends Request {
             private String region; 
             private ResourceSpec resourceSpec; 
 
+            private Builder() {
+            } 
+
+            private Builder(CreateNamespaceRequestCreateNamespaceRequest model) {
+                this.ha = model.ha;
+                this.instanceId = model.instanceId;
+                this.namespace = model.namespace;
+                this.region = model.region;
+                this.resourceSpec = model.resourceSpec;
+            } 
+
             /**
              * Ha.
              */
@@ -217,7 +253,10 @@ public class CreateNamespaceRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223493C7-FCA9-13D4-B75B-AF8B32F4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -225,7 +264,10 @@ public class CreateNamespaceRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -233,7 +275,10 @@ public class CreateNamespaceRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;

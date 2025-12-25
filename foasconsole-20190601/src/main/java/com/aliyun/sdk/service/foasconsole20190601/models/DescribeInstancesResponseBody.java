@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20190601.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -51,10 +56,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -101,7 +110,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String requestId; 
@@ -109,10 +118,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long totalCount; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -171,11 +193,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -209,6 +237,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(HaResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -232,13 +268,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class HostAliases extends TeaModel {
-        @NameInMap("HostNames")
-        @Validation(required = true)
-        private java.util.List < String > hostNames;
+        @com.aliyun.core.annotation.NameInMap("HostNames")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> hostNames;
 
-        @NameInMap("Ip")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -257,7 +299,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return hostNames
          */
-        public java.util.List < String > getHostNames() {
+        public java.util.List<String> getHostNames() {
             return this.hostNames;
         }
 
@@ -269,19 +311,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostNames; 
+            private java.util.List<String> hostNames; 
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostNames = model.hostNames;
+                this.ip = model.ip;
+            } 
+
             /**
-             * HostNames.
+             * <p>This parameter is required.</p>
              */
-            public Builder hostNames(java.util.List < String > hostNames) {
+            public Builder hostNames(java.util.List<String> hostNames) {
                 this.hostNames = hostNames;
                 return this;
             }
 
             /**
-             * Ip.
+             * <p>This parameter is required.</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -295,11 +345,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -333,6 +389,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer cpu; 
             private Integer memoryGB; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
             /**
              * Cpu.
              */
@@ -356,8 +420,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Oss extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
         private Oss(Builder builder) {
@@ -382,6 +452,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String bucket; 
 
+            private Builder() {
+            } 
+
+            private Builder(Oss model) {
+                this.bucket = model.bucket;
+            } 
+
             /**
              * Bucket.
              */
@@ -397,8 +474,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Storage extends TeaModel {
-        @NameInMap("Oss")
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
         private Storage(Builder builder) {
@@ -423,6 +506,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Oss oss; 
 
+            private Builder() {
+            } 
+
+            private Builder(Storage model) {
+                this.oss = model.oss;
+            } 
+
             /**
              * Oss.
              */
@@ -438,11 +528,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -476,6 +572,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -499,81 +603,87 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("ArchitectureType")
+        @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
 
-        @NameInMap("AskClusterId")
+        @com.aliyun.core.annotation.NameInMap("AskClusterId")
         private String askClusterId;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("HaResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
         private HaResourceSpec haResourceSpec;
 
-        @NameInMap("HaVSwitchIds")
-        private java.util.List < String > haVSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
+        private java.util.List<String> haVSwitchIds;
 
-        @NameInMap("HaZoneId")
+        @com.aliyun.core.annotation.NameInMap("HaZoneId")
         private String haZoneId;
 
-        @NameInMap("HostAliases")
-        @Validation(required = true)
-        private java.util.List < HostAliases> hostAliases;
+        @com.aliyun.core.annotation.NameInMap("HostAliases")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<HostAliases> hostAliases;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MonitorType")
+        @com.aliyun.core.annotation.NameInMap("MonitorType")
         private String monitorType;
 
-        @NameInMap("OrderState")
+        @com.aliyun.core.annotation.NameInMap("OrderState")
         private String orderState;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreateTime")
         private Long resourceCreateTime;
 
-        @NameInMap("ResourceExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceExpiredTime")
         private Long resourceExpiredTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Storage storage;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instances(Builder builder) {
@@ -657,7 +767,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return haVSwitchIds
          */
-        public java.util.List < String > getHaVSwitchIds() {
+        public java.util.List<String> getHaVSwitchIds() {
             return this.haVSwitchIds;
         }
 
@@ -671,7 +781,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return hostAliases
          */
-        public java.util.List < HostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
@@ -755,7 +865,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -769,7 +879,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -794,9 +904,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String clusterStatus; 
             private Boolean ha; 
             private HaResourceSpec haResourceSpec; 
-            private java.util.List < String > haVSwitchIds; 
+            private java.util.List<String> haVSwitchIds; 
             private String haZoneId; 
-            private java.util.List < HostAliases> hostAliases; 
+            private java.util.List<HostAliases> hostAliases; 
             private String instanceId; 
             private String instanceName; 
             private String monitorType; 
@@ -808,11 +918,42 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String resourceId; 
             private ResourceSpec resourceSpec; 
             private Storage storage; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String uid; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.architectureType = model.architectureType;
+                this.askClusterId = model.askClusterId;
+                this.chargeType = model.chargeType;
+                this.clusterStatus = model.clusterStatus;
+                this.ha = model.ha;
+                this.haResourceSpec = model.haResourceSpec;
+                this.haVSwitchIds = model.haVSwitchIds;
+                this.haZoneId = model.haZoneId;
+                this.hostAliases = model.hostAliases;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.monitorType = model.monitorType;
+                this.orderState = model.orderState;
+                this.region = model.region;
+                this.resourceCreateTime = model.resourceCreateTime;
+                this.resourceExpiredTime = model.resourceExpiredTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+                this.resourceSpec = model.resourceSpec;
+                this.storage = model.storage;
+                this.tags = model.tags;
+                this.uid = model.uid;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ArchitectureType.
@@ -865,7 +1006,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * HaVSwitchIds.
              */
-            public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+            public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
                 this.haVSwitchIds = haVSwitchIds;
                 return this;
             }
@@ -879,9 +1020,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostAliases.
+             * <p>This parameter is required.</p>
              */
-            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+            public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
                 return this;
             }
@@ -977,7 +1118,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -993,7 +1134,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
