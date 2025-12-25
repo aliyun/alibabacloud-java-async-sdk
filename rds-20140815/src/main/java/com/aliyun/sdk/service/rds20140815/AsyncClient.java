@@ -4503,6 +4503,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
 
     /**
+     * @param request the request parameters of ModifyRCDiskChargeType  ModifyRCDiskChargeTypeRequest
+     * @return ModifyRCDiskChargeTypeResponse
+     */
+    CompletableFuture<ModifyRCDiskChargeTypeResponse> modifyRCDiskChargeType(ModifyRCDiskChargeTypeRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> To minimize the impacts on your business, we recommend that you change specifications during off-peak hours.

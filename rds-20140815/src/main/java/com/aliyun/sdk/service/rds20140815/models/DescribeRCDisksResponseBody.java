@@ -251,6 +251,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
      * <p>DescribeRCDisksResponseBody</p>
      */
     public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
+        private String attachedTime;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -330,6 +333,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         private String zoneId;
 
         private Disks(Builder builder) {
+            this.attachedTime = builder.attachedTime;
             this.category = builder.category;
             this.creationTime = builder.creationTime;
             this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
@@ -364,6 +368,13 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
         public static Disks create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachedTime
+         */
+        public String getAttachedTime() {
+            return this.attachedTime;
         }
 
         /**
@@ -549,6 +560,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attachedTime; 
             private String category; 
             private String creationTime; 
             private Boolean deleteAutoSnapshot; 
@@ -580,6 +592,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             } 
 
             private Builder(Disks model) {
+                this.attachedTime = model.attachedTime;
                 this.category = model.category;
                 this.creationTime = model.creationTime;
                 this.deleteAutoSnapshot = model.deleteAutoSnapshot;
@@ -607,6 +620,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
                 this.type = model.type;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AttachedTime.
+             */
+            public Builder attachedTime(String attachedTime) {
+                this.attachedTime = attachedTime;
+                return this;
+            }
 
             /**
              * <p>The category of the disk. Valid values:</p>
