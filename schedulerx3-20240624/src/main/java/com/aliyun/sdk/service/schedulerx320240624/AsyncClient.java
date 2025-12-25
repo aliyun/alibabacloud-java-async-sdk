@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
     /**
+     * @param request the request parameters of CreateCalendar  CreateCalendarRequest
+     * @return CreateCalendarResponse
+     */
+    CompletableFuture<CreateCalendarResponse> createCalendar(CreateCalendarRequest request);
+
+    /**
      * @param request the request parameters of CreateCluster  CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -44,10 +50,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkflow  CreateWorkflowRequest
+     * @return CreateWorkflowResponse
+     */
+    CompletableFuture<CreateWorkflowResponse> createWorkflow(CreateWorkflowRequest request);
+
+    /**
      * @param request the request parameters of DeleteApp  DeleteAppRequest
      * @return DeleteAppResponse
      */
     CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCalendar  DeleteCalendarRequest
+     * @return DeleteCalendarResponse
+     */
+    CompletableFuture<DeleteCalendarResponse> deleteCalendar(DeleteCalendarRequest request);
 
     /**
      * @param request the request parameters of DeleteCluster  DeleteClusterRequest
@@ -62,16 +80,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
+     * @return DeleteWorkflowResponse
+     */
+    CompletableFuture<DeleteWorkflowResponse> deleteWorkflow(DeleteWorkflowRequest request);
+
+    /**
+     * @param request the request parameters of DeleteWorkflows  DeleteWorkflowsRequest
+     * @return DeleteWorkflowsResponse
+     */
+    CompletableFuture<DeleteWorkflowsResponse> deleteWorkflows(DeleteWorkflowsRequest request);
+
+    /**
      * @param request the request parameters of ExportJobs  ExportJobsRequest
      * @return ExportJobsResponse
      */
     CompletableFuture<ExportJobsResponse> exportJobs(ExportJobsRequest request);
 
     /**
+     * @param request the request parameters of ExportWorkflows  ExportWorkflowsRequest
+     * @return ExportWorkflowsResponse
+     */
+    CompletableFuture<ExportWorkflowsResponse> exportWorkflows(ExportWorkflowsRequest request);
+
+    /**
      * @param request the request parameters of GetApp  GetAppRequest
      * @return GetAppResponse
      */
     CompletableFuture<GetAppResponse> getApp(GetAppRequest request);
+
+    /**
+     * @param request the request parameters of GetCalendar  GetCalendarRequest
+     * @return GetCalendarResponse
+     */
+    CompletableFuture<GetCalendarResponse> getCalendar(GetCalendarRequest request);
 
     /**
      * @param request the request parameters of GetCluster  GetClusterRequest
@@ -122,6 +164,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLogEventResponse> getLogEvent(GetLogEventRequest request);
 
     /**
+     * @param request the request parameters of GetWorkflow  GetWorkflowRequest
+     * @return GetWorkflowResponse
+     */
+    CompletableFuture<GetWorkflowResponse> getWorkflow(GetWorkflowRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkflowDAG  GetWorkflowDAGRequest
+     * @return GetWorkflowDAGResponse
+     */
+    CompletableFuture<GetWorkflowDAGResponse> getWorkflowDAG(GetWorkflowDAGRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkflowDAGPreview  GetWorkflowDAGPreviewRequest
+     * @return GetWorkflowDAGPreviewResponse
+     */
+    CompletableFuture<GetWorkflowDAGPreviewResponse> getWorkflowDAGPreview(GetWorkflowDAGPreviewRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkflowExecutionDAG  GetWorkflowExecutionDAGRequest
+     * @return GetWorkflowExecutionDAGResponse
+     */
+    CompletableFuture<GetWorkflowExecutionDAGResponse> getWorkflowExecutionDAG(GetWorkflowExecutionDAGRequest request);
+
+    /**
      * @param request the request parameters of ImportCalendar  ImportCalendarRequest
      * @return ImportCalendarResponse
      */
@@ -132,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportJobsResponse
      */
     CompletableFuture<ImportJobsResponse> importJobs(ImportJobsRequest request);
+
+    /**
+     * @param request the request parameters of ImportWorkflows  ImportWorkflowsRequest
+     * @return ImportWorkflowsResponse
+     */
+    CompletableFuture<ImportWorkflowsResponse> importWorkflows(ImportWorkflowsRequest request);
 
     /**
      * @param request the request parameters of ListAlarmEvent  ListAlarmEventRequest
@@ -156,6 +228,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCalendarNamesResponse
      */
     CompletableFuture<ListCalendarNamesResponse> listCalendarNames(ListCalendarNamesRequest request);
+
+    /**
+     * @param request the request parameters of ListCalendars  ListCalendarsRequest
+     * @return ListCalendarsResponse
+     */
+    CompletableFuture<ListCalendarsResponse> listCalendars(ListCalendarsRequest request);
 
     /**
      * @param request the request parameters of ListClusters  ListClustersRequest
@@ -224,6 +302,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScheduleTimesResponse> listScheduleTimes(ListScheduleTimesRequest request);
 
     /**
+     * @param request the request parameters of ListWorkflowExecutions  ListWorkflowExecutionsRequest
+     * @return ListWorkflowExecutionsResponse
+     */
+    CompletableFuture<ListWorkflowExecutionsResponse> listWorkflowExecutions(ListWorkflowExecutionsRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkflowVersions  ListWorkflowVersionsRequest
+     * @return ListWorkflowVersionsResponse
+     */
+    CompletableFuture<ListWorkflowVersionsResponse> listWorkflowVersions(ListWorkflowVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkflows  ListWorkflowsRequest
+     * @return ListWorkflowsResponse
+     */
+    CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request);
+
+    /**
+     * @param request the request parameters of OperateBackfillWorkflow  OperateBackfillWorkflowRequest
+     * @return OperateBackfillWorkflowResponse
+     */
+    CompletableFuture<OperateBackfillWorkflowResponse> operateBackfillWorkflow(OperateBackfillWorkflowRequest request);
+
+    /**
      * @param request the request parameters of OperateDesignateExecutors  OperateDesignateExecutorsRequest
      * @return OperateDesignateExecutorsResponse
      */
@@ -236,16 +338,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateDisableJobsResponse> operateDisableJobs(OperateDisableJobsRequest request);
 
     /**
+     * @param request the request parameters of OperateDisableWorkflows  OperateDisableWorkflowsRequest
+     * @return OperateDisableWorkflowsResponse
+     */
+    CompletableFuture<OperateDisableWorkflowsResponse> operateDisableWorkflows(OperateDisableWorkflowsRequest request);
+
+    /**
      * @param request the request parameters of OperateEnableJobs  OperateEnableJobsRequest
      * @return OperateEnableJobsResponse
      */
     CompletableFuture<OperateEnableJobsResponse> operateEnableJobs(OperateEnableJobsRequest request);
 
     /**
+     * @param request the request parameters of OperateEnableWorkflows  OperateEnableWorkflowsRequest
+     * @return OperateEnableWorkflowsResponse
+     */
+    CompletableFuture<OperateEnableWorkflowsResponse> operateEnableWorkflows(OperateEnableWorkflowsRequest request);
+
+    /**
      * @param request the request parameters of OperateExecuteJob  OperateExecuteJobRequest
      * @return OperateExecuteJobResponse
      */
     CompletableFuture<OperateExecuteJobResponse> operateExecuteJob(OperateExecuteJobRequest request);
+
+    /**
+     * @param request the request parameters of OperateExecuteWorkflow  OperateExecuteWorkflowRequest
+     * @return OperateExecuteWorkflowResponse
+     */
+    CompletableFuture<OperateExecuteWorkflowResponse> operateExecuteWorkflow(OperateExecuteWorkflowRequest request);
+
+    /**
+     * @param request the request parameters of OperateHoldJobExecution  OperateHoldJobExecutionRequest
+     * @return OperateHoldJobExecutionResponse
+     */
+    CompletableFuture<OperateHoldJobExecutionResponse> operateHoldJobExecution(OperateHoldJobExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateHoldWorkflowExecution  OperateHoldWorkflowExecutionRequest
+     * @return OperateHoldWorkflowExecutionResponse
+     */
+    CompletableFuture<OperateHoldWorkflowExecutionResponse> operateHoldWorkflowExecution(OperateHoldWorkflowExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateMarkSuccessJobExecution  OperateMarkSuccessJobExecutionRequest
+     * @return OperateMarkSuccessJobExecutionResponse
+     */
+    CompletableFuture<OperateMarkSuccessJobExecutionResponse> operateMarkSuccessJobExecution(OperateMarkSuccessJobExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateMarkSuccessWorkflowExecution  OperateMarkSuccessWorkflowExecutionRequest
+     * @return OperateMarkSuccessWorkflowExecutionResponse
+     */
+    CompletableFuture<OperateMarkSuccessWorkflowExecutionResponse> operateMarkSuccessWorkflowExecution(OperateMarkSuccessWorkflowExecutionRequest request);
 
     /**
      * @param request the request parameters of OperateRerunJob  OperateRerunJobRequest
@@ -260,10 +404,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OperateRetryJobExecutionResponse> operateRetryJobExecution(OperateRetryJobExecutionRequest request);
 
     /**
+     * @param request the request parameters of OperateRetryWorkflowExecution  OperateRetryWorkflowExecutionRequest
+     * @return OperateRetryWorkflowExecutionResponse
+     */
+    CompletableFuture<OperateRetryWorkflowExecutionResponse> operateRetryWorkflowExecution(OperateRetryWorkflowExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateSkipJobExecution  OperateSkipJobExecutionRequest
+     * @return OperateSkipJobExecutionResponse
+     */
+    CompletableFuture<OperateSkipJobExecutionResponse> operateSkipJobExecution(OperateSkipJobExecutionRequest request);
+
+    /**
      * @param request the request parameters of OperateStopJobExecution  OperateStopJobExecutionRequest
      * @return OperateStopJobExecutionResponse
      */
     CompletableFuture<OperateStopJobExecutionResponse> operateStopJobExecution(OperateStopJobExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateStopWorkflowExecution  OperateStopWorkflowExecutionRequest
+     * @return OperateStopWorkflowExecutionResponse
+     */
+    CompletableFuture<OperateStopWorkflowExecutionResponse> operateStopWorkflowExecution(OperateStopWorkflowExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateUnholdJobExecution  OperateUnholdJobExecutionRequest
+     * @return OperateUnholdJobExecutionResponse
+     */
+    CompletableFuture<OperateUnholdJobExecutionResponse> operateUnholdJobExecution(OperateUnholdJobExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateUnholdWorkflowExecution  OperateUnholdWorkflowExecutionRequest
+     * @return OperateUnholdWorkflowExecutionResponse
+     */
+    CompletableFuture<OperateUnholdWorkflowExecutionResponse> operateUnholdWorkflowExecution(OperateUnholdWorkflowExecutionRequest request);
+
+    /**
+     * @param request the request parameters of OperateUnskipJobExecution  OperateUnskipJobExecutionRequest
+     * @return OperateUnskipJobExecutionResponse
+     */
+    CompletableFuture<OperateUnskipJobExecutionResponse> operateUnskipJobExecution(OperateUnskipJobExecutionRequest request);
 
     /**
      * @param request the request parameters of SyncJobs  SyncJobsRequest
@@ -276,6 +456,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAppResponse
      */
     CompletableFuture<UpdateAppResponse> updateApp(UpdateAppRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCalendar  UpdateCalendarRequest
+     * @return UpdateCalendarResponse
+     */
+    CompletableFuture<UpdateCalendarResponse> updateCalendar(UpdateCalendarRequest request);
 
     /**
      * @param request the request parameters of UpdateCluster  UpdateClusterRequest
@@ -300,5 +486,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobScriptResponse
      */
     CompletableFuture<UpdateJobScriptResponse> updateJobScript(UpdateJobScriptRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkflow  UpdateWorkflowRequest
+     * @return UpdateWorkflowResponse
+     */
+    CompletableFuture<UpdateWorkflowResponse> updateWorkflow(UpdateWorkflowRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkflowDAG  UpdateWorkflowDAGRequest
+     * @return UpdateWorkflowDAGResponse
+     */
+    CompletableFuture<UpdateWorkflowDAGResponse> updateWorkflowDAG(UpdateWorkflowDAGRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkflowDAGVersion  UpdateWorkflowDAGVersionRequest
+     * @return UpdateWorkflowDAGVersionResponse
+     */
+    CompletableFuture<UpdateWorkflowDAGVersionResponse> updateWorkflowDAGVersion(UpdateWorkflowDAGVersionRequest request);
 
 }
