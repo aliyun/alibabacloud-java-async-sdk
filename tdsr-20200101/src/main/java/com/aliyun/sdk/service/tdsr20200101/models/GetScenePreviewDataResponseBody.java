@@ -52,6 +52,10 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScenePreviewDataResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -263,6 +279,19 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -381,6 +410,15 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private java.util.List<Double> rotation; 
             private java.util.List<Double> spot; 
             private java.util.List<Double> viewpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(Position model) {
+                this.rotation = model.rotation;
+                this.spot = model.spot;
+                this.viewpoint = model.viewpoint;
+            } 
 
             /**
              * Rotation.
@@ -601,6 +639,26 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String virtualId; 
             private String virtualName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PanoList model) {
+                this.curRoomPicList = model.curRoomPicList;
+                this.enabled = model.enabled;
+                this.floorIdx = model.floorIdx;
+                this.id = model.id;
+                this.mainImage = model.mainImage;
+                this.neighbours = model.neighbours;
+                this.position = model.position;
+                this.rawName = model.rawName;
+                this.resource = model.resource;
+                this.roomIdx = model.roomIdx;
+                this.subSceneId = model.subSceneId;
+                this.token = model.token;
+                this.virtualId = model.virtualId;
+                this.virtualName = model.virtualName;
+            } 
+
             /**
              * CurRoomPicList.
              */
@@ -791,6 +849,16 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String textureModelPath; 
             private String texturePanoPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.modelPath = model.modelPath;
+                this.panoList = model.panoList;
+                this.textureModelPath = model.textureModelPath;
+                this.texturePanoPath = model.texturePanoPath;
+            } 
+
             /**
              * ModelPath.
              */
@@ -873,6 +941,14 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         public static final class Builder {
             private String customText; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ButtonConfig model) {
+                this.customText = model.customText;
+                this.type = model.type;
+            } 
 
             /**
              * CustomText.
@@ -1109,6 +1185,28 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private String title; 
             private String video; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.backgroundColor = model.backgroundColor;
+                this.buttonConfig = model.buttonConfig;
+                this.content = model.content;
+                this.formImgSize = model.formImgSize;
+                this.formJumpType = model.formJumpType;
+                this.formSelectImgType = model.formSelectImgType;
+                this.images = model.images;
+                this.isTagVisibleBy3d = model.isTagVisibleBy3d;
+                this.link = model.link;
+                this.panoId = model.panoId;
+                this.position = model.position;
+                this.positionPanoCube = model.positionPanoCube;
+                this.relatedPanoIds = model.relatedPanoIds;
+                this.sceneId = model.sceneId;
+                this.title = model.title;
+                this.video = model.video;
+            } 
+
             /**
              * BackgroundColor.
              */
@@ -1324,6 +1422,17 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
             private java.util.List<Double> positionPanoCube; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.config = model.config;
+                this.id = model.id;
+                this.position = model.position;
+                this.positionPanoCube = model.positionPanoCube;
+                this.type = model.type;
+            } 
+
             /**
              * Config.
              */
@@ -1414,6 +1523,14 @@ public class GetScenePreviewDataResponseBody extends TeaModel {
         public static final class Builder {
             private Model model; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.model = model.model;
+                this.tags = model.tags;
+            } 
 
             /**
              * Model.

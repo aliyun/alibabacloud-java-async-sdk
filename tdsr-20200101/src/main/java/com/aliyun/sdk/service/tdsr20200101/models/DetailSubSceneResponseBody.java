@@ -104,6 +104,10 @@ public class DetailSubSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -257,6 +261,31 @@ public class DetailSubSceneResponseBody extends TeaModel {
         private Boolean success; 
         private String type; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetailSubSceneResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.coverUrl = model.coverUrl;
+            this.cubemapPath = model.cubemapPath;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.imageUrl = model.imageUrl;
+            this.layoutData = model.layoutData;
+            this.message = model.message;
+            this.name = model.name;
+            this.originUrl = model.originUrl;
+            this.position = model.position;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.status = model.status;
+            this.success = model.success;
+            this.type = model.type;
+            this.url = model.url;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -519,6 +548,19 @@ public class DetailSubSceneResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.

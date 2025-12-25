@@ -56,6 +56,10 @@ public class GetSourcePackStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class GetSourcePackStatusResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSourcePackStatusResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.url = model.url;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -280,6 +297,19 @@ public class GetSourcePackStatusResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -386,6 +416,14 @@ public class GetSourcePackStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Long progress; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
 
             /**
              * Progress.

@@ -52,6 +52,10 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetScenePreviewResourceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -263,6 +279,19 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -394,6 +423,16 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             private String orthomapConfig; 
             private String rootPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.hotspotTagConfig = model.hotspotTagConfig;
+                this.modelConfig = model.modelConfig;
+                this.orthomapConfig = model.orthomapConfig;
+                this.rootPath = model.rootPath;
+            } 
+
             /**
              * HotspotTagConfig.
              */
@@ -488,6 +527,15 @@ public class GetScenePreviewResourceResponseBody extends TeaModel {
             private String name; 
             private ResourceDirectory resourceDirectory; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.name = model.name;
+                this.resourceDirectory = model.resourceDirectory;
+                this.version = model.version;
+            } 
 
             /**
              * Name.

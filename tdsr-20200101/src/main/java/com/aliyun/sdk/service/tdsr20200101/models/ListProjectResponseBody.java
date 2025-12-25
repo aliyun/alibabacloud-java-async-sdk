@@ -68,6 +68,10 @@ public class ListProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -149,6 +153,22 @@ public class ListProjectResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.hasNext = model.hasNext;
+            this.list = model.list;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -343,6 +363,19 @@ public class ListProjectResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -509,6 +542,19 @@ public class ListProjectResponseBody extends TeaModel {
             private Long modifiedTime; 
             private String name; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.businessId = model.businessId;
+                this.businessName = model.businessName;
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.modifiedTime = model.modifiedTime;
+                this.name = model.name;
+                this.token = model.token;
+            } 
 
             /**
              * BusinessId.

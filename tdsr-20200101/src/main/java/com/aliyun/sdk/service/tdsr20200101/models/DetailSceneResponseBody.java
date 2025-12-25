@@ -104,6 +104,10 @@ public class DetailSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -257,6 +261,31 @@ public class DetailSceneResponseBody extends TeaModel {
         private Long subSceneNum; 
         private Boolean success; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetailSceneResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.captures = model.captures;
+            this.code = model.code;
+            this.coverUrl = model.coverUrl;
+            this.floorPlans = model.floorPlans;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.message = model.message;
+            this.name = model.name;
+            this.previewToken = model.previewToken;
+            this.published = model.published;
+            this.requestId = model.requestId;
+            this.sourceNum = model.sourceNum;
+            this.status = model.status;
+            this.statusName = model.statusName;
+            this.subSceneNum = model.subSceneNum;
+            this.success = model.success;
+            this.type = model.type;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -520,6 +549,19 @@ public class DetailSceneResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -627,6 +669,14 @@ public class DetailSceneResponseBody extends TeaModel {
             private String title; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Captures model) {
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
             /**
              * Title.
              */
@@ -717,6 +767,16 @@ public class DetailSceneResponseBody extends TeaModel {
             private String floorLabel; 
             private String floorName; 
             private String miniMapUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(FloorPlans model) {
+                this.colorMapUrl = model.colorMapUrl;
+                this.floorLabel = model.floorLabel;
+                this.floorName = model.floorName;
+                this.miniMapUrl = model.miniMapUrl;
+            } 
 
             /**
              * ColorMapUrl.

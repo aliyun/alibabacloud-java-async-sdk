@@ -76,6 +76,10 @@ public class DetailProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DetailProjectResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(DetailProjectResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.businessId = model.businessId;
+            this.businessName = model.businessName;
+            this.code = model.code;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.message = model.message;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.token = model.token;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -382,6 +404,19 @@ public class DetailProjectResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.

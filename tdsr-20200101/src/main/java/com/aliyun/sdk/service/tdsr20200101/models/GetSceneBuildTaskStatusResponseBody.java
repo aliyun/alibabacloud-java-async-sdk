@@ -64,6 +64,10 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -137,6 +141,21 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
         private String sceneId; 
         private String status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSceneBuildTaskStatusResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.sceneId = model.sceneId;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -319,6 +338,19 @@ public class GetSceneBuildTaskStatusResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.

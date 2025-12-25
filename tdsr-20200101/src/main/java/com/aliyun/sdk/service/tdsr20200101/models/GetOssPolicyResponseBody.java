@@ -76,6 +76,10 @@ public class GetOssPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class GetOssPolicyResponseBody extends TeaModel {
         private String requestId; 
         private String signature; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOssPolicyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.accessId = model.accessId;
+            this.callback = model.callback;
+            this.code = model.code;
+            this.dir = model.dir;
+            this.expire = model.expire;
+            this.host = model.host;
+            this.message = model.message;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -379,6 +401,19 @@ public class GetOssPolicyResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.

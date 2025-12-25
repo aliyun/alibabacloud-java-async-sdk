@@ -68,6 +68,10 @@ public class ListSubSceneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -149,6 +153,22 @@ public class ListSubSceneResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSubSceneResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.count = model.count;
+            this.currentPage = model.currentPage;
+            this.hasNext = model.hasNext;
+            this.list = model.list;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -339,6 +359,19 @@ public class ListSubSceneResponseBody extends TeaModel {
             private String encodedDiagnosticMessage; 
             private String noPermissionType; 
             private String policyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
 
             /**
              * AuthAction.
@@ -602,6 +635,27 @@ public class ListSubSceneResponseBody extends TeaModel {
             private Long status; 
             private String type; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.baseImageUrl = model.baseImageUrl;
+                this.coverUrl = model.coverUrl;
+                this.cubemapPath = model.cubemapPath;
+                this.deleted = model.deleted;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.layoutData = model.layoutData;
+                this.name = model.name;
+                this.originUrl = model.originUrl;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.status = model.status;
+                this.type = model.type;
+                this.url = model.url;
+            } 
 
             /**
              * BaseImageUrl.

@@ -60,6 +60,10 @@ public class GetConnDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -125,6 +129,20 @@ public class GetConnDataResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetConnDataResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.extend = model.extend;
+            this.list = model.list;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.version = model.version;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -303,6 +321,19 @@ public class GetConnDataResponseBody extends TeaModel {
             private String noPermissionType; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessDeniedDetail model) {
+                this.authAction = model.authAction;
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+                this.encodedDiagnosticMessage = model.encodedDiagnosticMessage;
+                this.noPermissionType = model.noPermissionType;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * AuthAction.
              */
@@ -421,6 +452,15 @@ public class GetConnDataResponseBody extends TeaModel {
             private String id; 
             private String mapId; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.id = model.id;
+                this.mapId = model.mapId;
+                this.type = model.type;
+            } 
 
             /**
              * <p>ID</p>
