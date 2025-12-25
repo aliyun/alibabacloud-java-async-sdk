@@ -83,6 +83,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
     private Boolean needDesensitization;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private String parameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PresencePenalty")
     private String presencePenalty;
 
@@ -152,6 +156,7 @@ public class ChatWithDesensitizeSSERequest extends Request {
         this.modalitiesList = builder.modalitiesList;
         this.model = builder.model;
         this.needDesensitization = builder.needDesensitization;
+        this.parameters = builder.parameters;
         this.presencePenalty = builder.presencePenalty;
         this.responseFormat = builder.responseFormat;
         this.searchOptions = builder.searchOptions;
@@ -293,6 +298,13 @@ public class ChatWithDesensitizeSSERequest extends Request {
     }
 
     /**
+     * @return parameters
+     */
+    public String getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return presencePenalty
      */
     public String getPresencePenalty() {
@@ -400,6 +412,7 @@ public class ChatWithDesensitizeSSERequest extends Request {
         private java.util.List<String> modalitiesList; 
         private String model; 
         private Boolean needDesensitization; 
+        private String parameters; 
         private String presencePenalty; 
         private String responseFormat; 
         private java.util.Map<String, String> searchOptions; 
@@ -436,6 +449,7 @@ public class ChatWithDesensitizeSSERequest extends Request {
             this.modalitiesList = request.modalitiesList;
             this.model = request.model;
             this.needDesensitization = request.needDesensitization;
+            this.parameters = request.parameters;
             this.presencePenalty = request.presencePenalty;
             this.responseFormat = request.responseFormat;
             this.searchOptions = request.searchOptions;
@@ -597,6 +611,15 @@ public class ChatWithDesensitizeSSERequest extends Request {
         public Builder needDesensitization(Boolean needDesensitization) {
             this.putQueryParameter("NeedDesensitization", needDesensitization);
             this.needDesensitization = needDesensitization;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(String parameters) {
+            this.putQueryParameter("Parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 
