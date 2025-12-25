@@ -1306,6 +1306,303 @@ public class GetResultToReviewResponseBody extends TeaModel {
      *
      * <p>GetResultToReviewResponseBody</p>
      */
+    public static class SentenceReviewResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Changed")
+        private Boolean changed;
+
+        @com.aliyun.core.annotation.NameInMap("Cid")
+        private Long cid;
+
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
+        @com.aliyun.core.annotation.NameInMap("HitStatus")
+        private Integer hitStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OriginTaskId")
+        private String originTaskId;
+
+        @com.aliyun.core.annotation.NameInMap("OriginVid")
+        private String originVid;
+
+        @com.aliyun.core.annotation.NameInMap("Pid")
+        private String pid;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewDimensionType")
+        private String reviewDimensionType;
+
+        @com.aliyun.core.annotation.NameInMap("Rid")
+        private Long rid;
+
+        @com.aliyun.core.annotation.NameInMap("Sid")
+        private Long sid;
+
+        private SentenceReviewResults(Builder builder) {
+            this.changed = builder.changed;
+            this.cid = builder.cid;
+            this.comment = builder.comment;
+            this.hitStatus = builder.hitStatus;
+            this.originTaskId = builder.originTaskId;
+            this.originVid = builder.originVid;
+            this.pid = builder.pid;
+            this.reviewDimensionType = builder.reviewDimensionType;
+            this.rid = builder.rid;
+            this.sid = builder.sid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SentenceReviewResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return changed
+         */
+        public Boolean getChanged() {
+            return this.changed;
+        }
+
+        /**
+         * @return cid
+         */
+        public Long getCid() {
+            return this.cid;
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        /**
+         * @return hitStatus
+         */
+        public Integer getHitStatus() {
+            return this.hitStatus;
+        }
+
+        /**
+         * @return originTaskId
+         */
+        public String getOriginTaskId() {
+            return this.originTaskId;
+        }
+
+        /**
+         * @return originVid
+         */
+        public String getOriginVid() {
+            return this.originVid;
+        }
+
+        /**
+         * @return pid
+         */
+        public String getPid() {
+            return this.pid;
+        }
+
+        /**
+         * @return reviewDimensionType
+         */
+        public String getReviewDimensionType() {
+            return this.reviewDimensionType;
+        }
+
+        /**
+         * @return rid
+         */
+        public Long getRid() {
+            return this.rid;
+        }
+
+        /**
+         * @return sid
+         */
+        public Long getSid() {
+            return this.sid;
+        }
+
+        public static final class Builder {
+            private Boolean changed; 
+            private Long cid; 
+            private String comment; 
+            private Integer hitStatus; 
+            private String originTaskId; 
+            private String originVid; 
+            private String pid; 
+            private String reviewDimensionType; 
+            private Long rid; 
+            private Long sid; 
+
+            private Builder() {
+            } 
+
+            private Builder(SentenceReviewResults model) {
+                this.changed = model.changed;
+                this.cid = model.cid;
+                this.comment = model.comment;
+                this.hitStatus = model.hitStatus;
+                this.originTaskId = model.originTaskId;
+                this.originVid = model.originVid;
+                this.pid = model.pid;
+                this.reviewDimensionType = model.reviewDimensionType;
+                this.rid = model.rid;
+                this.sid = model.sid;
+            } 
+
+            /**
+             * Changed.
+             */
+            public Builder changed(Boolean changed) {
+                this.changed = changed;
+                return this;
+            }
+
+            /**
+             * Cid.
+             */
+            public Builder cid(Long cid) {
+                this.cid = cid;
+                return this;
+            }
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * HitStatus.
+             */
+            public Builder hitStatus(Integer hitStatus) {
+                this.hitStatus = hitStatus;
+                return this;
+            }
+
+            /**
+             * OriginTaskId.
+             */
+            public Builder originTaskId(String originTaskId) {
+                this.originTaskId = originTaskId;
+                return this;
+            }
+
+            /**
+             * OriginVid.
+             */
+            public Builder originVid(String originVid) {
+                this.originVid = originVid;
+                return this;
+            }
+
+            /**
+             * Pid.
+             */
+            public Builder pid(String pid) {
+                this.pid = pid;
+                return this;
+            }
+
+            /**
+             * ReviewDimensionType.
+             */
+            public Builder reviewDimensionType(String reviewDimensionType) {
+                this.reviewDimensionType = reviewDimensionType;
+                return this;
+            }
+
+            /**
+             * Rid.
+             */
+            public Builder rid(Long rid) {
+                this.rid = rid;
+                return this;
+            }
+
+            /**
+             * Sid.
+             */
+            public Builder sid(Long sid) {
+                this.sid = sid;
+                return this;
+            }
+
+            public SentenceReviewResults build() {
+                return new SentenceReviewResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
+    public static class ReviewInfoSentenceReviewResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SentenceReviewResults")
+        private java.util.List<SentenceReviewResults> sentenceReviewResults;
+
+        private ReviewInfoSentenceReviewResults(Builder builder) {
+            this.sentenceReviewResults = builder.sentenceReviewResults;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewInfoSentenceReviewResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sentenceReviewResults
+         */
+        public java.util.List<SentenceReviewResults> getSentenceReviewResults() {
+            return this.sentenceReviewResults;
+        }
+
+        public static final class Builder {
+            private java.util.List<SentenceReviewResults> sentenceReviewResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReviewInfoSentenceReviewResults model) {
+                this.sentenceReviewResults = model.sentenceReviewResults;
+            } 
+
+            /**
+             * SentenceReviewResults.
+             */
+            public Builder sentenceReviewResults(java.util.List<SentenceReviewResults> sentenceReviewResults) {
+                this.sentenceReviewResults = sentenceReviewResults;
+                return this;
+            }
+
+            public ReviewInfoSentenceReviewResults build() {
+                return new ReviewInfoSentenceReviewResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetResultToReviewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResultToReviewResponseBody</p>
+     */
     public static class ReviewInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitId")
         private String hitId;
@@ -1322,12 +1619,16 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
+        @com.aliyun.core.annotation.NameInMap("SentenceReviewResults")
+        private ReviewInfoSentenceReviewResults sentenceReviewResults;
+
         private ReviewInfo(Builder builder) {
             this.hitId = builder.hitId;
             this.reviewResult = builder.reviewResult;
             this.reviewTime = builder.reviewTime;
             this.reviewer = builder.reviewer;
             this.rid = builder.rid;
+            this.sentenceReviewResults = builder.sentenceReviewResults;
         }
 
         public static Builder builder() {
@@ -1373,12 +1674,20 @@ public class GetResultToReviewResponseBody extends TeaModel {
             return this.rid;
         }
 
+        /**
+         * @return sentenceReviewResults
+         */
+        public ReviewInfoSentenceReviewResults getSentenceReviewResults() {
+            return this.sentenceReviewResults;
+        }
+
         public static final class Builder {
             private String hitId; 
             private Integer reviewResult; 
             private String reviewTime; 
             private String reviewer; 
             private Long rid; 
+            private ReviewInfoSentenceReviewResults sentenceReviewResults; 
 
             private Builder() {
             } 
@@ -1389,6 +1698,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.reviewTime = model.reviewTime;
                 this.reviewer = model.reviewer;
                 this.rid = model.rid;
+                this.sentenceReviewResults = model.sentenceReviewResults;
             } 
 
             /**
@@ -1428,6 +1738,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
+                return this;
+            }
+
+            /**
+             * SentenceReviewResults.
+             */
+            public Builder sentenceReviewResults(ReviewInfoSentenceReviewResults sentenceReviewResults) {
+                this.sentenceReviewResults = sentenceReviewResults;
                 return this;
             }
 

@@ -106,6 +106,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskAssignRuleResponse> createTaskAssignRule(CreateTaskAssignRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
+    CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
+
+    /**
      * @param request the request parameters of CreateWarningConfig  CreateWarningConfigRequest
      * @return CreateWarningConfigResponse
      */
@@ -474,6 +480,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitReviewInfoResponse
      */
     CompletableFuture<SubmitReviewInfoResponse> submitReviewInfo(SubmitReviewInfoRequest request);
+
+    /**
+     * @param request the request parameters of SubmitReviewInfoV4  SubmitReviewInfoV4Request
+     * @return SubmitReviewInfoV4Response
+     */
+    CompletableFuture<SubmitReviewInfoV4Response> submitReviewInfoV4(SubmitReviewInfoV4Request request);
 
     /**
      * @param request the request parameters of SyncQualityCheck  SyncQualityCheckRequest
