@@ -727,6 +727,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -754,6 +757,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
             this.tags = builder.tags;
+            this.version = builder.version;
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
             this.zoneId = builder.zoneId;
@@ -887,6 +891,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -925,6 +936,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer runningTime; 
             private String sgId; 
             private java.util.List<Tags> tags; 
+            private String version; 
             private String vpcId; 
             private String vswId; 
             private String zoneId; 
@@ -950,6 +962,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.runningTime = model.runningTime;
                 this.sgId = model.sgId;
                 this.tags = model.tags;
+                this.version = model.version;
                 this.vpcId = model.vpcId;
                 this.vswId = model.vswId;
                 this.zoneId = model.zoneId;
@@ -1143,6 +1156,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

@@ -26,6 +26,10 @@ public class CreateInstanceRequest extends Request {
     private Boolean autoBackup;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
     private java.util.List<Components> components;
 
@@ -55,8 +59,16 @@ public class CreateInstanceRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isMultiAzStorage")
+    private Boolean isMultiAzStorage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kmsKeyId")
     private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("loadReplicas")
+    private Integer loadReplicas;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("multiZoneMode")
@@ -74,6 +86,10 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("paymentType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String paymentType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("promotionNo")
+    private String promotionNo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
@@ -105,6 +121,7 @@ public class CreateInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoBackup = builder.autoBackup;
+        this.autoRenew = builder.autoRenew;
         this.components = builder.components;
         this.configuration = builder.configuration;
         this.dbAdminPassword = builder.dbAdminPassword;
@@ -112,11 +129,14 @@ public class CreateInstanceRequest extends Request {
         this.encrypted = builder.encrypted;
         this.ha = builder.ha;
         this.instanceName = builder.instanceName;
+        this.isMultiAzStorage = builder.isMultiAzStorage;
         this.kmsKeyId = builder.kmsKeyId;
+        this.loadReplicas = builder.loadReplicas;
         this.multiZoneMode = builder.multiZoneMode;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
         this.paymentType = builder.paymentType;
+        this.promotionNo = builder.promotionNo;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.vSwitchIds = builder.vSwitchIds;
@@ -150,6 +170,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Boolean getAutoBackup() {
         return this.autoBackup;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -202,10 +229,24 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return isMultiAzStorage
+     */
+    public Boolean getIsMultiAzStorage() {
+        return this.isMultiAzStorage;
+    }
+
+    /**
      * @return kmsKeyId
      */
     public String getKmsKeyId() {
         return this.kmsKeyId;
+    }
+
+    /**
+     * @return loadReplicas
+     */
+    public Integer getLoadReplicas() {
+        return this.loadReplicas;
     }
 
     /**
@@ -234,6 +275,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    /**
+     * @return promotionNo
+     */
+    public String getPromotionNo() {
+        return this.promotionNo;
     }
 
     /**
@@ -281,6 +329,7 @@ public class CreateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String regionId; 
         private Boolean autoBackup; 
+        private Boolean autoRenew; 
         private java.util.List<Components> components; 
         private String configuration; 
         private String dbAdminPassword; 
@@ -288,11 +337,14 @@ public class CreateInstanceRequest extends Request {
         private Boolean encrypted; 
         private Boolean ha; 
         private String instanceName; 
+        private Boolean isMultiAzStorage; 
         private String kmsKeyId; 
+        private Integer loadReplicas; 
         private String multiZoneMode; 
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
+        private String promotionNo; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
         private java.util.List<VSwitchIds> vSwitchIds; 
@@ -308,6 +360,7 @@ public class CreateInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoBackup = request.autoBackup;
+            this.autoRenew = request.autoRenew;
             this.components = request.components;
             this.configuration = request.configuration;
             this.dbAdminPassword = request.dbAdminPassword;
@@ -315,11 +368,14 @@ public class CreateInstanceRequest extends Request {
             this.encrypted = request.encrypted;
             this.ha = request.ha;
             this.instanceName = request.instanceName;
+            this.isMultiAzStorage = request.isMultiAzStorage;
             this.kmsKeyId = request.kmsKeyId;
+            this.loadReplicas = request.loadReplicas;
             this.multiZoneMode = request.multiZoneMode;
             this.paymentDuration = request.paymentDuration;
             this.paymentDurationUnit = request.paymentDurationUnit;
             this.paymentType = request.paymentType;
+            this.promotionNo = request.promotionNo;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
             this.vSwitchIds = request.vSwitchIds;
@@ -343,6 +399,15 @@ public class CreateInstanceRequest extends Request {
         public Builder autoBackup(Boolean autoBackup) {
             this.putBodyParameter("autoBackup", autoBackup);
             this.autoBackup = autoBackup;
+            return this;
+        }
+
+        /**
+         * autoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putBodyParameter("autoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 
@@ -413,11 +478,29 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * isMultiAzStorage.
+         */
+        public Builder isMultiAzStorage(Boolean isMultiAzStorage) {
+            this.putBodyParameter("isMultiAzStorage", isMultiAzStorage);
+            this.isMultiAzStorage = isMultiAzStorage;
+            return this;
+        }
+
+        /**
          * kmsKeyId.
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putBodyParameter("kmsKeyId", kmsKeyId);
             this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
+         * loadReplicas.
+         */
+        public Builder loadReplicas(Integer loadReplicas) {
+            this.putBodyParameter("loadReplicas", loadReplicas);
+            this.loadReplicas = loadReplicas;
             return this;
         }
 
@@ -457,6 +540,15 @@ public class CreateInstanceRequest extends Request {
         public Builder paymentType(String paymentType) {
             this.putBodyParameter("paymentType", paymentType);
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * promotionNo.
+         */
+        public Builder promotionNo(String promotionNo) {
+            this.putBodyParameter("promotionNo", promotionNo);
+            this.promotionNo = promotionNo;
             return this;
         }
 

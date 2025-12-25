@@ -236,6 +236,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Replica")
         private Integer replica;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private MilvusResourceInfoList(Builder builder) {
             this.componentType = builder.componentType;
             this.cuNum = builder.cuNum;
@@ -243,6 +246,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
             this.replica = builder.replica;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -295,6 +299,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.replica;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String componentType; 
             private Integer cuNum; 
@@ -302,6 +313,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private Integer diskSize; 
             private String diskType; 
             private Integer replica; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -313,6 +325,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.diskSize = model.diskSize;
                 this.diskType = model.diskType;
                 this.replica = model.replica;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -383,6 +396,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
@@ -634,6 +655,123 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
             public ClusterInfo build() {
                 return new ClusterInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
+    public static class HighAvailability extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CurrentActiveAZ")
+        private String currentActiveAZ;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
+        private String primaryZoneId;
+
+        @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
+        private String secondaryZoneId;
+
+        private HighAvailability(Builder builder) {
+            this.currentActiveAZ = builder.currentActiveAZ;
+            this.mode = builder.mode;
+            this.primaryZoneId = builder.primaryZoneId;
+            this.secondaryZoneId = builder.secondaryZoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HighAvailability create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currentActiveAZ
+         */
+        public String getCurrentActiveAZ() {
+            return this.currentActiveAZ;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return primaryZoneId
+         */
+        public String getPrimaryZoneId() {
+            return this.primaryZoneId;
+        }
+
+        /**
+         * @return secondaryZoneId
+         */
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
+        }
+
+        public static final class Builder {
+            private String currentActiveAZ; 
+            private String mode; 
+            private String primaryZoneId; 
+            private String secondaryZoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighAvailability model) {
+                this.currentActiveAZ = model.currentActiveAZ;
+                this.mode = model.mode;
+                this.primaryZoneId = model.primaryZoneId;
+                this.secondaryZoneId = model.secondaryZoneId;
+            } 
+
+            /**
+             * CurrentActiveAZ.
+             */
+            public Builder currentActiveAZ(String currentActiveAZ) {
+                this.currentActiveAZ = currentActiveAZ;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * PrimaryZoneId.
+             */
+            public Builder primaryZoneId(String primaryZoneId) {
+                this.primaryZoneId = primaryZoneId;
+                return this;
+            }
+
+            /**
+             * SecondaryZoneId.
+             */
+            public Builder secondaryZoneId(String secondaryZoneId) {
+                this.secondaryZoneId = secondaryZoneId;
+                return this;
+            }
+
+            public HighAvailability build() {
+                return new HighAvailability(this);
             } 
 
         } 
@@ -1066,6 +1204,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
+        @com.aliyun.core.annotation.NameInMap("HighAvailability")
+        private HighAvailability highAvailability;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -1142,6 +1283,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.enableHa = builder.enableHa;
             this.encrypted = builder.encrypted;
             this.expireTime = builder.expireTime;
+            this.highAvailability = builder.highAvailability;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
             this.kmsKeyId = builder.kmsKeyId;
@@ -1235,6 +1377,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public Long getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return highAvailability
+         */
+        public HighAvailability getHighAvailability() {
+            return this.highAvailability;
         }
 
         /**
@@ -1401,6 +1550,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private Boolean enableHa; 
             private String encrypted; 
             private Long expireTime; 
+            private HighAvailability highAvailability; 
             private String instanceId; 
             private String instanceStatus; 
             private String kmsKeyId; 
@@ -1437,6 +1587,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.enableHa = model.enableHa;
                 this.encrypted = model.encrypted;
                 this.expireTime = model.expireTime;
+                this.highAvailability = model.highAvailability;
                 this.instanceId = model.instanceId;
                 this.instanceStatus = model.instanceStatus;
                 this.kmsKeyId = model.kmsKeyId;
@@ -1548,6 +1699,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * HighAvailability.
+             */
+            public Builder highAvailability(HighAvailability highAvailability) {
+                this.highAvailability = highAvailability;
                 return this;
             }
 
