@@ -27,6 +27,10 @@ public class RunTextPolishingRequest extends Request {
     private String content;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OriginContent")
+    private String originContent;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
@@ -39,6 +43,7 @@ public class RunTextPolishingRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.content = builder.content;
+        this.originContent = builder.originContent;
         this.prompt = builder.prompt;
         this.workspaceId = builder.workspaceId;
     }
@@ -71,6 +76,13 @@ public class RunTextPolishingRequest extends Request {
     }
 
     /**
+     * @return originContent
+     */
+    public String getOriginContent() {
+        return this.originContent;
+    }
+
+    /**
      * @return prompt
      */
     public String getPrompt() {
@@ -87,6 +99,7 @@ public class RunTextPolishingRequest extends Request {
     public static final class Builder extends Request.Builder<RunTextPolishingRequest, Builder> {
         private String regionId; 
         private String content; 
+        private String originContent; 
         private String prompt; 
         private String workspaceId; 
 
@@ -98,6 +111,7 @@ public class RunTextPolishingRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.content = request.content;
+            this.originContent = request.originContent;
             this.prompt = request.prompt;
             this.workspaceId = request.workspaceId;
         } 
@@ -120,6 +134,15 @@ public class RunTextPolishingRequest extends Request {
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * OriginContent.
+         */
+        public Builder originContent(String originContent) {
+            this.putBodyParameter("OriginContent", originContent);
+            this.originContent = originContent;
             return this;
         }
 
