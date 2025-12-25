@@ -1559,6 +1559,12 @@ public class PushTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlotType")
         private String slotType;
 
+        @com.aliyun.core.annotation.NameInMap("Sound")
+        private String sound;
+
+        @com.aliyun.core.annotation.NameInMap("SoundDuration")
+        private Integer soundDuration;
+
         @com.aliyun.core.annotation.NameInMap("TestMessage")
         private Boolean testMessage;
 
@@ -1580,6 +1586,8 @@ public class PushTask extends TeaModel {
             this.receiptId = builder.receiptId;
             this.renderStyle = builder.renderStyle;
             this.slotType = builder.slotType;
+            this.sound = builder.sound;
+            this.soundDuration = builder.soundDuration;
             this.testMessage = builder.testMessage;
             this.uri = builder.uri;
         }
@@ -1691,6 +1699,20 @@ public class PushTask extends TeaModel {
         }
 
         /**
+         * @return sound
+         */
+        public String getSound() {
+            return this.sound;
+        }
+
+        /**
+         * @return soundDuration
+         */
+        public Integer getSoundDuration() {
+            return this.soundDuration;
+        }
+
+        /**
          * @return testMessage
          */
         public Boolean getTestMessage() {
@@ -1719,6 +1741,8 @@ public class PushTask extends TeaModel {
             private String receiptId; 
             private String renderStyle; 
             private String slotType; 
+            private String sound; 
+            private Integer soundDuration; 
             private Boolean testMessage; 
             private String uri; 
 
@@ -1740,6 +1764,8 @@ public class PushTask extends TeaModel {
                 this.receiptId = model.receiptId;
                 this.renderStyle = model.renderStyle;
                 this.slotType = model.slotType;
+                this.sound = model.sound;
+                this.soundDuration = model.soundDuration;
                 this.testMessage = model.testMessage;
                 this.uri = model.uri;
             } 
@@ -1853,6 +1879,22 @@ public class PushTask extends TeaModel {
              */
             public Builder slotType(String slotType) {
                 this.slotType = slotType;
+                return this;
+            }
+
+            /**
+             * Sound.
+             */
+            public Builder sound(String sound) {
+                this.sound = sound;
+                return this;
+            }
+
+            /**
+             * SoundDuration.
+             */
+            public Builder soundDuration(Integer soundDuration) {
+                this.soundDuration = soundDuration;
                 return this;
             }
 
