@@ -59,7 +59,10 @@ public class ListGatewayFeaturesRequest extends Request {
         } 
 
         /**
-         * gatewayId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cpv4sqdl****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("gatewayId", gatewayId);

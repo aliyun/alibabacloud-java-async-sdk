@@ -93,7 +93,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The key to pass the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KEEP_UNCHANGED</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,7 +203,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * label.
+             * <p>The display value.</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -427,7 +439,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultValue.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;true&quot;</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -435,7 +450,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The parameter description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -443,7 +458,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EnableGzip</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -451,7 +469,14 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * <p>The parameter group to which the parameter belongs. Valid values:</p>
+             * <ul>
+             * <li>Telemetry: an observability parameter</li>
+             * <li>Engine: an engine parameter</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Engine</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -459,7 +484,16 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * inputType.
+             * <p>The input type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>Trigger</li>
+             * <li>Input</li>
+             * <li>SingleSelect</li>
+             * <li>MultiSelect</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Trigger</p>
              */
             public Builder inputType(String inputType) {
                 this.inputType = inputType;
@@ -467,7 +501,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * maxLength.
+             * <p>The maximum length of the value. This parameter is valid when the value type is string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -475,7 +512,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * maxValue.
+             * <p>The maximum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65535</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -483,7 +523,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * minLength.
+             * <p>The minimum length of the value. This parameter is valid when the value type is string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder minLength(Integer minLength) {
                 this.minLength = minLength;
@@ -491,7 +534,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * minValue.
+             * <p>The minimum value of the parameter. This parameter is valid when the value type is int32, int64, or float.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -499,7 +545,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable-gzip</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -507,7 +556,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * readOnly.
+             * <p>Indicates whether the parameter is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -515,7 +567,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * regex.
+             * <p>The regular expression that the parameter value must fulfill. This parameter is valid when the value type is string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[a-z].*</p>
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -523,7 +578,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * valueOptions.
+             * <p>The list of options supported by the parameter value.</p>
              */
             public Builder valueOptions(java.util.List<ValueOptions> valueOptions) {
                 this.valueOptions = valueOptions;
@@ -531,7 +586,19 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * valueType.
+             * <p>The value type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>bool: boolean</li>
+             * <li>string</li>
+             * <li>int32: integer</li>
+             * <li>int64: long integer</li>
+             * <li>json</li>
+             * <li>array: JSON array</li>
+             * <li>float: floating point</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bool</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -539,7 +606,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * valueUnit.
+             * <p>The value unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>byte</p>
              */
             public Builder valueUnit(String valueUnit) {
                 this.valueUnit = valueUnit;
@@ -606,7 +676,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * definition.
+             * <p>The parameter definition.</p>
              */
             public Builder definition(Definition definition) {
                 this.definition = definition;
@@ -614,7 +684,10 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;true&quot;</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -668,7 +741,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>The list of parameter configurations.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;

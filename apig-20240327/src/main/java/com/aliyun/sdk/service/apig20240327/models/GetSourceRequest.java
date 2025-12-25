@@ -59,7 +59,7 @@ public class GetSourceRequest extends Request {
         } 
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-d1596kem1hkv3o72qkdg</p>

@@ -93,7 +93,10 @@ public class GetSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterId.
+             * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2d290b2d8b5d4935864cace5f0173f31</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -253,7 +262,10 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * address.
+             * <p>The endpoint of the Nacos instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -261,7 +273,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * clusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fluss-cn-w7k4hann601</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -269,7 +284,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The Nacos instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hgprecn-cn-cfn47q7oh001</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -427,7 +445,10 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * createTimestamp.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -435,7 +456,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cq2vundlhtg***</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -443,7 +467,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * k8SSourceInfo.
+             * <p>Kubernetes source information.</p>
              */
             public Builder k8SSourceInfo(K8SSourceInfo k8SSourceInfo) {
                 this.k8SSourceInfo = k8SSourceInfo;
@@ -451,7 +475,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * nacosSourceInfo.
+             * <p>The source information when the source type is MSE_NACOS.</p>
              */
             public Builder nacosSourceInfo(NacosSourceInfo nacosSourceInfo) {
                 this.nacosSourceInfo = nacosSourceInfo;
@@ -459,7 +483,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>import-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +494,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz4us4iruleja</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -475,7 +505,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>src-crdddallhtgt***</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -483,7 +516,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>K8S</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -491,7 +527,10 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>The update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719386834548</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

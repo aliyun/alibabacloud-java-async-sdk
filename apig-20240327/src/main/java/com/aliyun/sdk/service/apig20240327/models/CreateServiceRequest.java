@@ -200,6 +200,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("qualifier")
         private String qualifier;
 
+        @com.aliyun.core.annotation.NameInMap("sourceId")
+        private String sourceId;
+
         private ServiceConfigs(Builder builder) {
             this.addresses = builder.addresses;
             this.agentServiceConfig = builder.agentServiceConfig;
@@ -209,6 +212,7 @@ public class CreateServiceRequest extends Request {
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.qualifier = builder.qualifier;
+            this.sourceId = builder.sourceId;
         }
 
         public static Builder builder() {
@@ -275,6 +279,13 @@ public class CreateServiceRequest extends Request {
             return this.qualifier;
         }
 
+        /**
+         * @return sourceId
+         */
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
             private AgentServiceConfig agentServiceConfig; 
@@ -284,6 +295,7 @@ public class CreateServiceRequest extends Request {
             private String name; 
             private String namespace; 
             private String qualifier; 
+            private String sourceId; 
 
             private Builder() {
             } 
@@ -297,6 +309,7 @@ public class CreateServiceRequest extends Request {
                 this.name = model.name;
                 this.namespace = model.namespace;
                 this.qualifier = model.qualifier;
+                this.sourceId = model.sourceId;
             } 
 
             /**
@@ -376,6 +389,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder qualifier(String qualifier) {
                 this.qualifier = qualifier;
+                return this;
+            }
+
+            /**
+             * sourceId.
+             */
+            public Builder sourceId(String sourceId) {
+                this.sourceId = sourceId;
                 return this;
             }
 

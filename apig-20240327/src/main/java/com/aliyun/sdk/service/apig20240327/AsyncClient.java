@@ -500,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartGatewayResponse> restartGateway(RestartGatewayRequest request);
 
     /**
+     * @param request the request parameters of SyncMCPServers  SyncMCPServersRequest
+     * @return SyncMCPServersResponse
+     */
+    CompletableFuture<SyncMCPServersResponse> syncMCPServers(SyncMCPServersRequest request);
+
+    /**
      * @param request the request parameters of UnDeployMcpServer  UnDeployMcpServerRequest
      * @return UnDeployMcpServerResponse
      */

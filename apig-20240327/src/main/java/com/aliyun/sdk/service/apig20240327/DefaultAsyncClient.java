@@ -1444,6 +1444,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SyncMCPServers  SyncMCPServersRequest
+     * @return SyncMCPServersResponse
+     */
+    @Override
+    public CompletableFuture<SyncMCPServersResponse> syncMCPServers(SyncMCPServersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SyncMCPServers").setMethod(HttpMethod.POST).setPathRegex("/v1/mcp-servers/sync-mcp-server").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SyncMCPServersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SyncMCPServersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UnDeployMcpServer  UnDeployMcpServerRequest
      * @return UnDeployMcpServerResponse
      */
