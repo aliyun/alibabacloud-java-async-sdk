@@ -1075,6 +1075,37 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUserWafRuleset  CreateUserWafRulesetRequest
+     * @return CreateUserWafRulesetResponse
+     */
+    @Override
+    public CompletableFuture<CreateUserWafRulesetResponse> createUserWafRuleset(CreateUserWafRulesetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateUserWafRuleset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateUserWafRulesetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateUserWafRulesetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateVideoProcessing  CreateVideoProcessingRequest
      * @return CreateVideoProcessingResponse
      */
@@ -2001,6 +2032,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteUserDeliveryTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteUserWafRuleset  DeleteUserWafRulesetRequest
+     * @return DeleteUserWafRulesetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteUserWafRulesetResponse> deleteUserWafRuleset(DeleteUserWafRulesetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUserWafRuleset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUserWafRulesetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUserWafRulesetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3445,6 +3507,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRoutineAccessToken  GetRoutineAccessTokenRequest
+     * @return GetRoutineAccessTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetRoutineAccessTokenResponse> getRoutineAccessToken(GetRoutineAccessTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRoutineAccessToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRoutineAccessTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRoutineAccessTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRoutineCodeVersion  GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
      */
@@ -3851,6 +3931,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUserLogDeliveryQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUserWafRuleset  GetUserWafRulesetRequest
+     * @return GetUserWafRulesetResponse
+     */
+    @Override
+    public CompletableFuture<GetUserWafRulesetResponse> getUserWafRuleset(GetUserWafRulesetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUserWafRuleset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserWafRulesetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserWafRulesetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5001,6 +5099,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUserRoutinesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUserWafRulesets  ListUserWafRulesetsRequest
+     * @return ListUserWafRulesetsResponse
+     */
+    @Override
+    public CompletableFuture<ListUserWafRulesetsResponse> listUserWafRulesets(ListUserWafRulesetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListUserWafRulesets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserWafRulesetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserWafRulesetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6499,6 +6615,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUserDeliveryTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateUserWafRuleset  UpdateUserWafRulesetRequest
+     * @return UpdateUserWafRulesetResponse
+     */
+    @Override
+    public CompletableFuture<UpdateUserWafRulesetResponse> updateUserWafRuleset(UpdateUserWafRulesetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateUserWafRuleset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUserWafRulesetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateUserWafRulesetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

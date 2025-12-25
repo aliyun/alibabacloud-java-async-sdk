@@ -395,6 +395,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserDeliveryTaskResponse> createUserDeliveryTask(CreateUserDeliveryTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateUserWafRuleset  CreateUserWafRulesetRequest
+     * @return CreateUserWafRulesetResponse
+     */
+    CompletableFuture<CreateUserWafRulesetResponse> createUserWafRuleset(CreateUserWafRulesetRequest request);
+
+    /**
      * @param request the request parameters of CreateVideoProcessing  CreateVideoProcessingRequest
      * @return CreateVideoProcessingResponse
      */
@@ -713,6 +732,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserDeliveryTaskResponse
      */
     CompletableFuture<DeleteUserDeliveryTaskResponse> deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteUserWafRuleset  DeleteUserWafRulesetRequest
+     * @return DeleteUserWafRulesetResponse
+     */
+    CompletableFuture<DeleteUserWafRulesetResponse> deleteUserWafRuleset(DeleteUserWafRulesetRequest request);
 
     /**
      * @param request the request parameters of DeleteVideoProcessing  DeleteVideoProcessingRequest
@@ -1217,6 +1255,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoutineResponse> getRoutine(GetRoutineRequest request);
 
     /**
+     * @param request the request parameters of GetRoutineAccessToken  GetRoutineAccessTokenRequest
+     * @return GetRoutineAccessTokenResponse
+     */
+    CompletableFuture<GetRoutineAccessTokenResponse> getRoutineAccessToken(GetRoutineAccessTokenRequest request);
+
+    /**
      * @param request the request parameters of GetRoutineCodeVersion  GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
      */
@@ -1375,6 +1419,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserLogDeliveryQuotaResponse
      */
     CompletableFuture<GetUserLogDeliveryQuotaResponse> getUserLogDeliveryQuota(GetUserLogDeliveryQuotaRequest request);
+
+    /**
+     * @param request the request parameters of GetUserWafRuleset  GetUserWafRulesetRequest
+     * @return GetUserWafRulesetResponse
+     */
+    CompletableFuture<GetUserWafRulesetResponse> getUserWafRuleset(GetUserWafRulesetRequest request);
 
     /**
      * @param request the request parameters of GetVideoProcessing  GetVideoProcessingRequest
@@ -1781,6 +1831,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserRoutinesResponse
      */
     CompletableFuture<ListUserRoutinesResponse> listUserRoutines(ListUserRoutinesRequest request);
+
+    /**
+     * @param request the request parameters of ListUserWafRulesets  ListUserWafRulesetsRequest
+     * @return ListUserWafRulesetsResponse
+     */
+    CompletableFuture<ListUserWafRulesetsResponse> listUserWafRulesets(ListUserWafRulesetsRequest request);
 
     /**
      * @param request the request parameters of ListVideoProcessings  ListVideoProcessingsRequest
@@ -2307,6 +2363,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserDeliveryTaskStatusResponse
      */
     CompletableFuture<UpdateUserDeliveryTaskStatusResponse> updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
+     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
+     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
+     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
+     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
+     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
+     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
+     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateUserWafRuleset  UpdateUserWafRulesetRequest
+     * @return UpdateUserWafRulesetResponse
+     */
+    CompletableFuture<UpdateUserWafRulesetResponse> updateUserWafRuleset(UpdateUserWafRulesetRequest request);
 
     /**
      * @param request the request parameters of UpdateVideoProcessing  UpdateVideoProcessingRequest
