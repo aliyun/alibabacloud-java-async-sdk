@@ -20,10 +20,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAddress  AddAddressRequest
+     * @return AddAddressResponse
+     */
+    CompletableFuture<AddAddressResponse> addAddress(AddAddressRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of ClearAddress  ClearAddressRequest
+     * @return ClearAddressResponse
+     */
+    CompletableFuture<ClearAddressResponse> clearAddress(ClearAddressRequest request);
 
     /**
      * @param request the request parameters of ClearMajorProtectionBlackIp  ClearMajorProtectionBlackIpRequest
@@ -143,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSM2CertResponse> createSM2Cert(CreateSM2CertRequest request);
 
     /**
+     * @param request the request parameters of DeleteAddress  DeleteAddressRequest
+     * @return DeleteAddressResponse
+     */
+    CompletableFuture<DeleteAddressResponse> deleteAddress(DeleteAddressRequest request);
+
+    /**
      * @param request the request parameters of DeleteApisecAbnormals  DeleteApisecAbnormalsRequest
      * @return DeleteApisecAbnormalsResponse
      */
@@ -239,6 +257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountDelegatedStatusResponse> describeAccountDelegatedStatus(DescribeAccountDelegatedStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeAddresses  DescribeAddressesRequest
+     * @return DescribeAddressesResponse
+     */
+    CompletableFuture<DescribeAddressesResponse> describeAddresses(DescribeAddressesRequest request);
+
+    /**
      * @param request the request parameters of DescribeAlarmBanner  DescribeAlarmBannerRequest
      * @return DescribeAlarmBannerResponse
      */
@@ -297,6 +321,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApisecEventsResponse
      */
     CompletableFuture<DescribeApisecEventsResponse> describeApisecEvents(DescribeApisecEventsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApisecExamples  DescribeApisecExamplesRequest
+     * @return DescribeApisecExamplesResponse
+     */
+    CompletableFuture<DescribeApisecExamplesResponse> describeApisecExamples(DescribeApisecExamplesRequest request);
 
     /**
      * @param request the request parameters of DescribeApisecLogDeliveries  DescribeApisecLogDeliveriesRequest
@@ -795,6 +825,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePunishedDomainsResponse
      */
     CompletableFuture<DescribePunishedDomainsResponse> describePunishedDomains(DescribePunishedDomainsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRelatedDefenseRules  DescribeRelatedDefenseRulesRequest
+     * @return DescribeRelatedDefenseRulesResponse
+     */
+    CompletableFuture<DescribeRelatedDefenseRulesResponse> describeRelatedDefenseRules(DescribeRelatedDefenseRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeResourceInstanceCerts  DescribeResourceInstanceCertsRequest
