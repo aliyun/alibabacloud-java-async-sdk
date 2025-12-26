@@ -97,6 +97,81 @@ public class GetServiceResponseBody extends TeaModel {
      *
      * <p>GetServiceResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceResponseBody</p>
+     */
     public static class Service extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attributes")
         private String attributes;
@@ -116,6 +191,9 @@ public class GetServiceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
@@ -128,6 +206,9 @@ public class GetServiceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceType")
         private String serviceType;
 
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("workspace")
         private String workspace;
 
@@ -138,10 +219,12 @@ public class GetServiceResponseBody extends TeaModel {
             this.displayName = builder.displayName;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.serviceStatus = builder.serviceStatus;
             this.serviceType = builder.serviceType;
+            this.tags = builder.tags;
             this.workspace = builder.workspace;
         }
 
@@ -196,6 +279,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceId
          */
         public String getServiceId() {
@@ -224,6 +314,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return workspace
          */
         public String getWorkspace() {
@@ -237,10 +334,12 @@ public class GetServiceResponseBody extends TeaModel {
             private String displayName; 
             private String pid; 
             private String regionId; 
+            private String resourceGroupId; 
             private String serviceId; 
             private String serviceName; 
             private String serviceStatus; 
             private String serviceType; 
+            private java.util.List<Tags> tags; 
             private String workspace; 
 
             private Builder() {
@@ -253,10 +352,12 @@ public class GetServiceResponseBody extends TeaModel {
                 this.displayName = model.displayName;
                 this.pid = model.pid;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.serviceId = model.serviceId;
                 this.serviceName = model.serviceName;
                 this.serviceStatus = model.serviceStatus;
                 this.serviceType = model.serviceType;
+                this.tags = model.tags;
                 this.workspace = model.workspace;
             } 
 
@@ -327,6 +428,14 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>Service ID.</p>
              * 
              * <strong>example:</strong>
@@ -367,6 +476,14 @@ public class GetServiceResponseBody extends TeaModel {
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

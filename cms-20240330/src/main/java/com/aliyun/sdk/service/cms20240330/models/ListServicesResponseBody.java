@@ -185,6 +185,9 @@ public class ListServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pid")
         private String pid;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
@@ -206,6 +209,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.pid = builder.pid;
+            this.resourceGroupId = builder.resourceGroupId;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.serviceStatus = builder.serviceStatus;
@@ -257,6 +261,13 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return serviceId
          */
         public String getServiceId() {
@@ -297,6 +308,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String description; 
             private String displayName; 
             private String pid; 
+            private String resourceGroupId; 
             private String serviceId; 
             private String serviceName; 
             private String serviceStatus; 
@@ -312,6 +324,7 @@ public class ListServicesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.displayName = model.displayName;
                 this.pid = model.pid;
+                this.resourceGroupId = model.resourceGroupId;
                 this.serviceId = model.serviceId;
                 this.serviceName = model.serviceName;
                 this.serviceStatus = model.serviceStatus;
@@ -371,6 +384,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder pid(String pid) {
                 this.pid = pid;
+                return this;
+            }
+
+            /**
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

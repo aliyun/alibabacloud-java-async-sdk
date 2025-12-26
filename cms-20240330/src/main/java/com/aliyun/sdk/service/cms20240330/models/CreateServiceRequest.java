@@ -43,6 +43,10 @@ public class CreateServiceRequest extends Request {
     private String pid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("serviceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
@@ -56,6 +60,10 @@ public class CreateServiceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
     private CreateServiceRequest(Builder builder) {
         super(builder);
         this.workspace = builder.workspace;
@@ -64,9 +72,11 @@ public class CreateServiceRequest extends Request {
         this.description = builder.description;
         this.displayName = builder.displayName;
         this.pid = builder.pid;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
         this.serviceType = builder.serviceType;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -125,6 +135,13 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -145,6 +162,13 @@ public class CreateServiceRequest extends Request {
         return this.serviceType;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
         private String workspace; 
         private String regionId; 
@@ -152,9 +176,11 @@ public class CreateServiceRequest extends Request {
         private String description; 
         private String displayName; 
         private String pid; 
+        private String resourceGroupId; 
         private String serviceName; 
         private String serviceStatus; 
         private String serviceType; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -168,9 +194,11 @@ public class CreateServiceRequest extends Request {
             this.description = request.description;
             this.displayName = request.displayName;
             this.pid = request.pid;
+            this.resourceGroupId = request.resourceGroupId;
             this.serviceName = request.serviceName;
             this.serviceStatus = request.serviceStatus;
             this.serviceType = request.serviceType;
+            this.tags = request.tags;
         } 
 
         /**
@@ -244,6 +272,15 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>Service name</p>
          * <p>This parameter is required.</p>
          * 
@@ -281,6 +318,15 @@ public class CreateServiceRequest extends Request {
             return this;
         }
 
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateServiceRequest build() {
             return new CreateServiceRequest(this);
@@ -288,4 +334,79 @@ public class CreateServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
