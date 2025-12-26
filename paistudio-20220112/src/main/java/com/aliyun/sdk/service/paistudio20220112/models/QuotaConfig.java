@@ -32,6 +32,9 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnablePreemptSubquotaWorkloads")
     private Boolean enablePreemptSubquotaWorkloads;
 
+    @com.aliyun.core.annotation.NameInMap("EnableSelfQuotaPreemption")
+    private Boolean enableSelfQuotaPreemption;
+
     @com.aliyun.core.annotation.NameInMap("EnableSubQuotaPreemption")
     private Boolean enableSubQuotaPreemption;
 
@@ -71,6 +74,7 @@ public class QuotaConfig extends TeaModel {
         this.defaultGPUDriver = builder.defaultGPUDriver;
         this.enableGPUShare = builder.enableGPUShare;
         this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
+        this.enableSelfQuotaPreemption = builder.enableSelfQuotaPreemption;
         this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
         this.eniCacheConfig = builder.eniCacheConfig;
         this.oversoldUsageInfo = builder.oversoldUsageInfo;
@@ -129,6 +133,13 @@ public class QuotaConfig extends TeaModel {
      */
     public Boolean getEnablePreemptSubquotaWorkloads() {
         return this.enablePreemptSubquotaWorkloads;
+    }
+
+    /**
+     * @return enableSelfQuotaPreemption
+     */
+    public Boolean getEnableSelfQuotaPreemption() {
+        return this.enableSelfQuotaPreemption;
     }
 
     /**
@@ -214,6 +225,7 @@ public class QuotaConfig extends TeaModel {
         private String defaultGPUDriver; 
         private Boolean enableGPUShare; 
         private Boolean enablePreemptSubquotaWorkloads; 
+        private Boolean enableSelfQuotaPreemption; 
         private Boolean enableSubQuotaPreemption; 
         private EniCacheConfig eniCacheConfig; 
         private OversoldUsageConfig oversoldUsageInfo; 
@@ -235,6 +247,7 @@ public class QuotaConfig extends TeaModel {
             this.defaultGPUDriver = model.defaultGPUDriver;
             this.enableGPUShare = model.enableGPUShare;
             this.enablePreemptSubquotaWorkloads = model.enablePreemptSubquotaWorkloads;
+            this.enableSelfQuotaPreemption = model.enableSelfQuotaPreemption;
             this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
             this.eniCacheConfig = model.eniCacheConfig;
             this.oversoldUsageInfo = model.oversoldUsageInfo;
@@ -285,6 +298,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder enablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
             this.enablePreemptSubquotaWorkloads = enablePreemptSubquotaWorkloads;
+            return this;
+        }
+
+        /**
+         * EnableSelfQuotaPreemption.
+         */
+        public Builder enableSelfQuotaPreemption(Boolean enableSelfQuotaPreemption) {
+            this.enableSelfQuotaPreemption = enableSelfQuotaPreemption;
             return this;
         }
 
