@@ -536,6 +536,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceInfoList")
         private java.util.List<InstanceInfoList> instanceInfoList;
 
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
+        private Float maxPrice;
+
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
         private String networkInterfaceIp;
 
@@ -559,6 +562,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("SubPayType")
+        private String subPayType;
 
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
@@ -588,6 +594,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.instanceInfoList = builder.instanceInfoList;
+            this.maxPrice = builder.maxPrice;
             this.networkInterfaceIp = builder.networkInterfaceIp;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
@@ -596,6 +603,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.securityGroupIds = builder.securityGroupIds;
             this.serverInstanceTypeInfo = builder.serverInstanceTypeInfo;
             this.status = builder.status;
+            this.subPayType = builder.subPayType;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskSize = builder.systemDiskSize;
@@ -676,6 +684,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxPrice
+         */
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        /**
          * @return networkInterfaceIp
          */
         public String getNetworkInterfaceIp() {
@@ -732,6 +747,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return subPayType
+         */
+        public String getSubPayType() {
+            return this.subPayType;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -783,6 +805,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String imageId; 
             private String imageName; 
             private java.util.List<InstanceInfoList> instanceInfoList; 
+            private Float maxPrice; 
             private String networkInterfaceIp; 
             private String officeSiteId; 
             private String officeSiteName; 
@@ -791,6 +814,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private java.util.List<String> securityGroupIds; 
             private ServerInstanceTypeInfo serverInstanceTypeInfo; 
             private String status; 
+            private String subPayType; 
             private String systemDiskCategory; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
@@ -811,6 +835,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.imageName = model.imageName;
                 this.instanceInfoList = model.instanceInfoList;
+                this.maxPrice = model.maxPrice;
                 this.networkInterfaceIp = model.networkInterfaceIp;
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
@@ -819,6 +844,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.securityGroupIds = model.securityGroupIds;
                 this.serverInstanceTypeInfo = model.serverInstanceTypeInfo;
                 this.status = model.status;
+                this.subPayType = model.subPayType;
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskSize = model.systemDiskSize;
@@ -915,6 +941,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * MaxPrice.
+             */
+            public Builder maxPrice(Float maxPrice) {
+                this.maxPrice = maxPrice;
+                return this;
+            }
+
+            /**
              * <p>The private IP address.</p>
              * 
              * <strong>example:</strong>
@@ -993,6 +1027,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubPayType.
+             */
+            public Builder subPayType(String subPayType) {
+                this.subPayType = subPayType;
                 return this;
             }
 

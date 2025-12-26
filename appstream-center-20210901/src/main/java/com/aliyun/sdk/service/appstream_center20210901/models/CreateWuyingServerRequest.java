@@ -59,6 +59,10 @@ public class CreateWuyingServerRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxPrice")
+    private Float maxPrice;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NetworkStrategyType")
     private String networkStrategyType;
 
@@ -93,6 +97,10 @@ public class CreateWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerPortRange")
     private String serverPortRange;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubPayType")
+    private String subPayType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
@@ -130,6 +138,7 @@ public class CreateWuyingServerRequest extends Request {
         this.hostName = builder.hostName;
         this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
+        this.maxPrice = builder.maxPrice;
         this.networkStrategyType = builder.networkStrategyType;
         this.officeSiteId = builder.officeSiteId;
         this.password = builder.password;
@@ -139,6 +148,7 @@ public class CreateWuyingServerRequest extends Request {
         this.savingPlanId = builder.savingPlanId;
         this.serverInstanceType = builder.serverInstanceType;
         this.serverPortRange = builder.serverPortRange;
+        this.subPayType = builder.subPayType;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
         this.systemDiskSize = builder.systemDiskSize;
@@ -231,6 +241,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return maxPrice
+     */
+    public Float getMaxPrice() {
+        return this.maxPrice;
+    }
+
+    /**
      * @return networkStrategyType
      */
     public String getNetworkStrategyType() {
@@ -294,6 +311,13 @@ public class CreateWuyingServerRequest extends Request {
     }
 
     /**
+     * @return subPayType
+     */
+    public String getSubPayType() {
+        return this.subPayType;
+    }
+
+    /**
      * @return systemDiskCategory
      */
     public String getSystemDiskCategory() {
@@ -346,6 +370,7 @@ public class CreateWuyingServerRequest extends Request {
         private String hostName; 
         private String idempotenceToken; 
         private String imageId; 
+        private Float maxPrice; 
         private String networkStrategyType; 
         private String officeSiteId; 
         private String password; 
@@ -355,6 +380,7 @@ public class CreateWuyingServerRequest extends Request {
         private String savingPlanId; 
         private String serverInstanceType; 
         private String serverPortRange; 
+        private String subPayType; 
         private String systemDiskCategory; 
         private String systemDiskPerformanceLevel; 
         private Integer systemDiskSize; 
@@ -378,6 +404,7 @@ public class CreateWuyingServerRequest extends Request {
             this.hostName = request.hostName;
             this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
+            this.maxPrice = request.maxPrice;
             this.networkStrategyType = request.networkStrategyType;
             this.officeSiteId = request.officeSiteId;
             this.password = request.password;
@@ -387,6 +414,7 @@ public class CreateWuyingServerRequest extends Request {
             this.savingPlanId = request.savingPlanId;
             this.serverInstanceType = request.serverInstanceType;
             this.serverPortRange = request.serverPortRange;
+            this.subPayType = request.subPayType;
             this.systemDiskCategory = request.systemDiskCategory;
             this.systemDiskPerformanceLevel = request.systemDiskPerformanceLevel;
             this.systemDiskSize = request.systemDiskSize;
@@ -514,6 +542,15 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
+         * MaxPrice.
+         */
+        public Builder maxPrice(Float maxPrice) {
+            this.putBodyParameter("MaxPrice", maxPrice);
+            this.maxPrice = maxPrice;
+            return this;
+        }
+
+        /**
          * <p>The type of the network policy (in invitational preview).</p>
          * 
          * <strong>example:</strong>
@@ -620,6 +657,15 @@ public class CreateWuyingServerRequest extends Request {
         public Builder serverPortRange(String serverPortRange) {
             this.putBodyParameter("ServerPortRange", serverPortRange);
             this.serverPortRange = serverPortRange;
+            return this;
+        }
+
+        /**
+         * SubPayType.
+         */
+        public Builder subPayType(String subPayType) {
+            this.putBodyParameter("SubPayType", subPayType);
+            this.subPayType = subPayType;
             return this;
         }
 
