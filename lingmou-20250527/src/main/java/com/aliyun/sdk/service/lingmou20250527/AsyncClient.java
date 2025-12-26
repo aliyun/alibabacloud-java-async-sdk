@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBroadcastTemplateResponse> getBroadcastTemplate(GetBroadcastTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetTTSVoiceByIdCustom  GetTTSVoiceByIdCustomRequest
+     * @return GetTTSVoiceByIdCustomResponse
+     */
+    CompletableFuture<GetTTSVoiceByIdCustomResponse> getTTSVoiceByIdCustom(GetTTSVoiceByIdCustomRequest request);
+
+    /**
      * @param request the request parameters of GetTrainPicAvatarStatus  GetTrainPicAvatarStatusRequest
      * @return GetTrainPicAvatarStatusResponse
      */
