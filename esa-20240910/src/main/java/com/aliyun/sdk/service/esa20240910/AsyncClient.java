@@ -1144,6 +1144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetKvAccountResponse> getKvAccount(GetKvAccountRequest request);
 
     /**
+     * @param request the request parameters of GetKvDetail  GetKvDetailRequest
+     * @return GetKvDetailResponse
+     */
+    CompletableFuture<GetKvDetailResponse> getKvDetail(GetKvDetailRequest request);
+
+    /**
      * @param request the request parameters of GetKvNamespace  GetKvNamespaceRequest
      * @return GetKvNamespaceResponse
      */
