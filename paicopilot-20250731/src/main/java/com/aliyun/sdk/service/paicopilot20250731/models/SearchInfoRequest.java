@@ -229,6 +229,9 @@ public class SearchInfoRequest extends Request {
      * <p>SearchInfoRequest</p>
      */
     public static class WebFilters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("IncludeSites")
         private java.util.List<String> includeSites;
 
@@ -243,6 +246,7 @@ public class SearchInfoRequest extends Request {
         private Double scoreThreshold;
 
         private WebFilters(Builder builder) {
+            this.category = builder.category;
             this.includeSites = builder.includeSites;
             this.query = builder.query;
             this.resultLimit = builder.resultLimit;
@@ -255,6 +259,13 @@ public class SearchInfoRequest extends Request {
 
         public static WebFilters create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -286,6 +297,7 @@ public class SearchInfoRequest extends Request {
         }
 
         public static final class Builder {
+            private String category; 
             private java.util.List<String> includeSites; 
             private String query; 
             private Integer resultLimit; 
@@ -295,11 +307,20 @@ public class SearchInfoRequest extends Request {
             } 
 
             private Builder(WebFilters model) {
+                this.category = model.category;
                 this.includeSites = model.includeSites;
                 this.query = model.query;
                 this.resultLimit = model.resultLimit;
                 this.scoreThreshold = model.scoreThreshold;
             } 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * IncludeSites.
