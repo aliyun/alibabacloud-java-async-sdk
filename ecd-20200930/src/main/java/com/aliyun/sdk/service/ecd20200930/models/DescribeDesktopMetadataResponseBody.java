@@ -134,6 +134,9 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
+        private String desktopType;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -146,8 +149,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManagementFlags")
         private java.util.List<String> managementFlags;
 
+        @com.aliyun.core.annotation.NameInMap("MemberEniIp")
+        private String memberEniIp;
+
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
+
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -168,11 +177,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
+            this.desktopType = builder.desktopType;
             this.expiredTime = builder.expiredTime;
             this.imageId = builder.imageId;
             this.localName = builder.localName;
             this.managementFlags = builder.managementFlags;
+            this.memberEniIp = builder.memberEniIp;
             this.officeSiteId = builder.officeSiteId;
+            this.platform = builder.platform;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceGroupName = builder.resourceGroupName;
@@ -230,6 +242,13 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         }
 
         /**
+         * @return desktopType
+         */
+        public String getDesktopType() {
+            return this.desktopType;
+        }
+
+        /**
          * @return expiredTime
          */
         public String getExpiredTime() {
@@ -258,10 +277,24 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberEniIp
+         */
+        public String getMemberEniIp() {
+            return this.memberEniIp;
+        }
+
+        /**
          * @return officeSiteId
          */
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
         }
 
         /**
@@ -299,11 +332,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String desktopStatus; 
+            private String desktopType; 
             private String expiredTime; 
             private String imageId; 
             private String localName; 
             private java.util.List<String> managementFlags; 
+            private String memberEniIp; 
             private String officeSiteId; 
+            private String platform; 
             private String regionId; 
             private String resourceGroupId; 
             private String resourceGroupName; 
@@ -319,11 +355,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
                 this.desktopStatus = model.desktopStatus;
+                this.desktopType = model.desktopType;
                 this.expiredTime = model.expiredTime;
                 this.imageId = model.imageId;
                 this.localName = model.localName;
                 this.managementFlags = model.managementFlags;
+                this.memberEniIp = model.memberEniIp;
                 this.officeSiteId = model.officeSiteId;
+                this.platform = model.platform;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceGroupName = model.resourceGroupName;
@@ -379,6 +418,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
+             * DesktopType.
+             */
+            public Builder desktopType(String desktopType) {
+                this.desktopType = desktopType;
+                return this;
+            }
+
+            /**
              * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
@@ -411,10 +458,26 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
             }
 
             /**
+             * MemberEniIp.
+             */
+            public Builder memberEniIp(String memberEniIp) {
+                this.memberEniIp = memberEniIp;
+                return this;
+            }
+
+            /**
              * OfficeSiteId.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
+             * Platform.
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

@@ -89,7 +89,7 @@ public class ModifyTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
-    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 40)
+    @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 40)
     private Integer systemDiskSize;
 
     @com.aliyun.core.annotation.Body

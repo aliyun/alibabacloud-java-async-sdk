@@ -104,6 +104,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("DesktopTypeId")
         private String desktopTypeId;
 
@@ -140,6 +143,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         private DesktopTypes(Builder builder) {
             this.cpuCount = builder.cpuCount;
             this.dataDiskSize = builder.dataDiskSize;
+            this.description = builder.description;
             this.desktopTypeId = builder.desktopTypeId;
             this.desktopTypeStatus = builder.desktopTypeStatus;
             this.gpuCount = builder.gpuCount;
@@ -173,6 +177,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
          */
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -255,6 +266,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         public static final class Builder {
             private String cpuCount; 
             private String dataDiskSize; 
+            private String description; 
             private String desktopTypeId; 
             private String desktopTypeStatus; 
             private Float gpuCount; 
@@ -273,6 +285,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private Builder(DesktopTypes model) {
                 this.cpuCount = model.cpuCount;
                 this.dataDiskSize = model.dataDiskSize;
+                this.description = model.description;
                 this.desktopTypeId = model.desktopTypeId;
                 this.desktopTypeStatus = model.desktopTypeStatus;
                 this.gpuCount = model.gpuCount;
@@ -305,6 +318,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
              */
             public Builder dataDiskSize(String dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
