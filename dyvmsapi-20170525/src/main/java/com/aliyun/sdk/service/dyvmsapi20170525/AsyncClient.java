@@ -222,6 +222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHotlineTransferRegisterFileResponse> listHotlineTransferRegisterFile(ListHotlineTransferRegisterFileRequest request);
 
     /**
+     * @param request the request parameters of ListServiceInstanceForPage  ListServiceInstanceForPageRequest
+     * @return ListServiceInstanceForPageResponse
+     */
+    CompletableFuture<ListServiceInstanceForPageResponse> listServiceInstanceForPage(ListServiceInstanceForPageRequest request);
+
+    /**
      * @param request the request parameters of PauseVideoFile  PauseVideoFileRequest
      * @return PauseVideoFileResponse
      */
