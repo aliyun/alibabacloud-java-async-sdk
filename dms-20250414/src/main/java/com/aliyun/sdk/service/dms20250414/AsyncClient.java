@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataLakeTableResponse> deleteDataLakeTable(DeleteDataLakeTableRequest request);
 
     /**
+     * @param request the request parameters of DescribeCustomAgent  DescribeCustomAgentRequest
+     * @return DescribeCustomAgentResponse
+     */
+    CompletableFuture<DescribeCustomAgentResponse> describeCustomAgent(DescribeCustomAgentRequest request);
+
+    /**
      * @param request the request parameters of DescribeDataAgentSession  DescribeDataAgentSessionRequest
      * @return DescribeDataAgentSessionResponse
      */
@@ -176,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAirflowsResponse
      */
     CompletableFuture<ListAirflowsResponse> listAirflows(ListAirflowsRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
+     * @return ListCustomAgentResponse
+     */
+    CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
 
     /**
      * @param request the request parameters of ListDataLakeCatalog  ListDataLakeCatalogRequest
