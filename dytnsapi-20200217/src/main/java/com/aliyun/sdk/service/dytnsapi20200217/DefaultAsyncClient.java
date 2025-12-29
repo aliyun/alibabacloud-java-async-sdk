@@ -151,6 +151,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteContacts  DeleteContactsRequest
+     * @return DeleteContactsResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContactsResponse> deleteContacts(DeleteContactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteContacts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <strong>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</strong></p>
      * <ul>
@@ -492,6 +510,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListContacts  ListContactsRequest
+     * @return ListContactsResponse
+     */
+    @Override
+    public CompletableFuture<ListContactsResponse> listContacts(ListContactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContacts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListContactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PhoneNumberConvertService  PhoneNumberConvertServiceRequest
      * @return PhoneNumberConvertServiceResponse
      */
@@ -686,6 +722,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryPackageTypeInfo  QueryPackageTypeInfoRequest
+     * @return QueryPackageTypeInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryPackageTypeInfoResponse> queryPackageTypeInfo(QueryPackageTypeInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryPackageTypeInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryPackageTypeInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryPackageTypeInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryPhoneNumberOnlineTime  QueryPhoneNumberOnlineTimeRequest
      * @return QueryPhoneNumberOnlineTimeResponse
      */
@@ -770,6 +824,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryTagListPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryTaskList  QueryTaskListRequest
+     * @return QueryTaskListResponse
+     */
+    @Override
+    public CompletableFuture<QueryTaskListResponse> queryTaskList(QueryTaskListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryTaskList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTaskListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTaskListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -896,6 +968,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UAIDVerificationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateContacts  UpdateContactsRequest
+     * @return UpdateContactsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContactsResponse> updateContacts(UpdateContactsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateContacts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContactsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContactsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

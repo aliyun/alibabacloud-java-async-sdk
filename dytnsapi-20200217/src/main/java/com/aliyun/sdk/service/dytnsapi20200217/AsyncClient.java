@@ -71,6 +71,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CompanyTwoElementsVerificationResponse> companyTwoElementsVerification(CompanyTwoElementsVerificationRequest request);
 
     /**
+     * @param request the request parameters of DeleteContacts  DeleteContactsRequest
+     * @return DeleteContactsResponse
+     */
+    CompletableFuture<DeleteContactsResponse> deleteContacts(DeleteContactsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <strong>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</strong></p>
      * <ul>
@@ -220,6 +226,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InvalidPhoneNumberFilterResponse> invalidPhoneNumberFilter(InvalidPhoneNumberFilterRequest request);
 
     /**
+     * @param request the request parameters of ListContacts  ListContactsRequest
+     * @return ListContactsResponse
+     */
+    CompletableFuture<ListContactsResponse> listContacts(ListContactsRequest request);
+
+    /**
      * @param request the request parameters of PhoneNumberConvertService  PhoneNumberConvertServiceRequest
      * @return PhoneNumberConvertServiceResponse
      */
@@ -318,6 +330,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryAvailableAuthCodeResponse> queryAvailableAuthCode(QueryAvailableAuthCodeRequest request);
 
     /**
+     * @param request the request parameters of QueryPackageTypeInfo  QueryPackageTypeInfoRequest
+     * @return QueryPackageTypeInfoResponse
+     */
+    CompletableFuture<QueryPackageTypeInfoResponse> queryPackageTypeInfo(QueryPackageTypeInfoRequest request);
+
+    /**
      * @param request the request parameters of QueryPhoneNumberOnlineTime  QueryPhoneNumberOnlineTimeRequest
      * @return QueryPhoneNumberOnlineTimeResponse
      */
@@ -346,6 +364,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryTagListPageResponse
      */
     CompletableFuture<QueryTagListPageResponse> queryTagListPage(QueryTagListPageRequest request);
+
+    /**
+     * @param request the request parameters of QueryTaskList  QueryTaskListRequest
+     * @return QueryTaskListResponse
+     */
+    CompletableFuture<QueryTaskListResponse> queryTaskList(QueryTaskListRequest request);
 
     /**
      * @param request the request parameters of QueryUsageStatisticsByTagId  QueryUsageStatisticsByTagIdRequest
@@ -400,5 +424,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UAIDVerificationResponse
      */
     CompletableFuture<UAIDVerificationResponse> uAIDVerification(UAIDVerificationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContacts  UpdateContactsRequest
+     * @return UpdateContactsResponse
+     */
+    CompletableFuture<UpdateContactsResponse> updateContacts(UpdateContactsRequest request);
 
 }
