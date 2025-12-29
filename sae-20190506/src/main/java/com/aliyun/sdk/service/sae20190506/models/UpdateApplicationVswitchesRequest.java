@@ -27,6 +27,14 @@ public class UpdateApplicationVswitchesRequest extends Request {
     private Boolean deploy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
+    private Integer minReadyInstanceRatio;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinReadyInstances")
+    private Integer minReadyInstances;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -35,6 +43,8 @@ public class UpdateApplicationVswitchesRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.deploy = builder.deploy;
+        this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
+        this.minReadyInstances = builder.minReadyInstances;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -66,6 +76,20 @@ public class UpdateApplicationVswitchesRequest extends Request {
     }
 
     /**
+     * @return minReadyInstanceRatio
+     */
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
+    }
+
+    /**
+     * @return minReadyInstances
+     */
+    public Integer getMinReadyInstances() {
+        return this.minReadyInstances;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -75,6 +99,8 @@ public class UpdateApplicationVswitchesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateApplicationVswitchesRequest, Builder> {
         private String appId; 
         private Boolean deploy; 
+        private Integer minReadyInstanceRatio; 
+        private Integer minReadyInstances; 
         private String vSwitchId; 
 
         private Builder() {
@@ -85,6 +111,8 @@ public class UpdateApplicationVswitchesRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.deploy = request.deploy;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
             this.vSwitchId = request.vSwitchId;
         } 
 
@@ -107,6 +135,24 @@ public class UpdateApplicationVswitchesRequest extends Request {
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
             this.deploy = deploy;
+            return this;
+        }
+
+        /**
+         * MinReadyInstanceRatio.
+         */
+        public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
+            this.putQueryParameter("MinReadyInstanceRatio", minReadyInstanceRatio);
+            this.minReadyInstanceRatio = minReadyInstanceRatio;
+            return this;
+        }
+
+        /**
+         * MinReadyInstances.
+         */
+        public Builder minReadyInstances(Integer minReadyInstances) {
+            this.putQueryParameter("MinReadyInstances", minReadyInstances);
+            this.minReadyInstances = minReadyInstances;
             return this;
         }
 

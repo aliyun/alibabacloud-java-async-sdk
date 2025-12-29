@@ -333,6 +333,81 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationInstancesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
@@ -376,6 +451,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SidecarContainersStatus")
         private java.util.List<SidecarContainersStatus> sidecarContainersStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
@@ -403,6 +481,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             this.mainContainerStatus = builder.mainContainerStatus;
             this.packageVersion = builder.packageVersion;
             this.sidecarContainersStatus = builder.sidecarContainersStatus;
+            this.tags = builder.tags;
             this.timestamp = builder.timestamp;
             this.trafficStatus = builder.trafficStatus;
             this.unhealthyMessage = builder.unhealthyMessage;
@@ -516,6 +595,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return timestamp
          */
         public Long getTimestamp() {
@@ -558,6 +644,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private String mainContainerStatus; 
             private String packageVersion; 
             private java.util.List<SidecarContainersStatus> sidecarContainersStatus; 
+            private java.util.List<Tags> tags; 
             private Long timestamp; 
             private String trafficStatus; 
             private String unhealthyMessage; 
@@ -581,6 +668,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
                 this.mainContainerStatus = model.mainContainerStatus;
                 this.packageVersion = model.packageVersion;
                 this.sidecarContainersStatus = model.sidecarContainersStatus;
+                this.tags = model.tags;
                 this.timestamp = model.timestamp;
                 this.trafficStatus = model.trafficStatus;
                 this.unhealthyMessage = model.unhealthyMessage;
@@ -758,6 +846,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
              */
             public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
                 this.sidecarContainersStatus = sidecarContainersStatus;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
