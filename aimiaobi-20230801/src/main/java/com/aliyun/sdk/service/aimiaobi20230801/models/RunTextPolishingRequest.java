@@ -35,6 +35,10 @@ public class RunTextPolishingRequest extends Request {
     private String prompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -45,6 +49,7 @@ public class RunTextPolishingRequest extends Request {
         this.content = builder.content;
         this.originContent = builder.originContent;
         this.prompt = builder.prompt;
+        this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -90,6 +95,13 @@ public class RunTextPolishingRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -101,6 +113,7 @@ public class RunTextPolishingRequest extends Request {
         private String content; 
         private String originContent; 
         private String prompt; 
+        private String taskId; 
         private String workspaceId; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class RunTextPolishingRequest extends Request {
             this.content = request.content;
             this.originContent = request.originContent;
             this.prompt = request.prompt;
+            this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -152,6 +166,15 @@ public class RunTextPolishingRequest extends Request {
         public Builder prompt(String prompt) {
             this.putBodyParameter("Prompt", prompt);
             this.prompt = prompt;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putBodyParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
