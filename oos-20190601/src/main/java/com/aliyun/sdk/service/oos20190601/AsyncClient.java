@@ -514,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetServiceSettingsResponse> setServiceSettings(SetServiceSettingsRequest request);
 
     /**
+     * @param request the request parameters of StartDebugExecution  StartDebugExecutionRequest
+     * @return StartDebugExecutionResponse
+     */
+    CompletableFuture<StartDebugExecutionResponse> startDebugExecution(StartDebugExecutionRequest request);
+
+    /**
      * @param request the request parameters of StartExecution  StartExecutionRequest
      * @return StartExecutionResponse
      */

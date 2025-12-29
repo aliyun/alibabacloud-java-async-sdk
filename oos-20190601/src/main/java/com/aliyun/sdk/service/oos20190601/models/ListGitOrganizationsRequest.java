@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGitOrganizationsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindType")
+    private String bindType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -37,6 +41,7 @@ public class ListGitOrganizationsRequest extends Request {
 
     private ListGitOrganizationsRequest(Builder builder) {
         super(builder);
+        this.bindType = builder.bindType;
         this.clientToken = builder.clientToken;
         this.owner = builder.owner;
         this.platform = builder.platform;
@@ -54,6 +59,13 @@ public class ListGitOrganizationsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bindType
+     */
+    public String getBindType() {
+        return this.bindType;
     }
 
     /**
@@ -85,6 +97,7 @@ public class ListGitOrganizationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListGitOrganizationsRequest, Builder> {
+        private String bindType; 
         private String clientToken; 
         private String owner; 
         private String platform; 
@@ -96,11 +109,21 @@ public class ListGitOrganizationsRequest extends Request {
 
         private Builder(ListGitOrganizationsRequest request) {
             super(request);
+            this.bindType = request.bindType;
             this.clientToken = request.clientToken;
             this.owner = request.owner;
             this.platform = request.platform;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BindType.
+         */
+        public Builder bindType(String bindType) {
+            this.putQueryParameter("BindType", bindType);
+            this.bindType = bindType;
+            return this;
+        }
 
         /**
          * ClientToken.

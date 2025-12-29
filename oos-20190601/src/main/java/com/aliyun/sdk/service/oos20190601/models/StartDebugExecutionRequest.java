@@ -12,59 +12,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListGitAccountsRequest} extends {@link RequestModel}
+ * {@link StartDebugExecutionRequest} extends {@link RequestModel}
  *
- * <p>ListGitAccountsRequest</p>
+ * <p>StartDebugExecutionRequest</p>
  */
-public class ListGitAccountsRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BindType")
-    private String bindType;
-
+public class StartDebugExecutionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Platform")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String platform;
+    @com.aliyun.core.annotation.NameInMap("Properties")
+    private String properties;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RoleName")
-    private String roleName;
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    private String taskType;
 
-    private ListGitAccountsRequest(Builder builder) {
+    private StartDebugExecutionRequest(Builder builder) {
         super(builder);
-        this.bindType = builder.bindType;
         this.clientToken = builder.clientToken;
-        this.platform = builder.platform;
+        this.properties = builder.properties;
         this.regionId = builder.regionId;
-        this.roleName = builder.roleName;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListGitAccountsRequest create() {
+    public static StartDebugExecutionRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return bindType
-     */
-    public String getBindType() {
-        return this.bindType;
     }
 
     /**
@@ -75,10 +62,10 @@ public class ListGitAccountsRequest extends Request {
     }
 
     /**
-     * @return platform
+     * @return properties
      */
-    public String getPlatform() {
-        return this.platform;
+    public String getProperties() {
+        return this.properties;
     }
 
     /**
@@ -89,40 +76,29 @@ public class ListGitAccountsRequest extends Request {
     }
 
     /**
-     * @return roleName
+     * @return taskType
      */
-    public String getRoleName() {
-        return this.roleName;
+    public String getTaskType() {
+        return this.taskType;
     }
 
-    public static final class Builder extends Request.Builder<ListGitAccountsRequest, Builder> {
-        private String bindType; 
+    public static final class Builder extends Request.Builder<StartDebugExecutionRequest, Builder> {
         private String clientToken; 
-        private String platform; 
+        private String properties; 
         private String regionId; 
-        private String roleName; 
+        private String taskType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListGitAccountsRequest request) {
+        private Builder(StartDebugExecutionRequest request) {
             super(request);
-            this.bindType = request.bindType;
             this.clientToken = request.clientToken;
-            this.platform = request.platform;
+            this.properties = request.properties;
             this.regionId = request.regionId;
-            this.roleName = request.roleName;
+            this.taskType = request.taskType;
         } 
-
-        /**
-         * BindType.
-         */
-        public Builder bindType(String bindType) {
-            this.putQueryParameter("BindType", bindType);
-            this.bindType = bindType;
-            return this;
-        }
 
         /**
          * ClientToken.
@@ -134,14 +110,11 @@ public class ListGitAccountsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>github</p>
+         * Properties.
          */
-        public Builder platform(String platform) {
-            this.putQueryParameter("Platform", platform);
-            this.platform = platform;
+        public Builder properties(String properties) {
+            this.putQueryParameter("Properties", properties);
+            this.properties = properties;
             return this;
         }
 
@@ -155,17 +128,17 @@ public class ListGitAccountsRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * TaskType.
          */
-        public Builder roleName(String roleName) {
-            this.putQueryParameter("RoleName", roleName);
-            this.roleName = roleName;
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("TaskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 
         @Override
-        public ListGitAccountsRequest build() {
-            return new ListGitAccountsRequest(this);
+        public StartDebugExecutionRequest build() {
+            return new StartDebugExecutionRequest(this);
         } 
 
     } 
