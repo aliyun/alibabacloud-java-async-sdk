@@ -32,11 +32,16 @@ public class UpdateSortScriptRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String scriptName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
     private UpdateSortScriptRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.appVersionId = builder.appVersionId;
         this.scriptName = builder.scriptName;
+        this.description = builder.description;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class UpdateSortScriptRequest extends Request {
         return this.scriptName;
     }
 
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSortScriptRequest, Builder> {
         private String appGroupIdentity; 
         private String appVersionId; 
         private String scriptName; 
+        private String description; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class UpdateSortScriptRequest extends Request {
             this.appGroupIdentity = request.appGroupIdentity;
             this.appVersionId = request.appVersionId;
             this.scriptName = request.scriptName;
+            this.description = request.description;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class UpdateSortScriptRequest extends Request {
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
             this.scriptName = scriptName;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
             return this;
         }
 

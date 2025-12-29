@@ -101,6 +101,9 @@ public class GetSortScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("modifyTime")
         private String modifyTime;
 
@@ -118,6 +121,7 @@ public class GetSortScriptResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.createTime = builder.createTime;
+            this.description = builder.description;
             this.modifyTime = builder.modifyTime;
             this.scope = builder.scope;
             this.scriptName = builder.scriptName;
@@ -138,6 +142,13 @@ public class GetSortScriptResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -177,6 +188,7 @@ public class GetSortScriptResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String description; 
             private String modifyTime; 
             private String scope; 
             private String scriptName; 
@@ -188,6 +200,7 @@ public class GetSortScriptResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.createTime = model.createTime;
+                this.description = model.description;
                 this.modifyTime = model.modifyTime;
                 this.scope = model.scope;
                 this.scriptName = model.scriptName;
@@ -203,6 +216,14 @@ public class GetSortScriptResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

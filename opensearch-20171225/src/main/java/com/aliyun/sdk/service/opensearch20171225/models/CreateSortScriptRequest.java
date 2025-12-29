@@ -28,6 +28,10 @@ public class CreateSortScriptRequest extends Request {
     private String appVersionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
@@ -43,6 +47,7 @@ public class CreateSortScriptRequest extends Request {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.appVersionId = builder.appVersionId;
+        this.description = builder.description;
         this.scope = builder.scope;
         this.scriptName = builder.scriptName;
         this.type = builder.type;
@@ -76,6 +81,13 @@ public class CreateSortScriptRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return scope
      */
     public String getScope() {
@@ -99,6 +111,7 @@ public class CreateSortScriptRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSortScriptRequest, Builder> {
         private String appGroupIdentity; 
         private String appVersionId; 
+        private String description; 
         private String scope; 
         private String scriptName; 
         private String type; 
@@ -111,6 +124,7 @@ public class CreateSortScriptRequest extends Request {
             super(request);
             this.appGroupIdentity = request.appGroupIdentity;
             this.appVersionId = request.appVersionId;
+            this.description = request.description;
             this.scope = request.scope;
             this.scriptName = request.scriptName;
             this.type = request.type;
@@ -139,6 +153,15 @@ public class CreateSortScriptRequest extends Request {
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
             this.appVersionId = appVersionId;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
             return this;
         }
 
