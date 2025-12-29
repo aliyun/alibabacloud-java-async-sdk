@@ -607,6 +607,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request);
 
     /**
+     * @param request the request parameters of InstallNodePoolComponents  InstallNodePoolComponentsRequest
+     * @return InstallNodePoolComponentsResponse
+     */
+    CompletableFuture<InstallNodePoolComponentsResponse> installNodePoolComponents(InstallNodePoolComponentsRequest request);
+
+    /**
      * @param request the request parameters of ListAddons  ListAddonsRequest
      * @return ListAddonsResponse
      */
@@ -935,6 +941,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateK8sClusterUserConfigExpireResponse
      */
     CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> updateK8sClusterUserConfigExpire(UpdateK8sClusterUserConfigExpireRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
+     * @return UpdateNodePoolComponentResponse
+     */
+    CompletableFuture<UpdateNodePoolComponentResponse> updateNodePoolComponent(UpdateNodePoolComponentRequest request);
 
     /**
      * @param request the request parameters of UpdateResourcesDeleteProtection  UpdateResourcesDeleteProtectionRequest

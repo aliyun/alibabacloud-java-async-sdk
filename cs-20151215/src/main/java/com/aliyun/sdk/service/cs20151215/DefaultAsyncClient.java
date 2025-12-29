@@ -1642,6 +1642,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of InstallNodePoolComponents  InstallNodePoolComponentsRequest
+     * @return InstallNodePoolComponentsResponse
+     */
+    @Override
+    public CompletableFuture<InstallNodePoolComponentsResponse> installNodePoolComponents(InstallNodePoolComponentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InstallNodePoolComponents").setMethod(HttpMethod.POST).setPathRegex("/clusters/{clusterId}/nodepools/{nodePoolId}/components").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallNodePoolComponentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InstallNodePoolComponentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAddons  ListAddonsRequest
      * @return ListAddonsResponse
      */
@@ -2494,6 +2512,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateNodePoolComponent  UpdateNodePoolComponentRequest
+     * @return UpdateNodePoolComponentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNodePoolComponentResponse> updateNodePoolComponent(UpdateNodePoolComponentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNodePoolComponent").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{clusterId}/nodepools/{nodepoolId}/component").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNodePoolComponentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNodePoolComponentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
