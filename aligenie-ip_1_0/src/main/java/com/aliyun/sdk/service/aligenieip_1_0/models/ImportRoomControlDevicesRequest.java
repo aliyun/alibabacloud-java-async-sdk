@@ -22,6 +22,10 @@ public class ImportRoomControlDevicesRequest extends Request {
     private String enableInfraredDeviceImport;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableMeshDeviceImport")
+    private String enableMeshDeviceImport;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HotelId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
@@ -39,6 +43,7 @@ public class ImportRoomControlDevicesRequest extends Request {
     private ImportRoomControlDevicesRequest(Builder builder) {
         super(builder);
         this.enableInfraredDeviceImport = builder.enableInfraredDeviceImport;
+        this.enableMeshDeviceImport = builder.enableMeshDeviceImport;
         this.hotelId = builder.hotelId;
         this.locationDevices = builder.locationDevices;
         this.roomNo = builder.roomNo;
@@ -65,6 +70,13 @@ public class ImportRoomControlDevicesRequest extends Request {
     }
 
     /**
+     * @return enableMeshDeviceImport
+     */
+    public String getEnableMeshDeviceImport() {
+        return this.enableMeshDeviceImport;
+    }
+
+    /**
      * @return hotelId
      */
     public String getHotelId() {
@@ -87,6 +99,7 @@ public class ImportRoomControlDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportRoomControlDevicesRequest, Builder> {
         private String enableInfraredDeviceImport; 
+        private String enableMeshDeviceImport; 
         private String hotelId; 
         private java.util.List<LocationDevices> locationDevices; 
         private String roomNo; 
@@ -98,6 +111,7 @@ public class ImportRoomControlDevicesRequest extends Request {
         private Builder(ImportRoomControlDevicesRequest request) {
             super(request);
             this.enableInfraredDeviceImport = request.enableInfraredDeviceImport;
+            this.enableMeshDeviceImport = request.enableMeshDeviceImport;
             this.hotelId = request.hotelId;
             this.locationDevices = request.locationDevices;
             this.roomNo = request.roomNo;
@@ -109,6 +123,15 @@ public class ImportRoomControlDevicesRequest extends Request {
         public Builder enableInfraredDeviceImport(String enableInfraredDeviceImport) {
             this.putBodyParameter("EnableInfraredDeviceImport", enableInfraredDeviceImport);
             this.enableInfraredDeviceImport = enableInfraredDeviceImport;
+            return this;
+        }
+
+        /**
+         * EnableMeshDeviceImport.
+         */
+        public Builder enableMeshDeviceImport(String enableMeshDeviceImport) {
+            this.putBodyParameter("EnableMeshDeviceImport", enableMeshDeviceImport);
+            this.enableMeshDeviceImport = enableMeshDeviceImport;
             return this;
         }
 
