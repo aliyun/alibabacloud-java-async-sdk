@@ -82,6 +82,35 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchNodeClass")
+    private String searchNodeClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchNodeCount")
+    @com.aliyun.core.annotation.Validation(maximum = 16, minimum = 2)
+    private Long searchNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchNodeStorage")
+    private Long searchNodeStorage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetHiddenZoneId")
+    private String targetHiddenZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetSecondaryZoneId")
+    private String targetSecondaryZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetVswitchId")
+    private String targetVswitchId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetZoneId")
+    private String targetZoneId;
+
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -100,6 +129,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.replicationFactor = builder.replicationFactor;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.searchNodeClass = builder.searchNodeClass;
+        this.searchNodeCount = builder.searchNodeCount;
+        this.searchNodeStorage = builder.searchNodeStorage;
+        this.targetHiddenZoneId = builder.targetHiddenZoneId;
+        this.targetSecondaryZoneId = builder.targetSecondaryZoneId;
+        this.targetVswitchId = builder.targetVswitchId;
+        this.targetZoneId = builder.targetZoneId;
     }
 
     public static Builder builder() {
@@ -227,6 +263,55 @@ public class ModifyDBInstanceSpecRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return searchNodeClass
+     */
+    public String getSearchNodeClass() {
+        return this.searchNodeClass;
+    }
+
+    /**
+     * @return searchNodeCount
+     */
+    public Long getSearchNodeCount() {
+        return this.searchNodeCount;
+    }
+
+    /**
+     * @return searchNodeStorage
+     */
+    public Long getSearchNodeStorage() {
+        return this.searchNodeStorage;
+    }
+
+    /**
+     * @return targetHiddenZoneId
+     */
+    public String getTargetHiddenZoneId() {
+        return this.targetHiddenZoneId;
+    }
+
+    /**
+     * @return targetSecondaryZoneId
+     */
+    public String getTargetSecondaryZoneId() {
+        return this.targetSecondaryZoneId;
+    }
+
+    /**
+     * @return targetVswitchId
+     */
+    public String getTargetVswitchId() {
+        return this.targetVswitchId;
+    }
+
+    /**
+     * @return targetZoneId
+     */
+    public String getTargetZoneId() {
+        return this.targetZoneId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
@@ -244,6 +329,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String replicationFactor; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String searchNodeClass; 
+        private Long searchNodeCount; 
+        private Long searchNodeStorage; 
+        private String targetHiddenZoneId; 
+        private String targetSecondaryZoneId; 
+        private String targetVswitchId; 
+        private String targetZoneId; 
 
         private Builder() {
             super();
@@ -267,6 +359,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.replicationFactor = request.replicationFactor;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.searchNodeClass = request.searchNodeClass;
+            this.searchNodeCount = request.searchNodeCount;
+            this.searchNodeStorage = request.searchNodeStorage;
+            this.targetHiddenZoneId = request.targetHiddenZoneId;
+            this.targetSecondaryZoneId = request.targetSecondaryZoneId;
+            this.targetVswitchId = request.targetVswitchId;
+            this.targetZoneId = request.targetZoneId;
         } 
 
         /**
@@ -497,6 +596,69 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SearchNodeClass.
+         */
+        public Builder searchNodeClass(String searchNodeClass) {
+            this.putQueryParameter("SearchNodeClass", searchNodeClass);
+            this.searchNodeClass = searchNodeClass;
+            return this;
+        }
+
+        /**
+         * SearchNodeCount.
+         */
+        public Builder searchNodeCount(Long searchNodeCount) {
+            this.putQueryParameter("SearchNodeCount", searchNodeCount);
+            this.searchNodeCount = searchNodeCount;
+            return this;
+        }
+
+        /**
+         * SearchNodeStorage.
+         */
+        public Builder searchNodeStorage(Long searchNodeStorage) {
+            this.putQueryParameter("SearchNodeStorage", searchNodeStorage);
+            this.searchNodeStorage = searchNodeStorage;
+            return this;
+        }
+
+        /**
+         * TargetHiddenZoneId.
+         */
+        public Builder targetHiddenZoneId(String targetHiddenZoneId) {
+            this.putQueryParameter("TargetHiddenZoneId", targetHiddenZoneId);
+            this.targetHiddenZoneId = targetHiddenZoneId;
+            return this;
+        }
+
+        /**
+         * TargetSecondaryZoneId.
+         */
+        public Builder targetSecondaryZoneId(String targetSecondaryZoneId) {
+            this.putQueryParameter("TargetSecondaryZoneId", targetSecondaryZoneId);
+            this.targetSecondaryZoneId = targetSecondaryZoneId;
+            return this;
+        }
+
+        /**
+         * TargetVswitchId.
+         */
+        public Builder targetVswitchId(String targetVswitchId) {
+            this.putQueryParameter("TargetVswitchId", targetVswitchId);
+            this.targetVswitchId = targetVswitchId;
+            return this;
+        }
+
+        /**
+         * TargetZoneId.
+         */
+        public Builder targetZoneId(String targetZoneId) {
+            this.putQueryParameter("TargetZoneId", targetZoneId);
+            this.targetZoneId = targetZoneId;
             return this;
         }
 

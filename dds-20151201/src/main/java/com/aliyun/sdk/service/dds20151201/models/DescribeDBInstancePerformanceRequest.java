@@ -69,6 +69,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     private String roleId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchId")
+    private String searchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -87,6 +91,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleId = builder.roleId;
+        this.searchId = builder.searchId;
         this.startTime = builder.startTime;
     }
 
@@ -188,6 +193,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     /**
+     * @return searchId
+     */
+    public String getSearchId() {
+        return this.searchId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -207,6 +219,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleId; 
+        private String searchId; 
         private String startTime; 
 
         private Builder() {
@@ -227,6 +240,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleId = request.roleId;
+            this.searchId = request.searchId;
             this.startTime = request.startTime;
         } 
 
@@ -381,6 +395,15 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
+            return this;
+        }
+
+        /**
+         * SearchId.
+         */
+        public Builder searchId(String searchId) {
+            this.putQueryParameter("SearchId", searchId);
+            this.searchId = searchId;
             return this;
         }
 

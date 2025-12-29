@@ -36,7 +36,6 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
     @com.aliyun.core.annotation.Query
@@ -237,7 +236,6 @@ public class ReleaseNodePrivateNetworkAddressRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp128a003436****</p>

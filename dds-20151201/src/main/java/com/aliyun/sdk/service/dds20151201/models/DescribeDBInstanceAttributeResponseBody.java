@@ -1849,6 +1849,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SearchNodeClass")
+        private String searchNodeClass;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeCount")
+        private Integer searchNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeStorage")
+        private Integer searchNodeStorage;
+
         @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
         private String secondaryZoneId;
 
@@ -1927,6 +1936,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.replicaSets = builder.replicaSets;
             this.replicationFactor = builder.replicationFactor;
             this.resourceGroupId = builder.resourceGroupId;
+            this.searchNodeClass = builder.searchNodeClass;
+            this.searchNodeCount = builder.searchNodeCount;
+            this.searchNodeStorage = builder.searchNodeStorage;
             this.secondaryZoneId = builder.secondaryZoneId;
             this.shardList = builder.shardList;
             this.storageEngine = builder.storageEngine;
@@ -2237,6 +2249,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchNodeClass
+         */
+        public String getSearchNodeClass() {
+            return this.searchNodeClass;
+        }
+
+        /**
+         * @return searchNodeCount
+         */
+        public Integer getSearchNodeCount() {
+            return this.searchNodeCount;
+        }
+
+        /**
+         * @return searchNodeStorage
+         */
+        public Integer getSearchNodeStorage() {
+            return this.searchNodeStorage;
+        }
+
+        /**
          * @return secondaryZoneId
          */
         public String getSecondaryZoneId() {
@@ -2362,6 +2395,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private ReplicaSets replicaSets; 
             private String replicationFactor; 
             private String resourceGroupId; 
+            private String searchNodeClass; 
+            private Integer searchNodeCount; 
+            private Integer searchNodeStorage; 
             private String secondaryZoneId; 
             private ShardList shardList; 
             private String storageEngine; 
@@ -2420,6 +2456,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.replicaSets = model.replicaSets;
                 this.replicationFactor = model.replicationFactor;
                 this.resourceGroupId = model.resourceGroupId;
+                this.searchNodeClass = model.searchNodeClass;
+                this.searchNodeCount = model.searchNodeCount;
+                this.searchNodeStorage = model.searchNodeStorage;
                 this.secondaryZoneId = model.secondaryZoneId;
                 this.shardList = model.shardList;
                 this.storageEngine = model.storageEngine;
@@ -2978,6 +3017,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SearchNodeClass.
+             */
+            public Builder searchNodeClass(String searchNodeClass) {
+                this.searchNodeClass = searchNodeClass;
+                return this;
+            }
+
+            /**
+             * SearchNodeCount.
+             */
+            public Builder searchNodeCount(Integer searchNodeCount) {
+                this.searchNodeCount = searchNodeCount;
+                return this;
+            }
+
+            /**
+             * SearchNodeStorage.
+             */
+            public Builder searchNodeStorage(Integer searchNodeStorage) {
+                this.searchNodeStorage = searchNodeStorage;
                 return this;
             }
 

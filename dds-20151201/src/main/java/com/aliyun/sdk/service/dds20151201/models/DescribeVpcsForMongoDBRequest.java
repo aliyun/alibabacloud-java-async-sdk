@@ -12,24 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeClusterRecoverTimeRequest} extends {@link RequestModel}
+ * {@link DescribeVpcsForMongoDBRequest} extends {@link RequestModel}
  *
- * <p>DescribeClusterRecoverTimeRequest</p>
+ * <p>DescribeVpcsForMongoDBRequest</p>
  */
-public class DescribeClusterRecoverTimeRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBInstanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DestRegion")
-    private String destRegion;
-
+public class DescribeVpcsForMongoDBRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -37,6 +24,18 @@ public class DescribeClusterRecoverTimeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -51,54 +50,33 @@ public class DescribeClusterRecoverTimeRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SrcRegion")
-    private String srcRegion;
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
 
-    private DescribeClusterRecoverTimeRequest(Builder builder) {
+    private DescribeVpcsForMongoDBRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.DBInstanceId = builder.DBInstanceId;
-        this.destRegion = builder.destRegion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.srcRegion = builder.srcRegion;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeClusterRecoverTimeRequest create() {
+    public static DescribeVpcsForMongoDBRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return DBInstanceId
-     */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    /**
-     * @return destRegion
-     */
-    public String getDestRegion() {
-        return this.destRegion;
     }
 
     /**
@@ -113,6 +91,27 @@ public class DescribeClusterRecoverTimeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -137,70 +136,39 @@ public class DescribeClusterRecoverTimeRequest extends Request {
     }
 
     /**
-     * @return srcRegion
+     * @return zoneId
      */
-    public String getSrcRegion() {
-        return this.srcRegion;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeClusterRecoverTimeRequest, Builder> {
-        private String regionId; 
-        private String DBInstanceId; 
-        private String destRegion; 
+    public static final class Builder extends Request.Builder<DescribeVpcsForMongoDBRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String srcRegion; 
+        private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeClusterRecoverTimeRequest request) {
+        private Builder(DescribeVpcsForMongoDBRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.DBInstanceId = request.DBInstanceId;
-            this.destRegion = request.destRegion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.srcRegion = request.srcRegion;
+            this.zoneId = request.zoneId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the instance.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bp18f7d6b6a7****</p>
-         */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * DestRegion.
-         */
-        public Builder destRegion(String destRegion) {
-            this.putQueryParameter("DestRegion", destRegion);
-            this.destRegion = destRegion;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -217,6 +185,33 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -248,17 +243,17 @@ public class DescribeClusterRecoverTimeRequest extends Request {
         }
 
         /**
-         * SrcRegion.
+         * ZoneId.
          */
-        public Builder srcRegion(String srcRegion) {
-            this.putQueryParameter("SrcRegion", srcRegion);
-            this.srcRegion = srcRegion;
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 
         @Override
-        public DescribeClusterRecoverTimeRequest build() {
-            return new DescribeClusterRecoverTimeRequest(this);
+        public DescribeVpcsForMongoDBRequest build() {
+            return new DescribeVpcsForMongoDBRequest(this);
         } 
 
     } 

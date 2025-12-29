@@ -12,27 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
+ * {@link ModifyActiveOperationMaintenanceConfigRequest} extends {@link RequestModel}
  *
- * <p>DescribeShardingNetworkAddressRequest</p>
+ * <p>ModifyActiveOperationMaintenanceConfigRequest</p>
  */
-public class DescribeShardingNetworkAddressRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+public class ModifyActiveOperationMaintenanceConfigRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CycleTime")
+    private String cycleTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBInstanceId;
+    @com.aliyun.core.annotation.NameInMap("CycleType")
+    private String cycleType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkType")
-    private String networkType;
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
+    private String maintainEndTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NodeId")
-    private String nodeId;
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
+    private String maintainStartTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -50,23 +49,28 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeShardingNetworkAddressRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    private ModifyActiveOperationMaintenanceConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.DBInstanceId = builder.DBInstanceId;
-        this.networkType = builder.networkType;
-        this.nodeId = builder.nodeId;
+        this.cycleTime = builder.cycleTime;
+        this.cycleType = builder.cycleType;
+        this.maintainEndTime = builder.maintainEndTime;
+        this.maintainStartTime = builder.maintainStartTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeShardingNetworkAddressRequest create() {
+    public static ModifyActiveOperationMaintenanceConfigRequest create() {
         return builder().build();
     }
 
@@ -76,31 +80,31 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return cycleTime
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getCycleTime() {
+        return this.cycleTime;
     }
 
     /**
-     * @return DBInstanceId
+     * @return cycleType
      */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getCycleType() {
+        return this.cycleType;
     }
 
     /**
-     * @return networkType
+     * @return maintainEndTime
      */
-    public String getNetworkType() {
-        return this.networkType;
+    public String getMaintainEndTime() {
+        return this.maintainEndTime;
     }
 
     /**
-     * @return nodeId
+     * @return maintainStartTime
      */
-    public String getNodeId() {
-        return this.nodeId;
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
     /**
@@ -131,75 +135,74 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeShardingNetworkAddressRequest, Builder> {
-        private String regionId; 
-        private String DBInstanceId; 
-        private String networkType; 
-        private String nodeId; 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyActiveOperationMaintenanceConfigRequest, Builder> {
+        private String cycleTime; 
+        private String cycleType; 
+        private String maintainEndTime; 
+        private String maintainStartTime; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeShardingNetworkAddressRequest request) {
+        private Builder(ModifyActiveOperationMaintenanceConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.DBInstanceId = request.DBInstanceId;
-            this.networkType = request.networkType;
-            this.nodeId = request.nodeId;
+            this.cycleTime = request.cycleTime;
+            this.cycleType = request.cycleType;
+            this.maintainEndTime = request.maintainEndTime;
+            this.maintainStartTime = request.maintainStartTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.status = request.status;
         } 
 
         /**
-         * RegionId.
+         * CycleTime.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder cycleTime(String cycleTime) {
+            this.putQueryParameter("CycleTime", cycleTime);
+            this.cycleTime = cycleTime;
             return this;
         }
 
         /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
+         * CycleType.
          */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
+        public Builder cycleType(String cycleType) {
+            this.putQueryParameter("CycleType", cycleType);
+            this.cycleType = cycleType;
             return this;
         }
 
         /**
-         * NetworkType.
+         * MaintainEndTime.
          */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
+        public Builder maintainEndTime(String maintainEndTime) {
+            this.putQueryParameter("MaintainEndTime", maintainEndTime);
+            this.maintainEndTime = maintainEndTime;
             return this;
         }
 
         /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bpxxxxxxxx</p>
+         * MaintainStartTime.
          */
-        public Builder nodeId(String nodeId) {
-            this.putQueryParameter("NodeId", nodeId);
-            this.nodeId = nodeId;
+        public Builder maintainStartTime(String maintainStartTime) {
+            this.putQueryParameter("MaintainStartTime", maintainStartTime);
+            this.maintainStartTime = maintainStartTime;
             return this;
         }
 
@@ -239,9 +242,18 @@ public class DescribeShardingNetworkAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
         @Override
-        public DescribeShardingNetworkAddressRequest build() {
-            return new DescribeShardingNetworkAddressRequest(this);
+        public ModifyActiveOperationMaintenanceConfigRequest build() {
+            return new ModifyActiveOperationMaintenanceConfigRequest(this);
         } 
 
     } 

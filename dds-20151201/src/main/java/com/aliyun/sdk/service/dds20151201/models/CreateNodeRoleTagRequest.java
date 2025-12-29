@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
+ * {@link CreateNodeRoleTagRequest} extends {@link RequestModel}
  *
- * <p>DescribeShardingNetworkAddressRequest</p>
+ * <p>CreateNodeRoleTagRequest</p>
  */
-public class DescribeShardingNetworkAddressRequest extends Request {
+public class CreateNodeRoleTagRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -25,14 +25,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkType")
-    private String networkType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NodeId")
-    private String nodeId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -50,23 +42,26 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeShardingNetworkAddressRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardList")
+    private String shardList;
+
+    private CreateNodeRoleTagRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
-        this.networkType = builder.networkType;
-        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.shardList = builder.shardList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeShardingNetworkAddressRequest create() {
+    public static CreateNodeRoleTagRequest create() {
         return builder().build();
     }
 
@@ -87,20 +82,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    /**
-     * @return nodeId
-     */
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     /**
@@ -131,30 +112,35 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeShardingNetworkAddressRequest, Builder> {
+    /**
+     * @return shardList
+     */
+    public String getShardList() {
+        return this.shardList;
+    }
+
+    public static final class Builder extends Request.Builder<CreateNodeRoleTagRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
-        private String networkType; 
-        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String shardList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeShardingNetworkAddressRequest request) {
+        private Builder(CreateNodeRoleTagRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
-            this.networkType = request.networkType;
-            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.shardList = request.shardList;
         } 
 
         /**
@@ -167,39 +153,14 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
+         * <p>dds-2ze09d7be1fxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * NetworkType.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bpxxxxxxxx</p>
-         */
-        public Builder nodeId(String nodeId) {
-            this.putQueryParameter("NodeId", nodeId);
-            this.nodeId = nodeId;
             return this;
         }
 
@@ -239,9 +200,18 @@ public class DescribeShardingNetworkAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * ShardList.
+         */
+        public Builder shardList(String shardList) {
+            this.putQueryParameter("ShardList", shardList);
+            this.shardList = shardList;
+            return this;
+        }
+
         @Override
-        public DescribeShardingNetworkAddressRequest build() {
-            return new DescribeShardingNetworkAddressRequest(this);
+        public CreateNodeRoleTagRequest build() {
+            return new CreateNodeRoleTagRequest(this);
         } 
 
     } 

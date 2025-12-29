@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AllocateDBInstanceSrvNetworkAddress  AllocateDBInstanceSrvNetworkAddressRequest
+     * @return AllocateDBInstanceSrvNetworkAddressResponse
+     */
+    CompletableFuture<AllocateDBInstanceSrvNetworkAddressResponse> allocateDBInstanceSrvNetworkAddress(AllocateDBInstanceSrvNetworkAddressRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</p>
      * <blockquote>
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AllocatePublicNetworkAddressResponse
      */
     CompletableFuture<AllocatePublicNetworkAddressResponse> allocatePublicNetworkAddress(AllocatePublicNetworkAddressRequest request);
+
+    /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
 
     /**
      * <b>description</b> :
@@ -123,6 +135,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNodeBatchResponse> createNodeBatch(CreateNodeBatchRequest request);
 
     /**
+     * @param request the request parameters of CreateNodeRoleTag  CreateNodeRoleTagRequest
+     * @return CreateNodeRoleTagResponse
+     */
+    CompletableFuture<CreateNodeRoleTagResponse> createNodeRoleTag(CreateNodeRoleTagRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
      * <ul>
@@ -134,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateShardingDBInstanceResponse
      */
     CompletableFuture<CreateShardingDBInstanceResponse> createShardingDBInstance(CreateShardingDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
 
     /**
      * <b>description</b> :
@@ -548,6 +572,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePriceResponse> describePrice(DescribePriceRequest request);
 
     /**
+     * @param request the request parameters of DescribeRdsVSwitchs  DescribeRdsVSwitchsRequest
+     * @return DescribeRdsVSwitchsResponse
+     */
+    CompletableFuture<DescribeRdsVSwitchsResponse> describeRdsVSwitchs(DescribeRdsVSwitchsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
+     * @return DescribeRdsVpcsResponse
+     */
+    CompletableFuture<DescribeRdsVpcsResponse> describeRdsVpcs(DescribeRdsVpcsRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</p>
@@ -581,6 +617,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRestoreDBInstanceListResponse
      */
     CompletableFuture<DescribeRestoreDBInstanceListResponse> describeRestoreDBInstanceList(DescribeRestoreDBInstanceListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRoleTagStatus  DescribeRoleTagStatusRequest
+     * @return DescribeRoleTagStatusResponse
+     */
+    CompletableFuture<DescribeRoleTagStatusResponse> describeRoleTagStatus(DescribeRoleTagStatusRequest request);
 
     /**
      * <b>description</b> :
@@ -655,6 +697,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcsForMongoDB  DescribeVpcsForMongoDBRequest
+     * @return DescribeVpcsForMongoDBResponse
+     */
+    CompletableFuture<DescribeVpcsForMongoDBResponse> describeVpcsForMongoDB(DescribeVpcsForMongoDBRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the instance meets the following requirements:</p>
      * <ul>
@@ -722,6 +770,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyActiveOperationMaintenanceConfig  ModifyActiveOperationMaintenanceConfigRequest
+     * @return ModifyActiveOperationMaintenanceConfigResponse
+     */
+    CompletableFuture<ModifyActiveOperationMaintenanceConfigResponse> modifyActiveOperationMaintenanceConfig(ModifyActiveOperationMaintenanceConfigRequest request);
+
+    /**
      * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
      * @return ModifyActiveOperationTasksResponse
      */
@@ -751,6 +805,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAuditPolicyResponse
      */
     CompletableFuture<ModifyAuditPolicyResponse> modifyAuditPolicy(ModifyAuditPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBackupExpireTime  ModifyBackupExpireTimeRequest
+     * @return ModifyBackupExpireTimeResponse
+     */
+    CompletableFuture<ModifyBackupExpireTimeResponse> modifyBackupExpireTime(ModifyBackupExpireTimeRequest request);
 
     /**
      * <b>description</b> :
@@ -998,6 +1058,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySecurityIpsResponse
      */
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    /**
+     * @param request the request parameters of ModifySrvNetworkAddress  ModifySrvNetworkAddressRequest
+     * @return ModifySrvNetworkAddressResponse
+     */
+    CompletableFuture<ModifySrvNetworkAddressResponse> modifySrvNetworkAddress(ModifySrvNetworkAddressRequest request);
 
     /**
      * <b>description</b> :

@@ -26,6 +26,10 @@ public class DescribeClusterBackupsRequest extends Request {
     private String backupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupJobId")
+    private String backupJobId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -59,6 +63,10 @@ public class DescribeClusterBackupsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -78,6 +86,7 @@ public class DescribeClusterBackupsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
+        this.backupJobId = builder.backupJobId;
         this.DBInstanceId = builder.DBInstanceId;
         this.destRegion = builder.destRegion;
         this.endTime = builder.endTime;
@@ -86,6 +95,7 @@ public class DescribeClusterBackupsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.srcRegion = builder.srcRegion;
@@ -117,6 +127,13 @@ public class DescribeClusterBackupsRequest extends Request {
      */
     public String getBackupId() {
         return this.backupId;
+    }
+
+    /**
+     * @return backupJobId
+     */
+    public String getBackupJobId() {
+        return this.backupJobId;
     }
 
     /**
@@ -176,6 +193,13 @@ public class DescribeClusterBackupsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -206,6 +230,7 @@ public class DescribeClusterBackupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeClusterBackupsRequest, Builder> {
         private String regionId; 
         private String backupId; 
+        private String backupJobId; 
         private String DBInstanceId; 
         private String destRegion; 
         private String endTime; 
@@ -214,6 +239,7 @@ public class DescribeClusterBackupsRequest extends Request {
         private Long ownerId; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String srcRegion; 
@@ -227,6 +253,7 @@ public class DescribeClusterBackupsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupId = request.backupId;
+            this.backupJobId = request.backupJobId;
             this.DBInstanceId = request.DBInstanceId;
             this.destRegion = request.destRegion;
             this.endTime = request.endTime;
@@ -235,6 +262,7 @@ public class DescribeClusterBackupsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.srcRegion = request.srcRegion;
@@ -259,6 +287,15 @@ public class DescribeClusterBackupsRequest extends Request {
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * BackupJobId.
+         */
+        public Builder backupJobId(String backupJobId) {
+            this.putQueryParameter("BackupJobId", backupJobId);
+            this.backupJobId = backupJobId;
             return this;
         }
 
@@ -362,6 +399,15 @@ public class DescribeClusterBackupsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

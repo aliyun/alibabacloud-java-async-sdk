@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateBackupResponseBody} extends {@link TeaModel}
+ * {@link ModifyBackupExpireTimeResponseBody} extends {@link TeaModel}
  *
- * <p>CreateBackupResponseBody</p>
+ * <p>ModifyBackupExpireTimeResponseBody</p>
  */
-public class CreateBackupResponseBody extends TeaModel {
+public class ModifyBackupExpireTimeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BackupExpireTime")
+    private String backupExpireTime;
+
     @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
-
-    @com.aliyun.core.annotation.NameInMap("BackupJobId")
-    private String backupJobId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateBackupResponseBody(Builder builder) {
+    private ModifyBackupExpireTimeResponseBody(Builder builder) {
+        this.backupExpireTime = builder.backupExpireTime;
         this.backupId = builder.backupId;
-        this.backupJobId = builder.backupJobId;
         this.requestId = builder.requestId;
     }
 
@@ -36,12 +36,19 @@ public class CreateBackupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateBackupResponseBody create() {
+    public static ModifyBackupExpireTimeResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backupExpireTime
+     */
+    public String getBackupExpireTime() {
+        return this.backupExpireTime;
     }
 
     /**
@@ -52,13 +59,6 @@ public class CreateBackupResponseBody extends TeaModel {
     }
 
     /**
-     * @return backupJobId
-     */
-    public String getBackupJobId() {
-        return this.backupJobId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -66,24 +66,29 @@ public class CreateBackupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String backupExpireTime; 
         private String backupId; 
-        private String backupJobId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateBackupResponseBody model) {
+        private Builder(ModifyBackupExpireTimeResponseBody model) {
+            this.backupExpireTime = model.backupExpireTime;
             this.backupId = model.backupId;
-            this.backupJobId = model.backupJobId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the backup set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5664****</p>
+         * BackupExpireTime.
+         */
+        public Builder backupExpireTime(String backupExpireTime) {
+            this.backupExpireTime = backupExpireTime;
+            return this;
+        }
+
+        /**
+         * BackupId.
          */
         public Builder backupId(String backupId) {
             this.backupId = backupId;
@@ -91,26 +96,15 @@ public class CreateBackupResponseBody extends TeaModel {
         }
 
         /**
-         * BackupJobId.
-         */
-        public Builder backupJobId(String backupJobId) {
-            this.backupJobId = backupJobId;
-            return this;
-        }
-
-        /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7016B12F-7F64-40A4-BAFF-013F02AC82FC</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateBackupResponseBody build() {
-            return new CreateBackupResponseBody(this);
+        public ModifyBackupExpireTimeResponseBody build() {
+            return new ModifyBackupExpireTimeResponseBody(this);
         } 
 
     } 

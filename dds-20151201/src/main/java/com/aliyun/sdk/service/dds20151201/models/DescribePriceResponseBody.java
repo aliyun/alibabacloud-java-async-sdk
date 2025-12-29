@@ -2997,6 +2997,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalProductFee")
         private Double totalProductFee;
 
+        @com.aliyun.core.annotation.NameInMap("UnitPriceUnit4Buy")
+        private String unitPriceUnit4Buy;
+
         @com.aliyun.core.annotation.NameInMap("priceType")
         private String priceType;
 
@@ -3019,6 +3022,7 @@ public class DescribePriceResponseBody extends TeaModel {
             this.standDiscountPrice = builder.standDiscountPrice;
             this.standPrice = builder.standPrice;
             this.totalProductFee = builder.totalProductFee;
+            this.unitPriceUnit4Buy = builder.unitPriceUnit4Buy;
             this.priceType = builder.priceType;
             this.priceUnit = builder.priceUnit;
         }
@@ -3137,6 +3141,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return unitPriceUnit4Buy
+         */
+        public String getUnitPriceUnit4Buy() {
+            return this.unitPriceUnit4Buy;
+        }
+
+        /**
          * @return priceType
          */
         public String getPriceType() {
@@ -3166,6 +3177,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Double standDiscountPrice; 
             private Double standPrice; 
             private Double totalProductFee; 
+            private String unitPriceUnit4Buy; 
             private String priceType; 
             private String priceUnit; 
 
@@ -3188,6 +3200,7 @@ public class DescribePriceResponseBody extends TeaModel {
                 this.standDiscountPrice = model.standDiscountPrice;
                 this.standPrice = model.standPrice;
                 this.totalProductFee = model.totalProductFee;
+                this.unitPriceUnit4Buy = model.unitPriceUnit4Buy;
                 this.priceType = model.priceType;
                 this.priceUnit = model.priceUnit;
             } 
@@ -3345,6 +3358,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder totalProductFee(Double totalProductFee) {
                 this.totalProductFee = totalProductFee;
+                return this;
+            }
+
+            /**
+             * UnitPriceUnit4Buy.
+             */
+            public Builder unitPriceUnit4Buy(String unitPriceUnit4Buy) {
+                this.unitPriceUnit4Buy = unitPriceUnit4Buy;
                 return this;
             }
 

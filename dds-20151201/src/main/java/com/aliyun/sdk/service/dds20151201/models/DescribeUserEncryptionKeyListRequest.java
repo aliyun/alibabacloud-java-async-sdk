@@ -43,6 +43,10 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
+    private String roleARN;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetRegionId")
     private String targetRegionId;
 
@@ -54,6 +58,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.roleARN = builder.roleARN;
         this.targetRegionId = builder.targetRegionId;
     }
 
@@ -113,6 +118,13 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
     }
 
     /**
+     * @return roleARN
+     */
+    public String getRoleARN() {
+        return this.roleARN;
+    }
+
+    /**
      * @return targetRegionId
      */
     public String getTargetRegionId() {
@@ -126,6 +138,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String roleARN; 
         private String targetRegionId; 
 
         private Builder() {
@@ -140,6 +153,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.roleARN = request.roleARN;
             this.targetRegionId = request.targetRegionId;
         } 
 
@@ -198,6 +212,15 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RoleARN.
+         */
+        public Builder roleARN(String roleARN) {
+            this.putQueryParameter("RoleARN", roleARN);
+            this.roleARN = roleARN;
             return this;
         }
 

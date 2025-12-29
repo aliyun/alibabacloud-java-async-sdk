@@ -12,27 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
+ * {@link DeleteBackupRequest} extends {@link RequestModel}
  *
- * <p>DescribeShardingNetworkAddressRequest</p>
+ * <p>DeleteBackupRequest</p>
  */
-public class DescribeShardingNetworkAddressRequest extends Request {
+public class DeleteBackupRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String backupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkType")
-    private String networkType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NodeId")
-    private String nodeId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -50,12 +47,11 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeShardingNetworkAddressRequest(Builder builder) {
+    private DeleteBackupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
-        this.networkType = builder.networkType;
-        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -66,7 +62,7 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeShardingNetworkAddressRequest create() {
+    public static DeleteBackupRequest create() {
         return builder().build();
     }
 
@@ -83,24 +79,17 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     }
 
     /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    /**
-     * @return nodeId
-     */
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     /**
@@ -131,11 +120,10 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeShardingNetworkAddressRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteBackupRequest, Builder> {
         private String regionId; 
+        private String backupId; 
         private String DBInstanceId; 
-        private String networkType; 
-        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -145,12 +133,11 @@ public class DescribeShardingNetworkAddressRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeShardingNetworkAddressRequest request) {
+        private Builder(DeleteBackupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.backupId = request.backupId;
             this.DBInstanceId = request.DBInstanceId;
-            this.networkType = request.networkType;
-            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -167,39 +154,26 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
+         * <p>5664****</p>
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * NetworkType.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bpxxxxxxxx</p>
-         */
-        public Builder nodeId(String nodeId) {
-            this.putQueryParameter("NodeId", nodeId);
-            this.nodeId = nodeId;
             return this;
         }
 
@@ -240,8 +214,8 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         @Override
-        public DescribeShardingNetworkAddressRequest build() {
-            return new DescribeShardingNetworkAddressRequest(this);
+        public DeleteBackupRequest build() {
+            return new DeleteBackupRequest(this);
         } 
 
     } 

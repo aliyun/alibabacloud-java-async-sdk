@@ -12,27 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
+ * {@link DescribeRdsVSwitchsRequest} extends {@link RequestModel}
  *
- * <p>DescribeShardingNetworkAddressRequest</p>
+ * <p>DescribeRdsVSwitchsRequest</p>
  */
-public class DescribeShardingNetworkAddressRequest extends Request {
+public class DescribeRdsVSwitchsRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String DBInstanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkType")
-    private String networkType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NodeId")
-    private String nodeId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -43,6 +30,10 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -50,23 +41,31 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeShardingNetworkAddressRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
+    private DescribeRdsVSwitchsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.DBInstanceId = builder.DBInstanceId;
-        this.networkType = builder.networkType;
-        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeShardingNetworkAddressRequest create() {
+    public static DescribeRdsVSwitchsRequest create() {
         return builder().build();
     }
 
@@ -80,27 +79,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return DBInstanceId
-     */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    /**
-     * @return nodeId
-     */
-    public String getNodeId() {
-        return this.nodeId;
     }
 
     /**
@@ -118,6 +96,13 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -131,30 +116,44 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeShardingNetworkAddressRequest, Builder> {
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeRdsVSwitchsRequest, Builder> {
         private String regionId; 
-        private String DBInstanceId; 
-        private String networkType; 
-        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String vpcId; 
+        private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeShardingNetworkAddressRequest request) {
+        private Builder(DescribeRdsVSwitchsRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.DBInstanceId = request.DBInstanceId;
-            this.networkType = request.networkType;
-            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -163,43 +162,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
-         */
-        public Builder DBInstanceId(String DBInstanceId) {
-            this.putQueryParameter("DBInstanceId", DBInstanceId);
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-
-        /**
-         * NetworkType.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bpxxxxxxxx</p>
-         */
-        public Builder nodeId(String nodeId) {
-            this.putQueryParameter("NodeId", nodeId);
-            this.nodeId = nodeId;
             return this;
         }
 
@@ -222,6 +184,15 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -239,9 +210,27 @@ public class DescribeShardingNetworkAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
+            return this;
+        }
+
         @Override
-        public DescribeShardingNetworkAddressRequest build() {
-            return new DescribeShardingNetworkAddressRequest(this);
+        public DescribeRdsVSwitchsRequest build() {
+            return new DescribeRdsVSwitchsRequest(this);
         } 
 
     } 

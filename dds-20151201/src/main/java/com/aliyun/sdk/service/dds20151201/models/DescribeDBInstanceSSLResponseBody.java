@@ -20,6 +20,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertCommonName")
     private String certCommonName;
 
+    @com.aliyun.core.annotation.NameInMap("ForceEncryption")
+    private String forceEncryption;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -31,6 +34,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {
         this.certCommonName = builder.certCommonName;
+        this.forceEncryption = builder.forceEncryption;
         this.requestId = builder.requestId;
         this.SSLExpiredTime = builder.SSLExpiredTime;
         this.SSLStatus = builder.SSLStatus;
@@ -56,6 +60,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     }
 
     /**
+     * @return forceEncryption
+     */
+    public String getForceEncryption() {
+        return this.forceEncryption;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -78,6 +89,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
     public static final class Builder {
         private String certCommonName; 
+        private String forceEncryption; 
         private String requestId; 
         private String SSLExpiredTime; 
         private String SSLStatus; 
@@ -87,6 +99,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
 
         private Builder(DescribeDBInstanceSSLResponseBody model) {
             this.certCommonName = model.certCommonName;
+            this.forceEncryption = model.forceEncryption;
             this.requestId = model.requestId;
             this.SSLExpiredTime = model.SSLExpiredTime;
             this.SSLStatus = model.SSLStatus;
@@ -100,6 +113,14 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
+            return this;
+        }
+
+        /**
+         * ForceEncryption.
+         */
+        public Builder forceEncryption(String forceEncryption) {
+            this.forceEncryption = forceEncryption;
             return this;
         }
 

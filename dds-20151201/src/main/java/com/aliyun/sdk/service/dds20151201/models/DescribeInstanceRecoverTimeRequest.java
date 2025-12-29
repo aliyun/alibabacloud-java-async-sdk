@@ -27,12 +27,20 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -46,15 +54,22 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
     private DescribeInstanceRecoverTimeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.destRegion = builder.destRegion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.srcRegion = builder.srcRegion;
     }
 
     public static Builder builder() {
@@ -85,6 +100,13 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
     }
 
     /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -96,6 +118,13 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -119,14 +148,24 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstanceRecoverTimeRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
+        private String destRegion; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String srcRegion; 
 
         private Builder() {
             super();
@@ -136,11 +175,14 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
+            this.destRegion = request.destRegion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.srcRegion = request.srcRegion;
         } 
 
         /**
@@ -166,6 +208,15 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         }
 
         /**
+         * DestRegion.
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -180,6 +231,15 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -207,6 +267,15 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SrcRegion.
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
             return this;
         }
 

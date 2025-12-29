@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeShardingNetworkAddressRequest} extends {@link RequestModel}
+ * {@link AllocateDBInstanceSrvNetworkAddressRequest} extends {@link RequestModel}
  *
- * <p>DescribeShardingNetworkAddressRequest</p>
+ * <p>AllocateDBInstanceSrvNetworkAddressRequest</p>
  */
-public class DescribeShardingNetworkAddressRequest extends Request {
+public class AllocateDBInstanceSrvNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -25,10 +25,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkType")
-    private String networkType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeId")
@@ -50,23 +46,27 @@ public class DescribeShardingNetworkAddressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeShardingNetworkAddressRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrvConnectionType")
+    private String srvConnectionType;
+
+    private AllocateDBInstanceSrvNetworkAddressRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
-        this.networkType = builder.networkType;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.srvConnectionType = builder.srvConnectionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeShardingNetworkAddressRequest create() {
+    public static AllocateDBInstanceSrvNetworkAddressRequest create() {
         return builder().build();
     }
 
@@ -87,13 +87,6 @@ public class DescribeShardingNetworkAddressRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
-    }
-
-    /**
-     * @return networkType
-     */
-    public String getNetworkType() {
-        return this.networkType;
     }
 
     /**
@@ -131,30 +124,37 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeShardingNetworkAddressRequest, Builder> {
+    /**
+     * @return srvConnectionType
+     */
+    public String getSrvConnectionType() {
+        return this.srvConnectionType;
+    }
+
+    public static final class Builder extends Request.Builder<AllocateDBInstanceSrvNetworkAddressRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
-        private String networkType; 
         private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String srvConnectionType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeShardingNetworkAddressRequest request) {
+        private Builder(AllocateDBInstanceSrvNetworkAddressRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
-            this.networkType = request.networkType;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.srvConnectionType = request.srvConnectionType;
         } 
 
         /**
@@ -167,11 +167,10 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-bpxxxxxxxx</p>
+         * <p>dds-2ze5eb9514e31364</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,22 +179,7 @@ public class DescribeShardingNetworkAddressRequest extends Request {
         }
 
         /**
-         * NetworkType.
-         */
-        public Builder networkType(String networkType) {
-            this.putQueryParameter("NetworkType", networkType);
-            this.networkType = networkType;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>d-bpxxxxxxxx</p>
+         * NodeId.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -239,9 +223,18 @@ public class DescribeShardingNetworkAddressRequest extends Request {
             return this;
         }
 
+        /**
+         * SrvConnectionType.
+         */
+        public Builder srvConnectionType(String srvConnectionType) {
+            this.putQueryParameter("SrvConnectionType", srvConnectionType);
+            this.srvConnectionType = srvConnectionType;
+            return this;
+        }
+
         @Override
-        public DescribeShardingNetworkAddressRequest build() {
-            return new DescribeShardingNetworkAddressRequest(this);
+        public AllocateDBInstanceSrvNetworkAddressRequest build() {
+            return new AllocateDBInstanceSrvNetworkAddressRequest(this);
         } 
 
     } 

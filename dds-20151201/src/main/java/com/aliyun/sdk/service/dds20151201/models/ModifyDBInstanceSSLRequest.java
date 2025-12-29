@@ -27,6 +27,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceEncryption")
+    private String forceEncryption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -55,6 +59,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.forceEncryption = builder.forceEncryption;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -88,6 +93,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return forceEncryption
+     */
+    public String getForceEncryption() {
+        return this.forceEncryption;
     }
 
     /**
@@ -135,6 +147,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBInstanceSSLRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
+        private String forceEncryption; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -150,6 +163,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
+            this.forceEncryption = request.forceEncryption;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -177,6 +191,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ForceEncryption.
+         */
+        public Builder forceEncryption(String forceEncryption) {
+            this.putQueryParameter("ForceEncryption", forceEncryption);
+            this.forceEncryption = forceEncryption;
             return this;
         }
 
