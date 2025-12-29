@@ -17,14 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteThreadResponseBody</p>
  */
 public class DeleteThreadResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("deleted")
-    private Boolean deleted;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private DeleteThreadResponseBody(Builder builder) {
-        this.deleted = builder.deleted;
         this.requestId = builder.requestId;
     }
 
@@ -41,13 +37,6 @@ public class DeleteThreadResponseBody extends TeaModel {
     }
 
     /**
-     * @return deleted
-     */
-    public Boolean getDeleted() {
-        return this.deleted;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,24 +44,14 @@ public class DeleteThreadResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Boolean deleted; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(DeleteThreadResponseBody model) {
-            this.deleted = model.deleted;
             this.requestId = model.requestId;
         } 
-
-        /**
-         * deleted.
-         */
-        public Builder deleted(Boolean deleted) {
-            this.deleted = deleted;
-            return this;
-        }
 
         /**
          * <p>Id of the request</p>
