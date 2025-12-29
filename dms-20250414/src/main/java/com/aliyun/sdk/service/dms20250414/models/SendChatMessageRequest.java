@@ -575,10 +575,14 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("ReportWaterMark")
+        private String reportWaterMark;
+
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
             this.language = builder.language;
+            this.reportWaterMark = builder.reportWaterMark;
         }
 
         public static Builder builder() {
@@ -610,10 +614,18 @@ public class SendChatMessageRequest extends Request {
             return this.language;
         }
 
+        /**
+         * @return reportWaterMark
+         */
+        public String getReportWaterMark() {
+            return this.reportWaterMark;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
             private String language; 
+            private String reportWaterMark; 
 
             private Builder() {
             } 
@@ -622,6 +634,7 @@ public class SendChatMessageRequest extends Request {
                 this.customAgentId = model.customAgentId;
                 this.customAgentStage = model.customAgentStage;
                 this.language = model.language;
+                this.reportWaterMark = model.reportWaterMark;
             } 
 
             /**
@@ -645,6 +658,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * ReportWaterMark.
+             */
+            public Builder reportWaterMark(String reportWaterMark) {
+                this.reportWaterMark = reportWaterMark;
                 return this;
             }
 
