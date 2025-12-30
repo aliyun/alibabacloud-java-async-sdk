@@ -25,6 +25,10 @@ public class ListHyperNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    private String commodityCode;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HpnZone")
     private String hpnZone;
@@ -49,6 +53,10 @@ public class ListHyperNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperatingStates")
+    private java.util.List<String> operatingStates;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
@@ -65,12 +73,14 @@ public class ListHyperNodesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.clusterName = builder.clusterName;
+        this.commodityCode = builder.commodityCode;
         this.hpnZone = builder.hpnZone;
         this.hyperNodeId = builder.hyperNodeId;
         this.machineType = builder.machineType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.nodeGroupName = builder.nodeGroupName;
+        this.operatingStates = builder.operatingStates;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
         this.zoneId = builder.zoneId;
@@ -101,6 +111,13 @@ public class ListHyperNodesRequest extends Request {
      */
     public String getClusterName() {
         return this.clusterName;
+    }
+
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -146,6 +163,13 @@ public class ListHyperNodesRequest extends Request {
     }
 
     /**
+     * @return operatingStates
+     */
+    public java.util.List<String> getOperatingStates() {
+        return this.operatingStates;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -169,12 +193,14 @@ public class ListHyperNodesRequest extends Request {
     public static final class Builder extends Request.Builder<ListHyperNodesRequest, Builder> {
         private String regionId; 
         private String clusterName; 
+        private String commodityCode; 
         private String hpnZone; 
         private String hyperNodeId; 
         private String machineType; 
         private Integer maxResults; 
         private String nextToken; 
         private String nodeGroupName; 
+        private java.util.List<String> operatingStates; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
         private String zoneId; 
@@ -187,12 +213,14 @@ public class ListHyperNodesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.clusterName = request.clusterName;
+            this.commodityCode = request.commodityCode;
             this.hpnZone = request.hpnZone;
             this.hyperNodeId = request.hyperNodeId;
             this.machineType = request.machineType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.nodeGroupName = request.nodeGroupName;
+            this.operatingStates = request.operatingStates;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
             this.zoneId = request.zoneId;
@@ -213,6 +241,15 @@ public class ListHyperNodesRequest extends Request {
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
             this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * CommodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putQueryParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
             return this;
         }
 
@@ -267,6 +304,16 @@ public class ListHyperNodesRequest extends Request {
         public Builder nodeGroupName(String nodeGroupName) {
             this.putBodyParameter("NodeGroupName", nodeGroupName);
             this.nodeGroupName = nodeGroupName;
+            return this;
+        }
+
+        /**
+         * OperatingStates.
+         */
+        public Builder operatingStates(java.util.List<String> operatingStates) {
+            String operatingStatesShrink = shrink(operatingStates, "OperatingStates", "json");
+            this.putQueryParameter("OperatingStates", operatingStatesShrink);
+            this.operatingStates = operatingStates;
             return this;
         }
 
