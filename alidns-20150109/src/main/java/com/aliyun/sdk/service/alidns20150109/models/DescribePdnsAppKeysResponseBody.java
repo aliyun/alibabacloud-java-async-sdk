@@ -94,9 +94,108 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
      *
      * <p>DescribePdnsAppKeysResponseBody</p>
      */
+    public static class BindEdgeDnsClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
+        private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterUserId")
+        private String clusterUserId;
+
+        private BindEdgeDnsClusters(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.clusterUserId = builder.clusterUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindEdgeDnsClusters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return clusterUserId
+         */
+        public String getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String clusterName; 
+            private String clusterUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEdgeDnsClusters model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterUserId = model.clusterUserId;
+            } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ClusterUserId.
+             */
+            public Builder clusterUserId(String clusterUserId) {
+                this.clusterUserId = clusterUserId;
+                return this;
+            }
+
+            public BindEdgeDnsClusters build() {
+                return new BindEdgeDnsClusters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePdnsAppKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsAppKeysResponseBody</p>
+     */
     public static class AppKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKeyId")
         private String appKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("BindEdgeDnsClusters")
+        private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters;
 
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -112,6 +211,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
 
         private AppKeys(Builder builder) {
             this.appKeyId = builder.appKeyId;
+            this.bindEdgeDnsClusters = builder.bindEdgeDnsClusters;
             this.createDate = builder.createDate;
             this.createTimestamp = builder.createTimestamp;
             this.remark = builder.remark;
@@ -131,6 +231,13 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
          */
         public String getAppKeyId() {
             return this.appKeyId;
+        }
+
+        /**
+         * @return bindEdgeDnsClusters
+         */
+        public java.util.List<BindEdgeDnsClusters> getBindEdgeDnsClusters() {
+            return this.bindEdgeDnsClusters;
         }
 
         /**
@@ -163,6 +270,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appKeyId; 
+            private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters; 
             private String createDate; 
             private Long createTimestamp; 
             private String remark; 
@@ -173,6 +281,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
 
             private Builder(AppKeys model) {
                 this.appKeyId = model.appKeyId;
+                this.bindEdgeDnsClusters = model.bindEdgeDnsClusters;
                 this.createDate = model.createDate;
                 this.createTimestamp = model.createTimestamp;
                 this.remark = model.remark;
@@ -184,6 +293,14 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
              */
             public Builder appKeyId(String appKeyId) {
                 this.appKeyId = appKeyId;
+                return this;
+            }
+
+            /**
+             * BindEdgeDnsClusters.
+             */
+            public Builder bindEdgeDnsClusters(java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters) {
+                this.bindEdgeDnsClusters = bindEdgeDnsClusters;
                 return this;
             }
 

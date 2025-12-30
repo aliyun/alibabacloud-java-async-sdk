@@ -122,6 +122,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddRspDomainServerHoldStatusForGateway  AddRspDomainServerHoldStatusForGatewayRequest
+     * @return AddRspDomainServerHoldStatusForGatewayResponse
+     */
+    CompletableFuture<AddRspDomainServerHoldStatusForGatewayResponse> addRspDomainServerHoldStatusForGateway(AddRspDomainServerHoldStatusForGatewayRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
      * 
