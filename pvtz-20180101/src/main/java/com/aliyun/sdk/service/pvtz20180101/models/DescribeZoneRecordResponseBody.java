@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,6 +90,10 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
 
     public static DescribeZoneRecordResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -216,6 +225,28 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
         private String value; 
         private Integer weight; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZoneRecordResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.line = model.line;
+            this.priority = model.priority;
+            this.recordId = model.recordId;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.rr = model.rr;
+            this.status = model.status;
+            this.ttl = model.ttl;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+            this.value = model.value;
+            this.weight = model.weight;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>

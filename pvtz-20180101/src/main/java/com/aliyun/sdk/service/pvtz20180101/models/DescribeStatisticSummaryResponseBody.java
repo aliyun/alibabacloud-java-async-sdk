@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -72,6 +81,16 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         private Long totalCount; 
         private VpcRequestTops vpcRequestTops; 
         private ZoneRequestTops zoneRequestTops; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStatisticSummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.vpcRequestTops = model.vpcRequestTops;
+            this.zoneRequestTops = model.zoneRequestTops;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -209,6 +228,18 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcType; 
 
+            private Builder() {
+            } 
+
+            private Builder(VpcRequestTop model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.requestCount = model.requestCount;
+                this.tunnelId = model.tunnelId;
+                this.vpcId = model.vpcId;
+                this.vpcType = model.vpcType;
+            } 
+
             /**
              * <p>The region ID.</p>
              * 
@@ -294,7 +325,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
      */
     public static class VpcRequestTops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcRequestTop")
-        private java.util.List < VpcRequestTop> vpcRequestTop;
+        private java.util.List<VpcRequestTop> vpcRequestTop;
 
         private VpcRequestTops(Builder builder) {
             this.vpcRequestTop = builder.vpcRequestTop;
@@ -311,17 +342,24 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         /**
          * @return vpcRequestTop
          */
-        public java.util.List < VpcRequestTop> getVpcRequestTop() {
+        public java.util.List<VpcRequestTop> getVpcRequestTop() {
             return this.vpcRequestTop;
         }
 
         public static final class Builder {
-            private java.util.List < VpcRequestTop> vpcRequestTop; 
+            private java.util.List<VpcRequestTop> vpcRequestTop; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcRequestTops model) {
+                this.vpcRequestTop = model.vpcRequestTop;
+            } 
 
             /**
              * VpcRequestTop.
              */
-            public Builder vpcRequestTop(java.util.List < VpcRequestTop> vpcRequestTop) {
+            public Builder vpcRequestTop(java.util.List<VpcRequestTop> vpcRequestTop) {
                 this.vpcRequestTop = vpcRequestTop;
                 return this;
             }
@@ -389,6 +427,15 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             private Long requestCount; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneRequestTop model) {
+                this.bizType = model.bizType;
+                this.requestCount = model.requestCount;
+                this.zoneName = model.zoneName;
+            } 
+
             /**
              * <p>The business type. Valid values:</p>
              * <ul>
@@ -442,7 +489,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
      */
     public static class ZoneRequestTops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneRequestTop")
-        private java.util.List < ZoneRequestTop> zoneRequestTop;
+        private java.util.List<ZoneRequestTop> zoneRequestTop;
 
         private ZoneRequestTops(Builder builder) {
             this.zoneRequestTop = builder.zoneRequestTop;
@@ -459,17 +506,24 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         /**
          * @return zoneRequestTop
          */
-        public java.util.List < ZoneRequestTop> getZoneRequestTop() {
+        public java.util.List<ZoneRequestTop> getZoneRequestTop() {
             return this.zoneRequestTop;
         }
 
         public static final class Builder {
-            private java.util.List < ZoneRequestTop> zoneRequestTop; 
+            private java.util.List<ZoneRequestTop> zoneRequestTop; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneRequestTops model) {
+                this.zoneRequestTop = model.zoneRequestTop;
+            } 
 
             /**
              * ZoneRequestTop.
              */
-            public Builder zoneRequestTop(java.util.List < ZoneRequestTop> zoneRequestTop) {
+            public Builder zoneRequestTop(java.util.List<ZoneRequestTop> zoneRequestTop) {
                 this.zoneRequestTop = zoneRequestTop;
                 return this;
             }

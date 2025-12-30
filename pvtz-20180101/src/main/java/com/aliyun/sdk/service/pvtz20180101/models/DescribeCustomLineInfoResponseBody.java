@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,8 +32,11 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreatorType")
     private String creatorType;
 
+    @com.aliyun.core.annotation.NameInMap("Dnscategory")
+    private String dnscategory;
+
     @com.aliyun.core.annotation.NameInMap("Ipv4s")
-    private java.util.List < String > ipv4s;
+    private java.util.List<String> ipv4s;
 
     @com.aliyun.core.annotation.NameInMap("LineId")
     private String lineId;
@@ -51,6 +59,7 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         this.creator = builder.creator;
         this.creatorSubType = builder.creatorSubType;
         this.creatorType = builder.creatorType;
+        this.dnscategory = builder.dnscategory;
         this.ipv4s = builder.ipv4s;
         this.lineId = builder.lineId;
         this.name = builder.name;
@@ -65,6 +74,10 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
 
     public static DescribeCustomLineInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -103,9 +116,16 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return dnscategory
+     */
+    public String getDnscategory() {
+        return this.dnscategory;
+    }
+
+    /**
      * @return ipv4s
      */
-    public java.util.List < String > getIpv4s() {
+    public java.util.List<String> getIpv4s() {
         return this.ipv4s;
     }
 
@@ -150,12 +170,31 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         private String creator; 
         private String creatorSubType; 
         private String creatorType; 
-        private java.util.List < String > ipv4s; 
+        private String dnscategory; 
+        private java.util.List<String> ipv4s; 
         private String lineId; 
         private String name; 
         private String requestId; 
         private String updateTime; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomLineInfoResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.creator = model.creator;
+            this.creatorSubType = model.creatorSubType;
+            this.creatorType = model.creatorType;
+            this.dnscategory = model.dnscategory;
+            this.ipv4s = model.ipv4s;
+            this.lineId = model.lineId;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * <p>The time when the custom line was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -223,9 +262,17 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
         }
 
         /**
+         * Dnscategory.
+         */
+        public Builder dnscategory(String dnscategory) {
+            this.dnscategory = dnscategory;
+            return this;
+        }
+
+        /**
          * <p>The IPv4 CIDR blocks.</p>
          */
-        public Builder ipv4s(java.util.List < String > ipv4s) {
+        public Builder ipv4s(java.util.List<String> ipv4s) {
             this.ipv4s = ipv4s;
             return this;
         }

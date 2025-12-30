@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("IpConfigs")
-    private java.util.List < IpConfigs> ipConfigs;
+    private java.util.List<IpConfigs> ipConfigs;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -79,6 +84,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -103,7 +112,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     /**
      * @return ipConfigs
      */
-    public java.util.List < IpConfigs> getIpConfigs() {
+    public java.util.List<IpConfigs> getIpConfigs() {
         return this.ipConfigs;
     }
 
@@ -181,7 +190,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         private String createTime; 
         private Long createTimestamp; 
         private String id; 
-        private java.util.List < IpConfigs> ipConfigs; 
+        private java.util.List<IpConfigs> ipConfigs; 
         private String name; 
         private String requestId; 
         private String securityGroupId; 
@@ -192,6 +201,26 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         private String vpcName; 
         private String vpcRegionId; 
         private String vpcRegionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResolverEndpointResponseBody model) {
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.id = model.id;
+            this.ipConfigs = model.ipConfigs;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.securityGroupId = model.securityGroupId;
+            this.status = model.status;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+            this.vpcId = model.vpcId;
+            this.vpcName = model.vpcName;
+            this.vpcRegionId = model.vpcRegionId;
+            this.vpcRegionName = model.vpcRegionName;
+        } 
 
         /**
          * <p>The time when the endpoint was created.</p>
@@ -229,7 +258,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
         /**
          * <p>The configurations of the source IP addresses for outbound traffic.</p>
          */
-        public Builder ipConfigs(java.util.List < IpConfigs> ipConfigs) {
+        public Builder ipConfigs(java.util.List<IpConfigs> ipConfigs) {
             this.ipConfigs = ipConfigs;
             return this;
         }
@@ -425,6 +454,16 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
             private String cidrBlock; 
             private String ip; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpConfigs model) {
+                this.azId = model.azId;
+                this.cidrBlock = model.cidrBlock;
+                this.ip = model.ip;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the zone to which the vSwitch belongs.</p>

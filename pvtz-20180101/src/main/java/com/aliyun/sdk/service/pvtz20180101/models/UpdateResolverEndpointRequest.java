@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateResolverEndpointRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpConfig")
-    private java.util.List < IpConfig> ipConfig;
+    private java.util.List<IpConfig> ipConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -45,7 +50,7 @@ public class UpdateResolverEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +65,7 @@ public class UpdateResolverEndpointRequest extends Request {
     /**
      * @return ipConfig
      */
-    public java.util.List < IpConfig> getIpConfig() {
+    public java.util.List<IpConfig> getIpConfig() {
         return this.ipConfig;
     }
 
@@ -80,7 +85,7 @@ public class UpdateResolverEndpointRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateResolverEndpointRequest, Builder> {
         private String endpointId; 
-        private java.util.List < IpConfig> ipConfig; 
+        private java.util.List<IpConfig> ipConfig; 
         private String lang; 
         private String name; 
 
@@ -115,7 +120,7 @@ public class UpdateResolverEndpointRequest extends Request {
          * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
          * </blockquote>
          */
-        public Builder ipConfig(java.util.List < IpConfig> ipConfig) {
+        public Builder ipConfig(java.util.List<IpConfig> ipConfig) {
             this.putQueryParameter("IpConfig", ipConfig);
             this.ipConfig = ipConfig;
             return this;
@@ -224,6 +229,16 @@ public class UpdateResolverEndpointRequest extends Request {
             private String cidrBlock; 
             private String ip; 
             private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpConfig model) {
+                this.azId = model.azId;
+                this.cidrBlock = model.cidrBlock;
+                this.ip = model.ip;
+                this.vSwitchId = model.vSwitchId;
+            } 
 
             /**
              * <p>The ID of the zone to which the vSwitch belongs.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class SearchCustomLinesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creator")
-    private java.util.List < String > creator;
+    private java.util.List<String> creator;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4")
@@ -76,7 +81,7 @@ public class SearchCustomLinesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,7 @@ public class SearchCustomLinesRequest extends Request {
     /**
      * @return creator
      */
-    public java.util.List < String > getCreator() {
+    public java.util.List<String> getCreator() {
         return this.creator;
     }
 
@@ -154,7 +159,7 @@ public class SearchCustomLinesRequest extends Request {
     public static final class Builder extends Request.Builder<SearchCustomLinesRequest, Builder> {
         private Long createTimestampEnd; 
         private Long createTimestampStart; 
-        private java.util.List < String > creator; 
+        private java.util.List<String> creator; 
         private String ipv4; 
         private String lang; 
         private String name; 
@@ -208,7 +213,7 @@ public class SearchCustomLinesRequest extends Request {
         /**
          * <p>The IDs of the creators for the custom lines.</p>
          */
-        public Builder creator(java.util.List < String > creator) {
+        public Builder creator(java.util.List<String> creator) {
             this.putQueryParameter("Creator", creator);
             this.creator = creator;
             return this;

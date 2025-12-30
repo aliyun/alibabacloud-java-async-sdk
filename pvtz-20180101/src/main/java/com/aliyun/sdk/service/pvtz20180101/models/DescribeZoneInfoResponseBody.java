@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZoneInfoResponseBody</p>
  */
 public class DescribeZoneInfoResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BindEdgeDnsClusters")
+    private BindEdgeDnsClusters bindEdgeDnsClusters;
+
     @com.aliyun.core.annotation.NameInMap("BindVpcs")
     private BindVpcs bindVpcs;
 
@@ -73,6 +81,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     private String zoneType;
 
     private DescribeZoneInfoResponseBody(Builder builder) {
+        this.bindEdgeDnsClusters = builder.bindEdgeDnsClusters;
         this.bindVpcs = builder.bindVpcs;
         this.createTime = builder.createTime;
         this.createTimestamp = builder.createTimestamp;
@@ -101,6 +110,17 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
 
     public static DescribeZoneInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return bindEdgeDnsClusters
+     */
+    public BindEdgeDnsClusters getBindEdgeDnsClusters() {
+        return this.bindEdgeDnsClusters;
     }
 
     /**
@@ -244,6 +264,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private BindEdgeDnsClusters bindEdgeDnsClusters; 
         private BindVpcs bindVpcs; 
         private String createTime; 
         private Long createTimestamp; 
@@ -264,6 +285,41 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         private String zoneName; 
         private String zoneTag; 
         private String zoneType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZoneInfoResponseBody model) {
+            this.bindEdgeDnsClusters = model.bindEdgeDnsClusters;
+            this.bindVpcs = model.bindVpcs;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.creator = model.creator;
+            this.creatorType = model.creatorType;
+            this.dnsGroup = model.dnsGroup;
+            this.dnsGroupChanging = model.dnsGroupChanging;
+            this.isPtr = model.isPtr;
+            this.proxyPattern = model.proxyPattern;
+            this.recordCount = model.recordCount;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.slaveDns = model.slaveDns;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+            this.zoneId = model.zoneId;
+            this.zoneName = model.zoneName;
+            this.zoneTag = model.zoneTag;
+            this.zoneType = model.zoneType;
+        } 
+
+        /**
+         * BindEdgeDnsClusters.
+         */
+        public Builder bindEdgeDnsClusters(BindEdgeDnsClusters bindEdgeDnsClusters) {
+            this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+            return this;
+        }
 
         /**
          * <p>The VPCs associated with the zone.</p>
@@ -518,6 +574,156 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
      *
      * <p>DescribeZoneInfoResponseBody</p>
      */
+    public static class EdgeDnsCluster extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
+        private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterUserId")
+        private Long clusterUserId;
+
+        private EdgeDnsCluster(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.clusterUserId = builder.clusterUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdgeDnsCluster create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return clusterUserId
+         */
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String clusterName; 
+            private Long clusterUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeDnsCluster model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterUserId = model.clusterUserId;
+            } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ClusterUserId.
+             */
+            public Builder clusterUserId(Long clusterUserId) {
+                this.clusterUserId = clusterUserId;
+                return this;
+            }
+
+            public EdgeDnsCluster build() {
+                return new EdgeDnsCluster(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneInfoResponseBody</p>
+     */
+    public static class BindEdgeDnsClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EdgeDnsCluster")
+        private java.util.List<EdgeDnsCluster> edgeDnsCluster;
+
+        private BindEdgeDnsClusters(Builder builder) {
+            this.edgeDnsCluster = builder.edgeDnsCluster;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindEdgeDnsClusters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return edgeDnsCluster
+         */
+        public java.util.List<EdgeDnsCluster> getEdgeDnsCluster() {
+            return this.edgeDnsCluster;
+        }
+
+        public static final class Builder {
+            private java.util.List<EdgeDnsCluster> edgeDnsCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEdgeDnsClusters model) {
+                this.edgeDnsCluster = model.edgeDnsCluster;
+            } 
+
+            /**
+             * EdgeDnsCluster.
+             */
+            public Builder edgeDnsCluster(java.util.List<EdgeDnsCluster> edgeDnsCluster) {
+                this.edgeDnsCluster = edgeDnsCluster;
+                return this;
+            }
+
+            public BindEdgeDnsClusters build() {
+                return new BindEdgeDnsClusters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeZoneInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZoneInfoResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -604,6 +810,18 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
             private String vpcType; 
             private Long vpcUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpc model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.vpcType = model.vpcType;
+                this.vpcUserId = model.vpcUserId;
+            } 
+
             /**
              * <p>The region ID of the VPC.</p>
              * 
@@ -689,7 +907,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
      */
     public static class BindVpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
-        private java.util.List < Vpc> vpc;
+        private java.util.List<Vpc> vpc;
 
         private BindVpcs(Builder builder) {
             this.vpc = builder.vpc;
@@ -706,17 +924,24 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         /**
          * @return vpc
          */
-        public java.util.List < Vpc> getVpc() {
+        public java.util.List<Vpc> getVpc() {
             return this.vpc;
         }
 
         public static final class Builder {
-            private java.util.List < Vpc> vpc; 
+            private java.util.List<Vpc> vpc; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindVpcs model) {
+                this.vpc = model.vpc;
+            } 
 
             /**
              * Vpc.
              */
-            public Builder vpc(java.util.List < Vpc> vpc) {
+            public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;
                 return this;
             }

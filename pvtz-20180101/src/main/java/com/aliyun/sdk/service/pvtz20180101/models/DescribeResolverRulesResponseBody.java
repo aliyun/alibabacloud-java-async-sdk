@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
@@ -45,6 +50,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     public static DescribeResolverRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,7 +80,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -93,9 +102,21 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResolverRulesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -133,7 +154,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         /**
          * <p>The forwarding rules.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
             return this;
         }
@@ -166,6 +187,102 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRulesResponseBody</p>
+     */
+    public static class BindEdgeDnsClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
+        private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterUserId")
+        private Long clusterUserId;
+
+        private BindEdgeDnsClusters(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.clusterUserId = builder.clusterUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindEdgeDnsClusters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return clusterUserId
+         */
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String clusterName; 
+            private Long clusterUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEdgeDnsClusters model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterUserId = model.clusterUserId;
+            } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ClusterUserId.
+             */
+            public Builder clusterUserId(Long clusterUserId) {
+                this.clusterUserId = clusterUserId;
+                return this;
+            }
+
+            public BindEdgeDnsClusters build() {
+                return new BindEdgeDnsClusters(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
@@ -257,6 +374,18 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String vpcName; 
             private String vpcType; 
             private String vpcUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindVpcs model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.vpcType = model.vpcType;
+                this.vpcUserId = model.vpcUserId;
+            } 
 
             /**
              * <p>The region ID of the VPC.</p>
@@ -379,6 +508,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String ip; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardIps model) {
+                this.ip = model.ip;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The IP address of the destination server.</p>
              * 
@@ -414,9 +551,150 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
      *
      * <p>DescribeResolverRulesResponseBody</p>
      */
+    public static class PriorityForwardConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlidnsServiceAddresses")
+        private java.util.List<String> alidnsServiceAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("CustomAddresses")
+        private java.util.List<String> customAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
+        private String enableStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private PriorityForwardConfigs(Builder builder) {
+            this.alidnsServiceAddresses = builder.alidnsServiceAddresses;
+            this.customAddresses = builder.customAddresses;
+            this.enableStatus = builder.enableStatus;
+            this.priority = builder.priority;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriorityForwardConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alidnsServiceAddresses
+         */
+        public java.util.List<String> getAlidnsServiceAddresses() {
+            return this.alidnsServiceAddresses;
+        }
+
+        /**
+         * @return customAddresses
+         */
+        public java.util.List<String> getCustomAddresses() {
+            return this.customAddresses;
+        }
+
+        /**
+         * @return enableStatus
+         */
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> alidnsServiceAddresses; 
+            private java.util.List<String> customAddresses; 
+            private String enableStatus; 
+            private Integer priority; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriorityForwardConfigs model) {
+                this.alidnsServiceAddresses = model.alidnsServiceAddresses;
+                this.customAddresses = model.customAddresses;
+                this.enableStatus = model.enableStatus;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * AlidnsServiceAddresses.
+             */
+            public Builder alidnsServiceAddresses(java.util.List<String> alidnsServiceAddresses) {
+                this.alidnsServiceAddresses = alidnsServiceAddresses;
+                return this;
+            }
+
+            /**
+             * CustomAddresses.
+             */
+            public Builder customAddresses(java.util.List<String> customAddresses) {
+                this.customAddresses = customAddresses;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(String enableStatus) {
+                this.enableStatus = enableStatus;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public PriorityForwardConfigs build() {
+                return new PriorityForwardConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeResolverRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindEdgeDnsClusters")
+        private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters;
+
         @com.aliyun.core.annotation.NameInMap("BindVpcs")
-        private java.util.List < BindVpcs> bindVpcs;
+        private java.util.List<BindVpcs> bindVpcs;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -431,13 +709,16 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         private String endpointName;
 
         @com.aliyun.core.annotation.NameInMap("ForwardIps")
-        private java.util.List < ForwardIps> forwardIps;
+        private java.util.List<ForwardIps> forwardIps;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PriorityForwardConfigs")
+        private java.util.List<PriorityForwardConfigs> priorityForwardConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -452,6 +733,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         private String zoneName;
 
         private Rules(Builder builder) {
+            this.bindEdgeDnsClusters = builder.bindEdgeDnsClusters;
             this.bindVpcs = builder.bindVpcs;
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
@@ -460,6 +742,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             this.forwardIps = builder.forwardIps;
             this.id = builder.id;
             this.name = builder.name;
+            this.priorityForwardConfigs = builder.priorityForwardConfigs;
             this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.updateTimestamp = builder.updateTimestamp;
@@ -475,9 +758,16 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bindEdgeDnsClusters
+         */
+        public java.util.List<BindEdgeDnsClusters> getBindEdgeDnsClusters() {
+            return this.bindEdgeDnsClusters;
+        }
+
+        /**
          * @return bindVpcs
          */
-        public java.util.List < BindVpcs> getBindVpcs() {
+        public java.util.List<BindVpcs> getBindVpcs() {
             return this.bindVpcs;
         }
 
@@ -512,7 +802,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         /**
          * @return forwardIps
          */
-        public java.util.List < ForwardIps> getForwardIps() {
+        public java.util.List<ForwardIps> getForwardIps() {
             return this.forwardIps;
         }
 
@@ -528,6 +818,13 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return priorityForwardConfigs
+         */
+        public java.util.List<PriorityForwardConfigs> getPriorityForwardConfigs() {
+            return this.priorityForwardConfigs;
         }
 
         /**
@@ -559,23 +856,53 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BindVpcs> bindVpcs; 
+            private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters; 
+            private java.util.List<BindVpcs> bindVpcs; 
             private String createTime; 
             private Long createTimestamp; 
             private String endpointId; 
             private String endpointName; 
-            private java.util.List < ForwardIps> forwardIps; 
+            private java.util.List<ForwardIps> forwardIps; 
             private String id; 
             private String name; 
+            private java.util.List<PriorityForwardConfigs> priorityForwardConfigs; 
             private String type; 
             private String updateTime; 
             private Long updateTimestamp; 
             private String zoneName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.bindEdgeDnsClusters = model.bindEdgeDnsClusters;
+                this.bindVpcs = model.bindVpcs;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.forwardIps = model.forwardIps;
+                this.id = model.id;
+                this.name = model.name;
+                this.priorityForwardConfigs = model.priorityForwardConfigs;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.zoneName = model.zoneName;
+            } 
+
+            /**
+             * BindEdgeDnsClusters.
+             */
+            public Builder bindEdgeDnsClusters(java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters) {
+                this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+                return this;
+            }
+
             /**
              * <p>The VPCs associated with the forwarding rule.</p>
              */
-            public Builder bindVpcs(java.util.List < BindVpcs> bindVpcs) {
+            public Builder bindVpcs(java.util.List<BindVpcs> bindVpcs) {
                 this.bindVpcs = bindVpcs;
                 return this;
             }
@@ -627,7 +954,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             /**
              * <p>The IP addresses and ports of the external DNS servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded.</p>
              */
-            public Builder forwardIps(java.util.List < ForwardIps> forwardIps) {
+            public Builder forwardIps(java.util.List<ForwardIps> forwardIps) {
                 this.forwardIps = forwardIps;
                 return this;
             }
@@ -651,6 +978,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PriorityForwardConfigs.
+             */
+            public Builder priorityForwardConfigs(java.util.List<PriorityForwardConfigs> priorityForwardConfigs) {
+                this.priorityForwardConfigs = priorityForwardConfigs;
                 return this;
             }
 

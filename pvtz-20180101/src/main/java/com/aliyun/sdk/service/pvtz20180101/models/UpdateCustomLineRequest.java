@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,9 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateCustomLineRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsCategory")
+    private String dnsCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4s")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ipv4s;
+    private java.util.List<String> ipv4s;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -32,6 +41,7 @@ public class UpdateCustomLineRequest extends Request {
 
     private UpdateCustomLineRequest(Builder builder) {
         super(builder);
+        this.dnsCategory = builder.dnsCategory;
         this.ipv4s = builder.ipv4s;
         this.lang = builder.lang;
         this.lineId = builder.lineId;
@@ -46,15 +56,22 @@ public class UpdateCustomLineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
+     * @return dnsCategory
+     */
+    public String getDnsCategory() {
+        return this.dnsCategory;
+    }
+
+    /**
      * @return ipv4s
      */
-    public java.util.List < String > getIpv4s() {
+    public java.util.List<String> getIpv4s() {
         return this.ipv4s;
     }
 
@@ -80,7 +97,8 @@ public class UpdateCustomLineRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateCustomLineRequest, Builder> {
-        private java.util.List < String > ipv4s; 
+        private String dnsCategory; 
+        private java.util.List<String> ipv4s; 
         private String lang; 
         private String lineId; 
         private String name; 
@@ -91,6 +109,7 @@ public class UpdateCustomLineRequest extends Request {
 
         private Builder(UpdateCustomLineRequest request) {
             super(request);
+            this.dnsCategory = request.dnsCategory;
             this.ipv4s = request.ipv4s;
             this.lang = request.lang;
             this.lineId = request.lineId;
@@ -98,10 +117,19 @@ public class UpdateCustomLineRequest extends Request {
         } 
 
         /**
+         * DnsCategory.
+         */
+        public Builder dnsCategory(String dnsCategory) {
+            this.putQueryParameter("DnsCategory", dnsCategory);
+            this.dnsCategory = dnsCategory;
+            return this;
+        }
+
+        /**
          * <p>The IPv4 CIDR blocks.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ipv4s(java.util.List < String > ipv4s) {
+        public Builder ipv4s(java.util.List<String> ipv4s) {
             this.putQueryParameter("Ipv4s", ipv4s);
             this.ipv4s = ipv4s;
             return this;

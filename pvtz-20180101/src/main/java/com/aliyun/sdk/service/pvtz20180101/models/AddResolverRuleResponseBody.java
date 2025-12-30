@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class AddResolverRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String ruleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddResolverRuleResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+        } 
 
         /**
          * <p>The request ID.</p>

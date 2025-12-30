@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class AddZoneResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -72,6 +81,16 @@ public class AddZoneResponseBody extends TeaModel {
         private Boolean success; 
         private String zoneId; 
         private String zoneName; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddZoneResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.zoneId = model.zoneId;
+            this.zoneName = model.zoneName;
+        } 
 
         /**
          * <p>The request ID.</p>

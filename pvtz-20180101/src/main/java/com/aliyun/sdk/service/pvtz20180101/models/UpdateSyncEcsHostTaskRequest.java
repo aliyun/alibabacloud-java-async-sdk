@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Region> region;
+    private java.util.List<Region> region;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -47,7 +52,7 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,7 +67,7 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
     /**
      * @return region
      */
-    public java.util.List < Region> getRegion() {
+    public java.util.List<Region> getRegion() {
         return this.region;
     }
 
@@ -82,7 +87,7 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateSyncEcsHostTaskRequest, Builder> {
         private String lang; 
-        private java.util.List < Region> region; 
+        private java.util.List<Region> region; 
         private String status; 
         private String zoneId; 
 
@@ -119,7 +124,7 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
          * <p>The regions to be synchronized.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder region(java.util.List < Region> region) {
+        public Builder region(java.util.List<Region> region) {
             this.putQueryParameter("Region", region);
             this.region = region;
             return this;
@@ -205,6 +210,14 @@ public class UpdateSyncEcsHostTaskRequest extends Request {
         public static final class Builder {
             private String regionId; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.regionId = model.regionId;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The region ID.</p>

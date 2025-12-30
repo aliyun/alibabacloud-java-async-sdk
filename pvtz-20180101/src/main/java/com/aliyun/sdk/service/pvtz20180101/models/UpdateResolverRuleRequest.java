@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateResolverRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForwardIp")
-    private java.util.List < ForwardIp> forwardIp;
+    private java.util.List<ForwardIp> forwardIp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -27,6 +32,10 @@ public class UpdateResolverRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriorityForwardConfigs")
+    private java.util.List<PriorityForwardConfigs> priorityForwardConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
@@ -39,6 +48,7 @@ public class UpdateResolverRuleRequest extends Request {
         this.forwardIp = builder.forwardIp;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.priorityForwardConfigs = builder.priorityForwardConfigs;
         this.ruleId = builder.ruleId;
     }
 
@@ -50,7 +60,7 @@ public class UpdateResolverRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,7 +75,7 @@ public class UpdateResolverRuleRequest extends Request {
     /**
      * @return forwardIp
      */
-    public java.util.List < ForwardIp> getForwardIp() {
+    public java.util.List<ForwardIp> getForwardIp() {
         return this.forwardIp;
     }
 
@@ -84,6 +94,13 @@ public class UpdateResolverRuleRequest extends Request {
     }
 
     /**
+     * @return priorityForwardConfigs
+     */
+    public java.util.List<PriorityForwardConfigs> getPriorityForwardConfigs() {
+        return this.priorityForwardConfigs;
+    }
+
+    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -92,9 +109,10 @@ public class UpdateResolverRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateResolverRuleRequest, Builder> {
         private String endpointId; 
-        private java.util.List < ForwardIp> forwardIp; 
+        private java.util.List<ForwardIp> forwardIp; 
         private String lang; 
         private String name; 
+        private java.util.List<PriorityForwardConfigs> priorityForwardConfigs; 
         private String ruleId; 
 
         private Builder() {
@@ -107,6 +125,7 @@ public class UpdateResolverRuleRequest extends Request {
             this.forwardIp = request.forwardIp;
             this.lang = request.lang;
             this.name = request.name;
+            this.priorityForwardConfigs = request.priorityForwardConfigs;
             this.ruleId = request.ruleId;
         } 
 
@@ -128,7 +147,7 @@ public class UpdateResolverRuleRequest extends Request {
          * <p> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound virtual private cloud (VPC) are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</p>
          * </blockquote>
          */
-        public Builder forwardIp(java.util.List < ForwardIp> forwardIp) {
+        public Builder forwardIp(java.util.List<ForwardIp> forwardIp) {
             this.putQueryParameter("ForwardIp", forwardIp);
             this.forwardIp = forwardIp;
             return this;
@@ -160,6 +179,15 @@ public class UpdateResolverRuleRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * PriorityForwardConfigs.
+         */
+        public Builder priorityForwardConfigs(java.util.List<PriorityForwardConfigs> priorityForwardConfigs) {
+            this.putQueryParameter("PriorityForwardConfigs", priorityForwardConfigs);
+            this.priorityForwardConfigs = priorityForwardConfigs;
             return this;
         }
 
@@ -227,6 +255,14 @@ public class UpdateResolverRuleRequest extends Request {
             private String ip; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardIp model) {
+                this.ip = model.ip;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The IP address of the destination server.</p>
              * <blockquote>
@@ -254,6 +290,144 @@ public class UpdateResolverRuleRequest extends Request {
 
             public ForwardIp build() {
                 return new ForwardIp(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateResolverRuleRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateResolverRuleRequest</p>
+     */
+    public static class PriorityForwardConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlidnsServiceAddresses")
+        private java.util.List<String> alidnsServiceAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("CustomAddresses")
+        private java.util.List<String> customAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
+        private String enableStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private PriorityForwardConfigs(Builder builder) {
+            this.alidnsServiceAddresses = builder.alidnsServiceAddresses;
+            this.customAddresses = builder.customAddresses;
+            this.enableStatus = builder.enableStatus;
+            this.priority = builder.priority;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PriorityForwardConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alidnsServiceAddresses
+         */
+        public java.util.List<String> getAlidnsServiceAddresses() {
+            return this.alidnsServiceAddresses;
+        }
+
+        /**
+         * @return customAddresses
+         */
+        public java.util.List<String> getCustomAddresses() {
+            return this.customAddresses;
+        }
+
+        /**
+         * @return enableStatus
+         */
+        public String getEnableStatus() {
+            return this.enableStatus;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> alidnsServiceAddresses; 
+            private java.util.List<String> customAddresses; 
+            private String enableStatus; 
+            private Integer priority; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriorityForwardConfigs model) {
+                this.alidnsServiceAddresses = model.alidnsServiceAddresses;
+                this.customAddresses = model.customAddresses;
+                this.enableStatus = model.enableStatus;
+                this.priority = model.priority;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * AlidnsServiceAddresses.
+             */
+            public Builder alidnsServiceAddresses(java.util.List<String> alidnsServiceAddresses) {
+                this.alidnsServiceAddresses = alidnsServiceAddresses;
+                return this;
+            }
+
+            /**
+             * CustomAddresses.
+             */
+            public Builder customAddresses(java.util.List<String> customAddresses) {
+                this.customAddresses = customAddresses;
+                return this;
+            }
+
+            /**
+             * EnableStatus.
+             */
+            public Builder enableStatus(String enableStatus) {
+                this.enableStatus = enableStatus;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public PriorityForwardConfigs build() {
+                return new PriorityForwardConfigs(this);
             } 
 
         } 

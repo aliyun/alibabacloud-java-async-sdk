@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResolverEndpointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -47,10 +52,14 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -90,17 +99,29 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeResolverEndpointsResponseBody model) {
+            this.endpoints = model.endpoints;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
+
         /**
          * <p>The endpoints.</p>
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
@@ -234,6 +255,16 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             private String ip; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpConfigs model) {
+                this.azId = model.azId;
+                this.cidrBlock = model.cidrBlock;
+                this.ip = model.ip;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The ID of the zone to which the vSwitch belongs.</p>
              * 
@@ -302,7 +333,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("IpConfigs")
-        private java.util.List < IpConfigs> ipConfigs;
+        private java.util.List<IpConfigs> ipConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -379,7 +410,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         /**
          * @return ipConfigs
          */
-        public java.util.List < IpConfigs> getIpConfigs() {
+        public java.util.List<IpConfigs> getIpConfigs() {
             return this.ipConfigs;
         }
 
@@ -450,7 +481,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             private String createTime; 
             private Long createTimestamp; 
             private String id; 
-            private java.util.List < IpConfigs> ipConfigs; 
+            private java.util.List<IpConfigs> ipConfigs; 
             private String name; 
             private String securityGroupId; 
             private String status; 
@@ -460,6 +491,25 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             private String vpcName; 
             private String vpcRegionId; 
             private String vpcRegionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.id = model.id;
+                this.ipConfigs = model.ipConfigs;
+                this.name = model.name;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.vpcRegionId = model.vpcRegionId;
+                this.vpcRegionName = model.vpcRegionName;
+            } 
 
             /**
              * <p>The time when the endpoint was created.</p>
@@ -497,7 +547,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             /**
              * <p>The source IP addresses of outbound traffic.</p>
              */
-            public Builder ipConfigs(java.util.List < IpConfigs> ipConfigs) {
+            public Builder ipConfigs(java.util.List<IpConfigs> ipConfigs) {
                 this.ipConfigs = ipConfigs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class DescribeZonesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTag")
-    private java.util.List < ResourceTag> resourceTag;
+    private java.util.List<ResourceTag> resourceTag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchMode")
@@ -51,7 +56,7 @@ public class DescribeZonesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneTag")
-    private java.util.List < String > zoneTag;
+    private java.util.List<String> zoneTag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneType")
@@ -80,7 +85,7 @@ public class DescribeZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +142,7 @@ public class DescribeZonesRequest extends Request {
     /**
      * @return resourceTag
      */
-    public java.util.List < ResourceTag> getResourceTag() {
+    public java.util.List<ResourceTag> getResourceTag() {
         return this.resourceTag;
     }
 
@@ -151,7 +156,7 @@ public class DescribeZonesRequest extends Request {
     /**
      * @return zoneTag
      */
-    public java.util.List < String > getZoneTag() {
+    public java.util.List<String> getZoneTag() {
         return this.zoneTag;
     }
 
@@ -170,9 +175,9 @@ public class DescribeZonesRequest extends Request {
         private String queryRegionId; 
         private String queryVpcId; 
         private String resourceGroupId; 
-        private java.util.List < ResourceTag> resourceTag; 
+        private java.util.List<ResourceTag> resourceTag; 
         private String searchMode; 
-        private java.util.List < String > zoneTag; 
+        private java.util.List<String> zoneTag; 
         private String zoneType; 
 
         private Builder() {
@@ -286,7 +291,7 @@ public class DescribeZonesRequest extends Request {
         /**
          * <p>The tags added to the zone.</p>
          */
-        public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
+        public Builder resourceTag(java.util.List<ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
             this.resourceTag = resourceTag;
             return this;
@@ -315,7 +320,7 @@ public class DescribeZonesRequest extends Request {
          * <strong>example:</strong>
          * <p>BLINK</p>
          */
-        public Builder zoneTag(java.util.List < String > zoneTag) {
+        public Builder zoneTag(java.util.List<String> zoneTag) {
             this.putQueryParameter("ZoneTag", zoneTag);
             this.zoneTag = zoneTag;
             return this;
@@ -388,6 +393,14 @@ public class DescribeZonesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N added to the zone.</p>

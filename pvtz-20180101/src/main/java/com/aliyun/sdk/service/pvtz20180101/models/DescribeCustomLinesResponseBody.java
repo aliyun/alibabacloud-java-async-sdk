@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
 
     public static DescribeCustomLinesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomLinesResponseBody model) {
+            this.customLines = model.customLines;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The custom lines.</p>
@@ -174,7 +195,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
      */
     public static class Ipv4s extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4")
-        private java.util.List < String > ipv4;
+        private java.util.List<String> ipv4;
 
         private Ipv4s(Builder builder) {
             this.ipv4 = builder.ipv4;
@@ -191,17 +212,24 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         /**
          * @return ipv4
          */
-        public java.util.List < String > getIpv4() {
+        public java.util.List<String> getIpv4() {
             return this.ipv4;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv4; 
+            private java.util.List<String> ipv4; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4s model) {
+                this.ipv4 = model.ipv4;
+            } 
 
             /**
              * Ipv4.
              */
-            public Builder ipv4(java.util.List < String > ipv4) {
+            public Builder ipv4(java.util.List<String> ipv4) {
                 this.ipv4 = ipv4;
                 return this;
             }
@@ -235,6 +263,9 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
+        @com.aliyun.core.annotation.NameInMap("DnsCategory")
+        private String dnsCategory;
+
         @com.aliyun.core.annotation.NameInMap("Ipv4s")
         private Ipv4s ipv4s;
 
@@ -256,6 +287,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             this.creator = builder.creator;
             this.creatorSubType = builder.creatorSubType;
             this.creatorType = builder.creatorType;
+            this.dnsCategory = builder.dnsCategory;
             this.ipv4s = builder.ipv4s;
             this.lineId = builder.lineId;
             this.name = builder.name;
@@ -307,6 +339,13 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return dnsCategory
+         */
+        public String getDnsCategory() {
+            return this.dnsCategory;
+        }
+
+        /**
          * @return ipv4s
          */
         public Ipv4s getIpv4s() {
@@ -347,11 +386,29 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             private String creator; 
             private String creatorSubType; 
             private String creatorType; 
+            private String dnsCategory; 
             private Ipv4s ipv4s; 
             private String lineId; 
             private String name; 
             private String updateTime; 
             private Long updateTimestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomLine model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.creator = model.creator;
+                this.creatorSubType = model.creatorSubType;
+                this.creatorType = model.creatorType;
+                this.dnsCategory = model.dnsCategory;
+                this.ipv4s = model.ipv4s;
+                this.lineId = model.lineId;
+                this.name = model.name;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+            } 
 
             /**
              * <p>The time when the custom line was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -419,6 +476,14 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
+             * DnsCategory.
+             */
+            public Builder dnsCategory(String dnsCategory) {
+                this.dnsCategory = dnsCategory;
+                return this;
+            }
+
+            /**
              * <p>The IPv4 CIDR blocks.</p>
              */
             public Builder ipv4s(Ipv4s ipv4s) {
@@ -482,7 +547,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
      */
     public static class CustomLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomLine")
-        private java.util.List < CustomLine> customLine;
+        private java.util.List<CustomLine> customLine;
 
         private CustomLines(Builder builder) {
             this.customLine = builder.customLine;
@@ -499,17 +564,24 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         /**
          * @return customLine
          */
-        public java.util.List < CustomLine> getCustomLine() {
+        public java.util.List<CustomLine> getCustomLine() {
             return this.customLine;
         }
 
         public static final class Builder {
-            private java.util.List < CustomLine> customLine; 
+            private java.util.List<CustomLine> customLine; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomLines model) {
+                this.customLine = model.customLine;
+            } 
 
             /**
              * CustomLine.
              */
-            public Builder customLine(java.util.List < CustomLine> customLine) {
+            public Builder customLine(java.util.List<CustomLine> customLine) {
                 this.customLine = customLine;
                 return this;
             }

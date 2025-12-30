@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResolverRuleResponseBody</p>
  */
 public class DescribeResolverRuleResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BindEdgeDnsClusters")
+    private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters;
+
     @com.aliyun.core.annotation.NameInMap("BindVpcs")
-    private java.util.List < BindVpcs> bindVpcs;
+    private java.util.List<BindVpcs> bindVpcs;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -28,7 +36,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     private String endpointName;
 
     @com.aliyun.core.annotation.NameInMap("ForwardIps")
-    private java.util.List < ForwardIps> forwardIps;
+    private java.util.List<ForwardIps> forwardIps;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
@@ -52,6 +60,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     private String zoneName;
 
     private DescribeResolverRuleResponseBody(Builder builder) {
+        this.bindEdgeDnsClusters = builder.bindEdgeDnsClusters;
         this.bindVpcs = builder.bindVpcs;
         this.createTime = builder.createTime;
         this.createTimestamp = builder.createTimestamp;
@@ -75,10 +84,21 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return bindEdgeDnsClusters
+     */
+    public java.util.List<BindEdgeDnsClusters> getBindEdgeDnsClusters() {
+        return this.bindEdgeDnsClusters;
+    }
+
     /**
      * @return bindVpcs
      */
-    public java.util.List < BindVpcs> getBindVpcs() {
+    public java.util.List<BindVpcs> getBindVpcs() {
         return this.bindVpcs;
     }
 
@@ -113,7 +133,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     /**
      * @return forwardIps
      */
-    public java.util.List < ForwardIps> getForwardIps() {
+    public java.util.List<ForwardIps> getForwardIps() {
         return this.forwardIps;
     }
 
@@ -167,12 +187,13 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BindVpcs> bindVpcs; 
+        private java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters; 
+        private java.util.List<BindVpcs> bindVpcs; 
         private String createTime; 
         private Long createTimestamp; 
         private String endpointId; 
         private String endpointName; 
-        private java.util.List < ForwardIps> forwardIps; 
+        private java.util.List<ForwardIps> forwardIps; 
         private String id; 
         private String name; 
         private String requestId; 
@@ -181,10 +202,38 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         private Long updateTimestamp; 
         private String zoneName; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeResolverRuleResponseBody model) {
+            this.bindEdgeDnsClusters = model.bindEdgeDnsClusters;
+            this.bindVpcs = model.bindVpcs;
+            this.createTime = model.createTime;
+            this.createTimestamp = model.createTimestamp;
+            this.endpointId = model.endpointId;
+            this.endpointName = model.endpointName;
+            this.forwardIps = model.forwardIps;
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.updateTime = model.updateTime;
+            this.updateTimestamp = model.updateTimestamp;
+            this.zoneName = model.zoneName;
+        } 
+
+        /**
+         * BindEdgeDnsClusters.
+         */
+        public Builder bindEdgeDnsClusters(java.util.List<BindEdgeDnsClusters> bindEdgeDnsClusters) {
+            this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+            return this;
+        }
+
         /**
          * <p>The virtual private clouds (VPCs) that are associated with the forwarding rule.</p>
          */
-        public Builder bindVpcs(java.util.List < BindVpcs> bindVpcs) {
+        public Builder bindVpcs(java.util.List<BindVpcs> bindVpcs) {
             this.bindVpcs = bindVpcs;
             return this;
         }
@@ -236,7 +285,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         /**
          * <p>The destination IP addresses.</p>
          */
-        public Builder forwardIps(java.util.List < ForwardIps> forwardIps) {
+        public Builder forwardIps(java.util.List<ForwardIps> forwardIps) {
             this.forwardIps = forwardIps;
             return this;
         }
@@ -331,6 +380,102 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
      *
      * <p>DescribeResolverRuleResponseBody</p>
      */
+    public static class BindEdgeDnsClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
+        private String clusterName;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterUserId")
+        private Long clusterUserId;
+
+        private BindEdgeDnsClusters(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.clusterName = builder.clusterName;
+            this.clusterUserId = builder.clusterUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindEdgeDnsClusters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return clusterName
+         */
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        /**
+         * @return clusterUserId
+         */
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String clusterName; 
+            private Long clusterUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindEdgeDnsClusters model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterUserId = model.clusterUserId;
+            } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ClusterName.
+             */
+            public Builder clusterName(String clusterName) {
+                this.clusterName = clusterName;
+                return this;
+            }
+
+            /**
+             * ClusterUserId.
+             */
+            public Builder clusterUserId(Long clusterUserId) {
+                this.clusterUserId = clusterUserId;
+                return this;
+            }
+
+            public BindEdgeDnsClusters build() {
+                return new BindEdgeDnsClusters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeResolverRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeResolverRuleResponseBody</p>
+     */
     public static class BindVpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -416,6 +561,18 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
             private String vpcName; 
             private String vpcType; 
             private String vpcUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindVpcs model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.vpcType = model.vpcType;
+                this.vpcUserId = model.vpcUserId;
+            } 
 
             /**
              * <p>The region ID.</p>
@@ -537,6 +694,14 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardIps model) {
+                this.ip = model.ip;
+                this.port = model.port;
+            } 
 
             /**
              * <p>The destination IP address.</p>

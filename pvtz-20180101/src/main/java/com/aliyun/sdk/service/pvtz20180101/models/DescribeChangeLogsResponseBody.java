@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
 
     public static DescribeChangeLogsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeChangeLogsResponseBody model) {
+            this.changeLogs = model.changeLogs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The operation logs.</p>
@@ -342,6 +363,25 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             private String operTime; 
             private Long operTimestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeLog model) {
+                this.content = model.content;
+                this.creatorId = model.creatorId;
+                this.creatorSubType = model.creatorSubType;
+                this.creatorType = model.creatorType;
+                this.creatorUserId = model.creatorUserId;
+                this.entityId = model.entityId;
+                this.entityName = model.entityName;
+                this.id = model.id;
+                this.operAction = model.operAction;
+                this.operIp = model.operIp;
+                this.operObject = model.operObject;
+                this.operTime = model.operTime;
+                this.operTimestamp = model.operTimestamp;
+            } 
+
             /**
              * <p>The operation content.</p>
              * 
@@ -393,7 +433,10 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUserId.
+             * <p>The operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141339776561****</p>
              */
             public Builder creatorUserId(String creatorUserId) {
                 this.creatorUserId = creatorUserId;
@@ -512,7 +555,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
      */
     public static class ChangeLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeLog")
-        private java.util.List < ChangeLog> changeLog;
+        private java.util.List<ChangeLog> changeLog;
 
         private ChangeLogs(Builder builder) {
             this.changeLog = builder.changeLog;
@@ -529,17 +572,24 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         /**
          * @return changeLog
          */
-        public java.util.List < ChangeLog> getChangeLog() {
+        public java.util.List<ChangeLog> getChangeLog() {
             return this.changeLog;
         }
 
         public static final class Builder {
-            private java.util.List < ChangeLog> changeLog; 
+            private java.util.List<ChangeLog> changeLog; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeLogs model) {
+                this.changeLog = model.changeLog;
+            } 
 
             /**
              * ChangeLog.
              */
-            public Builder changeLog(java.util.List < ChangeLog> changeLog) {
+            public Builder changeLog(java.util.List<ChangeLog> changeLog) {
                 this.changeLog = changeLog;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     private Integer totalPages;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private DescribeUserVpcAuthorizationsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -45,6 +50,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
 
     public static DescribeUserVpcAuthorizationsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,7 +94,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
@@ -95,7 +104,19 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserVpcAuthorizationsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -155,7 +176,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         /**
          * <p>The Alibaba Cloud accounts to which the permissions on the resources are granted.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }
@@ -245,6 +266,17 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             private Long authorizedUserId; 
             private String createTime; 
             private Long createTimestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.authType = model.authType;
+                this.authorizedAliyunId = model.authorizedAliyunId;
+                this.authorizedUserId = model.authorizedUserId;
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+            } 
 
             /**
              * <p>The authorization scope. Valid values:</p>

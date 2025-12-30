@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     public static DescribeSyncEcsHostTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSyncEcsHostTaskResponseBody model) {
+            this.ecsRegions = model.ecsRegions;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.success = model.success;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>The synchronized regions where the ECS instances are deployed.</p>
@@ -179,7 +200,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
      */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
-        private java.util.List < String > regionId;
+        private java.util.List<String> regionId;
 
         private RegionIds(Builder builder) {
             this.regionId = builder.regionId;
@@ -196,17 +217,24 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         /**
          * @return regionId
          */
-        public java.util.List < String > getRegionId() {
+        public java.util.List<String> getRegionId() {
             return this.regionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > regionId; 
+            private java.util.List<String> regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionIds model) {
+                this.regionId = model.regionId;
+            } 
 
             /**
              * RegionId.
              */
-            public Builder regionId(java.util.List < String > regionId) {
+            public Builder regionId(java.util.List<String> regionId) {
                 this.regionId = regionId;
                 return this;
             }
@@ -262,6 +290,14 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
             private RegionIds regionIds; 
             private Long userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsRegion model) {
+                this.regionIds = model.regionIds;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The synchronized region IDs.</p>
              */
@@ -296,7 +332,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
      */
     public static class EcsRegions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsRegion")
-        private java.util.List < EcsRegion> ecsRegion;
+        private java.util.List<EcsRegion> ecsRegion;
 
         private EcsRegions(Builder builder) {
             this.ecsRegion = builder.ecsRegion;
@@ -313,17 +349,24 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         /**
          * @return ecsRegion
          */
-        public java.util.List < EcsRegion> getEcsRegion() {
+        public java.util.List<EcsRegion> getEcsRegion() {
             return this.ecsRegion;
         }
 
         public static final class Builder {
-            private java.util.List < EcsRegion> ecsRegion; 
+            private java.util.List<EcsRegion> ecsRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcsRegions model) {
+                this.ecsRegion = model.ecsRegion;
+            } 
 
             /**
              * EcsRegion.
              */
-            public Builder ecsRegion(java.util.List < EcsRegion> ecsRegion) {
+            public Builder ecsRegion(java.util.List<EcsRegion> ecsRegion) {
                 this.ecsRegion = ecsRegion;
                 return this;
             }
@@ -343,7 +386,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
-        private java.util.List < String > regionId;
+        private java.util.List<String> regionId;
 
         private Regions(Builder builder) {
             this.regionId = builder.regionId;
@@ -360,17 +403,24 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         /**
          * @return regionId
          */
-        public java.util.List < String > getRegionId() {
+        public java.util.List<String> getRegionId() {
             return this.regionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > regionId; 
+            private java.util.List<String> regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.regionId = model.regionId;
+            } 
 
             /**
              * RegionId.
              */
-            public Builder regionId(java.util.List < String > regionId) {
+            public Builder regionId(java.util.List<String> regionId) {
                 this.regionId = regionId;
                 return this;
             }

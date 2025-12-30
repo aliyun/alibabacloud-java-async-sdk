@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,14 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddResolverRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdgeDnsClusters")
+    private java.util.List<EdgeDnsClusters> edgeDnsClusters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForwardIp")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ForwardIp> forwardIp;
+    private java.util.List<ForwardIp> forwardIp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -36,17 +44,23 @@ public class AddResolverRuleRequest extends Request {
     private String type;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
+    private java.util.List<Vpcs> vpcs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String zoneName;
 
     private AddResolverRuleRequest(Builder builder) {
         super(builder);
+        this.edgeDnsClusters = builder.edgeDnsClusters;
         this.endpointId = builder.endpointId;
         this.forwardIp = builder.forwardIp;
         this.lang = builder.lang;
         this.name = builder.name;
         this.type = builder.type;
+        this.vpcs = builder.vpcs;
         this.zoneName = builder.zoneName;
     }
 
@@ -58,9 +72,16 @@ public class AddResolverRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return edgeDnsClusters
+     */
+    public java.util.List<EdgeDnsClusters> getEdgeDnsClusters() {
+        return this.edgeDnsClusters;
     }
 
     /**
@@ -73,7 +94,7 @@ public class AddResolverRuleRequest extends Request {
     /**
      * @return forwardIp
      */
-    public java.util.List < ForwardIp> getForwardIp() {
+    public java.util.List<ForwardIp> getForwardIp() {
         return this.forwardIp;
     }
 
@@ -99,6 +120,13 @@ public class AddResolverRuleRequest extends Request {
     }
 
     /**
+     * @return vpcs
+     */
+    public java.util.List<Vpcs> getVpcs() {
+        return this.vpcs;
+    }
+
+    /**
      * @return zoneName
      */
     public String getZoneName() {
@@ -106,11 +134,13 @@ public class AddResolverRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddResolverRuleRequest, Builder> {
+        private java.util.List<EdgeDnsClusters> edgeDnsClusters; 
         private String endpointId; 
-        private java.util.List < ForwardIp> forwardIp; 
+        private java.util.List<ForwardIp> forwardIp; 
         private String lang; 
         private String name; 
         private String type; 
+        private java.util.List<Vpcs> vpcs; 
         private String zoneName; 
 
         private Builder() {
@@ -119,17 +149,27 @@ public class AddResolverRuleRequest extends Request {
 
         private Builder(AddResolverRuleRequest request) {
             super(request);
+            this.edgeDnsClusters = request.edgeDnsClusters;
             this.endpointId = request.endpointId;
             this.forwardIp = request.forwardIp;
             this.lang = request.lang;
             this.name = request.name;
             this.type = request.type;
+            this.vpcs = request.vpcs;
             this.zoneName = request.zoneName;
         } 
 
         /**
+         * EdgeDnsClusters.
+         */
+        public Builder edgeDnsClusters(java.util.List<EdgeDnsClusters> edgeDnsClusters) {
+            this.putQueryParameter("EdgeDnsClusters", edgeDnsClusters);
+            this.edgeDnsClusters = edgeDnsClusters;
+            return this;
+        }
+
+        /**
          * <p>The outbound endpoint ID. The outbound endpoint is used to forward the DNS requests to the specified destination IP addresses.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>hr****</p>
@@ -147,7 +187,7 @@ public class AddResolverRuleRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder forwardIp(java.util.List < ForwardIp> forwardIp) {
+        public Builder forwardIp(java.util.List<ForwardIp> forwardIp) {
             this.putQueryParameter("ForwardIp", forwardIp);
             this.forwardIp = forwardIp;
             return this;
@@ -199,6 +239,15 @@ public class AddResolverRuleRequest extends Request {
         }
 
         /**
+         * Vpcs.
+         */
+        public Builder vpcs(java.util.List<Vpcs> vpcs) {
+            this.putQueryParameter("Vpcs", vpcs);
+            this.vpcs = vpcs;
+            return this;
+        }
+
+        /**
          * <p>The zone for which you want to forward DNS requests.</p>
          * <blockquote>
          * <p> You cannot change the value of ZoneName after you create the forwarding rule.</p>
@@ -221,6 +270,60 @@ public class AddResolverRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddResolverRuleRequest} extends {@link TeaModel}
+     *
+     * <p>AddResolverRuleRequest</p>
+     */
+    public static class EdgeDnsClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        private EdgeDnsClusters(Builder builder) {
+            this.clusterId = builder.clusterId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdgeDnsClusters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdgeDnsClusters model) {
+                this.clusterId = model.clusterId;
+            } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            public EdgeDnsClusters build() {
+                return new EdgeDnsClusters(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AddResolverRuleRequest} extends {@link TeaModel}
@@ -267,6 +370,14 @@ public class AddResolverRuleRequest extends Request {
             private String ip; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardIp model) {
+                this.ip = model.ip;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The IP address of the destination server.</p>
              * <blockquote>
@@ -296,6 +407,123 @@ public class AddResolverRuleRequest extends Request {
 
             public ForwardIp build() {
                 return new ForwardIp(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddResolverRuleRequest} extends {@link TeaModel}
+     *
+     * <p>AddResolverRuleRequest</p>
+     */
+    public static class Vpcs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcType")
+        private String vpcType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcUserId")
+        private Long vpcUserId;
+
+        private Vpcs(Builder builder) {
+            this.regionId = builder.regionId;
+            this.vpcId = builder.vpcId;
+            this.vpcType = builder.vpcType;
+            this.vpcUserId = builder.vpcUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Vpcs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vpcType
+         */
+        public String getVpcType() {
+            return this.vpcType;
+        }
+
+        /**
+         * @return vpcUserId
+         */
+        public Long getVpcUserId() {
+            return this.vpcUserId;
+        }
+
+        public static final class Builder {
+            private String regionId; 
+            private String vpcId; 
+            private String vpcType; 
+            private Long vpcUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.regionId = model.regionId;
+                this.vpcId = model.vpcId;
+                this.vpcType = model.vpcType;
+                this.vpcUserId = model.vpcUserId;
+            } 
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcType.
+             */
+            public Builder vpcType(String vpcType) {
+                this.vpcType = vpcType;
+                return this;
+            }
+
+            /**
+             * VpcUserId.
+             */
+            public Builder vpcUserId(Long vpcUserId) {
+                this.vpcUserId = vpcUserId;
+                return this;
+            }
+
+            public Vpcs build() {
+                return new Vpcs(this);
             } 
 
         } 

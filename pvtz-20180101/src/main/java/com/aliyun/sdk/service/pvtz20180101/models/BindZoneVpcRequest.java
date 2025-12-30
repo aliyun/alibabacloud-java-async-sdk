@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class BindZoneVpcRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vpcs")
-    private java.util.List < Vpcs> vpcs;
+    private java.util.List<Vpcs> vpcs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -50,7 +55,7 @@ public class BindZoneVpcRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +84,7 @@ public class BindZoneVpcRequest extends Request {
     /**
      * @return vpcs
      */
-    public java.util.List < Vpcs> getVpcs() {
+    public java.util.List<Vpcs> getVpcs() {
         return this.vpcs;
     }
 
@@ -94,7 +99,7 @@ public class BindZoneVpcRequest extends Request {
         private String clientToken; 
         private String lang; 
         private String userClientIp; 
-        private java.util.List < Vpcs> vpcs; 
+        private java.util.List<Vpcs> vpcs; 
         private String zoneId; 
 
         private Builder() {
@@ -157,7 +162,7 @@ public class BindZoneVpcRequest extends Request {
          * <p> If Vpcs is left empty, all VPCs that are associated with the zone are disassociated from the zone.</p>
          * </blockquote>
          */
-        public Builder vpcs(java.util.List < Vpcs> vpcs) {
+        public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.putQueryParameter("Vpcs", vpcs);
             this.vpcs = vpcs;
             return this;
@@ -238,6 +243,15 @@ public class BindZoneVpcRequest extends Request {
             private String regionId; 
             private String vpcId; 
             private String vpcType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.regionId = model.regionId;
+                this.vpcId = model.vpcId;
+                this.vpcType = model.vpcType;
+            } 
 
             /**
              * <p>The region ID of the VPC.</p>

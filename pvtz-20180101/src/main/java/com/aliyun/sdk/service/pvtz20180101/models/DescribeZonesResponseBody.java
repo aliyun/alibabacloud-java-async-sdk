@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static DescribeZonesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Integer totalItems; 
         private Integer totalPages; 
         private Zones zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -210,6 +231,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of tag N added to the zone.</p>
              * 
@@ -247,7 +276,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class ResourceTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTag")
-        private java.util.List < ResourceTag> resourceTag;
+        private java.util.List<ResourceTag> resourceTag;
 
         private ResourceTags(Builder builder) {
             this.resourceTag = builder.resourceTag;
@@ -264,17 +293,24 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return resourceTag
          */
-        public java.util.List < ResourceTag> getResourceTag() {
+        public java.util.List<ResourceTag> getResourceTag() {
             return this.resourceTag;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceTag> resourceTag; 
+            private java.util.List<ResourceTag> resourceTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTags model) {
+                this.resourceTag = model.resourceTag;
+            } 
 
             /**
              * ResourceTag.
              */
-            public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
+            public Builder resourceTag(java.util.List<ResourceTag> resourceTag) {
                 this.resourceTag = resourceTag;
                 return this;
             }
@@ -329,6 +365,9 @@ public class DescribeZonesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTags")
         private ResourceTags resourceTags;
 
+        @com.aliyun.core.annotation.NameInMap("SlaveDnsStatus")
+        private String slaveDnsStatus;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -360,6 +399,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceTags = builder.resourceTags;
+            this.slaveDnsStatus = builder.slaveDnsStatus;
             this.updateTime = builder.updateTime;
             this.updateTimestamp = builder.updateTimestamp;
             this.zoneId = builder.zoneId;
@@ -461,6 +501,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
+         * @return slaveDnsStatus
+         */
+        public String getSlaveDnsStatus() {
+            return this.slaveDnsStatus;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -515,12 +562,38 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String remark; 
             private String resourceGroupId; 
             private ResourceTags resourceTags; 
+            private String slaveDnsStatus; 
             private String updateTime; 
             private Long updateTimestamp; 
             private String zoneId; 
             private String zoneName; 
             private String zoneTag; 
             private String zoneType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.creator = model.creator;
+                this.creatorSubType = model.creatorSubType;
+                this.dnsGroup = model.dnsGroup;
+                this.dnsGroupChanging = model.dnsGroupChanging;
+                this.isPtr = model.isPtr;
+                this.proxyPattern = model.proxyPattern;
+                this.recordCount = model.recordCount;
+                this.remark = model.remark;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceTags = model.resourceTags;
+                this.slaveDnsStatus = model.slaveDnsStatus;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+                this.zoneTag = model.zoneTag;
+                this.zoneType = model.zoneType;
+            } 
 
             /**
              * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -674,6 +747,14 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
+             * SlaveDnsStatus.
+             */
+            public Builder slaveDnsStatus(String slaveDnsStatus) {
+                this.slaveDnsStatus = slaveDnsStatus;
+                return this;
+            }
+
+            /**
              * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
@@ -762,7 +843,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -779,17 +860,24 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

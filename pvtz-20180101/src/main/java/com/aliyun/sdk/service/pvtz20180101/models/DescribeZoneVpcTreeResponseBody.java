@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Zones zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZoneVpcTreeResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -154,6 +171,17 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             private String vpcName; 
             private String vpcType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Vpc model) {
+                this.regionId = model.regionId;
+                this.regionName = model.regionName;
+                this.vpcId = model.vpcId;
+                this.vpcName = model.vpcName;
+                this.vpcType = model.vpcType;
+            } 
+
             /**
              * <p>The region ID of the VPC.</p>
              * 
@@ -228,7 +256,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
      */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
-        private java.util.List < Vpc> vpc;
+        private java.util.List<Vpc> vpc;
 
         private Vpcs(Builder builder) {
             this.vpc = builder.vpc;
@@ -245,17 +273,24 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         /**
          * @return vpc
          */
-        public java.util.List < Vpc> getVpc() {
+        public java.util.List<Vpc> getVpc() {
             return this.vpc;
         }
 
         public static final class Builder {
-            private java.util.List < Vpc> vpc; 
+            private java.util.List<Vpc> vpc; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vpcs model) {
+                this.vpc = model.vpc;
+            } 
 
             /**
              * Vpc.
              */
-            public Builder vpc(java.util.List < Vpc> vpc) {
+            public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;
                 return this;
             }
@@ -479,6 +514,28 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
             private String zoneTag; 
             private String zoneType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.creator = model.creator;
+                this.creatorType = model.creatorType;
+                this.dnsGroup = model.dnsGroup;
+                this.dnsGroupChanging = model.dnsGroupChanging;
+                this.isPtr = model.isPtr;
+                this.recordCount = model.recordCount;
+                this.remark = model.remark;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.vpcs = model.vpcs;
+                this.zoneId = model.zoneId;
+                this.zoneName = model.zoneName;
+                this.zoneTag = model.zoneTag;
+                this.zoneType = model.zoneType;
+            } 
+
             /**
              * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -690,7 +747,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -707,17 +764,24 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

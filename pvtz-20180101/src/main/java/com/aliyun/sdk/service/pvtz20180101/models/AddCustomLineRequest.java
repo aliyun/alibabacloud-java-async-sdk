@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddCustomLineRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4s")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ipv4s;
+    private java.util.List<String> ipv4s;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -51,7 +56,7 @@ public class AddCustomLineRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +71,7 @@ public class AddCustomLineRequest extends Request {
     /**
      * @return ipv4s
      */
-    public java.util.List < String > getIpv4s() {
+    public java.util.List<String> getIpv4s() {
         return this.ipv4s;
     }
 
@@ -93,7 +98,7 @@ public class AddCustomLineRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddCustomLineRequest, Builder> {
         private String dnsCategory; 
-        private java.util.List < String > ipv4s; 
+        private java.util.List<String> ipv4s; 
         private String lang; 
         private String name; 
         private String shareScope; 
@@ -127,7 +132,7 @@ public class AddCustomLineRequest extends Request {
          * <p>The IPv4 CIDR blocks.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ipv4s(java.util.List < String > ipv4s) {
+        public Builder ipv4s(java.util.List<String> ipv4s) {
             this.putQueryParameter("Ipv4s", ipv4s);
             this.ipv4s = ipv4s;
             return this;

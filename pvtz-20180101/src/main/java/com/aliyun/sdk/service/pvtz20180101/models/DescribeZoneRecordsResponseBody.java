@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,6 +50,10 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
 
     public static DescribeZoneRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalItems; 
         private Integer totalPages; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZoneRecordsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalItems = model.totalItems;
+            this.totalPages = model.totalPages;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -366,6 +387,27 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
             private Integer weight; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.createTime = model.createTime;
+                this.createTimestamp = model.createTimestamp;
+                this.line = model.line;
+                this.priority = model.priority;
+                this.recordId = model.recordId;
+                this.remark = model.remark;
+                this.rr = model.rr;
+                this.status = model.status;
+                this.ttl = model.ttl;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.updateTimestamp = model.updateTimestamp;
+                this.value = model.value;
+                this.weight = model.weight;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
@@ -559,7 +601,7 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
      */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Record")
-        private java.util.List < Record> record;
+        private java.util.List<Record> record;
 
         private Records(Builder builder) {
             this.record = builder.record;
@@ -576,17 +618,24 @@ public class DescribeZoneRecordsResponseBody extends TeaModel {
         /**
          * @return record
          */
-        public java.util.List < Record> getRecord() {
+        public java.util.List<Record> getRecord() {
             return this.record;
         }
 
         public static final class Builder {
-            private java.util.List < Record> record; 
+            private java.util.List<Record> record; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+            } 
 
             /**
              * Record.
              */
-            public Builder record(java.util.List < Record> record) {
+            public Builder record(java.util.List<Record> record) {
                 this.record = record;
                 return this;
             }

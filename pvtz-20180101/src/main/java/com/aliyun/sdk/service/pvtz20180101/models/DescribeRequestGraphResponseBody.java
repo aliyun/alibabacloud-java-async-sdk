@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestDetails
      */
@@ -48,6 +57,14 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
     public static final class Builder {
         private RequestDetails requestDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRequestGraphResponseBody model) {
+            this.requestDetails = model.requestDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the DNS requests.</p>
@@ -130,6 +147,15 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
             private String time; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneRequestTop model) {
+                this.requestCount = model.requestCount;
+                this.time = model.time;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The number of DNS requests.</p>
              * 
@@ -178,7 +204,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
      */
     public static class RequestDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneRequestTop")
-        private java.util.List < ZoneRequestTop> zoneRequestTop;
+        private java.util.List<ZoneRequestTop> zoneRequestTop;
 
         private RequestDetails(Builder builder) {
             this.zoneRequestTop = builder.zoneRequestTop;
@@ -195,17 +221,24 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
         /**
          * @return zoneRequestTop
          */
-        public java.util.List < ZoneRequestTop> getZoneRequestTop() {
+        public java.util.List<ZoneRequestTop> getZoneRequestTop() {
             return this.zoneRequestTop;
         }
 
         public static final class Builder {
-            private java.util.List < ZoneRequestTop> zoneRequestTop; 
+            private java.util.List<ZoneRequestTop> zoneRequestTop; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestDetails model) {
+                this.zoneRequestTop = model.zoneRequestTop;
+            } 
 
             /**
              * ZoneRequestTop.
              */
-            public Builder zoneRequestTop(java.util.List < ZoneRequestTop> zoneRequestTop) {
+            public Builder zoneRequestTop(java.util.List<ZoneRequestTop> zoneRequestTop) {
                 this.zoneRequestTop = zoneRequestTop;
                 return this;
             }
