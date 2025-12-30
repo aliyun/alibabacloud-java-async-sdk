@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBizEntityResponse> createBizEntity(CreateBizEntityRequest request);
 
     /**
+     * @param request the request parameters of CreateBizMetric  CreateBizMetricRequest
+     * @return CreateBizMetricResponse
+     */
+    CompletableFuture<CreateBizMetricResponse> createBizMetric(CreateBizMetricRequest request);
+
+    /**
      * @param request the request parameters of CreateBizUnit  CreateBizUnitRequest
      * @return CreateBizUnitResponse
      */
@@ -228,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBizEntityResponse
      */
     CompletableFuture<DeleteBizEntityResponse> deleteBizEntity(DeleteBizEntityRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBizMetric  DeleteBizMetricRequest
+     * @return DeleteBizMetricResponse
+     */
+    CompletableFuture<DeleteBizMetricResponse> deleteBizMetric(DeleteBizMetricRequest request);
 
     /**
      * @param request the request parameters of DeleteBizUnit  DeleteBizUnitRequest
@@ -374,10 +386,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBizEntityInfoByVersionResponse> getBizEntityInfoByVersion(GetBizEntityInfoByVersionRequest request);
 
     /**
+     * @param request the request parameters of GetBizMetricByName  GetBizMetricByNameRequest
+     * @return GetBizMetricByNameResponse
+     */
+    CompletableFuture<GetBizMetricByNameResponse> getBizMetricByName(GetBizMetricByNameRequest request);
+
+    /**
      * @param request the request parameters of GetBizUnitInfo  GetBizUnitInfoRequest
      * @return GetBizUnitInfoResponse
      */
     CompletableFuture<GetBizUnitInfoResponse> getBizUnitInfo(GetBizUnitInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
+     * @return GetCheckConnectivityJobsResponse
+     */
+    CompletableFuture<GetCheckConnectivityJobsResponse> getCheckConnectivityJobs(GetCheckConnectivityJobsRequest request);
 
     /**
      * @param request the request parameters of GetClusterQueueInfoByEnv  GetClusterQueueInfoByEnvRequest
@@ -1068,6 +1092,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBizEntityResponse
      */
     CompletableFuture<UpdateBizEntityResponse> updateBizEntity(UpdateBizEntityRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBizMetric  UpdateBizMetricRequest
+     * @return UpdateBizMetricResponse
+     */
+    CompletableFuture<UpdateBizMetricResponse> updateBizMetric(UpdateBizMetricRequest request);
 
     /**
      * @param request the request parameters of UpdateBizUnit  UpdateBizUnitRequest
