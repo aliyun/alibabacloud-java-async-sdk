@@ -158,6 +158,12 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FreezeAmount")
         private Double freezeAmount;
 
+        @com.aliyun.core.annotation.NameInMap("IcpNumber")
+        private String icpNumber;
+
+        @com.aliyun.core.annotation.NameInMap("IcpStatus")
+        private Boolean icpStatus;
+
         @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
@@ -243,6 +249,8 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             this.expireDate = builder.expireDate;
             this.extend = builder.extend;
             this.freezeAmount = builder.freezeAmount;
+            this.icpNumber = builder.icpNumber;
+            this.icpStatus = builder.icpStatus;
             this.introduction = builder.introduction;
             this.isPremium = builder.isPremium;
             this.partnerTypes = builder.partnerTypes;
@@ -422,6 +430,20 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
 
         /**
+         * @return icpNumber
+         */
+        public String getIcpNumber() {
+            return this.icpNumber;
+        }
+
+        /**
+         * @return icpStatus
+         */
+        public Boolean getIcpStatus() {
+            return this.icpStatus;
+        }
+
+        /**
          * @return introduction
          */
         public String getIntroduction() {
@@ -590,6 +612,8 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             private String expireDate; 
             private String extend; 
             private Double freezeAmount; 
+            private String icpNumber; 
+            private Boolean icpStatus; 
             private String introduction; 
             private Boolean isPremium; 
             private String partnerTypes; 
@@ -637,6 +661,8 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
                 this.expireDate = model.expireDate;
                 this.extend = model.extend;
                 this.freezeAmount = model.freezeAmount;
+                this.icpNumber = model.icpNumber;
+                this.icpStatus = model.icpStatus;
                 this.introduction = model.introduction;
                 this.isPremium = model.isPremium;
                 this.partnerTypes = model.partnerTypes;
@@ -825,6 +851,22 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
              */
             public Builder freezeAmount(Double freezeAmount) {
                 this.freezeAmount = freezeAmount;
+                return this;
+            }
+
+            /**
+             * IcpNumber.
+             */
+            public Builder icpNumber(String icpNumber) {
+                this.icpNumber = icpNumber;
+                return this;
+            }
+
+            /**
+             * IcpStatus.
+             */
+            public Builder icpStatus(Boolean icpStatus) {
+                this.icpStatus = icpStatus;
                 return this;
             }
 
