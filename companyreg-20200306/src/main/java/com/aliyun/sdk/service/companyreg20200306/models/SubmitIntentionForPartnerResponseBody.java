@@ -20,6 +20,9 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
+    private String extInfo;
+
     @com.aliyun.core.annotation.NameInMap("IntentionBizId")
     private String intentionBizId;
 
@@ -31,6 +34,7 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
 
     private SubmitIntentionForPartnerResponseBody(Builder builder) {
         this.errorMsg = builder.errorMsg;
+        this.extInfo = builder.extInfo;
         this.intentionBizId = builder.intentionBizId;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -56,6 +60,13 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
     }
 
     /**
+     * @return extInfo
+     */
+    public String getExtInfo() {
+        return this.extInfo;
+    }
+
+    /**
      * @return intentionBizId
      */
     public String getIntentionBizId() {
@@ -78,6 +89,7 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String errorMsg; 
+        private String extInfo; 
         private String intentionBizId; 
         private String requestId; 
         private Boolean success; 
@@ -87,6 +99,7 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
 
         private Builder(SubmitIntentionForPartnerResponseBody model) {
             this.errorMsg = model.errorMsg;
+            this.extInfo = model.extInfo;
             this.intentionBizId = model.intentionBizId;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -97,6 +110,14 @@ public class SubmitIntentionForPartnerResponseBody extends TeaModel {
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
+            return this;
+        }
+
+        /**
+         * ExtInfo.
+         */
+        public Builder extInfo(String extInfo) {
+            this.extInfo = extInfo;
             return this;
         }
 
