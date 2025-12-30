@@ -1720,10 +1720,14 @@ public class GetClusterResponseBody extends TeaModel {
      * <p>GetClusterResponseBody</p>
      */
     public static class SchedulerSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnablePowerSaving")
+        private Boolean enablePowerSaving;
+
         @com.aliyun.core.annotation.NameInMap("EnableTopologyAwareness")
         private Boolean enableTopologyAwareness;
 
         private SchedulerSpec(Builder builder) {
+            this.enablePowerSaving = builder.enablePowerSaving;
             this.enableTopologyAwareness = builder.enableTopologyAwareness;
         }
 
@@ -1736,6 +1740,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return enablePowerSaving
+         */
+        public Boolean getEnablePowerSaving() {
+            return this.enablePowerSaving;
+        }
+
+        /**
          * @return enableTopologyAwareness
          */
         public Boolean getEnableTopologyAwareness() {
@@ -1743,14 +1754,24 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enablePowerSaving; 
             private Boolean enableTopologyAwareness; 
 
             private Builder() {
             } 
 
             private Builder(SchedulerSpec model) {
+                this.enablePowerSaving = model.enablePowerSaving;
                 this.enableTopologyAwareness = model.enableTopologyAwareness;
             } 
+
+            /**
+             * EnablePowerSaving.
+             */
+            public Builder enablePowerSaving(Boolean enablePowerSaving) {
+                this.enablePowerSaving = enablePowerSaving;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</p>

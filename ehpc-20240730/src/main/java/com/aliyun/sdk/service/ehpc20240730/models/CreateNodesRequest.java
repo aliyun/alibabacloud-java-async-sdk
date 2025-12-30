@@ -46,6 +46,10 @@ public class CreateNodesRequest extends Request {
     private String hostnameSuffix;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostnames")
+    private java.util.List<String> hostnames;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeepAlive")
     private String keepAlive;
 
@@ -74,6 +78,7 @@ public class CreateNodesRequest extends Request {
         this.HPCInterConnect = builder.HPCInterConnect;
         this.hostnamePrefix = builder.hostnamePrefix;
         this.hostnameSuffix = builder.hostnameSuffix;
+        this.hostnames = builder.hostnames;
         this.keepAlive = builder.keepAlive;
         this.queueName = builder.queueName;
         this.ramRole = builder.ramRole;
@@ -144,6 +149,13 @@ public class CreateNodesRequest extends Request {
     }
 
     /**
+     * @return hostnames
+     */
+    public java.util.List<String> getHostnames() {
+        return this.hostnames;
+    }
+
+    /**
      * @return keepAlive
      */
     public String getKeepAlive() {
@@ -186,6 +198,7 @@ public class CreateNodesRequest extends Request {
         private String HPCInterConnect; 
         private String hostnamePrefix; 
         private String hostnameSuffix; 
+        private java.util.List<String> hostnames; 
         private String keepAlive; 
         private String queueName; 
         private String ramRole; 
@@ -205,6 +218,7 @@ public class CreateNodesRequest extends Request {
             this.HPCInterConnect = request.HPCInterConnect;
             this.hostnamePrefix = request.hostnamePrefix;
             this.hostnameSuffix = request.hostnameSuffix;
+            this.hostnames = request.hostnames;
             this.keepAlive = request.keepAlive;
             this.queueName = request.queueName;
             this.ramRole = request.ramRole;
@@ -301,6 +315,16 @@ public class CreateNodesRequest extends Request {
         public Builder hostnameSuffix(String hostnameSuffix) {
             this.putQueryParameter("HostnameSuffix", hostnameSuffix);
             this.hostnameSuffix = hostnameSuffix;
+            return this;
+        }
+
+        /**
+         * Hostnames.
+         */
+        public Builder hostnames(java.util.List<String> hostnames) {
+            String hostnamesShrink = shrink(hostnames, "Hostnames", "json");
+            this.putQueryParameter("Hostnames", hostnamesShrink);
+            this.hostnames = hostnames;
             return this;
         }
 
