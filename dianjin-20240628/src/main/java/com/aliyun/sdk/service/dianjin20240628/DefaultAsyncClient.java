@@ -239,6 +239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DashscopeAsyncTaskFinishEvent  DashscopeAsyncTaskFinishEventRequest
+     * @return DashscopeAsyncTaskFinishEventResponse
+     */
+    @Override
+    public CompletableFuture<DashscopeAsyncTaskFinishEventResponse> dashscopeAsyncTaskFinishEvent(DashscopeAsyncTaskFinishEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DashscopeAsyncTaskFinishEvent").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/event/dashscopeAsyncTaskFinish").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DashscopeAsyncTaskFinishEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DashscopeAsyncTaskFinishEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
      * @return DeleteDocumentResponse
      */

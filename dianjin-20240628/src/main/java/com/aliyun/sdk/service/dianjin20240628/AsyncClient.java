@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVideoCreationTaskResponse> createVideoCreationTask(CreateVideoCreationTaskRequest request);
 
     /**
+     * @param request the request parameters of DashscopeAsyncTaskFinishEvent  DashscopeAsyncTaskFinishEventRequest
+     * @return DashscopeAsyncTaskFinishEventResponse
+     */
+    CompletableFuture<DashscopeAsyncTaskFinishEventResponse> dashscopeAsyncTaskFinishEvent(DashscopeAsyncTaskFinishEventRequest request);
+
+    /**
      * @param request the request parameters of DeleteDocument  DeleteDocumentRequest
      * @return DeleteDocumentResponse
      */
