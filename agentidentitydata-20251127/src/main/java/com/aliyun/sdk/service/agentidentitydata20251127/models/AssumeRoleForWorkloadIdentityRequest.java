@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AssumeRoleForWorkloadIdentityRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DurationSeconds")
-    private String durationSeconds;
+    private Long durationSeconds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Policy")
@@ -57,7 +57,7 @@ public class AssumeRoleForWorkloadIdentityRequest extends Request {
     /**
      * @return durationSeconds
      */
-    public String getDurationSeconds() {
+    public Long getDurationSeconds() {
         return this.durationSeconds;
     }
 
@@ -83,7 +83,7 @@ public class AssumeRoleForWorkloadIdentityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssumeRoleForWorkloadIdentityRequest, Builder> {
-        private String durationSeconds; 
+        private Long durationSeconds; 
         private String policy; 
         private String roleSessionName; 
         private String workloadAccessToken; 
@@ -103,7 +103,7 @@ public class AssumeRoleForWorkloadIdentityRequest extends Request {
         /**
          * DurationSeconds.
          */
-        public Builder durationSeconds(String durationSeconds) {
+        public Builder durationSeconds(Long durationSeconds) {
             this.putBodyParameter("DurationSeconds", durationSeconds);
             this.durationSeconds = durationSeconds;
             return this;
