@@ -1408,6 +1408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListTransferFileDownloadUrl  ListTransferFileDownloadUrlRequest
+     * @return ListTransferFileDownloadUrlResponse
+     */
+    CompletableFuture<ListTransferFileDownloadUrlResponse> listTransferFileDownloadUrl(ListTransferFileDownloadUrlRequest request);
+
+    /**
      * @param request the request parameters of ListTransferFiles  ListTransferFilesRequest
      * @return ListTransferFilesResponse
      */
