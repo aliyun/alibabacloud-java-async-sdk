@@ -236,6 +236,9 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("errorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("errorDetail")
         private String errorDetail;
 
@@ -272,6 +275,7 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
             this.common = builder.common;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.errorCode = builder.errorCode;
             this.errorDetail = builder.errorDetail;
             this.gender = builder.gender;
             this.id = builder.id;
@@ -325,6 +329,13 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -403,6 +414,7 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
             private Boolean common; 
             private String createTime; 
             private String description; 
+            private String errorCode; 
             private String errorDetail; 
             private String gender; 
             private String id; 
@@ -423,6 +435,7 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
                 this.common = model.common;
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.errorCode = model.errorCode;
                 this.errorDetail = model.errorDetail;
                 this.gender = model.gender;
                 this.id = model.id;
@@ -472,6 +485,14 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * errorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
                 return this;
             }
 
