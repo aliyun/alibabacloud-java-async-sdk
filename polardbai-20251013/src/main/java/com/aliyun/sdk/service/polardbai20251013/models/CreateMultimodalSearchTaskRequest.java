@@ -1,0 +1,197 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.polardbai20251013.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CreateMultimodalSearchTaskRequest} extends {@link RequestModel}
+ *
+ * <p>CreateMultimodalSearchTaskRequest</p>
+ */
+public class CreateMultimodalSearchTaskRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String DBClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetIds")
+    private java.util.List<String> datasetIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmbeddingModel")
+    private String embeddingModel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchModel")
+    private String searchModel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopK")
+    private Integer topK;
+
+    private CreateMultimodalSearchTaskRequest(Builder builder) {
+        super(builder);
+        this.DBClusterId = builder.DBClusterId;
+        this.datasetIds = builder.datasetIds;
+        this.embeddingModel = builder.embeddingModel;
+        this.query = builder.query;
+        this.searchModel = builder.searchModel;
+        this.topK = builder.topK;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateMultimodalSearchTaskRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    /**
+     * @return datasetIds
+     */
+    public java.util.List<String> getDatasetIds() {
+        return this.datasetIds;
+    }
+
+    /**
+     * @return embeddingModel
+     */
+    public String getEmbeddingModel() {
+        return this.embeddingModel;
+    }
+
+    /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
+     * @return searchModel
+     */
+    public String getSearchModel() {
+        return this.searchModel;
+    }
+
+    /**
+     * @return topK
+     */
+    public Integer getTopK() {
+        return this.topK;
+    }
+
+    public static final class Builder extends Request.Builder<CreateMultimodalSearchTaskRequest, Builder> {
+        private String DBClusterId; 
+        private java.util.List<String> datasetIds; 
+        private String embeddingModel; 
+        private String query; 
+        private String searchModel; 
+        private Integer topK; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateMultimodalSearchTaskRequest request) {
+            super(request);
+            this.DBClusterId = request.DBClusterId;
+            this.datasetIds = request.datasetIds;
+            this.embeddingModel = request.embeddingModel;
+            this.query = request.query;
+            this.searchModel = request.searchModel;
+            this.topK = request.topK;
+        } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze454l20me07****</p>
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DatasetIds.
+         */
+        public Builder datasetIds(java.util.List<String> datasetIds) {
+            String datasetIdsShrink = shrink(datasetIds, "DatasetIds", "json");
+            this.putQueryParameter("DatasetIds", datasetIdsShrink);
+            this.datasetIds = datasetIds;
+            return this;
+        }
+
+        /**
+         * EmbeddingModel.
+         */
+        public Builder embeddingModel(String embeddingModel) {
+            this.putQueryParameter("EmbeddingModel", embeddingModel);
+            this.embeddingModel = embeddingModel;
+            return this;
+        }
+
+        /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putQueryParameter("Query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
+         * SearchModel.
+         */
+        public Builder searchModel(String searchModel) {
+            this.putQueryParameter("SearchModel", searchModel);
+            this.searchModel = searchModel;
+            return this;
+        }
+
+        /**
+         * TopK.
+         */
+        public Builder topK(Integer topK) {
+            this.putQueryParameter("TopK", topK);
+            this.topK = topK;
+            return this;
+        }
+
+        @Override
+        public CreateMultimodalSearchTaskRequest build() {
+            return new CreateMultimodalSearchTaskRequest(this);
+        } 
+
+    } 
+
+}
