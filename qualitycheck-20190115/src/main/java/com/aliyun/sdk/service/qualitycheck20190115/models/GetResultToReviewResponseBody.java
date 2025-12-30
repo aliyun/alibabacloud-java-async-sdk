@@ -1604,6 +1604,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
      * <p>GetResultToReviewResponseBody</p>
      */
     public static class ReviewInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
         @com.aliyun.core.annotation.NameInMap("HitId")
         private String hitId;
 
@@ -1623,6 +1626,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         private ReviewInfoSentenceReviewResults sentenceReviewResults;
 
         private ReviewInfo(Builder builder) {
+            this.comment = builder.comment;
             this.hitId = builder.hitId;
             this.reviewResult = builder.reviewResult;
             this.reviewTime = builder.reviewTime;
@@ -1637,6 +1641,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static ReviewInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -1682,6 +1693,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comment; 
             private String hitId; 
             private Integer reviewResult; 
             private String reviewTime; 
@@ -1693,6 +1705,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             } 
 
             private Builder(ReviewInfo model) {
+                this.comment = model.comment;
                 this.hitId = model.hitId;
                 this.reviewResult = model.reviewResult;
                 this.reviewTime = model.reviewTime;
@@ -1700,6 +1713,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
                 this.rid = model.rid;
                 this.sentenceReviewResults = model.sentenceReviewResults;
             } 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * HitId.
