@@ -269,6 +269,9 @@ public class ListSearchLibResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexInfo")
         private java.util.List<IndexInfo> indexInfo;
 
+        @com.aliyun.core.annotation.NameInMap("SearchLibConfig")
+        private String searchLibConfig;
+
         @com.aliyun.core.annotation.NameInMap("SearchLibName")
         private String searchLibName;
 
@@ -277,6 +280,7 @@ public class ListSearchLibResponseBody extends TeaModel {
 
         private SearchLibInfoList(Builder builder) {
             this.indexInfo = builder.indexInfo;
+            this.searchLibConfig = builder.searchLibConfig;
             this.searchLibName = builder.searchLibName;
             this.status = builder.status;
         }
@@ -297,6 +301,13 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchLibConfig
+         */
+        public String getSearchLibConfig() {
+            return this.searchLibConfig;
+        }
+
+        /**
          * @return searchLibName
          */
         public String getSearchLibName() {
@@ -312,6 +323,7 @@ public class ListSearchLibResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<IndexInfo> indexInfo; 
+            private String searchLibConfig; 
             private String searchLibName; 
             private String status; 
 
@@ -320,6 +332,7 @@ public class ListSearchLibResponseBody extends TeaModel {
 
             private Builder(SearchLibInfoList model) {
                 this.indexInfo = model.indexInfo;
+                this.searchLibConfig = model.searchLibConfig;
                 this.searchLibName = model.searchLibName;
                 this.status = model.status;
             } 
@@ -329,6 +342,14 @@ public class ListSearchLibResponseBody extends TeaModel {
              */
             public Builder indexInfo(java.util.List<IndexInfo> indexInfo) {
                 this.indexInfo = indexInfo;
+                return this;
+            }
+
+            /**
+             * SearchLibConfig.
+             */
+            public Builder searchLibConfig(String searchLibConfig) {
+                this.searchLibConfig = searchLibConfig;
                 return this;
             }
 

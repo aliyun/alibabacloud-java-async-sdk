@@ -131,6 +131,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AlterSearchIndexResponse> alterSearchIndex(AlterSearchIndexRequest request);
 
     /**
+     * @param request the request parameters of AlterSearchLib  AlterSearchLibRequest
+     * @return AlterSearchLibResponse
+     */
+    CompletableFuture<AlterSearchLibResponse> alterSearchLib(AlterSearchLibRequest request);
+
+    /**
      * @param request the request parameters of BatchCreateVodPackagingAsset  BatchCreateVodPackagingAssetRequest
      * @return BatchCreateVodPackagingAssetResponse
      */

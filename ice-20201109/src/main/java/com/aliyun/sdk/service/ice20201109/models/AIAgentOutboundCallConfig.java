@@ -26,6 +26,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoSpeechConfig")
     private AutoSpeechConfig autoSpeechConfig;
 
+    @com.aliyun.core.annotation.NameInMap("BackChannelingConfig")
+    private BackChannelingConfig backChannelingConfig;
+
     @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
     private Boolean enableIntelligentSegment;
 
@@ -57,6 +60,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         this.ambientSoundConfig = builder.ambientSoundConfig;
         this.asrConfig = builder.asrConfig;
         this.autoSpeechConfig = builder.autoSpeechConfig;
+        this.backChannelingConfig = builder.backChannelingConfig;
         this.enableIntelligentSegment = builder.enableIntelligentSegment;
         this.experimentalConfig = builder.experimentalConfig;
         this.greeting = builder.greeting;
@@ -99,6 +103,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      */
     public AutoSpeechConfig getAutoSpeechConfig() {
         return this.autoSpeechConfig;
+    }
+
+    /**
+     * @return backChannelingConfig
+     */
+    public BackChannelingConfig getBackChannelingConfig() {
+        return this.backChannelingConfig;
     }
 
     /**
@@ -168,6 +179,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         private AmbientSoundConfig ambientSoundConfig; 
         private AsrConfig asrConfig; 
         private AutoSpeechConfig autoSpeechConfig; 
+        private BackChannelingConfig backChannelingConfig; 
         private Boolean enableIntelligentSegment; 
         private String experimentalConfig; 
         private String greeting; 
@@ -185,6 +197,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             this.ambientSoundConfig = model.ambientSoundConfig;
             this.asrConfig = model.asrConfig;
             this.autoSpeechConfig = model.autoSpeechConfig;
+            this.backChannelingConfig = model.backChannelingConfig;
             this.enableIntelligentSegment = model.enableIntelligentSegment;
             this.experimentalConfig = model.experimentalConfig;
             this.greeting = model.greeting;
@@ -217,6 +230,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
          */
         public Builder autoSpeechConfig(AutoSpeechConfig autoSpeechConfig) {
             this.autoSpeechConfig = autoSpeechConfig;
+            return this;
+        }
+
+        /**
+         * BackChannelingConfig.
+         */
+        public Builder backChannelingConfig(BackChannelingConfig backChannelingConfig) {
+            this.backChannelingConfig = backChannelingConfig;
             return this;
         }
 
@@ -934,16 +955,217 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      *
      * <p>AIAgentOutboundCallConfig</p>
      */
+    public static class Words extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private Words(Builder builder) {
+            this.probability = builder.probability;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Words create() {
+            return builder().build();
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Double probability; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Words model) {
+                this.probability = model.probability;
+                this.text = model.text;
+            } 
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Words build() {
+                return new Words(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentOutboundCallConfig</p>
+     */
+    public static class BackChannelingConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerStage")
+        private String triggerStage;
+
+        @com.aliyun.core.annotation.NameInMap("Words")
+        private Words words;
+
+        private BackChannelingConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.probability = builder.probability;
+            this.triggerStage = builder.triggerStage;
+            this.words = builder.words;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelingConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return triggerStage
+         */
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        /**
+         * @return words
+         */
+        public Words getWords() {
+            return this.words;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Double probability; 
+            private String triggerStage; 
+            private Words words; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelingConfig model) {
+                this.enabled = model.enabled;
+                this.probability = model.probability;
+                this.triggerStage = model.triggerStage;
+                this.words = model.words;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * TriggerStage.
+             */
+            public Builder triggerStage(String triggerStage) {
+                this.triggerStage = triggerStage;
+                return this;
+            }
+
+            /**
+             * Words.
+             */
+            public Builder words(Words words) {
+                this.words = words;
+                return this;
+            }
+
+            public BackChannelingConfig build() {
+                return new BackChannelingConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentOutboundCallConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentOutboundCallConfig</p>
+     */
     public static class InterruptConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Eagerness")
+        @Deprecated
+        private String eagerness;
+
         @com.aliyun.core.annotation.NameInMap("EnableVoiceInterrupt")
         private Boolean enableVoiceInterrupt;
 
         @com.aliyun.core.annotation.NameInMap("InterruptWords")
         private java.util.List<String> interruptWords;
 
+        @com.aliyun.core.annotation.NameInMap("NoInterruptMode")
+        private String noInterruptMode;
+
         private InterruptConfig(Builder builder) {
+            this.eagerness = builder.eagerness;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
             this.interruptWords = builder.interruptWords;
+            this.noInterruptMode = builder.noInterruptMode;
         }
 
         public static Builder builder() {
@@ -952,6 +1174,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
         public static InterruptConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return eagerness
+         */
+        public String getEagerness() {
+            return this.eagerness;
         }
 
         /**
@@ -968,17 +1197,36 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             return this.interruptWords;
         }
 
+        /**
+         * @return noInterruptMode
+         */
+        public String getNoInterruptMode() {
+            return this.noInterruptMode;
+        }
+
         public static final class Builder {
+            private String eagerness; 
             private Boolean enableVoiceInterrupt; 
             private java.util.List<String> interruptWords; 
+            private String noInterruptMode; 
 
             private Builder() {
             } 
 
             private Builder(InterruptConfig model) {
+                this.eagerness = model.eagerness;
                 this.enableVoiceInterrupt = model.enableVoiceInterrupt;
                 this.interruptWords = model.interruptWords;
+                this.noInterruptMode = model.noInterruptMode;
             } 
+
+            /**
+             * Eagerness.
+             */
+            public Builder eagerness(String eagerness) {
+                this.eagerness = eagerness;
+                return this;
+            }
 
             /**
              * EnableVoiceInterrupt.
@@ -993,6 +1241,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
              */
             public Builder interruptWords(java.util.List<String> interruptWords) {
                 this.interruptWords = interruptWords;
+                return this;
+            }
+
+            /**
+             * NoInterruptMode.
+             */
+            public Builder noInterruptMode(String noInterruptMode) {
+                this.noInterruptMode = noInterruptMode;
                 return this;
             }
 
@@ -1679,6 +1935,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
      * <p>AIAgentOutboundCallConfig</p>
      */
     public static class TurnDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Eagerness")
+        private String eagerness;
+
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
@@ -1689,6 +1948,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         private java.util.List<String> turnEndWords;
 
         private TurnDetectionConfig(Builder builder) {
+            this.eagerness = builder.eagerness;
             this.mode = builder.mode;
             this.semanticWaitDuration = builder.semanticWaitDuration;
             this.turnEndWords = builder.turnEndWords;
@@ -1700,6 +1960,13 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
         public static TurnDetectionConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return eagerness
+         */
+        public String getEagerness() {
+            return this.eagerness;
         }
 
         /**
@@ -1724,6 +1991,7 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String eagerness; 
             private String mode; 
             private Integer semanticWaitDuration; 
             private java.util.List<String> turnEndWords; 
@@ -1732,10 +2000,19 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             } 
 
             private Builder(TurnDetectionConfig model) {
+                this.eagerness = model.eagerness;
                 this.mode = model.mode;
                 this.semanticWaitDuration = model.semanticWaitDuration;
                 this.turnEndWords = model.turnEndWords;
             } 
+
+            /**
+             * Eagerness.
+             */
+            public Builder eagerness(String eagerness) {
+                this.eagerness = eagerness;
+                return this;
+            }
 
             /**
              * Mode.

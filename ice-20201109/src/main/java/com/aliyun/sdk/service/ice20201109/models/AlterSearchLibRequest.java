@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSearchLibRequest} extends {@link RequestModel}
+ * {@link AlterSearchLibRequest} extends {@link RequestModel}
  *
- * <p>CreateSearchLibRequest</p>
+ * <p>AlterSearchLibRequest</p>
  */
-public class CreateSearchLibRequest extends Request {
+public class AlterSearchLibRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -30,7 +30,7 @@ public class CreateSearchLibRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String searchLibName;
 
-    private CreateSearchLibRequest(Builder builder) {
+    private AlterSearchLibRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.searchLibConfig = builder.searchLibConfig;
@@ -41,7 +41,7 @@ public class CreateSearchLibRequest extends Request {
         return new Builder();
     }
 
-    public static CreateSearchLibRequest create() {
+    public static AlterSearchLibRequest create() {
         return builder().build();
     }
 
@@ -71,7 +71,7 @@ public class CreateSearchLibRequest extends Request {
         return this.searchLibName;
     }
 
-    public static final class Builder extends Request.Builder<CreateSearchLibRequest, Builder> {
+    public static final class Builder extends Request.Builder<AlterSearchLibRequest, Builder> {
         private String regionId; 
         private String searchLibConfig; 
         private String searchLibName; 
@@ -80,7 +80,7 @@ public class CreateSearchLibRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSearchLibRequest request) {
+        private Builder(AlterSearchLibRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.searchLibConfig = request.searchLibConfig;
@@ -106,7 +106,6 @@ public class CreateSearchLibRequest extends Request {
         }
 
         /**
-         * <p>The name of the search library. The name can contain letters and digits and must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,8 +118,8 @@ public class CreateSearchLibRequest extends Request {
         }
 
         @Override
-        public CreateSearchLibRequest build() {
-            return new CreateSearchLibRequest(this);
+        public AlterSearchLibRequest build() {
+            return new AlterSearchLibRequest(this);
         } 
 
     } 
