@@ -378,6 +378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryUsageStatisticsByTagIdResponse> queryUsageStatisticsByTagId(QueryUsageStatisticsByTagIdRequest request);
 
     /**
+     * @param request the request parameters of SaveContacts  SaveContactsRequest
+     * @return SaveContactsResponse
+     */
+    CompletableFuture<SaveContactsResponse> saveContacts(SaveContactsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</p>
      * <ul>
