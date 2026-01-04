@@ -22,6 +22,10 @@ public class ListApplicationsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationCreationType")
+    private String applicationCreationType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
     private java.util.List<String> applicationIds;
 
@@ -71,6 +75,7 @@ public class ListApplicationsRequest extends Request {
     private ListApplicationsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.applicationCreationType = builder.applicationCreationType;
         this.applicationIds = builder.applicationIds;
         this.applicationName = builder.applicationName;
         this.authorizationType = builder.authorizationType;
@@ -101,6 +106,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return applicationCreationType
+     */
+    public String getApplicationCreationType() {
+        return this.applicationCreationType;
     }
 
     /**
@@ -175,6 +187,7 @@ public class ListApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private String regionId; 
+        private String applicationCreationType; 
         private java.util.List<String> applicationIds; 
         private String applicationName; 
         private String authorizationType; 
@@ -193,6 +206,7 @@ public class ListApplicationsRequest extends Request {
         private Builder(ListApplicationsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.applicationCreationType = request.applicationCreationType;
             this.applicationIds = request.applicationIds;
             this.applicationName = request.applicationName;
             this.authorizationType = request.authorizationType;
@@ -211,6 +225,15 @@ public class ListApplicationsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ApplicationCreationType.
+         */
+        public Builder applicationCreationType(String applicationCreationType) {
+            this.putQueryParameter("ApplicationCreationType", applicationCreationType);
+            this.applicationCreationType = applicationCreationType;
             return this;
         }
 

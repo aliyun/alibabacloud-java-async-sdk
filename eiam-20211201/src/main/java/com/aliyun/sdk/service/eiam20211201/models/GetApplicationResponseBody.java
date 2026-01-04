@@ -101,6 +101,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInvokeStatus")
         private String apiInvokeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationCreationType")
+        private String applicationCreationType;
+
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
@@ -149,6 +152,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceServerIdentifier")
         private String resourceServerIdentifier;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceServerSourceType")
+        private String resourceServerSourceType;
+
         @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
         private String resourceServerStatus;
 
@@ -166,6 +172,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         private Application(Builder builder) {
             this.apiInvokeStatus = builder.apiInvokeStatus;
+            this.applicationCreationType = builder.applicationCreationType;
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
@@ -182,6 +189,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.m2MClientStatus = builder.m2MClientStatus;
             this.managedServiceCode = builder.managedServiceCode;
             this.resourceServerIdentifier = builder.resourceServerIdentifier;
+            this.resourceServerSourceType = builder.resourceServerSourceType;
             this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
@@ -202,6 +210,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getApiInvokeStatus() {
             return this.apiInvokeStatus;
+        }
+
+        /**
+         * @return applicationCreationType
+         */
+        public String getApplicationCreationType() {
+            return this.applicationCreationType;
         }
 
         /**
@@ -317,6 +332,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceServerSourceType
+         */
+        public String getResourceServerSourceType() {
+            return this.resourceServerSourceType;
+        }
+
+        /**
          * @return resourceServerStatus
          */
         public String getResourceServerStatus() {
@@ -353,6 +375,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String apiInvokeStatus; 
+            private String applicationCreationType; 
             private String applicationId; 
             private String applicationName; 
             private String applicationSourceType; 
@@ -369,6 +392,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String m2MClientStatus; 
             private String managedServiceCode; 
             private String resourceServerIdentifier; 
+            private String resourceServerSourceType; 
             private String resourceServerStatus; 
             private Boolean serviceManaged; 
             private String ssoType; 
@@ -380,6 +404,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
             private Builder(Application model) {
                 this.apiInvokeStatus = model.apiInvokeStatus;
+                this.applicationCreationType = model.applicationCreationType;
                 this.applicationId = model.applicationId;
                 this.applicationName = model.applicationName;
                 this.applicationSourceType = model.applicationSourceType;
@@ -396,6 +421,7 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.m2MClientStatus = model.m2MClientStatus;
                 this.managedServiceCode = model.managedServiceCode;
                 this.resourceServerIdentifier = model.resourceServerIdentifier;
+                this.resourceServerSourceType = model.resourceServerSourceType;
                 this.resourceServerStatus = model.resourceServerStatus;
                 this.serviceManaged = model.serviceManaged;
                 this.ssoType = model.ssoType;
@@ -415,6 +441,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder apiInvokeStatus(String apiInvokeStatus) {
                 this.apiInvokeStatus = apiInvokeStatus;
+                return this;
+            }
+
+            /**
+             * ApplicationCreationType.
+             */
+            public Builder applicationCreationType(String applicationCreationType) {
+                this.applicationCreationType = applicationCreationType;
                 return this;
             }
 
@@ -598,6 +632,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder resourceServerIdentifier(String resourceServerIdentifier) {
                 this.resourceServerIdentifier = resourceServerIdentifier;
+                return this;
+            }
+
+            /**
+             * ResourceServerSourceType.
+             */
+            public Builder resourceServerSourceType(String resourceServerSourceType) {
+                this.resourceServerSourceType = resourceServerSourceType;
                 return this;
             }
 

@@ -122,6 +122,9 @@ public class ListApplicationsResponseBody extends TeaModel {
      * <p>ListApplicationsResponseBody</p>
      */
     public static class Applications extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationCreationType")
+        private String applicationCreationType;
+
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
@@ -155,6 +158,15 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
         private String managedServiceCode;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceServerIdentifier")
+        private String resourceServerIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceServerSourceType")
+        private String resourceServerSourceType;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+        private String resourceServerStatus;
+
         @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
@@ -168,6 +180,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Long updateTime;
 
         private Applications(Builder builder) {
+            this.applicationCreationType = builder.applicationCreationType;
             this.applicationId = builder.applicationId;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
@@ -179,6 +192,9 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.logoUrl = builder.logoUrl;
             this.managedServiceCode = builder.managedServiceCode;
+            this.resourceServerIdentifier = builder.resourceServerIdentifier;
+            this.resourceServerSourceType = builder.resourceServerSourceType;
+            this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -191,6 +207,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         public static Applications create() {
             return builder().build();
+        }
+
+        /**
+         * @return applicationCreationType
+         */
+        public String getApplicationCreationType() {
+            return this.applicationCreationType;
         }
 
         /**
@@ -271,6 +294,27 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceServerIdentifier
+         */
+        public String getResourceServerIdentifier() {
+            return this.resourceServerIdentifier;
+        }
+
+        /**
+         * @return resourceServerSourceType
+         */
+        public String getResourceServerSourceType() {
+            return this.resourceServerSourceType;
+        }
+
+        /**
+         * @return resourceServerStatus
+         */
+        public String getResourceServerStatus() {
+            return this.resourceServerStatus;
+        }
+
+        /**
          * @return serviceManaged
          */
         public Boolean getServiceManaged() {
@@ -299,6 +343,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applicationCreationType; 
             private String applicationId; 
             private String applicationName; 
             private String applicationSourceType; 
@@ -310,6 +355,9 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String instanceId; 
             private String logoUrl; 
             private String managedServiceCode; 
+            private String resourceServerIdentifier; 
+            private String resourceServerSourceType; 
+            private String resourceServerStatus; 
             private Boolean serviceManaged; 
             private String ssoType; 
             private String status; 
@@ -319,6 +367,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             private Builder(Applications model) {
+                this.applicationCreationType = model.applicationCreationType;
                 this.applicationId = model.applicationId;
                 this.applicationName = model.applicationName;
                 this.applicationSourceType = model.applicationSourceType;
@@ -330,11 +379,22 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.logoUrl = model.logoUrl;
                 this.managedServiceCode = model.managedServiceCode;
+                this.resourceServerIdentifier = model.resourceServerIdentifier;
+                this.resourceServerSourceType = model.resourceServerSourceType;
+                this.resourceServerStatus = model.resourceServerStatus;
                 this.serviceManaged = model.serviceManaged;
                 this.ssoType = model.ssoType;
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * ApplicationCreationType.
+             */
+            public Builder applicationCreationType(String applicationCreationType) {
+                this.applicationCreationType = applicationCreationType;
+                return this;
+            }
 
             /**
              * <p>The ID of the application.</p>
@@ -467,6 +527,30 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
+                return this;
+            }
+
+            /**
+             * ResourceServerIdentifier.
+             */
+            public Builder resourceServerIdentifier(String resourceServerIdentifier) {
+                this.resourceServerIdentifier = resourceServerIdentifier;
+                return this;
+            }
+
+            /**
+             * ResourceServerSourceType.
+             */
+            public Builder resourceServerSourceType(String resourceServerSourceType) {
+                this.resourceServerSourceType = resourceServerSourceType;
+                return this;
+            }
+
+            /**
+             * ResourceServerStatus.
+             */
+            public Builder resourceServerStatus(String resourceServerStatus) {
+                this.resourceServerStatus = resourceServerStatus;
                 return this;
             }
 
