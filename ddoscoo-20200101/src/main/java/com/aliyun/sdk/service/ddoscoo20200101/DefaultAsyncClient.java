@@ -1292,6 +1292,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDomainCcProtectSwitch  DescribeDomainCcProtectSwitchRequest
+     * @return DescribeDomainCcProtectSwitchResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDomainCcProtectSwitchResponse> describeDomainCcProtectSwitch(DescribeDomainCcProtectSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDomainCcProtectSwitch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDomainCcProtectSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDomainCcProtectSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDomainH2Fingerprint  DescribeDomainH2FingerprintRequest
      * @return DescribeDomainH2FingerprintResponse
      */

@@ -504,6 +504,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainBpsResponse> describeDomainBps(DescribeDomainBpsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDomainCcProtectSwitch  DescribeDomainCcProtectSwitchRequest
+     * @return DescribeDomainCcProtectSwitchResponse
+     */
+    CompletableFuture<DescribeDomainCcProtectSwitchResponse> describeDomainCcProtectSwitch(DescribeDomainCcProtectSwitchRequest request);
+
+    /**
      * @param request the request parameters of DescribeDomainH2Fingerprint  DescribeDomainH2FingerprintRequest
      * @return DescribeDomainH2FingerprintResponse
      */
