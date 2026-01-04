@@ -1895,6 +1895,36 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>The <strong>CreateRouteTargetGroup</strong> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <strong>ListRouteTargetGroup</strong> to query the creation status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Pending</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has been created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Active-Standby Mode</strong>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</li>
+     * <li><strong>Primary Instance</strong>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</li>
+     * <li><strong>Standby Instance</strong>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouteTargetGroup  CreateRouteTargetGroupRequest
+     * @return CreateRouteTargetGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateRouteTargetGroupResponse> createRouteTargetGroup(CreateRouteTargetGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRouteTargetGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRouteTargetGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRouteTargetGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>You can create only one pair of interfaces to be connected between two routers.</li>
@@ -3365,6 +3395,33 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRouteTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Deleting</strong> state, it indicates that the route target group is being deleted.</li>
+     * <li>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouteTargetGroup  DeleteRouteTargetGroupRequest
+     * @return DeleteRouteTargetGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRouteTargetGroupResponse> deleteRouteTargetGroup(DeleteRouteTargetGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRouteTargetGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRouteTargetGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRouteTargetGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5732,6 +5789,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Get the information of the route target group instance.</p>
+     * 
+     * @param request the request parameters of GetRouteTargetGroup  GetRouteTargetGroupRequest
+     * @return GetRouteTargetGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetRouteTargetGroupResponse> getRouteTargetGroup(GetRouteTargetGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRouteTargetGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRouteTargetGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRouteTargetGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTrafficMirrorServiceStatus  GetTrafficMirrorServiceStatusRequest
      * @return GetTrafficMirrorServiceStatusResponse
      */
@@ -6195,6 +6273,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPublicIpAddressPoolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the route target groups.</p>
+     * 
+     * @param request the request parameters of ListRouteTargetGroups  ListRouteTargetGroupsRequest
+     * @return ListRouteTargetGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListRouteTargetGroupsResponse> listRouteTargetGroups(ListRouteTargetGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRouteTargetGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRouteTargetGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRouteTargetGroupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8219,6 +8318,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * @param request the request parameters of SwitchActiveRouteTarget  SwitchActiveRouteTargetRequest
+     * @return SwitchActiveRouteTargetResponse
+     */
+    @Override
+    public CompletableFuture<SwitchActiveRouteTargetResponse> switchActiveRouteTarget(SwitchActiveRouteTargetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SwitchActiveRouteTarget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SwitchActiveRouteTargetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SwitchActiveRouteTargetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</p>
      * <ul>
      * <li>The keys of tags that are added to the same instance must be unique.</li>
@@ -8730,6 +8850,33 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdatePublicIpAddressPoolAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has completed its update.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRouteTargetGroup  UpdateRouteTargetGroupRequest
+     * @return UpdateRouteTargetGroupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRouteTargetGroupResponse> updateRouteTargetGroup(UpdateRouteTargetGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRouteTargetGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRouteTargetGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRouteTargetGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

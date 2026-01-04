@@ -950,6 +950,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>The <strong>CreateRouteTargetGroup</strong> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <strong>ListRouteTargetGroup</strong> to query the creation status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Pending</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has been created.</li>
+     * </ul>
+     * </li>
+     * <li><strong>Active-Standby Mode</strong>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</li>
+     * <li><strong>Primary Instance</strong>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</li>
+     * <li><strong>Standby Instance</strong>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRouteTargetGroup  CreateRouteTargetGroupRequest
+     * @return CreateRouteTargetGroupResponse
+     */
+    CompletableFuture<CreateRouteTargetGroupResponse> createRouteTargetGroup(CreateRouteTargetGroupRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>You can create only one pair of interfaces to be connected between two routers.</li>
@@ -1728,6 +1746,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRouteTableResponse
      */
     CompletableFuture<DeleteRouteTableResponse> deleteRouteTable(DeleteRouteTableRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>DeleteRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Deleting</strong> state, it indicates that the route target group is being deleted.</li>
+     * <li>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteRouteTargetGroup  DeleteRouteTargetGroupRequest
+     * @return DeleteRouteTargetGroupResponse
+     */
+    CompletableFuture<DeleteRouteTargetGroupResponse> deleteRouteTargetGroup(DeleteRouteTargetGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -2687,6 +2720,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPublicIpAddressPoolServiceStatusResponse> getPublicIpAddressPoolServiceStatus(GetPublicIpAddressPoolServiceStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get the information of the route target group instance.</p>
+     * 
+     * @param request the request parameters of GetRouteTargetGroup  GetRouteTargetGroupRequest
+     * @return GetRouteTargetGroupResponse
+     */
+    CompletableFuture<GetRouteTargetGroupResponse> getRouteTargetGroup(GetRouteTargetGroupRequest request);
+
+    /**
      * @param request the request parameters of GetTrafficMirrorServiceStatus  GetTrafficMirrorServiceStatusRequest
      * @return GetTrafficMirrorServiceStatusResponse
      */
@@ -2854,6 +2896,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPublicIpAddressPoolsResponse
      */
     CompletableFuture<ListPublicIpAddressPoolsResponse> listPublicIpAddressPools(ListPublicIpAddressPoolsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Lists the route target groups.</p>
+     * 
+     * @param request the request parameters of ListRouteTargetGroups  ListRouteTargetGroupsRequest
+     * @return ListRouteTargetGroupsResponse
+     */
+    CompletableFuture<ListRouteTargetGroupsResponse> listRouteTargetGroups(ListRouteTargetGroupsRequest request);
 
     /**
      * <b>description</b> :
@@ -3794,6 +3845,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>Switch Active and Standby For RouteTargetGroup.</p>
+     * 
+     * @param request the request parameters of SwitchActiveRouteTarget  SwitchActiveRouteTargetRequest
+     * @return SwitchActiveRouteTargetResponse
+     */
+    CompletableFuture<SwitchActiveRouteTargetResponse> switchActiveRouteTarget(SwitchActiveRouteTargetRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:</p>
      * <ul>
      * <li>The keys of tags that are added to the same instance must be unique.</li>
@@ -4045,6 +4105,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePublicIpAddressPoolAttributeResponse
      */
     CompletableFuture<UpdatePublicIpAddressPoolAttributeResponse> updatePublicIpAddressPoolAttribute(UpdatePublicIpAddressPoolAttributeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The <strong>UpdateRouteTargetGroup</strong> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<ul>
+     * <li>When the route target group is in the <strong>Updating</strong> state, it indicates that the route target group is being created.</li>
+     * <li>When the route target group is in the <strong>Available</strong>, <strong>Unavailable</strong>, <strong>Switched</strong>, or <strong>Abnormal</strong> state, it indicates that the route target group has completed its update.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRouteTargetGroup  UpdateRouteTargetGroupRequest
+     * @return UpdateRouteTargetGroupResponse
+     */
+    CompletableFuture<UpdateRouteTargetGroupResponse> updateRouteTargetGroup(UpdateRouteTargetGroupRequest request);
 
     /**
      * <b>description</b> :
