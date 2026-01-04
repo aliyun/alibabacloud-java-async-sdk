@@ -1614,6 +1614,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAICPublicKeysResponse> listAICPublicKeys(ListAICPublicKeysRequest request);
 
     /**
+     * @param request the request parameters of ListAddons  ListAddonsRequest
+     * @return ListAddonsResponse
+     */
+    CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
+
+    /**
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse
      */
@@ -1624,6 +1630,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBucketsResponse
      */
     CompletableFuture<ListBucketsResponse> listBuckets(ListBucketsRequest request);
+
+    /**
+     * @param request the request parameters of ListClusterAddonInstances  ListClusterAddonInstancesRequest
+     * @return ListClusterAddonInstancesResponse
+     */
+    CompletableFuture<ListClusterAddonInstancesResponse> listClusterAddonInstances(ListClusterAddonInstancesRequest request);
 
     /**
      * @param request the request parameters of ListObjects  ListObjectsRequest
