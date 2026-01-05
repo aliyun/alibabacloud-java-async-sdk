@@ -26,6 +26,10 @@ public class DescribeDomainsRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    private String domainId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -55,6 +59,7 @@ public class DescribeDomainsRequest extends Request {
         super(builder);
         this.backend = builder.backend;
         this.domain = builder.domain;
+        this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -88,6 +93,13 @@ public class DescribeDomainsRequest extends Request {
      */
     public String getDomain() {
         return this.domain;
+    }
+
+    /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
     }
 
     /**
@@ -135,6 +147,7 @@ public class DescribeDomainsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainsRequest, Builder> {
         private String backend; 
         private String domain; 
+        private String domainId; 
         private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -150,6 +163,7 @@ public class DescribeDomainsRequest extends Request {
             super(request);
             this.backend = request.backend;
             this.domain = request.domain;
+            this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -179,6 +193,15 @@ public class DescribeDomainsRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DomainId.
+         */
+        public Builder domainId(String domainId) {
+            this.putQueryParameter("DomainId", domainId);
+            this.domainId = domainId;
             return this;
         }
 
