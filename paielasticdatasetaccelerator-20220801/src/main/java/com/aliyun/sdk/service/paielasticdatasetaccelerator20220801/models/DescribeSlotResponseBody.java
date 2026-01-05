@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSlotResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSlotResponseBody</p>
  */
 public class DescribeSlotResponseBody extends TeaModel {
-    @NameInMap("Capacity")
+    @com.aliyun.core.annotation.NameInMap("Capacity")
     private String capacity;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IoType")
+    @com.aliyun.core.annotation.NameInMap("IoType")
     private String ioType;
 
-    @NameInMap("LifeCycle")
+    @com.aliyun.core.annotation.NameInMap("LifeCycle")
     private SlotLifeCycle lifeCycle;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private SlotStatus status;
 
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @NameInMap("StorageUri")
+    @com.aliyun.core.annotation.NameInMap("StorageUri")
     private String storageUri;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeSlotResponseBody(Builder builder) {
@@ -86,6 +91,10 @@ public class DescribeSlotResponseBody extends TeaModel {
 
     public static DescribeSlotResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -182,7 +191,7 @@ public class DescribeSlotResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -214,9 +223,31 @@ public class DescribeSlotResponseBody extends TeaModel {
         private SlotStatus status; 
         private String storageType; 
         private String storageUri; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String userId; 
         private String uuid; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlotResponseBody model) {
+            this.capacity = model.capacity;
+            this.description = model.description;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.instanceId = model.instanceId;
+            this.ioType = model.ioType;
+            this.lifeCycle = model.lifeCycle;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.storageType = model.storageType;
+            this.storageUri = model.storageUri;
+            this.tags = model.tags;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+        } 
 
         /**
          * Capacity.
@@ -259,7 +290,10 @@ public class DescribeSlotResponseBody extends TeaModel {
         }
 
         /**
-         * 数据集加速槽的读写类型。
+         * <p>数据集加速槽的读写类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>readonly</p>
          */
         public Builder ioType(String ioType) {
             this.ioType = ioType;
@@ -291,7 +325,10 @@ public class DescribeSlotResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -325,7 +362,7 @@ public class DescribeSlotResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -352,11 +389,17 @@ public class DescribeSlotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSlotResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSlotResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -389,6 +432,14 @@ public class DescribeSlotResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

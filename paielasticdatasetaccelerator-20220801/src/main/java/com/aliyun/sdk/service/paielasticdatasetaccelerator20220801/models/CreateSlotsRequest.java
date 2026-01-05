@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlotsRequest} extends {@link RequestModel}
  *
  * <p>CreateSlotsRequest</p>
  */
 public class CreateSlotsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("Slots")
-    private java.util.List < Slots> slots;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Slots")
+    private java.util.List<Slots> slots;
 
     private CreateSlotsRequest(Builder builder) {
         super(builder);
@@ -39,7 +44,7 @@ public class CreateSlotsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +66,14 @@ public class CreateSlotsRequest extends Request {
     /**
      * @return slots
      */
-    public java.util.List < Slots> getSlots() {
+    public java.util.List<Slots> getSlots() {
         return this.slots;
     }
 
     public static final class Builder extends Request.Builder<CreateSlotsRequest, Builder> {
         private String regionId; 
         private Boolean dryRun; 
-        private java.util.List < Slots> slots; 
+        private java.util.List<Slots> slots; 
 
         private Builder() {
             super();
@@ -102,7 +107,7 @@ public class CreateSlotsRequest extends Request {
         /**
          * Slots.
          */
-        public Builder slots(java.util.List < Slots> slots) {
+        public Builder slots(java.util.List<Slots> slots) {
             this.putBodyParameter("Slots", slots);
             this.slots = slots;
             return this;
@@ -115,13 +120,19 @@ public class CreateSlotsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSlotsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSlotsRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String value;
 
         private Tags(Builder builder) {
@@ -155,6 +166,14 @@ public class CreateSlotsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -178,41 +197,47 @@ public class CreateSlotsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSlotsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSlotsRequest</p>
+     */
     public static class Slots extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Description")
-        @Validation(maxLength = 1024)
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024)
         private String description;
 
-        @NameInMap("EndpointIds")
+        @com.aliyun.core.annotation.NameInMap("EndpointIds")
         private String endpointIds;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("IoType")
+        @com.aliyun.core.annotation.NameInMap("IoType")
         private String ioType;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private SlotLifeCycle lifeCycle;
 
-        @NameInMap("Name")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String name;
 
-        @NameInMap("StorageType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String storageType;
 
-        @NameInMap("StorageUri")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StorageUri")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String storageUri;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         private Slots(Builder builder) {
             this.capacity = builder.capacity;
@@ -301,7 +326,7 @@ public class CreateSlotsRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -315,7 +340,23 @@ public class CreateSlotsRequest extends Request {
             private String name; 
             private String storageType; 
             private String storageUri; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slots model) {
+                this.capacity = model.capacity;
+                this.description = model.description;
+                this.endpointIds = model.endpointIds;
+                this.instanceId = model.instanceId;
+                this.ioType = model.ioType;
+                this.lifeCycle = model.lifeCycle;
+                this.name = model.name;
+                this.storageType = model.storageType;
+                this.storageUri = model.storageUri;
+                this.tags = model.tags;
+            } 
 
             /**
              * Capacity.
@@ -342,7 +383,10 @@ public class CreateSlotsRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inst-my1tk3jggooi5uwks5</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -374,7 +418,10 @@ public class CreateSlotsRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -382,7 +429,10 @@ public class CreateSlotsRequest extends Request {
             }
 
             /**
-             * StorageUri.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://pai-vision-data-hz2.oss-cn-hangzhou-internal.aliyuncs.com/data/VOCdevkit/VOC2007/ImageSets/Main/val.txt</p>
              */
             public Builder storageUri(String storageUri) {
                 this.storageUri = storageUri;
@@ -392,7 +442,7 @@ public class CreateSlotsRequest extends Request {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

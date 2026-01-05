@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEndpointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEndpointsResponseBody</p>
  */
 public class ListEndpointsResponseBody extends TeaModel {
-    @NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
+    private java.util.List<Endpoints> endpoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListEndpointsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class ListEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -57,14 +66,23 @@ public class ListEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEndpointsResponseBody model) {
+            this.endpoints = model.endpoints;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Endpoints.
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
@@ -91,38 +109,44 @@ public class ListEndpointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEndpointsResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private EndpointStatus status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private Endpoints(Builder builder) {
@@ -237,6 +261,23 @@ public class ListEndpointsResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceId = model.instanceId;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.status = model.status;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.uuid = model.uuid;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * GmtCreateTime.
              */
@@ -254,7 +295,10 @@ public class ListEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * 所属加速实例的ID。
+             * <p>所属加速实例的ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inst-ivrq92qhbyrg4jctih</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

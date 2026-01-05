@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Metric} extends {@link TeaModel}
  *
  * <p>Metric</p>
  */
 public class Metric extends TeaModel {
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private String timestamp;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private Double value;
 
     private Metric(Builder builder) {
@@ -29,6 +34,10 @@ public class Metric extends TeaModel {
 
     public static Metric create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class Metric extends TeaModel {
     public static final class Builder {
         private String timestamp; 
         private Double value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Metric model) {
+            this.timestamp = model.timestamp;
+            this.value = model.value;
+        } 
 
         /**
          * Timestamp.

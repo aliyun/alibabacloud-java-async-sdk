@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceStatus} extends {@link TeaModel}
  *
  * <p>InstanceStatus</p>
  */
 public class InstanceStatus extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Phase")
+    @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
 
-    @NameInMap("SlotNum")
+    @com.aliyun.core.annotation.NameInMap("SlotNum")
     private Integer slotNum;
 
-    @NameInMap("UsedCapacity")
+    @com.aliyun.core.annotation.NameInMap("UsedCapacity")
     private String usedCapacity;
 
     private InstanceStatus(Builder builder) {
@@ -41,6 +46,10 @@ public class InstanceStatus extends TeaModel {
 
     public static InstanceStatus create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class InstanceStatus extends TeaModel {
         private String phase; 
         private Integer slotNum; 
         private String usedCapacity; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceStatus model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.phase = model.phase;
+            this.slotNum = model.slotNum;
+            this.usedCapacity = model.usedCapacity;
+        } 
 
         /**
          * Code.

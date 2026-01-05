@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentRequest} extends {@link RequestModel}
  *
  * <p>DescribeComponentRequest</p>
  */
 public class DescribeComponentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Path
-    @NameInMap("ComponentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentId;
 
-    @Query
-    @NameInMap("RenderTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenderTemplate")
     private Boolean renderTemplate;
 
-    @Query
-    @NameInMap("Values")
-    private java.util.Map < String, ? > values;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Values")
+    private java.util.Map<String, ?> values;
 
     private DescribeComponentRequest(Builder builder) {
         super(builder);
@@ -45,7 +50,7 @@ public class DescribeComponentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +79,7 @@ public class DescribeComponentRequest extends Request {
     /**
      * @return values
      */
-    public java.util.Map < String, ? > getValues() {
+    public java.util.Map<String, ?> getValues() {
         return this.values;
     }
 
@@ -82,7 +87,7 @@ public class DescribeComponentRequest extends Request {
         private String regionId; 
         private String componentId; 
         private Boolean renderTemplate; 
-        private java.util.Map < String, ? > values; 
+        private java.util.Map<String, ?> values; 
 
         private Builder() {
             super();
@@ -106,7 +111,10 @@ public class DescribeComponentRequest extends Request {
         }
 
         /**
-         * ComponentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmpt-my1tk3jggooi5uwks5</p>
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("ComponentId", componentId);
@@ -126,7 +134,7 @@ public class DescribeComponentRequest extends Request {
         /**
          * Values.
          */
-        public Builder values(java.util.Map < String, ? > values) {
+        public Builder values(java.util.Map<String, ?> values) {
             String valuesShrink = shrink(values, "Values", "json");
             this.putQueryParameter("Values", valuesShrink);
             this.values = values;

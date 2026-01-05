@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySlotMetricsResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySlotMetricsResponseBody</p>
  */
 public class QuerySlotMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
-    private java.util.List < Metric > metrics;
+    @com.aliyun.core.annotation.NameInMap("Metrics")
+    private java.util.List<Metric> metrics;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private QuerySlotMetricsResponseBody(Builder builder) {
@@ -36,10 +41,14 @@ public class QuerySlotMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metrics
      */
-    public java.util.List < Metric > getMetrics() {
+    public java.util.List<Metric> getMetrics() {
         return this.metrics;
     }
 
@@ -58,14 +67,23 @@ public class QuerySlotMetricsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Metric > metrics; 
+        private java.util.List<Metric> metrics; 
         private String period; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySlotMetricsResponseBody model) {
+            this.metrics = model.metrics;
+            this.period = model.period;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Metrics.
          */
-        public Builder metrics(java.util.List < Metric > metrics) {
+        public Builder metrics(java.util.List<Metric> metrics) {
             this.metrics = metrics;
             return this;
         }
@@ -79,7 +97,10 @@ public class QuerySlotMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A731A84D-55C9-44F7-99BB-E1CF0CF19197</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

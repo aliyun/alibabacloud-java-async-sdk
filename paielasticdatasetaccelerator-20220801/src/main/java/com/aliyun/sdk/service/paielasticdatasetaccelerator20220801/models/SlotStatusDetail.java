@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SlotStatusDetail} extends {@link TeaModel}
  *
  * <p>SlotStatusDetail</p>
  */
 public class SlotStatusDetail extends TeaModel {
-    @NameInMap("LoadedFileNum")
+    @com.aliyun.core.annotation.NameInMap("LoadedFileNum")
     private Long loadedFileNum;
 
-    @NameInMap("LoadedFileSize")
+    @com.aliyun.core.annotation.NameInMap("LoadedFileSize")
     private String loadedFileSize;
 
-    @NameInMap("LoadingTimeCost")
+    @com.aliyun.core.annotation.NameInMap("LoadingTimeCost")
     private Long loadingTimeCost;
 
     private SlotStatusDetail(Builder builder) {
@@ -33,6 +38,10 @@ public class SlotStatusDetail extends TeaModel {
 
     public static SlotStatusDetail create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class SlotStatusDetail extends TeaModel {
         private Long loadedFileNum; 
         private String loadedFileSize; 
         private Long loadingTimeCost; 
+
+        private Builder() {
+        } 
+
+        private Builder(SlotStatusDetail model) {
+            this.loadedFileNum = model.loadedFileNum;
+            this.loadedFileSize = model.loadedFileSize;
+            this.loadingTimeCost = model.loadingTimeCost;
+        } 
 
         /**
          * LoadedFileNum.

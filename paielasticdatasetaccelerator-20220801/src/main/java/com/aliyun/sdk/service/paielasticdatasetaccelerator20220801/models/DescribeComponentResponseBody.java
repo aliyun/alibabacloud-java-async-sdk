@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComponentResponseBody</p>
  */
 public class DescribeComponentResponseBody extends TeaModel {
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("RenderedContent")
+    @com.aliyun.core.annotation.NameInMap("RenderedContent")
     private String renderedContent;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private Template template;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribeComponentResponseBody(Builder builder) {
@@ -61,6 +66,10 @@ public class DescribeComponentResponseBody extends TeaModel {
 
     public static DescribeComponentResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +153,22 @@ public class DescribeComponentResponseBody extends TeaModel {
         private String userId; 
         private String uuid; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeComponentResponseBody model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.renderedContent = model.renderedContent;
+            this.requestId = model.requestId;
+            this.template = model.template;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+            this.version = model.version;
+        } 
 
         /**
          * GmtCreateTime.
@@ -231,11 +256,17 @@ public class DescribeComponentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComponentResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Template(Builder builder) {
@@ -268,6 +299,14 @@ public class DescribeComponentResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
 
             /**
              * Type.

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SlotStatus} extends {@link TeaModel}
  *
  * <p>SlotStatus</p>
  */
 public class SlotStatus extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private SlotStatusDetail detail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Phase")
+    @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
 
     private SlotStatus(Builder builder) {
@@ -37,6 +42,10 @@ public class SlotStatus extends TeaModel {
 
     public static SlotStatus create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,6 +81,16 @@ public class SlotStatus extends TeaModel {
         private SlotStatusDetail detail; 
         private String message; 
         private String phase; 
+
+        private Builder() {
+        } 
+
+        private Builder(SlotStatus model) {
+            this.code = model.code;
+            this.detail = model.detail;
+            this.message = model.message;
+            this.phase = model.phase;
+        } 
 
         /**
          * Code.

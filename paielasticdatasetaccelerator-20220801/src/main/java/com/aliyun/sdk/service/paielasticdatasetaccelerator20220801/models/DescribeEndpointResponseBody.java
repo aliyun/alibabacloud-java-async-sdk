@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndpointResponseBody</p>
  */
 public class DescribeEndpointResponseBody extends TeaModel {
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private EndpointStatus status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VswitchId")
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
     private String vswitchId;
 
     private DescribeEndpointResponseBody(Builder builder) {
@@ -65,6 +70,10 @@ public class DescribeEndpointResponseBody extends TeaModel {
 
     public static DescribeEndpointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -156,6 +165,23 @@ public class DescribeEndpointResponseBody extends TeaModel {
         private String uuid; 
         private String vpcId; 
         private String vswitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEndpointResponseBody model) {
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.name = model.name;
+            this.ownerId = model.ownerId;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.type = model.type;
+            this.userId = model.userId;
+            this.uuid = model.uuid;
+            this.vpcId = model.vpcId;
+            this.vswitchId = model.vswitchId;
+        } 
 
         /**
          * GmtCreateTime.

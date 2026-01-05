@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListComponentsResponseBody</p>
  */
 public class ListComponentsResponseBody extends TeaModel {
-    @NameInMap("Components")
-    private java.util.List < Components> components;
+    @com.aliyun.core.annotation.NameInMap("Components")
+    private java.util.List<Components> components;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListComponentsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class ListComponentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -57,14 +66,23 @@ public class ListComponentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListComponentsResponseBody model) {
+            this.components = model.components;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Components.
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
             return this;
         }
@@ -91,11 +109,17 @@ public class ListComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
     public static class Template extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Template(Builder builder) {
@@ -129,6 +153,14 @@ public class ListComponentsResponseBody extends TeaModel {
             private String type; 
             private String uri; 
 
+            private Builder() {
+            } 
+
+            private Builder(Template model) {
+                this.type = model.type;
+                this.uri = model.uri;
+            } 
+
             /**
              * Type.
              */
@@ -152,29 +184,35 @@ public class ListComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComponentsResponseBody</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private Template template;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Components(Builder builder) {
@@ -261,6 +299,20 @@ public class ListComponentsResponseBody extends TeaModel {
             private String userId; 
             private String uuid; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.template = model.template;
+                this.userId = model.userId;
+                this.uuid = model.uuid;
+                this.version = model.version;
+            } 
 
             /**
              * GmtCreateTime.

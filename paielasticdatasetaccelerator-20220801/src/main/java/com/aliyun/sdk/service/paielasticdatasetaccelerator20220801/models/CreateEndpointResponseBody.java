@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>CreateEndpointResponseBody</p>
  */
 public class CreateEndpointResponseBody extends TeaModel {
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEndpointResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateEndpointResponseBody extends TeaModel {
 
     public static CreateEndpointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateEndpointResponseBody extends TeaModel {
     public static final class Builder {
         private String endpointId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEndpointResponseBody model) {
+            this.endpointId = model.endpointId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * EndpointId.

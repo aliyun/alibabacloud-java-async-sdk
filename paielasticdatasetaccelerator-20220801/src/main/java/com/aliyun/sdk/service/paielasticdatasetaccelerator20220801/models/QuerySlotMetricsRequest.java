@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySlotMetricsRequest} extends {@link RequestModel}
  *
  * <p>QuerySlotMetricsRequest</p>
  */
 public class QuerySlotMetricsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Path
-    @NameInMap("SlotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("SlotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slotId;
 
-    @Query
-    @NameInMap("Dimensions")
-    private java.util.Map < String, ? > dimensions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private java.util.Map<String, ?> dimensions;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("MetricType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TimeStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStep")
     private String timeStep;
 
     private QuerySlotMetricsRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class QuerySlotMetricsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +88,7 @@ public class QuerySlotMetricsRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.Map < String, ? > getDimensions() {
+    public java.util.Map<String, ?> getDimensions() {
         return this.dimensions;
     }
 
@@ -118,7 +123,7 @@ public class QuerySlotMetricsRequest extends Request {
     public static final class Builder extends Request.Builder<QuerySlotMetricsRequest, Builder> {
         private String regionId; 
         private String slotId; 
-        private java.util.Map < String, ? > dimensions; 
+        private java.util.Map<String, ?> dimensions; 
         private String endTime; 
         private String metricType; 
         private String startTime; 
@@ -149,7 +154,10 @@ public class QuerySlotMetricsRequest extends Request {
         }
 
         /**
-         * SlotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slot-abcdefgh12****</p>
          */
         public Builder slotId(String slotId) {
             this.putPathParameter("SlotId", slotId);
@@ -160,7 +168,7 @@ public class QuerySlotMetricsRequest extends Request {
         /**
          * Dimensions.
          */
-        public Builder dimensions(java.util.Map < String, ? > dimensions) {
+        public Builder dimensions(java.util.Map<String, ?> dimensions) {
             String dimensionsShrink = shrink(dimensions, "Dimensions", "json");
             this.putQueryParameter("Dimensions", dimensionsShrink);
             this.dimensions = dimensions;
@@ -177,7 +185,10 @@ public class QuerySlotMetricsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkReceiveBytesPerSecond</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);

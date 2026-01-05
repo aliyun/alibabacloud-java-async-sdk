@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSlotsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSlotsResponseBody</p>
  */
 public class ListSlotsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Slots")
-    private java.util.List < Slots> slots;
+    @com.aliyun.core.annotation.NameInMap("Slots")
+    private java.util.List<Slots> slots;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSlotsResponseBody(Builder builder) {
@@ -35,6 +40,10 @@ public class ListSlotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class ListSlotsResponseBody extends TeaModel {
     /**
      * @return slots
      */
-    public java.util.List < Slots> getSlots() {
+    public java.util.List<Slots> getSlots() {
         return this.slots;
     }
 
@@ -58,8 +67,17 @@ public class ListSlotsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Slots> slots; 
+        private java.util.List<Slots> slots; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSlotsResponseBody model) {
+            this.requestId = model.requestId;
+            this.slots = model.slots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RequestId.
@@ -72,7 +90,7 @@ public class ListSlotsResponseBody extends TeaModel {
         /**
          * Slots.
          */
-        public Builder slots(java.util.List < Slots> slots) {
+        public Builder slots(java.util.List<Slots> slots) {
             this.slots = slots;
             return this;
         }
@@ -91,35 +109,41 @@ public class ListSlotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSlotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlotsResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private EndpointStatus status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private Endpoints(Builder builder) {
@@ -225,6 +249,22 @@ public class ListSlotsResponseBody extends TeaModel {
             private String vpcId; 
             private String vswitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.status = model.status;
+                this.type = model.type;
+                this.userId = model.userId;
+                this.uuid = model.uuid;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
+
             /**
              * GmtCreateTime.
              */
@@ -312,11 +352,17 @@ public class ListSlotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSlotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlotsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -350,6 +396,14 @@ public class ListSlotsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -373,53 +427,59 @@ public class ListSlotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSlotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSlotsResponseBody</p>
+     */
     public static class Slots extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
+        private java.util.List<Endpoints> endpoints;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IoType")
+        @com.aliyun.core.annotation.NameInMap("IoType")
         private String ioType;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private SlotLifeCycle lifeCycle;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private SlotStatus status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("StorageUri")
+        @com.aliyun.core.annotation.NameInMap("StorageUri")
         private String storageUri;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Slots(Builder builder) {
@@ -466,7 +526,7 @@ public class ListSlotsResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -543,7 +603,7 @@ public class ListSlotsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -564,7 +624,7 @@ public class ListSlotsResponseBody extends TeaModel {
         public static final class Builder {
             private String capacity; 
             private String description; 
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String instanceId; 
@@ -575,9 +635,31 @@ public class ListSlotsResponseBody extends TeaModel {
             private SlotStatus status; 
             private String storageType; 
             private String storageUri; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String userId; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Slots model) {
+                this.capacity = model.capacity;
+                this.description = model.description;
+                this.endpoints = model.endpoints;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
+                this.instanceId = model.instanceId;
+                this.ioType = model.ioType;
+                this.lifeCycle = model.lifeCycle;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.status = model.status;
+                this.storageType = model.storageType;
+                this.storageUri = model.storageUri;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * Capacity.
@@ -598,7 +680,7 @@ public class ListSlotsResponseBody extends TeaModel {
             /**
              * Endpoints.
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
@@ -628,7 +710,10 @@ public class ListSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * 数据集加速槽的读写类型。
+             * <p>数据集加速槽的读写类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readonly</p>
              */
             public Builder ioType(String ioType) {
                 this.ioType = ioType;
@@ -686,7 +771,7 @@ public class ListSlotsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

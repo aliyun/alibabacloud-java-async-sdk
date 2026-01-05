@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SlotLifeCycle} extends {@link TeaModel}
  *
  * <p>SlotLifeCycle</p>
  */
 public class SlotLifeCycle extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private SlotLifeCycle(Builder builder) {
@@ -29,6 +34,10 @@ public class SlotLifeCycle extends TeaModel {
 
     public static SlotLifeCycle create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class SlotLifeCycle extends TeaModel {
     public static final class Builder {
         private String config; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(SlotLifeCycle model) {
+            this.config = model.config;
+            this.type = model.type;
+        } 
 
         /**
          * Config.

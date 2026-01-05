@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSlotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSlotResponseBody</p>
  */
 public class CreateSlotResponseBody extends TeaModel {
-    @NameInMap("EndpointIds")
+    @com.aliyun.core.annotation.NameInMap("EndpointIds")
     private String endpointIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlotId")
+    @com.aliyun.core.annotation.NameInMap("SlotId")
     private String slotId;
 
     private CreateSlotResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class CreateSlotResponseBody extends TeaModel {
 
     public static CreateSlotResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class CreateSlotResponseBody extends TeaModel {
         private String endpointIds; 
         private String requestId; 
         private String slotId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSlotResponseBody model) {
+            this.endpointIds = model.endpointIds;
+            this.requestId = model.requestId;
+            this.slotId = model.slotId;
+        } 
 
         /**
          * EndpointIds.

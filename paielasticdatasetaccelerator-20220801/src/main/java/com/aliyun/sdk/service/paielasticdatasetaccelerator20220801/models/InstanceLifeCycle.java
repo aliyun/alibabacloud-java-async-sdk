@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paielasticdatasetaccelerator20220801.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstanceLifeCycle} extends {@link TeaModel}
  *
  * <p>InstanceLifeCycle</p>
  */
 public class InstanceLifeCycle extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private InstanceLifeCycle(Builder builder) {
@@ -29,6 +34,10 @@ public class InstanceLifeCycle extends TeaModel {
 
     public static InstanceLifeCycle create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class InstanceLifeCycle extends TeaModel {
     public static final class Builder {
         private String config; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceLifeCycle model) {
+            this.config = model.config;
+            this.type = model.type;
+        } 
 
         /**
          * Config.
