@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
+     * @param request the request parameters of ClonePolarFsBasicSnapshot  ClonePolarFsBasicSnapshotRequest
+     * @return ClonePolarFsBasicSnapshotResponse
+     */
+    CompletableFuture<ClonePolarFsBasicSnapshotResponse> clonePolarFsBasicSnapshot(ClonePolarFsBasicSnapshotRequest request);
+
+    /**
      * @param request the request parameters of CloseAITask  CloseAITaskRequest
      * @return CloseAITaskResponse
      */
