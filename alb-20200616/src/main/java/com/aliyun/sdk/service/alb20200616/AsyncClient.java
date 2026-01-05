@@ -348,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServerGroupResponse> deleteServerGroup(DeleteServerGroupRequest request);
 
     /**
+     * @param request the request parameters of DescribeCapacityReservation  DescribeCapacityReservationRequest
+     * @return DescribeCapacityReservationResponse
+     */
+    CompletableFuture<DescribeCapacityReservationResponse> describeCapacityReservation(DescribeCapacityReservationRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -631,6 +637,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return LoadBalancerLeaveSecurityGroupResponse
      */
     CompletableFuture<LoadBalancerLeaveSecurityGroupResponse> loadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCapacityReservation  ModifyCapacityReservationRequest
+     * @return ModifyCapacityReservationResponse
+     */
+    CompletableFuture<ModifyCapacityReservationResponse> modifyCapacityReservation(ModifyCapacityReservationRequest request);
 
     /**
      * @param request the request parameters of MoveResourceGroup  MoveResourceGroupRequest

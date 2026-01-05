@@ -212,8 +212,8 @@ public class CreateAScriptsRequest extends Request {
             } 
 
             /**
-             * <p>The attribute name.</p>
-             * <p>Set the value to <strong>EsDebug</strong>, which specifies that if requests carry the _es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.</p>
+             * <p>The key of the extended attribute.</p>
+             * <p>You can only set the key to <strong>EsDebug</strong>. This extended attribute adds a debug response header to record the execution of the AScript rule if the client request includes the _es_dbg parameter and its value matches the specified value of the extended attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>EsDebug</p>
@@ -224,7 +224,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The attribute value, which must be 1 to 128 characters in length, and can contain letters or digits.</p>
+             * <p>The value of the extended attribute, which can contain a maximum of 128 characters, including letters and digits.</p>
              * 
              * <strong>example:</strong>
              * <p>test123</p>
@@ -349,7 +349,7 @@ public class CreateAScriptsRequest extends Request {
 
             /**
              * <p>The name of the AScript rule.</p>
-             * <p>The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+             * <p>The length must be between 2 and 128 characters. This name must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -361,7 +361,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the AScript rule. Valid values:</p>
+             * <p>Enables the AScript rule. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
              * <li><strong>false</strong> (default)</li>
@@ -376,7 +376,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the extended attributes of the AScript rule. Valid values:</p>
+             * <p>Enables the extended attribute of the Ascript rule. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false (default)</li>
@@ -391,7 +391,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>The extended attributes.</p>
+             * <p>The extended attribute of the AScript rule.</p>
              */
             public Builder extAttributes(java.util.List<ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
@@ -399,14 +399,11 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * <p>可编程脚本执行位置</p>
+             * <p>The position where the Ascript rule is evaluated. Valid values are:</p>
              * <ul>
-             * <li><p>RequestHead（默认值）：请求方向规则执行前</p>
-             * </li>
-             * <li><p>RequestFoot：请求方向规则执行后</p>
-             * </li>
-             * <li><p>ResponseHead：响应方向规则执行前</p>
-             * </li>
+             * <li>RequestHead (default): before inbound rules are evaluated</li>
+             * <li>RequestFoot: after inbound rules are evaluated</li>
+             * <li>ResponseHead: before outbound rules are evaluated</li>
              * </ul>
              * 
              * <strong>example:</strong>

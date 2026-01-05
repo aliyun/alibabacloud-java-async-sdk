@@ -178,7 +178,6 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         private Integer port;
 
         @com.aliyun.core.annotation.NameInMap("ServerId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
         @com.aliyun.core.annotation.NameInMap("ServerIp")
@@ -302,7 +301,6 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
              * <li>Specify an IP address if you set <strong>ServerType</strong> to <strong>Ip</strong>.</li>
              * <li>Specify the Alibaba Cloud Resource Name (ARN) of a Function Compute function if you set <strong>ServerType</strong> to <strong>Fc</strong>.</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp1f9kdprbgy9uiu****</p>
