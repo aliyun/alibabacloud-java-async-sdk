@@ -121,6 +121,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSmartShortUrlResponse> createSmartShortUrl(CreateSmartShortUrlRequest request);
 
     /**
+     * @param request the request parameters of CreateSmsAppIcpRecord  CreateSmsAppIcpRecordRequest
+     * @return CreateSmsAppIcpRecordResponse
+     */
+    CompletableFuture<CreateSmsAppIcpRecordResponse> createSmsAppIcpRecord(CreateSmsAppIcpRecordRequest request);
+
+    /**
      * @param request the request parameters of CreateSmsAuthorizationLetter  CreateSmsAuthorizationLetterRequest
      * @return CreateSmsAuthorizationLetterResponse
      */
@@ -155,6 +161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSmsTemplateResponse
      */
     CompletableFuture<CreateSmsTemplateResponse> createSmsTemplate(CreateSmsTemplateRequest request);
+
+    /**
+     * @param request the request parameters of CreateSmsTrademark  CreateSmsTrademarkRequest
+     * @return CreateSmsTrademarkResponse
+     */
+    CompletableFuture<CreateSmsTrademarkResponse> createSmsTrademark(CreateSmsTrademarkRequest request);
 
     /**
      * @param request the request parameters of DeleteExtCodeSign  DeleteExtCodeSignRequest
@@ -296,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSmsTemplateResponse> getSmsTemplate(GetSmsTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetSmsTemplateList  GetSmsTemplateListRequest
+     * @return GetSmsTemplateListResponse
+     */
+    CompletableFuture<GetSmsTemplateListResponse> getSmsTemplateList(GetSmsTemplateListRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 50 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -409,6 +427,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QuerySingleSmsQualificationResponse> querySingleSmsQualification(QuerySingleSmsQualificationRequest request);
 
     /**
+     * @param request the request parameters of QuerySmsAppIcpRecord  QuerySmsAppIcpRecordRequest
+     * @return QuerySmsAppIcpRecordResponse
+     */
+    CompletableFuture<QuerySmsAppIcpRecordResponse> querySmsAppIcpRecord(QuerySmsAppIcpRecordRequest request);
+
+    /**
      * @param request the request parameters of QuerySmsAuthorizationLetter  QuerySmsAuthorizationLetterRequest
      * @return QuerySmsAuthorizationLetterResponse
      */
@@ -463,6 +487,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QuerySmsTemplateListResponse
      */
     CompletableFuture<QuerySmsTemplateListResponse> querySmsTemplateList(QuerySmsTemplateListRequest request);
+
+    /**
+     * @param request the request parameters of QuerySmsTrademark  QuerySmsTrademarkRequest
+     * @return QuerySmsTrademarkResponse
+     */
+    CompletableFuture<QuerySmsTrademarkResponse> querySmsTrademark(QuerySmsTrademarkRequest request);
 
     /**
      * @param request the request parameters of RequiredPhoneCode  RequiredPhoneCodeRequest
