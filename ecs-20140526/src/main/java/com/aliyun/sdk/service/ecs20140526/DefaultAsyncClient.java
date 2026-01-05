@@ -4215,6 +4215,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeLockedSnapshots  DescribeLockedSnapshotsRequest
+     * @return DescribeLockedSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLockedSnapshotsResponse> describeLockedSnapshots(DescribeLockedSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLockedSnapshots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLockedSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLockedSnapshotsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * 
@@ -6123,6 +6141,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can also use this operation to reconfigure locked snapshots. The configurable items depend on the lock mode and lock status:</p>
+     * <ul>
+     * <li>If a snapshot is locked in compliance mode and is in a cooling-off period, you can extend or shorten the cooling-off period and extend or shorten the lock duration.</li>
+     * <li>If the snapshot is locked in compliance mode and the cooling-off period has expired, you can only extend the lock duration.<blockquote>
+     * <p> If you reconfigure a locked snapshot during the cooling-off period, the system will be regarded as a relock operation, and all lock parameters will be reset instead of individual adjustments.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of LockSnapshot  LockSnapshotRequest
+     * @return LockSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<LockSnapshotResponse> lockSnapshot(LockSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("LockSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(LockSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<LockSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -9151,6 +9197,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnassociateHaVipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnlockSnapshot  UnlockSnapshotRequest
+     * @return UnlockSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<UnlockSnapshotResponse> unlockSnapshot(UnlockSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnlockSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnlockSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnlockSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

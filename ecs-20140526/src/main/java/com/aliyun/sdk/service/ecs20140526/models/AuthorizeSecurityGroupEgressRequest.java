@@ -557,7 +557,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * <p>The security group rules. You can specify 1 to 100 security group rules.</p>
+         * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
          */
         public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -911,7 +911,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             } 
 
             /**
-             * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
+             * <p>The description of the security group rule. The description can be up to 1 to 512 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>This is description.</p>
@@ -933,7 +933,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The ID of the destination security group.</p>
+             * <p>The ID of the destination security group that is specified in the security group rule.</p>
              * <ul>
              * <li>You must specify at least one of the following parameters: <code>DestGroupId</code>, <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, and <code>DestPrefixListId</code>.</li>
              * <li>If you specify <code>DestGroupId</code> but do not specify <code>DestCidrIp</code>, you must set <code>NicType</code> to intranet.</li>
@@ -980,9 +980,9 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
 
             /**
              * <p>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
-             * <p>When you specify this parameter, take note of the following items:</p>
+             * <p>Notes:</p>
              * <ul>
-             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</li>
              * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
              * </ul>
              * 
@@ -995,14 +995,28 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The protocol. The values of this parameter are case-insensitive. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+             * <p>Network Layer /transport layer protocol. Two types of assignments are supported:</p>
+             * <ol>
+             * <li>The case-insensitive protocol name. Valid value:</li>
+             * </ol>
              * <ul>
-             * <li>TCP.</li>
-             * <li>UDP.</li>
-             * <li>ICMP.</li>
-             * <li>ICMPv6.</li>
-             * <li>GRE.</li>
-             * <li>ALL: All protocols are supported.</li>
+             * <li>ICMP</li>
+             * <li>GRE</li>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>ALL: supports all protocols.</li>
+             * </ul>
+             * <ol start="2">
+             * <li>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</li>
+             * </ol>
+             * <ul>
+             * <li>Philippines (Manila)</li>
+             * <li>UK (London)</li>
+             * <li>Malaysia (Kuala Lumpur)</li>
+             * <li>China (Hohhot)</li>
+             * <li>China (Qingdao)</li>
+             * <li>US (Silicon Valley)</li>
+             * <li>Singapore</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1016,7 +1030,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             /**
              * <p>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p> This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and the <code>DestCidrIp</code> parameter cannot be set at the same time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1028,10 +1042,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv6 CIDR block or IPv6 address.</p>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>The source IPv6 CIDR block of the security group rule. or IPv6 address.</p>
+             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * <blockquote>
-             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1043,7 +1057,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
              * <ul>
              * <li><p>internet: public NIC.</p>
              * </li>
@@ -1065,7 +1079,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The action of the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+             * <p>The action of the security group rule. Valid values:</p>
              * <ul>
              * <li>accept: allows outbound access.</li>
              * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
@@ -1081,12 +1095,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of destination port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+             * <p>The destination port range of the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If the IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+             * <li>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
+             * <li>ICMP:-1/-1.</li>
+             * <li>GRE:-1/-1.</li>
+             * <li>ALL:-1/-1.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1098,7 +1112,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * PortRangeListId.
+             * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available prefix lists.</p>
+             * <ul>
+             * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
+             * <li>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For more information about limits on security groups and ports, see <a href="~~25412#SecurityGroupQuota1~~">Limits on security groups</a>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>prl-2ze9743****</p>
              */
             public Builder portRangeListId(String portRangeListId) {
                 this.portRangeListId = portRangeListId;
@@ -1106,7 +1127,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+             * <p>The priority of security group rule N. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
              * <p>Default value: 1.</p>
              * 
              * <strong>example:</strong>
@@ -1118,8 +1139,8 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The source IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -1130,12 +1151,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * <p>The range of source port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+             * <p>The source port range of the security group rule. Valid values:</p>
              * <ul>
-             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
-             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
-             * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+             * <li>TCP/UDP protocol: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</li>
+             * <li>ICMP protocol:-1/-1.</li>
+             * <li>GRE protocol:-1/-1.</li>
+             * <li>ALL:-1/-1.</li>
              * </ul>
              * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
              * 

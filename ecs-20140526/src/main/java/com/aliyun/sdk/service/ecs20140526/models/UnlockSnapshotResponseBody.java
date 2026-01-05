@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DisableNetworkInterfaceQoSResponseBody} extends {@link TeaModel}
+ * {@link UnlockSnapshotResponseBody} extends {@link TeaModel}
  *
- * <p>DisableNetworkInterfaceQoSResponseBody</p>
+ * <p>UnlockSnapshotResponseBody</p>
  */
-public class DisableNetworkInterfaceQoSResponseBody extends TeaModel {
+public class UnlockSnapshotResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DisableNetworkInterfaceQoSResponseBody(Builder builder) {
+    private UnlockSnapshotResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class DisableNetworkInterfaceQoSResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DisableNetworkInterfaceQoSResponseBody create() {
+    public static UnlockSnapshotResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class DisableNetworkInterfaceQoSResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DisableNetworkInterfaceQoSResponseBody model) {
+        private Builder(UnlockSnapshotResponseBody model) {
             this.requestId = model.requestId;
         } 
 
@@ -57,15 +57,15 @@ public class DisableNetworkInterfaceQoSResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DisableNetworkInterfaceQoSResponseBody build() {
-            return new DisableNetworkInterfaceQoSResponseBody(this);
+        public UnlockSnapshotResponseBody build() {
+            return new UnlockSnapshotResponseBody(this);
         } 
 
     } 

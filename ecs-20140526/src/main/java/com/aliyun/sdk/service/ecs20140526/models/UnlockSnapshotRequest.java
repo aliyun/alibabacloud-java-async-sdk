@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifySnapshotCategoryRequest} extends {@link RequestModel}
+ * {@link UnlockSnapshotRequest} extends {@link RequestModel}
  *
- * <p>ModifySnapshotCategoryRequest</p>
+ * <p>UnlockSnapshotRequest</p>
  */
-public class ModifySnapshotCategoryRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
-    private String sourceRegionId;
+public class UnlockSnapshotRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Category")
-    private String category;
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -34,6 +34,11 @@ public class ModifySnapshotCategoryRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -42,24 +47,19 @@ public class ModifySnapshotCategoryRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RetentionDays")
-    @com.aliyun.core.annotation.Validation(maximum = 65536, minimum = 61)
-    private Integer retentionDays;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
 
-    private ModifySnapshotCategoryRequest(Builder builder) {
+    private UnlockSnapshotRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.category = builder.category;
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.retentionDays = builder.retentionDays;
         this.snapshotId = builder.snapshotId;
     }
 
@@ -67,7 +67,7 @@ public class ModifySnapshotCategoryRequest extends Request {
         return new Builder();
     }
 
-    public static ModifySnapshotCategoryRequest create() {
+    public static UnlockSnapshotRequest create() {
         return builder().build();
     }
 
@@ -77,17 +77,17 @@ public class ModifySnapshotCategoryRequest extends Request {
     }
 
     /**
-     * @return sourceRegionId
+     * @return clientToken
      */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return category
+     * @return dryRun
      */
-    public String getCategory() {
-        return this.category;
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -105,6 +105,13 @@ public class ModifySnapshotCategoryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -119,66 +126,63 @@ public class ModifySnapshotCategoryRequest extends Request {
     }
 
     /**
-     * @return retentionDays
-     */
-    public Integer getRetentionDays() {
-        return this.retentionDays;
-    }
-
-    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
         return this.snapshotId;
     }
 
-    public static final class Builder extends Request.Builder<ModifySnapshotCategoryRequest, Builder> {
-        private String sourceRegionId; 
-        private String category; 
+    public static final class Builder extends Request.Builder<UnlockSnapshotRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private Integer retentionDays; 
         private String snapshotId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySnapshotCategoryRequest request) {
+        private Builder(UnlockSnapshotRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.category = request.category;
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.retentionDays = request.retentionDays;
             this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * SourceRegionId.
+         * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/zh/ecs/developer-reference/how-to-ensure-idempotence?spm=a2c4g.11186623.0.0.2a29d467Bh2sO5">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EC38E7D-389F-1925-ABE2-D7925A8F****</p>
          */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * <p>The type of the snapshot.</p>
+         * <p>Specifies whether to perform the dry run. Valid values:</p>
          * <ul>
-         * <li>Archive: archive snapshot</li>
+         * <li>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, an error is returned. If the check is passed, the error code DryRunOperation is returned.</li>
+         * <li>false (default): sends the request. If the request passes the check, the request is directly executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Archive</p>
+         * <p>false</p>
          */
-        public Builder category(String category) {
-            this.putQueryParameter("Category", category);
-            this.category = category;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -201,6 +205,19 @@ public class ModifySnapshotCategoryRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/zh/ecs/developer-reference/api-ecs-2014-05-26-describeregions?spm=a2c4g.11186623.0.i2">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -219,28 +236,11 @@ public class ModifySnapshotCategoryRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the snapshot. Unit: days. The retention period started at the point in time when the snapshot was created. You can archive only standard snapshots that have been retained for at least 14 days.</p>
-         * <p>After the snapshot is archived, the minimum retention period (also called minimum archive period) is 60 days. When you calculate the retention period of archived snapshots, you must deduct the retention period of standard snapshots. If you delete the snapshot within 60 days after the snapshot is archived, you are charged archive tier storage fees for the snapshot for 60 days. For more information about the billing of snapshots, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</p>
-         * <p>Value range [74,65536]</p>
-         * <blockquote>
-         * <p>If you do not specify this parameter, the snapshot is permanently retained.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
-        public Builder retentionDays(Integer retentionDays) {
-            this.putQueryParameter("RetentionDays", retentionDays);
-            this.retentionDays = retentionDays;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>s-123**sd</p>
+         * <p>s-9dp2qojdpdfmgfmf****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -249,8 +249,8 @@ public class ModifySnapshotCategoryRequest extends Request {
         }
 
         @Override
-        public ModifySnapshotCategoryRequest build() {
-            return new ModifySnapshotCategoryRequest(this);
+        public UnlockSnapshotRequest build() {
+            return new UnlockSnapshotRequest(this);
         } 
 
     } 

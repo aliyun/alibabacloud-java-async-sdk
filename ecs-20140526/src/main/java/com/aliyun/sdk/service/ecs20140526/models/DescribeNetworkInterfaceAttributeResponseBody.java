@@ -734,7 +734,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * QoSConfig.
+         * <p>QoS Speed Limit Settings</p>
          */
         public Builder qoSConfig(QoSConfig qoSConfig) {
             this.qoSConfig = qoSConfig;
@@ -2508,7 +2508,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * BandwidthRx.
+             * <p>maximum inbound internal bandwidth</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder bandwidthRx(Long bandwidthRx) {
                 this.bandwidthRx = bandwidthRx;
@@ -2516,7 +2519,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthTx.
+             * <p>Maximum outbound internal bandwidth</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder bandwidthTx(Long bandwidthTx) {
                 this.bandwidthTx = bandwidthTx;
@@ -2524,7 +2530,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ConcurrentConnections.
+             * <p>Maximum number of sessions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder concurrentConnections(Long concurrentConnections) {
                 this.concurrentConnections = concurrentConnections;
@@ -2532,7 +2541,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PpsRx.
+             * <p>Inbound packet forwarding rate over the internal network</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder ppsRx(Long ppsRx) {
                 this.ppsRx = ppsRx;
@@ -2540,7 +2552,10 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PpsTx.
+             * <p>Outbound packet forwarding rate over the internal network</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder ppsTx(Long ppsTx) {
                 this.ppsTx = ppsTx;
@@ -2607,7 +2622,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableQoS.
+             * <p>Whether to enable QoS speed limit settings</p>
              */
             public Builder enableQoS(Boolean enableQoS) {
                 this.enableQoS = enableQoS;
@@ -2615,7 +2630,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * QoS.
+             * <p>QoS Speed Limit Settings</p>
              */
             public Builder qoS(QoS qoS) {
                 this.qoS = qoS;

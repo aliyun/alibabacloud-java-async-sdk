@@ -176,6 +176,9 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
+        @com.aliyun.core.annotation.NameInMap("EnableExpectedRenewDay")
+        private Boolean enableExpectedRenewDay;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -188,6 +191,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private InstanceRenewAttribute(Builder builder) {
             this.autoRenewEnabled = builder.autoRenewEnabled;
             this.duration = builder.duration;
+            this.enableExpectedRenewDay = builder.enableExpectedRenewDay;
             this.instanceId = builder.instanceId;
             this.periodUnit = builder.periodUnit;
             this.renewalStatus = builder.renewalStatus;
@@ -216,6 +220,13 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableExpectedRenewDay
+         */
+        public Boolean getEnableExpectedRenewDay() {
+            return this.enableExpectedRenewDay;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -239,6 +250,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoRenewEnabled; 
             private Integer duration; 
+            private Boolean enableExpectedRenewDay; 
             private String instanceId; 
             private String periodUnit; 
             private String renewalStatus; 
@@ -249,6 +261,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private Builder(InstanceRenewAttribute model) {
                 this.autoRenewEnabled = model.autoRenewEnabled;
                 this.duration = model.duration;
+                this.enableExpectedRenewDay = model.enableExpectedRenewDay;
                 this.instanceId = model.instanceId;
                 this.periodUnit = model.periodUnit;
                 this.renewalStatus = model.renewalStatus;
@@ -273,6 +286,14 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * EnableExpectedRenewDay.
+             */
+            public Builder enableExpectedRenewDay(Boolean enableExpectedRenewDay) {
+                this.enableExpectedRenewDay = enableExpectedRenewDay;
                 return this;
             }
 

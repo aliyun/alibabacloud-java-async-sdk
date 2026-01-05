@@ -105,7 +105,7 @@ public class CreateDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Size")
-    @com.aliyun.core.annotation.Validation(maximum = 131072, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 262144, minimum = 1)
     private Integer size;
 
     @com.aliyun.core.annotation.Query

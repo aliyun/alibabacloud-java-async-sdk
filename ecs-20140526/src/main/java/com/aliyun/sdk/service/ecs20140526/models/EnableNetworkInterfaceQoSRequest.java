@@ -198,7 +198,7 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
         }
 
         /**
-         * QoS.
+         * <p>QoS Speed Limit Settings</p>
          */
         public Builder qoS(QoS qoS) {
             this.putQueryParameter("QoS", qoS);
@@ -335,7 +335,11 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             } 
 
             /**
-             * BandwidthRx.
+             * <p>The maximum inbound internal bandwidth.</p>
+             * <p>Unit: kbit/s, step size: 1000 (1Mbps), value range: [50000, +♾️)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder bandwidthRx(Long bandwidthRx) {
                 this.bandwidthRx = bandwidthRx;
@@ -343,7 +347,11 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             }
 
             /**
-             * BandwidthTx.
+             * <p>The maximum outbound internal bandwidth.</p>
+             * <p>Unit: kbit/s, step size: 1000 (1Mbps), value range: [50000, +♾️)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder bandwidthTx(Long bandwidthTx) {
                 this.bandwidthTx = bandwidthTx;
@@ -351,7 +359,11 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             }
 
             /**
-             * ConcurrentConnections.
+             * <p>Maximum Number of Sessions</p>
+             * <p>Step size: 10000, value range: [10000, +♾️)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder concurrentConnections(Long concurrentConnections) {
                 this.concurrentConnections = concurrentConnections;
@@ -359,7 +371,11 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             }
 
             /**
-             * PpsRx.
+             * <p>The inbound packet forwarding rate over the internal network.</p>
+             * <p>Unit: pps, step size: 10000, value range: [10000, +♾️)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder ppsRx(Long ppsRx) {
                 this.ppsRx = ppsRx;
@@ -367,7 +383,11 @@ public class EnableNetworkInterfaceQoSRequest extends Request {
             }
 
             /**
-             * PpsTx.
+             * <p>The outbound packet forwarding rate over the internal network.</p>
+             * <p>Unit: pps, step size: 10000, value range: [10000, +♾️)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder ppsTx(Long ppsTx) {
                 this.ppsTx = ppsTx;

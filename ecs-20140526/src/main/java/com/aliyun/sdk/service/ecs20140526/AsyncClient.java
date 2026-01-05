@@ -2059,6 +2059,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLimitationResponse> describeLimitation(DescribeLimitationRequest request);
 
     /**
+     * @param request the request parameters of DescribeLockedSnapshots  DescribeLockedSnapshotsRequest
+     * @return DescribeLockedSnapshotsResponse
+     */
+    CompletableFuture<DescribeLockedSnapshotsResponse> describeLockedSnapshots(DescribeLockedSnapshotsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set <code>MaxResults</code> to specify the maximum number of entries to return in the call. The return value of <code>NextToken</code> is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set <code>NextToken</code> to the <code>NextToken</code> value returned in the previous call and set <code>MaxResults</code> to specify the maximum number of entries to return in this call.</p>
      * 
@@ -3047,6 +3053,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can also use this operation to reconfigure locked snapshots. The configurable items depend on the lock mode and lock status:</p>
+     * <ul>
+     * <li>If a snapshot is locked in compliance mode and is in a cooling-off period, you can extend or shorten the cooling-off period and extend or shorten the lock duration.</li>
+     * <li>If the snapshot is locked in compliance mode and the cooling-off period has expired, you can only extend the lock duration.<blockquote>
+     * <p> If you reconfigure a locked snapshot during the cooling-off period, the system will be regarded as a relock operation, and all lock parameters will be reset instead of individual adjustments.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * @param request the request parameters of LockSnapshot  LockSnapshotRequest
+     * @return LockSnapshotResponse
+     */
+    CompletableFuture<LockSnapshotResponse> lockSnapshot(LockSnapshotRequest request);
 
     /**
      * <b>description</b> :
@@ -4707,6 +4729,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<UnassociateHaVipResponse> unassociateHaVip(UnassociateHaVipRequest request);
+
+    /**
+     * @param request the request parameters of UnlockSnapshot  UnlockSnapshotRequest
+     * @return UnlockSnapshotResponse
+     */
+    CompletableFuture<UnlockSnapshotResponse> unlockSnapshot(UnlockSnapshotRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
