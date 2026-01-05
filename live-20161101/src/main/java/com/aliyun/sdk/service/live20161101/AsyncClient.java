@@ -3084,6 +3084,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * 
+     * @param request the request parameters of DescribeLiveTagResources  DescribeLiveTagResourcesRequest
+     * @return DescribeLiveTagResourcesResponse
+     */
+    CompletableFuture<DescribeLiveTagResourcesResponse> describeLiveTagResources(DescribeLiveTagResourcesRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>  If you do not specify the StartTime or EndTime parameter, data of the current month is queried by default. To query data within a specific time range, you must specify both the StartTime and EndTime parameters.</p>
      * <ul>
      * <li>You can query data in the last 90 days.</li>
