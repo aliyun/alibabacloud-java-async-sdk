@@ -28,6 +28,10 @@ public class CreateApplicationRequest extends Request {
     private String architecture;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreatePolarFs")
+    private Boolean autoCreatePolarFs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
@@ -99,6 +103,7 @@ public class CreateApplicationRequest extends Request {
         super(builder);
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
+        this.autoCreatePolarFs = builder.autoCreatePolarFs;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.components = builder.components;
@@ -143,6 +148,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    /**
+     * @return autoCreatePolarFs
+     */
+    public Boolean getAutoCreatePolarFs() {
+        return this.autoCreatePolarFs;
     }
 
     /**
@@ -267,6 +279,7 @@ public class CreateApplicationRequest extends Request {
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String applicationType; 
         private String architecture; 
+        private Boolean autoCreatePolarFs; 
         private Boolean autoRenew; 
         private Boolean autoUseCoupon; 
         private java.util.List<Components> components; 
@@ -293,6 +306,7 @@ public class CreateApplicationRequest extends Request {
             super(request);
             this.applicationType = request.applicationType;
             this.architecture = request.architecture;
+            this.autoCreatePolarFs = request.autoCreatePolarFs;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.components = request.components;
@@ -333,6 +347,15 @@ public class CreateApplicationRequest extends Request {
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
             this.architecture = architecture;
+            return this;
+        }
+
+        /**
+         * AutoCreatePolarFs.
+         */
+        public Builder autoCreatePolarFs(Boolean autoCreatePolarFs) {
+            this.putQueryParameter("AutoCreatePolarFs", autoCreatePolarFs);
+            this.autoCreatePolarFs = autoCreatePolarFs;
             return this;
         }
 
