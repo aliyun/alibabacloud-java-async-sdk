@@ -382,6 +382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallPluginResponse> installPlugin(InstallPluginRequest request);
 
     /**
+     * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
+     * @return ListConsumerAuthorizationRulesResponse
+     */
+    CompletableFuture<ListConsumerAuthorizationRulesResponse> listConsumerAuthorizationRules(ListConsumerAuthorizationRulesRequest request);
+
+    /**
      * @param request the request parameters of ListConsumers  ListConsumersRequest
      * @return ListConsumersResponse
      */
@@ -444,6 +450,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPluginAttachmentsResponse
      */
     CompletableFuture<ListPluginAttachmentsResponse> listPluginAttachments(ListPluginAttachmentsRequest request);
+
+    /**
+     * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
+     * @return ListPluginClassesResponse
+     */
+    CompletableFuture<ListPluginClassesResponse> listPluginClasses(ListPluginClassesRequest request);
 
     /**
      * @param request the request parameters of ListPlugins  ListPluginsRequest

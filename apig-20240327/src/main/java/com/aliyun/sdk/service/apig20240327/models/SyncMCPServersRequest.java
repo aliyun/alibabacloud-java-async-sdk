@@ -115,7 +115,7 @@ public class SyncMCPServersRequest extends Request {
         } 
 
         /**
-         * domainIds.
+         * <p>The domain ID.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -124,7 +124,10 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The ID of the gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtg***</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -133,7 +136,7 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * nacosMcpServers.
+         * <p>The synchronized Nacos MCP server list. If the synchronized MCP server is included, add the mcpServerId parameter.</p>
          */
         public Builder nacosMcpServers(java.util.List<NacosMcpServers> nacosMcpServers) {
             this.putBodyParameter("nacosMcpServers", nacosMcpServers);
@@ -142,7 +145,10 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The Nacos namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("namespace", namespace);
@@ -151,7 +157,10 @@ public class SyncMCPServersRequest extends Request {
         }
 
         /**
-         * sourceId.
+         * <p>The source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src-d40mff6m1hkpt84vep60</p>
          */
         public Builder sourceId(String sourceId) {
             this.putBodyParameter("sourceId", sourceId);
@@ -258,7 +267,10 @@ public class SyncMCPServersRequest extends Request {
             } 
 
             /**
-             * exposedUriPath.
+             * <p>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/sse</p>
              */
             public Builder exposedUriPath(String exposedUriPath) {
                 this.exposedUriPath = exposedUriPath;
@@ -266,7 +278,10 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * instanceId.
+             * <p>The Nacos instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mse-24afmoioxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -274,7 +289,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * <p>MCP Server ID</p>
+             * <p>The MCP server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mcp-d3s8qo6m1hknegofa3bg</p>
@@ -285,7 +300,10 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * mcpServerName.
+             * <p>The name of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -293,7 +311,7 @@ public class SyncMCPServersRequest extends Request {
             }
 
             /**
-             * protocols.
+             * <p>The protocol.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;

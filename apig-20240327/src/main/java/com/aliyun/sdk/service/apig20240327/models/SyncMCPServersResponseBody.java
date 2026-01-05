@@ -93,7 +93,10 @@ public class SyncMCPServersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class SyncMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -186,7 +192,10 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * mcpServerName.
+             * <p>The name of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-fail</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -194,7 +203,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             }
 
             /**
-             * protocols.
+             * <p>The protocol.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
@@ -261,7 +270,10 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * mcpServerName.
+             * <p>The name of the MCP server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-success</p>
              */
             public Builder mcpServerName(String mcpServerName) {
                 this.mcpServerName = mcpServerName;
@@ -269,7 +281,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             }
 
             /**
-             * protocols.
+             * <p>The protocol.</p>
              */
             public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
@@ -336,7 +348,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             } 
 
             /**
-             * failedMcpServers.
+             * <p>The list of MCP servers that failed to synchronize.</p>
              */
             public Builder failedMcpServers(java.util.List<FailedMcpServers> failedMcpServers) {
                 this.failedMcpServers = failedMcpServers;
@@ -344,7 +356,7 @@ public class SyncMCPServersResponseBody extends TeaModel {
             }
 
             /**
-             * succeedMcpServers.
+             * <p>The list of MCP servers successfully synchronized.</p>
              */
             public Builder succeedMcpServers(java.util.List<SucceedMcpServers> succeedMcpServers) {
                 this.succeedMcpServers = succeedMcpServers;

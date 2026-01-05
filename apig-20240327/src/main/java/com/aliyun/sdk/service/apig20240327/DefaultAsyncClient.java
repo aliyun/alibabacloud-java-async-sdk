@@ -1098,6 +1098,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
+     * @return ListConsumerAuthorizationRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerAuthorizationRulesResponse> listConsumerAuthorizationRules(ListConsumerAuthorizationRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerAuthorizationRules").setMethod(HttpMethod.GET).setPathRegex("/v1/consumers/{consumerId}/authorization-rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerAuthorizationRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerAuthorizationRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListConsumers  ListConsumersRequest
      * @return ListConsumersResponse
      */
@@ -1276,6 +1294,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPluginAttachmentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPluginClasses  ListPluginClassesRequest
+     * @return ListPluginClassesResponse
+     */
+    @Override
+    public CompletableFuture<ListPluginClassesResponse> listPluginClasses(ListPluginClassesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPluginClasses").setMethod(HttpMethod.GET).setPathRegex("/v1/plugin-classes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPluginClassesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPluginClassesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
