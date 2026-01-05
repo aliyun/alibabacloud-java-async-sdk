@@ -98,6 +98,7 @@ public class DeleteComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The computing resource ID, the unique identifier of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

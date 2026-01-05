@@ -157,6 +157,7 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The specific connection configuration of the computing resource, including the connection address, access identity, and environment information. The environment for the computing resource is a member attribute of this object. It includes DEV (development environment) and PROD (production environment). The value for EnvType is case-insensitive.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +170,11 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>Depending on the added source category, different types may have specific subtypes subject to distinct parameter constraints. For example, Hologres computing resources support InstanceMode and UrlMode.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceMode</p>
          */
         public Builder connectionPropertiesMode(String connectionPropertiesMode) {
             this.putQueryParameter("ConnectionPropertiesMode", connectionPropertiesMode);
@@ -178,7 +183,10 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo_holo_cs</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -187,6 +195,7 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the computing resource. It can contain letters, digits, and underscores (_), cannot start with a digit or an underscore, and has a maximum length of 255 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +208,7 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +221,7 @@ public class CreateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The type of the computing resource. Multiple computing resource types are currently supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

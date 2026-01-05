@@ -155,7 +155,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the file resource. Supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -176,7 +179,7 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the data to retrieve, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

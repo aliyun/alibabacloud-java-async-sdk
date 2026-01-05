@@ -155,7 +155,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the workflow. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -176,7 +179,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the data to retrieve, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +217,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The workflow type. This parameter specifies a filter condition.</p>
+         * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>CycleWorkflow</li>

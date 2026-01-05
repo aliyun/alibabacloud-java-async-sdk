@@ -140,7 +140,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The description for this dataset version. Maximum length: 1,024 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -149,6 +152,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID. Currently supports DataWorks datasets only.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +165,15 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * ImportInfo.
+         * <p>The storage import configuration for the dataset. Required configuration varies by storage type.</p>
+         * <p><strong>NAS</strong></p>
+         * <p>For valid values, see the response from the file storage API DescribeFileSystems.</p>
+         * <pre><code class="language-JSON">{
+         * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+         * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
+         * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID for the mount point.
+         * }
+         * </code></pre>
          */
         public Builder importInfo(java.util.Map<String, String> importInfo) {
             String importInfoShrink = shrink(importInfo, "ImportInfo", "json");
@@ -171,7 +183,10 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
-         * MountPath.
+         * <p>The mount path, which must start with /mnt/. Default value: /mnt/data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
          */
         public Builder mountPath(String mountPath) {
             this.putBodyParameter("MountPath", mountPath);
@@ -180,6 +195,7 @@ public class CreateDatasetVersionRequest extends Request {
         }
 
         /**
+         * <p>URL</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

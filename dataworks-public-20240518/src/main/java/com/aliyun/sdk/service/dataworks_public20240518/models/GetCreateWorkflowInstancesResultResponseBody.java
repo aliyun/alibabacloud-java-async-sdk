@@ -226,7 +226,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowTaskInstanceIds.
+             * <p>The list of task instance IDs corresponding to the workflow instance. This field is returned after successful creation.</p>
              */
             public Builder workflowTaskInstanceIds(java.util.List<Long> workflowTaskInstanceIds) {
                 this.workflowTaskInstanceIds = workflowTaskInstanceIds;

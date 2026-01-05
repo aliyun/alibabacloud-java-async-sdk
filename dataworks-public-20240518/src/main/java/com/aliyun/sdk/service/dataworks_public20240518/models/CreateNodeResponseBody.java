@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,7 +43,7 @@ public class CreateNodeResponseBody extends TeaModel {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -55,7 +55,7 @@ public class CreateNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long id; 
+        private String id; 
         private String requestId; 
 
         private Builder() {
@@ -67,12 +67,15 @@ public class CreateNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The unique identifier of the Data Studio node.</p>
+         * <blockquote>
+         * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.id = id;
             return this;
         }

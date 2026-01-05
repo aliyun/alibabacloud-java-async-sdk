@@ -67,7 +67,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>Pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -144,7 +144,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -152,7 +155,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

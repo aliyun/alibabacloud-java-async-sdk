@@ -67,7 +67,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>Pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -546,7 +546,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the workflow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -651,7 +654,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowTaskInstanceId.
+             * <p>The task instance ID corresponding to the workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowTaskInstanceId(Long workflowTaskInstanceId) {
                 this.workflowTaskInstanceId = workflowTaskInstanceId;

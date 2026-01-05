@@ -309,11 +309,11 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace.</p>
+         * <p>The workspace environment.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li>Prod</li>
+         * <li>Dev</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -406,7 +406,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * <p>The running mode of the task after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
+         * <p>The run mode when triggered. Valid only if TriggerType is Scheduler.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Pause</li>
@@ -427,8 +427,8 @@ public class ListTasksRequest extends Request {
          * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Scheduler: scheduling cycle-based trigger</li>
-         * <li>Manual: manual trigger</li>
+         * <li>Scheduler: Triggered by schedule.</li>
+         * <li>Manual: Triggered manually.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ListComputeResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>Pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionProperties.
+             * <p>The category of the added compute resource. Different types have different subtypes with corresponding parameter constraints. Examples: InstanceMode: The instance mode. UrlMode: The connection string mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n    &quot;clusterIdentifier&quot;: &quot;c-da123456&quot;,\n    &quot;database&quot;: &quot;testdb&quot;,\n    &quot;loginMode&quot;:&quot;Anonymous&quot;,\n    &quot;defaultFS&quot;:&quot;127.0.0.1&quot;,\n    &quot;envType&quot;: &quot;Prod&quot;\n}</p>
              */
             public Builder connectionProperties(Object connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -240,7 +246,14 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionPropertiesMode.
+             * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
+             * <ul>
+             * <li>Dev</li>
+             * <li>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UrlMode</p>
              */
             public Builder connectionPropertiesMode(String connectionPropertiesMode) {
                 this.connectionPropertiesMode = connectionPropertiesMode;
@@ -248,7 +261,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624387842781448</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -256,7 +272,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648711113000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -264,7 +283,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The unique identifier of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>home_feed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +294,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The computing resource ID, which is the unique identifier for the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8649832502405358603</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -280,7 +305,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time of the computing resource (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624387842781448</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -288,7 +316,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The modifier ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648711113000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -296,7 +327,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * WhetherDefault.
+             * <p>Specifies whether it is the default compute resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder whetherDefault(Boolean whetherDefault) {
                 this.whetherDefault = whetherDefault;
@@ -376,7 +410,7 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputeResource.
+             * <p>Details of a single computing resource.</p>
              */
             public Builder computeResource(java.util.List<ComputeResource> computeResource) {
                 this.computeResource = computeResource;
@@ -384,7 +418,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cal_all_vemg_workflow_parallel</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -392,7 +429,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -485,7 +525,7 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputeResources.
+             * <p>The list of computing resources. Each element is a computing resource group that contains information about the development environment (if any) and the production environment.</p>
              */
             public Builder computeResources(java.util.List<ComputeResources> computeResources) {
                 this.computeResources = computeResources;
@@ -493,7 +533,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -501,7 +544,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -509,7 +555,10 @@ public class ListComputeResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

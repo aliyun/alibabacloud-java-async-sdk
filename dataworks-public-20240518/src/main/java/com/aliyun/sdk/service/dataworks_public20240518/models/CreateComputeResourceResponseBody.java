@@ -67,7 +67,10 @@ public class CreateComputeResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>Returns the ID of the created computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class GetComputeResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * ComputeResource.
+         * <p>The details of the computing resource.</p>
          */
         public Builder computeResource(ComputeResource computeResource) {
             this.computeResource = computeResource;
@@ -75,7 +75,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9252F32F-D855-549E-8898-61CF5A733050</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -284,7 +287,22 @@ public class GetComputeResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionProperties.
+             * <p>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</p>
+             * <ul>
+             * <li>Dev</li>
+             * <li>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;envType&quot;: &quot;Prod&quot;,
+             *     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+             *     &quot;instanceId&quot;: &quot;hgprecn-cn-x0r3oun4k001&quot;,
+             *     &quot;database&quot;: &quot;testdb&quot;,
+             *     &quot;securityProtocol&quot;: &quot;authTypeNone&quot;,
+             *     &quot;authType&quot;: &quot;Executor&quot;,
+             *     &quot;authIdentity&quot;: &quot;1107550004253538&quot;
+             * }</p>
              */
             public Builder connectionProperties(Object connectionProperties) {
                 this.connectionProperties = connectionProperties;
@@ -292,7 +310,15 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionPropertiesMode.
+             * <p>The addition category of the computing resource. Different types will have different subtypes, each with corresponding parameter constraints. For instance:</p>
+             * <ul>
+             * <li>InstanceMode: Instance mode</li>
+             * <li>UrlMode: Connection String Mode</li>
+             * <li>CdhMode: CDH mode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceMode</p>
              */
             public Builder connectionPropertiesMode(String connectionPropertiesMode) {
                 this.connectionPropertiesMode = connectionPropertiesMode;
@@ -300,7 +326,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698286929333</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -308,7 +337,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -316,7 +348,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -324,7 +359,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16738</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -332,7 +370,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modification time, in timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1698286929333</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -340,7 +381,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -348,7 +392,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyCs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +403,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the workspace to which the computing resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52660</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -364,7 +414,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * QualifiedName.
+             * <p>The business unique key for the computing resource. For example, the format for Hologres is ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</p>
              */
             public Builder qualifiedName(String qualifiedName) {
                 this.qualifiedName = qualifiedName;
@@ -372,7 +425,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +436,10 @@ public class GetComputeResourceResponseBody extends TeaModel {
             }
 
             /**
-             * WhetherDefault.
+             * <p>Specifies whether it is the default computing resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder whetherDefault(Boolean whetherDefault) {
                 this.whetherDefault = whetherDefault;

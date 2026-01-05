@@ -83,6 +83,7 @@ public class DeleteDatasetVersionRequest extends Request {
         }
 
         /**
+         * <p>The dataset version ID. Only DataWorks datasets are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

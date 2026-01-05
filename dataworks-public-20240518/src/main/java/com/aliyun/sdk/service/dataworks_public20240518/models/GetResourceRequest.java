@@ -24,7 +24,7 @@ public class GetResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -60,7 +60,7 @@ public class GetResourceRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -73,7 +73,7 @@ public class GetResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetResourceRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
         private Long projectId; 
 
         private Builder() {
@@ -97,13 +97,16 @@ public class GetResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file resource.</p>
+         * <p>The unique identifier of the file resource.</p>
+         * <blockquote>
+         * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

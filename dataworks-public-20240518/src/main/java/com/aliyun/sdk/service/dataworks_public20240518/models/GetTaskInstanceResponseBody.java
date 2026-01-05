@@ -1806,7 +1806,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingResourceTime.
+             * <p>The timestamp for when it started waiting for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder waitingResourceTime(Long waitingResourceTime) {
                 this.waitingResourceTime = waitingResourceTime;
@@ -1814,7 +1817,10 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WaitingTriggerTime.
+             * <p>The timestamp for when it started waiting for the scheduled time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder waitingTriggerTime(Long waitingTriggerTime) {
                 this.waitingTriggerTime = waitingTriggerTime;

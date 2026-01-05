@@ -169,12 +169,9 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * <p>Start Time</p>
-         * <p>Supported format:</p>
-         * <ul>
-         * <li>Unix timestamp, representing the number of milliseconds that have elapsed since January 1, 1970.</li>
-         * </ul>
-         * <p>The interval between BeginTime and EndTime must be 31 days or less.</p>
+         * <p>The start time.</p>
+         * <p>Supported format: Unix timestamp in milliseconds (the number of milliseconds that have elapsed since January 1, 1970).</p>
+         * <p>The interval between BeginTime and EndTime must be less than or equal to 31 days.</p>
          * <p>Default: The current time minus 2 hours, expressed as a millisecond Unix timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -187,12 +184,9 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * <p>End Time</p>
-         * <p>Supported format:</p>
-         * <ul>
-         * <li>Unix timestamp, representing the number of milliseconds that have elapsed since January 1, 1970.</li>
-         * </ul>
-         * <p>The interval between BeginTime and EndTime must be 31 days or less.</p>
+         * <p>The end time.</p>
+         * <p>Supported format: Unix timestamp in milliseconds (the number of milliseconds that have elapsed since January 1, 1970).</p>
+         * <p>The interval between BeginTime and EndTime must be less than or equal to 31 days.</p>
          * <p>Default: The current time, expressed as a millisecond Unix timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +199,13 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>The number of records to display on each page for paginated queries.</p>
+         * <blockquote>
+         * <p> The maximum value of Length for a single request is 1440.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder length(Integer length) {
             this.putBodyParameter("Length", length);
@@ -214,12 +214,12 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The metric name. Available metrics include:</p>
+         * <p>The metric name. Valid values:</p>
          * <ul>
          * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
          * <li>CUUsage: CU usage of the resource group, in CUs.</li>
          * <li>CUUtilization: CU utilization of the resource group, in %.</li>
-         * <li>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</li>
+         * <li>SlotSpec: Maximum number of concurrent slots for resource group scheduling, in slots.</li>
          * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
          * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
          * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
@@ -227,7 +227,7 @@ public class ListResourceGroupMetricDataRequest extends Request {
          * <li>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</li>
          * <li>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</li>
          * <li>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</li>
-         * <li>DataServiceCUMaxSpec: Maximum CU quota for dataservice, in CUs.</li>
+         * <li>DataServiceCUMaxSpec: Maximum CU quota for DataService Studio, in CUs.</li>
          * <li>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</li>
          * <li>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</li>
          * <li>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</li>
@@ -246,7 +246,13 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination cursor.</p>
+         * <blockquote>
+         * <p> If this parameter is not set, the first page of data is retrieved. If a value is returned for this parameter, it indicates that there is a next page. You can use the returned NextToken as a parameter to request the next page of data until it returns Null, which means all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FFqBJBxE8I0PE0IUO6K69k7m2FfyWNNc2qQ9ReUkazhz9VA7dWZKlxBcjUwOV0imSM</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -258,7 +264,7 @@ public class ListResourceGroupMetricDataRequest extends Request {
          * <p>The statistical period for monitoring data.</p>
          * <p>Value: A multiple of 60.</p>
          * <p>Unit: Seconds.</p>
-         * <p>Default: 60</p>
+         * <p>Default: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -270,6 +276,7 @@ public class ListResourceGroupMetricDataRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the general-purpose resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

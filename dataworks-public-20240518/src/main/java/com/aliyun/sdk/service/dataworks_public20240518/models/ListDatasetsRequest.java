@@ -209,7 +209,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * CreatorId.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12103XXX46492139</p>
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -218,7 +221,16 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * DataTypeList.
+         * <p>The data type. Multiple selections are allowed. Valid values:</p>
+         * <ul>
+         * <li>COMMON</li>
+         * <li>PIC</li>
+         * <li>TEXT</li>
+         * <li>TABLE</li>
+         * <li>VIDEO</li>
+         * <li>AUDIO</li>
+         * <li>INDEX</li>
+         * </ul>
          */
         public Builder dataTypeList(java.util.List<String> dataTypeList) {
             String dataTypeListShrink = shrink(dataTypeList, "DataTypeList", "simple");
@@ -228,7 +240,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The dataset name. Supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dataset</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -237,7 +252,15 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Default: Desc.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Asc: Ascending.</li>
+         * <li>Desc: Descending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -246,7 +269,14 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * Origin.
+         * <p>The dataset source. Valid values:</p>
+         * <ul>
+         * <li>DataWorks</li>
+         * <li>PAI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DataWorks</p>
          */
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
@@ -255,7 +285,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -264,7 +297,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -273,7 +309,10 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>251363</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -282,7 +321,16 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default: CreateTime.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ModifyTime: Modification time.</li>
+         * <li>CreateTime: Creation time.</li>
+         * <li>Name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -291,7 +339,16 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * StorageTypeList.
+         * <p>The storage type. Multiple selections are allowed. Supported values:</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>NAS: General-purpose NAS file systems</li>
+         * <li>EXTREMENAS: Extreme NAS file systems</li>
+         * <li>DLF_LANCE: Data Lake Formation</li>
+         * <li>CPFS: Cloud Parallel File Storage</li>
+         * <li>BMCPFS: CPFS for Lingjun</li>
+         * <li>MAXCOMPUTE: MaxCompute table</li>
+         * </ul>
          */
         public Builder storageTypeList(java.util.List<String> storageTypeList) {
             String storageTypeListShrink = shrink(storageTypeList, "StorageTypeList", "simple");

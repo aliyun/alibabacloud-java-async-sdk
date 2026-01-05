@@ -80,7 +80,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -99,7 +99,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +194,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Datasets.
+             * <p>The dataset list.</p>
              */
             public Builder datasets(java.util.List<Dataset> datasets) {
                 this.datasets = datasets;
@@ -199,7 +202,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -207,7 +213,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries on this page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -215,7 +224,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

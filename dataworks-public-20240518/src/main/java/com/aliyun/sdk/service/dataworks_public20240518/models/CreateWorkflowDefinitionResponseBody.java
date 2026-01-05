@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateWorkflowDefinitionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -43,7 +43,7 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -55,7 +55,7 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long id; 
+        private String id; 
         private String requestId; 
 
         private Builder() {
@@ -67,12 +67,15 @@ public class CreateWorkflowDefinitionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The unique identifier of the workflow.</p>
+         * <blockquote>
+         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.id = id;
             return this;
         }

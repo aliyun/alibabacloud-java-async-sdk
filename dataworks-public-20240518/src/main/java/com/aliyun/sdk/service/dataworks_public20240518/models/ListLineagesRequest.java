@@ -195,15 +195,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The destination entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-         * custom-api:api123
-         * custom-table:table456</p>
+         * DstEntityId.
          */
         public Builder dstEntityId(String dstEntityId) {
             this.putQueryParameter("DstEntityId", dstEntityId);
@@ -212,10 +204,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The destination entity name. Supports fuzzy matching.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dstName1</p>
+         * DstEntityName.
          */
         public Builder dstEntityName(String dstEntityName) {
             this.putQueryParameter("DstEntityName", dstEntityName);
@@ -224,10 +213,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return lineage information.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * NeedAttachRelationship.
          */
         public Builder needAttachRelationship(Boolean needAttachRelationship) {
             this.putQueryParameter("NeedAttachRelationship", needAttachRelationship);
@@ -236,14 +222,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The sort order. Default value: Asc. Valid values:</p>
-         * <ul>
-         * <li>Asc</li>
-         * <li>Desc</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Asc</p>
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -252,10 +231,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,10 +240,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page. Default value: 10. Maximum value: 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,10 +249,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The sort field. Default value: Name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Name</p>
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -288,15 +258,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The source entity ID. You can refer to the table or column ID returned by the ListTables or ListColumns operation, or use a custom entity ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>maxcompute-table:123456XXX::test_project::test_tbl
-         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
-         * hms-table:c-abc123xxx::test_db::test_tbl
-         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-         * custom-api:api123
-         * custom-table:table456</p>
+         * SrcEntityId.
          */
         public Builder srcEntityId(String srcEntityId) {
             this.putQueryParameter("SrcEntityId", srcEntityId);
@@ -305,10 +267,7 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * <p>The source entity name. Supports fuzzy matching.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>srcName1</p>
+         * SrcEntityName.
          */
         public Builder srcEntityName(String srcEntityName) {
             this.putQueryParameter("SrcEntityName", srcEntityName);

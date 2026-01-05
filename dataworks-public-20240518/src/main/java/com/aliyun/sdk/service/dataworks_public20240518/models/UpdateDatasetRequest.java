@@ -125,7 +125,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The dataset description. Length not exceeding 1024.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -134,6 +137,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID. Only DataWorks datasets are supported for update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The dataset name. A non-empty string, length not exceeding 128.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_oss_dataset_new</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -155,7 +162,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * Readme.
+         * <p>The user guide, supports Markdown formatted rich text.</p>
+         * 
+         * <strong>example:</strong>
+         * <h2>introduction</h2>
          */
         public Builder readme(String readme) {
             this.putBodyParameter("Readme", readme);

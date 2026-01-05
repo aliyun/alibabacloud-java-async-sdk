@@ -549,7 +549,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the workflow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -654,7 +657,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowTaskInstanceId.
+             * <p>The task instance ID corresponding to the workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowTaskInstanceId(Long workflowTaskInstanceId) {
                 this.workflowTaskInstanceId = workflowTaskInstanceId;

@@ -67,7 +67,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>Pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;

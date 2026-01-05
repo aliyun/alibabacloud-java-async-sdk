@@ -82,7 +82,7 @@ public class CreateIdentifyCredentialRequest extends Request {
         }
 
         /**
-         * IdentifyCredential.
+         * <p>The user credential object.</p>
          */
         public Builder identifyCredential(IdentifyCredential identifyCredential) {
             String identifyCredentialShrink = shrink(identifyCredential, "IdentifyCredential", "json");

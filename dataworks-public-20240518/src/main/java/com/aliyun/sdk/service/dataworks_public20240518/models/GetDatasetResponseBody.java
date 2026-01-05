@@ -80,7 +80,7 @@ public class GetDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * Dataset.
+         * <p>The dataset information.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -88,7 +88,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</p>
@@ -99,7 +99,10 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -155,7 +155,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Filter criteria: UDF name. Supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

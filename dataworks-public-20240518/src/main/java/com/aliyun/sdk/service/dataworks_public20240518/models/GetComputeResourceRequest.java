@@ -98,7 +98,11 @@ public class GetComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The computing resource ID, which is the unique identifier for the resource.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11792</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -107,7 +111,11 @@ public class GetComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

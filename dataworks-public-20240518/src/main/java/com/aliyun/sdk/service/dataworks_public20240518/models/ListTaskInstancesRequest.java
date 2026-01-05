@@ -663,6 +663,7 @@ public class ListTaskInstancesRequest extends Request {
          * <li>SupplementData: Data backfill</li>
          * <li>ManualWorkflow: Manually triggered workflow</li>
          * <li>Normal: Scheduled execution</li>
+         * <li>TriggerWorkflow: Triggered Workflow</li>
          * </ul>
          * 
          * <strong>example:</strong>

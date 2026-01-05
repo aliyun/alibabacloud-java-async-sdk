@@ -154,7 +154,10 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * CreatorId.
+         * <p>The creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12103XXX46492139</p>
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -163,6 +166,7 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +179,15 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Default: Desc.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Asc: Ascending.</li>
+         * <li>Desc: Descending.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -184,7 +196,10 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -193,7 +208,10 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -202,7 +220,16 @@ public class ListDatasetVersionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. Default: VersionNumber.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ModifyTime: Modification time.</li>
+         * <li>CreateTime: Creation time.</li>
+         * <li>VersionNumber: Version number.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);

@@ -170,7 +170,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The description of the dataset. It must not exceed 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -179,7 +182,19 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * DataType.
+         * <p>The data type. Valid values:</p>
+         * <ul>
+         * <li>COMMON: Common (Default)</li>
+         * <li>PIC</li>
+         * <li>TEXT</li>
+         * <li>TABLE</li>
+         * <li>VIDEO</li>
+         * <li>AUDIO</li>
+         * <li>INDEX</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         public Builder dataType(String dataType) {
             this.putBodyParameter("DataType", dataType);
@@ -188,6 +203,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The initial version of the dataset.</p>
          * <p>This parameter is required.</p>
          */
         public Builder initVersion(InitVersion initVersion) {
@@ -198,6 +214,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The name of the dataset. It cannot be an empty string and must not exceed 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +227,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * Origin.
+         * <p>The source of the dataset. Currently, only DataWorks is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataWorks</p>
          */
         public Builder origin(String origin) {
             this.putBodyParameter("Origin", origin);
@@ -219,6 +239,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +252,23 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The storage type. Currently supported values:</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>NAS: General-purpose NAS file systems</li>
+         * <li>EXTREMENAS: Extreme NAS file systems</li>
+         * <li>DLF_LANCE: Data Lake Formation</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NAS: General-purpose NAS file systems</li>
+         * <li>MAXCOMPUTE: MaxCompute table</li>
+         * <li>CPFS: Cloud Parallel File Storage</li>
+         * <li>BMCPFS: CPFS for Lingjun</li>
+         * <li>EXTREMENAS: Extreme NAS file systems</li>
+         * <li>OSS: Object Storage Service</li>
+         * <li>DLF_LANCE: Data Lake Formation.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +367,10 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The description. It must not exceed 1,024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initial Version</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -337,7 +378,15 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * ImportInfo.
+             * <p>The storage import configuration for the dataset. The required configuration information varies by storage type.</p>
+             * <p><strong>NAS</strong></p>
+             * <p>For valid values, refer to the response of the file storage API DescribeFileSystems.</p>
+             * <pre><code class="language-JSON">{
+             * &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+             * &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The storage specification of the file system.
+             * &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID of the mount point.
+             * }
+             * </code></pre>
              */
             public Builder importInfo(java.util.Map<String, String> importInfo) {
                 this.importInfo = importInfo;
@@ -345,7 +394,10 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The mount path. It must start with /mnt/. Default value: /mnt/data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -353,6 +405,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
+             * <p>URL</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -83,6 +83,7 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

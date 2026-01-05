@@ -24,7 +24,7 @@ public class DeleteFunctionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
@@ -61,7 +61,7 @@ public class DeleteFunctionRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -74,7 +74,7 @@ public class DeleteFunctionRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteFunctionRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
         private Long projectId; 
 
         private Builder() {
@@ -98,13 +98,16 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the UDF.</p>
+         * <p>The unique identifier of the UDF.</p>
+         * <blockquote>
+         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
             return this;

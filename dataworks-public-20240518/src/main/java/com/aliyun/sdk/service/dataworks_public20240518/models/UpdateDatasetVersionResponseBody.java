@@ -78,7 +78,10 @@ public class UpdateDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the update succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -83,6 +83,7 @@ public class GetDatasetVersionRequest extends Request {
         }
 
         /**
+         * <p>The dataset version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

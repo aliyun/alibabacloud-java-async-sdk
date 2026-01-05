@@ -80,7 +80,7 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * DatasetVersion.
+         * <p>The dataset version.</p>
          */
         public Builder datasetVersion(DatasetVersion datasetVersion) {
             this.datasetVersion = datasetVersion;
@@ -99,7 +99,10 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

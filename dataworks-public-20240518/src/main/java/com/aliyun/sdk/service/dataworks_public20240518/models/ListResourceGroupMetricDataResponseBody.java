@@ -88,7 +88,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, used for locating logs and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +168,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761184929633</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -170,7 +179,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -263,7 +275,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The unique identifier for the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -271,12 +286,12 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric name. Available metrics include:</p>
+             * <p>The metric name. Valid values:</p>
              * <ul>
              * <li>CUSpec: Maximum CU capacity of the resource group, in CUs.</li>
              * <li>CUUsage: CU usage of the resource group, in CUs.</li>
              * <li>CUUtilization: CU utilization of the resource group, in %.</li>
-             * <li>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</li>
+             * <li>SlotSpec: Maximum number of concurrent slots for resource group scheduling, in slots.</li>
              * <li>SlotUsage: Used concurrency for resource group scheduling, in slots.</li>
              * <li>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</li>
              * <li>SchedulerCUUsage: CU usage for data computing, in CUs.</li>
@@ -301,7 +316,7 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * <p>The list of metric data.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -309,7 +324,10 @@ public class ListResourceGroupMetricDataResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination cursor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tSBOXZcAmk+akxRkwRuXnGQEsIDODyd5ulPqgytNTbLp4bhb7fuvz13FXtm87Kfl</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

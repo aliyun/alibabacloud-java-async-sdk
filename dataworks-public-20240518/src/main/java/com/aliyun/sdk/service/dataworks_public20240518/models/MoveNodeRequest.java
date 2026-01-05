@@ -24,7 +24,7 @@ public class MoveNodeRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Path")
@@ -67,7 +67,7 @@ public class MoveNodeRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -87,7 +87,7 @@ public class MoveNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<MoveNodeRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
         private String path; 
         private Long projectId; 
 
@@ -119,7 +119,7 @@ public class MoveNodeRequest extends Request {
          * <strong>example:</strong>
          * <p>652567824470354XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
             return this;

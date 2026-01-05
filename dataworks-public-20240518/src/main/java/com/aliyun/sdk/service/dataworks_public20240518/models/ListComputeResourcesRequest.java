@@ -181,7 +181,14 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment type of the computing resource. Valid values:</p>
+         * <ul>
+         * <li>Dev</li>
+         * <li>Prod</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -190,7 +197,10 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +209,15 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort direction of the computing resource list. Valid values:</p>
+         * <ul>
+         * <li>Desc: descending order.</li>
+         * <li>Asc: ascending order.</li>
+         * </ul>
+         * <p>Default value: Desc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -208,7 +226,10 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to query. The default value is 1, which indicates the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -217,7 +238,10 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default value is 10, and the maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +250,11 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21229</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -235,7 +263,17 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the computing resource list by. Supported fields include name, creation time, and computing resource ID.</p>
+         * <ul>
+         * <li>CreateTime: Sorts by creation time</li>
+         * <li>Id: Sorts by computing resource ID</li>
+         * <li>Name: Sorts by computing resource name.</li>
+         * <li>CreateTimeWithDefaultFirst: Sorts based on whether it is the default resource and by creation time, with the default computing resource listed first.</li>
+         * </ul>
+         * <p>Default value: CreateTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTimeWithDefaultFirst</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -244,7 +282,7 @@ public class ListComputeResourcesRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>The filter for computing resource types. You can configure multiple types for filtering.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");

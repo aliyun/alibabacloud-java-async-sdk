@@ -119,10 +119,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The workflow ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100001</p>
+         * BusinessId.
          */
         public Builder businessId(Long businessId) {
             this.businessId = businessId;
@@ -130,15 +127,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>Request succeeded: The ErrorCode field is not returned.</li>
-         * <li>Request failed: The ErrorCode field is returned.</li>
-         * </ul>
-         * <p>For more information, see the error code section.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Invalid.Tenant.ConnectionNotExists</p>
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -146,10 +135,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The connection does not exist.</p>
+         * ErrorMessage.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -157,10 +143,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -168,10 +151,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of this request. You can troubleshoot issues based on the ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0000-ABCD-EFG****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -179,14 +159,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call succeeded. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

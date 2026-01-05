@@ -20,6 +20,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of AbolishPipelineRun  AbolishPipelineRunRequest
      * @return AbolishPipelineRunResponse
      */
@@ -256,6 +261,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateIdentifyCredential  CreateIdentifyCredentialRequest
      * @return CreateIdentifyCredentialResponse
      */
@@ -296,7 +306,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
+     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreatePipelineRun  CreatePipelineRunRequest
@@ -399,6 +410,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteComponentResponse> deleteComponent(DeleteComponentRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * @param request the request parameters of DeleteComputeResource  DeleteComputeResourceRequest
      * @return DeleteComputeResourceResponse
      */

@@ -212,7 +212,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource group used when you run the UDF.</p>
+             * <p>The runtime resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>S_resgrop_xxx</p>
@@ -269,7 +269,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command.</p>
+             * <p>Command</p>
              * 
              * <strong>example:</strong>
              * <p>ODPS_FUNCTION</p>
@@ -294,7 +294,7 @@ public class ListFunctionsResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -319,7 +319,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -338,7 +338,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long id; 
+            private String id; 
             private String path; 
             private Runtime runtime; 
 
@@ -353,11 +353,14 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The script ID.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>652567824470354XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -374,7 +377,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime.</p>
+             * <p>Runtime</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -432,7 +435,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         private String fileResource;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -581,7 +584,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -661,7 +664,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             private String embeddedResourceType; 
             private String exampleDescription; 
             private String fileResource; 
-            private Long id; 
+            private String id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
@@ -701,7 +704,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file resources in an Advanced RISC Machines (ARM) cluster.</p>
+             * <p>The list of resource files for the ARM cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.jar,yyy.jar</p>
@@ -723,7 +726,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the command.</p>
+             * <p>The command description.</p>
              * 
              * <strong>example:</strong>
              * <p>testUdf(xx,yy)</p>
@@ -734,7 +737,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the UDF was created. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the UDF was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1655953028000</p>
@@ -745,7 +748,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source information about the UDF.</p>
+             * <p>Data source information of the UDF.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -753,7 +756,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database. This parameter is returned for E-MapReduce (EMR) functions.</p>
+             * <p>The database name. This parameter is used only when the function type is EMR Function.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_first</p>
@@ -764,7 +767,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall description of the UDF.</p>
+             * <p>The general description of the function.</p>
              * 
              * <strong>example:</strong>
              * <p>Description</p>
@@ -775,7 +778,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the embedded UDF.</p>
+             * <p>Content of the nested function code</p>
              * 
              * <strong>example:</strong>
              * <p>print(&quot;hello,world!&quot;)</p>
@@ -786,7 +789,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the nested code.</p>
+             * <p>The nested code type.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>Python2</li>
@@ -805,11 +808,11 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the nested resource.</p>
+             * <p>The nested resource type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>File: general resources</li>
-             * <li>Embedded: embedded resources</li>
+             * <li>File: General resource file</li>
+             * <li>Embedded: Embedded resource</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -821,7 +824,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the example.</p>
+             * <p>The example description.</p>
              * 
              * <strong>example:</strong>
              * <p>Example description &gt;&gt;&gt; select tsetUdf(xx,yy);
@@ -833,7 +836,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The files resources.</p>
+             * <p>The implementation code of the function and the list of resource files.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx.jar,yyy.jar</p>
@@ -844,18 +847,21 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the UDF.</p>
+             * <p>The unique identifier of the UDF.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>580667964888595XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
 
             /**
-             * <p>The time when the UDF was last modified. This value is a UNIX timestamp.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1655953028000</p>
@@ -866,7 +872,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the UDF.</p>
+             * <p>The UDF name.</p>
              * 
              * <strong>example:</strong>
              * <p>Function name</p>
@@ -888,7 +894,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
+             * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
              * <p>xx: parameter information XXX
@@ -900,7 +906,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace to which the UDF belongs.</p>
+             * <p>The ID of the project to which the UDF belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>307XXX</p>
@@ -911,7 +917,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the return value.</p>
+             * <p>The return value description.</p>
              * 
              * <strong>example:</strong>
              * <p>The return value is a string.</p>
@@ -922,7 +928,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the resource group used when you run the UDF.</p>
+             * <p>The runtime resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -930,7 +936,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script information about the UDF.</p>
+             * <p>Script information of the UDF.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -941,12 +947,12 @@ public class ListFunctionsResponseBody extends TeaModel {
              * <p>The UDF type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Math: mathematical operation function</li>
-             * <li>Aggregate: aggregate function</li>
-             * <li>String: string processing function</li>
-             * <li>Date: date function</li>
-             * <li>Analytic: window function</li>
-             * <li>Other: other functions</li>
+             * <li>Math: Mathematical operation functions</li>
+             * <li>Aggregate: Aggregation functions</li>
+             * <li>String: String processing functions</li>
+             * <li>Date: Date functions</li>
+             * <li>Analytic: Window functions</li>
+             * <li>Other: Other functions</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1043,7 +1049,7 @@ public class ListFunctionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The UDFs.</p>
+             * <p>The function list.</p>
              */
             public Builder functions(java.util.List<Functions> functions) {
                 this.functions = functions;

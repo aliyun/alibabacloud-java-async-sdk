@@ -24,7 +24,7 @@ public class RenameWorkflowDefinitionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -67,7 +67,7 @@ public class RenameWorkflowDefinitionRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -87,7 +87,7 @@ public class RenameWorkflowDefinitionRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenameWorkflowDefinitionRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
         private String name; 
         private Long projectId; 
 
@@ -113,13 +113,16 @@ public class RenameWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The unique identifier of the Data Studio workflow.</p>
+         * <blockquote>
+         * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>463497880880954XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

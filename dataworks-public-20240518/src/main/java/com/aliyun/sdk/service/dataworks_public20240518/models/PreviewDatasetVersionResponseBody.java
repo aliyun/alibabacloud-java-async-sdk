@@ -80,7 +80,7 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * PreviewResult.
+         * <p>Preview results</p>
          */
         public Builder previewResult(PreviewResult previewResult) {
             this.previewResult = previewResult;
@@ -99,7 +99,10 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +194,10 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -199,7 +205,10 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>File name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parth/data.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -207,7 +216,10 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
             }
 
             /**
-             * MimeType.
+             * <p>The MIME type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text/plain</p>
              */
             public Builder mimeType(String mimeType) {
                 this.mimeType = mimeType;
@@ -215,7 +227,10 @@ public class PreviewDatasetVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SupportPreview.
+             * <p>Preview availability</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportPreview(Boolean supportPreview) {
                 this.supportPreview = supportPreview;

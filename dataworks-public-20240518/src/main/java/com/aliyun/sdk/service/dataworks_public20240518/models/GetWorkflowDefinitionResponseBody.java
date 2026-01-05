@@ -102,7 +102,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -151,7 +151,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -199,7 +199,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private Long id; 
+            private String id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
@@ -238,7 +238,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>463497880880954XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }

@@ -83,6 +83,7 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID. Only DataWorks datasets are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

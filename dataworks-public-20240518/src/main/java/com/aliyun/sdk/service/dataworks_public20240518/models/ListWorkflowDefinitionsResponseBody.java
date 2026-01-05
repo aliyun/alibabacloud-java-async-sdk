@@ -131,7 +131,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The command.</p>
+             * <p>Command</p>
              * 
              * <strong>example:</strong>
              * <p>WORKFLOW</p>
@@ -156,7 +156,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -181,7 +181,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -200,7 +200,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long id; 
+            private String id; 
             private String path; 
             private Runtime runtime; 
 
@@ -214,12 +214,15 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The script ID.</p>
+             * <p>The ID of the script.</p>
+             * <blockquote>
+             * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>698002781368644XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -236,7 +239,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime.</p>
+             * <p>Runtime</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -264,7 +267,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
@@ -322,7 +325,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -371,7 +374,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String description; 
-            private Long id; 
+            private String id; 
             private Long modifyTime; 
             private String name; 
             private String owner; 
@@ -395,7 +398,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the workflow was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1698057323000</p>
@@ -406,7 +409,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the workflow.</p>
+             * <p>Description</p>
              * 
              * <strong>example:</strong>
              * <p>Workflow description</p>
@@ -417,18 +420,21 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workflow.</p>
+             * <p>The unique identifier of the workflow.</p>
+             * <blockquote>
+             * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>463497880880954XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
 
             /**
-             * <p>The time when the workflow was last modified. This value is a UNIX timestamp.</p>
+             * <p>The timestamp when the workflow was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>1698057323000</p>
@@ -450,7 +456,7 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner.</p>
+             * <p>Owner</p>
              * 
              * <strong>example:</strong>
              * <p>110755000425XXXX</p>

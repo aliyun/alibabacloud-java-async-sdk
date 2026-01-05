@@ -354,7 +354,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String artifactType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -399,7 +399,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -440,7 +440,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
-            private Long id; 
+            private String id; 
             private String name; 
             private Node node; 
             private String scope; 
@@ -473,11 +473,14 @@ public class ListNodesResponseBody extends TeaModel {
 
             /**
              * <p>The variable ID.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>543211286945488XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -832,7 +835,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String artifactType;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -877,7 +880,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -918,7 +921,7 @@ public class ListNodesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String artifactType; 
-            private Long id; 
+            private String id; 
             private String name; 
             private VariablesNode node; 
             private String scope; 
@@ -951,11 +954,14 @@ public class ListNodesResponseBody extends TeaModel {
 
             /**
              * <p>The variable ID.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>623731286945488XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -1274,7 +1280,7 @@ public class ListNodesResponseBody extends TeaModel {
      */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -1299,7 +1305,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -1318,7 +1324,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long id; 
+            private String id; 
             private String path; 
             private Runtime runtime; 
 
@@ -1332,12 +1338,15 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The script ID.</p>
+             * <p>The ID of the script.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>853573334108680XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -1625,7 +1634,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String endTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -1670,7 +1679,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -1698,7 +1707,7 @@ public class ListNodesResponseBody extends TeaModel {
         public static final class Builder {
             private String cron; 
             private String endTime; 
-            private Long id; 
+            private String id; 
             private String startTime; 
             private String timezone; 
             private String type; 
@@ -1739,11 +1748,14 @@ public class ListNodesResponseBody extends TeaModel {
 
             /**
              * <p>The trigger ID.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>543680677872062XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -1811,7 +1823,7 @@ public class ListNodesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Inputs")
         private Inputs inputs;
@@ -1904,7 +1916,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -2003,7 +2015,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Long createTime; 
             private DataSource dataSource; 
             private String description; 
-            private Long id; 
+            private String id; 
             private Inputs inputs; 
             private Long modifyTime; 
             private String name; 
@@ -2072,12 +2084,15 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The unique identifier of the Data Studio node.</p>
+             * <blockquote>
+             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -2113,7 +2128,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node output.</p>
+             * <p>The output of the node.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -2296,7 +2311,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of nodes in DataStudio.</p>
+             * <p>The list of nodes in Data Studio.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

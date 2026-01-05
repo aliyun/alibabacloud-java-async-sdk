@@ -24,7 +24,7 @@ public class GetWorkflowDefinitionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
+    private String id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeScriptContent")
@@ -65,7 +65,7 @@ public class GetWorkflowDefinitionRequest extends Request {
     /**
      * @return id
      */
-    public Long getId() {
+    public String getId() {
         return this.id;
     }
 
@@ -85,7 +85,7 @@ public class GetWorkflowDefinitionRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetWorkflowDefinitionRequest, Builder> {
         private String regionId; 
-        private Long id; 
+        private String id; 
         private Boolean includeScriptContent; 
         private Long projectId; 
 
@@ -117,7 +117,7 @@ public class GetWorkflowDefinitionRequest extends Request {
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
          */
-        public Builder id(Long id) {
+        public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

@@ -32,29 +32,62 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dataworks.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("ap-south-1", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "dataworks.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dataworks.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dataworks.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-fujian", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "dataworks.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "dataworks.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dataworks.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-qingdao", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dataworks.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "dataworks.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dataworks.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dataworks.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dataworks.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "dataworks.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "dataworks.aliyuncs.com"),
             new TeaPair("eu-central-1", "dataworks.eu-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "dataworks.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "dataworks.aliyuncs.com"),
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "dataworks.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "dataworks.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -65,6 +98,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation may not be available in earlier versions of the SDK. In this case, use the AbolishDeployment operation. The parameters for AbolishDeployment are the same as those described in this topic.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of AbolishPipelineRun  AbolishPipelineRunRequest
      * @return AbolishPipelineRunResponse
      */
@@ -637,6 +675,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation does not support batch processing. If multiple publishing entities are specified in the parameters, only the first one will be processed; the others will be ignored.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateIdentifyCredential  CreateIdentifyCredentialRequest
      * @return CreateIdentifyCredentialResponse
      */
@@ -737,7 +780,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot use this API operation to create a process for multiple entities at a time. If you specify multiple entities in a request, the system creates a process only for the first entity.</p>
+     * <p> Batch operations are not currently supported. If you specify multiple entities in the parameters, only the first entity takes effect, and the rest are ignored.
+     *  This operation may not be available in earlier versions of the SDK. In this case, use the CreateDeployment operation. The parameters for CreateDeployment are the same as those described in this topic.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreatePipelineRun  CreatePipelineRunRequest
@@ -984,6 +1028,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks:</li>
+     * <li>Tenant Owner, Workspace Administrator, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * @param request the request parameters of DeleteComputeResource  DeleteComputeResourceRequest
      * @return DeleteComputeResourceResponse
      */

@@ -141,7 +141,19 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The specific connection configuration of the computing resource, including the connection address, access identity, and environment information. The environment type (EnvType) of the computing resource is a member attribute of this object, including DEV (development environment) and PROD (production environment). The value is not case-sensitive.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;envType&quot;: &quot;Prod&quot;,
+         *     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+         *     &quot;instanceId&quot;: &quot;hgprecn-cn-x0r3oun4k001&quot;,
+         *     &quot;database&quot;: &quot;testdb&quot;,
+         *     &quot;securityProtocol&quot;: &quot;authTypeNone&quot;,
+         *     &quot;authType&quot;: &quot;Executor&quot;,
+         *     &quot;authIdentity&quot;: &quot;1107550004253538&quot;
+         * }</p>
          */
         public Builder connectionProperties(String connectionProperties) {
             this.putQueryParameter("ConnectionProperties", connectionProperties);
@@ -150,7 +162,10 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * ConnectionPropertiesMode.
+         * <p>The category of the computing resource to be added. Different types have different subtypes and corresponding parameter schema constraints. Examples: InstanceMode and UrlMode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceMode</p>
          */
         public Builder connectionPropertiesMode(String connectionPropertiesMode) {
             this.putQueryParameter("ConnectionPropertiesMode", connectionPropertiesMode);
@@ -159,7 +174,7 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the computing resource. The maximum length is 3000 characters.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -168,7 +183,11 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the computing resource.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -177,7 +196,11 @@ public class UpdateComputeResourceRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -102,7 +102,7 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -155,7 +155,7 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -210,7 +210,7 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
-            private Long id; 
+            private String id; 
             private String message; 
             private Long modifyTime; 
             private String name; 
@@ -247,11 +247,14 @@ public class ListPipelineRunItemsResponseBody extends TeaModel {
 
             /**
              * <p>The unique identifier of the deployment.</p>
+             * <blockquote>
+             * <p> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
