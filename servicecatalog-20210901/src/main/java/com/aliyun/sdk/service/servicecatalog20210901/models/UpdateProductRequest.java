@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProductRequest} extends {@link RequestModel}
  *
  * <p>UpdateProductRequest</p>
  */
 public class UpdateProductRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Body
-    @NameInMap("ProductName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String productName;
 
-    @Body
-    @NameInMap("ProviderName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProviderName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String providerName;
 
     private UpdateProductRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class UpdateProductRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,7 @@ public class UpdateProductRequest extends Request {
         } 
 
         /**
-         * 产品描述
+         * <p>产品描述</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -108,7 +113,11 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * 代表资源一级ID的资源属性字段
+         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -117,7 +126,8 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * 代表资源名称的资源属性字段
+         * <p>代表资源名称的资源属性字段</p>
+         * <p>This parameter is required.</p>
          */
         public Builder productName(String productName) {
             this.putBodyParameter("ProductName", productName);
@@ -126,7 +136,8 @@ public class UpdateProductRequest extends Request {
         }
 
         /**
-         * 产品提供方
+         * <p>产品提供方</p>
+         * <p>This parameter is required.</p>
          */
         public Builder providerName(String providerName) {
             this.putBodyParameter("ProviderName", providerName);

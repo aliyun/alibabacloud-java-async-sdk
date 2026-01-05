@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateProductVersionRequest} extends {@link RequestModel}
  *
  * <p>CreateProductVersionRequest</p>
  */
 public class CreateProductVersionRequest extends Request {
-    @Body
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Active")
     private Boolean active;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Guidance")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Guidance")
     private String guidance;
 
-    @Body
-    @NameInMap("ProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Body
-    @NameInMap("ProductVersionName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductVersionName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String productVersionName;
 
-    @Body
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
-    @Body
-    @NameInMap("TemplateUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateUrl;
 
     private CreateProductVersionRequest(Builder builder) {
@@ -63,7 +68,7 @@ public class CreateProductVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,11 +147,14 @@ public class CreateProductVersionRequest extends Request {
         } 
 
         /**
-         * Specifies whether the product version is active. Valid values:
-         * <p>
+         * <p>Specifies whether the product version is active. Valid values:</p>
+         * <ul>
+         * <li>true: The product version is active. This is the default value.</li>
+         * <li>false: The product version is inactive.</li>
+         * </ul>
          * 
-         * *   true: The product version is active. This is the default value.
-         * *   false: The product version is inactive.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putBodyParameter("Active", active);
@@ -155,10 +163,11 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The description of the product version.
-         * <p>
+         * <p>The description of the product version.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>The description of the product version.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -167,13 +176,16 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The recommendation information. Valid values:
-         * <p>
+         * <p>The recommendation information. Valid values:</p>
+         * <ul>
+         * <li>Default: No recommendation information is provided. This is the default value.</li>
+         * <li>Recommended: the recommendation version.</li>
+         * <li>Latest: the latest version.</li>
+         * <li>Deprecated: the version that is about to be discontinued.</li>
+         * </ul>
          * 
-         * *   Default: No recommendation information is provided. This is the default value.
-         * *   Recommended: the recommendation version.
-         * *   Latest: the latest version.
-         * *   Deprecated: the version that is about to be discontinued.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder guidance(String guidance) {
             this.putBodyParameter("Guidance", guidance);
@@ -182,7 +194,11 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The ID of the product to which the product version belongs.
+         * <p>The ID of the product to which the product version belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -191,10 +207,12 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The name of the product version.
-         * <p>
+         * <p>The name of the product version.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder productVersionName(String productVersionName) {
             this.putBodyParameter("ProductVersionName", productVersionName);
@@ -203,10 +221,15 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The type of the template.
-         * <p>
+         * <p>The type of the product template. Valid values:</p>
+         * <ul>
+         * <li>RosTerraformTemplate: the Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+         * <li>RosStandardTemplate: the standard ROS template.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * The value is fixed as RosTerraformTemplate, which specifies the Terraform template that is supported by Resource Orchestration Service (ROS).
+         * <strong>example:</strong>
+         * <p>RosTerraformTemplate</p>
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -215,10 +238,9 @@ public class CreateProductVersionRequest extends Request {
         }
 
         /**
-         * The URL of the template.
-         * <p>
-         * 
-         * For more information about how to obtain the URL of a template, see [CreateTemplate](~~CreateTemplate~~).
+         * <p>The URL of the template.</p>
+         * <p>For more information about how to obtain the URL of a template, see <a href="~~CreateTemplate~~">CreateTemplate</a>.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder templateUrl(String templateUrl) {
             this.putBodyParameter("TemplateUrl", templateUrl);

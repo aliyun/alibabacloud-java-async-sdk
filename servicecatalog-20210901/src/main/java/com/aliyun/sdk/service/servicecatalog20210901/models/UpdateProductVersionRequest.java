@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProductVersionRequest} extends {@link RequestModel}
  *
  * <p>UpdateProductVersionRequest</p>
  */
 public class UpdateProductVersionRequest extends Request {
-    @Body
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Active")
     private Boolean active;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Guidance")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Guidance")
     private String guidance;
 
-    @Body
-    @NameInMap("ProductVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productVersionId;
 
-    @Body
-    @NameInMap("ProductVersionName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductVersionName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String productVersionName;
 
     private UpdateProductVersionRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class UpdateProductVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,11 +117,14 @@ public class UpdateProductVersionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the product version. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the product version. Valid values:</p>
+         * <ul>
+         * <li>true: enables the product version. This is the default value.</li>
+         * <li>false: disables the product version.</li>
+         * </ul>
          * 
-         * *   true: enables the product version. This is the default value.
-         * *   false: disables the product version.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.putBodyParameter("Active", active);
@@ -125,10 +133,11 @@ public class UpdateProductVersionRequest extends Request {
         }
 
         /**
-         * The description of the product version.
-         * <p>
+         * <p>The description of the product version.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>The description of the product version.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -137,13 +146,16 @@ public class UpdateProductVersionRequest extends Request {
         }
 
         /**
-         * The recommendation information. Valid values:
-         * <p>
+         * <p>The recommendation information. Valid values:</p>
+         * <ul>
+         * <li>Default: No recommendation information is provided. This is the default value.</li>
+         * <li>Recommended: the recommended version.</li>
+         * <li>Latest: the latest version.</li>
+         * <li>Deprecated: the version that is about to be discontinued.</li>
+         * </ul>
          * 
-         * *   Default: No recommendation information is provided. This is the default value.
-         * *   Recommended: the recommended version.
-         * *   Latest: the latest version.
-         * *   Deprecated: the version that is about to be discontinued.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder guidance(String guidance) {
             this.putBodyParameter("Guidance", guidance);
@@ -152,7 +164,11 @@ public class UpdateProductVersionRequest extends Request {
         }
 
         /**
-         * The ID of the product version.
+         * <p>The ID of the product version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         public Builder productVersionId(String productVersionId) {
             this.putBodyParameter("ProductVersionId", productVersionId);
@@ -161,10 +177,12 @@ public class UpdateProductVersionRequest extends Request {
         }
 
         /**
-         * The name of the product version.
-         * <p>
+         * <p>The name of the product version.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder productVersionName(String productVersionName) {
             this.putBodyParameter("ProductVersionName", productVersionName);

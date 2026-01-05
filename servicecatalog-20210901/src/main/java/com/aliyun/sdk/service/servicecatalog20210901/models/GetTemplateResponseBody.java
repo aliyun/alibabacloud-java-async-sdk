@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetTemplateResponseBody extends TeaModel {
 
     public static GetTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class GetTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String templateBody; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.templateBody = model.templateBody;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +78,18 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the template.
-         * <p>
+         * <p>The content of the template.</p>
+         * <p>For more information about the template syntax, see <a href="https://help.aliyun.com/document_detail/184397.html">Structure of Terraform templates</a>.</p>
          * 
-         * For more information about the template syntax, see [Structure of Terraform templates](~~184397~~).
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
+         *   &quot;Transform&quot;: &quot;Aliyun::Terraform-v1.1&quot;,
+         *   &quot;Workspace&quot;: {
+         *     &quot;main.tf&quot;: &quot;variable  &quot;name&quot; {  default = &quot;auto_provisioning_group&quot;}&quot;
+         *   },
+         *   &quot;Outputs&quot;: {}
+         * }</p>
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;

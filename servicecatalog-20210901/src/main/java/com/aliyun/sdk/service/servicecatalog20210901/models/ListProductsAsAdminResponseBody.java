@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsAsAdminResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsAsAdminResponseBody</p>
  */
 public class ListProductsAsAdminResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("ProductDetails")
-    private java.util.List < ProductDetails> productDetails;
+    @com.aliyun.core.annotation.NameInMap("ProductDetails")
+    private java.util.List<ProductDetails> productDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProductsAsAdminResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
 
     public static ListProductsAsAdminResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
     /**
      * @return productDetails
      */
-    public java.util.List < ProductDetails> getProductDetails() {
+    public java.util.List<ProductDetails> getProductDetails() {
         return this.productDetails;
     }
 
@@ -81,12 +90,26 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ProductDetails> productDetails; 
+        private java.util.List<ProductDetails> productDetails; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductsAsAdminResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.productDetails = model.productDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +128,18 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
         }
 
         /**
-         * The products.
+         * <p>The products.</p>
          */
-        public Builder productDetails(java.util.List < ProductDetails> productDetails) {
+        public Builder productDetails(java.util.List<ProductDetails> productDetails) {
             this.productDetails = productDetails;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,29 +163,35 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsAsAdminResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsAsAdminResponseBody</p>
+     */
     public static class ProductDetails extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ProductArn")
+        @com.aliyun.core.annotation.NameInMap("ProductArn")
         private String productArn;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private ProductDetails(Builder builder) {
@@ -241,11 +279,26 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             private String providerName; 
             private String templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductDetails model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.productArn = model.productArn;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productType = model.productType;
+                this.providerName = model.providerName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * The time when the product was created.
-             * <p>
+             * <p>The time when the product was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:10:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +306,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the product.
+             * <p>The description of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the product.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -261,7 +317,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the product.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
              */
             public Builder productArn(String productArn) {
                 this.productArn = productArn;
@@ -269,7 +328,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp18r7q127****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -277,7 +339,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -285,10 +350,11 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the product.
-             * <p>
+             * <p>The type of the product.</p>
+             * <p>The value is set to Ros, which indicates Resource Orchestration Service (ROS).</p>
              * 
-             * The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).
+             * <strong>example:</strong>
+             * <p>Ros</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -296,7 +362,10 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the product.
+             * <p>The provider of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT team</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -304,7 +373,14 @@ public class ListProductsAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the product template. Valid values:</p>
+             * <ul>
+             * <li>RosTerraformTemplate: the Terraform template that is supported by ROS.</li>
+             * <li>RosStandardTemplate: the standard ROS template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RosTerraformTemplate</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

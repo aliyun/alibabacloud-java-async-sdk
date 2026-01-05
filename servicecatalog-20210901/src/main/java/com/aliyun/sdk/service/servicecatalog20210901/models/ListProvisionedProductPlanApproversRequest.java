@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionedProductPlanApproversRequest} extends {@link RequestModel}
  *
  * <p>ListProvisionedProductPlanApproversRequest</p>
  */
 public class ListProvisionedProductPlanApproversRequest extends Request {
-    @Query
-    @NameInMap("AccessLevelFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLevelFilter")
     private String accessLevelFilter;
 
-    @Query
-    @NameInMap("ApprovalFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalFilter")
     private String approvalFilter;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
     private ListProvisionedProductPlanApproversRequest(Builder builder) {
         super(builder);
@@ -39,7 +44,7 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +66,14 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
     public static final class Builder extends Request.Builder<ListProvisionedProductPlanApproversRequest, Builder> {
         private String accessLevelFilter; 
         private String approvalFilter; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
 
         private Builder() {
             super();
@@ -82,14 +87,18 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
         } 
 
         /**
-         * The access filter. Valid values:
-         * <p>
+         * <p>The access filter. Valid values:</p>
+         * <ul>
+         * <li>User (default): queries the plans that are created by the current requester.</li>
+         * <li>Account: queries the plans that belong to the current Alibaba Cloud account.</li>
+         * <li>ResourceDirectory: queries the plans that belong to the current resource directory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify one of the <code>ApprovalFilter</code> and <code>AccessLevelFilter</code> parameters, but not both.</p>
+         * </blockquote>
          * 
-         * *   User (default): queries the plans that are created by the current requester.
-         * *   Account: queries the plans that belong to the current Alibaba Cloud account.
-         * *   ResourceDirectory: queries the plans that belong to the current resource directory.
-         * 
-         * >  You must specify one of the `ApprovalFilter` and `AccessLevelFilter` parameters, but not both.
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder accessLevelFilter(String accessLevelFilter) {
             this.putQueryParameter("AccessLevelFilter", accessLevelFilter);
@@ -98,13 +107,17 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
         }
 
         /**
-         * The access filter of the review dimension. Valid values:
-         * <p>
+         * <p>The access filter of the review dimension. Valid values:</p>
+         * <ul>
+         * <li>AccountRequests: queries all reviewed plans that belong to the current Alibaba Cloud account.</li>
+         * <li>ResourceDirectoryRequests: queries all plans that belong to the current resource directory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify one of the <code>ApprovalFilter</code> and <code>AccessLevelFilter</code> parameters, but not both.</p>
+         * </blockquote>
          * 
-         * *   AccountRequests: queries all reviewed plans that belong to the current Alibaba Cloud account.
-         * *   ResourceDirectoryRequests: queries all plans that belong to the current resource directory.
-         * 
-         * >  You must specify one of the `ApprovalFilter` and `AccessLevelFilter` parameters, but not both.
+         * <strong>example:</strong>
+         * <p>AccountRequests</p>
          */
         public Builder approvalFilter(String approvalFilter) {
             this.putQueryParameter("ApprovalFilter", approvalFilter);
@@ -113,9 +126,9 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
         }
 
         /**
-         * An array that consists of filter conditions.
+         * <p>An array that consists of filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -128,11 +141,17 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProvisionedProductPlanApproversRequest} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlanApproversRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -166,11 +185,22 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
+             * <p>The name of the filter condition. Valid values:</p>
+             * <ul>
+             * <li>ProvisionedProductPlanApproverName: performs fuzzy match by reviewer name.</li>
+             * </ul>
              * 
-             * *   ProvisionedProductPlanApproverName: performs fuzzy match by reviewer name.
+             * <strong>example:</strong>
+             * <p>ProvisionedProductPlanApproverName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +208,10 @@ public class ListProvisionedProductPlanApproversRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
+             * <p>The value of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approver</p>
              */
             public Builder value(String value) {
                 this.value = value;

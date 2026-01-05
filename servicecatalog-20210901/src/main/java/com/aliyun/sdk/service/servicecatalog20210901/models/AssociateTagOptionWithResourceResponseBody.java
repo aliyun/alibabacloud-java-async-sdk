@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateTagOptionWithResourceResponseBody} extends {@link TeaModel}
  *
  * <p>AssociateTagOptionWithResourceResponseBody</p>
  */
 public class AssociateTagOptionWithResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssociateTagOptionWithResourceResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class AssociateTagOptionWithResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class AssociateTagOptionWithResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AssociateTagOptionWithResourceResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC833558-AFF4-5935-9AB6-8A12EE7D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

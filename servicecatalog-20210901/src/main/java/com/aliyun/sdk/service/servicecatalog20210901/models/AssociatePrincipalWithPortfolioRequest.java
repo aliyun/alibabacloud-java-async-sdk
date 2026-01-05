@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociatePrincipalWithPortfolioRequest} extends {@link RequestModel}
  *
  * <p>AssociatePrincipalWithPortfolioRequest</p>
  */
 public class AssociatePrincipalWithPortfolioRequest extends Request {
-    @Body
-    @NameInMap("PortfolioId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portfolioId;
 
-    @Body
-    @NameInMap("PrincipalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalId;
 
-    @Body
-    @NameInMap("PrincipalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalType;
 
     private AssociatePrincipalWithPortfolioRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class AssociatePrincipalWithPortfolioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,10 @@ public class AssociatePrincipalWithPortfolioRequest extends Request {
         } 
 
         /**
-         * PortfolioId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         public Builder portfolioId(String portfolioId) {
             this.putBodyParameter("PortfolioId", portfolioId);
@@ -94,7 +102,10 @@ public class AssociatePrincipalWithPortfolioRequest extends Request {
         }
 
         /**
-         * PrincipalId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24477111603637****</p>
          */
         public Builder principalId(String principalId) {
             this.putBodyParameter("PrincipalId", principalId);
@@ -103,7 +114,10 @@ public class AssociatePrincipalWithPortfolioRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         public Builder principalType(String principalType) {
             this.putBodyParameter("PrincipalType", principalType);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPrincipalsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPrincipalsResponseBody</p>
  */
 public class ListPrincipalsResponseBody extends TeaModel {
-    @NameInMap("Principals")
-    private java.util.List < Principals> principals;
+    @com.aliyun.core.annotation.NameInMap("Principals")
+    private java.util.List<Principals> principals;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrincipalsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class ListPrincipalsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return principals
      */
-    public java.util.List < Principals> getPrincipals() {
+    public java.util.List<Principals> getPrincipals() {
         return this.principals;
     }
 
@@ -46,19 +55,30 @@ public class ListPrincipalsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Principals> principals; 
+        private java.util.List<Principals> principals; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPrincipalsResponseBody model) {
+            this.principals = model.principals;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The RAM entities.
+         * <p>The RAM entities.</p>
          */
-        public Builder principals(java.util.List < Principals> principals) {
+        public Builder principals(java.util.List<Principals> principals) {
             this.principals = principals;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class ListPrincipalsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPrincipalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPrincipalsResponseBody</p>
+     */
     public static class Principals extends TeaModel {
-        @NameInMap("PrincipalId")
+        @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
         private Principals(Builder builder) {
@@ -109,8 +135,19 @@ public class ListPrincipalsResponseBody extends TeaModel {
             private String principalId; 
             private String principalType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Principals model) {
+                this.principalId = model.principalId;
+                this.principalType = model.principalType;
+            } 
+
             /**
-             * The ID of the RAM entity.
+             * <p>The ID of the RAM entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24477111603637****</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -118,11 +155,14 @@ public class ListPrincipalsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the RAM entity. Valid values:
-             * <p>
+             * <p>The type of the RAM entity. Valid values:</p>
+             * <ul>
+             * <li>RamUser: a RAM user</li>
+             * <li>RamRole: a RAM role</li>
+             * </ul>
              * 
-             * *   RamUser: a RAM user
-             * *   RamRole: a RAM role
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;

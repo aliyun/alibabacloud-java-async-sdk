@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateTagOptionWithResourceRequest} extends {@link RequestModel}
  *
  * <p>AssociateTagOptionWithResourceRequest</p>
  */
 public class AssociateTagOptionWithResourceRequest extends Request {
-    @Body
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("TagOptionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagOptionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagOptionId;
 
     private AssociateTagOptionWithResourceRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class AssociateTagOptionWithResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class AssociateTagOptionWithResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the resource with which the tag option is associated.
+         * <p>The ID of the resource with which the tag option is associated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp15p96922****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -79,7 +88,11 @@ public class AssociateTagOptionWithResourceRequest extends Request {
         }
 
         /**
-         * The ID of the tag option.
+         * <p>The ID of the tag option.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1u6mdf3d****</p>
          */
         public Builder tagOptionId(String tagOptionId) {
             this.putBodyParameter("TagOptionId", tagOptionId);

@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePortfolioRequest} extends {@link RequestModel}
  *
  * <p>CreatePortfolioRequest</p>
  */
 public class CreatePortfolioRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("PortfolioName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String portfolioName;
 
-    @Body
-    @NameInMap("ProviderName")
-    @Validation(required = true, maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProviderName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100, minLength = 1)
     private String providerName;
 
     private CreatePortfolioRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class CreatePortfolioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,10 +89,11 @@ public class CreatePortfolioRequest extends Request {
         } 
 
         /**
-         * The description of the product portfolio.
-         * <p>
+         * <p>The description of the product portfolio.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>The description of the product portfolio.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -96,10 +102,12 @@ public class CreatePortfolioRequest extends Request {
         }
 
         /**
-         * The name of the product portfolio.
-         * <p>
+         * <p>The name of the product portfolio.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>DEMO-IT services</p>
          */
         public Builder portfolioName(String portfolioName) {
             this.putBodyParameter("PortfolioName", portfolioName);
@@ -108,10 +116,12 @@ public class CreatePortfolioRequest extends Request {
         }
 
         /**
-         * The provider of the product portfolio.
-         * <p>
+         * <p>The provider of the product portfolio.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>IT team</p>
          */
         public Builder providerName(String providerName) {
             this.putBodyParameter("ProviderName", providerName);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesForTagOptionRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesForTagOptionRequest</p>
  */
 public class ListResourcesForTagOptionRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagOptionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagOptionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagOptionId;
 
     private ListResourcesForTagOptionRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class ListResourcesForTagOptionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,10 +103,11 @@ public class ListResourcesForTagOptionRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -110,10 +116,11 @@ public class ListResourcesForTagOptionRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100 Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100 Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,11 +129,15 @@ public class ListResourcesForTagOptionRequest extends Request {
         }
 
         /**
-         * The type of resource that is associated with the tag option. Valid values:
-         * <p>
+         * <p>The type of resource that is associated with the tag option. Valid values:</p>
+         * <ul>
+         * <li>product: product</li>
+         * <li>Portfolio: product portfolio</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   product: product
-         * *   Portfolio: product portfolio
+         * <strong>example:</strong>
+         * <p>Product</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -135,7 +146,11 @@ public class ListResourcesForTagOptionRequest extends Request {
         }
 
         /**
-         * The ID of the tag option.
+         * <p>The ID of the tag option.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-bp1u6mdf3d****</p>
          */
         public Builder tagOptionId(String tagOptionId) {
             this.putQueryParameter("TagOptionId", tagOptionId);

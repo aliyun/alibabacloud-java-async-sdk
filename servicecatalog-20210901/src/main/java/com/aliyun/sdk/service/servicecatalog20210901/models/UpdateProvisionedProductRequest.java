@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProvisionedProductRequest} extends {@link RequestModel}
  *
  * <p>UpdateProvisionedProductRequest</p>
  */
 public class UpdateProvisionedProductRequest extends Request {
-    @Body
-    @NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.List<Parameters> parameters;
 
-    @Body
-    @NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
     private String portfolioId;
 
-    @Body
-    @NameInMap("ProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Body
-    @NameInMap("ProductVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productVersionId;
 
-    @Body
-    @NameInMap("ProvisionedProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProvisionedProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String provisionedProductId;
 
-    @Body
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private UpdateProvisionedProductRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class UpdateProvisionedProductRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,7 +70,7 @@ public class UpdateProvisionedProductRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -100,17 +105,17 @@ public class UpdateProvisionedProductRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<UpdateProvisionedProductRequest, Builder> {
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String portfolioId; 
         private String productId; 
         private String productVersionId; 
         private String provisionedProductId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -127,25 +132,29 @@ public class UpdateProvisionedProductRequest extends Request {
         } 
 
         /**
-         * The input parameters of the template.
-         * <p>
-         * 
-         * You can specify up to 200 parameters.
-         * 
-         * > - This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.
-         * > - If the values of the ProductVersionId and Parameters parameters are not changed, you are not allowed to update the information about the product instance.
+         * <p>The input parameters of the template.</p>
+         * <p>You can specify up to 200 parameters.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</li>
+         * <li>If the values of the ProductVersionId and Parameters parameters are not changed, you are not allowed to update the information about the product instance.</li>
+         * </ul>
+         * </blockquote>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.putBodyParameter("Parameters", parameters);
             this.parameters = parameters;
             return this;
         }
 
         /**
-         * The ID of the product portfolio.
-         * <p>
+         * <p>The ID of the product portfolio.</p>
+         * <blockquote>
+         * <p>The PortfolioId parameter is not required if the default launch option exists. The PortfolioId parameter is required if the default launch option does not exist. For more information about how to obtain the value of the PortfolioId parameter, see <a href="~~ListLaunchOptions~~">ListLaunchOptions</a>.</p>
+         * </blockquote>
          * 
-         * > The PortfolioId parameter is not required if the default launch option exists. The PortfolioId parameter is required if the default launch option does not exist. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         public Builder portfolioId(String portfolioId) {
             this.putBodyParameter("PortfolioId", portfolioId);
@@ -154,7 +163,11 @@ public class UpdateProvisionedProductRequest extends Request {
         }
 
         /**
-         * The ID of the product.
+         * <p>The ID of the product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
@@ -163,10 +176,14 @@ public class UpdateProvisionedProductRequest extends Request {
         }
 
         /**
-         * The ID of the product version.
-         * <p>
+         * <p>The ID of the product version.</p>
+         * <blockquote>
+         * <p>If the values of the ProductVersionId and Parameters parameters are not changed, the information about the product instance cannot be updated.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If the values of the ProductVersionId and Parameters parameters are not changed, the information about the product instance cannot be updated.
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         public Builder productVersionId(String productVersionId) {
             this.putBodyParameter("ProductVersionId", productVersionId);
@@ -175,7 +192,11 @@ public class UpdateProvisionedProductRequest extends Request {
         }
 
         /**
-         * The ID of the product instance.
+         * <p>The ID of the product instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
          */
         public Builder provisionedProductId(String provisionedProductId) {
             this.putBodyParameter("ProvisionedProductId", provisionedProductId);
@@ -184,15 +205,16 @@ public class UpdateProvisionedProductRequest extends Request {
         }
 
         /**
-         * The input custom tags.
-         * <p>
-         * 
-         * Maximum value of N: 20.
-         * 
-         * > - The Tags parameter is optional. If you need to specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.
-         * > - The tag is propagated to each stack resource that supports the tag feature.
+         * <p>The input custom tags.</p>
+         * <p>Maximum value of N: 20.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The Tags parameter is optional. If you need to specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</li>
+         * <li>The tag is propagated to each stack resource that supports the tag feature.</li>
+         * </ul>
+         * </blockquote>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -205,11 +227,17 @@ public class UpdateProvisionedProductRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateProvisionedProductRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProvisionedProductRequest</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -243,8 +271,19 @@ public class UpdateProvisionedProductRequest extends Request {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
-             * The name of the input parameter for the template.
+             * <p>The name of the input parameter for the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_type</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -252,7 +291,10 @@ public class UpdateProvisionedProductRequest extends Request {
             }
 
             /**
-             * The value of the input parameter for the template.
+             * <p>The value of the input parameter for the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.s6-c1m1.small</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -266,11 +308,17 @@ public class UpdateProvisionedProductRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateProvisionedProductRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateProvisionedProductRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -304,11 +352,20 @@ public class UpdateProvisionedProductRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the custom tag.
-             * <p>
+             * <p>The tag key of the custom tag.</p>
+             * <p>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -316,10 +373,11 @@ public class UpdateProvisionedProductRequest extends Request {
             }
 
             /**
-             * The tag value of the custom tag.
-             * <p>
+             * <p>The tag value of the custom tag.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionedProductPlanApproversResponseBody} extends {@link TeaModel}
  *
  * <p>ListProvisionedProductPlanApproversResponseBody</p>
  */
 public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
-    @NameInMap("Approvers")
-    private java.util.List < Approvers> approvers;
+    @com.aliyun.core.annotation.NameInMap("Approvers")
+    private java.util.List<Approvers> approvers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProvisionedProductPlanApproversResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return approvers
      */
-    public java.util.List < Approvers> getApprovers() {
+    public java.util.List<Approvers> getApprovers() {
         return this.approvers;
     }
 
@@ -46,19 +55,30 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Approvers> approvers; 
+        private java.util.List<Approvers> approvers; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProvisionedProductPlanApproversResponseBody model) {
+            this.approvers = model.approvers;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * An array that consists of reviewers.
+         * <p>An array that consists of reviewers.</p>
          */
-        public Builder approvers(java.util.List < Approvers> approvers) {
+        public Builder approvers(java.util.List<Approvers> approvers) {
             this.approvers = approvers;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProvisionedProductPlanApproversResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlanApproversResponseBody</p>
+     */
     public static class Approvers extends TeaModel {
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
         private Approvers(Builder builder) {
@@ -109,8 +135,19 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
             private String principalName; 
             private String principalType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Approvers model) {
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+            } 
+
             /**
-             * The name of the reviewer.
+             * <p>The name of the reviewer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approver-1</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -118,11 +155,14 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Resource Access Management (RAM) entity of the reviewer. Valid values:
-             * <p>
+             * <p>The type of the Resource Access Management (RAM) entity of the reviewer. Valid values:</p>
+             * <ul>
+             * <li>RamUser: a RAM user</li>
+             * <li>RamRole: a RAM role</li>
+             * </ul>
              * 
-             * *   RamUser: a RAM user
-             * *   RamRole: a RAM role
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;

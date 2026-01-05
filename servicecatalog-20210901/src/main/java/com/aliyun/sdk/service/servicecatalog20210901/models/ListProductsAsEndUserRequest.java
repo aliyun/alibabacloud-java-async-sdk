@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsAsEndUserRequest} extends {@link RequestModel}
  *
  * <p>ListProductsAsEndUserRequest</p>
  */
 public class ListProductsAsEndUserRequest extends Request {
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListProductsAsEndUserRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class ListProductsAsEndUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -57,7 +62,7 @@ public class ListProductsAsEndUserRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -90,7 +95,7 @@ public class ListProductsAsEndUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListProductsAsEndUserRequest, Builder> {
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String sortBy; 
@@ -110,19 +115,20 @@ public class ListProductsAsEndUserRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -131,10 +137,11 @@ public class ListProductsAsEndUserRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,10 +150,11 @@ public class ListProductsAsEndUserRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the queried data.
-         * <p>
+         * <p>The field that is used to sort data.</p>
+         * <p>The default value is CreateTime, which specifies the time when the product was created.</p>
          * 
-         * Set the value to CreateTime, which specifies the time when the product was created.
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -155,11 +163,14 @@ public class ListProductsAsEndUserRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the queried data. Valid values:
-         * <p>
+         * <p>The method that is used to sort the returned entries. Valid values:</p>
+         * <ul>
+         * <li>Asc: sorts the entries in ascending order.</li>
+         * <li>Desc (default): sorts the entries in descending order.</li>
+         * </ul>
          * 
-         * *   Asc: the ascending order
-         * *   Desc: the descending order
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -174,11 +185,17 @@ public class ListProductsAsEndUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsAsEndUserRequest} extends {@link TeaModel}
+     *
+     * <p>ListProductsAsEndUserRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -212,12 +229,23 @@ public class ListProductsAsEndUserRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
+             * <p>The name of the filter condition. Valid values:</p>
+             * <ul>
+             * <li>ProductName: performs exact matches by product name. Product names are not case-sensitive.</li>
+             * <li>FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</li>
+             * </ul>
              * 
-             * *   ProductName: performs exact matches by product name. Product names are not case-sensitive.
-             * *   FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.
+             * <strong>example:</strong>
+             * <p>ProductName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -225,7 +253,10 @@ public class ListProductsAsEndUserRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
+             * <p>The value of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance</p>
              */
             public Builder value(String value) {
                 this.value = value;

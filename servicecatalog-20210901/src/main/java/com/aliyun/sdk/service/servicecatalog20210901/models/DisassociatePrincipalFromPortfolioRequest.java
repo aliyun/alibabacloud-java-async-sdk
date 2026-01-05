@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisassociatePrincipalFromPortfolioRequest} extends {@link RequestModel}
  *
  * <p>DisassociatePrincipalFromPortfolioRequest</p>
  */
 public class DisassociatePrincipalFromPortfolioRequest extends Request {
-    @Body
-    @NameInMap("PortfolioId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portfolioId;
 
-    @Body
-    @NameInMap("PrincipalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalId;
 
-    @Body
-    @NameInMap("PrincipalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String principalType;
 
     private DisassociatePrincipalFromPortfolioRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,11 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         } 
 
         /**
-         * The ID of the product portfolio.
+         * <p>The ID of the product portfolio.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         public Builder portfolioId(String portfolioId) {
             this.putBodyParameter("PortfolioId", portfolioId);
@@ -94,12 +103,13 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         }
 
         /**
-         * The ID of the RAM entity.
-         * <p>
+         * <p>The ID of the RAM entity.</p>
+         * <p>For more information about how to obtain the ID of a RAM user, see <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a>.</p>
+         * <p>For more information about how to obtain the ID of a RAM role, see <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a RAM user, see [GetUser](~~28681~~).
-         * 
-         * For more information about how to obtain the ID of a RAM role, see [GetRole](~~28711~~).
+         * <strong>example:</strong>
+         * <p>24477111603637****</p>
          */
         public Builder principalId(String principalId) {
             this.putBodyParameter("PrincipalId", principalId);
@@ -108,11 +118,15 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         }
 
         /**
-         * The type of the Resource Access Management (RAM) entity. Valid values:
-         * <p>
+         * <p>The type of the Resource Access Management (RAM) entity. Valid values:</p>
+         * <ul>
+         * <li>RamUser: a RAM user</li>
+         * <li>RamRole: a RAM role</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RamUser: a RAM user
-         * *   RamRole: a RAM role
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         public Builder principalType(String principalType) {
             this.putBodyParameter("PrincipalType", principalType);

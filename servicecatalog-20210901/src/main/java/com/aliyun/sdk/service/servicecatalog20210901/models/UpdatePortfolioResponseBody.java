@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePortfolioResponseBody} extends {@link TeaModel}
  *
  * <p>UpdatePortfolioResponseBody</p>
  */
 public class UpdatePortfolioResponseBody extends TeaModel {
-    @NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
     private String portfolioId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdatePortfolioResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class UpdatePortfolioResponseBody extends TeaModel {
 
     public static UpdatePortfolioResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class UpdatePortfolioResponseBody extends TeaModel {
     public static final class Builder {
         private String portfolioId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePortfolioResponseBody model) {
+            this.portfolioId = model.portfolioId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PortfolioId.

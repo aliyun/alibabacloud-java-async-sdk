@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProductVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateProductVersionResponseBody</p>
  */
 public class UpdateProductVersionResponseBody extends TeaModel {
-    @NameInMap("ProductVersionId")
+    @com.aliyun.core.annotation.NameInMap("ProductVersionId")
     private String productVersionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateProductVersionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class UpdateProductVersionResponseBody extends TeaModel {
 
     public static UpdateProductVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class UpdateProductVersionResponseBody extends TeaModel {
         private String productVersionId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateProductVersionResponseBody model) {
+            this.productVersionId = model.productVersionId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the product version.
+         * <p>The ID of the product version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         public Builder productVersionId(String productVersionId) {
             this.productVersionId = productVersionId;
@@ -58,7 +78,10 @@ public class UpdateProductVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

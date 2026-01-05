@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTagOptionResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateTagOptionResponseBody</p>
  */
 public class UpdateTagOptionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagOptionDetail")
+    @com.aliyun.core.annotation.NameInMap("TagOptionDetail")
     private TagOptionDetail tagOptionDetail;
 
     private UpdateTagOptionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class UpdateTagOptionResponseBody extends TeaModel {
 
     public static UpdateTagOptionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class UpdateTagOptionResponseBody extends TeaModel {
         private String requestId; 
         private TagOptionDetail tagOptionDetail; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateTagOptionResponseBody model) {
+            this.requestId = model.requestId;
+            this.tagOptionDetail = model.tagOptionDetail;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class UpdateTagOptionResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tag option.
+         * <p>The details of the tag option.</p>
          */
         public Builder tagOptionDetail(TagOptionDetail tagOptionDetail) {
             this.tagOptionDetail = tagOptionDetail;
@@ -71,20 +91,26 @@ public class UpdateTagOptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTagOptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateTagOptionResponseBody</p>
+     */
     public static class TagOptionDetail extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("TagOptionId")
+        @com.aliyun.core.annotation.NameInMap("TagOptionId")
         private String tagOptionId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagOptionDetail(Builder builder) {
@@ -145,12 +171,26 @@ public class UpdateTagOptionResponseBody extends TeaModel {
             private String tagOptionId; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagOptionDetail model) {
+                this.active = model.active;
+                this.key = model.key;
+                this.owner = model.owner;
+                this.tagOptionId = model.tagOptionId;
+                this.value = model.value;
+            } 
+
             /**
-             * Indicates whether the tag option is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the tag option is enabled. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true (default)
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -158,10 +198,11 @@ public class UpdateTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag option.
-             * <p>
+             * <p>The key of the tag option.</p>
+             * <p>The key must be 1 to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The key must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -169,7 +210,10 @@ public class UpdateTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the tag option belongs.
+             * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133413081827****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -177,7 +221,10 @@ public class UpdateTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag option.
+             * <p>The ID of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-bp1u6mdf3d****</p>
              */
             public Builder tagOptionId(String tagOptionId) {
                 this.tagOptionId = tagOptionId;
@@ -185,10 +232,11 @@ public class UpdateTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag option.
-             * <p>
+             * <p>The value of the tag option.</p>
+             * <p>The value must be 1 to 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The value must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

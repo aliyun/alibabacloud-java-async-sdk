@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
  */
 public class GetTemplateRequest extends Request {
-    @Query
-    @NameInMap("ProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Query
-    @NameInMap("ProductVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productVersionId;
 
     private GetTemplateRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class GetTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,11 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * The ID of the product.
+         * <p>The ID of the product.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -79,7 +88,11 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the product version.
+         * <p>The ID of the product version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         public Builder productVersionId(String productVersionId) {
             this.putQueryParameter("ProductVersionId", productVersionId);

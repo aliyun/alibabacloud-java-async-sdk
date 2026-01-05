@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ApproveProvisionedProductPlan  ApproveProvisionedProductPlanRequest
+     * @return ApproveProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<ApproveProvisionedProductPlanResponse> approveProvisionedProductPlan(ApproveProvisionedProductPlanRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociatePrincipalWithPortfolio  AssociatePrincipalWithPortfolioRequest
+     * @return AssociatePrincipalWithPortfolioResponse
+     */
     @Override
     public CompletableFuture<AssociatePrincipalWithPortfolioResponse> associatePrincipalWithPortfolio(AssociatePrincipalWithPortfolioRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateProductWithPortfolio  AssociateProductWithPortfolioRequest
+     * @return AssociateProductWithPortfolioResponse
+     */
     @Override
     public CompletableFuture<AssociateProductWithPortfolioResponse> associateProductWithPortfolio(AssociateProductWithPortfolioRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AssociateTagOptionWithResource  AssociateTagOptionWithResourceRequest
+     * @return AssociateTagOptionWithResourceResponse
+     */
     @Override
     public CompletableFuture<AssociateTagOptionWithResourceResponse> associateTagOptionWithResource(AssociateTagOptionWithResourceRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelProvisionedProductPlan  CancelProvisionedProductPlanRequest
+     * @return CancelProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<CancelProvisionedProductPlanResponse> cancelProvisionedProductPlan(CancelProvisionedProductPlanRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyProduct  CopyProductRequest
+     * @return CopyProductResponse
+     */
     @Override
     public CompletableFuture<CopyProductResponse> copyProduct(CopyProductRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateConstraint  CreateConstraintRequest
+     * @return CreateConstraintResponse
+     */
     @Override
     public CompletableFuture<CreateConstraintResponse> createConstraint(CreateConstraintRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePortfolio  CreatePortfolioRequest
+     * @return CreatePortfolioResponse
+     */
     @Override
     public CompletableFuture<CreatePortfolioResponse> createPortfolio(CreatePortfolioRequest request) {
         try {
@@ -152,8 +184,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the CreateProduct operation, you must call the [CreateTemplate](~~CreateTemplate~~) operation to create a template.
-      *
+     * <b>description</b> :
+     * <p>Before you call the CreateProduct operation, you must call the <a href="~~CreateTemplate~~">CreateTemplate</a> operation to create a template.</p>
+     * 
+     * @param request the request parameters of CreateProduct  CreateProductRequest
+     * @return CreateProductResponse
      */
     @Override
     public CompletableFuture<CreateProductResponse> createProduct(CreateProductRequest request) {
@@ -170,8 +205,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the CreateProductVersion operation, you must call the [CreateTemplate](~~CreateTemplate~~) operation to create a template.
-      *
+     * <b>description</b> :
+     * <p>Before you call the CreateProductVersion operation, you must call the <a href="~~CreateTemplate~~">CreateTemplate</a> operation to create a template.</p>
+     * 
+     * @param request the request parameters of CreateProductVersion  CreateProductVersionRequest
+     * @return CreateProductVersionResponse
      */
     @Override
     public CompletableFuture<CreateProductVersionResponse> createProductVersion(CreateProductVersionRequest request) {
@@ -187,6 +225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateProvisionedProductPlan  CreateProvisionedProductPlanRequest
+     * @return CreateProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<CreateProvisionedProductPlanResponse> createProvisionedProductPlan(CreateProvisionedProductPlanRequest request) {
         try {
@@ -201,6 +243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTagOption  CreateTagOptionRequest
+     * @return CreateTagOptionResponse
+     */
     @Override
     public CompletableFuture<CreateTagOptionResponse> createTagOption(CreateTagOptionRequest request) {
         try {
@@ -215,6 +261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
     @Override
     public CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request) {
         try {
@@ -229,6 +279,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteConstraint  DeleteConstraintRequest
+     * @return DeleteConstraintResponse
+     */
     @Override
     public CompletableFuture<DeleteConstraintResponse> deleteConstraint(DeleteConstraintRequest request) {
         try {
@@ -243,6 +297,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePortfolio  DeletePortfolioRequest
+     * @return DeletePortfolioResponse
+     */
     @Override
     public CompletableFuture<DeletePortfolioResponse> deletePortfolio(DeletePortfolioRequest request) {
         try {
@@ -257,6 +315,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProduct  DeleteProductRequest
+     * @return DeleteProductResponse
+     */
     @Override
     public CompletableFuture<DeleteProductResponse> deleteProduct(DeleteProductRequest request) {
         try {
@@ -271,6 +333,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProductVersion  DeleteProductVersionRequest
+     * @return DeleteProductVersionResponse
+     */
     @Override
     public CompletableFuture<DeleteProductVersionResponse> deleteProductVersion(DeleteProductVersionRequest request) {
         try {
@@ -285,6 +351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteProvisionedProductPlan  DeleteProvisionedProductPlanRequest
+     * @return DeleteProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteProvisionedProductPlanResponse> deleteProvisionedProductPlan(DeleteProvisionedProductPlanRequest request) {
         try {
@@ -299,6 +369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteTagOption  DeleteTagOptionRequest
+     * @return DeleteTagOptionResponse
+     */
     @Override
     public CompletableFuture<DeleteTagOptionResponse> deleteTagOption(DeleteTagOptionRequest request) {
         try {
@@ -313,6 +387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisAssociateTagOptionFromResource  DisAssociateTagOptionFromResourceRequest
+     * @return DisAssociateTagOptionFromResourceResponse
+     */
     @Override
     public CompletableFuture<DisAssociateTagOptionFromResourceResponse> disAssociateTagOptionFromResource(DisAssociateTagOptionFromResourceRequest request) {
         try {
@@ -327,6 +405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisassociatePrincipalFromPortfolio  DisassociatePrincipalFromPortfolioRequest
+     * @return DisassociatePrincipalFromPortfolioResponse
+     */
     @Override
     public CompletableFuture<DisassociatePrincipalFromPortfolioResponse> disassociatePrincipalFromPortfolio(DisassociatePrincipalFromPortfolioRequest request) {
         try {
@@ -341,6 +423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisassociateProductFromPortfolio  DisassociateProductFromPortfolioRequest
+     * @return DisassociateProductFromPortfolioResponse
+     */
     @Override
     public CompletableFuture<DisassociateProductFromPortfolioResponse> disassociateProductFromPortfolio(DisassociateProductFromPortfolioRequest request) {
         try {
@@ -355,6 +441,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteProvisionedProductPlan  ExecuteProvisionedProductPlanRequest
+     * @return ExecuteProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<ExecuteProvisionedProductPlanResponse> executeProvisionedProductPlan(ExecuteProvisionedProductPlanRequest request) {
         try {
@@ -369,6 +459,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetConstraint  GetConstraintRequest
+     * @return GetConstraintResponse
+     */
     @Override
     public CompletableFuture<GetConstraintResponse> getConstraint(GetConstraintRequest request) {
         try {
@@ -383,6 +477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPortfolio  GetPortfolioRequest
+     * @return GetPortfolioResponse
+     */
     @Override
     public CompletableFuture<GetPortfolioResponse> getPortfolio(GetPortfolioRequest request) {
         try {
@@ -397,6 +495,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProductAsAdmin  GetProductAsAdminRequest
+     * @return GetProductAsAdminResponse
+     */
     @Override
     public CompletableFuture<GetProductAsAdminResponse> getProductAsAdmin(GetProductAsAdminRequest request) {
         try {
@@ -412,8 +514,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that you are granted the permissions to manage relevant products as a user by an administrator. For more information, see [Manage access permissions](~~405233~~).
-      *
+     * <b>description</b> :
+     * <p>Make sure that you are granted the permissions to manage relevant products as a user by an administrator. For more information, see <a href="https://help.aliyun.com/document_detail/405233.html">Manage access permissions</a>.</p>
+     * 
+     * @param request the request parameters of GetProductAsEndUser  GetProductAsEndUserRequest
+     * @return GetProductAsEndUserResponse
      */
     @Override
     public CompletableFuture<GetProductAsEndUserResponse> getProductAsEndUser(GetProductAsEndUserRequest request) {
@@ -429,6 +534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProductVersion  GetProductVersionRequest
+     * @return GetProductVersionResponse
+     */
     @Override
     public CompletableFuture<GetProductVersionResponse> getProductVersion(GetProductVersionRequest request) {
         try {
@@ -443,6 +552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProvisionedProduct  GetProvisionedProductRequest
+     * @return GetProvisionedProductResponse
+     */
     @Override
     public CompletableFuture<GetProvisionedProductResponse> getProvisionedProduct(GetProvisionedProductRequest request) {
         try {
@@ -457,6 +570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetProvisionedProductPlan  GetProvisionedProductPlanRequest
+     * @return GetProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<GetProvisionedProductPlanResponse> getProvisionedProductPlan(GetProvisionedProductPlanRequest request) {
         try {
@@ -471,6 +588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTagOption  GetTagOptionRequest
+     * @return GetTagOptionResponse
+     */
     @Override
     public CompletableFuture<GetTagOptionResponse> getTagOption(GetTagOptionRequest request) {
         try {
@@ -485,6 +606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTask  GetTaskRequest
+     * @return GetTaskResponse
+     */
     @Override
     public CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request) {
         try {
@@ -499,6 +624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
     @Override
     public CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request) {
         try {
@@ -513,6 +642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LaunchProduct  LaunchProductRequest
+     * @return LaunchProductResponse
+     */
     @Override
     public CompletableFuture<LaunchProductResponse> launchProduct(LaunchProductRequest request) {
         try {
@@ -527,6 +660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLaunchOptions  ListLaunchOptionsRequest
+     * @return ListLaunchOptionsResponse
+     */
     @Override
     public CompletableFuture<ListLaunchOptionsResponse> listLaunchOptions(ListLaunchOptionsRequest request) {
         try {
@@ -541,6 +678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPortfolios  ListPortfoliosRequest
+     * @return ListPortfoliosResponse
+     */
     @Override
     public CompletableFuture<ListPortfoliosResponse> listPortfolios(ListPortfoliosRequest request) {
         try {
@@ -555,6 +696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrincipals  ListPrincipalsRequest
+     * @return ListPrincipalsResponse
+     */
     @Override
     public CompletableFuture<ListPrincipalsResponse> listPrincipals(ListPrincipalsRequest request) {
         try {
@@ -569,6 +714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProductVersions  ListProductVersionsRequest
+     * @return ListProductVersionsResponse
+     */
     @Override
     public CompletableFuture<ListProductVersionsResponse> listProductVersions(ListProductVersionsRequest request) {
         try {
@@ -583,6 +732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProductsAsAdmin  ListProductsAsAdminRequest
+     * @return ListProductsAsAdminResponse
+     */
     @Override
     public CompletableFuture<ListProductsAsAdminResponse> listProductsAsAdmin(ListProductsAsAdminRequest request) {
         try {
@@ -598,8 +751,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that you are granted the permissions to manage relevant products as a user by an administrator. For more information, see [Manage access permissions](~~405233~~).
-      *
+     * <b>description</b> :
+     * <p>Make sure that you are granted the permissions to manage relevant products as a user by an administrator. For more information, see <a href="https://help.aliyun.com/document_detail/405233.html">Manage access permissions</a>.</p>
+     * 
+     * @param request the request parameters of ListProductsAsEndUser  ListProductsAsEndUserRequest
+     * @return ListProductsAsEndUserResponse
      */
     @Override
     public CompletableFuture<ListProductsAsEndUserResponse> listProductsAsEndUser(ListProductsAsEndUserRequest request) {
@@ -615,6 +771,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProvisionedProductPlanApprovers  ListProvisionedProductPlanApproversRequest
+     * @return ListProvisionedProductPlanApproversResponse
+     */
     @Override
     public CompletableFuture<ListProvisionedProductPlanApproversResponse> listProvisionedProductPlanApprovers(ListProvisionedProductPlanApproversRequest request) {
         try {
@@ -629,6 +789,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProvisionedProductPlans  ListProvisionedProductPlansRequest
+     * @return ListProvisionedProductPlansResponse
+     */
     @Override
     public CompletableFuture<ListProvisionedProductPlansResponse> listProvisionedProductPlans(ListProvisionedProductPlansRequest request) {
         try {
@@ -643,6 +807,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListProvisionedProducts  ListProvisionedProductsRequest
+     * @return ListProvisionedProductsResponse
+     */
     @Override
     public CompletableFuture<ListProvisionedProductsResponse> listProvisionedProducts(ListProvisionedProductsRequest request) {
         try {
@@ -657,6 +825,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
     @Override
     public CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request) {
         try {
@@ -671,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourcesForTagOption  ListResourcesForTagOptionRequest
+     * @return ListResourcesForTagOptionResponse
+     */
     @Override
     public CompletableFuture<ListResourcesForTagOptionResponse> listResourcesForTagOption(ListResourcesForTagOptionRequest request) {
         try {
@@ -685,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagOptions  ListTagOptionsRequest
+     * @return ListTagOptionsResponse
+     */
     @Override
     public CompletableFuture<ListTagOptionsResponse> listTagOptions(ListTagOptionsRequest request) {
         try {
@@ -699,6 +879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTasks  ListTasksRequest
+     * @return ListTasksResponse
+     */
     @Override
     public CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request) {
         try {
@@ -714,8 +898,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a product instance is terminated, the product instance is deleted from the product instance list. End users cannot manage the product instance throughout its lifecycle. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>After a product instance is terminated, the product instance is deleted from the product instance list. End users cannot manage the product instance throughout its lifecycle. Proceed with caution.</p>
+     * 
+     * @param request the request parameters of TerminateProvisionedProduct  TerminateProvisionedProductRequest
+     * @return TerminateProvisionedProductResponse
      */
     @Override
     public CompletableFuture<TerminateProvisionedProductResponse> terminateProvisionedProduct(TerminateProvisionedProductRequest request) {
@@ -731,6 +918,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateConstraint  UpdateConstraintRequest
+     * @return UpdateConstraintResponse
+     */
     @Override
     public CompletableFuture<UpdateConstraintResponse> updateConstraint(UpdateConstraintRequest request) {
         try {
@@ -745,6 +936,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePortfolio  UpdatePortfolioRequest
+     * @return UpdatePortfolioResponse
+     */
     @Override
     public CompletableFuture<UpdatePortfolioResponse> updatePortfolio(UpdatePortfolioRequest request) {
         try {
@@ -759,6 +954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProduct  UpdateProductRequest
+     * @return UpdateProductResponse
+     */
     @Override
     public CompletableFuture<UpdateProductResponse> updateProduct(UpdateProductRequest request) {
         try {
@@ -773,6 +972,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProductVersion  UpdateProductVersionRequest
+     * @return UpdateProductVersionResponse
+     */
     @Override
     public CompletableFuture<UpdateProductVersionResponse> updateProductVersion(UpdateProductVersionRequest request) {
         try {
@@ -787,6 +990,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProvisionedProduct  UpdateProvisionedProductRequest
+     * @return UpdateProvisionedProductResponse
+     */
     @Override
     public CompletableFuture<UpdateProvisionedProductResponse> updateProvisionedProduct(UpdateProvisionedProductRequest request) {
         try {
@@ -801,6 +1008,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateProvisionedProductPlan  UpdateProvisionedProductPlanRequest
+     * @return UpdateProvisionedProductPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateProvisionedProductPlanResponse> updateProvisionedProductPlan(UpdateProvisionedProductPlanRequest request) {
         try {
@@ -815,6 +1026,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTagOption  UpdateTagOptionRequest
+     * @return UpdateTagOptionResponse
+     */
     @Override
     public CompletableFuture<UpdateTagOptionResponse> updateTagOption(UpdateTagOptionRequest request) {
         try {

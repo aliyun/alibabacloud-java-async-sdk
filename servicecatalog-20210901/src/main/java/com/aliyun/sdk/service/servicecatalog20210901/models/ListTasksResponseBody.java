@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksResponseBody</p>
  */
 public class ListTasksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskDetails")
-    private java.util.List < TaskDetails> taskDetails;
+    @com.aliyun.core.annotation.NameInMap("TaskDetails")
+    private java.util.List<TaskDetails> taskDetails;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTasksResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static ListTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return taskDetails
      */
-    public java.util.List < TaskDetails> getTaskDetails() {
+    public java.util.List<TaskDetails> getTaskDetails() {
         return this.taskDetails;
     }
 
@@ -82,8 +91,19 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < TaskDetails> taskDetails; 
+        private java.util.List<TaskDetails> taskDetails; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.taskDetails = model.taskDetails;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -112,7 +132,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * TaskDetails.
          */
-        public Builder taskDetails(java.util.List < TaskDetails> taskDetails) {
+        public Builder taskDetails(java.util.List<TaskDetails> taskDetails) {
             this.taskDetails = taskDetails;
             return this;
         }
@@ -131,14 +151,20 @@ public class ListTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class TerraformLogs extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Stream")
+        @com.aliyun.core.annotation.NameInMap("Stream")
         private String stream;
 
         private TerraformLogs(Builder builder) {
@@ -181,6 +207,15 @@ public class ListTasksResponseBody extends TeaModel {
             private String content; 
             private String stream; 
 
+            private Builder() {
+            } 
+
+            private Builder(TerraformLogs model) {
+                this.command = model.command;
+                this.content = model.content;
+                this.stream = model.stream;
+            } 
+
             /**
              * Command.
              */
@@ -212,9 +247,15 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Log extends TeaModel {
-        @NameInMap("TerraformLogs")
-        private java.util.List < TerraformLogs> terraformLogs;
+        @com.aliyun.core.annotation.NameInMap("TerraformLogs")
+        private java.util.List<TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
             this.terraformLogs = builder.terraformLogs;
@@ -231,17 +272,24 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * @return terraformLogs
          */
-        public java.util.List < TerraformLogs> getTerraformLogs() {
+        public java.util.List<TerraformLogs> getTerraformLogs() {
             return this.terraformLogs;
         }
 
         public static final class Builder {
-            private java.util.List < TerraformLogs> terraformLogs; 
+            private java.util.List<TerraformLogs> terraformLogs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Log model) {
+                this.terraformLogs = model.terraformLogs;
+            } 
 
             /**
              * TerraformLogs.
              */
-            public Builder terraformLogs(java.util.List < TerraformLogs> terraformLogs) {
+            public Builder terraformLogs(java.util.List<TerraformLogs> terraformLogs) {
                 this.terraformLogs = terraformLogs;
                 return this;
             }
@@ -253,14 +301,20 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Outputs extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OutputKey")
+        @com.aliyun.core.annotation.NameInMap("OutputKey")
         private String outputKey;
 
-        @NameInMap("OutputValue")
+        @com.aliyun.core.annotation.NameInMap("OutputValue")
         private String outputValue;
 
         private Outputs(Builder builder) {
@@ -303,6 +357,15 @@ public class ListTasksResponseBody extends TeaModel {
             private String outputKey; 
             private String outputValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Outputs model) {
+                this.description = model.description;
+                this.outputKey = model.outputKey;
+                this.outputValue = model.outputValue;
+            } 
+
             /**
              * Description.
              */
@@ -334,11 +397,17 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -372,6 +441,14 @@ public class ListTasksResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
              * ParameterKey.
              */
@@ -395,53 +472,59 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTasksResponseBody</p>
+     */
     public static class TaskDetails extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private Log log;
 
-        @NameInMap("Outputs")
-        private java.util.List < Outputs> outputs;
+        @com.aliyun.core.annotation.NameInMap("Outputs")
+        private java.util.List<Outputs> outputs;
 
-        @NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.List<Parameters> parameters;
 
-        @NameInMap("PortfolioId")
+        @com.aliyun.core.annotation.NameInMap("PortfolioId")
         private String portfolioId;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductVersionId")
+        @com.aliyun.core.annotation.NameInMap("ProductVersionId")
         private String productVersionId;
 
-        @NameInMap("ProductVersionName")
+        @com.aliyun.core.annotation.NameInMap("ProductVersionName")
         private String productVersionName;
 
-        @NameInMap("ProvisionedProductId")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedProductId")
         private String provisionedProductId;
 
-        @NameInMap("ProvisionedProductName")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedProductName")
         private String provisionedProductName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TaskDetails(Builder builder) {
@@ -488,14 +571,14 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * @return outputs
          */
-        public java.util.List < Outputs> getOutputs() {
+        public java.util.List<Outputs> getOutputs() {
             return this.outputs;
         }
 
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -586,8 +669,8 @@ public class ListTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private Log log; 
-            private java.util.List < Outputs> outputs; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Outputs> outputs; 
+            private java.util.List<Parameters> parameters; 
             private String portfolioId; 
             private String productId; 
             private String productName; 
@@ -600,6 +683,28 @@ public class ListTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskDetails model) {
+                this.createTime = model.createTime;
+                this.log = model.log;
+                this.outputs = model.outputs;
+                this.parameters = model.parameters;
+                this.portfolioId = model.portfolioId;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productVersionId = model.productVersionId;
+                this.productVersionName = model.productVersionName;
+                this.provisionedProductId = model.provisionedProductId;
+                this.provisionedProductName = model.provisionedProductName;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreateTime.
@@ -620,7 +725,7 @@ public class ListTasksResponseBody extends TeaModel {
             /**
              * Outputs.
              */
-            public Builder outputs(java.util.List < Outputs> outputs) {
+            public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;
                 return this;
             }
@@ -628,7 +733,7 @@ public class ListTasksResponseBody extends TeaModel {
             /**
              * Parameters.
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -706,7 +811,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-bp1dmg242c****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

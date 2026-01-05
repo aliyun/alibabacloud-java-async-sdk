@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApproveProvisionedProductPlanRequest} extends {@link RequestModel}
  *
  * <p>ApproveProvisionedProductPlanRequest</p>
  */
 public class ApproveProvisionedProductPlanRequest extends Request {
-    @Body
-    @NameInMap("ApprovalAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApprovalAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String approvalAction;
 
-    @Body
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Body
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
     private ApproveProvisionedProductPlanRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ApproveProvisionedProductPlanRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,11 +89,15 @@ public class ApproveProvisionedProductPlanRequest extends Request {
         } 
 
         /**
-         * The review action. Valid values:
-         * <p>
+         * <p>The review action. Valid values:</p>
+         * <ul>
+         * <li>Approve</li>
+         * <li>Reject</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Approve
-         * *   Reject
+         * <strong>example:</strong>
+         * <p>Approve</p>
          */
         public Builder approvalAction(String approvalAction) {
             this.putBodyParameter("ApprovalAction", approvalAction);
@@ -97,7 +106,10 @@ public class ApproveProvisionedProductPlanRequest extends Request {
         }
 
         /**
-         * The review description.
+         * <p>The review description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved. You can create a resource.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -106,7 +118,11 @@ public class ApproveProvisionedProductPlanRequest extends Request {
         }
 
         /**
-         * The ID of the plan.
+         * <p>The ID of the plan.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-bp1jvmdk2k****</p>
          */
         public Builder planId(String planId) {
             this.putBodyParameter("PlanId", planId);

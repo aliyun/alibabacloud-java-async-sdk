@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConstraintResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConstraintResponseBody</p>
  */
 public class CreateConstraintResponseBody extends TeaModel {
-    @NameInMap("ConstraintId")
+    @com.aliyun.core.annotation.NameInMap("ConstraintId")
     private String constraintId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateConstraintResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateConstraintResponseBody extends TeaModel {
 
     public static CreateConstraintResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class CreateConstraintResponseBody extends TeaModel {
         private String constraintId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateConstraintResponseBody model) {
+            this.constraintId = model.constraintId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the constraint.
+         * <p>The ID of the constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cons-bp1yx7x42v****</p>
          */
         public Builder constraintId(String constraintId) {
             this.constraintId = constraintId;
@@ -58,7 +78,10 @@ public class CreateConstraintResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

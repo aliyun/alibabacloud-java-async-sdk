@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPortfolioResponseBody} extends {@link TeaModel}
  *
  * <p>GetPortfolioResponseBody</p>
  */
 public class GetPortfolioResponseBody extends TeaModel {
-    @NameInMap("PortfolioDetail")
+    @com.aliyun.core.annotation.NameInMap("PortfolioDetail")
     private PortfolioDetail portfolioDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagOptions")
-    private java.util.List < TagOptions> tagOptions;
+    @com.aliyun.core.annotation.NameInMap("TagOptions")
+    private java.util.List<TagOptions> tagOptions;
 
     private GetPortfolioResponseBody(Builder builder) {
         this.portfolioDetail = builder.portfolioDetail;
@@ -33,6 +38,10 @@ public class GetPortfolioResponseBody extends TeaModel {
 
     public static GetPortfolioResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,26 @@ public class GetPortfolioResponseBody extends TeaModel {
     /**
      * @return tagOptions
      */
-    public java.util.List < TagOptions> getTagOptions() {
+    public java.util.List<TagOptions> getTagOptions() {
         return this.tagOptions;
     }
 
     public static final class Builder {
         private PortfolioDetail portfolioDetail; 
         private String requestId; 
-        private java.util.List < TagOptions> tagOptions; 
+        private java.util.List<TagOptions> tagOptions; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPortfolioResponseBody model) {
+            this.portfolioDetail = model.portfolioDetail;
+            this.requestId = model.requestId;
+            this.tagOptions = model.tagOptions;
+        } 
 
         /**
-         * The details of the product portfolio.
+         * <p>The details of the product portfolio.</p>
          */
         public Builder portfolioDetail(PortfolioDetail portfolioDetail) {
             this.portfolioDetail = portfolioDetail;
@@ -70,7 +88,10 @@ public class GetPortfolioResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +99,9 @@ public class GetPortfolioResponseBody extends TeaModel {
         }
 
         /**
-         * The tag options associated with the service portfolio.
+         * <p>The tag options associated with the service portfolio.</p>
          */
-        public Builder tagOptions(java.util.List < TagOptions> tagOptions) {
+        public Builder tagOptions(java.util.List<TagOptions> tagOptions) {
             this.tagOptions = tagOptions;
             return this;
         }
@@ -91,23 +112,29 @@ public class GetPortfolioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPortfolioResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPortfolioResponseBody</p>
+     */
     public static class PortfolioDetail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PortfolioArn")
+        @com.aliyun.core.annotation.NameInMap("PortfolioArn")
         private String portfolioArn;
 
-        @NameInMap("PortfolioId")
+        @com.aliyun.core.annotation.NameInMap("PortfolioId")
         private String portfolioId;
 
-        @NameInMap("PortfolioName")
+        @com.aliyun.core.annotation.NameInMap("PortfolioName")
         private String portfolioName;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
         private PortfolioDetail(Builder builder) {
@@ -177,11 +204,24 @@ public class GetPortfolioResponseBody extends TeaModel {
             private String portfolioName; 
             private String providerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortfolioDetail model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.portfolioArn = model.portfolioArn;
+                this.portfolioId = model.portfolioId;
+                this.portfolioName = model.portfolioName;
+                this.providerName = model.providerName;
+            } 
+
             /**
-             * The time when the product portfolio was created.
-             * <p>
+             * <p>The time when the product portfolio was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:11:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -189,7 +229,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the product portfolio.
+             * <p>The description of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the product portfolio.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -197,7 +240,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the product portfolio.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:servicecatalog:cn-hangzhou:146611588617****:portfolio/port-bp1yt7582g****</p>
              */
             public Builder portfolioArn(String portfolioArn) {
                 this.portfolioArn = portfolioArn;
@@ -205,7 +251,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product portfolio.
+             * <p>The ID of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>port-bp1yt7582g****</p>
              */
             public Builder portfolioId(String portfolioId) {
                 this.portfolioId = portfolioId;
@@ -213,7 +262,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product portfolio.
+             * <p>The name of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-IT services</p>
              */
             public Builder portfolioName(String portfolioName) {
                 this.portfolioName = portfolioName;
@@ -221,7 +273,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the product portfolio.
+             * <p>The provider of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT team</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -235,20 +290,26 @@ public class GetPortfolioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPortfolioResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPortfolioResponseBody</p>
+     */
     public static class TagOptions extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("TagOptionId")
+        @com.aliyun.core.annotation.NameInMap("TagOptionId")
         private String tagOptionId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagOptions(Builder builder) {
@@ -309,12 +370,26 @@ public class GetPortfolioResponseBody extends TeaModel {
             private String tagOptionId; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagOptions model) {
+                this.active = model.active;
+                this.key = model.key;
+                this.owner = model.owner;
+                this.tagOptionId = model.tagOptionId;
+                this.value = model.value;
+            } 
+
             /**
-             * Indicates whether the tag option is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the tag option is enabled. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true (default)
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -322,7 +397,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag option.
+             * <p>The key of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -330,7 +408,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner of the tag option.
+             * <p>The ID of the owner of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133413081827****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -338,7 +419,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag option.
+             * <p>The ID of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-bp1q65xd3j****</p>
              */
             public Builder tagOptionId(String tagOptionId) {
                 this.tagOptionId = tagOptionId;
@@ -346,7 +430,10 @@ public class GetPortfolioResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag option.
+             * <p>The value of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

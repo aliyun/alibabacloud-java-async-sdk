@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTagOptionRequest} extends {@link RequestModel}
  *
  * <p>CreateTagOptionRequest</p>
  */
 public class CreateTagOptionRequest extends Request {
-    @Body
-    @NameInMap("Key")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String key;
 
-    @Body
-    @NameInMap("Value")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String value;
 
     private CreateTagOptionRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class CreateTagOptionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,10 +75,12 @@ public class CreateTagOptionRequest extends Request {
         } 
 
         /**
-         * The key of the tag option.
-         * <p>
+         * <p>The key of the tag option.</p>
+         * <p>The key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);
@@ -82,10 +89,12 @@ public class CreateTagOptionRequest extends Request {
         }
 
         /**
-         * The value of the tag option.
-         * <p>
+         * <p>The value of the tag option.</p>
+         * <p>The value can be up to 128 characters in length. It cannot start with <code>acs:</code>and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value can be up to 128 characters in length. It cannot start with `acs:`and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagOptionsRequest} extends {@link RequestModel}
  *
  * <p>ListTagOptionsRequest</p>
  */
 public class ListTagOptionsRequest extends Request {
-    @Query
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private Filters filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListTagOptionsRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class ListTagOptionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +115,7 @@ public class ListTagOptionsRequest extends Request {
         } 
 
         /**
-         * The filter condition.
+         * <p>The filter condition.</p>
          */
         public Builder filters(Filters filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
@@ -120,10 +125,11 @@ public class ListTagOptionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -132,10 +138,11 @@ public class ListTagOptionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,10 +151,11 @@ public class ListTagOptionsRequest extends Request {
         }
 
         /**
-         * The information based on which you want to sort the query results.
-         * <p>
+         * <p>The information based on which you want to sort the query results.</p>
+         * <p>Set the value to CreateTime, which specifies the creation time of tag options.</p>
          * 
-         * Set the value to CreateTime, which specifies the creation time of tag options.
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -156,11 +164,14 @@ public class ListTagOptionsRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>Asc: the ascending order</li>
+         * <li>Desc (default): the descending order</li>
+         * </ul>
          * 
-         * *   Asc: the ascending order
-         * *   Desc (default): the descending order
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -175,17 +186,23 @@ public class ListTagOptionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagOptionsRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagOptionsRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("FullTextSearch")
+        @com.aliyun.core.annotation.NameInMap("FullTextSearch")
         private String fullTextSearch;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -237,12 +254,25 @@ public class ListTagOptionsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.active = model.active;
+                this.fullTextSearch = model.fullTextSearch;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Specifies whether to enable the tag option. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the tag option. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true (default)
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -250,7 +280,10 @@ public class ListTagOptionsRequest extends Request {
             }
 
             /**
-             * The full-text search method.
+             * <p>The full-text search method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder fullTextSearch(String fullTextSearch) {
                 this.fullTextSearch = fullTextSearch;
@@ -258,7 +291,10 @@ public class ListTagOptionsRequest extends Request {
             }
 
             /**
-             * The key of the tag option.
+             * <p>The key of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -266,7 +302,10 @@ public class ListTagOptionsRequest extends Request {
             }
 
             /**
-             * The value of the tag option.
+             * <p>The value of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

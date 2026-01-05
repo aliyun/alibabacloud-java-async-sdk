@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskRequest} extends {@link RequestModel}
  *
  * <p>GetTaskRequest</p>
  */
 public class GetTaskRequest extends Request {
-    @Body
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private GetTaskRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-bp1dmg242c****</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

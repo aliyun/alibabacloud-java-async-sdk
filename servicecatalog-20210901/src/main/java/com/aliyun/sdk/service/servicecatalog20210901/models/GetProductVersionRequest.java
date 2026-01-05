@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProductVersionRequest} extends {@link RequestModel}
  *
  * <p>GetProductVersionRequest</p>
  */
 public class GetProductVersionRequest extends Request {
-    @Query
-    @NameInMap("ProductVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productVersionId;
 
     private GetProductVersionRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetProductVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetProductVersionRequest extends Request {
         } 
 
         /**
-         * ProductVersionId.
+         * <p>The ID of the product version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv-bp15e79d26****</p>
          */
         public Builder productVersionId(String productVersionId) {
             this.putQueryParameter("ProductVersionId", productVersionId);

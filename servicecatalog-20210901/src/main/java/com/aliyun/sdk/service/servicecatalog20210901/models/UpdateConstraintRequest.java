@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConstraintRequest} extends {@link RequestModel}
  *
  * <p>UpdateConstraintRequest</p>
  */
 public class UpdateConstraintRequest extends Request {
-    @Body
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Body
-    @NameInMap("ConstraintId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConstraintId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String constraintId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     private UpdateConstraintRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class UpdateConstraintRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,10 +89,12 @@ public class UpdateConstraintRequest extends Request {
         } 
 
         /**
-         * The configurations of the constraint.
-         * <p>
+         * <p>The configurations of the constraint.</p>
+         * <p>Format: { &quot;LocalRoleName&quot;: &quot;&lt;role_name&gt;&quot; }.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Format: { "LocalRoleName": "\<role_name>" }.
+         * <strong>example:</strong>
+         * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -96,7 +103,11 @@ public class UpdateConstraintRequest extends Request {
         }
 
         /**
-         * The ID of the constraint.
+         * <p>The ID of the constraint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cons-bp1yx7x42v****</p>
          */
         public Builder constraintId(String constraintId) {
             this.putBodyParameter("ConstraintId", constraintId);
@@ -105,10 +116,11 @@ public class UpdateConstraintRequest extends Request {
         }
 
         /**
-         * The description of the constraint.
-         * <p>
+         * <p>The description of the constraint.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Launch as local role TestRole</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

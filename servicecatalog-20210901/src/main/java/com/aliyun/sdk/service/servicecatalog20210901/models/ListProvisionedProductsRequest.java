@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionedProductsRequest} extends {@link RequestModel}
  *
  * <p>ListProvisionedProductsRequest</p>
  */
 public class ListProvisionedProductsRequest extends Request {
-    @Query
-    @NameInMap("AccessLevelFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLevelFilter")
     private String accessLevelFilter;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListProvisionedProductsRequest(Builder builder) {
@@ -54,7 +59,7 @@ public class ListProvisionedProductsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +74,7 @@ public class ListProvisionedProductsRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -103,7 +108,7 @@ public class ListProvisionedProductsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListProvisionedProductsRequest, Builder> {
         private String accessLevelFilter; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String sortBy; 
@@ -124,11 +129,14 @@ public class ListProvisionedProductsRequest extends Request {
         } 
 
         /**
-         * The access filter. Valid values:
-         * <p>
+         * <p>The access filter. Valid values:</p>
+         * <ul>
+         * <li>User: queries the product instances that are created by the current requester. This is the default value.</li>
+         * <li>Account: queries the product instances that belong to the current Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   User: queries the product instances that are created by the current requester. This is the default value.
-         * *   Account: queries the product instances that belong to the current Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder accessLevelFilter(String accessLevelFilter) {
             this.putQueryParameter("AccessLevelFilter", accessLevelFilter);
@@ -137,19 +145,20 @@ public class ListProvisionedProductsRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -158,10 +167,11 @@ public class ListProvisionedProductsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,10 +180,11 @@ public class ListProvisionedProductsRequest extends Request {
         }
 
         /**
-         * The field that is used to sort the queried data.
-         * <p>
+         * <p>The field that is used to sort the queried data.</p>
+         * <p>Set the value to CreateTime, which specifies the time when the product instance was created.</p>
          * 
-         * Set the value to CreateTime, which specifies the time when the product instance was created.
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -182,11 +193,14 @@ public class ListProvisionedProductsRequest extends Request {
         }
 
         /**
-         * The sorting method. Valid values:
-         * <p>
+         * <p>The sorting method. Valid values:</p>
+         * <ul>
+         * <li>Asc: the ascending order.</li>
+         * <li>Desc (default): the descending order.</li>
+         * </ul>
          * 
-         * *   Asc: the ascending order.
-         * *   Desc (default): the descending order.
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -201,11 +215,17 @@ public class ListProvisionedProductsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProvisionedProductsRequest} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductsRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -239,12 +259,23 @@ public class ListProvisionedProductsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
+             * <p>The name of the filter condition. Valid values:</p>
+             * <ul>
+             * <li>ProvisionedProductName: performs exact matches by product instance name. Product instance names are not case-sensitive.</li>
+             * <li>FullTextSearch: performs full-text searches by product instance name. Fuzzy match is supported.</li>
+             * </ul>
              * 
-             * *   ProvisionedProductName: performs exact matches by product instance name. Product instance names are not case-sensitive.
-             * *   FullTextSearch: performs full-text searches by product instance name. Fuzzy match is supported.
+             * <strong>example:</strong>
+             * <p>ProvisionedProductName</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -252,7 +283,10 @@ public class ListProvisionedProductsRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
+             * <p>The value of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-ECS instance</p>
              */
             public Builder value(String value) {
                 this.value = value;

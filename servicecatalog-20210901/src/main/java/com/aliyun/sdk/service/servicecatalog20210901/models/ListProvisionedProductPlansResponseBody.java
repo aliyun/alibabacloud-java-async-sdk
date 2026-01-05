@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionedProductPlansResponseBody} extends {@link TeaModel}
  *
  * <p>ListProvisionedProductPlansResponseBody</p>
  */
 public class ListProvisionedProductPlansResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PlanDetails")
-    private java.util.List < PlanDetails> planDetails;
+    @com.aliyun.core.annotation.NameInMap("PlanDetails")
+    private java.util.List<PlanDetails> planDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProvisionedProductPlansResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
     public static ListProvisionedProductPlansResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     /**
      * @return planDetails
      */
-    public java.util.List < PlanDetails> getPlanDetails() {
+    public java.util.List<PlanDetails> getPlanDetails() {
         return this.planDetails;
     }
 
@@ -81,15 +90,27 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PlanDetails> planDetails; 
+        private java.util.List<PlanDetails> planDetails; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProvisionedProductPlansResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.planDetails = model.planDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -97,10 +118,11 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
-         * <p>
+         * <p>The number of entries returned per page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -108,15 +130,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of plans.
+         * <p>An array that consists of plans.</p>
          */
-        public Builder planDetails(java.util.List < PlanDetails> planDetails) {
+        public Builder planDetails(java.util.List<PlanDetails> planDetails) {
             this.planDetails = planDetails;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +149,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,11 +165,17 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProvisionedProductPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlansResponseBody</p>
+     */
     public static class AssignedApprovers extends TeaModel {
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
         private AssignedApprovers(Builder builder) {
@@ -175,8 +209,19 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             private String principalName; 
             private String principalType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssignedApprovers model) {
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+            } 
+
             /**
-             * The RAM entity name of the reviewer.
+             * <p>The RAM entity name of the reviewer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>endUser</p>
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -184,11 +229,14 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the RAM entity of the reviewer. Valid values:
-             * <p>
+             * <p>The type of the RAM entity of the reviewer. Valid values:</p>
+             * <ul>
+             * <li>RamUser: a RAM user</li>
+             * <li>RamRole: a RAM role</li>
+             * </ul>
              * 
-             * *   RamUser: a RAM user
-             * *   RamRole: a RAM role
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -202,11 +250,17 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProvisionedProductPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlansResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -240,8 +294,19 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             private String parameterKey; 
             private String parameterValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.parameterKey = model.parameterKey;
+                this.parameterValue = model.parameterValue;
+            } 
+
             /**
-             * The name of the parameter in the template.
+             * <p>The name of the parameter in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_name</p>
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -249,7 +314,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter in the template.
+             * <p>The value of the parameter in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test-8</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -263,11 +331,17 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProvisionedProductPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlansResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -301,8 +375,19 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of the custom tag.
+             * <p>The key of the custom tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,7 +395,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the custom tag.
+             * <p>The value of the custom tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -324,77 +412,83 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListProvisionedProductPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlansResponseBody</p>
+     */
     public static class PlanDetails extends TeaModel {
-        @NameInMap("AssignedApprovers")
-        private java.util.List < AssignedApprovers> assignedApprovers;
+        @com.aliyun.core.annotation.NameInMap("AssignedApprovers")
+        private java.util.List<AssignedApprovers> assignedApprovers;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("OwnerPrincipalId")
+        @com.aliyun.core.annotation.NameInMap("OwnerPrincipalId")
         private String ownerPrincipalId;
 
-        @NameInMap("OwnerPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("OwnerPrincipalName")
         private String ownerPrincipalName;
 
-        @NameInMap("OwnerPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("OwnerPrincipalType")
         private String ownerPrincipalType;
 
-        @NameInMap("Parameters")
-        private java.util.List < Parameters> parameters;
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private java.util.List<Parameters> parameters;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("PlanName")
+        @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("PortfolioId")
+        @com.aliyun.core.annotation.NameInMap("PortfolioId")
         private String portfolioId;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductVersionId")
+        @com.aliyun.core.annotation.NameInMap("ProductVersionId")
         private String productVersionId;
 
-        @NameInMap("ProvisionedProductId")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedProductId")
         private String provisionedProductId;
 
-        @NameInMap("ProvisionedProductName")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedProductName")
         private String provisionedProductName;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackRegionId")
+        @com.aliyun.core.annotation.NameInMap("StackRegionId")
         private String stackRegionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private PlanDetails(Builder builder) {
@@ -435,7 +529,7 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         /**
          * @return assignedApprovers
          */
-        public java.util.List < AssignedApprovers> getAssignedApprovers() {
+        public java.util.List<AssignedApprovers> getAssignedApprovers() {
             return this.assignedApprovers;
         }
 
@@ -484,7 +578,7 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < Parameters> getParameters() {
+        public java.util.List<Parameters> getParameters() {
             return this.parameters;
         }
 
@@ -582,7 +676,7 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -601,14 +695,14 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AssignedApprovers> assignedApprovers; 
+            private java.util.List<AssignedApprovers> assignedApprovers; 
             private String createTime; 
             private String description; 
             private String operationType; 
             private String ownerPrincipalId; 
             private String ownerPrincipalName; 
             private String ownerPrincipalType; 
-            private java.util.List < Parameters> parameters; 
+            private java.util.List<Parameters> parameters; 
             private String planId; 
             private String planName; 
             private String planType; 
@@ -622,23 +716,54 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             private String stackRegionId; 
             private String status; 
             private String statusMessage; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String uid; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlanDetails model) {
+                this.assignedApprovers = model.assignedApprovers;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.operationType = model.operationType;
+                this.ownerPrincipalId = model.ownerPrincipalId;
+                this.ownerPrincipalName = model.ownerPrincipalName;
+                this.ownerPrincipalType = model.ownerPrincipalType;
+                this.parameters = model.parameters;
+                this.planId = model.planId;
+                this.planName = model.planName;
+                this.planType = model.planType;
+                this.portfolioId = model.portfolioId;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productVersionId = model.productVersionId;
+                this.provisionedProductId = model.provisionedProductId;
+                this.provisionedProductName = model.provisionedProductName;
+                this.stackId = model.stackId;
+                this.stackRegionId = model.stackRegionId;
+                this.status = model.status;
+                this.statusMessage = model.statusMessage;
+                this.tags = model.tags;
+                this.uid = model.uid;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * An array that consists of reviewers.
+             * <p>An array that consists of reviewers.</p>
              */
-            public Builder assignedApprovers(java.util.List < AssignedApprovers> assignedApprovers) {
+            public Builder assignedApprovers(java.util.List<AssignedApprovers> assignedApprovers) {
                 this.assignedApprovers = assignedApprovers;
                 return this;
             }
 
             /**
-             * The time when the plan was created.
-             * <p>
+             * <p>The time when the plan was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-09-13T02:01:22Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -646,7 +771,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the plan.
+             * <p>The description of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For development team.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -654,12 +782,15 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The purpose of the plan. Valid values:
-             * <p>
+             * <p>The purpose of the plan. Valid values:</p>
+             * <ul>
+             * <li>LaunchProduct: launches the product. This is the default value.</li>
+             * <li>UpdateProvisionedProduct: updates the information about the product instance.</li>
+             * <li>TerminateProvisionedProduct: terminates the product instance.</li>
+             * </ul>
              * 
-             * *   LaunchProduct: launches the product. This is the default value.
-             * *   UpdateProvisionedProduct: updates the information about the product instance.
-             * *   TerminateProvisionedProduct: terminates the product instance.
+             * <strong>example:</strong>
+             * <p>LaunchProduct</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -667,7 +798,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM entity to which the plan belongs.
+             * <p>The ID of the RAM entity to which the plan belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24477111603637****</p>
              */
             public Builder ownerPrincipalId(String ownerPrincipalId) {
                 this.ownerPrincipalId = ownerPrincipalId;
@@ -675,7 +809,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM entity to which the plan belongs.
+             * <p>The name of the RAM entity to which the plan belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enduser</p>
              */
             public Builder ownerPrincipalName(String ownerPrincipalName) {
                 this.ownerPrincipalName = ownerPrincipalName;
@@ -683,11 +820,14 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the RAM entity to which the plan belongs. Valid values:
-             * <p>
+             * <p>The type of the RAM entity to which the plan belongs. Valid values:</p>
+             * <ul>
+             * <li>RamUser: a RAM user</li>
+             * <li>RamRole: a RAM role</li>
+             * </ul>
              * 
-             * *   RamUser: a RAM user
-             * *   RamRole: a RAM role
+             * <strong>example:</strong>
+             * <p>RamUser</p>
              */
             public Builder ownerPrincipalType(String ownerPrincipalType) {
                 this.ownerPrincipalType = ownerPrincipalType;
@@ -695,15 +835,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the parameters in the template.
+             * <p>An array that consists of the parameters in the template.</p>
              */
-            public Builder parameters(java.util.List < Parameters> parameters) {
+            public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
 
             /**
-             * The ID of the plan.
+             * <p>The ID of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan-bp18mmdh2u****</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -711,7 +854,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plan.
+             * <p>The name of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance-637****</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -719,10 +865,11 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the plan.
-             * <p>
+             * <p>The type of the plan.</p>
+             * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
              * 
-             * The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).
+             * <strong>example:</strong>
+             * <p>Ros</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -730,7 +877,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product portfolio.
+             * <p>The ID of the product portfolio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>port-bp1438kf2j****</p>
              */
             public Builder portfolioId(String portfolioId) {
                 this.portfolioId = portfolioId;
@@ -738,7 +888,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product.
+             * <p>The ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp1rtrnh2c****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -746,7 +899,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create an ECS instance</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -754,7 +910,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product version.
+             * <p>The ID of the product version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv-bp19udk22v****</p>
              */
             public Builder productVersionId(String productVersionId) {
                 this.productVersionId = productVersionId;
@@ -762,7 +921,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product instance.
+             * <p>The ID of the product instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pp-bp1c35162d****</p>
              */
             public Builder provisionedProductId(String provisionedProductId) {
                 this.provisionedProductId = provisionedProductId;
@@ -770,7 +932,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product instance.
+             * <p>The name of the product instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds-MYSQL-875****</p>
              */
             public Builder provisionedProductName(String provisionedProductName) {
                 this.provisionedProductName = provisionedProductName;
@@ -778,7 +943,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ROS stack.
+             * <p>The ID of the ROS stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2599090a-309e-4306-b989-17ba66a9****</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -786,7 +954,10 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the ROS stack belongs.
+             * <p>The ID of the region to which the ROS stack belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder stackRegionId(String stackRegionId) {
                 this.stackRegionId = stackRegionId;
@@ -794,19 +965,22 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the plan. Valid values:
-             * <p>
+             * <p>The state of the plan. Valid values:</p>
+             * <ul>
+             * <li>PreviewInProgress: The plan is being prechecked.</li>
+             * <li>PreviewSuccess: The precheck is successful.</li>
+             * <li>PreviewFailed: The precheck fails.</li>
+             * <li>ApplicationInProgress: The plan is being reviewed.</li>
+             * <li>ApplicationApproved: The plan is approved.</li>
+             * <li>ApplicationRejected: The approval is rejected.</li>
+             * <li>ExecuteInProgress: The plan is being run.</li>
+             * <li>ExecuteSuccess: The plan is run.</li>
+             * <li>ExecuteFailed: The plan fails to be run.</li>
+             * <li>Canceled: The plan is canceled.</li>
+             * </ul>
              * 
-             * *   PreviewInProgress: The plan is being prechecked.
-             * *   PreviewSuccess: The precheck is successful.
-             * *   PreviewFailed: The precheck fails.
-             * *   ApplicationInProgress: The plan is being reviewed.
-             * *   ApplicationApproved: The plan is approved.
-             * *   ApplicationRejected: The approval is rejected.
-             * *   ExecuteInProgress: The plan is being run.
-             * *   ExecuteSuccess: The plan is run.
-             * *   ExecuteFailed: The plan fails to be run.
-             * *   Canceled: The plan is canceled.
+             * <strong>example:</strong>
+             * <p>PreviewSuccess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -814,10 +988,13 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned for the state.
-             * <p>
+             * <p>The message returned for the state.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.
+             * <strong>example:</strong>
+             * <p>Create stack failed: Resource CREATE failed: terraform stack sc-146611588617****-pp-bp1ddg1n2a**** failure...</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -825,15 +1002,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of custom tags.
+             * <p>An array that consists of custom tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the plan belongs.
+             * <p>The ID of the Alibaba Cloud account to which the plan belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>146611588617****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -841,10 +1021,11 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the task was modified.
-             * <p>
+             * <p>The last time when the task was modified.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-07-18T06:02:35.075Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

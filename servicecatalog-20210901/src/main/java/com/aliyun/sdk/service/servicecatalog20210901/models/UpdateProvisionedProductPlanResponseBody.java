@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateProvisionedProductPlanResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateProvisionedProductPlanResponseBody</p>
  */
 public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
-    @NameInMap("PlanId")
+    @com.aliyun.core.annotation.NameInMap("PlanId")
     private String planId;
 
-    @NameInMap("ProvisionedProductId")
+    @com.aliyun.core.annotation.NameInMap("ProvisionedProductId")
     private String provisionedProductId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateProvisionedProductPlanResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
 
     public static UpdateProvisionedProductPlanResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
         private String provisionedProductId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateProvisionedProductPlanResponseBody model) {
+            this.planId = model.planId;
+            this.provisionedProductId = model.provisionedProductId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the plan.
+         * <p>The ID of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-bp1jvmdk2k****</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -70,7 +91,10 @@ public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the product instance.
+         * <p>The ID of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
          */
         public Builder provisionedProductId(String provisionedProductId) {
             this.provisionedProductId = provisionedProductId;
@@ -78,7 +102,10 @@ public class UpdateProvisionedProductPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

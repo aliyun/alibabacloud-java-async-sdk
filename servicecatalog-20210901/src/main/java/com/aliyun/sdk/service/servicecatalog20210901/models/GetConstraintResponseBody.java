@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConstraintResponseBody} extends {@link TeaModel}
  *
  * <p>GetConstraintResponseBody</p>
  */
 public class GetConstraintResponseBody extends TeaModel {
-    @NameInMap("ConstraintDetail")
+    @com.aliyun.core.annotation.NameInMap("ConstraintDetail")
     private ConstraintDetail constraintDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConstraintResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetConstraintResponseBody extends TeaModel {
 
     public static GetConstraintResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class GetConstraintResponseBody extends TeaModel {
         private ConstraintDetail constraintDetail; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetConstraintResponseBody model) {
+            this.constraintDetail = model.constraintDetail;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the constraint.
+         * <p>The details of the constraint.</p>
          */
         public Builder constraintDetail(ConstraintDetail constraintDetail) {
             this.constraintDetail = constraintDetail;
@@ -58,7 +75,10 @@ public class GetConstraintResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +91,35 @@ public class GetConstraintResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConstraintResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConstraintResponseBody</p>
+     */
     public static class ConstraintDetail extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("ConstraintId")
+        @com.aliyun.core.annotation.NameInMap("ConstraintId")
         private String constraintId;
 
-        @NameInMap("ConstraintType")
+        @com.aliyun.core.annotation.NameInMap("ConstraintType")
         private String constraintType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PortfolioId")
+        @com.aliyun.core.annotation.NameInMap("PortfolioId")
         private String portfolioId;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ConstraintDetail(Builder builder) {
@@ -181,11 +207,26 @@ public class GetConstraintResponseBody extends TeaModel {
             private String productId; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConstraintDetail model) {
+                this.config = model.config;
+                this.constraintId = model.constraintId;
+                this.constraintType = model.constraintType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.portfolioId = model.portfolioId;
+                this.productId = model.productId;
+                this.productName = model.productName;
+            } 
+
             /**
-             * The configuration of the constraint.
-             * <p>
+             * <p>The configuration of the constraint.</p>
+             * <p>Format: { &quot;LocalRoleName&quot;: &quot;&lt;role_name&gt;&quot; }.</p>
              * 
-             * Format: { "LocalRoleName": "\<role_name>" }.
+             * <strong>example:</strong>
+             * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -193,7 +234,10 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the constraint.
+             * <p>The ID of the constraint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cons-bp1yx7x42v****</p>
              */
             public Builder constraintId(String constraintId) {
                 this.constraintId = constraintId;
@@ -201,10 +245,11 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the constraint.
-             * <p>
+             * <p>The type of the constraint.</p>
+             * <p>The value is fixed as Launch, which indicates the launch constraint.</p>
              * 
-             * The value is fixed as Launch, which indicates the launch constraint.
+             * <strong>example:</strong>
+             * <p>Launch</p>
              */
             public Builder constraintType(String constraintType) {
                 this.constraintType = constraintType;
@@ -212,10 +257,11 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the constraint was created.
-             * <p>
+             * <p>The time when the constraint was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:11:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -223,7 +269,10 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the constraint.
+             * <p>The description of the constraint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Launch as local role TestRole</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -231,7 +280,10 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product portfolio to which the constraint belongs.
+             * <p>The ID of the product portfolio to which the constraint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>port-bp1yt7582g****</p>
              */
             public Builder portfolioId(String portfolioId) {
                 this.portfolioId = portfolioId;
@@ -239,7 +291,10 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product for which the constraint is created.
+             * <p>The ID of the product for which the constraint is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp18r7q127****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -247,7 +302,10 @@ public class GetConstraintResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance.</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProductAsAdminResponseBody} extends {@link TeaModel}
  *
  * <p>GetProductAsAdminResponseBody</p>
  */
 public class GetProductAsAdminResponseBody extends TeaModel {
-    @NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
     private ProductDetail productDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagOptions")
-    private java.util.List < TagOptions> tagOptions;
+    @com.aliyun.core.annotation.NameInMap("TagOptions")
+    private java.util.List<TagOptions> tagOptions;
 
     private GetProductAsAdminResponseBody(Builder builder) {
         this.productDetail = builder.productDetail;
@@ -33,6 +38,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
 
     public static GetProductAsAdminResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,26 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     /**
      * @return tagOptions
      */
-    public java.util.List < TagOptions> getTagOptions() {
+    public java.util.List<TagOptions> getTagOptions() {
         return this.tagOptions;
     }
 
     public static final class Builder {
         private ProductDetail productDetail; 
         private String requestId; 
-        private java.util.List < TagOptions> tagOptions; 
+        private java.util.List<TagOptions> tagOptions; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetProductAsAdminResponseBody model) {
+            this.productDetail = model.productDetail;
+            this.requestId = model.requestId;
+            this.tagOptions = model.tagOptions;
+        } 
 
         /**
-         * The information about the product.
+         * <p>The information about the product.</p>
          */
         public Builder productDetail(ProductDetail productDetail) {
             this.productDetail = productDetail;
@@ -70,7 +88,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,9 +99,9 @@ public class GetProductAsAdminResponseBody extends TeaModel {
         }
 
         /**
-         * The tag options associated with the product.
+         * <p>The tag options associated with the product.</p>
          */
-        public Builder tagOptions(java.util.List < TagOptions> tagOptions) {
+        public Builder tagOptions(java.util.List<TagOptions> tagOptions) {
             this.tagOptions = tagOptions;
             return this;
         }
@@ -91,29 +112,35 @@ public class GetProductAsAdminResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProductAsAdminResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProductAsAdminResponseBody</p>
+     */
     public static class ProductDetail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ProductArn")
+        @com.aliyun.core.annotation.NameInMap("ProductArn")
         private String productArn;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private ProductDetail(Builder builder) {
@@ -201,11 +228,26 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             private String providerName; 
             private String templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductDetail model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.productArn = model.productArn;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productType = model.productType;
+                this.providerName = model.providerName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * The creation time.
-             * <p>
+             * <p>The creation time.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:10:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -213,7 +255,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the product.
+             * <p>The description of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a product description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -221,7 +266,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the product.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
              */
             public Builder productArn(String productArn) {
                 this.productArn = productArn;
@@ -229,7 +277,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product.
+             * <p>The ID of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp18r7q127****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -237,7 +288,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -245,10 +299,11 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the product.
-             * <p>
+             * <p>The type of the product.</p>
+             * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
              * 
-             * The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).
+             * <strong>example:</strong>
+             * <p>Ros</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -256,7 +311,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the product.
+             * <p>The provider of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT team</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -264,7 +322,14 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the product template. Valid values:</p>
+             * <ul>
+             * <li>RosTerraformTemplate: the Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+             * <li>RosStandardTemplate: the standard ROS template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RosTerraformTemplate</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -278,20 +343,26 @@ public class GetProductAsAdminResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetProductAsAdminResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProductAsAdminResponseBody</p>
+     */
     public static class TagOptions extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("TagOptionId")
+        @com.aliyun.core.annotation.NameInMap("TagOptionId")
         private String tagOptionId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagOptions(Builder builder) {
@@ -352,12 +423,26 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             private String tagOptionId; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagOptions model) {
+                this.active = model.active;
+                this.key = model.key;
+                this.owner = model.owner;
+                this.tagOptionId = model.tagOptionId;
+                this.value = model.value;
+            } 
+
             /**
-             * Indicates whether the tag option is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the tag option is enabled. Valid values:</p>
+             * <ul>
+             * <li>true (default)</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true (default)
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -365,7 +450,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag option.
+             * <p>The key of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +461,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owner of the tag option.
+             * <p>The ID of the owner of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133413081827****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -381,7 +472,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag option.
+             * <p>The ID of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-bp1q65xd3j****</p>
              */
             public Builder tagOptionId(String tagOptionId) {
                 this.tagOptionId = tagOptionId;
@@ -389,7 +483,10 @@ public class GetProductAsAdminResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag option.
+             * <p>The value of the tag option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetProductVersionResponseBody} extends {@link TeaModel}
  *
  * <p>GetProductVersionResponseBody</p>
  */
 public class GetProductVersionResponseBody extends TeaModel {
-    @NameInMap("ProductVersionDetail")
+    @com.aliyun.core.annotation.NameInMap("ProductVersionDetail")
     private ProductVersionDetail productVersionDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetProductVersionResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetProductVersionResponseBody extends TeaModel {
 
     public static GetProductVersionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class GetProductVersionResponseBody extends TeaModel {
         private ProductVersionDetail productVersionDetail; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetProductVersionResponseBody model) {
+            this.productVersionDetail = model.productVersionDetail;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ProductVersionDetail.
+         * <p>The details of the product version.</p>
          */
         public Builder productVersionDetail(ProductVersionDetail productVersionDetail) {
             this.productVersionDetail = productVersionDetail;
@@ -58,7 +75,10 @@ public class GetProductVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,32 +91,38 @@ public class GetProductVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetProductVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProductVersionResponseBody</p>
+     */
     public static class ProductVersionDetail extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Guidance")
+        @com.aliyun.core.annotation.NameInMap("Guidance")
         private String guidance;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductVersionId")
+        @com.aliyun.core.annotation.NameInMap("ProductVersionId")
         private String productVersionId;
 
-        @NameInMap("ProductVersionName")
+        @com.aliyun.core.annotation.NameInMap("ProductVersionName")
         private String productVersionName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
-        @NameInMap("TemplateUrl")
+        @com.aliyun.core.annotation.NameInMap("TemplateUrl")
         private String templateUrl;
 
         private ProductVersionDetail(Builder builder) {
@@ -193,8 +219,30 @@ public class GetProductVersionResponseBody extends TeaModel {
             private String templateType; 
             private String templateUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductVersionDetail model) {
+                this.active = model.active;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.guidance = model.guidance;
+                this.productId = model.productId;
+                this.productVersionId = model.productVersionId;
+                this.productVersionName = model.productVersionName;
+                this.templateType = model.templateType;
+                this.templateUrl = model.templateUrl;
+            } 
+
             /**
-             * Active.
+             * <p>Indicates whether the product version is visible to end users. Valid values:</p>
+             * <ul>
+             * <li>true: The product version is visible to end users. This is the default value.</li>
+             * <li>false: The product version is invisible to end users.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -202,7 +250,11 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the product version was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:10:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +262,10 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the product version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the product version.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +273,16 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Guidance.
+             * <p>The recommendation information. Valid values:</p>
+             * <ul>
+             * <li>Default: No recommendation information is provided. This is the default value.</li>
+             * <li>Recommended: the recommendation version.</li>
+             * <li>Latest: the latest version.</li>
+             * <li>Deprecated: the version that is about to be deprecated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder guidance(String guidance) {
                 this.guidance = guidance;
@@ -226,7 +290,10 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID of the product to which the product version belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp18r7q127****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -234,7 +301,10 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersionId.
+             * <p>The ID of the product version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv-bp15e79d26****</p>
              */
             public Builder productVersionId(String productVersionId) {
                 this.productVersionId = productVersionId;
@@ -242,7 +312,10 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersionName.
+             * <p>The name of the product version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder productVersionName(String productVersionName) {
                 this.productVersionName = productVersionName;
@@ -250,7 +323,14 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the product template. Valid values:</p>
+             * <ul>
+             * <li>RosTerraformTemplate: The Terraform template that is supported by Resource Orchestration Service (ROS).</li>
+             * <li>RosStandardTemplate: The standard ROS template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RosTerraformTemplate</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -258,7 +338,7 @@ public class GetProductVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateUrl.
+             * <p>The URL of the template.</p>
              */
             public Builder templateUrl(String templateUrl) {
                 this.templateUrl = templateUrl;

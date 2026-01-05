@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPortfoliosResponseBody} extends {@link TeaModel}
  *
  * <p>ListPortfoliosResponseBody</p>
  */
 public class ListPortfoliosResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PortfolioDetails")
-    private java.util.List < PortfolioDetails> portfolioDetails;
+    @com.aliyun.core.annotation.NameInMap("PortfolioDetails")
+    private java.util.List<PortfolioDetails> portfolioDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPortfoliosResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListPortfoliosResponseBody extends TeaModel {
 
     public static ListPortfoliosResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
     /**
      * @return portfolioDetails
      */
-    public java.util.List < PortfolioDetails> getPortfolioDetails() {
+    public java.util.List<PortfolioDetails> getPortfolioDetails() {
         return this.portfolioDetails;
     }
 
@@ -81,9 +90,20 @@ public class ListPortfoliosResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PortfolioDetails> portfolioDetails; 
+        private java.util.List<PortfolioDetails> portfolioDetails; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPortfoliosResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.portfolioDetails = model.portfolioDetails;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -104,7 +124,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
         /**
          * PortfolioDetails.
          */
-        public Builder portfolioDetails(java.util.List < PortfolioDetails> portfolioDetails) {
+        public Builder portfolioDetails(java.util.List<PortfolioDetails> portfolioDetails) {
             this.portfolioDetails = portfolioDetails;
             return this;
         }
@@ -131,23 +151,29 @@ public class ListPortfoliosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPortfoliosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPortfoliosResponseBody</p>
+     */
     public static class PortfolioDetails extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PortfolioArn")
+        @com.aliyun.core.annotation.NameInMap("PortfolioArn")
         private String portfolioArn;
 
-        @NameInMap("PortfolioId")
+        @com.aliyun.core.annotation.NameInMap("PortfolioId")
         private String portfolioId;
 
-        @NameInMap("PortfolioName")
+        @com.aliyun.core.annotation.NameInMap("PortfolioName")
         private String portfolioName;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
         private PortfolioDetails(Builder builder) {
@@ -217,8 +243,23 @@ public class ListPortfoliosResponseBody extends TeaModel {
             private String portfolioName; 
             private String providerName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortfolioDetails model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.portfolioArn = model.portfolioArn;
+                this.portfolioId = model.portfolioId;
+                this.portfolioName = model.portfolioName;
+                this.providerName = model.providerName;
+            } 
+
             /**
-             * 代表创建时间的资源属性字段
+             * <p>代表创建时间的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:11:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +267,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
             }
 
             /**
-             * 产品组合描述
+             * <p>产品组合描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +283,10 @@ public class ListPortfoliosResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源一级ID的资源属性字段
+             * <p>代表资源一级ID的资源属性字段</p>
+             * 
+             * <strong>example:</strong>
+             * <p>port-bp1yt7582g****</p>
              */
             public Builder portfolioId(String portfolioId) {
                 this.portfolioId = portfolioId;
@@ -250,7 +294,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
             }
 
             /**
-             * 代表资源名称的资源属性字段
+             * <p>代表资源名称的资源属性字段</p>
              */
             public Builder portfolioName(String portfolioName) {
                 this.portfolioName = portfolioName;
@@ -258,7 +302,7 @@ public class ListPortfoliosResponseBody extends TeaModel {
             }
 
             /**
-             * 产品组合提供方
+             * <p>产品组合提供方</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;

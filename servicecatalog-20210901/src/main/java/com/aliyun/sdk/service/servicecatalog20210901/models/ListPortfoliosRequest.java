@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPortfoliosRequest} extends {@link RequestModel}
  *
  * <p>ListPortfoliosRequest</p>
  */
 public class ListPortfoliosRequest extends Request {
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
     private String productId;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListPortfoliosRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class ListPortfoliosRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +72,7 @@ public class ListPortfoliosRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -114,7 +119,7 @@ public class ListPortfoliosRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListPortfoliosRequest, Builder> {
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productId; 
@@ -140,7 +145,7 @@ public class ListPortfoliosRequest extends Request {
         /**
          * Filters.
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -207,11 +212,17 @@ public class ListPortfoliosRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListPortfoliosRequest} extends {@link TeaModel}
+     *
+     * <p>ListPortfoliosRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -244,6 +255,14 @@ public class ListPortfoliosRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

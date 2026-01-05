@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProvisionedProductPlansRequest} extends {@link RequestModel}
  *
  * <p>ListProvisionedProductPlansRequest</p>
  */
 public class ListProvisionedProductPlansRequest extends Request {
-    @Query
-    @NameInMap("AccessLevelFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLevelFilter")
     private String accessLevelFilter;
 
-    @Query
-    @NameInMap("ApprovalFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalFilter")
     private String approvalFilter;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProvisionedProductId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedProductId")
     private String provisionedProductId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListProvisionedProductPlansRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class ListProvisionedProductPlansRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +91,7 @@ public class ListProvisionedProductPlansRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -128,7 +133,7 @@ public class ListProvisionedProductPlansRequest extends Request {
     public static final class Builder extends Request.Builder<ListProvisionedProductPlansRequest, Builder> {
         private String accessLevelFilter; 
         private String approvalFilter; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String provisionedProductId; 
@@ -152,12 +157,15 @@ public class ListProvisionedProductPlansRequest extends Request {
         } 
 
         /**
-         * The access filter. Valid values:
-         * <p>
+         * <p>The access filter. Valid values:</p>
+         * <ul>
+         * <li>User (default): queries the plans that are created by the current requester.</li>
+         * <li>Account: queries the plans that belong to the current Alibaba Cloud account.</li>
+         * <li>ResourceDirectory: queries the plans that belong to the current resource directory.</li>
+         * </ul>
          * 
-         * *   User (default): queries the plans that are created by the current requester.
-         * *   Account: queries the plans that belong to the current Alibaba Cloud account.
-         * *   ResourceDirectory: queries the plans that belong to the current resource directory.
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder accessLevelFilter(String accessLevelFilter) {
             this.putQueryParameter("AccessLevelFilter", accessLevelFilter);
@@ -166,13 +174,16 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * The access filter of the review dimension. Valid values:
-         * <p>
+         * <p>The access filter of the review dimension. Valid values:</p>
+         * <ul>
+         * <li>ReceivedRequests: queries plans that are pending for review.</li>
+         * <li>ApprovalHistory: queries review history.</li>
+         * <li>AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</li>
+         * <li>AccountRequests: queries all plans that belong to the current Alibaba Cloud account.</li>
+         * </ul>
          * 
-         * *   ReceivedRequests: queries plans that are pending for review.
-         * *   ApprovalHistory: queries review history.
-         * *   AccountRequests: queries all plans that belong to the current Alibaba Cloud account.
-         * *   AccountRequests: queries all plans that belong to the current Alibaba Cloud account.
+         * <strong>example:</strong>
+         * <p>ReceivedRequests</p>
          */
         public Builder approvalFilter(String approvalFilter) {
             this.putQueryParameter("ApprovalFilter", approvalFilter);
@@ -181,19 +192,20 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * An array that consists of filter conditions.
+         * <p>An array that consists of filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,10 +214,11 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +227,10 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * The ID of the product instance.
+         * <p>The ID of the product instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp-bp1ddg1n2a****</p>
          */
         public Builder provisionedProductId(String provisionedProductId) {
             this.putQueryParameter("ProvisionedProductId", provisionedProductId);
@@ -223,10 +239,11 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * The information based on which you want to sort the query results.
-         * <p>
+         * <p>The information based on which you want to sort the query results.</p>
+         * <p>Set the value to CreateTime, which specifies the creation time of plans.</p>
          * 
-         * Set the value to CreateTime, which specifies the creation time of plans.
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -235,11 +252,14 @@ public class ListProvisionedProductPlansRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the query results. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <ul>
+         * <li>Asc: the ascending order</li>
+         * <li>Desc (default): the descending order.</li>
+         * </ul>
          * 
-         * *   Asc: the ascending order
-         * *   Desc (default): the descending order.
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -254,11 +274,17 @@ public class ListProvisionedProductPlansRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListProvisionedProductPlansRequest} extends {@link TeaModel}
+     *
+     * <p>ListProvisionedProductPlansRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -292,16 +318,27 @@ public class ListProvisionedProductPlansRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The name of the filter condition. Valid values:
-             * <p>
+             * <p>The name of the filter condition. Valid values:</p>
+             * <ul>
+             * <li>ProvisionedProductPlanName: performs exact matches by plan name. Plan names are not case-sensitive.</li>
+             * <li>ProvisionedProductPlanApprover: performs exact matches by reviewer. You must specify a reviewer in the <code>RamUser/RamRole:&lt;Name of the reviewer&gt;</code> format. You can specify multiple reviewers.</li>
+             * <li>ProvisionedProductPlanApproverName: performs matches by reviewer name. You must specify the Resource Access Management (RAM) entity name of the reviewer. You can specify multiple reviewer names.</li>
+             * <li>ProvisionedProductPlanStatus: performs matches by plan status. You must specify the state of the plan. You can specify multiple states.</li>
+             * <li>ProvisionedProductPlanOwnerUid: performs exact matches by ID of Alibaba Cloud account to which a plan belongs.</li>
+             * <li>FullTextSearch: performs fuzzy full-text searches by plan name.</li>
+             * </ul>
              * 
-             * *   ProvisionedProductPlanName: performs exact matches by plan name. Plan names are not case-sensitive.
-             * *   ProvisionedProductPlanApprover: performs exact matches by reviewer. You must specify a reviewer in the `RamUser/RamRole:<Name of the reviewer>` format. You can specify multiple reviewers.
-             * *   ProvisionedProductPlanApproverName: performs matches by reviewer name. You must specify the Resource Access Management (RAM) entity name of the reviewer. You can specify multiple reviewer names.
-             * *   ProvisionedProductPlanStatus: performs matches by plan status. You must specify the state of the plan. You can specify multiple states.
-             * *   ProvisionedProductPlanOwnerUid: performs exact matches by ID of Alibaba Cloud account to which a plan belongs.
-             * *   FullTextSearch: performs fuzzy full-text searches by plan name.
+             * <strong>example:</strong>
+             * <p>FullTextSearch</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,7 +346,10 @@ public class ListProvisionedProductPlansRequest extends Request {
             }
 
             /**
-             * The value of the filter condition.
+             * <p>The value of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder value(String value) {
                 this.value = value;

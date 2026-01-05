@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConstraintRequest} extends {@link RequestModel}
  *
  * <p>GetConstraintRequest</p>
  */
 public class GetConstraintRequest extends Request {
-    @Query
-    @NameInMap("ConstraintId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConstraintId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String constraintId;
 
     private GetConstraintRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class GetConstraintRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class GetConstraintRequest extends Request {
         } 
 
         /**
-         * The ID of the constraint.
+         * <p>The ID of the constraint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cons-bp1yx7x42v****</p>
          */
         public Builder constraintId(String constraintId) {
             this.putQueryParameter("ConstraintId", constraintId);

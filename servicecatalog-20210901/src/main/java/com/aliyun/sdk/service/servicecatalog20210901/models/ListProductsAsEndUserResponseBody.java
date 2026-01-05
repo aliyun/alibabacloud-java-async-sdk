@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsAsEndUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsAsEndUserResponseBody</p>
  */
 public class ListProductsAsEndUserResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("ProductSummaries")
-    private java.util.List < ProductSummaries> productSummaries;
+    @com.aliyun.core.annotation.NameInMap("ProductSummaries")
+    private java.util.List<ProductSummaries> productSummaries;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProductsAsEndUserResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
 
     public static ListProductsAsEndUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
     /**
      * @return productSummaries
      */
-    public java.util.List < ProductSummaries> getProductSummaries() {
+    public java.util.List<ProductSummaries> getProductSummaries() {
         return this.productSummaries;
     }
 
@@ -81,12 +90,26 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ProductSummaries> productSummaries; 
+        private java.util.List<ProductSummaries> productSummaries; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductsAsEndUserResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.productSummaries = model.productSummaries;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +117,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +128,18 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The products.
+         * <p>The products.</p>
          */
-        public Builder productSummaries(java.util.List < ProductSummaries> productSummaries) {
+        public Builder productSummaries(java.util.List<ProductSummaries> productSummaries) {
             this.productSummaries = productSummaries;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -131,32 +163,38 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsAsEndUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsAsEndUserResponseBody</p>
+     */
     public static class ProductSummaries extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HasDefaultLaunchOption")
+        @com.aliyun.core.annotation.NameInMap("HasDefaultLaunchOption")
         private Boolean hasDefaultLaunchOption;
 
-        @NameInMap("ProductArn")
+        @com.aliyun.core.annotation.NameInMap("ProductArn")
         private String productArn;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private ProductSummaries(Builder builder) {
@@ -253,11 +291,27 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             private String providerName; 
             private String templateType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductSummaries model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.hasDefaultLaunchOption = model.hasDefaultLaunchOption;
+                this.productArn = model.productArn;
+                this.productId = model.productId;
+                this.productName = model.productName;
+                this.productType = model.productType;
+                this.providerName = model.providerName;
+                this.templateType = model.templateType;
+            } 
+
             /**
-             * The time when the product was created.
-             * <p>
+             * <p>The time when the product was created.</p>
+             * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-04-12T06:10:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -265,7 +319,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the product.
+             * <p>The description of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the product.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -273,13 +330,17 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the default launch option exists. Valid values:
-             * <p>
+             * <p>Indicates whether the default launch option exists. Valid values:</p>
+             * <ul>
+             * <li>true: The default launch option exists. In this case, the PortfolioId parameter is not required when the product is launched or when the information about the product instance is updated.</li>
+             * <li>false: The default launch option does not exist. In this case, the PortfolioId parameter is required when the product is launched or when the information about the product instance is updated. For more information about the PortfolioId parameter, see <a href="~~ListLaunchOptions~~">ListLaunchOptions</a>.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If the product is added to only one product portfolio, the default launch option exists. If the product is added to multiple product portfolios, multiple launch options exist at the same time. However, no default launch options exist.</p>
+             * </blockquote>
              * 
-             * *   true: The default launch option exists. In this case, the PortfolioId parameter is not required when the product is launched or when the information about the product instance is updated.
-             * *   false: The default launch option does not exist. In this case, the PortfolioId parameter is required when the product is launched or when the information about the product instance is updated. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).
-             * 
-             * > If the product is added to only one product portfolio, the default launch option exists. If the product is added to multiple product portfolios, multiple launch options exist at the same time. However, no default launch options exist.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDefaultLaunchOption(Boolean hasDefaultLaunchOption) {
                 this.hasDefaultLaunchOption = hasDefaultLaunchOption;
@@ -287,7 +348,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the product.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
              */
             public Builder productArn(String productArn) {
                 this.productArn = productArn;
@@ -295,7 +359,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the product.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-bp18r7q127****</p>
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -303,7 +370,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the product.
+             * <p>The name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-Create an ECS instance</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -311,10 +381,11 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the product.
-             * <p>
+             * <p>The type of the product.</p>
+             * <p>The value is set to Ros, which indicates Resource Orchestration Service (ROS).</p>
              * 
-             * The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).
+             * <strong>example:</strong>
+             * <p>Ros</p>
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -322,7 +393,10 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the product.
+             * <p>The provider of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT team</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -330,7 +404,14 @@ public class ListProductsAsEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the product template. Valid values:</p>
+             * <ul>
+             * <li>RosTerraformTemplate: the Terraform template that is supported by ROS.</li>
+             * <li>RosStandardTemplate: the standard ROS template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RosTerraformTemplate</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

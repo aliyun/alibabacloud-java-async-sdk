@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConstraintRequest} extends {@link RequestModel}
  *
  * <p>CreateConstraintRequest</p>
  */
 public class CreateConstraintRequest extends Request {
-    @Body
-    @NameInMap("Config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @Body
-    @NameInMap("ConstraintType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConstraintType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String constraintType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("PortfolioId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portfolioId;
 
-    @Body
-    @NameInMap("ProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
     private CreateConstraintRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class CreateConstraintRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,10 +119,12 @@ public class CreateConstraintRequest extends Request {
         } 
 
         /**
-         * The configuration of the constraint.
-         * <p>
+         * <p>The configuration of the constraint.</p>
+         * <p>Format: { &quot;LocalRoleName&quot;: &quot;&lt;role_name&gt;&quot; }.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Format: { "LocalRoleName": "\<role_name>" }.
+         * <strong>example:</strong>
+         * <p>{ &quot;LocalRoleName&quot;: &quot;TestRole&quot; }</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -126,10 +133,12 @@ public class CreateConstraintRequest extends Request {
         }
 
         /**
-         * The type of the constraint.
-         * <p>
+         * <p>The type of the constraint.</p>
+         * <p>The value is fixed as Launch, which specifies the launch constraint.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value is fixed as Launch, which specifies the launch constraint.
+         * <strong>example:</strong>
+         * <p>Launch</p>
          */
         public Builder constraintType(String constraintType) {
             this.putBodyParameter("ConstraintType", constraintType);
@@ -138,10 +147,11 @@ public class CreateConstraintRequest extends Request {
         }
 
         /**
-         * The description of the constraint.
-         * <p>
+         * <p>The description of the constraint.</p>
+         * <p>The value must be 1 to 128 characters in length.</p>
          * 
-         * The value must be 1 to 128 characters in length.
+         * <strong>example:</strong>
+         * <p>Launch as local role TestRole</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -150,7 +160,11 @@ public class CreateConstraintRequest extends Request {
         }
 
         /**
-         * The ID of the product portfolio to which the constraint belongs.
+         * <p>The ID of the product portfolio to which the constraint belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         public Builder portfolioId(String portfolioId) {
             this.putBodyParameter("PortfolioId", portfolioId);
@@ -159,7 +173,11 @@ public class CreateConstraintRequest extends Request {
         }
 
         /**
-         * The ID of the product for which the constraint is created.
+         * <p>The ID of the product for which the constraint is created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-bp18r7q127****</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);

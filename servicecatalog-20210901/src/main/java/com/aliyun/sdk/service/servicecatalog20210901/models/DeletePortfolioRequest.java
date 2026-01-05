@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePortfolioRequest} extends {@link RequestModel}
  *
  * <p>DeletePortfolioRequest</p>
  */
 public class DeletePortfolioRequest extends Request {
-    @Body
-    @NameInMap("PortfolioId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortfolioId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portfolioId;
 
     private DeletePortfolioRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class DeletePortfolioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,11 @@ public class DeletePortfolioRequest extends Request {
         } 
 
         /**
-         * The ID of the product portfolio.
+         * <p>The ID of the product portfolio.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>port-bp1yt7582g****</p>
          */
         public Builder portfolioId(String portfolioId) {
             this.putBodyParameter("PortfolioId", portfolioId);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.servicecatalog20210901.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesForTagOptionResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourcesForTagOptionResponseBody</p>
  */
 public class ListResourcesForTagOptionResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDetails")
-    private java.util.List < ResourceDetails> resourceDetails;
+    @com.aliyun.core.annotation.NameInMap("ResourceDetails")
+    private java.util.List<ResourceDetails> resourceDetails;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourcesForTagOptionResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
 
     public static ListResourcesForTagOptionResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -67,7 +76,7 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
     /**
      * @return resourceDetails
      */
-    public java.util.List < ResourceDetails> getResourceDetails() {
+    public java.util.List<ResourceDetails> getResourceDetails() {
         return this.resourceDetails;
     }
 
@@ -82,14 +91,26 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < ResourceDetails> resourceDetails; 
+        private java.util.List<ResourceDetails> resourceDetails; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourcesForTagOptionResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.resourceDetails = model.resourceDetails;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -97,10 +118,11 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
-         * <p>
+         * <p>The number of entries returned per page.</p>
+         * <p>Valid values: 1 to 100 Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100 Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -108,7 +130,10 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E465F21C-8712-5794-A754-5E4D9152****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -116,15 +141,18 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the associated resources.
+         * <p>An array that consists of the associated resources.</p>
          */
-        public Builder resourceDetails(java.util.List < ResourceDetails> resourceDetails) {
+        public Builder resourceDetails(java.util.List<ResourceDetails> resourceDetails) {
             this.resourceDetails = resourceDetails;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,20 +165,26 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesForTagOptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourcesForTagOptionResponseBody</p>
+     */
     public static class ResourceDetails extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ResourceArn")
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
         private String resourceArn;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
         private ResourceDetails(Builder builder) {
@@ -211,11 +245,23 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceDetails model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.resourceArn = model.resourceArn;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+            } 
+
             /**
-             * The time when the resource was created.
-             * <p>
+             * <p>The time when the resource was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
-             * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <strong>example:</strong>
+             * <p>2022-11-04T08:07:04.281986714Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -223,10 +269,11 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the resource.
-             * <p>
+             * <p>The description of the resource.</p>
+             * <p>The value must be 1 to 128 characters in length.</p>
              * 
-             * The value must be 1 to 128 characters in length.
+             * <strong>example:</strong>
+             * <p>The description of the resource.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +281,10 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:servicecatalog:cn-hangzhou:146611588617****:product/prod-bp18r7q127****</p>
              */
             public Builder resourceArn(String resourceArn) {
                 this.resourceArn = resourceArn;
@@ -242,7 +292,10 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource with which the tag option is associated.
+             * <p>The ID of the resource with which the tag option is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>port-bp15p96922****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -250,7 +303,10 @@ public class ListResourcesForTagOptionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEMO-ECS</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
