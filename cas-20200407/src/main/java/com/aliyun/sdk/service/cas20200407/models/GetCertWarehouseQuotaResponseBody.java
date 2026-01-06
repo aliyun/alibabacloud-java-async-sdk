@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCertWarehouseQuotaResponseBody</p>
  */
 public class GetCertWarehouseQuotaResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppTotalQuota")
+    private Long appTotalQuota;
+
+    @com.aliyun.core.annotation.NameInMap("AppUseCount")
+    private Long appUseCount;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -27,6 +33,8 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
     private Long useCount;
 
     private GetCertWarehouseQuotaResponseBody(Builder builder) {
+        this.appTotalQuota = builder.appTotalQuota;
+        this.appUseCount = builder.appUseCount;
         this.requestId = builder.requestId;
         this.totalQuota = builder.totalQuota;
         this.useCount = builder.useCount;
@@ -42,6 +50,20 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appTotalQuota
+     */
+    public Long getAppTotalQuota() {
+        return this.appTotalQuota;
+    }
+
+    /**
+     * @return appUseCount
+     */
+    public Long getAppUseCount() {
+        return this.appUseCount;
     }
 
     /**
@@ -66,6 +88,8 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long appTotalQuota; 
+        private Long appUseCount; 
         private String requestId; 
         private Long totalQuota; 
         private Long useCount; 
@@ -74,10 +98,28 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         } 
 
         private Builder(GetCertWarehouseQuotaResponseBody model) {
+            this.appTotalQuota = model.appTotalQuota;
+            this.appUseCount = model.appUseCount;
             this.requestId = model.requestId;
             this.totalQuota = model.totalQuota;
             this.useCount = model.useCount;
         } 
+
+        /**
+         * AppTotalQuota.
+         */
+        public Builder appTotalQuota(Long appTotalQuota) {
+            this.appTotalQuota = appTotalQuota;
+            return this;
+        }
+
+        /**
+         * AppUseCount.
+         */
+        public Builder appUseCount(Long appUseCount) {
+            this.appUseCount = appUseCount;
+            return this;
+        }
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

@@ -45,6 +45,10 @@ public class VerifyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String signingAlgorithm;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarehouseId")
+    private String warehouseId;
+
     private VerifyRequest(Builder builder) {
         super(builder);
         this.certIdentifier = builder.certIdentifier;
@@ -53,6 +57,7 @@ public class VerifyRequest extends Request {
         this.messageType = builder.messageType;
         this.signatureValue = builder.signatureValue;
         this.signingAlgorithm = builder.signingAlgorithm;
+        this.warehouseId = builder.warehouseId;
     }
 
     public static Builder builder() {
@@ -110,6 +115,13 @@ public class VerifyRequest extends Request {
         return this.signingAlgorithm;
     }
 
+    /**
+     * @return warehouseId
+     */
+    public String getWarehouseId() {
+        return this.warehouseId;
+    }
+
     public static final class Builder extends Request.Builder<VerifyRequest, Builder> {
         private String certIdentifier; 
         private String customIdentifier; 
@@ -117,6 +129,7 @@ public class VerifyRequest extends Request {
         private String messageType; 
         private String signatureValue; 
         private String signingAlgorithm; 
+        private String warehouseId; 
 
         private Builder() {
             super();
@@ -130,6 +143,7 @@ public class VerifyRequest extends Request {
             this.messageType = request.messageType;
             this.signatureValue = request.signatureValue;
             this.signingAlgorithm = request.signingAlgorithm;
+            this.warehouseId = request.warehouseId;
         } 
 
         /**
@@ -220,6 +234,15 @@ public class VerifyRequest extends Request {
         public Builder signingAlgorithm(String signingAlgorithm) {
             this.putQueryParameter("SigningAlgorithm", signingAlgorithm);
             this.signingAlgorithm = signingAlgorithm;
+            return this;
+        }
+
+        /**
+         * WarehouseId.
+         */
+        public Builder warehouseId(String warehouseId) {
+            this.putQueryParameter("WarehouseId", warehouseId);
+            this.warehouseId = warehouseId;
             return this;
         }
 

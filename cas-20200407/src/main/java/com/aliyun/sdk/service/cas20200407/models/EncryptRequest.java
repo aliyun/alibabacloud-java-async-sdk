@@ -39,6 +39,10 @@ public class EncryptRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String plaintext;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarehouseId")
+    private Long warehouseId;
+
     private EncryptRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
@@ -46,6 +50,7 @@ public class EncryptRequest extends Request {
         this.customIdentifier = builder.customIdentifier;
         this.messageType = builder.messageType;
         this.plaintext = builder.plaintext;
+        this.warehouseId = builder.warehouseId;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class EncryptRequest extends Request {
         return this.plaintext;
     }
 
+    /**
+     * @return warehouseId
+     */
+    public Long getWarehouseId() {
+        return this.warehouseId;
+    }
+
     public static final class Builder extends Request.Builder<EncryptRequest, Builder> {
         private String algorithm; 
         private String certIdentifier; 
         private String customIdentifier; 
         private String messageType; 
         private String plaintext; 
+        private Long warehouseId; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class EncryptRequest extends Request {
             this.customIdentifier = request.customIdentifier;
             this.messageType = request.messageType;
             this.plaintext = request.plaintext;
+            this.warehouseId = request.warehouseId;
         } 
 
         /**
@@ -190,6 +204,15 @@ public class EncryptRequest extends Request {
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);
             this.plaintext = plaintext;
+            return this;
+        }
+
+        /**
+         * WarehouseId.
+         */
+        public Builder warehouseId(Long warehouseId) {
+            this.putQueryParameter("WarehouseId", warehouseId);
+            this.warehouseId = warehouseId;
             return this;
         }
 

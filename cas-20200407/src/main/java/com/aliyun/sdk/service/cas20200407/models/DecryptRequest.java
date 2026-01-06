@@ -39,6 +39,10 @@ public class DecryptRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MessageType")
     private String messageType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarehouseId")
+    private Long warehouseId;
+
     private DecryptRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
@@ -46,6 +50,7 @@ public class DecryptRequest extends Request {
         this.ciphertextBlob = builder.ciphertextBlob;
         this.customIdentifier = builder.customIdentifier;
         this.messageType = builder.messageType;
+        this.warehouseId = builder.warehouseId;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class DecryptRequest extends Request {
         return this.messageType;
     }
 
+    /**
+     * @return warehouseId
+     */
+    public Long getWarehouseId() {
+        return this.warehouseId;
+    }
+
     public static final class Builder extends Request.Builder<DecryptRequest, Builder> {
         private String algorithm; 
         private String certIdentifier; 
         private String ciphertextBlob; 
         private String customIdentifier; 
         private String messageType; 
+        private Long warehouseId; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class DecryptRequest extends Request {
             this.ciphertextBlob = request.ciphertextBlob;
             this.customIdentifier = request.customIdentifier;
             this.messageType = request.messageType;
+            this.warehouseId = request.warehouseId;
         } 
 
         /**
@@ -185,6 +199,15 @@ public class DecryptRequest extends Request {
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);
             this.messageType = messageType;
+            return this;
+        }
+
+        /**
+         * WarehouseId.
+         */
+        public Builder warehouseId(Long warehouseId) {
+            this.putQueryParameter("WarehouseId", warehouseId);
+            this.warehouseId = warehouseId;
             return this;
         }
 
