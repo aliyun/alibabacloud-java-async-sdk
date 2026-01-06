@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyRCDiskChargeTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
@@ -40,7 +44,6 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
     @com.aliyun.core.annotation.Query
@@ -54,6 +57,7 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
 
     private ModifyRCDiskChargeTypeRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.businessInfo = builder.businessInfo;
@@ -75,6 +79,13 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -134,6 +145,7 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyRCDiskChargeTypeRequest, Builder> {
+        private Boolean autoPay; 
         private String autoRenew; 
         private Boolean autoUseCoupon; 
         private String businessInfo; 
@@ -149,6 +161,7 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
 
         private Builder(ModifyRCDiskChargeTypeRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.businessInfo = request.businessInfo;
@@ -158,6 +171,15 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
             this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * AutoRenew.
@@ -208,10 +230,7 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Postpaid</p>
+         * PayType.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);

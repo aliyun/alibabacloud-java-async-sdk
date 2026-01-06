@@ -20,6 +20,12 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExternalReplication")
     private String externalReplication;
 
+    @com.aliyun.core.annotation.NameInMap("GtidExecuted")
+    private String gtidExecuted;
+
+    @com.aliyun.core.annotation.NameInMap("ImportStatus")
+    private String importStatus;
+
     @com.aliyun.core.annotation.NameInMap("ReplicationDelay")
     private String replicationDelay;
 
@@ -43,6 +49,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
     private DescribeDBInstanceReplicationResponseBody(Builder builder) {
         this.externalReplication = builder.externalReplication;
+        this.gtidExecuted = builder.gtidExecuted;
+        this.importStatus = builder.importStatus;
         this.replicationDelay = builder.replicationDelay;
         this.replicationErrorMessage = builder.replicationErrorMessage;
         this.replicationIp = builder.replicationIp;
@@ -69,6 +77,20 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
      */
     public String getExternalReplication() {
         return this.externalReplication;
+    }
+
+    /**
+     * @return gtidExecuted
+     */
+    public String getGtidExecuted() {
+        return this.gtidExecuted;
+    }
+
+    /**
+     * @return importStatus
+     */
+    public String getImportStatus() {
+        return this.importStatus;
     }
 
     /**
@@ -122,6 +144,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String externalReplication; 
+        private String gtidExecuted; 
+        private String importStatus; 
         private String replicationDelay; 
         private String replicationErrorMessage; 
         private String replicationIp; 
@@ -135,6 +159,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
         private Builder(DescribeDBInstanceReplicationResponseBody model) {
             this.externalReplication = model.externalReplication;
+            this.gtidExecuted = model.gtidExecuted;
+            this.importStatus = model.importStatus;
             this.replicationDelay = model.replicationDelay;
             this.replicationErrorMessage = model.replicationErrorMessage;
             this.replicationIp = model.replicationIp;
@@ -156,6 +182,22 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
          */
         public Builder externalReplication(String externalReplication) {
             this.externalReplication = externalReplication;
+            return this;
+        }
+
+        /**
+         * GtidExecuted.
+         */
+        public Builder gtidExecuted(String gtidExecuted) {
+            this.gtidExecuted = gtidExecuted;
+            return this;
+        }
+
+        /**
+         * ImportStatus.
+         */
+        public Builder importStatus(String importStatus) {
+            this.importStatus = importStatus;
             return this;
         }
 

@@ -539,6 +539,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EcsHostName")
+        private String ecsHostName;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -575,6 +578,12 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
+        @com.aliyun.core.annotation.NameInMap("OSName")
+        private String OSName;
+
+        @com.aliyun.core.annotation.NameInMap("OSType")
+        private String OSType;
+
         @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
@@ -587,8 +596,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StoppedMode")
+        private String stoppedMode;
 
         @com.aliyun.core.annotation.NameInMap("TagResources")
         private java.util.List<TagResources> tagResources;
@@ -612,6 +627,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.dbType = builder.dbType;
             this.deploymentSetId = builder.deploymentSetId;
             this.description = builder.description;
+            this.ecsHostName = builder.ecsHostName;
             this.expiredTime = builder.expiredTime;
             this.gmtCreated = builder.gmtCreated;
             this.hostIp = builder.hostIp;
@@ -624,11 +640,15 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.memory = builder.memory;
             this.nodeType = builder.nodeType;
+            this.OSName = builder.OSName;
+            this.OSType = builder.OSType;
             this.publicIp = builder.publicIp;
             this.regionId = builder.regionId;
             this.securityGroupId = builder.securityGroupId;
             this.spotStrategy = builder.spotStrategy;
+            this.startTime = builder.startTime;
             this.status = builder.status;
+            this.stoppedMode = builder.stoppedMode;
             this.tagResources = builder.tagResources;
             this.tags = builder.tags;
             this.vpcAttributes = builder.vpcAttributes;
@@ -684,6 +704,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return ecsHostName
+         */
+        public String getEcsHostName() {
+            return this.ecsHostName;
         }
 
         /**
@@ -771,6 +798,20 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return OSName
+         */
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        /**
+         * @return OSType
+         */
+        public String getOSType() {
+            return this.OSType;
+        }
+
+        /**
          * @return publicIp
          */
         public String getPublicIp() {
@@ -799,10 +840,24 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return stoppedMode
+         */
+        public String getStoppedMode() {
+            return this.stoppedMode;
         }
 
         /**
@@ -847,6 +902,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String dbType; 
             private String deploymentSetId; 
             private String description; 
+            private String ecsHostName; 
             private String expiredTime; 
             private String gmtCreated; 
             private String hostIp; 
@@ -859,11 +915,15 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String instanceTypeFamily; 
             private Integer memory; 
             private String nodeType; 
+            private String OSName; 
+            private String OSType; 
             private String publicIp; 
             private String regionId; 
             private String securityGroupId; 
             private String spotStrategy; 
+            private String startTime; 
             private String status; 
+            private String stoppedMode; 
             private java.util.List<TagResources> tagResources; 
             private java.util.List<Tags> tags; 
             private VpcAttributes vpcAttributes; 
@@ -880,6 +940,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.dbType = model.dbType;
                 this.deploymentSetId = model.deploymentSetId;
                 this.description = model.description;
+                this.ecsHostName = model.ecsHostName;
                 this.expiredTime = model.expiredTime;
                 this.gmtCreated = model.gmtCreated;
                 this.hostIp = model.hostIp;
@@ -892,11 +953,15 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.memory = model.memory;
                 this.nodeType = model.nodeType;
+                this.OSName = model.OSName;
+                this.OSType = model.OSType;
                 this.publicIp = model.publicIp;
                 this.regionId = model.regionId;
                 this.securityGroupId = model.securityGroupId;
                 this.spotStrategy = model.spotStrategy;
+                this.startTime = model.startTime;
                 this.status = model.status;
+                this.stoppedMode = model.stoppedMode;
                 this.tagResources = model.tagResources;
                 this.tags = model.tags;
                 this.vpcAttributes = model.vpcAttributes;
@@ -958,6 +1023,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EcsHostName.
+             */
+            public Builder ecsHostName(String ecsHostName) {
+                this.ecsHostName = ecsHostName;
                 return this;
             }
 
@@ -1070,6 +1143,22 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * OSName.
+             */
+            public Builder OSName(String OSName) {
+                this.OSName = OSName;
+                return this;
+            }
+
+            /**
+             * OSType.
+             */
+            public Builder OSType(String OSType) {
+                this.OSType = OSType;
+                return this;
+            }
+
+            /**
              * PublicIp.
              */
             public Builder publicIp(String publicIp) {
@@ -1105,6 +1194,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
              * <p>The instance status. Valid values:</p>
              * <ul>
              * <li><strong>Pending</strong></li>
@@ -1122,6 +1219,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StoppedMode.
+             */
+            public Builder stoppedMode(String stoppedMode) {
+                this.stoppedMode = stoppedMode;
                 return this;
             }
 

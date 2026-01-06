@@ -60,7 +60,6 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
     @com.aliyun.core.annotation.Query
@@ -401,7 +400,6 @@ public class ModifyRCInstanceChargeTypeRequest extends Request {
          * <li><strong>Prepaid</strong>: subscription.</li>
          * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
