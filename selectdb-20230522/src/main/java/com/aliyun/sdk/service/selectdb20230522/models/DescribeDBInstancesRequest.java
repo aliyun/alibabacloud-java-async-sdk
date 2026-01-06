@@ -47,10 +47,6 @@ public class DescribeDBInstancesRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -63,7 +59,6 @@ public class DescribeDBInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
     }
 
@@ -130,13 +125,6 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -151,7 +139,6 @@ public class DescribeDBInstancesRequest extends Request {
         private Long pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private Long resourceOwnerId; 
         private java.util.List<Tag> tag; 
 
         private Builder() {
@@ -167,7 +154,6 @@ public class DescribeDBInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
         } 
 
@@ -263,15 +249,6 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
