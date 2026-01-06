@@ -173,7 +173,17 @@ public class ModifyAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * AutoRenewalPeriod.
+         * <p>The duration of the auto-renewal. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>When <strong>AutoRenewalPeriod</strong> is set to <strong>Month</strong>, the value ranges from 1 to 11 (integer).</li>
+         * <li>When <strong>AutoRenewalPeriod</strong> is set to <strong>Month</strong>, the valid values are 1, 2, 3, and 5 (integer).</li>
+         * </ul>
+         * <blockquote>
+         * <p> Longer renewal periods offer better pricing. Renewing for 1 year is more cost-effective than renewing for 10 or 11 months.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewalPeriod(String autoRenewalPeriod) {
             this.putQueryParameter("AutoRenewalPeriod", autoRenewalPeriod);
@@ -182,7 +192,14 @@ public class ModifyAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenewalPeriodUnit.
+         * <p>Auto-renewal duration. Valid values:</p>
+         * <ul>
+         * <li>Year.</li>
+         * <li>Month.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder autoRenewalPeriodUnit(String autoRenewalPeriodUnit) {
             this.putQueryParameter("AutoRenewalPeriodUnit", autoRenewalPeriodUnit);
@@ -191,7 +208,15 @@ public class ModifyAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenewalStatus.
+         * <p>The renewal method. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+         * <li><strong>Normal</strong>: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</li>
+         * <li><strong>NotRenewal</strong>: The cluster is not renewed. Reminders are only sent three days before cluster expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder autoRenewalStatus(String autoRenewalStatus) {
             this.putQueryParameter("AutoRenewalStatus", autoRenewalStatus);
@@ -200,6 +225,7 @@ public class ModifyAutoRenewalAttributeRequest extends Request {
         }
 
         /**
+         * <p>The ID of cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +256,7 @@ public class ModifyAutoRenewalAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

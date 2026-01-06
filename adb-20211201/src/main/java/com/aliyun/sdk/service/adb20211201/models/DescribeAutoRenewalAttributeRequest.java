@@ -172,7 +172,7 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster IDs.</p>
          */
         public Builder DBClusterId(java.util.List<String> DBClusterId) {
             String DBClusterIdShrink = shrink(DBClusterId, "DBClusterId", "json");
@@ -200,7 +200,10 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. A positive integer greater than 0 and not exceeding the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +212,15 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong>(Default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,6 +229,7 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +242,10 @@ public class DescribeAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-4690g37929****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

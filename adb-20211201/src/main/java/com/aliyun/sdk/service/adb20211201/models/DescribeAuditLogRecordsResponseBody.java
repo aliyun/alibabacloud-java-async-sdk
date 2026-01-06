@@ -206,6 +206,9 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecuteTimestamp")
         private Long executeTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("HasDiagnosticInfo")
+        private Boolean hasDiagnosticInfo;
+
         @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
@@ -232,6 +235,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             this.DBName = builder.DBName;
             this.executeTime = builder.executeTime;
             this.executeTimestamp = builder.executeTimestamp;
+            this.hasDiagnosticInfo = builder.hasDiagnosticInfo;
             this.hostAddress = builder.hostAddress;
             this.processID = builder.processID;
             this.SQLText = builder.SQLText;
@@ -275,6 +279,13 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
          */
         public Long getExecuteTimestamp() {
             return this.executeTimestamp;
+        }
+
+        /**
+         * @return hasDiagnosticInfo
+         */
+        public Boolean getHasDiagnosticInfo() {
+            return this.hasDiagnosticInfo;
         }
 
         /**
@@ -331,6 +342,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String DBName; 
             private String executeTime; 
             private Long executeTimestamp; 
+            private Boolean hasDiagnosticInfo; 
             private String hostAddress; 
             private String processID; 
             private String SQLText; 
@@ -347,6 +359,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
                 this.DBName = model.DBName;
                 this.executeTime = model.executeTime;
                 this.executeTimestamp = model.executeTimestamp;
+                this.hasDiagnosticInfo = model.hasDiagnosticInfo;
                 this.hostAddress = model.hostAddress;
                 this.processID = model.processID;
                 this.SQLText = model.SQLText;
@@ -394,6 +407,14 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
              */
             public Builder executeTimestamp(Long executeTimestamp) {
                 this.executeTimestamp = executeTimestamp;
+                return this;
+            }
+
+            /**
+             * HasDiagnosticInfo.
+             */
+            public Builder hasDiagnosticInfo(Boolean hasDiagnosticInfo) {
+                this.hasDiagnosticInfo = hasDiagnosticInfo;
                 return this;
             }
 

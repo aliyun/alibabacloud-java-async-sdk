@@ -24,6 +24,7 @@ public class DescribeDownloadRecordsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
+    @Deprecated
     private String lang;
 
     @com.aliyun.core.annotation.Query

@@ -54,7 +54,10 @@ public class ModifyAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>421794A3-72A5-5D27-9E8B-A75A4C503E17</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

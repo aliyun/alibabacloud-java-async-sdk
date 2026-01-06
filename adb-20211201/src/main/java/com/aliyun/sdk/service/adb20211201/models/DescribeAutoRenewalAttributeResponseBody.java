@@ -106,7 +106,7 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of auto-renewal details.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -256,7 +268,14 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoRenewalEnabled.
+             * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enables.</li>
+             * <li><strong>false</strong>: Disables.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenewalEnabled(Boolean autoRenewalEnabled) {
                 this.autoRenewalEnabled = autoRenewalEnabled;
@@ -264,7 +283,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenewalPeriod.
+             * <p>The auto-renewal duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoRenewalPeriod(Long autoRenewalPeriod) {
                 this.autoRenewalPeriod = autoRenewalPeriod;
@@ -272,7 +294,14 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenewalPeriodUnit.
+             * <p>The unit of auto-renewal duration. Valid values:</p>
+             * <ul>
+             * <li><strong>Year</strong></li>
+             * <li><strong>Month</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Year</p>
              */
             public Builder autoRenewalPeriodUnit(String autoRenewalPeriodUnit) {
                 this.autoRenewalPeriodUnit = autoRenewalPeriodUnit;
@@ -280,7 +309,15 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AutoRenewalStatus.
+             * <p>The renewal method. Valid values:</p>
+             * <ul>
+             * <li><strong>AutoRenewal</strong>: The cluster is automatically renewed.</li>
+             * <li><strong>Normal</strong>: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</li>
+             * <li><strong>NotRenewal</strong>: The cluster is not renewed. Reminders are only sent three days before cluster expiration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoRenewal</p>
              */
             public Builder autoRenewalStatus(String autoRenewalStatus) {
                 this.autoRenewalStatus = autoRenewalStatus;
@@ -288,7 +325,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-uf6485635fz8****</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -296,7 +336,10 @@ public class DescribeAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
