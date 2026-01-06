@@ -343,6 +343,9 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -364,6 +367,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         private PipelineRuns(Builder builder) {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.description = builder.description;
             this.id = builder.id;
             this.message = builder.message;
             this.modifyTime = builder.modifyTime;
@@ -392,6 +396,13 @@ public class ListPipelineRunsResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -439,6 +450,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String creator; 
+            private String description; 
             private String id; 
             private String message; 
             private Long modifyTime; 
@@ -452,6 +464,7 @@ public class ListPipelineRunsResponseBody extends TeaModel {
             private Builder(PipelineRuns model) {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.description = model.description;
                 this.id = model.id;
                 this.message = model.message;
                 this.modifyTime = model.modifyTime;
@@ -479,6 +492,17 @@ public class ListPipelineRunsResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * <p>The description of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check before going online to development</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

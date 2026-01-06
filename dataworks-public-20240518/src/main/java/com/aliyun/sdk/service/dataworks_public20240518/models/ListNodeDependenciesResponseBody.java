@@ -212,7 +212,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node output.</p>
+             * <p>The output of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>860438872620113XXXX</p>
@@ -486,7 +486,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable name.</p>
+             * <p>The name of the variable.</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -522,7 +522,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the variable. Valid values:</p>
+             * <p>The type of the variable.</p>
              * <ul>
              * <li>NoKvVariableExpression</li>
              * <li>Constant</li>
@@ -623,7 +623,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of node outputs.</p>
+             * <p>The node output list.</p>
              */
             public Builder nodeOutputs(java.util.List<NodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -1021,7 +1021,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the variable.</p>
+             * <p>The variable name.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -1104,7 +1104,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of node outputs.</p>
+             * <p>The node output list.</p>
              */
             public Builder nodeOutputs(java.util.List<OutputsNodeOutputs> nodeOutputs) {
                 this.nodeOutputs = nodeOutputs;
@@ -1120,7 +1120,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable list.</p>
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1316,7 +1316,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             /**
              * <p>The ID of the script.</p>
              * <blockquote>
-             * <p> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
+             * <p> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1339,7 +1339,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime.</p>
+             * <p>Runtime</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -1445,7 +1445,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance generation mode. Valid values:</p>
+             * <p>The instance generation mode.</p>
              * <ul>
              * <li>T+1</li>
              * <li>Immediately</li>
@@ -1471,7 +1471,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode. Valid values:</p>
+             * <p>The rerun mode.</p>
              * <ul>
              * <li>Allowed</li>
              * <li>Denied</li>
@@ -1762,9 +1762,9 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
              * <p>The trigger type.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Scheduler: periodic scheduling.</li>
-             * <li>Manual: manual scheduling.</li>
-             * <li>Streaming: streaming scheduler.</li>
+             * <li>Scheduler: Periodic scheduling.</li>
+             * <li>Manual: Manual scheduling.</li>
+             * <li>Streaming: Streaming scheduler.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2183,7 +2183,7 @@ public class ListNodeDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling task ID.</p>
+             * <p>The ID of the scheduling task.</p>
              * 
              * <strong>example:</strong>
              * <p>580667964888595XXXX</p>

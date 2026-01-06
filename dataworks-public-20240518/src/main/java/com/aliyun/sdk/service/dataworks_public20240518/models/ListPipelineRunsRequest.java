@@ -26,6 +26,10 @@ public class ListPipelineRunsRequest extends Request {
     private String creator;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectId")
+    private String objectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
@@ -48,6 +52,7 @@ public class ListPipelineRunsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.creator = builder.creator;
+        this.objectId = builder.objectId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -82,6 +87,13 @@ public class ListPipelineRunsRequest extends Request {
     }
 
     /**
+     * @return objectId
+     */
+    public String getObjectId() {
+        return this.objectId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -112,6 +124,7 @@ public class ListPipelineRunsRequest extends Request {
     public static final class Builder extends Request.Builder<ListPipelineRunsRequest, Builder> {
         private String regionId; 
         private String creator; 
+        private String objectId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -125,6 +138,7 @@ public class ListPipelineRunsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.creator = request.creator;
+            this.objectId = request.objectId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
@@ -149,6 +163,15 @@ public class ListPipelineRunsRequest extends Request {
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * ObjectId.
+         */
+        public Builder objectId(String objectId) {
+            this.putQueryParameter("ObjectId", objectId);
+            this.objectId = objectId;
             return this;
         }
 

@@ -167,7 +167,12 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
+         * <p>Filter condition: The type of the workflow. The default value is CycleWorkflow.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CycleWorkflow</li>
+         * <li>ManualWorkflow</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -191,7 +196,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page number of the data to retrieve, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

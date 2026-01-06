@@ -231,7 +231,15 @@ public class ListDataQualityScanRunsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The extended query filter. Supported parameters:</p>
+         * <ul>
+         * <li>TaskInstanceId</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;TaskInstanceId&quot;: 111L
+         * }</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
