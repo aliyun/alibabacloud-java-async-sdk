@@ -27,6 +27,11 @@ public class ListGroupsForApplicationRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationRoleId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String applicationRoleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupIds")
     private java.util.List<String> groupIds;
 
@@ -47,6 +52,7 @@ public class ListGroupsForApplicationRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
+        this.applicationRoleId = builder.applicationRoleId;
         this.groupIds = builder.groupIds;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -81,6 +87,13 @@ public class ListGroupsForApplicationRequest extends Request {
     }
 
     /**
+     * @return applicationRoleId
+     */
+    public String getApplicationRoleId() {
+        return this.applicationRoleId;
+    }
+
+    /**
      * @return groupIds
      */
     public java.util.List<String> getGroupIds() {
@@ -111,6 +124,7 @@ public class ListGroupsForApplicationRequest extends Request {
     public static final class Builder extends Request.Builder<ListGroupsForApplicationRequest, Builder> {
         private String regionId; 
         private String applicationId; 
+        private String applicationRoleId; 
         private java.util.List<String> groupIds; 
         private String instanceId; 
         private Long pageNumber; 
@@ -124,6 +138,7 @@ public class ListGroupsForApplicationRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.applicationId = request.applicationId;
+            this.applicationRoleId = request.applicationRoleId;
             this.groupIds = request.groupIds;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
@@ -149,6 +164,18 @@ public class ListGroupsForApplicationRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * <p>应用角色ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        public Builder applicationRoleId(String applicationRoleId) {
+            this.putQueryParameter("ApplicationRoleId", applicationRoleId);
+            this.applicationRoleId = applicationRoleId;
             return this;
         }
 

@@ -121,11 +121,72 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
      *
      * <p>ListGroupsForApplicationResponseBody</p>
      */
+    public static class ApplicationRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoleId")
+        private String applicationRoleId;
+
+        private ApplicationRoles(Builder builder) {
+            this.applicationRoleId = builder.applicationRoleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationRoles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationRoleId
+         */
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+        public static final class Builder {
+            private String applicationRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationRoles model) {
+                this.applicationRoleId = model.applicationRoleId;
+            } 
+
+            /**
+             * <p>应用角色标识。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+             */
+            public Builder applicationRoleId(String applicationRoleId) {
+                this.applicationRoleId = applicationRoleId;
+                return this;
+            }
+
+            public ApplicationRoles build() {
+                return new ApplicationRoles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGroupsForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsForApplicationResponseBody</p>
+     */
     public static class Groups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoles")
+        private java.util.List<ApplicationRoles> applicationRoles;
+
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
         private Groups(Builder builder) {
+            this.applicationRoles = builder.applicationRoles;
             this.groupId = builder.groupId;
         }
 
@@ -138,6 +199,13 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return applicationRoles
+         */
+        public java.util.List<ApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
+        }
+
+        /**
          * @return groupId
          */
         public String getGroupId() {
@@ -145,14 +213,24 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<ApplicationRoles> applicationRoles; 
             private String groupId; 
 
             private Builder() {
             } 
 
             private Builder(Groups model) {
+                this.applicationRoles = model.applicationRoles;
                 this.groupId = model.groupId;
             } 
+
+            /**
+             * <p>应用角色列表。</p>
+             */
+            public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
+                this.applicationRoles = applicationRoles;
+                return this;
+            }
 
             /**
              * <p>The group ID.</p>

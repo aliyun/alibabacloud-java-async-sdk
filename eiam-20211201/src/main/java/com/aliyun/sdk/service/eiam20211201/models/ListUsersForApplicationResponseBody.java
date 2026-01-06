@@ -121,11 +121,72 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
      *
      * <p>ListUsersForApplicationResponseBody</p>
      */
+    public static class ApplicationRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoleId")
+        private String applicationRoleId;
+
+        private ApplicationRoles(Builder builder) {
+            this.applicationRoleId = builder.applicationRoleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationRoles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationRoleId
+         */
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+        public static final class Builder {
+            private String applicationRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationRoles model) {
+                this.applicationRoleId = model.applicationRoleId;
+            } 
+
+            /**
+             * <p>应用角色标识。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+             */
+            public Builder applicationRoleId(String applicationRoleId) {
+                this.applicationRoleId = applicationRoleId;
+                return this;
+            }
+
+            public ApplicationRoles build() {
+                return new ApplicationRoles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListUsersForApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUsersForApplicationResponseBody</p>
+     */
     public static class Users extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoles")
+        private java.util.List<ApplicationRoles> applicationRoles;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Users(Builder builder) {
+            this.applicationRoles = builder.applicationRoles;
             this.userId = builder.userId;
         }
 
@@ -138,6 +199,13 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return applicationRoles
+         */
+        public java.util.List<ApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -145,14 +213,24 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<ApplicationRoles> applicationRoles; 
             private String userId; 
 
             private Builder() {
             } 
 
             private Builder(Users model) {
+                this.applicationRoles = model.applicationRoles;
                 this.userId = model.userId;
             } 
+
+            /**
+             * <p>应用角色列表。</p>
+             */
+            public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
+                this.applicationRoles = applicationRoles;
+                return this;
+            }
 
             /**
              * <p>The ID of the account.</p>

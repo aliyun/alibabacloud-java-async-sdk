@@ -27,6 +27,11 @@ public class RevokeApplicationFromUsersRequest extends Request {
     private String applicationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationRoleId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String applicationRoleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -40,6 +45,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.applicationId = builder.applicationId;
+        this.applicationRoleId = builder.applicationRoleId;
         this.instanceId = builder.instanceId;
         this.userIds = builder.userIds;
     }
@@ -72,6 +78,13 @@ public class RevokeApplicationFromUsersRequest extends Request {
     }
 
     /**
+     * @return applicationRoleId
+     */
+    public String getApplicationRoleId() {
+        return this.applicationRoleId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -88,6 +101,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
     public static final class Builder extends Request.Builder<RevokeApplicationFromUsersRequest, Builder> {
         private String regionId; 
         private String applicationId; 
+        private String applicationRoleId; 
         private String instanceId; 
         private java.util.List<String> userIds; 
 
@@ -99,6 +113,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.applicationId = request.applicationId;
+            this.applicationRoleId = request.applicationRoleId;
             this.instanceId = request.instanceId;
             this.userIds = request.userIds;
         } 
@@ -122,6 +137,18 @@ public class RevokeApplicationFromUsersRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * <p>应用角色ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+         */
+        public Builder applicationRoleId(String applicationRoleId) {
+            this.putQueryParameter("ApplicationRoleId", applicationRoleId);
+            this.applicationRoleId = applicationRoleId;
             return this;
         }
 

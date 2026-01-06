@@ -115,9 +115,69 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
      *
      * <p>ListApplicationsForGroupResponseBody</p>
      */
+    public static class ApplicationRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoleId")
+        private String applicationRoleId;
+
+        private ApplicationRoles(Builder builder) {
+            this.applicationRoleId = builder.applicationRoleId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationRoles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationRoleId
+         */
+        public String getApplicationRoleId() {
+            return this.applicationRoleId;
+        }
+
+        public static final class Builder {
+            private String applicationRoleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationRoles model) {
+                this.applicationRoleId = model.applicationRoleId;
+            } 
+
+            /**
+             * <p>应用角色标识。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
+             */
+            public Builder applicationRoleId(String applicationRoleId) {
+                this.applicationRoleId = applicationRoleId;
+                return this;
+            }
+
+            public ApplicationRoles build() {
+                return new ApplicationRoles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListApplicationsForGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsForGroupResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationRoles")
+        private java.util.List<ApplicationRoles> applicationRoles;
 
         @com.aliyun.core.annotation.NameInMap("HasDirectAuthorization")
         private Boolean hasDirectAuthorization;
@@ -127,6 +187,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
         private Applications(Builder builder) {
             this.applicationId = builder.applicationId;
+            this.applicationRoles = builder.applicationRoles;
             this.hasDirectAuthorization = builder.hasDirectAuthorization;
             this.hasInheritAuthorization = builder.hasInheritAuthorization;
         }
@@ -147,6 +208,13 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return applicationRoles
+         */
+        public java.util.List<ApplicationRoles> getApplicationRoles() {
+            return this.applicationRoles;
+        }
+
+        /**
          * @return hasDirectAuthorization
          */
         public Boolean getHasDirectAuthorization() {
@@ -162,6 +230,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applicationId; 
+            private java.util.List<ApplicationRoles> applicationRoles; 
             private Boolean hasDirectAuthorization; 
             private Boolean hasInheritAuthorization; 
 
@@ -170,6 +239,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
 
             private Builder(Applications model) {
                 this.applicationId = model.applicationId;
+                this.applicationRoles = model.applicationRoles;
                 this.hasDirectAuthorization = model.hasDirectAuthorization;
                 this.hasInheritAuthorization = model.hasInheritAuthorization;
             } 
@@ -182,6 +252,14 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
+                return this;
+            }
+
+            /**
+             * <p>应用角色列表。</p>
+             */
+            public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
+                this.applicationRoles = applicationRoles;
                 return this;
             }
 
