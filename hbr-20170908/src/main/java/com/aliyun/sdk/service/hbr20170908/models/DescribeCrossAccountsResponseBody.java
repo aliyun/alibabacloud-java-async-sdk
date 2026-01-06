@@ -255,6 +255,9 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
         private String crossAccountRoleName;
 
+        @com.aliyun.core.annotation.NameInMap("CrossAccountType")
+        private String crossAccountType;
+
         @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
         private Long crossAccountUserId;
 
@@ -271,6 +274,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             this.alias = builder.alias;
             this.createdTime = builder.createdTime;
             this.crossAccountRoleName = builder.crossAccountRoleName;
+            this.crossAccountType = builder.crossAccountType;
             this.crossAccountUserId = builder.crossAccountUserId;
             this.id = builder.id;
             this.ownerId = builder.ownerId;
@@ -307,6 +311,13 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return crossAccountType
+         */
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        /**
          * @return crossAccountUserId
          */
         public Long getCrossAccountUserId() {
@@ -338,6 +349,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             private String alias; 
             private Long createdTime; 
             private String crossAccountRoleName; 
+            private String crossAccountType; 
             private Long crossAccountUserId; 
             private Long id; 
             private Long ownerId; 
@@ -350,6 +362,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
                 this.alias = model.alias;
                 this.createdTime = model.createdTime;
                 this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
                 this.crossAccountUserId = model.crossAccountUserId;
                 this.id = model.id;
                 this.ownerId = model.ownerId;
@@ -386,6 +399,14 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
+                return this;
+            }
+
+            /**
+             * CrossAccountType.
+             */
+            public Builder crossAccountType(String crossAccountType) {
+                this.crossAccountType = crossAccountType;
                 return this;
             }
 
