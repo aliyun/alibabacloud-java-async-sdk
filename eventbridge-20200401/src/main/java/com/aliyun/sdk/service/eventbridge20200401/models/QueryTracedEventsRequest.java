@@ -52,6 +52,10 @@ public class QueryTracedEventsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subject")
+    private String subject;
+
     private QueryTracedEventsRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -62,6 +66,7 @@ public class QueryTracedEventsRequest extends Request {
         this.matchedRule = builder.matchedRule;
         this.nextToken = builder.nextToken;
         this.startTime = builder.startTime;
+        this.subject = builder.subject;
     }
 
     public static Builder builder() {
@@ -133,6 +138,13 @@ public class QueryTracedEventsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return subject
+     */
+    public String getSubject() {
+        return this.subject;
+    }
+
     public static final class Builder extends Request.Builder<QueryTracedEventsRequest, Builder> {
         private Long endTime; 
         private String eventBusName; 
@@ -142,6 +154,7 @@ public class QueryTracedEventsRequest extends Request {
         private String matchedRule; 
         private String nextToken; 
         private Long startTime; 
+        private String subject; 
 
         private Builder() {
             super();
@@ -157,6 +170,7 @@ public class QueryTracedEventsRequest extends Request {
             this.matchedRule = request.matchedRule;
             this.nextToken = request.nextToken;
             this.startTime = request.startTime;
+            this.subject = request.subject;
         } 
 
         /**
@@ -258,6 +272,15 @@ public class QueryTracedEventsRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Subject.
+         */
+        public Builder subject(String subject) {
+            this.putQueryParameter("Subject", subject);
+            this.subject = subject;
             return this;
         }
 
