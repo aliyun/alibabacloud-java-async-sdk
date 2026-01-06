@@ -58,7 +58,7 @@ public class DescribeHistoryTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private Long resourceOwnerAccount;
+    private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
@@ -189,7 +189,7 @@ public class DescribeHistoryTasksRequest extends Request {
     /**
      * @return resourceOwnerAccount
      */
-    public Long getResourceOwnerAccount() {
+    public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
     }
 
@@ -252,7 +252,7 @@ public class DescribeHistoryTasksRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private Long resourceOwnerAccount; 
+        private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
         private String status; 
@@ -395,7 +395,7 @@ public class DescribeHistoryTasksRequest extends Request {
         /**
          * ResourceOwnerAccount.
          */
-        public Builder resourceOwnerAccount(Long resourceOwnerAccount) {
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
             this.resourceOwnerAccount = resourceOwnerAccount;
             return this;
