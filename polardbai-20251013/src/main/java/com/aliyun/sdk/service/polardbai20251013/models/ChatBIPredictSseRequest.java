@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIPredictSseRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -56,8 +64,14 @@ public class ChatBIPredictSseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SelectData")
     private Boolean selectData;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThinkingMode")
+    private Boolean thinkingMode;
+
     private ChatBIPredictSseRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.generateChart = builder.generateChart;
         this.generateSummary = builder.generateSummary;
@@ -67,6 +81,7 @@ public class ChatBIPredictSseRequest extends Request {
         this.question = builder.question;
         this.schemaIndexTableName = builder.schemaIndexTableName;
         this.selectData = builder.selectData;
+        this.thinkingMode = builder.thinkingMode;
     }
 
     public static Builder builder() {
@@ -80,6 +95,20 @@ public class ChatBIPredictSseRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -145,7 +174,16 @@ public class ChatBIPredictSseRequest extends Request {
         return this.selectData;
     }
 
+    /**
+     * @return thinkingMode
+     */
+    public Boolean getThinkingMode() {
+        return this.thinkingMode;
+    }
+
     public static final class Builder extends Request.Builder<ChatBIPredictSseRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String dbName; 
         private Boolean generateChart; 
         private Boolean generateSummary; 
@@ -155,6 +193,7 @@ public class ChatBIPredictSseRequest extends Request {
         private String question; 
         private String schemaIndexTableName; 
         private Boolean selectData; 
+        private Boolean thinkingMode; 
 
         private Builder() {
             super();
@@ -162,6 +201,8 @@ public class ChatBIPredictSseRequest extends Request {
 
         private Builder(ChatBIPredictSseRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.dbName = request.dbName;
             this.generateChart = request.generateChart;
             this.generateSummary = request.generateSummary;
@@ -171,7 +212,26 @@ public class ChatBIPredictSseRequest extends Request {
             this.question = request.question;
             this.schemaIndexTableName = request.schemaIndexTableName;
             this.selectData = request.selectData;
+            this.thinkingMode = request.thinkingMode;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -261,6 +321,15 @@ public class ChatBIPredictSseRequest extends Request {
         public Builder selectData(Boolean selectData) {
             this.putQueryParameter("SelectData", selectData);
             this.selectData = selectData;
+            return this;
+        }
+
+        /**
+         * ThinkingMode.
+         */
+        public Builder thinkingMode(Boolean thinkingMode) {
+            this.putQueryParameter("ThinkingMode", thinkingMode);
+            this.thinkingMode = thinkingMode;
             return this;
         }
 

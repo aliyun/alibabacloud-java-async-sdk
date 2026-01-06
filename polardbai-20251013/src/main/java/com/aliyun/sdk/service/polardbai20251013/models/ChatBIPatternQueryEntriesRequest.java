@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIPatternQueryEntriesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -46,6 +54,8 @@ public class ChatBIPatternQueryEntriesRequest extends Request {
 
     private ChatBIPatternQueryEntriesRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.id = builder.id;
         this.instanceName = builder.instanceName;
@@ -65,6 +75,20 @@ public class ChatBIPatternQueryEntriesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -110,6 +134,8 @@ public class ChatBIPatternQueryEntriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBIPatternQueryEntriesRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String dbName; 
         private Integer id; 
         private String instanceName; 
@@ -123,6 +149,8 @@ public class ChatBIPatternQueryEntriesRequest extends Request {
 
         private Builder(ChatBIPatternQueryEntriesRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.dbName = request.dbName;
             this.id = request.id;
             this.instanceName = request.instanceName;
@@ -130,6 +158,24 @@ public class ChatBIPatternQueryEntriesRequest extends Request {
             this.pageSize = request.pageSize;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

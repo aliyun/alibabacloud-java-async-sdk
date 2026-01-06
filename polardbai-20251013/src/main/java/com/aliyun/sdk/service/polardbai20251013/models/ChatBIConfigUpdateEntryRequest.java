@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIConfigUpdateEntryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -62,6 +70,8 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
 
     private ChatBIConfigUpdateEntryRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.formulaFunction = builder.formulaFunction;
         this.id = builder.id;
@@ -84,6 +94,20 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -150,6 +174,8 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBIConfigUpdateEntryRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String dbName; 
         private String formulaFunction; 
         private Integer id; 
@@ -166,6 +192,8 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
 
         private Builder(ChatBIConfigUpdateEntryRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.dbName = request.dbName;
             this.formulaFunction = request.formulaFunction;
             this.id = request.id;
@@ -176,6 +204,24 @@ public class ChatBIConfigUpdateEntryRequest extends Request {
             this.sqlFunction = request.sqlFunction;
             this.textCondition = request.textCondition;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

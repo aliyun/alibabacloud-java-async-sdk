@@ -196,6 +196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DownloadMultimodalSearchTaskResultMetadataResponse> downloadMultimodalSearchTaskResultMetadata(DownloadMultimodalSearchTaskResultMetadataRequest request);
 
     /**
+     * @param request the request parameters of GetUserToken  GetUserTokenRequest
+     * @return GetUserTokenResponse
+     */
+    CompletableFuture<GetUserTokenResponse> getUserToken(GetUserTokenRequest request);
+
+    /**
      * @param request the request parameters of ListMultimodalDataset  ListMultimodalDatasetRequest
      * @return ListMultimodalDatasetResponse
      */
@@ -214,6 +220,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultimodalSearchTaskResponse> listMultimodalSearchTask(ListMultimodalSearchTaskRequest request);
 
     /**
+     * @param request the request parameters of ListMultimodalSearchTaskResult  ListMultimodalSearchTaskResultRequest
+     * @return ListMultimodalSearchTaskResultResponse
+     */
+    CompletableFuture<ListMultimodalSearchTaskResultResponse> listMultimodalSearchTaskResult(ListMultimodalSearchTaskResultRequest request);
+
+    /**
      * @param request the request parameters of UpdateMultimodalDataset  UpdateMultimodalDatasetRequest
      * @return UpdateMultimodalDatasetResponse
      */
@@ -224,5 +236,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadOSSMultimodalDatasetResponse
      */
     CompletableFuture<UploadOSSMultimodalDatasetResponse> uploadOSSMultimodalDataset(UploadOSSMultimodalDatasetRequest request);
+
+    /**
+     * @param request the request parameters of ValidateDatabaseUserToken  ValidateDatabaseUserTokenRequest
+     * @return ValidateDatabaseUserTokenResponse
+     */
+    CompletableFuture<ValidateDatabaseUserTokenResponse> validateDatabaseUserToken(ValidateDatabaseUserTokenRequest request);
+
+    /**
+     * @param request the request parameters of ValidateUserToken  ValidateUserTokenRequest
+     * @return ValidateUserTokenResponse
+     */
+    CompletableFuture<ValidateUserTokenResponse> validateUserToken(ValidateUserTokenRequest request);
 
 }

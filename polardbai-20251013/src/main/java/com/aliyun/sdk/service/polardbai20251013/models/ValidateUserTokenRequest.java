@@ -12,42 +12,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChatBIFileTemplateDownloadRequest} extends {@link RequestModel}
+ * {@link ValidateUserTokenRequest} extends {@link RequestModel}
  *
- * <p>ChatBIFileTemplateDownloadRequest</p>
+ * <p>ValidateUserTokenRequest</p>
  */
-public class ChatBIFileTemplateDownloadRequest extends Request {
+public class ValidateUserTokenRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authMessage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String instanceName;
+    private String DBClusterId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TableType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String tableType;
-
-    private ChatBIFileTemplateDownloadRequest(Builder builder) {
+    private ValidateUserTokenRequest(Builder builder) {
         super(builder);
         this.authMessage = builder.authMessage;
         this.authType = builder.authType;
-        this.instanceName = builder.instanceName;
-        this.tableType = builder.tableType;
+        this.DBClusterId = builder.DBClusterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ChatBIFileTemplateDownloadRequest create() {
+    public static ValidateUserTokenRequest create() {
         return builder().build();
     }
 
@@ -71,39 +67,33 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
     }
 
     /**
-     * @return instanceName
+     * @return DBClusterId
      */
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
-    /**
-     * @return tableType
-     */
-    public String getTableType() {
-        return this.tableType;
-    }
-
-    public static final class Builder extends Request.Builder<ChatBIFileTemplateDownloadRequest, Builder> {
+    public static final class Builder extends Request.Builder<ValidateUserTokenRequest, Builder> {
         private String authMessage; 
         private String authType; 
-        private String instanceName; 
-        private String tableType; 
+        private String DBClusterId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ChatBIFileTemplateDownloadRequest request) {
+        private Builder(ValidateUserTokenRequest request) {
             super(request);
             this.authMessage = request.authMessage;
             this.authType = request.authType;
-            this.instanceName = request.instanceName;
-            this.tableType = request.tableType;
+            this.DBClusterId = request.DBClusterId;
         } 
 
         /**
-         * AuthMessage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yEtNjzuM21NVLVJTuL9Trw****</p>
          */
         public Builder authMessage(String authMessage) {
             this.putQueryParameter("AuthMessage", authMessage);
@@ -112,7 +102,10 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -126,27 +119,15 @@ public class ChatBIFileTemplateDownloadRequest extends Request {
          * <strong>example:</strong>
          * <p>pc-2ze454l20me07****</p>
          */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pattern/config</p>
-         */
-        public Builder tableType(String tableType) {
-            this.putQueryParameter("TableType", tableType);
-            this.tableType = tableType;
+        public Builder DBClusterId(String DBClusterId) {
+            this.putQueryParameter("DBClusterId", DBClusterId);
+            this.DBClusterId = DBClusterId;
             return this;
         }
 
         @Override
-        public ChatBIFileTemplateDownloadRequest build() {
-            return new ChatBIFileTemplateDownloadRequest(this);
+        public ValidateUserTokenRequest build() {
+            return new ValidateUserTokenRequest(this);
         } 
 
     } 

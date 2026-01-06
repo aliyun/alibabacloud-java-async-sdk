@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIPatternIndexCreateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -37,6 +45,8 @@ public class ChatBIPatternIndexCreateRequest extends Request {
 
     private ChatBIPatternIndexCreateRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
         this.patternTableName = builder.patternTableName;
@@ -54,6 +64,20 @@ public class ChatBIPatternIndexCreateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -85,6 +109,8 @@ public class ChatBIPatternIndexCreateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBIPatternIndexCreateRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String dbName; 
         private String instanceName; 
         private String patternTableName; 
@@ -96,11 +122,31 @@ public class ChatBIPatternIndexCreateRequest extends Request {
 
         private Builder(ChatBIPatternIndexCreateRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
             this.patternTableName = request.patternTableName;
             this.tableNameSuffix = request.tableNameSuffix;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

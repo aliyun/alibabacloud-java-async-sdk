@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIFileUploadCallbackRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CharacterSetName")
     private String characterSetName;
 
@@ -48,6 +56,8 @@ public class ChatBIFileUploadCallbackRequest extends Request {
 
     private ChatBIFileUploadCallbackRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.characterSetName = builder.characterSetName;
         this.dbName = builder.dbName;
         this.fileName = builder.fileName;
@@ -67,6 +77,20 @@ public class ChatBIFileUploadCallbackRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -112,6 +136,8 @@ public class ChatBIFileUploadCallbackRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBIFileUploadCallbackRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String characterSetName; 
         private String dbName; 
         private String fileName; 
@@ -125,6 +151,8 @@ public class ChatBIFileUploadCallbackRequest extends Request {
 
         private Builder(ChatBIFileUploadCallbackRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.characterSetName = request.characterSetName;
             this.dbName = request.dbName;
             this.fileName = request.fileName;
@@ -132,6 +160,24 @@ public class ChatBIFileUploadCallbackRequest extends Request {
             this.tableName = request.tableName;
             this.tableType = request.tableType;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * CharacterSetName.

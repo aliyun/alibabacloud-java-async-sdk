@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBIConfigCreateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
@@ -29,6 +37,8 @@ public class ChatBIConfigCreateRequest extends Request {
 
     private ChatBIConfigCreateRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
     }
@@ -47,6 +57,20 @@ public class ChatBIConfigCreateRequest extends Request {
     }
 
     /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
+    }
+
+    /**
      * @return dbName
      */
     public String getDbName() {
@@ -61,6 +85,8 @@ public class ChatBIConfigCreateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBIConfigCreateRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String dbName; 
         private String instanceName; 
 
@@ -70,9 +96,29 @@ public class ChatBIConfigCreateRequest extends Request {
 
         private Builder(ChatBIConfigCreateRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

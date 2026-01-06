@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatBISchemaIndexCreateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthMessage")
+    private String authMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
+    private String authType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ColumnsExcluded")
     private String columnsExcluded;
 
@@ -45,6 +53,8 @@ public class ChatBISchemaIndexCreateRequest extends Request {
 
     private ChatBISchemaIndexCreateRequest(Builder builder) {
         super(builder);
+        this.authMessage = builder.authMessage;
+        this.authType = builder.authType;
         this.columnsExcluded = builder.columnsExcluded;
         this.dbName = builder.dbName;
         this.instanceName = builder.instanceName;
@@ -64,6 +74,20 @@ public class ChatBISchemaIndexCreateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authMessage
+     */
+    public String getAuthMessage() {
+        return this.authMessage;
+    }
+
+    /**
+     * @return authType
+     */
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -109,6 +133,8 @@ public class ChatBISchemaIndexCreateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatBISchemaIndexCreateRequest, Builder> {
+        private String authMessage; 
+        private String authType; 
         private String columnsExcluded; 
         private String dbName; 
         private String instanceName; 
@@ -122,6 +148,8 @@ public class ChatBISchemaIndexCreateRequest extends Request {
 
         private Builder(ChatBISchemaIndexCreateRequest request) {
             super(request);
+            this.authMessage = request.authMessage;
+            this.authType = request.authType;
             this.columnsExcluded = request.columnsExcluded;
             this.dbName = request.dbName;
             this.instanceName = request.instanceName;
@@ -129,6 +157,24 @@ public class ChatBISchemaIndexCreateRequest extends Request {
             this.tablesIncluded = request.tablesIncluded;
             this.toSample = request.toSample;
         } 
+
+        /**
+         * AuthMessage.
+         */
+        public Builder authMessage(String authMessage) {
+            this.putQueryParameter("AuthMessage", authMessage);
+            this.authMessage = authMessage;
+            return this;
+        }
+
+        /**
+         * AuthType.
+         */
+        public Builder authType(String authType) {
+            this.putQueryParameter("AuthType", authType);
+            this.authType = authType;
+            return this;
+        }
 
         /**
          * ColumnsExcluded.
