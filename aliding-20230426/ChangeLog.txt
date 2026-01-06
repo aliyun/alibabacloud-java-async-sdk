@@ -1,3 +1,6 @@
+2026-01-06 Version: 1.0.60
+- Generated java-async 2023-04-26 for aliding.
+
 2025-12-23 Version: 1.0.59
 - Generated java-async 2023-04-26 for aliding.
 

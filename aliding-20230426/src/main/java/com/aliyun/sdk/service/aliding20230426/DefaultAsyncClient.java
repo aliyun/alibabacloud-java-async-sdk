@@ -1743,6 +1743,132 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDingtalkMeetingInfo  GetDingtalkMeetingInfoRequest
+     * @return GetDingtalkMeetingInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkMeetingInfoResponse> getDingtalkMeetingInfo(GetDingtalkMeetingInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkMeetingInfo").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkMeetingInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkMeetingInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkMeetingInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingList  GetDingtalkMeetingListRequest
+     * @return GetDingtalkMeetingListResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkMeetingListResponse> getDingtalkMeetingList(GetDingtalkMeetingListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkMeetingList").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkMeetingList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkMeetingListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkMeetingListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMemberEvent  GetDingtalkMeetingMemberEventRequest
+     * @return GetDingtalkMeetingMemberEventResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkMeetingMemberEventResponse> getDingtalkMeetingMemberEvent(GetDingtalkMeetingMemberEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkMeetingMemberEvent").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkMeetingMemberEvent").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkMeetingMemberEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkMeetingMemberEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMemberList  GetDingtalkMeetingMemberListRequest
+     * @return GetDingtalkMeetingMemberListResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkMeetingMemberListResponse> getDingtalkMeetingMemberList(GetDingtalkMeetingMemberListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkMeetingMemberList").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkMeetingMemberList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkMeetingMemberListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkMeetingMemberListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMetricData  GetDingtalkMeetingMetricDataRequest
+     * @return GetDingtalkMeetingMetricDataResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkMeetingMetricDataResponse> getDingtalkMeetingMetricData(GetDingtalkMeetingMetricDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkMeetingMetricData").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkMeetingMetricData").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkMeetingMetricDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkMeetingMetricDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkProjectionInfo  GetDingtalkProjectionInfoRequest
+     * @return GetDingtalkProjectionInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkProjectionInfoResponse> getDingtalkProjectionInfo(GetDingtalkProjectionInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkProjectionInfo").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkProjectionInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkProjectionInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkProjectionInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDingtalkProjectionList  GetDingtalkProjectionListRequest
+     * @return GetDingtalkProjectionListResponse
+     */
+    @Override
+    public CompletableFuture<GetDingtalkProjectionListResponse> getDingtalkProjectionList(GetDingtalkProjectionListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDingtalkProjectionList").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/getDingtalkProjectionList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDingtalkProjectionListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDingtalkProjectionListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDocContent  GetDocContentRequest
      * @return GetDocContentResponse
      */
@@ -3683,6 +3809,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryReportDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRobotUnsubscription  QueryRobotUnsubscriptionRequest
+     * @return QueryRobotUnsubscriptionResponse
+     */
+    @Override
+    public CompletableFuture<QueryRobotUnsubscriptionResponse> queryRobotUnsubscription(QueryRobotUnsubscriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryRobotUnsubscription").setMethod(HttpMethod.POST).setPathRegex("/aliding/v1/robot/queryRobotUnsubscription").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRobotUnsubscriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRobotUnsubscriptionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

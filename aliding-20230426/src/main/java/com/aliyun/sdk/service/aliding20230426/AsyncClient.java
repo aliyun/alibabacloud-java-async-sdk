@@ -586,6 +586,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeptNoResponse> getDeptNo(GetDeptNoRequest request);
 
     /**
+     * @param request the request parameters of GetDingtalkMeetingInfo  GetDingtalkMeetingInfoRequest
+     * @return GetDingtalkMeetingInfoResponse
+     */
+    CompletableFuture<GetDingtalkMeetingInfoResponse> getDingtalkMeetingInfo(GetDingtalkMeetingInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingList  GetDingtalkMeetingListRequest
+     * @return GetDingtalkMeetingListResponse
+     */
+    CompletableFuture<GetDingtalkMeetingListResponse> getDingtalkMeetingList(GetDingtalkMeetingListRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMemberEvent  GetDingtalkMeetingMemberEventRequest
+     * @return GetDingtalkMeetingMemberEventResponse
+     */
+    CompletableFuture<GetDingtalkMeetingMemberEventResponse> getDingtalkMeetingMemberEvent(GetDingtalkMeetingMemberEventRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMemberList  GetDingtalkMeetingMemberListRequest
+     * @return GetDingtalkMeetingMemberListResponse
+     */
+    CompletableFuture<GetDingtalkMeetingMemberListResponse> getDingtalkMeetingMemberList(GetDingtalkMeetingMemberListRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkMeetingMetricData  GetDingtalkMeetingMetricDataRequest
+     * @return GetDingtalkMeetingMetricDataResponse
+     */
+    CompletableFuture<GetDingtalkMeetingMetricDataResponse> getDingtalkMeetingMetricData(GetDingtalkMeetingMetricDataRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkProjectionInfo  GetDingtalkProjectionInfoRequest
+     * @return GetDingtalkProjectionInfoResponse
+     */
+    CompletableFuture<GetDingtalkProjectionInfoResponse> getDingtalkProjectionInfo(GetDingtalkProjectionInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetDingtalkProjectionList  GetDingtalkProjectionListRequest
+     * @return GetDingtalkProjectionListResponse
+     */
+    CompletableFuture<GetDingtalkProjectionListResponse> getDingtalkProjectionList(GetDingtalkProjectionListRequest request);
+
+    /**
      * @param request the request parameters of GetDocContent  GetDocContentRequest
      * @return GetDocContentResponse
      */
@@ -1230,6 +1272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryReportDetailResponse
      */
     CompletableFuture<QueryReportDetailResponse> queryReportDetail(QueryReportDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryRobotUnsubscription  QueryRobotUnsubscriptionRequest
+     * @return QueryRobotUnsubscriptionResponse
+     */
+    CompletableFuture<QueryRobotUnsubscriptionResponse> queryRobotUnsubscription(QueryRobotUnsubscriptionRequest request);
 
     /**
      * @param request the request parameters of QueryScheduleConference  QueryScheduleConferenceRequest
