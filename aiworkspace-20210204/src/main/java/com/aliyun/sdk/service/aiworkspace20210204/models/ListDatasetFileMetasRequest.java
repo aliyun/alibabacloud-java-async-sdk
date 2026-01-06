@@ -97,6 +97,10 @@ public class ListDatasetFileMetasRequest extends Request {
     private String queryType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryVideo")
+    private String queryVideo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
     private Float scoreThreshold;
 
@@ -151,6 +155,7 @@ public class ListDatasetFileMetasRequest extends Request {
         this.queryTagsIncludeAny = builder.queryTagsIncludeAny;
         this.queryText = builder.queryText;
         this.queryType = builder.queryType;
+        this.queryVideo = builder.queryVideo;
         this.scoreThreshold = builder.scoreThreshold;
         this.sortBy = builder.sortBy;
         this.startFileUpdateTime = builder.startFileUpdateTime;
@@ -308,6 +313,13 @@ public class ListDatasetFileMetasRequest extends Request {
     }
 
     /**
+     * @return queryVideo
+     */
+    public String getQueryVideo() {
+        return this.queryVideo;
+    }
+
+    /**
      * @return scoreThreshold
      */
     public Float getScoreThreshold() {
@@ -383,6 +395,7 @@ public class ListDatasetFileMetasRequest extends Request {
         private java.util.List<String> queryTagsIncludeAny; 
         private String queryText; 
         private String queryType; 
+        private String queryVideo; 
         private Float scoreThreshold; 
         private String sortBy; 
         private String startFileUpdateTime; 
@@ -417,6 +430,7 @@ public class ListDatasetFileMetasRequest extends Request {
             this.queryTagsIncludeAny = request.queryTagsIncludeAny;
             this.queryText = request.queryText;
             this.queryType = request.queryType;
+            this.queryVideo = request.queryVideo;
             this.scoreThreshold = request.scoreThreshold;
             this.sortBy = request.sortBy;
             this.startFileUpdateTime = request.startFileUpdateTime;
@@ -638,6 +652,15 @@ public class ListDatasetFileMetasRequest extends Request {
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
             this.queryType = queryType;
+            return this;
+        }
+
+        /**
+         * QueryVideo.
+         */
+        public Builder queryVideo(String queryVideo) {
+            this.putQueryParameter("QueryVideo", queryVideo);
+            this.queryVideo = queryVideo;
             return this;
         }
 
