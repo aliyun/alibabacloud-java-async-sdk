@@ -38,7 +38,6 @@ public class CreateTrainPicAvatarRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("templateId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     @com.aliyun.core.annotation.Query
@@ -175,10 +174,7 @@ public class CreateTrainPicAvatarRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M16vSG46Pby9HWOrFSZ7QaQA</p>
+         * templateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("templateId", templateId);
