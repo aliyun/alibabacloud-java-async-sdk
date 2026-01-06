@@ -1005,6 +1005,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDirectoryOrFilePropertiesResponse> getDirectoryOrFileProperties(GetDirectoryOrFilePropertiesRequest request);
 
     /**
+     * @param request the request parameters of GetFileset  GetFilesetRequest
+     * @return GetFilesetResponse
+     */
+    CompletableFuture<GetFilesetResponse> getFileset(GetFilesetRequest request);
+
+    /**
+     * @param request the request parameters of GetProtocolMountTarget  GetProtocolMountTargetRequest
+     * @return GetProtocolMountTargetResponse
+     */
+    CompletableFuture<GetProtocolMountTargetResponse> getProtocolMountTarget(GetProtocolMountTargetRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose File Storage NAS (NAS) file systems support this operation.</p>
      * 
