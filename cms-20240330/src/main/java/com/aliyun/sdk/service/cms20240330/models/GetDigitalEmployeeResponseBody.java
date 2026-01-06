@@ -30,6 +30,9 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String displayName;
 
+    @com.aliyun.core.annotation.NameInMap("employeeType")
+    private String employeeType;
+
     @com.aliyun.core.annotation.NameInMap("knowledges")
     private Knowledges knowledges;
 
@@ -53,6 +56,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
         this.displayName = builder.displayName;
+        this.employeeType = builder.employeeType;
         this.knowledges = builder.knowledges;
         this.name = builder.name;
         this.regionId = builder.regionId;
@@ -102,6 +106,13 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     }
 
     /**
+     * @return employeeType
+     */
+    public String getEmployeeType() {
+        return this.employeeType;
+    }
+
+    /**
      * @return knowledges
      */
     public Knowledges getKnowledges() {
@@ -148,6 +159,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         private String defaultRule; 
         private String description; 
         private String displayName; 
+        private String employeeType; 
         private Knowledges knowledges; 
         private String name; 
         private String regionId; 
@@ -163,6 +175,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             this.defaultRule = model.defaultRule;
             this.description = model.description;
             this.displayName = model.displayName;
+            this.employeeType = model.employeeType;
             this.knowledges = model.knowledges;
             this.name = model.name;
             this.regionId = model.regionId;
@@ -203,6 +216,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * employeeType.
+         */
+        public Builder employeeType(String employeeType) {
+            this.employeeType = employeeType;
             return this;
         }
 

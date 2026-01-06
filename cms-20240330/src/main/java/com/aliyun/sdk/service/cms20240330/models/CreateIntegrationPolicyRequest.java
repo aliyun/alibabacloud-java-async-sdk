@@ -216,6 +216,9 @@ public class CreateIntegrationPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("clusterId")
         private String clusterId;
 
+        @com.aliyun.core.annotation.NameInMap("clusterNamespace")
+        private String clusterNamespace;
+
         @com.aliyun.core.annotation.NameInMap("disablePolicyShare")
         private Boolean disablePolicyShare;
 
@@ -231,6 +234,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         private EntityGroup(Builder builder) {
             this.clusterEntityType = builder.clusterEntityType;
             this.clusterId = builder.clusterId;
+            this.clusterNamespace = builder.clusterNamespace;
             this.disablePolicyShare = builder.disablePolicyShare;
             this.entityGroupId = builder.entityGroupId;
             this.entityUserId = builder.entityUserId;
@@ -257,6 +261,13 @@ public class CreateIntegrationPolicyRequest extends Request {
          */
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        /**
+         * @return clusterNamespace
+         */
+        public String getClusterNamespace() {
+            return this.clusterNamespace;
         }
 
         /**
@@ -290,6 +301,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         public static final class Builder {
             private String clusterEntityType; 
             private String clusterId; 
+            private String clusterNamespace; 
             private Boolean disablePolicyShare; 
             private String entityGroupId; 
             private String entityUserId; 
@@ -301,6 +313,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             private Builder(EntityGroup model) {
                 this.clusterEntityType = model.clusterEntityType;
                 this.clusterId = model.clusterId;
+                this.clusterNamespace = model.clusterNamespace;
                 this.disablePolicyShare = model.disablePolicyShare;
                 this.entityGroupId = model.entityGroupId;
                 this.entityUserId = model.entityUserId;
@@ -326,6 +339,14 @@ public class CreateIntegrationPolicyRequest extends Request {
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * clusterNamespace.
+             */
+            public Builder clusterNamespace(String clusterNamespace) {
+                this.clusterNamespace = clusterNamespace;
                 return this;
             }
 

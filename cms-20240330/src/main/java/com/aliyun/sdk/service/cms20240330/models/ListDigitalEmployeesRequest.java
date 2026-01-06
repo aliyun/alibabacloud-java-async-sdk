@@ -22,6 +22,10 @@ public class ListDigitalEmployeesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("employeeType")
+    private String employeeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
@@ -37,6 +41,7 @@ public class ListDigitalEmployeesRequest extends Request {
     private ListDigitalEmployeesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.employeeType = builder.employeeType;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
@@ -63,6 +68,13 @@ public class ListDigitalEmployeesRequest extends Request {
     }
 
     /**
+     * @return employeeType
+     */
+    public String getEmployeeType() {
+        return this.employeeType;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -85,6 +97,7 @@ public class ListDigitalEmployeesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDigitalEmployeesRequest, Builder> {
         private String regionId; 
+        private String employeeType; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -96,6 +109,7 @@ public class ListDigitalEmployeesRequest extends Request {
         private Builder(ListDigitalEmployeesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.employeeType = request.employeeType;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
@@ -107,6 +121,15 @@ public class ListDigitalEmployeesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * employeeType.
+         */
+        public Builder employeeType(String employeeType) {
+            this.putQueryParameter("employeeType", employeeType);
+            this.employeeType = employeeType;
             return this;
         }
 
