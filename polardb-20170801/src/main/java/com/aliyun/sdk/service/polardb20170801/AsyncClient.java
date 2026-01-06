@@ -1051,6 +1051,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHALogsResponse> describeHALogs(DescribeHALogsRequest request);
 
     /**
+     * @param request the request parameters of DescribeHistoryEvents  DescribeHistoryEventsRequest
+     * @return DescribeHistoryEventsResponse
+     */
+    CompletableFuture<DescribeHistoryEventsResponse> describeHistoryEvents(DescribeHistoryEventsRequest request);
+
+    /**
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
