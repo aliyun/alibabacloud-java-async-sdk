@@ -1,6 +1,9 @@
 2026-01-07 Version: 2.0.22
 - Generated java-async 2019-03-07 for Cloudauth.
 
+2026-01-07 Version: 2.0.22
+- Generated java-async 2019-03-07 for Cloudauth.
+
 2025-12-29 Version: 2.0.21
 - Generated java-async 2019-03-07 for Cloudauth.
 
