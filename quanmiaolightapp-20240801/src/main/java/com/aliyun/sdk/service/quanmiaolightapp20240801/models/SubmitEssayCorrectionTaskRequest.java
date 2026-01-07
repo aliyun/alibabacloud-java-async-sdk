@@ -273,6 +273,9 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("answer")
         private String answer;
 
+        @com.aliyun.core.annotation.NameInMap("customId")
+        private String customId;
+
         @com.aliyun.core.annotation.NameInMap("grade")
         private String grade;
 
@@ -290,6 +293,7 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
 
         private Tasks(Builder builder) {
             this.answer = builder.answer;
+            this.customId = builder.customId;
             this.grade = builder.grade;
             this.otherReviewPoints = builder.otherReviewPoints;
             this.question = builder.question;
@@ -310,6 +314,13 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
          */
         public String getAnswer() {
             return this.answer;
+        }
+
+        /**
+         * @return customId
+         */
+        public String getCustomId() {
+            return this.customId;
         }
 
         /**
@@ -349,6 +360,7 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
 
         public static final class Builder {
             private String answer; 
+            private String customId; 
             private String grade; 
             private String otherReviewPoints; 
             private String question; 
@@ -360,6 +372,7 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
 
             private Builder(Tasks model) {
                 this.answer = model.answer;
+                this.customId = model.customId;
                 this.grade = model.grade;
                 this.otherReviewPoints = model.otherReviewPoints;
                 this.question = model.question;
@@ -372,6 +385,14 @@ public class SubmitEssayCorrectionTaskRequest extends Request {
              */
             public Builder answer(String answer) {
                 this.answer = answer;
+                return this;
+            }
+
+            /**
+             * customId.
+             */
+            public Builder customId(String customId) {
+                this.customId = customId;
                 return this;
             }
 
