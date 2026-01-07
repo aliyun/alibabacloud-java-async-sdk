@@ -37,6 +37,10 @@ public class ListHyperNodesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("HyperNodeId")
     private String hyperNodeId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HyperNodeIds")
+    private java.util.List<String> hyperNodeIds;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MachineType")
     private String machineType;
@@ -76,6 +80,7 @@ public class ListHyperNodesRequest extends Request {
         this.commodityCode = builder.commodityCode;
         this.hpnZone = builder.hpnZone;
         this.hyperNodeId = builder.hyperNodeId;
+        this.hyperNodeIds = builder.hyperNodeIds;
         this.machineType = builder.machineType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -132,6 +137,13 @@ public class ListHyperNodesRequest extends Request {
      */
     public String getHyperNodeId() {
         return this.hyperNodeId;
+    }
+
+    /**
+     * @return hyperNodeIds
+     */
+    public java.util.List<String> getHyperNodeIds() {
+        return this.hyperNodeIds;
     }
 
     /**
@@ -196,6 +208,7 @@ public class ListHyperNodesRequest extends Request {
         private String commodityCode; 
         private String hpnZone; 
         private String hyperNodeId; 
+        private java.util.List<String> hyperNodeIds; 
         private String machineType; 
         private Integer maxResults; 
         private String nextToken; 
@@ -216,6 +229,7 @@ public class ListHyperNodesRequest extends Request {
             this.commodityCode = request.commodityCode;
             this.hpnZone = request.hpnZone;
             this.hyperNodeId = request.hyperNodeId;
+            this.hyperNodeIds = request.hyperNodeIds;
             this.machineType = request.machineType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -268,6 +282,16 @@ public class ListHyperNodesRequest extends Request {
         public Builder hyperNodeId(String hyperNodeId) {
             this.putBodyParameter("HyperNodeId", hyperNodeId);
             this.hyperNodeId = hyperNodeId;
+            return this;
+        }
+
+        /**
+         * HyperNodeIds.
+         */
+        public Builder hyperNodeIds(java.util.List<String> hyperNodeIds) {
+            String hyperNodeIdsShrink = shrink(hyperNodeIds, "HyperNodeIds", "json");
+            this.putQueryParameter("HyperNodeIds", hyperNodeIdsShrink);
+            this.hyperNodeIds = hyperNodeIds;
             return this;
         }
 
