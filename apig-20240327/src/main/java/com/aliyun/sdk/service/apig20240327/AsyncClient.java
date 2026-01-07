@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of CreateSecret  CreateSecretRequest
+     * @return CreateSecretResponse
+     */
+    CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create multiple services at a time.</p>
      * 
@@ -226,6 +232,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolicyAttachmentResponse
      */
     CompletableFuture<DeletePolicyAttachmentResponse> deletePolicyAttachment(DeletePolicyAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecret  DeleteSecretRequest
+     * @return DeleteSecretResponse
+     */
+    CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     /**
      * @param request the request parameters of DeleteService  DeleteServiceRequest
@@ -352,6 +364,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceOverviewResponse> getResourceOverview(GetResourceOverviewRequest request);
 
     /**
+     * @param request the request parameters of GetSecretValue  GetSecretValueRequest
+     * @return GetSecretValueResponse
+     */
+    CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request);
+
+    /**
      * @param request the request parameters of GetService  GetServiceRequest
      * @return GetServiceResponse
      */
@@ -474,6 +492,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPolicyClassesResponse
      */
     CompletableFuture<ListPolicyClassesResponse> listPolicyClasses(ListPolicyClassesRequest request);
+
+    /**
+     * @param request the request parameters of ListSecretReferences  ListSecretReferencesRequest
+     * @return ListSecretReferencesResponse
+     */
+    CompletableFuture<ListSecretReferencesResponse> listSecretReferences(ListSecretReferencesRequest request);
+
+    /**
+     * @param request the request parameters of ListSecrets  ListSecretsRequest
+     * @return ListSecretsResponse
+     */
+    CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request);
 
     /**
      * @param request the request parameters of ListServices  ListServicesRequest
@@ -616,6 +646,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolicyResponse
      */
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecret  UpdateSecretRequest
+     * @return UpdateSecretResponse
+     */
+    CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request);
 
     /**
      * @param request the request parameters of UpdateService  UpdateServiceRequest
