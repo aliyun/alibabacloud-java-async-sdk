@@ -113,6 +113,9 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CcEnable")
         private Integer ccEnable;
 
+        @com.aliyun.core.annotation.NameInMap("CcGlobalSwitch")
+        private String ccGlobalSwitch;
+
         @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
@@ -132,6 +135,7 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             this.blackWhiteListEnable = builder.blackWhiteListEnable;
             this.ccCustomRuleEnable = builder.ccCustomRuleEnable;
             this.ccEnable = builder.ccEnable;
+            this.ccGlobalSwitch = builder.ccGlobalSwitch;
             this.ccTemplate = builder.ccTemplate;
             this.domain = builder.domain;
             this.preciseRuleEnable = builder.preciseRuleEnable;
@@ -189,6 +193,13 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
         }
 
         /**
+         * @return ccGlobalSwitch
+         */
+        public String getCcGlobalSwitch() {
+            return this.ccGlobalSwitch;
+        }
+
+        /**
          * @return ccTemplate
          */
         public String getCcTemplate() {
@@ -223,6 +234,7 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
             private Integer blackWhiteListEnable; 
             private Integer ccCustomRuleEnable; 
             private Integer ccEnable; 
+            private String ccGlobalSwitch; 
             private String ccTemplate; 
             private String domain; 
             private Integer preciseRuleEnable; 
@@ -238,6 +250,7 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
                 this.blackWhiteListEnable = model.blackWhiteListEnable;
                 this.ccCustomRuleEnable = model.ccCustomRuleEnable;
                 this.ccEnable = model.ccEnable;
+                this.ccGlobalSwitch = model.ccGlobalSwitch;
                 this.ccTemplate = model.ccTemplate;
                 this.domain = model.domain;
                 this.preciseRuleEnable = model.preciseRuleEnable;
@@ -289,6 +302,14 @@ public class DescribeDomainCcProtectSwitchResponseBody extends TeaModel {
              */
             public Builder ccEnable(Integer ccEnable) {
                 this.ccEnable = ccEnable;
+                return this;
+            }
+
+            /**
+             * CcGlobalSwitch.
+             */
+            public Builder ccGlobalSwitch(String ccGlobalSwitch) {
+                this.ccGlobalSwitch = ccGlobalSwitch;
                 return this;
             }
 
