@@ -36,12 +36,17 @@ public class CreateLabelTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String labelTemplateId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
     private CreateLabelTaskRequest(Builder builder) {
         super(builder);
         this.callbackUrl = builder.callbackUrl;
         this.fileUrl = builder.fileUrl;
         this.idempotentId = builder.idempotentId;
         this.labelTemplateId = builder.labelTemplateId;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -52,7 +57,7 @@ public class CreateLabelTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,11 +90,19 @@ public class CreateLabelTaskRequest extends Request {
         return this.labelTemplateId;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<CreateLabelTaskRequest, Builder> {
         private String callbackUrl; 
         private String fileUrl; 
         private String idempotentId; 
         private String labelTemplateId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class CreateLabelTaskRequest extends Request {
             this.fileUrl = request.fileUrl;
             this.idempotentId = request.idempotentId;
             this.labelTemplateId = request.labelTemplateId;
+            this.projectId = request.projectId;
         } 
 
         /**
@@ -142,6 +156,15 @@ public class CreateLabelTaskRequest extends Request {
         public Builder labelTemplateId(String labelTemplateId) {
             this.putBodyParameter("LabelTemplateId", labelTemplateId);
             this.labelTemplateId = labelTemplateId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

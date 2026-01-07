@@ -25,10 +25,15 @@ public class CreateOssUploadTokenRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("FileType")
     private String fileType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
     private CreateOssUploadTokenRequest(Builder builder) {
         super(builder);
         this.fileName = builder.fileName;
         this.fileType = builder.fileType;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -39,7 +44,7 @@ public class CreateOssUploadTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -58,9 +63,17 @@ public class CreateOssUploadTokenRequest extends Request {
         return this.fileType;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<CreateOssUploadTokenRequest, Builder> {
         private String fileName; 
         private String fileType; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class CreateOssUploadTokenRequest extends Request {
             super(request);
             this.fileName = request.fileName;
             this.fileType = request.fileType;
+            this.projectId = request.projectId;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class CreateOssUploadTokenRequest extends Request {
         public Builder fileType(String fileType) {
             this.putBodyParameter("FileType", fileType);
             this.fileType = fileType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

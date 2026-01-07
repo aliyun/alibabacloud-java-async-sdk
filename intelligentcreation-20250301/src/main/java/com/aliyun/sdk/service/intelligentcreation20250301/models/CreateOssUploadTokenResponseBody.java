@@ -60,6 +60,10 @@ public class CreateOssUploadTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessId
      */
@@ -125,6 +129,20 @@ public class CreateOssUploadTokenResponseBody extends TeaModel {
         private String requestId; 
         private String signature; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOssUploadTokenResponseBody model) {
+            this.accessId = model.accessId;
+            this.expireTime = model.expireTime;
+            this.host = model.host;
+            this.key = model.key;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.signature = model.signature;
+            this.url = model.url;
+        } 
 
         /**
          * AccessId.

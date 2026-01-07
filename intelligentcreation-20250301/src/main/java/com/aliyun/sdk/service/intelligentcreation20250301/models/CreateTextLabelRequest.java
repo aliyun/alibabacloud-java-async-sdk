@@ -25,10 +25,15 @@ public class CreateTextLabelRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("LabelTemplateId")
     private String labelTemplateId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
     private CreateTextLabelRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
         this.labelTemplateId = builder.labelTemplateId;
+        this.projectId = builder.projectId;
     }
 
     public static Builder builder() {
@@ -39,7 +44,7 @@ public class CreateTextLabelRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -58,9 +63,17 @@ public class CreateTextLabelRequest extends Request {
         return this.labelTemplateId;
     }
 
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
     public static final class Builder extends Request.Builder<CreateTextLabelRequest, Builder> {
         private String data; 
         private String labelTemplateId; 
+        private Long projectId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class CreateTextLabelRequest extends Request {
             super(request);
             this.data = request.data;
             this.labelTemplateId = request.labelTemplateId;
+            this.projectId = request.projectId;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class CreateTextLabelRequest extends Request {
         public Builder labelTemplateId(String labelTemplateId) {
             this.putBodyParameter("LabelTemplateId", labelTemplateId);
             this.labelTemplateId = labelTemplateId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

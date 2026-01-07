@@ -44,6 +44,10 @@ public class GetLabelTaskResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -77,6 +81,16 @@ public class GetLabelTaskResultResponseBody extends TeaModel {
         private String resultDataUrl; 
         private String status; 
         private String tokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLabelTaskResultResponseBody model) {
+            this.requestId = model.requestId;
+            this.resultDataUrl = model.resultDataUrl;
+            this.status = model.status;
+            this.tokens = model.tokens;
+        } 
 
         /**
          * RequestId.

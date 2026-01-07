@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetLabelTaskResultRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetLabelTaskResultRequest(Builder builder) {
         super(builder);
+        this.projectId = builder.projectId;
         this.taskId = builder.taskId;
     }
 
@@ -34,9 +39,16 @@ public class GetLabelTaskResultRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
     }
 
     /**
@@ -47,6 +59,7 @@ public class GetLabelTaskResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetLabelTaskResultRequest, Builder> {
+        private Long projectId; 
         private String taskId; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class GetLabelTaskResultRequest extends Request {
 
         private Builder(GetLabelTaskResultRequest request) {
             super(request);
+            this.projectId = request.projectId;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
 
         /**
          * TaskId.

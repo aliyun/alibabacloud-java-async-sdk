@@ -40,6 +40,10 @@ public class CreateTextLabelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -65,6 +69,15 @@ public class CreateTextLabelResponseBody extends TeaModel {
         private String data; 
         private String requestId; 
         private String tokens; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTextLabelResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.tokens = model.tokens;
+        } 
 
         /**
          * Data.
