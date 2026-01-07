@@ -199,6 +199,123 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
      *
      * <p>ListClusterKubeconfigStatesResponseBody</p>
      */
+    public static class CloudServiceRoles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("is_default_template")
+        private Boolean isDefaultTemplate;
+
+        @com.aliyun.core.annotation.NameInMap("role_name")
+        private String roleName;
+
+        @com.aliyun.core.annotation.NameInMap("role_namespace")
+        private String roleNamespace;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private CloudServiceRoles(Builder builder) {
+            this.isDefaultTemplate = builder.isDefaultTemplate;
+            this.roleName = builder.roleName;
+            this.roleNamespace = builder.roleNamespace;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudServiceRoles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isDefaultTemplate
+         */
+        public Boolean getIsDefaultTemplate() {
+            return this.isDefaultTemplate;
+        }
+
+        /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
+         * @return roleNamespace
+         */
+        public String getRoleNamespace() {
+            return this.roleNamespace;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Boolean isDefaultTemplate; 
+            private String roleName; 
+            private String roleNamespace; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudServiceRoles model) {
+                this.isDefaultTemplate = model.isDefaultTemplate;
+                this.roleName = model.roleName;
+                this.roleNamespace = model.roleNamespace;
+                this.type = model.type;
+            } 
+
+            /**
+             * is_default_template.
+             */
+            public Builder isDefaultTemplate(Boolean isDefaultTemplate) {
+                this.isDefaultTemplate = isDefaultTemplate;
+                return this;
+            }
+
+            /**
+             * role_name.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * role_namespace.
+             */
+            public Builder roleNamespace(String roleNamespace) {
+                this.roleNamespace = roleNamespace;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public CloudServiceRoles build() {
+                return new CloudServiceRoles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListClusterKubeconfigStatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterKubeconfigStatesResponseBody</p>
+     */
     public static class States extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("account_display_name")
         private String accountDisplayName;
@@ -221,6 +338,9 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_state")
         private String certState;
 
+        @com.aliyun.core.annotation.NameInMap("cloud_service_roles")
+        private java.util.List<CloudServiceRoles> cloudServiceRoles;
+
         @com.aliyun.core.annotation.NameInMap("revokable")
         private Boolean revokable;
 
@@ -232,6 +352,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             this.accountType = builder.accountType;
             this.certExpireTime = builder.certExpireTime;
             this.certState = builder.certState;
+            this.cloudServiceRoles = builder.cloudServiceRoles;
             this.revokable = builder.revokable;
         }
 
@@ -293,6 +414,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cloudServiceRoles
+         */
+        public java.util.List<CloudServiceRoles> getCloudServiceRoles() {
+            return this.cloudServiceRoles;
+        }
+
+        /**
          * @return revokable
          */
         public Boolean getRevokable() {
@@ -307,6 +435,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private String accountType; 
             private String certExpireTime; 
             private String certState; 
+            private java.util.List<CloudServiceRoles> cloudServiceRoles; 
             private Boolean revokable; 
 
             private Builder() {
@@ -320,6 +449,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
                 this.accountType = model.accountType;
                 this.certExpireTime = model.certExpireTime;
                 this.certState = model.certState;
+                this.cloudServiceRoles = model.cloudServiceRoles;
                 this.revokable = model.revokable;
             } 
 
@@ -412,6 +542,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
              */
             public Builder certState(String certState) {
                 this.certState = certState;
+                return this;
+            }
+
+            /**
+             * cloud_service_roles.
+             */
+            public Builder cloudServiceRoles(java.util.List<CloudServiceRoles> cloudServiceRoles) {
+                this.cloudServiceRoles = cloudServiceRoles;
                 return this;
             }
 

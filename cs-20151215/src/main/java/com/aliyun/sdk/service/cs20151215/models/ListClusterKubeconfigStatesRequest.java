@@ -22,6 +22,10 @@ public class ListClusterKubeconfigStatesRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cloudServiceKubeConfig")
+    private Boolean cloudServiceKubeConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -32,6 +36,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
     private ListClusterKubeconfigStatesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.cloudServiceKubeConfig = builder.cloudServiceKubeConfig;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -57,6 +62,13 @@ public class ListClusterKubeconfigStatesRequest extends Request {
     }
 
     /**
+     * @return cloudServiceKubeConfig
+     */
+    public Boolean getCloudServiceKubeConfig() {
+        return this.cloudServiceKubeConfig;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -72,6 +84,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListClusterKubeconfigStatesRequest, Builder> {
         private String clusterId; 
+        private Boolean cloudServiceKubeConfig; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -82,6 +95,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         private Builder(ListClusterKubeconfigStatesRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.cloudServiceKubeConfig = request.cloudServiceKubeConfig;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -95,6 +109,15 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * cloudServiceKubeConfig.
+         */
+        public Builder cloudServiceKubeConfig(Boolean cloudServiceKubeConfig) {
+            this.putQueryParameter("cloudServiceKubeConfig", cloudServiceKubeConfig);
+            this.cloudServiceKubeConfig = cloudServiceKubeConfig;
             return this;
         }
 
