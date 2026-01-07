@@ -76,8 +76,16 @@ public class ListServiceInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReplicaName")
     private String replicaName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    private String resource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -107,7 +115,9 @@ public class ListServiceInstancesRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.quotaId = builder.quotaId;
         this.replicaName = builder.replicaName;
+        this.resource = builder.resource;
         this.resourceType = builder.resourceType;
         this.role = builder.role;
         this.sort = builder.sort;
@@ -225,10 +235,24 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    /**
      * @return replicaName
      */
     public String getReplicaName() {
         return this.replicaName;
+    }
+
+    /**
+     * @return resource
+     */
+    public String getResource() {
+        return this.resource;
     }
 
     /**
@@ -267,7 +291,9 @@ public class ListServiceInstancesRequest extends Request {
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String quotaId; 
         private String replicaName; 
+        private String resource; 
         private String resourceType; 
         private String role; 
         private String sort; 
@@ -292,7 +318,9 @@ public class ListServiceInstancesRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.quotaId = request.quotaId;
             this.replicaName = request.replicaName;
+            this.resource = request.resource;
             this.resourceType = request.resourceType;
             this.role = request.role;
             this.sort = request.sort;
@@ -486,11 +514,29 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.putQueryParameter("QuotaId", quotaId);
+            this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
          * ReplicaName.
          */
         public Builder replicaName(String replicaName) {
             this.putQueryParameter("ReplicaName", replicaName);
             this.replicaName = replicaName;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
             return this;
         }
 

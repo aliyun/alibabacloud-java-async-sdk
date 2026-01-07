@@ -22,6 +22,10 @@ public class ListServicesRequest extends Request {
     private Boolean autoscalerEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
+    private String callerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CronscalerEnabled")
     private Boolean cronscalerEnabled;
 
@@ -121,6 +125,7 @@ public class ListServicesRequest extends Request {
     private ListServicesRequest(Builder builder) {
         super(builder);
         this.autoscalerEnabled = builder.autoscalerEnabled;
+        this.callerUid = builder.callerUid;
         this.cronscalerEnabled = builder.cronscalerEnabled;
         this.filter = builder.filter;
         this.gateway = builder.gateway;
@@ -165,6 +170,13 @@ public class ListServicesRequest extends Request {
      */
     public Boolean getAutoscalerEnabled() {
         return this.autoscalerEnabled;
+    }
+
+    /**
+     * @return callerUid
+     */
+    public String getCallerUid() {
+        return this.callerUid;
     }
 
     /**
@@ -337,6 +349,7 @@ public class ListServicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private Boolean autoscalerEnabled; 
+        private String callerUid; 
         private Boolean cronscalerEnabled; 
         private String filter; 
         private String gateway; 
@@ -369,6 +382,7 @@ public class ListServicesRequest extends Request {
         private Builder(ListServicesRequest request) {
             super(request);
             this.autoscalerEnabled = request.autoscalerEnabled;
+            this.callerUid = request.callerUid;
             this.cronscalerEnabled = request.cronscalerEnabled;
             this.filter = request.filter;
             this.gateway = request.gateway;
@@ -401,6 +415,15 @@ public class ListServicesRequest extends Request {
         public Builder autoscalerEnabled(Boolean autoscalerEnabled) {
             this.putQueryParameter("AutoscalerEnabled", autoscalerEnabled);
             this.autoscalerEnabled = autoscalerEnabled;
+            return this;
+        }
+
+        /**
+         * CallerUid.
+         */
+        public Builder callerUid(String callerUid) {
+            this.putQueryParameter("CallerUid", callerUid);
+            this.callerUid = callerUid;
             return this;
         }
 

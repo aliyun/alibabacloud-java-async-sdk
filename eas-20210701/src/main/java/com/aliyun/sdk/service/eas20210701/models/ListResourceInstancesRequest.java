@@ -71,6 +71,10 @@ public class ListResourceInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
+    private String zone;
+
     private ListResourceInstancesRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -86,6 +90,7 @@ public class ListResourceInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.sort = builder.sort;
+        this.zone = builder.zone;
     }
 
     public static Builder builder() {
@@ -192,6 +197,13 @@ public class ListResourceInstancesRequest extends Request {
         return this.sort;
     }
 
+    /**
+     * @return zone
+     */
+    public String getZone() {
+        return this.zone;
+    }
+
     public static final class Builder extends Request.Builder<ListResourceInstancesRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
@@ -206,6 +218,7 @@ public class ListResourceInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String sort; 
+        private String zone; 
 
         private Builder() {
             super();
@@ -226,6 +239,7 @@ public class ListResourceInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.sort = request.sort;
+            this.zone = request.zone;
         } 
 
         /**
@@ -525,6 +539,15 @@ public class ListResourceInstancesRequest extends Request {
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
             this.sort = sort;
+            return this;
+        }
+
+        /**
+         * Zone.
+         */
+        public Builder zone(String zone) {
+            this.putQueryParameter("Zone", zone);
+            this.zone = zone;
             return this;
         }
 
