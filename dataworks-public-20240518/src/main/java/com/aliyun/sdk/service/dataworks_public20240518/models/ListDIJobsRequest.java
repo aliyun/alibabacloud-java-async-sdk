@@ -50,6 +50,10 @@ public class ListDIJobsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
     private String sourceDataSourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
+    private String specType;
+
     private ListDIJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -60,6 +64,7 @@ public class ListDIJobsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
         this.sourceDataSourceType = builder.sourceDataSourceType;
+        this.specType = builder.specType;
     }
 
     public static Builder builder() {
@@ -131,6 +136,13 @@ public class ListDIJobsRequest extends Request {
         return this.sourceDataSourceType;
     }
 
+    /**
+     * @return specType
+     */
+    public String getSpecType() {
+        return this.specType;
+    }
+
     public static final class Builder extends Request.Builder<ListDIJobsRequest, Builder> {
         private String regionId; 
         private String destinationDataSourceType; 
@@ -140,6 +152,7 @@ public class ListDIJobsRequest extends Request {
         private Long pageSize; 
         private Long projectId; 
         private String sourceDataSourceType; 
+        private String specType; 
 
         private Builder() {
             super();
@@ -155,6 +168,7 @@ public class ListDIJobsRequest extends Request {
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
             this.sourceDataSourceType = request.sourceDataSourceType;
+            this.specType = request.specType;
         } 
 
         /**
@@ -256,6 +270,15 @@ public class ListDIJobsRequest extends Request {
         public Builder sourceDataSourceType(String sourceDataSourceType) {
             this.putQueryParameter("SourceDataSourceType", sourceDataSourceType);
             this.sourceDataSourceType = sourceDataSourceType;
+            return this;
+        }
+
+        /**
+         * SpecType.
+         */
+        public Builder specType(String specType) {
+            this.putQueryParameter("SpecType", specType);
+            this.specType = specType;
             return this;
         }
 
