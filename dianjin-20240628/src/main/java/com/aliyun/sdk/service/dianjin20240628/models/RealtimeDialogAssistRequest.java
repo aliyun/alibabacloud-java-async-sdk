@@ -54,9 +54,17 @@ public class RealtimeDialogAssistRequest extends Request {
     private String requestId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scriptContentPlayed")
+    private String scriptContentPlayed;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userVad")
+    private Boolean userVad;
 
     private RealtimeDialogAssistRequest(Builder builder) {
         super(builder);
@@ -68,7 +76,9 @@ public class RealtimeDialogAssistRequest extends Request {
         this.hangUpDialog = builder.hangUpDialog;
         this.metaData = builder.metaData;
         this.requestId = builder.requestId;
+        this.scriptContentPlayed = builder.scriptContentPlayed;
         this.sessionId = builder.sessionId;
+        this.userVad = builder.userVad;
     }
 
     public static Builder builder() {
@@ -141,10 +151,24 @@ public class RealtimeDialogAssistRequest extends Request {
     }
 
     /**
+     * @return scriptContentPlayed
+     */
+    public String getScriptContentPlayed() {
+        return this.scriptContentPlayed;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    /**
+     * @return userVad
+     */
+    public Boolean getUserVad() {
+        return this.userVad;
     }
 
     public static final class Builder extends Request.Builder<RealtimeDialogAssistRequest, Builder> {
@@ -156,7 +180,9 @@ public class RealtimeDialogAssistRequest extends Request {
         private Boolean hangUpDialog; 
         private java.util.Map<String, ?> metaData; 
         private String requestId; 
+        private String scriptContentPlayed; 
         private String sessionId; 
+        private Boolean userVad; 
 
         private Builder() {
             super();
@@ -172,7 +198,9 @@ public class RealtimeDialogAssistRequest extends Request {
             this.hangUpDialog = request.hangUpDialog;
             this.metaData = request.metaData;
             this.requestId = request.requestId;
+            this.scriptContentPlayed = request.scriptContentPlayed;
             this.sessionId = request.sessionId;
+            this.userVad = request.userVad;
         } 
 
         /**
@@ -257,6 +285,15 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * scriptContentPlayed.
+         */
+        public Builder scriptContentPlayed(String scriptContentPlayed) {
+            this.putBodyParameter("scriptContentPlayed", scriptContentPlayed);
+            this.scriptContentPlayed = scriptContentPlayed;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,6 +302,15 @@ public class RealtimeDialogAssistRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * userVad.
+         */
+        public Builder userVad(Boolean userVad) {
+            this.putBodyParameter("userVad", userVad);
+            this.userVad = userVad;
             return this;
         }
 
@@ -282,6 +328,12 @@ public class RealtimeDialogAssistRequest extends Request {
      * <p>RealtimeDialogAssistRequest</p>
      */
     public static class ConversationModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("begin")
+        private Integer begin;
+
+        @com.aliyun.core.annotation.NameInMap("beginTime")
+        private String beginTime;
+
         @com.aliyun.core.annotation.NameInMap("content")
         @com.aliyun.core.annotation.Validation(required = true)
         private String content;
@@ -295,6 +347,9 @@ public class RealtimeDialogAssistRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("customerServiceType")
         private String customerServiceType;
 
+        @com.aliyun.core.annotation.NameInMap("end")
+        private Integer end;
+
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer role;
@@ -303,10 +358,13 @@ public class RealtimeDialogAssistRequest extends Request {
         private String type;
 
         private ConversationModel(Builder builder) {
+            this.begin = builder.begin;
+            this.beginTime = builder.beginTime;
             this.content = builder.content;
             this.customerId = builder.customerId;
             this.customerServiceId = builder.customerServiceId;
             this.customerServiceType = builder.customerServiceType;
+            this.end = builder.end;
             this.role = builder.role;
             this.type = builder.type;
         }
@@ -317,6 +375,20 @@ public class RealtimeDialogAssistRequest extends Request {
 
         public static ConversationModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return begin
+         */
+        public Integer getBegin() {
+            return this.begin;
+        }
+
+        /**
+         * @return beginTime
+         */
+        public String getBeginTime() {
+            return this.beginTime;
         }
 
         /**
@@ -348,6 +420,13 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * @return end
+         */
+        public Integer getEnd() {
+            return this.end;
+        }
+
+        /**
          * @return role
          */
         public Integer getRole() {
@@ -362,10 +441,13 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer begin; 
+            private String beginTime; 
             private String content; 
             private String customerId; 
             private String customerServiceId; 
             private String customerServiceType; 
+            private Integer end; 
             private Integer role; 
             private String type; 
 
@@ -373,13 +455,32 @@ public class RealtimeDialogAssistRequest extends Request {
             } 
 
             private Builder(ConversationModel model) {
+                this.begin = model.begin;
+                this.beginTime = model.beginTime;
                 this.content = model.content;
                 this.customerId = model.customerId;
                 this.customerServiceId = model.customerServiceId;
                 this.customerServiceType = model.customerServiceType;
+                this.end = model.end;
                 this.role = model.role;
                 this.type = model.type;
             } 
+
+            /**
+             * begin.
+             */
+            public Builder begin(Integer begin) {
+                this.begin = begin;
+                return this;
+            }
+
+            /**
+             * beginTime.
+             */
+            public Builder beginTime(String beginTime) {
+                this.beginTime = beginTime;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>
@@ -410,6 +511,14 @@ public class RealtimeDialogAssistRequest extends Request {
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
+                return this;
+            }
+
+            /**
+             * end.
+             */
+            public Builder end(Integer end) {
+                this.end = end;
                 return this;
             }
 

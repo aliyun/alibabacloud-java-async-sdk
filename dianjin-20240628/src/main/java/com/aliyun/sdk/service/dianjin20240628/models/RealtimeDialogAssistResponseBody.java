@@ -647,6 +647,9 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("conversationModel")
         private java.util.List<ConversationModel> conversationModel;
 
+        @com.aliyun.core.annotation.NameInMap("interrupt")
+        private Boolean interrupt;
+
         @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
 
@@ -658,6 +661,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             this.assistScripts = builder.assistScripts;
             this.assistSop = builder.assistSop;
             this.conversationModel = builder.conversationModel;
+            this.interrupt = builder.interrupt;
             this.requestId = builder.requestId;
             this.sessionId = builder.sessionId;
         }
@@ -699,6 +703,13 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
+         * @return interrupt
+         */
+        public Boolean getInterrupt() {
+            return this.interrupt;
+        }
+
+        /**
          * @return requestId
          */
         public String getRequestId() {
@@ -717,6 +728,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             private java.util.List<AssistScripts> assistScripts; 
             private java.util.List<AssistSop> assistSop; 
             private java.util.List<ConversationModel> conversationModel; 
+            private Boolean interrupt; 
             private String requestId; 
             private String sessionId; 
 
@@ -728,6 +740,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
                 this.assistScripts = model.assistScripts;
                 this.assistSop = model.assistSop;
                 this.conversationModel = model.conversationModel;
+                this.interrupt = model.interrupt;
                 this.requestId = model.requestId;
                 this.sessionId = model.sessionId;
             } 
@@ -761,6 +774,14 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
              */
             public Builder conversationModel(java.util.List<ConversationModel> conversationModel) {
                 this.conversationModel = conversationModel;
+                return this;
+            }
+
+            /**
+             * interrupt.
+             */
+            public Builder interrupt(Boolean interrupt) {
+                this.interrupt = interrupt;
                 return this;
             }
 
