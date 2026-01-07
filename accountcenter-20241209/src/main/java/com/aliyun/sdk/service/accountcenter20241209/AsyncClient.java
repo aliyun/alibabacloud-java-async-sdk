@@ -20,6 +20,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AccountContactAdd  AccountContactAddRequest
+     * @return AccountContactAddResponse
+     */
+    CompletableFuture<AccountContactAddResponse> accountContactAdd(AccountContactAddRequest request);
+
+    /**
+     * @param request the request parameters of AccountContactDelete  AccountContactDeleteRequest
+     * @return AccountContactDeleteResponse
+     */
+    CompletableFuture<AccountContactDeleteResponse> accountContactDelete(AccountContactDeleteRequest request);
+
+    /**
+     * @param request the request parameters of AccountContactEdit  AccountContactEditRequest
+     * @return AccountContactEditResponse
+     */
+    CompletableFuture<AccountContactEditResponse> accountContactEdit(AccountContactEditRequest request);
+
+    /**
+     * @param request the request parameters of AccountContactQueryDetail  AccountContactQueryDetailRequest
+     * @return AccountContactQueryDetailResponse
+     */
+    CompletableFuture<AccountContactQueryDetailResponse> accountContactQueryDetail(AccountContactQueryDetailRequest request);
+
+    /**
+     * @param request the request parameters of AccountContactQueryPageList  AccountContactQueryPageListRequest
+     * @return AccountContactQueryPageListResponse
+     */
+    CompletableFuture<AccountContactQueryPageListResponse> accountContactQueryPageList(AccountContactQueryPageListRequest request);
+
+    /**
      * @param request the request parameters of EnterpriseAccountChangeLoginPassword  EnterpriseAccountChangeLoginPasswordRequest
      * @return EnterpriseAccountChangeLoginPasswordResponse
      */
@@ -104,6 +134,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnterpriseAccountUpdateSessionExpireTimeResponse> enterpriseAccountUpdateSessionExpireTime(EnterpriseAccountUpdateSessionExpireTimeRequest request);
 
     /**
+     * @param request the request parameters of EnterpriseContactAdd  EnterpriseContactAddRequest
+     * @return EnterpriseContactAddResponse
+     */
+    CompletableFuture<EnterpriseContactAddResponse> enterpriseContactAdd(EnterpriseContactAddRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseContactDelete  EnterpriseContactDeleteRequest
+     * @return EnterpriseContactDeleteResponse
+     */
+    CompletableFuture<EnterpriseContactDeleteResponse> enterpriseContactDelete(EnterpriseContactDeleteRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseContactEdit  EnterpriseContactEditRequest
+     * @return EnterpriseContactEditResponse
+     */
+    CompletableFuture<EnterpriseContactEditResponse> enterpriseContactEdit(EnterpriseContactEditRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseContactQueryDetail  EnterpriseContactQueryDetailRequest
+     * @return EnterpriseContactQueryDetailResponse
+     */
+    CompletableFuture<EnterpriseContactQueryDetailResponse> enterpriseContactQueryDetail(EnterpriseContactQueryDetailRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseContactQueryPageList  EnterpriseContactQueryPageListRequest
+     * @return EnterpriseContactQueryPageListResponse
+     */
+    CompletableFuture<EnterpriseContactQueryPageListResponse> enterpriseContactQueryPageList(EnterpriseContactQueryPageListRequest request);
+
+    /**
      * @param request the request parameters of EnterpriseOrgQueryLoadTree  EnterpriseOrgQueryLoadTreeRequest
      * @return EnterpriseOrgQueryLoadTreeResponse
      */
@@ -174,5 +234,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnterpriseUninvitedAdminInviteJoinEnterpriseResponse
      */
     CompletableFuture<EnterpriseUninvitedAdminInviteJoinEnterpriseResponse> enterpriseUninvitedAdminInviteJoinEnterprise(EnterpriseUninvitedAdminInviteJoinEnterpriseRequest request);
+
+    /**
+     * @param request the request parameters of SendAsyncEmailCaptcha  SendAsyncEmailCaptchaRequest
+     * @return SendAsyncEmailCaptchaResponse
+     */
+    CompletableFuture<SendAsyncEmailCaptchaResponse> sendAsyncEmailCaptcha(SendAsyncEmailCaptchaRequest request);
+
+    /**
+     * @param request the request parameters of SendAsyncMobileCaptcha  SendAsyncMobileCaptchaRequest
+     * @return SendAsyncMobileCaptchaResponse
+     */
+    CompletableFuture<SendAsyncMobileCaptchaResponse> sendAsyncMobileCaptcha(SendAsyncMobileCaptchaRequest request);
 
 }
