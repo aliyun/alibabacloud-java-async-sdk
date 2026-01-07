@@ -149,6 +149,9 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertifyId")
         private String certifyId;
 
+        @com.aliyun.core.annotation.NameInMap("GuardRiskScore")
+        private Double guardRiskScore;
+
         @com.aliyun.core.annotation.NameInMap("RiskExtends")
         private String riskExtends;
 
@@ -157,6 +160,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
 
         private ResultObject(Builder builder) {
             this.certifyId = builder.certifyId;
+            this.guardRiskScore = builder.guardRiskScore;
             this.riskExtends = builder.riskExtends;
             this.riskTags = builder.riskTags;
         }
@@ -177,6 +181,13 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
         }
 
         /**
+         * @return guardRiskScore
+         */
+        public Double getGuardRiskScore() {
+            return this.guardRiskScore;
+        }
+
+        /**
          * @return riskExtends
          */
         public String getRiskExtends() {
@@ -192,6 +203,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String certifyId; 
+            private Double guardRiskScore; 
             private String riskExtends; 
             private String riskTags; 
 
@@ -200,6 +212,7 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
 
             private Builder(ResultObject model) {
                 this.certifyId = model.certifyId;
+                this.guardRiskScore = model.guardRiskScore;
                 this.riskExtends = model.riskExtends;
                 this.riskTags = model.riskTags;
             } 
@@ -212,6 +225,14 @@ public class DescribeFaceGuardRiskResponseBody extends TeaModel {
              */
             public Builder certifyId(String certifyId) {
                 this.certifyId = certifyId;
+                return this;
+            }
+
+            /**
+             * GuardRiskScore.
+             */
+            public Builder guardRiskScore(Double guardRiskScore) {
+                this.guardRiskScore = guardRiskScore;
                 return this;
             }
 
