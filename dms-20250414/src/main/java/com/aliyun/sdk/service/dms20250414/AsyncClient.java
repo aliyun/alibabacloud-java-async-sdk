@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddUserToDataAgentWorkspace  AddUserToDataAgentWorkspaceRequest
+     * @return AddUserToDataAgentWorkspaceResponse
+     */
+    CompletableFuture<AddUserToDataAgentWorkspaceResponse> addUserToDataAgentWorkspace(AddUserToDataAgentWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of BatchCreateDataLakePartitions  BatchCreateDataLakePartitionsRequest
      * @return BatchCreateDataLakePartitionsResponse
      */
@@ -56,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataAgentSessionResponse> createDataAgentSession(CreateDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentWorkspace  CreateDataAgentWorkspaceRequest
+     * @return CreateDataAgentWorkspaceResponse
+     */
+    CompletableFuture<CreateDataAgentWorkspaceResponse> createDataAgentWorkspace(CreateDataAgentWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of CreateDataLakeDatabase  CreateDataLakeDatabaseRequest
      * @return CreateDataLakeDatabaseResponse
      */
@@ -84,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAirflowResponse
      */
     CompletableFuture<DeleteAirflowResponse> deleteAirflow(DeleteAirflowRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAgentWorkspace  DeleteDataAgentWorkspaceRequest
+     * @return DeleteDataAgentWorkspaceResponse
+     */
+    CompletableFuture<DeleteDataAgentWorkspaceResponse> deleteDataAgentWorkspace(DeleteDataAgentWorkspaceRequest request);
 
     /**
      * @param request the request parameters of DeleteDataLakeDatabase  DeleteDataLakeDatabaseRequest
@@ -154,6 +172,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<GetChatContentResponseBody> getChatContentWithResponseIterable(GetChatContentRequest request);
 
     /**
+     * @param request the request parameters of GetDataAgentSubAccountInfo  GetDataAgentSubAccountInfoRequest
+     * @return GetDataAgentSubAccountInfoResponse
+     */
+    CompletableFuture<GetDataAgentSubAccountInfoResponse> getDataAgentSubAccountInfo(GetDataAgentSubAccountInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetDataAgentWorkspaceInfo  GetDataAgentWorkspaceInfoRequest
+     * @return GetDataAgentWorkspaceInfoResponse
+     */
+    CompletableFuture<GetDataAgentWorkspaceInfoResponse> getDataAgentWorkspaceInfo(GetDataAgentWorkspaceInfoRequest request);
+
+    /**
      * @param request the request parameters of GetDataLakeCatalog  GetDataLakeCatalogRequest
      * @return GetDataLakeCatalogResponse
      */
@@ -206,6 +236,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomAgentResponse
      */
     CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentWorkspace  ListDataAgentWorkspaceRequest
+     * @return ListDataAgentWorkspaceResponse
+     */
+    CompletableFuture<ListDataAgentWorkspaceResponse> listDataAgentWorkspace(ListDataAgentWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentWorkspaceMember  ListDataAgentWorkspaceMemberRequest
+     * @return ListDataAgentWorkspaceMemberResponse
+     */
+    CompletableFuture<ListDataAgentWorkspaceMemberResponse> listDataAgentWorkspaceMember(ListDataAgentWorkspaceMemberRequest request);
 
     /**
      * @param request the request parameters of ListDataLakeCatalog  ListDataLakeCatalogRequest
@@ -274,6 +316,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFileUploadResponse> listFileUpload(ListFileUploadRequest request);
 
     /**
+     * @param request the request parameters of RemoveUserToDataAgentWorkspace  RemoveUserToDataAgentWorkspaceRequest
+     * @return RemoveUserToDataAgentWorkspaceResponse
+     */
+    CompletableFuture<RemoveUserToDataAgentWorkspaceResponse> removeUserToDataAgentWorkspace(RemoveUserToDataAgentWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of SendChatMessage  SendChatMessageRequest
      * @return SendChatMessageResponse
      */
@@ -284,6 +332,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAirflowResponse
      */
     CompletableFuture<UpdateAirflowResponse> updateAirflow(UpdateAirflowRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataAgentSpaceInfo  UpdateDataAgentSpaceInfoRequest
+     * @return UpdateDataAgentSpaceInfoResponse
+     */
+    CompletableFuture<UpdateDataAgentSpaceInfoResponse> updateDataAgentSpaceInfo(UpdateDataAgentSpaceInfoRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataAgentWorkspaceMemberRole  UpdateDataAgentWorkspaceMemberRoleRequest
+     * @return UpdateDataAgentWorkspaceMemberRoleResponse
+     */
+    CompletableFuture<UpdateDataAgentWorkspaceMemberRoleResponse> updateDataAgentWorkspaceMemberRole(UpdateDataAgentWorkspaceMemberRoleRequest request);
 
     /**
      * @param request the request parameters of UpdateDataLakeDatabase  UpdateDataLakeDatabaseRequest
