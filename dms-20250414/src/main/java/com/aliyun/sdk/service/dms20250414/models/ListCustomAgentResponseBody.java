@@ -161,11 +161,23 @@ public class ListCustomAgentResponseBody extends TeaModel {
      * <p>ListCustomAgentResponseBody</p>
      */
     public static class ExecutionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SkipAskHuman")
+        private Boolean skipAskHuman;
+
         @com.aliyun.core.annotation.NameInMap("SkipPlan")
         private Boolean skipPlan;
 
+        @com.aliyun.core.annotation.NameInMap("SkipSqlConfirm")
+        private Boolean skipSqlConfirm;
+
+        @com.aliyun.core.annotation.NameInMap("SkipWebReportConfirm")
+        private Boolean skipWebReportConfirm;
+
         private ExecutionConfig(Builder builder) {
+            this.skipAskHuman = builder.skipAskHuman;
             this.skipPlan = builder.skipPlan;
+            this.skipSqlConfirm = builder.skipSqlConfirm;
+            this.skipWebReportConfirm = builder.skipWebReportConfirm;
         }
 
         public static Builder builder() {
@@ -177,27 +189,78 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipAskHuman
+         */
+        public Boolean getSkipAskHuman() {
+            return this.skipAskHuman;
+        }
+
+        /**
          * @return skipPlan
          */
         public Boolean getSkipPlan() {
             return this.skipPlan;
         }
 
+        /**
+         * @return skipSqlConfirm
+         */
+        public Boolean getSkipSqlConfirm() {
+            return this.skipSqlConfirm;
+        }
+
+        /**
+         * @return skipWebReportConfirm
+         */
+        public Boolean getSkipWebReportConfirm() {
+            return this.skipWebReportConfirm;
+        }
+
         public static final class Builder {
+            private Boolean skipAskHuman; 
             private Boolean skipPlan; 
+            private Boolean skipSqlConfirm; 
+            private Boolean skipWebReportConfirm; 
 
             private Builder() {
             } 
 
             private Builder(ExecutionConfig model) {
+                this.skipAskHuman = model.skipAskHuman;
                 this.skipPlan = model.skipPlan;
+                this.skipSqlConfirm = model.skipSqlConfirm;
+                this.skipWebReportConfirm = model.skipWebReportConfirm;
             } 
+
+            /**
+             * SkipAskHuman.
+             */
+            public Builder skipAskHuman(Boolean skipAskHuman) {
+                this.skipAskHuman = skipAskHuman;
+                return this;
+            }
 
             /**
              * SkipPlan.
              */
             public Builder skipPlan(Boolean skipPlan) {
                 this.skipPlan = skipPlan;
+                return this;
+            }
+
+            /**
+             * SkipSqlConfirm.
+             */
+            public Builder skipSqlConfirm(Boolean skipSqlConfirm) {
+                this.skipSqlConfirm = skipSqlConfirm;
+                return this;
+            }
+
+            /**
+             * SkipWebReportConfirm.
+             */
+            public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
+                this.skipWebReportConfirm = skipWebReportConfirm;
                 return this;
             }
 
