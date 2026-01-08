@@ -145,6 +145,114 @@ public class TextModerationResponseBody extends TeaModel {
      *
      * <p>TextModerationResponseBody</p>
      */
+    public static class LlmContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("outputText")
+        private String outputText;
+
+        private LlmContent(Builder builder) {
+            this.outputText = builder.outputText;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LlmContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outputText
+         */
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+        public static final class Builder {
+            private String outputText; 
+
+            private Builder() {
+            } 
+
+            private Builder(LlmContent model) {
+                this.outputText = model.outputText;
+            } 
+
+            /**
+             * outputText.
+             */
+            public Builder outputText(String outputText) {
+                this.outputText = outputText;
+                return this;
+            }
+
+            public LlmContent build() {
+                return new LlmContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationResponseBody</p>
+     */
+    public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("llmContent")
+        private LlmContent llmContent;
+
+        private Ext(Builder builder) {
+            this.llmContent = builder.llmContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return llmContent
+         */
+        public LlmContent getLlmContent() {
+            return this.llmContent;
+        }
+
+        public static final class Builder {
+            private LlmContent llmContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.llmContent = model.llmContent;
+            } 
+
+            /**
+             * llmContent.
+             */
+            public Builder llmContent(LlmContent llmContent) {
+                this.llmContent = llmContent;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
@@ -157,6 +265,9 @@ public class TextModerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("deviceId")
         private String deviceId;
+
+        @com.aliyun.core.annotation.NameInMap("ext")
+        private Ext ext;
 
         @com.aliyun.core.annotation.NameInMap("labels")
         private String labels;
@@ -172,6 +283,7 @@ public class TextModerationResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.descriptions = builder.descriptions;
             this.deviceId = builder.deviceId;
+            this.ext = builder.ext;
             this.labels = builder.labels;
             this.manualTaskId = builder.manualTaskId;
             this.reason = builder.reason;
@@ -214,6 +326,13 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return ext
+         */
+        public Ext getExt() {
+            return this.ext;
+        }
+
+        /**
          * @return labels
          */
         public String getLabels() {
@@ -239,6 +358,7 @@ public class TextModerationResponseBody extends TeaModel {
             private String dataId; 
             private String descriptions; 
             private String deviceId; 
+            private Ext ext; 
             private String labels; 
             private String manualTaskId; 
             private String reason; 
@@ -251,6 +371,7 @@ public class TextModerationResponseBody extends TeaModel {
                 this.dataId = model.dataId;
                 this.descriptions = model.descriptions;
                 this.deviceId = model.deviceId;
+                this.ext = model.ext;
                 this.labels = model.labels;
                 this.manualTaskId = model.manualTaskId;
                 this.reason = model.reason;
@@ -297,6 +418,14 @@ public class TextModerationResponseBody extends TeaModel {
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
+                return this;
+            }
+
+            /**
+             * ext.
+             */
+            public Builder ext(Ext ext) {
+                this.ext = ext;
                 return this;
             }
 

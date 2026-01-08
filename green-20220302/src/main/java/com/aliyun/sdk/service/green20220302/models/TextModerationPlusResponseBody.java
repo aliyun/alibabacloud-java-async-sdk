@@ -379,6 +379,114 @@ public class TextModerationPlusResponseBody extends TeaModel {
      *
      * <p>TextModerationPlusResponseBody</p>
      */
+    public static class LlmContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OutputText")
+        private String outputText;
+
+        private LlmContent(Builder builder) {
+            this.outputText = builder.outputText;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LlmContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outputText
+         */
+        public String getOutputText() {
+            return this.outputText;
+        }
+
+        public static final class Builder {
+            private String outputText; 
+
+            private Builder() {
+            } 
+
+            private Builder(LlmContent model) {
+                this.outputText = model.outputText;
+            } 
+
+            /**
+             * OutputText.
+             */
+            public Builder outputText(String outputText) {
+                this.outputText = outputText;
+                return this;
+            }
+
+            public LlmContent build() {
+                return new LlmContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationPlusResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationPlusResponseBody</p>
+     */
+    public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LlmContent")
+        private LlmContent llmContent;
+
+        private Ext(Builder builder) {
+            this.llmContent = builder.llmContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return llmContent
+         */
+        public LlmContent getLlmContent() {
+            return this.llmContent;
+        }
+
+        public static final class Builder {
+            private LlmContent llmContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.llmContent = model.llmContent;
+            } 
+
+            /**
+             * LlmContent.
+             */
+            public Builder llmContent(LlmContent llmContent) {
+                this.llmContent = llmContent;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationPlusResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationPlusResponseBody</p>
+     */
     public static class CustomizedHit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyWords")
         private String keyWords;
@@ -755,6 +863,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
         private String detectedLanguage;
 
+        @com.aliyun.core.annotation.NameInMap("Ext")
+        private Ext ext;
+
         @com.aliyun.core.annotation.NameInMap("ManualTaskId")
         private String manualTaskId;
 
@@ -783,6 +894,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             this.attackResult = builder.attackResult;
             this.dataId = builder.dataId;
             this.detectedLanguage = builder.detectedLanguage;
+            this.ext = builder.ext;
             this.manualTaskId = builder.manualTaskId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
@@ -843,6 +955,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return ext
+         */
+        public Ext getExt() {
+            return this.ext;
+        }
+
+        /**
          * @return manualTaskId
          */
         public String getManualTaskId() {
@@ -898,6 +1017,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private java.util.List<AttackResult> attackResult; 
             private String dataId; 
             private String detectedLanguage; 
+            private Ext ext; 
             private String manualTaskId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
@@ -916,6 +1036,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
                 this.attackResult = model.attackResult;
                 this.dataId = model.dataId;
                 this.detectedLanguage = model.detectedLanguage;
+                this.ext = model.ext;
                 this.manualTaskId = model.manualTaskId;
                 this.result = model.result;
                 this.riskLevel = model.riskLevel;
@@ -976,6 +1097,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder detectedLanguage(String detectedLanguage) {
                 this.detectedLanguage = detectedLanguage;
+                return this;
+            }
+
+            /**
+             * Ext.
+             */
+            public Builder ext(Ext ext) {
+                this.ext = ext;
                 return this;
             }
 
