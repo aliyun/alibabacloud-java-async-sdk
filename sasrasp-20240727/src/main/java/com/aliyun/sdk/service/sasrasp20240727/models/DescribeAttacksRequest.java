@@ -43,6 +43,10 @@ public class DescribeAttacksRequest extends Request {
     private Long endTimestamp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandleStatus")
+    private Integer handleStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HandlerType")
     private String handlerType;
 
@@ -103,6 +107,7 @@ public class DescribeAttacksRequest extends Request {
         this.attackType = builder.attackType;
         this.attackUrl = builder.attackUrl;
         this.endTimestamp = builder.endTimestamp;
+        this.handleStatus = builder.handleStatus;
         this.handlerType = builder.handlerType;
         this.hostname = builder.hostname;
         this.ip = builder.ip;
@@ -171,6 +176,13 @@ public class DescribeAttacksRequest extends Request {
      */
     public Long getEndTimestamp() {
         return this.endTimestamp;
+    }
+
+    /**
+     * @return handleStatus
+     */
+    public Integer getHandleStatus() {
+        return this.handleStatus;
     }
 
     /**
@@ -271,6 +283,7 @@ public class DescribeAttacksRequest extends Request {
         private String attackType; 
         private String attackUrl; 
         private Long endTimestamp; 
+        private Integer handleStatus; 
         private String handlerType; 
         private String hostname; 
         private String ip; 
@@ -297,6 +310,7 @@ public class DescribeAttacksRequest extends Request {
             this.attackType = request.attackType;
             this.attackUrl = request.attackUrl;
             this.endTimestamp = request.endTimestamp;
+            this.handleStatus = request.handleStatus;
             this.handlerType = request.handlerType;
             this.hostname = request.hostname;
             this.ip = request.ip;
@@ -366,6 +380,15 @@ public class DescribeAttacksRequest extends Request {
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
             this.endTimestamp = endTimestamp;
+            return this;
+        }
+
+        /**
+         * HandleStatus.
+         */
+        public Builder handleStatus(Integer handleStatus) {
+            this.putQueryParameter("HandleStatus", handleStatus);
+            this.handleStatus = handleStatus;
             return this;
         }
 
