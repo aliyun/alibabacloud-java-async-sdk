@@ -472,6 +472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdatePrivateNetwrok  UpdatePrivateNetwrokRequest
+     * @return UpdatePrivateNetwrokResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePrivateNetwrokResponse> updatePrivateNetwrok(UpdatePrivateNetwrokRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdatePrivateNetwrok").setMethod(HttpMethod.PUT).setPathRegex("/openapi/es-serverless/instances/{appName}/private-networks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePrivateNetwrokResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePrivateNetwrokResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateSnapshotSetting  UpdateSnapshotSettingRequest
      * @return UpdateSnapshotSettingResponse
      */
