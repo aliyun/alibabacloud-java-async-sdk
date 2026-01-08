@@ -48,6 +48,10 @@ public class ModifyClusterRequest extends Request {
     private ControlPlaneConfig controlPlaneConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("control_plane_endpoints_config")
+    private ControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
@@ -107,6 +111,7 @@ public class ModifyClusterRequest extends Request {
         this.apiServerEipId = builder.apiServerEipId;
         this.clusterName = builder.clusterName;
         this.controlPlaneConfig = builder.controlPlaneConfig;
+        this.controlPlaneEndpointsConfig = builder.controlPlaneEndpointsConfig;
         this.deletionProtection = builder.deletionProtection;
         this.enableRrsa = builder.enableRrsa;
         this.ingressDomainRebinding = builder.ingressDomainRebinding;
@@ -181,6 +186,13 @@ public class ModifyClusterRequest extends Request {
      */
     public ControlPlaneConfig getControlPlaneConfig() {
         return this.controlPlaneConfig;
+    }
+
+    /**
+     * @return controlPlaneEndpointsConfig
+     */
+    public ControlPlaneEndpointsConfig getControlPlaneEndpointsConfig() {
+        return this.controlPlaneEndpointsConfig;
     }
 
     /**
@@ -275,6 +287,7 @@ public class ModifyClusterRequest extends Request {
         private String apiServerEipId; 
         private String clusterName; 
         private ControlPlaneConfig controlPlaneConfig; 
+        private ControlPlaneEndpointsConfig controlPlaneEndpointsConfig; 
         private Boolean deletionProtection; 
         private Boolean enableRrsa; 
         private Boolean ingressDomainRebinding; 
@@ -301,6 +314,7 @@ public class ModifyClusterRequest extends Request {
             this.apiServerEipId = request.apiServerEipId;
             this.clusterName = request.clusterName;
             this.controlPlaneConfig = request.controlPlaneConfig;
+            this.controlPlaneEndpointsConfig = request.controlPlaneEndpointsConfig;
             this.deletionProtection = request.deletionProtection;
             this.enableRrsa = request.enableRrsa;
             this.ingressDomainRebinding = request.ingressDomainRebinding;
@@ -393,6 +407,15 @@ public class ModifyClusterRequest extends Request {
         public Builder controlPlaneConfig(ControlPlaneConfig controlPlaneConfig) {
             this.putBodyParameter("control_plane_config", controlPlaneConfig);
             this.controlPlaneConfig = controlPlaneConfig;
+            return this;
+        }
+
+        /**
+         * control_plane_endpoints_config.
+         */
+        public Builder controlPlaneEndpointsConfig(ControlPlaneEndpointsConfig controlPlaneEndpointsConfig) {
+            this.putBodyParameter("control_plane_endpoints_config", controlPlaneEndpointsConfig);
+            this.controlPlaneEndpointsConfig = controlPlaneEndpointsConfig;
             return this;
         }
 
@@ -1337,6 +1360,135 @@ public class ModifyClusterRequest extends Request {
 
             public ControlPlaneConfig build() {
                 return new ControlPlaneConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
+    public static class InternalDnsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bind_vpcs")
+        private java.util.List<String> bindVpcs;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private InternalDnsConfig(Builder builder) {
+            this.bindVpcs = builder.bindVpcs;
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InternalDnsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindVpcs
+         */
+        public java.util.List<String> getBindVpcs() {
+            return this.bindVpcs;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> bindVpcs; 
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(InternalDnsConfig model) {
+                this.bindVpcs = model.bindVpcs;
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * bind_vpcs.
+             */
+            public Builder bindVpcs(java.util.List<String> bindVpcs) {
+                this.bindVpcs = bindVpcs;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public InternalDnsConfig build() {
+                return new InternalDnsConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
+    public static class ControlPlaneEndpointsConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("internal_dns_config")
+        private InternalDnsConfig internalDnsConfig;
+
+        private ControlPlaneEndpointsConfig(Builder builder) {
+            this.internalDnsConfig = builder.internalDnsConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ControlPlaneEndpointsConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return internalDnsConfig
+         */
+        public InternalDnsConfig getInternalDnsConfig() {
+            return this.internalDnsConfig;
+        }
+
+        public static final class Builder {
+            private InternalDnsConfig internalDnsConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlPlaneEndpointsConfig model) {
+                this.internalDnsConfig = model.internalDnsConfig;
+            } 
+
+            /**
+             * internal_dns_config.
+             */
+            public Builder internalDnsConfig(InternalDnsConfig internalDnsConfig) {
+                this.internalDnsConfig = internalDnsConfig;
+                return this;
+            }
+
+            public ControlPlaneEndpointsConfig build() {
+                return new ControlPlaneEndpointsConfig(this);
             } 
 
         } 
