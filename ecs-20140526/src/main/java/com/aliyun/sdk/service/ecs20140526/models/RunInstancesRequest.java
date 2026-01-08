@@ -3940,6 +3940,9 @@ public class RunInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RxQueueSize")
         private Integer rxQueueSize;
 
+        @com.aliyun.core.annotation.NameInMap("SecondaryPrivateIpAddressCount")
+        private Integer secondaryPrivateIpAddressCount;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -3969,6 +3972,7 @@ public class RunInstancesRequest extends Request {
             this.queueNumber = builder.queueNumber;
             this.queuePairNumber = builder.queuePairNumber;
             this.rxQueueSize = builder.rxQueueSize;
+            this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
             this.securityGroupId = builder.securityGroupId;
             this.securityGroupIds = builder.securityGroupIds;
             this.sourceDestCheck = builder.sourceDestCheck;
@@ -4076,6 +4080,13 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * @return secondaryPrivateIpAddressCount
+         */
+        public Integer getSecondaryPrivateIpAddressCount() {
+            return this.secondaryPrivateIpAddressCount;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
@@ -4124,6 +4135,7 @@ public class RunInstancesRequest extends Request {
             private Integer queueNumber; 
             private Long queuePairNumber; 
             private Integer rxQueueSize; 
+            private Integer secondaryPrivateIpAddressCount; 
             private String securityGroupId; 
             private java.util.List<String> securityGroupIds; 
             private Boolean sourceDestCheck; 
@@ -4147,6 +4159,7 @@ public class RunInstancesRequest extends Request {
                 this.queueNumber = model.queueNumber;
                 this.queuePairNumber = model.queuePairNumber;
                 this.rxQueueSize = model.rxQueueSize;
+                this.secondaryPrivateIpAddressCount = model.secondaryPrivateIpAddressCount;
                 this.securityGroupId = model.securityGroupId;
                 this.securityGroupIds = model.securityGroupIds;
                 this.sourceDestCheck = model.sourceDestCheck;
@@ -4383,6 +4396,14 @@ public class RunInstancesRequest extends Request {
              */
             public Builder rxQueueSize(Integer rxQueueSize) {
                 this.rxQueueSize = rxQueueSize;
+                return this;
+            }
+
+            /**
+             * SecondaryPrivateIpAddressCount.
+             */
+            public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+                this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
                 return this;
             }
 
