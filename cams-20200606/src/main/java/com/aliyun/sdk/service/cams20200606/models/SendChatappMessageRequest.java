@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendChatappMessageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdAccountId")
+    private String adAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
@@ -36,6 +40,7 @@ public class SendChatappMessageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @com.aliyun.core.annotation.Query
@@ -65,6 +70,7 @@ public class SendChatappMessageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsvCode")
+    @Deprecated
     private String isvCode;
 
     @com.aliyun.core.annotation.Query
@@ -74,6 +80,10 @@ public class SendChatappMessageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageCampaignId")
+    private String messageCampaignId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageType")
@@ -129,6 +139,10 @@ public class SendChatappMessageRequest extends Request {
     private String to;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenType")
+    private String tokenType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrackingData")
     private String trackingData;
 
@@ -143,6 +157,7 @@ public class SendChatappMessageRequest extends Request {
 
     private SendChatappMessageRequest(Builder builder) {
         super(builder);
+        this.adAccountId = builder.adAccountId;
         this.channelType = builder.channelType;
         this.content = builder.content;
         this.contextMessageId = builder.contextMessageId;
@@ -157,6 +172,7 @@ public class SendChatappMessageRequest extends Request {
         this.isvCode = builder.isvCode;
         this.label = builder.label;
         this.language = builder.language;
+        this.messageCampaignId = builder.messageCampaignId;
         this.messageType = builder.messageType;
         this.ownerId = builder.ownerId;
         this.payload = builder.payload;
@@ -170,6 +186,7 @@ public class SendChatappMessageRequest extends Request {
         this.templateName = builder.templateName;
         this.templateParams = builder.templateParams;
         this.to = builder.to;
+        this.tokenType = builder.tokenType;
         this.trackingData = builder.trackingData;
         this.ttl = builder.ttl;
         this.type = builder.type;
@@ -186,6 +203,13 @@ public class SendChatappMessageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adAccountId
+     */
+    public String getAdAccountId() {
+        return this.adAccountId;
     }
 
     /**
@@ -287,6 +311,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return messageCampaignId
+     */
+    public String getMessageCampaignId() {
+        return this.messageCampaignId;
+    }
+
+    /**
      * @return messageType
      */
     public String getMessageType() {
@@ -378,6 +409,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return tokenType
+     */
+    public String getTokenType() {
+        return this.tokenType;
+    }
+
+    /**
      * @return trackingData
      */
     public String getTrackingData() {
@@ -399,6 +437,7 @@ public class SendChatappMessageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendChatappMessageRequest, Builder> {
+        private String adAccountId; 
         private String channelType; 
         private String content; 
         private String contextMessageId; 
@@ -413,6 +452,7 @@ public class SendChatappMessageRequest extends Request {
         private String isvCode; 
         private String label; 
         private String language; 
+        private String messageCampaignId; 
         private String messageType; 
         private Long ownerId; 
         private java.util.List<String> payload; 
@@ -426,6 +466,7 @@ public class SendChatappMessageRequest extends Request {
         private String templateName; 
         private java.util.Map<String, String> templateParams; 
         private String to; 
+        private String tokenType; 
         private String trackingData; 
         private Integer ttl; 
         private String type; 
@@ -436,6 +477,7 @@ public class SendChatappMessageRequest extends Request {
 
         private Builder(SendChatappMessageRequest request) {
             super(request);
+            this.adAccountId = request.adAccountId;
             this.channelType = request.channelType;
             this.content = request.content;
             this.contextMessageId = request.contextMessageId;
@@ -450,6 +492,7 @@ public class SendChatappMessageRequest extends Request {
             this.isvCode = request.isvCode;
             this.label = request.label;
             this.language = request.language;
+            this.messageCampaignId = request.messageCampaignId;
             this.messageType = request.messageType;
             this.ownerId = request.ownerId;
             this.payload = request.payload;
@@ -463,10 +506,20 @@ public class SendChatappMessageRequest extends Request {
             this.templateName = request.templateName;
             this.templateParams = request.templateParams;
             this.to = request.to;
+            this.tokenType = request.tokenType;
             this.trackingData = request.trackingData;
             this.ttl = request.ttl;
             this.type = request.type;
         } 
+
+        /**
+         * AdAccountId.
+         */
+        public Builder adAccountId(String adAccountId) {
+            this.putQueryParameter("AdAccountId", adAccountId);
+            this.adAccountId = adAccountId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -629,6 +682,15 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
+         * MessageCampaignId.
+         */
+        public Builder messageCampaignId(String messageCampaignId) {
+            this.putQueryParameter("MessageCampaignId", messageCampaignId);
+            this.messageCampaignId = messageCampaignId;
+            return this;
+        }
+
+        /**
          * MessageType.
          */
         public Builder messageType(String messageType) {
@@ -751,6 +813,15 @@ public class SendChatappMessageRequest extends Request {
         public Builder to(String to) {
             this.putQueryParameter("To", to);
             this.to = to;
+            return this;
+        }
+
+        /**
+         * TokenType.
+         */
+        public Builder tokenType(String tokenType) {
+            this.putQueryParameter("TokenType", tokenType);
+            this.tokenType = tokenType;
             return this;
         }
 

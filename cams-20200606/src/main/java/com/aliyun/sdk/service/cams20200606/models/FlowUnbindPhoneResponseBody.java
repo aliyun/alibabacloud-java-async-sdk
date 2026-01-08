@@ -29,6 +29,9 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Model")
     private Boolean model;
 
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
@@ -37,6 +40,7 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -81,6 +85,13 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
     }
 
     /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -92,6 +103,7 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private Boolean model; 
+        private String requestId; 
         private Boolean success; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
             this.code = model.code;
             this.message = model.message;
             this.model = model.model;
+            this.requestId = model.requestId;
             this.success = model.success;
         } 
 
@@ -146,6 +159,14 @@ public class FlowUnbindPhoneResponseBody extends TeaModel {
          */
         public Builder model(Boolean model) {
             this.model = model;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 

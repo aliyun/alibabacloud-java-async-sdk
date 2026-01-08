@@ -28,6 +28,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustWabaId")
+    @Deprecated
     private String custWabaId;
 
     @com.aliyun.core.annotation.Query
@@ -53,6 +54,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsvCode")
+    @Deprecated
     private String isvCode;
 
     @com.aliyun.core.annotation.Query

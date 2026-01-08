@@ -41,6 +41,10 @@ public class ListChatappMessageRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeStr")
+    private String endTimeStr;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventAction")
     private String eventAction;
 
@@ -74,6 +78,10 @@ public class ListChatappMessageRequest extends Request {
     private Long startTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimeStr")
+    private String startTimeStr;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
@@ -88,6 +96,7 @@ public class ListChatappMessageRequest extends Request {
         this.clientAcceptStatus = builder.clientAcceptStatus;
         this.custSpaceId = builder.custSpaceId;
         this.endTime = builder.endTime;
+        this.endTimeStr = builder.endTimeStr;
         this.eventAction = builder.eventAction;
         this.groupMessageId = builder.groupMessageId;
         this.messageStatus = builder.messageStatus;
@@ -96,6 +105,7 @@ public class ListChatappMessageRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
+        this.startTimeStr = builder.startTimeStr;
         this.templateCode = builder.templateCode;
         this.userNumber = builder.userNumber;
     }
@@ -146,6 +156,13 @@ public class ListChatappMessageRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return endTimeStr
+     */
+    public String getEndTimeStr() {
+        return this.endTimeStr;
     }
 
     /**
@@ -205,6 +222,13 @@ public class ListChatappMessageRequest extends Request {
     }
 
     /**
+     * @return startTimeStr
+     */
+    public String getStartTimeStr() {
+        return this.startTimeStr;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -224,6 +248,7 @@ public class ListChatappMessageRequest extends Request {
         private String clientAcceptStatus; 
         private String custSpaceId; 
         private Long endTime; 
+        private String endTimeStr; 
         private String eventAction; 
         private String groupMessageId; 
         private String messageStatus; 
@@ -232,6 +257,7 @@ public class ListChatappMessageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Long startTime; 
+        private String startTimeStr; 
         private String templateCode; 
         private String userNumber; 
 
@@ -246,6 +272,7 @@ public class ListChatappMessageRequest extends Request {
             this.clientAcceptStatus = request.clientAcceptStatus;
             this.custSpaceId = request.custSpaceId;
             this.endTime = request.endTime;
+            this.endTimeStr = request.endTimeStr;
             this.eventAction = request.eventAction;
             this.groupMessageId = request.groupMessageId;
             this.messageStatus = request.messageStatus;
@@ -254,6 +281,7 @@ public class ListChatappMessageRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
+            this.startTimeStr = request.startTimeStr;
             this.templateCode = request.templateCode;
             this.userNumber = request.userNumber;
         } 
@@ -309,6 +337,15 @@ public class ListChatappMessageRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EndTimeStr.
+         */
+        public Builder endTimeStr(String endTimeStr) {
+            this.putQueryParameter("EndTimeStr", endTimeStr);
+            this.endTimeStr = endTimeStr;
             return this;
         }
 
@@ -382,6 +419,15 @@ public class ListChatappMessageRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * StartTimeStr.
+         */
+        public Builder startTimeStr(String startTimeStr) {
+            this.putQueryParameter("StartTimeStr", startTimeStr);
+            this.startTimeStr = startTimeStr;
             return this;
         }
 
