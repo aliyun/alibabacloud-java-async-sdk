@@ -18,12 +18,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLifecyclePoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyId")
+    private String lifecyclePolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
     private String lifecyclePolicyName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyType")
+    private String lifecyclePolicyType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -35,15 +47,23 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    private String path;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
     private DescribeLifecyclePoliciesRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.fileSystemId = builder.fileSystemId;
+        this.lifecyclePolicyId = builder.lifecyclePolicyId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
+        this.lifecyclePolicyType = builder.lifecyclePolicyType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.path = builder.path;
         this.storageType = builder.storageType;
     }
 
@@ -61,6 +81,13 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return fileSystemId
      */
     public String getFileSystemId() {
@@ -68,10 +95,24 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     }
 
     /**
+     * @return lifecyclePolicyId
+     */
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
+    }
+
+    /**
      * @return lifecyclePolicyName
      */
     public String getLifecyclePolicyName() {
         return this.lifecyclePolicyName;
+    }
+
+    /**
+     * @return lifecyclePolicyType
+     */
+    public String getLifecyclePolicyType() {
+        return this.lifecyclePolicyType;
     }
 
     /**
@@ -89,6 +130,13 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     }
 
     /**
+     * @return path
+     */
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * @return storageType
      */
     public String getStorageType() {
@@ -96,10 +144,14 @@ public class DescribeLifecyclePoliciesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLifecyclePoliciesRequest, Builder> {
+        private String description; 
         private String fileSystemId; 
+        private String lifecyclePolicyId; 
         private String lifecyclePolicyName; 
+        private String lifecyclePolicyType; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String path; 
         private String storageType; 
 
         private Builder() {
@@ -108,12 +160,25 @@ public class DescribeLifecyclePoliciesRequest extends Request {
 
         private Builder(DescribeLifecyclePoliciesRequest request) {
             super(request);
+            this.description = request.description;
             this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyId = request.lifecyclePolicyId;
             this.lifecyclePolicyName = request.lifecyclePolicyName;
+            this.lifecyclePolicyType = request.lifecyclePolicyType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.path = request.path;
             this.storageType = request.storageType;
         } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
 
         /**
          * <p>The ID of the file system.</p>
@@ -128,6 +193,15 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
+         * LifecyclePolicyId.
+         */
+        public Builder lifecyclePolicyId(String lifecyclePolicyId) {
+            this.putQueryParameter("LifecyclePolicyId", lifecyclePolicyId);
+            this.lifecyclePolicyId = lifecyclePolicyId;
+            return this;
+        }
+
+        /**
          * <p>The name of the lifecycle policy. The name must meet the following conventions:</p>
          * <p>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
          * 
@@ -137,6 +211,15 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         public Builder lifecyclePolicyName(String lifecyclePolicyName) {
             this.putQueryParameter("LifecyclePolicyName", lifecyclePolicyName);
             this.lifecyclePolicyName = lifecyclePolicyName;
+            return this;
+        }
+
+        /**
+         * LifecyclePolicyType.
+         */
+        public Builder lifecyclePolicyType(String lifecyclePolicyType) {
+            this.putQueryParameter("LifecyclePolicyType", lifecyclePolicyType);
+            this.lifecyclePolicyType = lifecyclePolicyType;
             return this;
         }
 
@@ -164,6 +247,15 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Path.
+         */
+        public Builder path(String path) {
+            this.putQueryParameter("Path", path);
+            this.path = path;
             return this;
         }
 

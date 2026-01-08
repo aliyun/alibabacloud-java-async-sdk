@@ -23,13 +23,17 @@ public class DeleteLifecyclePolicyRequest extends Request {
     private String fileSystemId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyId")
+    private String lifecyclePolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecyclePolicyName;
 
     private DeleteLifecyclePolicyRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
+        this.lifecyclePolicyId = builder.lifecyclePolicyId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
     }
 
@@ -54,6 +58,13 @@ public class DeleteLifecyclePolicyRequest extends Request {
     }
 
     /**
+     * @return lifecyclePolicyId
+     */
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
+    }
+
+    /**
      * @return lifecyclePolicyName
      */
     public String getLifecyclePolicyName() {
@@ -62,6 +73,7 @@ public class DeleteLifecyclePolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteLifecyclePolicyRequest, Builder> {
         private String fileSystemId; 
+        private String lifecyclePolicyId; 
         private String lifecyclePolicyName; 
 
         private Builder() {
@@ -71,6 +83,7 @@ public class DeleteLifecyclePolicyRequest extends Request {
         private Builder(DeleteLifecyclePolicyRequest request) {
             super(request);
             this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyId = request.lifecyclePolicyId;
             this.lifecyclePolicyName = request.lifecyclePolicyName;
         } 
 
@@ -88,8 +101,16 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
+         * LifecyclePolicyId.
+         */
+        public Builder lifecyclePolicyId(String lifecyclePolicyId) {
+            this.putQueryParameter("LifecyclePolicyId", lifecyclePolicyId);
+            this.lifecyclePolicyId = lifecyclePolicyId;
+            return this;
+        }
+
+        /**
          * <p>The name of the lifecycle policy.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lifecyclepolicy1</p>

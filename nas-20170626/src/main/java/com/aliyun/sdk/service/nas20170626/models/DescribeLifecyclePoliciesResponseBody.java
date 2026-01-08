@@ -169,15 +169,174 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
      *
      * <p>DescribeLifecyclePoliciesResponseBody</p>
      */
+    public static class RetrieveRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private String threshold;
+
+        private RetrieveRules(Builder builder) {
+            this.attribute = builder.attribute;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RetrieveRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private String threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetrieveRules model) {
+                this.attribute = model.attribute;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public RetrieveRules build() {
+                return new RetrieveRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLifecyclePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecyclePoliciesResponseBody</p>
+     */
+    public static class TransitRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private String threshold;
+
+        private TransitRules(Builder builder) {
+            this.attribute = builder.attribute;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TransitRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private String threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitRules model) {
+                this.attribute = model.attribute;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public TransitRules build() {
+                return new TransitRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLifecyclePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecyclePoliciesResponseBody</p>
+     */
     public static class LifecyclePolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
+        @com.aliyun.core.annotation.NameInMap("LifecyclePolicyId")
+        private String lifecyclePolicyId;
+
         @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
         private String lifecyclePolicyName;
+
+        @com.aliyun.core.annotation.NameInMap("LifecyclePolicyType")
+        private String lifecyclePolicyType;
 
         @com.aliyun.core.annotation.NameInMap("LifecycleRuleName")
         private String lifecycleRuleName;
@@ -188,17 +347,28 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Paths")
         private java.util.List<String> paths;
 
+        @com.aliyun.core.annotation.NameInMap("RetrieveRules")
+        private java.util.List<RetrieveRules> retrieveRules;
+
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
+        @com.aliyun.core.annotation.NameInMap("TransitRules")
+        private java.util.List<TransitRules> transitRules;
+
         private LifecyclePolicies(Builder builder) {
             this.createTime = builder.createTime;
+            this.description = builder.description;
             this.fileSystemId = builder.fileSystemId;
+            this.lifecyclePolicyId = builder.lifecyclePolicyId;
             this.lifecyclePolicyName = builder.lifecyclePolicyName;
+            this.lifecyclePolicyType = builder.lifecyclePolicyType;
             this.lifecycleRuleName = builder.lifecycleRuleName;
             this.path = builder.path;
             this.paths = builder.paths;
+            this.retrieveRules = builder.retrieveRules;
             this.storageType = builder.storageType;
+            this.transitRules = builder.transitRules;
         }
 
         public static Builder builder() {
@@ -217,6 +387,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return fileSystemId
          */
         public String getFileSystemId() {
@@ -224,10 +401,24 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return lifecyclePolicyId
+         */
+        public String getLifecyclePolicyId() {
+            return this.lifecyclePolicyId;
+        }
+
+        /**
          * @return lifecyclePolicyName
          */
         public String getLifecyclePolicyName() {
             return this.lifecyclePolicyName;
+        }
+
+        /**
+         * @return lifecyclePolicyType
+         */
+        public String getLifecyclePolicyType() {
+            return this.lifecyclePolicyType;
         }
 
         /**
@@ -252,32 +443,56 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return retrieveRules
+         */
+        public java.util.List<RetrieveRules> getRetrieveRules() {
+            return this.retrieveRules;
+        }
+
+        /**
          * @return storageType
          */
         public String getStorageType() {
             return this.storageType;
         }
 
+        /**
+         * @return transitRules
+         */
+        public java.util.List<TransitRules> getTransitRules() {
+            return this.transitRules;
+        }
+
         public static final class Builder {
             private String createTime; 
+            private String description; 
             private String fileSystemId; 
+            private String lifecyclePolicyId; 
             private String lifecyclePolicyName; 
+            private String lifecyclePolicyType; 
             private String lifecycleRuleName; 
             private String path; 
             private java.util.List<String> paths; 
+            private java.util.List<RetrieveRules> retrieveRules; 
             private String storageType; 
+            private java.util.List<TransitRules> transitRules; 
 
             private Builder() {
             } 
 
             private Builder(LifecyclePolicies model) {
                 this.createTime = model.createTime;
+                this.description = model.description;
                 this.fileSystemId = model.fileSystemId;
+                this.lifecyclePolicyId = model.lifecyclePolicyId;
                 this.lifecyclePolicyName = model.lifecyclePolicyName;
+                this.lifecyclePolicyType = model.lifecyclePolicyType;
                 this.lifecycleRuleName = model.lifecycleRuleName;
                 this.path = model.path;
                 this.paths = model.paths;
+                this.retrieveRules = model.retrieveRules;
                 this.storageType = model.storageType;
+                this.transitRules = model.transitRules;
             } 
 
             /**
@@ -293,6 +508,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
              * <p>The ID of the file system.</p>
              * 
              * <strong>example:</strong>
@@ -304,6 +527,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
+             * LifecyclePolicyId.
+             */
+            public Builder lifecyclePolicyId(String lifecyclePolicyId) {
+                this.lifecyclePolicyId = lifecyclePolicyId;
+                return this;
+            }
+
+            /**
              * <p>The name of the lifecycle policy.</p>
              * 
              * <strong>example:</strong>
@@ -311,6 +542,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
              */
             public Builder lifecyclePolicyName(String lifecyclePolicyName) {
                 this.lifecyclePolicyName = lifecyclePolicyName;
+                return this;
+            }
+
+            /**
+             * LifecyclePolicyType.
+             */
+            public Builder lifecyclePolicyType(String lifecyclePolicyType) {
+                this.lifecyclePolicyType = lifecyclePolicyType;
                 return this;
             }
 
@@ -352,6 +591,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
+             * RetrieveRules.
+             */
+            public Builder retrieveRules(java.util.List<RetrieveRules> retrieveRules) {
+                this.retrieveRules = retrieveRules;
+                return this;
+            }
+
+            /**
              * <p>The storage type of the data that is dumped to the IA storage medium.</p>
              * <p>Default value: InfrequentAccess (IA).</p>
              * 
@@ -360,6 +607,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
+                return this;
+            }
+
+            /**
+             * TransitRules.
+             */
+            public Builder transitRules(java.util.List<TransitRules> transitRules) {
+                this.transitRules = transitRules;
                 return this;
             }
 

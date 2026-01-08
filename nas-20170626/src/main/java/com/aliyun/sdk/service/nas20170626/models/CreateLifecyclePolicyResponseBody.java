@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLifecyclePolicyResponseBody</p>
  */
 public class CreateLifecyclePolicyResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyId")
+    private String lifecyclePolicyId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
     private Boolean success;
 
     private CreateLifecyclePolicyResponseBody(Builder builder) {
+        this.lifecyclePolicyId = builder.lifecyclePolicyId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -41,6 +45,13 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return lifecyclePolicyId
+     */
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String lifecyclePolicyId; 
         private String requestId; 
         private Boolean success; 
 
@@ -62,9 +74,18 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
         } 
 
         private Builder(CreateLifecyclePolicyResponseBody model) {
+            this.lifecyclePolicyId = model.lifecyclePolicyId;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
+
+        /**
+         * LifecyclePolicyId.
+         */
+        public Builder lifecyclePolicyId(String lifecyclePolicyId) {
+            this.lifecyclePolicyId = lifecyclePolicyId;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

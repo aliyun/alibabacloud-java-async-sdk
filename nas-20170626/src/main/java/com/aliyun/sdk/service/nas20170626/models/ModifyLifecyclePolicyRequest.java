@@ -23,8 +23,11 @@ public class ModifyLifecyclePolicyRequest extends Request {
     private String fileSystemId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicyId")
+    private String lifecyclePolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecyclePolicyName;
 
     @com.aliyun.core.annotation.Query
@@ -42,6 +45,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
     private ModifyLifecyclePolicyRequest(Builder builder) {
         super(builder);
         this.fileSystemId = builder.fileSystemId;
+        this.lifecyclePolicyId = builder.lifecyclePolicyId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
         this.lifecycleRuleName = builder.lifecycleRuleName;
         this.path = builder.path;
@@ -66,6 +70,13 @@ public class ModifyLifecyclePolicyRequest extends Request {
      */
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    /**
+     * @return lifecyclePolicyId
+     */
+    public String getLifecyclePolicyId() {
+        return this.lifecyclePolicyId;
     }
 
     /**
@@ -98,6 +109,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyLifecyclePolicyRequest, Builder> {
         private String fileSystemId; 
+        private String lifecyclePolicyId; 
         private String lifecyclePolicyName; 
         private String lifecycleRuleName; 
         private String path; 
@@ -110,6 +122,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
         private Builder(ModifyLifecyclePolicyRequest request) {
             super(request);
             this.fileSystemId = request.fileSystemId;
+            this.lifecyclePolicyId = request.lifecyclePolicyId;
             this.lifecyclePolicyName = request.lifecyclePolicyName;
             this.lifecycleRuleName = request.lifecycleRuleName;
             this.path = request.path;
@@ -130,9 +143,17 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
+         * LifecyclePolicyId.
+         */
+        public Builder lifecyclePolicyId(String lifecyclePolicyId) {
+            this.putQueryParameter("LifecyclePolicyId", lifecyclePolicyId);
+            this.lifecyclePolicyId = lifecyclePolicyId;
+            return this;
+        }
+
+        /**
          * <p>The name of the lifecycle policy.</p>
          * <p>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>lifecyclepolicy_01</p>
