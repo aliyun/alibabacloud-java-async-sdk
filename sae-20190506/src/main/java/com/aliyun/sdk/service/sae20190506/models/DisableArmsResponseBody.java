@@ -132,7 +132,16 @@ public class DisableArmsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,14 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +172,10 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +183,10 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0616FF6-9536-47BF-8A03-FB70386DFC71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +194,14 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +209,10 @@ public class DisableArmsResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215623063975374318e6d53</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -233,7 +265,14 @@ public class DisableArmsResponseBody extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Indicates if enabled. Valid values: </p>
+             * <ul>
+             * <li>true: enabled</li>
+             * <li>false: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

@@ -30,6 +30,10 @@ public class UpdateAppModeRequest extends Request {
     private Boolean enableIdle;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleHour")
+    private String idleHour;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
@@ -38,6 +42,7 @@ public class UpdateAppModeRequest extends Request {
         this.appId = builder.appId;
         this.appIds = builder.appIds;
         this.enableIdle = builder.enableIdle;
+        this.idleHour = builder.idleHour;
         this.namespaceId = builder.namespaceId;
     }
 
@@ -76,6 +81,13 @@ public class UpdateAppModeRequest extends Request {
     }
 
     /**
+     * @return idleHour
+     */
+    public String getIdleHour() {
+        return this.idleHour;
+    }
+
+    /**
      * @return namespaceId
      */
     public String getNamespaceId() {
@@ -86,6 +98,7 @@ public class UpdateAppModeRequest extends Request {
         private String appId; 
         private String appIds; 
         private Boolean enableIdle; 
+        private String idleHour; 
         private String namespaceId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class UpdateAppModeRequest extends Request {
             this.appId = request.appId;
             this.appIds = request.appIds;
             this.enableIdle = request.enableIdle;
+            this.idleHour = request.idleHour;
             this.namespaceId = request.namespaceId;
         } 
 
@@ -135,6 +149,15 @@ public class UpdateAppModeRequest extends Request {
         public Builder enableIdle(Boolean enableIdle) {
             this.putQueryParameter("EnableIdle", enableIdle);
             this.enableIdle = enableIdle;
+            return this;
+        }
+
+        /**
+         * IdleHour.
+         */
+        public Builder idleHour(String idleHour) {
+            this.putQueryParameter("IdleHour", idleHour);
+            this.idleHour = idleHour;
             return this;
         }
 

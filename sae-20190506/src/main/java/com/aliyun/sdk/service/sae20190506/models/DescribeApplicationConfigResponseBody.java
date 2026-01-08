@@ -1910,6 +1910,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Html")
         private String html;
 
+        @com.aliyun.core.annotation.NameInMap("IdleHour")
+        private String idleHour;
+
         @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
         private String imagePullSecrets;
 
@@ -2139,6 +2142,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.gpuType = builder.gpuType;
             this.headlessPvtzDiscovery = builder.headlessPvtzDiscovery;
             this.html = builder.html;
+            this.idleHour = builder.idleHour;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
             this.initContainersConfig = builder.initContainersConfig;
@@ -2463,6 +2467,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getHtml() {
             return this.html;
+        }
+
+        /**
+         * @return idleHour
+         */
+        public String getIdleHour() {
+            return this.idleHour;
         }
 
         /**
@@ -2950,6 +2961,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String gpuType; 
             private String headlessPvtzDiscovery; 
             private String html; 
+            private String idleHour; 
             private String imagePullSecrets; 
             private String imageUrl; 
             private java.util.List<InitContainersConfig> initContainersConfig; 
@@ -3055,6 +3067,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.gpuType = model.gpuType;
                 this.headlessPvtzDiscovery = model.headlessPvtzDiscovery;
                 this.html = model.html;
+                this.idleHour = model.idleHour;
                 this.imagePullSecrets = model.imagePullSecrets;
                 this.imageUrl = model.imageUrl;
                 this.initContainersConfig = model.initContainersConfig;
@@ -3553,6 +3566,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder html(String html) {
                 this.html = html;
+                return this;
+            }
+
+            /**
+             * IdleHour.
+             */
+            public Builder idleHour(String idleHour) {
+                this.idleHour = idleHour;
                 return this;
             }
 

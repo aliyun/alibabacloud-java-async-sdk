@@ -132,7 +132,16 @@ public class ResumeTrafficResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request was successful.</li>
+         * <li><strong>3xx</strong>: The request was redirected.</li>
+         * <li><strong>4xx</strong>: The request failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code returned if the request failed.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +165,14 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the operation. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If the request fails, a specific error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +180,7 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -175,7 +191,14 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong>: The traffic was resumed.</li>
+         * <li><strong>False</strong>: The traffic failed to be resumed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -183,7 +206,10 @@ public class ResumeTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1a0b2215622920113732501e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -249,7 +275,10 @@ public class ResumeTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * msg.
+             * <p>The description of the returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>succeed in handling request</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -257,7 +286,14 @@ public class ResumeTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the traffic was removed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The traffic was removed.</li>
+             * <li><strong>false</strong>: The traffic failed to be removed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
