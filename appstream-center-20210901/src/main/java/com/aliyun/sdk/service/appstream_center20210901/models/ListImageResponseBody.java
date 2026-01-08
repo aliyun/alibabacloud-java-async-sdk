@@ -305,6 +305,9 @@ public class ListImageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>应用名称</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -477,6 +480,81 @@ public class ListImageResponseBody extends TeaModel {
      *
      * <p>ListImageResponseBody</p>
      */
+    public static class TagList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagList(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagList build() {
+                return new TagList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -508,6 +586,9 @@ public class ListImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DriverList")
         private java.util.List<String> driverList;
 
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+        private String environmentId;
+
         @com.aliyun.core.annotation.NameInMap("FeatureList")
         private java.util.List<String> featureList;
 
@@ -525,6 +606,9 @@ public class ListImageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ImageCreateMode")
         private String imageCreateMode;
+
+        @com.aliyun.core.annotation.NameInMap("ImageIconUrl")
+        private String imageIconUrl;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -577,6 +661,9 @@ public class ListImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("Rating")
+        private Integer rating;
+
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceCategory")
         private String resourceInstanceCategory;
 
@@ -594,6 +681,9 @@ public class ListImageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<TagList> tagList;
 
         @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
@@ -618,12 +708,14 @@ public class ListImageResponseBody extends TeaModel {
             this.description = builder.description;
             this.distro = builder.distro;
             this.driverList = builder.driverList;
+            this.environmentId = builder.environmentId;
             this.featureList = builder.featureList;
             this.fotaChannel = builder.fotaChannel;
             this.fotaVersion = builder.fotaVersion;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.imageCreateMode = builder.imageCreateMode;
+            this.imageIconUrl = builder.imageIconUrl;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageRegionDistributeList = builder.imageRegionDistributeList;
@@ -641,12 +733,14 @@ public class ListImageResponseBody extends TeaModel {
             this.platformName = builder.platformName;
             this.productType = builder.productType;
             this.protocolType = builder.protocolType;
+            this.rating = builder.rating;
             this.resourceInstanceCategory = builder.resourceInstanceCategory;
             this.scene = builder.scene;
             this.sessionType = builder.sessionType;
             this.status = builder.status;
             this.supportedLanguageList = builder.supportedLanguageList;
             this.systemDiskSize = builder.systemDiskSize;
+            this.tagList = builder.tagList;
             this.versionId = builder.versionId;
             this.versionName = builder.versionName;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
@@ -732,6 +826,13 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return environmentId
+         */
+        public String getEnvironmentId() {
+            return this.environmentId;
+        }
+
+        /**
          * @return featureList
          */
         public java.util.List<String> getFeatureList() {
@@ -771,6 +872,13 @@ public class ListImageResponseBody extends TeaModel {
          */
         public String getImageCreateMode() {
             return this.imageCreateMode;
+        }
+
+        /**
+         * @return imageIconUrl
+         */
+        public String getImageIconUrl() {
+            return this.imageIconUrl;
         }
 
         /**
@@ -893,6 +1001,13 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return rating
+         */
+        public Integer getRating() {
+            return this.rating;
+        }
+
+        /**
          * @return resourceInstanceCategory
          */
         public String getResourceInstanceCategory() {
@@ -935,6 +1050,13 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagList
+         */
+        public java.util.List<TagList> getTagList() {
+            return this.tagList;
+        }
+
+        /**
          * @return versionId
          */
         public String getVersionId() {
@@ -973,12 +1095,14 @@ public class ListImageResponseBody extends TeaModel {
             private String description; 
             private String distro; 
             private java.util.List<String> driverList; 
+            private String environmentId; 
             private java.util.List<String> featureList; 
             private String fotaChannel; 
             private String fotaVersion; 
             private String gmtCreate; 
             private String gmtModified; 
             private String imageCreateMode; 
+            private String imageIconUrl; 
             private String imageId; 
             private String imageName; 
             private java.util.List<ImageRegionDistributeList> imageRegionDistributeList; 
@@ -996,12 +1120,14 @@ public class ListImageResponseBody extends TeaModel {
             private String platformName; 
             private String productType; 
             private String protocolType; 
+            private Integer rating; 
             private String resourceInstanceCategory; 
             private String scene; 
             private String sessionType; 
             private String status; 
             private java.util.List<String> supportedLanguageList; 
             private Integer systemDiskSize; 
+            private java.util.List<TagList> tagList; 
             private String versionId; 
             private String versionName; 
             private Boolean volumeEncryptionEnabled; 
@@ -1021,12 +1147,14 @@ public class ListImageResponseBody extends TeaModel {
                 this.description = model.description;
                 this.distro = model.distro;
                 this.driverList = model.driverList;
+                this.environmentId = model.environmentId;
                 this.featureList = model.featureList;
                 this.fotaChannel = model.fotaChannel;
                 this.fotaVersion = model.fotaVersion;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.imageCreateMode = model.imageCreateMode;
+                this.imageIconUrl = model.imageIconUrl;
                 this.imageId = model.imageId;
                 this.imageName = model.imageName;
                 this.imageRegionDistributeList = model.imageRegionDistributeList;
@@ -1044,12 +1172,14 @@ public class ListImageResponseBody extends TeaModel {
                 this.platformName = model.platformName;
                 this.productType = model.productType;
                 this.protocolType = model.protocolType;
+                this.rating = model.rating;
                 this.resourceInstanceCategory = model.resourceInstanceCategory;
                 this.scene = model.scene;
                 this.sessionType = model.sessionType;
                 this.status = model.status;
                 this.supportedLanguageList = model.supportedLanguageList;
                 this.systemDiskSize = model.systemDiskSize;
+                this.tagList = model.tagList;
                 this.versionId = model.versionId;
                 this.versionName = model.versionName;
                 this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
@@ -1132,6 +1262,9 @@ public class ListImageResponseBody extends TeaModel {
 
             /**
              * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1140,6 +1273,9 @@ public class ListImageResponseBody extends TeaModel {
 
             /**
              * <p>The name of the release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu 22.04 64位</p>
              */
             public Builder distro(String distro) {
                 this.distro = distro;
@@ -1155,6 +1291,14 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
+             * EnvironmentId.
+             */
+            public Builder environmentId(String environmentId) {
+                this.environmentId = environmentId;
+                return this;
+            }
+
+            /**
              * <p>The image feature tags.</p>
              */
             public Builder featureList(java.util.List<String> featureList) {
@@ -1166,6 +1310,9 @@ public class ListImageResponseBody extends TeaModel {
              * <blockquote>
              * <p> This parameter is not available for public use.</p>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>镜像支持的fota渠道，暂未启用</p>
              */
             public Builder fotaChannel(String fotaChannel) {
                 this.fotaChannel = fotaChannel;
@@ -1220,6 +1367,14 @@ public class ListImageResponseBody extends TeaModel {
              */
             public Builder imageCreateMode(String imageCreateMode) {
                 this.imageCreateMode = imageCreateMode;
+                return this;
+            }
+
+            /**
+             * ImageIconUrl.
+             */
+            public Builder imageIconUrl(String imageIconUrl) {
+                this.imageIconUrl = imageIconUrl;
                 return this;
             }
 
@@ -1296,6 +1451,9 @@ public class ListImageResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether the current version is the active version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlineVersion(Boolean onlineVersion) {
                 this.onlineVersion = onlineVersion;
@@ -1405,6 +1563,14 @@ public class ListImageResponseBody extends TeaModel {
             }
 
             /**
+             * Rating.
+             */
+            public Builder rating(Integer rating) {
+                this.rating = rating;
+                return this;
+            }
+
+            /**
              * <p>The types of resources that are supported by the images.</p>
              * 
              * <strong>example:</strong>
@@ -1469,6 +1635,14 @@ public class ListImageResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * TagList.
+             */
+            public Builder tagList(java.util.List<TagList> tagList) {
+                this.tagList = tagList;
                 return this;
             }
 
