@@ -3816,6 +3816,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallDomainList  DescribeVpcFirewallDomainListRequest
+     * @return DescribeVpcFirewallDomainListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallDomainListResponse> describeVpcFirewallDomainList(DescribeVpcFirewallDomainListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallDomainList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallDomainListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallDomainListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeVpcFirewallDomainRelationList  DescribeVpcFirewallDomainRelationListRequest
+     * @return DescribeVpcFirewallDomainRelationListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallDomainRelationListResponse> describeVpcFirewallDomainRelationList(DescribeVpcFirewallDomainRelationListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallDomainRelationList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallDomainRelationListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallDomainRelationListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallDropTrafficTrend  DescribeVpcFirewallDropTrafficTrendRequest
      * @return DescribeVpcFirewallDropTrafficTrendResponse
      */
