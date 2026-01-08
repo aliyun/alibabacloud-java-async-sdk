@@ -737,6 +737,9 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
+        @com.aliyun.core.annotation.NameInMap("statusReason")
+        private String statusReason;
+
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
@@ -752,6 +755,7 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
             this.finishTime = builder.finishTime;
             this.mediaDetectionTaskResult = builder.mediaDetectionTaskResult;
             this.startTime = builder.startTime;
+            this.statusReason = builder.statusReason;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.videoUrl = builder.videoUrl;
@@ -801,6 +805,13 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusReason
+         */
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -827,6 +838,7 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
             private String finishTime; 
             private MediaDetectionTaskResult mediaDetectionTaskResult; 
             private String startTime; 
+            private String statusReason; 
             private String taskId; 
             private String taskStatus; 
             private String videoUrl; 
@@ -840,6 +852,7 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
                 this.finishTime = model.finishTime;
                 this.mediaDetectionTaskResult = model.mediaDetectionTaskResult;
                 this.startTime = model.startTime;
+                this.statusReason = model.statusReason;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
                 this.videoUrl = model.videoUrl;
@@ -882,6 +895,14 @@ public class GetVideoCreationTaskResultResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * statusReason.
+             */
+            public Builder statusReason(String statusReason) {
+                this.statusReason = statusReason;
                 return this;
             }
 
