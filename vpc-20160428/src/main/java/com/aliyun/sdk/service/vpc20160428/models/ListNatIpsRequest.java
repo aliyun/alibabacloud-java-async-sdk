@@ -30,6 +30,10 @@ public class ListNatIpsRequest extends Request {
     private String ipOrigin;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
+    private String ipv4Prefix;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
@@ -84,6 +88,7 @@ public class ListNatIpsRequest extends Request {
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipOrigin = builder.ipOrigin;
+        this.ipv4Prefix = builder.ipv4Prefix;
         this.maxResults = builder.maxResults;
         this.natGatewayId = builder.natGatewayId;
         this.natIpCidr = builder.natIpCidr;
@@ -130,6 +135,13 @@ public class ListNatIpsRequest extends Request {
      */
     public String getIpOrigin() {
         return this.ipOrigin;
+    }
+
+    /**
+     * @return ipv4Prefix
+     */
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     /**
@@ -220,6 +232,7 @@ public class ListNatIpsRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String ipOrigin; 
+        private String ipv4Prefix; 
         private String maxResults; 
         private String natGatewayId; 
         private String natIpCidr; 
@@ -242,6 +255,7 @@ public class ListNatIpsRequest extends Request {
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipOrigin = request.ipOrigin;
+            this.ipv4Prefix = request.ipv4Prefix;
             this.maxResults = request.maxResults;
             this.natGatewayId = request.natGatewayId;
             this.natIpCidr = request.natIpCidr;
@@ -294,6 +308,15 @@ public class ListNatIpsRequest extends Request {
         public Builder ipOrigin(String ipOrigin) {
             this.putQueryParameter("IpOrigin", ipOrigin);
             this.ipOrigin = ipOrigin;
+            return this;
+        }
+
+        /**
+         * Ipv4Prefix.
+         */
+        public Builder ipv4Prefix(String ipv4Prefix) {
+            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
+            this.ipv4Prefix = ipv4Prefix;
             return this;
         }
 
