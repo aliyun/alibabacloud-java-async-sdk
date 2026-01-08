@@ -1740,6 +1740,9 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class Datasets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActualMountAccess")
+        private String actualMountAccess;
+
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
@@ -1765,6 +1768,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String uri;
 
         private Datasets(Builder builder) {
+            this.actualMountAccess = builder.actualMountAccess;
             this.datasetId = builder.datasetId;
             this.datasetVersion = builder.datasetVersion;
             this.dynamic = builder.dynamic;
@@ -1781,6 +1785,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Datasets create() {
             return builder().build();
+        }
+
+        /**
+         * @return actualMountAccess
+         */
+        public String getActualMountAccess() {
+            return this.actualMountAccess;
         }
 
         /**
@@ -1840,6 +1851,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String actualMountAccess; 
             private String datasetId; 
             private String datasetVersion; 
             private Boolean dynamic; 
@@ -1853,6 +1865,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Datasets model) {
+                this.actualMountAccess = model.actualMountAccess;
                 this.datasetId = model.datasetId;
                 this.datasetVersion = model.datasetVersion;
                 this.dynamic = model.dynamic;
@@ -1862,6 +1875,14 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.options = model.options;
                 this.uri = model.uri;
             } 
+
+            /**
+             * ActualMountAccess.
+             */
+            public Builder actualMountAccess(String actualMountAccess) {
+                this.actualMountAccess = actualMountAccess;
+                return this;
+            }
 
             /**
              * <p>The dataset ID.</p>
