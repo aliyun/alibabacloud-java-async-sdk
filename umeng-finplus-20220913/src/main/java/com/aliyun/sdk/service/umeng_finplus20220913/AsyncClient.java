@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataSet2Response> createDataSet2(CreateDataSet2Request request);
 
     /**
+     * @param request the request parameters of CreateInstanceTask  CreateInstanceTaskRequest
+     * @return CreateInstanceTaskResponse
+     */
+    CompletableFuture<CreateInstanceTaskResponse> createInstanceTask(CreateInstanceTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateKnowLedge  CreateKnowLedgeRequest
      * @return CreateKnowLedgeResponse
      */
