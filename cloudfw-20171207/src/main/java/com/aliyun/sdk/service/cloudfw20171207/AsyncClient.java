@@ -1457,6 +1457,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallSummaryInfoResponse> describeVpcFirewallSummaryInfo(DescribeVpcFirewallSummaryInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallTrafficAssetList  DescribeVpcFirewallTrafficAssetListRequest
+     * @return DescribeVpcFirewallTrafficAssetListResponse
+     */
+    CompletableFuture<DescribeVpcFirewallTrafficAssetListResponse> describeVpcFirewallTrafficAssetList(DescribeVpcFirewallTrafficAssetListRequest request);
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallZone  DescribeVpcFirewallZoneRequest
      * @return DescribeVpcFirewallZoneResponse
      */
