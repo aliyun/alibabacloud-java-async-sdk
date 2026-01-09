@@ -215,6 +215,9 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
+        @com.aliyun.core.annotation.NameInMap("OutId")
+        private String outId;
+
         @com.aliyun.core.annotation.NameInMap("RecordingFilePath")
         private String recordingFilePath;
 
@@ -237,6 +240,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             this.importedTime = builder.importedTime;
             this.majorIntent = builder.majorIntent;
             this.options = builder.options;
+            this.outId = builder.outId;
             this.recordingFilePath = builder.recordingFilePath;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -335,6 +339,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return outId
+         */
+        public String getOutId() {
+            return this.outId;
+        }
+
+        /**
          * @return recordingFilePath
          */
         public String getRecordingFilePath() {
@@ -368,6 +379,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private Long importedTime; 
             private String majorIntent; 
             private String options; 
+            private String outId; 
             private String recordingFilePath; 
             private Long status; 
             private String taskId; 
@@ -388,6 +400,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
                 this.importedTime = model.importedTime;
                 this.majorIntent = model.majorIntent;
                 this.options = model.options;
+                this.outId = model.outId;
                 this.recordingFilePath = model.recordingFilePath;
                 this.status = model.status;
                 this.taskId = model.taskId;
@@ -486,6 +499,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder options(String options) {
                 this.options = options;
+                return this;
+            }
+
+            /**
+             * OutId.
+             */
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 

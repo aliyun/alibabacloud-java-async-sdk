@@ -212,6 +212,9 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
+        @com.aliyun.core.annotation.NameInMap("WithActivePrompt")
+        private Boolean withActivePrompt;
+
         @com.aliyun.core.annotation.NameInMap("WithConfig")
         private Boolean withConfig;
 
@@ -227,6 +230,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             this.lastOnlineTime = builder.lastOnlineTime;
             this.modifyTime = builder.modifyTime;
             this.status = builder.status;
+            this.withActivePrompt = builder.withActivePrompt;
             this.withConfig = builder.withConfig;
         }
 
@@ -316,6 +320,13 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         }
 
         /**
+         * @return withActivePrompt
+         */
+        public Boolean getWithActivePrompt() {
+            return this.withActivePrompt;
+        }
+
+        /**
          * @return withConfig
          */
         public Boolean getWithConfig() {
@@ -334,6 +345,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             private String lastOnlineTime; 
             private String modifyTime; 
             private Long status; 
+            private Boolean withActivePrompt; 
             private Boolean withConfig; 
 
             private Builder() {
@@ -351,6 +363,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
                 this.lastOnlineTime = model.lastOnlineTime;
                 this.modifyTime = model.modifyTime;
                 this.status = model.status;
+                this.withActivePrompt = model.withActivePrompt;
                 this.withConfig = model.withConfig;
             } 
 
@@ -439,6 +452,14 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              */
             public Builder status(Long status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * WithActivePrompt.
+             */
+            public Builder withActivePrompt(Boolean withActivePrompt) {
+                this.withActivePrompt = withActivePrompt;
                 return this;
             }
 

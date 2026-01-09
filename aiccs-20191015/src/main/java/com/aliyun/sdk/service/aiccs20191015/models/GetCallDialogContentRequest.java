@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetCallDialogContentRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callDate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
     @com.aliyun.core.annotation.Query
@@ -115,7 +117,10 @@ public class GetCallDialogContentRequest extends Request {
         } 
 
         /**
-         * CallDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-06</p>
          */
         public Builder callDate(String callDate) {
             this.putQueryParameter("CallDate", callDate);
@@ -124,7 +129,10 @@ public class GetCallDialogContentRequest extends Request {
         }
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456^123478</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
