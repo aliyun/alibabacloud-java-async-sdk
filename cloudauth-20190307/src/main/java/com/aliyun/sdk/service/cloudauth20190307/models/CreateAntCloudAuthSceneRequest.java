@@ -30,6 +30,10 @@ public class CreateAntCloudAuthSceneRequest extends Request {
     private String checkFileName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceRiskPlus")
+    private String deviceRiskPlus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MiniProgramName")
     private String miniProgramName;
 
@@ -59,6 +63,7 @@ public class CreateAntCloudAuthSceneRequest extends Request {
         this.bindMiniProgram = builder.bindMiniProgram;
         this.checkFileBody = builder.checkFileBody;
         this.checkFileName = builder.checkFileName;
+        this.deviceRiskPlus = builder.deviceRiskPlus;
         this.miniProgramName = builder.miniProgramName;
         this.platform = builder.platform;
         this.returnPicCount = builder.returnPicCount;
@@ -99,6 +104,13 @@ public class CreateAntCloudAuthSceneRequest extends Request {
      */
     public String getCheckFileName() {
         return this.checkFileName;
+    }
+
+    /**
+     * @return deviceRiskPlus
+     */
+    public String getDeviceRiskPlus() {
+        return this.deviceRiskPlus;
     }
 
     /**
@@ -147,6 +159,7 @@ public class CreateAntCloudAuthSceneRequest extends Request {
         private String bindMiniProgram; 
         private String checkFileBody; 
         private String checkFileName; 
+        private String deviceRiskPlus; 
         private String miniProgramName; 
         private String platform; 
         private Long returnPicCount; 
@@ -163,6 +176,7 @@ public class CreateAntCloudAuthSceneRequest extends Request {
             this.bindMiniProgram = request.bindMiniProgram;
             this.checkFileBody = request.checkFileBody;
             this.checkFileName = request.checkFileName;
+            this.deviceRiskPlus = request.deviceRiskPlus;
             this.miniProgramName = request.miniProgramName;
             this.platform = request.platform;
             this.returnPicCount = request.returnPicCount;
@@ -208,6 +222,15 @@ public class CreateAntCloudAuthSceneRequest extends Request {
         public Builder checkFileName(String checkFileName) {
             this.putQueryParameter("CheckFileName", checkFileName);
             this.checkFileName = checkFileName;
+            return this;
+        }
+
+        /**
+         * DeviceRiskPlus.
+         */
+        public Builder deviceRiskPlus(String deviceRiskPlus) {
+            this.putQueryParameter("DeviceRiskPlus", deviceRiskPlus);
+            this.deviceRiskPlus = deviceRiskPlus;
             return this;
         }
 

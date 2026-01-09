@@ -110,6 +110,9 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("DeviceRiskPlus")
+        private String deviceRiskPlus;
+
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
@@ -148,6 +151,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             this.bindMiniProgram = builder.bindMiniProgram;
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.deviceRiskPlus = builder.deviceRiskPlus;
             this.domain = builder.domain;
             this.miniProgramName = builder.miniProgramName;
             this.modifier = builder.modifier;
@@ -195,6 +199,13 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return deviceRiskPlus
+         */
+        public String getDeviceRiskPlus() {
+            return this.deviceRiskPlus;
         }
 
         /**
@@ -279,6 +290,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
             private String bindMiniProgram; 
             private String createTime; 
             private String creator; 
+            private String deviceRiskPlus; 
             private String domain; 
             private String miniProgramName; 
             private String modifier; 
@@ -299,6 +311,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
                 this.bindMiniProgram = model.bindMiniProgram;
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.deviceRiskPlus = model.deviceRiskPlus;
                 this.domain = model.domain;
                 this.miniProgramName = model.miniProgramName;
                 this.modifier = model.modifier;
@@ -357,6 +370,14 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * DeviceRiskPlus.
+             */
+            public Builder deviceRiskPlus(String deviceRiskPlus) {
+                this.deviceRiskPlus = deviceRiskPlus;
                 return this;
             }
 

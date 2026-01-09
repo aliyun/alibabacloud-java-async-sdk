@@ -799,6 +799,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MobileOnlineTimeResponse> mobileOnlineTime(MobileOnlineTimeRequest request);
 
     /**
+     * @param request the request parameters of MobileRecycledMetaVerify  MobileRecycledMetaVerifyRequest
+     * @return MobileRecycledMetaVerifyResponse
+     */
+    CompletableFuture<MobileRecycledMetaVerifyResponse> mobileRecycledMetaVerify(MobileRecycledMetaVerifyRequest request);
+
+    /**
      * <b>description</b> :
      * <ul>
      * <li>Service Address: cloudauth.aliyuncs.com.</li>
