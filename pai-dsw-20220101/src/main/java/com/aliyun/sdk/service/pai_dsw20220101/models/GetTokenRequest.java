@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTokenRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Audience")
+    private String audience;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Integer expireTime;
 
@@ -26,10 +30,16 @@ public class GetTokenRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private GetTokenRequest(Builder builder) {
         super(builder);
+        this.audience = builder.audience;
         this.expireTime = builder.expireTime;
         this.instanceId = builder.instanceId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -46,6 +56,13 @@ public class GetTokenRequest extends Request {
     }
 
     /**
+     * @return audience
+     */
+    public String getAudience() {
+        return this.audience;
+    }
+
+    /**
      * @return expireTime
      */
     public Integer getExpireTime() {
@@ -59,9 +76,18 @@ public class GetTokenRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<GetTokenRequest, Builder> {
+        private String audience; 
         private Integer expireTime; 
         private String instanceId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -69,9 +95,20 @@ public class GetTokenRequest extends Request {
 
         private Builder(GetTokenRequest request) {
             super(request);
+            this.audience = request.audience;
             this.expireTime = request.expireTime;
             this.instanceId = request.instanceId;
+            this.type = request.type;
         } 
+
+        /**
+         * Audience.
+         */
+        public Builder audience(String audience) {
+            this.putQueryParameter("Audience", audience);
+            this.audience = audience;
+            return this;
+        }
 
         /**
          * <p>The validity period. Unit: seconds.</p>
@@ -95,6 +132,15 @@ public class GetTokenRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
