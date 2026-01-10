@@ -41,6 +41,10 @@ public class CreateOrderRequest extends Request {
     private String pluginType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private String relatedUserList;
 
@@ -55,6 +59,7 @@ public class CreateOrderRequest extends Request {
         this.comment = builder.comment;
         this.pluginParam = builder.pluginParam;
         this.pluginType = builder.pluginType;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -108,6 +113,13 @@ public class CreateOrderRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return relatedUserList
      */
     public String getRelatedUserList() {
@@ -127,6 +139,7 @@ public class CreateOrderRequest extends Request {
         private String comment; 
         private java.util.Map<String, ?> pluginParam; 
         private String pluginType; 
+        private String realLoginUserUid; 
         private String relatedUserList; 
         private Long tid; 
 
@@ -141,6 +154,7 @@ public class CreateOrderRequest extends Request {
             this.comment = request.comment;
             this.pluginParam = request.pluginParam;
             this.pluginType = request.pluginType;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.relatedUserList = request.relatedUserList;
             this.tid = request.tid;
         } 
@@ -203,6 +217,15 @@ public class CreateOrderRequest extends Request {
         public Builder pluginType(String pluginType) {
             this.putQueryParameter("PluginType", pluginType);
             this.pluginType = pluginType;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

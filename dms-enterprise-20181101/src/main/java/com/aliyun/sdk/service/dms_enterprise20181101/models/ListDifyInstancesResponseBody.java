@@ -248,6 +248,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Edition")
         private String edition;
 
@@ -272,8 +275,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MajorVersion")
         private String majorVersion;
 
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
+        private String regionCode;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -290,6 +299,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appUuid = builder.appUuid;
             this.createdTime = builder.createdTime;
+            this.description = builder.description;
             this.edition = builder.edition;
             this.enterpriseInternetUrl = builder.enterpriseInternetUrl;
             this.enterpriseIntranetUrl = builder.enterpriseIntranetUrl;
@@ -298,7 +308,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             this.internetUrl = builder.internetUrl;
             this.intranetUrl = builder.intranetUrl;
             this.majorVersion = builder.majorVersion;
+            this.regionCode = builder.regionCode;
             this.securityGroupId = builder.securityGroupId;
+            this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.workspaceId = builder.workspaceId;
@@ -325,6 +337,13 @@ public class ListDifyInstancesResponseBody extends TeaModel {
          */
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -384,10 +403,24 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionCode
+         */
+        public String getRegionCode() {
+            return this.regionCode;
+        }
+
+        /**
          * @return securityGroupId
          */
         public String getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -421,6 +454,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String appUuid; 
             private String createdTime; 
+            private String description; 
             private String edition; 
             private String enterpriseInternetUrl; 
             private String enterpriseIntranetUrl; 
@@ -429,7 +463,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             private String internetUrl; 
             private String intranetUrl; 
             private String majorVersion; 
+            private String regionCode; 
             private String securityGroupId; 
+            private String status; 
             private String vSwitchId; 
             private String vpcId; 
             private String workspaceId; 
@@ -441,6 +477,7 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.appUuid = model.appUuid;
                 this.createdTime = model.createdTime;
+                this.description = model.description;
                 this.edition = model.edition;
                 this.enterpriseInternetUrl = model.enterpriseInternetUrl;
                 this.enterpriseIntranetUrl = model.enterpriseIntranetUrl;
@@ -449,7 +486,9 @@ public class ListDifyInstancesResponseBody extends TeaModel {
                 this.internetUrl = model.internetUrl;
                 this.intranetUrl = model.intranetUrl;
                 this.majorVersion = model.majorVersion;
+                this.regionCode = model.regionCode;
                 this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
                 this.workspaceId = model.workspaceId;
@@ -469,6 +508,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -537,10 +584,26 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * RegionCode.
+             */
+            public Builder regionCode(String regionCode) {
+                this.regionCode = regionCode;
+                return this;
+            }
+
+            /**
              * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
