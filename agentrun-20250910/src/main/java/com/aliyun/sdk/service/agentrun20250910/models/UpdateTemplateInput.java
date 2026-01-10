@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTemplateInput</p>
  */
 public class UpdateTemplateInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowAnonymousManage")
+    private Boolean allowAnonymousManage;
+
     @com.aliyun.core.annotation.NameInMap("armsConfiguration")
     private ArmsConfiguration armsConfiguration;
 
@@ -63,6 +66,7 @@ public class UpdateTemplateInput extends TeaModel {
     private java.util.Map<String, ?> templateConfiguration;
 
     private UpdateTemplateInput(Builder builder) {
+        this.allowAnonymousManage = builder.allowAnonymousManage;
         this.armsConfiguration = builder.armsConfiguration;
         this.containerConfiguration = builder.containerConfiguration;
         this.cpu = builder.cpu;
@@ -89,6 +93,13 @@ public class UpdateTemplateInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowAnonymousManage
+     */
+    public Boolean getAllowAnonymousManage() {
+        return this.allowAnonymousManage;
     }
 
     /**
@@ -190,6 +201,7 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean allowAnonymousManage; 
         private ArmsConfiguration armsConfiguration; 
         private ContainerConfiguration containerConfiguration; 
         private Float cpu; 
@@ -209,6 +221,7 @@ public class UpdateTemplateInput extends TeaModel {
         } 
 
         private Builder(UpdateTemplateInput model) {
+            this.allowAnonymousManage = model.allowAnonymousManage;
             this.armsConfiguration = model.armsConfiguration;
             this.containerConfiguration = model.containerConfiguration;
             this.cpu = model.cpu;
@@ -224,6 +237,14 @@ public class UpdateTemplateInput extends TeaModel {
             this.sandboxTTLInSeconds = model.sandboxTTLInSeconds;
             this.templateConfiguration = model.templateConfiguration;
         } 
+
+        /**
+         * allowAnonymousManage.
+         */
+        public Builder allowAnonymousManage(Boolean allowAnonymousManage) {
+            this.allowAnonymousManage = allowAnonymousManage;
+            return this;
+        }
 
         /**
          * armsConfiguration.

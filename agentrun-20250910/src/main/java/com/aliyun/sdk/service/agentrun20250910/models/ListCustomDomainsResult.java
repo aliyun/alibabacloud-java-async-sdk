@@ -12,19 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateMemoryEventResponseBody} extends {@link TeaModel}
+ * {@link ListCustomDomainsResult} extends {@link TeaModel}
  *
- * <p>CreateMemoryEventResponseBody</p>
+ * <p>ListCustomDomainsResult</p>
  */
-public class CreateMemoryEventResponseBody extends TeaModel {
+public class ListCustomDomainsResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("data")
+    private ListCustomDomainsOutput data;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private CreateMemoryEventResponseBody(Builder builder) {
+    private ListCustomDomainsResult(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +36,7 @@ public class CreateMemoryEventResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateMemoryEventResponseBody create() {
+    public static ListCustomDomainsResult create() {
         return builder().build();
     }
 
@@ -48,6 +52,13 @@ public class CreateMemoryEventResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public ListCustomDomainsOutput getData() {
+        return this.data;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,13 +67,15 @@ public class CreateMemoryEventResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private ListCustomDomainsOutput data; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateMemoryEventResponseBody model) {
+        private Builder(ListCustomDomainsResult model) {
             this.code = model.code;
+            this.data = model.data;
             this.requestId = model.requestId;
         } 
 
@@ -75,18 +88,23 @@ public class CreateMemoryEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A8B33FA2-43F2-5E56-9032-51283F08018E</p>
+         * data.
+         */
+        public Builder data(ListCustomDomainsOutput data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateMemoryEventResponseBody build() {
-            return new CreateMemoryEventResponseBody(this);
+        public ListCustomDomainsResult build() {
+            return new ListCustomDomainsResult(this);
         } 
 
     } 

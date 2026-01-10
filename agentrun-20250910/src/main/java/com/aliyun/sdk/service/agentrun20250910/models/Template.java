@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Template</p>
  */
 public class Template extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowAnonymousManage")
+    private Boolean allowAnonymousManage;
+
     @com.aliyun.core.annotation.NameInMap("containerConfiguration")
     private ContainerConfiguration containerConfiguration;
 
@@ -101,6 +104,7 @@ public class Template extends TeaModel {
     private String templateVersion;
 
     private Template(Builder builder) {
+        this.allowAnonymousManage = builder.allowAnonymousManage;
         this.containerConfiguration = builder.containerConfiguration;
         this.cpu = builder.cpu;
         this.createdAt = builder.createdAt;
@@ -139,6 +143,13 @@ public class Template extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowAnonymousManage
+     */
+    public Boolean getAllowAnonymousManage() {
+        return this.allowAnonymousManage;
     }
 
     /**
@@ -324,6 +335,7 @@ public class Template extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean allowAnonymousManage; 
         private ContainerConfiguration containerConfiguration; 
         private Float cpu; 
         private String createdAt; 
@@ -355,6 +367,7 @@ public class Template extends TeaModel {
         } 
 
         private Builder(Template model) {
+            this.allowAnonymousManage = model.allowAnonymousManage;
             this.containerConfiguration = model.containerConfiguration;
             this.cpu = model.cpu;
             this.createdAt = model.createdAt;
@@ -382,6 +395,14 @@ public class Template extends TeaModel {
             this.templateType = model.templateType;
             this.templateVersion = model.templateVersion;
         } 
+
+        /**
+         * allowAnonymousManage.
+         */
+        public Builder allowAnonymousManage(Boolean allowAnonymousManage) {
+            this.allowAnonymousManage = allowAnonymousManage;
+            return this;
+        }
 
         /**
          * containerConfiguration.

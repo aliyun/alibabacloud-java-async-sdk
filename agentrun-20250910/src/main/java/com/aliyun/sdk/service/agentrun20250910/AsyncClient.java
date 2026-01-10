@@ -68,18 +68,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
 
     /**
-     * @param request the request parameters of CreateMemory  CreateMemoryRequest
-     * @return CreateMemoryResponse
-     */
-    CompletableFuture<CreateMemoryResponse> createMemory(CreateMemoryRequest request);
-
-    /**
-     * @param request the request parameters of CreateMemoryEvent  CreateMemoryEventRequest
-     * @return CreateMemoryEventResponse
-     */
-    CompletableFuture<CreateMemoryEventResponse> createMemoryEvent(CreateMemoryEventRequest request);
-
-    /**
      * @param request the request parameters of CreateModelProxy  CreateModelProxyRequest
      * @return CreateModelProxyResponse
      */
@@ -147,12 +135,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCredentialResponse
      */
     CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
-
-    /**
-     * @param request the request parameters of DeleteMemory  DeleteMemoryRequest
-     * @return DeleteMemoryResponse
-     */
-    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
 
     /**
      * @param request the request parameters of DeleteModelProxy  DeleteModelProxyRequest
@@ -225,27 +207,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCredentialResponse
      */
     CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
-
-    /**
-     * @param request the request parameters of GetMemory  GetMemoryRequest
-     * @return GetMemoryResponse
-     */
-    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
-
-    /**
-     * @param request the request parameters of GetMemoryEvent  GetMemoryEventRequest
-     * @return GetMemoryEventResponse
-     */
-    CompletableFuture<GetMemoryEventResponse> getMemoryEvent(GetMemoryEventRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>根据会话ID获取指定内存会话的详细信息，包括会话中的事件记录、时间戳等。用于查看和管理对话历史。</p>
-     * 
-     * @param request the request parameters of GetMemorySession  GetMemorySessionRequest
-     * @return GetMemorySessionResponse
-     */
-    CompletableFuture<GetMemorySessionResponse> getMemorySession(GetMemorySessionRequest request);
 
     /**
      * @param request the request parameters of GetModelProxy  GetModelProxyRequest
@@ -326,27 +287,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCredentialsResponse> listCredentials(ListCredentialsRequest request);
 
     /**
-     * @param request the request parameters of ListMemory  ListMemoryRequest
-     * @return ListMemoryResponse
-     */
-    CompletableFuture<ListMemoryResponse> listMemory(ListMemoryRequest request);
-
-    /**
-     * @param request the request parameters of ListMemoryEvent  ListMemoryEventRequest
-     * @return ListMemoryEventResponse
-     */
-    CompletableFuture<ListMemoryEventResponse> listMemoryEvent(ListMemoryEventRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>获取指定内存实例的所有会话列表，支持按时间范围过滤和分页查询。会话是AgentRun中用于存储对话历史和管理上下文的重要组件。</p>
-     * 
-     * @param request the request parameters of ListMemorySessions  ListMemorySessionsRequest
-     * @return ListMemorySessionsResponse
-     */
-    CompletableFuture<ListMemorySessionsResponse> listMemorySessions(ListMemorySessionsRequest request);
-
-    /**
      * @param request the request parameters of ListModelProviders  ListModelProvidersRequest
      * @return ListModelProvidersResponse
      */
@@ -392,12 +332,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishRuntimeVersionResponse> publishRuntimeVersion(PublishRuntimeVersionRequest request);
 
     /**
-     * @param request the request parameters of RetrieveMemory  RetrieveMemoryRequest
-     * @return RetrieveMemoryResponse
-     */
-    CompletableFuture<RetrieveMemoryResponse> retrieveMemory(RetrieveMemoryRequest request);
-
-    /**
      * <b>description</b> :
      * <p>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</p>
      * 
@@ -432,12 +366,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCredentialResponse
      */
     CompletableFuture<UpdateCredentialResponse> updateCredential(UpdateCredentialRequest request);
-
-    /**
-     * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
-     * @return UpdateMemoryResponse
-     */
-    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
 
     /**
      * @param request the request parameters of UpdateModelProxy  UpdateModelProxyRequest

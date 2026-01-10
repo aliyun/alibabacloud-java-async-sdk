@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTemplateInput</p>
  */
 public class CreateTemplateInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowAnonymousManage")
+    private Boolean allowAnonymousManage;
+
     @com.aliyun.core.annotation.NameInMap("armsConfiguration")
     private ArmsConfiguration armsConfiguration;
 
@@ -77,6 +80,7 @@ public class CreateTemplateInput extends TeaModel {
     private String templateType;
 
     private CreateTemplateInput(Builder builder) {
+        this.allowAnonymousManage = builder.allowAnonymousManage;
         this.armsConfiguration = builder.armsConfiguration;
         this.containerConfiguration = builder.containerConfiguration;
         this.cpu = builder.cpu;
@@ -106,6 +110,13 @@ public class CreateTemplateInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowAnonymousManage
+     */
+    public Boolean getAllowAnonymousManage() {
+        return this.allowAnonymousManage;
     }
 
     /**
@@ -228,6 +239,7 @@ public class CreateTemplateInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean allowAnonymousManage; 
         private ArmsConfiguration armsConfiguration; 
         private ContainerConfiguration containerConfiguration; 
         private Float cpu; 
@@ -250,6 +262,7 @@ public class CreateTemplateInput extends TeaModel {
         } 
 
         private Builder(CreateTemplateInput model) {
+            this.allowAnonymousManage = model.allowAnonymousManage;
             this.armsConfiguration = model.armsConfiguration;
             this.containerConfiguration = model.containerConfiguration;
             this.cpu = model.cpu;
@@ -268,6 +281,14 @@ public class CreateTemplateInput extends TeaModel {
             this.templateName = model.templateName;
             this.templateType = model.templateType;
         } 
+
+        /**
+         * allowAnonymousManage.
+         */
+        public Builder allowAnonymousManage(Boolean allowAnonymousManage) {
+            this.allowAnonymousManage = allowAnonymousManage;
+            return this;
+        }
 
         /**
          * armsConfiguration.

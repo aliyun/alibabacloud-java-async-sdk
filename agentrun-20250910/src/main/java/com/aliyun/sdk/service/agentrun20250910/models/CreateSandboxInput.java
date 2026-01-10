@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSandboxInput</p>
  */
 public class CreateSandboxInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
+
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
+
     @com.aliyun.core.annotation.NameInMap("sandboxId")
     private String sandboxId;
 
@@ -29,6 +35,8 @@ public class CreateSandboxInput extends TeaModel {
     private String templateName;
 
     private CreateSandboxInput(Builder builder) {
+        this.nasConfig = builder.nasConfig;
+        this.ossMountConfig = builder.ossMountConfig;
         this.sandboxId = builder.sandboxId;
         this.sandboxIdleTimeoutSeconds = builder.sandboxIdleTimeoutSeconds;
         this.templateName = builder.templateName;
@@ -44,6 +52,20 @@ public class CreateSandboxInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     /**
@@ -68,6 +90,8 @@ public class CreateSandboxInput extends TeaModel {
     }
 
     public static final class Builder {
+        private NASConfig nasConfig; 
+        private OSSMountConfig ossMountConfig; 
         private String sandboxId; 
         private Integer sandboxIdleTimeoutSeconds; 
         private String templateName; 
@@ -76,10 +100,28 @@ public class CreateSandboxInput extends TeaModel {
         } 
 
         private Builder(CreateSandboxInput model) {
+            this.nasConfig = model.nasConfig;
+            this.ossMountConfig = model.ossMountConfig;
             this.sandboxId = model.sandboxId;
             this.sandboxIdleTimeoutSeconds = model.sandboxIdleTimeoutSeconds;
             this.templateName = model.templateName;
         } 
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * ossMountConfig.
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
+            return this;
+        }
 
         /**
          * sandboxId.
