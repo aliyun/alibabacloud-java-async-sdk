@@ -178,6 +178,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMemoryCollection  CreateMemoryCollectionRequest
+     * @return CreateMemoryCollectionResponse
+     */
+    @Override
+    public CompletableFuture<CreateMemoryCollectionResponse> createMemoryCollection(CreateMemoryCollectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMemoryCollection").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/agents/memory-collections").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMemoryCollectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMemoryCollectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateModelProxy  CreateModelProxyRequest
      * @return CreateModelProxyResponse
      */
@@ -367,6 +385,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMemoryCollection  DeleteMemoryCollectionRequest
+     * @return DeleteMemoryCollectionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMemoryCollectionResponse> deleteMemoryCollection(DeleteMemoryCollectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMemoryCollection").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/agents/memory-collections/{memoryCollectionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMemoryCollectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMemoryCollectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -583,6 +619,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetMemoryCollection  GetMemoryCollectionRequest
+     * @return GetMemoryCollectionResponse
+     */
+    @Override
+    public CompletableFuture<GetMemoryCollectionResponse> getMemoryCollection(GetMemoryCollectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMemoryCollection").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/memory-collections/{memoryCollectionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMemoryCollectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMemoryCollectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetModelProxy  GetModelProxyRequest
      * @return GetModelProxyResponse
      */
@@ -793,6 +847,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListKnowledgeBasesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMemoryCollections  ListMemoryCollectionsRequest
+     * @return ListMemoryCollectionsResponse
+     */
+    @Override
+    public CompletableFuture<ListMemoryCollectionsResponse> listMemoryCollections(ListMemoryCollectionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMemoryCollections").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/memory-collections").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMemoryCollectionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMemoryCollectionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1024,6 +1096,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMemoryCollection  UpdateMemoryCollectionRequest
+     * @return UpdateMemoryCollectionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMemoryCollectionResponse> updateMemoryCollection(UpdateMemoryCollectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMemoryCollection").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/agents/memory-collections/{memoryCollectionName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMemoryCollectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMemoryCollectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

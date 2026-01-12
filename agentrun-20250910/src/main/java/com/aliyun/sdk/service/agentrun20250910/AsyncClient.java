@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
 
     /**
+     * @param request the request parameters of CreateMemoryCollection  CreateMemoryCollectionRequest
+     * @return CreateMemoryCollectionResponse
+     */
+    CompletableFuture<CreateMemoryCollectionResponse> createMemoryCollection(CreateMemoryCollectionRequest request);
+
+    /**
      * @param request the request parameters of CreateModelProxy  CreateModelProxyRequest
      * @return CreateModelProxyResponse
      */
@@ -147,6 +153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteKnowledgeBaseResponse
      */
     CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMemoryCollection  DeleteMemoryCollectionRequest
+     * @return DeleteMemoryCollectionResponse
+     */
+    CompletableFuture<DeleteMemoryCollectionResponse> deleteMemoryCollection(DeleteMemoryCollectionRequest request);
 
     /**
      * @param request the request parameters of DeleteModelProxy  DeleteModelProxyRequest
@@ -225,6 +237,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetKnowledgeBaseResponse
      */
     CompletableFuture<GetKnowledgeBaseResponse> getKnowledgeBase(GetKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of GetMemoryCollection  GetMemoryCollectionRequest
+     * @return GetMemoryCollectionResponse
+     */
+    CompletableFuture<GetMemoryCollectionResponse> getMemoryCollection(GetMemoryCollectionRequest request);
 
     /**
      * @param request the request parameters of GetModelProxy  GetModelProxyRequest
@@ -309,6 +327,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListKnowledgeBasesResponse
      */
     CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
+
+    /**
+     * @param request the request parameters of ListMemoryCollections  ListMemoryCollectionsRequest
+     * @return ListMemoryCollectionsResponse
+     */
+    CompletableFuture<ListMemoryCollectionsResponse> listMemoryCollections(ListMemoryCollectionsRequest request);
 
     /**
      * @param request the request parameters of ListModelProviders  ListModelProvidersRequest
@@ -396,6 +420,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKnowledgeBaseResponse
      */
     CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMemoryCollection  UpdateMemoryCollectionRequest
+     * @return UpdateMemoryCollectionResponse
+     */
+    CompletableFuture<UpdateMemoryCollectionResponse> updateMemoryCollection(UpdateMemoryCollectionRequest request);
 
     /**
      * @param request the request parameters of UpdateModelProxy  UpdateModelProxyRequest
