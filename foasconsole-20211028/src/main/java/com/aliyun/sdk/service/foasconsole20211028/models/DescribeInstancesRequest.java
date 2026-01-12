@@ -26,6 +26,10 @@ public class DescribeInstancesRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Elastic")
+    private Boolean elastic;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -62,6 +66,7 @@ public class DescribeInstancesRequest extends Request {
         super(builder);
         this.architectureType = builder.architectureType;
         this.chargeType = builder.chargeType;
+        this.elastic = builder.elastic;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.namespaceName = builder.namespaceName;
@@ -97,6 +102,13 @@ public class DescribeInstancesRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return elastic
+     */
+    public Boolean getElastic() {
+        return this.elastic;
     }
 
     /**
@@ -158,6 +170,7 @@ public class DescribeInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private String architectureType; 
         private String chargeType; 
+        private Boolean elastic; 
         private String instanceId; 
         private String instanceName; 
         private String namespaceName; 
@@ -175,6 +188,7 @@ public class DescribeInstancesRequest extends Request {
             super(request);
             this.architectureType = request.architectureType;
             this.chargeType = request.chargeType;
+            this.elastic = request.elastic;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.namespaceName = request.namespaceName;
@@ -200,6 +214,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * Elastic.
+         */
+        public Builder elastic(Boolean elastic) {
+            this.putQueryParameter("Elastic", elastic);
+            this.elastic = elastic;
             return this;
         }
 

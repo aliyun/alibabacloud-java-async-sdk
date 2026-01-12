@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyElasticResourceSpecResponse> modifyElasticResourceSpec(ModifyElasticResourceSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceSpec  ModifyInstanceSpecRequest
+     * @return ModifyInstanceSpecResponse
+     */
+    CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request);
+
+    /**
      * @deprecated OpenAPI ModifyInstanceVswitch is deprecated  * @param request  the request parameters of ModifyInstanceVswitch  ModifyInstanceVswitchRequest
      * @return ModifyInstanceVswitchResponse
      */
