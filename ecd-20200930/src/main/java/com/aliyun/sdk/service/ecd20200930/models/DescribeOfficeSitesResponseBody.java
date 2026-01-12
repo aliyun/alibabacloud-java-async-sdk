@@ -635,6 +635,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainUserName")
         private String domainUserName;
 
+        @com.aliyun.core.annotation.NameInMap("Eid")
+        private String eid;
+
         @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
         private Boolean enableAdminAccess;
 
@@ -646,6 +649,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EnableServiceRoute")
         private Boolean enableServiceRoute;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
 
         @com.aliyun.core.annotation.NameInMap("FileSystemIds")
         private java.util.List<String> fileSystemIds;
@@ -773,10 +779,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.domainPassword = builder.domainPassword;
             this.domainUserName = builder.domainUserName;
+            this.eid = builder.eid;
             this.enableAdminAccess = builder.enableAdminAccess;
             this.enableCrossDesktopAccess = builder.enableCrossDesktopAccess;
             this.enableInternetAccess = builder.enableInternetAccess;
             this.enableServiceRoute = builder.enableServiceRoute;
+            this.envType = builder.envType;
             this.fileSystemIds = builder.fileSystemIds;
             this.isLdap = builder.isLdap;
             this.ldapUrl = builder.ldapUrl;
@@ -1003,6 +1011,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return eid
+         */
+        public String getEid() {
+            return this.eid;
+        }
+
+        /**
          * @return enableAdminAccess
          */
         public Boolean getEnableAdminAccess() {
@@ -1028,6 +1043,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public Boolean getEnableServiceRoute() {
             return this.enableServiceRoute;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -1288,10 +1310,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String domainName; 
             private String domainPassword; 
             private String domainUserName; 
+            private String eid; 
             private Boolean enableAdminAccess; 
             private Boolean enableCrossDesktopAccess; 
             private Boolean enableInternetAccess; 
             private Boolean enableServiceRoute; 
+            private String envType; 
             private java.util.List<String> fileSystemIds; 
             private Boolean isLdap; 
             private String ldapUrl; 
@@ -1356,10 +1380,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.domainName = model.domainName;
                 this.domainPassword = model.domainPassword;
                 this.domainUserName = model.domainUserName;
+                this.eid = model.eid;
                 this.enableAdminAccess = model.enableAdminAccess;
                 this.enableCrossDesktopAccess = model.enableCrossDesktopAccess;
                 this.enableInternetAccess = model.enableInternetAccess;
                 this.enableServiceRoute = model.enableServiceRoute;
+                this.envType = model.envType;
                 this.fileSystemIds = model.fileSystemIds;
                 this.isLdap = model.isLdap;
                 this.ldapUrl = model.ldapUrl;
@@ -1675,6 +1701,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             }
 
             /**
+             * Eid.
+             */
+            public Builder eid(String eid) {
+                this.eid = eid;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -1720,6 +1754,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder enableServiceRoute(Boolean enableServiceRoute) {
                 this.enableServiceRoute = enableServiceRoute;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 

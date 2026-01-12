@@ -67,7 +67,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         } 
 
         /**
-         * Entitlements.
+         * <p>The results.</p>
          */
         public Builder entitlements(Entitlements entitlements) {
             this.entitlements = entitlements;
@@ -267,7 +267,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
             } 
 
             /**
-             * AssignModels.
+             * <p>The assignment results.</p>
              */
             public Builder assignModels(java.util.List<AssignModels> assignModels) {
                 this.assignModels = assignModels;

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSubnetsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Eid")
+    private String eid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -44,6 +48,7 @@ public class DescribeSubnetsRequest extends Request {
 
     private DescribeSubnetsRequest(Builder builder) {
         super(builder);
+        this.eid = builder.eid;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
@@ -63,6 +68,13 @@ public class DescribeSubnetsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return eid
+     */
+    public String getEid() {
+        return this.eid;
     }
 
     /**
@@ -108,6 +120,7 @@ public class DescribeSubnetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSubnetsRequest, Builder> {
+        private String eid; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -121,6 +134,7 @@ public class DescribeSubnetsRequest extends Request {
 
         private Builder(DescribeSubnetsRequest request) {
             super(request);
+            this.eid = request.eid;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
@@ -128,6 +142,15 @@ public class DescribeSubnetsRequest extends Request {
             this.regionId = request.regionId;
             this.subnetId = request.subnetId;
         } 
+
+        /**
+         * Eid.
+         */
+        public Builder eid(String eid) {
+            this.putQueryParameter("Eid", eid);
+            this.eid = eid;
+            return this;
+        }
 
         /**
          * MaxResults.

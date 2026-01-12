@@ -62,6 +62,10 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Eid")
+    private String eid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
     private Boolean enableAdminAccess;
 
@@ -111,6 +115,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
         this.desktopAccessType = builder.desktopAccessType;
         this.domainName = builder.domainName;
+        this.eid = builder.eid;
         this.enableAdminAccess = builder.enableAdminAccess;
         this.enableInternetAccess = builder.enableInternetAccess;
         this.needVerifyZeroDevice = builder.needVerifyZeroDevice;
@@ -213,6 +218,13 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     }
 
     /**
+     * @return eid
+     */
+    public String getEid() {
+        return this.eid;
+    }
+
+    /**
      * @return enableAdminAccess
      */
     public Boolean getEnableAdminAccess() {
@@ -287,6 +299,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         private Boolean cloudBoxOfficeSite; 
         private String desktopAccessType; 
         private String domainName; 
+        private String eid; 
         private Boolean enableAdminAccess; 
         private Boolean enableInternetAccess; 
         private Boolean needVerifyZeroDevice; 
@@ -314,6 +327,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
             this.cloudBoxOfficeSite = request.cloudBoxOfficeSite;
             this.desktopAccessType = request.desktopAccessType;
             this.domainName = request.domainName;
+            this.eid = request.eid;
             this.enableAdminAccess = request.enableAdminAccess;
             this.enableInternetAccess = request.enableInternetAccess;
             this.needVerifyZeroDevice = request.needVerifyZeroDevice;
@@ -470,6 +484,15 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * Eid.
+         */
+        public Builder eid(String eid) {
+            this.putQueryParameter("Eid", eid);
+            this.eid = eid;
             return this;
         }
 
