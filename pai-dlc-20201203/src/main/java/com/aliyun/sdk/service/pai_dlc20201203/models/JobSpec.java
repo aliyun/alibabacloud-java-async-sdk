@@ -60,6 +60,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SpotSpec")
     private SpotSpec spotSpec;
 
+    @com.aliyun.core.annotation.NameInMap("StartupDependencies")
+    private java.util.List<StartupDependency> startupDependencies;
+
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -85,6 +88,7 @@ public class JobSpec extends TeaModel {
         this.restartPolicy = builder.restartPolicy;
         this.serviceSpec = builder.serviceSpec;
         this.spotSpec = builder.spotSpec;
+        this.startupDependencies = builder.startupDependencies;
         this.systemDisk = builder.systemDisk;
         this.type = builder.type;
         this.useSpotInstance = builder.useSpotInstance;
@@ -201,6 +205,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return startupDependencies
+     */
+    public java.util.List<StartupDependency> getStartupDependencies() {
+        return this.startupDependencies;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -236,6 +247,7 @@ public class JobSpec extends TeaModel {
         private String restartPolicy; 
         private ServiceSpec serviceSpec; 
         private SpotSpec spotSpec; 
+        private java.util.List<StartupDependency> startupDependencies; 
         private SystemDisk systemDisk; 
         private String type; 
         private Boolean useSpotInstance; 
@@ -258,6 +270,7 @@ public class JobSpec extends TeaModel {
             this.restartPolicy = model.restartPolicy;
             this.serviceSpec = model.serviceSpec;
             this.spotSpec = model.spotSpec;
+            this.startupDependencies = model.startupDependencies;
             this.systemDisk = model.systemDisk;
             this.type = model.type;
             this.useSpotInstance = model.useSpotInstance;
@@ -372,6 +385,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder spotSpec(SpotSpec spotSpec) {
             this.spotSpec = spotSpec;
+            return this;
+        }
+
+        /**
+         * StartupDependencies.
+         */
+        public Builder startupDependencies(java.util.List<StartupDependency> startupDependencies) {
+            this.startupDependencies = startupDependencies;
             return this;
         }
 

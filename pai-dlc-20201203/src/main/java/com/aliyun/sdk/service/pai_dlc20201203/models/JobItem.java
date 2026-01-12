@@ -84,7 +84,7 @@ public class JobItem extends TeaModel {
     private Long jobMaxRunningTimeMinutes;
 
     @com.aliyun.core.annotation.NameInMap("JobReplicaStatuses")
-    private JobReplicaStatus jobReplicaStatuses;
+    private java.util.List<JobReplicaStatus> jobReplicaStatuses;
 
     @com.aliyun.core.annotation.NameInMap("JobSpecs")
     private java.util.List<JobSpec> jobSpecs;
@@ -417,7 +417,7 @@ public class JobItem extends TeaModel {
     /**
      * @return jobReplicaStatuses
      */
-    public JobReplicaStatus getJobReplicaStatuses() {
+    public java.util.List<JobReplicaStatus> getJobReplicaStatuses() {
         return this.jobReplicaStatuses;
     }
 
@@ -682,7 +682,7 @@ public class JobItem extends TeaModel {
         private Boolean isDeleted; 
         private String jobId; 
         private Long jobMaxRunningTimeMinutes; 
-        private JobReplicaStatus jobReplicaStatuses; 
+        private java.util.List<JobReplicaStatus> jobReplicaStatuses; 
         private java.util.List<JobSpec> jobSpecs; 
         private String jobType; 
         private String nodeCount; 
@@ -960,7 +960,7 @@ public class JobItem extends TeaModel {
         /**
          * JobReplicaStatuses.
          */
-        public Builder jobReplicaStatuses(JobReplicaStatus jobReplicaStatuses) {
+        public Builder jobReplicaStatuses(java.util.List<JobReplicaStatus> jobReplicaStatuses) {
             this.jobReplicaStatuses = jobReplicaStatuses;
             return this;
         }

@@ -17,18 +17,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignNodeSpec</p>
  */
 public class AssignNodeSpec extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AntiAffinityHyperNodes")
+    private java.util.List<HyperNodeSpec> antiAffinityHyperNodes;
+
     @com.aliyun.core.annotation.NameInMap("AntiAffinityNodeNames")
     private String antiAffinityNodeNames;
 
     @com.aliyun.core.annotation.NameInMap("EnableAssignNode")
     private Boolean enableAssignNode;
 
+    @com.aliyun.core.annotation.NameInMap("HyperNodes")
+    private java.util.List<HyperNodeSpec> hyperNodes;
+
     @com.aliyun.core.annotation.NameInMap("NodeNames")
     private String nodeNames;
 
     private AssignNodeSpec(Builder builder) {
+        this.antiAffinityHyperNodes = builder.antiAffinityHyperNodes;
         this.antiAffinityNodeNames = builder.antiAffinityNodeNames;
         this.enableAssignNode = builder.enableAssignNode;
+        this.hyperNodes = builder.hyperNodes;
         this.nodeNames = builder.nodeNames;
     }
 
@@ -42,6 +50,13 @@ public class AssignNodeSpec extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return antiAffinityHyperNodes
+     */
+    public java.util.List<HyperNodeSpec> getAntiAffinityHyperNodes() {
+        return this.antiAffinityHyperNodes;
     }
 
     /**
@@ -59,6 +74,13 @@ public class AssignNodeSpec extends TeaModel {
     }
 
     /**
+     * @return hyperNodes
+     */
+    public java.util.List<HyperNodeSpec> getHyperNodes() {
+        return this.hyperNodes;
+    }
+
+    /**
      * @return nodeNames
      */
     public String getNodeNames() {
@@ -66,18 +88,30 @@ public class AssignNodeSpec extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<HyperNodeSpec> antiAffinityHyperNodes; 
         private String antiAffinityNodeNames; 
         private Boolean enableAssignNode; 
+        private java.util.List<HyperNodeSpec> hyperNodes; 
         private String nodeNames; 
 
         private Builder() {
         } 
 
         private Builder(AssignNodeSpec model) {
+            this.antiAffinityHyperNodes = model.antiAffinityHyperNodes;
             this.antiAffinityNodeNames = model.antiAffinityNodeNames;
             this.enableAssignNode = model.enableAssignNode;
+            this.hyperNodes = model.hyperNodes;
             this.nodeNames = model.nodeNames;
         } 
+
+        /**
+         * AntiAffinityHyperNodes.
+         */
+        public Builder antiAffinityHyperNodes(java.util.List<HyperNodeSpec> antiAffinityHyperNodes) {
+            this.antiAffinityHyperNodes = antiAffinityHyperNodes;
+            return this;
+        }
 
         /**
          * AntiAffinityNodeNames.
@@ -92,6 +126,14 @@ public class AssignNodeSpec extends TeaModel {
          */
         public Builder enableAssignNode(Boolean enableAssignNode) {
             this.enableAssignNode = enableAssignNode;
+            return this;
+        }
+
+        /**
+         * HyperNodes.
+         */
+        public Builder hyperNodes(java.util.List<HyperNodeSpec> hyperNodes) {
+            this.hyperNodes = hyperNodes;
             return this;
         }
 
