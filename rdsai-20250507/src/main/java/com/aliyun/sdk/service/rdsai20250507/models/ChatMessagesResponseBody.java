@@ -158,7 +158,7 @@ public class ChatMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Answer.
+         * <p>The answer.</p>
          */
         public Builder answer(String answer) {
             this.answer = answer;
@@ -166,7 +166,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>The ID of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -174,7 +177,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedAt.
+         * <p>The creation time of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1763986004</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -182,7 +188,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Event.
+         * <p>The event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MysqlIOException</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -190,7 +199,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60b335ca-124d-4ee1-864b-de554987****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -198,7 +210,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oas8pwy2-slxw-sf98-bx83-cb2hkktl****</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -206,7 +221,7 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Mode.
+         * <p>The query mode.</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -214,7 +229,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +240,10 @@ public class ChatMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01c3d43d-9466-4bd5-8196-4cbbce08****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

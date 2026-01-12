@@ -129,7 +129,15 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>Cover</strong> (default): Uses the IP addresses and CIDR blocks that are specified in the <strong>IpWhitelist</strong> parameter to <strong>overwrite</strong> the existing ones in the current whitelist.</li>
+         * <li><strong>Append</strong>: <strong>Appends</strong> the IP addresses and CIDR blocks that are specified in the <strong>IpWhitelist</strong> parameter to the current whitelist.</li>
+         * <li><strong>Delete</strong>: <strong>Deletes</strong> the IP addresses and CIDR blocks that are specified in the <strong>IpWhitelist</strong> parameter from the current whitelist. You must retain at least one IP address or CIDR block.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,7 +146,10 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * <p>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -147,7 +158,10 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -156,7 +170,10 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * IpWhitelist.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.23.XXX.XXX</p>
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("IpWhitelist", ipWhitelist);
@@ -165,7 +182,16 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * <p>The IP address whitelist. Before you modify the IP address whitelist, call the DescribeInstanceIpWhitelist operation to query the existing IP address whitelist of the instance.</p>
+         * <p><strong>Configuration rules</strong></p>
+         * <ul>
+         * <li>You can configure IP addresses (such as 10.23.XXX.XXX) or CIDR blocks (such as 10.23.XXX.XXX/24).</li>
+         * <li>Separate multiple IP addresses or CIDR blocks with commas (,) and do not add spaces preceding or following the commas.</li>
+         * <li>You can configure up to 1,000 IP addresses and CIDR blocks in total for each instance. If you want to add a large number of IP addresses, we recommend that you merge the IP addresses into CIDR blocks, such as 10.23.XXX.XXX/24.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -174,7 +200,10 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceIpWhitelist</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

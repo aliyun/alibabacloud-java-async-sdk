@@ -87,7 +87,10 @@ public class DeleteAppInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -96,7 +99,10 @@ public class DeleteAppInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -105,7 +111,10 @@ public class DeleteAppInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>DeleteAppInstance</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

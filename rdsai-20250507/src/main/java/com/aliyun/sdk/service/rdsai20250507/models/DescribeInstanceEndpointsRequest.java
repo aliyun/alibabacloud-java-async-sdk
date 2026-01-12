@@ -73,7 +73,10 @@ public class DescribeInstanceEndpointsRequest extends Request {
         } 
 
         /**
-         * InstanceName.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -82,7 +85,10 @@ public class DescribeInstanceEndpointsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceEndpoints</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

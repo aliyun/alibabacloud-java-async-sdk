@@ -87,6 +87,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
      */
@@ -123,6 +132,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+     *  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteAppInstance  DeleteAppInstanceRequest
      * @return DeleteAppInstanceResponse
      */
@@ -159,6 +178,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeAppInstanceAttribute  DescribeAppInstanceAttributeRequest
      * @return DescribeAppInstanceAttributeResponse
      */
@@ -177,6 +202,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeAppInstances  DescribeAppInstancesRequest
      * @return DescribeAppInstancesResponse
      */
@@ -213,6 +244,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceAuthInfo  DescribeInstanceAuthInfoRequest
      * @return DescribeInstanceAuthInfoResponse
      */
@@ -231,6 +268,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceEndpoints  DescribeInstanceEndpointsRequest
      * @return DescribeInstanceEndpointsResponse
      */
@@ -249,6 +292,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceIpWhitelist  DescribeInstanceIpWhitelistRequest
      * @return DescribeInstanceIpWhitelistResponse
      */
@@ -285,6 +334,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
      */
@@ -303,6 +358,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeInstanceStorageConfig  DescribeInstanceStorageConfigRequest
      * @return DescribeInstanceStorageConfigResponse
      */
@@ -411,6 +475,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
      * @return ModifyInstanceAuthConfigResponse
      */
@@ -447,6 +517,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceIpWhitelist  ModifyInstanceIpWhitelistRequest
      * @return ModifyInstanceIpWhitelistResponse
      */
@@ -483,6 +559,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
      * @return ModifyInstanceSSLResponse
      */
@@ -501,6 +583,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
      * @return ModifyInstanceStorageConfigResponse
      */
@@ -537,6 +628,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> You can only change the password of a RDS Supabase Dashboard user.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
      * @return ResetInstancePasswordResponse
      */
@@ -555,6 +655,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of RestartInstance  RestartInstanceRequest
      * @return RestartInstanceResponse
      */
@@ -573,6 +679,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
      */
@@ -591,6 +703,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
      * @return StopInstanceResponse
      */

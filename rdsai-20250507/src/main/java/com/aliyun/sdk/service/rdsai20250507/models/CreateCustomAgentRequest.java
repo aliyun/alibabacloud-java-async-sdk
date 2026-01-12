@@ -102,7 +102,10 @@ public class CreateCustomAgentRequest extends Request {
         } 
 
         /**
-         * EnableTools.
+         * <p>The system prompts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTools(Boolean enableTools) {
             this.putQueryParameter("EnableTools", enableTools);
@@ -111,7 +114,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The operation that you want to perform. Set the value to <strong>CreateCustomAgent</strong>.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -120,6 +123,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
+         * <p>The name of the dedicated agent.</p>
          * <p>This parameter is required.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
@@ -129,7 +133,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         /**
-         * Tools.
+         * <p>Specifies whether to enable tools.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             String toolsShrink = shrink(tools, "Tools", "json");

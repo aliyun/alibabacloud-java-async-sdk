@@ -119,7 +119,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * EnableTools.
+         * <p>Indicates whether tools are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTools(String enableTools) {
             this.enableTools = enableTools;
@@ -127,7 +130,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>AgentId。</p>
+         * <p>The ID of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
@@ -138,7 +141,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the agent.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -146,7 +149,10 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +160,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * SystemPrompt.
+         * <p>The system prompts.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -162,7 +168,7 @@ public class UpdateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Tools.
+         * <p>The information about the tool.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             this.tools = tools;

@@ -73,7 +73,10 @@ public class ListCustomAgentRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The operation that you want to perform. Set the value to <strong>ListCustomAgent</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -82,7 +85,10 @@ public class ListCustomAgentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

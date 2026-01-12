@@ -93,7 +93,7 @@ public class GetConversationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * HasMore.
+         * <p>Indicates whether the current page is followed by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasMore(String hasMore) {
             this.hasMore = hasMore;
@@ -109,7 +112,10 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * Limit.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Long limit) {
             this.limit = limit;
@@ -117,7 +123,10 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,10 @@ public class GetConversationsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764055092</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -217,7 +229,10 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the history conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60b335ca-124d-4ee1-864b-de554987****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -225,7 +240,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * Introduction.
+             * <p>The introduction to the conversation.</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -233,7 +248,7 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the history conversation.</p>
              */
             public Builder name(String name) {
                 this.name = name;

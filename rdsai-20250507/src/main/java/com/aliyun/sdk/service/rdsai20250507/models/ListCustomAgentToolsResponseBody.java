@@ -67,7 +67,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * En.
+             * <p>The description in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries RDS instances.</p>
              */
             public Builder en(String en) {
                 this.en = en;
@@ -201,7 +207,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Ja.
+             * <p>The description in Japanese.</p>
              */
             public Builder ja(String ja) {
                 this.ja = ja;
@@ -209,7 +215,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describe_db_instances</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +226,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Tc.
+             * <p>The description in Traditional Chinese.</p>
              */
             public Builder tc(String tc) {
                 this.tc = tc;
@@ -225,7 +234,10 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The read/write type of the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -233,7 +245,7 @@ public class ListCustomAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Zh.
+             * <p>The description in Simplified Chinese.</p>
              */
             public Builder zh(String zh) {
                 this.zh = zh;

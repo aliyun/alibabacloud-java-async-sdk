@@ -67,7 +67,10 @@ public class ChatMessagesTaskStopResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ChatMessagesTaskStopResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder result(String result) {
             this.result = result;

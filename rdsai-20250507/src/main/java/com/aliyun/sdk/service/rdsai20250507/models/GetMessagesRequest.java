@@ -87,7 +87,10 @@ public class GetMessagesRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The operation that you want to perform. Set the value to <strong>GetMessages</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>941c6f59-acf5-4e11-9adc-31e52e1f****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -96,7 +99,10 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * FirstId.
+         * <p>The ID of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>038866af-a050-4bc5-bfad-b7bfc838****</p>
          */
         public Builder firstId(String firstId) {
             this.putQueryParameter("FirstId", firstId);
@@ -105,7 +111,10 @@ public class GetMessagesRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The ID of the first message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);

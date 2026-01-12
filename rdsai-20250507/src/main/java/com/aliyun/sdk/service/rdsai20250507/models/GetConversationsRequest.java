@@ -101,7 +101,10 @@ public class GetConversationsRequest extends Request {
         } 
 
         /**
-         * LastId.
+         * <p>The operation that you want to perform. Set the value to <strong>GetConversations</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77be60cd-237b-4ca9-9c46-48b663cb****</p>
          */
         public Builder lastId(String lastId) {
             this.putQueryParameter("LastId", lastId);
@@ -110,7 +113,10 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The ID of the last conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -119,7 +125,10 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * Pinned.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pinned(String pinned) {
             this.putQueryParameter("Pinned", pinned);
@@ -128,7 +137,10 @@ public class GetConversationsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>Specifies whether to pin the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreatedAt</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

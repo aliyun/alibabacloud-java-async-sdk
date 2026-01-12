@@ -119,7 +119,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * CAType.
+         * <p>The type of the certificate. Set the value to <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder CAType(String CAType) {
             this.CAType = CAType;
@@ -127,7 +130,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -135,7 +141,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +152,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables SSL encryption.</li>
+         * <li><strong>0</strong>: disables SSL encryption.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -151,7 +167,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ServerCert.
+         * <p>The content of the custom certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
          */
         public Builder serverCert(String serverCert) {
             this.serverCert = serverCert;
@@ -159,7 +178,10 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * ServerKey.
+         * <p>The private key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
          */
         public Builder serverKey(String serverKey) {
             this.serverKey = serverKey;

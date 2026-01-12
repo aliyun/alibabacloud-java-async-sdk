@@ -131,7 +131,14 @@ public class ModifyInstanceSSLRequest extends Request {
         } 
 
         /**
-         * CAType.
+         * <p>Enables or disables SSL. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables SSL.</li>
+         * <li><strong>0</strong>: disables SSL.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder CAType(String CAType) {
             this.putQueryParameter("CAType", CAType);
@@ -140,6 +147,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +160,10 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceSSL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,6 +172,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
+         * <p>The ID of the RDS Supabase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +185,13 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * ServerCert.
+         * <p>The certificate type. Only <strong>custom</strong> is supported.</p>
+         * <blockquote>
+         * <p> This parameter is required if <strong>SSLEnabled</strong> is set to <strong>1</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>
          */
         public Builder serverCert(String serverCert) {
             this.putQueryParameter("ServerCert", serverCert);
@@ -182,7 +200,13 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * ServerKey.
+         * <p>The content of the custom certificate.</p>
+         * <blockquote>
+         * <p> This parameter is required if <strong>CAType</strong> is set to <strong>custom</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</p>
          */
         public Builder serverKey(String serverKey) {
             this.putQueryParameter("ServerKey", serverKey);

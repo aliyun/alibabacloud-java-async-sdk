@@ -116,7 +116,7 @@ public class UpdateCustomAgentRequest extends Request {
         } 
 
         /**
-         * <p>AgentId。</p>
+         * <p>The operation that you want to perform. Set the value to <strong>UpdateCustomAgent</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,10 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * EnableTools.
+         * <p>The system prompts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTools(Boolean enableTools) {
             this.putQueryParameter("EnableTools", enableTools);
@@ -138,7 +141,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The ID of the agent.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,7 +150,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * SystemPrompt.
+         * <p>The name of the agent.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);
@@ -156,7 +159,7 @@ public class UpdateCustomAgentRequest extends Request {
         }
 
         /**
-         * Tools.
+         * <p>Specifies whether to enable tools.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             String toolsShrink = shrink(tools, "Tools", "json");

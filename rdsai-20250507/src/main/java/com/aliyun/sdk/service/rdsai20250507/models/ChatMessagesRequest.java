@@ -102,7 +102,10 @@ public class ChatMessagesRequest extends Request {
         } 
 
         /**
-         * ConversationId.
+         * <p>The query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fea7bdca-e848-44dd-b1ae-852472b8****</p>
          */
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
@@ -111,7 +114,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * Inputs.
+         * <p>The ID of the parent message.</p>
          */
         public Builder inputs(Inputs inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
@@ -121,7 +124,10 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
-         * ParentMessageId.
+         * <p>The ID of the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
          */
         public Builder parentMessageId(String parentMessageId) {
             this.putQueryParameter("ParentMessageId", parentMessageId);
@@ -130,6 +136,7 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
+         * <p>The operation that you want to perform. Set the value to <strong>ChatMessages</strong>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder query(String query) {

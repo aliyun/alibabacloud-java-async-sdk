@@ -87,7 +87,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         } 
 
         /**
-         * ConfigList.
+         * <p>The ID of the RDS Supabase instance.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             String configListShrink = shrink(configList, "ConfigList", "json");
@@ -97,7 +97,10 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -106,7 +109,10 @@ public class ModifyInstanceAuthConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceAuthConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

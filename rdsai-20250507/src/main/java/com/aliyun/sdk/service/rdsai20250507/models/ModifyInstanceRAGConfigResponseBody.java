@@ -80,7 +80,10 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -88,7 +91,10 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,14 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the RAG agent.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(String status) {
             this.status = status;

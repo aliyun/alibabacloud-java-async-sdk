@@ -102,7 +102,10 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -111,7 +114,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * ConfigList.
+         * <p>The ID of the RDS Supabase instance.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             String configListShrink = shrink(configList, "ConfigList", "json");
@@ -121,6 +124,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +137,10 @@ public class ModifyInstanceStorageConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceStorageConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

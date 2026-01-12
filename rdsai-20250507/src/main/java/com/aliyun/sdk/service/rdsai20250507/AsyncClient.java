@@ -34,6 +34,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatMessagesTaskStopResponse> chatMessagesTaskStop(ChatMessagesTaskStopRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateAppInstance  CreateAppInstanceRequest
      * @return CreateAppInstanceResponse
      */
@@ -46,6 +55,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+     * <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+     *  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteAppInstance  DeleteAppInstanceRequest
      * @return DeleteAppInstanceResponse
      */
@@ -58,12 +77,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeAppInstanceAttribute  DescribeAppInstanceAttributeRequest
      * @return DescribeAppInstanceAttributeResponse
      */
     CompletableFuture<DescribeAppInstanceAttributeResponse> describeAppInstanceAttribute(DescribeAppInstanceAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeAppInstances  DescribeAppInstancesRequest
      * @return DescribeAppInstancesResponse
      */
@@ -76,18 +107,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEventsListResponse> describeEventsList(DescribeEventsListRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceAuthInfo  DescribeInstanceAuthInfoRequest
      * @return DescribeInstanceAuthInfoResponse
      */
     CompletableFuture<DescribeInstanceAuthInfoResponse> describeInstanceAuthInfo(DescribeInstanceAuthInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceEndpoints  DescribeInstanceEndpointsRequest
      * @return DescribeInstanceEndpointsResponse
      */
     CompletableFuture<DescribeInstanceEndpointsResponse> describeInstanceEndpoints(DescribeInstanceEndpointsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceIpWhitelist  DescribeInstanceIpWhitelistRequest
      * @return DescribeInstanceIpWhitelistResponse
      */
@@ -100,12 +149,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceRAGConfigResponse> describeInstanceRAGConfig(DescribeInstanceRAGConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of DescribeInstanceSSL  DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
      */
     CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeInstanceStorageConfig  DescribeInstanceStorageConfigRequest
      * @return DescribeInstanceStorageConfigResponse
      */
@@ -142,6 +206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomAgentToolsResponse> listCustomAgentTools(ListCustomAgentToolsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceAuthConfig  ModifyInstanceAuthConfigRequest
      * @return ModifyInstanceAuthConfigResponse
      */
@@ -154,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceConfigResponse> modifyInstanceConfig(ModifyInstanceConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceIpWhitelist  ModifyInstanceIpWhitelistRequest
      * @return ModifyInstanceIpWhitelistResponse
      */
@@ -166,12 +242,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceRAGConfigResponse> modifyInstanceRAGConfig(ModifyInstanceRAGConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstanceSSL  ModifyInstanceSSLRequest
      * @return ModifyInstanceSSLResponse
      */
     CompletableFuture<ModifyInstanceSSLResponse> modifyInstanceSSL(ModifyInstanceSSLRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyInstanceStorageConfig  ModifyInstanceStorageConfigRequest
      * @return ModifyInstanceStorageConfigResponse
      */
@@ -184,24 +275,51 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMessagesFeedbacksResponse> modifyMessagesFeedbacks(ModifyMessagesFeedbacksRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * <blockquote>
+     * <p> You can only change the password of a RDS Supabase Dashboard user.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ResetInstancePassword  ResetInstancePasswordRequest
      * @return ResetInstancePasswordResponse
      */
     CompletableFuture<ResetInstancePasswordResponse> resetInstancePassword(ResetInstancePasswordRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of RestartInstance  RestartInstanceRequest
      * @return RestartInstanceResponse
      */
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
      */
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
      * @return StopInstanceResponse
      */

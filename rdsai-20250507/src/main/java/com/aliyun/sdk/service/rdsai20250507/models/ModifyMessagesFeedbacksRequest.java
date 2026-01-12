@@ -87,7 +87,12 @@ public class ModifyMessagesFeedbacksRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>The rating of the message.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>like</li>
+         * <li>dislike</li>
+         * </ul>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -96,7 +101,10 @@ public class ModifyMessagesFeedbacksRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyMessagesFeedbacks</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yy9rkn6q-js75-0dka-0cc2-6b5o86uj****</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
@@ -105,7 +113,10 @@ public class ModifyMessagesFeedbacksRequest extends Request {
         }
 
         /**
-         * Rating.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>like</p>
          */
         public Builder rating(String rating) {
             this.putQueryParameter("Rating", rating);

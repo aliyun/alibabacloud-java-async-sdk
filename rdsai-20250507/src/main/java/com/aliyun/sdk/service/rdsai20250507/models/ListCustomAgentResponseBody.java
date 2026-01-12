@@ -106,7 +106,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27 16:01:28</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -277,7 +292,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * EnableTools.
+             * <p>Indicates whether tools are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTools(Boolean enableTools) {
                 this.enableTools = enableTools;
@@ -285,7 +303,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AgentId。</p>
+             * <p>The ID of the agent.</p>
              * 
              * <strong>example:</strong>
              * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -296,7 +314,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the dedicated agent.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -304,7 +322,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPrompt.
+             * <p>The system prompts.</p>
              */
             public Builder systemPrompt(String systemPrompt) {
                 this.systemPrompt = systemPrompt;
@@ -312,7 +330,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Tools.
+             * <p>The information about the tool.</p>
              */
             public Builder tools(java.util.List<String> tools) {
                 this.tools = tools;
@@ -320,7 +338,10 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The modification time of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-27 16:02:28</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

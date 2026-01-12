@@ -132,7 +132,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * CreatedAt.
+         * <p>The creation time of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-27 16:01:28</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -140,7 +143,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * EnableTools.
+         * <p>Indicates whether tools are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTools(Boolean enableTools) {
             this.enableTools = enableTools;
@@ -159,7 +165,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the agent.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -167,7 +173,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +184,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * SystemPrompt.
+         * <p>The system prompts.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.systemPrompt = systemPrompt;
@@ -183,7 +192,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Tools.
+         * <p>The information about the tool.</p>
          */
         public Builder tools(java.util.List<String> tools) {
             this.tools = tools;

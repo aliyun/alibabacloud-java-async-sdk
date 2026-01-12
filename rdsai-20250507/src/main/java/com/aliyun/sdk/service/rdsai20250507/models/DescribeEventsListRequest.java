@@ -130,7 +130,10 @@ public class DescribeEventsListRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The start time of the query period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-28 18:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -139,7 +142,10 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * InstanceIdList.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-uf6ce0r08lr7xnriq2</p>
          */
         public Builder instanceIdList(String instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -148,7 +154,10 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +166,10 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The end time of the query period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,6 +178,7 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeEventsList</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +191,10 @@ public class DescribeEventsListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The RDS Supabase instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01 18:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

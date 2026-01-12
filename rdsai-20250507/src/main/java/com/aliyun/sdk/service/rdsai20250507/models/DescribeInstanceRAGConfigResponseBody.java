@@ -93,7 +93,7 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigList.
+         * <p>The RAG agent configurations.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
@@ -101,7 +101,10 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -109,7 +112,10 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,14 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the RAG agent.</p>
+         * <ul>
+         * <li><strong>true</strong>: RAG agent is enabled.</li>
+         * <li><strong>false</strong>: RAG agent is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -183,7 +196,10 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM_MODEL</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +207,10 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-flash</p>
              */
             public Builder value(String value) {
                 this.value = value;

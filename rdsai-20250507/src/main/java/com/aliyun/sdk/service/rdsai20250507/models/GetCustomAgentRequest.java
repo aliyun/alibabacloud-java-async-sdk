@@ -59,7 +59,10 @@ public class GetCustomAgentRequest extends Request {
         } 
 
         /**
-         * CustomAgentId.
+         * <p>The operation that you want to perform. Set the value to <strong>GetCustomAgent</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebe44453-3b41-4c74-94d1-01d088d7xxxx</p>
          */
         public Builder customAgentId(String customAgentId) {
             this.putQueryParameter("CustomAgentId", customAgentId);

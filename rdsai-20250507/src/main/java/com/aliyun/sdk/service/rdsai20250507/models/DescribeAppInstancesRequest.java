@@ -115,7 +115,10 @@ public class DescribeAppInstancesRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated. If you specify this parameter, the RDS Supabase instances associated with the specified RDS for PostgreSQL instance are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -124,7 +127,10 @@ public class DescribeAppInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-2ze49qv594vi****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -133,7 +139,10 @@ public class DescribeAppInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of records per page. Valid values: <strong>1 to 50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -142,7 +151,10 @@ public class DescribeAppInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The application type. Only <strong>supabase</strong> is supported. For more information, see <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +163,10 @@ public class DescribeAppInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeAppInstances</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -93,7 +93,7 @@ public class GetMessagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * HasMore.
+         * <p>Indicates whether the current page is followed by a page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasMore(Boolean hasMore) {
             this.hasMore = hasMore;
@@ -109,7 +112,10 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * Limit.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Long limit) {
             this.limit = limit;
@@ -117,7 +123,10 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +257,7 @@ public class GetMessagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The response to the query.</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -256,7 +265,10 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * ConversationId.
+             * <p>The ID of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9cbbe885-b240-4803-9d15-6781a3fd****</p>
              */
             public Builder conversationId(String conversationId) {
                 this.conversationId = conversationId;
@@ -264,7 +276,10 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The creation time of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763986004</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -272,7 +287,10 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Feedback.
+             * <p>The feedback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>like</p>
              */
             public Builder feedback(String feedback) {
                 this.feedback = feedback;
@@ -280,7 +298,10 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84dc9f9b-424a-404d-9c36-35e9d000****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -288,7 +309,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * <p>The query statement.</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -296,7 +317,7 @@ public class GetMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * RetrieverResources.
+             * <p>The retriever resources.</p>
              */
             public Builder retrieverResources(java.util.List<?> retrieverResources) {
                 this.retrieverResources = retrieverResources;

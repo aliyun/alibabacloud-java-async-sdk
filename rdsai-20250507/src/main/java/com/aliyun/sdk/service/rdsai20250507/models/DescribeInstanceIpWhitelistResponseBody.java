@@ -80,7 +80,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -88,7 +91,7 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * IpWhiteListGroups.
+         * <p>The IP address whitelists.</p>
          */
         public Builder ipWhiteListGroups(java.util.List<IpWhiteListGroups> ipWhiteListGroups) {
             this.ipWhiteListGroups = ipWhiteListGroups;
@@ -96,7 +99,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The IP address whitelist name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -170,7 +179,10 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelist.
+             * <p>The IP addresses or CIDR blocks in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XXX.XXX/24,10.0.XXX.XXX/24</p>
              */
             public Builder ipWhitelist(String ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;

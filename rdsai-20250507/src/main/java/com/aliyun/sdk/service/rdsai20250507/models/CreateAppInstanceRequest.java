@@ -255,7 +255,13 @@ public class CreateAppInstanceRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The ID of the RDS for PostgreSQL instance with which the RDS Supabase instances are associated.</p>
+         * <blockquote>
+         * <p>: Only newly purchased empty RDS for PostgreSQL instances are supported. The major engine version must be PostgreSQL 17 and the minor version must be 20250630 or later.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test-supabase</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -264,7 +270,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -273,7 +282,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The name of the new AI application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -282,7 +294,7 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceConfig.
+         * <p>A reserved parameter.</p>
          */
         public Builder DBInstanceConfig(DBInstanceConfig DBInstanceConfig) {
             String DBInstanceConfigShrink = shrink(DBInstanceConfig, "DBInstanceConfig", "json");
@@ -292,7 +304,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceName.
+         * <p>The instance type. Only <strong>rdsai.supabase.basic</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-2ze49qv594vi****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -301,7 +316,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DashboardPassword.
+         * <p>The Supabase Dashboard user name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_Password</p>
          */
         public Builder dashboardPassword(String dashboardPassword) {
             this.putQueryParameter("DashboardPassword", dashboardPassword);
@@ -310,7 +328,11 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DashboardUsername.
+         * <p>The password used to access the RDS database.</p>
+         * <p>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder dashboardUsername(String dashboardUsername) {
             this.putQueryParameter("DashboardUsername", dashboardUsername);
@@ -319,7 +341,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DatabasePassword.
+         * <p>The idempotency token. The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_Password</p>
          */
         public Builder databasePassword(String databasePassword) {
             this.putQueryParameter("DatabasePassword", databasePassword);
@@ -328,7 +353,14 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * InitializeWithExistingData.
+         * <p>Specifies whether to enable public endpoint.</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder initializeWithExistingData(Boolean initializeWithExistingData) {
             this.putQueryParameter("InitializeWithExistingData", initializeWithExistingData);
@@ -337,7 +369,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rdsai.supabase.basic</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -346,7 +381,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * PublicEndpointEnabled.
+         * <p>The billing method of the RDS for PostgreSQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
             this.putQueryParameter("PublicEndpointEnabled", publicEndpointEnabled);
@@ -355,7 +393,11 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * PublicNetworkAccessEnabled.
+         * <p>The Supabase Dashboard password.</p>
+         * <p>The password must be 8 to 32 characters in length and must contain at least three of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder publicNetworkAccessEnabled(Boolean publicNetworkAccessEnabled) {
             this.putQueryParameter("PublicNetworkAccessEnabled", publicNetworkAccessEnabled);
@@ -364,7 +406,17 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * RAGEnabled.
+         * <p>Specifies whether to enable the Internet NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enable the Internet NAT gateway.</li>
+         * <li><strong>false</strong> (default): disable the Internet NAT gateway.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If an Internet NAT gateway is enabled for the vSwitch that you specify for VSwitchId, select false for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder RAGEnabled(Boolean RAGEnabled) {
             this.putQueryParameter("RAGEnabled", RAGEnabled);
@@ -373,7 +425,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>CreateAppInstance</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -382,7 +437,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The application type. Only <strong>supabase</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-9dp2hkpm22gxscfgy****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

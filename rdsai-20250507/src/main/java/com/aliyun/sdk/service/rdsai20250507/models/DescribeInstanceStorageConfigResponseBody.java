@@ -80,7 +80,7 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigList.
+         * <p>The storage configurations.</p>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             this.configList = configList;
@@ -88,7 +88,10 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -96,7 +99,10 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,19 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The configuration item name. Valid values:</p>
+             * <ul>
+             * <li><strong>AWS_SESSION_TOKEN</strong>: temporary OSS access token (session token).</li>
+             * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID of OSS.</li>
+             * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey secret of OSS.</li>
+             * <li><strong>GLOBAL_S3_BUCKET</strong>: the name of the OSS bucket.</li>
+             * <li><strong>TENANT_ID</strong>: the tenant ID of the OSS Prefix (prefix or directory).</li>
+             * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
+             * <li><strong>REGION</strong>: the region of OSS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REGION</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +188,10 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder value(String value) {
                 this.value = value;

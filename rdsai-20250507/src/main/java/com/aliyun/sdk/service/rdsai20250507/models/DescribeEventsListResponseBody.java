@@ -145,7 +145,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         } 
 
         /**
-         * EventCodeCounts.
+         * <p>The total number of events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OtherException:3,MysqlIOException:1</p>
          */
         public Builder eventCodeCounts(String eventCodeCounts) {
             this.eventCodeCounts = eventCodeCounts;
@@ -153,7 +156,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * Events.
+         * <p>The information about the events.</p>
          */
         public Builder events(java.util.List<Events> events) {
             this.events = events;
@@ -161,7 +164,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -169,7 +175,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +186,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +219,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPages(Long totalPages) {
             this.totalPages = totalPages;
@@ -332,7 +353,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
             } 
 
             /**
-             * EventCode.
+             * <p>The event code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ExceptionEvent</p>
              */
             public Builder eventCode(String eventCode) {
                 this.eventCode = eventCode;
@@ -340,7 +364,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * EventStatus.
+             * <p>The state of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -348,7 +375,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * EventTimeList.
+             * <p>The event.</p>
              */
             public Builder eventTimeList(java.util.List<String> eventTimeList) {
                 this.eventTimeList = eventTimeList;
@@ -356,7 +383,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the instance.</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -364,7 +391,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zecnb327gp36e7lh</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -372,7 +402,10 @@ public class DescribeEventsListResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryTime.
+             * <p>The recovery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-23T02:11:07Z</p>
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;

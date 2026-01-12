@@ -116,7 +116,10 @@ public class ModifyInstanceConfigRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,7 +128,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigName.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip、nat</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -134,7 +140,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * <p>The name of the configuration item that you want to modify. Configure this parameter together with the ConfigValue parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on、off</p>
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);
@@ -143,6 +152,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

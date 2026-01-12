@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceIpWhitelistRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    private String groupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -27,6 +31,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
 
     private DescribeInstanceIpWhitelistRequest(Builder builder) {
         super(builder);
+        this.groupName = builder.groupName;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -45,6 +50,13 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
     }
 
     /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -59,6 +71,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceIpWhitelistRequest, Builder> {
+        private String groupName; 
         private String instanceName; 
         private String regionId; 
 
@@ -68,12 +81,25 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
 
         private Builder(DescribeInstanceIpWhitelistRequest request) {
             super(request);
+            this.groupName = request.groupName;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceName.
+         * GroupName.
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -82,7 +108,10 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeInstanceIpWhitelist</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -67,7 +67,10 @@ public class ModifyInstanceIpWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceName.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ra-supabase-8moov5lxba****</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -75,7 +78,10 @@ public class ModifyInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87249A6F-xxx-804C-E1E0AD1FAD90</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

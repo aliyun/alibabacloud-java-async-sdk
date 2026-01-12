@@ -116,7 +116,10 @@ public class ModifyInstanceRAGConfigRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -125,7 +128,11 @@ public class ModifyInstanceRAGConfigRequest extends Request {
         }
 
         /**
-         * ConfigList.
+         * <p>Specifies whether to enable the RAG agent. If you do not configure this parameter, the RAG agent state remains unchanged. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          */
         public Builder configList(java.util.List<ConfigList> configList) {
             String configListShrink = shrink(configList, "ConfigList", "json");
@@ -135,6 +142,7 @@ public class ModifyInstanceRAGConfigRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +155,10 @@ public class ModifyInstanceRAGConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifyInstanceRAGConfig</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,7 +167,10 @@ public class ModifyInstanceRAGConfigRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The ID of the RDS Supabase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);
