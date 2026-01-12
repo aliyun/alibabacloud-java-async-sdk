@@ -29,6 +29,9 @@ public class CustomDomain extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
+    @com.aliyun.core.annotation.NameInMap("domainType")
+    private String domainType;
+
     @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
@@ -46,6 +49,7 @@ public class CustomDomain extends TeaModel {
         this.createdAt = builder.createdAt;
         this.description = builder.description;
         this.domainName = builder.domainName;
+        this.domainType = builder.domainType;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
@@ -93,6 +97,13 @@ public class CustomDomain extends TeaModel {
     }
 
     /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
+    }
+
+    /**
      * @return protocol
      */
     public String getProtocol() {
@@ -125,6 +136,7 @@ public class CustomDomain extends TeaModel {
         private String createdAt; 
         private String description; 
         private String domainName; 
+        private String domainType; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
@@ -138,6 +150,7 @@ public class CustomDomain extends TeaModel {
             this.createdAt = model.createdAt;
             this.description = model.description;
             this.domainName = model.domainName;
+            this.domainType = model.domainType;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
             this.tlsConfig = model.tlsConfig;
@@ -182,6 +195,14 @@ public class CustomDomain extends TeaModel {
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * domainType.
+         */
+        public Builder domainType(String domainType) {
+            this.domainType = domainType;
             return this;
         }
 

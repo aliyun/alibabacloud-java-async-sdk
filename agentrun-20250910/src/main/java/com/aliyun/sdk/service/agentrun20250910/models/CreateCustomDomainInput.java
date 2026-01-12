@@ -27,6 +27,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
+    @com.aliyun.core.annotation.NameInMap("domainType")
+    private String domainType;
+
     @com.aliyun.core.annotation.NameInMap("protocol")
     @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
@@ -41,6 +44,7 @@ public class CreateCustomDomainInput extends TeaModel {
         this.certConfig = builder.certConfig;
         this.description = builder.description;
         this.domainName = builder.domainName;
+        this.domainType = builder.domainType;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
@@ -80,6 +84,13 @@ public class CreateCustomDomainInput extends TeaModel {
     }
 
     /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
+    }
+
+    /**
      * @return protocol
      */
     public String getProtocol() {
@@ -104,6 +115,7 @@ public class CreateCustomDomainInput extends TeaModel {
         private CertConfig certConfig; 
         private String description; 
         private String domainName; 
+        private String domainType; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
@@ -115,6 +127,7 @@ public class CreateCustomDomainInput extends TeaModel {
             this.certConfig = model.certConfig;
             this.description = model.description;
             this.domainName = model.domainName;
+            this.domainType = model.domainType;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
             this.tlsConfig = model.tlsConfig;
@@ -148,6 +161,14 @@ public class CreateCustomDomainInput extends TeaModel {
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * domainType.
+         */
+        public Builder domainType(String domainType) {
+            this.domainType = domainType;
             return this;
         }
 

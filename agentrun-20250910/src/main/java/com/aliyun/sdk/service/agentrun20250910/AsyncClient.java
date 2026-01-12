@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
 
     /**
+     * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
+
+    /**
      * @param request the request parameters of CreateModelProxy  CreateModelProxyRequest
      * @return CreateModelProxyResponse
      */
@@ -135,6 +141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCredentialResponse
      */
     CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of DeleteModelProxy  DeleteModelProxyRequest
@@ -207,6 +219,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCredentialResponse
      */
     CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
+
+    /**
+     * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
+     * @return GetKnowledgeBaseResponse
+     */
+    CompletableFuture<GetKnowledgeBaseResponse> getKnowledgeBase(GetKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of GetModelProxy  GetModelProxyRequest
@@ -285,6 +303,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCredentialsResponse
      */
     CompletableFuture<ListCredentialsResponse> listCredentials(ListCredentialsRequest request);
+
+    /**
+     * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
+     * @return ListKnowledgeBasesResponse
+     */
+    CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
      * @param request the request parameters of ListModelProviders  ListModelProvidersRequest
@@ -366,6 +390,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCredentialResponse
      */
     CompletableFuture<UpdateCredentialResponse> updateCredential(UpdateCredentialRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of UpdateModelProxy  UpdateModelProxyRequest
