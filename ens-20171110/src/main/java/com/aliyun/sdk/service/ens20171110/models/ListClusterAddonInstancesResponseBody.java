@@ -67,7 +67,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Addons.
+         * <p>List of addon information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -75,7 +75,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
@@ -170,7 +170,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppVersion.
+             * <p>Application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7380581386597434629002</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -178,7 +181,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigVersion.
+             * <p>Configuration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4572581386436834662215</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -186,7 +192,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>Custom parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;: &quot;val1&quot;}</p>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -300,7 +312,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CleanupCloudResources.
+             * <p>Whether to automatically clean up associated cloud resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;
@@ -308,7 +323,7 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigSchema.
+             * <p>List of custom parameter schemas for the addon.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -316,7 +331,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Addon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -324,7 +342,17 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Current addon status. Values:</p>
+             * <ul>
+             * <li><strong>enabling</strong>: Enabling.</li>
+             * <li><strong>enabled</strong>: Enabled.</li>
+             * <li><strong>disabling</strong>: Disabling.</li>
+             * <li><strong>disabled</strong>: Disabled.</li>
+             * <li><strong>upgrading</strong>: Upgrading.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -332,7 +360,10 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

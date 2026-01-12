@@ -795,6 +795,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterKubeConfigResponse> describeClusterKubeConfig(DescribeClusterKubeConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeClustersV1  DescribeClustersV1Request
+     * @return DescribeClustersV1Response
+     */
+    CompletableFuture<DescribeClustersV1Response> describeClustersV1(DescribeClustersV1Request request);
+
+    /**
      * @param request the request parameters of DescribeCreatePrePaidInstanceResult  DescribeCreatePrePaidInstanceResultRequest
      * @return DescribeCreatePrePaidInstanceResultResponse
      */

@@ -67,7 +67,7 @@ public class ListAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * Addons.
+         * <p>The list of component information.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -75,7 +75,7 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Id of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
@@ -170,7 +170,10 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppVersion.
+             * <p>The application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>859e9d595b2974ed79c444658d1dea89</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -178,7 +181,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigVersion.
+             * <p>The version of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4155709cd12a09bdb8cbaca71bf03233</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -186,7 +192,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The custom configurations of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:&quot;val1&quot;}</p>
              */
             public Builder params(java.util.Map<String, ?> params) {
                 this.params = params;
@@ -287,7 +299,10 @@ public class ListAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * CleanupCloudResources.
+             * <p>Specifies whether to clear resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;
@@ -295,7 +310,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigSchema.
+             * <p>The schema of the custom parameters of the component.</p>
              */
             public Builder configSchema(java.util.List<ConfigSchema> configSchema) {
                 this.configSchema = configSchema;
@@ -303,7 +318,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edge-csi-lite</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +329,10 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder version(String version) {
                 this.version = version;
