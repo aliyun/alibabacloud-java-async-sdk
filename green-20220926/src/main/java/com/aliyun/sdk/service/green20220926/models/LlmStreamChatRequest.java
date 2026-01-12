@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class LlmStreamChatRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    private String channel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Messages")
     private Object messages;
 
@@ -35,6 +39,7 @@ public class LlmStreamChatRequest extends Request {
 
     private LlmStreamChatRequest(Builder builder) {
         super(builder);
+        this.channel = builder.channel;
         this.messages = builder.messages;
         this.temperature = builder.temperature;
         this.topP = builder.topP;
@@ -52,6 +57,13 @@ public class LlmStreamChatRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return channel
+     */
+    public String getChannel() {
+        return this.channel;
     }
 
     /**
@@ -83,6 +95,7 @@ public class LlmStreamChatRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LlmStreamChatRequest, Builder> {
+        private String channel; 
         private Object messages; 
         private Float temperature; 
         private Float topP; 
@@ -94,11 +107,21 @@ public class LlmStreamChatRequest extends Request {
 
         private Builder(LlmStreamChatRequest request) {
             super(request);
+            this.channel = request.channel;
             this.messages = request.messages;
             this.temperature = request.temperature;
             this.topP = request.topP;
             this.type = request.type;
         } 
+
+        /**
+         * Channel.
+         */
+        public Builder channel(String channel) {
+            this.putBodyParameter("Channel", channel);
+            this.channel = channel;
+            return this;
+        }
 
         /**
          * <p>Conversation information</p>

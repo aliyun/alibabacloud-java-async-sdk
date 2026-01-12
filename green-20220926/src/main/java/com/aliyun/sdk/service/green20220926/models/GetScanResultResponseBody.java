@@ -317,6 +317,9 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiTaskId")
         private String apiTaskId;
 
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("AttackLevel")
         private String attackLevel;
 
@@ -355,6 +358,9 @@ public class GetScanResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ImageUrls")
+        private java.util.List<String> imageUrls;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
@@ -468,6 +474,7 @@ public class GetScanResultResponseBody extends TeaModel {
             this.apiRiskLevel = builder.apiRiskLevel;
             this.apiService = builder.apiService;
             this.apiTaskId = builder.apiTaskId;
+            this.appId = builder.appId;
             this.attackLevel = builder.attackLevel;
             this.content = builder.content;
             this.dataId = builder.dataId;
@@ -481,6 +488,7 @@ public class GetScanResultResponseBody extends TeaModel {
             this.imageLabels = builder.imageLabels;
             this.imageService = builder.imageService;
             this.imageUrl = builder.imageUrl;
+            this.imageUrls = builder.imageUrls;
             this.labels = builder.labels;
             this.liveId = builder.liveId;
             this.maliciousFileLevel = builder.maliciousFileLevel;
@@ -566,6 +574,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public String getApiTaskId() {
             return this.apiTaskId;
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -657,6 +672,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        /**
+         * @return imageUrls
+         */
+        public java.util.List<String> getImageUrls() {
+            return this.imageUrls;
         }
 
         /**
@@ -911,6 +933,7 @@ public class GetScanResultResponseBody extends TeaModel {
             private String apiRiskLevel; 
             private String apiService; 
             private String apiTaskId; 
+            private String appId; 
             private String attackLevel; 
             private String content; 
             private String dataId; 
@@ -924,6 +947,7 @@ public class GetScanResultResponseBody extends TeaModel {
             private java.util.List<java.util.Map<String, ?>> imageLabels; 
             private String imageService; 
             private String imageUrl; 
+            private java.util.List<String> imageUrls; 
             private String labels; 
             private String liveId; 
             private String maliciousFileLevel; 
@@ -970,6 +994,7 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.apiRiskLevel = model.apiRiskLevel;
                 this.apiService = model.apiService;
                 this.apiTaskId = model.apiTaskId;
+                this.appId = model.appId;
                 this.attackLevel = model.attackLevel;
                 this.content = model.content;
                 this.dataId = model.dataId;
@@ -983,6 +1008,7 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.imageLabels = model.imageLabels;
                 this.imageService = model.imageService;
                 this.imageUrl = model.imageUrl;
+                this.imageUrls = model.imageUrls;
                 this.labels = model.labels;
                 this.liveId = model.liveId;
                 this.maliciousFileLevel = model.maliciousFileLevel;
@@ -1080,6 +1106,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder apiTaskId(String apiTaskId) {
                 this.apiTaskId = apiTaskId;
+                return this;
+            }
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
                 return this;
             }
 
@@ -1224,6 +1258,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * ImageUrls.
+             */
+            public Builder imageUrls(java.util.List<String> imageUrls) {
+                this.imageUrls = imageUrls;
                 return this;
             }
 
