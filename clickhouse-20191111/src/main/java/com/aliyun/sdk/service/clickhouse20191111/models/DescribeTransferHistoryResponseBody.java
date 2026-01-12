@@ -122,6 +122,9 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubJob")
         private String subJob;
 
+        @com.aliyun.core.annotation.NameInMap("SubJobMessage")
+        private String subJobMessage;
+
         @com.aliyun.core.annotation.NameInMap("SubJobStatus")
         private String subJobStatus;
 
@@ -146,6 +149,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             this.sourceDBCluster = builder.sourceDBCluster;
             this.status = builder.status;
             this.subJob = builder.subJob;
+            this.subJobMessage = builder.subJobMessage;
             this.subJobStatus = builder.subJobStatus;
             this.targetControlVersion = builder.targetControlVersion;
             this.targetDBCluster = builder.targetDBCluster;
@@ -218,6 +222,13 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return subJobMessage
+         */
+        public String getSubJobMessage() {
+            return this.subJobMessage;
+        }
+
+        /**
          * @return subJobStatus
          */
         public String getSubJobStatus() {
@@ -261,6 +272,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             private String sourceDBCluster; 
             private String status; 
             private String subJob; 
+            private String subJobMessage; 
             private String subJobStatus; 
             private String targetControlVersion; 
             private String targetDBCluster; 
@@ -279,6 +291,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
                 this.sourceDBCluster = model.sourceDBCluster;
                 this.status = model.status;
                 this.subJob = model.subJob;
+                this.subJobMessage = model.subJobMessage;
                 this.subJobStatus = model.subJobStatus;
                 this.targetControlVersion = model.targetControlVersion;
                 this.targetDBCluster = model.targetDBCluster;
@@ -375,6 +388,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
              */
             public Builder subJob(String subJob) {
                 this.subJob = subJob;
+                return this;
+            }
+
+            /**
+             * SubJobMessage.
+             */
+            public Builder subJobMessage(String subJobMessage) {
+                this.subJobMessage = subJobMessage;
                 return this;
             }
 
