@@ -26,6 +26,14 @@ public class ListInstancesRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeAfter")
+    private String createTimeAfter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeBefore")
+    private String createTimeBefore;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateUserId")
     private String createUserId;
 
@@ -129,6 +137,8 @@ public class ListInstancesRequest extends Request {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
+        this.createTimeAfter = builder.createTimeAfter;
+        this.createTimeBefore = builder.createTimeBefore;
         this.createUserId = builder.createUserId;
         this.gpuType = builder.gpuType;
         this.imageName = builder.imageName;
@@ -181,6 +191,20 @@ public class ListInstancesRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return createTimeAfter
+     */
+    public String getCreateTimeAfter() {
+        return this.createTimeAfter;
+    }
+
+    /**
+     * @return createTimeBefore
+     */
+    public String getCreateTimeBefore() {
+        return this.createTimeBefore;
     }
 
     /**
@@ -361,6 +385,8 @@ public class ListInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String acceleratorType; 
         private String accessibility; 
+        private String createTimeAfter; 
+        private String createTimeBefore; 
         private String createUserId; 
         private String gpuType; 
         private String imageName; 
@@ -395,6 +421,8 @@ public class ListInstancesRequest extends Request {
             super(request);
             this.acceleratorType = request.acceleratorType;
             this.accessibility = request.accessibility;
+            this.createTimeAfter = request.createTimeAfter;
+            this.createTimeBefore = request.createTimeBefore;
             this.createUserId = request.createUserId;
             this.gpuType = request.gpuType;
             this.imageName = request.imageName;
@@ -451,6 +479,24 @@ public class ListInstancesRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CreateTimeAfter.
+         */
+        public Builder createTimeAfter(String createTimeAfter) {
+            this.putQueryParameter("CreateTimeAfter", createTimeAfter);
+            this.createTimeAfter = createTimeAfter;
+            return this;
+        }
+
+        /**
+         * CreateTimeBefore.
+         */
+        public Builder createTimeBefore(String createTimeBefore) {
+            this.putQueryParameter("CreateTimeBefore", createTimeBefore);
+            this.createTimeBefore = createTimeBefore;
             return this;
         }
 
