@@ -120,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManualModerationResultResponse> manualModerationResult(ManualModerationResultRequest request);
 
     /**
+     * @param request the request parameters of MultiModalAgent  MultiModalAgentRequest
+     * @return MultiModalAgentResponse
+     */
+    CompletableFuture<MultiModalAgentResponse> multiModalAgent(MultiModalAgentRequest request);
+
+    /**
      * @param request the request parameters of MultiModalGuard  MultiModalGuardRequest
      * @return MultiModalGuardResponse
      */
