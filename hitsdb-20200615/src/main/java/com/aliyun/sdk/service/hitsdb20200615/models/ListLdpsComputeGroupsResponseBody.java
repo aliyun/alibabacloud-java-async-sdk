@@ -128,6 +128,12 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.Map<String, ?> properties;
 
+        @com.aliyun.core.annotation.NameInMap("RayInteractiveAccessAddr")
+        private String rayInteractiveAccessAddr;
+
+        @com.aliyun.core.annotation.NameInMap("RayVpcWebUIAddr")
+        private String rayVpcWebUIAddr;
+
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
@@ -139,6 +145,8 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
             this.groupName = builder.groupName;
             this.isDefault = builder.isDefault;
             this.properties = builder.properties;
+            this.rayInteractiveAccessAddr = builder.rayInteractiveAccessAddr;
+            this.rayVpcWebUIAddr = builder.rayVpcWebUIAddr;
             this.state = builder.state;
             this.webUI = builder.webUI;
         }
@@ -180,6 +188,20 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return rayInteractiveAccessAddr
+         */
+        public String getRayInteractiveAccessAddr() {
+            return this.rayInteractiveAccessAddr;
+        }
+
+        /**
+         * @return rayVpcWebUIAddr
+         */
+        public String getRayVpcWebUIAddr() {
+            return this.rayVpcWebUIAddr;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -198,6 +220,8 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
             private String groupName; 
             private Boolean isDefault; 
             private java.util.Map<String, ?> properties; 
+            private String rayInteractiveAccessAddr; 
+            private String rayVpcWebUIAddr; 
             private String state; 
             private String webUI; 
 
@@ -209,6 +233,8 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
                 this.groupName = model.groupName;
                 this.isDefault = model.isDefault;
                 this.properties = model.properties;
+                this.rayInteractiveAccessAddr = model.rayInteractiveAccessAddr;
+                this.rayVpcWebUIAddr = model.rayVpcWebUIAddr;
                 this.state = model.state;
                 this.webUI = model.webUI;
             } 
@@ -242,6 +268,22 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * RayInteractiveAccessAddr.
+             */
+            public Builder rayInteractiveAccessAddr(String rayInteractiveAccessAddr) {
+                this.rayInteractiveAccessAddr = rayInteractiveAccessAddr;
+                return this;
+            }
+
+            /**
+             * RayVpcWebUIAddr.
+             */
+            public Builder rayVpcWebUIAddr(String rayVpcWebUIAddr) {
+                this.rayVpcWebUIAddr = rayVpcWebUIAddr;
                 return this;
             }
 
