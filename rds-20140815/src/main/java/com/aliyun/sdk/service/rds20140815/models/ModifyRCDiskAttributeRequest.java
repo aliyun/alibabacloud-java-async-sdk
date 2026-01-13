@@ -12,14 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DetachRCDiskRequest} extends {@link RequestModel}
+ * {@link ModifyRCDiskAttributeRequest} extends {@link RequestModel}
  *
- * <p>DetachRCDiskRequest</p>
+ * <p>ModifyRCDiskAttributeRequest</p>
  */
-public class DetachRCDiskRequest extends Request {
+public class ModifyRCDiskAttributeRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+    private Boolean burstingEnabled;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
     private Boolean deleteWithInstance;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskId")
@@ -27,19 +35,21 @@ public class DetachRCDiskRequest extends Request {
     private String diskId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("DiskName")
+    private String diskName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DetachRCDiskRequest(Builder builder) {
+    private ModifyRCDiskAttributeRequest(Builder builder) {
         super(builder);
+        this.burstingEnabled = builder.burstingEnabled;
         this.deleteWithInstance = builder.deleteWithInstance;
+        this.description = builder.description;
         this.diskId = builder.diskId;
-        this.instanceId = builder.instanceId;
+        this.diskName = builder.diskName;
         this.regionId = builder.regionId;
     }
 
@@ -47,13 +57,20 @@ public class DetachRCDiskRequest extends Request {
         return new Builder();
     }
 
-    public static DetachRCDiskRequest create() {
+    public static ModifyRCDiskAttributeRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return burstingEnabled
+     */
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     /**
@@ -64,6 +81,13 @@ public class DetachRCDiskRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return diskId
      */
     public String getDiskId() {
@@ -71,10 +95,10 @@ public class DetachRCDiskRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return diskName
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDiskName() {
+        return this.diskName;
     }
 
     /**
@@ -84,29 +108,39 @@ public class DetachRCDiskRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DetachRCDiskRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyRCDiskAttributeRequest, Builder> {
+        private Boolean burstingEnabled; 
         private Boolean deleteWithInstance; 
+        private String description; 
         private String diskId; 
-        private String instanceId; 
+        private String diskName; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetachRCDiskRequest request) {
+        private Builder(ModifyRCDiskAttributeRequest request) {
             super(request);
+            this.burstingEnabled = request.burstingEnabled;
             this.deleteWithInstance = request.deleteWithInstance;
+            this.description = request.description;
             this.diskId = request.diskId;
-            this.instanceId = request.instanceId;
+            this.diskName = request.diskName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * BurstingEnabled.
+         */
+        public Builder burstingEnabled(Boolean burstingEnabled) {
+            this.putQueryParameter("BurstingEnabled", burstingEnabled);
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+
+        /**
+         * DeleteWithInstance.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -115,11 +149,19 @@ public class DetachRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk that you want to detach.</p>
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rcd-f8zh55g5gbk1byjr****</p>
+         * <p>rcd-wz9c8isqly8637zw****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -128,20 +170,16 @@ public class DetachRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rc-dh2jf9n6j4s14926****</p>
+         * DiskName.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder diskName(String diskName) {
+            this.putQueryParameter("DiskName", diskName);
+            this.diskName = diskName;
             return this;
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -153,8 +191,8 @@ public class DetachRCDiskRequest extends Request {
         }
 
         @Override
-        public DetachRCDiskRequest build() {
-            return new DetachRCDiskRequest(this);
+        public ModifyRCDiskAttributeRequest build() {
+            return new ModifyRCDiskAttributeRequest(this);
         } 
 
     } 
