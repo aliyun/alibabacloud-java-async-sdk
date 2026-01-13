@@ -806,6 +806,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryHotlineNumberResponse> queryHotlineNumber(QueryHotlineNumberRequest request);
 
     /**
+     * @param request the request parameters of QueryInboundCallId  QueryInboundCallIdRequest
+     * @return QueryInboundCallIdResponse
+     */
+    CompletableFuture<QueryInboundCallIdResponse> queryInboundCallId(QueryInboundCallIdRequest request);
+
+    /**
      * @param request the request parameters of QueryOutboundTask  QueryOutboundTaskRequest
      * @return QueryOutboundTaskResponse
      */
