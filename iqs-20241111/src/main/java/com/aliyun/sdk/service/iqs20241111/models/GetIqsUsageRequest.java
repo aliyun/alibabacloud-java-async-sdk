@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetIqsUsageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("callerId")
+    private String callerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endDate")
     private String endDate;
 
@@ -27,6 +31,7 @@ public class GetIqsUsageRequest extends Request {
 
     private GetIqsUsageRequest(Builder builder) {
         super(builder);
+        this.callerId = builder.callerId;
         this.endDate = builder.endDate;
         this.startDate = builder.startDate;
     }
@@ -45,6 +50,13 @@ public class GetIqsUsageRequest extends Request {
     }
 
     /**
+     * @return callerId
+     */
+    public String getCallerId() {
+        return this.callerId;
+    }
+
+    /**
      * @return endDate
      */
     public String getEndDate() {
@@ -59,6 +71,7 @@ public class GetIqsUsageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetIqsUsageRequest, Builder> {
+        private String callerId; 
         private String endDate; 
         private String startDate; 
 
@@ -68,9 +81,19 @@ public class GetIqsUsageRequest extends Request {
 
         private Builder(GetIqsUsageRequest request) {
             super(request);
+            this.callerId = request.callerId;
             this.endDate = request.endDate;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * callerId.
+         */
+        public Builder callerId(String callerId) {
+            this.putQueryParameter("callerId", callerId);
+            this.callerId = callerId;
+            return this;
+        }
 
         /**
          * endDate.
