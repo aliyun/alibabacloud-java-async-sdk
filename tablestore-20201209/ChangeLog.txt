@@ -1,3 +1,6 @@
+2026-01-13 Version: 2.0.0
+- Generated java-async 2020-12-09 for Tablestore.
+
 2025-02-08 Version: 1.0.3
 - Generated java-async 2020-12-09 for Tablestore.
 

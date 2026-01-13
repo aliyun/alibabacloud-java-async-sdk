@@ -12,26 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceRequest} extends {@link RequestModel}
+ * {@link UnbindInstance2VpcRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceRequest</p>
+ * <p>UnbindInstance2VpcRequest</p>
  */
-public class DeleteInstanceRequest extends Request {
+public class UnbindInstance2VpcRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    private DeleteInstanceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceVpcName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceVpcName;
+
+    private UnbindInstance2VpcRequest(Builder builder) {
         super(builder);
         this.instanceName = builder.instanceName;
+        this.instanceVpcName = builder.instanceVpcName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteInstanceRequest create() {
+    public static UnbindInstance2VpcRequest create() {
         return builder().build();
     }
 
@@ -47,24 +53,32 @@ public class DeleteInstanceRequest extends Request {
         return this.instanceName;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
+    /**
+     * @return instanceVpcName
+     */
+    public String getInstanceVpcName() {
+        return this.instanceVpcName;
+    }
+
+    public static final class Builder extends Request.Builder<UnbindInstance2VpcRequest, Builder> {
         private String instanceName; 
+        private String instanceVpcName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest request) {
+        private Builder(UnbindInstance2VpcRequest request) {
             super(request);
             this.instanceName = request.instanceName;
+            this.instanceVpcName = request.instanceVpcName;
         } 
 
         /**
-         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance-test</p>
+         * <p>mkdd-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -72,9 +86,21 @@ public class DeleteInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xu6666</p>
+         */
+        public Builder instanceVpcName(String instanceVpcName) {
+            this.putBodyParameter("InstanceVpcName", instanceVpcName);
+            this.instanceVpcName = instanceVpcName;
+            return this;
+        }
+
         @Override
-        public DeleteInstanceRequest build() {
-            return new DeleteInstanceRequest(this);
+        public UnbindInstance2VpcRequest build() {
+            return new UnbindInstance2VpcRequest(this);
         } 
 
     } 

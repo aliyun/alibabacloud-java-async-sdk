@@ -12,17 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceRequest} extends {@link RequestModel}
+ * {@link DeleteVCUInstanceRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceRequest</p>
+ * <p>DeleteVCUInstanceRequest</p>
  */
-public class DeleteInstanceRequest extends Request {
-    @com.aliyun.core.annotation.Body
+public class DeleteVCUInstanceRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    private DeleteInstanceRequest(Builder builder) {
+    private DeleteVCUInstanceRequest(Builder builder) {
         super(builder);
         this.instanceName = builder.instanceName;
     }
@@ -31,7 +31,7 @@ public class DeleteInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteInstanceRequest create() {
+    public static DeleteVCUInstanceRequest create() {
         return builder().build();
     }
 
@@ -47,34 +47,33 @@ public class DeleteInstanceRequest extends Request {
         return this.instanceName;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteVCUInstanceRequest, Builder> {
         private String instanceName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest request) {
+        private Builder(DeleteVCUInstanceRequest request) {
             super(request);
             this.instanceName = request.instanceName;
         } 
 
         /**
-         * <p>The name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance-test</p>
+         * <p>instance_name</p>
          */
         public Builder instanceName(String instanceName) {
-            this.putBodyParameter("InstanceName", instanceName);
+            this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
             return this;
         }
 
         @Override
-        public DeleteInstanceRequest build() {
-            return new DeleteInstanceRequest(this);
+        public DeleteVCUInstanceRequest build() {
+            return new DeleteVCUInstanceRequest(this);
         } 
 
     } 

@@ -20,7 +20,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
     private java.util.List<Regions> regions;
 
-    @com.aliyun.core.annotation.NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -34,6 +34,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static DescribeRegionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -54,6 +58,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List<Regions> regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The regions.</p>
          */
@@ -63,10 +75,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>B37BBA04-D827-55C8-B901-5264B904E8C6</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,6 +131,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static final class Builder {
             private String i18nKey; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.i18nKey = model.i18nKey;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The key of the region.</p>

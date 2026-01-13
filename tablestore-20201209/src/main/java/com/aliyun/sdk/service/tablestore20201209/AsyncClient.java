@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BindInstance2Vpc  BindInstance2VpcRequest
+     * @return BindInstance2VpcResponse
+     */
+    CompletableFuture<BindInstance2VpcResponse> bindInstance2Vpc(BindInstance2VpcRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -43,6 +49,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateInstanceResponse
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateVCUInstance  CreateVCUInstanceRequest
+     * @return CreateVCUInstanceResponse
+     */
+    CompletableFuture<CreateVCUInstanceResponse> createVCUInstance(CreateVCUInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -70,6 +82,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteInstancePolicyResponse> deleteInstancePolicy(DeleteInstancePolicyRequest request);
 
     /**
+     * @param request the request parameters of DeleteVCUInstance  DeleteVCUInstanceRequest
+     * @return DeleteVCUInstanceResponse
+     */
+    CompletableFuture<DeleteVCUInstanceResponse> deleteVCUInstance(DeleteVCUInstanceRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -80,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceResponse
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListClusterType  ListClusterTypeRequest
+     * @return ListClusterTypeResponse
+     */
+    CompletableFuture<ListClusterTypeResponse> listClusterType(ListClusterTypeRequest request);
 
     /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
@@ -94,10 +118,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListVpcInfoByInstance  ListVpcInfoByInstanceRequest
+     * @return ListVpcInfoByInstanceResponse
+     */
+    CompletableFuture<ListVpcInfoByInstanceResponse> listVpcInfoByInstance(ListVpcInfoByInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListVpcInfoByVpc  ListVpcInfoByVpcRequest
+     * @return ListVpcInfoByVpcResponse
+     */
+    CompletableFuture<ListVpcInfoByVpcResponse> listVpcInfoByVpc(ListVpcInfoByVpcRequest request);
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnbindInstance2Vpc  UnbindInstance2VpcRequest
+     * @return UnbindInstance2VpcResponse
+     */
+    CompletableFuture<UnbindInstance2VpcResponse> unbindInstance2Vpc(UnbindInstance2VpcRequest request);
 
     /**
      * <b>description</b> :

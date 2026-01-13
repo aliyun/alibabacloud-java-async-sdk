@@ -40,6 +40,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindInstance2Vpc  BindInstance2VpcRequest
+     * @return BindInstance2VpcResponse
+     */
+    @Override
+    public CompletableFuture<BindInstance2VpcResponse> bindInstance2Vpc(BindInstance2VpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BindInstance2Vpc").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/bindinstance2vpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindInstance2VpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindInstance2VpcResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -101,6 +119,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateVCUInstance  CreateVCUInstanceRequest
+     * @return CreateVCUInstanceResponse
+     */
+    @Override
+    public CompletableFuture<CreateVCUInstanceResponse> createVCUInstance(CreateVCUInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateVCUInstance").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/createvcuinstance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVCUInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVCUInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Before you delete an instance, make sure that all data tables and time series tables in the instance are deleted and virtual private clouds (VPCs) are unbound from the instance.</p>
      * <ul>
@@ -150,6 +186,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteVCUInstance  DeleteVCUInstanceRequest
+     * @return DeleteVCUInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteVCUInstanceResponse> deleteVCUInstance(DeleteVCUInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVCUInstance").setMethod(HttpMethod.DELETE).setPathRegex("/v2/openapi/deletevcuinstance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVCUInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteVCUInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -180,6 +234,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListClusterType  ListClusterTypeRequest
+     * @return ListClusterTypeResponse
+     */
+    @Override
+    public CompletableFuture<ListClusterTypeResponse> listClusterType(ListClusterTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListClusterType").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/listclustertype").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListClusterTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -222,6 +294,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListVpcInfoByInstance  ListVpcInfoByInstanceRequest
+     * @return ListVpcInfoByInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ListVpcInfoByInstanceResponse> listVpcInfoByInstance(ListVpcInfoByInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListVpcInfoByInstance").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/listvpcinfobyinstance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVpcInfoByInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVpcInfoByInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListVpcInfoByVpc  ListVpcInfoByVpcRequest
+     * @return ListVpcInfoByVpcResponse
+     */
+    @Override
+    public CompletableFuture<ListVpcInfoByVpcResponse> listVpcInfoByVpc(ListVpcInfoByVpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListVpcInfoByVpc").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/listvpcinfobyvpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVpcInfoByVpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVpcInfoByVpcResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of TagResources  TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -234,6 +342,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnbindInstance2Vpc  UnbindInstance2VpcRequest
+     * @return UnbindInstance2VpcResponse
+     */
+    @Override
+    public CompletableFuture<UnbindInstance2VpcResponse> unbindInstance2Vpc(UnbindInstance2VpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnbindInstance2Vpc").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/unbindinstance2vpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindInstance2VpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindInstance2VpcResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TagResourcesResponse} extends {@link TeaModel}
+ * {@link ListVpcInfoByVpcResponse} extends {@link TeaModel}
  *
- * <p>TagResourcesResponse</p>
+ * <p>ListVpcInfoByVpcResponse</p>
  */
-public class TagResourcesResponse extends Response {
+public class ListVpcInfoByVpcResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class TagResourcesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private TagResourcesResponseBody body;
+    private ListVpcInfoByVpcResponseBody body;
 
-    private TagResourcesResponse(BuilderImpl builder) {
+    private ListVpcInfoByVpcResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static TagResourcesResponse create() {
+    public static ListVpcInfoByVpcResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class TagResourcesResponse extends Response {
     /**
      * @return body
      */
-    public TagResourcesResponseBody getBody() {
+    public ListVpcInfoByVpcResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<TagResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListVpcInfoByVpcResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(TagResourcesResponseBody body);
+        Builder body(ListVpcInfoByVpcResponseBody body);
 
         @Override
-        TagResourcesResponse build();
+        ListVpcInfoByVpcResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TagResourcesResponse, Builder>
+            extends Response.BuilderImpl<ListVpcInfoByVpcResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private TagResourcesResponseBody body; 
+        private ListVpcInfoByVpcResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TagResourcesResponse response) {
+        private BuilderImpl(ListVpcInfoByVpcResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class TagResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(TagResourcesResponseBody body) {
+        public Builder body(ListVpcInfoByVpcResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public TagResourcesResponse build() {
-            return new TagResourcesResponse(this);
+        public ListVpcInfoByVpcResponse build() {
+            return new ListVpcInfoByVpcResponse(this);
         } 
 
     } 

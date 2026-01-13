@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TagResourcesResponse} extends {@link TeaModel}
+ * {@link BindInstance2VpcResponse} extends {@link TeaModel}
  *
- * <p>TagResourcesResponse</p>
+ * <p>BindInstance2VpcResponse</p>
  */
-public class TagResourcesResponse extends Response {
+public class BindInstance2VpcResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class TagResourcesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private TagResourcesResponseBody body;
+    private BindInstance2VpcResponseBody body;
 
-    private TagResourcesResponse(BuilderImpl builder) {
+    private BindInstance2VpcResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static TagResourcesResponse create() {
+    public static BindInstance2VpcResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class TagResourcesResponse extends Response {
     /**
      * @return body
      */
-    public TagResourcesResponseBody getBody() {
+    public BindInstance2VpcResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<TagResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<BindInstance2VpcResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(TagResourcesResponseBody body);
+        Builder body(BindInstance2VpcResponseBody body);
 
         @Override
-        TagResourcesResponse build();
+        BindInstance2VpcResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TagResourcesResponse, Builder>
+            extends Response.BuilderImpl<BindInstance2VpcResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private TagResourcesResponseBody body; 
+        private BindInstance2VpcResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TagResourcesResponse response) {
+        private BuilderImpl(BindInstance2VpcResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class TagResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(TagResourcesResponseBody body) {
+        public Builder body(BindInstance2VpcResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public TagResourcesResponse build() {
-            return new TagResourcesResponse(this);
+        public BindInstance2VpcResponse build() {
+            return new BindInstance2VpcResponse(this);
         } 
 
     } 

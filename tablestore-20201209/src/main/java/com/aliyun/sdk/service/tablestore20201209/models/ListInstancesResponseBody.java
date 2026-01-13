@@ -44,6 +44,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -77,6 +81,16 @@ public class ListInstancesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the instances.</p>
@@ -313,6 +327,26 @@ public class ListInstancesResponseBody extends TeaModel {
             private String userId; 
             private Integer VCUQuota; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.aliasName = model.aliasName;
+                this.createTime = model.createTime;
+                this.instanceDescription = model.instanceDescription;
+                this.instanceName = model.instanceName;
+                this.instanceSpecification = model.instanceSpecification;
+                this.instanceStatus = model.instanceStatus;
+                this.isMultiAZ = model.isMultiAZ;
+                this.paymentType = model.paymentType;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.SPInstanceId = model.SPInstanceId;
+                this.storageType = model.storageType;
+                this.userId = model.userId;
+                this.VCUQuota = model.VCUQuota;
+            } 
+
             /**
              * <p>The instance alias.</p>
              * 
@@ -373,11 +407,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status.</p>
+             * <p>The status of the instance.</p>
              * <ul>
-             * <li>normal: The instance works as expected.</li>
+             * <li>normal: The instance runs as expected.</li>
              * <li>forbidden: The instance is disabled.</li>
-             * <li>deleting: The instance is being deleted.</li>
+             * <li>Deleting: The instance is being released.</li>
              * </ul>
              * 
              * <strong>example:</strong>

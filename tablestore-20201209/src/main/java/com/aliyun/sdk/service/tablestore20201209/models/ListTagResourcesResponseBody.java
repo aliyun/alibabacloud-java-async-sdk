@@ -44,6 +44,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -77,6 +81,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<TagResources> tagResources; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.tagResources = model.tagResources;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of tagged resources that are returned for the query.</p>
@@ -192,6 +206,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The resource ID, which is the instance name.</p>

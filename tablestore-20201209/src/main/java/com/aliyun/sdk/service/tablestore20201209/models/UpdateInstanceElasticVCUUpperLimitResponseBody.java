@@ -32,6 +32,10 @@ public class UpdateInstanceElasticVCUUpperLimitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UpdateInstanceElasticVCUUpperLimitResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateInstanceElasticVCUUpperLimitResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The request ID, which can be used to troubleshoot issues.</p>

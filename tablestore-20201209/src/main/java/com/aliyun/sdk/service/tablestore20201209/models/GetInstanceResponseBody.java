@@ -120,6 +120,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliasName
      */
@@ -305,6 +309,35 @@ public class GetInstanceResponseBody extends TeaModel {
         private java.util.List<Tags> tags; 
         private String userId; 
         private Integer VCUQuota; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.aliasName = model.aliasName;
+            this.createTime = model.createTime;
+            this.elasticVCUUpperLimit = model.elasticVCUUpperLimit;
+            this.instanceDescription = model.instanceDescription;
+            this.instanceName = model.instanceName;
+            this.instanceSpecification = model.instanceSpecification;
+            this.instanceStatus = model.instanceStatus;
+            this.isMultiAZ = model.isMultiAZ;
+            this.network = model.network;
+            this.networkSourceACL = model.networkSourceACL;
+            this.networkTypeACL = model.networkTypeACL;
+            this.paymentType = model.paymentType;
+            this.policy = model.policy;
+            this.policyVersion = model.policyVersion;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.SPInstanceId = model.SPInstanceId;
+            this.storageType = model.storageType;
+            this.tableQuota = model.tableQuota;
+            this.tags = model.tags;
+            this.userId = model.userId;
+            this.VCUQuota = model.VCUQuota;
+        } 
 
         /**
          * <p>The instance alias.</p>
@@ -684,6 +717,16 @@ public class GetInstanceResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

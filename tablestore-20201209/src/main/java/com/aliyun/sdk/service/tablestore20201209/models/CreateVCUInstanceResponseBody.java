@@ -12,13 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+ * {@link CreateVCUInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>CreateInstanceResponseBody</p>
+ * <p>CreateVCUInstanceResponseBody</p>
  */
-public class CreateInstanceResponseBody extends TeaModel {
+public class CreateVCUInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -26,8 +29,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateInstanceResponseBody(Builder builder) {
+    private CreateVCUInstanceResponseBody(Builder builder) {
         this.code = builder.code;
+        this.instanceName = builder.instanceName;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -36,7 +40,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateInstanceResponseBody create() {
+    public static CreateVCUInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -49,6 +53,13 @@ public class CreateInstanceResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -67,23 +78,22 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private String instanceName; 
         private String message; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateInstanceResponseBody model) {
+        private Builder(CreateVCUInstanceResponseBody model) {
             this.code = model.code;
+            this.instanceName = model.instanceName;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -91,10 +101,15 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +117,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which can be used to troubleshoot issues.</p>
+         * <p>request id</p>
          * 
          * <strong>example:</strong>
          * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
@@ -112,8 +127,8 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateInstanceResponseBody build() {
-            return new CreateInstanceResponseBody(this);
+        public CreateVCUInstanceResponseBody build() {
+            return new CreateVCUInstanceResponseBody(this);
         } 
 
     } 

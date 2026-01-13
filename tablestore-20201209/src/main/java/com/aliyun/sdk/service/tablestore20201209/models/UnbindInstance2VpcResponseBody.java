@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+ * {@link UnbindInstance2VpcResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceResponseBody</p>
+ * <p>UnbindInstance2VpcResponseBody</p>
  */
-public class UpdateInstanceResponseBody extends TeaModel {
+public class UnbindInstance2VpcResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateInstanceResponseBody(Builder builder) {
+    private UnbindInstance2VpcResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceResponseBody create() {
+    public static UnbindInstance2VpcResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateInstanceResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateInstanceResponseBody model) {
+        private Builder(UnbindInstance2VpcResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID, which can be used to troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateInstanceResponseBody build() {
-            return new UpdateInstanceResponseBody(this);
+        public UnbindInstance2VpcResponseBody build() {
+            return new UnbindInstance2VpcResponseBody(this);
         } 
 
     } 

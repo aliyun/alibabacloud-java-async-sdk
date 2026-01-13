@@ -64,7 +64,7 @@ public class ListInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,7 +201,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance status.</p>
+         * <p>The status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -213,7 +213,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the instance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -273,8 +273,19 @@ public class ListInstancesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +293,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tester</p>
              */
             public Builder value(String value) {
                 this.value = value;
