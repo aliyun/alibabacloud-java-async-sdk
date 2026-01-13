@@ -160,6 +160,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateCustomDomain").setMethod(HttpMethod.POST).setPathRegex("/2025-09-10/agents/custom-domains").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
      */
@@ -367,6 +385,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCustomDomain  DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteCustomDomain").setMethod(HttpMethod.DELETE).setPathRegex("/2025-09-10/agents/custom-domains/{domainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCustomDomainResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -601,6 +637,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCustomDomain  GetCustomDomainRequest
+     * @return GetCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCustomDomain").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/custom-domains/{domainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCustomDomainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
      * @return GetKnowledgeBaseResponse
      */
@@ -829,6 +883,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCredentialsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCustomDomains  ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     */
+    @Override
+    public CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListCustomDomains").setMethod(HttpMethod.GET).setPathRegex("/2025-09-10/agents/custom-domains").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCustomDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCustomDomainsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1078,6 +1150,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCustomDomain  UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateCustomDomain").setMethod(HttpMethod.PUT).setPathRegex("/2025-09-10/agents/custom-domains/{domainName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCustomDomainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCustomDomainResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCredentialResponse> createCredential(CreateCredentialRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomDomain  CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
+     */
+    CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request);
+
+    /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
      */
@@ -147,6 +153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCredentialResponse
      */
     CompletableFuture<DeleteCredentialResponse> deleteCredential(DeleteCredentialRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomDomain  DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
+     */
+    CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request);
 
     /**
      * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
@@ -231,6 +243,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCredentialResponse
      */
     CompletableFuture<GetCredentialResponse> getCredential(GetCredentialRequest request);
+
+    /**
+     * @param request the request parameters of GetCustomDomain  GetCustomDomainRequest
+     * @return GetCustomDomainResponse
+     */
+    CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request);
 
     /**
      * @param request the request parameters of GetKnowledgeBase  GetKnowledgeBaseRequest
@@ -321,6 +339,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCredentialsResponse
      */
     CompletableFuture<ListCredentialsResponse> listCredentials(ListCredentialsRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomDomains  ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     */
+    CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request);
 
     /**
      * @param request the request parameters of ListKnowledgeBases  ListKnowledgeBasesRequest
@@ -414,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCredentialResponse
      */
     CompletableFuture<UpdateCredentialResponse> updateCredential(UpdateCredentialRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCustomDomain  UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     */
+    CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request);
 
     /**
      * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest

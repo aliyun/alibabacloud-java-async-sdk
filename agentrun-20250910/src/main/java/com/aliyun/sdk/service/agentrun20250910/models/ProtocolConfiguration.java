@@ -17,10 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProtocolConfiguration</p>
  */
 public class ProtocolConfiguration extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("protocolSettings")
+    private java.util.List<ProtocolSettings> protocolSettings;
+
     @com.aliyun.core.annotation.NameInMap("type")
+    @Deprecated
     private String type;
 
     private ProtocolConfiguration(Builder builder) {
+        this.protocolSettings = builder.protocolSettings;
         this.type = builder.type;
     }
 
@@ -37,6 +42,13 @@ public class ProtocolConfiguration extends TeaModel {
     }
 
     /**
+     * @return protocolSettings
+     */
+    public java.util.List<ProtocolSettings> getProtocolSettings() {
+        return this.protocolSettings;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -44,14 +56,24 @@ public class ProtocolConfiguration extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<ProtocolSettings> protocolSettings; 
         private String type; 
 
         private Builder() {
         } 
 
         private Builder(ProtocolConfiguration model) {
+            this.protocolSettings = model.protocolSettings;
             this.type = model.type;
         } 
+
+        /**
+         * <p>详细的协议配置信息</p>
+         */
+        public Builder protocolSettings(java.util.List<ProtocolSettings> protocolSettings) {
+            this.protocolSettings = protocolSettings;
+            return this;
+        }
 
         /**
          * type.
