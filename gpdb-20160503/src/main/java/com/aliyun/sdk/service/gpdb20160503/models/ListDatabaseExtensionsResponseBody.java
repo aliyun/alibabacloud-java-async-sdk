@@ -67,7 +67,7 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Extensions.
+         * <p>Extension list.</p>
          */
         public Builder extensions(java.util.List<Extensions> extensions) {
             this.extensions = extensions;
@@ -75,7 +75,10 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhparser</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +168,10 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionName.
+             * <p>The extension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhparser</p>
              */
             public Builder extensionName(String extensionName) {
                 this.extensionName = extensionName;
@@ -170,7 +179,10 @@ public class ListDatabaseExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>installed</p>
              */
             public Builder status(String status) {
                 this.status = status;

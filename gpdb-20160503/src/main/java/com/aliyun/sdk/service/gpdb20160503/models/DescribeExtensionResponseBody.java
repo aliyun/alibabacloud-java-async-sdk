@@ -158,7 +158,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentVersion.
+         * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1</p>
          */
         public Builder currentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
@@ -166,7 +169,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhparser</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -174,7 +180,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * ExtensionId.
+         * <p>The extension ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37</p>
          */
         public Builder extensionId(String extensionId) {
             this.extensionId = extensionId;
@@ -182,7 +191,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * ExtensionName.
+         * <p>The extension name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhparser</p>
          */
         public Builder extensionName(String extensionName) {
             this.extensionName = extensionName;
@@ -190,7 +202,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * IsInstallNeedRestart.
+         * <p>Indicates whether an instance restart is required after you install the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder isInstallNeedRestart(Boolean isInstallNeedRestart) {
             this.isInstallNeedRestart = isInstallNeedRestart;
@@ -198,7 +213,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * IsLatestVersion.
+         * <p>Whether it is the latest version extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -206,7 +224,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1</p>
          */
         public Builder latestVersion(String latestVersion) {
             this.latestVersion = latestVersion;
@@ -214,7 +235,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +246,10 @@ public class DescribeExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>installed</p>
          */
         public Builder status(String status) {
             this.status = status;

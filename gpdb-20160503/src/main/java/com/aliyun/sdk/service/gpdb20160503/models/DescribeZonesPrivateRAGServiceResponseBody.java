@@ -67,7 +67,10 @@ public class DescribeZonesPrivateRAGServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeZonesPrivateRAGServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneIds.
+         * <p>The list of zones.</p>
          */
         public Builder zoneIds(java.util.List<String> zoneIds) {
             this.zoneIds = zoneIds;

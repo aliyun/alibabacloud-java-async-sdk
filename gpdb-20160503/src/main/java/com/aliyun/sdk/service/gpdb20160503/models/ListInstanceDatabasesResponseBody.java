@@ -93,7 +93,13 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -101,7 +107,7 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Databases.
+         * <p>The queried databases.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
@@ -109,7 +115,10 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -183,7 +195,15 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * <ul>
+             * <li>Only contain letters, digits, and underscores (_).</li>
+             * <li>Must start with a letter.</li>
+             * <li>Up to 63 characters in length.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>testdatabase</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -191,7 +211,10 @@ public class ListInstanceDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder description(String description) {
                 this.description = description;

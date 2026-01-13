@@ -45,6 +45,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ChatWithKnowledgeBaseStreamRequest(Builder builder) {
@@ -213,6 +214,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
 
         /**
          * <p>The region ID of the instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1091,9 +1093,11 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
      */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Role")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String role;
 
         private Messages(Builder builder) {
@@ -1137,6 +1141,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
 
             /**
              * <p>The message content.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1150,6 +1155,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              * <li>user</li>
              * <li>assistant</li>
              * </ul>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>

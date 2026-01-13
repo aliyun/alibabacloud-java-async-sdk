@@ -509,6 +509,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVectorIndexResponse> deleteVectorIndex(DeleteVectorIndexRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Before you deploy the private RAG service, create an initial account.</li>
+     * <li>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</li>
+     * </ol>
+     * 
      * @param request the request parameters of DeployPrivateRAGService  DeployPrivateRAGServiceRequest
      * @return DeployPrivateRAGServiceResponse
      */

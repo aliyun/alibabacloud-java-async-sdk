@@ -54,7 +54,10 @@ public class DeleteDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07F6177E-6DE4-408A-BB4F-0723301340F3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

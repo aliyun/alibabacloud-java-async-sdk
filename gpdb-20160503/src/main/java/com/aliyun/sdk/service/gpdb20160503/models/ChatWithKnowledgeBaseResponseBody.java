@@ -913,63 +913,6 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
      *
      * <p>ChatWithKnowledgeBaseResponseBody</p>
      */
-    public static class Metadata extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Source")
-        private Long source;
-
-        private Metadata(Builder builder) {
-            this.source = builder.source;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Metadata create() {
-            return builder().build();
-        }
-
-        /**
-         * @return source
-         */
-        public Long getSource() {
-            return this.source;
-        }
-
-        public static final class Builder {
-            private Long source; 
-
-            private Builder() {
-            } 
-
-            private Builder(Metadata model) {
-                this.source = model.source;
-            } 
-
-            /**
-             * <p>The source of the document.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder source(Long source) {
-                this.source = source;
-                return this;
-            }
-
-            public Metadata build() {
-                return new Metadata(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ChatWithKnowledgeBaseResponseBody} extends {@link TeaModel}
-     *
-     * <p>ChatWithKnowledgeBaseResponseBody</p>
-     */
     public static class Matches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -987,7 +930,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         private Object loaderMetadata;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private Metadata metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("RerankScore")
         private Double rerankScore;
@@ -1060,7 +1003,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public Metadata getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
@@ -1098,7 +1041,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             private String fileURL; 
             private String id; 
             private Object loaderMetadata; 
-            private Metadata metadata; 
+            private java.util.Map<String, ?> metadata; 
             private Double rerankScore; 
             private Long retrievalSource; 
             private Double score; 
@@ -1176,7 +1119,7 @@ public class ChatWithKnowledgeBaseResponseBody extends TeaModel {
             /**
              * <p>The metadata.</p>
              */
-            public Builder metadata(Metadata metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }

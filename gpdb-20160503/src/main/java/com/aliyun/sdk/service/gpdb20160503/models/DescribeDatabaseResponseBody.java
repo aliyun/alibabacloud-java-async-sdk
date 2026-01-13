@@ -197,7 +197,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessPrivilege.
+         * <p>The permission control information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=Tc/test_001\ntest_001=CTc/test_001</p>
          */
         public Builder accessPrivilege(String accessPrivilege) {
             this.accessPrivilege = accessPrivilege;
@@ -205,7 +208,11 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * CharacterSetName.
+         * <p>The character set.</p>
+         * <p>For more information about the value range, see Document <a href="https://www.postgresql.org/docs/current/multibyte.html">https://www.postgresql.org/docs/current/multibyte.html</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTF8</p>
          */
         public Builder characterSetName(String characterSetName) {
             this.characterSetName = characterSetName;
@@ -213,7 +220,18 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Collate.
+         * <p>Database locale parameter that specifies string comparison and sorting rules.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
+         * </li>
+         * <li><p>Collate: You can query available collations using the command SELECT DISTINCT collname FROM pg_collation;. If not specified, the default value is en_US.utf8.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US.utf8</p>
          */
         public Builder collate(String collate) {
             this.collate = collate;
@@ -221,7 +239,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * ConnLimit.
+         * <p>Limits the number of concurrent connections. -1 indicates unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder connLimit(String connLimit) {
             this.connLimit = connLimit;
@@ -229,7 +250,18 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Ctype.
+         * <p>Database locale parameter that specifies character classification and case conversion rules.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The locale must be compatible with the character set specified by the CharacterSetName parameter.</p>
+         * </li>
+         * <li><p>You can execute the SELECT DISTINCT collctype FROM pg_collation; statement to obtain the field value. The default value is en_US.utf8.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US.utf8</p>
          */
         public Builder ctype(String ctype) {
             this.ctype = ctype;
@@ -237,7 +269,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -245,7 +280,15 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * DatabaseName.
+         * <p>The database name.</p>
+         * <ul>
+         * <li>Only contain letters, digits, and underscores (_).</li>
+         * <li>Must start with a letter.</li>
+         * <li>Up to 63 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -253,7 +296,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The database comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A user management database storing customer profiles.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -261,7 +307,16 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the table.</p>
+         * <ul>
+         * <li>Contain lowercase letters, digits, and underscores (_).</li>
+         * <li>Must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>Cannot start with gp.</li>
+         * <li>Must be 2 to 16 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testadb</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -269,7 +324,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +335,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The database size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000 MB</p>
          */
         public Builder size(String size) {
             this.size = size;
@@ -285,7 +346,10 @@ public class DescribeDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * TableSpace.
+         * <p>The database tablespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg_default</p>
          */
         public Builder tableSpace(String tableSpace) {
             this.tableSpace = tableSpace;

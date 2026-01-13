@@ -75,6 +75,10 @@ public class DescribeDatabaseRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +91,7 @@ public class DescribeDatabaseRequest extends Request {
         }
 
         /**
+         * <p>The name of the database that you want to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

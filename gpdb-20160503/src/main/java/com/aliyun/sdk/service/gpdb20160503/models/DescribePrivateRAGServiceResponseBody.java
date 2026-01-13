@@ -67,7 +67,10 @@ public class DescribePrivateRAGServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * CaCert.
+         * <p>CA certificate Info. The returned OSS link, valid for 2 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-xxx">https://oss-xxx</a></p>
          */
         public Builder caCert(String caCert) {
             this.caCert = caCert;
@@ -75,7 +78,10 @@ public class DescribePrivateRAGServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
