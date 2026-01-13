@@ -26,6 +26,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     private String desktopName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopStatusList")
+    private java.util.List<String> desktopStatusList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopType")
     private String desktopType;
 
@@ -36,6 +40,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeDesktopStatusList")
+    private java.util.List<String> excludeDesktopStatusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
@@ -82,9 +90,11 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         super(builder);
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
+        this.desktopStatusList = builder.desktopStatusList;
         this.desktopType = builder.desktopType;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
+        this.excludeDesktopStatusList = builder.excludeDesktopStatusList;
         this.officeSiteId = builder.officeSiteId;
         this.orderBy = builder.orderBy;
         this.pageNumber = builder.pageNumber;
@@ -125,6 +135,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     }
 
     /**
+     * @return desktopStatusList
+     */
+    public java.util.List<String> getDesktopStatusList() {
+        return this.desktopStatusList;
+    }
+
+    /**
      * @return desktopType
      */
     public String getDesktopType() {
@@ -143,6 +160,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
      */
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return excludeDesktopStatusList
+     */
+    public java.util.List<String> getExcludeDesktopStatusList() {
+        return this.excludeDesktopStatusList;
     }
 
     /**
@@ -218,9 +242,11 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeGlobalDesktopRecordsRequest, Builder> {
         private java.util.List<String> desktopId; 
         private String desktopName; 
+        private java.util.List<String> desktopStatusList; 
         private String desktopType; 
         private String endTime; 
         private String endUserId; 
+        private java.util.List<String> excludeDesktopStatusList; 
         private String officeSiteId; 
         private String orderBy; 
         private Integer pageNumber; 
@@ -240,9 +266,11 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
             super(request);
             this.desktopId = request.desktopId;
             this.desktopName = request.desktopName;
+            this.desktopStatusList = request.desktopStatusList;
             this.desktopType = request.desktopType;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
+            this.excludeDesktopStatusList = request.excludeDesktopStatusList;
             this.officeSiteId = request.officeSiteId;
             this.orderBy = request.orderBy;
             this.pageNumber = request.pageNumber;
@@ -273,6 +301,15 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
             this.desktopName = desktopName;
+            return this;
+        }
+
+        /**
+         * DesktopStatusList.
+         */
+        public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
+            this.putQueryParameter("DesktopStatusList", desktopStatusList);
+            this.desktopStatusList = desktopStatusList;
             return this;
         }
 
@@ -312,6 +349,15 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * ExcludeDesktopStatusList.
+         */
+        public Builder excludeDesktopStatusList(java.util.List<String> excludeDesktopStatusList) {
+            this.putQueryParameter("ExcludeDesktopStatusList", excludeDesktopStatusList);
+            this.excludeDesktopStatusList = excludeDesktopStatusList;
             return this;
         }
 

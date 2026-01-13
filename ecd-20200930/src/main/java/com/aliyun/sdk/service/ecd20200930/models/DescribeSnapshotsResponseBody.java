@@ -146,6 +146,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskStatus")
         private String diskStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EnvId")
+        private String envId;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -197,6 +203,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
             this.diskStatus = builder.diskStatus;
+            this.envId = builder.envId;
+            this.envType = builder.envType;
             this.osType = builder.osType;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
@@ -275,6 +283,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public String getDiskStatus() {
             return this.diskStatus;
+        }
+
+        /**
+         * @return envId
+         */
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -384,6 +406,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String desktopName; 
             private String desktopStatus; 
             private String diskStatus; 
+            private String envId; 
+            private String envType; 
             private String osType; 
             private String progress; 
             private String protocolType; 
@@ -411,6 +435,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.desktopName = model.desktopName;
                 this.desktopStatus = model.desktopStatus;
                 this.diskStatus = model.diskStatus;
+                this.envId = model.envId;
+                this.envType = model.envType;
                 this.osType = model.osType;
                 this.progress = model.progress;
                 this.protocolType = model.protocolType;
@@ -520,6 +546,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder diskStatus(String diskStatus) {
                 this.diskStatus = diskStatus;
+                return this;
+            }
+
+            /**
+             * EnvId.
+             */
+            public Builder envId(String envId) {
+                this.envId = envId;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 

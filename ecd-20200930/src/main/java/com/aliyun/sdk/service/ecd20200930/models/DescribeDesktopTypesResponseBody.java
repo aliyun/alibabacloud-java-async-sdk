@@ -113,6 +113,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopTypeStatus")
         private String desktopTypeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EnvId")
+        private String envId;
+
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        private String envType;
+
         @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
@@ -146,6 +152,8 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             this.description = builder.description;
             this.desktopTypeId = builder.desktopTypeId;
             this.desktopTypeStatus = builder.desktopTypeStatus;
+            this.envId = builder.envId;
+            this.envType = builder.envType;
             this.gpuCount = builder.gpuCount;
             this.gpuMemory = builder.gpuMemory;
             this.gpuSpec = builder.gpuSpec;
@@ -198,6 +206,20 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
          */
         public String getDesktopTypeStatus() {
             return this.desktopTypeStatus;
+        }
+
+        /**
+         * @return envId
+         */
+        public String getEnvId() {
+            return this.envId;
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
         }
 
         /**
@@ -269,6 +291,8 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String description; 
             private String desktopTypeId; 
             private String desktopTypeStatus; 
+            private String envId; 
+            private String envType; 
             private Float gpuCount; 
             private Integer gpuMemory; 
             private String gpuSpec; 
@@ -288,6 +312,8 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.desktopTypeId = model.desktopTypeId;
                 this.desktopTypeStatus = model.desktopTypeStatus;
+                this.envId = model.envId;
+                this.envType = model.envType;
                 this.gpuCount = model.gpuCount;
                 this.gpuMemory = model.gpuMemory;
                 this.gpuSpec = model.gpuSpec;
@@ -348,6 +374,22 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
              */
             public Builder desktopTypeStatus(String desktopTypeStatus) {
                 this.desktopTypeStatus = desktopTypeStatus;
+                return this;
+            }
+
+            /**
+             * EnvId.
+             */
+            public Builder envId(String envId) {
+                this.envId = envId;
+                return this;
+            }
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
                 return this;
             }
 

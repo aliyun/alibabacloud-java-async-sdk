@@ -62,6 +62,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private Integer memorySize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
@@ -107,6 +111,7 @@ public class DescribeDesktopTypesRequest extends Request {
         this.gpuMemory = builder.gpuMemory;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.memorySize = builder.memorySize;
+        this.officeSiteId = builder.officeSiteId;
         this.orderBy = builder.orderBy;
         this.orderType = builder.orderType;
         this.regionId = builder.regionId;
@@ -208,6 +213,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return orderBy
      */
     public String getOrderBy() {
@@ -275,6 +287,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private Integer gpuMemory; 
         private String instanceTypeFamily; 
         private Integer memorySize; 
+        private String officeSiteId; 
         private String orderBy; 
         private String orderType; 
         private String regionId; 
@@ -301,6 +314,7 @@ public class DescribeDesktopTypesRequest extends Request {
             this.gpuMemory = request.gpuMemory;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.memorySize = request.memorySize;
+            this.officeSiteId = request.officeSiteId;
             this.orderBy = request.orderBy;
             this.orderType = request.orderType;
             this.regionId = request.regionId;
@@ -487,6 +501,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder memorySize(Integer memorySize) {
             this.putQueryParameter("MemorySize", memorySize);
             this.memorySize = memorySize;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
             return this;
         }
 
