@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ManageAccountResult} extends {@link TeaModel}
+ * {@link AccountCreateCmd} extends {@link TeaModel}
  *
- * <p>ManageAccountResult</p>
+ * <p>AccountCreateCmd</p>
  */
-public class ManageAccountResult extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
+public class AccountCreateCmd extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("accountId")
+    private String accountId;
 
-    private ManageAccountResult(Builder builder) {
-        this.success = builder.success;
+    private AccountCreateCmd(Builder builder) {
+        this.accountId = builder.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ManageAccountResult create() {
+    public static AccountCreateCmd create() {
         return builder().build();
     }
 
@@ -37,32 +37,32 @@ public class ManageAccountResult extends TeaModel {
     }
 
     /**
-     * @return success
+     * @return accountId
      */
-    public Boolean getSuccess() {
-        return this.success;
+    public String getAccountId() {
+        return this.accountId;
     }
 
     public static final class Builder {
-        private Boolean success; 
+        private String accountId; 
 
         private Builder() {
         } 
 
-        private Builder(ManageAccountResult model) {
-            this.success = model.success;
+        private Builder(AccountCreateCmd model) {
+            this.accountId = model.accountId;
         } 
 
         /**
-         * success.
+         * accountId.
          */
-        public Builder success(Boolean success) {
-            this.success = success;
+        public Builder accountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
 
-        public ManageAccountResult build() {
-            return new ManageAccountResult(this);
+        public AccountCreateCmd build() {
+            return new AccountCreateCmd(this);
         } 
 
     } 

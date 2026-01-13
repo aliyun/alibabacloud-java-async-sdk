@@ -92,6 +92,10 @@ public class IrAccountEntity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -221,6 +225,28 @@ public class IrAccountEntity extends TeaModel {
         private Integer testQps; 
         private Integer testQueryPerDay; 
         private String testStartTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(IrAccountEntity model) {
+            this.accountId = model.accountId;
+            this.accountName = model.accountName;
+            this.accountStatus = model.accountStatus;
+            this.adjustedNormalQps = model.adjustedNormalQps;
+            this.configuration = model.configuration;
+            this.createTime = model.createTime;
+            this.id = model.id;
+            this.isDeleted = model.isDeleted;
+            this.modifiedTime = model.modifiedTime;
+            this.quarkKey = model.quarkKey;
+            this.quarkOsr = model.quarkOsr;
+            this.quarkUsername = model.quarkUsername;
+            this.searchType = model.searchType;
+            this.testQps = model.testQps;
+            this.testQueryPerDay = model.testQueryPerDay;
+            this.testStartTime = model.testStartTime;
+        } 
 
         /**
          * accountId.

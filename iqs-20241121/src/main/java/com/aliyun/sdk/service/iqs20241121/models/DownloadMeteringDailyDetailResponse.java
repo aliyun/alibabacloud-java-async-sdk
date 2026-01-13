@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ManageSearchAccountInfoResponse} extends {@link TeaModel}
+ * {@link DownloadMeteringDailyDetailResponse} extends {@link TeaModel}
  *
- * <p>ManageSearchAccountInfoResponse</p>
+ * <p>DownloadMeteringDailyDetailResponse</p>
  */
-public class ManageSearchAccountInfoResponse extends Response {
+public class DownloadMeteringDailyDetailResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ManageSearchAccountInfoResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private OperationResult body;
+    private DownloadMeteringDailyDetailResponseBody body;
 
-    private ManageSearchAccountInfoResponse(BuilderImpl builder) {
+    private DownloadMeteringDailyDetailResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ManageSearchAccountInfoResponse create() {
+    public static DownloadMeteringDailyDetailResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ManageSearchAccountInfoResponse extends Response {
     /**
      * @return body
      */
-    public OperationResult getBody() {
+    public DownloadMeteringDailyDetailResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ManageSearchAccountInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<DownloadMeteringDailyDetailResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(OperationResult body);
+        Builder body(DownloadMeteringDailyDetailResponseBody body);
 
         @Override
-        ManageSearchAccountInfoResponse build();
+        DownloadMeteringDailyDetailResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ManageSearchAccountInfoResponse, Builder>
+            extends Response.BuilderImpl<DownloadMeteringDailyDetailResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private OperationResult body; 
+        private DownloadMeteringDailyDetailResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ManageSearchAccountInfoResponse response) {
+        private BuilderImpl(DownloadMeteringDailyDetailResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ManageSearchAccountInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(OperationResult body) {
+        public Builder body(DownloadMeteringDailyDetailResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ManageSearchAccountInfoResponse build() {
-            return new ManageSearchAccountInfoResponse(this);
+        public DownloadMeteringDailyDetailResponse build() {
+            return new DownloadMeteringDailyDetailResponse(this);
         } 
 
     } 

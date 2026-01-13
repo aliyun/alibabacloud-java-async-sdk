@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExpandSearchExpiredTimeRequest} extends {@link RequestModel}
+ * {@link ApplyFormalServiceRequest} extends {@link RequestModel}
  *
- * <p>ExpandSearchExpiredTimeRequest</p>
+ * <p>ApplyFormalServiceRequest</p>
  */
-public class ExpandSearchExpiredTimeRequest extends Request {
+public class ApplyFormalServiceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private ExpendExpiredTimeRequest body;
+    private ApplyFormalServiceCmd body;
 
-    private ExpandSearchExpiredTimeRequest(Builder builder) {
+    private ApplyFormalServiceRequest(Builder builder) {
         super(builder);
         this.body = builder.body;
     }
@@ -30,7 +30,7 @@ public class ExpandSearchExpiredTimeRequest extends Request {
         return new Builder();
     }
 
-    public static ExpandSearchExpiredTimeRequest create() {
+    public static ApplyFormalServiceRequest create() {
         return builder().build();
     }
 
@@ -42,18 +42,18 @@ public class ExpandSearchExpiredTimeRequest extends Request {
     /**
      * @return body
      */
-    public ExpendExpiredTimeRequest getBody() {
+    public ApplyFormalServiceCmd getBody() {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<ExpandSearchExpiredTimeRequest, Builder> {
-        private ExpendExpiredTimeRequest body; 
+    public static final class Builder extends Request.Builder<ApplyFormalServiceRequest, Builder> {
+        private ApplyFormalServiceCmd body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExpandSearchExpiredTimeRequest request) {
+        private Builder(ApplyFormalServiceRequest request) {
             super(request);
             this.body = request.body;
         } 
@@ -61,15 +61,15 @@ public class ExpandSearchExpiredTimeRequest extends Request {
         /**
          * body.
          */
-        public Builder body(ExpendExpiredTimeRequest body) {
+        public Builder body(ApplyFormalServiceCmd body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         @Override
-        public ExpandSearchExpiredTimeRequest build() {
-            return new ExpandSearchExpiredTimeRequest(this);
+        public ApplyFormalServiceRequest build() {
+            return new ApplyFormalServiceRequest(this);
         } 
 
     } 

@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ManageAccountResult} extends {@link TeaModel}
+ * {@link ApplyFormalServiceResponseBody} extends {@link TeaModel}
  *
- * <p>ManageAccountResult</p>
+ * <p>ApplyFormalServiceResponseBody</p>
  */
-public class ManageAccountResult extends TeaModel {
+public class ApplyFormalServiceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private ManageAccountResult(Builder builder) {
+    private ApplyFormalServiceResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
         this.success = builder.success;
     }
 
@@ -28,12 +32,19 @@ public class ManageAccountResult extends TeaModel {
         return new Builder();
     }
 
-    public static ManageAccountResult create() {
+    public static ApplyFormalServiceResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -44,14 +55,27 @@ public class ManageAccountResult extends TeaModel {
     }
 
     public static final class Builder {
+        private String requestId; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(ManageAccountResult model) {
+        private Builder(ApplyFormalServiceResponseBody model) {
+            this.requestId = model.requestId;
             this.success = model.success;
         } 
+
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECB2144C-E277-5434-80E6-12D26678D364</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
 
         /**
          * success.
@@ -61,8 +85,8 @@ public class ManageAccountResult extends TeaModel {
             return this;
         }
 
-        public ManageAccountResult build() {
-            return new ManageAccountResult(this);
+        public ApplyFormalServiceResponseBody build() {
+            return new ApplyFormalServiceResponseBody(this);
         } 
 
     } 

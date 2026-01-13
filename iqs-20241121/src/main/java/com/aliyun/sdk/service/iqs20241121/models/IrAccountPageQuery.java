@@ -32,6 +32,10 @@ public class IrAccountPageQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -41,6 +45,13 @@ public class IrAccountPageQuery extends TeaModel {
 
     public static final class Builder {
         private String name; 
+
+        private Builder() {
+        } 
+
+        private Builder(IrAccountPageQuery model) {
+            this.name = model.name;
+        } 
 
         /**
          * name.

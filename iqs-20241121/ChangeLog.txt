@@ -1,3 +1,6 @@
+2026-01-13 Version: 1.0.1
+- Generated java-async 2024-11-21 for IQS.
+
 2025-02-27 Version: 1.0.0
 - Generated java-async 2024-11-21 for IQS.
 

@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExpandSearchExpiredTimeRequest} extends {@link RequestModel}
+ * {@link DownloadApiCallDailyDetailRequest} extends {@link RequestModel}
  *
- * <p>ExpandSearchExpiredTimeRequest</p>
+ * <p>DownloadApiCallDailyDetailRequest</p>
  */
-public class ExpandSearchExpiredTimeRequest extends Request {
+public class DownloadApiCallDailyDetailRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private ExpendExpiredTimeRequest body;
+    private DownloadApiCallDailyDetailCmd body;
 
-    private ExpandSearchExpiredTimeRequest(Builder builder) {
+    private DownloadApiCallDailyDetailRequest(Builder builder) {
         super(builder);
         this.body = builder.body;
     }
@@ -30,7 +30,7 @@ public class ExpandSearchExpiredTimeRequest extends Request {
         return new Builder();
     }
 
-    public static ExpandSearchExpiredTimeRequest create() {
+    public static DownloadApiCallDailyDetailRequest create() {
         return builder().build();
     }
 
@@ -42,18 +42,18 @@ public class ExpandSearchExpiredTimeRequest extends Request {
     /**
      * @return body
      */
-    public ExpendExpiredTimeRequest getBody() {
+    public DownloadApiCallDailyDetailCmd getBody() {
         return this.body;
     }
 
-    public static final class Builder extends Request.Builder<ExpandSearchExpiredTimeRequest, Builder> {
-        private ExpendExpiredTimeRequest body; 
+    public static final class Builder extends Request.Builder<DownloadApiCallDailyDetailRequest, Builder> {
+        private DownloadApiCallDailyDetailCmd body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExpandSearchExpiredTimeRequest request) {
+        private Builder(DownloadApiCallDailyDetailRequest request) {
             super(request);
             this.body = request.body;
         } 
@@ -61,15 +61,15 @@ public class ExpandSearchExpiredTimeRequest extends Request {
         /**
          * body.
          */
-        public Builder body(ExpendExpiredTimeRequest body) {
+        public Builder body(DownloadApiCallDailyDetailCmd body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;
         }
 
         @Override
-        public ExpandSearchExpiredTimeRequest build() {
-            return new ExpandSearchExpiredTimeRequest(this);
+        public DownloadApiCallDailyDetailRequest build() {
+            return new DownloadApiCallDailyDetailRequest(this);
         } 
 
     } 
