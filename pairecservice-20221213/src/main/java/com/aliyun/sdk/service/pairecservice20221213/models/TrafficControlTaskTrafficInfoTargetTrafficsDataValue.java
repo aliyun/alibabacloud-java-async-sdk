@@ -20,12 +20,12 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
     @com.aliyun.core.annotation.NameInMap("Traffic")
     private Double traffic;
 
-    @com.aliyun.core.annotation.NameInMap("RecordTime")
-    private Long recordTime;
+    @com.aliyun.core.annotation.NameInMap("RecorfTime")
+    private Long recorfTime;
 
     private TrafficControlTaskTrafficInfoTargetTrafficsDataValue(Builder builder) {
         this.traffic = builder.traffic;
-        this.recordTime = builder.recordTime;
+        this.recorfTime = builder.recorfTime;
     }
 
     public static Builder builder() {
@@ -48,22 +48,22 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
     }
 
     /**
-     * @return recordTime
+     * @return recorfTime
      */
-    public Long getRecordTime() {
-        return this.recordTime;
+    public Long getRecorfTime() {
+        return this.recorfTime;
     }
 
     public static final class Builder {
         private Double traffic; 
-        private Long recordTime; 
+        private Long recorfTime; 
 
         private Builder() {
         } 
 
         private Builder(TrafficControlTaskTrafficInfoTargetTrafficsDataValue model) {
             this.traffic = model.traffic;
-            this.recordTime = model.recordTime;
+            this.recorfTime = model.recorfTime;
         } 
 
         /**
@@ -75,10 +75,10 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
         }
 
         /**
-         * RecordTime.
+         * RecorfTime.
          */
-        public Builder recordTime(Long recordTime) {
-            this.recordTime = recordTime;
+        public Builder recorfTime(Long recorfTime) {
+            this.recorfTime = recorfTime;
             return this;
         }
 

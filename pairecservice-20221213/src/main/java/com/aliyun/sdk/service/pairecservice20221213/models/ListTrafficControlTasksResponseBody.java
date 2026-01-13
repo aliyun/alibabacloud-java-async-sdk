@@ -698,6 +698,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatisBehaviorConditionArray")
         private String statisBehaviorConditionArray;
 
+        @com.aliyun.core.annotation.NameInMap("StatisBehaviorConditionExpress")
+        private String statisBehaviorConditionExpress;
+
         @com.aliyun.core.annotation.NameInMap("StatisBehaviorConditionType")
         private String statisBehaviorConditionType;
 
@@ -752,6 +755,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.statisBahaviorConditionExpress = builder.statisBahaviorConditionExpress;
             this.statisBehaviorConditionArray = builder.statisBehaviorConditionArray;
+            this.statisBehaviorConditionExpress = builder.statisBehaviorConditionExpress;
             this.statisBehaviorConditionType = builder.statisBehaviorConditionType;
             this.trafficControlTargets = builder.trafficControlTargets;
             this.trafficControlTaskId = builder.trafficControlTaskId;
@@ -994,6 +998,13 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return statisBehaviorConditionExpress
+         */
+        public String getStatisBehaviorConditionExpress() {
+            return this.statisBehaviorConditionExpress;
+        }
+
+        /**
          * @return statisBehaviorConditionType
          */
         public String getStatisBehaviorConditionType() {
@@ -1075,6 +1086,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             private String startTime; 
             private String statisBahaviorConditionExpress; 
             private String statisBehaviorConditionArray; 
+            private String statisBehaviorConditionExpress; 
             private String statisBehaviorConditionType; 
             private java.util.List<TrafficControlTargets> trafficControlTargets; 
             private String trafficControlTaskId; 
@@ -1119,6 +1131,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
                 this.startTime = model.startTime;
                 this.statisBahaviorConditionExpress = model.statisBahaviorConditionExpress;
                 this.statisBehaviorConditionArray = model.statisBehaviorConditionArray;
+                this.statisBehaviorConditionExpress = model.statisBehaviorConditionExpress;
                 this.statisBehaviorConditionType = model.statisBehaviorConditionType;
                 this.trafficControlTargets = model.trafficControlTargets;
                 this.trafficControlTaskId = model.trafficControlTaskId;
@@ -1381,6 +1394,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
              */
             public Builder statisBehaviorConditionArray(String statisBehaviorConditionArray) {
                 this.statisBehaviorConditionArray = statisBehaviorConditionArray;
+                return this;
+            }
+
+            /**
+             * StatisBehaviorConditionExpress.
+             */
+            public Builder statisBehaviorConditionExpress(String statisBehaviorConditionExpress) {
+                this.statisBehaviorConditionExpress = statisBehaviorConditionExpress;
                 return this;
             }
 

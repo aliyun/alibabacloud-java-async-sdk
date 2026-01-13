@@ -76,6 +76,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeRecallManagementServiceVersion  ChangeRecallManagementServiceVersionRequest
+     * @return ChangeRecallManagementServiceVersionResponse
+     */
+    @Override
+    public CompletableFuture<ChangeRecallManagementServiceVersionResponse> changeRecallManagementServiceVersion(ChangeRecallManagementServiceVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChangeRecallManagementServiceVersion").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/action/changeversion").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeRecallManagementServiceVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeRecallManagementServiceVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckInstanceResources  CheckInstanceResourcesRequest
      * @return CheckInstanceResourcesResponse
      */
@@ -472,6 +490,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRecallManagementConfig  CreateRecallManagementConfigRequest
+     * @return CreateRecallManagementConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateRecallManagementConfigResponse> createRecallManagementConfig(CreateRecallManagementConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRecallManagementConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecallManagementConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRecallManagementConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRecallManagementService  CreateRecallManagementServiceRequest
+     * @return CreateRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<CreateRecallManagementServiceResponse> createRecallManagementService(CreateRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRecallManagementService").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRecallManagementServiceVersion  CreateRecallManagementServiceVersionRequest
+     * @return CreateRecallManagementServiceVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateRecallManagementServiceVersionResponse> createRecallManagementServiceVersion(CreateRecallManagementServiceVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRecallManagementServiceVersion").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecallManagementServiceVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRecallManagementServiceVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRecallManagementServiceVersionConfig  CreateRecallManagementServiceVersionConfigRequest
+     * @return CreateRecallManagementServiceVersionConfigResponse
+     */
+    @Override
+    public CompletableFuture<CreateRecallManagementServiceVersionConfigResponse> createRecallManagementServiceVersionConfig(CreateRecallManagementServiceVersionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRecallManagementServiceVersionConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}/configs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecallManagementServiceVersionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRecallManagementServiceVersionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRecallManagementTable  CreateRecallManagementTableRequest
+     * @return CreateRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<CreateRecallManagementTableResponse> createRecallManagementTable(CreateRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRecallManagementTable").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementtables").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRecallManagementTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateResourceRule  CreateResourceRuleRequest
      * @return CreateResourceRuleResponse
      */
@@ -808,6 +916,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteParamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementService  DeleteRecallManagementServiceRequest
+     * @return DeleteRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecallManagementServiceResponse> deleteRecallManagementService(DeleteRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRecallManagementService").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementServiceVersion  DeleteRecallManagementServiceVersionRequest
+     * @return DeleteRecallManagementServiceVersionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecallManagementServiceVersionResponse> deleteRecallManagementServiceVersion(DeleteRecallManagementServiceVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRecallManagementServiceVersion").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecallManagementServiceVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecallManagementServiceVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementServiceVersionConfig  DeleteRecallManagementServiceVersionConfigRequest
+     * @return DeleteRecallManagementServiceVersionConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecallManagementServiceVersionConfigResponse> deleteRecallManagementServiceVersionConfig(DeleteRecallManagementServiceVersionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRecallManagementServiceVersionConfig").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}/configs/{RecallManagementServiceVersionConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecallManagementServiceVersionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecallManagementServiceVersionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementTable  DeleteRecallManagementTableRequest
+     * @return DeleteRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRecallManagementTableResponse> deleteRecallManagementTable(DeleteRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRecallManagementTable").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRecallManagementTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1240,6 +1420,114 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetLayerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementConfig  GetRecallManagementConfigRequest
+     * @return GetRecallManagementConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementConfigResponse> getRecallManagementConfig(GetRecallManagementConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementConfig").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementJob  GetRecallManagementJobRequest
+     * @return GetRecallManagementJobResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementJobResponse> getRecallManagementJob(GetRecallManagementJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementjobs/{RecallManagementJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementService  GetRecallManagementServiceRequest
+     * @return GetRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementServiceResponse> getRecallManagementService(GetRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementService").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementServiceVersion  GetRecallManagementServiceVersionRequest
+     * @return GetRecallManagementServiceVersionResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementServiceVersionResponse> getRecallManagementServiceVersion(GetRecallManagementServiceVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementServiceVersion").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementServiceVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementServiceVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementServiceVersionConfig  GetRecallManagementServiceVersionConfigRequest
+     * @return GetRecallManagementServiceVersionConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementServiceVersionConfigResponse> getRecallManagementServiceVersionConfig(GetRecallManagementServiceVersionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementServiceVersionConfig").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}/configs/{RecallManagementServiceVersionConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementServiceVersionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementServiceVersionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRecallManagementTable  GetRecallManagementTableRequest
+     * @return GetRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<GetRecallManagementTableResponse> getRecallManagementTable(GetRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRecallManagementTable").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRecallManagementTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1714,6 +2002,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRecallManagementJobs  ListRecallManagementJobsRequest
+     * @return ListRecallManagementJobsResponse
+     */
+    @Override
+    public CompletableFuture<ListRecallManagementJobsResponse> listRecallManagementJobs(ListRecallManagementJobsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRecallManagementJobs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementjobs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecallManagementJobsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecallManagementJobsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecallManagementServiceVersions  ListRecallManagementServiceVersionsRequest
+     * @return ListRecallManagementServiceVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListRecallManagementServiceVersionsResponse> listRecallManagementServiceVersions(ListRecallManagementServiceVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRecallManagementServiceVersions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecallManagementServiceVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecallManagementServiceVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecallManagementServices  ListRecallManagementServicesRequest
+     * @return ListRecallManagementServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListRecallManagementServicesResponse> listRecallManagementServices(ListRecallManagementServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRecallManagementServices").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementservices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecallManagementServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecallManagementServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecallManagementTableVersions  ListRecallManagementTableVersionsRequest
+     * @return ListRecallManagementTableVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListRecallManagementTableVersionsResponse> listRecallManagementTableVersions(ListRecallManagementTableVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRecallManagementTableVersions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}/versions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecallManagementTableVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecallManagementTableVersionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRecallManagementTables  ListRecallManagementTablesRequest
+     * @return ListRecallManagementTablesResponse
+     */
+    @Override
+    public CompletableFuture<ListRecallManagementTablesResponse> listRecallManagementTables(ListRecallManagementTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRecallManagementTables").setMethod(HttpMethod.GET).setPathRegex("/api/v1/recallmanagementtables").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRecallManagementTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRecallManagementTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListResourceRules  ListResourceRulesRequest
      * @return ListResourceRulesResponse
      */
@@ -1894,6 +2272,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OfflineRecallManagementService  OfflineRecallManagementServiceRequest
+     * @return OfflineRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<OfflineRecallManagementServiceResponse> offlineRecallManagementService(OfflineRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OfflineRecallManagementService").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/action/offline").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OfflineRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OfflineRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of OnlineExperiment  OnlineExperimentRequest
      * @return OnlineExperimentResponse
      */
@@ -1942,6 +2338,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OnlineLaboratoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OnlineRecallManagementService  OnlineRecallManagementServiceRequest
+     * @return OnlineRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<OnlineRecallManagementServiceResponse> onlineRecallManagementService(OnlineRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OnlineRecallManagementService").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/action/online").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OnlineRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OnlineRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PublishRecallManagementTable  PublishRecallManagementTableRequest
+     * @return PublishRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<PublishRecallManagementTableResponse> publishRecallManagementTable(PublishRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PublishRecallManagementTable").setMethod(HttpMethod.POST).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}/action/publish").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PublishRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PublishRecallManagementTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2410,6 +2842,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateParamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementConfig  UpdateRecallManagementConfigRequest
+     * @return UpdateRecallManagementConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecallManagementConfigResponse> updateRecallManagementConfig(UpdateRecallManagementConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRecallManagementConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/recallmanagementconfigs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecallManagementConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecallManagementConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementService  UpdateRecallManagementServiceRequest
+     * @return UpdateRecallManagementServiceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecallManagementServiceResponse> updateRecallManagementService(UpdateRecallManagementServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRecallManagementService").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecallManagementServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecallManagementServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementServiceVersionConfig  UpdateRecallManagementServiceVersionConfigRequest
+     * @return UpdateRecallManagementServiceVersionConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecallManagementServiceVersionConfigResponse> updateRecallManagementServiceVersionConfig(UpdateRecallManagementServiceVersionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRecallManagementServiceVersionConfig").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/recallmanagementservices/{RecallManagementServiceId}/versions/{RecallManagementServiceVersionId}/configs/{RecallManagementServiceVersionConfigId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecallManagementServiceVersionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecallManagementServiceVersionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementTable  UpdateRecallManagementTableRequest
+     * @return UpdateRecallManagementTableResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRecallManagementTableResponse> updateRecallManagementTable(UpdateRecallManagementTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRecallManagementTable").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/recallmanagementtables/{RecallManagementTableId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRecallManagementTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRecallManagementTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

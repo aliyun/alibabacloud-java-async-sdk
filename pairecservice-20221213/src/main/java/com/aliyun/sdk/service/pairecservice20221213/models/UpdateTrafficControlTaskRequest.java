@@ -114,6 +114,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
     private String statisBaeaviorConditionArray;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StatisBehaviorConditionArray")
+    private String statisBehaviorConditionArray;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StatisBehaviorConditionExpress")
     private String statisBehaviorConditionExpress;
 
@@ -167,6 +171,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         this.serviceIds = builder.serviceIds;
         this.startTime = builder.startTime;
         this.statisBaeaviorConditionArray = builder.statisBaeaviorConditionArray;
+        this.statisBehaviorConditionArray = builder.statisBehaviorConditionArray;
         this.statisBehaviorConditionExpress = builder.statisBehaviorConditionExpress;
         this.statisBehaviorConditionType = builder.statisBehaviorConditionType;
         this.trafficControlTargets = builder.trafficControlTargets;
@@ -358,6 +363,13 @@ public class UpdateTrafficControlTaskRequest extends Request {
     }
 
     /**
+     * @return statisBehaviorConditionArray
+     */
+    public String getStatisBehaviorConditionArray() {
+        return this.statisBehaviorConditionArray;
+    }
+
+    /**
      * @return statisBehaviorConditionExpress
      */
     public String getStatisBehaviorConditionExpress() {
@@ -431,6 +443,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         private java.util.List<Integer> serviceIds; 
         private String startTime; 
         private String statisBaeaviorConditionArray; 
+        private String statisBehaviorConditionArray; 
         private String statisBehaviorConditionExpress; 
         private String statisBehaviorConditionType; 
         private java.util.List<TrafficControlTargets> trafficControlTargets; 
@@ -469,6 +482,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
             this.serviceIds = request.serviceIds;
             this.startTime = request.startTime;
             this.statisBaeaviorConditionArray = request.statisBaeaviorConditionArray;
+            this.statisBehaviorConditionArray = request.statisBehaviorConditionArray;
             this.statisBehaviorConditionExpress = request.statisBehaviorConditionExpress;
             this.statisBehaviorConditionType = request.statisBehaviorConditionType;
             this.trafficControlTargets = request.trafficControlTargets;
@@ -691,6 +705,15 @@ public class UpdateTrafficControlTaskRequest extends Request {
         public Builder statisBaeaviorConditionArray(String statisBaeaviorConditionArray) {
             this.putBodyParameter("StatisBaeaviorConditionArray", statisBaeaviorConditionArray);
             this.statisBaeaviorConditionArray = statisBaeaviorConditionArray;
+            return this;
+        }
+
+        /**
+         * StatisBehaviorConditionArray.
+         */
+        public Builder statisBehaviorConditionArray(String statisBehaviorConditionArray) {
+            this.putBodyParameter("StatisBehaviorConditionArray", statisBehaviorConditionArray);
+            this.statisBehaviorConditionArray = statisBehaviorConditionArray;
             return this;
         }
 

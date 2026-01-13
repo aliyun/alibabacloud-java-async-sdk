@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BackflowFeatureConsistencyCheckJobDataResponse> backflowFeatureConsistencyCheckJobData(BackflowFeatureConsistencyCheckJobDataRequest request);
 
     /**
+     * @param request the request parameters of ChangeRecallManagementServiceVersion  ChangeRecallManagementServiceVersionRequest
+     * @return ChangeRecallManagementServiceVersionResponse
+     */
+    CompletableFuture<ChangeRecallManagementServiceVersionResponse> changeRecallManagementServiceVersion(ChangeRecallManagementServiceVersionRequest request);
+
+    /**
      * @param request the request parameters of CheckInstanceResources  CheckInstanceResourcesRequest
      * @return CheckInstanceResourcesResponse
      */
@@ -164,6 +170,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateParamResponse> createParam(CreateParamRequest request);
 
     /**
+     * @param request the request parameters of CreateRecallManagementConfig  CreateRecallManagementConfigRequest
+     * @return CreateRecallManagementConfigResponse
+     */
+    CompletableFuture<CreateRecallManagementConfigResponse> createRecallManagementConfig(CreateRecallManagementConfigRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecallManagementService  CreateRecallManagementServiceRequest
+     * @return CreateRecallManagementServiceResponse
+     */
+    CompletableFuture<CreateRecallManagementServiceResponse> createRecallManagementService(CreateRecallManagementServiceRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecallManagementServiceVersion  CreateRecallManagementServiceVersionRequest
+     * @return CreateRecallManagementServiceVersionResponse
+     */
+    CompletableFuture<CreateRecallManagementServiceVersionResponse> createRecallManagementServiceVersion(CreateRecallManagementServiceVersionRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecallManagementServiceVersionConfig  CreateRecallManagementServiceVersionConfigRequest
+     * @return CreateRecallManagementServiceVersionConfigResponse
+     */
+    CompletableFuture<CreateRecallManagementServiceVersionConfigResponse> createRecallManagementServiceVersionConfig(CreateRecallManagementServiceVersionConfigRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecallManagementTable  CreateRecallManagementTableRequest
+     * @return CreateRecallManagementTableResponse
+     */
+    CompletableFuture<CreateRecallManagementTableResponse> createRecallManagementTable(CreateRecallManagementTableRequest request);
+
+    /**
      * @param request the request parameters of CreateResourceRule  CreateResourceRuleRequest
      * @return CreateResourceRuleResponse
      */
@@ -276,6 +312,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteParamResponse
      */
     CompletableFuture<DeleteParamResponse> deleteParam(DeleteParamRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementService  DeleteRecallManagementServiceRequest
+     * @return DeleteRecallManagementServiceResponse
+     */
+    CompletableFuture<DeleteRecallManagementServiceResponse> deleteRecallManagementService(DeleteRecallManagementServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementServiceVersion  DeleteRecallManagementServiceVersionRequest
+     * @return DeleteRecallManagementServiceVersionResponse
+     */
+    CompletableFuture<DeleteRecallManagementServiceVersionResponse> deleteRecallManagementServiceVersion(DeleteRecallManagementServiceVersionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementServiceVersionConfig  DeleteRecallManagementServiceVersionConfigRequest
+     * @return DeleteRecallManagementServiceVersionConfigResponse
+     */
+    CompletableFuture<DeleteRecallManagementServiceVersionConfigResponse> deleteRecallManagementServiceVersionConfig(DeleteRecallManagementServiceVersionConfigRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecallManagementTable  DeleteRecallManagementTableRequest
+     * @return DeleteRecallManagementTableResponse
+     */
+    CompletableFuture<DeleteRecallManagementTableResponse> deleteRecallManagementTable(DeleteRecallManagementTableRequest request);
 
     /**
      * @param request the request parameters of DeleteResourceRule  DeleteResourceRuleRequest
@@ -420,6 +480,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLayerResponse
      */
     CompletableFuture<GetLayerResponse> getLayer(GetLayerRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementConfig  GetRecallManagementConfigRequest
+     * @return GetRecallManagementConfigResponse
+     */
+    CompletableFuture<GetRecallManagementConfigResponse> getRecallManagementConfig(GetRecallManagementConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementJob  GetRecallManagementJobRequest
+     * @return GetRecallManagementJobResponse
+     */
+    CompletableFuture<GetRecallManagementJobResponse> getRecallManagementJob(GetRecallManagementJobRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementService  GetRecallManagementServiceRequest
+     * @return GetRecallManagementServiceResponse
+     */
+    CompletableFuture<GetRecallManagementServiceResponse> getRecallManagementService(GetRecallManagementServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementServiceVersion  GetRecallManagementServiceVersionRequest
+     * @return GetRecallManagementServiceVersionResponse
+     */
+    CompletableFuture<GetRecallManagementServiceVersionResponse> getRecallManagementServiceVersion(GetRecallManagementServiceVersionRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementServiceVersionConfig  GetRecallManagementServiceVersionConfigRequest
+     * @return GetRecallManagementServiceVersionConfigResponse
+     */
+    CompletableFuture<GetRecallManagementServiceVersionConfigResponse> getRecallManagementServiceVersionConfig(GetRecallManagementServiceVersionConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetRecallManagementTable  GetRecallManagementTableRequest
+     * @return GetRecallManagementTableResponse
+     */
+    CompletableFuture<GetRecallManagementTableResponse> getRecallManagementTable(GetRecallManagementTableRequest request);
 
     /**
      * @param request the request parameters of GetResourceRule  GetResourceRuleRequest
@@ -578,6 +674,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListParamsResponse> listParams(ListParamsRequest request);
 
     /**
+     * @param request the request parameters of ListRecallManagementJobs  ListRecallManagementJobsRequest
+     * @return ListRecallManagementJobsResponse
+     */
+    CompletableFuture<ListRecallManagementJobsResponse> listRecallManagementJobs(ListRecallManagementJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListRecallManagementServiceVersions  ListRecallManagementServiceVersionsRequest
+     * @return ListRecallManagementServiceVersionsResponse
+     */
+    CompletableFuture<ListRecallManagementServiceVersionsResponse> listRecallManagementServiceVersions(ListRecallManagementServiceVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListRecallManagementServices  ListRecallManagementServicesRequest
+     * @return ListRecallManagementServicesResponse
+     */
+    CompletableFuture<ListRecallManagementServicesResponse> listRecallManagementServices(ListRecallManagementServicesRequest request);
+
+    /**
+     * @param request the request parameters of ListRecallManagementTableVersions  ListRecallManagementTableVersionsRequest
+     * @return ListRecallManagementTableVersionsResponse
+     */
+    CompletableFuture<ListRecallManagementTableVersionsResponse> listRecallManagementTableVersions(ListRecallManagementTableVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListRecallManagementTables  ListRecallManagementTablesRequest
+     * @return ListRecallManagementTablesResponse
+     */
+    CompletableFuture<ListRecallManagementTablesResponse> listRecallManagementTables(ListRecallManagementTablesRequest request);
+
+    /**
      * @param request the request parameters of ListResourceRules  ListResourceRulesRequest
      * @return ListResourceRulesResponse
      */
@@ -638,6 +764,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OfflineLaboratoryResponse> offlineLaboratory(OfflineLaboratoryRequest request);
 
     /**
+     * @param request the request parameters of OfflineRecallManagementService  OfflineRecallManagementServiceRequest
+     * @return OfflineRecallManagementServiceResponse
+     */
+    CompletableFuture<OfflineRecallManagementServiceResponse> offlineRecallManagementService(OfflineRecallManagementServiceRequest request);
+
+    /**
      * @param request the request parameters of OnlineExperiment  OnlineExperimentRequest
      * @return OnlineExperimentResponse
      */
@@ -654,6 +786,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OnlineLaboratoryResponse
      */
     CompletableFuture<OnlineLaboratoryResponse> onlineLaboratory(OnlineLaboratoryRequest request);
+
+    /**
+     * @param request the request parameters of OnlineRecallManagementService  OnlineRecallManagementServiceRequest
+     * @return OnlineRecallManagementServiceResponse
+     */
+    CompletableFuture<OnlineRecallManagementServiceResponse> onlineRecallManagementService(OnlineRecallManagementServiceRequest request);
+
+    /**
+     * @param request the request parameters of PublishRecallManagementTable  PublishRecallManagementTableRequest
+     * @return PublishRecallManagementTableResponse
+     */
+    CompletableFuture<PublishRecallManagementTableResponse> publishRecallManagementTable(PublishRecallManagementTableRequest request);
 
     /**
      * @param request the request parameters of PushAllExperiment  PushAllExperimentRequest
@@ -810,6 +954,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateParamResponse
      */
     CompletableFuture<UpdateParamResponse> updateParam(UpdateParamRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementConfig  UpdateRecallManagementConfigRequest
+     * @return UpdateRecallManagementConfigResponse
+     */
+    CompletableFuture<UpdateRecallManagementConfigResponse> updateRecallManagementConfig(UpdateRecallManagementConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementService  UpdateRecallManagementServiceRequest
+     * @return UpdateRecallManagementServiceResponse
+     */
+    CompletableFuture<UpdateRecallManagementServiceResponse> updateRecallManagementService(UpdateRecallManagementServiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementServiceVersionConfig  UpdateRecallManagementServiceVersionConfigRequest
+     * @return UpdateRecallManagementServiceVersionConfigResponse
+     */
+    CompletableFuture<UpdateRecallManagementServiceVersionConfigResponse> updateRecallManagementServiceVersionConfig(UpdateRecallManagementServiceVersionConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRecallManagementTable  UpdateRecallManagementTableRequest
+     * @return UpdateRecallManagementTableResponse
+     */
+    CompletableFuture<UpdateRecallManagementTableResponse> updateRecallManagementTable(UpdateRecallManagementTableRequest request);
 
     /**
      * @param request the request parameters of UpdateResourceRule  UpdateResourceRuleRequest

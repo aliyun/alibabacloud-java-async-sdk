@@ -98,12 +98,12 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data;
 
-        @com.aliyun.core.annotation.NameInMap("TrafficContorlTargetId")
-        private String trafficContorlTargetId;
+        @com.aliyun.core.annotation.NameInMap("TrafficControlTargetId")
+        private String trafficControlTargetId;
 
         private TargetTraffics(Builder builder) {
             this.data = builder.data;
-            this.trafficContorlTargetId = builder.trafficContorlTargetId;
+            this.trafficControlTargetId = builder.trafficControlTargetId;
         }
 
         public static Builder builder() {
@@ -122,22 +122,22 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * @return trafficContorlTargetId
+         * @return trafficControlTargetId
          */
-        public String getTrafficContorlTargetId() {
-            return this.trafficContorlTargetId;
+        public String getTrafficControlTargetId() {
+            return this.trafficControlTargetId;
         }
 
         public static final class Builder {
             private java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data; 
-            private String trafficContorlTargetId; 
+            private String trafficControlTargetId; 
 
             private Builder() {
             } 
 
             private Builder(TargetTraffics model) {
                 this.data = model.data;
-                this.trafficContorlTargetId = model.trafficContorlTargetId;
+                this.trafficControlTargetId = model.trafficControlTargetId;
             } 
 
             /**
@@ -149,10 +149,10 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficContorlTargetId.
+             * TrafficControlTargetId.
              */
-            public Builder trafficContorlTargetId(String trafficContorlTargetId) {
-                this.trafficContorlTargetId = trafficContorlTargetId;
+            public Builder trafficControlTargetId(String trafficControlTargetId) {
+                this.trafficControlTargetId = trafficControlTargetId;
                 return this;
             }
 
