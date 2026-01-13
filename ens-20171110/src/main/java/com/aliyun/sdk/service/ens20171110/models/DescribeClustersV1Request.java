@@ -87,7 +87,10 @@ public class DescribeClustersV1Request extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eck-xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -96,7 +99,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-58</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -105,7 +111,10 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * Name.
+         * <p>System specified parameters. Set the value to <strong>DescribeClustersV1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-eck-name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

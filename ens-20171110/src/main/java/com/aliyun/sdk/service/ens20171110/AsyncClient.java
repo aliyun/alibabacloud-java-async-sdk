@@ -1575,6 +1575,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 
     /**
+     * @param request the request parameters of InitializeENSECKServiceRole  InitializeENSECKServiceRoleRequest
+     * @return InitializeENSECKServiceRoleResponse
+     */
+    CompletableFuture<InitializeENSECKServiceRoleResponse> initializeENSECKServiceRole(InitializeENSECKServiceRoleRequest request);
+
+    /**
      * @param request the request parameters of JoinPublicIpsToEpnInstance  JoinPublicIpsToEpnInstanceRequest
      * @return JoinPublicIpsToEpnInstanceResponse
      */
