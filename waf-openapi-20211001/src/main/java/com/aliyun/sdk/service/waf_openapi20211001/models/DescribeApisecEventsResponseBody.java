@@ -138,15 +138,19 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         private String attackClient;
 
         @com.aliyun.core.annotation.NameInMap("AttackCntInfo")
+        @Deprecated
         private String attackCntInfo;
 
         @com.aliyun.core.annotation.NameInMap("AttackIp")
+        @Deprecated
         private String attackIp;
 
         @com.aliyun.core.annotation.NameInMap("AttackIpInfo")
+        @Deprecated
         private String attackIpInfo;
 
         @com.aliyun.core.annotation.NameInMap("AttackIps")
+        @Deprecated
         private java.util.List<String> attackIps;
 
         @com.aliyun.core.annotation.NameInMap("AttackerList")
@@ -159,6 +163,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         private String eventId;
 
         @com.aliyun.core.annotation.NameInMap("EventInfo")
+        @Deprecated
         private String eventInfo;
 
         @com.aliyun.core.annotation.NameInMap("EventLevel")
@@ -186,9 +191,11 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         private String remoteRegion;
 
         @com.aliyun.core.annotation.NameInMap("RequestData")
+        @Deprecated
         private String requestData;
 
         @com.aliyun.core.annotation.NameInMap("ResponseData")
+        @Deprecated
         private String responseData;
 
         @com.aliyun.core.annotation.NameInMap("StartTs")

@@ -449,6 +449,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCloudResourceAccessedPortsResponse> describeCloudResourceAccessedPorts(DescribeCloudResourceAccessedPortsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCloudResourceList  DescribeCloudResourceListRequest
+     * @return DescribeCloudResourceListResponse
+     */
+    CompletableFuture<DescribeCloudResourceListResponse> describeCloudResourceList(DescribeCloudResourceListRequest request);
+
+    /**
      * @param request the request parameters of DescribeCloudResources  DescribeCloudResourcesRequest
      * @return DescribeCloudResourcesResponse
      */
@@ -1059,6 +1065,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeThreatEventDetailResponse
      */
     CompletableFuture<DescribeThreatEventDetailResponse> describeThreatEventDetail(DescribeThreatEventDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeThreatEventTopMetric  DescribeThreatEventTopMetricRequest
+     * @return DescribeThreatEventTopMetricResponse
+     */
+    CompletableFuture<DescribeThreatEventTopMetricResponse> describeThreatEventTopMetric(DescribeThreatEventTopMetricRequest request);
 
     /**
      * @param request the request parameters of DescribeUserAbnormalTrend  DescribeUserAbnormalTrendRequest

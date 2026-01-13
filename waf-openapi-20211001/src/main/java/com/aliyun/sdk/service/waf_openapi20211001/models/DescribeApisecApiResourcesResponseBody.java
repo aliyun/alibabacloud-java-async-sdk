@@ -174,6 +174,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         private Long eventNum;
 
         @com.aliyun.core.annotation.NameInMap("Examples")
+        @Deprecated
         private java.util.List<String> examples;
 
         @com.aliyun.core.annotation.NameInMap("FarthestTs")

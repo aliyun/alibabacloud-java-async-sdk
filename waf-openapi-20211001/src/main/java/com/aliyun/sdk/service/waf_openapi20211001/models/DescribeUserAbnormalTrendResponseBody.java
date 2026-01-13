@@ -108,6 +108,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
         private Long abnormalMedium;
 
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
+        @Deprecated
         private Long timeStamp;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")

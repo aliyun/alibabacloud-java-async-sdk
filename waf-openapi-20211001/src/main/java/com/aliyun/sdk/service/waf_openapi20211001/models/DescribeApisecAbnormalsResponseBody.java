@@ -153,6 +153,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         private Long discoverTime;
 
         @com.aliyun.core.annotation.NameInMap("Examples")
+        @Deprecated
         private java.util.List<String> examples;
 
         @com.aliyun.core.annotation.NameInMap("FirstTime")

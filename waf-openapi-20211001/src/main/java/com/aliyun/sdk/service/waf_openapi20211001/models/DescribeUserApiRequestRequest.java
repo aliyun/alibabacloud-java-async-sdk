@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeUserApiRequestRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApiFormat")
+    @Deprecated
     private String apiFormat;
 
     @com.aliyun.core.annotation.Query
@@ -32,6 +33,7 @@ public class DescribeUserApiRequestRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
+    @Deprecated
     private String domain;
 
     @com.aliyun.core.annotation.Query

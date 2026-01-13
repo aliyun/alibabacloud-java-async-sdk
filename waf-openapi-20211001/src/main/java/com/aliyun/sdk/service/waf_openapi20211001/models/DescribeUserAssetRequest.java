@@ -28,6 +28,7 @@ public class DescribeUserAssetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Days")
+    @Deprecated
     private String days;
 
     @com.aliyun.core.annotation.Query

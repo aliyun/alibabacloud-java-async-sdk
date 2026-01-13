@@ -1346,6 +1346,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeCloudResourceList  DescribeCloudResourceListRequest
+     * @return DescribeCloudResourceListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCloudResourceListResponse> describeCloudResourceList(DescribeCloudResourceListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCloudResourceList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCloudResourceListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCloudResourceListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeCloudResources  DescribeCloudResourcesRequest
      * @return DescribeCloudResourcesResponse
      */
@@ -3128,6 +3146,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeThreatEventDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeThreatEventTopMetric  DescribeThreatEventTopMetricRequest
+     * @return DescribeThreatEventTopMetricResponse
+     */
+    @Override
+    public CompletableFuture<DescribeThreatEventTopMetricResponse> describeThreatEventTopMetric(DescribeThreatEventTopMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeThreatEventTopMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeThreatEventTopMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeThreatEventTopMetricResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
