@@ -87,7 +87,7 @@ public class ListExecutorEventsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>Queries the Executor filter conditions.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -97,7 +97,10 @@ public class ListExecutorEventsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.<br>Starting value: 1<br>Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -106,7 +109,10 @@ public class ListExecutorEventsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on the current page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +219,7 @@ public class ListExecutorEventsRequest extends Request {
             } 
 
             /**
-             * ExecutorIds.
+             * <p>The list of executor IDs. A maximum of 100 IDs are supported.</p>
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
@@ -221,7 +227,10 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -229,7 +238,15 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * Level.
+             * <p>The level of the running event. Valid value:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * <li>Error</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -237,7 +254,10 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * TimeAfter.
+             * <p>For jobs submitted after this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703820113</p>
              */
             public Builder timeAfter(Long timeAfter) {
                 this.timeAfter = timeAfter;
@@ -245,7 +265,10 @@ public class ListExecutorEventsRequest extends Request {
             }
 
             /**
-             * TimeBefore.
+             * <p>For jobs submitted before this time, the time in the region is converted into a Unix timestamp (UI8 regionfor Aliyun sites).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703819914</p>
              */
             public Builder timeBefore(Long timeBefore) {
                 this.timeBefore = timeBefore;

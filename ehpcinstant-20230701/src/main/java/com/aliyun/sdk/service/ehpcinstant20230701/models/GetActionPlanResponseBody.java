@@ -35,6 +35,9 @@ public class GetActionPlanResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
     private Float desiredCapacity;
 
+    @com.aliyun.core.annotation.NameInMap("IntervalMinutes")
+    private Integer intervalMinutes;
+
     @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
@@ -69,6 +72,7 @@ public class GetActionPlanResponseBody extends TeaModel {
         this.appId = builder.appId;
         this.createTime = builder.createTime;
         this.desiredCapacity = builder.desiredCapacity;
+        this.intervalMinutes = builder.intervalMinutes;
         this.level = builder.level;
         this.prologScript = builder.prologScript;
         this.regions = builder.regions;
@@ -132,6 +136,13 @@ public class GetActionPlanResponseBody extends TeaModel {
      */
     public Float getDesiredCapacity() {
         return this.desiredCapacity;
+    }
+
+    /**
+     * @return intervalMinutes
+     */
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
     }
 
     /**
@@ -204,6 +215,7 @@ public class GetActionPlanResponseBody extends TeaModel {
         private String appId; 
         private String createTime; 
         private Float desiredCapacity; 
+        private Integer intervalMinutes; 
         private String level; 
         private String prologScript; 
         private java.util.List<Regions> regions; 
@@ -224,6 +236,7 @@ public class GetActionPlanResponseBody extends TeaModel {
             this.appId = model.appId;
             this.createTime = model.createTime;
             this.desiredCapacity = model.desiredCapacity;
+            this.intervalMinutes = model.intervalMinutes;
             this.level = model.level;
             this.prologScript = model.prologScript;
             this.regions = model.regions;
@@ -298,6 +311,14 @@ public class GetActionPlanResponseBody extends TeaModel {
          */
         public Builder desiredCapacity(Float desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
+            return this;
+        }
+
+        /**
+         * IntervalMinutes.
+         */
+        public Builder intervalMinutes(Integer intervalMinutes) {
+            this.intervalMinutes = intervalMinutes;
             return this;
         }
 

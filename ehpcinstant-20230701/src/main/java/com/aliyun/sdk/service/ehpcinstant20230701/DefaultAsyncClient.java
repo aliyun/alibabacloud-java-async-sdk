@@ -353,6 +353,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries job executor information.</p>
+     * 
      * @param request the request parameters of ListExecutorEvents  ListExecutorEventsRequest
      * @return ListExecutorEventsResponse
      */

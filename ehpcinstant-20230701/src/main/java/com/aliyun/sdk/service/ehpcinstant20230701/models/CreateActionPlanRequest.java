@@ -34,6 +34,10 @@ public class CreateActionPlanRequest extends Request {
     private Double desiredCapacity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalMinutes")
+    private Integer intervalMinutes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
@@ -63,6 +67,7 @@ public class CreateActionPlanRequest extends Request {
         this.allocationSpec = builder.allocationSpec;
         this.appId = builder.appId;
         this.desiredCapacity = builder.desiredCapacity;
+        this.intervalMinutes = builder.intervalMinutes;
         this.level = builder.level;
         this.prologScript = builder.prologScript;
         this.regions = builder.regions;
@@ -113,6 +118,13 @@ public class CreateActionPlanRequest extends Request {
     }
 
     /**
+     * @return intervalMinutes
+     */
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
+    }
+
+    /**
      * @return level
      */
     public String getLevel() {
@@ -159,6 +171,7 @@ public class CreateActionPlanRequest extends Request {
         private String allocationSpec; 
         private String appId; 
         private Double desiredCapacity; 
+        private Integer intervalMinutes; 
         private String level; 
         private String prologScript; 
         private java.util.List<Regions> regions; 
@@ -176,6 +189,7 @@ public class CreateActionPlanRequest extends Request {
             this.allocationSpec = request.allocationSpec;
             this.appId = request.appId;
             this.desiredCapacity = request.desiredCapacity;
+            this.intervalMinutes = request.intervalMinutes;
             this.level = request.level;
             this.prologScript = request.prologScript;
             this.regions = request.regions;
@@ -234,6 +248,15 @@ public class CreateActionPlanRequest extends Request {
         public Builder desiredCapacity(Double desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
             this.desiredCapacity = desiredCapacity;
+            return this;
+        }
+
+        /**
+         * IntervalMinutes.
+         */
+        public Builder intervalMinutes(Integer intervalMinutes) {
+            this.putQueryParameter("IntervalMinutes", intervalMinutes);
+            this.intervalMinutes = intervalMinutes;
             return this;
         }
 

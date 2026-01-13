@@ -106,7 +106,7 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * ExecutorEventList.
+         * <p>The list of the running event.</p>
          */
         public Builder executorEventList(java.util.List<ExecutorEventList> executorEventList) {
             this.executorEventList = executorEventList;
@@ -114,7 +114,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the running event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executor created successfully</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -251,7 +266,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorId.
+             * <p>The ID of the executor. The format is JobId-TaskName-ArrayIndex.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx-Task0-1</p>
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
@@ -259,7 +277,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-xxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -267,7 +288,15 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The level of the running event. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * <li>Error</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -275,7 +304,10 @@ public class ListExecutorEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The event of the running event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-20 10:04:13</p>
              */
             public Builder time(String time) {
                 this.time = time;

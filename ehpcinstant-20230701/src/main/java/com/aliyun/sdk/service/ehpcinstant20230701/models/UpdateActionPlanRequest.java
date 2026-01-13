@@ -29,11 +29,16 @@ public class UpdateActionPlanRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Enabled")
     private String enabled;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalMinutes")
+    private Integer intervalMinutes;
+
     private UpdateActionPlanRequest(Builder builder) {
         super(builder);
         this.actionPlanId = builder.actionPlanId;
         this.desiredCapacity = builder.desiredCapacity;
         this.enabled = builder.enabled;
+        this.intervalMinutes = builder.intervalMinutes;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class UpdateActionPlanRequest extends Request {
         return this.enabled;
     }
 
+    /**
+     * @return intervalMinutes
+     */
+    public Integer getIntervalMinutes() {
+        return this.intervalMinutes;
+    }
+
     public static final class Builder extends Request.Builder<UpdateActionPlanRequest, Builder> {
         private String actionPlanId; 
         private Float desiredCapacity; 
         private String enabled; 
+        private Integer intervalMinutes; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdateActionPlanRequest extends Request {
             this.actionPlanId = request.actionPlanId;
             this.desiredCapacity = request.desiredCapacity;
             this.enabled = request.enabled;
+            this.intervalMinutes = request.intervalMinutes;
         } 
 
         /**
@@ -127,6 +141,15 @@ public class UpdateActionPlanRequest extends Request {
         public Builder enabled(String enabled) {
             this.putQueryParameter("Enabled", enabled);
             this.enabled = enabled;
+            return this;
+        }
+
+        /**
+         * IntervalMinutes.
+         */
+        public Builder intervalMinutes(Integer intervalMinutes) {
+            this.putQueryParameter("IntervalMinutes", intervalMinutes);
+            this.intervalMinutes = intervalMinutes;
             return this;
         }
 
