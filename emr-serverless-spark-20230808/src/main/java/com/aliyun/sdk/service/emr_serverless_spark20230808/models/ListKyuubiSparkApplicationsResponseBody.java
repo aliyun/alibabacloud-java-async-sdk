@@ -206,6 +206,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tag> tags;
+
         @com.aliyun.core.annotation.NameInMap("vcoreSeconds")
         private Long vcoreSeconds;
 
@@ -225,6 +228,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             this.runLog = builder.runLog;
             this.startTime = builder.startTime;
             this.state = builder.state;
+            this.tags = builder.tags;
             this.vcoreSeconds = builder.vcoreSeconds;
             this.webUI = builder.webUI;
         }
@@ -322,6 +326,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tag> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vcoreSeconds
          */
         public Long getVcoreSeconds() {
@@ -348,6 +359,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
             private RunLog runLog; 
             private String startTime; 
             private String state; 
+            private java.util.List<Tag> tags; 
             private Long vcoreSeconds; 
             private String webUI; 
 
@@ -367,6 +379,7 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
                 this.runLog = model.runLog;
                 this.startTime = model.startTime;
                 this.state = model.state;
+                this.tags = model.tags;
                 this.vcoreSeconds = model.vcoreSeconds;
                 this.webUI = model.webUI;
             } 
@@ -493,6 +506,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tag> tags) {
+                this.tags = tags;
                 return this;
             }
 

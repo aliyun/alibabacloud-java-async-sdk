@@ -170,6 +170,9 @@ public class ListCatalogsResponseBody extends TeaModel {
      * <p>ListCatalogsResponseBody</p>
      */
     public static class Catalogs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("alias")
+        private String alias;
+
         @com.aliyun.core.annotation.NameInMap("catalogId")
         private String catalogId;
 
@@ -198,6 +201,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         private String workspaceId;
 
         private Catalogs(Builder builder) {
+            this.alias = builder.alias;
             this.catalogId = builder.catalogId;
             this.catalogProvider = builder.catalogProvider;
             this.catalogType = builder.catalogType;
@@ -215,6 +219,13 @@ public class ListCatalogsResponseBody extends TeaModel {
 
         public static Catalogs create() {
             return builder().build();
+        }
+
+        /**
+         * @return alias
+         */
+        public String getAlias() {
+            return this.alias;
         }
 
         /**
@@ -281,6 +292,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String alias; 
             private String catalogId; 
             private String catalogProvider; 
             private String catalogType; 
@@ -295,6 +307,7 @@ public class ListCatalogsResponseBody extends TeaModel {
             } 
 
             private Builder(Catalogs model) {
+                this.alias = model.alias;
                 this.catalogId = model.catalogId;
                 this.catalogProvider = model.catalogProvider;
                 this.catalogType = model.catalogType;
@@ -305,6 +318,14 @@ public class ListCatalogsResponseBody extends TeaModel {
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * alias.
+             */
+            public Builder alias(String alias) {
+                this.alias = alias;
+                return this;
+            }
 
             /**
              * <p>regionId。</p>
