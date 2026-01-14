@@ -833,6 +833,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRCDiskResponse> createRCDisk(CreateRCDiskRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
+     * </ul>
+     * <h3><a href="#"></a>Usage</h3>
+     * <ul>
+     * <li>Method 1: Create a custom image by using a snapshot generated from the <strong>system disk</strong>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</li>
+     * <li>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRCImage  CreateRCImageRequest
+     * @return CreateRCImageResponse
+     */
+    CompletableFuture<CreateRCImageResponse> createRCImage(CreateRCImageRequest request);
+
+    /**
      * @param request the request parameters of CreateRCNodePool  CreateRCNodePoolRequest
      * @return CreateRCNodePoolResponse
      */
@@ -4165,6 +4188,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBInstanceTDEResponse
      */
     CompletableFuture<ModifyDBInstanceTDEResponse> modifyDBInstanceTDE(ModifyDBInstanceTDERequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceVectorSupportStatus  ModifyDBInstanceVectorSupportStatusRequest
+     * @return ModifyDBInstanceVectorSupportStatusResponse
+     */
+    CompletableFuture<ModifyDBInstanceVectorSupportStatusResponse> modifyDBInstanceVectorSupportStatus(ModifyDBInstanceVectorSupportStatusRequest request);
 
     /**
      * <b>description</b> :

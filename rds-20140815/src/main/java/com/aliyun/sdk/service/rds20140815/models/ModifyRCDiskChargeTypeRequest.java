@@ -47,6 +47,10 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
     private String payType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    private String period;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionCode")
     private String promotionCode;
 
@@ -54,6 +58,10 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    private Integer usedTime;
 
     private ModifyRCDiskChargeTypeRequest(Builder builder) {
         super(builder);
@@ -64,8 +72,10 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
         this.payType = builder.payType;
+        this.period = builder.period;
         this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
+        this.usedTime = builder.usedTime;
     }
 
     public static Builder builder() {
@@ -131,6 +141,13 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
     }
 
     /**
+     * @return period
+     */
+    public String getPeriod() {
+        return this.period;
+    }
+
+    /**
      * @return promotionCode
      */
     public String getPromotionCode() {
@@ -144,6 +161,13 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return usedTime
+     */
+    public Integer getUsedTime() {
+        return this.usedTime;
+    }
+
     public static final class Builder extends Request.Builder<ModifyRCDiskChargeTypeRequest, Builder> {
         private Boolean autoPay; 
         private String autoRenew; 
@@ -152,8 +176,10 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         private String clientToken; 
         private String instanceId; 
         private String payType; 
+        private String period; 
         private String promotionCode; 
         private String regionId; 
+        private Integer usedTime; 
 
         private Builder() {
             super();
@@ -168,8 +194,10 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
             this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
             this.payType = request.payType;
+            this.period = request.period;
             this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
+            this.usedTime = request.usedTime;
         } 
 
         /**
@@ -239,6 +267,15 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         }
 
         /**
+         * Period.
+         */
+        public Builder period(String period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
          * PromotionCode.
          */
         public Builder promotionCode(String promotionCode) {
@@ -256,6 +293,15 @@ public class ModifyRCDiskChargeTypeRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UsedTime.
+         */
+        public Builder usedTime(Integer usedTime) {
+            this.putQueryParameter("UsedTime", usedTime);
+            this.usedTime = usedTime;
             return this;
         }
 
