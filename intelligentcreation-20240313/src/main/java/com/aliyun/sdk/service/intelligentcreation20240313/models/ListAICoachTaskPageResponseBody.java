@@ -23,9 +23,13 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("taskList")
     private java.util.List<TaskList> taskList;
 
+    @com.aliyun.core.annotation.NameInMap("total")
+    private Long total;
+
     private ListAICoachTaskPageResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.taskList = builder.taskList;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         return this.taskList;
     }
 
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String requestId; 
         private java.util.List<TaskList> taskList; 
+        private Long total; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         private Builder(ListAICoachTaskPageResponseBody model) {
             this.requestId = model.requestId;
             this.taskList = model.taskList;
+            this.total = model.total;
         } 
 
         /**
@@ -82,6 +95,14 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
+            return this;
+        }
+
+        /**
+         * total.
+         */
+        public Builder total(Long total) {
+            this.total = total;
             return this;
         }
 
