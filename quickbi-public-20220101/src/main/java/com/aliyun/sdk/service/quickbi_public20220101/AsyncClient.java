@@ -278,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataSourceConnectionInfoResponse> getDataSourceConnectionInfo(GetDataSourceConnectionInfoRequest request);
 
     /**
+     * @param request the request parameters of GetMailTaskList  GetMailTaskListRequest
+     * @return GetMailTaskListResponse
+     */
+    CompletableFuture<GetMailTaskListResponse> getMailTaskList(GetMailTaskListRequest request);
+
+    /**
      * @param request the request parameters of GetMailTaskStatus  GetMailTaskStatusRequest
      * @return GetMailTaskStatusResponse
      */
@@ -397,6 +403,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserGroupsByUserIdResponse
      */
     CompletableFuture<ListUserGroupsByUserIdResponse> listUserGroupsByUserId(ListUserGroupsByUserIdRequest request);
+
+    /**
+     * @param request the request parameters of ListWhitePortalMenu  ListWhitePortalMenuRequest
+     * @return ListWhitePortalMenuResponse
+     */
+    CompletableFuture<ListWhitePortalMenuResponse> listWhitePortalMenu(ListWhitePortalMenuRequest request);
 
     /**
      * @param request the request parameters of ListWorkspaceRoleUsers  ListWorkspaceRoleUsersRequest
@@ -649,6 +661,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryTicketInfoResponse
      */
     CompletableFuture<QueryTicketInfoResponse> queryTicketInfo(QueryTicketInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryUserByMobileAccount  QueryUserByMobileAccountRequest
+     * @return QueryUserByMobileAccountResponse
+     */
+    CompletableFuture<QueryUserByMobileAccountResponse> queryUserByMobileAccount(QueryUserByMobileAccountRequest request);
 
     /**
      * @param request the request parameters of QueryUserGroupListByParentId  QueryUserGroupListByParentIdRequest

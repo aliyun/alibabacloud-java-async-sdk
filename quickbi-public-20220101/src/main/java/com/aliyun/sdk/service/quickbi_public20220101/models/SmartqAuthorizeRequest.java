@@ -35,7 +35,7 @@ public class SmartqAuthorizeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationType")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Integer operationType;
 
     @com.aliyun.core.annotation.Query

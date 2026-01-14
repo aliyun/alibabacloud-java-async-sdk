@@ -159,6 +159,9 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerAccountName")
         private String ownerAccountName;
 
+        @com.aliyun.core.annotation.NameInMap("RealOwnerAccountName")
+        private String realOwnerAccountName;
+
         @com.aliyun.core.annotation.NameInMap("WorkspaceDescription")
         private String workspaceDescription;
 
@@ -180,6 +183,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             this.organizationId = builder.organizationId;
             this.owner = builder.owner;
             this.ownerAccountName = builder.ownerAccountName;
+            this.realOwnerAccountName = builder.realOwnerAccountName;
             this.workspaceDescription = builder.workspaceDescription;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
@@ -271,6 +275,13 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return realOwnerAccountName
+         */
+        public String getRealOwnerAccountName() {
+            return this.realOwnerAccountName;
+        }
+
+        /**
          * @return workspaceDescription
          */
         public String getWorkspaceDescription() {
@@ -303,6 +314,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             private String organizationId; 
             private String owner; 
             private String ownerAccountName; 
+            private String realOwnerAccountName; 
             private String workspaceDescription; 
             private String workspaceId; 
             private String workspaceName; 
@@ -322,6 +334,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
                 this.organizationId = model.organizationId;
                 this.owner = model.owner;
                 this.ownerAccountName = model.ownerAccountName;
+                this.realOwnerAccountName = model.realOwnerAccountName;
                 this.workspaceDescription = model.workspaceDescription;
                 this.workspaceId = model.workspaceId;
                 this.workspaceName = model.workspaceName;
@@ -453,6 +466,14 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
              */
             public Builder ownerAccountName(String ownerAccountName) {
                 this.ownerAccountName = ownerAccountName;
+                return this;
+            }
+
+            /**
+             * RealOwnerAccountName.
+             */
+            public Builder realOwnerAccountName(String realOwnerAccountName) {
+                this.realOwnerAccountName = realOwnerAccountName;
                 return this;
             }
 

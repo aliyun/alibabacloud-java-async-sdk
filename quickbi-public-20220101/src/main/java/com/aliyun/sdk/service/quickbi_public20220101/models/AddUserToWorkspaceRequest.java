@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddUserToWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RoleId")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 30, minimum = 25)
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long roleId;
 
     @com.aliyun.core.annotation.Query
