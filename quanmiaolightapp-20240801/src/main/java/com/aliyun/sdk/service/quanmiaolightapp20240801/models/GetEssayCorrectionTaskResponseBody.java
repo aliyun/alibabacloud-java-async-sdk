@@ -191,10 +191,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("score")
         private Integer score;
 
+        @com.aliyun.core.annotation.NameInMap("usage")
+        private ModelUsage usage;
+
         private Results(Builder builder) {
             this.customId = builder.customId;
             this.result = builder.result;
             this.score = builder.score;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -226,10 +230,18 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
             return this.score;
         }
 
+        /**
+         * @return usage
+         */
+        public ModelUsage getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private String customId; 
             private String result; 
             private Integer score; 
+            private ModelUsage usage; 
 
             private Builder() {
             } 
@@ -238,6 +250,7 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
                 this.customId = model.customId;
                 this.result = model.result;
                 this.score = model.score;
+                this.usage = model.usage;
             } 
 
             /**
@@ -267,6 +280,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * usage.
+             */
+            public Builder usage(ModelUsage usage) {
+                this.usage = usage;
+                return this;
+            }
+
             public Results build() {
                 return new Results(this);
             } 
@@ -290,10 +311,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("totalUsage")
+        private ModelUsage totalUsage;
+
         private Data(Builder builder) {
             this.errorMessage = builder.errorMessage;
             this.results = builder.results;
             this.status = builder.status;
+            this.totalUsage = builder.totalUsage;
         }
 
         public static Builder builder() {
@@ -325,10 +350,18 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return totalUsage
+         */
+        public ModelUsage getTotalUsage() {
+            return this.totalUsage;
+        }
+
         public static final class Builder {
             private String errorMessage; 
             private java.util.List<Results> results; 
             private String status; 
+            private ModelUsage totalUsage; 
 
             private Builder() {
             } 
@@ -337,6 +370,7 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
                 this.errorMessage = model.errorMessage;
                 this.results = model.results;
                 this.status = model.status;
+                this.totalUsage = model.totalUsage;
             } 
 
             /**
@@ -360,6 +394,14 @@ public class GetEssayCorrectionTaskResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * totalUsage.
+             */
+            public Builder totalUsage(ModelUsage totalUsage) {
+                this.totalUsage = totalUsage;
                 return this;
             }
 
