@@ -148,6 +148,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListKnowledgeBaseChunks  ListKnowledgeBaseChunksRequest
+     * @return ListKnowledgeBaseChunksResponse
+     */
+    @Override
+    public CompletableFuture<ListKnowledgeBaseChunksResponse> listKnowledgeBaseChunks(ListKnowledgeBaseChunksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListKnowledgeBaseChunks").setMethod(HttpMethod.GET).setPathRegex("/api/v1/langstudio/knowledgebases/{KnowledgeBaseId}/knowledgebasechunks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKnowledgeBaseChunksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKnowledgeBaseChunksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListKnowledgeBaseJobs  ListKnowledgeBaseJobsRequest
      * @return ListKnowledgeBaseJobsResponse
      */
@@ -214,6 +232,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBaseChunk  UpdateKnowledgeBaseChunkRequest
+     * @return UpdateKnowledgeBaseChunkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeBaseChunkResponse> updateKnowledgeBaseChunk(UpdateKnowledgeBaseChunkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateKnowledgeBaseChunk").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/langstudio/knowledgebases/{KnowledgeBaseId}/knowledgebasechunks/{KnowledgeBaseChunkId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeBaseChunkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeBaseChunkResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -20,6 +20,9 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
+    @com.aliyun.core.annotation.NameInMap("AutoApproval")
+    private Boolean autoApproval;
+
     @com.aliyun.core.annotation.NameInMap("ChatHistoryConfig")
     private ChatHistoryConfig chatHistoryConfig;
 
@@ -42,7 +45,7 @@ public class Deployment extends TeaModel {
     private String deploymentId;
 
     @com.aliyun.core.annotation.NameInMap("DeploymentStages")
-    private String deploymentStages;
+    private java.util.List<DeploymentStages> deploymentStages;
 
     @com.aliyun.core.annotation.NameInMap("DeploymentStatus")
     private String deploymentStatus;
@@ -100,6 +103,7 @@ public class Deployment extends TeaModel {
 
     private Deployment(Builder builder) {
         this.accessibility = builder.accessibility;
+        this.autoApproval = builder.autoApproval;
         this.chatHistoryConfig = builder.chatHistoryConfig;
         this.contentModerationConfig = builder.contentModerationConfig;
         this.creator = builder.creator;
@@ -145,6 +149,13 @@ public class Deployment extends TeaModel {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return autoApproval
+     */
+    public Boolean getAutoApproval() {
+        return this.autoApproval;
     }
 
     /**
@@ -199,7 +210,7 @@ public class Deployment extends TeaModel {
     /**
      * @return deploymentStages
      */
-    public String getDeploymentStages() {
+    public java.util.List<DeploymentStages> getDeploymentStages() {
         return this.deploymentStages;
     }
 
@@ -331,6 +342,7 @@ public class Deployment extends TeaModel {
 
     public static final class Builder {
         private String accessibility; 
+        private Boolean autoApproval; 
         private ChatHistoryConfig chatHistoryConfig; 
         private ContentModerationConfig contentModerationConfig; 
         private String creator; 
@@ -338,7 +350,7 @@ public class Deployment extends TeaModel {
         private java.util.List<DataSources> dataSources; 
         private String deploymentConfig; 
         private String deploymentId; 
-        private String deploymentStages; 
+        private java.util.List<DeploymentStages> deploymentStages; 
         private String deploymentStatus; 
         private String description; 
         private EcsSpec ecsSpec; 
@@ -363,6 +375,7 @@ public class Deployment extends TeaModel {
 
         private Builder(Deployment model) {
             this.accessibility = model.accessibility;
+            this.autoApproval = model.autoApproval;
             this.chatHistoryConfig = model.chatHistoryConfig;
             this.contentModerationConfig = model.contentModerationConfig;
             this.creator = model.creator;
@@ -396,6 +409,14 @@ public class Deployment extends TeaModel {
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * AutoApproval.
+         */
+        public Builder autoApproval(Boolean autoApproval) {
+            this.autoApproval = autoApproval;
             return this;
         }
 
@@ -458,7 +479,7 @@ public class Deployment extends TeaModel {
         /**
          * DeploymentStages.
          */
-        public Builder deploymentStages(String deploymentStages) {
+        public Builder deploymentStages(java.util.List<DeploymentStages> deploymentStages) {
             this.deploymentStages = deploymentStages;
             return this;
         }
@@ -1163,6 +1184,207 @@ public class Deployment extends TeaModel {
 
             public DataSources build() {
                 return new DataSources(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Deployment} extends {@link TeaModel}
+     *
+     * <p>Deployment</p>
+     */
+    public static class DeploymentStages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("GmtEndTime")
+        private String gmtEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("GmtStartTime")
+        private String gmtStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("Stage")
+        private Integer stage;
+
+        @com.aliyun.core.annotation.NameInMap("StageInfo")
+        private String stageInfo;
+
+        @com.aliyun.core.annotation.NameInMap("StageName")
+        private String stageName;
+
+        @com.aliyun.core.annotation.NameInMap("StageStatus")
+        private String stageStatus;
+
+        private DeploymentStages(Builder builder) {
+            this.description = builder.description;
+            this.errorMessage = builder.errorMessage;
+            this.gmtEndTime = builder.gmtEndTime;
+            this.gmtStartTime = builder.gmtStartTime;
+            this.stage = builder.stage;
+            this.stageInfo = builder.stageInfo;
+            this.stageName = builder.stageName;
+            this.stageStatus = builder.stageStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeploymentStages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return gmtEndTime
+         */
+        public String getGmtEndTime() {
+            return this.gmtEndTime;
+        }
+
+        /**
+         * @return gmtStartTime
+         */
+        public String getGmtStartTime() {
+            return this.gmtStartTime;
+        }
+
+        /**
+         * @return stage
+         */
+        public Integer getStage() {
+            return this.stage;
+        }
+
+        /**
+         * @return stageInfo
+         */
+        public String getStageInfo() {
+            return this.stageInfo;
+        }
+
+        /**
+         * @return stageName
+         */
+        public String getStageName() {
+            return this.stageName;
+        }
+
+        /**
+         * @return stageStatus
+         */
+        public String getStageStatus() {
+            return this.stageStatus;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String errorMessage; 
+            private String gmtEndTime; 
+            private String gmtStartTime; 
+            private Integer stage; 
+            private String stageInfo; 
+            private String stageName; 
+            private String stageStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeploymentStages model) {
+                this.description = model.description;
+                this.errorMessage = model.errorMessage;
+                this.gmtEndTime = model.gmtEndTime;
+                this.gmtStartTime = model.gmtStartTime;
+                this.stage = model.stage;
+                this.stageInfo = model.stageInfo;
+                this.stageName = model.stageName;
+                this.stageStatus = model.stageStatus;
+            } 
+
+            /**
+             * <p>描述</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>错误信息</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>结束时间</p>
+             */
+            public Builder gmtEndTime(String gmtEndTime) {
+                this.gmtEndTime = gmtEndTime;
+                return this;
+            }
+
+            /**
+             * <p>开始时间</p>
+             */
+            public Builder gmtStartTime(String gmtStartTime) {
+                this.gmtStartTime = gmtStartTime;
+                return this;
+            }
+
+            /**
+             * <p>阶段</p>
+             */
+            public Builder stage(Integer stage) {
+                this.stage = stage;
+                return this;
+            }
+
+            /**
+             * <p>阶段信息</p>
+             */
+            public Builder stageInfo(String stageInfo) {
+                this.stageInfo = stageInfo;
+                return this;
+            }
+
+            /**
+             * <p>阶段名称</p>
+             */
+            public Builder stageName(String stageName) {
+                this.stageName = stageName;
+                return this;
+            }
+
+            /**
+             * <p>阶段状态</p>
+             */
+            public Builder stageStatus(String stageStatus) {
+                this.stageStatus = stageStatus;
+                return this;
+            }
+
+            public DeploymentStages build() {
+                return new DeploymentStages(this);
             } 
 
         } 

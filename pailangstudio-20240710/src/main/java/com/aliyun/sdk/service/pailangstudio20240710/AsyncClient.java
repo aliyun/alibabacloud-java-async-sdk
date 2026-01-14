@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetKnowledgeBaseJobResponse> getKnowledgeBaseJob(GetKnowledgeBaseJobRequest request);
 
     /**
+     * @param request the request parameters of ListKnowledgeBaseChunks  ListKnowledgeBaseChunksRequest
+     * @return ListKnowledgeBaseChunksResponse
+     */
+    CompletableFuture<ListKnowledgeBaseChunksResponse> listKnowledgeBaseChunks(ListKnowledgeBaseChunksRequest request);
+
+    /**
      * @param request the request parameters of ListKnowledgeBaseJobs  ListKnowledgeBaseJobsRequest
      * @return ListKnowledgeBaseJobsResponse
      */
@@ -78,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKnowledgeBaseResponse
      */
     CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBaseChunk  UpdateKnowledgeBaseChunkRequest
+     * @return UpdateKnowledgeBaseChunkResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseChunkResponse> updateKnowledgeBaseChunk(UpdateKnowledgeBaseChunkRequest request);
 
     /**
      * @param request the request parameters of UpdateKnowledgeBaseJob  UpdateKnowledgeBaseJobRequest
