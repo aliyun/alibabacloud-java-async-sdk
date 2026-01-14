@@ -984,6 +984,9 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("storageSecretKey")
         private String storageSecretKey;
 
+        @com.aliyun.core.annotation.NameInMap("traceOn")
+        private Boolean traceOn;
+
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
             this.capacityType = builder.capacityType;
@@ -993,6 +996,7 @@ public class CreateInstanceRequest extends Request {
             this.sendReceiveRatio = builder.sendReceiveRatio;
             this.storageEncryption = builder.storageEncryption;
             this.storageSecretKey = builder.storageSecretKey;
+            this.traceOn = builder.traceOn;
         }
 
         public static Builder builder() {
@@ -1059,6 +1063,13 @@ public class CreateInstanceRequest extends Request {
             return this.storageSecretKey;
         }
 
+        /**
+         * @return traceOn
+         */
+        public Boolean getTraceOn() {
+            return this.traceOn;
+        }
+
         public static final class Builder {
             private Boolean autoScaling; 
             private String capacityType; 
@@ -1068,6 +1079,7 @@ public class CreateInstanceRequest extends Request {
             private Float sendReceiveRatio; 
             private Boolean storageEncryption; 
             private String storageSecretKey; 
+            private Boolean traceOn; 
 
             private Builder() {
             } 
@@ -1081,6 +1093,7 @@ public class CreateInstanceRequest extends Request {
                 this.sendReceiveRatio = model.sendReceiveRatio;
                 this.storageEncryption = model.storageEncryption;
                 this.storageSecretKey = model.storageSecretKey;
+                this.traceOn = model.traceOn;
             } 
 
             /**
@@ -1175,6 +1188,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder storageSecretKey(String storageSecretKey) {
                 this.storageSecretKey = storageSecretKey;
+                return this;
+            }
+
+            /**
+             * traceOn.
+             */
+            public Builder traceOn(Boolean traceOn) {
+                this.traceOn = traceOn;
                 return this;
             }
 

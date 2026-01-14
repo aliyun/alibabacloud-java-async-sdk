@@ -34,7 +34,7 @@ public class UpdateConsumerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String deliveryOrderType;
 
     @com.aliyun.core.annotation.Body
@@ -175,7 +175,6 @@ public class UpdateConsumerGroupRequest extends Request {
          * <li>Concurrently: concurrent delivery</li>
          * <li>Orderly: ordered delivery</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Concurrently</p>
