@@ -104,6 +104,7 @@ public class ApplyTempStorageLeaseRequest extends Request {
         } 
 
         /**
+         * <p>The Model Studio workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +129,7 @@ public class ApplyTempStorageLeaseRequest extends Request {
         }
 
         /**
+         * <p>The file name, including the file extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +142,7 @@ public class ApplyTempStorageLeaseRequest extends Request {
         }
 
         /**
+         * <p>The size of the file, in bytes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

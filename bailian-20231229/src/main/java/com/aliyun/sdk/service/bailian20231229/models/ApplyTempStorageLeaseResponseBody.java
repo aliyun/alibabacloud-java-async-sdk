@@ -119,7 +119,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataCenter.FileTooLarge</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User not authorized to operate on the specified resource</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +149,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -159,7 +171,7 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Headers.
+             * <p>K-V fields to be included in the Header; both Key and Value are strings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Content-Type: application/json</p>
              */
             public Builder headers(Object headers) {
                 this.headers = headers;
@@ -246,7 +261,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * <p>HTTP method for the call. Valid values: PUT POST</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUT</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -254,7 +272,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>Authorized URL for the file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&OSSAccessKeyId=TestID&Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D">https://bailian-datahub-data-origin-prod.oss-cn-hangzhou.aliyuncs.com/1005426495169178/10024405/68abd1dea7b6404d8f7d7b9f7fbd332d.1716698936847.pdf?Expires=1716699536&amp;OSSAccessKeyId=TestID&amp;Signature=HfwPUZo4pR6DatSDym0zFKVh9Wg%3D</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -321,7 +342,7 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
             } 
 
             /**
-             * Param.
+             * <p>HTTP parameters used for uploading the file.</p>
              */
             public Builder param(Param param) {
                 this.param = param;
@@ -329,7 +350,10 @@ public class ApplyTempStorageLeaseResponseBody extends TeaModel {
             }
 
             /**
-             * TempStorageLeaseId.
+             * <p>Unique lease ID. This parameter is required when retrieving the uploaded file within the application later.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1e6a159107384782be5e45ac4759b247.1719325231035</p>
              */
             public Builder tempStorageLeaseId(String tempStorageLeaseId) {
                 this.tempStorageLeaseId = tempStorageLeaseId;

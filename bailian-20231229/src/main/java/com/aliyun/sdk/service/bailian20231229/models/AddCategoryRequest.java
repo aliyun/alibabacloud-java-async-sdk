@@ -127,6 +127,7 @@ public class AddCategoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace, in which to create the new category. To view the workspace ID, click the Workspace Details icon in the upper-left corner on the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

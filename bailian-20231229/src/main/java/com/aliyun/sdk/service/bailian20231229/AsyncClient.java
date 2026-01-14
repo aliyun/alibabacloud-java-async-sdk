@@ -20,6 +20,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot use API to create structured table. To create a table, go to <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> in the console. You can associate a knowledge base with ApsaraDB for RDS to automatically update structured knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+     * <ul>
+     * <li>If you are using a RAM user, you must first obtain the OpenAPI management permissions (namely sfm:AddCategory) of Model Studio. For more information, see <a href="https://help.aliyun.com/document_detail/2848578.html">Grant OpenAPI permissions to a RAM user</a>. If you are using the Alibaba Cloud account, you do not need permissions. We recommend that you use <a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">the latest version of the SDK</a> to call this operation.</li>
+     * <li>You can create up to 1,000 categories in each workspace.</li>
+     * <li>This interface is not idempotent.
+     * <strong>Throttling:</strong> Throttling will be triggered if you call this operation frequently. Do not exceed 5 times per second. If throttling is triggered, try again later.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddCategory  AddCategoryRequest
      * @return AddCategoryResponse
      */
@@ -63,6 +72,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>1\. This interface is intended for pro-code deployment only; other scenarios are currently not supported. 2. After obtaining the temporary file upload lease via this interface, upload the file manually.</p>
+     * 
      * @param request the request parameters of ApplyTempStorageLease  ApplyTempStorageLeaseRequest
      * @return ApplyTempStorageLeaseResponse
      */
@@ -248,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIndexJobStatusResponse
      */
     CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetIndexMonitor  GetIndexMonitorRequest
+     * @return GetIndexMonitorResponse
+     */
+    CompletableFuture<GetIndexMonitorResponse> getIndexMonitor(GetIndexMonitorRequest request);
 
     /**
      * @param request the request parameters of GetMemory  GetMemoryRequest
