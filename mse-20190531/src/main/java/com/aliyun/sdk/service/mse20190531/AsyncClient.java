@@ -304,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteBlackWhiteList  DeleteBlackWhiteListRequest
+     * @return DeleteBlackWhiteListResponse
+     */
+    CompletableFuture<DeleteBlackWhiteListResponse> deleteBlackWhiteList(DeleteBlackWhiteListRequest request);
+
+    /**
      * @param request the request parameters of DeleteCircuitBreakerRules  DeleteCircuitBreakerRulesRequest
      * @return DeleteCircuitBreakerRulesResponse
      */
@@ -332,6 +338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGatewayResponse
      */
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGatewayAuth  DeleteGatewayAuthRequest
+     * @return DeleteGatewayAuthResponse
+     */
+    CompletableFuture<DeleteGatewayAuthResponse> deleteGatewayAuth(DeleteGatewayAuthRequest request);
 
     /**
      * @param request the request parameters of DeleteGatewayAuthConsumer  DeleteGatewayAuthConsumerRequest
@@ -945,6 +957,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
 
     /**
+     * @param request the request parameters of ListGatewayAuth  ListGatewayAuthRequest
+     * @return ListGatewayAuthResponse
+     */
+    CompletableFuture<ListGatewayAuthResponse> listGatewayAuth(ListGatewayAuthRequest request);
+
+    /**
      * @param request the request parameters of ListGatewayAuthConsumer  ListGatewayAuthConsumerRequest
      * @return ListGatewayAuthConsumerResponse
      */
@@ -1392,6 +1410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFlowRuleResponse
      */
     CompletableFuture<UpdateFlowRuleResponse> updateFlowRule(UpdateFlowRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayAuth  UpdateGatewayAuthRequest
+     * @return UpdateGatewayAuthResponse
+     */
+    CompletableFuture<UpdateGatewayAuthResponse> updateGatewayAuth(UpdateGatewayAuthRequest request);
 
     /**
      * @param request the request parameters of UpdateGatewayAuthConsumer  UpdateGatewayAuthConsumerRequest
