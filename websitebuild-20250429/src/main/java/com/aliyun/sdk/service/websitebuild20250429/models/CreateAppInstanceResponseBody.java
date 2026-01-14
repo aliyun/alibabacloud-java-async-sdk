@@ -296,10 +296,14 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
+        @com.aliyun.core.annotation.NameInMap("SiteHost")
+        private String siteHost;
+
         private Module(Builder builder) {
             this.bizId = builder.bizId;
             this.instanceId = builder.instanceId;
             this.orderId = builder.orderId;
+            this.siteHost = builder.siteHost;
         }
 
         public static Builder builder() {
@@ -331,10 +335,18 @@ public class CreateAppInstanceResponseBody extends TeaModel {
             return this.orderId;
         }
 
+        /**
+         * @return siteHost
+         */
+        public String getSiteHost() {
+            return this.siteHost;
+        }
+
         public static final class Builder {
             private String bizId; 
             private String instanceId; 
             private String orderId; 
+            private String siteHost; 
 
             private Builder() {
             } 
@@ -343,6 +355,7 @@ public class CreateAppInstanceResponseBody extends TeaModel {
                 this.bizId = model.bizId;
                 this.instanceId = model.instanceId;
                 this.orderId = model.orderId;
+                this.siteHost = model.siteHost;
             } 
 
             /**
@@ -366,6 +379,14 @@ public class CreateAppInstanceResponseBody extends TeaModel {
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * SiteHost.
+             */
+            public Builder siteHost(String siteHost) {
+                this.siteHost = siteHost;
                 return this;
             }
 
