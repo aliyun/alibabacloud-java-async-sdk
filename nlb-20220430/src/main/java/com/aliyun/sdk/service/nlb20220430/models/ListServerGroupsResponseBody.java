@@ -678,6 +678,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private HealthCheck healthCheck;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+        private String ipVersionAffinityMode;
+
         @com.aliyun.core.annotation.NameInMap("PreserveClientIpEnabled")
         private Boolean preserveClientIpEnabled;
 
@@ -724,6 +727,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.connectionDrainEnabled = builder.connectionDrainEnabled;
             this.connectionDrainTimeout = builder.connectionDrainTimeout;
             this.healthCheck = builder.healthCheck;
+            this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
             this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
             this.protocol = builder.protocol;
             this.regionId = builder.regionId;
@@ -787,6 +791,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public HealthCheck getHealthCheck() {
             return this.healthCheck;
+        }
+
+        /**
+         * @return ipVersionAffinityMode
+         */
+        public String getIpVersionAffinityMode() {
+            return this.ipVersionAffinityMode;
         }
 
         /**
@@ -887,6 +898,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Boolean connectionDrainEnabled; 
             private Integer connectionDrainTimeout; 
             private HealthCheck healthCheck; 
+            private String ipVersionAffinityMode; 
             private Boolean preserveClientIpEnabled; 
             private String protocol; 
             private String regionId; 
@@ -911,6 +923,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
                 this.connectionDrainEnabled = model.connectionDrainEnabled;
                 this.connectionDrainTimeout = model.connectionDrainTimeout;
                 this.healthCheck = model.healthCheck;
+                this.ipVersionAffinityMode = model.ipVersionAffinityMode;
                 this.preserveClientIpEnabled = model.preserveClientIpEnabled;
                 this.protocol = model.protocol;
                 this.regionId = model.regionId;
@@ -998,6 +1011,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
+                return this;
+            }
+
+            /**
+             * IpVersionAffinityMode.
+             */
+            public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+                this.ipVersionAffinityMode = ipVersionAffinityMode;
                 return this;
             }
 

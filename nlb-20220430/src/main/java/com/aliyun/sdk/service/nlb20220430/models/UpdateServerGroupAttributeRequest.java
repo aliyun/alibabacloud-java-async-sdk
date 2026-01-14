@@ -38,6 +38,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     private HealthCheckConfig healthCheckConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+    private String ipVersionAffinityMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PreserveClientIpEnabled")
     private Boolean preserveClientIpEnabled;
 
@@ -65,6 +69,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         this.connectionDrainTimeout = builder.connectionDrainTimeout;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
         this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
         this.regionId = builder.regionId;
         this.scheduler = builder.scheduler;
@@ -121,6 +126,13 @@ public class UpdateServerGroupAttributeRequest extends Request {
     }
 
     /**
+     * @return ipVersionAffinityMode
+     */
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
+    }
+
+    /**
      * @return preserveClientIpEnabled
      */
     public Boolean getPreserveClientIpEnabled() {
@@ -161,6 +173,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         private Integer connectionDrainTimeout; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private String ipVersionAffinityMode; 
         private Boolean preserveClientIpEnabled; 
         private String regionId; 
         private String scheduler; 
@@ -178,6 +191,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             this.connectionDrainTimeout = request.connectionDrainTimeout;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipVersionAffinityMode = request.ipVersionAffinityMode;
             this.preserveClientIpEnabled = request.preserveClientIpEnabled;
             this.regionId = request.regionId;
             this.scheduler = request.scheduler;
@@ -251,6 +265,15 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putBodyParameter("HealthCheckConfig", healthCheckConfig);
             this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * IpVersionAffinityMode.
+         */
+        public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+            this.putBodyParameter("IpVersionAffinityMode", ipVersionAffinityMode);
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
             return this;
         }
 

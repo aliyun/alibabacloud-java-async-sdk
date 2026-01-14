@@ -47,6 +47,10 @@ public class CreateServerGroupRequest extends Request {
     private HealthCheckConfig healthCheckConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IpVersionAffinityMode")
+    private String ipVersionAffinityMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PreserveClientIpEnabled")
     private Boolean preserveClientIpEnabled;
 
@@ -93,6 +97,7 @@ public class CreateServerGroupRequest extends Request {
         this.connectionDrainTimeout = builder.connectionDrainTimeout;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipVersionAffinityMode = builder.ipVersionAffinityMode;
         this.preserveClientIpEnabled = builder.preserveClientIpEnabled;
         this.protocol = builder.protocol;
         this.regionId = builder.regionId;
@@ -167,6 +172,13 @@ public class CreateServerGroupRequest extends Request {
     }
 
     /**
+     * @return ipVersionAffinityMode
+     */
+    public String getIpVersionAffinityMode() {
+        return this.ipVersionAffinityMode;
+    }
+
+    /**
      * @return preserveClientIpEnabled
      */
     public Boolean getPreserveClientIpEnabled() {
@@ -237,6 +249,7 @@ public class CreateServerGroupRequest extends Request {
         private Integer connectionDrainTimeout; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private String ipVersionAffinityMode; 
         private Boolean preserveClientIpEnabled; 
         private String protocol; 
         private String regionId; 
@@ -260,6 +273,7 @@ public class CreateServerGroupRequest extends Request {
             this.connectionDrainTimeout = request.connectionDrainTimeout;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipVersionAffinityMode = request.ipVersionAffinityMode;
             this.preserveClientIpEnabled = request.preserveClientIpEnabled;
             this.protocol = request.protocol;
             this.regionId = request.regionId;
@@ -369,6 +383,15 @@ public class CreateServerGroupRequest extends Request {
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putBodyParameter("HealthCheckConfig", healthCheckConfig);
             this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * IpVersionAffinityMode.
+         */
+        public Builder ipVersionAffinityMode(String ipVersionAffinityMode) {
+            this.putBodyParameter("IpVersionAffinityMode", ipVersionAffinityMode);
+            this.ipVersionAffinityMode = ipVersionAffinityMode;
             return this;
         }
 
