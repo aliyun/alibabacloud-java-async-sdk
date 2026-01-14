@@ -170,6 +170,9 @@ public class DescribeRulesResponseBody extends TeaModel {
      * <p>DescribeRulesResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuditMode")
+        private Integer auditMode;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
@@ -248,6 +251,9 @@ public class DescribeRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TemplateRuleIds")
         private String templateRuleIds;
 
+        @com.aliyun.core.annotation.NameInMap("ThreatAnalysisStatus")
+        private Integer threatAnalysisStatus;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
@@ -255,6 +261,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         private Integer warnLevel;
 
         private Items(Builder builder) {
+            this.auditMode = builder.auditMode;
             this.category = builder.category;
             this.categoryName = builder.categoryName;
             this.content = builder.content;
@@ -281,6 +288,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             this.supportForm = builder.supportForm;
             this.target = builder.target;
             this.templateRuleIds = builder.templateRuleIds;
+            this.threatAnalysisStatus = builder.threatAnalysisStatus;
             this.userId = builder.userId;
             this.warnLevel = builder.warnLevel;
         }
@@ -291,6 +299,13 @@ public class DescribeRulesResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return auditMode
+         */
+        public Integer getAuditMode() {
+            return this.auditMode;
         }
 
         /**
@@ -476,6 +491,13 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return threatAnalysisStatus
+         */
+        public Integer getThreatAnalysisStatus() {
+            return this.threatAnalysisStatus;
+        }
+
+        /**
          * @return userId
          */
         public Long getUserId() {
@@ -490,6 +512,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer auditMode; 
             private Integer category; 
             private String categoryName; 
             private String content; 
@@ -516,6 +539,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             private Integer supportForm; 
             private String target; 
             private String templateRuleIds; 
+            private Integer threatAnalysisStatus; 
             private Long userId; 
             private Integer warnLevel; 
 
@@ -523,6 +547,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.auditMode = model.auditMode;
                 this.category = model.category;
                 this.categoryName = model.categoryName;
                 this.content = model.content;
@@ -549,9 +574,18 @@ public class DescribeRulesResponseBody extends TeaModel {
                 this.supportForm = model.supportForm;
                 this.target = model.target;
                 this.templateRuleIds = model.templateRuleIds;
+                this.threatAnalysisStatus = model.threatAnalysisStatus;
                 this.userId = model.userId;
                 this.warnLevel = model.warnLevel;
             } 
+
+            /**
+             * AuditMode.
+             */
+            public Builder auditMode(Integer auditMode) {
+                this.auditMode = auditMode;
+                return this;
+            }
 
             /**
              * <p>The content type of the sensitive data detection rule. Valid values:</p>
@@ -874,6 +908,14 @@ public class DescribeRulesResponseBody extends TeaModel {
              */
             public Builder templateRuleIds(String templateRuleIds) {
                 this.templateRuleIds = templateRuleIds;
+                return this;
+            }
+
+            /**
+             * ThreatAnalysisStatus.
+             */
+            public Builder threatAnalysisStatus(Integer threatAnalysisStatus) {
+                this.threatAnalysisStatus = threatAnalysisStatus;
                 return this;
             }
 
