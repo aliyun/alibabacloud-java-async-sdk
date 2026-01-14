@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAgent  AddAgentRequest
+     * @return AddAgentResponse
+     */
+    CompletableFuture<AddAgentResponse> addAgent(AddAgentRequest request);
+
+    /**
+     * @param request the request parameters of AddAgentGroup  AddAgentGroupRequest
+     * @return AddAgentGroupResponse
+     */
+    CompletableFuture<AddAgentGroupResponse> addAgentGroup(AddAgentGroupRequest request);
+
+    /**
      * @param request the request parameters of AddBlacklist  AddBlacklistRequest
      * @return AddBlacklistResponse
      */
@@ -32,16 +44,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTaskResponse> addTask(AddTaskRequest request);
 
     /**
+     * @param request the request parameters of AgentCallList  AgentCallListRequest
+     * @return AgentCallListResponse
+     */
+    CompletableFuture<AgentCallListResponse> agentCallList(AgentCallListRequest request);
+
+    /**
      * @param request the request parameters of AgentCancelCall  AgentCancelCallRequest
      * @return AgentCancelCallResponse
      */
     CompletableFuture<AgentCancelCallResponse> agentCancelCall(AgentCancelCallRequest request);
 
     /**
+     * @param request the request parameters of AgentGroupPage  AgentGroupPageRequest
+     * @return AgentGroupPageResponse
+     */
+    CompletableFuture<AgentGroupPageResponse> agentGroupPage(AgentGroupPageRequest request);
+
+    /**
+     * @param request the request parameters of AgentImportNumber  AgentImportNumberRequest
+     * @return AgentImportNumberResponse
+     */
+    CompletableFuture<AgentImportNumberResponse> agentImportNumber(AgentImportNumberRequest request);
+
+    /**
      * @param request the request parameters of AgentRecoverCall  AgentRecoverCallRequest
      * @return AgentRecoverCallResponse
      */
     CompletableFuture<AgentRecoverCallResponse> agentRecoverCall(AgentRecoverCallRequest request);
+
+    /**
+     * @param request the request parameters of CallChatList  CallChatListRequest
+     * @return CallChatListResponse
+     */
+    CompletableFuture<CallChatListResponse> callChatList(CallChatListRequest request);
+
+    /**
+     * @param request the request parameters of CallNumberDetail  CallNumberDetailRequest
+     * @return CallNumberDetailResponse
+     */
+    CompletableFuture<CallNumberDetailResponse> callNumberDetail(CallNumberDetailRequest request);
 
     /**
      * @param request the request parameters of Details  DetailsRequest
@@ -68,10 +110,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportNumberV2Response> importNumberV2(ImportNumberV2Request request);
 
     /**
+     * @param request the request parameters of JoinAgentGroup  JoinAgentGroupRequest
+     * @return JoinAgentGroupResponse
+     */
+    CompletableFuture<JoinAgentGroupResponse> joinAgentGroup(JoinAgentGroupRequest request);
+
+    /**
      * @param request the request parameters of Page  PageRequest
      * @return PageResponse
      */
     CompletableFuture<PageResponse> page(PageRequest request);
+
+    /**
+     * @param request the request parameters of QueryAgentInfo  QueryAgentInfoRequest
+     * @return QueryAgentInfoResponse
+     */
+    CompletableFuture<QueryAgentInfoResponse> queryAgentInfo(QueryAgentInfoRequest request);
+
+    /**
+     * @param request the request parameters of QuickAddTask  QuickAddTaskRequest
+     * @return QuickAddTaskResponse
+     */
+    CompletableFuture<QuickAddTaskResponse> quickAddTask(QuickAddTaskRequest request);
+
+    /**
+     * @param request the request parameters of QuitAgentGroup  QuitAgentGroupRequest
+     * @return QuitAgentGroupResponse
+     */
+    CompletableFuture<QuitAgentGroupResponse> quitAgentGroup(QuitAgentGroupRequest request);
 
     /**
      * @param request the request parameters of SmsTemplateCreate  SmsTemplateCreateRequest

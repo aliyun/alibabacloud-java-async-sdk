@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImportNumberResponseBody} extends {@link TeaModel}
+ * {@link CallChatListResponseBody} extends {@link TeaModel}
  *
- * <p>ImportNumberResponseBody</p>
+ * <p>CallChatListResponseBody</p>
  */
-public class ImportNumberResponseBody extends TeaModel {
+public class CallChatListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -27,18 +27,18 @@ public class ImportNumberResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private Model model;
+    private java.util.List<Model> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
-    private String success;
+    private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    private ImportNumberResponseBody(Builder builder) {
+    private CallChatListResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
@@ -52,7 +52,7 @@ public class ImportNumberResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ImportNumberResponseBody create() {
+    public static CallChatListResponseBody create() {
         return builder().build();
     }
 
@@ -84,7 +84,7 @@ public class ImportNumberResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public Model getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -98,7 +98,7 @@ public class ImportNumberResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
@@ -113,15 +113,15 @@ public class ImportNumberResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private Long code; 
         private String message; 
-        private Model model; 
+        private java.util.List<Model> model; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
         private Long timestamp; 
 
         private Builder() {
         } 
 
-        private Builder(ImportNumberResponseBody model) {
+        private Builder(CallChatListResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.message = model.message;
@@ -158,7 +158,7 @@ public class ImportNumberResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(Model model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -174,7 +174,7 @@ public class ImportNumberResponseBody extends TeaModel {
         /**
          * Success.
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
@@ -187,40 +187,36 @@ public class ImportNumberResponseBody extends TeaModel {
             return this;
         }
 
-        public ImportNumberResponseBody build() {
-            return new ImportNumberResponseBody(this);
+        public CallChatListResponseBody build() {
+            return new CallChatListResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ImportNumberResponseBody} extends {@link TeaModel}
+     * {@link CallChatListResponseBody} extends {@link TeaModel}
      *
-     * <p>ImportNumberResponseBody</p>
+     * <p>CallChatListResponseBody</p>
      */
     public static class Model extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BatchId")
-        private Long batchId;
+        @com.aliyun.core.annotation.NameInMap("ChatId")
+        private Long chatId;
 
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private Long code;
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
 
-        @com.aliyun.core.annotation.NameInMap("Data")
-        private String data;
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
 
-        @com.aliyun.core.annotation.NameInMap("ImportNum")
-        private Long importNum;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
+        @com.aliyun.core.annotation.NameInMap("FromType")
+        private Long fromType;
 
         private Model(Builder builder) {
-            this.batchId = builder.batchId;
-            this.code = builder.code;
-            this.data = builder.data;
-            this.importNum = builder.importNum;
-            this.message = builder.message;
+            this.chatId = builder.chatId;
+            this.content = builder.content;
+            this.createTime = builder.createTime;
+            this.fromType = builder.fromType;
         }
 
         public static Builder builder() {
@@ -232,95 +228,90 @@ public class ImportNumberResponseBody extends TeaModel {
         }
 
         /**
-         * @return batchId
+         * @return chatId
          */
-        public Long getBatchId() {
-            return this.batchId;
+        public Long getChatId() {
+            return this.chatId;
         }
 
         /**
-         * @return code
+         * @return content
          */
-        public Long getCode() {
-            return this.code;
+        public String getContent() {
+            return this.content;
         }
 
         /**
-         * @return data
+         * @return createTime
          */
-        public String getData() {
-            return this.data;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
-         * @return importNum
+         * @return fromType
          */
-        public Long getImportNum() {
-            return this.importNum;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
+        public Long getFromType() {
+            return this.fromType;
         }
 
         public static final class Builder {
-            private Long batchId; 
-            private Long code; 
-            private String data; 
-            private Long importNum; 
-            private String message; 
+            private Long chatId; 
+            private String content; 
+            private String createTime; 
+            private Long fromType; 
 
             private Builder() {
             } 
 
             private Builder(Model model) {
-                this.batchId = model.batchId;
-                this.code = model.code;
-                this.data = model.data;
-                this.importNum = model.importNum;
-                this.message = model.message;
+                this.chatId = model.chatId;
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.fromType = model.fromType;
             } 
 
             /**
-             * BatchId.
+             * <p>聊天内容id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79</p>
              */
-            public Builder batchId(Long batchId) {
-                this.batchId = batchId;
+            public Builder chatId(Long chatId) {
+                this.chatId = chatId;
                 return this;
             }
 
             /**
-             * Code.
+             * <p>说话内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder code(Long code) {
-                this.code = code;
+            public Builder content(String content) {
+                this.content = content;
                 return this;
             }
 
             /**
-             * Data.
+             * <p>说话时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-09 14:14:19</p>
              */
-            public Builder data(String data) {
-                this.data = data;
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
             /**
-             * ImportNum.
+             * <p>说话号码，其中0为AI,1-用户,2-坐席</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
-            public Builder importNum(Long importNum) {
-                this.importNum = importNum;
-                return this;
-            }
-
-            /**
-             * Message.
-             */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder fromType(Long fromType) {
+                this.fromType = fromType;
                 return this;
             }
 

@@ -40,6 +40,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddAgent  AddAgentRequest
+     * @return AddAgentResponse
+     */
+    @Override
+    public CompletableFuture<AddAgentResponse> addAgent(AddAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddAgentGroup  AddAgentGroupRequest
+     * @return AddAgentGroupResponse
+     */
+    @Override
+    public CompletableFuture<AddAgentGroupResponse> addAgentGroup(AddAgentGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAgentGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAgentGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAgentGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AddBlacklist  AddBlacklistRequest
      * @return AddBlacklistResponse
      */
@@ -76,6 +112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AgentCallList  AgentCallListRequest
+     * @return AgentCallListResponse
+     */
+    @Override
+    public CompletableFuture<AgentCallListResponse> agentCallList(AgentCallListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AgentCallList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AgentCallListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AgentCallListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AgentCancelCall  AgentCancelCallRequest
      * @return AgentCancelCallResponse
      */
@@ -94,6 +148,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AgentGroupPage  AgentGroupPageRequest
+     * @return AgentGroupPageResponse
+     */
+    @Override
+    public CompletableFuture<AgentGroupPageResponse> agentGroupPage(AgentGroupPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AgentGroupPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AgentGroupPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AgentGroupPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AgentImportNumber  AgentImportNumberRequest
+     * @return AgentImportNumberResponse
+     */
+    @Override
+    public CompletableFuture<AgentImportNumberResponse> agentImportNumber(AgentImportNumberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AgentImportNumber").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AgentImportNumberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AgentImportNumberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AgentRecoverCall  AgentRecoverCallRequest
      * @return AgentRecoverCallResponse
      */
@@ -106,6 +196,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AgentRecoverCallResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CallChatList  CallChatListRequest
+     * @return CallChatListResponse
+     */
+    @Override
+    public CompletableFuture<CallChatListResponse> callChatList(CallChatListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CallChatList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CallChatListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CallChatListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CallNumberDetail  CallNumberDetailRequest
+     * @return CallNumberDetailResponse
+     */
+    @Override
+    public CompletableFuture<CallNumberDetailResponse> callNumberDetail(CallNumberDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CallNumberDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CallNumberDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CallNumberDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -184,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of JoinAgentGroup  JoinAgentGroupRequest
+     * @return JoinAgentGroupResponse
+     */
+    @Override
+    public CompletableFuture<JoinAgentGroupResponse> joinAgentGroup(JoinAgentGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("JoinAgentGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(JoinAgentGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<JoinAgentGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of Page  PageRequest
      * @return PageResponse
      */
@@ -196,6 +340,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAgentInfo  QueryAgentInfoRequest
+     * @return QueryAgentInfoResponse
+     */
+    @Override
+    public CompletableFuture<QueryAgentInfoResponse> queryAgentInfo(QueryAgentInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAgentInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAgentInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAgentInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QuickAddTask  QuickAddTaskRequest
+     * @return QuickAddTaskResponse
+     */
+    @Override
+    public CompletableFuture<QuickAddTaskResponse> quickAddTask(QuickAddTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuickAddTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuickAddTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuickAddTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QuitAgentGroup  QuitAgentGroupRequest
+     * @return QuitAgentGroupResponse
+     */
+    @Override
+    public CompletableFuture<QuitAgentGroupResponse> quitAgentGroup(QuitAgentGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QuitAgentGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QuitAgentGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QuitAgentGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

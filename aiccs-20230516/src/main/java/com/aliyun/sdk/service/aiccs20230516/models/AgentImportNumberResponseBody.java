@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImportNumberResponseBody} extends {@link TeaModel}
+ * {@link AgentImportNumberResponseBody} extends {@link TeaModel}
  *
- * <p>ImportNumberResponseBody</p>
+ * <p>AgentImportNumberResponseBody</p>
  */
-public class ImportNumberResponseBody extends TeaModel {
+public class AgentImportNumberResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Code")
-    private Long code;
+    private String code;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -33,12 +33,12 @@ public class ImportNumberResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
-    private String success;
+    private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    private ImportNumberResponseBody(Builder builder) {
+    private AgentImportNumberResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
@@ -52,7 +52,7 @@ public class ImportNumberResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ImportNumberResponseBody create() {
+    public static AgentImportNumberResponseBody create() {
         return builder().build();
     }
 
@@ -70,7 +70,7 @@ public class ImportNumberResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Long getCode() {
+    public String getCode() {
         return this.code;
     }
 
@@ -98,7 +98,7 @@ public class ImportNumberResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
@@ -111,17 +111,17 @@ public class ImportNumberResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private Long code; 
+        private String code; 
         private String message; 
         private Model model; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
         private Long timestamp; 
 
         private Builder() {
         } 
 
-        private Builder(ImportNumberResponseBody model) {
+        private Builder(AgentImportNumberResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.message = model.message;
@@ -142,7 +142,7 @@ public class ImportNumberResponseBody extends TeaModel {
         /**
          * Code.
          */
-        public Builder code(Long code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
@@ -174,7 +174,7 @@ public class ImportNumberResponseBody extends TeaModel {
         /**
          * Success.
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
@@ -187,40 +187,28 @@ public class ImportNumberResponseBody extends TeaModel {
             return this;
         }
 
-        public ImportNumberResponseBody build() {
-            return new ImportNumberResponseBody(this);
+        public AgentImportNumberResponseBody build() {
+            return new AgentImportNumberResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ImportNumberResponseBody} extends {@link TeaModel}
+     * {@link AgentImportNumberResponseBody} extends {@link TeaModel}
      *
-     * <p>ImportNumberResponseBody</p>
+     * <p>AgentImportNumberResponseBody</p>
      */
     public static class Model extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
-        private Long batchId;
+        private String batchId;
 
-        @com.aliyun.core.annotation.NameInMap("Code")
-        private Long code;
-
-        @com.aliyun.core.annotation.NameInMap("Data")
-        private String data;
-
-        @com.aliyun.core.annotation.NameInMap("ImportNum")
-        private Long importNum;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
 
         private Model(Builder builder) {
             this.batchId = builder.batchId;
-            this.code = builder.code;
-            this.data = builder.data;
-            this.importNum = builder.importNum;
-            this.message = builder.message;
+            this.id = builder.id;
         }
 
         public static Builder builder() {
@@ -234,93 +222,48 @@ public class ImportNumberResponseBody extends TeaModel {
         /**
          * @return batchId
          */
-        public Long getBatchId() {
+        public String getBatchId() {
             return this.batchId;
         }
 
         /**
-         * @return code
+         * @return id
          */
-        public Long getCode() {
-            return this.code;
-        }
-
-        /**
-         * @return data
-         */
-        public String getData() {
-            return this.data;
-        }
-
-        /**
-         * @return importNum
-         */
-        public Long getImportNum() {
-            return this.importNum;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
+        public Long getId() {
+            return this.id;
         }
 
         public static final class Builder {
-            private Long batchId; 
-            private Long code; 
-            private String data; 
-            private Long importNum; 
-            private String message; 
+            private String batchId; 
+            private Long id; 
 
             private Builder() {
             } 
 
             private Builder(Model model) {
                 this.batchId = model.batchId;
-                this.code = model.code;
-                this.data = model.data;
-                this.importNum = model.importNum;
-                this.message = model.message;
+                this.id = model.id;
             } 
 
             /**
-             * BatchId.
+             * <p>批次ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
              */
-            public Builder batchId(Long batchId) {
+            public Builder batchId(String batchId) {
                 this.batchId = batchId;
                 return this;
             }
 
             /**
-             * Code.
+             * <p>外呼编号ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
-            public Builder code(Long code) {
-                this.code = code;
-                return this;
-            }
-
-            /**
-             * Data.
-             */
-            public Builder data(String data) {
-                this.data = data;
-                return this;
-            }
-
-            /**
-             * ImportNum.
-             */
-            public Builder importNum(Long importNum) {
-                this.importNum = importNum;
-                return this;
-            }
-
-            /**
-             * Message.
-             */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
