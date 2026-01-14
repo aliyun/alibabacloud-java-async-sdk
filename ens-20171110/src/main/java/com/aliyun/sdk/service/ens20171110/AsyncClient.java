@@ -513,6 +513,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBucketLifecycleResponse> deleteBucketLifecycle(DeleteBucketLifecycleRequest request);
 
     /**
+     * @param request the request parameters of DeleteCluster  DeleteClusterRequest
+     * @return DeleteClusterResponse
+     */
+    CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you release a disk, the disk must be in the Available state.</p>
      * 
