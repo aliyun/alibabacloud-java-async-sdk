@@ -277,6 +277,81 @@ public class ListCustomAgentResponseBody extends TeaModel {
      *
      * <p>ListCustomAgentResponseBody</p>
      */
+    public static class KnowledgeConfigList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessType")
+        private String accessType;
+
+        @com.aliyun.core.annotation.NameInMap("McpServerId")
+        private String mcpServerId;
+
+        private KnowledgeConfigList(Builder builder) {
+            this.accessType = builder.accessType;
+            this.mcpServerId = builder.mcpServerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KnowledgeConfigList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessType
+         */
+        public String getAccessType() {
+            return this.accessType;
+        }
+
+        /**
+         * @return mcpServerId
+         */
+        public String getMcpServerId() {
+            return this.mcpServerId;
+        }
+
+        public static final class Builder {
+            private String accessType; 
+            private String mcpServerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(KnowledgeConfigList model) {
+                this.accessType = model.accessType;
+                this.mcpServerId = model.mcpServerId;
+            } 
+
+            /**
+             * AccessType.
+             */
+            public Builder accessType(String accessType) {
+                this.accessType = accessType;
+                return this;
+            }
+
+            /**
+             * McpServerId.
+             */
+            public Builder mcpServerId(String mcpServerId) {
+                this.mcpServerId = mcpServerId;
+                return this;
+            }
+
+            public KnowledgeConfigList build() {
+                return new KnowledgeConfigList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunParentId")
         private String aliyunParentId;
@@ -313,6 +388,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Knowledge")
         private String knowledge;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeConfigList")
+        private java.util.List<KnowledgeConfigList> knowledgeConfigList;
 
         @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
@@ -357,6 +435,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.instruction = builder.instruction;
             this.knowledge = builder.knowledge;
+            this.knowledgeConfigList = builder.knowledgeConfigList;
             this.modifier = builder.modifier;
             this.modifierUserName = builder.modifierUserName;
             this.name = builder.name;
@@ -462,6 +541,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return knowledgeConfigList
+         */
+        public java.util.List<KnowledgeConfigList> getKnowledgeConfigList() {
+            return this.knowledgeConfigList;
+        }
+
+        /**
          * @return modifier
          */
         public String getModifier() {
@@ -544,6 +630,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             private String gmtModified; 
             private String instruction; 
             private String knowledge; 
+            private java.util.List<KnowledgeConfigList> knowledgeConfigList; 
             private String modifier; 
             private String modifierUserName; 
             private String name; 
@@ -571,6 +658,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.instruction = model.instruction;
                 this.knowledge = model.knowledge;
+                this.knowledgeConfigList = model.knowledgeConfigList;
                 this.modifier = model.modifier;
                 this.modifierUserName = model.modifierUserName;
                 this.name = model.name;
@@ -676,6 +764,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
              */
             public Builder knowledge(String knowledge) {
                 this.knowledge = knowledge;
+                return this;
+            }
+
+            /**
+             * KnowledgeConfigList.
+             */
+            public Builder knowledgeConfigList(java.util.List<KnowledgeConfigList> knowledgeConfigList) {
+                this.knowledgeConfigList = knowledgeConfigList;
                 return this;
             }
 
