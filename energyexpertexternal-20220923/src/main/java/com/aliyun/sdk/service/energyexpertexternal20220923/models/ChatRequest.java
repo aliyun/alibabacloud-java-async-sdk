@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChatRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("documentIds")
+    private java.util.List<Long> documentIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("question")
     @com.aliyun.core.annotation.Validation(required = true)
     private String question;
@@ -29,6 +33,7 @@ public class ChatRequest extends Request {
 
     private ChatRequest(Builder builder) {
         super(builder);
+        this.documentIds = builder.documentIds;
         this.question = builder.question;
         this.sessionId = builder.sessionId;
     }
@@ -47,6 +52,13 @@ public class ChatRequest extends Request {
     }
 
     /**
+     * @return documentIds
+     */
+    public java.util.List<Long> getDocumentIds() {
+        return this.documentIds;
+    }
+
+    /**
      * @return question
      */
     public String getQuestion() {
@@ -61,6 +73,7 @@ public class ChatRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChatRequest, Builder> {
+        private java.util.List<Long> documentIds; 
         private String question; 
         private String sessionId; 
 
@@ -70,9 +83,19 @@ public class ChatRequest extends Request {
 
         private Builder(ChatRequest request) {
             super(request);
+            this.documentIds = request.documentIds;
             this.question = request.question;
             this.sessionId = request.sessionId;
         } 
+
+        /**
+         * documentIds.
+         */
+        public Builder documentIds(java.util.List<Long> documentIds) {
+            this.putBodyParameter("documentIds", documentIds);
+            this.documentIds = documentIds;
+            return this;
+        }
 
         /**
          * <p>Q&amp;A content.</p>

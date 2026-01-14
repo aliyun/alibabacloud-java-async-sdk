@@ -405,6 +405,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecalculateCarbonEmissionResponse> recalculateCarbonEmission(RecalculateCarbonEmissionRequest request);
 
     /**
+     * @param request the request parameters of Retrieve  RetrieveRequest
+     * @return RetrieveResponse
+     */
+    CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
+
+    /**
      * @param request the request parameters of SendDocumentAskQuestion  SendDocumentAskQuestionRequest
      * @return SendDocumentAskQuestionResponse
      */
