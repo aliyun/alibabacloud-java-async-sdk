@@ -34,6 +34,10 @@ public class ListRegistryModulesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -43,6 +47,7 @@ public class ListRegistryModulesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.namespaceName = builder.namespaceName;
         this.nextToken = builder.nextToken;
+        this.status = builder.status;
         this.type = builder.type;
     }
 
@@ -88,6 +93,13 @@ public class ListRegistryModulesRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -99,6 +111,7 @@ public class ListRegistryModulesRequest extends Request {
         private Integer maxResults; 
         private String namespaceName; 
         private String nextToken; 
+        private String status; 
         private String type; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListRegistryModulesRequest extends Request {
             this.maxResults = request.maxResults;
             this.namespaceName = request.namespaceName;
             this.nextToken = request.nextToken;
+            this.status = request.status;
             this.type = request.type;
         } 
 
@@ -147,6 +161,15 @@ public class ListRegistryModulesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 
