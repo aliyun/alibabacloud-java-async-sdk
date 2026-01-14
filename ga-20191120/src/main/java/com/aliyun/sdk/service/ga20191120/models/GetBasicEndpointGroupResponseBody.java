@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBasicEndpointGroupResponseBody} extends {@link TeaModel}
  *
  * <p>GetBasicEndpointGroupResponseBody</p>
@@ -60,6 +66,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
 
     public static GetBasicEndpointGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,8 +154,27 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetBasicEndpointGroupResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.description = model.description;
+            this.endpointAddress = model.endpointAddress;
+            this.endpointGroupId = model.endpointGroupId;
+            this.endpointGroupRegion = model.endpointGroupRegion;
+            this.endpointSubAddress = model.endpointSubAddress;
+            this.endpointType = model.endpointType;
+            this.name = model.name;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
+
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -153,7 +182,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the endpoint group.
+         * <p>The description of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BasicEndpointGroup</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -161,7 +193,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The address of the endpoint.
+         * <p>The address of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1a05txelswuj8g****</p>
          */
         public Builder endpointAddress(String endpointAddress) {
             this.endpointAddress = endpointAddress;
@@ -169,7 +204,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -177,7 +215,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the endpoint group resides.
+         * <p>The ID of the region where the endpoint group resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
@@ -185,14 +226,16 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The secondary address of the endpoint.
-         * <p>
+         * <p>The secondary address of the endpoint.</p>
+         * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+         * <ul>
+         * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+         * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+         * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+         * </ul>
          * 
-         * This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
-         * 
-         * *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
-         * *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
-         * *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder endpointSubAddress(String endpointSubAddress) {
             this.endpointSubAddress = endpointSubAddress;
@@ -200,13 +243,16 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The type of endpoint. Valid values:
-         * <p>
+         * <p>The type of endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+         * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+         * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance</li>
+         * </ul>
          * 
-         * *   **ENI**: elastic network interface (ENI).
-         * *   **SLB**: Classic Load Balancer (CLB) instance.
-         * *   **ECS**: Elastic Compute Service (ECS) instance.
-         * *   **NLB**: Network Load Balancer (NLB) instance
+         * <strong>example:</strong>
+         * <p>ENI</p>
          */
         public Builder endpointType(String endpointType) {
             this.endpointType = endpointType;
@@ -214,7 +260,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint group.
+         * <p>The name of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -222,7 +271,10 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,13 +282,16 @@ public class GetBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the endpoint group. Valid values:
-         * <p>
+         * <p>The status of the endpoint group. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: being initialized.</li>
+         * <li><strong>active</strong>: running as expected.</li>
+         * <li><strong>updating</strong>: being updated.</li>
+         * <li><strong>deleting</strong>: being deleted.</li>
+         * </ul>
          * 
-         * *   **init**: being initialized.
-         * *   **active**: running as expected.
-         * *   **updating**: being updated.
-         * *   **deleting**: being deleted.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;

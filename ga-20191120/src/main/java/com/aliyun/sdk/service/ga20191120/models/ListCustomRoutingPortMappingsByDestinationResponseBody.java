@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingPortMappingsByDestinationResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomRoutingPortMappingsByDestinationResponseBody</p>
@@ -18,7 +24,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PortMappings")
-    private java.util.List < PortMappings> portMappings;
+    private java.util.List<PortMappings> portMappings;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -59,7 +69,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     /**
      * @return portMappings
      */
-    public java.util.List < PortMappings> getPortMappings() {
+    public java.util.List<PortMappings> getPortMappings() {
         return this.portMappings;
     }
 
@@ -80,12 +90,26 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PortMappings> portMappings; 
+        private java.util.List<PortMappings> portMappings; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCustomRoutingPortMappingsByDestinationResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.portMappings = model.portMappings;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +117,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,15 +128,18 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         }
 
         /**
-         * Details about the port mapping table.
+         * <p>Details about the port mapping table.</p>
          */
-        public Builder portMappings(java.util.List < PortMappings> portMappings) {
+        public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String	04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomRoutingPortMappingsByDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingPortMappingsByDestinationResponseBody</p>
+     */
     public static class DestinationSocketAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
@@ -168,8 +207,19 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             private String ipAddress; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationSocketAddress model) {
+                this.ipAddress = model.ipAddress;
+                this.port = model.port;
+            } 
+
             /**
-             * The service IP address of the backend instance.
+             * <p>The service IP address of the backend instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -177,7 +227,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The service port of the backend instance.
+             * <p>The service port of the backend instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -191,6 +244,12 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomRoutingPortMappingsByDestinationResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingPortMappingsByDestinationResponseBody</p>
+     */
     public static class PortMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -217,7 +276,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         private String listenerId;
 
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < String > protocols;
+        private java.util.List<String> protocols;
 
         @com.aliyun.core.annotation.NameInMap("Vswitch")
         private String vswitch;
@@ -302,7 +361,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
         /**
          * @return protocols
          */
-        public java.util.List < String > getProtocols() {
+        public java.util.List<String> getProtocols() {
             return this.protocols;
         }
 
@@ -322,11 +381,30 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             private String endpointGroupRegion; 
             private String endpointId; 
             private String listenerId; 
-            private java.util.List < String > protocols; 
+            private java.util.List<String> protocols; 
             private String vswitch; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortMappings model) {
+                this.acceleratorId = model.acceleratorId;
+                this.acceleratorPort = model.acceleratorPort;
+                this.destinationSocketAddress = model.destinationSocketAddress;
+                this.destinationTrafficState = model.destinationTrafficState;
+                this.endpointGroupId = model.endpointGroupId;
+                this.endpointGroupRegion = model.endpointGroupRegion;
+                this.endpointId = model.endpointId;
+                this.listenerId = model.listenerId;
+                this.protocols = model.protocols;
+                this.vswitch = model.vswitch;
+            } 
+
             /**
-             * The ID of the GA instance.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -334,7 +412,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The acceleration port.
+             * <p>The acceleration port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder acceleratorPort(Integer acceleratorPort) {
                 this.acceleratorPort = acceleratorPort;
@@ -342,7 +423,7 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The service IP address and port of the backend instance.
+             * <p>The service IP address and port of the backend instance.</p>
              */
             public Builder destinationSocketAddress(DestinationSocketAddress destinationSocketAddress) {
                 this.destinationSocketAddress = destinationSocketAddress;
@@ -350,11 +431,14 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The access policy of traffic for the backend instance.
-             * <p>
+             * <p>The access policy of traffic for the backend instance.</p>
+             * <ul>
+             * <li><strong>allow</strong>: allows traffic to the backend instance.</li>
+             * <li><strong>deny</strong>: denies all traffic to the backend instance.</li>
+             * </ul>
              * 
-             * *   **allow**: allows traffic to the backend instance.
-             * *   **deny**: denies all traffic to the backend instance.
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder destinationTrafficState(String destinationTrafficState) {
                 this.destinationTrafficState = destinationTrafficState;
@@ -362,7 +446,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The ID of the endpoint group.
+             * <p>The ID of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epg-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -370,7 +457,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The ID of the region in which the endpoint group resides.
+             * <p>The ID of the region in which the endpoint group resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-west-1</p>
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -378,7 +468,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The ID of the endpoint.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -386,7 +479,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The ID of the listener.
+             * <p>The ID of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -394,19 +490,22 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
             }
 
             /**
-             * The protocol of the backend service.
-             * <p>
-             * 
-             * *   **tcp**: TCP
-             * *   **udp**: UDP
+             * <p>The protocol of the backend service.</p>
+             * <ul>
+             * <li><strong>tcp</strong>: TCP</li>
+             * <li><strong>udp</strong>: UDP</li>
+             * </ul>
              */
-            public Builder protocols(java.util.List < String > protocols) {
+            public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
                 return this;
             }
 
             /**
-             * The name of the endpoint (vSwitch).
+             * <p>The name of the endpoint (vSwitch).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test01</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;

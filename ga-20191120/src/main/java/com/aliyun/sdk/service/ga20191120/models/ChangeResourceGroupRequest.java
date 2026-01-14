@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -52,7 +58,7 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,12 +119,14 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -127,7 +135,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the new resource group.
+         * <p>The ID of the new resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzrnd67gq****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -136,7 +148,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,13 +161,17 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the GA resource.
-         * <p>
+         * <p>The ID of the GA resource.</p>
+         * <ul>
+         * <li>If you set <strong>ResourceType</strong> to <strong>accelerator</strong>, set the value of ResourceId to the ID of a standard GA instance.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>basicaccelerator</strong>, set the value of ResourceId to the ID of a basic GA instance.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>bandwidthpackage</strong>, set the value of ResourceId to the ID of a bandwidth plan.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>acl</strong>, set the value of ResourceId to the ID of an access control list (ACL).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-         * *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-         * *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-         * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).
+         * <strong>example:</strong>
+         * <p>ga-bp149u6o36qt1as9b****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -160,13 +180,17 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the GA resource. Valid values:
-         * <p>
+         * <p>The type of the GA resource. Valid values:</p>
+         * <ul>
+         * <li><strong>accelerator:</strong> a standard GA instance.</li>
+         * <li><strong>basicaccelerator:</strong> a basic GA instance.</li>
+         * <li><strong>bandwidthpackage:</strong> a bandwidth plan.</li>
+         * <li><strong>acl:</strong> an ACL.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **accelerator:** a standard GA instance.
-         * *   **basicaccelerator:** a basic GA instance.
-         * *   **bandwidthpackage:** a bandwidth plan.
-         * *   **acl:** an ACL.
+         * <strong>example:</strong>
+         * <p>accelerator</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

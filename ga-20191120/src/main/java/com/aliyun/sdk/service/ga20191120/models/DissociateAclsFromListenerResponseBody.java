@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DissociateAclsFromListenerResponseBody} extends {@link TeaModel}
  *
  * <p>DissociateAclsFromListenerResponseBody</p>
  */
 public class DissociateAclsFromListenerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclIds")
-    private java.util.List < String > aclIds;
+    private java.util.List<String> aclIds;
 
     @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
@@ -34,10 +40,14 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclIds
      */
-    public java.util.List < String > getAclIds() {
+    public java.util.List<String> getAclIds() {
         return this.aclIds;
     }
 
@@ -56,20 +66,32 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > aclIds; 
+        private java.util.List<String> aclIds; 
         private String listenerId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DissociateAclsFromListenerResponseBody model) {
+            this.aclIds = model.aclIds;
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The IDs of the ACL.
+         * <p>The IDs of the ACL.</p>
          */
-        public Builder aclIds(java.util.List < String > aclIds) {
+        public Builder aclIds(java.util.List<String> aclIds) {
             this.aclIds = aclIds;
             return this;
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -77,7 +99,10 @@ public class DissociateAclsFromListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

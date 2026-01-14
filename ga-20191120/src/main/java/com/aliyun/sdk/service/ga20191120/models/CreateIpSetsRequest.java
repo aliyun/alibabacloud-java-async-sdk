@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIpSetsRequest} extends {@link RequestModel}
  *
  * <p>CreateIpSetsRequest</p>
@@ -14,7 +20,7 @@ public class CreateIpSetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccelerateRegion")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AccelerateRegion> accelerateRegion;
+    private java.util.List<AccelerateRegion> accelerateRegion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcceleratorId")
@@ -46,7 +52,7 @@ public class CreateIpSetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class CreateIpSetsRequest extends Request {
     /**
      * @return accelerateRegion
      */
-    public java.util.List < AccelerateRegion> getAccelerateRegion() {
+    public java.util.List<AccelerateRegion> getAccelerateRegion() {
         return this.accelerateRegion;
     }
 
@@ -80,7 +86,7 @@ public class CreateIpSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateIpSetsRequest, Builder> {
-        private java.util.List < AccelerateRegion> accelerateRegion; 
+        private java.util.List<AccelerateRegion> accelerateRegion; 
         private String acceleratorId; 
         private String clientToken; 
         private String regionId; 
@@ -98,16 +104,21 @@ public class CreateIpSetsRequest extends Request {
         } 
 
         /**
-         * The information about the acceleration regions.
+         * <p>The information about the acceleration regions.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder accelerateRegion(java.util.List < AccelerateRegion> accelerateRegion) {
+        public Builder accelerateRegion(java.util.List<AccelerateRegion> accelerateRegion) {
             this.putQueryParameter("AccelerateRegion", accelerateRegion);
             this.accelerateRegion = accelerateRegion;
             return this;
         }
 
         /**
-         * The GA instance ID.
+         * <p>The GA instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1yeeq8yfoyszmqy****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -116,12 +127,14 @@ public class CreateIpSetsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -130,7 +143,11 @@ public class CreateIpSetsRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,6 +162,12 @@ public class CreateIpSetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIpSetsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIpSetsRequest</p>
+     */
     public static class AccelerateRegion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -208,11 +231,23 @@ public class CreateIpSetsRequest extends Request {
             private String ipVersion; 
             private String ispType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccelerateRegion model) {
+                this.accelerateRegionId = model.accelerateRegionId;
+                this.bandwidth = model.bandwidth;
+                this.ipVersion = model.ipVersion;
+                this.ispType = model.ispType;
+            } 
+
             /**
-             * The ID of the acceleration region.
-             * <p>
+             * <p>The ID of the acceleration region.</p>
+             * <p>The number of regions that you can add varies based on the specification of the GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Overview</a>.</p>
+             * <p>This parameter is required.</p>
              * 
-             * The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder accelerateRegionId(String accelerateRegionId) {
                 this.accelerateRegionId = accelerateRegionId;
@@ -220,12 +255,17 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * The bandwidth that you want to allocate to the acceleration region. Unit: **Mbit/s**.
-             * <p>
+             * <p>The bandwidth that you want to allocate to the acceleration region. Unit: <strong>Mbit/s</strong>.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is required.</li>
+             * <li>You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.</li>
+             * <li>The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * >*  This parameter is required.
-             * >*   You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.
-             * >*   The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -233,14 +273,18 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * The IP version used to connect to the GA instance. Valid values:
-             * <p>
+             * <p>The IP version used to connect to the GA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong> (default)</li>
+             * <li><strong>IPv6</strong></li>
+             * <li><strong>DUAL_STACK</strong>: IPv4 and IPv6</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only pay-as-you-go standard GA instances support DUAL_STACK.</p>
+             * </blockquote>
              * 
-             * *   **IPv4** (default)
-             * *   **IPv6**
-             * *   **DUAL_STACK**: IPv4 and IPv6
-             * 
-             * > Only pay-as-you-go standard GA instances support DUAL_STACK.
+             * <strong>example:</strong>
+             * <p>IPv6</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -248,14 +292,20 @@ public class CreateIpSetsRequest extends Request {
             }
 
             /**
-             * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
-             * <p>
+             * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong>: BGP (Multi-ISP) lines.</li>
+             * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is required only if the bandwidth metering method of the GA instance is <strong>pay-by-data transfer</strong>.</li>
+             * <li>Different acceleration regions support different line types of EIPs.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   **BGP**: BGP (Multi-ISP) lines.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines
-             * 
-             * > *   This parameter is required only if the bandwidth metering method of the GA instance is **pay-by-data transfer**.
-             * >*   Different acceleration regions support different line types of EIPs.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ispType(String ispType) {
                 this.ispType = ispType;

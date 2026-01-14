@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommodityPriceResponseBody</p>
@@ -18,19 +24,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     private Double discountPrice;
 
     @com.aliyun.core.annotation.NameInMap("OrderDetails")
-    private java.util.List < OrderDetails> orderDetails;
+    private java.util.List<OrderDetails> orderDetails;
 
     @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Double originalPrice;
 
     @com.aliyun.core.annotation.NameInMap("Promotions")
-    private java.util.List < Promotions> promotions;
+    private java.util.List<Promotions> promotions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleDetails")
-    private java.util.List < RuleDetails> ruleDetails;
+    private java.util.List<RuleDetails> ruleDetails;
 
     @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Double tradePrice;
@@ -54,6 +60,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currency
      */
@@ -71,7 +81,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * @return orderDetails
      */
-    public java.util.List < OrderDetails> getOrderDetails() {
+    public java.util.List<OrderDetails> getOrderDetails() {
         return this.orderDetails;
     }
 
@@ -85,7 +95,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * @return promotions
      */
-    public java.util.List < Promotions> getPromotions() {
+    public java.util.List<Promotions> getPromotions() {
         return this.promotions;
     }
 
@@ -99,7 +109,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * @return ruleDetails
      */
-    public java.util.List < RuleDetails> getRuleDetails() {
+    public java.util.List<RuleDetails> getRuleDetails() {
         return this.ruleDetails;
     }
 
@@ -113,19 +123,36 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static final class Builder {
         private String currency; 
         private Double discountPrice; 
-        private java.util.List < OrderDetails> orderDetails; 
+        private java.util.List<OrderDetails> orderDetails; 
         private Double originalPrice; 
-        private java.util.List < Promotions> promotions; 
+        private java.util.List<Promotions> promotions; 
         private String requestId; 
-        private java.util.List < RuleDetails> ruleDetails; 
+        private java.util.List<RuleDetails> ruleDetails; 
         private Double tradePrice; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommodityPriceResponseBody model) {
+            this.currency = model.currency;
+            this.discountPrice = model.discountPrice;
+            this.orderDetails = model.orderDetails;
+            this.originalPrice = model.originalPrice;
+            this.promotions = model.promotions;
+            this.requestId = model.requestId;
+            this.ruleDetails = model.ruleDetails;
+            this.tradePrice = model.tradePrice;
+        } 
+
         /**
-         * The currency unit.
-         * <p>
+         * <p>The currency unit.</p>
+         * <ul>
+         * <li>China site: <strong>CNY</strong>.</li>
+         * <li>International site: <strong>USD</strong>.</li>
+         * </ul>
          * 
-         * *   China site: **CNY**.
-         * *   International site: **USD**.
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -133,7 +160,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The discount.
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>419.8</p>
          */
         public Builder discountPrice(Double discountPrice) {
             this.discountPrice = discountPrice;
@@ -141,15 +171,18 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the commodity module.
+         * <p>The details of the commodity module.</p>
          */
-        public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
+        public Builder orderDetails(java.util.List<OrderDetails> orderDetails) {
             this.orderDetails = orderDetails;
             return this;
         }
 
         /**
-         * The original price.
+         * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099</p>
          */
         public Builder originalPrice(Double originalPrice) {
             this.originalPrice = originalPrice;
@@ -157,18 +190,21 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the coupon.
-         * <p>
-         * 
-         * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+         * <p>The details of the coupon.</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
          */
-        public Builder promotions(java.util.List < Promotions> promotions) {
+        public Builder promotions(java.util.List<Promotions> promotions) {
             this.promotions = promotions;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -176,15 +212,18 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the discount rules.
+         * <p>The details about the discount rules.</p>
          */
-        public Builder ruleDetails(java.util.List < RuleDetails> ruleDetails) {
+        public Builder ruleDetails(java.util.List<RuleDetails> ruleDetails) {
             this.ruleDetails = ruleDetails;
             return this;
         }
 
         /**
-         * The transaction price, which is equal to the original price minus the discount.
+         * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679.2</p>
          */
         public Builder tradePrice(Double tradePrice) {
             this.tradePrice = tradePrice;
@@ -197,6 +236,12 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceResponseBody</p>
+     */
     public static class ModuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Double discountPrice;
@@ -271,8 +316,22 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             private Double originalPrice; 
             private Double tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleDetails model) {
+                this.discountPrice = model.discountPrice;
+                this.moduleCode = model.moduleCode;
+                this.moduleName = model.moduleName;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40000.0</p>
              */
             public Builder discountPrice(Double discountPrice) {
                 this.discountPrice = discountPrice;
@@ -280,7 +339,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity module.
+             * <p>The code of the commodity module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spec</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -288,7 +350,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the commodity module.
+             * <p>The name of the commodity module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Specification</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -296,7 +361,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000.0</p>
              */
             public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
@@ -304,7 +372,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160000.0</p>
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -318,6 +389,12 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceResponseBody</p>
+     */
     public static class PromDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
@@ -392,11 +469,25 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             private String promotionId; 
             private String promotionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromDetails model) {
+                this.finalPromFee = model.finalPromFee;
+                this.optionCode = model.optionCode;
+                this.promType = model.promType;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
+
             /**
-             * The discounted price.
-             * <p>
+             * <p>The discounted price.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>0.01</p>
              */
             public Builder finalPromFee(Double finalPromFee) {
                 this.finalPromFee = finalPromFee;
@@ -404,10 +495,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the discount option.
-             * <p>
+             * <p>The code of the discount option.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>youhui_quan</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -415,10 +509,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The sub-type of the discount.
-             * <p>
+             * <p>The sub-type of the discount.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>deduct</p>
              */
             public Builder promType(String promType) {
                 this.promType = promType;
@@ -426,10 +523,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the discount item.
-             * <p>
+             * <p>The ID of the discount item.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>50003298014****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -437,10 +537,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the discount item.
-             * <p>
+             * <p>The name of the discount item.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>coupon</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -454,6 +557,12 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceResponseBody</p>
+     */
     public static class OrderDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -465,19 +574,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         private Double discountPrice;
 
         @com.aliyun.core.annotation.NameInMap("ModuleDetails")
-        private java.util.List < ModuleDetails> moduleDetails;
+        private java.util.List<ModuleDetails> moduleDetails;
 
         @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("PromDetails")
-        private java.util.List < PromDetails> promDetails;
+        private java.util.List<PromDetails> promDetails;
 
         @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        private java.util.List < Long > ruleIds;
+        private java.util.List<Long> ruleIds;
 
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
@@ -526,7 +635,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * @return moduleDetails
          */
-        public java.util.List < ModuleDetails> getModuleDetails() {
+        public java.util.List<ModuleDetails> getModuleDetails() {
             return this.moduleDetails;
         }
 
@@ -540,7 +649,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * @return promDetails
          */
-        public java.util.List < PromDetails> getPromDetails() {
+        public java.util.List<PromDetails> getPromDetails() {
             return this.promDetails;
         }
 
@@ -554,7 +663,7 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < Long > getRuleIds() {
+        public java.util.List<Long> getRuleIds() {
             return this.ruleIds;
         }
 
@@ -569,15 +678,33 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             private String commodityCode; 
             private String commodityName; 
             private Double discountPrice; 
-            private java.util.List < ModuleDetails> moduleDetails; 
+            private java.util.List<ModuleDetails> moduleDetails; 
             private Double originalPrice; 
-            private java.util.List < PromDetails> promDetails; 
+            private java.util.List<PromDetails> promDetails; 
             private Long quantity; 
-            private java.util.List < Long > ruleIds; 
+            private java.util.List<Long> ruleIds; 
             private Double tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderDetails model) {
+                this.commodityCode = model.commodityCode;
+                this.commodityName = model.commodityName;
+                this.discountPrice = model.discountPrice;
+                this.moduleDetails = model.moduleDetails;
+                this.originalPrice = model.originalPrice;
+                this.promDetails = model.promDetails;
+                this.quantity = model.quantity;
+                this.ruleIds = model.ruleIds;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
-             * The code of the commodity.
+             * <p>The code of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga_gapluspre_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -585,7 +712,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the commodity.
+             * <p>The name of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global Accelerator_Instance Type (Subscription)</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -593,7 +723,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>419.8</p>
              */
             public Builder discountPrice(Double discountPrice) {
                 this.discountPrice = discountPrice;
@@ -601,15 +734,18 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the commodity module.
+             * <p>The information about the commodity module.</p>
              */
-            public Builder moduleDetails(java.util.List < ModuleDetails> moduleDetails) {
+            public Builder moduleDetails(java.util.List<ModuleDetails> moduleDetails) {
                 this.moduleDetails = moduleDetails;
                 return this;
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2099</p>
              */
             public Builder originalPrice(Double originalPrice) {
                 this.originalPrice = originalPrice;
@@ -617,18 +753,21 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the discount.
-             * <p>
-             * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <p>The details of the discount.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              */
-            public Builder promDetails(java.util.List < PromDetails> promDetails) {
+            public Builder promDetails(java.util.List<PromDetails> promDetails) {
                 this.promDetails = promDetails;
                 return this;
             }
 
             /**
-             * The number of instances that are purchased.
+             * <p>The number of instances that are purchased.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(Long quantity) {
                 this.quantity = quantity;
@@ -636,15 +775,18 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of discount rules.
+             * <p>The IDs of discount rules.</p>
              */
-            public Builder ruleIds(java.util.List < Long > ruleIds) {
+            public Builder ruleIds(java.util.List<Long> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679.2</p>
              */
             public Builder tradePrice(Double tradePrice) {
                 this.tradePrice = tradePrice;
@@ -658,6 +800,12 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceResponseBody</p>
+     */
     public static class Promotions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Double canPromFee;
@@ -732,11 +880,25 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             private String promotionOptionNo; 
             private Boolean selected; 
 
+            private Builder() {
+            } 
+
+            private Builder(Promotions model) {
+                this.canPromFee = model.canPromFee;
+                this.optionCode = model.optionCode;
+                this.promotionName = model.promotionName;
+                this.promotionOptionNo = model.promotionOptionNo;
+                this.selected = model.selected;
+            } 
+
             /**
-             * The discounted amount.
-             * <p>
+             * <p>The discounted amount.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder canPromFee(Double canPromFee) {
                 this.canPromFee = canPromFee;
@@ -744,10 +906,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the commodity to which the coupon can be applied.
-             * <p>
+             * <p>The code of the commodity to which the coupon can be applied.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>youhui_quan</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -755,10 +920,13 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the coupon.
-             * <p>
+             * <p>The name of the coupon.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -766,10 +934,16 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the coupon.
-             * <p>
-             * > *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.
-             * > *   This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <p>The code of the coupon.</p>
+             * <blockquote>
+             * <ul>
+             * <li><code>youhuiquan_promotion_option_id_for_blank</code> indicates coupons that cannot be applied to the commodity.</li>
+             * <li>This parameter does not take effect for accounts registered on the China site (aliyun.com).</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>50003298014****</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -777,13 +951,17 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the coupon was selected.
-             * <p>
+             * <p>Indicates whether the coupon was selected.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+             * </blockquote>
              * 
-             * *   **true**
-             * *   **false**
-             * 
-             * >  This parameter does not take effect for accounts registered on the China site (aliyun.com).
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -797,6 +975,12 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceResponseBody</p>
+     */
     public static class RuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -835,8 +1019,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleDetails model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
-             * The ID of the discount rule.
+             * <p>The ID of the discount rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102104100786****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -844,7 +1039,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the discount rule.
+             * <p>The name of the discount rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GA New Customers Small II Specification Monthly Subscription - 20% Discount</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

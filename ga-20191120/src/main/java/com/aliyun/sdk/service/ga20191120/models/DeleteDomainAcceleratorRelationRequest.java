@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainAcceleratorRelationRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainAcceleratorRelationRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteDomainAcceleratorRelationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcceleratorIds")
-    private java.util.List < String > acceleratorIds;
+    private java.util.List<String> acceleratorIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
@@ -39,7 +45,7 @@ public class DeleteDomainAcceleratorRelationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -47,7 +53,7 @@ public class DeleteDomainAcceleratorRelationRequest extends Request {
     /**
      * @return acceleratorIds
      */
-    public java.util.List < String > getAcceleratorIds() {
+    public java.util.List<String> getAcceleratorIds() {
         return this.acceleratorIds;
     }
 
@@ -66,7 +72,7 @@ public class DeleteDomainAcceleratorRelationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDomainAcceleratorRelationRequest, Builder> {
-        private java.util.List < String > acceleratorIds; 
+        private java.util.List<String> acceleratorIds; 
         private String domain; 
         private String regionId; 
 
@@ -82,19 +88,21 @@ public class DeleteDomainAcceleratorRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance to be disassociated. You can specify up to 50 IDs.
-         * <p>
-         * 
-         * If you leave this parameter empty, all GA instances associated with the specified domain name are disassociated.
+         * <p>The ID of the GA instance to be disassociated. You can specify up to 50 IDs.</p>
+         * <p>If you leave this parameter empty, all GA instances associated with the specified domain name are disassociated.</p>
          */
-        public Builder acceleratorIds(java.util.List < String > acceleratorIds) {
+        public Builder acceleratorIds(java.util.List<String> acceleratorIds) {
             this.putQueryParameter("AcceleratorIds", acceleratorIds);
             this.acceleratorIds = acceleratorIds;
             return this;
         }
 
         /**
-         * The accelerated domain name to be disassociated.
+         * <p>The accelerated domain name to be disassociated.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -103,7 +111,10 @@ public class DeleteDomainAcceleratorRelationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicAccelerateIpResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBasicAccelerateIpResponseBody</p>
@@ -44,6 +50,10 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
 
     public static CreateBasicAccelerateIpResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,26 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBasicAccelerateIpResponseBody model) {
+            this.accelerateIpAddress = model.accelerateIpAddress;
+            this.accelerateIpId = model.accelerateIpId;
+            this.acceleratorId = model.acceleratorId;
+            this.ipSetId = model.ipSetId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
+
         /**
-         * The accelerated IP address.
+         * <p>The accelerated IP address of the basic GA instance.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>116.132.XX.XX</p>
          */
         public Builder accelerateIpAddress(String accelerateIpAddress) {
             this.accelerateIpAddress = accelerateIpAddress;
@@ -105,7 +133,10 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the accelerated IP address.
+         * <p>The ID of the accelerated IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaip-bp1****</p>
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.accelerateIpId = accelerateIpId;
@@ -113,7 +144,10 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -121,7 +155,10 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the acceleration region.
+         * <p>The ID of the acceleration region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11r5jb8ogp122xl****</p>
          */
         public Builder ipSetId(String ipSetId) {
             this.ipSetId = ipSetId;
@@ -129,7 +166,10 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,10 +177,11 @@ public class CreateBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the accelerated IP address.
-         * <p>
+         * <p>The status of the accelerated IP address. Valid values:</p>
+         * <p><strong>init:</strong> The accelerated IP address is being initialized.</p>
          * 
-         * >  This parameter returns an empty string because the parameter is not in use.
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder state(String state) {
             this.state = state;

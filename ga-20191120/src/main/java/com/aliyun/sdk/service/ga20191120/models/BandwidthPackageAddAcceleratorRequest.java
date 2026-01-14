@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BandwidthPackageAddAcceleratorRequest} extends {@link RequestModel}
  *
  * <p>BandwidthPackageAddAcceleratorRequest</p>
@@ -41,7 +47,7 @@ public class BandwidthPackageAddAcceleratorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,11 @@ public class BandwidthPackageAddAcceleratorRequest extends Request {
         } 
 
         /**
-         * The GA instance ID.
+         * <p>The GA instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1qe94o52ot4pkfn****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -93,7 +103,11 @@ public class BandwidthPackageAddAcceleratorRequest extends Request {
         }
 
         /**
-         * The bandwidth plan ID.
+         * <p>The bandwidth plan ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -102,7 +116,11 @@ public class BandwidthPackageAddAcceleratorRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

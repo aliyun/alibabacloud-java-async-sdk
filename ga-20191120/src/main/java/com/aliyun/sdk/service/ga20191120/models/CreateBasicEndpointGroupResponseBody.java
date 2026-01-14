@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicEndpointGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBasicEndpointGroupResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateBasicEndpointGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpointGroupId
      */
@@ -48,8 +58,19 @@ public class CreateBasicEndpointGroupResponseBody extends TeaModel {
         private String endpointGroupId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBasicEndpointGroupResponseBody model) {
+            this.endpointGroupId = model.endpointGroupId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The endpoint group ID.
+         * <p>The endpoint group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -57,7 +78,10 @@ public class CreateBasicEndpointGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

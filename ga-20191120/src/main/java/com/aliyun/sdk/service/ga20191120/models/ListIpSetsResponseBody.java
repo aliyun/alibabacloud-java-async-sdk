@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpSetsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpSetsResponseBody</p>
  */
 public class ListIpSetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IpSets")
-    private java.util.List < IpSets> ipSets;
+    private java.util.List<IpSets> ipSets;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListIpSetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipSets
      */
-    public java.util.List < IpSets> getIpSets() {
+    public java.util.List<IpSets> getIpSets() {
         return this.ipSets;
     }
 
@@ -78,22 +88,36 @@ public class ListIpSetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < IpSets> ipSets; 
+        private java.util.List<IpSets> ipSets; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpSetsResponseBody model) {
+            this.ipSets = model.ipSets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The acceleration regions.
+         * <p>The acceleration regions.</p>
          */
-        public Builder ipSets(java.util.List < IpSets> ipSets) {
+        public Builder ipSets(java.util.List<IpSets> ipSets) {
             this.ipSets = ipSets;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListIpSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListIpSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9B4E54C-9CCD-4002-91A9-D38C6C209192</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListIpSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListIpSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpSetsResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -180,16 +219,28 @@ public class ListIpSetsResponseBody extends TeaModel {
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * The name of the action on the managed instance. Valid values:
-             * <p>
+             * <p>The name of the action on the managed instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong></li>
+             * <li><strong>Update</strong></li>
+             * <li><strong>Delete</strong></li>
+             * <li><strong>Associate</strong></li>
+             * <li><strong>UserUnmanaged</strong></li>
+             * <li><strong>CreateChild</strong></li>
+             * </ul>
              * 
-             * *   **Create**
-             * *   **Update**
-             * *   **Delete**
-             * *   **Associate**
-             * *   **UserUnmanaged**
-             * *   **CreateChild**
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -197,18 +248,22 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the child resource. Valid values:
-             * <p>
+             * <p>The type of the child resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Listener</strong>: listener.</li>
+             * <li><strong>IpSet</strong>: acceleration region.</li>
+             * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+             * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+             * <li><strong>Endpoint</strong>: endpoint.</li>
+             * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
+             * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Listener**: listener.
-             * *   **IpSet**: acceleration region.
-             * *   **EndpointGroup**: endpoint group.
-             * *   **ForwardingRule**: forwarding rule.
-             * *   **Endpoint**: endpoint.
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
-             * 
-             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -216,11 +271,14 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the specified actions are managed.
-             * <p>
+             * <p>Indicates whether the specified actions are managed.</p>
+             * <ul>
+             * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the actions on the managed instance.****</li>
+             * <li><strong>false</strong>: The specified actions are not managed, and users can perform the actions on the managed instance.</li>
+             * </ul>
              * 
-             * *   **true**: The specified actions are managed, and users cannot perform the actions on the managed instance.****
-             * *   **false**: The specified actions are not managed, and users can perform the actions on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -234,6 +292,12 @@ public class ListIpSetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIpSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpSetsResponseBody</p>
+     */
     public static class IpSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
         private String accelerateRegionId;
@@ -242,7 +306,7 @@ public class ListIpSetsResponseBody extends TeaModel {
         private Integer bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("IpAddressList")
-        private java.util.List < String > ipAddressList;
+        private java.util.List<String> ipAddressList;
 
         @com.aliyun.core.annotation.NameInMap("IpSetId")
         private String ipSetId;
@@ -260,7 +324,7 @@ public class ListIpSetsResponseBody extends TeaModel {
         private Boolean serviceManaged;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
@@ -303,7 +367,7 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * @return ipAddressList
          */
-        public java.util.List < String > getIpAddressList() {
+        public java.util.List<String> getIpAddressList() {
             return this.ipAddressList;
         }
 
@@ -345,7 +409,7 @@ public class ListIpSetsResponseBody extends TeaModel {
         /**
          * @return serviceManagedInfos
          */
-        public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
             return this.serviceManagedInfos;
         }
 
@@ -359,17 +423,36 @@ public class ListIpSetsResponseBody extends TeaModel {
         public static final class Builder {
             private String accelerateRegionId; 
             private Integer bandwidth; 
-            private java.util.List < String > ipAddressList; 
+            private java.util.List<String> ipAddressList; 
             private String ipSetId; 
             private String ipVersion; 
             private String ispType; 
             private String serviceId; 
             private Boolean serviceManaged; 
-            private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+            private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpSets model) {
+                this.accelerateRegionId = model.accelerateRegionId;
+                this.bandwidth = model.bandwidth;
+                this.ipAddressList = model.ipAddressList;
+                this.ipSetId = model.ipSetId;
+                this.ipVersion = model.ipVersion;
+                this.ispType = model.ispType;
+                this.serviceId = model.serviceId;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceManagedInfos = model.serviceManagedInfos;
+                this.state = model.state;
+            } 
+
             /**
-             * The ID of the acceleration region.
+             * <p>The ID of the acceleration region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder accelerateRegionId(String accelerateRegionId) {
                 this.accelerateRegionId = accelerateRegionId;
@@ -377,7 +460,10 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth that is allocated to the acceleration region. Unit: **Mbit/s**.
+             * <p>The bandwidth that is allocated to the acceleration region. Unit: <strong>Mbit/s</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -385,15 +471,18 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The accelerated IP addresses.
+             * <p>The accelerated IP addresses.</p>
              */
-            public Builder ipAddressList(java.util.List < String > ipAddressList) {
+            public Builder ipAddressList(java.util.List<String> ipAddressList) {
                 this.ipAddressList = ipAddressList;
                 return this;
             }
 
             /**
-             * The ID of the acceleration region.
+             * <p>The ID of the acceleration region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ips-bp11r5jb8ogp122xl****</p>
              */
             public Builder ipSetId(String ipSetId) {
                 this.ipSetId = ipSetId;
@@ -401,12 +490,15 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. Valid values:
-             * <p>
+             * <p>The IP version. Valid values:</p>
+             * <ul>
+             * <li><strong>IPv4</strong></li>
+             * <li><strong>IPv6</strong></li>
+             * <li><strong>DUAL_STACK</strong></li>
+             * </ul>
              * 
-             * *   **IPv4**
-             * *   **IPv6**
-             * *   **DUAL_STACK**
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -414,11 +506,14 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The line type of the elastic IP address (EIP) in the acceleration region. Valid values:
-             * <p>
+             * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+             * <ul>
+             * <li><strong>BGP</strong>: BGP (Multi-ISP) lines. This is the default value.</li>
+             * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</li>
+             * </ul>
              * 
-             * *   **BGP**: BGP (Multi-ISP) lines. This is the default value.
-             * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines.
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder ispType(String ispType) {
                 this.ispType = ispType;
@@ -426,10 +521,13 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service that manages the instance.
-             * <p>
+             * <p>The ID of the service that manages the instance.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>true</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **true**.
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -437,11 +535,14 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is managed. Valid values:
-             * <p>
+             * <p>Indicates whether the instance is managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -449,25 +550,30 @@ public class ListIpSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The actions that users can perform on the managed instance.
-             * <p>
-             * 
-             * > *   This parameter takes effect only if **ServiceManaged** is set to **true**.
-             * >*   Users can perform only specific actions on a managed instance.
+             * <p>The actions that users can perform on the managed instance.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>true</strong>.</li>
+             * <li>Users can perform only specific actions on a managed instance.</li>
+             * </ul>
+             * </blockquote>
              */
-            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }
 
             /**
-             * The status of the acceleration region. Valid values:
-             * <p>
+             * <p>The status of the acceleration region. Valid values:</p>
+             * <ul>
+             * <li><strong>init:</strong> The acceleration region is being initialized.</li>
+             * <li><strong>active:</strong> The acceleration region is in the running state.</li>
+             * <li><strong>updating:</strong> The acceleration region is being configured.</li>
+             * <li><strong>deleting:</strong> The acceleration region is being deleted.</li>
+             * </ul>
              * 
-             * *   **init:** The acceleration region is being initialized.
-             * *   **active:** The acceleration region is in the running state.
-             * *   **updating:** The acceleration region is being configured.
-             * *   **deleting:** The acceleration region is being deleted.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;

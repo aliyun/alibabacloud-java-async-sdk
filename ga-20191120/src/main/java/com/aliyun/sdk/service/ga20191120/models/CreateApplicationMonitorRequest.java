@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationMonitorRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationMonitorRequest</p>
@@ -84,7 +90,7 @@ public class CreateApplicationMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,7 +205,11 @@ public class CreateApplicationMonitorRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance on which you want to perform the origin probing task.
+         * <p>The ID of the GA instance on which you want to perform the origin probing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -208,7 +218,11 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The URL or IP address that you want to probe.
+         * <p>The URL or IP address that you want to probe.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -217,12 +231,14 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -231,11 +247,14 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic diagnostics feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the automatic diagnostics feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder detectEnable(Boolean detectEnable) {
             this.putQueryParameter("DetectEnable", detectEnable);
@@ -244,12 +263,12 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The threshold that is used to trigger the automatic diagnostics feature. Unit: percentage.
-         * <p>
+         * <p>The threshold that is used to trigger the automatic diagnostics feature. Unit: percentage.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <p>The default value is <strong>0</strong>, which indicates that the automatic diagnostics feature is not triggered.</p>
          * 
-         * Valid values: **0** to **100**.
-         * 
-         * The default value is **0**, which indicates that the automatic diagnostics feature is not triggered.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder detectThreshold(Integer detectThreshold) {
             this.putQueryParameter("DetectThreshold", detectThreshold);
@@ -258,10 +277,11 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The number of times that the threshold must be reached before the automatic diagnostics feature is triggered.
-         * <p>
+         * <p>The number of times that the threshold must be reached before the automatic diagnostics feature is triggered.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>1</strong>.</p>
          * 
-         * Valid values: **1** to **20**. Default value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder detectTimes(Integer detectTimes) {
             this.putQueryParameter("DetectTimes", detectTimes);
@@ -270,7 +290,11 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the listener on which you want to perform the origin probing task.
+         * <p>The ID of the listener on which you want to perform the origin probing task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -279,7 +303,10 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.
+         * <p>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;http_method&quot;: &quot;get&quot;,&quot;header&quot;: &quot;key:asd&quot;,&quot;acceptable_response_code&quot;: &quot;500&quot;,&quot;cert_verify&quot;: true }</p>
          */
         public Builder optionsJson(String optionsJson) {
             this.putQueryParameter("OptionsJson", optionsJson);
@@ -288,7 +315,11 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -297,12 +328,12 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.
-         * <p>
+         * <p>The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.</p>
+         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of <strong>DetectTimes</strong>, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+         * <p>Unit: seconds. Valid values: <strong>300</strong> to <strong>86400</strong>. Default value: <strong>300</strong>.</p>
          * 
-         * If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes**, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
-         * 
-         * Unit: seconds. Valid values: **300** to **86400**. Default value: **300**.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder silenceTime(Integer silenceTime) {
             this.putQueryParameter("SilenceTime", silenceTime);
@@ -311,10 +342,12 @@ public class CreateApplicationMonitorRequest extends Request {
         }
 
         /**
-         * The name of the origin probing task.
-         * <p>
+         * <p>The name of the origin probing task.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

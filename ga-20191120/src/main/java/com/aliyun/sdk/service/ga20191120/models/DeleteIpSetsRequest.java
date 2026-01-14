@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteIpSetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteIpSetsRequest</p>
@@ -14,7 +20,7 @@ public class DeleteIpSetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpSetIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ipSetIds;
+    private java.util.List<String> ipSetIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -35,7 +41,7 @@ public class DeleteIpSetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +49,7 @@ public class DeleteIpSetsRequest extends Request {
     /**
      * @return ipSetIds
      */
-    public java.util.List < String > getIpSetIds() {
+    public java.util.List<String> getIpSetIds() {
         return this.ipSetIds;
     }
 
@@ -55,7 +61,7 @@ public class DeleteIpSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteIpSetsRequest, Builder> {
-        private java.util.List < String > ipSetIds; 
+        private java.util.List<String> ipSetIds; 
         private String regionId; 
 
         private Builder() {
@@ -69,16 +75,24 @@ public class DeleteIpSetsRequest extends Request {
         } 
 
         /**
-         * The IDs of the acceleration regions that you want to delete.
+         * <p>The IDs of the acceleration regions that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11c9mpphtb1xkds****</p>
          */
-        public Builder ipSetIds(java.util.List < String > ipSetIds) {
+        public Builder ipSetIds(java.util.List<String> ipSetIds) {
             this.putQueryParameter("IpSetIds", ipSetIds);
             this.ipSetIds = ipSetIds;
             return this;
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

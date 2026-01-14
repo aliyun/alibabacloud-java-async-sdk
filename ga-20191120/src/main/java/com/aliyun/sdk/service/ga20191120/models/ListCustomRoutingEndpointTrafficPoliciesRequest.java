@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingEndpointTrafficPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListCustomRoutingEndpointTrafficPoliciesRequest</p>
@@ -66,7 +72,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,11 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance to which the traffic policies belong.
+         * <p>The ID of the GA instance to which the traffic policies belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -163,7 +173,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The IP address of the traffic destination.
+         * <p>The IP address of the traffic destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -172,7 +185,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group to which the traffic policies belong.
+         * <p>The ID of the endpoint group to which the traffic policies belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -181,7 +197,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint to which the traffic policies belong.
+         * <p>The ID of the endpoint to which the traffic policies belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp16jdc00bhe97sr5****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -190,7 +209,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the listener to which the traffic policies belong.
+         * <p>The ID of the listener to which the traffic policies belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -199,7 +221,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -208,7 +233,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +245,11 @@ public class ListCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

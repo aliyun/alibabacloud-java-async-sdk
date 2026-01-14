@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBasicAccelerateIpResponseBody} extends {@link TeaModel}
  *
  * <p>GetBasicAccelerateIpResponseBody</p>
@@ -44,6 +50,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
 
     public static GetBasicAccelerateIpResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetBasicAccelerateIpResponseBody model) {
+            this.accelerateIpAddress = model.accelerateIpAddress;
+            this.accelerateIpId = model.accelerateIpId;
+            this.acceleratorId = model.acceleratorId;
+            this.ipSetId = model.ipSetId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
+
         /**
-         * The accelerated IP address of the basic GA instance.
+         * <p>The accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.132.XX.XX</p>
          */
         public Builder accelerateIpAddress(String accelerateIpAddress) {
             this.accelerateIpAddress = accelerateIpAddress;
@@ -105,7 +130,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the accelerated IP address.
+         * <p>The ID of the accelerated IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaip-bp1****</p>
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.accelerateIpId = accelerateIpId;
@@ -113,7 +141,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the basic GA instance to which the queried accelerated IP address belongs.
+         * <p>The ID of the basic GA instance to which the queried accelerated IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -121,7 +152,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the acceleration region of the basic GA instance.
+         * <p>The ID of the acceleration region of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11r5jb8ogp122xl****</p>
          */
         public Builder ipSetId(String ipSetId) {
             this.ipSetId = ipSetId;
@@ -129,7 +163,10 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,16 +174,20 @@ public class GetBasicAccelerateIpResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the accelerated IP address. Valid values:
-         * <p>
+         * <p>The status of the accelerated IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>active</strong>: The accelerated IP address is available.</li>
+         * <li><strong>binding</strong>: The accelerated IP address is being associated.</li>
+         * <li><strong>bound</strong>: The accelerated IP address is associated.</li>
+         * <li><strong>unbinding</strong>: The accelerated IP address is being disassociated.</li>
+         * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the accelerated IP address is being created, this parameter is not returned.</p>
+         * </blockquote>
          * 
-         * *   **active**: The accelerated IP address is available.
-         * *   **binding**: The accelerated IP address is being associated.
-         * *   **bound**: The accelerated IP address is associated.
-         * *   **unbinding**: The accelerated IP address is being disassociated.
-         * *   **deleting**: The GA instance is being deleted.
-         * 
-         * >  If the accelerated IP address is being created, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;

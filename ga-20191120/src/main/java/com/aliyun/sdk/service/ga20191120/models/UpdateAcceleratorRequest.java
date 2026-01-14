@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAcceleratorRequest} extends {@link RequestModel}
  *
  * <p>UpdateAcceleratorRequest</p>
@@ -25,6 +31,10 @@ public class UpdateAcceleratorRequest extends Request {
     private Boolean autoUseCoupon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    private Integer bandwidth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -38,6 +48,7 @@ public class UpdateAcceleratorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -49,6 +60,7 @@ public class UpdateAcceleratorRequest extends Request {
         this.acceleratorId = builder.acceleratorId;
         this.autoPay = builder.autoPay;
         this.autoUseCoupon = builder.autoUseCoupon;
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
@@ -64,7 +76,7 @@ public class UpdateAcceleratorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -88,6 +100,13 @@ public class UpdateAcceleratorRequest extends Request {
      */
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -129,6 +148,7 @@ public class UpdateAcceleratorRequest extends Request {
         private String acceleratorId; 
         private Boolean autoPay; 
         private Boolean autoUseCoupon; 
+        private Integer bandwidth; 
         private String clientToken; 
         private String description; 
         private String name; 
@@ -144,6 +164,7 @@ public class UpdateAcceleratorRequest extends Request {
             this.acceleratorId = request.acceleratorId;
             this.autoPay = request.autoPay;
             this.autoUseCoupon = request.autoUseCoupon;
+            this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
@@ -152,7 +173,11 @@ public class UpdateAcceleratorRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -161,13 +186,17 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: disables automatic payment. This is the default value. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</li>
+         * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if you call the operation to upgrade a GA instance.</p>
+         * </blockquote>
          * 
-         * *   **false**: disables automatic payment. This is the default value. After an order is generated, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.
-         * *   **true**: enables automatic payment. Payments are automatically completed.
-         * 
-         * >  This parameter takes effect only if you call the operation to upgrade a GA instance.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -176,13 +205,17 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: automatically pays bills by using coupons.</li>
+         * <li><strong>false</strong>: does not automatically pay bills by using coupons.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: automatically pays bills by using coupons.
-         * *   **false**: does not automatically pay bills by using coupons.
-         * 
-         * >  This parameter takes effect only if the **AutoPay** parameter is set to **true**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -191,12 +224,23 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * Bandwidth.
+         */
+        public Builder bandwidth(Integer bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -205,7 +249,10 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * The description of the GA instance. The description can be up to 200 characters in length.
+         * <p>The description of the GA instance. The description can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accelerator</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,10 +261,11 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * The name of the GA instance.
-         * <p>
+         * <p>The name of the GA instance.</p>
+         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>Accelerator</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +274,10 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,29 +286,32 @@ public class UpdateAcceleratorRequest extends Request {
         }
 
         /**
-         * The specification of the GA instance. Valid values:
-         * <p>
+         * <p>The specification of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Small Ⅰ</li>
+         * <li><strong>2</strong>: Small Ⅱ</li>
+         * <li><strong>3</strong>: Small Ⅲ</li>
+         * <li><strong>5</strong>: Medium Ⅰ</li>
+         * <li><strong>8</strong>: Medium Ⅱ</li>
+         * <li><strong>10</strong>: Medium Ⅲ</li>
+         * <li><strong>20</strong>: Large Ⅰ</li>
+         * <li><strong>30</strong>: Large Ⅱ</li>
+         * <li><strong>40</strong>: Large Ⅲ</li>
+         * <li><strong>50</strong>: Large Ⅳ</li>
+         * <li><strong>60</strong>: Large Ⅴ</li>
+         * <li><strong>70</strong>: Large Ⅵ</li>
+         * <li><strong>80</strong>: Large VⅡ</li>
+         * <li><strong>90</strong>: Large VⅢ</li>
+         * <li><strong>100</strong>: Super Large Ⅰ</li>
+         * <li><strong>200</strong>: Super Large Ⅱ</li>
+         * </ul>
+         * <blockquote>
+         * <p> The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
+         * </blockquote>
+         * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
          * 
-         * *   **1**: Small Ⅰ
-         * *   **2**: Small Ⅱ
-         * *   **3**: Small Ⅲ
-         * *   **5**: Medium Ⅰ
-         * *   **8**: Medium Ⅱ
-         * *   **10**: Medium Ⅲ
-         * *   **20**: Large Ⅰ
-         * *   **30**: Large Ⅱ
-         * *   **40**: Large Ⅲ
-         * *   **50**: Large Ⅳ
-         * *   **60**: Large Ⅴ
-         * *   **70**: Large Ⅵ
-         * *   **80**: Large VⅡ
-         * *   **90**: Large VⅢ
-         * *   **100**: Super Large Ⅰ
-         * *   **200**: Super Large Ⅱ
-         * 
-         * >  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.
-         * 
-         * Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

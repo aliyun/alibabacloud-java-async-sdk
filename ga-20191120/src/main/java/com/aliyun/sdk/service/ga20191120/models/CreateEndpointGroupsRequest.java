@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEndpointGroupsRequest} extends {@link RequestModel}
  *
  * <p>CreateEndpointGroupsRequest</p>
@@ -27,7 +33,7 @@ public class CreateEndpointGroupsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
+    private java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -57,7 +63,7 @@ public class CreateEndpointGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +92,7 @@ public class CreateEndpointGroupsRequest extends Request {
     /**
      * @return endpointGroupConfigurations
      */
-    public java.util.List < EndpointGroupConfigurations> getEndpointGroupConfigurations() {
+    public java.util.List<EndpointGroupConfigurations> getEndpointGroupConfigurations() {
         return this.endpointGroupConfigurations;
     }
 
@@ -108,7 +114,7 @@ public class CreateEndpointGroupsRequest extends Request {
         private String acceleratorId; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations; 
+        private java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations; 
         private String listenerId; 
         private String regionId; 
 
@@ -127,7 +133,11 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -136,12 +146,14 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -150,11 +162,14 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a 2xx HTTP status code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -163,19 +178,23 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * EndpointGroupConfigurations.
+         * <p>This parameter is required.</p>
          */
-        public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
+        public Builder endpointGroupConfigurations(java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putBodyParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
             this.endpointGroupConfigurations = endpointGroupConfigurations;
             return this;
         }
 
         /**
-         * The ID of the listener.
-         * <p>
+         * <p>The ID of the listener.</p>
+         * <blockquote>
+         * <p> If the listener protocol is <strong>HTTP</strong> or <strong>HTTPS</strong>, you can call the <strong>CreateEndpointGroups</strong> operation to create only one endpoint group.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If the listener protocol is **HTTP** or **HTTPS**, you can call the **CreateEndpointGroups** operation to create only one endpoint group.
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -184,7 +203,11 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +222,19 @@ public class CreateEndpointGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointGroupsRequest</p>
+     */
     public static class EndpointConfigurations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
+        private Boolean enableClientIPPreservation;
+
+        @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
+        private Boolean enableProxyProtocol;
+
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
@@ -209,13 +244,23 @@ public class CreateEndpointGroupsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private EndpointConfigurations(Builder builder) {
+            this.enableClientIPPreservation = builder.enableClientIPPreservation;
+            this.enableProxyProtocol = builder.enableProxyProtocol;
             this.endpoint = builder.endpoint;
             this.subAddress = builder.subAddress;
             this.type = builder.type;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
             this.weight = builder.weight;
         }
 
@@ -225,6 +270,20 @@ public class CreateEndpointGroupsRequest extends Request {
 
         public static EndpointConfigurations create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableClientIPPreservation
+         */
+        public Boolean getEnableClientIPPreservation() {
+            return this.enableClientIPPreservation;
+        }
+
+        /**
+         * @return enableProxyProtocol
+         */
+        public Boolean getEnableProxyProtocol() {
+            return this.enableProxyProtocol;
         }
 
         /**
@@ -249,6 +308,20 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
          * @return weight
          */
         public Long getWeight() {
@@ -256,10 +329,44 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableClientIPPreservation; 
+            private Boolean enableProxyProtocol; 
             private String endpoint; 
             private String subAddress; 
             private String type; 
+            private java.util.List<String> vSwitchIds; 
+            private String vpcId; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointConfigurations model) {
+                this.enableClientIPPreservation = model.enableClientIPPreservation;
+                this.enableProxyProtocol = model.enableProxyProtocol;
+                this.endpoint = model.endpoint;
+                this.subAddress = model.subAddress;
+                this.type = model.type;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.weight = model.weight;
+            } 
+
+            /**
+             * EnableClientIPPreservation.
+             */
+            public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
+                this.enableClientIPPreservation = enableClientIPPreservation;
+                return this;
+            }
+
+            /**
+             * EnableProxyProtocol.
+             */
+            public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
+                this.enableProxyProtocol = enableProxyProtocol;
+                return this;
+            }
 
             /**
              * Endpoint.
@@ -286,6 +393,22 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
              * Weight.
              */
             public Builder weight(Long weight) {
@@ -300,6 +423,12 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointGroupsRequest</p>
+     */
     public static class PortOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Long endpointPort;
@@ -338,6 +467,14 @@ public class CreateEndpointGroupsRequest extends Request {
             private Long endpointPort; 
             private Long listenerPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortOverrides model) {
+                this.endpointPort = model.endpointPort;
+                this.listenerPort = model.listenerPort;
+            } 
+
             /**
              * EndpointPort.
              */
@@ -361,6 +498,12 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointGroupsRequest</p>
+     */
     public static class SystemTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -411,6 +554,15 @@ public class CreateEndpointGroupsRequest extends Request {
             private String scope; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SystemTag model) {
+                this.key = model.key;
+                this.scope = model.scope;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -442,6 +594,12 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -480,6 +638,14 @@ public class CreateEndpointGroupsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -503,15 +669,15 @@ public class CreateEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEndpointGroupsRequest</p>
+     */
     public static class EndpointGroupConfigurations extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationProxyProtocol")
-        private Boolean enableClientIPPreservationProxyProtocol;
-
-        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationToa")
-        private Boolean enableClientIPPreservationToa;
-
         @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
-        private java.util.List < EndpointConfigurations> endpointConfigurations;
+        private java.util.List<EndpointConfigurations> endpointConfigurations;
 
         @com.aliyun.core.annotation.NameInMap("EndpointGroupDescription")
         private String endpointGroupDescription;
@@ -526,6 +692,9 @@ public class CreateEndpointGroupsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointIpVersion")
+        private String endpointIpVersion;
+
         @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
         private String endpointProtocolVersion;
 
@@ -534,6 +703,9 @@ public class CreateEndpointGroupsRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
+        private String healthCheckHost;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Long healthCheckIntervalSeconds;
@@ -548,13 +720,13 @@ public class CreateEndpointGroupsRequest extends Request {
         private String healthCheckProtocol;
 
         @com.aliyun.core.annotation.NameInMap("PortOverrides")
-        private java.util.List < PortOverrides> portOverrides;
+        private java.util.List<PortOverrides> portOverrides;
 
         @com.aliyun.core.annotation.NameInMap("SystemTag")
-        private java.util.List < SystemTag> systemTag;
+        private java.util.List<SystemTag> systemTag;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Long thresholdCount;
@@ -563,16 +735,16 @@ public class CreateEndpointGroupsRequest extends Request {
         private Long trafficPercentage;
 
         private EndpointGroupConfigurations(Builder builder) {
-            this.enableClientIPPreservationProxyProtocol = builder.enableClientIPPreservationProxyProtocol;
-            this.enableClientIPPreservationToa = builder.enableClientIPPreservationToa;
             this.endpointConfigurations = builder.endpointConfigurations;
             this.endpointGroupDescription = builder.endpointGroupDescription;
             this.endpointGroupName = builder.endpointGroupName;
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
+            this.endpointIpVersion = builder.endpointIpVersion;
             this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.healthCheckEnabled = builder.healthCheckEnabled;
+            this.healthCheckHost = builder.healthCheckHost;
             this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
             this.healthCheckPath = builder.healthCheckPath;
             this.healthCheckPort = builder.healthCheckPort;
@@ -593,23 +765,9 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
-         * @return enableClientIPPreservationProxyProtocol
-         */
-        public Boolean getEnableClientIPPreservationProxyProtocol() {
-            return this.enableClientIPPreservationProxyProtocol;
-        }
-
-        /**
-         * @return enableClientIPPreservationToa
-         */
-        public Boolean getEnableClientIPPreservationToa() {
-            return this.enableClientIPPreservationToa;
-        }
-
-        /**
          * @return endpointConfigurations
          */
-        public java.util.List < EndpointConfigurations> getEndpointConfigurations() {
+        public java.util.List<EndpointConfigurations> getEndpointConfigurations() {
             return this.endpointConfigurations;
         }
 
@@ -642,6 +800,13 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         /**
+         * @return endpointIpVersion
+         */
+        public String getEndpointIpVersion() {
+            return this.endpointIpVersion;
+        }
+
+        /**
          * @return endpointProtocolVersion
          */
         public String getEndpointProtocolVersion() {
@@ -660,6 +825,13 @@ public class CreateEndpointGroupsRequest extends Request {
          */
         public Boolean getHealthCheckEnabled() {
             return this.healthCheckEnabled;
+        }
+
+        /**
+         * @return healthCheckHost
+         */
+        public String getHealthCheckHost() {
+            return this.healthCheckHost;
         }
 
         /**
@@ -693,21 +865,21 @@ public class CreateEndpointGroupsRequest extends Request {
         /**
          * @return portOverrides
          */
-        public java.util.List < PortOverrides> getPortOverrides() {
+        public java.util.List<PortOverrides> getPortOverrides() {
             return this.portOverrides;
         }
 
         /**
          * @return systemTag
          */
-        public java.util.List < SystemTag> getSystemTag() {
+        public java.util.List<SystemTag> getSystemTag() {
             return this.systemTag;
         }
 
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
@@ -726,46 +898,55 @@ public class CreateEndpointGroupsRequest extends Request {
         }
 
         public static final class Builder {
-            private Boolean enableClientIPPreservationProxyProtocol; 
-            private Boolean enableClientIPPreservationToa; 
-            private java.util.List < EndpointConfigurations> endpointConfigurations; 
+            private java.util.List<EndpointConfigurations> endpointConfigurations; 
             private String endpointGroupDescription; 
             private String endpointGroupName; 
             private String endpointGroupRegion; 
             private String endpointGroupType; 
+            private String endpointIpVersion; 
             private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private Boolean healthCheckEnabled; 
+            private String healthCheckHost; 
             private Long healthCheckIntervalSeconds; 
             private String healthCheckPath; 
             private Long healthCheckPort; 
             private String healthCheckProtocol; 
-            private java.util.List < PortOverrides> portOverrides; 
-            private java.util.List < SystemTag> systemTag; 
-            private java.util.List < Tag> tag; 
+            private java.util.List<PortOverrides> portOverrides; 
+            private java.util.List<SystemTag> systemTag; 
+            private java.util.List<Tag> tag; 
             private Long thresholdCount; 
             private Long trafficPercentage; 
 
-            /**
-             * EnableClientIPPreservationProxyProtocol.
-             */
-            public Builder enableClientIPPreservationProxyProtocol(Boolean enableClientIPPreservationProxyProtocol) {
-                this.enableClientIPPreservationProxyProtocol = enableClientIPPreservationProxyProtocol;
-                return this;
-            }
+            private Builder() {
+            } 
 
-            /**
-             * EnableClientIPPreservationToa.
-             */
-            public Builder enableClientIPPreservationToa(Boolean enableClientIPPreservationToa) {
-                this.enableClientIPPreservationToa = enableClientIPPreservationToa;
-                return this;
-            }
+            private Builder(EndpointGroupConfigurations model) {
+                this.endpointConfigurations = model.endpointConfigurations;
+                this.endpointGroupDescription = model.endpointGroupDescription;
+                this.endpointGroupName = model.endpointGroupName;
+                this.endpointGroupRegion = model.endpointGroupRegion;
+                this.endpointGroupType = model.endpointGroupType;
+                this.endpointIpVersion = model.endpointIpVersion;
+                this.endpointProtocolVersion = model.endpointProtocolVersion;
+                this.endpointRequestProtocol = model.endpointRequestProtocol;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckHost = model.healthCheckHost;
+                this.healthCheckIntervalSeconds = model.healthCheckIntervalSeconds;
+                this.healthCheckPath = model.healthCheckPath;
+                this.healthCheckPort = model.healthCheckPort;
+                this.healthCheckProtocol = model.healthCheckProtocol;
+                this.portOverrides = model.portOverrides;
+                this.systemTag = model.systemTag;
+                this.tag = model.tag;
+                this.thresholdCount = model.thresholdCount;
+                this.trafficPercentage = model.trafficPercentage;
+            } 
 
             /**
              * EndpointConfigurations.
              */
-            public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
+            public Builder endpointConfigurations(java.util.List<EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
                 return this;
             }
@@ -787,7 +968,7 @@ public class CreateEndpointGroupsRequest extends Request {
             }
 
             /**
-             * EndpointGroupRegion.
+             * <p>This parameter is required.</p>
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -799,6 +980,14 @@ public class CreateEndpointGroupsRequest extends Request {
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
+                return this;
+            }
+
+            /**
+             * EndpointIpVersion.
+             */
+            public Builder endpointIpVersion(String endpointIpVersion) {
+                this.endpointIpVersion = endpointIpVersion;
                 return this;
             }
 
@@ -823,6 +1012,14 @@ public class CreateEndpointGroupsRequest extends Request {
              */
             public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
                 this.healthCheckEnabled = healthCheckEnabled;
+                return this;
+            }
+
+            /**
+             * HealthCheckHost.
+             */
+            public Builder healthCheckHost(String healthCheckHost) {
+                this.healthCheckHost = healthCheckHost;
                 return this;
             }
 
@@ -861,7 +1058,7 @@ public class CreateEndpointGroupsRequest extends Request {
             /**
              * PortOverrides.
              */
-            public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
+            public Builder portOverrides(java.util.List<PortOverrides> portOverrides) {
                 this.portOverrides = portOverrides;
                 return this;
             }
@@ -869,7 +1066,7 @@ public class CreateEndpointGroupsRequest extends Request {
             /**
              * SystemTag.
              */
-            public Builder systemTag(java.util.List < SystemTag> systemTag) {
+            public Builder systemTag(java.util.List<SystemTag> systemTag) {
                 this.systemTag = systemTag;
                 return this;
             }
@@ -877,7 +1074,7 @@ public class CreateEndpointGroupsRequest extends Request {
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

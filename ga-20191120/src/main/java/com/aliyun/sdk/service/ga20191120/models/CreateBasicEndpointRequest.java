@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicEndpointRequest} extends {@link RequestModel}
  *
  * <p>CreateBasicEndpointRequest</p>
@@ -78,7 +84,7 @@ public class CreateBasicEndpointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -184,7 +190,11 @@ public class CreateBasicEndpointRequest extends Request {
         } 
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -193,12 +203,14 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,7 +219,11 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The address of the endpoint.
+         * <p>The address of the endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1a05txelswuj8g****</p>
          */
         public Builder endpointAddress(String endpointAddress) {
             this.putQueryParameter("EndpointAddress", endpointAddress);
@@ -216,7 +232,11 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -225,14 +245,16 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The secondary address of the endpoint.
-         * <p>
+         * <p>The secondary address of the endpoint.</p>
+         * <p>This parameter is required if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+         * <ul>
+         * <li>If the endpoint type is <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</li>
+         * <li>If the endpoint type is <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</li>
+         * <li>This parameter is required if the endpoint type is <strong>NLB</strong>. <strong>EndpointSubAddress</strong> is the primary private IP address of the NLB backend server.</li>
+         * </ul>
          * 
-         * This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**.
-         * 
-         * *   If the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-         * *   If the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
-         * *   This parameter is required if the endpoint type is **NLB**. **EndpointSubAddress** is the primary private IP address of the NLB backend server.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder endpointSubAddress(String endpointSubAddress) {
             this.putQueryParameter("EndpointSubAddress", endpointSubAddress);
@@ -241,13 +263,15 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The type of the secondary address of the endpoint. Valid values:
-         * <p>
+         * <p>The type of the secondary address of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong>: a primary private IP address.</li>
+         * <li><strong>secondary</strong>: a secondary private IP address.</li>
+         * </ul>
+         * <p>This parameter is required if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is <strong>NLB</strong>, only <strong>primary</strong> is supported.</p>
          * 
-         * *   **primary**: a primary private IP address.
-         * *   **secondary**: a secondary private IP address.
-         * 
-         * This parameter is required if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is **NLB**, only **primary** is supported.
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder endpointSubAddressType(String endpointSubAddressType) {
             this.putQueryParameter("EndpointSubAddressType", endpointSubAddressType);
@@ -256,13 +280,17 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The type of endpoint. Valid values:
-         * <p>
+         * <p>The type of endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>ENI</strong>: elastic network interface (ENI)</li>
+         * <li><strong>SLB</strong>: Classic Load Balancer (CLB)</li>
+         * <li><strong>ECS</strong>: Elastic Compute Service (ECS)</li>
+         * <li><strong>NLB</strong>: Network Load Balancer (NLB)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ENI**: elastic network interface (ENI)
-         * *   **SLB**: Classic Load Balancer (CLB)
-         * *   **ECS**: Elastic Compute Service (ECS)
-         * *   **NLB**: Network Load Balancer (NLB)
+         * <strong>example:</strong>
+         * <p>ENI</p>
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -271,10 +299,11 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The zone ID of the endpoint.
-         * <p>
+         * <p>The zone ID of the endpoint.</p>
+         * <p>This parameter is required only if the endpoint type is <strong>NLB</strong>.</p>
          * 
-         * This parameter is required only if the endpoint type is **NLB**.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder endpointZoneId(String endpointZoneId) {
             this.putQueryParameter("EndpointZoneId", endpointZoneId);
@@ -283,10 +312,11 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The name of the endpoint that is associated with the basic GA instance.
-         * <p>
+         * <p>The name of the endpoint that is associated with the basic GA instance.</p>
+         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>ep01</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -295,7 +325,11 @@ public class CreateBasicEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

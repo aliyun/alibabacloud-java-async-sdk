@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBasicAccelerateIpEndpointRelationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBasicAccelerateIpEndpointRelationResponseBody</p>
@@ -40,6 +46,10 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
 
     public static DeleteBasicAccelerateIpEndpointRelationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         private String requestId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteBasicAccelerateIpEndpointRelationResponseBody model) {
+            this.accelerateIpId = model.accelerateIpId;
+            this.acceleratorId = model.acceleratorId;
+            this.endpointId = model.endpointId;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
+
         /**
-         * The ID of the accelerated IP address of the basic GA instance.
+         * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaip-bp1****</p>
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.accelerateIpId = accelerateIpId;
@@ -93,7 +117,10 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -101,7 +128,10 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the endpoint that is associated with the basic GA instance.
+         * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp14sz7ftcwwjgrdm****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -109,7 +139,10 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,10 +150,13 @@ public class DeleteBasicAccelerateIpEndpointRelationResponseBody extends TeaMode
         }
 
         /**
-         * The status of the mapping between the accelerated IP address and endpoint.
-         * <p>
+         * <p>The status of the mapping between the accelerated IP address and endpoint.</p>
+         * <blockquote>
+         * <p> This parameter is not in use and empty.</p>
+         * </blockquote>
          * 
-         * >  This parameter is not in use and empty.
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder state(String state) {
             this.state = state;

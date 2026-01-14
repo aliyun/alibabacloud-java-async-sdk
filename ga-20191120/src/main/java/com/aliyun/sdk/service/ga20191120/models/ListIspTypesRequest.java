@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIspTypesRequest} extends {@link RequestModel}
  *
  * <p>ListIspTypesRequest</p>
@@ -39,7 +45,7 @@ public class ListIspTypesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,10 @@ public class ListIspTypesRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance that you want to query.
+         * <p>The ID of the GA instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -91,11 +100,14 @@ public class ListIspTypesRequest extends Request {
         }
 
         /**
-         * The type of the Global Accelerator (GA) instance to be queried. Valid values:
-         * <p>
+         * <p>The type of the Global Accelerator (GA) instance to be queried. Valid values:</p>
+         * <ul>
+         * <li><strong>basic</strong>: basic GA instance</li>
+         * <li><strong>standard</strong>: standard GA instance</li>
+         * </ul>
          * 
-         * *   **basic**: basic GA instance
-         * *   **standard**: standard GA instance
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
@@ -104,7 +116,11 @@ public class ListIspTypesRequest extends Request {
         }
 
         /**
-         * The ID of the acceleration region to be queried.
+         * <p>The ID of the acceleration region to be queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder businessRegionId(String businessRegionId) {
             this.putQueryParameter("BusinessRegionId", businessRegionId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenerCertificatesRequest} extends {@link RequestModel}
  *
  * <p>ListListenerCertificatesRequest</p>
@@ -57,7 +63,7 @@ public class ListListenerCertificatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -127,7 +133,11 @@ public class ListListenerCertificatesRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -136,7 +146,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -145,7 +159,10 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Valid values: **1** to **50**. Default value: **20**.
+         * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,11 +171,14 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
          * 
-         * *   You do not need to specify this parameter for the first request.
-         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -167,7 +187,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,13 +200,15 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The type of the certificate. Valid values:
-         * <p>
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong></li>
+         * <li><strong>additional</strong></li>
+         * </ul>
+         * <p>If you do not specify this parameter, default and additional certificates are returned by default.</p>
          * 
-         * *   **default**
-         * *   **additional**
-         * 
-         * If you do not specify this parameter, default and additional certificates are returned by default.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

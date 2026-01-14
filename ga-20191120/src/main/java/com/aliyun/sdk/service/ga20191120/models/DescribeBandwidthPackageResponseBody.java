@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBandwidthPackageResponseBody</p>
  */
 public class DescribeBandwidthPackageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accelerators")
-    private java.util.List < String > accelerators;
+    private java.util.List<String> accelerators;
 
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
@@ -63,7 +69,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     private String state;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -98,10 +104,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accelerators
      */
-    public java.util.List < String > getAccelerators() {
+    public java.util.List<String> getAccelerators() {
         return this.accelerators;
     }
 
@@ -220,7 +230,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -232,7 +242,7 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > accelerators; 
+        private java.util.List<String> accelerators; 
         private Integer bandwidth; 
         private String bandwidthPackageId; 
         private String bandwidthType; 
@@ -249,19 +259,47 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String state; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBandwidthPackageResponseBody model) {
+            this.accelerators = model.accelerators;
+            this.bandwidth = model.bandwidth;
+            this.bandwidthPackageId = model.bandwidthPackageId;
+            this.bandwidthType = model.bandwidthType;
+            this.billingType = model.billingType;
+            this.cbnGeographicRegionIdA = model.cbnGeographicRegionIdA;
+            this.cbnGeographicRegionIdB = model.cbnGeographicRegionIdB;
+            this.chargeType = model.chargeType;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.expiredTime = model.expiredTime;
+            this.name = model.name;
+            this.ratio = model.ratio;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.state = model.state;
+            this.tags = model.tags;
+            this.type = model.type;
+        } 
+
         /**
-         * The ID of the GA instance that is associated with the bandwidth plan.
+         * <p>The ID of the GA instance that is associated with the bandwidth plan.</p>
          */
-        public Builder accelerators(java.util.List < String > accelerators) {
+        public Builder accelerators(java.util.List<String> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
         /**
-         * The bandwidth value of the bandwidth plan. Unit: Mbit/s.
+         * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -269,7 +307,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -277,12 +318,15 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the bandwidth. Valid values:
-         * <p>
+         * <p>The type of the bandwidth. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic bandwidth</li>
+         * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
+         * <li><strong>Advanced</strong>: premium bandwidth</li>
+         * </ul>
          * 
-         * *   **Basic**: basic bandwidth
-         * *   **Enhanced**: enhanced bandwidth
-         * *   **Advanced**: premium bandwidth
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.bandwidthType = bandwidthType;
@@ -290,11 +334,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method that is used when you use the pay-as-you-go billing method. Valid values:
-         * <p>
+         * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+         * <li><strong>PayBY95</strong>: pay-by-95th-percentile</li>
+         * </ul>
          * 
-         * *   **PayByTraffic**: pay-by-data-transfer
-         * *   **PayBY95**: pay-by-95th-percentile
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder billingType(String billingType) {
             this.billingType = billingType;
@@ -302,10 +349,11 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Area A specified in the cross-region acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.
-         * <p>
+         * <p>Area A specified in the cross-region acceleration bandwidth plan. Only <strong>China-mainland</strong> (the Chinese mainland) is returned.</p>
+         * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
          * 
-         * This parameter is returned only if you call this operation on the International site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>China-mainland</p>
          */
         public Builder cbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
             this.cbnGeographicRegionIdA = cbnGeographicRegionIdA;
@@ -313,10 +361,11 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Area B specified in the cross-region acceleration bandwidth plan. Only **Global** (global) is returned.
-         * <p>
+         * <p>Area B specified in the cross-region acceleration bandwidth plan. Only <strong>Global</strong> (global) is returned.</p>
+         * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
          * 
-         * This parameter is returned only if you call this operation on the International site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>Global</p>
          */
         public Builder cbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
             this.cbnGeographicRegionIdB = cbnGeographicRegionIdB;
@@ -324,11 +373,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the bandwidth plan.
-         * <p>
+         * <p>The billing method of the bandwidth plan.</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * </ul>
          * 
-         * *   **PREPAY**: subscription. This is the default value.
-         * *   **POSTPAY**: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -336,7 +388,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the bandwidth plan was created.
+         * <p>The timestamp that indicates when the bandwidth plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578966918000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -344,7 +399,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the bandwidth plan.
+         * <p>The description of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -352,7 +410,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the bandwidth plan expires.
+         * <p>The timestamp that indicates when the bandwidth plan expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578966918000</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -360,7 +421,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the bandwidth plan.
+         * <p>The name of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -368,7 +432,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.
+         * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ratio(Integer ratio) {
             this.ratio = ratio;
@@ -376,7 +443,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where GA instance is deployed. **cn-hangzhou** is returned.
+         * <p>The ID of the region where GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -384,7 +454,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -392,7 +465,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfnvueepcihjiq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -400,17 +476,20 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The state of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The bandwidth plan is being initialized.</li>
+         * <li><strong>active</strong>: The bandwidth plan is available.</li>
+         * <li><strong>binded</strong>: The bandwidth plan is associated with a GA instance.</li>
+         * <li><strong>binding</strong>: The bandwidth plan is being associated.</li>
+         * <li><strong>unbinding</strong>: The bandwidth plan is being disassociated.</li>
+         * <li><strong>updating</strong>: The bandwidth plan is being updated.</li>
+         * <li><strong>finacialLocked</strong>: The bandwidth plan is locked due to overdue payments.</li>
+         * <li><strong>Locked</strong>: The bandwidth plan is locked.</li>
+         * </ul>
          * 
-         * *   **init**: The bandwidth plan is being initialized.
-         * *   **active**: The bandwidth plan is available.
-         * *   **binded**: The bandwidth plan is associated with a GA instance.
-         * *   **binding**: The bandwidth plan is being associated.
-         * *   **unbinding**: The bandwidth plan is being disassociated.
-         * *   **updating**: The bandwidth plan is being updated.
-         * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-         * *   **Locked**: The bandwidth plan is locked.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -418,21 +497,23 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Tag objects.
+         * <p>Tag objects.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * The type of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The type of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+         * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+         * </ul>
+         * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only <strong>Basic</strong> is returned.</p>
          * 
-         * *   **Basic**: a basic bandwidth plan
-         * *   **CrossDomain**: a cross-region acceleration bandwidth plan
-         * 
-         * If you call this operation on the Alibaba Cloud China Site (aliyun.com), only **Basic** is returned.
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -445,6 +526,12 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBandwidthPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthPackageResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -483,8 +570,19 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of tag N that is added to the bandwidth plan.
+             * <p>The key of tag N that is added to the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -492,7 +590,10 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N that is added to the bandwidth plan.
+             * <p>The value of tag N that is added to the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

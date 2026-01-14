@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteForwardingRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteForwardingRulesRequest</p>
@@ -23,7 +29,7 @@ public class DeleteForwardingRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForwardingRuleIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > forwardingRuleIds;
+    private java.util.List<String> forwardingRuleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -52,7 +58,7 @@ public class DeleteForwardingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +80,7 @@ public class DeleteForwardingRulesRequest extends Request {
     /**
      * @return forwardingRuleIds
      */
-    public java.util.List < String > getForwardingRuleIds() {
+    public java.util.List<String> getForwardingRuleIds() {
         return this.forwardingRuleIds;
     }
 
@@ -95,7 +101,7 @@ public class DeleteForwardingRulesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteForwardingRulesRequest, Builder> {
         private String acceleratorId; 
         private String clientToken; 
-        private java.util.List < String > forwardingRuleIds; 
+        private java.util.List<String> forwardingRuleIds; 
         private String listenerId; 
         private String regionId; 
 
@@ -113,7 +119,11 @@ public class DeleteForwardingRulesRequest extends Request {
         } 
 
         /**
-         * The GA instance ID.
+         * <p>The GA instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4q****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,12 +132,14 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,16 +148,24 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * The forwarding rules.
+         * <p>The forwarding rules.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frule-bp19a3t3yzr21q3****</p>
          */
-        public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
+        public Builder forwardingRuleIds(java.util.List<String> forwardingRuleIds) {
             this.putQueryParameter("ForwardingRuleIds", forwardingRuleIds);
             this.forwardingRuleIds = forwardingRuleIds;
             return this;
         }
 
         /**
-         * The listener ID.
+         * <p>The listener ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1s0vzbi5bxlx5****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -154,7 +174,11 @@ public class DeleteForwardingRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEndpointGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateEndpointGroupRequest</p>
@@ -21,7 +27,7 @@ public class UpdateEndpointGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
-    private java.util.List < EndpointConfigurations> endpointConfigurations;
+    private java.util.List<EndpointConfigurations> endpointConfigurations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
@@ -34,6 +40,10 @@ public class UpdateEndpointGroupRequest extends Request {
     private String endpointGroupRegion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointIpVersion")
+    private String endpointIpVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
     private String endpointProtocolVersion;
 
@@ -44,6 +54,10 @@ public class UpdateEndpointGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
     private Boolean healthCheckEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
+    private String healthCheckHost;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
@@ -67,7 +81,7 @@ public class UpdateEndpointGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PortOverrides")
-    private java.util.List < PortOverrides> portOverrides;
+    private java.util.List<PortOverrides> portOverrides;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -89,9 +103,11 @@ public class UpdateEndpointGroupRequest extends Request {
         this.endpointConfigurations = builder.endpointConfigurations;
         this.endpointGroupId = builder.endpointGroupId;
         this.endpointGroupRegion = builder.endpointGroupRegion;
+        this.endpointIpVersion = builder.endpointIpVersion;
         this.endpointProtocolVersion = builder.endpointProtocolVersion;
         this.endpointRequestProtocol = builder.endpointRequestProtocol;
         this.healthCheckEnabled = builder.healthCheckEnabled;
+        this.healthCheckHost = builder.healthCheckHost;
         this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
         this.healthCheckPath = builder.healthCheckPath;
         this.healthCheckPort = builder.healthCheckPort;
@@ -111,7 +127,7 @@ public class UpdateEndpointGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,7 +149,7 @@ public class UpdateEndpointGroupRequest extends Request {
     /**
      * @return endpointConfigurations
      */
-    public java.util.List < EndpointConfigurations> getEndpointConfigurations() {
+    public java.util.List<EndpointConfigurations> getEndpointConfigurations() {
         return this.endpointConfigurations;
     }
 
@@ -149,6 +165,13 @@ public class UpdateEndpointGroupRequest extends Request {
      */
     public String getEndpointGroupRegion() {
         return this.endpointGroupRegion;
+    }
+
+    /**
+     * @return endpointIpVersion
+     */
+    public String getEndpointIpVersion() {
+        return this.endpointIpVersion;
     }
 
     /**
@@ -170,6 +193,13 @@ public class UpdateEndpointGroupRequest extends Request {
      */
     public Boolean getHealthCheckEnabled() {
         return this.healthCheckEnabled;
+    }
+
+    /**
+     * @return healthCheckHost
+     */
+    public String getHealthCheckHost() {
+        return this.healthCheckHost;
     }
 
     /**
@@ -210,7 +240,7 @@ public class UpdateEndpointGroupRequest extends Request {
     /**
      * @return portOverrides
      */
-    public java.util.List < PortOverrides> getPortOverrides() {
+    public java.util.List<PortOverrides> getPortOverrides() {
         return this.portOverrides;
     }
 
@@ -238,18 +268,20 @@ public class UpdateEndpointGroupRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateEndpointGroupRequest, Builder> {
         private String clientToken; 
         private String description; 
-        private java.util.List < EndpointConfigurations> endpointConfigurations; 
+        private java.util.List<EndpointConfigurations> endpointConfigurations; 
         private String endpointGroupId; 
         private String endpointGroupRegion; 
+        private String endpointIpVersion; 
         private String endpointProtocolVersion; 
         private String endpointRequestProtocol; 
         private Boolean healthCheckEnabled; 
+        private String healthCheckHost; 
         private Integer healthCheckIntervalSeconds; 
         private String healthCheckPath; 
         private Integer healthCheckPort; 
         private String healthCheckProtocol; 
         private String name; 
-        private java.util.List < PortOverrides> portOverrides; 
+        private java.util.List<PortOverrides> portOverrides; 
         private String regionId; 
         private Integer thresholdCount; 
         private Integer trafficPercentage; 
@@ -265,9 +297,11 @@ public class UpdateEndpointGroupRequest extends Request {
             this.endpointConfigurations = request.endpointConfigurations;
             this.endpointGroupId = request.endpointGroupId;
             this.endpointGroupRegion = request.endpointGroupRegion;
+            this.endpointIpVersion = request.endpointIpVersion;
             this.endpointProtocolVersion = request.endpointProtocolVersion;
             this.endpointRequestProtocol = request.endpointRequestProtocol;
             this.healthCheckEnabled = request.healthCheckEnabled;
+            this.healthCheckHost = request.healthCheckHost;
             this.healthCheckIntervalSeconds = request.healthCheckIntervalSeconds;
             this.healthCheckPath = request.healthCheckPath;
             this.healthCheckPort = request.healthCheckPort;
@@ -280,12 +314,14 @@ public class UpdateEndpointGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -294,10 +330,11 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The description of the endpoint group.
-         * <p>
+         * <p>The description of the endpoint group.</p>
+         * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>EndpointGroup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -306,19 +343,20 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The information about the endpoints.
-         * <p>
-         * 
-         * You can specify information for up to 20 endpoints.
+         * <p>The configurations of the endpoints in the endpoint group.</p>
          */
-        public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
+        public Builder endpointConfigurations(java.util.List<EndpointConfigurations> endpointConfigurations) {
             this.putQueryParameter("EndpointConfigurations", endpointConfigurations);
             this.endpointConfigurations = endpointConfigurations;
             return this;
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -327,7 +365,11 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the endpoint group is created.
+         * <p>The ID of the region where the endpoint group is created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
@@ -336,7 +378,26 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * EndpointProtocolVersion.
+         * EndpointIpVersion.
+         */
+        public Builder endpointIpVersion(String endpointIpVersion) {
+            this.putQueryParameter("EndpointIpVersion", endpointIpVersion);
+            this.endpointIpVersion = endpointIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>The protocol version that is used by the backend service. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP1.1</strong></li>
+         * <li><strong>HTTP2</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when you set EndpointRequestProtocol to HTTPS.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP1.1</p>
          */
         public Builder endpointProtocolVersion(String endpointProtocolVersion) {
             this.putQueryParameter("EndpointProtocolVersion", endpointProtocolVersion);
@@ -345,14 +406,20 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The protocol that is used by the backend service. Valid values:
-         * <p>
+         * <p>The protocol that is used by the backend service. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>HTTPS</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</li>
+         * <li>For an HTTP listener, the backend service protocol must be HTTP.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **HTTP**
-         * *   **HTTPS**
-         * 
-         * > *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.
-         * > *   For an HTTP listener, the backend service protocol must be HTTP.
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder endpointRequestProtocol(String endpointRequestProtocol) {
             this.putQueryParameter("EndpointRequestProtocol", endpointRequestProtocol);
@@ -361,11 +428,14 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check feature. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the health check feature. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The health check feature is enabled.</li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**: enables the health check feature.
-         * *   **false**: disables the health check feature.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder healthCheckEnabled(Boolean healthCheckEnabled) {
             this.putQueryParameter("HealthCheckEnabled", healthCheckEnabled);
@@ -374,7 +444,19 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+         * HealthCheckHost.
+         */
+        public Builder healthCheckHost(String healthCheckHost) {
+            this.putQueryParameter("HealthCheckHost", healthCheckHost);
+            this.healthCheckHost = healthCheckHost;
+            return this;
+        }
+
+        /**
+         * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckIntervalSeconds(Integer healthCheckIntervalSeconds) {
             this.putQueryParameter("HealthCheckIntervalSeconds", healthCheckIntervalSeconds);
@@ -383,7 +465,10 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The path to which health check requests are sent.
+         * <p>The path to which health check requests are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthcheck</p>
          */
         public Builder healthCheckPath(String healthCheckPath) {
             this.putQueryParameter("HealthCheckPath", healthCheckPath);
@@ -392,7 +477,10 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The port that is used for health checks. Valid values: **1** to **65535**.
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder healthCheckPort(Integer healthCheckPort) {
             this.putQueryParameter("HealthCheckPort", healthCheckPort);
@@ -401,12 +489,15 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The protocol over which health check requests are sent. Valid values:
-         * <p>
+         * <p>The protocol over which to send health check requests. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong> or <strong>TCP</strong></li>
+         * <li><strong>http</strong> or <strong>HTTP</strong></li>
+         * <li><strong>https</strong> or <strong>HTTPS</strong></li>
+         * </ul>
          * 
-         * *   **tcp**: TCP
-         * *   **http**: HTTP
-         * *   **https**: HTTPS
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.putQueryParameter("HealthCheckProtocol", healthCheckProtocol);
@@ -415,10 +506,11 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The name of the endpoint group.
-         * <p>
+         * <p>The name of the endpoint group.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -427,16 +519,20 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The mappings between ports.
+         * <p>The port mapping.</p>
          */
-        public Builder portOverrides(java.util.List < PortOverrides> portOverrides) {
+        public Builder portOverrides(java.util.List<PortOverrides> portOverrides) {
             this.putQueryParameter("PortOverrides", portOverrides);
             this.portOverrides = portOverrides;
             return this;
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -445,10 +541,11 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.
-         * <p>
+         * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * 
-         * Valid values: **2** to **10**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder thresholdCount(Integer thresholdCount) {
             this.putQueryParameter("ThresholdCount", thresholdCount);
@@ -457,7 +554,10 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
-         * The weight of the endpoint group when the listener is associated with multiple endpoint groups.
+         * <p>The weight of the endpoint group when the listener is associated with multiple endpoint groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder trafficPercentage(Integer trafficPercentage) {
             this.putQueryParameter("TrafficPercentage", trafficPercentage);
@@ -472,6 +572,12 @@ public class UpdateEndpointGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateEndpointGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEndpointGroupRequest</p>
+     */
     public static class EndpointConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
@@ -490,6 +596,12 @@ public class UpdateEndpointGroupRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private java.util.List<String> vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         @com.aliyun.core.annotation.NameInMap("Weight")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer weight;
@@ -500,6 +612,8 @@ public class UpdateEndpointGroupRequest extends Request {
             this.endpoint = builder.endpoint;
             this.subAddress = builder.subAddress;
             this.type = builder.type;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
             this.weight = builder.weight;
         }
 
@@ -547,6 +661,20 @@ public class UpdateEndpointGroupRequest extends Request {
         }
 
         /**
+         * @return vSwitchIds
+         */
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
          * @return weight
          */
         public Integer getWeight() {
@@ -559,14 +687,43 @@ public class UpdateEndpointGroupRequest extends Request {
             private String endpoint; 
             private String subAddress; 
             private String type; 
+            private java.util.List<String> vSwitchIds; 
+            private String vpcId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointConfigurations model) {
+                this.enableClientIPPreservation = model.enableClientIPPreservation;
+                this.enableProxyProtocol = model.enableProxyProtocol;
+                this.endpoint = model.endpoint;
+                this.subAddress = model.subAddress;
+                this.type = model.type;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.weight = model.weight;
+            } 
+
             /**
-             * Specifies whether to reserve client IP addresses. Default value: false. Valid values:
-             * <p>
+             * <p>Specifies whether to automatically preserve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>By default, client IP address preservation is disabled for an endpoint group of a UDP or TCP listener. You can configure this parameter based on your business requirements.</li>
+             * <li>By default, client IP address preservation is enabled for an endpoint group of an HTTP or HTTP listener. You can obtain client IP addresses by using the X-Forwarded-For header. You cannot disable the feature.</li>
+             * <li>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   **true**: reserves client IP addresses.
-             * *   **false**: does not reserve client IP addresses.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableClientIPPreservation(Boolean enableClientIPPreservation) {
                 this.enableClientIPPreservation = enableClientIPPreservation;
@@ -574,11 +731,23 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:
-             * <p>
+             * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is available only to endpoint groups of TCP listeners.</li>
+             * <li>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   **true**: preserves client IP addresses by using the ProxyProtocol module.
-             * *   **false**: does not preserve client IP addresses by using the ProxyProtocol module.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
                 this.enableProxyProtocol = enableProxyProtocol;
@@ -586,7 +755,11 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The IP address or domain name of the endpoint.
+             * <p>Enter the IP address, domain name, or instance ID based on the value of the Type parameter.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.XX.XX.21</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -594,10 +767,13 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The private IP address of the ENI.
-             * <p>
+             * <p>The private IP address of the ENI.</p>
+             * <blockquote>
+             * <p> This parameter is available only when you set the endpoint type to <strong>ENI</strong>. If you leave this parameter empty, the primary private IP address of the ENI is used.</p>
+             * </blockquote>
              * 
-             * > - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.
+             * <strong>example:</strong>
+             * <p>172.168.XX.XX</p>
              */
             public Builder subAddress(String subAddress) {
                 this.subAddress = subAddress;
@@ -605,24 +781,34 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Domain</strong>: a custom domain name.</li>
+             * <li><strong>Ip</strong>: a custom IP address.</li>
+             * <li><strong>IpTarget</strong>: a custom private IP address.</li>
+             * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud.</li>
+             * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance.</li>
+             * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance.</li>
+             * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket.</li>
+             * <li><strong>ENI</strong>: an elastic network interface (ENI).</li>
+             * <li><strong>NLB</strong>: a Network Load Balancer (NLB) instance.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>If you set this parameter to <strong>ECS</strong>, <strong>ENI</strong>, <strong>SLB</strong>, <strong>ALB</strong>, <strong>NLB</strong>, or <strong>IpTarget</strong>, and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</li>
+             * <li>If you set this parameter to <strong>ALB</strong> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</li>
+             * <li>If you set this parameter to <strong>OSS</strong> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</li>
+             * <li>If you set this parameter to <strong>NLB</strong> and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.<blockquote>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** Elastic Compute Service (ECS) instance.
-             * *   **SLB:** Server Load Balancer (SLB) instance.
-             * *   **ALB:** Application Load Balancer (ALB) instance.
-             * *   **OSS:** Object Storage Service (OSS) bucket.
-             * *   **ENI:** Elastic Network interface (ENI).
-             * *   **NLB:** Network Load Balancer (NLB) instance.
-             * 
-             * > *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.
-             * > *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.
-             * > *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.
-             * 
-             * For more information, see [Service-linked roles](~~178360~~).
+             * <strong>example:</strong>
+             * <p>Ip</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -630,12 +816,38 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The weight of the endpoint.
-             * <p>
+             * <p>The IDs of vSwitches that are deployed in the VPC.</p>
+             */
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * <p>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</p>
+             * <blockquote>
+             * <p> This parameter is valid and required only if Type is set to <strong>IpTarget</strong>.</p>
+             * </blockquote>
              * 
-             * Valid values: **0** to **255**.
+             * <strong>example:</strong>
+             * <p>vpc-2zen6t0u7xhm0k5iz****</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * <p>The weight of the endpoint.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+             * <blockquote>
+             * <p> If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -649,6 +861,12 @@ public class UpdateEndpointGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateEndpointGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEndpointGroupRequest</p>
+     */
     public static class PortOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Integer endpointPort;
@@ -687,8 +905,19 @@ public class UpdateEndpointGroupRequest extends Request {
             private Integer endpointPort; 
             private Integer listenerPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortOverrides model) {
+                this.endpointPort = model.endpointPort;
+                this.listenerPort = model.listenerPort;
+            } 
+
             /**
-             * The endpoint port that is mapped to the listener port.
+             * <p>The endpoint port that is mapped to the listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder endpointPort(Integer endpointPort) {
                 this.endpointPort = endpointPort;
@@ -696,11 +925,17 @@ public class UpdateEndpointGroupRequest extends Request {
             }
 
             /**
-             * The listener port that is mapped to the endpoint port.
-             * <p>
+             * <p>The listener port that is mapped to the endpoint port.</p>
+             * <blockquote>
+             * <ul>
+             * <li>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</li>
+             * <li>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</li>
+             * <li>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > *   Only HTTP and HTTPS listeners support port mappings.
-             * > *   The listener port in a port mapping must be the one used by the current listener.
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;

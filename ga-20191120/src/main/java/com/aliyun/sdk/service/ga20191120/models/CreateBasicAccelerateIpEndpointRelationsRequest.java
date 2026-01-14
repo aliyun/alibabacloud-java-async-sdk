@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicAccelerateIpEndpointRelationsRequest} extends {@link RequestModel}
  *
  * <p>CreateBasicAccelerateIpEndpointRelationsRequest</p>
@@ -14,7 +20,7 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccelerateIpEndpointRelations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations;
+    private java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcceleratorId")
@@ -46,7 +52,7 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,7 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
     /**
      * @return accelerateIpEndpointRelations
      */
-    public java.util.List < AccelerateIpEndpointRelations> getAccelerateIpEndpointRelations() {
+    public java.util.List<AccelerateIpEndpointRelations> getAccelerateIpEndpointRelations() {
         return this.accelerateIpEndpointRelations;
     }
 
@@ -80,7 +86,7 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateBasicAccelerateIpEndpointRelationsRequest, Builder> {
-        private java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations; 
+        private java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations; 
         private String acceleratorId; 
         private String clientToken; 
         private String regionId; 
@@ -98,16 +104,21 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
         } 
 
         /**
-         * A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.
+         * <p>A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder accelerateIpEndpointRelations(java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations) {
+        public Builder accelerateIpEndpointRelations(java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations) {
             this.putQueryParameter("AccelerateIpEndpointRelations", accelerateIpEndpointRelations);
             this.accelerateIpEndpointRelations = accelerateIpEndpointRelations;
             return this;
         }
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -116,12 +127,14 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -130,7 +143,11 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,6 +162,12 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBasicAccelerateIpEndpointRelationsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBasicAccelerateIpEndpointRelationsRequest</p>
+     */
     public static class AccelerateIpEndpointRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
         private String accelerateIpId;
@@ -183,13 +206,21 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
             private String accelerateIpId; 
             private String endpointId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccelerateIpEndpointRelations model) {
+                this.accelerateIpId = model.accelerateIpId;
+                this.endpointId = model.endpointId;
+            } 
+
             /**
-             * The IDs of the accelerated IP addresses.
-             * <p>
+             * <p>The IDs of the accelerated IP addresses.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253393.html">ListBasicAccelerateIps</a> operation to query the IDs of the accelerated IP addresses.</p>
+             * <p>You can specify up to 20 IP address IDs.</p>
              * 
-             * You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the IDs of the accelerated IP addresses.
-             * 
-             * You can specify up to 20 IP address IDs.
+             * <strong>example:</strong>
+             * <p>gaip-bp1****</p>
              */
             public Builder accelerateIpId(String accelerateIpId) {
                 this.accelerateIpId = accelerateIpId;
@@ -197,12 +228,12 @@ public class CreateBasicAccelerateIpEndpointRelationsRequest extends Request {
             }
 
             /**
-             * The IDs of the endpoints.
-             * <p>
+             * <p>The IDs of the endpoints.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253406.html">ListBasicEndpoints</a> to query the IDs of the endpoints.</p>
+             * <p>You can specify up to 20 endpoint IDs.</p>
              * 
-             * You can call the [ListBasicEndpoints](~~2253406~~) to query the IDs of the endpoints.
-             * 
-             * You can specify up to 20 endpoint IDs.
+             * <strong>example:</strong>
+             * <p>ep-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;

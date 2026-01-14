@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAcceleratorAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAcceleratorAutoRenewAttributeResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
 
     public static DescribeAcceleratorAutoRenewAttributeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         private String renewalStatus; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAcceleratorAutoRenewAttributeResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.renewalStatus = model.renewalStatus;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -93,11 +117,14 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates whether auto-renewal is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
@@ -105,7 +132,10 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The auto-renewal duration. Unit: month.
+         * <p>The auto-renewal duration. Unit: month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -113,12 +143,15 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates how the GA instance is renewed. Valid values:
-         * <p>
+         * <p>Indicates how the GA instance is renewed. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The GA instance is automatically renewed.</li>
+         * <li><strong>Normal</strong>: You must manually renew the GA instance.</li>
+         * <li><strong>NotRenewal</strong>: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</li>
+         * </ul>
          * 
-         * *   **AutoRenewal**: The GA instance is automatically renewed.
-         * *   **Normal**: You must manually renew the GA instance.
-         * *   **NotRenewal**: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.renewalStatus = renewalStatus;
@@ -126,7 +159,10 @@ public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

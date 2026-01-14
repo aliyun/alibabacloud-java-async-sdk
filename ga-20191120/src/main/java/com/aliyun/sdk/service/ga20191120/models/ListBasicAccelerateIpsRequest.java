@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBasicAccelerateIpsRequest} extends {@link RequestModel}
  *
  * <p>ListBasicAccelerateIpsRequest</p>
@@ -60,7 +66,7 @@ public class ListBasicAccelerateIpsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +145,10 @@ public class ListBasicAccelerateIpsRequest extends Request {
         } 
 
         /**
-         * The accelerated IP address of the basic GA instance.
+         * <p>The accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.132.XX.XX</p>
          */
         public Builder accelerateIpAddress(String accelerateIpAddress) {
             this.putQueryParameter("AccelerateIpAddress", accelerateIpAddress);
@@ -148,7 +157,10 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The ID of the accelerated IP address of the basic GA instance.
+         * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaip-bp1****</p>
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.putQueryParameter("AccelerateIpId", accelerateIpId);
@@ -157,12 +169,14 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -171,10 +185,12 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The ID of the acceleration region.
-         * <p>
+         * <p>The ID of the acceleration region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253380.html">GetBasicAccelerator</a> operation to query the ID of the acceleration region.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [GetBasicAccelerator](~~2253380~~) operation to query the ID of the acceleration region.
+         * <strong>example:</strong>
+         * <p>ips-bp11r5jb8ogp122xl****</p>
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);
@@ -183,7 +199,10 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -192,11 +211,14 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+         * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -205,7 +227,11 @@ public class ListBasicAccelerateIpsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

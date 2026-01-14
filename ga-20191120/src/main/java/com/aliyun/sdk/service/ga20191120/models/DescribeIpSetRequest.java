@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIpSetRequest} extends {@link RequestModel}
  *
  * <p>DescribeIpSetRequest</p>
@@ -35,7 +41,7 @@ public class DescribeIpSetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,10 +75,12 @@ public class DescribeIpSetRequest extends Request {
         } 
 
         /**
-         * The ID of the acceleration region.
-         * <p>
+         * <p>The ID of the acceleration region.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253273.html">ListIpSets</a> operation to query the IDs of acceleration regions of a specific GA instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specific GA instance.
+         * <strong>example:</strong>
+         * <p>ips-bp11ilwqjdkjeg9r7****</p>
          */
         public Builder ipSetId(String ipSetId) {
             this.putQueryParameter("IpSetId", ipSetId);
@@ -81,7 +89,11 @@ public class DescribeIpSetRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

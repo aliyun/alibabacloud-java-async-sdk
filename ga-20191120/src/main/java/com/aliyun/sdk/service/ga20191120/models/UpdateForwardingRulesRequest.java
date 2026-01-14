@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateForwardingRulesRequest} extends {@link RequestModel}
  *
  * <p>UpdateForwardingRulesRequest</p>
@@ -23,7 +29,7 @@ public class UpdateForwardingRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForwardingRules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ForwardingRules> forwardingRules;
+    private java.util.List<ForwardingRules> forwardingRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -52,7 +58,7 @@ public class UpdateForwardingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +80,7 @@ public class UpdateForwardingRulesRequest extends Request {
     /**
      * @return forwardingRules
      */
-    public java.util.List < ForwardingRules> getForwardingRules() {
+    public java.util.List<ForwardingRules> getForwardingRules() {
         return this.forwardingRules;
     }
 
@@ -95,7 +101,7 @@ public class UpdateForwardingRulesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateForwardingRulesRequest, Builder> {
         private String acceleratorId; 
         private String clientToken; 
-        private java.util.List < ForwardingRules> forwardingRules; 
+        private java.util.List<ForwardingRules> forwardingRules; 
         private String listenerId; 
         private String regionId; 
 
@@ -113,7 +119,11 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
         /**
-         * The GA instance ID.
+         * <p>The GA instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4q****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,12 +132,14 @@ public class UpdateForwardingRulesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>02fb3da4****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,16 +148,24 @@ public class UpdateForwardingRulesRequest extends Request {
         }
 
         /**
-         * The configurations of the forwarding rules.
+         * <p>The configurations of the forwarding rules.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
-        public Builder forwardingRules(java.util.List < ForwardingRules> forwardingRules) {
+        public Builder forwardingRules(java.util.List<ForwardingRules> forwardingRules) {
             this.putQueryParameter("ForwardingRules", forwardingRules);
             this.forwardingRules = forwardingRules;
             return this;
         }
 
         /**
-         * The listener ID.
+         * <p>The listener ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1s0vzbi5bxlx5****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -154,7 +174,11 @@ public class UpdateForwardingRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,6 +193,12 @@ public class UpdateForwardingRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -196,11 +226,22 @@ public class UpdateForwardingRulesRequest extends Request {
         public static final class Builder {
             private String endpointGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.endpointGroupId = model.endpointGroupId;
+            } 
+
             /**
-             * The ID of an endpoint group.
-             * <p>
+             * <p>The ID of the endpoint group.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> rather than this parameter to configure forwarding actions.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.
+             * <strong>example:</strong>
+             * <p>epg-bp1ieei9664r5nv****</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -214,10 +255,16 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -234,20 +281,28 @@ public class UpdateForwardingRulesRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
-             * The configuration of an endpoint group.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.
+             * <p>The configuration of an endpoint group.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> rather than this parameter to configure forwarding actions.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -259,6 +314,12 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class RuleActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
@@ -323,11 +384,21 @@ public class UpdateForwardingRulesRequest extends Request {
             private String ruleActionType; 
             private String ruleActionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleActions model) {
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.order = model.order;
+                this.ruleActionType = model.ruleActionType;
+                this.ruleActionValue = model.ruleActionValue;
+            } 
+
             /**
-             * The forwarding configuration.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleActionType** and **RuleActionValue** rather than this parameter to configure forwarding actions.
+             * <p>The forwarding configuration.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> rather than this parameter to configure forwarding actions.</p>
+             * </blockquote>
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -335,10 +406,14 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The forwarding priority.
-             * <p>
+             * <p>The forwarding priority.</p>
+             * <blockquote>
+             * <p> This parameter does not take effect. Ignore this parameter.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  This parameter does not take effect. Ignore this parameter.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -346,15 +421,20 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The type of the forwarding action. Valid values:
-             * <p>
+             * <p>The type of the forwarding action. Valid values:</p>
+             * <ul>
+             * <li><strong>ForwardGroup</strong>: forwards a request.</li>
+             * <li><strong>Redirect</strong>: redirects a request.</li>
+             * <li><strong>FixResponse</strong>: returns a fixed response.</li>
+             * <li><strong>Rewrite</strong>: rewrites a request.</li>
+             * <li><strong>AddHeader</strong>: adds a header to a request.</li>
+             * <li><strong>RemoveHeaderConfig</strong>: deletes the header of a request.</li>
+             * <li><strong>Drop</strong>: drops a request.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **ForwardGroup**: forwards a request.
-             * *   **Redirect**: redirects a request.
-             * *   **FixResponse**: returns a fixed response.
-             * *   **Rewrite**: rewrites a request.
-             * *   **AddHeader**: adds a header to a request.
-             * *   **RemoveHeader**: deletes the header of a request.
+             * <strong>example:</strong>
+             * <p>ForwardGroup</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -362,46 +442,55 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The value of the forwarding action.
-             * <p>
+             * <p>The value of the forwarding action.</p>
+             * <p>You must specify different JSON strings based on <strong>RuleActionType</strong>.</p>
+             * <p>A forwarding rule can contain only one forwarding action whose type is <strong>ForwardGroup</strong>, <strong>Redirect</strong>, or <strong>FixResponse</strong>. You must specify a forwarding action whose type is <strong>Rewrite</strong>, <strong>AddHeader</strong>, or <strong>RemoveHeader</strong> before a forwarding action whose type is <strong>ForwardGroup</strong>.</p>
+             * <ul>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>ForwardGroup</strong>, this parameter specifies the information of a virtual endpoint group. You can forward requests to only one virtual endpoint group. Example: <code>{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}</code>.</p>
+             * <ul>
+             * <li><code>type</code>: Set this parameter to <code>endpointgroup</code>.</li>
+             * <li><code>value</code>: Set this parameter to the ID of a virtual endpoint group.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>Redirect</strong>, this parameter specifies redirecting configurations. You cannot leave the following parameters empty or use the default values for the following parameters for a forwarding action whose type is <strong>Redirect</strong>: <code>protocol</code>, <code>domain</code>, <code>port</code>, <code>path</code>, and <code>query</code>. Example: <code>{&quot;protocol&quot;:&quot;HTTP&quot;, &quot;domain&quot;:&quot;www.example.com&quot;, &quot;port&quot;:&quot;80&quot;, &quot;path&quot;:&quot;/a&quot;,&quot;query&quot;:&quot;value1&quot;, &quot;code&quot;:&quot;301&quot; }</code>.</p>
+             * <ul>
+             * <li><code>protocol</code>: the protocol of requests after the requests are redirected. Valid values: <code>${protocol}</code> (default), <code>HTTP</code>, and <code>HTTPS</code>.</li>
+             * <li><code>domain</code>: the domain name to which requests are redirected. Default value: <code>${host}</code>. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: <code>. - ? = ~ _ - + / ^ * ! $ &amp; | ( ) [ ]</code>.</li>
+             * <li><code>port</code>: the port to which requests are redirected. Default value: <code>${port}</code>. You can enter a port number from 1 to 63335.</li>
+             * <li><code>path</code>: the path to which requests are redirected. Default value: <code>${path}</code>. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: <code>. - _ / = ? ~ ^ * $ : ( ) [ ] + |</code>. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: <code>. - _ / = ? :</code>. The path must start with a forward slash (/).</li>
+             * <li><code>query</code>: the query string of the requests that are redirected. Default value: <code>${query}</code>. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <code>greater than or equal to 32 and smaller than 127</code>. The query string cannot contain uppercase letters, space characters, or the following special characters: <code>[ ] { } &lt; &gt; # | &amp;</code>.</li>
+             * <li><code>code</code>: the redirect code. Valid values: <code>301</code>, <code>302</code>, <code>303</code>, <code>307</code>, and <code>308</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>FixResponse</strong>, this parameter specifies a fixed response. Example: <code>{&quot;code&quot;:&quot;200&quot;, &quot;type&quot;:&quot;text/plain&quot;, &quot;content&quot;:&quot;dssacav&quot; }</code>.</p>
+             * <ul>
+             * <li><code>code</code>: the HTTP response status code. The response status code must be one of the following numeric strings: <code>2xx</code>, <code>4xx</code>, and <code>5xx</code>. The letter <code>x</code> indicates a number from 0 to 9.</li>
+             * <li><code>type</code>: the type of the response content. Valid values: <strong>text/plain</strong>, <strong>text/css</strong>, <strong>text/html</strong>, <strong>application/javascript</strong>, and <strong>application/json</strong>.</li>
+             * <li><code>content</code>: the response content. The response content cannot exceed 1,000 characters in length, and does not support Chinese characters.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>AddHeader</strong>, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is <strong>AddHeader</strong>, you must specify another forwarding action whose type is <strong>ForwardGroup</strong>. Example: <code>[{&quot;name&quot;:&quot;header1&quot;,&quot;type&quot;:&quot;userdefined&quot;, &quot;value&quot;:&quot;value&quot;}]</code>.</p>
+             * <ul>
+             * <li><code>name</code>: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name of the HTTP header specified by <strong>AddHeader</strong> must be unique and cannot be the same as the name of the HTTP header specified by <strong>RemoveHeader</strong>.</li>
+             * <li><code>type</code>: the content type of the HTTP header. Valid values: <code>user-defined</code>, <code>ref</code>, and <code>system-defined</code>.</li>
+             * <li><code>value</code>: the content of the HTTP header. You cannot leave this parameter empty. If you set <code>type</code> to <code>user-defined</code>, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <code>greater than or equal to 32 and smaller than 127</code>. The content can contain letters, digits, hyphens (-), and underscores (<em>*). The content cannot start or end with a space character. If you set <code>type</code> to <code>ref</code>, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (</em>*). The content cannot start or end with a space character. If you set <code>type</code> to <code>system-defined</code>, only <code>ClientSrcIp</code> is supported.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>RemoveHeader</strong>, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is <strong>RemoveHeader</strong>, you must specify another forwarding action whose type is <strong>ForwardGroup</strong>. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). Example: <code>[&quot;header1&quot;]</code>.</p>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>Rewrite</strong>, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is <strong>Rewrite</strong>, you must specify another forwarding action whose type is <strong>ForwardGroup</strong>. Example: <code>{&quot;domain&quot;:&quot;value1&quot;, &quot;path&quot;:&quot;value2&quot;, &quot;query&quot;:&quot;value3&quot;}</code>.</p>
+             * <ul>
+             * <li><code>domain</code>: the domain name to which requests are redirected. Default value: <code>${host}</code>. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: <code>. - ? = ~ _ - + / ^ * ! $ &amp; | ( ) [ ]</code>.</li>
+             * <li><code>path</code>: the path to which requests are redirected. Default value: <code>${path}</code>. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: <code>. - _ / = ? ~ ^ * $ : ( ) [ ] + |</code>. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: <code>. - _ / = ? :</code>. The path must start with a forward slash (/).</li>
+             * <li><code>query</code>: the query string of the requests that are redirected. Default value: <code>${query}</code>. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are <code>greater than or equal to 32 and smaller than 127</code>. The query string cannot contain uppercase letters, space characters, or the following special characters: <code>[ ] { } &lt; &gt; # | &amp;</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleActionType</strong> is set to <strong>Drop</strong>, you do not need to specify this parameter.</p>
+             * </li>
+             * </ul>
              * 
-             * You must specify different JSON strings based on the value of **RuleActionType**.
-             * 
-             * A forwarding rule can contain only one forwarding action whose type is **ForwardGroup**, **Redirect**, or **FixResponse**. You must specify a forwarding action whose type is **Rewrite**, **AddHeader**, or **RemoveHeader** before a forwarding action whose type is **ForwardGroup**.
-             * 
-             * *   If you set **RuleActionType** to **ForwardGroup**, this parameter specifies the information of a virtual endpoint group. You can forward requests to only one virtual endpoint group. Example: `{"type":"endpointgroup", "value":"epg-bp1enpdcrqhl78g6r****"}`.
-             * 
-             *     *   `type`: Set this parameter to `endpointgroup`.
-             *     *   `value`: Set this parameter to the ID of a virtual endpoint group.
-             * 
-             * *   If you set **RuleActionType** to **Redirect**, this parameter specifies the redirect configuration. You cannot leave all the following parameters empty or use the default values for all the following parameters for a forwarding action whose type is **Redirect**: `protocol`, `domain`, `port`, `path`, and `query`. Example: `{"protocol":"HTTP", "domain":"www.example.com", "port":"80", "path":"/a","query":"value1", "code":"301" }`.
-             * 
-             *     *   `protocol`: the protocol of requests after the requests are redirected. Valid values: `${protocol}` (default), `HTTP`, and `HTTPS`.
-             *     *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.
-             *     *   `port`: the port to which requests are redirected. Default value: `${port}`. You can enter a port number that ranges from 1 to 63335.
-             *     *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).
-             *     *   `query`: the query string to which requests are redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.
-             *     *   `code`: the redirect code. Valid values: `301`, `302`, `303`, `307`, and `308`.
-             * 
-             * *   If you set **RuleActionType** to **FixResponse**, this parameter specifies a fixed response. Example: `{"code":"200", "type":"text/plain", "content":"dssacav" }`.
-             * 
-             *     *   `code`: the HTTP response status code. The response status code must be one of the following numeric strings: `2xx`, `4xx`, and `5xx`. The letter `x` is a digit.
-             *     *   `type`: the type of the response content. Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.
-             *     *   `content`: the response content. The response content cannot exceed 1,000 characters in length and does not support Chinese characters.
-             * 
-             * *   If you set **RuleActionType** to **AddHeader**, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is **AddHeader**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `[{"name":"header1","type":"userdefined", "value":"value"}]`.
-             * 
-             *     *   `name`: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.
-             *     *   `type`: the content type of the HTTP header. Valid values: `user-defined`, `ref`, and `system-defined`.
-             *     *   `value`: the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.**
-             * 
-             * *   If you set **RuleActionType** to **RemoveHeader**, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is **RemoveHeader**, you must specify another forwarding action whose type is **ForwardGroup**. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). Example: `["header1"]`.
-             * 
-             * *   If you set **RuleActionType** to **Rewrite**, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is **Rewrite**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `{"domain":"value1", "path":"value2", "query":"value3"}`.
-             * 
-             *     *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ & | ( ) [ ]`.
-             *     *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + |`. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).
-             *     *   `query`: the query string to which requests are redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > # | &`.
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}]</p>
              */
             public Builder ruleActionValue(String ruleActionValue) {
                 this.ruleActionValue = ruleActionValue;
@@ -415,9 +504,15 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class HostConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private HostConfig(Builder builder) {
             this.values = builder.values;
@@ -434,20 +529,27 @@ public class UpdateForwardingRulesRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostConfig model) {
+                this.values = model.values;
+            } 
 
             /**
-             * The domain name configuration.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.
+             * <p>The domain name configuration.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleConditionType</strong> and <strong>RuleConditionValue</strong> rather than this parameter to configure forwarding conditions.</p>
+             * </blockquote>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -459,9 +561,15 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class PathConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private PathConfig(Builder builder) {
             this.values = builder.values;
@@ -478,20 +586,27 @@ public class UpdateForwardingRulesRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfig model) {
+                this.values = model.values;
+            } 
 
             /**
-             * The path configuration.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.
+             * <p>The path configuration.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleConditionType</strong> and <strong>RuleConditionValue</strong> rather than this parameter to configure forwarding conditions.</p>
+             * </blockquote>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -503,6 +618,12 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class RuleConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
@@ -566,11 +687,21 @@ public class UpdateForwardingRulesRequest extends Request {
             private String ruleConditionType; 
             private String ruleConditionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleConditions model) {
+                this.hostConfig = model.hostConfig;
+                this.pathConfig = model.pathConfig;
+                this.ruleConditionType = model.ruleConditionType;
+                this.ruleConditionValue = model.ruleConditionValue;
+            } 
+
             /**
-             * The domain name configuration.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.
+             * <p>The domain name configuration.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleConditionType</strong> and <strong>RuleConditionValue</strong> rather than this parameter to configure forwarding conditions.</p>
+             * </blockquote>
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -578,10 +709,10 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The path configuration.
-             * <p>
-             * 
-             * >  We recommend that you use **RuleConditionType** and **RuleConditionValue** rather than this parameter to configure forwarding conditions.
+             * <p>The path configuration.</p>
+             * <blockquote>
+             * <p> We recommend that you use <strong>RuleConditionType</strong> and <strong>RuleConditionValue</strong> rather than this parameter to configure forwarding conditions.</p>
+             * </blockquote>
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -589,16 +720,20 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The type of the forwarding condition. Valid values:
-             * <p>
+             * <p>The type of the forwarding condition. Valid values:</p>
+             * <ul>
+             * <li><strong>Host</strong>: Requests are forwarded based on domain names.</li>
+             * <li><strong>Path</strong>: Requests are forwarded based on paths.</li>
+             * <li><strong>RequestHeader</strong>: Requests are forwarded based on HTTP headers.</li>
+             * <li><strong>Query</strong>: Requests are forwarded based on query strings.</li>
+             * <li><strong>Method</strong>: Requests are forwarded based on HTTP request methods.</li>
+             * <li><strong>Cookie</strong>: Requests are forwarded based on cookies.</li>
+             * <li><strong>SourceIp</strong>: Requests are forwarded based on source IP addresses.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **Host**: Requests are forwarded based on domain names.
-             * *   **Path**: Requests are forwarded based on paths.
-             * *   **RequestHeader**: Requests are forwarded based on HTTP headers.
-             * *   **Query**: Requests are forwarded based on query strings.
-             * *   **Method**: Requests are forwarded based on HTTP request methods.
-             * *   **Cookie**: Requests are forwarded based on cookies.
-             * *   **SourceIP**: Requests are forwarded based on source IP addresses.
+             * <strong>example:</strong>
+             * <p>Host</p>
              */
             public Builder ruleConditionType(String ruleConditionType) {
                 this.ruleConditionType = ruleConditionType;
@@ -606,31 +741,38 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The value of the forwarding condition. You must specify different JSON strings based on the value of **RuleConditionType**.
-             * <p>
+             * <p>The value of the forwarding condition. You must specify different JSON strings based on <strong>RuleConditionType</strong>.</p>
+             * <ul>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>Host</strong>, RuleConditionValue specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). You can use asterisks (*) and question marks (?) as wildcard characters. Example: <code>[&quot;www.example.com&quot;, &quot;www.aliyun.com&quot;]</code>.</p>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>Path</strong>, RuleConditionValue specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - _ . + / &amp; ~ @ : &quot;. Supported wildcard characters are asterisks (*) and question marks (?). Example: <code>[&quot;/a&quot;, &quot;/b/&quot;]</code>.</p>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>RequestHeader</strong>, RuleConditionValue specifies an HTTP header condition. An HTTP header consists of a key and a value. The header values in a forwarding condition must be unique. Example: <code>[{&quot;header1&quot;:[&quot;value1&quot;,&quot;value2&quot;]}]</code>.</p>
+             * <ul>
+             * <li>Key: The key of an HTTP header must be 1 to 40 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</li>
+             * <li>Value: The value of an HTTP header must be 1 to 128 characters in length and can contain printable characters whose ASCII values <code>are larger than or equal to 32 and smaller than 127</code>. The value cannot start or end with a space.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>Query</strong>, RuleConditionValue specifies a query string condition. A query string consists of a key and a value. Example: <code>[{&quot;query1&quot;:[&quot;value1&quot;]}, {&quot;query2&quot;:[&quot;value2&quot;]}]</code>.</p>
+             * <ul>
+             * <li>Key: The key must be 1 to 100 characters in length and can contain printable characters whose ASCII values <code>are larger than or equal to 32 and smaller than 127</code>, excluding uppercase letters, spaces, and the following special characters: <code>[ ] { } &lt; &gt; \ ; / ? : @ &amp; = + , $ % &quot; ^ ~</code>.</li>
+             * <li>Value: The value must be 1 to 128 characters in length and can contain printable characters whose ASCII values <code>are larger than or equal to 32 and smaller than 127</code>, excluding uppercase letters, spaces, and the following special characters: <code>[ ] { } &lt; &gt; \ ; / ? : @ &amp; = + , $ % &quot; ^ ~</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>Method</strong>, RuleConditionValue specifies an HTTP method condition. Valid values: <strong>HEAD</strong>, <strong>GET</strong>, <strong>POST</strong>, <strong>OPTIONS</strong>, <strong>PUT</strong>, <strong>PATCH</strong>, and <strong>DELETE</strong>. Example: <code>[&quot;GET&quot;, &quot;OPTIONS&quot;, &quot;POST&quot;]</code>.</p>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>Cookie</strong>, RuleConditionValue specifies a cookie condition. A cookie consists of a key and a value. Example: <code>[{&quot;cookie1&quot;:[&quot;value1&quot;]}, {&quot;cookie2&quot;:[&quot;value2&quot;]}]</code>.</p>
+             * <ul>
+             * <li>Key: The key of a cookie must be 1 to 100 characters in length and can contain printable characters whose ASCII values <code>are larger than or equal to 32 and smaller than 127</code>, excluding uppercase letters, spaces, and the following special characters: <code># [ ] { } \ &lt; &gt; &amp;</code>.</li>
+             * <li>Value: The value of a cookie must be 1 to 128 characters in length and can contain printable characters whose ASCII values <code>are larger than or equal to 32 and smaller than 127</code>, excluding uppercase letters, spaces, and the following special characters: <code># [ ] { } \ &lt; &gt; &amp;</code>.</li>
+             * </ul>
+             * </li>
+             * <li><p>If <strong>RuleConditionType</strong> is set to <strong>SourceIP</strong>, RuleConditionValue specifies a source IP address condition. IP addresses, such as 1.1.XX.XX/32, and CIDR blocks, such as 2.2.XX.XX/24, are supported. A forwarding rule can contain only one forwarding condition of the SourceIP type. You can specify multiple source IP addresses or CIDR blocks in a forwarding condition. The relationship between multiple IP addresses or CIDR blocks is OR. Example: <code>[&quot;1.1.XX.XX/32&quot;, &quot;2.2.XX.XX/24&quot;]</code>.</p>
+             * </li>
+             * </ul>
              * 
-             * *   If you set **RuleConditionType** to **Host**, this parameter specifies a domain name condition. A forwarding rule can contain only one forwarding condition of the Host type. You can specify multiple domain names in a forwarding condition. The relationship between multiple domain names is OR. The domain name must be 3 to 128 characters in length and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["www.example.com", "www.aliyun.com"]`.
-             * 
-             * *   If **RuleConditionType** is set to **Path**, this parameter specifies a path condition. A forwarding rule can contain multiple forwarding conditions of the Path type. The relationship between multiple path conditions is OR. You can specify multiple paths in a forwarding condition. The relationship between multiple paths is OR. The path must be 1 to 128 characters in length, and must start with a forward slash (/). The path can contain letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?). Example: `["/a", "/b/"]`.
-             * 
-             * *   If you set **RuleConditionType** to **RequestHeader**, this parameter specifies an HTTP header condition that consists of key-value pairs. The header values in a forwarding condition must be unique. Example: `[{"header1":["value1","value2"]}]`.
-             * 
-             *     *   Key: The key of an HTTP header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
-             *     *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot start or end with a space character.
-             * 
-             * *   If you set **RuleConditionType** to **Query**, this parameter specifies a query string condition that consists of key-value pairs. Example: `[{"query1":["value1"]}, {"query2":["value2"]}]`.
-             * 
-             *     *   Key: The key of an HTTP header must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.
-             *     *   Value: The value of an HTTP header must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > \ ; / ? : @ & = + , $ % | " ^ ~`.
-             * 
-             * *   If you set **RuleConditionType** to **Method**, this parameter specifies an HTTP request method condition. Valid values: **HEAD**, **GET**, **POST**, **OPTIONS**, **PUT**, **PATCH**, and **DELETE**. Example: `["GET", "OPTIONS", "POST"]`.
-             * 
-             * *   If you set **RuleConditionType** to **Cookie**, this parameter specifies a cookie condition that consists of key-value pairs. Example: `[{"cookie1":["value1"]}, {"cookie2":["value2"]}]`.
-             * 
-             *     *   Key: The key of a cookie must be 1 to 100 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The key cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
-             *     *   Value: The value of a cookie must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and less than 127`. The value cannot contain uppercase letters, space characters, or the following special characters: `# [ ] { } \ | < > &`.
-             * 
-             * *   If you set **RuleConditionType** to **SourceIP**, this parameter specifies a source IP address condition. You can specify IP addresses, such as 1.1.XX.XX/32. You can also specify CIDR blocks, such as 2.2.XX.XX/24. A forwarding rule can contain only one forwarding condition whose type is SourceIP. You can specify multiple source IP addresses in a forwarding condition. The relationship between multiple source IP addresses is OR. Example: `["1.1.XX.XX/32", "2.2.XX.XX/24"]`.
+             * <strong>example:</strong>
+             * <p>[&quot;<a href="http://www.example.com">www.example.com</a>&quot;, &quot;<a href="http://www.aliyun.com%22%5D">www.aliyun.com&quot;]</a></p>
              */
             public Builder ruleConditionValue(String ruleConditionValue) {
                 this.ruleConditionValue = ruleConditionValue;
@@ -644,6 +786,12 @@ public class UpdateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateForwardingRulesRequest</p>
+     */
     public static class ForwardingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardingRuleId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -658,11 +806,11 @@ public class UpdateForwardingRulesRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("RuleActions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < RuleActions> ruleActions;
+        private java.util.List<RuleActions> ruleActions;
 
         @com.aliyun.core.annotation.NameInMap("RuleConditions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < RuleConditions> ruleConditions;
+        private java.util.List<RuleConditions> ruleConditions;
 
         @com.aliyun.core.annotation.NameInMap("RuleDirection")
         private String ruleDirection;
@@ -708,14 +856,14 @@ public class UpdateForwardingRulesRequest extends Request {
         /**
          * @return ruleActions
          */
-        public java.util.List < RuleActions> getRuleActions() {
+        public java.util.List<RuleActions> getRuleActions() {
             return this.ruleActions;
         }
 
         /**
          * @return ruleConditions
          */
-        public java.util.List < RuleConditions> getRuleConditions() {
+        public java.util.List<RuleConditions> getRuleConditions() {
             return this.ruleConditions;
         }
 
@@ -730,12 +878,28 @@ public class UpdateForwardingRulesRequest extends Request {
             private String forwardingRuleId; 
             private String forwardingRuleName; 
             private Integer priority; 
-            private java.util.List < RuleActions> ruleActions; 
-            private java.util.List < RuleConditions> ruleConditions; 
+            private java.util.List<RuleActions> ruleActions; 
+            private java.util.List<RuleConditions> ruleConditions; 
             private String ruleDirection; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardingRules model) {
+                this.forwardingRuleId = model.forwardingRuleId;
+                this.forwardingRuleName = model.forwardingRuleName;
+                this.priority = model.priority;
+                this.ruleActions = model.ruleActions;
+                this.ruleConditions = model.ruleConditions;
+                this.ruleDirection = model.ruleDirection;
+            } 
+
             /**
-             * The forwarding rule ID.
+             * <p>The forwarding rule ID.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frule-bp1dii16gu9qdvb34****</p>
              */
             public Builder forwardingRuleId(String forwardingRuleId) {
                 this.forwardingRuleId = forwardingRuleId;
@@ -743,10 +907,11 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The forwarding rule name.
-             * <p>
+             * <p>The forwarding rule name.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder forwardingRuleName(String forwardingRuleName) {
                 this.forwardingRuleName = forwardingRuleName;
@@ -754,7 +919,11 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The priority of the forwarding rule. Valid values: **1** to **10000**. A smaller value specifies a higher priority.
+             * <p>The priority of the forwarding rule. Valid values: <strong>1</strong> to <strong>10000</strong>. A smaller value specifies a higher priority.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -762,26 +931,29 @@ public class UpdateForwardingRulesRequest extends Request {
             }
 
             /**
-             * The configurations of the forwarding actions.
+             * <p>The configurations of the forwarding actions.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+            public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
                 return this;
             }
 
             /**
-             * The forwarding conditions.
+             * <p>The conditions that trigger the forwarding rule.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
+            public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
                 return this;
             }
 
             /**
-             * The direction in which the rule takes effect. You do not need to configure this parameter.
-             * <p>
+             * <p>The direction in which the rule takes effect. You do not need to specify this parameter.</p>
+             * <p>By default, this parameter is set to <strong>request</strong>, which specifies that the rule takes effect on requests.</p>
              * 
-             * By default, this parameter is set to **request**, which specifies that the rule takes effect on requests.
+             * <strong>example:</strong>
+             * <p>request</p>
              */
             public Builder ruleDirection(String ruleDirection) {
                 this.ruleDirection = ruleDirection;

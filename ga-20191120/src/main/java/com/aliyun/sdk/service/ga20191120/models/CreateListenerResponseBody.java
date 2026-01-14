@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateListenerResponseBody} extends {@link TeaModel}
  *
  * <p>CreateListenerResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateListenerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listenerId
      */
@@ -48,8 +58,19 @@ public class CreateListenerResponseBody extends TeaModel {
         private String listenerId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateListenerResponseBody model) {
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -57,7 +78,10 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

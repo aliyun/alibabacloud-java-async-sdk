@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBandwidthPackageResponseBody</p>
@@ -30,6 +36,10 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthPackageId
      */
@@ -48,8 +58,19 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         private String bandwidthPackageId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteBandwidthPackageResponseBody model) {
+            this.bandwidthPackageId = model.bandwidthPackageId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The bandwidth plan ID.
+         * <p>The bandwidth plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -57,7 +78,10 @@ public class DeleteBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

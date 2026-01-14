@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEndpointGroupIpAddressCidrBlocksResponseBody} extends {@link TeaModel}
  *
  * <p>ListEndpointGroupIpAddressCidrBlocksResponseBody</p>
@@ -15,7 +21,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
     private String endpointGroupRegion;
 
     @com.aliyun.core.annotation.NameInMap("IpAddressCidrBlocks")
-    private java.util.List < String > ipAddressCidrBlocks;
+    private java.util.List<String> ipAddressCidrBlocks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpointGroupRegion
      */
@@ -52,7 +62,7 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
     /**
      * @return ipAddressCidrBlocks
      */
-    public java.util.List < String > getIpAddressCidrBlocks() {
+    public java.util.List<String> getIpAddressCidrBlocks() {
         return this.ipAddressCidrBlocks;
     }
 
@@ -79,13 +89,27 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String endpointGroupRegion; 
-        private java.util.List < String > ipAddressCidrBlocks; 
+        private java.util.List<String> ipAddressCidrBlocks; 
         private String requestId; 
         private String resourceGroupId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEndpointGroupIpAddressCidrBlocksResponseBody model) {
+            this.endpointGroupRegion = model.endpointGroupRegion;
+            this.ipAddressCidrBlocks = model.ipAddressCidrBlocks;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.state = model.state;
+        } 
+
         /**
-         * The region ID of the endpoint group.
+         * <p>The region ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = endpointGroupRegion;
@@ -93,15 +117,18 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks.
+         * <p>The CIDR blocks.</p>
          */
-        public Builder ipAddressCidrBlocks(java.util.List < String > ipAddressCidrBlocks) {
+        public Builder ipAddressCidrBlocks(java.util.List<String> ipAddressCidrBlocks) {
             this.ipAddressCidrBlocks = ipAddressCidrBlocks;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +136,10 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the endpoint group belongs.
+         * <p>The ID of the resource group to which the endpoint group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekztkx4zwc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -117,7 +147,10 @@ public class ListEndpointGroupIpAddressCidrBlocksResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the endpoint group.
+         * <p>The status of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;

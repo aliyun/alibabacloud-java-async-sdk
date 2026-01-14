@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomRoutingEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomRoutingEndpointResponseBody</p>
@@ -36,7 +42,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
     private Boolean serviceManaged;
 
     @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-    private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+    private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
@@ -68,6 +74,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
 
     public static DescribeCustomRoutingEndpointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -129,7 +139,7 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
     /**
      * @return serviceManagedInfos
      */
-    public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+    public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
         return this.serviceManagedInfos;
     }
 
@@ -163,13 +173,34 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         private String requestId; 
         private String serviceId; 
         private Boolean serviceManaged; 
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
         private String state; 
         private String trafficToEndpointPolicy; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomRoutingEndpointResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.endpoint = model.endpoint;
+            this.endpointGroupId = model.endpointGroupId;
+            this.endpointId = model.endpointId;
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceManaged = model.serviceManaged;
+            this.serviceManagedInfos = model.serviceManagedInfos;
+            this.state = model.state;
+            this.trafficToEndpointPolicy = model.trafficToEndpointPolicy;
+            this.type = model.type;
+        } 
+
         /**
-         * The ID of the GA instance with which the endpoint is associated.
+         * <p>The ID of the GA instance with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -177,7 +208,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint (vSwitch).
+         * <p>The name of the endpoint (vSwitch).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-test01</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -185,7 +219,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint group to which the endpoint belongs.
+         * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp14sz7ftcwwjgrdm****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -193,7 +230,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint.
+         * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -201,7 +241,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the listener with which the endpoint is associated.
+         * <p>The ID of the listener with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -209,7 +252,10 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String	04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,10 +263,13 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID to which the managed instance belongs.
-         * <p>
+         * <p>The service ID to which the managed instance belongs.</p>
+         * <blockquote>
+         * <p> Valid only when the ServiceManaged parameter is True.</p>
+         * </blockquote>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -228,11 +277,14 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Is it a managed instance. Valid values:
-         * <p>
+         * <p>Is it a managed instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * - true
-         * - false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -240,15 +292,18 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * <p>A list of action policies that users can execute on this managed instance.</p>
          */
-        public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+        public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
             return this;
         }
 
         /**
-         * The status of the endpoint.
+         * <p>The status of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -256,12 +311,15 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The access policy of traffic for the specified endpoint. Valid values:
-         * <p>
+         * <p>The access policy of traffic for the specified endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>AllowAll</strong>: allows all traffic to the endpoint.</li>
+         * <li><strong>DenyAll</strong>: denies all traffic to the endpoint.</li>
+         * <li><strong>AllowCustom</strong>: allows traffic only to specified destinations.</li>
+         * </ul>
          * 
-         * *   **AllowAll**: allows all traffic to the endpoint.
-         * *   **DenyAll**: denies all traffic to the endpoint.
-         * *   **AllowCustom**: allows traffic only to specified destinations.
+         * <strong>example:</strong>
+         * <p>DenyAll</p>
          */
         public Builder trafficToEndpointPolicy(String trafficToEndpointPolicy) {
             this.trafficToEndpointPolicy = trafficToEndpointPolicy;
@@ -269,10 +327,11 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * The backend service type of the endpoint.
-         * <p>
+         * <p>The backend service type of the endpoint.</p>
+         * <p>Set the value to <strong>PrivateSubNet</strong>, which indicates private CIDR blocks.</p>
          * 
-         * Set the value to **PrivateSubNet**, which indicates private CIDR blocks.
+         * <strong>example:</strong>
+         * <p>PrivateSubNet</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -285,6 +344,12 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomRoutingEndpointResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomRoutingEndpointResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -335,16 +400,28 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * Managed policy action name, Valid values:
-             * <p>
+             * <p>Managed policy action name, Valid values:</p>
+             * <ul>
+             * <li>Create</li>
+             * <li>Update</li>
+             * <li>Delete</li>
+             * <li>Associate</li>
+             * <li>UserUnmanaged</li>
+             * <li>CreateChild</li>
+             * </ul>
              * 
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -352,18 +429,22 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Sub resource type, Valid values:
-             * <p>
+             * <p>Sub resource type, Valid values:</p>
+             * <ul>
+             * <li>Listener</li>
+             * <li>IpSet</li>
+             * <li>EndpointGroup</li>
+             * <li>ForwardingRule</li>
+             * <li>Endpoint</li>
+             * <li>EndpointGroupDestination</li>
+             * <li>EndpointPolicy</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only valid when the Action parameter is CreateChild.</p>
+             * </blockquote>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
-             * 
-             * >Only valid when the Action parameter is CreateChild.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -371,12 +452,16 @@ public class DescribeCustomRoutingEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
-             * <p>
+             * <p>Is the managed policy action managed, Valid values:</p>
+             * <ul>
+             * <li><p>true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+             * </li>
+             * <li><p>false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+             * </li>
+             * </ul>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

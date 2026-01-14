@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingEndpointGroupDestinationsRequest} extends {@link RequestModel}
  *
  * <p>ListCustomRoutingEndpointGroupDestinationsRequest</p>
@@ -39,7 +45,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Protocols")
-    private java.util.List < String > protocols;
+    private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -71,7 +77,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -121,7 +127,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
     /**
      * @return protocols
      */
-    public java.util.List < String > getProtocols() {
+    public java.util.List<String> getProtocols() {
         return this.protocols;
     }
 
@@ -146,7 +152,7 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         private String listenerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > protocols; 
+        private java.util.List<String> protocols; 
         private String regionId; 
         private Integer toPort; 
 
@@ -168,7 +174,11 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -177,7 +187,10 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp16jdc00bhe97sr5****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -186,10 +199,11 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The start port of the backend service port range of the endpoint group.
-         * <p>
+         * <p>The start port of the backend service port range of the endpoint group.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
          * 
-         * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder fromPort(Integer fromPort) {
             this.putQueryParameter("FromPort", fromPort);
@@ -198,7 +212,10 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -207,7 +224,10 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +236,10 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,25 +248,27 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The backend service protocols of the endpoint group. Valid values:
-         * <p>
-         * 
-         * - **TCP**: TCP.
-         * - **UDP**: UDP.
-         * - **TCP,UDP**: TCP and UDP.
-         * 
-         * If this parameter is empty, all types of protocols are queried.
-         * 
-         * You can specify up to 10 protocols.
+         * <p>The backend service protocols of the endpoint group. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong>: TCP.</li>
+         * <li><strong>UDP</strong>: UDP.</li>
+         * <li><strong>TCP,UDP</strong>: TCP and UDP.</li>
+         * </ul>
+         * <p>If this parameter is empty, all types of protocols are queried.</p>
+         * <p>You can specify up to 10 protocols.</p>
          */
-        public Builder protocols(java.util.List < String > protocols) {
+        public Builder protocols(java.util.List<String> protocols) {
             this.putQueryParameter("Protocols", protocols);
             this.protocols = protocols;
             return this;
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,10 +277,11 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends Request {
         }
 
         /**
-         * The end port of the backend service port range of the endpoint group.
-         * <p>
+         * <p>The end port of the backend service port range of the endpoint group.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
          * 
-         * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder toPort(Integer toPort) {
             this.putQueryParameter("ToPort", toPort);

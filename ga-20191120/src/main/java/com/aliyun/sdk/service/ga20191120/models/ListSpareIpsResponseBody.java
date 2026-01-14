@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSpareIpsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSpareIpsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListSpareIpsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SpareIps")
-    private java.util.List < SpareIps> spareIps;
+    private java.util.List<SpareIps> spareIps;
 
     private ListSpareIpsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -30,6 +36,10 @@ public class ListSpareIpsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -40,16 +50,27 @@ public class ListSpareIpsResponseBody extends TeaModel {
     /**
      * @return spareIps
      */
-    public java.util.List < SpareIps> getSpareIps() {
+    public java.util.List<SpareIps> getSpareIps() {
         return this.spareIps;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SpareIps> spareIps; 
+        private java.util.List<SpareIps> spareIps; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSpareIpsResponseBody model) {
+            this.requestId = model.requestId;
+            this.spareIps = model.spareIps;
+        } 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,9 +78,9 @@ public class ListSpareIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The secondary IP addresses that are associated with the CNAME.
+         * <p>The secondary IP addresses that are associated with the CNAME.</p>
          */
-        public Builder spareIps(java.util.List < SpareIps> spareIps) {
+        public Builder spareIps(java.util.List<SpareIps> spareIps) {
             this.spareIps = spareIps;
             return this;
         }
@@ -70,6 +91,12 @@ public class ListSpareIpsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSpareIpsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSpareIpsResponseBody</p>
+     */
     public static class SpareIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpareIp")
         private String spareIp;
@@ -108,8 +135,19 @@ public class ListSpareIpsResponseBody extends TeaModel {
             private String spareIp; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpareIps model) {
+                this.spareIp = model.spareIp;
+                this.state = model.state;
+            } 
+
             /**
-             * The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.
+             * <p>The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder spareIp(String spareIp) {
                 this.spareIp = spareIp;
@@ -117,11 +155,14 @@ public class ListSpareIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the secondary IP address. Valid values:
-             * <p>
+             * <p>The status of the secondary IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>active:</strong> The secondary IP address is available.</li>
+             * <li><strong>inuse:</strong> The secondary IP address is in use.</li>
+             * </ul>
              * 
-             * *   **active:** The secondary IP address is available.
-             * *   **inuse:** The secondary IP address is in use.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;

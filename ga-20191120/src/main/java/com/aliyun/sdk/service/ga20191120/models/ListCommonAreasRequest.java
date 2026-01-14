@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommonAreasRequest} extends {@link RequestModel}
  *
  * <p>ListCommonAreasRequest</p>
@@ -38,7 +44,7 @@ public class ListCommonAreasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,11 +87,14 @@ public class ListCommonAreasRequest extends Request {
         } 
 
         /**
-         * The IP version used to connect to the GA instance. Valid values:
-         * <p>
+         * <p>The IP version used to connect to the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
          * 
-         * *   **IPv4** (default)
-         * *   **IPv6**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -94,11 +103,14 @@ public class ListCommonAreasRequest extends Request {
         }
 
         /**
-         * Specifies whether to query regions where endpoint groups of GA can be deployed. Valid values:
-         * <p>
+         * <p>Specifies whether to query regions where endpoint groups of GA can be deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEpg(Boolean isEpg) {
             this.putQueryParameter("IsEpg", isEpg);
@@ -107,11 +119,14 @@ public class ListCommonAreasRequest extends Request {
         }
 
         /**
-         * Specifies whether to query regions supported by GA. Valid values:
-         * <p>
+         * <p>Specifies whether to query regions supported by GA. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isIpSet(Boolean isIpSet) {
             this.putQueryParameter("IsIpSet", isIpSet);

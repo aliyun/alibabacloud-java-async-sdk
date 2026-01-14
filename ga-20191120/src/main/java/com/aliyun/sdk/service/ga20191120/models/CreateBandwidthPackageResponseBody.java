@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBandwidthPackageResponseBody</p>
@@ -34,6 +40,10 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthPackageId
      */
@@ -60,8 +70,20 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBandwidthPackageResponseBody model) {
+            this.bandwidthPackageId = model.bandwidthPackageId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
@@ -69,12 +91,12 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
-         * <p>
+         * <p>The order ID.</p>
+         * <p>If bills are not automatically paid, you must go to the Order Center to complete the payments.</p>
+         * <p>This parameter is returned only if ChargeType is set to PREPAY. If AutoPay is set to false, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</p>
          * 
-         * If bills are not automatically paid, you must go to the Order Center to complete the payments.
-         * 
-         * This parameter is returned only if ChargeType is set to PREPAY. If AutoPay is set to false, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.
+         * <strong>example:</strong>
+         * <p>208257****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -82,7 +104,10 @@ public class CreateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenAcceleratorServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenAcceleratorServiceResponseBody</p>
@@ -40,6 +46,10 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
 
     public static OpenAcceleratorServiceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(OpenAcceleratorServiceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +128,10 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208257****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -109,7 +139,10 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B49B60F6-F6C8-49E5-B06B-E33E3A469A92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class OpenAcceleratorServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true:</strong> The call was successful.</li>
+         * <li><strong>false:</strong> The call failed.</li>
+         * </ul>
          * 
-         * *   **true:** The call was successful.
-         * *   **false:** The call failed.
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomRoutingEndpointGroupDestinationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomRoutingEndpointGroupDestinationsRequest</p>
@@ -40,7 +46,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         } 
 
         /**
-         * The ID of the endpoint group mapping configuration.
+         * <p>The ID of the endpoint group mapping configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dst-123abc****</p>
          */
         public Builder destinationId(String destinationId) {
             this.putQueryParameter("DestinationId", destinationId);
@@ -92,7 +102,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1j184jhb9i9ubwf****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -101,7 +114,11 @@ public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends Reque
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

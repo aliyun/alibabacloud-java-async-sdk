@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomRoutingEndpointTrafficPoliciesRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomRoutingEndpointTrafficPoliciesRequest</p>
@@ -23,7 +29,7 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PolicyConfigurations> policyConfigurations;
+    private java.util.List<PolicyConfigurations> policyConfigurations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -46,7 +52,7 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,7 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     /**
      * @return policyConfigurations
      */
-    public java.util.List < PolicyConfigurations> getPolicyConfigurations() {
+    public java.util.List<PolicyConfigurations> getPolicyConfigurations() {
         return this.policyConfigurations;
     }
 
@@ -82,7 +88,7 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateCustomRoutingEndpointTrafficPoliciesRequest, Builder> {
         private String clientToken; 
         private String endpointId; 
-        private java.util.List < PolicyConfigurations> policyConfigurations; 
+        private java.util.List<PolicyConfigurations> policyConfigurations; 
         private String regionId; 
 
         private Builder() {
@@ -98,12 +104,14 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,7 +120,11 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint for which you want to modify the traffic policies.
+         * <p>The ID of the endpoint for which you want to modify the traffic policies.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-2zewuzypq5e6r3pfh****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -121,19 +133,22 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The access policies.
-         * <p>
-         * 
-         * You can specify a maximum of 500 traffic policies for each endpoint.
+         * <p>The access policies.</p>
+         * <p>You can specify a maximum of 500 traffic policies for each endpoint.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder policyConfigurations(java.util.List < PolicyConfigurations> policyConfigurations) {
+        public Builder policyConfigurations(java.util.List<PolicyConfigurations> policyConfigurations) {
             this.putQueryParameter("PolicyConfigurations", policyConfigurations);
             this.policyConfigurations = policyConfigurations;
             return this;
         }
 
         /**
-         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,6 +163,12 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCustomRoutingEndpointTrafficPoliciesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomRoutingEndpointTrafficPoliciesRequest</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
@@ -186,15 +207,22 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port of the destination port range. The value of this parameter must fall within the port range of the backend service.
-             * <p>
+             * <p>The first port of the destination port range. The value of this parameter must fall within the port range of the backend service.</p>
+             * <p>This parameter takes effect only when you set the <strong>TrafficToEndpointPolicy</strong> parameter to <strong>AllowCustom</strong>. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic policy of an endpoint.</p>
+             * <p>If the start port and end port values are empty, traffic on all ports of the destination is allowed.</p>
+             * <p>You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.</p>
              * 
-             * This parameter takes effect only when you set the **TrafficToEndpointPolicy** parameter to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy of an endpoint.
-             * 
-             * If the start port and end port values are empty, traffic on all ports of the destination is allowed.
-             * 
-             * You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -202,14 +230,13 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
             }
 
             /**
-             * The last port of the destination port range. The value of this parameter must fall within the port range of the backend service.
-             * <p>
+             * <p>The last port of the destination port range. The value of this parameter must fall within the port range of the backend service.</p>
+             * <p>This parameter takes effect only when you set the <strong>TrafficToEndpointPolicy</strong> parameter to <strong>AllowCustom</strong>. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic policy of an endpoint.</p>
+             * <p>If the start port and end port values are empty, traffic on all ports of the destination is allowed.</p>
+             * <p>You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.</p>
              * 
-             * This parameter takes effect only when you set the **TrafficToEndpointPolicy** parameter to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy of an endpoint.
-             * 
-             * If the start port and end port values are empty, traffic on all ports of the destination is allowed.
-             * 
-             * You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -223,6 +250,12 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCustomRoutingEndpointTrafficPoliciesRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomRoutingEndpointTrafficPoliciesRequest</p>
+     */
     public static class PolicyConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -231,7 +264,7 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
             this.address = builder.address;
@@ -264,24 +297,34 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
         public static final class Builder {
             private String address; 
             private String policyId; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfigurations model) {
+                this.address = model.address;
+                this.policyId = model.policyId;
+                this.portRanges = model.portRanges;
+            } 
 
             /**
-             * The IP address of the destination which to allow traffic.
-             * <p>
+             * <p>The IP address of the destination which to allow traffic.</p>
+             * <p>This parameter takes effect only when you set the <strong>TrafficToEndpointPolicy</strong> parameter to <strong>AllowCustom</strong>. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic policy of an endpoint.</p>
+             * <p>You can specify a maximum of 500 traffic policies for each endpoint.</p>
+             * <blockquote>
+             * <p> This parameter is required.</p>
+             * </blockquote>
              * 
-             * This parameter takes effect only when you set the **TrafficToEndpointPolicy** parameter to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy of an endpoint.
-             * 
-             * You can specify a maximum of 500 traffic policies for each endpoint.
-             * 
-             * >  This parameter is required.
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -289,10 +332,13 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
             }
 
             /**
-             * The ID of the traffic policy that you want to modify.
-             * <p>
+             * <p>The ID of the traffic policy that you want to modify.</p>
+             * <blockquote>
+             * <p> This parameter is required.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required.
+             * <strong>example:</strong>
+             * <p>ply-bptest2****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -300,16 +346,12 @@ public class UpdateCustomRoutingEndpointTrafficPoliciesRequest extends Request {
             }
 
             /**
-             * The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
-             * <p>
-             * 
-             * If you do not specify object, traffic is forwarded to all ports.
-             * 
-             * This parameter takes effect only when you set the **TrafficToEndpointPolicy** parameter to **AllowCustom**. You can call the [DescribeCustomRoutingEndpoint](~~449386~~) operation to query the traffic policy of an endpoint.
-             * 
-             * You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.
+             * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
+             * <p>If you do not specify object, traffic is forwarded to all ports.</p>
+             * <p>This parameter takes effect only when you set the <strong>TrafficToEndpointPolicy</strong> parameter to <strong>AllowCustom</strong>. You can call the <a href="https://help.aliyun.com/document_detail/449386.html">DescribeCustomRoutingEndpoint</a> operation to query the traffic policy of an endpoint.</p>
+             * <p>You can specify a maximum of 500 port ranges for each endpoint and a maximum of 10 port ranges for each traffic policy.</p>
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }

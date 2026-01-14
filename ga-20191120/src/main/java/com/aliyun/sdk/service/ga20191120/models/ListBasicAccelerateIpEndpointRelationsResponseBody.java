@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBasicAccelerateIpEndpointRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBasicAccelerateIpEndpointRelationsResponseBody</p>
  */
 public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccelerateIpEndpointRelations")
-    private java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations;
+    private java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
@@ -42,10 +48,14 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accelerateIpEndpointRelations
      */
-    public java.util.List < AccelerateIpEndpointRelations> getAccelerateIpEndpointRelations() {
+    public java.util.List<AccelerateIpEndpointRelations> getAccelerateIpEndpointRelations() {
         return this.accelerateIpEndpointRelations;
     }
 
@@ -78,22 +88,36 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
     }
 
     public static final class Builder {
-        private java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations; 
+        private java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations; 
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListBasicAccelerateIpEndpointRelationsResponseBody model) {
+            this.accelerateIpEndpointRelations = model.accelerateIpEndpointRelations;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.
+         * <p>A list of accelerated IP addresses and the endpoints with which the accelerated IP addresses are associated.</p>
          */
-        public Builder accelerateIpEndpointRelations(java.util.List < AccelerateIpEndpointRelations> accelerateIpEndpointRelations) {
+        public Builder accelerateIpEndpointRelations(java.util.List<AccelerateIpEndpointRelations> accelerateIpEndpointRelations) {
             this.accelerateIpEndpointRelations = accelerateIpEndpointRelations;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -101,11 +125,14 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is not returned, it indicates that no additional results exist.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +140,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +151,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +167,12 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link ListBasicAccelerateIpEndpointRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBasicAccelerateIpEndpointRelationsResponseBody</p>
+     */
     public static class AccelerateIpEndpointRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
         private String accelerateIpId;
@@ -280,8 +319,28 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             private String ipAddress; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccelerateIpEndpointRelations model) {
+                this.accelerateIpId = model.accelerateIpId;
+                this.acceleratorId = model.acceleratorId;
+                this.endpointAddress = model.endpointAddress;
+                this.endpointId = model.endpointId;
+                this.endpointName = model.endpointName;
+                this.endpointSubAddress = model.endpointSubAddress;
+                this.endpointSubAddressType = model.endpointSubAddressType;
+                this.endpointType = model.endpointType;
+                this.endpointZoneId = model.endpointZoneId;
+                this.ipAddress = model.ipAddress;
+                this.state = model.state;
+            } 
+
             /**
-             * The ID of the accelerated IP address.
+             * <p>The ID of the accelerated IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gaip-bp1****</p>
              */
             public Builder accelerateIpId(String accelerateIpId) {
                 this.accelerateIpId = accelerateIpId;
@@ -289,7 +348,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the basic GA instance.
+             * <p>The ID of the basic GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1miyl2kn2racucvegr5</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -297,7 +359,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The address of the endpoint.
+             * <p>The address of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp1a05txelswuj8g****</p>
              */
             public Builder endpointAddress(String endpointAddress) {
                 this.endpointAddress = endpointAddress;
@@ -305,7 +370,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the endpoint.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -313,7 +381,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The name of the endpoint.
+             * <p>The name of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep01</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -321,14 +392,16 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The secondary address of the endpoint.
-             * <p>
+             * <p>The secondary address of the endpoint.</p>
+             * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+             * <ul>
+             * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+             * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+             * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+             * </ul>
              * 
-             * This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.
-             * 
-             * *   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.
-             * *   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.
-             * *   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder endpointSubAddress(String endpointSubAddress) {
                 this.endpointSubAddress = endpointSubAddress;
@@ -336,13 +409,15 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The type of the secondary address of the endpoint.
-             * <p>
+             * <p>The type of the secondary address of the endpoint.</p>
+             * <ul>
+             * <li><strong>primary</strong>: a primary private IP address.</li>
+             * <li><strong>secondary</strong>: a secondary private IP address.</li>
+             * </ul>
+             * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is set to <strong>NLB</strong>, <strong>primary</strong> is returned.</p>
              * 
-             * *   **primary**: a primary private IP address.
-             * *   **secondary**: a secondary private IP address.
-             * 
-             * This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder endpointSubAddressType(String endpointSubAddressType) {
                 this.endpointSubAddressType = endpointSubAddressType;
@@ -350,13 +425,16 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The type of endpoint. Valid values:
-             * <p>
+             * <p>The type of endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+             * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+             * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance.</li>
+             * </ul>
              * 
-             * *   **ENI**: elastic network interface (ENI).
-             * *   **SLB**: Classic Load Balancer (CLB) instance.
-             * *   **ECS**: Elastic Compute Service (ECS) instance.
-             * *   **NLB**: Network Load Balancer (NLB) instance.
+             * <strong>example:</strong>
+             * <p>NLB</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -364,10 +442,11 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the zone where the endpoint is created.
-             * <p>
+             * <p>The ID of the zone where the endpoint is created.</p>
+             * <p>This parameter is returned only when the endpoint type is <strong>NLB</strong>.</p>
              * 
-             * This parameter is returned only when the endpoint type is **NLB**.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder endpointZoneId(String endpointZoneId) {
                 this.endpointZoneId = endpointZoneId;
@@ -375,7 +454,10 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The accelerated IP address of the basic GA instance.
+             * <p>The accelerated IP address of the basic GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.132.XX.XX</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -383,10 +465,11 @@ public class ListBasicAccelerateIpEndpointRelationsResponseBody extends TeaModel
             }
 
             /**
-             * The association status between the accelerated IP address and endpoint.
-             * <p>
+             * <p>The association status between the accelerated IP address and endpoint.</p>
+             * <p>A value of <strong>active</strong> indicates that the accelerated IP address is associated with the endpoint.</p>
              * 
-             * A value of **active** indicates that the accelerated IP address is associated with the endpoint.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBandwidthPackagesRequest} extends {@link RequestModel}
  *
  * <p>ListBandwidthPackagesRequest</p>
@@ -39,7 +45,7 @@ public class ListBandwidthPackagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -65,7 +71,7 @@ public class ListBandwidthPackagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +121,7 @@ public class ListBandwidthPackagesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -133,7 +139,7 @@ public class ListBandwidthPackagesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String state; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -153,7 +159,10 @@ public class ListBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The ID of the bandwidth plan.
+         * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -162,7 +171,10 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +183,10 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **100**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +195,11 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -189,7 +208,10 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ry6mp2c****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -198,17 +220,20 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The status of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The status of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The bandwidth plan is being initialized.</li>
+         * <li><strong>active</strong>: The bandwidth plan is available.</li>
+         * <li><strong>binded</strong>: The bandwidth plan is associated.</li>
+         * <li><strong>binding</strong>: The bandwidth plan is being associated.</li>
+         * <li><strong>unbinding</strong>: The bandwidth plan is being disassociated.</li>
+         * <li><strong>updating</strong>: The bandwidth plan is being updated.</li>
+         * <li><strong>finacialLocked</strong>: The bandwidth plan is locked due to overdue payments.</li>
+         * <li><strong>locked</strong>: The bandwidth plan is locked.</li>
+         * </ul>
          * 
-         * *   **init**: The bandwidth plan is being initialized.
-         * *   **active**: The bandwidth plan is available.
-         * *   **binded**: The bandwidth plan is associated.
-         * *   **binding**: The bandwidth plan is being associated.
-         * *   **unbinding**: The bandwidth plan is being disassociated.
-         * *   **updating**: The bandwidth plan is being updated.
-         * *   **finacialLocked**: The bandwidth plan is locked due to overdue payments.
-         * *   **locked**: The bandwidth plan is locked.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -217,22 +242,24 @@ public class ListBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The tag of the bandwidth plan.
+         * <p>The tag of the bandwidth plan.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The type of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The type of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+         * <li><strong>CrossDomain</strong>: a cross-border acceleration bandwidth plan</li>
+         * </ul>
+         * <p>If you call this operation on the China site (aliyun.com), you can set Type only to <strong>Basic</strong>.</p>
          * 
-         * *   **Basic**: a basic bandwidth plan
-         * *   **CrossDomain**: a cross-border acceleration bandwidth plan
-         * 
-         * If you call this operation on the China site (aliyun.com), you can set Type only to **Basic**.
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -247,6 +274,12 @@ public class ListBandwidthPackagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListBandwidthPackagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListBandwidthPackagesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -285,13 +318,21 @@ public class ListBandwidthPackagesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the bandwidth plan. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key of the bandwidth plan. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag keys.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag keys.
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,12 +340,12 @@ public class ListBandwidthPackagesRequest extends Request {
             }
 
             /**
-             * The tag value of the bandwidth plan. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value of the bandwidth plan. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag values.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag values.
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

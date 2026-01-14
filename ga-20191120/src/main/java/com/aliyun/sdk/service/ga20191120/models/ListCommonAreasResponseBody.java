@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCommonAreasResponseBody} extends {@link TeaModel}
  *
  * <p>ListCommonAreasResponseBody</p>
  */
 public class ListCommonAreasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Areas")
-    private java.util.List < Areas> areas;
+    private java.util.List<Areas> areas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListCommonAreasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return areas
      */
-    public java.util.List < Areas> getAreas() {
+    public java.util.List<Areas> getAreas() {
         return this.areas;
     }
 
@@ -45,19 +55,30 @@ public class ListCommonAreasResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Areas> areas; 
+        private java.util.List<Areas> areas; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCommonAreasResponseBody model) {
+            this.areas = model.areas;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the areas.
+         * <p>The information about the areas.</p>
          */
-        public Builder areas(java.util.List < Areas> areas) {
+        public Builder areas(java.util.List<Areas> areas) {
             this.areas = areas;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListCommonAreasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCommonAreasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommonAreasResponseBody</p>
+     */
     public static class RegionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -108,8 +135,19 @@ public class ListCommonAreasResponseBody extends TeaModel {
             private String localName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionList model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * The region name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Qingdao)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +155,10 @@ public class ListCommonAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -131,6 +172,12 @@ public class ListCommonAreasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCommonAreasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCommonAreasResponseBody</p>
+     */
     public static class Areas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
@@ -139,7 +186,7 @@ public class ListCommonAreasResponseBody extends TeaModel {
         private String localName;
 
         @com.aliyun.core.annotation.NameInMap("RegionList")
-        private java.util.List < RegionList> regionList;
+        private java.util.List<RegionList> regionList;
 
         private Areas(Builder builder) {
             this.areaId = builder.areaId;
@@ -172,17 +219,29 @@ public class ListCommonAreasResponseBody extends TeaModel {
         /**
          * @return regionList
          */
-        public java.util.List < RegionList> getRegionList() {
+        public java.util.List<RegionList> getRegionList() {
             return this.regionList;
         }
 
         public static final class Builder {
             private String areaId; 
             private String localName; 
-            private java.util.List < RegionList> regionList; 
+            private java.util.List<RegionList> regionList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Areas model) {
+                this.areaId = model.areaId;
+                this.localName = model.localName;
+                this.regionList = model.regionList;
+            } 
 
             /**
-             * The area ID.
+             * <p>The area ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huabei</p>
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -190,7 +249,10 @@ public class ListCommonAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The area name.
+             * <p>The area name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>North China</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -198,9 +260,9 @@ public class ListCommonAreasResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the regions.
+             * <p>The information about the regions.</p>
              */
-            public Builder regionList(java.util.List < RegionList> regionList) {
+            public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;
                 return this;
             }

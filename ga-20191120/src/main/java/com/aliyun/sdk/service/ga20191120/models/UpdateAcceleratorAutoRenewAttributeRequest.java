@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAcceleratorAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateAcceleratorAutoRenewAttributeRequest</p>
@@ -59,7 +65,7 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +144,11 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -147,13 +157,17 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the GA instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> <strong>AutoRenew</strong> and <strong>RenewalStatus</strong> cannot be left empty at the same time.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false** (default)
-         * 
-         * >  **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -162,12 +176,14 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. Unit: month.
-         * <p>
+         * <p>The auto-renewal duration. Unit: month.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>12</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>AutoRenew</strong> to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **12**.
-         * 
-         * >  This parameter takes effect only if you set **AutoRenew** to **true**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -176,12 +192,14 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -190,10 +208,11 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The name of the GA instance.
-         * <p>
+         * <p>The name of the GA instance.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +221,10 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -211,18 +233,23 @@ public class UpdateAcceleratorAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies how to renew the GA instance. Valid values:
-         * <p>
+         * <p>Specifies how to renew the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoRenewal</strong>: The system automatically renews the GA instance.</li>
+         * <li><strong>Normal</strong>: You must manually renew the GA instance.</li>
+         * <li><strong>NotRenewal</strong>: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to <strong>Normal</strong>, and then manually renew the instance. You can also set RenewalStatus to <strong>AutoRenewal</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>AutoRenew</strong> and <strong>RenewalStatus</strong> cannot be left empty at the same time.</p>
+         * </li>
+         * <li><p><strong>RenewalStatus</strong> takes precedence over <strong>AutoRenew</strong>. By default, if you do not specify <strong>RenewalStatus</strong>, <strong>AutoRenew</strong> is used.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **AutoRenewal**: The system automatically renews the GA instance.
-         * *   **Normal**: You must manually renew the GA instance.
-         * *   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to **Normal**, and then manually renew the instance. You can also set RenewalStatus to **AutoRenewal**.
-         * 
-         * > 
-         * 
-         * *   **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.
-         * 
-         * *   **RenewalStatus** takes precedence over **AutoRenew**. By default, if you do not specify **RenewalStatus**, **AutoRenew** is used.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

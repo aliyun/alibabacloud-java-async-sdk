@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommodityPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommodityPriceRequest</p>
@@ -14,7 +20,7 @@ public class DescribeCommodityPriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Orders")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Orders> orders;
+    private java.util.List<Orders> orders;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
@@ -40,7 +46,7 @@ public class DescribeCommodityPriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -48,7 +54,7 @@ public class DescribeCommodityPriceRequest extends Request {
     /**
      * @return orders
      */
-    public java.util.List < Orders> getOrders() {
+    public java.util.List<Orders> getOrders() {
         return this.orders;
     }
 
@@ -67,7 +73,7 @@ public class DescribeCommodityPriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCommodityPriceRequest, Builder> {
-        private java.util.List < Orders> orders; 
+        private java.util.List<Orders> orders; 
         private String promotionOptionNo; 
         private String regionId; 
 
@@ -83,19 +89,23 @@ public class DescribeCommodityPriceRequest extends Request {
         } 
 
         /**
-         * The commodity orders.
+         * <p>The commodity orders.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder orders(java.util.List < Orders> orders) {
+        public Builder orders(java.util.List<Orders> orders) {
             this.putQueryParameter("Orders", orders);
             this.orders = orders;
             return this;
         }
 
         /**
-         * The coupon code.
-         * <p>
+         * <p>The coupon code.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable on the China site (aliyun.com).</p>
+         * </blockquote>
          * 
-         * >  This parameter is unavailable on the China site (aliyun.com).
+         * <strong>example:</strong>
+         * <p>50003298014****</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -104,7 +114,11 @@ public class DescribeCommodityPriceRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,6 +133,12 @@ public class DescribeCommodityPriceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommodityPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceRequest</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -157,11 +177,20 @@ public class DescribeCommodityPriceRequest extends Request {
             private String code; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.code = model.code;
+                this.value = model.value;
+            } 
+
             /**
-             * The code of the attribute of the commodity module.
-             * <p>
+             * <p>The code of the attribute of the commodity module.</p>
+             * <p>The information varies based on the commodity module. Examples: <strong>instance</strong> (GA instance) and <strong>ord_time</strong> (subscription duration).</p>
              * 
-             * The information varies based on the commodity module. Examples: **instance** (GA instance) and **ord_time** (subscription duration).
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -169,10 +198,11 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The value of the attribute.
-             * <p>
+             * <p>The value of the attribute.</p>
+             * <p>The information varies based on the commodity module. Examples: <strong>instance_fee</strong> (GA instance fee) and <strong>1:Month</strong> (one-month subscription).</p>
              * 
-             * The information varies based on the commodity module. Examples: **instance_fee** (GA instance fee) and **1:Month** (one-month subscription).
+             * <strong>example:</strong>
+             * <p>instance_fee</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -186,12 +216,18 @@ public class DescribeCommodityPriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceRequest</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
-        private java.util.List < Properties> properties;
+        private java.util.List<Properties> properties;
 
         private Components(Builder builder) {
             this.componentCode = builder.componentCode;
@@ -216,19 +252,28 @@ public class DescribeCommodityPriceRequest extends Request {
         /**
          * @return properties
          */
-        public java.util.List < Properties> getProperties() {
+        public java.util.List<Properties> getProperties() {
             return this.properties;
         }
 
         public static final class Builder {
             private String componentCode; 
-            private java.util.List < Properties> properties; 
+            private java.util.List<Properties> properties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentCode = model.componentCode;
+                this.properties = model.properties;
+            } 
 
             /**
-             * The code of the commodity module.
-             * <p>
+             * <p>The code of the commodity module.</p>
+             * <p>The information varies based on the commodity module. Examples: <strong>instance</strong> (GA instance) and <strong>ord_time</strong> (subscription duration).</p>
              * 
-             * The information varies based on the commodity module. Examples: **instance** (GA instance) and **ord_time** (subscription duration).
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -236,12 +281,10 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The attributes of commodity modules.
-             * <p>
-             * 
-             * The information varies based on the commodity module.
+             * <p>The attributes of commodity modules.</p>
+             * <p>The information varies based on the commodity module.</p>
              */
-            public Builder properties(java.util.List < Properties> properties) {
+            public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -253,6 +296,12 @@ public class DescribeCommodityPriceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityPriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityPriceRequest</p>
+     */
     public static class Orders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -261,7 +310,7 @@ public class DescribeCommodityPriceRequest extends Request {
         private String commodityCode;
 
         @com.aliyun.core.annotation.NameInMap("Components")
-        private java.util.List < Components> components;
+        private java.util.List<Components> components;
 
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -310,7 +359,7 @@ public class DescribeCommodityPriceRequest extends Request {
         /**
          * @return components
          */
-        public java.util.List < Components> getComponents() {
+        public java.util.List<Components> getComponents() {
             return this.components;
         }
 
@@ -345,14 +394,30 @@ public class DescribeCommodityPriceRequest extends Request {
         public static final class Builder {
             private String chargeType; 
             private String commodityCode; 
-            private java.util.List < Components> components; 
+            private java.util.List<Components> components; 
             private Long duration; 
             private String orderType; 
             private String pricingCycle; 
             private Long quantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Orders model) {
+                this.chargeType = model.chargeType;
+                this.commodityCode = model.commodityCode;
+                this.components = model.components;
+                this.duration = model.duration;
+                this.orderType = model.orderType;
+                this.pricingCycle = model.pricingCycle;
+                this.quantity = model.quantity;
+            } 
+
             /**
-             * The billing method. Set the value to **PREPAY**, which specifies the subscription billing method.
+             * <p>The billing method. Set the value to <strong>PREPAY</strong>, which specifies the subscription billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -360,18 +425,20 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The commodity code.
-             * <p>
+             * <p>The commodity code.</p>
+             * <p>Valid values on the China site (aliyun.com):</p>
+             * <ul>
+             * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
+             * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+             * </ul>
+             * <p>Valid values on the international site (alibabacloud.com):</p>
+             * <ul>
+             * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
+             * <li><strong>ga_bwppreintl_public_intl:</strong> basic bandwidth plan.</li>
+             * </ul>
              * 
-             * Valid values on the China site (aliyun.com):
-             * 
-             * *   **ga_gapluspre_public_cn**: GA instance.
-             * *   **ga_plusbwppre_public_cn**: basic bandwidth plan.
-             * 
-             * Valid values on the international site (alibabacloud.com):
-             * 
-             * *   **ga_pluspre_public_intl**: GA instance.
-             * *   **ga_bwppreintl_public_intl:** basic bandwidth plan.
+             * <strong>example:</strong>
+             * <p>ga_gapluspre_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -379,22 +446,23 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The information about commodity modules.
-             * <p>
-             * 
-             * The information varies based on the commodity module.
+             * <p>The information about commodity modules.</p>
+             * <p>The information varies based on the commodity module.</p>
              */
-            public Builder components(java.util.List < Components> components) {
+            public Builder components(java.util.List<Components> components) {
                 this.components = components;
                 return this;
             }
 
             /**
-             * The subscription duration.
-             * <p>
+             * <p>The subscription duration.</p>
+             * <ul>
+             * <li>Valid values if you set <strong>PricingCycle</strong> to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.</li>
+             * <li>Valid values if you set <strong>PricingCycle</strong> to <strong>Year</strong>: <strong>1</strong> to <strong>3</strong>.</li>
+             * </ul>
              * 
-             * *   Valid values if you set **PricingCycle** to **Month**: **1** to **9**.
-             * *   Valid values if you set **PricingCycle** to **Year**: **1** to **3**.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -402,12 +470,15 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The type of the order. Valid values:
-             * <p>
+             * <p>The type of the order. Valid values:</p>
+             * <ul>
+             * <li><strong>BUY</strong>: purchase order.</li>
+             * <li><strong>RENEW</strong>: renewal order.</li>
+             * <li><strong>UPGRADE</strong>: upgrade order.</li>
+             * </ul>
              * 
-             * *   **BUY**: purchase order.
-             * *   **RENEW**: renewal order.
-             * *   **UPGRADE**: upgrade order.
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -415,11 +486,14 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The billing cycle. Valid values:
-             * <p>
+             * <p>The billing cycle. Valid values:</p>
+             * <ul>
+             * <li><strong>Month</strong></li>
+             * <li><strong>Year</strong></li>
+             * </ul>
              * 
-             * *   **Month**
-             * *   **Year**
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder pricingCycle(String pricingCycle) {
                 this.pricingCycle = pricingCycle;
@@ -427,7 +501,10 @@ public class DescribeCommodityPriceRequest extends Request {
             }
 
             /**
-             * The number of instances that you want to purchase.
+             * <p>The number of instances that you want to purchase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantity(Long quantity) {
                 this.quantity = quantity;

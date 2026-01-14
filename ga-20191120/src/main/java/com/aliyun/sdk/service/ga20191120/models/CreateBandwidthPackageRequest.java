@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBandwidthPackageRequest} extends {@link RequestModel}
  *
  * <p>CreateBandwidthPackageRequest</p>
@@ -84,7 +90,7 @@ public class CreateBandwidthPackageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -122,7 +128,7 @@ public class CreateBandwidthPackageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -249,7 +255,7 @@ public class CreateBandwidthPackageRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -278,7 +284,7 @@ public class CreateBandwidthPackageRequest extends Request {
         private Integer ratio; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -309,11 +315,14 @@ public class CreateBandwidthPackageRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+         * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+         * </ul>
          * 
-         * *   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.
-         * *   **true**: enables automatic payment. Payments are automatically completed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -322,11 +331,14 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong> (default): does not enable auto-renewal.</li>
+         * </ul>
          * 
-         * *   **true**: enables auto-renewal.
-         * *   **false** (default): does not enable auto-renewal.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -335,12 +347,14 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. Unit: months.
-         * <p>
+         * <p>The auto-renewal duration. Unit: months.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **12**. Default value: **1**.
-         * 
-         * >  This parameter is required only if **AutoRenew** is set to **true**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewDuration(Integer autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -349,13 +363,17 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically pay bills by using coupons. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically pay bills by using coupons. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
-         * 
-         * >  This parameter is required only if **AutoPay** is set to **true**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -364,10 +382,12 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The bandwidth of the bandwidth plan. Unit: Mbit/s.
-         * <p>
+         * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **2** to **2000**.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -376,14 +396,16 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The type of the bandwidth. Valid values:
-         * <p>
+         * <p>The type of the bandwidth. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: standard bandwidth</li>
+         * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
+         * <li><strong>Advanced</strong>: premium bandwidth</li>
+         * </ul>
+         * <p>If <strong>Type</strong> is set to <strong>Basic</strong>, this parameter is required.</p>
          * 
-         * *   **Basic**: standard bandwidth
-         * *   **Enhanced**: enhanced bandwidth
-         * *   **Advanced**: premium bandwidth
-         * 
-         * If **Type** is set to **Basic**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder bandwidthType(String bandwidthType) {
             this.putQueryParameter("BandwidthType", bandwidthType);
@@ -392,13 +414,17 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The metering method that is used when you use the pay-as-you-go billing method. Valid values:
-         * <p>
+         * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PayByTraffic</strong> (default)</li>
+         * <li><strong>PayBY95</strong> By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>ChargeType</strong> to <strong>POSTPAY</strong>.</p>
+         * </blockquote>
          * 
-         * *   **PayByTraffic** (default)
-         * *   **PayBY95** By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.
-         * 
-         * >  This parameter takes effect only if you set **ChargeType** to **POSTPAY**.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder billingType(String billingType) {
             this.putQueryParameter("BillingType", billingType);
@@ -407,10 +433,11 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Area A to be connected. Set the value to **China-mainland**.
-         * <p>
+         * <p>Area A to be connected. Set the value to <strong>China-mainland</strong>.</p>
+         * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
          * 
-         * You can set this parameter only if you call this operation on the international site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>China-mainland</p>
          */
         public Builder cbnGeographicRegionIdA(String cbnGeographicRegionIdA) {
             this.putQueryParameter("CbnGeographicRegionIdA", cbnGeographicRegionIdA);
@@ -419,10 +446,11 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * Area B to be connected. Set the value to **Global**.
-         * <p>
+         * <p>Area B to be connected. Set the value to <strong>Global</strong>.</p>
+         * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
          * 
-         * You can set this parameter only if you call this operation on the international site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>Global</p>
          */
         public Builder cbnGeographicRegionIdB(String cbnGeographicRegionIdB) {
             this.putQueryParameter("CbnGeographicRegionIdB", cbnGeographicRegionIdB);
@@ -431,11 +459,14 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing method of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The billing method of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>PREPAY</strong> (default): subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</li>
+         * </ul>
          * 
-         * *   **PREPAY** (default): subscription.
-         * *   **POSTPAY**: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -444,12 +475,14 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -458,13 +491,15 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
          * 
-         * *   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.
-         * *   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.
-         * 
-         * If **ChargeType** is set to **PREPAY**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -473,13 +508,15 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The billing cycle. Valid values:
-         * <p>
+         * <p>The billing cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: billed on a monthly basis.</li>
+         * <li><strong>Year</strong>: billed on an annual basis.</li>
+         * </ul>
+         * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
          * 
-         * *   **Month**: billed on a monthly basis.
-         * *   **Year**: billed on an annual basis.
-         * 
-         * If **ChargeType** is set to **PREPAY**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -488,10 +525,13 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The coupon code.
-         * <p>
+         * <p>The coupon code.</p>
+         * <blockquote>
+         * <p> This parameter is only available on the international site (alibabacloud.com).</p>
+         * </blockquote>
          * 
-         * >  This parameter is only available on the international site (alibabacloud.com).
+         * <strong>example:</strong>
+         * <p>50003298014****</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -500,10 +540,13 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.
-         * <p>
+         * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>BillingType</strong> is set to <strong>PayBY95</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only if **BillingType** is set to **PayBY95**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ratio(Integer ratio) {
             this.putQueryParameter("Ratio", ratio);
@@ -512,7 +555,11 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.
+         * <p>The ID of the region where the GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -521,7 +568,10 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzrnd67gq****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -530,22 +580,25 @@ public class CreateBandwidthPackageRequest extends Request {
         }
 
         /**
-         * The tags to add to the bandwidth plan.
+         * <p>The tags to add to the bandwidth plan.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The type of the bandwidth plan. Valid values:
-         * <p>
+         * <p>The type of the bandwidth plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+         * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+         * </ul>
+         * <p>If you call this operation on the Alibaba Cloud China site, only <strong>Basic</strong> is supported.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Basic**: a basic bandwidth plan
-         * *   **CrossDomain**: a cross-region acceleration bandwidth plan
-         * 
-         * If you call this operation on the Alibaba Cloud China site, only **Basic** is supported.
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -560,6 +613,12 @@ public class CreateBandwidthPackageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBandwidthPackageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBandwidthPackageRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -598,13 +657,21 @@ public class CreateBandwidthPackageRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
              * 
-             * The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most 20 tag keys.
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -612,12 +679,12 @@ public class CreateBandwidthPackageRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <p>Each tag key corresponds to a tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+             * <p>The value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.
-             * 
-             * The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

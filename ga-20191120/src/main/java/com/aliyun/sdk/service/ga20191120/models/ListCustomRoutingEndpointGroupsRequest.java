@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingEndpointGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListCustomRoutingEndpointGroupsRequest</p>
@@ -61,7 +67,7 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +146,11 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -149,12 +159,12 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether the access log feature is enabled.
-         * <p>
+         * <p>Specifies whether the access log feature is enabled.</p>
+         * <p>You can set the parameter to <strong>on</strong>.</p>
+         * <p>If you leave the parameter empty, all endpoint groups are returned.</p>
          * 
-         * You can set the parameter to **on**.
-         * 
-         * If you leave the parameter empty, all endpoint groups are returned.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
@@ -163,7 +173,10 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp14sz7ftcwwjgrdm****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -172,7 +185,10 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the custom routing listener.
+         * <p>The ID of the custom routing listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -181,7 +197,10 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +209,10 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +221,11 @@ public class ListCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

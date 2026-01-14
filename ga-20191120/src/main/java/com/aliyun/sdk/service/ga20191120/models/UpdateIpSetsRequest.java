@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIpSetsRequest} extends {@link RequestModel}
  *
  * <p>UpdateIpSetsRequest</p>
@@ -14,7 +20,7 @@ public class UpdateIpSetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpSets")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < IpSets> ipSets;
+    private java.util.List<IpSets> ipSets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -35,7 +41,7 @@ public class UpdateIpSetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -43,7 +49,7 @@ public class UpdateIpSetsRequest extends Request {
     /**
      * @return ipSets
      */
-    public java.util.List < IpSets> getIpSets() {
+    public java.util.List<IpSets> getIpSets() {
         return this.ipSets;
     }
 
@@ -55,7 +61,7 @@ public class UpdateIpSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateIpSetsRequest, Builder> {
-        private java.util.List < IpSets> ipSets; 
+        private java.util.List<IpSets> ipSets; 
         private String regionId; 
 
         private Builder() {
@@ -69,16 +75,21 @@ public class UpdateIpSetsRequest extends Request {
         } 
 
         /**
-         * The acceleration regions.
+         * <p>The acceleration regions.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder ipSets(java.util.List < IpSets> ipSets) {
+        public Builder ipSets(java.util.List<IpSets> ipSets) {
             this.putQueryParameter("IpSets", ipSets);
             this.ipSets = ipSets;
             return this;
         }
 
         /**
-         * The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -93,6 +104,12 @@ public class UpdateIpSetsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateIpSetsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateIpSetsRequest</p>
+     */
     public static class IpSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -133,11 +150,21 @@ public class UpdateIpSetsRequest extends Request {
             private Integer bandwidth; 
             private String ipSetId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpSets model) {
+                this.bandwidth = model.bandwidth;
+                this.ipSetId = model.ipSetId;
+            } 
+
             /**
-             * The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.
-             * <p>
+             * <p>The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.</p>
+             * <p>You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -145,10 +172,12 @@ public class UpdateIpSetsRequest extends Request {
             }
 
             /**
-             * The IDs of the acceleration regions that you want to modify.
-             * <p>
+             * <p>The IDs of the acceleration regions that you want to modify.</p>
+             * <p>You can specify the IDs of up to 100 acceleration regions.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can specify the IDs of up to 100 acceleration regions.
+             * <strong>example:</strong>
+             * <p>ips-bp11c9mpphtb1xkds****</p>
              */
             public Builder ipSetId(String ipSetId) {
                 this.ipSetId = ipSetId;

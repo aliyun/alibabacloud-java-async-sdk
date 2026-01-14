@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceManagedControlRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceManagedControlRequest</p>
@@ -51,7 +57,7 @@ public class UpdateServiceManagedControlRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,12 +118,14 @@ public class UpdateServiceManagedControlRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,7 +134,11 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to cn-hangzhou.
+         * <p>The region ID of the GA instance. Set the value to cn-hangzhou.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,7 +147,11 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The ID of the resource whose control mode you want to change.
+         * <p>The ID of the resource whose control mode you want to change.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp149u6o36qt1as9b****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -144,10 +160,12 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The type of the resource whose control mode you want to change.
-         * <p>
+         * <p>The type of the resource whose control mode you want to change.</p>
+         * <p>Set the value to <strong>Accelerator</strong>, which specifies a standard GA instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Set the value to **Accelerator**, which specifies a standard GA instance.
+         * <strong>example:</strong>
+         * <p>Accelerator</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -156,12 +174,14 @@ public class UpdateServiceManagedControlRequest extends Request {
         }
 
         /**
-         * The control mode of the resource.
-         * <p>
+         * <p>The control mode of the resource.</p>
+         * <p>Set the value to <strong>false</strong>, which changes the control mode of the resource from managed mode to unmanaged mode.</p>
+         * <blockquote>
+         * <p> You can change the control mode only from managed mode to unmanaged mode.</p>
+         * </blockquote>
          * 
-         * Set the value to **false**, which changes the control mode of the resource from managed mode to unmanaged mode.
-         * 
-         * >  You can change the control mode only from managed mode to unmanaged mode.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);

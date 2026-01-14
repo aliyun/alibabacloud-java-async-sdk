@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAcceleratorsRequest} extends {@link RequestModel}
  *
  * <p>ListAcceleratorsRequest</p>
@@ -26,6 +32,7 @@ public class ListAcceleratorsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
@@ -39,7 +46,7 @@ public class ListAcceleratorsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListAcceleratorsRequest(Builder builder) {
         super(builder);
@@ -60,7 +67,7 @@ public class ListAcceleratorsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +117,7 @@ public class ListAcceleratorsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -121,7 +128,7 @@ public class ListAcceleratorsRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String state; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -139,7 +146,10 @@ public class ListAcceleratorsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -148,7 +158,10 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +170,10 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,7 +182,11 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +195,10 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekztkx4zwc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -184,16 +207,19 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The status of the GA instance. Valid values:
-         * <p>
+         * <p>The status of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The GA instance is being initialized.</li>
+         * <li><strong>active</strong>: The GA instance is available.</li>
+         * <li><strong>configuring</strong>: The GA instance is being configured.</li>
+         * <li><strong>binding</strong>: The GA instance is being associated.</li>
+         * <li><strong>unbinding</strong>: The GA instance is being disassociated.</li>
+         * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+         * <li><strong>finacialLocked</strong>: The GA instance is locked due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **init**: The GA instance is being initialized.
-         * *   **active**: The GA instance is available.
-         * *   **configuring**: The GA instance is being configured.
-         * *   **binding**: The GA instance is being associated.
-         * *   **unbinding**: The GA instance is being disassociated.
-         * *   **deleting**: The GA instance is being deleted.
-         * *   **finacialLocked**: The GA instance is locked due to overdue payments.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -202,9 +228,9 @@ public class ListAcceleratorsRequest extends Request {
         }
 
         /**
-         * The tags of the GA instance.
+         * <p>The tags of the GA instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -217,6 +243,12 @@ public class ListAcceleratorsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListAcceleratorsRequest} extends {@link TeaModel}
+     *
+     * <p>ListAcceleratorsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -255,13 +287,21 @@ public class ListAcceleratorsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the GA resource. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key of the GA resource. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag keys.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag keys.
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -269,12 +309,12 @@ public class ListAcceleratorsRequest extends Request {
             }
 
             /**
-             * The tag value of the GA resource. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag values.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag values.
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

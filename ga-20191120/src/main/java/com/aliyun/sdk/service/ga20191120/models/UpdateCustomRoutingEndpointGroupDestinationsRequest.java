@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomRoutingEndpointGroupDestinationsRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomRoutingEndpointGroupDestinationsRequest</p>
@@ -18,7 +24,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationConfigurations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DestinationConfigurations> destinationConfigurations;
+    private java.util.List<DestinationConfigurations> destinationConfigurations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -51,7 +57,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,7 +72,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
     /**
      * @return destinationConfigurations
      */
-    public java.util.List < DestinationConfigurations> getDestinationConfigurations() {
+    public java.util.List<DestinationConfigurations> getDestinationConfigurations() {
         return this.destinationConfigurations;
     }
 
@@ -93,7 +99,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
 
     public static final class Builder extends Request.Builder<UpdateCustomRoutingEndpointGroupDestinationsRequest, Builder> {
         private String clientToken; 
-        private java.util.List < DestinationConfigurations> destinationConfigurations; 
+        private java.util.List<DestinationConfigurations> destinationConfigurations; 
         private Boolean dryRun; 
         private String endpointGroupId; 
         private String regionId; 
@@ -112,12 +118,14 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * > If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -126,25 +134,26 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         }
 
         /**
-         * The mapping configurations of endpoint group.
-         * <p>
-         * 
-         * You must specify the backend service port range and protocol of the endpoint group. The specified information is used to map the port range of the associated listener.
-         * 
-         * You can specify at most 20 mapping configurations, which include port ranges and protocol types.
+         * <p>The mapping configurations of endpoint group.</p>
+         * <p>You must specify the backend service port range and protocol of the endpoint group. The specified information is used to map the port range of the associated listener.</p>
+         * <p>You can specify at most 20 mapping configurations, which include port ranges and protocol types.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder destinationConfigurations(java.util.List < DestinationConfigurations> destinationConfigurations) {
+        public Builder destinationConfigurations(java.util.List<DestinationConfigurations> destinationConfigurations) {
             this.putQueryParameter("DestinationConfigurations", destinationConfigurations);
             this.destinationConfigurations = destinationConfigurations;
             return this;
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -153,7 +162,11 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -162,7 +175,11 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,6 +194,12 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCustomRoutingEndpointGroupDestinationsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomRoutingEndpointGroupDestinationsRequest</p>
+     */
     public static class DestinationConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -186,7 +209,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         private Integer fromPort;
 
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < String > protocols;
+        private java.util.List<String> protocols;
 
         @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
@@ -223,7 +246,7 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         /**
          * @return protocols
          */
-        public java.util.List < String > getProtocols() {
+        public java.util.List<String> getProtocols() {
             return this.protocols;
         }
 
@@ -237,11 +260,25 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
         public static final class Builder {
             private String destinationId; 
             private Integer fromPort; 
-            private java.util.List < String > protocols; 
+            private java.util.List<String> protocols; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationConfigurations model) {
+                this.destinationId = model.destinationId;
+                this.fromPort = model.fromPort;
+                this.protocols = model.protocols;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The ID of the mapping configuration of the endpoint group.
+             * <p>The ID of the mapping configuration of the endpoint group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst-abc123****</p>
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -249,12 +286,12 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
             }
 
             /**
-             * The start port of the backend service port range of the endpoint group.
-             * <p>
+             * <p>The start port of the backend service port range of the endpoint group.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+             * <p>You can specify up to 20 start ports in each request.</p>
              * 
-             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
-             * 
-             * You can specify up to 20 start ports in each request.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -262,27 +299,26 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
             }
 
             /**
-             * The backend service protocol of the endpoint group. Valid values:
-             * <p>
-             * 
-             * *   **tcp**: TCP
-             * *   **udp**: UDP
-             * *   **tcp,udp**: TCP and UDP
-             * 
-             * You can specify up to four backend service protocols in each configuration.
+             * <p>The backend service protocol of the endpoint group. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong>: TCP</li>
+             * <li><strong>udp</strong>: UDP</li>
+             * <li><strong>tcp,udp</strong>: TCP and UDP</li>
+             * </ul>
+             * <p>You can specify up to four backend service protocols in each configuration.</p>
              */
-            public Builder protocols(java.util.List < String > protocols) {
+            public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
                 return this;
             }
 
             /**
-             * The end port of the backend service port range of the endpoint group.
-             * <p>
+             * <p>The end port of the backend service port range of the endpoint group.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+             * <p>You can specify up to 20 end ports in each request.</p>
              * 
-             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
-             * 
-             * You can specify up to 20 end ports in each request.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;

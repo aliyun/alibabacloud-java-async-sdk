@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomRoutingEndPointTrafficPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomRoutingEndPointTrafficPolicyRequest</p>
@@ -40,7 +46,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the traffic policy to be queried.
+         * <p>The ID of the traffic policy to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp1d2utp8qqe2a44t****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -92,7 +101,11 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ply-bptest2****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -101,7 +114,11 @@ public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeCustomRoutingEndPointTrafficPolicy**.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeCustomRoutingEndPointTrafficPolicy</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

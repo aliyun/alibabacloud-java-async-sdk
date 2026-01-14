@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingEndpointGroupDestinationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomRoutingEndpointGroupDestinationsResponseBody</p>
  */
 public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Destinations")
-    private java.util.List < Destinations> destinations;
+    private java.util.List<Destinations> destinations;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return destinations
      */
-    public java.util.List < Destinations> getDestinations() {
+    public java.util.List<Destinations> getDestinations() {
         return this.destinations;
     }
 
@@ -78,22 +88,36 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
     }
 
     public static final class Builder {
-        private java.util.List < Destinations> destinations; 
+        private java.util.List<Destinations> destinations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCustomRoutingEndpointGroupDestinationsResponseBody model) {
+            this.destinations = model.destinations;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The details about the endpoint group mappings.
+         * <p>The details about the endpoint group mappings.</p>
          */
-        public Builder destinations(java.util.List < Destinations> destinations) {
+        public Builder destinations(java.util.List<Destinations> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomRoutingEndpointGroupDestinationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingEndpointGroupDestinationsResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -180,16 +219,28 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * Managed policy action name, Valid values:
-             * <p>
+             * <p>The name of the action that you can perform on the managed instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong>: Create an instance.</li>
+             * <li><strong>Update</strong>: Update the current instance.</li>
+             * <li><strong>Delete</strong>: Delete the current instance.</li>
+             * <li><strong>Associate</strong>: Reference the current instance.</li>
+             * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+             * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+             * </ul>
              * 
-             * Create
-             * Update
-             * Delete
-             * Associate
-             * UserUnmanaged
-             * CreateChild
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -197,18 +248,22 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The type of the child resource. Valid values:
-             * <p>
+             * <p>The type of the child resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Listener</strong>: listener.</li>
+             * <li><strong>IpSet</strong>: acceleration region.</li>
+             * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+             * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+             * <li><strong>Endpoint</strong>: endpoint.</li>
+             * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
+             * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Listener**: listener.
-             * *   **IpSet**: acceleration region.
-             * *   **EndpointGroup**: endpoint group.
-             * *   **ForwardingRule**: forwarding rule.
-             * *   **Endpoint**: endpoint.
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
-             * 
-             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -216,11 +271,14 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * Indicates whether the specified actions are managed. Valid values:
-             * <p>
+             * <p>Indicates whether the specified actions are managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</li>
+             * <li><strong>false</strong>: The specified actions are not managed, and you can perform the specified actions on the managed instance.</li>
+             * </ul>
              * 
-             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -234,6 +292,12 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomRoutingEndpointGroupDestinationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingEndpointGroupDestinationsResponseBody</p>
+     */
     public static class Destinations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -251,7 +315,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         private String listenerId;
 
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < String > protocols;
+        private java.util.List<String> protocols;
 
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
@@ -260,7 +324,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         private Boolean serviceManaged;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
         @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
@@ -324,7 +388,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         /**
          * @return protocols
          */
-        public java.util.List < String > getProtocols() {
+        public java.util.List<String> getProtocols() {
             return this.protocols;
         }
 
@@ -345,7 +409,7 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
         /**
          * @return serviceManagedInfos
          */
-        public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
             return this.serviceManagedInfos;
         }
 
@@ -362,14 +426,33 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             private String endpointGroupId; 
             private Integer fromPort; 
             private String listenerId; 
-            private java.util.List < String > protocols; 
+            private java.util.List<String> protocols; 
             private String serviceId; 
             private Boolean serviceManaged; 
-            private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+            private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(Destinations model) {
+                this.acceleratorId = model.acceleratorId;
+                this.destinationId = model.destinationId;
+                this.endpointGroupId = model.endpointGroupId;
+                this.fromPort = model.fromPort;
+                this.listenerId = model.listenerId;
+                this.protocols = model.protocols;
+                this.serviceId = model.serviceId;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceManagedInfos = model.serviceManagedInfos;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The GA instance ID.
+             * <p>The GA instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -377,7 +460,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The ID of the endpoint group mapping.
+             * <p>The ID of the endpoint group mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dst-123abc****</p>
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -385,7 +471,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The endpoint group ID.
+             * <p>The endpoint group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epg-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -393,7 +482,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The first port of the backend service port range.
+             * <p>The first port of the backend service port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -401,7 +493,10 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The listener ID.
+             * <p>The listener ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -409,23 +504,26 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The backend service protocols of the endpoint group. Valid values:
-             * <p>
-             * 
-             * *   **TCP**
-             * *   **UDP**
-             * *   **TCP,UDP**
+             * <p>The backend service protocols of the endpoint group. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * <li><strong>TCP,UDP</strong></li>
+             * </ul>
              */
-            public Builder protocols(java.util.List < String > protocols) {
+            public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
                 return this;
             }
 
             /**
-             * The ID of the service that manages the GA instance.
-             * <p>
+             * <p>The ID of the service that manages the GA instance.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -433,11 +531,14 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * Indicates whether the GA instance is managed. Valid values:
-             * <p>
+             * <p>Indicates whether the GA instance is managed. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -445,20 +546,24 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
             }
 
             /**
-             * The actions that you can perform on the managed instance.
-             * <p>
-             * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-             * 
-             * *   You can perform only specific actions on a managed instance.
+             * <p>The actions that you can perform on the managed instance.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</li>
+             * <li>You can perform only specific actions on the managed instance.</li>
+             * </ul>
+             * </blockquote>
              */
-            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }
 
             /**
-             * The last port of the backend service port range.
+             * <p>The last port of the backend service port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;

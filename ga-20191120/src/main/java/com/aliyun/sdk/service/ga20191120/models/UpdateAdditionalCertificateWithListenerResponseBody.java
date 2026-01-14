@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAdditionalCertificateWithListenerResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAdditionalCertificateWithListenerResponseBody</p>
@@ -30,6 +36,10 @@ public class UpdateAdditionalCertificateWithListenerResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listenerId
      */
@@ -48,8 +58,19 @@ public class UpdateAdditionalCertificateWithListenerResponseBody extends TeaMode
         private String listenerId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAdditionalCertificateWithListenerResponseBody model) {
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -57,7 +78,10 @@ public class UpdateAdditionalCertificateWithListenerResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

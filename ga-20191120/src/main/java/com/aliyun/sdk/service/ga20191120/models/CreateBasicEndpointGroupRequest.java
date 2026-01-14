@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicEndpointGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateBasicEndpointGroupRequest</p>
@@ -71,7 +77,7 @@ public class CreateBasicEndpointGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,7 +174,11 @@ public class CreateBasicEndpointGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -177,12 +187,14 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,10 +203,11 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The description of the endpoint group.
-         * <p>
+         * <p>The description of the endpoint group.</p>
+         * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>BasicEndpointGroup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -203,7 +216,10 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The endpoint address.
+         * <p>The endpoint address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1a05txelswuj8g****</p>
          */
         public Builder endpointAddress(String endpointAddress) {
             this.putQueryParameter("EndpointAddress", endpointAddress);
@@ -212,10 +228,12 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the endpoint group belongs.
-         * <p>
+         * <p>The ID of the region to which the endpoint group belongs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253223.html">ListAvailableBusiRegions</a> operation to query the region ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [ListAvailableBusiRegions](~~2253223~~) operation to query the region ID.
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
@@ -224,13 +242,15 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The secondary address of the endpoint.
-         * <p>
+         * <p>The secondary address of the endpoint.</p>
+         * <p>You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
+         * <ul>
+         * <li>When the endpoint type is <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.</li>
+         * <li>If the endpoint type is <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.</li>
+         * </ul>
          * 
-         * You must specify this parameter when the accelerated IP address is associated with the secondary private IP address of an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).
-         * 
-         * *   When the endpoint type is **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If the parameter is left empty, the primary private IP address of the primary ENI is used.
-         * *   If the endpoint type is **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If the parameter is left empty, the primary private IP address of the secondary ENI is used.
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         public Builder endpointSubAddress(String endpointSubAddress) {
             this.putQueryParameter("EndpointSubAddress", endpointSubAddress);
@@ -239,12 +259,15 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The type of the endpoint. Valid values:
-         * <p>
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>ENI</strong></li>
+         * <li><strong>SLB</strong></li>
+         * <li><strong>ECS</strong></li>
+         * </ul>
          * 
-         * *   **ENI**
-         * *   **SLB**
-         * *   **ECS**
+         * <strong>example:</strong>
+         * <p>ENI</p>
          */
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
@@ -253,10 +276,11 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The name of the endpoint group.
-         * <p>
+         * <p>The name of the endpoint group.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -265,7 +289,11 @@ public class CreateBasicEndpointGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

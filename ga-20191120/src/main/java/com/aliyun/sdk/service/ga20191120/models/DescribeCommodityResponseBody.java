@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommodityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommodityResponseBody</p>
@@ -18,7 +24,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
     private String commodityName;
 
     @com.aliyun.core.annotation.NameInMap("Components")
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,6 +44,10 @@ public class DescribeCommodityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commodityCode
      */
@@ -55,7 +65,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -69,22 +79,34 @@ public class DescribeCommodityResponseBody extends TeaModel {
     public static final class Builder {
         private String commodityCode; 
         private String commodityName; 
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommodityResponseBody model) {
+            this.commodityCode = model.commodityCode;
+            this.commodityName = model.commodityName;
+            this.components = model.components;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The commodity code.
-         * <p>
+         * <p>The commodity code.</p>
+         * <p>Examples for the China site (aliyun.com):</p>
+         * <ul>
+         * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
+         * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+         * </ul>
+         * <p>Examples for the international site (alibabacloud.com):</p>
+         * <ul>
+         * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
+         * <li><strong>ga_bwppreintl_public_intl</strong>: basic bandwidth plan.</li>
+         * </ul>
          * 
-         * Examples for the China site (aliyun.com):
-         * 
-         * *   **ga_gapluspre_public_cn**: GA instance.
-         * *   **ga_plusbwppre_public_cn**: basic bandwidth plan.
-         * 
-         * Examples for the international site (alibabacloud.com):
-         * 
-         * *   **ga_pluspre_public_intl**: GA instance.
-         * *   **ga_bwppreintl_public_intl**: basic bandwidth plan.
+         * <strong>example:</strong>
+         * <p>ga_gapluspre_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -92,7 +114,10 @@ public class DescribeCommodityResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the commodity.
+         * <p>The name of the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global Accelerator_Instance Type (Subscription)</p>
          */
         public Builder commodityName(String commodityName) {
             this.commodityName = commodityName;
@@ -100,18 +125,19 @@ public class DescribeCommodityResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the commodity modules.
-         * <p>
-         * 
-         * The returned information varies based on the commodity.
+         * <p>The information about the commodity modules.</p>
+         * <p>The returned information varies based on the commodity.</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,6 +150,12 @@ public class DescribeCommodityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommodityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityResponseBody</p>
+     */
     public static class PropertyValueList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrderIndex")
         private Long orderIndex;
@@ -186,11 +218,22 @@ public class DescribeCommodityResponseBody extends TeaModel {
             private String tips; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PropertyValueList model) {
+                this.orderIndex = model.orderIndex;
+                this.text = model.text;
+                this.tips = model.tips;
+                this.value = model.value;
+            } 
+
             /**
-             * The sequence number of the attribute.
-             * <p>
+             * <p>The sequence number of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderIndex(Long orderIndex) {
                 this.orderIndex = orderIndex;
@@ -198,10 +241,11 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the attribute.
-             * <p>
+             * <p>The content of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>1 Month</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -209,10 +253,11 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The message of the attribute.
-             * <p>
+             * <p>The message of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>1 Month</p>
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -220,10 +265,11 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the attribute.
-             * <p>
+             * <p>The value of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>1:Month</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -237,6 +283,12 @@ public class DescribeCommodityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityResponseBody</p>
+     */
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -245,7 +297,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PropertyValueList")
-        private java.util.List < PropertyValueList> propertyValueList;
+        private java.util.List<PropertyValueList> propertyValueList;
 
         private Properties(Builder builder) {
             this.code = builder.code;
@@ -278,20 +330,30 @@ public class DescribeCommodityResponseBody extends TeaModel {
         /**
          * @return propertyValueList
          */
-        public java.util.List < PropertyValueList> getPropertyValueList() {
+        public java.util.List<PropertyValueList> getPropertyValueList() {
             return this.propertyValueList;
         }
 
         public static final class Builder {
             private String code; 
             private String name; 
-            private java.util.List < PropertyValueList> propertyValueList; 
+            private java.util.List<PropertyValueList> propertyValueList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Properties model) {
+                this.code = model.code;
+                this.name = model.name;
+                this.propertyValueList = model.propertyValueList;
+            } 
 
             /**
-             * The code of the attribute.
-             * <p>
+             * <p>The code of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>ord_time</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -299,10 +361,11 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the attribute.
-             * <p>
+             * <p>The name of the attribute.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>Duration</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,12 +373,10 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The list of attribute values of the commodity module.
-             * <p>
-             * 
-             * The returned information varies based on the commodity module.
+             * <p>The list of attribute values of the commodity module.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              */
-            public Builder propertyValueList(java.util.List < PropertyValueList> propertyValueList) {
+            public Builder propertyValueList(java.util.List<PropertyValueList> propertyValueList) {
                 this.propertyValueList = propertyValueList;
                 return this;
             }
@@ -327,6 +388,12 @@ public class DescribeCommodityResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommodityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommodityResponseBody</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
@@ -335,7 +402,7 @@ public class DescribeCommodityResponseBody extends TeaModel {
         private String componentName;
 
         @com.aliyun.core.annotation.NameInMap("Properties")
-        private java.util.List < Properties> properties;
+        private java.util.List<Properties> properties;
 
         private Components(Builder builder) {
             this.componentCode = builder.componentCode;
@@ -368,20 +435,30 @@ public class DescribeCommodityResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.List < Properties> getProperties() {
+        public java.util.List<Properties> getProperties() {
             return this.properties;
         }
 
         public static final class Builder {
             private String componentCode; 
             private String componentName; 
-            private java.util.List < Properties> properties; 
+            private java.util.List<Properties> properties; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentCode = model.componentCode;
+                this.componentName = model.componentName;
+                this.properties = model.properties;
+            } 
 
             /**
-             * The code of the commodity module.
-             * <p>
+             * <p>The code of the commodity module.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>Duration</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -389,10 +466,11 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the commodity module.
-             * <p>
+             * <p>The name of the commodity module.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              * 
-             * The returned information varies based on the commodity module.
+             * <strong>example:</strong>
+             * <p>Duration</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -400,12 +478,10 @@ public class DescribeCommodityResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the commodity module.
-             * <p>
-             * 
-             * The returned information varies based on the commodity module.
+             * <p>The attributes of the commodity module.</p>
+             * <p>The returned information varies based on the commodity module.</p>
              */
-            public Builder properties(java.util.List < Properties> properties) {
+            public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEndpointGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListEndpointGroupsRequest</p>
@@ -48,7 +54,7 @@ public class ListEndpointGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListEndpointGroupsRequest(Builder builder) {
         super(builder);
@@ -71,7 +77,7 @@ public class ListEndpointGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -135,7 +141,7 @@ public class ListEndpointGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -148,7 +154,7 @@ public class ListEndpointGroupsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -168,7 +174,11 @@ public class ListEndpointGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -177,11 +187,14 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether the access logging feature is enabled. Default value: off. Valid values:
-         * <p>
+         * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: The access logging feature is enabled.</li>
+         * <li><strong>off</strong>: The access logging feature is disabled.</li>
+         * </ul>
          * 
-         * *   **on**: The access logging feature is enabled.
-         * *   **off**: The access logging feature is disabled.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder accessLogSwitch(String accessLogSwitch) {
             this.putQueryParameter("AccessLogSwitch", accessLogSwitch);
@@ -190,7 +203,10 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp16jdc00bhe97sr5****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -199,12 +215,15 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The type of the endpoint group. Valid values:
-         * <p>
+         * <p>The type of the endpoint group. Valid values: Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong></li>
+         * <li><strong>virtual</strong></li>
+         * <li>If you leave this parameter empty, all default and virtual endpoint groups are queried.</li>
+         * </ul>
          * 
-         * *   **default**
-         * *   **virtual**
-         * *   If you leave this parameter empty, all default and virtual endpoint groups are queried.
+         * <strong>example:</strong>
+         * <p>virtual</p>
          */
         public Builder endpointGroupType(String endpointGroupType) {
             this.putQueryParameter("EndpointGroupType", endpointGroupType);
@@ -213,7 +232,10 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -222,7 +244,10 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -231,7 +256,10 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +268,11 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,9 +281,9 @@ public class ListEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The tag of the endpoint group.
+         * <p>The tag of the endpoint group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -264,6 +296,12 @@ public class ListEndpointGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>ListEndpointGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -302,13 +340,21 @@ public class ListEndpointGroupsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the endpoint group. It cannot be an empty string.
-             * <p>
+             * <p>The tag key of the endpoint group. It cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag keys.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag keys.
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -316,12 +362,12 @@ public class ListEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The tag value of the endpoint group. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value of the endpoint group. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag values.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag values.
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

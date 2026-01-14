@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicAccelerateIpEndpointRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBasicAccelerateIpEndpointRelationsResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateBasicAccelerateIpEndpointRelationsResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorId
      */
@@ -48,8 +58,19 @@ public class CreateBasicAccelerateIpEndpointRelationsResponseBody extends TeaMod
         private String acceleratorId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBasicAccelerateIpEndpointRelationsResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -57,7 +78,10 @@ public class CreateBasicAccelerateIpEndpointRelationsResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

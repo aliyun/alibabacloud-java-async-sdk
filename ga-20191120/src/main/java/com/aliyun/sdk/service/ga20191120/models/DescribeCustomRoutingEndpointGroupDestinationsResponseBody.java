@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomRoutingEndpointGroupDestinationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomRoutingEndpointGroupDestinationsResponseBody</p>
@@ -27,7 +33,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     private String listenerId;
 
     @com.aliyun.core.annotation.NameInMap("Protocols")
-    private java.util.List < String > protocols;
+    private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -39,7 +45,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     private Boolean serviceManaged;
 
     @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-    private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+    private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
@@ -68,6 +74,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
 
     public static DescribeCustomRoutingEndpointGroupDestinationsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,7 +118,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     /**
      * @return protocols
      */
-    public java.util.List < String > getProtocols() {
+    public java.util.List<String> getProtocols() {
         return this.protocols;
     }
 
@@ -136,7 +146,7 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     /**
      * @return serviceManagedInfos
      */
-    public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+    public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
         return this.serviceManagedInfos;
     }
 
@@ -160,16 +170,37 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         private String endpointGroupId; 
         private Integer fromPort; 
         private String listenerId; 
-        private java.util.List < String > protocols; 
+        private java.util.List<String> protocols; 
         private String requestId; 
         private String serviceId; 
         private Boolean serviceManaged; 
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
         private String state; 
         private Integer toPort; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomRoutingEndpointGroupDestinationsResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.destinationId = model.destinationId;
+            this.endpointGroupId = model.endpointGroupId;
+            this.fromPort = model.fromPort;
+            this.listenerId = model.listenerId;
+            this.protocols = model.protocols;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceManaged = model.serviceManaged;
+            this.serviceManagedInfos = model.serviceManagedInfos;
+            this.state = model.state;
+            this.toPort = model.toPort;
+        } 
+
         /**
-         * The ID of the Global Accelerator (GA) instance.
+         * <p>The ID of the Global Accelerator (GA) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -177,7 +208,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The ID of the endpoint group mapping configuration.
+         * <p>The ID of the endpoint group mapping configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dst-123abc****</p>
          */
         public Builder destinationId(String destinationId) {
             this.destinationId = destinationId;
@@ -185,7 +219,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp14sz7ftcwwjgrdm****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -193,7 +230,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The start port of the backend service port range of the endpoint group.
+         * <p>The start port of the backend service port range of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder fromPort(Integer fromPort) {
             this.fromPort = fromPort;
@@ -201,7 +241,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -209,20 +252,23 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The backend service protocol of the endpoint group.
-         * <p>
-         * 
-         * *   **TCP**: TCP
-         * *   **UDP**: UDP
-         * *   **TCP,UDP**: TCP and UDP
+         * <p>The backend service protocol of the endpoint group.</p>
+         * <ul>
+         * <li><strong>TCP</strong>: TCP</li>
+         * <li><strong>UDP</strong>: UDP</li>
+         * <li><strong>TCP,UDP</strong>: TCP and UDP</li>
+         * </ul>
          */
-        public Builder protocols(java.util.List < String > protocols) {
+        public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,10 +276,13 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The service ID to which the managed instance belongs.
-         * <p>
+         * <p>The service ID to which the managed instance belongs.</p>
+         * <blockquote>
+         * <p> Valid only when the ServiceManaged parameter is True.</p>
+         * </blockquote>
          * 
-         * >  Valid only when the ServiceManaged parameter is True.
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -241,11 +290,14 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * Is it a managed instance. Valid values:
-         * <p>
+         * <p>Is it a managed instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * - true
-         * - false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -253,21 +305,24 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * A list of action policies that users can execute on this managed instance.
+         * <p>A list of action policies that users can execute on this managed instance.</p>
          */
-        public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+        public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
             return this;
         }
 
         /**
-         * The status of the endpoint group mapping configuration.
-         * <p>
+         * <p>The status of the endpoint group mapping configuration.</p>
+         * <ul>
+         * <li><strong>init</strong>: being initialized.</li>
+         * <li><strong>active</strong>: normal.</li>
+         * <li><strong>updating</strong>: being updated.</li>
+         * <li><strong>deleting</strong>: being deleted.</li>
+         * </ul>
          * 
-         * *   **init**: being initialized.
-         * *   **active**: normal.
-         * *   **updating**: being updated.
-         * *   **deleting**: being deleted.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -275,7 +330,10 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
         }
 
         /**
-         * The end port of the backend service port range of the endpoint group.
+         * <p>The end port of the backend service port range of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder toPort(Integer toPort) {
             this.toPort = toPort;
@@ -288,6 +346,12 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomRoutingEndpointGroupDestinationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomRoutingEndpointGroupDestinationsResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -338,16 +402,28 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * Managed policy action name, Valid values:
-             * <p>
+             * <p>Managed policy action name, Valid values:</p>
+             * <ul>
+             * <li>Create</li>
+             * <li>Update</li>
+             * <li>Delete</li>
+             * <li>Associate</li>
+             * <li>UserUnmanaged</li>
+             * <li>CreateChild</li>
+             * </ul>
              * 
-             * - Create
-             * - Update
-             * - Delete
-             * - Associate
-             * - UserUnmanaged
-             * - CreateChild
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -355,18 +431,22 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             }
 
             /**
-             * Sub resource type, Valid values:
-             * <p>
+             * <p>Sub resource type, Valid values:</p>
+             * <ul>
+             * <li>Listener</li>
+             * <li>IpSet</li>
+             * <li>EndpointGroup</li>
+             * <li>ForwardingRule</li>
+             * <li>Endpoint</li>
+             * <li>EndpointGroupDestination</li>
+             * <li>EndpointPolicy</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only valid when the Action parameter is CreateChild.</p>
+             * </blockquote>
              * 
-             * - Listener
-             * - IpSet
-             * - EndpointGroup
-             * - ForwardingRule
-             * - Endpoint
-             * - EndpointGroupDestination
-             * - EndpointPolicy
-             * 
-             * >Only valid when the Action parameter is CreateChild.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -374,12 +454,16 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
             }
 
             /**
-             * Is the managed policy action managed, Valid values:
-             * <p>
+             * <p>Is the managed policy action managed, Valid values:</p>
+             * <ul>
+             * <li><p>true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+             * </li>
+             * <li><p>false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+             * </li>
+             * </ul>
              * 
-             * - true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.
-             * 
-             * - false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

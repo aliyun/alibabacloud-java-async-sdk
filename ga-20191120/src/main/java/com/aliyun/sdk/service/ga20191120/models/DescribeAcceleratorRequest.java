@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAcceleratorRequest} extends {@link RequestModel}
  *
  * <p>DescribeAcceleratorRequest</p>
@@ -18,6 +24,7 @@ public class DescribeAcceleratorRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
@@ -35,7 +42,7 @@ public class DescribeAcceleratorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +76,11 @@ public class DescribeAcceleratorRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance that you want to query.
+         * <p>The ID of the GA instance that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -78,7 +89,11 @@ public class DescribeAcceleratorRequest extends Request {
         }
 
         /**
-         * The region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

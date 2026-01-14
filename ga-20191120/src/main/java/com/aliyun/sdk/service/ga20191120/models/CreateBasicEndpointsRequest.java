@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicEndpointsRequest} extends {@link RequestModel}
  *
  * <p>CreateBasicEndpointsRequest</p>
@@ -28,7 +34,7 @@ public class CreateBasicEndpointsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Endpoints")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Endpoints> endpoints;
+    private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -52,7 +58,7 @@ public class CreateBasicEndpointsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +87,7 @@ public class CreateBasicEndpointsRequest extends Request {
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -96,7 +102,7 @@ public class CreateBasicEndpointsRequest extends Request {
         private String acceleratorId; 
         private String clientToken; 
         private String endpointGroupId; 
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private String regionId; 
 
         private Builder() {
@@ -113,7 +119,11 @@ public class CreateBasicEndpointsRequest extends Request {
         } 
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,12 +132,14 @@ public class CreateBasicEndpointsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,7 +148,11 @@ public class CreateBasicEndpointsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
@@ -145,16 +161,21 @@ public class CreateBasicEndpointsRequest extends Request {
         }
 
         /**
-         * The endpoints.
+         * <p>The endpoints.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.putQueryParameter("Endpoints", endpoints);
             this.endpoints = endpoints;
             return this;
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,6 +190,12 @@ public class CreateBasicEndpointsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBasicEndpointsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBasicEndpointsRequest</p>
+     */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointAddress")
         private String endpointAddress;
@@ -255,8 +282,23 @@ public class CreateBasicEndpointsRequest extends Request {
             private String endpointZoneId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.endpointAddress = model.endpointAddress;
+                this.endpointSubAddress = model.endpointSubAddress;
+                this.endpointSubAddressType = model.endpointSubAddressType;
+                this.endpointType = model.endpointType;
+                this.endpointZoneId = model.endpointZoneId;
+                this.name = model.name;
+            } 
+
             /**
-             * The address of the endpoint.
+             * <p>The address of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp1a05txelswuj8g****</p>
              */
             public Builder endpointAddress(String endpointAddress) {
                 this.endpointAddress = endpointAddress;
@@ -264,14 +306,16 @@ public class CreateBasicEndpointsRequest extends Request {
             }
 
             /**
-             * The secondary address of the endpoint.
-             * <p>
+             * <p>The secondary address of the endpoint.</p>
+             * <p>This parameter is required only if you set the endpoint type to <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+             * <ul>
+             * <li>If you set the endpoint type to <strong>ECS</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.</li>
+             * <li>If you set the endpoint type to <strong>ENI</strong>, you can set <strong>EndpointSubAddress</strong> to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.</li>
+             * <li>If you set the endpoint type to <strong>NLB</strong>, you can set <strong>EndpointSubAddress</strong> to the primary private IP address of the NLB backend server.</li>
+             * </ul>
              * 
-             * This parameter is required only if you set the endpoint type to **ECS**, **ENI**, or **NLB**.
-             * 
-             * *   If you set the endpoint type to **ECS**, you can set **EndpointSubAddress** to the secondary private IP address of the primary ENI. If you leave this parameter empty, the primary private IP address of the primary ENI is used.
-             * *   If you set the endpoint type to **ENI**, you can set **EndpointSubAddress** to the secondary private IP address of the secondary ENI. If you leave this parameter empty, the primary private IP address of the secondary ENI is used.
-             * *   If you set the endpoint type to **NLB**, you can set **EndpointSubAddress** to the primary private IP address of the NLB backend server.
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder endpointSubAddress(String endpointSubAddress) {
                 this.endpointSubAddress = endpointSubAddress;
@@ -279,13 +323,15 @@ public class CreateBasicEndpointsRequest extends Request {
             }
 
             /**
-             * The secondary address type of the endpoint. Valid values:
-             * <p>
+             * <p>The secondary address type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>primary</strong>: a primary private IP address.</li>
+             * <li><strong>secondary</strong>: a secondary private IP address.</li>
+             * </ul>
+             * <p>This parameter is required only if you set the endpoint type to <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If you set the endpoint type to <strong>NLB</strong>, only <strong>primary</strong> is supported.</p>
              * 
-             * *   **primary**: a primary private IP address.
-             * *   **secondary**: a secondary private IP address.
-             * 
-             * This parameter is required only if you set the endpoint type to **ECS**, **ENI**, or **NLB**. If you set the endpoint type to **NLB**, only **primary** is supported.
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder endpointSubAddressType(String endpointSubAddressType) {
                 this.endpointSubAddressType = endpointSubAddressType;
@@ -293,15 +339,19 @@ public class CreateBasicEndpointsRequest extends Request {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+             * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+             * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is required.</p>
+             * </blockquote>
              * 
-             * *   **ENI**: elastic network interface (ENI).
-             * *   **SLB**: Classic Load Balancer (CLB) instance.
-             * *   **ECS**: Elastic Compute Service (ECS) instance.
-             * *   **NLB**: Network Load Balancer (NLB) instance.
-             * 
-             * >  This parameter is required.
+             * <strong>example:</strong>
+             * <p>ENI</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -309,10 +359,11 @@ public class CreateBasicEndpointsRequest extends Request {
             }
 
             /**
-             * The ID of the zone where the endpoint resides.
-             * <p>
+             * <p>The ID of the zone where the endpoint resides.</p>
+             * <p>This parameter is required only if you set the endpoint type to <strong>NLB</strong>.</p>
              * 
-             * This parameter is required only if you set the endpoint type to **NLB**.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder endpointZoneId(String endpointZoneId) {
                 this.endpointZoneId = endpointZoneId;
@@ -320,10 +371,11 @@ public class CreateBasicEndpointsRequest extends Request {
             }
 
             /**
-             * The name of the endpoint.
-             * <p>
+             * <p>The name of the endpoint.</p>
+             * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
              * 
-             * The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+             * <strong>example:</strong>
+             * <p>ep01</p>
              */
             public Builder name(String name) {
                 this.name = name;

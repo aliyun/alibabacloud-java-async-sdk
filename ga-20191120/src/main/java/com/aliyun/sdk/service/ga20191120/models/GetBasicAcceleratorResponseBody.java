@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBasicAcceleratorResponseBody} extends {@link TeaModel}
  *
  * <p>GetBasicAcceleratorResponseBody</p>
@@ -66,7 +72,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     private String state;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetBasicAcceleratorResponseBody(Builder builder) {
         this.acceleratorId = builder.acceleratorId;
@@ -96,6 +102,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     public static GetBasicAcceleratorResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -227,7 +237,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -250,10 +260,38 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String state; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetBasicAcceleratorResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.bandwidthBillingType = model.bandwidthBillingType;
+            this.basicBandwidthPackage = model.basicBandwidthPackage;
+            this.basicEndpointGroupId = model.basicEndpointGroupId;
+            this.basicIpSetId = model.basicIpSetId;
+            this.cenId = model.cenId;
+            this.createTime = model.createTime;
+            this.crossBorderStatus = model.crossBorderStatus;
+            this.crossDomainBandwidthPackage = model.crossDomainBandwidthPackage;
+            this.crossPrivateState = model.crossPrivateState;
+            this.description = model.description;
+            this.expiredTime = model.expiredTime;
+            this.instanceChargeType = model.instanceChargeType;
+            this.name = model.name;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.state = model.state;
+            this.tags = model.tags;
+        } 
 
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -261,12 +299,15 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The bandwidth metering method.
-         * <p>
+         * <p>The bandwidth metering method.</p>
+         * <ul>
+         * <li><strong>BandwidthPackage</strong>: billed based on bandwidth plans.</li>
+         * <li><strong>CDT</strong>: billed by Cloud Data Transfer (CDT) and based on data transfer.</li>
+         * <li><strong>CDT95</strong>: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.</li>
+         * </ul>
          * 
-         * *   **BandwidthPackage**: billed based on bandwidth plans.
-         * *   **CDT**: billed by Cloud Data Transfer (CDT) and based on data transfer.
-         * *   **CDT95**: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.
+         * <strong>example:</strong>
+         * <p>CDT</p>
          */
         public Builder bandwidthBillingType(String bandwidthBillingType) {
             this.bandwidthBillingType = bandwidthBillingType;
@@ -274,7 +315,7 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the basic bandwidth plan that is associated with the basic GA instance.
+         * <p>The details about the basic bandwidth plan that is associated with the basic GA instance.</p>
          */
         public Builder basicBandwidthPackage(BasicBandwidthPackage basicBandwidthPackage) {
             this.basicBandwidthPackage = basicBandwidthPackage;
@@ -282,7 +323,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the endpoint group.
+         * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         public Builder basicEndpointGroupId(String basicEndpointGroupId) {
             this.basicEndpointGroupId = basicEndpointGroupId;
@@ -290,7 +334,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the acceleration region.
+         * <p>The ID of the acceleration region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11ilwqjdkjeg9r7****</p>
          */
         public Builder basicIpSetId(String basicIpSetId) {
             this.basicIpSetId = basicIpSetId;
@@ -298,7 +345,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Cloud Enterprise Network (CEN) instance to which the basic GA instance is attached.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the basic GA instance is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-hjkduu767hc****</p>
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
@@ -306,7 +356,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the basic GA instance is created.
+         * <p>The timestamp that indicates when the basic GA instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637734547</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -314,11 +367,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:
-         * <p>
+         * <p>Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossBorderStatus(Boolean crossBorderStatus) {
             this.crossBorderStatus = crossBorderStatus;
@@ -326,10 +382,8 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.
-         * <p>
-         * 
-         * This array is returned only for GA instances that are created on the international site (alibabacloud.com).
+         * <p>The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.</p>
+         * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
          */
         public Builder crossDomainBandwidthPackage(CrossDomainBandwidthPackage crossDomainBandwidthPackage) {
             this.crossDomainBandwidthPackage = crossDomainBandwidthPackage;
@@ -337,11 +391,14 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether cross-border acceleration is enabled.
-         * <p>
+         * <p>Indicates whether cross-border acceleration is enabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder crossPrivateState(String crossPrivateState) {
             this.crossPrivateState = crossPrivateState;
@@ -349,7 +406,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the basic GA instance.
+         * <p>The description of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BasicAccelerator</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -357,10 +417,11 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp that indicates when the basic GA instance expires.
-         * <p>
+         * <p>The timestamp that indicates when the basic GA instance expires.</p>
+         * <p>The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
-         * The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * <strong>example:</strong>
+         * <p>1640326547</p>
          */
         public Builder expiredTime(Long expiredTime) {
             this.expiredTime = expiredTime;
@@ -368,7 +429,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the basic GA instance. Only **PREPAY** is returned, which indicates the subscription billing method.
+         * <p>The billing method of the basic GA instance. Only <strong>PREPAY</strong> is returned, which indicates the subscription billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -376,7 +440,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the basic GA instance.
+         * <p>The name of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BasicAccelerator</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -384,7 +451,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the basic GA instance is deployed.
+         * <p>The ID of the region where the basic GA instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -392,7 +462,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -400,7 +473,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the basic GA instance belongs.
+         * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzrnd67gq****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -408,16 +484,19 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the basic GA instance.
-         * <p>
+         * <p>The status of the basic GA instance.</p>
+         * <ul>
+         * <li><strong>init</strong>: The GA instance is being initialized.</li>
+         * <li><strong>active</strong>: The GA instance is available.</li>
+         * <li><strong>configuring</strong>: The GA instance is being configured.</li>
+         * <li><strong>binding</strong>: The GA instance is being associated.</li>
+         * <li><strong>unbinding</strong>: The GA instance is being disassociated.</li>
+         * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+         * <li><strong>finacialLocked</strong>: The GA instance is locked due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **init**: The GA instance is being initialized.
-         * *   **active**: The GA instance is available.
-         * *   **configuring**: The GA instance is being configured.
-         * *   **binding**: The GA instance is being associated.
-         * *   **unbinding**: The GA instance is being disassociated.
-         * *   **deleting**: The GA instance is being deleted.
-         * *   **finacialLocked**: The GA instance is locked due to overdue payments.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -425,9 +504,9 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The tags of the basic GA instance.
+         * <p>The tags of the basic GA instance.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -438,6 +517,12 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBasicAcceleratorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBasicAcceleratorResponseBody</p>
+     */
     public static class BasicBandwidthPackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -488,8 +573,20 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String bandwidthType; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BasicBandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.bandwidthType = model.bandwidthType;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
-             * The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.
+             * <p>The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -497,12 +594,15 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the bandwidth that is provided by the basic bandwidth plan.
-             * <p>
+             * <p>The type of the bandwidth that is provided by the basic bandwidth plan.</p>
+             * <ul>
+             * <li><strong>Basic</strong>: basic</li>
+             * <li><strong>Enhanced</strong>: enhanced</li>
+             * <li><strong>Advanced</strong>: premium</li>
+             * </ul>
              * 
-             * *   **Basic**: basic
-             * *   **Enhanced**: enhanced
-             * *   **Advanced**: premium
+             * <strong>example:</strong>
+             * <p>Basic</p>
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;
@@ -510,7 +610,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the basic bandwidth plan.
+             * <p>The ID of the basic bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gbwp-bp1d8xk8bg139j0fw****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -524,6 +627,12 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBasicAcceleratorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBasicAcceleratorResponseBody</p>
+     */
     public static class CrossDomainBandwidthPackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -562,8 +671,19 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private Integer bandwidth; 
             private String instanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CrossDomainBandwidthPackage model) {
+                this.bandwidth = model.bandwidth;
+                this.instanceId = model.instanceId;
+            } 
+
             /**
-             * The bandwidth value of the cross-border acceleration bandwidth plan. Unit: Mbit/s.
+             * <p>The bandwidth value of the cross-border acceleration bandwidth plan. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -571,7 +691,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cross-border acceleration bandwidth plan.
+             * <p>The ID of the cross-border acceleration bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gbwp-bp1d8xk8bg139j0fw****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -585,6 +708,12 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetBasicAcceleratorResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBasicAcceleratorResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -623,8 +752,19 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -632,7 +772,10 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingEndpointTrafficPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomRoutingEndpointTrafficPoliciesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -59,7 +69,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -80,12 +90,26 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCustomRoutingEndpointTrafficPoliciesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +117,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,15 +128,18 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         }
 
         /**
-         * A list of traffic policies.
+         * <p>A list of traffic policies.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomRoutingEndpointTrafficPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingEndpointTrafficPoliciesResponseBody</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
@@ -168,8 +207,19 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port of the port range used by the traffic destination to process requests.
+             * <p>The first port of the port range used by the traffic destination to process requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -177,7 +227,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The last port of the port range used by the traffic destination to process requests.
+             * <p>The last port of the port range used by the traffic destination to process requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -191,6 +244,12 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomRoutingEndpointTrafficPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingEndpointTrafficPoliciesResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -241,16 +300,28 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * The name of the action on the managed instance. Valid values:
-             * <p>
+             * <p>The name of the action on the managed instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong>: Create an instance.</li>
+             * <li><strong>Update</strong>: Update the current instance.</li>
+             * <li><strong>Delete</strong>: Delete the current instance.</li>
+             * <li><strong>Associate</strong>: Reference the current instance.</li>
+             * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+             * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+             * </ul>
              * 
-             * *   **Create**: Create an instance.
-             * *   **Update**: Update the current instance.
-             * *   **Delete**: Delete the current instance.
-             * *   **Associate**: Reference the current instance.
-             * *   **UserUnmanaged**: Unmanage the instance.
-             * *   **CreateChild**: Create a child resource in the current instance.
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -258,18 +329,22 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The type of the child resource. Valid values:
-             * <p>
+             * <p>The type of the child resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Listener</strong>: listener.</li>
+             * <li><strong>IpSet</strong>: acceleration region.</li>
+             * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+             * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+             * <li><strong>Endpoint</strong>: endpoint.</li>
+             * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
+             * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Listener**: listener.
-             * *   **IpSet**: acceleration region.
-             * *   **EndpointGroup**: endpoint group.
-             * *   **ForwardingRule**: forwarding rule.
-             * *   **Endpoint**: endpoint.
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
-             * 
-             * >  This parameter is returned only if the value of **Action** is **CreateChild**.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -277,11 +352,14 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * Indicates whether the specified actions are managed. Valid values:
-             * <p>
+             * <p>Indicates whether the specified actions are managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
+             * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+             * </ul>
              * 
-             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -295,6 +373,12 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomRoutingEndpointTrafficPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomRoutingEndpointTrafficPoliciesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -315,7 +399,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
@@ -324,7 +408,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         private Boolean serviceManaged;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
         private Policies(Builder builder) {
             this.acceleratorId = builder.acceleratorId;
@@ -392,7 +476,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
@@ -413,7 +497,7 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         /**
          * @return serviceManagedInfos
          */
-        public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
             return this.serviceManagedInfos;
         }
 
@@ -424,13 +508,32 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             private String endpointId; 
             private String listenerId; 
             private String policyId; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
             private String serviceId; 
             private Boolean serviceManaged; 
-            private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+            private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.acceleratorId = model.acceleratorId;
+                this.address = model.address;
+                this.endpointGroupId = model.endpointGroupId;
+                this.endpointId = model.endpointId;
+                this.listenerId = model.listenerId;
+                this.policyId = model.policyId;
+                this.portRanges = model.portRanges;
+                this.serviceId = model.serviceId;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceManagedInfos = model.serviceManagedInfos;
+            } 
 
             /**
-             * The ID of the GA instance to which the endpoint belongs.
+             * <p>The ID of the GA instance to which the endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -438,7 +541,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The IP addresses of the traffic policies.
+             * <p>The IP addresses of the traffic policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -446,7 +552,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the endpoint group to which the endpoint belongs.
+             * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -454,7 +563,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the endpoint to which the traffic policy belongs.
+             * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -462,7 +574,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the custom routing listener to which the endpoint belongs.
+             * <p>The ID of the custom routing listener to which the endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -470,7 +585,10 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the traffic policy.
+             * <p>The ID of the traffic policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ply-bp1dmlohjjz4kqaun****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -478,18 +596,21 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The port range of the traffic policy.
+             * <p>The port range of the traffic policy.</p>
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }
 
             /**
-             * The ID of the service that manages the instance.
-             * <p>
+             * <p>The ID of the service that manages the instance.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -497,11 +618,14 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * Indicates whether the instance is managed. Valid values:
-             * <p>
+             * <p>Indicates whether the instance is managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The GA instance is managed.</li>
+             * <li><strong>false</strong>: The GA instance is not managed.</li>
+             * </ul>
              * 
-             * *   **true**: The GA instance is managed.
-             * *   **false**: The GA instance is not managed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -509,13 +633,15 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
             }
 
             /**
-             * The actions that users can perform on the managed instance.
-             * <p>
-             * 
-             * > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
-             * >*   Users can perform only specific actions on a managed instance.
+             * <p>The actions that users can perform on the managed instance.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
+             * <li>Users can perform only specific actions on a managed instance.</li>
+             * </ul>
+             * </blockquote>
              */
-            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }

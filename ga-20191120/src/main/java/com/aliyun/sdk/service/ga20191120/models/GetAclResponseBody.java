@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAclResponseBody} extends {@link TeaModel}
  *
  * <p>GetAclResponseBody</p>
  */
 public class GetAclResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclEntries")
-    private java.util.List < AclEntries> aclEntries;
+    private java.util.List<AclEntries> aclEntries;
 
     @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
@@ -27,7 +33,7 @@ public class GetAclResponseBody extends TeaModel {
     private String addressIPVersion;
 
     @com.aliyun.core.annotation.NameInMap("RelatedListeners")
-    private java.util.List < RelatedListeners> relatedListeners;
+    private java.util.List<RelatedListeners> relatedListeners;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -36,7 +42,7 @@ public class GetAclResponseBody extends TeaModel {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private GetAclResponseBody(Builder builder) {
         this.aclEntries = builder.aclEntries;
@@ -58,10 +64,14 @@ public class GetAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -96,7 +106,7 @@ public class GetAclResponseBody extends TeaModel {
     /**
      * @return relatedListeners
      */
-    public java.util.List < RelatedListeners> getRelatedListeners() {
+    public java.util.List<RelatedListeners> getRelatedListeners() {
         return this.relatedListeners;
     }
 
@@ -117,31 +127,49 @@ public class GetAclResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private String aclId; 
         private String aclName; 
         private String aclStatus; 
         private String addressIPVersion; 
-        private java.util.List < RelatedListeners> relatedListeners; 
+        private java.util.List<RelatedListeners> relatedListeners; 
         private String requestId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAclResponseBody model) {
+            this.aclEntries = model.aclEntries;
+            this.aclId = model.aclId;
+            this.aclName = model.aclName;
+            this.aclStatus = model.aclStatus;
+            this.addressIPVersion = model.addressIPVersion;
+            this.relatedListeners = model.relatedListeners;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.tags = model.tags;
+        } 
 
         /**
-         * The entries of the ACL.
+         * <p>The entries of the ACL.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -149,7 +177,10 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-acl</p>
          */
         public Builder aclName(String aclName) {
             this.aclName = aclName;
@@ -157,11 +188,14 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The IP version of the network ACL. Valid values:
-         * <p>
+         * <p>The IP version of the network ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
          * 
-         * *   **IPv4**
-         * *   **IPv6**
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder aclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
@@ -169,7 +203,10 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -177,15 +214,18 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The listeners that are associated with the ACL.
+         * <p>The listeners that are associated with the ACL.</p>
          */
-        public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
+        public Builder relatedListeners(java.util.List<RelatedListeners> relatedListeners) {
             this.relatedListeners = relatedListeners;
             return this;
         }
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +233,10 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the network ACL.
+         * <p>The name of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx7itmygzsza</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -201,9 +244,9 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The tag of the ACL.
+         * <p>The tag of the ACL.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -214,6 +257,12 @@ public class GetAclResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAclResponseBody</p>
+     */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
@@ -252,8 +301,19 @@ public class GetAclResponseBody extends TeaModel {
             private String entry; 
             private String entryDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.entry = model.entry;
+                this.entryDescription = model.entryDescription;
+            } 
+
             /**
-             * An IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).
+             * <p>An IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX/24</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -261,7 +321,10 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ACL entry.
+             * <p>The description of the ACL entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-entry</p>
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;
@@ -275,6 +338,12 @@ public class GetAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAclResponseBody</p>
+     */
     public static class RelatedListeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -325,8 +394,20 @@ public class GetAclResponseBody extends TeaModel {
             private String aclType; 
             private String listenerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RelatedListeners model) {
+                this.acceleratorId = model.acceleratorId;
+                this.aclType = model.aclType;
+                this.listenerId = model.listenerId;
+            } 
+
             /**
-             * The ID of the GA instance.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -334,11 +415,14 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the ACL. Valid values:
-             * <p>
+             * <p>The type of the ACL. Valid values:</p>
+             * <ul>
+             * <li><strong>white</strong>: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.</li>
+             * <li><strong>black</strong>: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.</li>
+             * </ul>
              * 
-             * *   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
-             * *   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
+             * <strong>example:</strong>
+             * <p>White</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -346,7 +430,10 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the listener.
+             * <p>The ID of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -360,6 +447,12 @@ public class GetAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAclResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -398,8 +491,19 @@ public class GetAclResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The key of tag N that is add to the ACL.
+             * <p>The key of tag N that is add to the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -407,7 +511,10 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N that is add to the ACL.
+             * <p>The value of tag N that is add to the ACL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

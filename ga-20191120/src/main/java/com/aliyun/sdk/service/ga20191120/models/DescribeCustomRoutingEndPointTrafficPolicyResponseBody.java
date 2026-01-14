@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomRoutingEndPointTrafficPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomRoutingEndPointTrafficPolicyResponseBody</p>
@@ -33,7 +39,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     private String policyId;
 
     @com.aliyun.core.annotation.NameInMap("PortRanges")
-    private java.util.List < PortRanges> portRanges;
+    private java.util.List<PortRanges> portRanges;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +51,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     private Boolean serviceManaged;
 
     @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-    private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+    private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
     @com.aliyun.core.annotation.NameInMap("State")
     private String state;
@@ -72,6 +78,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     public static DescribeCustomRoutingEndPointTrafficPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -126,7 +136,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     /**
      * @return portRanges
      */
-    public java.util.List < PortRanges> getPortRanges() {
+    public java.util.List<PortRanges> getPortRanges() {
         return this.portRanges;
     }
 
@@ -154,7 +164,7 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
     /**
      * @return serviceManagedInfos
      */
-    public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+    public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
         return this.serviceManagedInfos;
     }
 
@@ -173,15 +183,37 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         private String endpointId; 
         private String listenerId; 
         private String policyId; 
-        private java.util.List < PortRanges> portRanges; 
+        private java.util.List<PortRanges> portRanges; 
         private String requestId; 
         private String serviceId; 
         private Boolean serviceManaged; 
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomRoutingEndPointTrafficPolicyResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.address = model.address;
+            this.endpoint = model.endpoint;
+            this.endpointGroupId = model.endpointGroupId;
+            this.endpointId = model.endpointId;
+            this.listenerId = model.listenerId;
+            this.policyId = model.policyId;
+            this.portRanges = model.portRanges;
+            this.requestId = model.requestId;
+            this.serviceId = model.serviceId;
+            this.serviceManaged = model.serviceManaged;
+            this.serviceManagedInfos = model.serviceManagedInfos;
+            this.state = model.state;
+        } 
+
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -189,7 +221,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the traffic policy.
+         * <p>The ID of the traffic policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -197,7 +232,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the endpoint to which the traffic policy belongs.
+         * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-test01</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -205,7 +243,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the listener to which the endpoint belongs.
+         * <p>The ID of the listener to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1bpn0kn908w4nb****</p>
          */
         public Builder endpointGroupId(String endpointGroupId) {
             this.endpointGroupId = endpointGroupId;
@@ -213,7 +254,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the endpoint group to which the endpoint belongs.
+         * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-2zewuzypq5e6r3pfh****</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -221,7 +265,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the GA instance to which the endpoint belongs.
+         * <p>The ID of the GA instance to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -229,7 +276,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The name of the vSwitch to which the traffic policy belongs.
+         * <p>The name of the vSwitch to which the traffic policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ply-bptest2****</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -237,15 +287,18 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The IP address of the traffic policy.
+         * <p>The IP address of the traffic policy.</p>
          */
-        public Builder portRanges(java.util.List < PortRanges> portRanges) {
+        public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
 
         /**
-         * The ID of the endpoint to which the traffic destination belongs.
+         * <p>The ID of the endpoint to which the traffic destination belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,10 +306,13 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The ID of the service that manages the instance.
-         * <p>
+         * <p>The ID of the service that manages the instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if the value of **ServiceManaged** is **true**.
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -264,11 +320,14 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * Indicates whether the instance is managed. Valid values:
-         * <p>
+         * <p>Indicates whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
@@ -276,24 +335,30 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         }
 
         /**
-         * The actions that users can perform on the managed instance.
-         * <p>
-         * > *   This parameter is returned only if the value of **ServiceManaged** is **true**.
-         * > *   Users can perform only specific actions on a managed instance.
+         * <p>The actions that users can perform on the managed instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
+         * <li>Users can perform only specific actions on a managed instance.</li>
+         * </ul>
+         * </blockquote>
          */
-        public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+        public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
             this.serviceManagedInfos = serviceManagedInfos;
             return this;
         }
 
         /**
-         * The status of the traffic destination.
-         * <p>
+         * <p>The status of the traffic destination.</p>
+         * <ul>
+         * <li>init: being initialized.</li>
+         * <li>active: running as expected.</li>
+         * <li>updating: being updated.</li>
+         * <li>deleting: being deleted.</li>
+         * </ul>
          * 
-         * - init: being initialized.
-         * - active: running as expected.
-         * - updating: being updated.
-         * - deleting: being deleted.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -306,6 +371,12 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomRoutingEndPointTrafficPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomRoutingEndPointTrafficPolicyResponseBody</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
@@ -344,8 +415,19 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port of the port range used by the traffic destination to process requests.
+             * <p>The first port of the port range used by the traffic destination to process requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -353,7 +435,10 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * The last port of the port range used by the traffic destination to process requests.
+             * <p>The last port of the port range used by the traffic destination to process requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -367,6 +452,12 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomRoutingEndPointTrafficPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomRoutingEndPointTrafficPolicyResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -417,16 +508,28 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * The name of the action performed on the managed instance. Valid values:
-             * <p>
+             * <p>The name of the action performed on the managed instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong></li>
+             * <li><strong>Update</strong></li>
+             * <li><strong>Delete</strong></li>
+             * <li><strong>Associate</strong></li>
+             * <li><strong>UserUnmanaged</strong></li>
+             * <li><strong>CreateChild</strong></li>
+             * </ul>
              * 
-             * *   **Create**
-             * *   **Update**
-             * *   **Delete**
-             * *   **Associate**
-             * *   **UserUnmanaged**
-             * *   **CreateChild**
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -434,18 +537,22 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * The type of the child resource. Valid values:
-             * <p>
+             * <p>The type of the child resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Listener</strong>: listener.</li>
+             * <li><strong>IpSet</strong>: acceleration region.</li>
+             * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+             * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+             * <li><strong>Endpoint</strong>: endpoint.</li>
+             * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group that is associated with a custom routing listener.</li>
+             * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint that is associated with a custom routing listener.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Listener**: listener.
-             * *   **IpSet**: acceleration region.
-             * *   **EndpointGroup**: endpoint group.
-             * *   **ForwardingRule**: forwarding rule.
-             * *   **Endpoint**: endpoint.
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group that is associated with a custom routing listener.
-             * *   **EndpointPolicy**: traffic policy of an endpoint that is associated with a custom routing listener.
-             * 
-             * >  This parameter takes effect only if the value of **Action** is **CreateChild**.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -453,11 +560,14 @@ public class DescribeCustomRoutingEndPointTrafficPolicyResponseBody extends TeaM
             }
 
             /**
-             * Indicates whether the specified actions are managed.
-             * <p>
+             * <p>Indicates whether the specified actions are managed.</p>
+             * <ul>
+             * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
+             * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+             * </ul>
              * 
-             * *   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;

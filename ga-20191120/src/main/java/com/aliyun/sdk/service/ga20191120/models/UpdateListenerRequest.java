@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateListenerRequest} extends {@link RequestModel}
  *
  * <p>UpdateListenerRequest</p>
@@ -13,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackendPorts")
-    private java.util.List < BackendPorts> backendPorts;
+    private java.util.List<BackendPorts> backendPorts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Certificates")
-    private java.util.List < Certificates> certificates;
+    private java.util.List<Certificates> certificates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientAffinity")
@@ -50,7 +56,7 @@ public class UpdateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PortRanges")
-    private java.util.List < PortRanges> portRanges;
+    private java.util.List<PortRanges> portRanges;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Protocol")
@@ -58,6 +64,7 @@ public class UpdateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
+    @Deprecated
     private String proxyProtocol;
 
     @com.aliyun.core.annotation.Query
@@ -104,7 +111,7 @@ public class UpdateListenerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,14 +119,14 @@ public class UpdateListenerRequest extends Request {
     /**
      * @return backendPorts
      */
-    public java.util.List < BackendPorts> getBackendPorts() {
+    public java.util.List<BackendPorts> getBackendPorts() {
         return this.backendPorts;
     }
 
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
@@ -175,7 +182,7 @@ public class UpdateListenerRequest extends Request {
     /**
      * @return portRanges
      */
-    public java.util.List < PortRanges> getPortRanges() {
+    public java.util.List<PortRanges> getPortRanges() {
         return this.portRanges;
     }
 
@@ -222,8 +229,8 @@ public class UpdateListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateListenerRequest, Builder> {
-        private java.util.List < BackendPorts> backendPorts; 
-        private java.util.List < Certificates> certificates; 
+        private java.util.List<BackendPorts> backendPorts; 
+        private java.util.List<Certificates> certificates; 
         private String clientAffinity; 
         private String clientToken; 
         private String description; 
@@ -231,7 +238,7 @@ public class UpdateListenerRequest extends Request {
         private Integer idleTimeout; 
         private String listenerId; 
         private String name; 
-        private java.util.List < PortRanges> portRanges; 
+        private java.util.List<PortRanges> portRanges; 
         private String protocol; 
         private String proxyProtocol; 
         private String regionId; 
@@ -264,29 +271,32 @@ public class UpdateListenerRequest extends Request {
         } 
 
         /**
-         * The range of ports that are used by backend servers to receive requests.
+         * <p>The range of ports that are used by backend servers to receive requests.</p>
          */
-        public Builder backendPorts(java.util.List < BackendPorts> backendPorts) {
+        public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
             this.putQueryParameter("BackendPorts", backendPorts);
             this.backendPorts = backendPorts;
             return this;
         }
 
         /**
-         * The SSL certificate.
+         * <p>The SSL certificate.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
             this.certificates = certificates;
             return this;
         }
 
         /**
-         * Specifies whether to enable client affinity for the listener.
-         * <p>
+         * <p>Indicates whether client affinity is enabled for the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>NONE</strong>: Client affinity is disabled. Requests from the same client may be forwarded to different endpoints.</li>
+         * <li><strong>SOURCE_IP</strong>: Client affinity is enabled. When a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</li>
+         * </ul>
          * 
-         * *   If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.
-         * *   To enable client affinity, set this parameter to **SOURCE_IP**. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.
+         * <strong>example:</strong>
+         * <p>SOURCE_IP</p>
          */
         public Builder clientAffinity(String clientAffinity) {
             this.putQueryParameter("ClientAffinity", clientAffinity);
@@ -295,12 +305,14 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -309,10 +321,11 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The description of the listener.
-         * <p>
+         * <p>The description of the listener.</p>
+         * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -321,14 +334,18 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The maximum version of the HTTP protocol. Valid values:
-         * <p>
+         * <p>The maximum version of the HTTP protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>http3</strong></li>
+         * <li><strong>http2</strong></li>
+         * <li><strong>http1.1</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Only HTTPS listeners support this parameter.</p>
+         * </blockquote>
          * 
-         * *   **http3**
-         * *   **http2**
-         * *   **http1.1**
-         * 
-         * >  Only HTTPS listeners support this parameter.
+         * <strong>example:</strong>
+         * <p>http2</p>
          */
         public Builder httpVersion(String httpVersion) {
             this.putQueryParameter("HttpVersion", httpVersion);
@@ -337,12 +354,15 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The timeout period for idle connections. Unit: seconds.
-         * <p>
+         * <p>The timeout period for idle connections. Unit: seconds.</p>
+         * <ul>
+         * <li>TCP: 10-900. Default value: 900. Unit: seconds.</li>
+         * <li>UDP: 10-20. Default value: 20. Unit: seconds.</li>
+         * <li>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</li>
+         * </ul>
          * 
-         * *   TCP: 10-900. Default value: 900. Unit: seconds.
-         * *   UDP: 10-20. Default value: 20. Unit: seconds.
-         * *   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -351,7 +371,11 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -360,10 +384,11 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The name of the listener.
-         * <p>
+         * <p>The name of the listener.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -372,27 +397,27 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The listener ports that are used to receive requests and forward the requests to endpoints.
-         * <p>
-         * 
-         * Valid values: **1** to **65499**.
-         * 
-         * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
+         * <p>The listener ports that are used to receive requests and forward the requests to endpoints.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>.</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
          */
-        public Builder portRanges(java.util.List < PortRanges> portRanges) {
+        public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putQueryParameter("PortRanges", portRanges);
             this.portRanges = portRanges;
             return this;
         }
 
         /**
-         * The network transmission protocol that is used by the listener. Valid values:
-         * <p>
+         * <p>The network transmission protocol that is used by the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong>: TCP</li>
+         * <li><strong>udp</strong>: UDP</li>
+         * <li><strong>http</strong>: HTTP</li>
+         * <li><strong>https</strong>: HTTPS</li>
+         * </ul>
          * 
-         * *   **tcp**: TCP
-         * *   **udp**: UDP
-         * *   **http**: HTTP
-         * *   **https**: HTTPS
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -401,13 +426,17 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to reserve client IP addresses. Default value: false. Valid values:
-         * <p>
+         * <p>Specifies whether to preserve source IP addresses of clients.</p>
+         * <ul>
+         * <li><strong>true</strong> This feature allows you to view client IP addresses on backend servers.</li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter will be discontinued in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
+         * </blockquote>
          * 
-         * *   **true**: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.
-         * *   **false** (default): disables client IP preservation.
-         * 
-         * > This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder proxyProtocol(String proxyProtocol) {
             this.putQueryParameter("ProxyProtocol", proxyProtocol);
@@ -416,7 +445,10 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -425,12 +457,14 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The timeout period for HTTP or HTTPS requests.
-         * <p>
+         * <p>The timeout period for HTTP or HTTPS requests.</p>
+         * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+         * </blockquote>
          * 
-         * Valid values: 1 to 180. Default value: 60. Unit: seconds.
-         * 
-         * >  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -439,35 +473,45 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The ID of the security policy. Valid values:
-         * <p>
+         * <p>The ID of the security policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>tls_cipher_policy_1_0</strong></p>
+         * <ul>
+         * <li>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</li>
+         * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>tls_cipher_policy_1_1</strong></p>
+         * <ul>
+         * <li>Supported TLS versions: TLS 1.1 and TLS 1.2</li>
+         * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>tls_cipher_policy_1_2</strong></p>
+         * <ul>
+         * <li>Supported TLS version: TLS 1.2</li>
+         * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>tls_cipher_policy_1_2_strict</strong></p>
+         * <ul>
+         * <li>Supported TLS version: TLS 1.2</li>
+         * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>tls_cipher_policy_1_2_strict_with_1_3</strong></p>
+         * <ul>
+         * <li>Supported TLS versions: TLS 1.2 and TLS 1.3</li>
+         * <li>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS listener.</p>
+         * </blockquote>
          * 
-         * *   **tls_cipher_policy\_1\_0**
-         * 
-         *     *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-         * 
-         * *   **tls_cipher_policy\_1\_1**
-         * 
-         *     *   Supported TLS versions: TLS 1.1 and TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-         * 
-         * *   **tls_cipher_policy\_1\_2**
-         * 
-         *     *   Supported TLS version: TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-         * 
-         * *   **tls_cipher_policy\_1\_2\_strict**
-         * 
-         *     *   Supported TLS version: TLS 1.2
-         *     *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
-         * 
-         * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
-         * 
-         *     *   Supported TLS versions: TLS 1.2 and TLS 1.3
-         *     *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
-         * 
-         * > This parameter is available only when you create an HTTPS listener.
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_0</p>
          */
         public Builder securityPolicyId(String securityPolicyId) {
             this.putQueryParameter("SecurityPolicyId", securityPolicyId);
@@ -476,7 +520,7 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The `XForward` headers.
+         * <p>The <code>XForward</code> headers.</p>
          */
         public Builder xForwardedForConfig(XForwardedForConfig xForwardedForConfig) {
             this.putQueryParameter("XForwardedForConfig", xForwardedForConfig);
@@ -491,6 +535,12 @@ public class UpdateListenerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateListenerRequest</p>
+     */
     public static class BackendPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
@@ -529,11 +579,22 @@ public class UpdateListenerRequest extends Request {
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(BackendPorts model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port in the range of ports that are used by backend servers to receive requests.
-             * <p>
+             * <p>The first port in the range of ports that are used by backend servers to receive requests.</p>
+             * <blockquote>
+             * <p>This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+             * </blockquote>
              * 
-             * > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -541,10 +602,13 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * The last port in the range of ports that are used by backend servers to receive requests.
-             * <p>
+             * <p>The last port in the range of ports that are used by backend servers to receive requests.</p>
+             * <blockquote>
+             * <p>This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+             * </blockquote>
              * 
-             * > This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -558,6 +622,12 @@ public class UpdateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateListenerRequest</p>
+     */
     public static class Certificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -584,11 +654,21 @@ public class UpdateListenerRequest extends Request {
         public static final class Builder {
             private String id; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.id = model.id;
+            } 
+
             /**
-             * The ID of the SSL certificate.
-             * <p>
+             * <p>The ID of the SSL certificate.</p>
+             * <blockquote>
+             * <p>This parameter is required only when you configure an HTTPS listener.</p>
+             * </blockquote>
              * 
-             * > This parameter is required only when you configure an HTTPS listener.
+             * <strong>example:</strong>
+             * <p>449****-cn-hangzhou</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -602,6 +682,12 @@ public class UpdateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateListenerRequest</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -642,15 +728,25 @@ public class UpdateListenerRequest extends Request {
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port of the listener port range that is used to receive and forward requests to endpoints.
-             * <p>
+             * <p>The first port of the listener port range that is used to receive and forward requests to endpoints.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+             * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+             * <blockquote>
+             * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
-             * 
-             * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
-             * 
-             * > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -658,14 +754,16 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * The last port of the listener port range that is used to receive and forward requests to endpoints.
-             * <p>
+             * <p>The last port of the listener port range that is used to receive and forward requests to endpoints.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+             * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+             * <blockquote>
+             * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.
-             * 
-             * The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).
-             * 
-             * > You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -679,6 +777,12 @@ public class UpdateListenerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateListenerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateListenerRequest</p>
+     */
     public static class XForwardedForConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
@@ -753,14 +857,29 @@ public class UpdateListenerRequest extends Request {
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xRealIpEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(XForwardedForConfig model) {
+                this.xForwardedForGaApEnabled = model.xForwardedForGaApEnabled;
+                this.xForwardedForGaIdEnabled = model.xForwardedForGaIdEnabled;
+                this.xForwardedForPortEnabled = model.xForwardedForPortEnabled;
+                this.xForwardedForProtoEnabled = model.xForwardedForProtoEnabled;
+                this.xRealIpEnabled = model.xRealIpEnabled;
+            } 
+
             /**
-             * Specifies whether to use the `GA-AP` header to retrieve information about acceleration regions. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>GA-AP</code> header to retrieve information about acceleration regions. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
-             * 
-             * > This parameter is available only when you create an HTTPS or HTTP listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForGaApEnabled(Boolean xForwardedForGaApEnabled) {
                 this.xForwardedForGaApEnabled = xForwardedForGaApEnabled;
@@ -768,13 +887,17 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>GA-ID</code> header to retrieve the ID of the GA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
-             * 
-             * > This parameter is available only when you create an HTTPS or HTTP listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForGaIdEnabled(Boolean xForwardedForGaIdEnabled) {
                 this.xForwardedForGaIdEnabled = xForwardedForGaIdEnabled;
@@ -782,13 +905,17 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>GA-X-Forward-Port</code> header to retrieve the listener ports of the GA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
-             * 
-             * > This parameter is available only when you create an HTTPS or HTTP listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForPortEnabled(Boolean xForwardedForPortEnabled) {
                 this.xForwardedForPortEnabled = xForwardedForPortEnabled;
@@ -796,13 +923,17 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>GA-X-Forward-Proto</code> header to retrieve the listener protocol of the GA instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
-             * 
-             * > This parameter is available only when you create an HTTPS or HTTP listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xForwardedForProtoEnabled(Boolean xForwardedForProtoEnabled) {
                 this.xForwardedForProtoEnabled = xForwardedForProtoEnabled;
@@ -810,13 +941,17 @@ public class UpdateListenerRequest extends Request {
             }
 
             /**
-             * Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:
-             * <p>
+             * <p>Specifies whether to use the <code>X-Real-IP</code> header to retrieve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong> (default): no</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false** (default): no
-             * 
-             * > This parameter is available only when you create an HTTPS or HTTP listener.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder xRealIpEnabled(Boolean xRealIpEnabled) {
                 this.xRealIpEnabled = xRealIpEnabled;

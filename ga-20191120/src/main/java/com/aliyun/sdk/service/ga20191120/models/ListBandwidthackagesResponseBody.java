@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBandwidthackagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListBandwidthackagesResponseBody</p>
  */
 public class ListBandwidthackagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BandwidthPackages")
-    private java.util.List < BandwidthPackages> bandwidthPackages;
+    private java.util.List<BandwidthPackages> bandwidthPackages;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthPackages
      */
-    public java.util.List < BandwidthPackages> getBandwidthPackages() {
+    public java.util.List<BandwidthPackages> getBandwidthPackages() {
         return this.bandwidthPackages;
     }
 
@@ -78,22 +88,36 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BandwidthPackages> bandwidthPackages; 
+        private java.util.List<BandwidthPackages> bandwidthPackages; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListBandwidthackagesResponseBody model) {
+            this.bandwidthPackages = model.bandwidthPackages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The details of the bandwidth plans.
+         * <p>The details of the bandwidth plans.</p>
          */
-        public Builder bandwidthPackages(java.util.List < BandwidthPackages> bandwidthPackages) {
+        public Builder bandwidthPackages(java.util.List<BandwidthPackages> bandwidthPackages) {
             this.bandwidthPackages = bandwidthPackages;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBandwidthackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBandwidthackagesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -168,8 +207,19 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the bandwidth plan.
+             * <p>The tag key of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +227,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the bandwidth plan.
+             * <p>The tag value of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,9 +244,15 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBandwidthackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBandwidthackagesResponseBody</p>
+     */
     public static class BandwidthPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accelerators")
-        private java.util.List < String > accelerators;
+        private java.util.List<String> accelerators;
 
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -226,7 +285,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         private String state;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private BandwidthPackages(Builder builder) {
             this.accelerators = builder.accelerators;
@@ -254,7 +313,7 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         /**
          * @return accelerators
          */
-        public java.util.List < String > getAccelerators() {
+        public java.util.List<String> getAccelerators() {
             return this.accelerators;
         }
 
@@ -331,12 +390,12 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < String > accelerators; 
+            private java.util.List<String> accelerators; 
             private Integer bandwidth; 
             private String bandwidthPackageId; 
             private String chargeType; 
@@ -347,18 +406,39 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String state; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(BandwidthPackages model) {
+                this.accelerators = model.accelerators;
+                this.bandwidth = model.bandwidth;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.state = model.state;
+                this.tags = model.tags;
+            } 
 
             /**
-             * The IDs of the GA instances that are associated with the bandwidth plans.
+             * <p>The IDs of the GA instances that are associated with the bandwidth plans.</p>
              */
-            public Builder accelerators(java.util.List < String > accelerators) {
+            public Builder accelerators(java.util.List<String> accelerators) {
                 this.accelerators = accelerators;
                 return this;
             }
 
             /**
-             * The bandwidth of the bandwidth plan. Unit: Mbit/s.
+             * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -366,7 +446,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bandwidth plan.
+             * <p>The ID of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -374,11 +457,14 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the bandwidth plan. Valid values:
-             * <p>
+             * <p>The billing method of the bandwidth plan. Valid values:</p>
+             * <ul>
+             * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
+             * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+             * </ul>
              * 
-             * *   **PREPAY**: subscription. This is the default value.
-             * *   **POSTPAY**: pay-as-you-go.
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -386,7 +472,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bandwidth plan was created.
+             * <p>The time when the bandwidth plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578966918000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -394,7 +483,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the bandwidth plan.
+             * <p>The description of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +494,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the bandwidth plan.
+             * <p>The expiration time of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1578966918000</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -410,7 +505,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the GA instance.
+             * <p>The name of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accelerator</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,7 +516,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -426,7 +527,10 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzzwgr7vz2liy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -434,17 +538,20 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the bandwidth plan. Valid values:
-             * <p>
+             * <p>The status of the bandwidth plan. Valid values:</p>
+             * <ul>
+             * <li><strong>init:</strong> The bandwidth plan is being initialized.</li>
+             * <li><strong>active:</strong> The bandwidth plan is available.</li>
+             * <li><strong>binded:</strong> The bandwidth plan is associated with a GA instance.</li>
+             * <li><strong>binding:</strong> The bandwidth plan is being associated with a GA instance.</li>
+             * <li><strong>unbinding:</strong> The bandwidth plan is being disassociated from a GA instance.</li>
+             * <li><strong>updating:</strong> The bandwidth plan is being updated.</li>
+             * <li><strong>finacialLocked:</strong> The bandwidth plan is locked due to overdue payments.</li>
+             * <li><strong>locked:</strong> The bandwidth plan is locked.</li>
+             * </ul>
              * 
-             * *   **init:** The bandwidth plan is being initialized.
-             * *   **active:** The bandwidth plan is available.
-             * *   **binded:** The bandwidth plan is associated with a GA instance.
-             * *   **binding:** The bandwidth plan is being associated with a GA instance.
-             * *   **unbinding:** The bandwidth plan is being disassociated from a GA instance.
-             * *   **updating:** The bandwidth plan is being updated.
-             * *   **finacialLocked:** The bandwidth plan is locked due to overdue payments.
-             * *   **locked:** The bandwidth plan is locked.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -452,9 +559,9 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the bandwidth plan.
+             * <p>The tag of the bandwidth plan.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

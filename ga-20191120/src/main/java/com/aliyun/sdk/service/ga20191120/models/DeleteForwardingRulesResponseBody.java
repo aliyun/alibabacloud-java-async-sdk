@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteForwardingRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteForwardingRulesResponseBody</p>
  */
 public class DeleteForwardingRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ForwardingRules")
-    private java.util.List < ForwardingRules> forwardingRules;
+    private java.util.List<ForwardingRules> forwardingRules;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forwardingRules
      */
-    public java.util.List < ForwardingRules> getForwardingRules() {
+    public java.util.List<ForwardingRules> getForwardingRules() {
         return this.forwardingRules;
     }
 
@@ -45,19 +55,30 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ForwardingRules> forwardingRules; 
+        private java.util.List<ForwardingRules> forwardingRules; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteForwardingRulesResponseBody model) {
+            this.forwardingRules = model.forwardingRules;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The forwarding rules.
+         * <p>The forwarding rules.</p>
          */
-        public Builder forwardingRules(java.util.List < ForwardingRules> forwardingRules) {
+        public Builder forwardingRules(java.util.List<ForwardingRules> forwardingRules) {
             this.forwardingRules = forwardingRules;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFC67ED9-4AB1-431F-B6E3-A752B7B8CCD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteForwardingRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteForwardingRulesResponseBody</p>
+     */
     public static class ForwardingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardingRuleId")
         private String forwardingRuleId;
@@ -96,8 +123,18 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String forwardingRuleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForwardingRules model) {
+                this.forwardingRuleId = model.forwardingRuleId;
+            } 
+
             /**
-             * The forwarding rule ID.
+             * <p>The forwarding rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frule-bp19a3t3yzr21q3****</p>
              */
             public Builder forwardingRuleId(String forwardingRuleId) {
                 this.forwardingRuleId = forwardingRuleId;

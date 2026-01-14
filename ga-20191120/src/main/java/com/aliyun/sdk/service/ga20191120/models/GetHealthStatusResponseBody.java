@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHealthStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetHealthStatusResponseBody</p>
  */
 public class GetHealthStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EndpointGroups")
-    private java.util.List < EndpointGroups> endpointGroups;
+    private java.util.List<EndpointGroups> endpointGroups;
 
     @com.aliyun.core.annotation.NameInMap("HealthStatus")
     private String healthStatus;
@@ -38,10 +44,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpointGroups
      */
-    public java.util.List < EndpointGroups> getEndpointGroups() {
+    public java.util.List<EndpointGroups> getEndpointGroups() {
         return this.endpointGroups;
     }
 
@@ -67,26 +77,39 @@ public class GetHealthStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EndpointGroups> endpointGroups; 
+        private java.util.List<EndpointGroups> endpointGroups; 
         private String healthStatus; 
         private String listenerId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetHealthStatusResponseBody model) {
+            this.endpointGroups = model.endpointGroups;
+            this.healthStatus = model.healthStatus;
+            this.listenerId = model.listenerId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the endpoint groups.
+         * <p>The information about the endpoint groups.</p>
          */
-        public Builder endpointGroups(java.util.List < EndpointGroups> endpointGroups) {
+        public Builder endpointGroups(java.util.List<EndpointGroups> endpointGroups) {
             this.endpointGroups = endpointGroups;
             return this;
         }
 
         /**
-         * The health status of endpoints and endpoint groups. Valid values:
-         * <p>
+         * <p>The health status of endpoints and endpoint groups. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>abnormal</strong></li>
+         * <li><strong>partiallyAbnormal</strong></li>
+         * </ul>
          * 
-         * *   **normal**
-         * *   **abnormal**
-         * *   **partiallyAbnormal**
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.healthStatus = healthStatus;
@@ -94,7 +117,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -102,7 +128,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,6 +144,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHealthStatusResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -201,8 +236,23 @@ public class GetHealthStatusResponseBody extends TeaModel {
             private Long port; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.address = model.address;
+                this.endpointId = model.endpointId;
+                this.healthDetail = model.healthDetail;
+                this.healthStatus = model.healthStatus;
+                this.port = model.port;
+                this.type = model.type;
+            } 
+
             /**
-             * The IP address of the endpoint.
+             * <p>The IP address of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -210,7 +260,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-hp33b2e43fays7s8****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -218,10 +271,13 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health check details of the endpoint.
-             * <p>
+             * <p>The health check details of the endpoint.</p>
+             * <blockquote>
+             * <p> This parameter is unavailable.</p>
+             * </blockquote>
              * 
-             * >  This parameter is unavailable.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder healthDetail(String healthDetail) {
                 this.healthDetail = healthDetail;
@@ -229,12 +285,15 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the endpoint. Valid values:
-             * <p>
+             * <p>The health status of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>init:</strong> The endpoint is being initialized.</li>
+             * <li><strong>normal:</strong> The endpoint is normal.</li>
+             * <li><strong>abnormal:</strong> The endpoint is abnormal.</li>
+             * </ul>
              * 
-             * *   **init:** The endpoint is being initialized.
-             * *   **normal:** The endpoint is normal.
-             * *   **abnormal:** The endpoint is abnormal.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -242,7 +301,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used to connect to the endpoint.
+             * <p>The port that is used to connect to the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -250,18 +312,21 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint. Valid values:
-             * <p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Domain:</strong> a custom domain name.</li>
+             * <li><strong>Ip:</strong> a custom IP address.</li>
+             * <li><strong>PublicIp:</strong> a public IP address provided by Alibaba Cloud.</li>
+             * <li><strong>ECS:</strong> an Elastic Compute Service (ECS) instance.</li>
+             * <li><strong>SLB:</strong> a Classic Load Balancer (CLB) instance.</li>
+             * <li><strong>ALB:</strong> an Application Load Balancer (ALB) instance.</li>
+             * <li><strong>OSS:</strong> an Object Storage Service (OSS) bucket.</li>
+             * <li><strong>ENI:</strong> an elastic network interface (ENI).</li>
+             * <li><strong>NLB:</strong> a Network Load Balancer (NLB) instance.</li>
+             * </ul>
              * 
-             * *   **Domain:** a custom domain name.
-             * *   **Ip:** a custom IP address.
-             * *   **PublicIp:** a public IP address provided by Alibaba Cloud.
-             * *   **ECS:** an Elastic Compute Service (ECS) instance.
-             * *   **SLB:** a Classic Load Balancer (CLB) instance.
-             * *   **ALB:** an Application Load Balancer (ALB) instance.
-             * *   **OSS:** an Object Storage Service (OSS) bucket.
-             * *   **ENI:** an elastic network interface (ENI).
-             * *   **NLB:** a Network Load Balancer (NLB) instance.
+             * <strong>example:</strong>
+             * <p>Ip</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -275,6 +340,12 @@ public class GetHealthStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHealthStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHealthStatusResponseBody</p>
+     */
     public static class EndpointGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
@@ -283,10 +354,10 @@ public class GetHealthStatusResponseBody extends TeaModel {
         private String endpointGroupType;
 
         @com.aliyun.core.annotation.NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("ForwardingRuleIds")
-        private java.util.List < String > forwardingRuleIds;
+        private java.util.List<String> forwardingRuleIds;
 
         @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
@@ -324,14 +395,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
         /**
          * @return forwardingRuleIds
          */
-        public java.util.List < String > getForwardingRuleIds() {
+        public java.util.List<String> getForwardingRuleIds() {
             return this.forwardingRuleIds;
         }
 
@@ -345,12 +416,26 @@ public class GetHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String endpointGroupId; 
             private String endpointGroupType; 
-            private java.util.List < Endpoints> endpoints; 
-            private java.util.List < String > forwardingRuleIds; 
+            private java.util.List<Endpoints> endpoints; 
+            private java.util.List<String> forwardingRuleIds; 
             private String healthStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointGroups model) {
+                this.endpointGroupId = model.endpointGroupId;
+                this.endpointGroupType = model.endpointGroupType;
+                this.endpoints = model.endpoints;
+                this.forwardingRuleIds = model.forwardingRuleIds;
+                this.healthStatus = model.healthStatus;
+            } 
+
             /**
-             * The ID of the endpoint group.
+             * <p>The ID of the endpoint group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epg-bp14sz7ftcwwjgrdm****</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -358,11 +443,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint group. Valid values:
-             * <p>
+             * <p>The type of the endpoint group. Valid values:</p>
+             * <ul>
+             * <li><strong>default:</strong> the default endpoint group.</li>
+             * <li><strong>virtual:</strong> a virtual endpoint group.</li>
+             * </ul>
              * 
-             * *   **default:** the default endpoint group.
-             * *   **virtual:** a virtual endpoint group.
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
@@ -370,29 +458,32 @@ public class GetHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the endpoints.
+             * <p>The information about the endpoints.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
 
             /**
-             * The IDs of the forwarding rules.
+             * <p>The IDs of the forwarding rules.</p>
              */
-            public Builder forwardingRuleIds(java.util.List < String > forwardingRuleIds) {
+            public Builder forwardingRuleIds(java.util.List<String> forwardingRuleIds) {
                 this.forwardingRuleIds = forwardingRuleIds;
                 return this;
             }
 
             /**
-             * The health status of the endpoint group. Valid values:
-             * <p>
+             * <p>The health status of the endpoint group. Valid values:</p>
+             * <ul>
+             * <li><strong>init:</strong> The endpoint group is being initialized.</li>
+             * <li><strong>normal:</strong> The endpoint group is normal.</li>
+             * <li><strong>abnormal:</strong> The endpoint group is abnormal.</li>
+             * <li><strong>partiallyAbnormal:</strong> The endpoint group is partially abnormal.</li>
+             * </ul>
              * 
-             * *   **init:** The endpoint group is being initialized.
-             * *   **normal:** The endpoint group is normal.
-             * *   **abnormal:** The endpoint group is abnormal.
-             * *   **partiallyAbnormal:** The endpoint group is partially abnormal.
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;

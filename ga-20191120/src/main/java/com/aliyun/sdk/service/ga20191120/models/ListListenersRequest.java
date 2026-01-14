@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListListenersRequest} extends {@link RequestModel}
  *
  * <p>ListListenersRequest</p>
@@ -26,6 +32,10 @@ public class ListListenersRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
+    private String protocol;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -35,6 +45,7 @@ public class ListListenersRequest extends Request {
         this.acceleratorId = builder.acceleratorId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.protocol = builder.protocol;
         this.regionId = builder.regionId;
     }
 
@@ -46,7 +57,7 @@ public class ListListenersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,6 +84,13 @@ public class ListListenersRequest extends Request {
     }
 
     /**
+     * @return protocol
+     */
+    public String getProtocol() {
+        return this.protocol;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,6 +101,7 @@ public class ListListenersRequest extends Request {
         private String acceleratorId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String protocol; 
         private String regionId; 
 
         private Builder() {
@@ -94,11 +113,16 @@ public class ListListenersRequest extends Request {
             this.acceleratorId = request.acceleratorId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.protocol = request.protocol;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -107,7 +131,10 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +143,10 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to **50**. Default value: **10**.
+         * <p>The number of entries per page. Valid values: 1 to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +155,20 @@ public class ListListenersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * Protocol.
+         */
+        public Builder protocol(String protocol) {
+            this.putQueryParameter("Protocol", protocol);
+            this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

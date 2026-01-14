@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomRoutingEndpointTrafficPoliciesRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomRoutingEndpointTrafficPoliciesRequest</p>
@@ -23,7 +29,7 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > policyIds;
+    private java.util.List<String> policyIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -46,7 +52,7 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,7 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     /**
      * @return policyIds
      */
-    public java.util.List < String > getPolicyIds() {
+    public java.util.List<String> getPolicyIds() {
         return this.policyIds;
     }
 
@@ -82,7 +88,7 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteCustomRoutingEndpointTrafficPoliciesRequest, Builder> {
         private String clientToken; 
         private String endpointId; 
-        private java.util.List < String > policyIds; 
+        private java.util.List<String> policyIds; 
         private String regionId; 
 
         private Builder() {
@@ -98,12 +104,14 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -112,10 +120,14 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint for which you want to delete traffic destinations.
-         * <p>
+         * <p>The ID of the endpoint for which you want to delete traffic destinations.</p>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>ep-2zewuzypq5e6r3pfh****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -124,19 +136,22 @@ public class DeleteCustomRoutingEndpointTrafficPoliciesRequest extends Request {
         }
 
         /**
-         * The IDs of the traffic destinations.
-         * <p>
-         * 
-         * You can specify the IDs of up to 9,000 traffic destinations.
+         * <p>The IDs of the traffic destinations.</p>
+         * <p>You can specify the IDs of up to 9,000 traffic destinations.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder policyIds(java.util.List < String > policyIds) {
+        public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

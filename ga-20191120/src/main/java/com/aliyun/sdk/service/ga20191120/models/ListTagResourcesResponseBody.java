@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -36,6 +42,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static ListTagResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,12 +82,25 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListTagResourcesResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The token that determines the start point of the next query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the next query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, it indicates that no subsequent query is to be sent.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -85,7 +108,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,7 +119,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resources to which tags are added.
+         * <p>The information about the resources to which tags are added.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -101,7 +127,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -114,6 +143,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -176,8 +211,21 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagResource model) {
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp149u6o36qt1as9b****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -185,14 +233,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
-             * <p>
+             * <p>The type of the resource.</p>
+             * <ul>
+             * <li><strong>accelerator</strong>: a standard GA instance</li>
+             * <li><strong>basicaccelerator</strong>: a basic GA instance</li>
+             * <li><strong>bandwidthpackage</strong>: a bandwidth plan</li>
+             * <li><strong>acl</strong>: an ACL</li>
+             * <li><strong>endpointgroup</strong>: an endpoint group</li>
+             * </ul>
              * 
-             * *   **accelerator**: a standard GA instance
-             * *   **basicaccelerator**: a basic GA instance
-             * *   **bandwidthpackage**: a bandwidth plan
-             * *   **acl**: an ACL
-             * *   **endpointgroup**: an endpoint group
+             * <strong>example:</strong>
+             * <p>accelerator</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -200,7 +251,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valueTest</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -208,7 +262,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -222,9 +279,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
-        private java.util.List < TagResource> tagResource;
+        private java.util.List<TagResource> tagResource;
 
         private TagResources(Builder builder) {
             this.tagResource = builder.tagResource;
@@ -241,17 +304,24 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * @return tagResource
          */
-        public java.util.List < TagResource> getTagResource() {
+        public java.util.List<TagResource> getTagResource() {
             return this.tagResource;
         }
 
         public static final class Builder {
-            private java.util.List < TagResource> tagResource; 
+            private java.util.List<TagResource> tagResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.tagResource = model.tagResource;
+            } 
 
             /**
              * TagResource.
              */
-            public Builder tagResource(java.util.List < TagResource> tagResource) {
+            public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;
                 return this;
             }

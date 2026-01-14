@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomRoutingEndpointGroupsRequest</p>
@@ -27,7 +33,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
+    private java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -57,7 +63,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +92,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
     /**
      * @return endpointGroupConfigurations
      */
-    public java.util.List < EndpointGroupConfigurations> getEndpointGroupConfigurations() {
+    public java.util.List<EndpointGroupConfigurations> getEndpointGroupConfigurations() {
         return this.endpointGroupConfigurations;
     }
 
@@ -108,7 +114,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         private String acceleratorId; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations; 
+        private java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations; 
         private String listenerId; 
         private String regionId; 
 
@@ -127,7 +133,11 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -136,12 +146,14 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * > If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request is different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -150,11 +162,14 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -163,19 +178,22 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The information about the endpoint groups.
-         * <p>
-         * 
-         * You can specify at most five endpoint groups.
+         * <p>The information about the endpoint groups.</p>
+         * <p>You can specify at most five endpoint groups.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder endpointGroupConfigurations(java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations) {
+        public Builder endpointGroupConfigurations(java.util.List<EndpointGroupConfigurations> endpointGroupConfigurations) {
             this.putQueryParameter("EndpointGroupConfigurations", endpointGroupConfigurations);
             this.endpointGroupConfigurations = endpointGroupConfigurations;
             return this;
         }
 
         /**
-         * The ID of the custom routing listener.
+         * <p>The ID of the custom routing listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -184,7 +202,11 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,12 +221,18 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomRoutingEndpointGroupsRequest</p>
+     */
     public static class DestinationConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < String > protocols;
+        private java.util.List<String> protocols;
 
         @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
@@ -233,7 +261,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         /**
          * @return protocols
          */
-        public java.util.List < String > getProtocols() {
+        public java.util.List<String> getProtocols() {
             return this.protocols;
         }
 
@@ -246,16 +274,25 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
 
         public static final class Builder {
             private Integer fromPort; 
-            private java.util.List < String > protocols; 
+            private java.util.List<String> protocols; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationConfigurations model) {
+                this.fromPort = model.fromPort;
+                this.protocols = model.protocols;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first backend service port for the endpoint group.
-             * <p>
+             * <p>The first backend service port for the endpoint group.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
+             * <p>You can specify at most 20 first backend service ports for each endpoint group.</p>
              * 
-             * Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
-             * 
-             * You can specify at most 20 first backend service ports for each endpoint group.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -263,23 +300,21 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The backend service protocol.
-             * <p>
-             * 
-             * You can specify up to four backend service protocols in each mapping configuration.
+             * <p>The backend service protocol.</p>
+             * <p>You can specify up to four backend service protocols in each mapping configuration.</p>
              */
-            public Builder protocols(java.util.List < String > protocols) {
+            public Builder protocols(java.util.List<String> protocols) {
                 this.protocols = protocols;
                 return this;
             }
 
             /**
-             * The last backend service port for the endpoint group.
-             * <p>
+             * <p>The last backend service port for the endpoint group.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
+             * <p>You can specify at most 20 last backend service ports for each endpoint group.</p>
              * 
-             * Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.
-             * 
-             * You can specify at most 20 last backend service ports for each endpoint group.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -293,6 +328,12 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomRoutingEndpointGroupsRequest</p>
+     */
     public static class PortRanges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
@@ -331,13 +372,21 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             private Integer fromPort; 
             private Integer toPort; 
 
+            private Builder() {
+            } 
+
+            private Builder(PortRanges model) {
+                this.fromPort = model.fromPort;
+                this.toPort = model.toPort;
+            } 
+
             /**
-             * The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
-             * <p>
+             * <p>The first port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+             * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
+             * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five first ports for each destination.</p>
              * 
-             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
-             * 
-             * You can specify port ranges for at most 20 destinations in each endpoint and specify at most five first ports for each destination.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder fromPort(Integer fromPort) {
                 this.fromPort = fromPort;
@@ -345,12 +394,12 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.
-             * <p>
+             * <p>The last port of the destination port range. The value of this parameter must fall within the port range of the endpoint group.</p>
+             * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
+             * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five last ports for each destination.</p>
              * 
-             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
-             * 
-             * You can specify port ranges for at most 20 destinations in each endpoint and specify at most five last ports for each destination.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder toPort(Integer toPort) {
                 this.toPort = toPort;
@@ -364,12 +413,18 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomRoutingEndpointGroupsRequest</p>
+     */
     public static class PolicyConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
             this.address = builder.address;
@@ -394,21 +449,29 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
         public static final class Builder {
             private String address; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
+
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfigurations model) {
+                this.address = model.address;
+                this.portRanges = model.portRanges;
+            } 
 
             /**
-             * The IP address of the destination to which traffic is forwarded.
-             * <p>
+             * <p>The IP address of the destination to which traffic is forwarded.</p>
+             * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
+             * <p>You can specify at most 20 destination IP addresses for each endpoint.</p>
              * 
-             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
-             * 
-             * You can specify at most 20 destination IP addresses for each endpoint.
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -416,16 +479,12 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.
-             * <p>
-             * 
-             * If you leave this parameter empty, traffic is forwarded to all destination ports.
-             * 
-             * This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.
-             * 
-             * You can specify port ranges for at most 20 destinations in each endpoint and specify at most five port ranges for each destination.
+             * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
+             * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
+             * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
+             * <p>You can specify port ranges for at most 20 destinations in each endpoint and specify at most five port ranges for each destination.</p>
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }
@@ -437,12 +496,18 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomRoutingEndpointGroupsRequest</p>
+     */
     public static class EndpointConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
         @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
-        private java.util.List < PolicyConfigurations> policyConfigurations;
+        private java.util.List<PolicyConfigurations> policyConfigurations;
 
         @com.aliyun.core.annotation.NameInMap("TrafficToEndpointPolicy")
         private String trafficToEndpointPolicy;
@@ -475,7 +540,7 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         /**
          * @return policyConfigurations
          */
-        public java.util.List < PolicyConfigurations> getPolicyConfigurations() {
+        public java.util.List<PolicyConfigurations> getPolicyConfigurations() {
             return this.policyConfigurations;
         }
 
@@ -495,12 +560,25 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
 
         public static final class Builder {
             private String endpoint; 
-            private java.util.List < PolicyConfigurations> policyConfigurations; 
+            private java.util.List<PolicyConfigurations> policyConfigurations; 
             private String trafficToEndpointPolicy; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointConfigurations model) {
+                this.endpoint = model.endpoint;
+                this.policyConfigurations = model.policyConfigurations;
+                this.trafficToEndpointPolicy = model.trafficToEndpointPolicy;
+                this.type = model.type;
+            } 
+
             /**
-             * The name of the vSwitch that is specified as an endpoint.
+             * <p>The name of the vSwitch that is specified as an endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-test01</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -508,25 +586,25 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The destination to which traffic is forwarded.
-             * <p>
-             * 
-             * You can specify at most 20 destinations for each endpoint.
+             * <p>The destination to which traffic is forwarded.</p>
+             * <p>You can specify at most 20 destinations for each endpoint.</p>
              */
-            public Builder policyConfigurations(java.util.List < PolicyConfigurations> policyConfigurations) {
+            public Builder policyConfigurations(java.util.List<PolicyConfigurations> policyConfigurations) {
                 this.policyConfigurations = policyConfigurations;
                 return this;
             }
 
             /**
-             * The traffic policy that is used to process traffic to the endpoint. Valid values:
-             * <p>
+             * <p>The traffic policy that is used to process traffic to the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>AllowAll</strong>: allows all traffic to the endpoint.</li>
+             * <li><strong>DenyAll</strong> (default): denies all traffic to the endpoint.</li>
+             * <li><strong>AllowCustom</strong>: allows traffic only to specified destinations in the endpoint.</li>
+             * </ul>
+             * <p>If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.</p>
              * 
-             * *   **AllowAll**: allows all traffic to the endpoint.
-             * *   **DenyAll** (default): denies all traffic to the endpoint.
-             * *   **AllowCustom**: allows traffic only to specified destinations in the endpoint.
-             * 
-             * If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.
+             * <strong>example:</strong>
+             * <p>DenyAll</p>
              */
             public Builder trafficToEndpointPolicy(String trafficToEndpointPolicy) {
                 this.trafficToEndpointPolicy = trafficToEndpointPolicy;
@@ -534,10 +612,11 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The type of endpoint.
-             * <p>
+             * <p>The type of endpoint.</p>
+             * <p>Set the value to <strong>PrivateSubNet</strong>, which specifies a private CIDR block. This is the default value.</p>
              * 
-             * Set the value to **PrivateSubNet**, which specifies a private CIDR block. This is the default value.
+             * <strong>example:</strong>
+             * <p>PrivateSubNet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -551,15 +630,21 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomRoutingEndpointGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomRoutingEndpointGroupsRequest</p>
+     */
     public static class EndpointGroupConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DestinationConfigurations")
-        private java.util.List < DestinationConfigurations> destinationConfigurations;
+        private java.util.List<DestinationConfigurations> destinationConfigurations;
 
         @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
-        private java.util.List < EndpointConfigurations> endpointConfigurations;
+        private java.util.List<EndpointConfigurations> endpointConfigurations;
 
         @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -594,14 +679,14 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
         /**
          * @return destinationConfigurations
          */
-        public java.util.List < DestinationConfigurations> getDestinationConfigurations() {
+        public java.util.List<DestinationConfigurations> getDestinationConfigurations() {
             return this.destinationConfigurations;
         }
 
         /**
          * @return endpointConfigurations
          */
-        public java.util.List < EndpointConfigurations> getEndpointConfigurations() {
+        public java.util.List<EndpointConfigurations> getEndpointConfigurations() {
             return this.endpointConfigurations;
         }
 
@@ -621,18 +706,29 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < DestinationConfigurations> destinationConfigurations; 
-            private java.util.List < EndpointConfigurations> endpointConfigurations; 
+            private java.util.List<DestinationConfigurations> destinationConfigurations; 
+            private java.util.List<EndpointConfigurations> endpointConfigurations; 
             private String endpointGroupRegion; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointGroupConfigurations model) {
+                this.description = model.description;
+                this.destinationConfigurations = model.destinationConfigurations;
+                this.endpointConfigurations = model.endpointConfigurations;
+                this.endpointGroupRegion = model.endpointGroupRegion;
+                this.name = model.name;
+            } 
+
             /**
-             * The description of the endpoint group.
-             * <p>
+             * <p>The description of the endpoint group.</p>
+             * <p>The description cannot exceed 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most five endpoint group descriptions.</p>
              * 
-             * The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.
-             * 
-             * You can specify at most five endpoint group descriptions.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -640,34 +736,31 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The mapping configuration of the endpoint group.
-             * <p>
-             * 
-             * You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.
-             * 
-             * You can specify at most 20 mapping configurations for each endpoint group.
+             * <p>The mapping configuration of the endpoint group.</p>
+             * <p>You need to specify the backend service ports and protocols for the endpoint group. The ports are mapped to listener ports.</p>
+             * <p>You can specify at most 20 mapping configurations for each endpoint group.</p>
              */
-            public Builder destinationConfigurations(java.util.List < DestinationConfigurations> destinationConfigurations) {
+            public Builder destinationConfigurations(java.util.List<DestinationConfigurations> destinationConfigurations) {
                 this.destinationConfigurations = destinationConfigurations;
                 return this;
             }
 
             /**
-             * The information about the endpoints.
-             * <p>
-             * 
-             * You can specify at most 10 endpoints for each endpoint group.
+             * <p>The information about the endpoints.</p>
+             * <p>You can specify at most 10 endpoints for each endpoint group.</p>
              */
-            public Builder endpointConfigurations(java.util.List < EndpointConfigurations> endpointConfigurations) {
+            public Builder endpointConfigurations(java.util.List<EndpointConfigurations> endpointConfigurations) {
                 this.endpointConfigurations = endpointConfigurations;
                 return this;
             }
 
             /**
-             * The ID of the region in which the endpoint group resides.
-             * <p>
+             * <p>The ID of the region in which the endpoint group resides.</p>
+             * <p>You can specify at most five region IDs.</p>
+             * <p>This parameter is required.</p>
              * 
-             * You can specify at most five region IDs.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder endpointGroupRegion(String endpointGroupRegion) {
                 this.endpointGroupRegion = endpointGroupRegion;
@@ -675,12 +768,12 @@ public class CreateCustomRoutingEndpointGroupsRequest extends Request {
             }
 
             /**
-             * The name of the endpoint group.
-             * <p>
+             * <p>The name of the endpoint group.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+             * <p>You can specify at most five endpoint group names.</p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
-             * 
-             * You can specify at most five endpoint group names.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBasicAcceleratorResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBasicAcceleratorResponseBody</p>
@@ -34,6 +40,10 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorId
      */
@@ -60,8 +70,20 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         private String orderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateBasicAcceleratorResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the basic GA instance.
+         * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -69,12 +91,12 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
-         * <p>
+         * <p>The order ID.</p>
+         * <p>This parameter is returned only if ChargeType is set to PREPAY.</p>
+         * <p>If <strong>AutoPay</strong> is set to <strong>false</strong>, go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</p>
          * 
-         * This parameter is returned only if ChargeType is set to PREPAY.
-         * 
-         * If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.
+         * <strong>example:</strong>
+         * <p>2082574365</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -82,7 +104,10 @@ public class CreateBasicAcceleratorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

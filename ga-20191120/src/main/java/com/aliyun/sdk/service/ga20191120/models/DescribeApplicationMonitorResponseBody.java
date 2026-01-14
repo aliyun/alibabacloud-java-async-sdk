@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationMonitorResponseBody</p>
@@ -27,7 +33,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     private Integer detectTimes;
 
     @com.aliyun.core.annotation.NameInMap("IspCityList")
-    private java.util.List < IspCityList> ispCityList;
+    private java.util.List<IspCityList> ispCityList;
 
     @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
@@ -78,6 +84,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorId
      */
@@ -116,7 +126,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     /**
      * @return ispCityList
      */
-    public java.util.List < IspCityList> getIspCityList() {
+    public java.util.List<IspCityList> getIspCityList() {
         return this.ispCityList;
     }
 
@@ -182,7 +192,7 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         private Boolean detectEnable; 
         private Integer detectThreshold; 
         private Integer detectTimes; 
-        private java.util.List < IspCityList> ispCityList; 
+        private java.util.List<IspCityList> ispCityList; 
         private String listenerId; 
         private String optionsJson; 
         private String regionId; 
@@ -192,8 +202,31 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         private String taskId; 
         private String taskName; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationMonitorResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.address = model.address;
+            this.detectEnable = model.detectEnable;
+            this.detectThreshold = model.detectThreshold;
+            this.detectTimes = model.detectTimes;
+            this.ispCityList = model.ispCityList;
+            this.listenerId = model.listenerId;
+            this.optionsJson = model.optionsJson;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.silenceTime = model.silenceTime;
+            this.state = model.state;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+        } 
+
         /**
-         * The ID of the GA instance on which the origin probing task ran.
+         * <p>The ID of the GA instance on which the origin probing task ran.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -201,7 +234,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The URL or IP address that was probed.
+         * <p>The URL or IP address that was probed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -209,11 +245,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the automatic diagnostics feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detectEnable(Boolean detectEnable) {
             this.detectEnable = detectEnable;
@@ -221,10 +260,11 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold that is used to trigger automatic diagnostics.
-         * <p>
+         * <p>The threshold that is used to trigger automatic diagnostics.</p>
+         * <p>If the availability of the origin server drops below the specified threshold, the automatic diagnostics feature is triggered.</p>
          * 
-         * If the availability of the origin server drops below the specified threshold, the automatic diagnostics feature is triggered.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder detectThreshold(Integer detectThreshold) {
             this.detectThreshold = detectThreshold;
@@ -232,7 +272,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that are required to reach the threshold before the automatic diagnostics feature is triggered.
+         * <p>The number of times that are required to reach the threshold before the automatic diagnostics feature is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder detectTimes(Integer detectTimes) {
             this.detectTimes = detectTimes;
@@ -240,15 +283,18 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The probe points of the Internet service provider (ISP).
+         * <p>The probe points of the Internet service provider (ISP).</p>
          */
-        public Builder ispCityList(java.util.List < IspCityList> ispCityList) {
+        public Builder ispCityList(java.util.List<IspCityList> ispCityList) {
             this.ispCityList = ispCityList;
             return this;
         }
 
         /**
-         * The ID of the listener on which the origin probing task ran.
+         * <p>The ID of the listener on which the origin probing task ran.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.listenerId = listenerId;
@@ -256,7 +302,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.
+         * <p>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;http_method&quot;: &quot;get&quot;,&quot;header&quot;: &quot;key:asd&quot;,&quot;acceptable_response_code&quot;: &quot;500&quot;,&quot;cert_verify&quot;: true }</p>
          */
         public Builder optionsJson(String optionsJson) {
             this.optionsJson = optionsJson;
@@ -264,7 +313,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -272,7 +324,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -280,12 +335,12 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers automatic diagnostics, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.
-         * <p>
+         * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers automatic diagnostics, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.</p>
+         * <p>If the number of consecutive times that the availability rate drops below the automatic diagnostics threshold reaches the value of <strong>DetectTimes</strong>, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period regardless of whether the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+         * <p>Unit: seconds.</p>
          * 
-         * If the number of consecutive times that the availability rate drops below the automatic diagnostics threshold reaches the value of **DetectTimes**, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period regardless of whether the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.
-         * 
-         * Unit: seconds.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder silenceTime(Integer silenceTime) {
             this.silenceTime = silenceTime;
@@ -293,14 +348,17 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the origin probing task. Valid values:
-         * <p>
+         * <p>The status of the origin probing task. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong></li>
+         * <li><strong>active</strong></li>
+         * <li><strong>updating</strong></li>
+         * <li><strong>inactive</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
          * 
-         * *   **init**
-         * *   **active**
-         * *   **updating**
-         * *   **inactive**
-         * *   **deleting**
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -308,7 +366,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the origin probing task.
+         * <p>The ID of the origin probing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sm-bp1fpdjfju9k8yr1y****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -316,7 +377,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the origin probing task.
+         * <p>The name of the origin probing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -329,6 +393,12 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApplicationMonitorResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationMonitorResponseBody</p>
+     */
     public static class IspCityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("City")
         private String city;
@@ -391,8 +461,21 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             private String isp; 
             private String ispName; 
 
+            private Builder() {
+            } 
+
+            private Builder(IspCityList model) {
+                this.city = model.city;
+                this.cityName = model.cityName;
+                this.isp = model.isp;
+                this.ispName = model.ispName;
+            } 
+
             /**
-             * The ID of the city in which the probe point of the ISP is deployed.
+             * <p>The ID of the city in which the probe point of the ISP is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>375</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -400,7 +483,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the city in which the probe point of the ISP is deployed.
+             * <p>The name of the city in which the probe point of the ISP is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Singapore</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -408,7 +494,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The probe point ID of the ISP.
+             * <p>The probe point ID of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -416,7 +505,10 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The probe point name of the ISP.
+             * <p>The probe point name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;

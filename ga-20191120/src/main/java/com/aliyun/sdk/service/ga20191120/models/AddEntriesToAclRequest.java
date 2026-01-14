@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddEntriesToAclRequest} extends {@link RequestModel}
  *
  * <p>AddEntriesToAclRequest</p>
@@ -14,7 +20,7 @@ public class AddEntriesToAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclEntries")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AclEntries> aclEntries;
+    private java.util.List<AclEntries> aclEntries;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclId")
@@ -51,7 +57,7 @@ public class AddEntriesToAclRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +65,7 @@ public class AddEntriesToAclRequest extends Request {
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -92,7 +98,7 @@ public class AddEntriesToAclRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddEntriesToAclRequest, Builder> {
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private String aclId; 
         private String clientToken; 
         private Boolean dryRun; 
@@ -112,19 +118,22 @@ public class AddEntriesToAclRequest extends Request {
         } 
 
         /**
-         * The entries (IP addresses or CIDR blocks) that you want to add to the ACL.
-         * <p>
-         * 
-         * You can delete a maximum of 50 entries at a time.
+         * <p>The entries (IP addresses or CIDR blocks) that you want to add to the ACL.</p>
+         * <p>You can add at most 50 entries at a time.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.putQueryParameter("AclEntries", aclEntries);
             this.aclEntries = aclEntries;
             return this;
         }
 
         /**
-         * The ACL ID.
+         * <p>The ACL ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -133,12 +142,14 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,11 +158,14 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -160,7 +174,11 @@ public class AddEntriesToAclRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,6 +193,12 @@ public class AddEntriesToAclRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddEntriesToAclRequest} extends {@link TeaModel}
+     *
+     * <p>AddEntriesToAclRequest</p>
+     */
     public static class AclEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
@@ -213,11 +237,22 @@ public class AddEntriesToAclRequest extends Request {
             private String entry; 
             private String entryDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.entry = model.entry;
+                this.entryDescription = model.entryDescription;
+            } 
+
             /**
-             * The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add a maximum of 50 entries at a time.
-             * <p>
+             * <p>The entry (IP address or CIDR block) that you want to add. You can add at most 50 entries at a time.</p>
+             * <blockquote>
+             * <p> This parameter is required.</p>
+             * </blockquote>
              * 
-             * >  This parameter is required.
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX/24</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -225,12 +260,12 @@ public class AddEntriesToAclRequest extends Request {
             }
 
             /**
-             * The description of the entry.
-             * <p>
+             * <p>The description of the entry that you want to add to the ACL.</p>
+             * <p>You can add at most 50 descriptions in each request.</p>
+             * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
              * 
-             * You can add the descriptions of up to 50 entries in each request.
-             * 
-             * The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
+             * <strong>example:</strong>
+             * <p>test-entry</p>
              */
             public Builder entryDescription(String entryDescription) {
                 this.entryDescription = entryDescription;

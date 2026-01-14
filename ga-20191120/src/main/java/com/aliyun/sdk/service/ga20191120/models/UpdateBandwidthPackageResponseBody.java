@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBandwidthPackageResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateBandwidthPackageResponseBody</p>
@@ -36,6 +42,10 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
 
     public static UpdateBandwidthPackageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateBandwidthPackageResponseBody model) {
+            this.bandwidthPackage = model.bandwidthPackage;
+            this.description = model.description;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The bandwidth plan ID.
+         * <p>The bandwidth plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1eo4f57z1kbbcmn****</p>
          */
         public Builder bandwidthPackage(String bandwidthPackage) {
             this.bandwidthPackage = bandwidthPackage;
@@ -81,7 +104,10 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the bandwidth plan.
+         * <p>The description of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -89,7 +115,10 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the bandwidth plan.
+         * <p>The name of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -97,7 +126,10 @@ public class UpdateBandwidthPackageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1DF3A3CB-B621-44F8-9870-C20D034D7AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

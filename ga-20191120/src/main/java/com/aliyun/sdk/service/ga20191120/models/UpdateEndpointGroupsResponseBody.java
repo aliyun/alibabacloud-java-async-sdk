@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateEndpointGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateEndpointGroupsResponseBody</p>
  */
 public class UpdateEndpointGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EndpointGroupIds")
-    private java.util.List < String > endpointGroupIds;
+    private java.util.List<String> endpointGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class UpdateEndpointGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endpointGroupIds
      */
-    public java.util.List < String > getEndpointGroupIds() {
+    public java.util.List<String> getEndpointGroupIds() {
         return this.endpointGroupIds;
     }
 
@@ -45,19 +55,30 @@ public class UpdateEndpointGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > endpointGroupIds; 
+        private java.util.List<String> endpointGroupIds; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateEndpointGroupsResponseBody model) {
+            this.endpointGroupIds = model.endpointGroupIds;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The IDs of the endpoint groups.
+         * <p>The IDs of the endpoint groups.</p>
          */
-        public Builder endpointGroupIds(java.util.List < String > endpointGroupIds) {
+        public Builder endpointGroupIds(java.util.List<String> endpointGroupIds) {
             this.endpointGroupIds = endpointGroupIds;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

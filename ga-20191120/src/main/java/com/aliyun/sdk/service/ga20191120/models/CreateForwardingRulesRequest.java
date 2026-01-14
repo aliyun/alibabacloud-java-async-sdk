@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardingRulesRequest} extends {@link RequestModel}
  *
  * <p>CreateForwardingRulesRequest</p>
@@ -23,7 +29,7 @@ public class CreateForwardingRulesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ForwardingRules")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ForwardingRules> forwardingRules;
+    private java.util.List<ForwardingRules> forwardingRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -52,7 +58,7 @@ public class CreateForwardingRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +80,7 @@ public class CreateForwardingRulesRequest extends Request {
     /**
      * @return forwardingRules
      */
-    public java.util.List < ForwardingRules> getForwardingRules() {
+    public java.util.List<ForwardingRules> getForwardingRules() {
         return this.forwardingRules;
     }
 
@@ -95,7 +101,7 @@ public class CreateForwardingRulesRequest extends Request {
     public static final class Builder extends Request.Builder<CreateForwardingRulesRequest, Builder> {
         private String acceleratorId; 
         private String clientToken; 
-        private java.util.List < ForwardingRules> forwardingRules; 
+        private java.util.List<ForwardingRules> forwardingRules; 
         private String listenerId; 
         private String regionId; 
 
@@ -113,7 +119,11 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4q****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -122,12 +132,14 @@ public class CreateForwardingRulesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * <strong>example:</strong>
+         * <p>02fb3da4****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,16 +148,20 @@ public class CreateForwardingRulesRequest extends Request {
         }
 
         /**
-         * ForwardingRules.
+         * <p>This parameter is required.</p>
          */
-        public Builder forwardingRules(java.util.List < ForwardingRules> forwardingRules) {
+        public Builder forwardingRules(java.util.List<ForwardingRules> forwardingRules) {
             this.putBodyParameter("ForwardingRules", forwardingRules);
             this.forwardingRules = forwardingRules;
             return this;
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1s0vzbi5bxlx5****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -154,7 +170,11 @@ public class CreateForwardingRulesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,6 +189,12 @@ public class CreateForwardingRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class ServerGroupTuples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -196,8 +222,15 @@ public class CreateForwardingRulesRequest extends Request {
         public static final class Builder {
             private String endpointGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.endpointGroupId = model.endpointGroupId;
+            } 
+
             /**
-             * EndpointGroupId.
+             * <p>This parameter is required.</p>
              */
             public Builder endpointGroupId(String endpointGroupId) {
                 this.endpointGroupId = endpointGroupId;
@@ -211,10 +244,16 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class ForwardGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -231,17 +270,24 @@ public class CreateForwardingRulesRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
-             * ServerGroupTuples.
+             * <p>This parameter is required.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -253,6 +299,12 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class RuleActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
@@ -317,6 +369,16 @@ public class CreateForwardingRulesRequest extends Request {
             private String ruleActionType; 
             private String ruleActionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleActions model) {
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.order = model.order;
+                this.ruleActionType = model.ruleActionType;
+                this.ruleActionValue = model.ruleActionValue;
+            } 
+
             /**
              * ForwardGroupConfig.
              */
@@ -326,7 +388,7 @@ public class CreateForwardingRulesRequest extends Request {
             }
 
             /**
-             * Order.
+             * <p>This parameter is required.</p>
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -334,7 +396,7 @@ public class CreateForwardingRulesRequest extends Request {
             }
 
             /**
-             * RuleActionType.
+             * <p>This parameter is required.</p>
              */
             public Builder ruleActionType(String ruleActionType) {
                 this.ruleActionType = ruleActionType;
@@ -356,9 +418,15 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class HostConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private HostConfig(Builder builder) {
             this.values = builder.values;
@@ -375,17 +443,24 @@ public class CreateForwardingRulesRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -397,9 +472,15 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class PathConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private PathConfig(Builder builder) {
             this.values = builder.values;
@@ -416,17 +497,24 @@ public class CreateForwardingRulesRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -438,6 +526,12 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class RuleConditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
@@ -500,6 +594,16 @@ public class CreateForwardingRulesRequest extends Request {
             private String ruleConditionType; 
             private String ruleConditionValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleConditions model) {
+                this.hostConfig = model.hostConfig;
+                this.pathConfig = model.pathConfig;
+                this.ruleConditionType = model.ruleConditionType;
+                this.ruleConditionValue = model.ruleConditionValue;
+            } 
+
             /**
              * HostConfig.
              */
@@ -539,6 +643,12 @@ public class CreateForwardingRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateForwardingRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateForwardingRulesRequest</p>
+     */
     public static class ForwardingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardingRuleName")
         private String forwardingRuleName;
@@ -548,11 +658,11 @@ public class CreateForwardingRulesRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("RuleActions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < RuleActions> ruleActions;
+        private java.util.List<RuleActions> ruleActions;
 
         @com.aliyun.core.annotation.NameInMap("RuleConditions")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < RuleConditions> ruleConditions;
+        private java.util.List<RuleConditions> ruleConditions;
 
         @com.aliyun.core.annotation.NameInMap("RuleDirection")
         private String ruleDirection;
@@ -590,14 +700,14 @@ public class CreateForwardingRulesRequest extends Request {
         /**
          * @return ruleActions
          */
-        public java.util.List < RuleActions> getRuleActions() {
+        public java.util.List<RuleActions> getRuleActions() {
             return this.ruleActions;
         }
 
         /**
          * @return ruleConditions
          */
-        public java.util.List < RuleConditions> getRuleConditions() {
+        public java.util.List<RuleConditions> getRuleConditions() {
             return this.ruleConditions;
         }
 
@@ -611,9 +721,20 @@ public class CreateForwardingRulesRequest extends Request {
         public static final class Builder {
             private String forwardingRuleName; 
             private Integer priority; 
-            private java.util.List < RuleActions> ruleActions; 
-            private java.util.List < RuleConditions> ruleConditions; 
+            private java.util.List<RuleActions> ruleActions; 
+            private java.util.List<RuleConditions> ruleConditions; 
             private String ruleDirection; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardingRules model) {
+                this.forwardingRuleName = model.forwardingRuleName;
+                this.priority = model.priority;
+                this.ruleActions = model.ruleActions;
+                this.ruleConditions = model.ruleConditions;
+                this.ruleDirection = model.ruleDirection;
+            } 
 
             /**
              * ForwardingRuleName.
@@ -632,17 +753,17 @@ public class CreateForwardingRulesRequest extends Request {
             }
 
             /**
-             * RuleActions.
+             * <p>This parameter is required.</p>
              */
-            public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+            public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
                 return this;
             }
 
             /**
-             * RuleConditions.
+             * <p>This parameter is required.</p>
              */
-            public Builder ruleConditions(java.util.List < RuleConditions> ruleConditions) {
+            public Builder ruleConditions(java.util.List<RuleConditions> ruleConditions) {
                 this.ruleConditions = ruleConditions;
                 return this;
             }

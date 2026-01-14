@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDomainsResponseBody</p>
  */
 public class ListDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -78,22 +88,36 @@ public class ListDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * A list of accelerated domain names.
+         * <p>A list of accelerated domain names.</p>
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class ServiceManagedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -180,16 +219,28 @@ public class ListDomainsResponseBody extends TeaModel {
             private String childType; 
             private Boolean isManaged; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceManagedInfos model) {
+                this.action = model.action;
+                this.childType = model.childType;
+                this.isManaged = model.isManaged;
+            } 
+
             /**
-             * The name of the action on the managed instance. Valid values:
-             * <p>
+             * <p>The name of the action on the managed instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Create</strong>: Create an instance.</li>
+             * <li><strong>Update</strong>: Update the current instance.</li>
+             * <li><strong>Delete</strong>: Delete the current instance.</li>
+             * <li><strong>Associate</strong>: Reference the current instance.</li>
+             * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+             * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+             * </ul>
              * 
-             * *   **Create**: Create an instance.
-             * *   **Update**: Update the current instance.
-             * *   **Delete**: Delete the current instance.
-             * *   **Associate**: Reference the current instance.
-             * *   **UserUnmanaged**: Unmanage the instance.
-             * *   **CreateChild**: Create a child resource in the current instance.
+             * <strong>example:</strong>
+             * <p>Update</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -197,18 +248,22 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the child resource. Valid values:
-             * <p>
+             * <p>The type of the child resource. Valid values:</p>
+             * <ul>
+             * <li><strong>Listener</strong>: listener.</li>
+             * <li><strong>IpSet</strong>: acceleration region.</li>
+             * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+             * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+             * <li><strong>Endpoint</strong>: endpoint.</li>
+             * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
+             * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Listener**: listener.
-             * *   **IpSet**: acceleration region.
-             * *   **EndpointGroup**: endpoint group.
-             * *   **ForwardingRule**: forwarding rule.
-             * *   **Endpoint**: endpoint.
-             * *   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.
-             * *   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.
-             * 
-             * >  This parameter takes effect only if **Action** is set to **CreateChild**.
+             * <strong>example:</strong>
+             * <p>Listener</p>
              */
             public Builder childType(String childType) {
                 this.childType = childType;
@@ -216,11 +271,14 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the specified actions are managed. Valid values:
-             * <p>
+             * <p>Indicates whether the specified actions are managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</li>
+             * <li><strong>false</strong>: The specified actions are not managed, and you can perform the specified actions on the managed instance.</li>
+             * </ul>
              * 
-             * *   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.
-             * *   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -234,6 +292,12 @@ public class ListDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class Accelerators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -248,7 +312,7 @@ public class ListDomainsResponseBody extends TeaModel {
         private Boolean serviceManaged;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
-        private java.util.List < ServiceManagedInfos> serviceManagedInfos;
+        private java.util.List<ServiceManagedInfos> serviceManagedInfos;
 
         private Accelerators(Builder builder) {
             this.acceleratorId = builder.acceleratorId;
@@ -297,7 +361,7 @@ public class ListDomainsResponseBody extends TeaModel {
         /**
          * @return serviceManagedInfos
          */
-        public java.util.List < ServiceManagedInfos> getServiceManagedInfos() {
+        public java.util.List<ServiceManagedInfos> getServiceManagedInfos() {
             return this.serviceManagedInfos;
         }
 
@@ -306,10 +370,24 @@ public class ListDomainsResponseBody extends TeaModel {
             private String name; 
             private String serviceId; 
             private Boolean serviceManaged; 
-            private java.util.List < ServiceManagedInfos> serviceManagedInfos; 
+            private java.util.List<ServiceManagedInfos> serviceManagedInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accelerators model) {
+                this.acceleratorId = model.acceleratorId;
+                this.name = model.name;
+                this.serviceId = model.serviceId;
+                this.serviceManaged = model.serviceManaged;
+                this.serviceManagedInfos = model.serviceManagedInfos;
+            } 
 
             /**
-             * The ID of the GA instance.
+             * <p>The ID of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -317,7 +395,10 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the GA instance.
+             * <p>The name of the GA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accelerator</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,10 +406,13 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the service that manages the GA instance.
-             * <p>
+             * <p>The ID of the service that manages the GA instance.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -336,11 +420,14 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the GA instance is managed. Valid values:
-             * <p>
+             * <p>Indicates whether the GA instance is managed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The GA instance is managed.</li>
+             * <li><strong>false</strong>: The GA instance is not managed.</li>
+             * </ul>
              * 
-             * *   **true**: The GA instance is managed.
-             * *   **false**: The GA instance is not managed.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -348,14 +435,15 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The actions that you can perform on the managed instance.
-             * <p>
-             * 
-             * >  This parameter takes effect only if **ServiceManaged** is set to **True**.
-             * 
-             * *   You can perform only specific actions on a managed instance.
+             * <p>The actions that you can perform on the managed instance.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+             * </blockquote>
+             * <ul>
+             * <li>You can perform only specific actions on a managed instance.</li>
+             * </ul>
              */
-            public Builder serviceManagedInfos(java.util.List < ServiceManagedInfos> serviceManagedInfos) {
+            public Builder serviceManagedInfos(java.util.List<ServiceManagedInfos> serviceManagedInfos) {
                 this.serviceManagedInfos = serviceManagedInfos;
                 return this;
             }
@@ -367,9 +455,15 @@ public class ListDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accelerators")
-        private java.util.List < Accelerators> accelerators;
+        private java.util.List<Accelerators> accelerators;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -394,7 +488,7 @@ public class ListDomainsResponseBody extends TeaModel {
         /**
          * @return accelerators
          */
-        public java.util.List < Accelerators> getAccelerators() {
+        public java.util.List<Accelerators> getAccelerators() {
             return this.accelerators;
         }
 
@@ -413,20 +507,32 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Accelerators> accelerators; 
+            private java.util.List<Accelerators> accelerators; 
             private String domain; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.accelerators = model.accelerators;
+                this.domain = model.domain;
+                this.state = model.state;
+            } 
+
             /**
-             * A list of GA instances.
+             * <p>A list of GA instances.</p>
              */
-            public Builder accelerators(java.util.List < Accelerators> accelerators) {
+            public Builder accelerators(java.util.List<Accelerators> accelerators) {
                 this.accelerators = accelerators;
                 return this;
             }
 
             /**
-             * The accelerated domain name.
+             * <p>The accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -434,13 +540,16 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ICP filing status of the accelerated domain name. Valid values:
-             * <p>
+             * <p>The ICP filing status of the accelerated domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>illegal:</strong> The domain name is illegal.</li>
+             * <li><strong>inactive:</strong> The domain name has not completed ICP filing.</li>
+             * <li><strong>active:</strong> The domain name has a valid ICP number.</li>
+             * <li><strong>unknown:</strong> The ICP filing status is unknown.</li>
+             * </ul>
              * 
-             * *   **illegal:** The domain name is illegal.
-             * *   **inactive:** The domain name has not completed ICP filing.
-             * *   **active:** The domain name has a valid ICP number.
-             * *   **unknown:** The ICP filing status is unknown.
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder state(String state) {
                 this.state = state;

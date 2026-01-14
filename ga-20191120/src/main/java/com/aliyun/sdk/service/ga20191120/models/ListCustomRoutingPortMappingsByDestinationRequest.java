@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomRoutingPortMappingsByDestinationRequest} extends {@link RequestModel}
  *
  * <p>ListCustomRoutingPortMappingsByDestinationRequest</p>
@@ -52,7 +58,7 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,11 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         } 
 
         /**
-         * The service IP address of the backend instance.
+         * <p>The service IP address of the backend instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         public Builder destinationAddress(String destinationAddress) {
             this.putQueryParameter("DestinationAddress", destinationAddress);
@@ -122,7 +132,11 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint to which the backend instance belongs.
+         * <p>The ID of the endpoint to which the backend instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp16jdc00bhe97sr5****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -131,7 +145,10 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -140,7 +157,10 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +169,11 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

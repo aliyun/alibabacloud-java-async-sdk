@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListDomainsRequest</p>
@@ -54,7 +60,7 @@ public class ListDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,7 +130,10 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance that you want to query.
+         * <p>The ID of the GA instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -133,7 +142,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The accelerated domain name that you want to query.
+         * <p>The accelerated domain name that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -142,7 +154,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -151,7 +166,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +178,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,13 +190,16 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The ICP filing status of the accelerated domain name that you want to query. Valid values:
-         * <p>
+         * <p>The ICP filing status of the accelerated domain name that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>illegal:</strong> The domain name is illegal.</li>
+         * <li><strong>inactive:</strong> The domain name has not completed ICP filing.</li>
+         * <li><strong>active:</strong> The domain name has a valid ICP filing.</li>
+         * <li><strong>unknown:</strong> The ICP filing status is unknown.</li>
+         * </ul>
          * 
-         * *   **illegal:** The domain name is illegal.
-         * *   **inactive:** The domain name has not completed ICP filing.
-         * *   **active:** The domain name has a valid ICP filing.
-         * *   **unknown:** The ICP filing status is unknown.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

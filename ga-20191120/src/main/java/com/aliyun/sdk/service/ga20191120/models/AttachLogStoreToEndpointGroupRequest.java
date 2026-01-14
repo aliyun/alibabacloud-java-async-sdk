@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachLogStoreToEndpointGroupRequest} extends {@link RequestModel}
  *
  * <p>AttachLogStoreToEndpointGroupRequest</p>
@@ -17,13 +23,21 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
     private String acceleratorId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogRecordCustomizedHeaderList")
+    private java.util.List<String> accessLogRecordCustomizedHeaderList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogRecordCustomizedHeadersEnabled")
+    private Boolean accessLogRecordCustomizedHeadersEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointGroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > endpointGroupIds;
+    private java.util.List<String> endpointGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerId")
@@ -53,6 +67,8 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
     private AttachLogStoreToEndpointGroupRequest(Builder builder) {
         super(builder);
         this.acceleratorId = builder.acceleratorId;
+        this.accessLogRecordCustomizedHeaderList = builder.accessLogRecordCustomizedHeaderList;
+        this.accessLogRecordCustomizedHeadersEnabled = builder.accessLogRecordCustomizedHeadersEnabled;
         this.clientToken = builder.clientToken;
         this.endpointGroupIds = builder.endpointGroupIds;
         this.listenerId = builder.listenerId;
@@ -70,7 +86,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,6 +99,20 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
     }
 
     /**
+     * @return accessLogRecordCustomizedHeaderList
+     */
+    public java.util.List<String> getAccessLogRecordCustomizedHeaderList() {
+        return this.accessLogRecordCustomizedHeaderList;
+    }
+
+    /**
+     * @return accessLogRecordCustomizedHeadersEnabled
+     */
+    public Boolean getAccessLogRecordCustomizedHeadersEnabled() {
+        return this.accessLogRecordCustomizedHeadersEnabled;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -92,7 +122,7 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
     /**
      * @return endpointGroupIds
      */
-    public java.util.List < String > getEndpointGroupIds() {
+    public java.util.List<String> getEndpointGroupIds() {
         return this.endpointGroupIds;
     }
 
@@ -133,8 +163,10 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<AttachLogStoreToEndpointGroupRequest, Builder> {
         private String acceleratorId; 
+        private java.util.List<String> accessLogRecordCustomizedHeaderList; 
+        private Boolean accessLogRecordCustomizedHeadersEnabled; 
         private String clientToken; 
-        private java.util.List < String > endpointGroupIds; 
+        private java.util.List<String> endpointGroupIds; 
         private String listenerId; 
         private String regionId; 
         private String slsLogStoreName; 
@@ -148,6 +180,8 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         private Builder(AttachLogStoreToEndpointGroupRequest request) {
             super(request);
             this.acceleratorId = request.acceleratorId;
+            this.accessLogRecordCustomizedHeaderList = request.accessLogRecordCustomizedHeaderList;
+            this.accessLogRecordCustomizedHeadersEnabled = request.accessLogRecordCustomizedHeadersEnabled;
             this.clientToken = request.clientToken;
             this.endpointGroupIds = request.endpointGroupIds;
             this.listenerId = request.listenerId;
@@ -158,7 +192,11 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.putQueryParameter("AcceleratorId", acceleratorId);
@@ -167,12 +205,32 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * AccessLogRecordCustomizedHeaderList.
+         */
+        public Builder accessLogRecordCustomizedHeaderList(java.util.List<String> accessLogRecordCustomizedHeaderList) {
+            this.putQueryParameter("AccessLogRecordCustomizedHeaderList", accessLogRecordCustomizedHeaderList);
+            this.accessLogRecordCustomizedHeaderList = accessLogRecordCustomizedHeaderList;
+            return this;
+        }
+
+        /**
+         * AccessLogRecordCustomizedHeadersEnabled.
+         */
+        public Builder accessLogRecordCustomizedHeadersEnabled(Boolean accessLogRecordCustomizedHeadersEnabled) {
+            this.putQueryParameter("AccessLogRecordCustomizedHeadersEnabled", accessLogRecordCustomizedHeadersEnabled);
+            this.accessLogRecordCustomizedHeadersEnabled = accessLogRecordCustomizedHeadersEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,16 +239,21 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the endpoint groups.
+         * <p>The IDs of the endpoint groups.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder endpointGroupIds(java.util.List < String > endpointGroupIds) {
+        public Builder endpointGroupIds(java.util.List<String> endpointGroupIds) {
             this.putQueryParameter("EndpointGroupIds", endpointGroupIds);
             this.endpointGroupIds = endpointGroupIds;
             return this;
         }
 
         /**
-         * The ID of the listener.
+         * <p>The ID of the listener.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -199,7 +262,11 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +275,11 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The name of the Logstore.
+         * <p>The name of the Logstore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-01</p>
          */
         public Builder slsLogStoreName(String slsLogStoreName) {
             this.putQueryParameter("SlsLogStoreName", slsLogStoreName);
@@ -217,7 +288,11 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project.
+         * <p>The name of the Log Service project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn-01</p>
          */
         public Builder slsProjectName(String slsProjectName) {
             this.putQueryParameter("SlsProjectName", slsProjectName);
@@ -226,7 +301,11 @@ public class AttachLogStoreToEndpointGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Log Service project.
+         * <p>The region ID of the Log Service project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);

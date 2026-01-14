@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -23,7 +29,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -33,7 +39,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -52,7 +58,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +80,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -88,16 +94,16 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String clientToken; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -113,12 +119,14 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -127,7 +135,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -136,32 +148,36 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource to which you want to add tags.
-         * <p>
-         * 
-         * *   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.
-         * *   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.
-         * *   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.
-         * *   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.
-         * *   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.
-         * 
-         * This parameter is required. You can enter up to 50 GA resource IDs.
+         * <p>The ID of the resource to which you want to add tags.</p>
+         * <ul>
+         * <li>If you set <strong>ResourceType</strong> to <strong>accelerator</strong>, set the value of ResourceId to the ID of a standard GA instance.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>basicaccelerator</strong>, set the value of ResourceId to the ID of a basic GA instance.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>bandwidthpackage</strong>, set the value of ResourceId to the ID of a bandwidth plan.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>acl</strong>, set the value of ResourceId to the ID of an ACL.</li>
+         * <li>If you set <strong>ResourceType</strong> to <strong>endpointgroup</strong>, set the value of ResourceId to the ID of an endpoint group.</li>
+         * </ul>
+         * <p>This parameter is required. You can enter up to 50 GA resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The type of the resource to which you want to add tags. Valid values:
-         * <p>
+         * <p>The type of the resource to which you want to add tags. Valid values:</p>
+         * <ul>
+         * <li><strong>accelerator:</strong> a standard GA instance.</li>
+         * <li><strong>basicaccelerator:</strong> a basic GA instance.</li>
+         * <li><strong>bandwidthpackage:</strong> a bandwidth plan.</li>
+         * <li><strong>acl:</strong> an ACL.</li>
+         * <li><strong>endpointgroup:</strong> an endpoint group of a standard GA instance. You cannot call the TagResources operation to add tags to an endpoint group of a basic GA instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **accelerator:** a standard GA instance.
-         * *   **basicaccelerator:** a basic GA instance.
-         * *   **bandwidthpackage:** a bandwidth plan.
-         * *   **acl:** an ACL.
-         * *   **endpointgroup:** an endpoint group of a standard GA instance. You cannot call the TagResources operation to add tags to an endpoint group of a basic GA instance.
+         * <strong>example:</strong>
+         * <p>accelerator</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -170,12 +186,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags of GA resources.
-         * <p>
-         * 
-         * You can specify up to 20 tags.
+         * <p>The tags of GA resources.</p>
+         * <p>You can specify up to 20 tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -188,6 +203,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -226,13 +247,21 @@ public class TagResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The tag key of the GA resource. The tag key cannot be an empty string.
-             * <p>
+             * <p>The tag key of the GA resource. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag keys.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag keys.
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -240,12 +269,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value of the GA resource. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * <p>You can specify up to 20 tag values.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-             * 
-             * You can specify up to 20 tag values.
+             * <strong>example:</strong>
+             * <p>valueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;

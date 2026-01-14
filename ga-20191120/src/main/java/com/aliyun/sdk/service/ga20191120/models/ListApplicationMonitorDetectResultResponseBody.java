@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationMonitorDetectResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationMonitorDetectResultResponseBody</p>
  */
 public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApplicationMonitorDetectResultList")
-    private java.util.List < ApplicationMonitorDetectResultList> applicationMonitorDetectResultList;
+    private java.util.List<ApplicationMonitorDetectResultList> applicationMonitorDetectResultList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,10 +48,14 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationMonitorDetectResultList
      */
-    public java.util.List < ApplicationMonitorDetectResultList> getApplicationMonitorDetectResultList() {
+    public java.util.List<ApplicationMonitorDetectResultList> getApplicationMonitorDetectResultList() {
         return this.applicationMonitorDetectResultList;
     }
 
@@ -78,22 +88,36 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplicationMonitorDetectResultList> applicationMonitorDetectResultList; 
+        private java.util.List<ApplicationMonitorDetectResultList> applicationMonitorDetectResultList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationMonitorDetectResultResponseBody model) {
+            this.applicationMonitorDetectResultList = model.applicationMonitorDetectResultList;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Details about the diagnostic result of the origin probing task.
+         * <p>Details about the diagnostic result of the origin probing task.</p>
          */
-        public Builder applicationMonitorDetectResultList(java.util.List < ApplicationMonitorDetectResultList> applicationMonitorDetectResultList) {
+        public Builder applicationMonitorDetectResultList(java.util.List<ApplicationMonitorDetectResultList> applicationMonitorDetectResultList) {
             this.applicationMonitorDetectResultList = applicationMonitorDetectResultList;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationMonitorDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationMonitorDetectResultResponseBody</p>
+     */
     public static class ApplicationMonitorDetectResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
@@ -264,8 +303,27 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             private String statusCode; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationMonitorDetectResultList model) {
+                this.acceleratorId = model.acceleratorId;
+                this.content = model.content;
+                this.detail = model.detail;
+                this.detectTime = model.detectTime;
+                this.diagStatus = model.diagStatus;
+                this.listenerId = model.listenerId;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.statusCode = model.statusCode;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * The ID of the GA instance on which the origin probing task runs.
+             * <p>The ID of the GA instance on which the origin probing task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ga-bp1odcab8tmno0hdq****</p>
              */
             public Builder acceleratorId(String acceleratorId) {
                 this.acceleratorId = acceleratorId;
@@ -273,7 +331,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The response content returned by the origin probing task.
+             * <p>The response content returned by the origin probing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>502 BadGateway</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -281,19 +342,22 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the diagnostic result. Valid values:
-             * <p>
+             * <p>The description of the diagnostic result. Valid values:</p>
+             * <ul>
+             * <li><strong>All forward nodes work well.:</strong> The origin server is normal.</li>
+             * <li><strong>Endpoint network error.:</strong> The origin server is abnormal. You must check whether the origin server is running as expected.</li>
+             * <li><strong>Public network error.:</strong> An Internet error occurred, which is a network error that occurred when the client connected to the acceleration region.</li>
+             * <li><strong>Ga internal error.:</strong> An internal error occurred. For example, an exception occurred when GA processed a request.</li>
+             * <li><strong>Ga has been deleted.:</strong> The current GA instance is deleted.</li>
+             * <li><strong>Ga state is not stable.:</strong> The current GA instance is in an unstable state, such as the Configuring state.</li>
+             * <li><strong>Ga has no listener configuration.:</strong> No listener is configured for the current GA instance.</li>
+             * <li><strong>Missing endpoint configuration.:</strong> No endpoint is configured.</li>
+             * <li><strong>Missing acceleration region configuration.:</strong> No acceleration region is configured.</li>
+             * <li><strong>Missing endpointgroup configuration.:</strong> No endpoint group is configured.</li>
+             * </ul>
              * 
-             * *   **All forward nodes work well.:** The origin server is normal.
-             * *   **Endpoint network error.:** The origin server is abnormal. You must check whether the origin server is running as expected.
-             * *   **Public network error.:** An Internet error occurred, which is a network error that occurred when the client connected to the acceleration region.
-             * *   **Ga internal error.:** An internal error occurred. For example, an exception occurred when GA processed a request.
-             * *   **Ga has been deleted.:** The current GA instance is deleted.
-             * *   **Ga state is not stable.:** The current GA instance is in an unstable state, such as the Configuring state.
-             * *   **Ga has no listener configuration.:** No listener is configured for the current GA instance.
-             * *   **Missing endpoint configuration.:** No endpoint is configured.
-             * *   **Missing acceleration region configuration.:** No acceleration region is configured.
-             * *   **Missing endpointgroup configuration.:** No endpoint group is configured.
+             * <strong>example:</strong>
+             * <p>All forward nodes work well</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -301,7 +365,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the diagnosis of the origin probing task ends.
+             * <p>The time when the diagnosis of the origin probing task ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663205460</p>
              */
             public Builder detectTime(String detectTime) {
                 this.detectTime = detectTime;
@@ -309,11 +376,14 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The diagnostic result of the origin probing task. Valid values:
-             * <p>
+             * <p>The diagnostic result of the origin probing task. Valid values:</p>
+             * <ul>
+             * <li><strong>success:</strong> The origin probing task succeeded.</li>
+             * <li><strong>failed:</strong> The origin probing task failed.</li>
+             * </ul>
              * 
-             * *   **success:** The origin probing task succeeded.
-             * *   **failed:** The origin probing task failed.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder diagStatus(String diagStatus) {
                 this.diagStatus = diagStatus;
@@ -321,7 +391,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the listener on which the origin probing task runs.
+             * <p>The ID of the listener on which the origin probing task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lsr-bp1bpn0kn908w4nbw****</p>
              */
             public Builder listenerId(String listenerId) {
                 this.listenerId = listenerId;
@@ -329,7 +402,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -337,15 +413,19 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The network transmission protocol that is used by the listener. Valid values:
-             * <p>
+             * <p>The network transmission protocol that is used by the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp:</strong> TCP.</li>
+             * <li><strong>udp:</strong> UDP.</li>
+             * <li><strong>http:</strong> HTTP.</li>
+             * <li><strong>https:</strong> HTTPS.</li>
+             * </ul>
+             * <blockquote>
+             * <p> UDP listeners do not support probing.</p>
+             * </blockquote>
              * 
-             * *   **tcp:** TCP.
-             * *   **udp:** UDP.
-             * *   **http:** HTTP.
-             * *   **https:** HTTPS.
-             * 
-             * >  UDP listeners do not support probing.
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -353,7 +433,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned by the origin probing task.
+             * <p>The error code returned by the origin probing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>502</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -361,7 +444,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The origin probing task ID.
+             * <p>The origin probing task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sm-bp1fpdjfju9k8yr1y****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

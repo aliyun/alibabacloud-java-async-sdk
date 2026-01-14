@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSpareIpResponseBody} extends {@link TeaModel}
  *
  * <p>GetSpareIpResponseBody</p>
@@ -30,6 +36,10 @@ public class GetSpareIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetSpareIpResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSpareIpResponseBody model) {
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
+
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +78,14 @@ public class GetSpareIpResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the secondary IP address. Valid values:
-         * <p>
+         * <p>The status of the secondary IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>active:</strong> The secondary IP address is available.</li>
+         * <li><strong>inuse:</strong> The secondary IP address is in use.</li>
+         * </ul>
          * 
-         * *   **active:** The secondary IP address is available.
-         * *   **inuse:** The secondary IP address is in use.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder state(String state) {
             this.state = state;

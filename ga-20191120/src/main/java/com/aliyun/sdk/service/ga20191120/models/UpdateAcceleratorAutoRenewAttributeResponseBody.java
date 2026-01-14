@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAcceleratorAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAcceleratorAutoRenewAttributeResponseBody</p>
@@ -30,6 +36,10 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acceleratorId
      */
@@ -48,8 +58,19 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
         private String acceleratorId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAcceleratorAutoRenewAttributeResponseBody model) {
+            this.acceleratorId = model.acceleratorId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the GA instance.
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         public Builder acceleratorId(String acceleratorId) {
             this.acceleratorId = acceleratorId;
@@ -57,7 +78,10 @@ public class UpdateAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

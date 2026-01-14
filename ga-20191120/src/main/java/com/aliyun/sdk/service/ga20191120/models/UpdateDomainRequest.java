@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRequest</p>
@@ -40,7 +46,7 @@ public class UpdateDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,10 +89,12 @@ public class UpdateDomainRequest extends Request {
         } 
 
         /**
-         * The new accelerated domain name.
-         * <p>
+         * <p>The new accelerated domain name.</p>
+         * <p>Only primary domain names are supported, such as <code>example.net</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Only primary domain names are supported, such as `example.net`.
+         * <strong>example:</strong>
+         * <p>example.net</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -95,7 +103,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The region ID of the GA instance. Set the value to **cn-hangzhou**.
+         * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -104,7 +115,11 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The accelerated domain name to be modified.
+         * <p>The accelerated domain name to be modified.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder targetDomain(String targetDomain) {
             this.putQueryParameter("TargetDomain", targetDomain);

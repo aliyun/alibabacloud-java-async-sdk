@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIpsetsBandwidthLimitResponseBody} extends {@link TeaModel}
  *
  * <p>GetIpsetsBandwidthLimitResponseBody</p>
@@ -34,6 +40,10 @@ public class GetIpsetsBandwidthLimitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bandwidthAllocationType
      */
@@ -60,12 +70,24 @@ public class GetIpsetsBandwidthLimitResponseBody extends TeaModel {
         private Long bandwidthLimit; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIpsetsBandwidthLimitResponseBody model) {
+            this.bandwidthAllocationType = model.bandwidthAllocationType;
+            this.bandwidthLimit = model.bandwidthLimit;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The type of the bandwidth that is allocated.
-         * <p>
+         * <p>The type of the bandwidth that is allocated.</p>
+         * <ul>
+         * <li><strong>ShareBandwidth:</strong> shared bandwidth.</li>
+         * <li><strong>ExclusiveBandwidth:</strong> dedicated bandwidth.</li>
+         * </ul>
          * 
-         * *   **ShareBandwidth:** shared bandwidth.
-         * *   **ExclusiveBandwidth:** dedicated bandwidth.
+         * <strong>example:</strong>
+         * <p>ShareBandwidth</p>
          */
         public Builder bandwidthAllocationType(String bandwidthAllocationType) {
             this.bandwidthAllocationType = bandwidthAllocationType;
@@ -73,7 +95,10 @@ public class GetIpsetsBandwidthLimitResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum bandwidth of the acceleration area. Unit: Mbit/s.
+         * <p>The maximum bandwidth of the acceleration area. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder bandwidthLimit(Long bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
@@ -81,7 +106,10 @@ public class GetIpsetsBandwidthLimitResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
