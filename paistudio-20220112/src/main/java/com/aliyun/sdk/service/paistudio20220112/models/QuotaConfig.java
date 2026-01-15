@@ -23,6 +23,9 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
+    @com.aliyun.core.annotation.NameInMap("ControlPlaneClusterId")
+    private String controlPlaneClusterId;
+
     @com.aliyun.core.annotation.NameInMap("DefaultGPUDriver")
     private String defaultGPUDriver;
 
@@ -41,8 +44,8 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EniCacheConfig")
     private EniCacheConfig eniCacheConfig;
 
-    @com.aliyun.core.annotation.NameInMap("OversoldUsageInfo")
-    private OversoldUsageConfig oversoldUsageInfo;
+    @com.aliyun.core.annotation.NameInMap("OversoldUsageConfig")
+    private OversoldUsageConfig oversoldUsageConfig;
 
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List<WorkspaceSpecs> resourceSpecs;
@@ -71,13 +74,14 @@ public class QuotaConfig extends TeaModel {
     private QuotaConfig(Builder builder) {
         this.ACS = builder.ACS;
         this.clusterId = builder.clusterId;
+        this.controlPlaneClusterId = builder.controlPlaneClusterId;
         this.defaultGPUDriver = builder.defaultGPUDriver;
         this.enableGPUShare = builder.enableGPUShare;
         this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
         this.enableSelfQuotaPreemption = builder.enableSelfQuotaPreemption;
         this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
         this.eniCacheConfig = builder.eniCacheConfig;
-        this.oversoldUsageInfo = builder.oversoldUsageInfo;
+        this.oversoldUsageConfig = builder.oversoldUsageConfig;
         this.resourceSpecs = builder.resourceSpecs;
         this.sandboxCacheConfig = builder.sandboxCacheConfig;
         this.selfQuotaPreemptionConfig = builder.selfQuotaPreemptionConfig;
@@ -112,6 +116,13 @@ public class QuotaConfig extends TeaModel {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return controlPlaneClusterId
+     */
+    public String getControlPlaneClusterId() {
+        return this.controlPlaneClusterId;
     }
 
     /**
@@ -157,10 +168,10 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
-     * @return oversoldUsageInfo
+     * @return oversoldUsageConfig
      */
-    public OversoldUsageConfig getOversoldUsageInfo() {
-        return this.oversoldUsageInfo;
+    public OversoldUsageConfig getOversoldUsageConfig() {
+        return this.oversoldUsageConfig;
     }
 
     /**
@@ -222,13 +233,14 @@ public class QuotaConfig extends TeaModel {
     public static final class Builder {
         private ACS ACS; 
         private String clusterId; 
+        private String controlPlaneClusterId; 
         private String defaultGPUDriver; 
         private Boolean enableGPUShare; 
         private Boolean enablePreemptSubquotaWorkloads; 
         private Boolean enableSelfQuotaPreemption; 
         private Boolean enableSubQuotaPreemption; 
         private EniCacheConfig eniCacheConfig; 
-        private OversoldUsageConfig oversoldUsageInfo; 
+        private OversoldUsageConfig oversoldUsageConfig; 
         private java.util.List<WorkspaceSpecs> resourceSpecs; 
         private SandboxCacheConfig sandboxCacheConfig; 
         private SelfQuotaPreemptionConfig selfQuotaPreemptionConfig; 
@@ -244,13 +256,14 @@ public class QuotaConfig extends TeaModel {
         private Builder(QuotaConfig model) {
             this.ACS = model.ACS;
             this.clusterId = model.clusterId;
+            this.controlPlaneClusterId = model.controlPlaneClusterId;
             this.defaultGPUDriver = model.defaultGPUDriver;
             this.enableGPUShare = model.enableGPUShare;
             this.enablePreemptSubquotaWorkloads = model.enablePreemptSubquotaWorkloads;
             this.enableSelfQuotaPreemption = model.enableSelfQuotaPreemption;
             this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
             this.eniCacheConfig = model.eniCacheConfig;
-            this.oversoldUsageInfo = model.oversoldUsageInfo;
+            this.oversoldUsageConfig = model.oversoldUsageConfig;
             this.resourceSpecs = model.resourceSpecs;
             this.sandboxCacheConfig = model.sandboxCacheConfig;
             this.selfQuotaPreemptionConfig = model.selfQuotaPreemptionConfig;
@@ -274,6 +287,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ControlPlaneClusterId.
+         */
+        public Builder controlPlaneClusterId(String controlPlaneClusterId) {
+            this.controlPlaneClusterId = controlPlaneClusterId;
             return this;
         }
 
@@ -326,10 +347,10 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
-         * OversoldUsageInfo.
+         * OversoldUsageConfig.
          */
-        public Builder oversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
-            this.oversoldUsageInfo = oversoldUsageInfo;
+        public Builder oversoldUsageConfig(OversoldUsageConfig oversoldUsageConfig) {
+            this.oversoldUsageConfig = oversoldUsageConfig;
             return this;
         }
 
