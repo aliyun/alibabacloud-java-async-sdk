@@ -28,6 +28,7 @@ public class DeleteCertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     private DeleteCertificateRequest(Builder builder) {
@@ -111,6 +112,7 @@ public class DeleteCertificateRequest extends Request {
 
         /**
          * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>106560</p>

@@ -274,7 +274,10 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * <p>The task configuration specification type. Valid values: FILESPEC, CLASSIC, ALL. FILESPEC: New-style task based on structured filespec; CLASSIC: Task using traditional configuration mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILESPEC</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);

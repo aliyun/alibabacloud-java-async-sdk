@@ -28,6 +28,7 @@ public class GetCertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     private GetCertificateRequest(Builder builder) {
@@ -111,6 +112,7 @@ public class GetCertificateRequest extends Request {
 
         /**
          * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1065601</p>
