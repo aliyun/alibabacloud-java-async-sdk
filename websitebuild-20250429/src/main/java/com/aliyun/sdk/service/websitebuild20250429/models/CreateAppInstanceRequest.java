@@ -185,7 +185,10 @@ public class CreateAppInstanceRequest extends Request {
         } 
 
         /**
-         * ApplicationType.
+         * <p>Application type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PC_WebSite</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -194,7 +197,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Whether to enable auto-renewal upon expiration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -203,7 +209,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Ensures idempotence of the request. Generate a unique value from your client to ensure that it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210713a117660695309606626a</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -212,7 +221,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * DeployArea.
+         * <p>Deployment area</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChineseMainland</p>
          */
         public Builder deployArea(String deployArea) {
             this.putQueryParameter("DeployArea", deployArea);
@@ -221,7 +233,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Required. The number of subscription periods</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -230,7 +245,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Extended information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -239,7 +257,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>Payment type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO_PAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -248,7 +269,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -257,7 +281,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * <p>Required. The quantity of instances to be ordered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -266,7 +293,10 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic_Edition</p>
          */
         public Builder siteVersion(String siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

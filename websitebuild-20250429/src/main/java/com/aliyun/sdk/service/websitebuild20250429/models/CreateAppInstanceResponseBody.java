@@ -184,7 +184,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>Application name, query this application by name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>Returned error parameters</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,7 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Response data</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -240,7 +258,7 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -251,7 +269,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +280,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Exception message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +291,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -359,7 +386,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>Business ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WS20250915163734000001</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -367,7 +397,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas-cn-7mz2uc8v902</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -375,7 +408,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>Order ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250822465990301</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -383,7 +419,10 @@ public class CreateAppInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SiteHost.
+             * <p>siteId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd.scd.wanwang.xin</p>
              */
             public Builder siteHost(String siteHost) {
                 this.siteHost = siteHost;
