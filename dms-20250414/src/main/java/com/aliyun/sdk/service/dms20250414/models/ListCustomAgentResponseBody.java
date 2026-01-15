@@ -368,6 +368,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataJson")
         private String dataJson;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultAgent")
+        private Integer defaultAgent;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -428,6 +431,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.creatorUserName = builder.creatorUserName;
             this.customAgentId = builder.customAgentId;
             this.dataJson = builder.dataJson;
+            this.defaultAgent = builder.defaultAgent;
             this.description = builder.description;
             this.dmsUnit = builder.dmsUnit;
             this.executionConfig = builder.executionConfig;
@@ -489,6 +493,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         public String getDataJson() {
             return this.dataJson;
+        }
+
+        /**
+         * @return defaultAgent
+         */
+        public Integer getDefaultAgent() {
+            return this.defaultAgent;
         }
 
         /**
@@ -623,6 +634,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             private String creatorUserName; 
             private String customAgentId; 
             private String dataJson; 
+            private Integer defaultAgent; 
             private String description; 
             private String dmsUnit; 
             private ExecutionConfig executionConfig; 
@@ -651,6 +663,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
                 this.creatorUserName = model.creatorUserName;
                 this.customAgentId = model.customAgentId;
                 this.dataJson = model.dataJson;
+                this.defaultAgent = model.defaultAgent;
                 this.description = model.description;
                 this.dmsUnit = model.dmsUnit;
                 this.executionConfig = model.executionConfig;
@@ -708,6 +721,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
              */
             public Builder dataJson(String dataJson) {
                 this.dataJson = dataJson;
+                return this;
+            }
+
+            /**
+             * DefaultAgent.
+             */
+            public Builder defaultAgent(Integer defaultAgent) {
+                this.defaultAgent = defaultAgent;
                 return this;
             }
 
