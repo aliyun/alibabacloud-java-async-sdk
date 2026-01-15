@@ -29,11 +29,15 @@ public class ContainerConfiguration extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("imageRegistryType")
     private String imageRegistryType;
 
+    @com.aliyun.core.annotation.NameInMap("port")
+    private Integer port;
+
     private ContainerConfiguration(Builder builder) {
         this.acrInstanceId = builder.acrInstanceId;
         this.command = builder.command;
         this.image = builder.image;
         this.imageRegistryType = builder.imageRegistryType;
+        this.port = builder.port;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class ContainerConfiguration extends TeaModel {
         return this.imageRegistryType;
     }
 
+    /**
+     * @return port
+     */
+    public Integer getPort() {
+        return this.port;
+    }
+
     public static final class Builder {
         private String acrInstanceId; 
         private java.util.List<String> command; 
         private String image; 
         private String imageRegistryType; 
+        private Integer port; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class ContainerConfiguration extends TeaModel {
             this.command = model.command;
             this.image = model.image;
             this.imageRegistryType = model.imageRegistryType;
+            this.port = model.port;
         } 
 
         /**
@@ -130,6 +143,14 @@ public class ContainerConfiguration extends TeaModel {
          */
         public Builder imageRegistryType(String imageRegistryType) {
             this.imageRegistryType = imageRegistryType;
+            return this;
+        }
+
+        /**
+         * port.
+         */
+        public Builder port(Integer port) {
+            this.port = port;
             return this;
         }
 
