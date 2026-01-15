@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshAppInstanceTicketResponse> refreshAppInstanceTicket(RefreshAppInstanceTicketRequest request);
 
     /**
+     * @param request the request parameters of RefundAppInstanceForPartner  RefundAppInstanceForPartnerRequest
+     * @return RefundAppInstanceForPartnerResponse
+     */
+    CompletableFuture<RefundAppInstanceForPartnerResponse> refundAppInstanceForPartner(RefundAppInstanceForPartnerRequest request);
+
+    /**
      * @param request the request parameters of RenewAppInstance  RenewAppInstanceRequest
      * @return RenewAppInstanceResponse
      */
