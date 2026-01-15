@@ -22,6 +22,10 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     private java.util.List<String> androidInstanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamValidation")
+    private Boolean ignoreParamValidation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
@@ -32,6 +36,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     private ResetAndroidInstancesInGroupRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
+        this.ignoreParamValidation = builder.ignoreParamValidation;
         this.saleMode = builder.saleMode;
         this.settingResetType = builder.settingResetType;
     }
@@ -57,6 +62,13 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     }
 
     /**
+     * @return ignoreParamValidation
+     */
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
+    }
+
+    /**
      * @return saleMode
      */
     public String getSaleMode() {
@@ -72,6 +84,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetAndroidInstancesInGroupRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
+        private Boolean ignoreParamValidation; 
         private String saleMode; 
         private Integer settingResetType; 
 
@@ -82,6 +95,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         private Builder(ResetAndroidInstancesInGroupRequest request) {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
+            this.ignoreParamValidation = request.ignoreParamValidation;
             this.saleMode = request.saleMode;
             this.settingResetType = request.settingResetType;
         } 
@@ -92,6 +106,15 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
             this.androidInstanceIds = androidInstanceIds;
+            return this;
+        }
+
+        /**
+         * IgnoreParamValidation.
+         */
+        public Builder ignoreParamValidation(Boolean ignoreParamValidation) {
+            this.putQueryParameter("IgnoreParamValidation", ignoreParamValidation);
+            this.ignoreParamValidation = ignoreParamValidation;
             return this;
         }
 

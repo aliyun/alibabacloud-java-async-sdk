@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchGetAcpConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionMode")
+    private String connectionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
@@ -35,6 +39,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
 
     private BatchGetAcpConnectionTicketRequest(Builder builder) {
         super(builder);
+        this.connectionMode = builder.connectionMode;
         this.endUserId = builder.endUserId;
         this.instanceGroupId = builder.instanceGroupId;
         this.instanceIds = builder.instanceIds;
@@ -52,6 +57,13 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return connectionMode
+     */
+    public String getConnectionMode() {
+        return this.connectionMode;
     }
 
     /**
@@ -83,6 +95,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchGetAcpConnectionTicketRequest, Builder> {
+        private String connectionMode; 
         private String endUserId; 
         private String instanceGroupId; 
         private java.util.List<String> instanceIds; 
@@ -94,11 +107,21 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
 
         private Builder(BatchGetAcpConnectionTicketRequest request) {
             super(request);
+            this.connectionMode = request.connectionMode;
             this.endUserId = request.endUserId;
             this.instanceGroupId = request.instanceGroupId;
             this.instanceIds = request.instanceIds;
             this.instanceTasks = request.instanceTasks;
         } 
+
+        /**
+         * ConnectionMode.
+         */
+        public Builder connectionMode(String connectionMode) {
+            this.putQueryParameter("ConnectionMode", connectionMode);
+            this.connectionMode = connectionMode;
+            return this;
+        }
 
         /**
          * <p>The ID of the user to whom the cloud phone instance is assigned.</p>

@@ -113,6 +113,9 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PersistentAppInstanceId")
         private String persistentAppInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private Integer port;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -128,6 +131,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             this.errorCode = builder.errorCode;
             this.instanceId = builder.instanceId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
+            this.port = builder.port;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.ticket = builder.ticket;
@@ -177,6 +181,13 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -203,6 +214,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             private String errorCode; 
             private String instanceId; 
             private String persistentAppInstanceId; 
+            private Integer port; 
             private String taskId; 
             private String taskStatus; 
             private String ticket; 
@@ -216,6 +228,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
                 this.errorCode = model.errorCode;
                 this.instanceId = model.instanceId;
                 this.persistentAppInstanceId = model.persistentAppInstanceId;
+                this.port = model.port;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
                 this.ticket = model.ticket;
@@ -264,6 +277,14 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
              */
             public Builder persistentAppInstanceId(String persistentAppInstanceId) {
                 this.persistentAppInstanceId = persistentAppInstanceId;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
                 return this;
             }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateInstanceImageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamValidation")
+    private Boolean ignoreParamValidation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -31,6 +35,7 @@ public class UpdateInstanceImageRequest extends Request {
 
     private UpdateInstanceImageRequest(Builder builder) {
         super(builder);
+        this.ignoreParamValidation = builder.ignoreParamValidation;
         this.imageId = builder.imageId;
         this.instanceIdList = builder.instanceIdList;
         this.reset = builder.reset;
@@ -47,6 +52,13 @@ public class UpdateInstanceImageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ignoreParamValidation
+     */
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
     }
 
     /**
@@ -71,6 +83,7 @@ public class UpdateInstanceImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateInstanceImageRequest, Builder> {
+        private Boolean ignoreParamValidation; 
         private String imageId; 
         private java.util.List<String> instanceIdList; 
         private Boolean reset; 
@@ -81,10 +94,20 @@ public class UpdateInstanceImageRequest extends Request {
 
         private Builder(UpdateInstanceImageRequest request) {
             super(request);
+            this.ignoreParamValidation = request.ignoreParamValidation;
             this.imageId = request.imageId;
             this.instanceIdList = request.instanceIdList;
             this.reset = request.reset;
         } 
+
+        /**
+         * IgnoreParamValidation.
+         */
+        public Builder ignoreParamValidation(Boolean ignoreParamValidation) {
+            this.putQueryParameter("IgnoreParamValidation", ignoreParamValidation);
+            this.ignoreParamValidation = ignoreParamValidation;
+            return this;
+        }
 
         /**
          * ImageId.

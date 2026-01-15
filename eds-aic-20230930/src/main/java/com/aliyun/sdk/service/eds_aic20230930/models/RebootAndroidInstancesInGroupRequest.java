@@ -26,6 +26,10 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
     private Boolean forceStop;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamValidation")
+    private Boolean ignoreParamValidation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
@@ -33,6 +37,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.forceStop = builder.forceStop;
+        this.ignoreParamValidation = builder.ignoreParamValidation;
         this.saleMode = builder.saleMode;
     }
 
@@ -64,6 +69,13 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
     }
 
     /**
+     * @return ignoreParamValidation
+     */
+    public Boolean getIgnoreParamValidation() {
+        return this.ignoreParamValidation;
+    }
+
+    /**
      * @return saleMode
      */
     public String getSaleMode() {
@@ -73,6 +85,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
     public static final class Builder extends Request.Builder<RebootAndroidInstancesInGroupRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private Boolean forceStop; 
+        private Boolean ignoreParamValidation; 
         private String saleMode; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.forceStop = request.forceStop;
+            this.ignoreParamValidation = request.ignoreParamValidation;
             this.saleMode = request.saleMode;
         } 
 
@@ -109,6 +123,15 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
             this.forceStop = forceStop;
+            return this;
+        }
+
+        /**
+         * IgnoreParamValidation.
+         */
+        public Builder ignoreParamValidation(Boolean ignoreParamValidation) {
+            this.putQueryParameter("IgnoreParamValidation", ignoreParamValidation);
+            this.ignoreParamValidation = ignoreParamValidation;
             return this;
         }
 
