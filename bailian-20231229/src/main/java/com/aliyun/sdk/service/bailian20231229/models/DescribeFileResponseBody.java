@@ -213,6 +213,9 @@ public class DescribeFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
+        @com.aliyun.core.annotation.NameInMap("ParseResultDownloadUrl")
+        private String parseResultDownloadUrl;
+
         @com.aliyun.core.annotation.NameInMap("Parser")
         private String parser;
 
@@ -231,6 +234,7 @@ public class DescribeFileResponseBody extends TeaModel {
             this.fileId = builder.fileId;
             this.fileName = builder.fileName;
             this.fileType = builder.fileType;
+            this.parseResultDownloadUrl = builder.parseResultDownloadUrl;
             this.parser = builder.parser;
             this.sizeInBytes = builder.sizeInBytes;
             this.status = builder.status;
@@ -281,6 +285,13 @@ public class DescribeFileResponseBody extends TeaModel {
         }
 
         /**
+         * @return parseResultDownloadUrl
+         */
+        public String getParseResultDownloadUrl() {
+            return this.parseResultDownloadUrl;
+        }
+
+        /**
          * @return parser
          */
         public String getParser() {
@@ -314,6 +325,7 @@ public class DescribeFileResponseBody extends TeaModel {
             private String fileId; 
             private String fileName; 
             private String fileType; 
+            private String parseResultDownloadUrl; 
             private String parser; 
             private Long sizeInBytes; 
             private String status; 
@@ -328,6 +340,7 @@ public class DescribeFileResponseBody extends TeaModel {
                 this.fileId = model.fileId;
                 this.fileName = model.fileName;
                 this.fileType = model.fileType;
+                this.parseResultDownloadUrl = model.parseResultDownloadUrl;
                 this.parser = model.parser;
                 this.sizeInBytes = model.sizeInBytes;
                 this.status = model.status;
@@ -386,6 +399,14 @@ public class DescribeFileResponseBody extends TeaModel {
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * ParseResultDownloadUrl.
+             */
+            public Builder parseResultDownloadUrl(String parseResultDownloadUrl) {
+                this.parseResultDownloadUrl = parseResultDownloadUrl;
                 return this;
             }
 
