@@ -627,6 +627,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMultimodalEmbeddingModelMode  ListMultimodalEmbeddingModelModeRequest
+     * @return ListMultimodalEmbeddingModelModeResponse
+     */
+    @Override
+    public CompletableFuture<ListMultimodalEmbeddingModelModeResponse> listMultimodalEmbeddingModelMode(ListMultimodalEmbeddingModelModeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMultimodalEmbeddingModelMode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMultimodalEmbeddingModelModeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMultimodalEmbeddingModelModeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMultimodalSearchModel  ListMultimodalSearchModelRequest
+     * @return ListMultimodalSearchModelResponse
+     */
+    @Override
+    public CompletableFuture<ListMultimodalSearchModelResponse> listMultimodalSearchModel(ListMultimodalSearchModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMultimodalSearchModel").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMultimodalSearchModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMultimodalSearchModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListMultimodalSearchTask  ListMultimodalSearchTaskRequest
      * @return ListMultimodalSearchTaskResponse
      */

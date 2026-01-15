@@ -31,6 +31,10 @@ public class CreateMultimodalSearchTaskRequest extends Request {
     private String embeddingModel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelMode")
+    private String modelMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
@@ -47,6 +51,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.datasetIds = builder.datasetIds;
         this.embeddingModel = builder.embeddingModel;
+        this.modelMode = builder.modelMode;
         this.query = builder.query;
         this.searchModel = builder.searchModel;
         this.topK = builder.topK;
@@ -87,6 +92,13 @@ public class CreateMultimodalSearchTaskRequest extends Request {
     }
 
     /**
+     * @return modelMode
+     */
+    public String getModelMode() {
+        return this.modelMode;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -111,6 +123,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         private String DBClusterId; 
         private java.util.List<String> datasetIds; 
         private String embeddingModel; 
+        private String modelMode; 
         private String query; 
         private String searchModel; 
         private Integer topK; 
@@ -124,6 +137,7 @@ public class CreateMultimodalSearchTaskRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.datasetIds = request.datasetIds;
             this.embeddingModel = request.embeddingModel;
+            this.modelMode = request.modelMode;
             this.query = request.query;
             this.searchModel = request.searchModel;
             this.topK = request.topK;
@@ -157,6 +171,15 @@ public class CreateMultimodalSearchTaskRequest extends Request {
         public Builder embeddingModel(String embeddingModel) {
             this.putQueryParameter("EmbeddingModel", embeddingModel);
             this.embeddingModel = embeddingModel;
+            return this;
+        }
+
+        /**
+         * ModelMode.
+         */
+        public Builder modelMode(String modelMode) {
+            this.putQueryParameter("ModelMode", modelMode);
+            this.modelMode = modelMode;
             return this;
         }
 

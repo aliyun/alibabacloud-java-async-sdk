@@ -214,6 +214,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultimodalEmbeddingModelResponse> listMultimodalEmbeddingModel(ListMultimodalEmbeddingModelRequest request);
 
     /**
+     * @param request the request parameters of ListMultimodalEmbeddingModelMode  ListMultimodalEmbeddingModelModeRequest
+     * @return ListMultimodalEmbeddingModelModeResponse
+     */
+    CompletableFuture<ListMultimodalEmbeddingModelModeResponse> listMultimodalEmbeddingModelMode(ListMultimodalEmbeddingModelModeRequest request);
+
+    /**
+     * @param request the request parameters of ListMultimodalSearchModel  ListMultimodalSearchModelRequest
+     * @return ListMultimodalSearchModelResponse
+     */
+    CompletableFuture<ListMultimodalSearchModelResponse> listMultimodalSearchModel(ListMultimodalSearchModelRequest request);
+
+    /**
      * @param request the request parameters of ListMultimodalSearchTask  ListMultimodalSearchTaskRequest
      * @return ListMultimodalSearchTaskResponse
      */

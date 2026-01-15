@@ -31,11 +31,16 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelMode")
+    private String modelMode;
+
     private CreateMultimodalDatasetEmbeddingRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.datasetId = builder.datasetId;
         this.model = builder.model;
+        this.modelMode = builder.modelMode;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
         return this.model;
     }
 
+    /**
+     * @return modelMode
+     */
+    public String getModelMode() {
+        return this.modelMode;
+    }
+
     public static final class Builder extends Request.Builder<CreateMultimodalDatasetEmbeddingRequest, Builder> {
         private String DBClusterId; 
         private String datasetId; 
         private String model; 
+        private String modelMode; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.datasetId = request.datasetId;
             this.model = request.model;
+            this.modelMode = request.modelMode;
         } 
 
         /**
@@ -118,6 +132,15 @@ public class CreateMultimodalDatasetEmbeddingRequest extends Request {
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
             this.model = model;
+            return this;
+        }
+
+        /**
+         * ModelMode.
+         */
+        public Builder modelMode(String modelMode) {
+            this.putQueryParameter("ModelMode", modelMode);
+            this.modelMode = modelMode;
             return this;
         }
 
