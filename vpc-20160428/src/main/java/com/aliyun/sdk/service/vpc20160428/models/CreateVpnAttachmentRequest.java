@@ -112,6 +112,10 @@ public class CreateVpnAttachmentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TunnelBandwidth")
+    private String tunnelBandwidth;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
     private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification;
@@ -141,6 +145,7 @@ public class CreateVpnAttachmentRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tags = builder.tags;
+        this.tunnelBandwidth = builder.tunnelBandwidth;
         this.tunnelOptionsSpecification = builder.tunnelOptionsSpecification;
     }
 
@@ -319,6 +324,13 @@ public class CreateVpnAttachmentRequest extends Request {
     }
 
     /**
+     * @return tunnelBandwidth
+     */
+    public String getTunnelBandwidth() {
+        return this.tunnelBandwidth;
+    }
+
+    /**
      * @return tunnelOptionsSpecification
      */
     public java.util.List<TunnelOptionsSpecification> getTunnelOptionsSpecification() {
@@ -349,6 +361,7 @@ public class CreateVpnAttachmentRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List<Tags> tags; 
+        private String tunnelBandwidth; 
         private java.util.List<TunnelOptionsSpecification> tunnelOptionsSpecification; 
 
         private Builder() {
@@ -380,6 +393,7 @@ public class CreateVpnAttachmentRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tags = request.tags;
+            this.tunnelBandwidth = request.tunnelBandwidth;
             this.tunnelOptionsSpecification = request.tunnelOptionsSpecification;
         } 
 
@@ -770,6 +784,15 @@ public class CreateVpnAttachmentRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TunnelBandwidth.
+         */
+        public Builder tunnelBandwidth(String tunnelBandwidth) {
+            this.putQueryParameter("TunnelBandwidth", tunnelBandwidth);
+            this.tunnelBandwidth = tunnelBandwidth;
             return this;
         }
 

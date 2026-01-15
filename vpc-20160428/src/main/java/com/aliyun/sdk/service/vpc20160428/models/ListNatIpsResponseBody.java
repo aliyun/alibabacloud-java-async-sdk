@@ -287,7 +287,10 @@ public class ListNatIpsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ipv4Prefix.
+             * <p>The IP prefix address range to which the queried NAT IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/28</p>
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;

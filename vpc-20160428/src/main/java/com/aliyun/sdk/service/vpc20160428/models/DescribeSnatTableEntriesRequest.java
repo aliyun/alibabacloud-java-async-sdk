@@ -272,7 +272,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceIds.
+         * <p>The ID of the elastic network interface to be queried.</p>
          */
         public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);

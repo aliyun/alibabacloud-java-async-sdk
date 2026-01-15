@@ -246,7 +246,14 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Whether to perform a dry run of this request, with values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sends a check request without modifying the SNAT entry. The checks include whether the required parameters are filled in, the request format, and business restrictions. If the check fails, the corresponding error is returned. If the check passes, an error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. After passing the check, it returns a 2xx HTTP status code and modifies the SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -255,7 +262,17 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * EipAffinity.
+         * <p>Whether to enable IP affinity. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disable IP affinity.</li>
+         * <li><strong>1</strong>: Enable IP affinity.<blockquote>
+         * <p>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access; otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder eipAffinity(Integer eipAffinity) {
             this.putQueryParameter("EipAffinity", eipAffinity);
@@ -264,7 +281,10 @@ public class ModifySnatEntryRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * <p>Elastic Network Interface ID. The IPv4 address set of the elastic network interface will be used as the SNAT address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-gw8g131ef2dnbu3k****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);

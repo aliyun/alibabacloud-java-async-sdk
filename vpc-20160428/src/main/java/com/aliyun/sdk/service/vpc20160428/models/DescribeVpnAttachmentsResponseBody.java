@@ -278,6 +278,9 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransitRouterName")
         private String transitRouterName;
 
+        @com.aliyun.core.annotation.NameInMap("TunnelBandwidth")
+        private String tunnelBandwidth;
+
         private VpnAttachments(Builder builder) {
             this.attachType = builder.attachType;
             this.crossAccountAuthorized = builder.crossAccountAuthorized;
@@ -288,6 +291,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.transitRouterId = builder.transitRouterId;
             this.transitRouterName = builder.transitRouterName;
+            this.tunnelBandwidth = builder.tunnelBandwidth;
         }
 
         public static Builder builder() {
@@ -361,6 +365,13 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             return this.transitRouterName;
         }
 
+        /**
+         * @return tunnelBandwidth
+         */
+        public String getTunnelBandwidth() {
+            return this.tunnelBandwidth;
+        }
+
         public static final class Builder {
             private String attachType; 
             private Boolean crossAccountAuthorized; 
@@ -371,6 +382,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String transitRouterId; 
             private String transitRouterName; 
+            private String tunnelBandwidth; 
 
             private Builder() {
             } 
@@ -385,6 +397,7 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.transitRouterId = model.transitRouterId;
                 this.transitRouterName = model.transitRouterName;
+                this.tunnelBandwidth = model.tunnelBandwidth;
             } 
 
             /**
@@ -490,6 +503,14 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
              */
             public Builder transitRouterName(String transitRouterName) {
                 this.transitRouterName = transitRouterName;
+                return this;
+            }
+
+            /**
+             * TunnelBandwidth.
+             */
+            public Builder tunnelBandwidth(String tunnelBandwidth) {
+                this.tunnelBandwidth = tunnelBandwidth;
                 return this;
             }
 

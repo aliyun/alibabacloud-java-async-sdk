@@ -413,6 +413,9 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>The access mode for reverse access to the VPC NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTI_BINDED</p>
          */
         public Builder accessMode(AccessMode accessMode) {
             String accessModeShrink = shrink(accessMode, "AccessMode", "json");
@@ -538,7 +541,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * Ipv4Prefix.
+         * <p>Create an IP prefix address segment for batch creation of NAT IPs. Please use the reserved and unallocated network segments in the VSwitch where the NAT is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/28</p>
          */
         public Builder ipv4Prefix(String ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -561,7 +567,10 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * NatIp.
+         * <p>The private IP address occupied by the NAT gateway. Please use an unassigned IP from the subnet where the NAT is located. If left empty, an IP address will be randomly assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.x</p>
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -629,6 +638,9 @@ public class CreateNatGatewayRequest extends Request {
 
         /**
          * <p>PrivateLink is not supported by default. If you set the value to true, PrivateLink is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder privateLinkEnabled(Boolean privateLinkEnabled) {
             this.putQueryParameter("PrivateLinkEnabled", privateLinkEnabled);
@@ -827,6 +839,9 @@ public class CreateNatGatewayRequest extends Request {
              * <blockquote>
              * <p>This value takes effect if the access mode is the tunnel mode.</p>
              * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>geneve</p>
              */
             public Builder tunnelType(String tunnelType) {
                 this.tunnelType = tunnelType;

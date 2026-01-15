@@ -320,7 +320,16 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             } 
 
             /**
-             * EipAffinity.
+             * <p>Whether to enable IP affinity. Values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Disable IP affinity. - <strong>1</strong>: Enable IP affinity.<blockquote>
+             * <p>After enabling the IP affinity switch, if an SNAT entry is bound to multiple EIPs or NAT IPs, the same client will use the same EIP or NAT IP for access. Otherwise, the client will randomly select from the bound EIPs or NAT IPs for access.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eipAffinity(String eipAffinity) {
                 this.eipAffinity = eipAffinity;
@@ -339,7 +348,10 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>Elastic Network Interface ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-gw8g131ef2dnbu3k****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;

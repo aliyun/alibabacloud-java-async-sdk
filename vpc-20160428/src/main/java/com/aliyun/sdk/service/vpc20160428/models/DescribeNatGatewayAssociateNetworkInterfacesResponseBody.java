@@ -524,7 +524,10 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
             }
 
             /**
-             * ResourceVpcId.
+             * <p>VPC ID of the service resource</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1di7uewzmtvfuq8****</p>
              */
             public Builder resourceVpcId(String resourceVpcId) {
                 this.resourceVpcId = resourceVpcId;

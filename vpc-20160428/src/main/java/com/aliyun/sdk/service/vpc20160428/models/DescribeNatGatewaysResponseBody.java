@@ -216,7 +216,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * ModeValue.
+             * <p>Access mode, with values:</p>
+             * <ul>
+             * <li><strong>route</strong>: Route mode.</li>
+             * <li><strong>tunnel</strong>: Tunnel mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>route</p>
              */
             public Builder modeValue(String modeValue) {
                 this.modeValue = modeValue;
@@ -224,7 +231,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelType.
+             * <p>Tunnel mode type:</p>
+             * <ul>
+             * <li><strong>geneve</strong>: Geneve type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>geneve</p>
              */
             public Builder tunnelType(String tunnelType) {
                 this.tunnelType = tunnelType;
@@ -603,7 +616,10 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * IpPrefix.
+             * <p>NAT IP prefix address range</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/28</p>
              */
             public Builder ipPrefix(String ipPrefix) {
                 this.ipPrefix = ipPrefix;
@@ -1532,7 +1548,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessMode.
+             * <p>Access mode for reverse access to VPC NAT gateway.</p>
              */
             public Builder accessMode(AccessMode accessMode) {
                 this.accessMode = accessMode;
@@ -1640,7 +1656,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSessionLog.
+             * <p>Whether to enable session logging, with values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Session logging is enabled. </li>
+             * <li><strong>false</strong>: Session logging is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSessionLog(String enableSessionLog) {
                 this.enableSessionLog = enableSessionLog;
@@ -1724,7 +1747,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * IpPrefixList.
+             * <p>List of NAT IP prefix address segments.</p>
              */
             public Builder ipPrefixList(NatGatewayIpPrefixList ipPrefixList) {
                 this.ipPrefixList = ipPrefixList;

@@ -92,6 +92,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TransitRouterName")
     private String transitRouterName;
 
+    @com.aliyun.core.annotation.NameInMap("TunnelBandwidth")
+    private String tunnelBandwidth;
+
     @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
     private TunnelOptionsSpecification tunnelOptionsSpecification;
 
@@ -136,6 +139,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         this.tags = builder.tags;
         this.transitRouterId = builder.transitRouterId;
         this.transitRouterName = builder.transitRouterName;
+        this.tunnelBandwidth = builder.tunnelBandwidth;
         this.tunnelOptionsSpecification = builder.tunnelOptionsSpecification;
         this.vcoHealthCheck = builder.vcoHealthCheck;
         this.vpnBgpConfig = builder.vpnBgpConfig;
@@ -332,6 +336,13 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     /**
+     * @return tunnelBandwidth
+     */
+    public String getTunnelBandwidth() {
+        return this.tunnelBandwidth;
+    }
+
+    /**
      * @return tunnelOptionsSpecification
      */
     public TunnelOptionsSpecification getTunnelOptionsSpecification() {
@@ -399,6 +410,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         private Tags tags; 
         private String transitRouterId; 
         private String transitRouterName; 
+        private String tunnelBandwidth; 
         private TunnelOptionsSpecification tunnelOptionsSpecification; 
         private VcoHealthCheck vcoHealthCheck; 
         private VpnBgpConfig vpnBgpConfig; 
@@ -435,6 +447,7 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
             this.tags = model.tags;
             this.transitRouterId = model.transitRouterId;
             this.transitRouterName = model.transitRouterName;
+            this.tunnelBandwidth = model.tunnelBandwidth;
             this.tunnelOptionsSpecification = model.tunnelOptionsSpecification;
             this.vcoHealthCheck = model.vcoHealthCheck;
             this.vpnBgpConfig = model.vpnBgpConfig;
@@ -759,6 +772,14 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
          */
         public Builder transitRouterName(String transitRouterName) {
             this.transitRouterName = transitRouterName;
+            return this;
+        }
+
+        /**
+         * TunnelBandwidth.
+         */
+        public Builder tunnelBandwidth(String tunnelBandwidth) {
+            this.tunnelBandwidth = tunnelBandwidth;
             return this;
         }
 

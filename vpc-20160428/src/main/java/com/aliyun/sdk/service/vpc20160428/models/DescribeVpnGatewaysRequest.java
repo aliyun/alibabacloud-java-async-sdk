@@ -22,6 +22,10 @@ public class DescribeVpnGatewaysRequest extends Request {
     private String businessStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
@@ -77,6 +81,7 @@ public class DescribeVpnGatewaysRequest extends Request {
     private DescribeVpnGatewaysRequest(Builder builder) {
         super(builder);
         this.businessStatus = builder.businessStatus;
+        this.gatewayType = builder.gatewayType;
         this.includeReservationData = builder.includeReservationData;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -110,6 +115,13 @@ public class DescribeVpnGatewaysRequest extends Request {
      */
     public String getBusinessStatus() {
         return this.businessStatus;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -205,6 +217,7 @@ public class DescribeVpnGatewaysRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVpnGatewaysRequest, Builder> {
         private String businessStatus; 
+        private String gatewayType; 
         private Boolean includeReservationData; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -226,6 +239,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         private Builder(DescribeVpnGatewaysRequest request) {
             super(request);
             this.businessStatus = request.businessStatus;
+            this.gatewayType = request.gatewayType;
             this.includeReservationData = request.includeReservationData;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -254,6 +268,15 @@ public class DescribeVpnGatewaysRequest extends Request {
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
             this.businessStatus = businessStatus;
+            return this;
+        }
+
+        /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("GatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 

@@ -379,7 +379,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessMode.
+         * <p>Access mode for reverse access to VPC NAT gateway.</p>
          */
         public Builder accessMode(AccessMode accessMode) {
             this.accessMode = accessMode;
@@ -455,7 +455,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableSessionLog.
+         * <p>Whether to enable session log, with values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Session logging is enabled. </li>
+         * <li><strong>false</strong>: Session logging is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSessionLog(Boolean enableSessionLog) {
             this.enableSessionLog = enableSessionLog;
@@ -498,7 +505,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LogDelivery.
+         * <p>Session log configuration information.</p>
          */
         public Builder logDelivery(LogDelivery logDelivery) {
             this.logDelivery = logDelivery;
@@ -720,7 +727,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * ModeValue.
+             * <p>Access mode values:</p>
+             * <ul>
+             * <li><strong>route</strong>: Route mode.</li>
+             * <li><strong>tunnel</strong>: Tunnel mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>route</p>
              */
             public Builder modeValue(String modeValue) {
                 this.modeValue = modeValue;
@@ -728,7 +742,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelType.
+             * <p>Tunnel mode type:</p>
+             * <ul>
+             * <li><strong>geneve</strong>: Geneve type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>geneve</p>
              */
             public Builder tunnelType(String tunnelType) {
                 this.tunnelType = tunnelType;
@@ -1301,7 +1321,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * DeliverLogsErrorMessage.
+             * <p>Error message for session log write failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LogStoreNotExist: logstore session_log_test does not exist</p>
              */
             public Builder deliverLogsErrorMessage(String deliverLogsErrorMessage) {
                 this.deliverLogsErrorMessage = deliverLogsErrorMessage;
@@ -1309,7 +1332,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryStatus.
+             * <p>Session log write status. Values:</p>
+             * <ul>
+             * <li><strong>Success</strong>: Success. </li>
+             * <li><strong>Failure</strong>: Failure.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Failure</p>
              */
             public Builder deliveryStatus(String deliveryStatus) {
                 this.deliveryStatus = deliveryStatus;
@@ -1317,7 +1347,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LogDeliveryType.
+             * <p>Session log delivery destination type. Value: <strong>sls</strong>, Alibaba Cloud Log Service SLS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls</p>
              */
             public Builder logDeliveryType(String logDeliveryType) {
                 this.logDeliveryType = logDeliveryType;
@@ -1325,7 +1358,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LogDestination.
+             * <p>Destination address for session log writing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>
              */
             public Builder logDestination(String logDestination) {
                 this.logDestination = logDestination;

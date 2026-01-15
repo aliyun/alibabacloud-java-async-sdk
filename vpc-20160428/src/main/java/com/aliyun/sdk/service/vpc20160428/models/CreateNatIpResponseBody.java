@@ -106,7 +106,10 @@ public class CreateNatIpResponseBody extends TeaModel {
         } 
 
         /**
-         * Ipv4Prefix.
+         * <p>The IPv4Prefix returned by the previous API is obsolete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder ipv4Prefix(String ipv4Prefix) {
             this.ipv4Prefix = ipv4Prefix;
@@ -136,7 +139,7 @@ public class CreateNatIpResponseBody extends TeaModel {
         }
 
         /**
-         * NatIps.
+         * <p>The NatIp parameter that is returned after you create a NatIp. If you use IPv4Prefix to create a NatIp, the information about all NatIp is returned. We recommend that you use this parameter to obtain the information about a NatIp when you create a NatIp.</p>
          */
         public Builder natIps(java.util.List<NatIps> natIps) {
             this.natIps = natIps;
@@ -226,7 +229,10 @@ public class CreateNatIpResponseBody extends TeaModel {
             } 
 
             /**
-             * Ipv4Prefix.
+             * <p>The Ipv4Prefix of the created NatIpList list is returned when Ipv4Preix is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.128/28</p>
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -234,10 +240,10 @@ public class CreateNatIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The NAT IP address.</p>
+             * <p>Returns the NatIp address of the created NatIpList list when Ipv4Preix is created.</p>
              * 
              * <strong>example:</strong>
-             * <p>192.168.0.34</p>
+             * <p>192.168.2.128</p>
              */
             public Builder natIp(String natIp) {
                 this.natIp = natIp;
@@ -245,10 +251,10 @@ public class CreateNatIpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAT IP address.</p>
+             * <p>Returns the NatIpId of the created NatIpList list when Ipv4Preix is created.</p>
              * 
              * <strong>example:</strong>
-             * <p>vpcnatip-gw8y7q3cpk3fggs8****</p>
+             * <p>vpcnatip-xxxxxxxx</p>
              */
             public Builder natIpId(String natIpId) {
                 this.natIpId = natIpId;

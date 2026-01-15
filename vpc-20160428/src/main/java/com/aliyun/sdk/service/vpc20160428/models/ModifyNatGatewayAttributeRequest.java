@@ -228,15 +228,15 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to <strong>NAT</strong>, which indicates that the NAT gateway is associated with the EIP in NAT mode.</p>
-         * <p>**</p>
-         * <p><strong>Description</strong></p>
+         * <p>Modifies the mode in which the EIP is associated with the NAT gateway. The value can be empty or <strong>NAT</strong>, which specifies the NAT mode.</p>
+         * <blockquote>
+         * </blockquote>
          * <ul>
-         * <li><p>If EipBindMode is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. If EipBindMode is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about <strong>MULTI_BINDED</strong>, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
+         * <li><p>You can only change <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> mode, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
          * </li>
-         * <li><p>When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.</p>
+         * <li><p>When you change the association mode, your network may be interrupted for seconds. The duration increases with the number of EIPs. You can change the association mode for at most 5 EIPs at the same time. We recommend changing the association mode during off-peak hours.</p>
          * </li>
-         * <li><p>After the mode is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.</p>
+         * <li><p>After the association mode is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with an IPv4 gateway. If an EIP is associated with a NAT gateway in NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Ensure the vSwitch has sufficient private IP addresses for EIPs to be associated with the NAT gateway.</p>
          * </li>
          * </ul>
          * 
@@ -250,7 +250,14 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * EnableSessionLog.
+         * <p>Whether to enable session logging, with values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Session logging is enabled. </li>
+         * <li><strong>false</strong>: Session logging is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSessionLog(Boolean enableSessionLog) {
             this.putQueryParameter("EnableSessionLog", enableSessionLog);
@@ -275,7 +282,7 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
-         * LogDelivery.
+         * <p>Session log configuration information.</p>
          */
         public Builder logDelivery(LogDelivery logDelivery) {
             String logDeliveryShrink = shrink(logDelivery, "LogDelivery", "json");
@@ -420,7 +427,10 @@ public class ModifyNatGatewayAttributeRequest extends Request {
             } 
 
             /**
-             * LogDeliveryType.
+             * <p>Session log write type. Value: <strong>sls</strong>, Alibaba Cloud Log Service SLS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls</p>
              */
             public Builder logDeliveryType(String logDeliveryType) {
                 this.logDeliveryType = logDeliveryType;
@@ -428,7 +438,10 @@ public class ModifyNatGatewayAttributeRequest extends Request {
             }
 
             /**
-             * LogDestination.
+             * <p>Session log write address. Value: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>
              */
             public Builder logDestination(String logDestination) {
                 this.logDestination = logDestination;

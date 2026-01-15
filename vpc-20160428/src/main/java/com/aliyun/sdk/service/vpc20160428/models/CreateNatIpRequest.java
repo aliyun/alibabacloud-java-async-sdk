@@ -276,7 +276,10 @@ public class CreateNatIpRequest extends Request {
         }
 
         /**
-         * Ipv4Prefix.
+         * <p>The created IP prefix address segment must be within the reserved network segment of the switch where the NAT is located, and the reserved network segment cannot be occupied. The IP prefix mask must be /28.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder ipv4Prefix(String ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -285,7 +288,10 @@ public class CreateNatIpRequest extends Request {
         }
 
         /**
-         * Ipv4PrefixCount.
+         * <p>The number of automatically assigned IP prefixes. These are randomly allocated from the unassigned reserved segments of the switch where the NAT is located. Value range: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv4PrefixCount(Long ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);

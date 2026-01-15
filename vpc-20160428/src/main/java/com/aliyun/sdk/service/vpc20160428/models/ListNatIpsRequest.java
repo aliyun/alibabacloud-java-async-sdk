@@ -303,7 +303,10 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * IpOrigin.
+         * <p>The enumeration of the fields used to describe the source of the NatIp. Prefix indicates the NatIp that belongs to the IPv4Prefix. The value cidr indicates isolated NatIp. The value control indicates all NatIp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cidr</p>
          */
         public Builder ipOrigin(String ipOrigin) {
             this.putQueryParameter("IpOrigin", ipOrigin);
@@ -312,7 +315,10 @@ public class ListNatIpsRequest extends Request {
         }
 
         /**
-         * Ipv4Prefix.
+         * <p>The IP prefix address range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/28</p>
          */
         public Builder ipv4Prefix(String ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);

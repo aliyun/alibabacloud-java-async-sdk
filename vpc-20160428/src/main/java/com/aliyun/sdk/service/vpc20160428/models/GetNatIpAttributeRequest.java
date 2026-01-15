@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteNatIpRequest} extends {@link RequestModel}
+ * {@link GetNatIpAttributeRequest} extends {@link RequestModel}
  *
- * <p>DeleteNatIpRequest</p>
+ * <p>GetNatIpAttributeRequest</p>
  */
-public class DeleteNatIpRequest extends Request {
+public class GetNatIpAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -26,15 +26,8 @@ public class DeleteNatIpRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
-    private String ipv4Prefix;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
-    private String natGatewayId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatIpId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natIpId;
 
     @com.aliyun.core.annotation.Query
@@ -58,12 +51,10 @@ public class DeleteNatIpRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DeleteNatIpRequest(Builder builder) {
+    private GetNatIpAttributeRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
-        this.ipv4Prefix = builder.ipv4Prefix;
-        this.natGatewayId = builder.natGatewayId;
         this.natIpId = builder.natIpId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -76,7 +67,7 @@ public class DeleteNatIpRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteNatIpRequest create() {
+    public static GetNatIpAttributeRequest create() {
         return builder().build();
     }
 
@@ -97,20 +88,6 @@ public class DeleteNatIpRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
-    }
-
-    /**
-     * @return ipv4Prefix
-     */
-    public String getIpv4Prefix() {
-        return this.ipv4Prefix;
-    }
-
-    /**
-     * @return natGatewayId
-     */
-    public String getNatGatewayId() {
-        return this.natGatewayId;
     }
 
     /**
@@ -155,11 +132,9 @@ public class DeleteNatIpRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteNatIpRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetNatIpAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private String ipv4Prefix; 
-        private String natGatewayId; 
         private String natIpId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -171,12 +146,10 @@ public class DeleteNatIpRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteNatIpRequest request) {
+        private Builder(GetNatIpAttributeRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
-            this.ipv4Prefix = request.ipv4Prefix;
-            this.natGatewayId = request.natGatewayId;
             this.natIpId = request.natIpId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -186,11 +159,7 @@ public class DeleteNatIpRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request.</p>
-         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-         * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
-         * </blockquote>
+         * <p>Client Token, used to ensure the idempotence of requests. Generate a unique value for this parameter from your client, ensuring that it is unique across different requests. ClientToken only supports ASCII characters. If not specified, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong> identifier. The <strong>RequestId</strong> may differ for each API request.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
@@ -202,10 +171,10 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <p>Indicates whether to perform a dry run of the request. Values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * <li><strong>true</strong>: Sends a check request without querying NAT IP address information. The checks include whether the AccessKey is valid, the RAM user&quot;s authorization status, and if all required parameters are filled out. If any check fails, the corresponding error is returned. If all checks pass, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. After passing the checks, it returns an HTTP 2xx status code and queries the NAT IP address information.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,31 +187,8 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * <p>The IP prefix address to be deleted.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>192.168.0.0/28</p>
-         */
-        public Builder ipv4Prefix(String ipv4Prefix) {
-            this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
-            this.ipv4Prefix = ipv4Prefix;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the NAT gateway instance to which the IP prefix to be deleted belongs. Required when deleting an IP prefix.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ngw-gw8v16wgvtq26vh59****</p>
-         */
-        public Builder natGatewayId(String natGatewayId) {
-            this.putQueryParameter("NatGatewayId", natGatewayId);
-            this.natGatewayId = natGatewayId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the NAT IP address that you want to delete.</p>
+         * <p>The ID of the NAT IP address instance to be queried.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>
@@ -272,12 +218,11 @@ public class DeleteNatIpRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the NAT gateway to which the NAT IP address that you want to delete belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the NAT gateway instance to which the NAT IP address to be queried belongs. You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-qingdao</p>
+         * <p>eu-central-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -304,8 +249,8 @@ public class DeleteNatIpRequest extends Request {
         }
 
         @Override
-        public DeleteNatIpRequest build() {
-            return new DeleteNatIpRequest(this);
+        public GetNatIpAttributeRequest build() {
+            return new GetNatIpAttributeRequest(this);
         } 
 
     } 

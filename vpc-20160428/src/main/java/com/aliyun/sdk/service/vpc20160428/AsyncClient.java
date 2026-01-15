@@ -2705,6 +2705,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNatGatewayAttributeResponse> getNatGatewayAttribute(GetNatGatewayAttributeRequest request);
 
     /**
+     * @param request the request parameters of GetNatIpAttribute  GetNatIpAttributeRequest
+     * @return GetNatIpAttributeResponse
+     */
+    CompletableFuture<GetNatIpAttributeResponse> getNatIpAttribute(GetNatIpAttributeRequest request);
+
+    /**
+     * @param request the request parameters of GetNatIpCidrAttribute  GetNatIpCidrAttributeRequest
+     * @return GetNatIpCidrAttributeResponse
+     */
+    CompletableFuture<GetNatIpCidrAttributeResponse> getNatIpCidrAttribute(GetNatIpCidrAttributeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see <a href="https://help.aliyun.com/document_detail/274385.html">Outbound data transfer billing</a> and <a href="https://help.aliyun.com/document_detail/54582.html">Billing</a>.</p>
      * 

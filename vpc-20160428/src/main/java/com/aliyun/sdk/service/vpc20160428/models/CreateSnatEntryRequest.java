@@ -258,7 +258,14 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Indicates whether to only precheck this request. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sends a precheck request and does not create an SNAT entry. The precheck includes verifying if the AccessKey is valid, checking the RAM user&quot;s authorization, and ensuring that all required parameters are filled out. If the precheck fails, the corresponding error is returned. If the precheck passes, the error code <code>DryRunOperation</code> is returned.</li>
+         * <li><strong>false</strong> (default): Sends a normal request. After passing the precheck, it returns a 2xx HTTP status code and creates an SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -285,7 +292,13 @@ public class CreateSnatEntryRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceId.
+         * <p>Elastic Network Interface ID.  </p>
+         * <blockquote>
+         * <p>The IPv4 address set of the elastic network interface will be used as the SNAT address.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-gw8g131ef2dnbu3k****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);

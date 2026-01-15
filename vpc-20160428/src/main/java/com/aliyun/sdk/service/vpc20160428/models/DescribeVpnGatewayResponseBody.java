@@ -47,6 +47,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EniInstanceIds")
     private EniInstanceIds eniInstanceIds;
 
+    @com.aliyun.core.annotation.NameInMap("GatewayType")
+    private String gatewayType;
+
     @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
@@ -112,6 +115,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         this.enableBgp = builder.enableBgp;
         this.endTime = builder.endTime;
         this.eniInstanceIds = builder.eniInstanceIds;
+        this.gatewayType = builder.gatewayType;
         this.internetIp = builder.internetIp;
         this.ipsecVpn = builder.ipsecVpn;
         this.name = builder.name;
@@ -212,6 +216,13 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      */
     public EniInstanceIds getEniInstanceIds() {
         return this.eniInstanceIds;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -351,6 +362,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         private Boolean enableBgp; 
         private Long endTime; 
         private EniInstanceIds eniInstanceIds; 
+        private String gatewayType; 
         private String internetIp; 
         private String ipsecVpn; 
         private String name; 
@@ -384,6 +396,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             this.enableBgp = model.enableBgp;
             this.endTime = model.endTime;
             this.eniInstanceIds = model.eniInstanceIds;
+            this.gatewayType = model.gatewayType;
             this.internetIp = model.internetIp;
             this.ipsecVpn = model.ipsecVpn;
             this.name = model.name;
@@ -525,6 +538,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          */
         public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
             this.eniInstanceIds = eniInstanceIds;
+            return this;
+        }
+
+        /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
             return this;
         }
 
