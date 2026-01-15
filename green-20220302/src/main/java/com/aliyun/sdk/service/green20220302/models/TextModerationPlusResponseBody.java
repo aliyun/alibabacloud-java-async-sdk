@@ -568,6 +568,102 @@ public class TextModerationPlusResponseBody extends TeaModel {
      *
      * <p>TextModerationPlusResponseBody</p>
      */
+    public static class RiskPositions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndPos")
+        private Integer endPos;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWord")
+        private String riskWord;
+
+        @com.aliyun.core.annotation.NameInMap("StartPos")
+        private Integer startPos;
+
+        private RiskPositions(Builder builder) {
+            this.endPos = builder.endPos;
+            this.riskWord = builder.riskWord;
+            this.startPos = builder.startPos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskPositions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endPos
+         */
+        public Integer getEndPos() {
+            return this.endPos;
+        }
+
+        /**
+         * @return riskWord
+         */
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        /**
+         * @return startPos
+         */
+        public Integer getStartPos() {
+            return this.startPos;
+        }
+
+        public static final class Builder {
+            private Integer endPos; 
+            private String riskWord; 
+            private Integer startPos; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskPositions model) {
+                this.endPos = model.endPos;
+                this.riskWord = model.riskWord;
+                this.startPos = model.startPos;
+            } 
+
+            /**
+             * EndPos.
+             */
+            public Builder endPos(Integer endPos) {
+                this.endPos = endPos;
+                return this;
+            }
+
+            /**
+             * RiskWord.
+             */
+            public Builder riskWord(String riskWord) {
+                this.riskWord = riskWord;
+                return this;
+            }
+
+            /**
+             * StartPos.
+             */
+            public Builder startPos(Integer startPos) {
+                this.startPos = startPos;
+                return this;
+            }
+
+            public RiskPositions build() {
+                return new RiskPositions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TextModerationPlusResponseBody} extends {@link TeaModel}
+     *
+     * <p>TextModerationPlusResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
@@ -581,6 +677,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
+        @com.aliyun.core.annotation.NameInMap("RiskPositions")
+        private java.util.List<RiskPositions> riskPositions;
+
         @com.aliyun.core.annotation.NameInMap("RiskWords")
         private String riskWords;
 
@@ -589,6 +688,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             this.customizedHit = builder.customizedHit;
             this.description = builder.description;
             this.label = builder.label;
+            this.riskPositions = builder.riskPositions;
             this.riskWords = builder.riskWords;
         }
 
@@ -629,6 +729,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskPositions
+         */
+        public java.util.List<RiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        /**
          * @return riskWords
          */
         public String getRiskWords() {
@@ -640,6 +747,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private java.util.List<CustomizedHit> customizedHit; 
             private String description; 
             private String label; 
+            private java.util.List<RiskPositions> riskPositions; 
             private String riskWords; 
 
             private Builder() {
@@ -650,6 +758,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
                 this.customizedHit = model.customizedHit;
                 this.description = model.description;
                 this.label = model.label;
+                this.riskPositions = model.riskPositions;
                 this.riskWords = model.riskWords;
             } 
 
@@ -691,6 +800,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder label(String label) {
                 this.label = label;
+                return this;
+            }
+
+            /**
+             * RiskPositions.
+             */
+            public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
+                this.riskPositions = riskPositions;
                 return this;
             }
 
