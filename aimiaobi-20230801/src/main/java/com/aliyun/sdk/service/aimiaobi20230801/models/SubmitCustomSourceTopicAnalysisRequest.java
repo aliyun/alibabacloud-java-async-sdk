@@ -42,6 +42,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
     private java.util.List<News> news;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Topics")
+    private java.util.List<Topics> topics;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TopicsFileUrl")
+    private String topicsFileUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -54,6 +62,8 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         this.fileUrl = builder.fileUrl;
         this.maxTopicSize = builder.maxTopicSize;
         this.news = builder.news;
+        this.topics = builder.topics;
+        this.topicsFileUrl = builder.topicsFileUrl;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -113,6 +123,20 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
     }
 
     /**
+     * @return topics
+     */
+    public java.util.List<Topics> getTopics() {
+        return this.topics;
+    }
+
+    /**
+     * @return topicsFileUrl
+     */
+    public String getTopicsFileUrl() {
+        return this.topicsFileUrl;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -126,6 +150,8 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         private String fileUrl; 
         private Integer maxTopicSize; 
         private java.util.List<News> news; 
+        private java.util.List<Topics> topics; 
+        private String topicsFileUrl; 
         private String workspaceId; 
 
         private Builder() {
@@ -140,6 +166,8 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
             this.fileUrl = request.fileUrl;
             this.maxTopicSize = request.maxTopicSize;
             this.news = request.news;
+            this.topics = request.topics;
+            this.topicsFileUrl = request.topicsFileUrl;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -196,6 +224,25 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
             String newsShrink = shrink(news, "News", "json");
             this.putBodyParameter("News", newsShrink);
             this.news = news;
+            return this;
+        }
+
+        /**
+         * Topics.
+         */
+        public Builder topics(java.util.List<Topics> topics) {
+            String topicsShrink = shrink(topics, "Topics", "json");
+            this.putBodyParameter("Topics", topicsShrink);
+            this.topics = topics;
+            return this;
+        }
+
+        /**
+         * TopicsFileUrl.
+         */
+        public Builder topicsFileUrl(String topicsFileUrl) {
+            this.putBodyParameter("TopicsFileUrl", topicsFileUrl);
+            this.topicsFileUrl = topicsFileUrl;
             return this;
         }
 
@@ -426,6 +473,81 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
 
             public News build() {
                 return new News(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitCustomSourceTopicAnalysisRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitCustomSourceTopicAnalysisRequest</p>
+     */
+    public static class Topics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("News")
+        private java.util.List<HottopicNews> news;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        private Topics(Builder builder) {
+            this.news = builder.news;
+            this.topic = builder.topic;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Topics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return news
+         */
+        public java.util.List<HottopicNews> getNews() {
+            return this.news;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public static final class Builder {
+            private java.util.List<HottopicNews> news; 
+            private String topic; 
+
+            private Builder() {
+            } 
+
+            private Builder(Topics model) {
+                this.news = model.news;
+                this.topic = model.topic;
+            } 
+
+            /**
+             * News.
+             */
+            public Builder news(java.util.List<HottopicNews> news) {
+                this.news = news;
+                return this;
+            }
+
+            /**
+             * Topic.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            public Topics build() {
+                return new Topics(this);
             } 
 
         } 

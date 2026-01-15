@@ -22,6 +22,10 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExportType")
+    private String exportType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -34,6 +38,7 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
     private ExportCustomSourceAnalysisTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.exportType = builder.exportType;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
     }
@@ -59,6 +64,13 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
     }
 
     /**
+     * @return exportType
+     */
+    public String getExportType() {
+        return this.exportType;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -74,6 +86,7 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportCustomSourceAnalysisTaskRequest, Builder> {
         private String regionId; 
+        private String exportType; 
         private String taskId; 
         private String workspaceId; 
 
@@ -84,6 +97,7 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
         private Builder(ExportCustomSourceAnalysisTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.exportType = request.exportType;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
@@ -94,6 +108,15 @@ public class ExportCustomSourceAnalysisTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ExportType.
+         */
+        public Builder exportType(String exportType) {
+            this.putBodyParameter("ExportType", exportType);
+            this.exportType = exportType;
             return this;
         }
 
