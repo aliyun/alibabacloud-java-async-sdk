@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceGroupInspectReportDetailRequest</p>
  */
 public class GetInstanceGroupInspectReportDetailRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReportId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,6 +28,7 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
 
     private GetInstanceGroupInspectReportDetailRequest(Builder builder) {
         super(builder);
+        this.agentId = builder.agentId;
         this.reportId = builder.reportId;
     }
 
@@ -41,6 +46,13 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
     }
 
     /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
      * @return reportId
      */
     public String getReportId() {
@@ -48,6 +60,7 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetInstanceGroupInspectReportDetailRequest, Builder> {
+        private String agentId; 
         private String reportId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
 
         private Builder(GetInstanceGroupInspectReportDetailRequest request) {
             super(request);
+            this.agentId = request.agentId;
             this.reportId = request.reportId;
         } 
+
+        /**
+         * AgentId.
+         */
+        public Builder agentId(String agentId) {
+            this.putQueryParameter("AgentId", agentId);
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
