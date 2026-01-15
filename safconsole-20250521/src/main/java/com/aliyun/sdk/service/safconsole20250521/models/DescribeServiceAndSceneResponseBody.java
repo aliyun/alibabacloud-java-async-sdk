@@ -1,0 +1,229 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.safconsole20250521.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DescribeServiceAndSceneResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeServiceAndSceneResponseBody</p>
+ */
+public class DescribeServiceAndSceneResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private Long code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Long httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
+    private ResultObject resultObject;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private DescribeServiceAndSceneResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.requestId = builder.requestId;
+        this.resultObject = builder.resultObject;
+        this.success = builder.success;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeServiceAndSceneResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public Long getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return resultObject
+     */
+    public ResultObject getResultObject() {
+        return this.resultObject;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static final class Builder {
+        private Long code; 
+        private Long httpStatusCode; 
+        private String requestId; 
+        private ResultObject resultObject; 
+        private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeServiceAndSceneResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.resultObject = model.resultObject;
+            this.success = model.success;
+        } 
+
+        /**
+         * Code.
+         */
+        public Builder code(Long code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Long httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResultObject.
+         */
+        public Builder resultObject(ResultObject resultObject) {
+            this.resultObject = resultObject;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public DescribeServiceAndSceneResponseBody build() {
+            return new DescribeServiceAndSceneResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link DescribeServiceAndSceneResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceAndSceneResponseBody</p>
+     */
+    public static class ResultObject extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Scene")
+        private String scene;
+
+        @com.aliyun.core.annotation.NameInMap("Service")
+        private String service;
+
+        private ResultObject(Builder builder) {
+            this.scene = builder.scene;
+            this.service = builder.service;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResultObject create() {
+            return builder().build();
+        }
+
+        /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
+        }
+
+        /**
+         * @return service
+         */
+        public String getService() {
+            return this.service;
+        }
+
+        public static final class Builder {
+            private String scene; 
+            private String service; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultObject model) {
+                this.scene = model.scene;
+                this.service = model.service;
+            } 
+
+            /**
+             * Scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * Service.
+             */
+            public Builder service(String service) {
+                this.service = service;
+                return this;
+            }
+
+            public ResultObject build() {
+                return new ResultObject(this);
+            } 
+
+        } 
+
+    }
+}
