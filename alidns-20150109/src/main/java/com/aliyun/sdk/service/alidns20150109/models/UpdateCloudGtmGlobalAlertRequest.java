@@ -174,11 +174,15 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private Integer threshold;
+
         private AlertConfig(Builder builder) {
             this.dingtalkNotice = builder.dingtalkNotice;
             this.emailNotice = builder.emailNotice;
             this.noticeType = builder.noticeType;
             this.smsNotice = builder.smsNotice;
+            this.threshold = builder.threshold;
         }
 
         public static Builder builder() {
@@ -217,11 +221,19 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             return this.smsNotice;
         }
 
+        /**
+         * @return threshold
+         */
+        public Integer getThreshold() {
+            return this.threshold;
+        }
+
         public static final class Builder {
             private Boolean dingtalkNotice; 
             private Boolean emailNotice; 
             private String noticeType; 
             private Boolean smsNotice; 
+            private Integer threshold; 
 
             private Builder() {
             } 
@@ -231,6 +243,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
                 this.emailNotice = model.emailNotice;
                 this.noticeType = model.noticeType;
                 this.smsNotice = model.smsNotice;
+                this.threshold = model.threshold;
             } 
 
             /**
@@ -293,6 +306,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(Integer threshold) {
+                this.threshold = threshold;
                 return this;
             }
 

@@ -792,6 +792,9 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigLoggingSwitchStatus")
+        private String configLoggingSwitchStatus;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -846,6 +849,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             this.availableStatus = builder.availableStatus;
             this.commodityCode = builder.commodityCode;
             this.configId = builder.configId;
+            this.configLoggingSwitchStatus = builder.configLoggingSwitchStatus;
             this.createTime = builder.createTime;
             this.createTimestamp = builder.createTimestamp;
             this.enableStatus = builder.enableStatus;
@@ -905,6 +909,13 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
          */
         public String getConfigId() {
             return this.configId;
+        }
+
+        /**
+         * @return configLoggingSwitchStatus
+         */
+        public String getConfigLoggingSwitchStatus() {
+            return this.configLoggingSwitchStatus;
         }
 
         /**
@@ -1025,6 +1036,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             private String availableStatus; 
             private String commodityCode; 
             private String configId; 
+            private String configLoggingSwitchStatus; 
             private String createTime; 
             private Long createTimestamp; 
             private String enableStatus; 
@@ -1051,6 +1063,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
                 this.availableStatus = model.availableStatus;
                 this.commodityCode = model.commodityCode;
                 this.configId = model.configId;
+                this.configLoggingSwitchStatus = model.configLoggingSwitchStatus;
                 this.createTime = model.createTime;
                 this.createTimestamp = model.createTimestamp;
                 this.enableStatus = model.enableStatus;
@@ -1132,6 +1145,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
              */
             public Builder configId(String configId) {
                 this.configId = configId;
+                return this;
+            }
+
+            /**
+             * ConfigLoggingSwitchStatus.
+             */
+            public Builder configLoggingSwitchStatus(String configLoggingSwitchStatus) {
+                this.configLoggingSwitchStatus = configLoggingSwitchStatus;
                 return this;
             }
 

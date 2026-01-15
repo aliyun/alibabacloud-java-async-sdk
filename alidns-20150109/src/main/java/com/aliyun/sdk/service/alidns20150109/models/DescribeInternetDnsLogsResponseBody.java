@@ -275,17 +275,26 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsMsgId")
         private String dnsMsgId;
 
+        @com.aliyun.core.annotation.NameInMap("Flags")
+        private String flags;
+
         @com.aliyun.core.annotation.NameInMap("LogTime")
         private Long logTime;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("QueryFlags")
+        private String queryFlags;
+
         @com.aliyun.core.annotation.NameInMap("QueryName")
         private String queryName;
 
         @com.aliyun.core.annotation.NameInMap("QueryType")
         private String queryType;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseTimestamp")
+        private String responseTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("Rt")
         private Integer rt;
@@ -310,10 +319,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
         private Log(Builder builder) {
             this.dnsMsgId = builder.dnsMsgId;
+            this.flags = builder.flags;
             this.logTime = builder.logTime;
             this.protocol = builder.protocol;
+            this.queryFlags = builder.queryFlags;
             this.queryName = builder.queryName;
             this.queryType = builder.queryType;
+            this.responseTimestamp = builder.responseTimestamp;
             this.rt = builder.rt;
             this.serverIp = builder.serverIp;
             this.sourceIp = builder.sourceIp;
@@ -339,6 +351,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return flags
+         */
+        public String getFlags() {
+            return this.flags;
+        }
+
+        /**
          * @return logTime
          */
         public Long getLogTime() {
@@ -353,6 +372,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryFlags
+         */
+        public String getQueryFlags() {
+            return this.queryFlags;
+        }
+
+        /**
          * @return queryName
          */
         public String getQueryName() {
@@ -364,6 +390,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
          */
         public String getQueryType() {
             return this.queryType;
+        }
+
+        /**
+         * @return responseTimestamp
+         */
+        public String getResponseTimestamp() {
+            return this.responseTimestamp;
         }
 
         /**
@@ -417,10 +450,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dnsMsgId; 
+            private String flags; 
             private Long logTime; 
             private String protocol; 
+            private String queryFlags; 
             private String queryName; 
             private String queryType; 
+            private String responseTimestamp; 
             private Integer rt; 
             private String serverIp; 
             private String sourceIp; 
@@ -434,10 +470,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
             private Builder(Log model) {
                 this.dnsMsgId = model.dnsMsgId;
+                this.flags = model.flags;
                 this.logTime = model.logTime;
                 this.protocol = model.protocol;
+                this.queryFlags = model.queryFlags;
                 this.queryName = model.queryName;
                 this.queryType = model.queryType;
+                this.responseTimestamp = model.responseTimestamp;
                 this.rt = model.rt;
                 this.serverIp = model.serverIp;
                 this.sourceIp = model.sourceIp;
@@ -455,6 +494,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
              */
             public Builder dnsMsgId(String dnsMsgId) {
                 this.dnsMsgId = dnsMsgId;
+                return this;
+            }
+
+            /**
+             * Flags.
+             */
+            public Builder flags(String flags) {
+                this.flags = flags;
                 return this;
             }
 
@@ -488,6 +535,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
+             * QueryFlags.
+             */
+            public Builder queryFlags(String queryFlags) {
+                this.queryFlags = queryFlags;
+                return this;
+            }
+
+            /**
              * <p>The domain name for which you want to query Domain Name System (DNS) records.</p>
              * 
              * <strong>example:</strong>
@@ -506,6 +561,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
              */
             public Builder queryType(String queryType) {
                 this.queryType = queryType;
+                return this;
+            }
+
+            /**
+             * ResponseTimestamp.
+             */
+            public Builder responseTimestamp(String responseTimestamp) {
+                this.responseTimestamp = responseTimestamp;
                 return this;
             }
 
