@@ -2018,6 +2018,9 @@ public class HttpApiDeployConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intentCode")
         private String intentCode;
 
+        @com.aliyun.core.annotation.NameInMap("match")
+        private HttpApiBackendMatchConditions match;
+
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
@@ -2032,6 +2035,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
         private ServiceConfigs(Builder builder) {
             this.intentCode = builder.intentCode;
+            this.match = builder.match;
             this.modelName = builder.modelName;
             this.modelNamePattern = builder.modelNamePattern;
             this.serviceId = builder.serviceId;
@@ -2051,6 +2055,13 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         public String getIntentCode() {
             return this.intentCode;
+        }
+
+        /**
+         * @return match
+         */
+        public HttpApiBackendMatchConditions getMatch() {
+            return this.match;
         }
 
         /**
@@ -2083,6 +2094,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
         public static final class Builder {
             private String intentCode; 
+            private HttpApiBackendMatchConditions match; 
             private String modelName; 
             private String modelNamePattern; 
             private String serviceId; 
@@ -2093,6 +2105,7 @@ public class HttpApiDeployConfig extends TeaModel {
 
             private Builder(ServiceConfigs model) {
                 this.intentCode = model.intentCode;
+                this.match = model.match;
                 this.modelName = model.modelName;
                 this.modelNamePattern = model.modelNamePattern;
                 this.serviceId = model.serviceId;
@@ -2104,6 +2117,14 @@ public class HttpApiDeployConfig extends TeaModel {
              */
             public Builder intentCode(String intentCode) {
                 this.intentCode = intentCode;
+                return this;
+            }
+
+            /**
+             * match.
+             */
+            public Builder match(HttpApiBackendMatchConditions match) {
+                this.match = match;
                 return this;
             }
 
