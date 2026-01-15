@@ -54,6 +54,10 @@ public class SearchImageByNameRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
+    private String scoreThreshold;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Start")
     @com.aliyun.core.annotation.Validation(maximum = 499)
@@ -69,6 +73,7 @@ public class SearchImageByNameRequest extends Request {
         this.num = builder.num;
         this.picName = builder.picName;
         this.productId = builder.productId;
+        this.scoreThreshold = builder.scoreThreshold;
         this.start = builder.start;
     }
 
@@ -142,6 +147,13 @@ public class SearchImageByNameRequest extends Request {
     }
 
     /**
+     * @return scoreThreshold
+     */
+    public String getScoreThreshold() {
+        return this.scoreThreshold;
+    }
+
+    /**
      * @return start
      */
     public Integer getStart() {
@@ -157,6 +169,7 @@ public class SearchImageByNameRequest extends Request {
         private Integer num; 
         private String picName; 
         private String productId; 
+        private String scoreThreshold; 
         private Integer start; 
 
         private Builder() {
@@ -173,6 +186,7 @@ public class SearchImageByNameRequest extends Request {
             this.num = request.num;
             this.picName = request.picName;
             this.productId = request.productId;
+            this.scoreThreshold = request.scoreThreshold;
             this.start = request.start;
         } 
 
@@ -276,6 +290,15 @@ public class SearchImageByNameRequest extends Request {
         public Builder productId(String productId) {
             this.putBodyParameter("ProductId", productId);
             this.productId = productId;
+            return this;
+        }
+
+        /**
+         * ScoreThreshold.
+         */
+        public Builder scoreThreshold(String scoreThreshold) {
+            this.putQueryParameter("ScoreThreshold", scoreThreshold);
+            this.scoreThreshold = scoreThreshold;
             return this;
         }
 

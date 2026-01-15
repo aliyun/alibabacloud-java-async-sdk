@@ -39,6 +39,10 @@ public class SearchImageByTextRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer num;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
+    private String scoreThreshold;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Start")
     @com.aliyun.core.annotation.Validation(maximum = 499)
@@ -56,6 +60,7 @@ public class SearchImageByTextRequest extends Request {
         this.filter = builder.filter;
         this.instanceName = builder.instanceName;
         this.num = builder.num;
+        this.scoreThreshold = builder.scoreThreshold;
         this.start = builder.start;
         this.text = builder.text;
     }
@@ -109,6 +114,13 @@ public class SearchImageByTextRequest extends Request {
     }
 
     /**
+     * @return scoreThreshold
+     */
+    public String getScoreThreshold() {
+        return this.scoreThreshold;
+    }
+
+    /**
      * @return start
      */
     public Integer getStart() {
@@ -128,6 +140,7 @@ public class SearchImageByTextRequest extends Request {
         private String filter; 
         private String instanceName; 
         private Integer num; 
+        private String scoreThreshold; 
         private Integer start; 
         private String text; 
 
@@ -142,6 +155,7 @@ public class SearchImageByTextRequest extends Request {
             this.filter = request.filter;
             this.instanceName = request.instanceName;
             this.num = request.num;
+            this.scoreThreshold = request.scoreThreshold;
             this.start = request.start;
             this.text = request.text;
         } 
@@ -191,6 +205,15 @@ public class SearchImageByTextRequest extends Request {
         public Builder num(Integer num) {
             this.putBodyParameter("Num", num);
             this.num = num;
+            return this;
+        }
+
+        /**
+         * ScoreThreshold.
+         */
+        public Builder scoreThreshold(String scoreThreshold) {
+            this.putQueryParameter("ScoreThreshold", scoreThreshold);
+            this.scoreThreshold = scoreThreshold;
             return this;
         }
 
