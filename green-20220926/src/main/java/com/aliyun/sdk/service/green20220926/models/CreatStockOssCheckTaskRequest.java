@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatStockOssCheckTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketPrefixFilterConfig")
+    private String bucketPrefixFilterConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Buckets")
     private String buckets;
 
@@ -131,6 +135,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
 
     private CreatStockOssCheckTaskRequest(Builder builder) {
         super(builder);
+        this.bucketPrefixFilterConfig = builder.bucketPrefixFilterConfig;
         this.buckets = builder.buckets;
         this.callbackId = builder.callbackId;
         this.distinctHistoryTasks = builder.distinctHistoryTasks;
@@ -172,6 +177,13 @@ public class CreatStockOssCheckTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bucketPrefixFilterConfig
+     */
+    public String getBucketPrefixFilterConfig() {
+        return this.bucketPrefixFilterConfig;
     }
 
     /**
@@ -371,6 +383,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatStockOssCheckTaskRequest, Builder> {
+        private String bucketPrefixFilterConfig; 
         private String buckets; 
         private String callbackId; 
         private Boolean distinctHistoryTasks; 
@@ -406,6 +419,7 @@ public class CreatStockOssCheckTaskRequest extends Request {
 
         private Builder(CreatStockOssCheckTaskRequest request) {
             super(request);
+            this.bucketPrefixFilterConfig = request.bucketPrefixFilterConfig;
             this.buckets = request.buckets;
             this.callbackId = request.callbackId;
             this.distinctHistoryTasks = request.distinctHistoryTasks;
@@ -435,6 +449,15 @@ public class CreatStockOssCheckTaskRequest extends Request {
             this.taskName = request.taskName;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * BucketPrefixFilterConfig.
+         */
+        public Builder bucketPrefixFilterConfig(String bucketPrefixFilterConfig) {
+            this.putQueryParameter("BucketPrefixFilterConfig", bucketPrefixFilterConfig);
+            this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+            return this;
+        }
 
         /**
          * <p>OSS buckets</p>

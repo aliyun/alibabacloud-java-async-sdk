@@ -581,6 +581,9 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
      * <p>GetOssCheckTaskInfoResponseBody</p>
      */
     public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BucketPrefixFilterConfig")
+        private java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig;
+
         @com.aliyun.core.annotation.NameInMap("CallbackId")
         private Long callbackId;
 
@@ -654,6 +657,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         private UserFreezeConfig userFreezeConfig;
 
         private Config(Builder builder) {
+            this.bucketPrefixFilterConfig = builder.bucketPrefixFilterConfig;
             this.callbackId = builder.callbackId;
             this.distinctHistoryTasks = builder.distinctHistoryTasks;
             this.endTime = builder.endTime;
@@ -686,6 +690,13 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
 
         public static Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return bucketPrefixFilterConfig
+         */
+        public java.util.Map<String, ConfigBucketPrefixFilterConfigValue> getBucketPrefixFilterConfig() {
+            return this.bucketPrefixFilterConfig;
         }
 
         /**
@@ -857,6 +868,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig; 
             private Long callbackId; 
             private Boolean distinctHistoryTasks; 
             private String endTime; 
@@ -886,6 +898,7 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
             } 
 
             private Builder(Config model) {
+                this.bucketPrefixFilterConfig = model.bucketPrefixFilterConfig;
                 this.callbackId = model.callbackId;
                 this.distinctHistoryTasks = model.distinctHistoryTasks;
                 this.endTime = model.endTime;
@@ -911,6 +924,14 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
                 this.taskCycle = model.taskCycle;
                 this.userFreezeConfig = model.userFreezeConfig;
             } 
+
+            /**
+             * BucketPrefixFilterConfig.
+             */
+            public Builder bucketPrefixFilterConfig(java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig) {
+                this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+                return this;
+            }
 
             /**
              * CallbackId.

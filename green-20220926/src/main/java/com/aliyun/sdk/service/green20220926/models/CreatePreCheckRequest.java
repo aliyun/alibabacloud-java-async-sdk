@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePreCheckRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BucketPrefixFilterConfig")
+    private String bucketPrefixFilterConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Buckets")
     private String buckets;
 
@@ -75,6 +79,7 @@ public class CreatePreCheckRequest extends Request {
 
     private CreatePreCheckRequest(Builder builder) {
         super(builder);
+        this.bucketPrefixFilterConfig = builder.bucketPrefixFilterConfig;
         this.buckets = builder.buckets;
         this.distinctHistoryTasks = builder.distinctHistoryTasks;
         this.endTime = builder.endTime;
@@ -102,6 +107,13 @@ public class CreatePreCheckRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bucketPrefixFilterConfig
+     */
+    public String getBucketPrefixFilterConfig() {
+        return this.bucketPrefixFilterConfig;
     }
 
     /**
@@ -203,6 +215,7 @@ public class CreatePreCheckRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePreCheckRequest, Builder> {
+        private String bucketPrefixFilterConfig; 
         private String buckets; 
         private Boolean distinctHistoryTasks; 
         private String endTime; 
@@ -224,6 +237,7 @@ public class CreatePreCheckRequest extends Request {
 
         private Builder(CreatePreCheckRequest request) {
             super(request);
+            this.bucketPrefixFilterConfig = request.bucketPrefixFilterConfig;
             this.buckets = request.buckets;
             this.distinctHistoryTasks = request.distinctHistoryTasks;
             this.endTime = request.endTime;
@@ -239,6 +253,15 @@ public class CreatePreCheckRequest extends Request {
             this.startTime = request.startTime;
             this.taskName = request.taskName;
         } 
+
+        /**
+         * BucketPrefixFilterConfig.
+         */
+        public Builder bucketPrefixFilterConfig(String bucketPrefixFilterConfig) {
+            this.putBodyParameter("BucketPrefixFilterConfig", bucketPrefixFilterConfig);
+            this.bucketPrefixFilterConfig = bucketPrefixFilterConfig;
+            return this;
+        }
 
         /**
          * <p>Buckets.</p>
