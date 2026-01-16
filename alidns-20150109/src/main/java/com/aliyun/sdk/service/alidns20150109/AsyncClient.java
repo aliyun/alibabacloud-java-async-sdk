@@ -1160,6 +1160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchRecursionZonesResponse> searchRecursionZones(SearchRecursionZonesRequest request);
 
     /**
+     * @param request the request parameters of SetCloudGtmInstanceConfigLogSwitch  SetCloudGtmInstanceConfigLogSwitchRequest
+     * @return SetCloudGtmInstanceConfigLogSwitchResponse
+     */
+    CompletableFuture<SetCloudGtmInstanceConfigLogSwitchResponse> setCloudGtmInstanceConfigLogSwitch(SetCloudGtmInstanceConfigLogSwitchRequest request);
+
+    /**
      * @param request the request parameters of SetDNSSLBStatus  SetDNSSLBStatusRequest
      * @return SetDNSSLBStatusResponse
      */
