@@ -31,8 +31,11 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
     private java.util.List<String> securityGroups;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pvlId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String pvlId;
 
     private UpdateKibanaPvlNetworkRequest(Builder builder) {
@@ -40,6 +43,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         this.instanceId = builder.instanceId;
         this.endpointName = builder.endpointName;
         this.securityGroups = builder.securityGroups;
+        this.clientToken = builder.clientToken;
         this.pvlId = builder.pvlId;
     }
 
@@ -78,6 +82,13 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return pvlId
      */
     public String getPvlId() {
@@ -88,6 +99,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         private String instanceId; 
         private String endpointName; 
         private java.util.List<String> securityGroups; 
+        private String clientToken; 
         private String pvlId; 
 
         private Builder() {
@@ -99,6 +111,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
             this.instanceId = request.instanceId;
             this.endpointName = request.endpointName;
             this.securityGroups = request.securityGroups;
+            this.clientToken = request.clientToken;
             this.pvlId = request.pvlId;
         } 
 
@@ -133,10 +146,16 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>es-cn-27a3mul6l0***-kibana-internal</p>
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * pvlId.
          */
         public Builder pvlId(String pvlId) {
             this.putQueryParameter("pvlId", pvlId);

@@ -24,7 +24,6 @@ public class EnableKibanaPvlNetworkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endpointName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointName;
 
     @com.aliyun.core.annotation.Body
@@ -34,13 +33,15 @@ public class EnableKibanaPvlNetworkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vSwitchIdsZone")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<VSwitchIdsZone> vSwitchIdsZone;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vpcId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
 
     private EnableKibanaPvlNetworkRequest(Builder builder) {
         super(builder);
@@ -49,6 +50,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         this.securityGroups = builder.securityGroups;
         this.vSwitchIdsZone = builder.vSwitchIdsZone;
         this.vpcId = builder.vpcId;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -99,12 +101,20 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         return this.vpcId;
     }
 
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<EnableKibanaPvlNetworkRequest, Builder> {
         private String instanceId; 
         private String endpointName; 
         private java.util.List<String> securityGroups; 
         private java.util.List<VSwitchIdsZone> vSwitchIdsZone; 
         private String vpcId; 
+        private String clientToken; 
 
         private Builder() {
             super();
@@ -117,6 +127,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             this.securityGroups = request.securityGroups;
             this.vSwitchIdsZone = request.vSwitchIdsZone;
             this.vpcId = request.vpcId;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -132,10 +143,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
+         * endpointName.
          */
         public Builder endpointName(String endpointName) {
             this.putBodyParameter("endpointName", endpointName);
@@ -153,7 +161,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * vSwitchIdsZone.
          */
         public Builder vSwitchIdsZone(java.util.List<VSwitchIdsZone> vSwitchIdsZone) {
             this.putBodyParameter("vSwitchIdsZone", vSwitchIdsZone);
@@ -162,14 +170,20 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-xxx</p>
+         * vpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -188,11 +202,9 @@ public class EnableKibanaPvlNetworkRequest extends Request {
      */
     public static class VSwitchIdsZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vswitchId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String vswitchId;
 
         @com.aliyun.core.annotation.NameInMap("zoneId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private VSwitchIdsZone(Builder builder) {
@@ -235,10 +247,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-xxxx</p>
+             * vswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -246,10 +255,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * zoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

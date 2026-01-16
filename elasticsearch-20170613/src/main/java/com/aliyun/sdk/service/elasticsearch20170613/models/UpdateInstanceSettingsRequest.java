@@ -23,8 +23,8 @@ public class UpdateInstanceSettingsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("body")
-    private String body;
+    @com.aliyun.core.annotation.NameInMap("esConfig")
+    private java.util.Map<String, String> esConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -41,7 +41,7 @@ public class UpdateInstanceSettingsRequest extends Request {
     private UpdateInstanceSettingsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
+        this.esConfig = builder.esConfig;
         this.clientToken = builder.clientToken;
         this.force = builder.force;
         this.updateStrategy = builder.updateStrategy;
@@ -68,10 +68,10 @@ public class UpdateInstanceSettingsRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return esConfig
      */
-    public String getBody() {
-        return this.body;
+    public java.util.Map<String, String> getEsConfig() {
+        return this.esConfig;
     }
 
     /**
@@ -97,7 +97,7 @@ public class UpdateInstanceSettingsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceSettingsRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private java.util.Map<String, String> esConfig; 
         private String clientToken; 
         private Boolean force; 
         private String updateStrategy; 
@@ -109,7 +109,7 @@ public class UpdateInstanceSettingsRequest extends Request {
         private Builder(UpdateInstanceSettingsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
+            this.esConfig = request.esConfig;
             this.clientToken = request.clientToken;
             this.force = request.force;
             this.updateStrategy = request.updateStrategy;
@@ -129,11 +129,11 @@ public class UpdateInstanceSettingsRequest extends Request {
         }
 
         /**
-         * body.
+         * esConfig.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder esConfig(java.util.Map<String, String> esConfig) {
+            this.putBodyParameter("esConfig", esConfig);
+            this.esConfig = esConfig;
             return this;
         }
 

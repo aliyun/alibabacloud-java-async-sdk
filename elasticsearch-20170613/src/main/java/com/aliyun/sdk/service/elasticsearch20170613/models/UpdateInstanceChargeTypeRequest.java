@@ -23,8 +23,12 @@ public class UpdateInstanceChargeTypeRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("body")
-    private String body;
+    @com.aliyun.core.annotation.NameInMap("paymentInfo")
+    private PaymentInfo paymentInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentType")
+    private String paymentType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
@@ -33,7 +37,8 @@ public class UpdateInstanceChargeTypeRequest extends Request {
     private UpdateInstanceChargeTypeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.body = builder.body;
+        this.paymentInfo = builder.paymentInfo;
+        this.paymentType = builder.paymentType;
         this.clientToken = builder.clientToken;
     }
 
@@ -58,10 +63,17 @@ public class UpdateInstanceChargeTypeRequest extends Request {
     }
 
     /**
-     * @return body
+     * @return paymentInfo
      */
-    public String getBody() {
-        return this.body;
+    public PaymentInfo getPaymentInfo() {
+        return this.paymentInfo;
+    }
+
+    /**
+     * @return paymentType
+     */
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     /**
@@ -73,7 +85,8 @@ public class UpdateInstanceChargeTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceChargeTypeRequest, Builder> {
         private String instanceId; 
-        private String body; 
+        private PaymentInfo paymentInfo; 
+        private String paymentType; 
         private String clientToken; 
 
         private Builder() {
@@ -83,7 +96,8 @@ public class UpdateInstanceChargeTypeRequest extends Request {
         private Builder(UpdateInstanceChargeTypeRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.body = request.body;
+            this.paymentInfo = request.paymentInfo;
+            this.paymentType = request.paymentType;
             this.clientToken = request.clientToken;
         } 
 
@@ -101,11 +115,20 @@ public class UpdateInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * body.
+         * paymentInfo.
          */
-        public Builder body(String body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
+        public Builder paymentInfo(PaymentInfo paymentInfo) {
+            this.putBodyParameter("paymentInfo", paymentInfo);
+            this.paymentInfo = paymentInfo;
+            return this;
+        }
+
+        /**
+         * paymentType.
+         */
+        public Builder paymentType(String paymentType) {
+            this.putBodyParameter("paymentType", paymentType);
+            this.paymentType = paymentType;
             return this;
         }
 
@@ -128,4 +151,79 @@ public class UpdateInstanceChargeTypeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateInstanceChargeTypeRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceChargeTypeRequest</p>
+     */
+    public static class PaymentInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("pricingCycle")
+        private String pricingCycle;
+
+        private PaymentInfo(Builder builder) {
+            this.duration = builder.duration;
+            this.pricingCycle = builder.pricingCycle;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PaymentInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return pricingCycle
+         */
+        public String getPricingCycle() {
+            return this.pricingCycle;
+        }
+
+        public static final class Builder {
+            private Integer duration; 
+            private String pricingCycle; 
+
+            private Builder() {
+            } 
+
+            private Builder(PaymentInfo model) {
+                this.duration = model.duration;
+                this.pricingCycle = model.pricingCycle;
+            } 
+
+            /**
+             * duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * pricingCycle.
+             */
+            public Builder pricingCycle(String pricingCycle) {
+                this.pricingCycle = pricingCycle;
+                return this;
+            }
+
+            public PaymentInfo build() {
+                return new PaymentInfo(this);
+            } 
+
+        } 
+
+    }
 }

@@ -51,6 +51,10 @@ public class UpdateInstanceRequest extends Request {
     private NodeSpec nodeSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateType")
+    private String updateType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
@@ -76,6 +80,7 @@ public class UpdateInstanceRequest extends Request {
         this.masterConfiguration = builder.masterConfiguration;
         this.nodeAmount = builder.nodeAmount;
         this.nodeSpec = builder.nodeSpec;
+        this.updateType = builder.updateType;
         this.warmNodeConfiguration = builder.warmNodeConfiguration;
         this.clientToken = builder.clientToken;
         this.force = builder.force;
@@ -152,6 +157,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return updateType
+     */
+    public String getUpdateType() {
+        return this.updateType;
+    }
+
+    /**
      * @return warmNodeConfiguration
      */
     public WarmNodeConfiguration getWarmNodeConfiguration() {
@@ -188,6 +200,7 @@ public class UpdateInstanceRequest extends Request {
         private MasterNodeConfiguration masterConfiguration; 
         private Integer nodeAmount; 
         private NodeSpec nodeSpec; 
+        private String updateType; 
         private WarmNodeConfiguration warmNodeConfiguration; 
         private String clientToken; 
         private Boolean force; 
@@ -207,6 +220,7 @@ public class UpdateInstanceRequest extends Request {
             this.masterConfiguration = request.masterConfiguration;
             this.nodeAmount = request.nodeAmount;
             this.nodeSpec = request.nodeSpec;
+            this.updateType = request.updateType;
             this.warmNodeConfiguration = request.warmNodeConfiguration;
             this.clientToken = request.clientToken;
             this.force = request.force;
@@ -286,6 +300,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.putBodyParameter("nodeSpec", nodeSpec);
             this.nodeSpec = nodeSpec;
+            return this;
+        }
+
+        /**
+         * updateType.
+         */
+        public Builder updateType(String updateType) {
+            this.putBodyParameter("updateType", updateType);
+            this.updateType = updateType;
             return this;
         }
 

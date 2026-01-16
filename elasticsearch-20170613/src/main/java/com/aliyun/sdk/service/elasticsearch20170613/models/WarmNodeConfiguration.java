@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WarmNodeConfiguration extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("amount")
-    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Long amount;
 
     @com.aliyun.core.annotation.NameInMap("disk")
