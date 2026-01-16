@@ -110,6 +110,14 @@ public class CreateIndexRequest extends Request {
     private String chunkMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("database")
+    private String database;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("datasourceCode")
+    private String datasourceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("enableHeaders")
     private Boolean enableHeaders;
 
@@ -129,6 +137,10 @@ public class CreateIndexRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pipelineRetrieveRateLimitStrategy")
     private String pipelineRetrieveRateLimitStrategy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("table")
+    private String table;
 
     private CreateIndexRequest(Builder builder) {
         super(builder);
@@ -154,11 +166,14 @@ public class CreateIndexRequest extends Request {
         this.structureType = builder.structureType;
         this.tableIds = builder.tableIds;
         this.chunkMode = builder.chunkMode;
+        this.database = builder.database;
+        this.datasourceCode = builder.datasourceCode;
         this.enableHeaders = builder.enableHeaders;
         this.metaExtractColumns = builder.metaExtractColumns;
         this.pipelineCommercialCu = builder.pipelineCommercialCu;
         this.pipelineCommercialType = builder.pipelineCommercialType;
         this.pipelineRetrieveRateLimitStrategy = builder.pipelineRetrieveRateLimitStrategy;
+        this.table = builder.table;
     }
 
     public static Builder builder() {
@@ -329,6 +344,20 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return database
+     */
+    public String getDatabase() {
+        return this.database;
+    }
+
+    /**
+     * @return datasourceCode
+     */
+    public String getDatasourceCode() {
+        return this.datasourceCode;
+    }
+
+    /**
      * @return enableHeaders
      */
     public Boolean getEnableHeaders() {
@@ -363,6 +392,13 @@ public class CreateIndexRequest extends Request {
         return this.pipelineRetrieveRateLimitStrategy;
     }
 
+    /**
+     * @return table
+     */
+    public String getTable() {
+        return this.table;
+    }
+
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String workspaceId; 
         private java.util.List<String> categoryIds; 
@@ -386,11 +422,14 @@ public class CreateIndexRequest extends Request {
         private String structureType; 
         private java.util.List<String> tableIds; 
         private String chunkMode; 
+        private String database; 
+        private String datasourceCode; 
         private Boolean enableHeaders; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
         private Integer pipelineCommercialCu; 
         private String pipelineCommercialType; 
         private String pipelineRetrieveRateLimitStrategy; 
+        private String table; 
 
         private Builder() {
             super();
@@ -420,11 +459,14 @@ public class CreateIndexRequest extends Request {
             this.structureType = request.structureType;
             this.tableIds = request.tableIds;
             this.chunkMode = request.chunkMode;
+            this.database = request.database;
+            this.datasourceCode = request.datasourceCode;
             this.enableHeaders = request.enableHeaders;
             this.metaExtractColumns = request.metaExtractColumns;
             this.pipelineCommercialCu = request.pipelineCommercialCu;
             this.pipelineCommercialType = request.pipelineCommercialType;
             this.pipelineRetrieveRateLimitStrategy = request.pipelineRetrieveRateLimitStrategy;
+            this.table = request.table;
         } 
 
         /**
@@ -739,6 +781,24 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * database.
+         */
+        public Builder database(String database) {
+            this.putQueryParameter("database", database);
+            this.database = database;
+            return this;
+        }
+
+        /**
+         * datasourceCode.
+         */
+        public Builder datasourceCode(String datasourceCode) {
+            this.putQueryParameter("datasourceCode", datasourceCode);
+            this.datasourceCode = datasourceCode;
+            return this;
+        }
+
+        /**
          * <p>Whether to treat the first row of all .xlsx and .xls files as headers and concatenate them into each text chunk. This prevents the models from mistakenly interpreting headers as regular data rows.</p>
          * <blockquote>
          * <p>Enable this feature only when all imported files are in .xlsx or .xls format and contain headers. Otherwise, leave it disabled.</p>
@@ -793,6 +853,15 @@ public class CreateIndexRequest extends Request {
         public Builder pipelineRetrieveRateLimitStrategy(String pipelineRetrieveRateLimitStrategy) {
             this.putQueryParameter("pipelineRetrieveRateLimitStrategy", pipelineRetrieveRateLimitStrategy);
             this.pipelineRetrieveRateLimitStrategy = pipelineRetrieveRateLimitStrategy;
+            return this;
+        }
+
+        /**
+         * table.
+         */
+        public Builder table(String table) {
+            this.putQueryParameter("table", table);
+            this.table = table;
             return this;
         }
 
