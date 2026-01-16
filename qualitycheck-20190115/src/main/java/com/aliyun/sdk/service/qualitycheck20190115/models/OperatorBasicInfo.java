@@ -199,6 +199,123 @@ public class OperatorBasicInfo extends TeaModel {
      *
      * <p>OperatorBasicInfo</p>
      */
+    public static class Dimensions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("Dimension")
+        private String dimension;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeCondition")
+        private String excludeCondition;
+
+        @com.aliyun.core.annotation.NameInMap("IncludeCondition")
+        private String includeCondition;
+
+        private Dimensions(Builder builder) {
+            this.desc = builder.desc;
+            this.dimension = builder.dimension;
+            this.excludeCondition = builder.excludeCondition;
+            this.includeCondition = builder.includeCondition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dimensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return dimension
+         */
+        public String getDimension() {
+            return this.dimension;
+        }
+
+        /**
+         * @return excludeCondition
+         */
+        public String getExcludeCondition() {
+            return this.excludeCondition;
+        }
+
+        /**
+         * @return includeCondition
+         */
+        public String getIncludeCondition() {
+            return this.includeCondition;
+        }
+
+        public static final class Builder {
+            private String desc; 
+            private String dimension; 
+            private String excludeCondition; 
+            private String includeCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.desc = model.desc;
+                this.dimension = model.dimension;
+                this.excludeCondition = model.excludeCondition;
+                this.includeCondition = model.includeCondition;
+            } 
+
+            /**
+             * Desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * Dimension.
+             */
+            public Builder dimension(String dimension) {
+                this.dimension = dimension;
+                return this;
+            }
+
+            /**
+             * ExcludeCondition.
+             */
+            public Builder excludeCondition(String excludeCondition) {
+                this.excludeCondition = excludeCondition;
+                return this;
+            }
+
+            /**
+             * IncludeCondition.
+             */
+            public Builder includeCondition(String includeCondition) {
+                this.includeCondition = includeCondition;
+                return this;
+            }
+
+            public Dimensions build() {
+                return new Dimensions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link OperatorBasicInfo} extends {@link TeaModel}
+     *
+     * <p>OperatorBasicInfo</p>
+     */
     public static class Param extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerThreshold")
         private String answerThreshold;
@@ -242,6 +359,9 @@ public class OperatorBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Different_role")
         private Boolean differentRole;
 
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
+        private java.util.List<Dimensions> dimensions;
+
         @com.aliyun.core.annotation.NameInMap("EndType")
         private String endType;
 
@@ -253,6 +373,9 @@ public class OperatorBasicInfo extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("From_end")
         private Boolean fromEnd;
+
+        @com.aliyun.core.annotation.NameInMap("HitCondition")
+        private String hitCondition;
 
         @com.aliyun.core.annotation.NameInMap("Hit_time")
         private Integer hitTime;
@@ -290,8 +413,14 @@ public class OperatorBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KnowledgeTargetType")
         private Integer knowledgeTargetType;
 
+        @com.aliyun.core.annotation.NameInMap("Knowledges")
+        private String knowledges;
+
         @com.aliyun.core.annotation.NameInMap("LgfSentences")
         private java.util.List<String> lgfSentences;
+
+        @com.aliyun.core.annotation.NameInMap("LlmModelCode")
+        private String llmModelCode;
 
         @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
@@ -328,6 +457,9 @@ public class OperatorBasicInfo extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RoleId")
         private Integer roleId;
+
+        @com.aliyun.core.annotation.NameInMap("SceneName")
+        private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
@@ -374,10 +506,12 @@ public class OperatorBasicInfo extends TeaModel {
             this.customerParam = builder.customerParam;
             this.delayTime = builder.delayTime;
             this.differentRole = builder.differentRole;
+            this.dimensions = builder.dimensions;
             this.endType = builder.endType;
             this.excludes = builder.excludes;
             this.from = builder.from;
             this.fromEnd = builder.fromEnd;
+            this.hitCondition = builder.hitCondition;
             this.hitTime = builder.hitTime;
             this.inSentence = builder.inSentence;
             this.interval = builder.interval;
@@ -390,7 +524,9 @@ public class OperatorBasicInfo extends TeaModel {
             this.knowledgeTargetId = builder.knowledgeTargetId;
             this.knowledgeTargetName = builder.knowledgeTargetName;
             this.knowledgeTargetType = builder.knowledgeTargetType;
+            this.knowledges = builder.knowledges;
             this.lgfSentences = builder.lgfSentences;
+            this.llmModelCode = builder.llmModelCode;
             this.maxEmotionChangeValue = builder.maxEmotionChangeValue;
             this.minWordSize = builder.minWordSize;
             this.nearDialogue = builder.nearDialogue;
@@ -403,6 +539,7 @@ public class OperatorBasicInfo extends TeaModel {
             this.references = builder.references;
             this.regex = builder.regex;
             this.roleId = builder.roleId;
+            this.sceneName = builder.sceneName;
             this.score = builder.score;
             this.similarityThreshold = builder.similarityThreshold;
             this.similarlySentences = builder.similarlySentences;
@@ -522,6 +659,13 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
+         * @return dimensions
+         */
+        public java.util.List<Dimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        /**
          * @return endType
          */
         public String getEndType() {
@@ -547,6 +691,13 @@ public class OperatorBasicInfo extends TeaModel {
          */
         public Boolean getFromEnd() {
             return this.fromEnd;
+        }
+
+        /**
+         * @return hitCondition
+         */
+        public String getHitCondition() {
+            return this.hitCondition;
         }
 
         /**
@@ -634,10 +785,24 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
+         * @return knowledges
+         */
+        public String getKnowledges() {
+            return this.knowledges;
+        }
+
+        /**
          * @return lgfSentences
          */
         public java.util.List<String> getLgfSentences() {
             return this.lgfSentences;
+        }
+
+        /**
+         * @return llmModelCode
+         */
+        public String getLlmModelCode() {
+            return this.llmModelCode;
         }
 
         /**
@@ -725,6 +890,13 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
+         * @return sceneName
+         */
+        public String getSceneName() {
+            return this.sceneName;
+        }
+
+        /**
          * @return score
          */
         public Integer getScore() {
@@ -809,10 +981,12 @@ public class OperatorBasicInfo extends TeaModel {
             private JudgeNodeMetaDesc customerParam; 
             private Integer delayTime; 
             private Boolean differentRole; 
+            private java.util.List<Dimensions> dimensions; 
             private String endType; 
             private java.util.List<String> excludes; 
             private Integer from; 
             private Boolean fromEnd; 
+            private String hitCondition; 
             private Integer hitTime; 
             private Boolean inSentence; 
             private Integer interval; 
@@ -825,7 +999,9 @@ public class OperatorBasicInfo extends TeaModel {
             private String knowledgeTargetId; 
             private String knowledgeTargetName; 
             private Integer knowledgeTargetType; 
+            private String knowledges; 
             private java.util.List<String> lgfSentences; 
+            private String llmModelCode; 
             private Integer maxEmotionChangeValue; 
             private Integer minWordSize; 
             private Boolean nearDialogue; 
@@ -838,6 +1014,7 @@ public class OperatorBasicInfo extends TeaModel {
             private java.util.List<String> references; 
             private String regex; 
             private Integer roleId; 
+            private String sceneName; 
             private Integer score; 
             private Double similarityThreshold; 
             private java.util.List<String> similarlySentences; 
@@ -867,10 +1044,12 @@ public class OperatorBasicInfo extends TeaModel {
                 this.customerParam = model.customerParam;
                 this.delayTime = model.delayTime;
                 this.differentRole = model.differentRole;
+                this.dimensions = model.dimensions;
                 this.endType = model.endType;
                 this.excludes = model.excludes;
                 this.from = model.from;
                 this.fromEnd = model.fromEnd;
+                this.hitCondition = model.hitCondition;
                 this.hitTime = model.hitTime;
                 this.inSentence = model.inSentence;
                 this.interval = model.interval;
@@ -883,7 +1062,9 @@ public class OperatorBasicInfo extends TeaModel {
                 this.knowledgeTargetId = model.knowledgeTargetId;
                 this.knowledgeTargetName = model.knowledgeTargetName;
                 this.knowledgeTargetType = model.knowledgeTargetType;
+                this.knowledges = model.knowledges;
                 this.lgfSentences = model.lgfSentences;
+                this.llmModelCode = model.llmModelCode;
                 this.maxEmotionChangeValue = model.maxEmotionChangeValue;
                 this.minWordSize = model.minWordSize;
                 this.nearDialogue = model.nearDialogue;
@@ -896,6 +1077,7 @@ public class OperatorBasicInfo extends TeaModel {
                 this.references = model.references;
                 this.regex = model.regex;
                 this.roleId = model.roleId;
+                this.sceneName = model.sceneName;
                 this.score = model.score;
                 this.similarityThreshold = model.similarityThreshold;
                 this.similarlySentences = model.similarlySentences;
@@ -1021,6 +1203,14 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
+             * Dimensions.
+             */
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
+                this.dimensions = dimensions;
+                return this;
+            }
+
+            /**
              * EndType.
              */
             public Builder endType(String endType) {
@@ -1049,6 +1239,14 @@ public class OperatorBasicInfo extends TeaModel {
              */
             public Builder fromEnd(Boolean fromEnd) {
                 this.fromEnd = fromEnd;
+                return this;
+            }
+
+            /**
+             * HitCondition.
+             */
+            public Builder hitCondition(String hitCondition) {
+                this.hitCondition = hitCondition;
                 return this;
             }
 
@@ -1149,10 +1347,26 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
+             * Knowledges.
+             */
+            public Builder knowledges(String knowledges) {
+                this.knowledges = knowledges;
+                return this;
+            }
+
+            /**
              * LgfSentences.
              */
             public Builder lgfSentences(java.util.List<String> lgfSentences) {
                 this.lgfSentences = lgfSentences;
+                return this;
+            }
+
+            /**
+             * LlmModelCode.
+             */
+            public Builder llmModelCode(String llmModelCode) {
+                this.llmModelCode = llmModelCode;
                 return this;
             }
 
@@ -1249,6 +1463,14 @@ public class OperatorBasicInfo extends TeaModel {
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;
+                return this;
+            }
+
+            /**
+             * SceneName.
+             */
+            public Builder sceneName(String sceneName) {
+                this.sceneName = sceneName;
                 return this;
             }
 

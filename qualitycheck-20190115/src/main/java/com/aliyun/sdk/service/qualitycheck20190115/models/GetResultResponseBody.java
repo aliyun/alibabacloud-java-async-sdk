@@ -2987,11 +2987,20 @@ public class GetResultResponseBody extends TeaModel {
      * <p>GetResultResponseBody</p>
      */
     public static class HitResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtificialRule")
+        private String artificialRule;
+
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private HitResultConditions conditions;
 
+        @com.aliyun.core.annotation.NameInMap("FinalHitResult")
+        private String finalHitResult;
+
         @com.aliyun.core.annotation.NameInMap("Hits")
         private Hits hits;
+
+        @com.aliyun.core.annotation.NameInMap("MachineHitResult")
+        private String machineHitResult;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3015,8 +3024,11 @@ public class GetResultResponseBody extends TeaModel {
         private String type;
 
         private HitResult(Builder builder) {
+            this.artificialRule = builder.artificialRule;
             this.conditions = builder.conditions;
+            this.finalHitResult = builder.finalHitResult;
             this.hits = builder.hits;
+            this.machineHitResult = builder.machineHitResult;
             this.name = builder.name;
             this.reviewResult = builder.reviewResult;
             this.rid = builder.rid;
@@ -3035,6 +3047,13 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return artificialRule
+         */
+        public String getArtificialRule() {
+            return this.artificialRule;
+        }
+
+        /**
          * @return conditions
          */
         public HitResultConditions getConditions() {
@@ -3042,10 +3061,24 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return finalHitResult
+         */
+        public String getFinalHitResult() {
+            return this.finalHitResult;
+        }
+
+        /**
          * @return hits
          */
         public Hits getHits() {
             return this.hits;
+        }
+
+        /**
+         * @return machineHitResult
+         */
+        public String getMachineHitResult() {
+            return this.machineHitResult;
         }
 
         /**
@@ -3098,8 +3131,11 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String artificialRule; 
             private HitResultConditions conditions; 
+            private String finalHitResult; 
             private Hits hits; 
+            private String machineHitResult; 
             private String name; 
             private Integer reviewResult; 
             private String rid; 
@@ -3112,8 +3148,11 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             private Builder(HitResult model) {
+                this.artificialRule = model.artificialRule;
                 this.conditions = model.conditions;
+                this.finalHitResult = model.finalHitResult;
                 this.hits = model.hits;
+                this.machineHitResult = model.machineHitResult;
                 this.name = model.name;
                 this.reviewResult = model.reviewResult;
                 this.rid = model.rid;
@@ -3124,6 +3163,14 @@ public class GetResultResponseBody extends TeaModel {
             } 
 
             /**
+             * ArtificialRule.
+             */
+            public Builder artificialRule(String artificialRule) {
+                this.artificialRule = artificialRule;
+                return this;
+            }
+
+            /**
              * Conditions.
              */
             public Builder conditions(HitResultConditions conditions) {
@@ -3132,10 +3179,26 @@ public class GetResultResponseBody extends TeaModel {
             }
 
             /**
+             * FinalHitResult.
+             */
+            public Builder finalHitResult(String finalHitResult) {
+                this.finalHitResult = finalHitResult;
+                return this;
+            }
+
+            /**
              * Hits.
              */
             public Builder hits(Hits hits) {
                 this.hits = hits;
+                return this;
+            }
+
+            /**
+             * MachineHitResult.
+             */
+            public Builder machineHitResult(String machineHitResult) {
+                this.machineHitResult = machineHitResult;
                 return this;
             }
 
