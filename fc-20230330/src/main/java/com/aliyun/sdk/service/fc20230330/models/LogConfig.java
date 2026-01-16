@@ -20,6 +20,9 @@ public class LogConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enableInstanceMetrics")
     private Boolean enableInstanceMetrics;
 
+    @com.aliyun.core.annotation.NameInMap("enableLlmMetrics")
+    private Boolean enableLlmMetrics;
+
     @com.aliyun.core.annotation.NameInMap("enableRequestMetrics")
     private Boolean enableRequestMetrics;
 
@@ -36,6 +39,7 @@ public class LogConfig extends TeaModel {
 
     private LogConfig(Builder builder) {
         this.enableInstanceMetrics = builder.enableInstanceMetrics;
+        this.enableLlmMetrics = builder.enableLlmMetrics;
         this.enableRequestMetrics = builder.enableRequestMetrics;
         this.logBeginRule = builder.logBeginRule;
         this.logstore = builder.logstore;
@@ -59,6 +63,13 @@ public class LogConfig extends TeaModel {
      */
     public Boolean getEnableInstanceMetrics() {
         return this.enableInstanceMetrics;
+    }
+
+    /**
+     * @return enableLlmMetrics
+     */
+    public Boolean getEnableLlmMetrics() {
+        return this.enableLlmMetrics;
     }
 
     /**
@@ -91,6 +102,7 @@ public class LogConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean enableInstanceMetrics; 
+        private Boolean enableLlmMetrics; 
         private Boolean enableRequestMetrics; 
         private String logBeginRule; 
         private String logstore; 
@@ -101,6 +113,7 @@ public class LogConfig extends TeaModel {
 
         private Builder(LogConfig model) {
             this.enableInstanceMetrics = model.enableInstanceMetrics;
+            this.enableLlmMetrics = model.enableLlmMetrics;
             this.enableRequestMetrics = model.enableRequestMetrics;
             this.logBeginRule = model.logBeginRule;
             this.logstore = model.logstore;
@@ -112,6 +125,14 @@ public class LogConfig extends TeaModel {
          */
         public Builder enableInstanceMetrics(Boolean enableInstanceMetrics) {
             this.enableInstanceMetrics = enableInstanceMetrics;
+            return this;
+        }
+
+        /**
+         * enableLlmMetrics.
+         */
+        public Builder enableLlmMetrics(Boolean enableLlmMetrics) {
+            this.enableLlmMetrics = enableLlmMetrics;
             return this;
         }
 
