@@ -226,6 +226,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateClusterNodePool  CreateClusterNodePoolRequest
+     * @return CreateClusterNodePoolResponse
+     */
+    CompletableFuture<CreateClusterNodePoolResponse> createClusterNodePool(CreateClusterNodePoolRequest request);
+
+    /**
      * @param request the request parameters of CreateDisk  CreateDiskRequest
      * @return CreateDiskResponse
      */
@@ -519,6 +525,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteClusterNodePool  DeleteClusterNodePoolRequest
+     * @return DeleteClusterNodePoolResponse
+     */
+    CompletableFuture<DeleteClusterNodePoolResponse> deleteClusterNodePool(DeleteClusterNodePoolRequest request);
+
+    /**
+     * @param request the request parameters of DeleteClusterNodes  DeleteClusterNodesRequest
+     * @return DeleteClusterNodesResponse
+     */
+    CompletableFuture<DeleteClusterNodesResponse> deleteClusterNodes(DeleteClusterNodesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you release a disk, the disk must be in the Available state.</p>
      * 
@@ -741,6 +759,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeARMServerInstancesResponse> describeARMServerInstances(DescribeARMServerInstancesRequest request);
 
     /**
+     * @param request the request parameters of DescribeAddon  DescribeAddonRequest
+     * @return DescribeAddonResponse
+     */
+    CompletableFuture<DescribeAddonResponse> describeAddon(DescribeAddonRequest request);
+
+    /**
      * @param request the request parameters of DescribeApplication  DescribeApplicationRequest
      * @return DescribeApplicationResponse
      */
@@ -792,6 +816,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterResponse> describeCluster(DescribeClusterRequest request);
 
     /**
+     * @param request the request parameters of DescribeClusterDetail  DescribeClusterDetailRequest
+     * @return DescribeClusterDetailResponse
+     */
+    CompletableFuture<DescribeClusterDetailResponse> describeClusterDetail(DescribeClusterDetailRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  The maximum number of times that each user can call this operation per second is 100.</p>
      * 
@@ -799,6 +829,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeClusterKubeConfigResponse
      */
     CompletableFuture<DescribeClusterKubeConfigResponse> describeClusterKubeConfig(DescribeClusterKubeConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeClusterNodePools  DescribeClusterNodePoolsRequest
+     * @return DescribeClusterNodePoolsResponse
+     */
+    CompletableFuture<DescribeClusterNodePoolsResponse> describeClusterNodePools(DescribeClusterNodePoolsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeClusterNodes  DescribeClusterNodesRequest
+     * @return DescribeClusterNodesResponse
+     */
+    CompletableFuture<DescribeClusterNodesResponse> describeClusterNodes(DescribeClusterNodesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeClusterUserKubeconfig  DescribeClusterUserKubeconfigRequest
+     * @return DescribeClusterUserKubeconfigResponse
+     */
+    CompletableFuture<DescribeClusterUserKubeconfigResponse> describeClusterUserKubeconfig(DescribeClusterUserKubeconfigRequest request);
 
     /**
      * @param request the request parameters of DescribeClustersV1  DescribeClustersV1Request
@@ -1548,6 +1596,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBucketLifecycleResponse> getBucketLifecycle(GetBucketLifecycleRequest request);
 
     /**
+     * @param request the request parameters of GetClusterAddonInstance  GetClusterAddonInstanceRequest
+     * @return GetClusterAddonInstanceResponse
+     */
+    CompletableFuture<GetClusterAddonInstanceResponse> getClusterAddonInstance(GetClusterAddonInstanceRequest request);
+
+    /**
      * @param request the request parameters of GetOssStorageAndAccByBuckets  GetOssStorageAndAccByBucketsRequest
      * @return GetOssStorageAndAccByBucketsResponse
      */
@@ -1585,6 +1639,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InitializeENSECKServiceRoleResponse
      */
     CompletableFuture<InitializeENSECKServiceRoleResponse> initializeENSECKServiceRole(InitializeENSECKServiceRoleRequest request);
+
+    /**
+     * @param request the request parameters of InstallClusterAddons  InstallClusterAddonsRequest
+     * @return InstallClusterAddonsResponse
+     */
+    CompletableFuture<InstallClusterAddonsResponse> installClusterAddons(InstallClusterAddonsRequest request);
 
     /**
      * @param request the request parameters of JoinPublicIpsToEpnInstance  JoinPublicIpsToEpnInstanceRequest
@@ -1678,6 +1738,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ManageAICLoginResponse
      */
     CompletableFuture<ManageAICLoginResponse> manageAICLogin(ManageAICLoginRequest request);
+
+    /**
+     * @param request the request parameters of ModifyClusterAddon  ModifyClusterAddonRequest
+     * @return ModifyClusterAddonResponse
+     */
+    CompletableFuture<ModifyClusterAddonResponse> modifyClusterAddon(ModifyClusterAddonRequest request);
+
+    /**
+     * @param request the request parameters of ModifyClusterNodePool  ModifyClusterNodePoolRequest
+     * @return ModifyClusterNodePoolResponse
+     */
+    CompletableFuture<ModifyClusterNodePoolResponse> modifyClusterNodePool(ModifyClusterNodePoolRequest request);
 
     /**
      * @param request the request parameters of ModifyEnsEipAddressAttribute  ModifyEnsEipAddressAttributeRequest
@@ -2144,6 +2216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SaveSDGResponse> saveSDG(SaveSDGRequest request);
 
     /**
+     * @param request the request parameters of ScaleClusterNodePool  ScaleClusterNodePoolRequest
+     * @return ScaleClusterNodePoolResponse
+     */
+    CompletableFuture<ScaleClusterNodePoolResponse> scaleClusterNodePool(ScaleClusterNodePoolRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation up to 100 times per second.</p>
      * <ul>
@@ -2323,6 +2401,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
     /**
+     * @param request the request parameters of UnInstallClusterAddons  UnInstallClusterAddonsRequest
+     * @return UnInstallClusterAddonsResponse
+     */
+    CompletableFuture<UnInstallClusterAddonsResponse> unInstallClusterAddons(UnInstallClusterAddonsRequest request);
+
+    /**
      * @param request the request parameters of UnassignPrivateIpAddresses  UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse
      */
@@ -2375,6 +2459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeApplicationResponse
      */
     CompletableFuture<UpgradeApplicationResponse> upgradeApplication(UpgradeApplicationRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeClusterAddons  UpgradeClusterAddonsRequest
+     * @return UpgradeClusterAddonsResponse
+     */
+    CompletableFuture<UpgradeClusterAddonsResponse> upgradeClusterAddons(UpgradeClusterAddonsRequest request);
 
     /**
      * @param request the request parameters of UploadAICPublicKey  UploadAICPublicKeyRequest

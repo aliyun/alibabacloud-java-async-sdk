@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InitializeENSECKServiceRoleResponseBody} extends {@link TeaModel}
+ * {@link ScaleClusterNodePoolResponseBody} extends {@link TeaModel}
  *
- * <p>InitializeENSECKServiceRoleResponseBody</p>
+ * <p>ScaleClusterNodePoolResponseBody</p>
  */
-public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
+public class ScaleClusterNodePoolResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private InitializeENSECKServiceRoleResponseBody(Builder builder) {
+    private ScaleClusterNodePoolResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitializeENSECKServiceRoleResponseBody create() {
+    public static ScaleClusterNodePoolResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(InitializeENSECKServiceRoleResponseBody model) {
+        private Builder(ScaleClusterNodePoolResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>ID of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public InitializeENSECKServiceRoleResponseBody build() {
-            return new InitializeENSECKServiceRoleResponseBody(this);
+        public ScaleClusterNodePoolResponseBody build() {
+            return new ScaleClusterNodePoolResponseBody(this);
         } 
 
     } 

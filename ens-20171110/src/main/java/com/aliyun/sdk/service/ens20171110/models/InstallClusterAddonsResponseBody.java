@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InitializeENSECKServiceRoleResponseBody} extends {@link TeaModel}
+ * {@link InstallClusterAddonsResponseBody} extends {@link TeaModel}
  *
- * <p>InitializeENSECKServiceRoleResponseBody</p>
+ * <p>InstallClusterAddonsResponseBody</p>
  */
-public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
+public class InstallClusterAddonsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private InitializeENSECKServiceRoleResponseBody(Builder builder) {
+    private InstallClusterAddonsResponseBody(Builder builder) {
+        this.clusterId = builder.clusterId;
         this.requestId = builder.requestId;
     }
 
@@ -28,12 +32,19 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitializeENSECKServiceRoleResponseBody create() {
+    public static InstallClusterAddonsResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -44,28 +55,38 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String clusterId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(InitializeENSECKServiceRoleResponseBody model) {
+        private Builder(InstallClusterAddonsResponseBody model) {
+            this.clusterId = model.clusterId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>ID of the request</p>
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public InitializeENSECKServiceRoleResponseBody build() {
-            return new InitializeENSECKServiceRoleResponseBody(this);
+        public InstallClusterAddonsResponseBody build() {
+            return new InstallClusterAddonsResponseBody(this);
         } 
 
     } 

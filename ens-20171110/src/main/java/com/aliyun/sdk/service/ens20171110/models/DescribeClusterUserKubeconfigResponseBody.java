@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InitializeENSECKServiceRoleResponseBody} extends {@link TeaModel}
+ * {@link DescribeClusterUserKubeconfigResponseBody} extends {@link TeaModel}
  *
- * <p>InitializeENSECKServiceRoleResponseBody</p>
+ * <p>DescribeClusterUserKubeconfigResponseBody</p>
  */
-public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
+public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private Object config;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private InitializeENSECKServiceRoleResponseBody(Builder builder) {
+    private DescribeClusterUserKubeconfigResponseBody(Builder builder) {
+        this.config = builder.config;
         this.requestId = builder.requestId;
     }
 
@@ -28,12 +32,19 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitializeENSECKServiceRoleResponseBody create() {
+    public static DescribeClusterUserKubeconfigResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return config
+     */
+    public Object getConfig() {
+        return this.config;
     }
 
     /**
@@ -44,28 +55,38 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Object config; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(InitializeENSECKServiceRoleResponseBody model) {
+        private Builder(DescribeClusterUserKubeconfigResponseBody model) {
+            this.config = model.config;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>ID of the request</p>
+         * Config.
+         */
+        public Builder config(Object config) {
+            this.config = config;
+            return this;
+        }
+
+        /**
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
+         * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public InitializeENSECKServiceRoleResponseBody build() {
-            return new InitializeENSECKServiceRoleResponseBody(this);
+        public DescribeClusterUserKubeconfigResponseBody build() {
+            return new DescribeClusterUserKubeconfigResponseBody(this);
         } 
 
     } 

@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InitializeENSECKServiceRoleResponseBody} extends {@link TeaModel}
+ * {@link ModifyClusterAddonResponseBody} extends {@link TeaModel}
  *
- * <p>InitializeENSECKServiceRoleResponseBody</p>
+ * <p>ModifyClusterAddonResponseBody</p>
  */
-public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
+public class ModifyClusterAddonResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private InitializeENSECKServiceRoleResponseBody(Builder builder) {
+    private ModifyClusterAddonResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitializeENSECKServiceRoleResponseBody create() {
+    public static ModifyClusterAddonResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,23 @@ public class InitializeENSECKServiceRoleResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(InitializeENSECKServiceRoleResponseBody model) {
+        private Builder(ModifyClusterAddonResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>F3B261DD-3858-4D3C-877D-303ADF374600</p>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public InitializeENSECKServiceRoleResponseBody build() {
-            return new InitializeENSECKServiceRoleResponseBody(this);
+        public ModifyClusterAddonResponseBody build() {
+            return new ModifyClusterAddonResponseBody(this);
         } 
 
     } 
