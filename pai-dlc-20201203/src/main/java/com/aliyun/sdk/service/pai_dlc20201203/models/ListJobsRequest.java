@@ -39,12 +39,20 @@ public class ListJobsRequest extends Request {
     private String displayNameSearchMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAssignNode")
+    private String enableAssignNode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FromAllWorkspaces")
     private Boolean fromAllWorkspaces;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageSearch")
+    private String imageSearch;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
@@ -58,6 +66,18 @@ public class ListJobsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("JobType")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String jobType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumericRangeField")
+    private String numericRangeField;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumericRangeMax")
+    private Long numericRangeMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumericRangeMin")
+    private Long numericRangeMin;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -84,6 +104,10 @@ public class ListJobsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReasonSearch")
+    private String reasonSearch;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
@@ -115,6 +139,14 @@ public class ListJobsRequest extends Request {
     private java.util.Map<String, String> tags;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRangeField")
+    private String timeRangeField;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserCommandSearch")
+    private String userCommandSearch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIdForFilter")
     private String userIdForFilter;
 
@@ -133,17 +165,23 @@ public class ListJobsRequest extends Request {
         this.caller = builder.caller;
         this.displayName = builder.displayName;
         this.displayNameSearchMode = builder.displayNameSearchMode;
+        this.enableAssignNode = builder.enableAssignNode;
         this.endTime = builder.endTime;
         this.fromAllWorkspaces = builder.fromAllWorkspaces;
+        this.imageSearch = builder.imageSearch;
         this.jobId = builder.jobId;
         this.jobIds = builder.jobIds;
         this.jobType = builder.jobType;
+        this.numericRangeField = builder.numericRangeField;
+        this.numericRangeMax = builder.numericRangeMax;
+        this.numericRangeMin = builder.numericRangeMin;
         this.order = builder.order;
         this.oversoldInfo = builder.oversoldInfo;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.paymentType = builder.paymentType;
         this.pipelineId = builder.pipelineId;
+        this.reasonSearch = builder.reasonSearch;
         this.resourceId = builder.resourceId;
         this.resourceQuotaName = builder.resourceQuotaName;
         this.showOwn = builder.showOwn;
@@ -151,6 +189,8 @@ public class ListJobsRequest extends Request {
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.tags = builder.tags;
+        this.timeRangeField = builder.timeRangeField;
+        this.userCommandSearch = builder.userCommandSearch;
         this.userIdForFilter = builder.userIdForFilter;
         this.username = builder.username;
         this.workspaceId = builder.workspaceId;
@@ -205,6 +245,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return enableAssignNode
+     */
+    public String getEnableAssignNode() {
+        return this.enableAssignNode;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -216,6 +263,13 @@ public class ListJobsRequest extends Request {
      */
     public Boolean getFromAllWorkspaces() {
         return this.fromAllWorkspaces;
+    }
+
+    /**
+     * @return imageSearch
+     */
+    public String getImageSearch() {
+        return this.imageSearch;
     }
 
     /**
@@ -237,6 +291,27 @@ public class ListJobsRequest extends Request {
      */
     public String getJobType() {
         return this.jobType;
+    }
+
+    /**
+     * @return numericRangeField
+     */
+    public String getNumericRangeField() {
+        return this.numericRangeField;
+    }
+
+    /**
+     * @return numericRangeMax
+     */
+    public Long getNumericRangeMax() {
+        return this.numericRangeMax;
+    }
+
+    /**
+     * @return numericRangeMin
+     */
+    public Long getNumericRangeMin() {
+        return this.numericRangeMin;
     }
 
     /**
@@ -279,6 +354,13 @@ public class ListJobsRequest extends Request {
      */
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    /**
+     * @return reasonSearch
+     */
+    public String getReasonSearch() {
+        return this.reasonSearch;
     }
 
     /**
@@ -331,6 +413,20 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return timeRangeField
+     */
+    public String getTimeRangeField() {
+        return this.timeRangeField;
+    }
+
+    /**
+     * @return userCommandSearch
+     */
+    public String getUserCommandSearch() {
+        return this.userCommandSearch;
+    }
+
+    /**
      * @return userIdForFilter
      */
     public String getUserIdForFilter() {
@@ -357,17 +453,23 @@ public class ListJobsRequest extends Request {
         private String caller; 
         private String displayName; 
         private String displayNameSearchMode; 
+        private String enableAssignNode; 
         private String endTime; 
         private Boolean fromAllWorkspaces; 
+        private String imageSearch; 
         private String jobId; 
         private String jobIds; 
         private String jobType; 
+        private String numericRangeField; 
+        private Long numericRangeMax; 
+        private Long numericRangeMin; 
         private String order; 
         private String oversoldInfo; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String paymentType; 
         private String pipelineId; 
+        private String reasonSearch; 
         private String resourceId; 
         private String resourceQuotaName; 
         private Boolean showOwn; 
@@ -375,6 +477,8 @@ public class ListJobsRequest extends Request {
         private String startTime; 
         private String status; 
         private java.util.Map<String, String> tags; 
+        private String timeRangeField; 
+        private String userCommandSearch; 
         private String userIdForFilter; 
         private String username; 
         private String workspaceId; 
@@ -390,17 +494,23 @@ public class ListJobsRequest extends Request {
             this.caller = request.caller;
             this.displayName = request.displayName;
             this.displayNameSearchMode = request.displayNameSearchMode;
+            this.enableAssignNode = request.enableAssignNode;
             this.endTime = request.endTime;
             this.fromAllWorkspaces = request.fromAllWorkspaces;
+            this.imageSearch = request.imageSearch;
             this.jobId = request.jobId;
             this.jobIds = request.jobIds;
             this.jobType = request.jobType;
+            this.numericRangeField = request.numericRangeField;
+            this.numericRangeMax = request.numericRangeMax;
+            this.numericRangeMin = request.numericRangeMin;
             this.order = request.order;
             this.oversoldInfo = request.oversoldInfo;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.paymentType = request.paymentType;
             this.pipelineId = request.pipelineId;
+            this.reasonSearch = request.reasonSearch;
             this.resourceId = request.resourceId;
             this.resourceQuotaName = request.resourceQuotaName;
             this.showOwn = request.showOwn;
@@ -408,6 +518,8 @@ public class ListJobsRequest extends Request {
             this.startTime = request.startTime;
             this.status = request.status;
             this.tags = request.tags;
+            this.timeRangeField = request.timeRangeField;
+            this.userCommandSearch = request.userCommandSearch;
             this.userIdForFilter = request.userIdForFilter;
             this.username = request.username;
             this.workspaceId = request.workspaceId;
@@ -475,6 +587,15 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * EnableAssignNode.
+         */
+        public Builder enableAssignNode(String enableAssignNode) {
+            this.putQueryParameter("EnableAssignNode", enableAssignNode);
+            this.enableAssignNode = enableAssignNode;
+            return this;
+        }
+
+        /**
          * <p>The end time of the query. Use the job creation time to filter data. The default value is the current time.</p>
          * 
          * <strong>example:</strong>
@@ -495,6 +616,15 @@ public class ListJobsRequest extends Request {
         public Builder fromAllWorkspaces(Boolean fromAllWorkspaces) {
             this.putQueryParameter("FromAllWorkspaces", fromAllWorkspaces);
             this.fromAllWorkspaces = fromAllWorkspaces;
+            return this;
+        }
+
+        /**
+         * ImageSearch.
+         */
+        public Builder imageSearch(String imageSearch) {
+            this.putQueryParameter("ImageSearch", imageSearch);
+            this.imageSearch = imageSearch;
             return this;
         }
 
@@ -535,6 +665,33 @@ public class ListJobsRequest extends Request {
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
             this.jobType = jobType;
+            return this;
+        }
+
+        /**
+         * NumericRangeField.
+         */
+        public Builder numericRangeField(String numericRangeField) {
+            this.putQueryParameter("NumericRangeField", numericRangeField);
+            this.numericRangeField = numericRangeField;
+            return this;
+        }
+
+        /**
+         * NumericRangeMax.
+         */
+        public Builder numericRangeMax(Long numericRangeMax) {
+            this.putQueryParameter("NumericRangeMax", numericRangeMax);
+            this.numericRangeMax = numericRangeMax;
+            return this;
+        }
+
+        /**
+         * NumericRangeMin.
+         */
+        public Builder numericRangeMin(Long numericRangeMin) {
+            this.putQueryParameter("NumericRangeMin", numericRangeMin);
+            this.numericRangeMin = numericRangeMin;
             return this;
         }
 
@@ -622,6 +779,15 @@ public class ListJobsRequest extends Request {
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
             this.pipelineId = pipelineId;
+            return this;
+        }
+
+        /**
+         * ReasonSearch.
+         */
+        public Builder reasonSearch(String reasonSearch) {
+            this.putQueryParameter("ReasonSearch", reasonSearch);
+            this.reasonSearch = reasonSearch;
             return this;
         }
 
@@ -726,6 +892,24 @@ public class ListJobsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TimeRangeField.
+         */
+        public Builder timeRangeField(String timeRangeField) {
+            this.putQueryParameter("TimeRangeField", timeRangeField);
+            this.timeRangeField = timeRangeField;
+            return this;
+        }
+
+        /**
+         * UserCommandSearch.
+         */
+        public Builder userCommandSearch(String userCommandSearch) {
+            this.putQueryParameter("UserCommandSearch", userCommandSearch);
+            this.userCommandSearch = userCommandSearch;
             return this;
         }
 
