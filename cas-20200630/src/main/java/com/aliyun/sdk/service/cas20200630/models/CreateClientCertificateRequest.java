@@ -26,8 +26,16 @@ public class CreateClientCertificateRequest extends Request {
     private String algorithm;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliasName")
+    private String aliasName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommonName")
@@ -101,7 +109,9 @@ public class CreateClientCertificateRequest extends Request {
         super(builder);
         this.afterTime = builder.afterTime;
         this.algorithm = builder.algorithm;
+        this.aliasName = builder.aliasName;
         this.beforeTime = builder.beforeTime;
+        this.clientToken = builder.clientToken;
         this.commonName = builder.commonName;
         this.country = builder.country;
         this.customIdentifier = builder.customIdentifier;
@@ -149,10 +159,24 @@ public class CreateClientCertificateRequest extends Request {
     }
 
     /**
+     * @return aliasName
+     */
+    public String getAliasName() {
+        return this.aliasName;
+    }
+
+    /**
      * @return beforeTime
      */
     public Long getBeforeTime() {
         return this.beforeTime;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -277,7 +301,9 @@ public class CreateClientCertificateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateClientCertificateRequest, Builder> {
         private Long afterTime; 
         private String algorithm; 
+        private String aliasName; 
         private Long beforeTime; 
+        private String clientToken; 
         private String commonName; 
         private String country; 
         private String customIdentifier; 
@@ -304,7 +330,9 @@ public class CreateClientCertificateRequest extends Request {
             super(request);
             this.afterTime = request.afterTime;
             this.algorithm = request.algorithm;
+            this.aliasName = request.aliasName;
             this.beforeTime = request.beforeTime;
+            this.clientToken = request.clientToken;
             this.commonName = request.commonName;
             this.country = request.country;
             this.customIdentifier = request.customIdentifier;
@@ -365,6 +393,15 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
+         * AliasName.
+         */
+        public Builder aliasName(String aliasName) {
+            this.putQueryParameter("AliasName", aliasName);
+            this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
          * <p>The issuance time of the client certificate. This value is a UNIX timestamp. The default value is the time when you call this operation. Unit: seconds.</p>
          * <blockquote>
          * <p> The <strong>BeforeTime</strong> and <strong>AfterTime</strong> parameters must be both empty or both specified.</p>
@@ -376,6 +413,15 @@ public class CreateClientCertificateRequest extends Request {
         public Builder beforeTime(Long beforeTime) {
             this.putQueryParameter("BeforeTime", beforeTime);
             this.beforeTime = beforeTime;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

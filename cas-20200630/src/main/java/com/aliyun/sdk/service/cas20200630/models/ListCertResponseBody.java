@@ -252,7 +252,7 @@ public class ListCertResponseBody extends TeaModel {
         private String extra;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
@@ -381,7 +381,7 @@ public class ListCertResponseBody extends TeaModel {
         /**
          * @return id
          */
-        public String getId() {
+        public Long getId() {
             return this.id;
         }
 
@@ -452,7 +452,7 @@ public class ListCertResponseBody extends TeaModel {
             private String commonName; 
             private String customIdentifier; 
             private String extra; 
-            private String id; 
+            private Long id; 
             private String identifier; 
             private Boolean keyExportable; 
             private String organization; 
@@ -570,7 +570,7 @@ public class ListCertResponseBody extends TeaModel {
             /**
              * Id.
              */
-            public Builder id(String id) {
+            public Builder id(Long id) {
                 this.id = id;
                 return this;
             }

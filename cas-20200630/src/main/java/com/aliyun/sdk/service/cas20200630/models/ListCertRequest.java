@@ -42,6 +42,10 @@ public class ListCertRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    private String parentIdentifier;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Integer showSize;
 
@@ -61,6 +65,7 @@ public class ListCertRequest extends Request {
         this.instanceUuid = builder.instanceUuid;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.parentIdentifier = builder.parentIdentifier;
         this.showSize = builder.showSize;
         this.status = builder.status;
         this.type = builder.type;
@@ -122,6 +127,13 @@ public class ListCertRequest extends Request {
     }
 
     /**
+     * @return parentIdentifier
+     */
+    public String getParentIdentifier() {
+        return this.parentIdentifier;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -149,6 +161,7 @@ public class ListCertRequest extends Request {
         private String instanceUuid; 
         private Integer maxResults; 
         private String nextToken; 
+        private String parentIdentifier; 
         private Integer showSize; 
         private String status; 
         private String type; 
@@ -165,6 +178,7 @@ public class ListCertRequest extends Request {
             this.instanceUuid = request.instanceUuid;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.parentIdentifier = request.parentIdentifier;
             this.showSize = request.showSize;
             this.status = request.status;
             this.type = request.type;
@@ -221,6 +235,15 @@ public class ListCertRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ParentIdentifier.
+         */
+        public Builder parentIdentifier(String parentIdentifier) {
+            this.putQueryParameter("ParentIdentifier", parentIdentifier);
+            this.parentIdentifier = parentIdentifier;
             return this;
         }
 

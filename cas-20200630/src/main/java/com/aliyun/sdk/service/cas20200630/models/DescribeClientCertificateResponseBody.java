@@ -179,6 +179,9 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
+        @com.aliyun.core.annotation.NameInMap("AliasName")
+        private String aliasName;
+
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
@@ -199,6 +202,12 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
+
+        @com.aliyun.core.annotation.NameInMap("FullAlgorithm")
+        private String fullAlgorithm;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
@@ -248,12 +257,16 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("UploadFlag")
+        private Integer uploadFlag;
+
         @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private Certificate(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
+            this.aliasName = builder.aliasName;
             this.beforeDate = builder.beforeDate;
             this.certChain = builder.certChain;
             this.certificateType = builder.certificateType;
@@ -261,6 +274,8 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             this.countryCode = builder.countryCode;
             this.customIdentifier = builder.customIdentifier;
             this.days = builder.days;
+            this.fullAlgorithm = builder.fullAlgorithm;
+            this.id = builder.id;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
@@ -277,6 +292,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             this.status = builder.status;
             this.subjectDN = builder.subjectDN;
             this.tags = builder.tags;
+            this.uploadFlag = builder.uploadFlag;
             this.x509Certificate = builder.x509Certificate;
         }
 
@@ -300,6 +316,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         public String getAlgorithm() {
             return this.algorithm;
+        }
+
+        /**
+         * @return aliasName
+         */
+        public String getAliasName() {
+            return this.aliasName;
         }
 
         /**
@@ -349,6 +372,20 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          */
         public Integer getDays() {
             return this.days;
+        }
+
+        /**
+         * @return fullAlgorithm
+         */
+        public String getFullAlgorithm() {
+            return this.fullAlgorithm;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -464,6 +501,13 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return uploadFlag
+         */
+        public Integer getUploadFlag() {
+            return this.uploadFlag;
+        }
+
+        /**
          * @return x509Certificate
          */
         public String getX509Certificate() {
@@ -473,6 +517,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public static final class Builder {
             private Long afterDate; 
             private String algorithm; 
+            private String aliasName; 
             private Long beforeDate; 
             private String certChain; 
             private String certificateType; 
@@ -480,6 +525,8 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private String countryCode; 
             private String customIdentifier; 
             private Integer days; 
+            private String fullAlgorithm; 
+            private Long id; 
             private String identifier; 
             private Integer keySize; 
             private String locality; 
@@ -496,6 +543,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private String status; 
             private String subjectDN; 
             private java.util.List<Tags> tags; 
+            private Integer uploadFlag; 
             private String x509Certificate; 
 
             private Builder() {
@@ -504,6 +552,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
             private Builder(Certificate model) {
                 this.afterDate = model.afterDate;
                 this.algorithm = model.algorithm;
+                this.aliasName = model.aliasName;
                 this.beforeDate = model.beforeDate;
                 this.certChain = model.certChain;
                 this.certificateType = model.certificateType;
@@ -511,6 +560,8 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
                 this.countryCode = model.countryCode;
                 this.customIdentifier = model.customIdentifier;
                 this.days = model.days;
+                this.fullAlgorithm = model.fullAlgorithm;
+                this.id = model.id;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
@@ -527,6 +578,7 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
                 this.status = model.status;
                 this.subjectDN = model.subjectDN;
                 this.tags = model.tags;
+                this.uploadFlag = model.uploadFlag;
                 this.x509Certificate = model.x509Certificate;
             } 
 
@@ -554,6 +606,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
+                return this;
+            }
+
+            /**
+             * AliasName.
+             */
+            public Builder aliasName(String aliasName) {
+                this.aliasName = aliasName;
                 return this;
             }
 
@@ -630,6 +690,22 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              */
             public Builder days(Integer days) {
                 this.days = days;
+                return this;
+            }
+
+            /**
+             * FullAlgorithm.
+             */
+            public Builder fullAlgorithm(String fullAlgorithm) {
+                this.fullAlgorithm = fullAlgorithm;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
@@ -825,6 +901,14 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UploadFlag.
+             */
+            public Builder uploadFlag(Integer uploadFlag) {
+                this.uploadFlag = uploadFlag;
                 return this;
             }
 

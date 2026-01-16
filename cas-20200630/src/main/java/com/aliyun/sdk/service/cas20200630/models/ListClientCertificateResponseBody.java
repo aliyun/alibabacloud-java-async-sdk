@@ -23,6 +23,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
@@ -38,6 +41,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
     private ListClientCertificateResponseBody(Builder builder) {
         this.certificateList = builder.certificateList;
         this.currentPage = builder.currentPage;
+        this.maxResults = builder.maxResults;
         this.pageCount = builder.pageCount;
         this.requestId = builder.requestId;
         this.showSize = builder.showSize;
@@ -71,6 +75,13 @@ public class ListClientCertificateResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return pageCount
      */
     public Integer getPageCount() {
@@ -101,6 +112,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<CertificateList> certificateList; 
         private Integer currentPage; 
+        private Integer maxResults; 
         private Integer pageCount; 
         private String requestId; 
         private Integer showSize; 
@@ -112,6 +124,7 @@ public class ListClientCertificateResponseBody extends TeaModel {
         private Builder(ListClientCertificateResponseBody model) {
             this.certificateList = model.certificateList;
             this.currentPage = model.currentPage;
+            this.maxResults = model.maxResults;
             this.pageCount = model.pageCount;
             this.requestId = model.requestId;
             this.showSize = model.showSize;
@@ -134,6 +147,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
 
@@ -200,6 +221,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
+        @com.aliyun.core.annotation.NameInMap("AliasName")
+        private String aliasName;
+
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
@@ -217,6 +241,9 @@ public class ListClientCertificateResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
@@ -269,12 +296,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
         private CertificateList(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
+            this.aliasName = builder.aliasName;
             this.beforeDate = builder.beforeDate;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
             this.customIdentifier = builder.customIdentifier;
             this.days = builder.days;
+            this.id = builder.id;
             this.identifier = builder.identifier;
             this.keySize = builder.keySize;
             this.locality = builder.locality;
@@ -313,6 +342,13 @@ public class ListClientCertificateResponseBody extends TeaModel {
          */
         public String getAlgorithm() {
             return this.algorithm;
+        }
+
+        /**
+         * @return aliasName
+         */
+        public String getAliasName() {
+            return this.aliasName;
         }
 
         /**
@@ -355,6 +391,13 @@ public class ListClientCertificateResponseBody extends TeaModel {
          */
         public Integer getDays() {
             return this.days;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -472,12 +515,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
         public static final class Builder {
             private Long afterDate; 
             private String algorithm; 
+            private String aliasName; 
             private Long beforeDate; 
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
             private String customIdentifier; 
             private Integer days; 
+            private Long id; 
             private String identifier; 
             private Integer keySize; 
             private String locality; 
@@ -501,12 +546,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
             private Builder(CertificateList model) {
                 this.afterDate = model.afterDate;
                 this.algorithm = model.algorithm;
+                this.aliasName = model.aliasName;
                 this.beforeDate = model.beforeDate;
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
                 this.countryCode = model.countryCode;
                 this.customIdentifier = model.customIdentifier;
                 this.days = model.days;
+                this.id = model.id;
                 this.identifier = model.identifier;
                 this.keySize = model.keySize;
                 this.locality = model.locality;
@@ -549,6 +596,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
+                return this;
+            }
+
+            /**
+             * AliasName.
+             */
+            public Builder aliasName(String aliasName) {
+                this.aliasName = aliasName;
                 return this;
             }
 
@@ -617,6 +672,14 @@ public class ListClientCertificateResponseBody extends TeaModel {
              */
             public Builder days(Integer days) {
                 this.days = days;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
