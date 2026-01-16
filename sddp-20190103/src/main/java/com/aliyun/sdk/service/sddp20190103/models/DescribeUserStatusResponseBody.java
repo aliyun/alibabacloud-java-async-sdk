@@ -101,6 +101,9 @@ public class DescribeUserStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("AssetRoleAuthed")
+        private Boolean assetRoleAuthed;
+
         @com.aliyun.core.annotation.NameInMap("AuditClosable")
         private Boolean auditClosable;
 
@@ -160,6 +163,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
         private UserStatus(Builder builder) {
             this.accessKeyId = builder.accessKeyId;
+            this.assetRoleAuthed = builder.assetRoleAuthed;
             this.auditClosable = builder.auditClosable;
             this.auditReleasable = builder.auditReleasable;
             this.authed = builder.authed;
@@ -194,6 +198,13 @@ public class DescribeUserStatusResponseBody extends TeaModel {
          */
         public String getAccessKeyId() {
             return this.accessKeyId;
+        }
+
+        /**
+         * @return assetRoleAuthed
+         */
+        public Boolean getAssetRoleAuthed() {
+            return this.assetRoleAuthed;
         }
 
         /**
@@ -331,6 +342,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessKeyId; 
+            private Boolean assetRoleAuthed; 
             private Boolean auditClosable; 
             private Boolean auditReleasable; 
             private Boolean authed; 
@@ -356,6 +368,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
 
             private Builder(UserStatus model) {
                 this.accessKeyId = model.accessKeyId;
+                this.assetRoleAuthed = model.assetRoleAuthed;
                 this.auditClosable = model.auditClosable;
                 this.auditReleasable = model.auditReleasable;
                 this.authed = model.authed;
@@ -385,6 +398,14 @@ public class DescribeUserStatusResponseBody extends TeaModel {
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
+                return this;
+            }
+
+            /**
+             * AssetRoleAuthed.
+             */
+            public Builder assetRoleAuthed(Boolean assetRoleAuthed) {
+                this.assetRoleAuthed = assetRoleAuthed;
                 return this;
             }
 

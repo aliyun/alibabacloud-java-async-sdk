@@ -26,6 +26,10 @@ public class CreateSlrRoleRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    private String serviceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -33,6 +37,7 @@ public class CreateSlrRoleRequest extends Request {
         super(builder);
         this.featureType = builder.featureType;
         this.lang = builder.lang;
+        this.serviceName = builder.serviceName;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -64,6 +69,13 @@ public class CreateSlrRoleRequest extends Request {
     }
 
     /**
+     * @return serviceName
+     */
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -73,6 +85,7 @@ public class CreateSlrRoleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSlrRoleRequest, Builder> {
         private Integer featureType; 
         private String lang; 
+        private String serviceName; 
         private String sourceIp; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class CreateSlrRoleRequest extends Request {
             super(request);
             this.featureType = request.featureType;
             this.lang = request.lang;
+            this.serviceName = request.serviceName;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -111,6 +125,15 @@ public class CreateSlrRoleRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ServiceName.
+         */
+        public Builder serviceName(String serviceName) {
+            this.putQueryParameter("ServiceName", serviceName);
+            this.serviceName = serviceName;
             return this;
         }
 
