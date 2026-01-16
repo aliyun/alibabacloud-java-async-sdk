@@ -60,6 +60,26 @@ public class DescribeVerifySearchPageListRequest extends Request {
     private String productCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskBizScenario")
+    private Integer riskBizScenario;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskDevice")
+    private Integer riskDevice;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskDeviceToken")
+    private Integer riskDeviceToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskGeneric")
+    private Integer riskGeneric;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskModelMining")
+    private Integer riskModelMining;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Root")
     private Integer root;
 
@@ -99,6 +119,11 @@ public class DescribeVerifySearchPageListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.passed = builder.passed;
         this.productCode = builder.productCode;
+        this.riskBizScenario = builder.riskBizScenario;
+        this.riskDevice = builder.riskDevice;
+        this.riskDeviceToken = builder.riskDeviceToken;
+        this.riskGeneric = builder.riskGeneric;
+        this.riskModelMining = builder.riskModelMining;
         this.root = builder.root;
         this.sceneId = builder.sceneId;
         this.simulator = builder.simulator;
@@ -192,6 +217,41 @@ public class DescribeVerifySearchPageListRequest extends Request {
     }
 
     /**
+     * @return riskBizScenario
+     */
+    public Integer getRiskBizScenario() {
+        return this.riskBizScenario;
+    }
+
+    /**
+     * @return riskDevice
+     */
+    public Integer getRiskDevice() {
+        return this.riskDevice;
+    }
+
+    /**
+     * @return riskDeviceToken
+     */
+    public Integer getRiskDeviceToken() {
+        return this.riskDeviceToken;
+    }
+
+    /**
+     * @return riskGeneric
+     */
+    public Integer getRiskGeneric() {
+        return this.riskGeneric;
+    }
+
+    /**
+     * @return riskModelMining
+     */
+    public Integer getRiskModelMining() {
+        return this.riskModelMining;
+    }
+
+    /**
      * @return root
      */
     public Integer getRoot() {
@@ -251,6 +311,11 @@ public class DescribeVerifySearchPageListRequest extends Request {
         private String pageSize; 
         private String passed; 
         private String productCode; 
+        private Integer riskBizScenario; 
+        private Integer riskDevice; 
+        private Integer riskDeviceToken; 
+        private Integer riskGeneric; 
+        private Integer riskModelMining; 
         private Integer root; 
         private String sceneId; 
         private Integer simulator; 
@@ -275,6 +340,11 @@ public class DescribeVerifySearchPageListRequest extends Request {
             this.pageSize = request.pageSize;
             this.passed = request.passed;
             this.productCode = request.productCode;
+            this.riskBizScenario = request.riskBizScenario;
+            this.riskDevice = request.riskDevice;
+            this.riskDeviceToken = request.riskDeviceToken;
+            this.riskGeneric = request.riskGeneric;
+            this.riskModelMining = request.riskModelMining;
             this.root = request.root;
             this.sceneId = request.sceneId;
             this.simulator = request.simulator;
@@ -407,6 +477,51 @@ public class DescribeVerifySearchPageListRequest extends Request {
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
             this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * RiskBizScenario.
+         */
+        public Builder riskBizScenario(Integer riskBizScenario) {
+            this.putQueryParameter("RiskBizScenario", riskBizScenario);
+            this.riskBizScenario = riskBizScenario;
+            return this;
+        }
+
+        /**
+         * RiskDevice.
+         */
+        public Builder riskDevice(Integer riskDevice) {
+            this.putQueryParameter("RiskDevice", riskDevice);
+            this.riskDevice = riskDevice;
+            return this;
+        }
+
+        /**
+         * RiskDeviceToken.
+         */
+        public Builder riskDeviceToken(Integer riskDeviceToken) {
+            this.putQueryParameter("RiskDeviceToken", riskDeviceToken);
+            this.riskDeviceToken = riskDeviceToken;
+            return this;
+        }
+
+        /**
+         * RiskGeneric.
+         */
+        public Builder riskGeneric(Integer riskGeneric) {
+            this.putQueryParameter("RiskGeneric", riskGeneric);
+            this.riskGeneric = riskGeneric;
+            return this;
+        }
+
+        /**
+         * RiskModelMining.
+         */
+        public Builder riskModelMining(Integer riskModelMining) {
+            this.putQueryParameter("RiskModelMining", riskModelMining);
+            this.riskModelMining = riskModelMining;
             return this;
         }
 

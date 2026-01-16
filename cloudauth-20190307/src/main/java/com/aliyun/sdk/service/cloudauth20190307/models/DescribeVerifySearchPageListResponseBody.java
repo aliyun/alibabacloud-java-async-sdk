@@ -622,6 +622,21 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
+        @com.aliyun.core.annotation.NameInMap("RiskBizScenario")
+        private Integer riskBizScenario;
+
+        @com.aliyun.core.annotation.NameInMap("RiskDevice")
+        private Integer riskDevice;
+
+        @com.aliyun.core.annotation.NameInMap("RiskDeviceToken")
+        private Integer riskDeviceToken;
+
+        @com.aliyun.core.annotation.NameInMap("RiskGeneric")
+        private Integer riskGeneric;
+
+        @com.aliyun.core.annotation.NameInMap("RiskModelMining")
+        private Integer riskModelMining;
+
         @com.aliyun.core.annotation.NameInMap("Root")
         private Integer root;
 
@@ -649,6 +664,11 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
             this.outerOrderNo = builder.outerOrderNo;
             this.passed = builder.passed;
             this.productCode = builder.productCode;
+            this.riskBizScenario = builder.riskBizScenario;
+            this.riskDevice = builder.riskDevice;
+            this.riskDeviceToken = builder.riskDeviceToken;
+            this.riskGeneric = builder.riskGeneric;
+            this.riskModelMining = builder.riskModelMining;
             this.root = builder.root;
             this.sceneId = builder.sceneId;
             this.simulator = builder.simulator;
@@ -722,6 +742,41 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskBizScenario
+         */
+        public Integer getRiskBizScenario() {
+            return this.riskBizScenario;
+        }
+
+        /**
+         * @return riskDevice
+         */
+        public Integer getRiskDevice() {
+            return this.riskDevice;
+        }
+
+        /**
+         * @return riskDeviceToken
+         */
+        public Integer getRiskDeviceToken() {
+            return this.riskDeviceToken;
+        }
+
+        /**
+         * @return riskGeneric
+         */
+        public Integer getRiskGeneric() {
+            return this.riskGeneric;
+        }
+
+        /**
+         * @return riskModelMining
+         */
+        public Integer getRiskModelMining() {
+            return this.riskModelMining;
+        }
+
+        /**
          * @return root
          */
         public Integer getRoot() {
@@ -772,6 +827,11 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
             private String outerOrderNo; 
             private String passed; 
             private String productCode; 
+            private Integer riskBizScenario; 
+            private Integer riskDevice; 
+            private Integer riskDeviceToken; 
+            private Integer riskGeneric; 
+            private Integer riskModelMining; 
             private Integer root; 
             private Long sceneId; 
             private Integer simulator; 
@@ -791,6 +851,11 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
                 this.outerOrderNo = model.outerOrderNo;
                 this.passed = model.passed;
                 this.productCode = model.productCode;
+                this.riskBizScenario = model.riskBizScenario;
+                this.riskDevice = model.riskDevice;
+                this.riskDeviceToken = model.riskDeviceToken;
+                this.riskGeneric = model.riskGeneric;
+                this.riskModelMining = model.riskModelMining;
                 this.root = model.root;
                 this.sceneId = model.sceneId;
                 this.simulator = model.simulator;
@@ -885,6 +950,46 @@ public class DescribeVerifySearchPageListResponseBody extends TeaModel {
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
+                return this;
+            }
+
+            /**
+             * RiskBizScenario.
+             */
+            public Builder riskBizScenario(Integer riskBizScenario) {
+                this.riskBizScenario = riskBizScenario;
+                return this;
+            }
+
+            /**
+             * RiskDevice.
+             */
+            public Builder riskDevice(Integer riskDevice) {
+                this.riskDevice = riskDevice;
+                return this;
+            }
+
+            /**
+             * RiskDeviceToken.
+             */
+            public Builder riskDeviceToken(Integer riskDeviceToken) {
+                this.riskDeviceToken = riskDeviceToken;
+                return this;
+            }
+
+            /**
+             * RiskGeneric.
+             */
+            public Builder riskGeneric(Integer riskGeneric) {
+                this.riskGeneric = riskGeneric;
+                return this;
+            }
+
+            /**
+             * RiskModelMining.
+             */
+            public Builder riskModelMining(Integer riskModelMining) {
+                this.riskModelMining = riskModelMining;
                 return this;
             }
 
