@@ -53,9 +53,17 @@ public class CreateAppInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Quantity")
     private Integer quantity;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteVersion")
     private String siteVersion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreateAppInstanceRequest(Builder builder) {
         super(builder);
@@ -68,7 +76,9 @@ public class CreateAppInstanceRequest extends Request {
         this.paymentType = builder.paymentType;
         this.pricingCycle = builder.pricingCycle;
         this.quantity = builder.quantity;
+        this.resourceGroupId = builder.resourceGroupId;
         this.siteVersion = builder.siteVersion;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -148,10 +158,24 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return siteVersion
      */
     public String getSiteVersion() {
         return this.siteVersion;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateAppInstanceRequest, Builder> {
@@ -164,7 +188,9 @@ public class CreateAppInstanceRequest extends Request {
         private String paymentType; 
         private String pricingCycle; 
         private Integer quantity; 
+        private String resourceGroupId; 
         private String siteVersion; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -181,7 +207,9 @@ public class CreateAppInstanceRequest extends Request {
             this.paymentType = request.paymentType;
             this.pricingCycle = request.pricingCycle;
             this.quantity = request.quantity;
+            this.resourceGroupId = request.resourceGroupId;
             this.siteVersion = request.siteVersion;
+            this.tags = request.tags;
         } 
 
         /**
@@ -293,6 +321,15 @@ public class CreateAppInstanceRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>Site version</p>
          * 
          * <strong>example:</strong>
@@ -304,6 +341,16 @@ public class CreateAppInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putBodyParameter("Tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateAppInstanceRequest build() {
             return new CreateAppInstanceRequest(this);
@@ -311,4 +358,79 @@ public class CreateAppInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppInstanceRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

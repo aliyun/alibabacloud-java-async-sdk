@@ -77,8 +77,14 @@ public class AppInstanceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("PartnerDetail")
+    private PartnerDetail partnerDetail;
+
     @com.aliyun.core.annotation.NameInMap("Profile")
     private AppInstanceProfile profile;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("SiteHost")
     private String siteHost;
@@ -97,6 +103,9 @@ public class AppInstanceAggregate extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("StatusText")
     private String statusText;
+
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("ThumbnailUrl")
     private String thumbnailUrl;
@@ -125,13 +134,16 @@ public class AppInstanceAggregate extends TeaModel {
         this.gmtPublish = builder.gmtPublish;
         this.iconUrl = builder.iconUrl;
         this.name = builder.name;
+        this.partnerDetail = builder.partnerDetail;
         this.profile = builder.profile;
+        this.resourceGroupId = builder.resourceGroupId;
         this.siteHost = builder.siteHost;
         this.slug = builder.slug;
         this.sourceType = builder.sourceType;
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.statusText = builder.statusText;
+        this.tags = builder.tags;
         this.thumbnailUrl = builder.thumbnailUrl;
         this.userId = builder.userId;
     }
@@ -289,10 +301,24 @@ public class AppInstanceAggregate extends TeaModel {
     }
 
     /**
+     * @return partnerDetail
+     */
+    public PartnerDetail getPartnerDetail() {
+        return this.partnerDetail;
+    }
+
+    /**
      * @return profile
      */
     public AppInstanceProfile getProfile() {
         return this.profile;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -338,6 +364,13 @@ public class AppInstanceAggregate extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return thumbnailUrl
      */
     public String getThumbnailUrl() {
@@ -372,13 +405,16 @@ public class AppInstanceAggregate extends TeaModel {
         private String gmtPublish; 
         private String iconUrl; 
         private String name; 
+        private PartnerDetail partnerDetail; 
         private AppInstanceProfile profile; 
+        private String resourceGroupId; 
         private String siteHost; 
         private String slug; 
         private String sourceType; 
         private String startTime; 
         private String status; 
         private String statusText; 
+        private java.util.List<Tags> tags; 
         private String thumbnailUrl; 
         private String userId; 
 
@@ -406,13 +442,16 @@ public class AppInstanceAggregate extends TeaModel {
             this.gmtPublish = model.gmtPublish;
             this.iconUrl = model.iconUrl;
             this.name = model.name;
+            this.partnerDetail = model.partnerDetail;
             this.profile = model.profile;
+            this.resourceGroupId = model.resourceGroupId;
             this.siteHost = model.siteHost;
             this.slug = model.slug;
             this.sourceType = model.sourceType;
             this.startTime = model.startTime;
             this.status = model.status;
             this.statusText = model.statusText;
+            this.tags = model.tags;
             this.thumbnailUrl = model.thumbnailUrl;
             this.userId = model.userId;
         } 
@@ -578,10 +617,26 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
+         * PartnerDetail.
+         */
+        public Builder partnerDetail(PartnerDetail partnerDetail) {
+            this.partnerDetail = partnerDetail;
+            return this;
+        }
+
+        /**
          * Profile.
          */
         public Builder profile(AppInstanceProfile profile) {
             this.profile = profile;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -634,6 +689,14 @@ public class AppInstanceAggregate extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * ThumbnailUrl.
          */
         public Builder thumbnailUrl(String thumbnailUrl) {
@@ -655,4 +718,376 @@ public class AppInstanceAggregate extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppInstanceAggregate} extends {@link TeaModel}
+     *
+     * <p>AppInstanceAggregate</p>
+     */
+    public static class BindData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizId")
+        private String bizId;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
+        private String gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Mobile")
+        private String mobile;
+
+        @com.aliyun.core.annotation.NameInMap("ParentPk")
+        private String parentPk;
+
+        @com.aliyun.core.annotation.NameInMap("PartnerId")
+        private String partnerId;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        private BindData(Builder builder) {
+            this.bizId = builder.bizId;
+            this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
+            this.id = builder.id;
+            this.mobile = builder.mobile;
+            this.parentPk = builder.parentPk;
+            this.partnerId = builder.partnerId;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BindData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        /**
+         * @return gmtCreate
+         */
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return mobile
+         */
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        /**
+         * @return parentPk
+         */
+        public String getParentPk() {
+            return this.parentPk;
+        }
+
+        /**
+         * @return partnerId
+         */
+        public String getPartnerId() {
+            return this.partnerId;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private String bizId; 
+            private String gmtCreate; 
+            private String gmtModified; 
+            private String id; 
+            private String mobile; 
+            private String parentPk; 
+            private String partnerId; 
+            private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindData model) {
+                this.bizId = model.bizId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mobile = model.mobile;
+                this.parentPk = model.parentPk;
+                this.partnerId = model.partnerId;
+                this.userId = model.userId;
+            } 
+
+            /**
+             * BizId.
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
+             */
+            public Builder gmtCreate(String gmtCreate) {
+                this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Mobile.
+             */
+            public Builder mobile(String mobile) {
+                this.mobile = mobile;
+                return this;
+            }
+
+            /**
+             * ParentPk.
+             */
+            public Builder parentPk(String parentPk) {
+                this.parentPk = parentPk;
+                return this;
+            }
+
+            /**
+             * PartnerId.
+             */
+            public Builder partnerId(String partnerId) {
+                this.partnerId = partnerId;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public BindData build() {
+                return new BindData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AppInstanceAggregate} extends {@link TeaModel}
+     *
+     * <p>AppInstanceAggregate</p>
+     */
+    public static class PartnerDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindData")
+        private BindData bindData;
+
+        @com.aliyun.core.annotation.NameInMap("PartnerId")
+        private String partnerId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private PartnerDetail(Builder builder) {
+            this.bindData = builder.bindData;
+            this.partnerId = builder.partnerId;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartnerDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindData
+         */
+        public BindData getBindData() {
+            return this.bindData;
+        }
+
+        /**
+         * @return partnerId
+         */
+        public String getPartnerId() {
+            return this.partnerId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private BindData bindData; 
+            private String partnerId; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartnerDetail model) {
+                this.bindData = model.bindData;
+                this.partnerId = model.partnerId;
+                this.status = model.status;
+            } 
+
+            /**
+             * BindData.
+             */
+            public Builder bindData(BindData bindData) {
+                this.bindData = bindData;
+                return this;
+            }
+
+            /**
+             * PartnerId.
+             */
+            public Builder partnerId(String partnerId) {
+                this.partnerId = partnerId;
+                return this;
+            }
+
+            /**
+             * <p>trial,draft,live,refunded,expired,released</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public PartnerDetail build() {
+                return new PartnerDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AppInstanceAggregate} extends {@link TeaModel}
+     *
+     * <p>AppInstanceAggregate</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
