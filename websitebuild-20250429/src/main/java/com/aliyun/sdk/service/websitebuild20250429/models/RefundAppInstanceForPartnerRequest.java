@@ -26,6 +26,10 @@ public class RefundAppInstanceForPartnerRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RefundReason")
     private String refundReason;
 
@@ -37,6 +41,7 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
+        this.clientToken = builder.clientToken;
         this.refundReason = builder.refundReason;
         this.userId = builder.userId;
     }
@@ -69,6 +74,13 @@ public class RefundAppInstanceForPartnerRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return refundReason
      */
     public String getRefundReason() {
@@ -85,6 +97,7 @@ public class RefundAppInstanceForPartnerRequest extends Request {
     public static final class Builder extends Request.Builder<RefundAppInstanceForPartnerRequest, Builder> {
         private String regionId; 
         private String bizId; 
+        private String clientToken; 
         private String refundReason; 
         private String userId; 
 
@@ -96,6 +109,7 @@ public class RefundAppInstanceForPartnerRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
+            this.clientToken = request.clientToken;
             this.refundReason = request.refundReason;
             this.userId = request.userId;
         } 
@@ -115,6 +129,15 @@ public class RefundAppInstanceForPartnerRequest extends Request {
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
             this.bizId = bizId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
