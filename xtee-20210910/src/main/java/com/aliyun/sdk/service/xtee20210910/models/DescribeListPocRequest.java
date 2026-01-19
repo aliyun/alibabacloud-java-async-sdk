@@ -34,6 +34,14 @@ public class DescribeListPocRequest extends Request {
     private String regId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
+    private String taskStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -43,6 +51,8 @@ public class DescribeListPocRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.regId = builder.regId;
+        this.taskName = builder.taskName;
+        this.taskStatus = builder.taskStatus;
         this.type = builder.type;
     }
 
@@ -88,6 +98,20 @@ public class DescribeListPocRequest extends Request {
     }
 
     /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    /**
+     * @return taskStatus
+     */
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -99,6 +123,8 @@ public class DescribeListPocRequest extends Request {
         private String lang; 
         private Long pageSize; 
         private String regId; 
+        private String taskName; 
+        private String taskStatus; 
         private String type; 
 
         private Builder() {
@@ -111,6 +137,8 @@ public class DescribeListPocRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.regId = request.regId;
+            this.taskName = request.taskName;
+            this.taskStatus = request.taskStatus;
             this.type = request.type;
         } 
 
@@ -163,6 +191,24 @@ public class DescribeListPocRequest extends Request {
         public Builder regId(String regId) {
             this.putQueryParameter("RegId", regId);
             this.regId = regId;
+            return this;
+        }
+
+        /**
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.putQueryParameter("TaskName", taskName);
+            this.taskName = taskName;
+            return this;
+        }
+
+        /**
+         * TaskStatus.
+         */
+        public Builder taskStatus(String taskStatus) {
+            this.putQueryParameter("TaskStatus", taskStatus);
+            this.taskStatus = taskStatus;
             return this;
         }
 
