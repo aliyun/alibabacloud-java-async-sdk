@@ -566,6 +566,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAIDBClusterPerformanceResponse> describeAIDBClusterPerformance(DescribeAIDBClusterPerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeAIDBClusterTaskLogFiles  DescribeAIDBClusterTaskLogFilesRequest
+     * @return DescribeAIDBClusterTaskLogFilesResponse
+     */
+    CompletableFuture<DescribeAIDBClusterTaskLogFilesResponse> describeAIDBClusterTaskLogFiles(DescribeAIDBClusterTaskLogFilesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterTaskMetrics  DescribeAIDBClusterTaskMetricsRequest
+     * @return DescribeAIDBClusterTaskMetricsResponse
+     */
+    CompletableFuture<DescribeAIDBClusterTaskMetricsResponse> describeAIDBClusterTaskMetrics(DescribeAIDBClusterTaskMetricsRequest request);
+
+    /**
      * @param request the request parameters of DescribeAIDBClusters  DescribeAIDBClustersRequest
      * @return DescribeAIDBClustersResponse
      */

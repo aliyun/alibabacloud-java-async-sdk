@@ -1526,6 +1526,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeAIDBClusterTaskLogFiles  DescribeAIDBClusterTaskLogFilesRequest
+     * @return DescribeAIDBClusterTaskLogFilesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAIDBClusterTaskLogFilesResponse> describeAIDBClusterTaskLogFiles(DescribeAIDBClusterTaskLogFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIDBClusterTaskLogFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIDBClusterTaskLogFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAIDBClusterTaskLogFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterTaskMetrics  DescribeAIDBClusterTaskMetricsRequest
+     * @return DescribeAIDBClusterTaskMetricsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAIDBClusterTaskMetricsResponse> describeAIDBClusterTaskMetrics(DescribeAIDBClusterTaskMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIDBClusterTaskMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIDBClusterTaskMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAIDBClusterTaskMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAIDBClusters  DescribeAIDBClustersRequest
      * @return DescribeAIDBClustersResponse
      */
