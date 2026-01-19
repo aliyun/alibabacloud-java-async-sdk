@@ -1,6 +1,9 @@
 2026-01-19 Version: 1.0.32
 - Generated java-async 2023-08-08 for emr-serverless-spark.
 
+2026-01-19 Version: 1.0.32
+- Generated java-async 2023-08-08 for emr-serverless-spark.
+
 2026-01-13 Version: 1.0.31
 - Generated java-async 2023-08-08 for emr-serverless-spark.
 
