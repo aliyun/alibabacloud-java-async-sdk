@@ -338,6 +338,9 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cert_state")
         private String certState;
 
+        @com.aliyun.core.annotation.NameInMap("cloud_service_name")
+        private String cloudServiceName;
+
         @com.aliyun.core.annotation.NameInMap("cloud_service_roles")
         private java.util.List<CloudServiceRoles> cloudServiceRoles;
 
@@ -352,6 +355,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             this.accountType = builder.accountType;
             this.certExpireTime = builder.certExpireTime;
             this.certState = builder.certState;
+            this.cloudServiceName = builder.cloudServiceName;
             this.cloudServiceRoles = builder.cloudServiceRoles;
             this.revokable = builder.revokable;
         }
@@ -414,6 +418,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cloudServiceName
+         */
+        public String getCloudServiceName() {
+            return this.cloudServiceName;
+        }
+
+        /**
          * @return cloudServiceRoles
          */
         public java.util.List<CloudServiceRoles> getCloudServiceRoles() {
@@ -435,6 +446,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private String accountType; 
             private String certExpireTime; 
             private String certState; 
+            private String cloudServiceName; 
             private java.util.List<CloudServiceRoles> cloudServiceRoles; 
             private Boolean revokable; 
 
@@ -449,6 +461,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
                 this.accountType = model.accountType;
                 this.certExpireTime = model.certExpireTime;
                 this.certState = model.certState;
+                this.cloudServiceName = model.cloudServiceName;
                 this.cloudServiceRoles = model.cloudServiceRoles;
                 this.revokable = model.revokable;
             } 
@@ -542,6 +555,14 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
              */
             public Builder certState(String certState) {
                 this.certState = certState;
+                return this;
+            }
+
+            /**
+             * cloud_service_name.
+             */
+            public Builder cloudServiceName(String cloudServiceName) {
+                this.cloudServiceName = cloudServiceName;
                 return this;
             }
 
