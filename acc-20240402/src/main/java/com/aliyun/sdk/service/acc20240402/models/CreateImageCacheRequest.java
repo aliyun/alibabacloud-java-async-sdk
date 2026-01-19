@@ -23,11 +23,12 @@ public class CreateImageCacheRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCacheName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String imageCacheName;
 
     @com.aliyun.core.annotation.Query
@@ -693,6 +694,7 @@ public class CreateImageCacheRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 256)
         private String value;
 
         private Tags(Builder builder) {

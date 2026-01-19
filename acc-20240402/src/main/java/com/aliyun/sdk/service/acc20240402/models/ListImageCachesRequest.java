@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListImageCachesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCacheName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String imageCacheName;
 
     @com.aliyun.core.annotation.Query
@@ -224,6 +225,7 @@ public class ListImageCachesRequest extends Request {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
