@@ -492,6 +492,9 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvokingEventMessageType")
         private String invokingEventMessageType;
 
+        @com.aliyun.core.annotation.NameInMap("LastCompliantFixedTimestamp")
+        private Long lastCompliantFixedTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("LastNonCompliantRecordTimestamp")
         private Long lastNonCompliantRecordTimestamp;
 
@@ -511,6 +514,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
             this.evaluationId = builder.evaluationId;
             this.evaluationResultIdentifier = builder.evaluationResultIdentifier;
             this.invokingEventMessageType = builder.invokingEventMessageType;
+            this.lastCompliantFixedTimestamp = builder.lastCompliantFixedTimestamp;
             this.lastNonCompliantRecordTimestamp = builder.lastNonCompliantRecordTimestamp;
             this.remediationEnabled = builder.remediationEnabled;
             this.resultRecordedTimestamp = builder.resultRecordedTimestamp;
@@ -568,6 +572,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastCompliantFixedTimestamp
+         */
+        public Long getLastCompliantFixedTimestamp() {
+            return this.lastCompliantFixedTimestamp;
+        }
+
+        /**
          * @return lastNonCompliantRecordTimestamp
          */
         public Long getLastNonCompliantRecordTimestamp() {
@@ -602,6 +613,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
             private String evaluationId; 
             private EvaluationResultIdentifier evaluationResultIdentifier; 
             private String invokingEventMessageType; 
+            private Long lastCompliantFixedTimestamp; 
             private Long lastNonCompliantRecordTimestamp; 
             private Boolean remediationEnabled; 
             private Long resultRecordedTimestamp; 
@@ -617,6 +629,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
                 this.evaluationId = model.evaluationId;
                 this.evaluationResultIdentifier = model.evaluationResultIdentifier;
                 this.invokingEventMessageType = model.invokingEventMessageType;
+                this.lastCompliantFixedTimestamp = model.lastCompliantFixedTimestamp;
                 this.lastNonCompliantRecordTimestamp = model.lastNonCompliantRecordTimestamp;
                 this.remediationEnabled = model.remediationEnabled;
                 this.resultRecordedTimestamp = model.resultRecordedTimestamp;
@@ -699,6 +712,14 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
              */
             public Builder invokingEventMessageType(String invokingEventMessageType) {
                 this.invokingEventMessageType = invokingEventMessageType;
+                return this;
+            }
+
+            /**
+             * LastCompliantFixedTimestamp.
+             */
+            public Builder lastCompliantFixedTimestamp(Long lastCompliantFixedTimestamp) {
+                this.lastCompliantFixedTimestamp = lastCompliantFixedTimestamp;
                 return this;
             }
 

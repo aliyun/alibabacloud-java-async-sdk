@@ -292,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRemediationsResponse> deleteRemediations(DeleteRemediationsRequest request);
 
     /**
+     * @param request the request parameters of DeleteReportTemplate  DeleteReportTemplateRequest
+     * @return DeleteReportTemplateResponse
+     */
+    CompletableFuture<DeleteReportTemplateResponse> deleteReportTemplate(DeleteReportTemplateRequest request);
+
+    /**
      * @param request the request parameters of DescribeDiscoveredResourceBatch  DescribeDiscoveredResourceBatchRequest
      * @return DescribeDiscoveredResourceBatchResponse
      */
@@ -401,6 +407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateConfigRulesReportResponse
      */
     CompletableFuture<GenerateConfigRulesReportResponse> generateConfigRulesReport(GenerateConfigRulesReportRequest request);
+
+    /**
+     * @param request the request parameters of GenerateReportFromTemplate  GenerateReportFromTemplateRequest
+     * @return GenerateReportFromTemplateResponse
+     */
+    CompletableFuture<GenerateReportFromTemplateResponse> generateReportFromTemplate(GenerateReportFromTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -741,6 +753,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRemediationTemplateResponse
      */
     CompletableFuture<GetRemediationTemplateResponse> getRemediationTemplate(GetRemediationTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetReportFromTemplate  GetReportFromTemplateRequest
+     * @return GetReportFromTemplateResponse
+     */
+    CompletableFuture<GetReportFromTemplateResponse> getReportFromTemplate(GetReportFromTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -1242,6 +1260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of TriggerReportSend  TriggerReportSendRequest
+     * @return TriggerReportSendResponse
+     */
+    CompletableFuture<TriggerReportSendResponse> triggerReportSend(TriggerReportSendRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
