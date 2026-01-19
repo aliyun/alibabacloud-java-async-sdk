@@ -53,6 +53,9 @@ public class ResourceInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
+    @com.aliyun.core.annotation.NameInMap("InstancePhase")
+    private String instancePhase;
+
     @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
@@ -102,6 +105,7 @@ public class ResourceInstance extends TeaModel {
         this.instanceIp = builder.instanceIp;
         this.instanceMemory = builder.instanceMemory;
         this.instanceName = builder.instanceName;
+        this.instancePhase = builder.instancePhase;
         this.instanceStatus = builder.instanceStatus;
         this.instanceSystemDiskSize = builder.instanceSystemDiskSize;
         this.instanceTenantIp = builder.instanceTenantIp;
@@ -213,6 +217,13 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return instancePhase
+     */
+    public String getInstancePhase() {
+        return this.instancePhase;
+    }
+
+    /**
      * @return instanceStatus
      */
     public String getInstanceStatus() {
@@ -309,6 +320,7 @@ public class ResourceInstance extends TeaModel {
         private String instanceIp; 
         private String instanceMemory; 
         private String instanceName; 
+        private String instancePhase; 
         private String instanceStatus; 
         private Integer instanceSystemDiskSize; 
         private String instanceTenantIp; 
@@ -338,6 +350,7 @@ public class ResourceInstance extends TeaModel {
             this.instanceIp = model.instanceIp;
             this.instanceMemory = model.instanceMemory;
             this.instanceName = model.instanceName;
+            this.instancePhase = model.instancePhase;
             this.instanceStatus = model.instanceStatus;
             this.instanceSystemDiskSize = model.instanceSystemDiskSize;
             this.instanceTenantIp = model.instanceTenantIp;
@@ -445,6 +458,14 @@ public class ResourceInstance extends TeaModel {
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * InstancePhase.
+         */
+        public Builder instancePhase(String instancePhase) {
+            this.instancePhase = instancePhase;
             return this;
         }
 

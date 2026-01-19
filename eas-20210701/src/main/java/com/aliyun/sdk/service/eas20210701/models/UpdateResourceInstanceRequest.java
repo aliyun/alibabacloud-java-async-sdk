@@ -37,12 +37,17 @@ public class UpdateResourceInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String action;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NewDiskSize")
+    private String newDiskSize;
+
     private UpdateResourceInstanceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.resourceId = builder.resourceId;
         this.instanceId = builder.instanceId;
         this.action = builder.action;
+        this.newDiskSize = builder.newDiskSize;
     }
 
     public static Builder builder() {
@@ -86,11 +91,19 @@ public class UpdateResourceInstanceRequest extends Request {
         return this.action;
     }
 
+    /**
+     * @return newDiskSize
+     */
+    public String getNewDiskSize() {
+        return this.newDiskSize;
+    }
+
     public static final class Builder extends Request.Builder<UpdateResourceInstanceRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
         private String instanceId; 
         private String action; 
+        private String newDiskSize; 
 
         private Builder() {
             super();
@@ -102,6 +115,7 @@ public class UpdateResourceInstanceRequest extends Request {
             this.resourceId = request.resourceId;
             this.instanceId = request.instanceId;
             this.action = request.action;
+            this.newDiskSize = request.newDiskSize;
         } 
 
         /**
@@ -158,6 +172,15 @@ public class UpdateResourceInstanceRequest extends Request {
         public Builder action(String action) {
             this.putBodyParameter("Action", action);
             this.action = action;
+            return this;
+        }
+
+        /**
+         * NewDiskSize.
+         */
+        public Builder newDiskSize(String newDiskSize) {
+            this.putBodyParameter("NewDiskSize", newDiskSize);
+            this.newDiskSize = newDiskSize;
             return this;
         }
 
