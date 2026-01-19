@@ -752,6 +752,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
+        @com.aliyun.core.annotation.NameInMap("VplVersion")
+        private String vplVersion;
+
         private OfficeSites(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
             this.acceleratorId = builder.acceleratorId;
@@ -818,6 +821,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.vSwitchIds = builder.vSwitchIds;
             this.vpcId = builder.vpcId;
             this.vpcType = builder.vpcType;
+            this.vplVersion = builder.vplVersion;
         }
 
         public static Builder builder() {
@@ -1283,6 +1287,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             return this.vpcType;
         }
 
+        /**
+         * @return vplVersion
+         */
+        public String getVplVersion() {
+            return this.vplVersion;
+        }
+
         public static final class Builder {
             private java.util.List<ADConnectors> ADConnectors; 
             private String acceleratorId; 
@@ -1349,6 +1360,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcType; 
+            private String vplVersion; 
 
             private Builder() {
             } 
@@ -1419,6 +1431,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.vSwitchIds = model.vSwitchIds;
                 this.vpcId = model.vpcId;
                 this.vpcType = model.vpcType;
+                this.vplVersion = model.vplVersion;
             } 
 
             /**
@@ -2155,6 +2168,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
+                return this;
+            }
+
+            /**
+             * VplVersion.
+             */
+            public Builder vplVersion(String vplVersion) {
+                this.vplVersion = vplVersion;
                 return this;
             }
 
