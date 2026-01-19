@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCampaignResponseBody} extends {@link TeaModel}
  *
  * <p>GetCampaignResponseBody</p>
  */
 public class GetCampaignResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCampaignResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetCampaignResponseBody extends TeaModel {
 
     public static GetCampaignResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetCampaignResponseBody extends TeaModel {
         private Long httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCampaignResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,65 +151,71 @@ public class GetCampaignResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCampaignResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCampaignResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ActualEndTime")
+        @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;
 
-        @NameInMap("ActualStartTime")
+        @com.aliyun.core.annotation.NameInMap("ActualStartTime")
         private Long actualStartTime;
 
-        @NameInMap("CampaignId")
+        @com.aliyun.core.annotation.NameInMap("CampaignId")
         private String campaignId;
 
-        @NameInMap("CasesAborted")
+        @com.aliyun.core.annotation.NameInMap("CasesAborted")
         private Long casesAborted;
 
-        @NameInMap("CasesConnected")
+        @com.aliyun.core.annotation.NameInMap("CasesConnected")
         private Long casesConnected;
 
-        @NameInMap("CasesUncompleted")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
-        @NameInMap("CompletedRate")
+        @com.aliyun.core.annotation.NameInMap("CompletedRate")
         private Long completedRate;
 
-        @NameInMap("MaxAttemptCount")
+        @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
-        @NameInMap("MinAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
         private Long minAttemptInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PlanedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedEndTime")
         private Long planedEndTime;
 
-        @NameInMap("PlanedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedStartTime")
         private Long planedStartTime;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Simulation")
+        @com.aliyun.core.annotation.NameInMap("Simulation")
         private Boolean simulation;
 
-        @NameInMap("SimulationParameters")
+        @com.aliyun.core.annotation.NameInMap("SimulationParameters")
         private String simulationParameters;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StrategyParameters")
+        @com.aliyun.core.annotation.NameInMap("StrategyParameters")
         private String strategyParameters;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("TotalCases")
+        @com.aliyun.core.annotation.NameInMap("TotalCases")
         private Long totalCases;
 
         private Data(Builder builder) {
@@ -384,6 +410,32 @@ public class GetCampaignResponseBody extends TeaModel {
             private String strategyParameters; 
             private String strategyType; 
             private Long totalCases; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.actualEndTime = model.actualEndTime;
+                this.actualStartTime = model.actualStartTime;
+                this.campaignId = model.campaignId;
+                this.casesAborted = model.casesAborted;
+                this.casesConnected = model.casesConnected;
+                this.casesUncompleted = model.casesUncompleted;
+                this.completedRate = model.completedRate;
+                this.maxAttemptCount = model.maxAttemptCount;
+                this.minAttemptInterval = model.minAttemptInterval;
+                this.name = model.name;
+                this.planedEndTime = model.planedEndTime;
+                this.planedStartTime = model.planedStartTime;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.simulation = model.simulation;
+                this.simulationParameters = model.simulationParameters;
+                this.state = model.state;
+                this.strategyParameters = model.strategyParameters;
+                this.strategyType = model.strategyType;
+                this.totalCases = model.totalCases;
+            } 
 
             /**
              * ActualEndTime.

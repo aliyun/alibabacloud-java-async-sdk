@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCampaignsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCampaignsResponseBody</p>
  */
 public class ListCampaignsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCampaignsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListCampaignsResponseBody extends TeaModel {
 
     public static ListCampaignsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListCampaignsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCampaignsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,62 +172,68 @@ public class ListCampaignsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCampaignsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignsResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("ActualEndTime")
+        @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;
 
-        @NameInMap("ActualStartTime")
+        @com.aliyun.core.annotation.NameInMap("ActualStartTime")
         private Long actualStartTime;
 
-        @NameInMap("CampaignId")
+        @com.aliyun.core.annotation.NameInMap("CampaignId")
         private String campaignId;
 
-        @NameInMap("CasesAborted")
+        @com.aliyun.core.annotation.NameInMap("CasesAborted")
         private Long casesAborted;
 
-        @NameInMap("CasesConnected")
+        @com.aliyun.core.annotation.NameInMap("CasesConnected")
         private Long casesConnected;
 
-        @NameInMap("CasesUncompleted")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
-        @NameInMap("CompletedRate")
+        @com.aliyun.core.annotation.NameInMap("CompletedRate")
         private Long completedRate;
 
-        @NameInMap("MaxAttemptCount")
+        @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
-        @NameInMap("MinAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
         private Long minAttemptInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PlanedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedEndTime")
         private Long planedEndTime;
 
-        @NameInMap("PlanedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedStartTime")
         private Long planedStartTime;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Simulation")
+        @com.aliyun.core.annotation.NameInMap("Simulation")
         private Boolean simulation;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StrategyParameters")
+        @com.aliyun.core.annotation.NameInMap("StrategyParameters")
         private String strategyParameters;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("TotalCases")
+        @com.aliyun.core.annotation.NameInMap("TotalCases")
         private Long totalCases;
 
         private List(Builder builder) {
@@ -393,6 +420,31 @@ public class ListCampaignsResponseBody extends TeaModel {
             private String strategyType; 
             private Long totalCases; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.actualEndTime = model.actualEndTime;
+                this.actualStartTime = model.actualStartTime;
+                this.campaignId = model.campaignId;
+                this.casesAborted = model.casesAborted;
+                this.casesConnected = model.casesConnected;
+                this.casesUncompleted = model.casesUncompleted;
+                this.completedRate = model.completedRate;
+                this.maxAttemptCount = model.maxAttemptCount;
+                this.minAttemptInterval = model.minAttemptInterval;
+                this.name = model.name;
+                this.planedEndTime = model.planedEndTime;
+                this.planedStartTime = model.planedStartTime;
+                this.queueId = model.queueId;
+                this.queueName = model.queueName;
+                this.simulation = model.simulation;
+                this.state = model.state;
+                this.strategyParameters = model.strategyParameters;
+                this.strategyType = model.strategyType;
+                this.totalCases = model.totalCases;
+            } 
+
             /**
              * ActualEndTime.
              */
@@ -552,17 +604,23 @@ public class ListCampaignsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCampaignsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -583,7 +641,7 @@ public class ListCampaignsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -609,15 +667,25 @@ public class ListCampaignsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

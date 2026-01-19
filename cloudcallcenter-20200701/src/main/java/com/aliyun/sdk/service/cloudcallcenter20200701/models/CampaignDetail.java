@@ -1,66 +1,71 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CampaignDetail} extends {@link TeaModel}
  *
  * <p>CampaignDetail</p>
  */
 public class CampaignDetail extends TeaModel {
-    @NameInMap("ActualEndTime")
+    @com.aliyun.core.annotation.NameInMap("ActualEndTime")
     private Long actualEndTime;
 
-    @NameInMap("ActualStartTime")
+    @com.aliyun.core.annotation.NameInMap("ActualStartTime")
     private Long actualStartTime;
 
-    @NameInMap("CasesAborted")
+    @com.aliyun.core.annotation.NameInMap("CasesAborted")
     private Long casesAborted;
 
-    @NameInMap("CasesConnected")
+    @com.aliyun.core.annotation.NameInMap("CasesConnected")
     private Long casesConnected;
 
-    @NameInMap("CasesUncompleted")
+    @com.aliyun.core.annotation.NameInMap("CasesUncompleted")
     private Long casesUncompleted;
 
-    @NameInMap("CompletedRate")
+    @com.aliyun.core.annotation.NameInMap("CompletedRate")
     private Long completedRate;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("MaxAttemptCount")
+    @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
     private Long maxAttemptCount;
 
-    @NameInMap("MinAttemptInterval")
+    @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
     private Long minAttemptInterval;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PlanedEndTime")
+    @com.aliyun.core.annotation.NameInMap("PlanedEndTime")
     private Long planedEndTime;
 
-    @NameInMap("PlanedStartTime")
+    @com.aliyun.core.annotation.NameInMap("PlanedStartTime")
     private Long planedStartTime;
 
-    @NameInMap("QueueName")
+    @com.aliyun.core.annotation.NameInMap("QueueName")
     private String queueName;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("TotalCases")
+    @com.aliyun.core.annotation.NameInMap("TotalCases")
     private Long totalCases;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Long updateTime;
 
     private CampaignDetail(Builder builder) {
@@ -89,6 +94,10 @@ public class CampaignDetail extends TeaModel {
 
     public static CampaignDetail create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -228,6 +237,29 @@ public class CampaignDetail extends TeaModel {
         private String state; 
         private Long totalCases; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(CampaignDetail model) {
+            this.actualEndTime = model.actualEndTime;
+            this.actualStartTime = model.actualStartTime;
+            this.casesAborted = model.casesAborted;
+            this.casesConnected = model.casesConnected;
+            this.casesUncompleted = model.casesUncompleted;
+            this.completedRate = model.completedRate;
+            this.createTime = model.createTime;
+            this.id = model.id;
+            this.maxAttemptCount = model.maxAttemptCount;
+            this.minAttemptInterval = model.minAttemptInterval;
+            this.name = model.name;
+            this.planedEndTime = model.planedEndTime;
+            this.planedStartTime = model.planedStartTime;
+            this.queueName = model.queueName;
+            this.state = model.state;
+            this.totalCases = model.totalCases;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * ActualEndTime.

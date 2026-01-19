@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceMigrationAvailableNumbersRequest} extends {@link RequestModel}
  *
  * <p>ReplaceMigrationAvailableNumbersRequest</p>
  */
 public class ReplaceMigrationAvailableNumbersRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OperatorName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperatorName")
     private String operatorName;
 
-    @Query
-    @NameInMap("OperatorUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperatorUid")
     private Long operatorUid;
 
-    @Query
-    @NameInMap("V1Numbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("V1Numbers")
     private String v1Numbers;
 
-    @Query
-    @NameInMap("V2Numbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("V2Numbers")
     private String v2Numbers;
 
     private ReplaceMigrationAvailableNumbersRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class ReplaceMigrationAvailableNumbersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCorpNumberGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCorpNumberGroupResponseBody</p>
  */
 public class CreateCorpNumberGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCorpNumberGroupResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class CreateCorpNumberGroupResponseBody extends TeaModel {
 
     public static CreateCorpNumberGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class CreateCorpNumberGroupResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCorpNumberGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -131,20 +151,26 @@ public class CreateCorpNumberGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCorpNumberGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateCorpNumberGroupResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AliyunUid")
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NumberCount")
+        @com.aliyun.core.annotation.NameInMap("NumberCount")
         private String numberCount;
 
-        @NameInMap("NumberGroupId")
+        @com.aliyun.core.annotation.NameInMap("NumberGroupId")
         private String numberGroupId;
 
-        @NameInMap("NumberGroupName")
+        @com.aliyun.core.annotation.NameInMap("NumberGroupName")
         private String numberGroupName;
 
         private Data(Builder builder) {
@@ -204,6 +230,17 @@ public class CreateCorpNumberGroupResponseBody extends TeaModel {
             private String numberCount; 
             private String numberGroupId; 
             private String numberGroupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunUid = model.aliyunUid;
+                this.description = model.description;
+                this.numberCount = model.numberCount;
+                this.numberGroupId = model.numberGroupId;
+                this.numberGroupName = model.numberGroupName;
+            } 
 
             /**
              * AliyunUid.

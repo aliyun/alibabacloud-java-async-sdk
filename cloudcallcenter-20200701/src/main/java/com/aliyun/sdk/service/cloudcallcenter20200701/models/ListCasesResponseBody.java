@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCasesResponseBody</p>
  */
 public class ListCasesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCasesResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListCasesResponseBody extends TeaModel {
 
     public static ListCasesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListCasesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCasesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -151,29 +172,35 @@ public class ListCasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCasesResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("AbandonType")
+        @com.aliyun.core.annotation.NameInMap("AbandonType")
         private String abandonType;
 
-        @NameInMap("AttemptCount")
+        @com.aliyun.core.annotation.NameInMap("AttemptCount")
         private Long attemptCount;
 
-        @NameInMap("CaseId")
+        @com.aliyun.core.annotation.NameInMap("CaseId")
         private String caseId;
 
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("ExpandInfo")
+        @com.aliyun.core.annotation.NameInMap("ExpandInfo")
         private String expandInfo;
 
-        @NameInMap("FailureReason")
+        @com.aliyun.core.annotation.NameInMap("FailureReason")
         private String failureReason;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private List(Builder builder) {
@@ -261,6 +288,20 @@ public class ListCasesResponseBody extends TeaModel {
             private String phoneNumber; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.abandonType = model.abandonType;
+                this.attemptCount = model.attemptCount;
+                this.caseId = model.caseId;
+                this.customVariables = model.customVariables;
+                this.expandInfo = model.expandInfo;
+                this.failureReason = model.failureReason;
+                this.phoneNumber = model.phoneNumber;
+                this.state = model.state;
+            } 
+
             /**
              * AbandonType.
              */
@@ -332,17 +373,23 @@ public class ListCasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCasesResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -363,7 +410,7 @@ public class ListCasesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -389,15 +436,25 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

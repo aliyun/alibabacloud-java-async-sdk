@@ -1,28 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortCasesRequest} extends {@link RequestModel}
  *
  * <p>AbortCasesRequest</p>
  */
 public class AbortCasesRequest extends Request {
-    @Query
-    @NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
     private String campaignId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumberList")
-    private java.util.List < String > phoneNumberList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberList")
+    private java.util.List<String> phoneNumberList;
 
     private AbortCasesRequest(Builder builder) {
         super(builder);
@@ -39,7 +44,7 @@ public class AbortCasesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +66,14 @@ public class AbortCasesRequest extends Request {
     /**
      * @return phoneNumberList
      */
-    public java.util.List < String > getPhoneNumberList() {
+    public java.util.List<String> getPhoneNumberList() {
         return this.phoneNumberList;
     }
 
     public static final class Builder extends Request.Builder<AbortCasesRequest, Builder> {
         private String campaignId; 
         private String instanceId; 
-        private java.util.List < String > phoneNumberList; 
+        private java.util.List<String> phoneNumberList; 
 
         private Builder() {
             super();
@@ -102,7 +107,7 @@ public class AbortCasesRequest extends Request {
         /**
          * PhoneNumberList.
          */
-        public Builder phoneNumberList(java.util.List < String > phoneNumberList) {
+        public Builder phoneNumberList(java.util.List<String> phoneNumberList) {
             String phoneNumberListShrink = shrink(phoneNumberList, "PhoneNumberList", "json");
             this.putQueryParameter("PhoneNumberList", phoneNumberListShrink);
             this.phoneNumberList = phoneNumberList;

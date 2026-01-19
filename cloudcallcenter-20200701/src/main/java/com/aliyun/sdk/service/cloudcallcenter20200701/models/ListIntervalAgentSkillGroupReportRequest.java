@@ -1,48 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntervalAgentSkillGroupReportRequest} extends {@link RequestModel}
  *
  * <p>ListIntervalAgentSkillGroupReportRequest</p>
  */
 public class ListIntervalAgentSkillGroupReportRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowDefaultIfEmpty")
+    private Boolean showDefaultIfEmpty;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skillGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long startTime;
 
     private ListIntervalAgentSkillGroupReportRequest(Builder builder) {
@@ -52,6 +61,7 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
         this.instanceId = builder.instanceId;
         this.interval = builder.interval;
         this.mediaType = builder.mediaType;
+        this.showDefaultIfEmpty = builder.showDefaultIfEmpty;
         this.skillGroupId = builder.skillGroupId;
         this.startTime = builder.startTime;
     }
@@ -64,7 +74,7 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -105,6 +115,13 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
     }
 
     /**
+     * @return showDefaultIfEmpty
+     */
+    public Boolean getShowDefaultIfEmpty() {
+        return this.showDefaultIfEmpty;
+    }
+
+    /**
      * @return skillGroupId
      */
     public String getSkillGroupId() {
@@ -124,6 +141,7 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
         private String instanceId; 
         private String interval; 
         private String mediaType; 
+        private Boolean showDefaultIfEmpty; 
         private String skillGroupId; 
         private Long startTime; 
 
@@ -138,12 +156,16 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
             this.instanceId = request.instanceId;
             this.interval = request.interval;
             this.mediaType = request.mediaType;
+            this.showDefaultIfEmpty = request.showDefaultIfEmpty;
             this.skillGroupId = request.skillGroupId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * AgentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent@ccc-test</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -161,7 +183,10 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc-test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +213,19 @@ public class ListIntervalAgentSkillGroupReportRequest extends Request {
         }
 
         /**
-         * SkillGroupId.
+         * ShowDefaultIfEmpty.
+         */
+        public Builder showDefaultIfEmpty(Boolean showDefaultIfEmpty) {
+            this.putQueryParameter("ShowDefaultIfEmpty", showDefaultIfEmpty);
+            this.showDefaultIfEmpty = showDefaultIfEmpty;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>skg-default@ccc-test</p>
          */
         public Builder skillGroupId(String skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);

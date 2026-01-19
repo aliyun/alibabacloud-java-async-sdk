@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoricalCampaignReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoricalCampaignReportResponseBody</p>
  */
 public class GetHistoricalCampaignReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHistoricalCampaignReportResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
 
     public static GetHistoricalCampaignReportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHistoricalCampaignReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -131,23 +151,29 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoricalCampaignReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoricalCampaignReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AbandonedRate")
+        @com.aliyun.core.annotation.NameInMap("AbandonedRate")
         private Float abandonedRate;
 
-        @NameInMap("CallsAbandoned")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandoned")
         private Long callsAbandoned;
 
-        @NameInMap("CallsConnected")
+        @com.aliyun.core.annotation.NameInMap("CallsConnected")
         private Long callsConnected;
 
-        @NameInMap("CallsDialed")
+        @com.aliyun.core.annotation.NameInMap("CallsDialed")
         private Long callsDialed;
 
-        @NameInMap("ConnectedRate")
+        @com.aliyun.core.annotation.NameInMap("ConnectedRate")
         private Float connectedRate;
 
-        @NameInMap("OccupancyRate")
+        @com.aliyun.core.annotation.NameInMap("OccupancyRate")
         private Float occupancyRate;
 
         private Data(Builder builder) {
@@ -216,6 +242,18 @@ public class GetHistoricalCampaignReportResponseBody extends TeaModel {
             private Long callsDialed; 
             private Float connectedRate; 
             private Float occupancyRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.abandonedRate = model.abandonedRate;
+                this.callsAbandoned = model.callsAbandoned;
+                this.callsConnected = model.callsConnected;
+                this.callsDialed = model.callsDialed;
+                this.connectedRate = model.connectedRate;
+                this.occupancyRate = model.occupancyRate;
+            } 
 
             /**
              * AbandonedRate.

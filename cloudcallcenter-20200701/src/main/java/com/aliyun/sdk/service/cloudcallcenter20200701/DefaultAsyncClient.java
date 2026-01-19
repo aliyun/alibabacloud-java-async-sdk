@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AbortCampaign  AbortCampaignRequest
+     * @return AbortCampaignResponse
+     */
     @Override
     public CompletableFuture<AbortCampaignResponse> abortCampaign(AbortCampaignRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AbortCases  AbortCasesRequest
+     * @return AbortCasesResponse
+     */
     @Override
     public CompletableFuture<AbortCasesResponse> abortCases(AbortCasesRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckDemoInstanceExists  CheckDemoInstanceExistsRequest
+     * @return CheckDemoInstanceExistsResponse
+     */
     @Override
     public CompletableFuture<CheckDemoInstanceExistsResponse> checkDemoInstanceExists(CheckDemoInstanceExistsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckMQRoleAssumptionAuthority  CheckMQRoleAssumptionAuthorityRequest
+     * @return CheckMQRoleAssumptionAuthorityResponse
+     */
     @Override
     public CompletableFuture<CheckMQRoleAssumptionAuthorityResponse> checkMQRoleAssumptionAuthority(CheckMQRoleAssumptionAuthorityRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCampaign  CreateCampaignRequest
+     * @return CreateCampaignResponse
+     */
     @Override
     public CompletableFuture<CreateCampaignResponse> createCampaign(CreateCampaignRequest request) {
         try {
@@ -109,6 +129,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateChatMediaUrl  CreateChatMediaUrlRequest
+     * @return CreateChatMediaUrlResponse
+     */
+    @Override
+    public CompletableFuture<CreateChatMediaUrlResponse> createChatMediaUrl(CreateChatMediaUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateChatMediaUrl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateChatMediaUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateChatMediaUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCorpNumberGroup  CreateCorpNumberGroupRequest
+     * @return CreateCorpNumberGroupResponse
+     */
     @Override
     public CompletableFuture<CreateCorpNumberGroupResponse> createCorpNumberGroup(CreateCorpNumberGroupRequest request) {
         try {
@@ -123,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDemoInstance  CreateDemoInstanceRequest
+     * @return CreateDemoInstanceResponse
+     */
     @Override
     public CompletableFuture<CreateDemoInstanceResponse> createDemoInstance(CreateDemoInstanceRequest request) {
         try {
@@ -137,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccessChannelOfStaging  GetAccessChannelOfStagingRequest
+     * @return GetAccessChannelOfStagingResponse
+     */
     @Override
     public CompletableFuture<GetAccessChannelOfStagingResponse> getAccessChannelOfStaging(GetAccessChannelOfStagingRequest request) {
         try {
@@ -151,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCampaign  GetCampaignRequest
+     * @return GetCampaignResponse
+     */
     @Override
     public CompletableFuture<GetCampaignResponse> getCampaign(GetCampaignRequest request) {
         try {
@@ -165,6 +219,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDocument  GetDocumentRequest
+     * @return GetDocumentResponse
+     */
+    @Override
+    public CompletableFuture<GetDocumentResponse> getDocument(GetDocumentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDocument").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDocumentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetHistoricalCampaignReport  GetHistoricalCampaignReportRequest
+     * @return GetHistoricalCampaignReportResponse
+     */
     @Override
     public CompletableFuture<GetHistoricalCampaignReportResponse> getHistoricalCampaignReport(GetHistoricalCampaignReportRequest request) {
         try {
@@ -179,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInstanceIdsByAliyunUidV2  GetInstanceIdsByAliyunUidV2Request
+     * @return GetInstanceIdsByAliyunUidV2Response
+     */
     @Override
     public CompletableFuture<GetInstanceIdsByAliyunUidV2Response> getInstanceIdsByAliyunUidV2(GetInstanceIdsByAliyunUidV2Request request) {
         try {
@@ -193,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRealtimeCampaignStats  GetRealtimeCampaignStatsRequest
+     * @return GetRealtimeCampaignStatsResponse
+     */
     @Override
     public CompletableFuture<GetRealtimeCampaignStatsResponse> getRealtimeCampaignStats(GetRealtimeCampaignStatsRequest request) {
         try {
@@ -207,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportAdmins  ImportAdminsRequest
+     * @return ImportAdminsResponse
+     */
     @Override
     public CompletableFuture<ImportAdminsResponse> importAdmins(ImportAdminsRequest request) {
         try {
@@ -221,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IssueSoftphoneCommand  IssueSoftphoneCommandRequest
+     * @return IssueSoftphoneCommandResponse
+     */
     @Override
     public CompletableFuture<IssueSoftphoneCommandResponse> issueSoftphoneCommand(IssueSoftphoneCommandRequest request) {
         try {
@@ -235,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAttempts  ListAttemptsRequest
+     * @return ListAttemptsResponse
+     */
     @Override
     public CompletableFuture<ListAttemptsResponse> listAttempts(ListAttemptsRequest request) {
         try {
@@ -249,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCampaignTrendingReport  ListCampaignTrendingReportRequest
+     * @return ListCampaignTrendingReportResponse
+     */
     @Override
     public CompletableFuture<ListCampaignTrendingReportResponse> listCampaignTrendingReport(ListCampaignTrendingReportRequest request) {
         try {
@@ -263,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCampaigns  ListCampaignsRequest
+     * @return ListCampaignsResponse
+     */
     @Override
     public CompletableFuture<ListCampaignsResponse> listCampaigns(ListCampaignsRequest request) {
         try {
@@ -277,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCases  ListCasesRequest
+     * @return ListCasesResponse
+     */
     @Override
     public CompletableFuture<ListCasesResponse> listCases(ListCasesRequest request) {
         try {
@@ -291,6 +399,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFlashSmsSettings  ListFlashSmsSettingsRequest
+     * @return ListFlashSmsSettingsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlashSmsSettingsResponse> listFlashSmsSettings(ListFlashSmsSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFlashSmsSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlashSmsSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlashSmsSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListHistoricalAgentSkillGroupReport  ListHistoricalAgentSkillGroupReportRequest
+     * @return ListHistoricalAgentSkillGroupReportResponse
+     */
     @Override
     public CompletableFuture<ListHistoricalAgentSkillGroupReportResponse> listHistoricalAgentSkillGroupReport(ListHistoricalAgentSkillGroupReportRequest request) {
         try {
@@ -305,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIntervalAgentSkillGroupReport  ListIntervalAgentSkillGroupReportRequest
+     * @return ListIntervalAgentSkillGroupReportResponse
+     */
     @Override
     public CompletableFuture<ListIntervalAgentSkillGroupReportResponse> listIntervalAgentSkillGroupReport(ListIntervalAgentSkillGroupReportRequest request) {
         try {
@@ -319,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMonoRecordings  ListMonoRecordingsRequest
+     * @return ListMonoRecordingsResponse
+     */
     @Override
     public CompletableFuture<ListMonoRecordingsResponse> listMonoRecordings(ListMonoRecordingsRequest request) {
         try {
@@ -333,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PauseCampaign  PauseCampaignRequest
+     * @return PauseCampaignResponse
+     */
     @Override
     public CompletableFuture<PauseCampaignResponse> pauseCampaign(PauseCampaignRequest request) {
         try {
@@ -347,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ProcessAliMeCallbackOfStaging  ProcessAliMeCallbackOfStagingRequest
+     * @return ProcessAliMeCallbackOfStagingResponse
+     */
     @Override
     public CompletableFuture<ProcessAliMeCallbackOfStagingResponse> processAliMeCallbackOfStaging(ProcessAliMeCallbackOfStagingRequest request) {
         try {
@@ -361,6 +507,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ProcessCustomIMCallback  ProcessCustomIMCallbackRequest
+     * @return ProcessCustomIMCallbackResponse
+     */
+    @Override
+    public CompletableFuture<ProcessCustomIMCallbackResponse> processCustomIMCallback(ProcessCustomIMCallbackRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ProcessCustomIMCallback").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProcessCustomIMCallbackResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProcessCustomIMCallbackResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReplaceMigrationAvailableNumbers  ReplaceMigrationAvailableNumbersRequest
+     * @return ReplaceMigrationAvailableNumbersResponse
+     */
     @Override
     public CompletableFuture<ReplaceMigrationAvailableNumbersResponse> replaceMigrationAvailableNumbers(ReplaceMigrationAvailableNumbersRequest request) {
         try {
@@ -375,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResumeCampaign  ResumeCampaignRequest
+     * @return ResumeCampaignResponse
+     */
     @Override
     public CompletableFuture<ResumeCampaignResponse> resumeCampaign(ResumeCampaignRequest request) {
         try {
@@ -389,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveRTCStatsV2  SaveRTCStatsV2Request
+     * @return SaveRTCStatsV2Response
+     */
     @Override
     public CompletableFuture<SaveRTCStatsV2Response> saveRTCStatsV2(SaveRTCStatsV2Request request) {
         try {
@@ -403,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveTerminalLog  SaveTerminalLogRequest
+     * @return SaveTerminalLogResponse
+     */
     @Override
     public CompletableFuture<SaveTerminalLogResponse> saveTerminalLog(SaveTerminalLogRequest request) {
         try {
@@ -417,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveWebRtcInfo  SaveWebRtcInfoRequest
+     * @return SaveWebRtcInfoResponse
+     */
     @Override
     public CompletableFuture<SaveWebRtcInfoResponse> saveWebRtcInfo(SaveWebRtcInfoRequest request) {
         try {
@@ -431,6 +615,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendNotification  SendNotificationRequest
+     * @return SendNotificationResponse
+     */
+    @Override
+    public CompletableFuture<SendNotificationResponse> sendNotification(SendNotificationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendNotification").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendNotificationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendNotificationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitCampaign  SubmitCampaignRequest
+     * @return SubmitCampaignResponse
+     */
     @Override
     public CompletableFuture<SubmitCampaignResponse> submitCampaign(SubmitCampaignRequest request) {
         try {
@@ -445,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnregisterDevice  UnregisterDeviceRequest
+     * @return UnregisterDeviceResponse
+     */
     @Override
     public CompletableFuture<UnregisterDeviceResponse> unregisterDevice(UnregisterDeviceRequest request) {
         try {

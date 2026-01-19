@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCampaignTrendingReportResponseBody} extends {@link TeaModel}
  *
  * <p>ListCampaignTrendingReportResponseBody</p>
  */
 public class ListCampaignTrendingReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCampaignTrendingReportResponseBody(Builder builder) {
@@ -43,6 +48,10 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,7 +62,7 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,10 +89,21 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCampaignTrendingReportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -96,7 +116,7 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,38 +151,44 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCampaignTrendingReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCampaignTrendingReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BreakAgents")
+        @com.aliyun.core.annotation.NameInMap("BreakAgents")
         private Long breakAgents;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Long concurrency;
 
-        @NameInMap("Datetime")
+        @com.aliyun.core.annotation.NameInMap("Datetime")
         private Long datetime;
 
-        @NameInMap("LoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("LoggedInAgents")
         private Long loggedInAgents;
 
-        @NameInMap("OutboundScenarioBreakingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioBreakingAgents")
         private String outboundScenarioBreakingAgents;
 
-        @NameInMap("OutboundScenarioReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioReadyAgents")
         private String outboundScenarioReadyAgents;
 
-        @NameInMap("OutboundScenarioTalkingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioTalkingAgents")
         private String outboundScenarioTalkingAgents;
 
-        @NameInMap("OutboundScenarioWorkingAgents")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenarioWorkingAgents")
         private String outboundScenarioWorkingAgents;
 
-        @NameInMap("ReadyAgents")
+        @com.aliyun.core.annotation.NameInMap("ReadyAgents")
         private Long readyAgents;
 
-        @NameInMap("TalkAgents")
+        @com.aliyun.core.annotation.NameInMap("TalkAgents")
         private Long talkAgents;
 
-        @NameInMap("WorkAgents")
+        @com.aliyun.core.annotation.NameInMap("WorkAgents")
         private Long workAgents;
 
         private Data(Builder builder) {
@@ -276,6 +302,23 @@ public class ListCampaignTrendingReportResponseBody extends TeaModel {
             private Long readyAgents; 
             private Long talkAgents; 
             private Long workAgents; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.breakAgents = model.breakAgents;
+                this.concurrency = model.concurrency;
+                this.datetime = model.datetime;
+                this.loggedInAgents = model.loggedInAgents;
+                this.outboundScenarioBreakingAgents = model.outboundScenarioBreakingAgents;
+                this.outboundScenarioReadyAgents = model.outboundScenarioReadyAgents;
+                this.outboundScenarioTalkingAgents = model.outboundScenarioTalkingAgents;
+                this.outboundScenarioWorkingAgents = model.outboundScenarioWorkingAgents;
+                this.readyAgents = model.readyAgents;
+                this.talkAgents = model.talkAgents;
+                this.workAgents = model.workAgents;
+            } 
 
             /**
              * BreakAgents.

@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IssueSoftphoneCommandRequest} extends {@link RequestModel}
  *
  * <p>IssueSoftphoneCommandRequest</p>
  */
 public class IssueSoftphoneCommandRequest extends Request {
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
     private IssueSoftphoneCommandRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class IssueSoftphoneCommandRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class IssueSoftphoneCommandRequest extends Request {
         } 
 
         /**
-         * Data.
+         * <p>This parameter is required.</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);

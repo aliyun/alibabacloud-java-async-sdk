@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveRTCStatsV2Request} extends {@link RequestModel}
  *
  * <p>SaveRTCStatsV2Request</p>
  */
 public class SaveRTCStatsV2Request extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("GeneralInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GeneralInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String generalInfo;
 
-    @Query
-    @NameInMap("GoogAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GoogAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String googAddress;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ReceiverReport")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReceiverReport")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiverReport;
 
-    @Query
-    @NameInMap("SenderReport")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SenderReport")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String senderReport;
 
     private SaveRTCStatsV2Request(Builder builder) {
@@ -60,7 +65,7 @@ public class SaveRTCStatsV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +135,7 @@ public class SaveRTCStatsV2Request extends Request {
         } 
 
         /**
-         * CallId.
+         * <p>This parameter is required.</p>
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -139,7 +144,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * GeneralInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder generalInfo(String generalInfo) {
             this.putQueryParameter("GeneralInfo", generalInfo);
@@ -148,7 +153,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * GoogAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder googAddress(String googAddress) {
             this.putQueryParameter("GoogAddress", googAddress);
@@ -157,7 +162,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -166,7 +171,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * ReceiverReport.
+         * <p>This parameter is required.</p>
          */
         public Builder receiverReport(String receiverReport) {
             this.putQueryParameter("ReceiverReport", receiverReport);
@@ -175,7 +180,7 @@ public class SaveRTCStatsV2Request extends Request {
         }
 
         /**
-         * SenderReport.
+         * <p>This parameter is required.</p>
          */
         public Builder senderReport(String senderReport) {
             this.putQueryParameter("SenderReport", senderReport);

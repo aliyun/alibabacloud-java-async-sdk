@@ -1,20 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcallcenter20200701.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDemoInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDemoInstanceRequest</p>
  */
 public class CreateDemoInstanceRequest extends Request {
-    @Query
-    @NameInMap("OutboundCallWhitelist")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundCallWhitelist")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outboundCallWhitelist;
 
     private CreateDemoInstanceRequest(Builder builder) {
@@ -30,7 +35,7 @@ public class CreateDemoInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -55,7 +60,7 @@ public class CreateDemoInstanceRequest extends Request {
         } 
 
         /**
-         * OutboundCallWhitelist.
+         * <p>This parameter is required.</p>
          */
         public Builder outboundCallWhitelist(String outboundCallWhitelist) {
             this.putQueryParameter("OutboundCallWhitelist", outboundCallWhitelist);
