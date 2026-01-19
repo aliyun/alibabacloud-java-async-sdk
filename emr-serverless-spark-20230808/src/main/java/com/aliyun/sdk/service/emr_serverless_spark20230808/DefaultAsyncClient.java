@@ -688,6 +688,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListLivyComputeSessions  ListLivyComputeSessionsRequest
+     * @return ListLivyComputeSessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListLivyComputeSessionsResponse> listLivyComputeSessions(ListLivyComputeSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLivyComputeSessions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/livycompute/{livyComputeId}/session").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLivyComputeSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLivyComputeSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListLivyComputeToken  ListLivyComputeTokenRequest
      * @return ListLivyComputeTokenResponse
      */

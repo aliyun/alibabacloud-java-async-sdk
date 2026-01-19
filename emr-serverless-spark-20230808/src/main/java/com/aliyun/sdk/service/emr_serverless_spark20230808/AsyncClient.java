@@ -236,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLivyComputeResponse> listLivyCompute(ListLivyComputeRequest request);
 
     /**
+     * @param request the request parameters of ListLivyComputeSessions  ListLivyComputeSessionsRequest
+     * @return ListLivyComputeSessionsResponse
+     */
+    CompletableFuture<ListLivyComputeSessionsResponse> listLivyComputeSessions(ListLivyComputeSessionsRequest request);
+
+    /**
      * @param request the request parameters of ListLivyComputeToken  ListLivyComputeTokenRequest
      * @return ListLivyComputeTokenResponse
      */
