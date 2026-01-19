@@ -554,6 +554,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ObtainCloudAccountRoleAccessCredential  ObtainCloudAccountRoleAccessCredentialRequest
+     * @return ObtainCloudAccountRoleAccessCredentialResponse
+     */
+    @Override
+    public CompletableFuture<ObtainCloudAccountRoleAccessCredentialResponse> obtainCloudAccountRoleAccessCredential(ObtainCloudAccountRoleAccessCredentialRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ObtainCloudAccountRoleAccessCredential").setMethod(HttpMethod.GET).setPathRegex("/v2/{instanceId}/cloudAccountRoles/_/actions/obtainAccessCredential").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ObtainCloudAccountRoleAccessCredentialResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ObtainCloudAccountRoleAccessCredentialResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PatchGroup  PatchGroupRequest
      * @return PatchGroupResponse
      */
