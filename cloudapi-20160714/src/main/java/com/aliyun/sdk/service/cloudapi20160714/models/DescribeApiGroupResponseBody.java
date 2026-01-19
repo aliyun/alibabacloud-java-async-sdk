@@ -911,6 +911,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateValidStart")
         private Long certificateValidStart;
 
+        @com.aliyun.core.annotation.NameInMap("ClientCertSDnPassThrough")
+        private Boolean clientCertSDnPassThrough;
+
         @com.aliyun.core.annotation.NameInMap("CustomDomainType")
         private String customDomainType;
 
@@ -935,6 +938,15 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsHttpRedirectToHttps")
         private Boolean isHttpRedirectToHttps;
 
+        @com.aliyun.core.annotation.NameInMap("SslOcspCacheEnable")
+        private Boolean sslOcspCacheEnable;
+
+        @com.aliyun.core.annotation.NameInMap("SslOcspEnable")
+        private Boolean sslOcspEnable;
+
+        @com.aliyun.core.annotation.NameInMap("SslVerifyDepth")
+        private Integer sslVerifyDepth;
+
         @com.aliyun.core.annotation.NameInMap("WildcardDomainPatterns")
         private String wildcardDomainPatterns;
 
@@ -945,6 +957,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             this.certificateName = builder.certificateName;
             this.certificateValidEnd = builder.certificateValidEnd;
             this.certificateValidStart = builder.certificateValidStart;
+            this.clientCertSDnPassThrough = builder.clientCertSDnPassThrough;
             this.customDomainType = builder.customDomainType;
             this.domainBindingStatus = builder.domainBindingStatus;
             this.domainCNAMEStatus = builder.domainCNAMEStatus;
@@ -953,6 +966,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             this.domainRemark = builder.domainRemark;
             this.domainWebSocketStatus = builder.domainWebSocketStatus;
             this.isHttpRedirectToHttps = builder.isHttpRedirectToHttps;
+            this.sslOcspCacheEnable = builder.sslOcspCacheEnable;
+            this.sslOcspEnable = builder.sslOcspEnable;
+            this.sslVerifyDepth = builder.sslVerifyDepth;
             this.wildcardDomainPatterns = builder.wildcardDomainPatterns;
         }
 
@@ -1004,6 +1020,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Long getCertificateValidStart() {
             return this.certificateValidStart;
+        }
+
+        /**
+         * @return clientCertSDnPassThrough
+         */
+        public Boolean getClientCertSDnPassThrough() {
+            return this.clientCertSDnPassThrough;
         }
 
         /**
@@ -1063,6 +1086,27 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return sslOcspCacheEnable
+         */
+        public Boolean getSslOcspCacheEnable() {
+            return this.sslOcspCacheEnable;
+        }
+
+        /**
+         * @return sslOcspEnable
+         */
+        public Boolean getSslOcspEnable() {
+            return this.sslOcspEnable;
+        }
+
+        /**
+         * @return sslVerifyDepth
+         */
+        public Integer getSslVerifyDepth() {
+            return this.sslVerifyDepth;
+        }
+
+        /**
          * @return wildcardDomainPatterns
          */
         public String getWildcardDomainPatterns() {
@@ -1076,6 +1120,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String certificateName; 
             private Long certificateValidEnd; 
             private Long certificateValidStart; 
+            private Boolean clientCertSDnPassThrough; 
             private String customDomainType; 
             private String domainBindingStatus; 
             private String domainCNAMEStatus; 
@@ -1084,6 +1129,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String domainRemark; 
             private String domainWebSocketStatus; 
             private Boolean isHttpRedirectToHttps; 
+            private Boolean sslOcspCacheEnable; 
+            private Boolean sslOcspEnable; 
+            private Integer sslVerifyDepth; 
             private String wildcardDomainPatterns; 
 
             private Builder() {
@@ -1096,6 +1144,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
                 this.certificateName = model.certificateName;
                 this.certificateValidEnd = model.certificateValidEnd;
                 this.certificateValidStart = model.certificateValidStart;
+                this.clientCertSDnPassThrough = model.clientCertSDnPassThrough;
                 this.customDomainType = model.customDomainType;
                 this.domainBindingStatus = model.domainBindingStatus;
                 this.domainCNAMEStatus = model.domainCNAMEStatus;
@@ -1104,6 +1153,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
                 this.domainRemark = model.domainRemark;
                 this.domainWebSocketStatus = model.domainWebSocketStatus;
                 this.isHttpRedirectToHttps = model.isHttpRedirectToHttps;
+                this.sslOcspCacheEnable = model.sslOcspCacheEnable;
+                this.sslOcspEnable = model.sslOcspEnable;
+                this.sslVerifyDepth = model.sslVerifyDepth;
                 this.wildcardDomainPatterns = model.wildcardDomainPatterns;
             } 
 
@@ -1170,6 +1222,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              */
             public Builder certificateValidStart(Long certificateValidStart) {
                 this.certificateValidStart = certificateValidStart;
+                return this;
+            }
+
+            /**
+             * ClientCertSDnPassThrough.
+             */
+            public Builder clientCertSDnPassThrough(Boolean clientCertSDnPassThrough) {
+                this.clientCertSDnPassThrough = clientCertSDnPassThrough;
                 return this;
             }
 
@@ -1270,6 +1330,30 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              */
             public Builder isHttpRedirectToHttps(Boolean isHttpRedirectToHttps) {
                 this.isHttpRedirectToHttps = isHttpRedirectToHttps;
+                return this;
+            }
+
+            /**
+             * SslOcspCacheEnable.
+             */
+            public Builder sslOcspCacheEnable(Boolean sslOcspCacheEnable) {
+                this.sslOcspCacheEnable = sslOcspCacheEnable;
+                return this;
+            }
+
+            /**
+             * SslOcspEnable.
+             */
+            public Builder sslOcspEnable(Boolean sslOcspEnable) {
+                this.sslOcspEnable = sslOcspEnable;
+                return this;
+            }
+
+            /**
+             * SslVerifyDepth.
+             */
+            public Builder sslVerifyDepth(Integer sslVerifyDepth) {
+                this.sslVerifyDepth = sslVerifyDepth;
                 return this;
             }
 
