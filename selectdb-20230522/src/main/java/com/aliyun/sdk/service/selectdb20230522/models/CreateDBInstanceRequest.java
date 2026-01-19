@@ -44,6 +44,10 @@ public class CreateDBInstanceRequest extends Request {
     private String clusterNodeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigPatternType")
+    private String configPatternType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
@@ -133,6 +137,7 @@ public class CreateDBInstanceRequest extends Request {
         this.clientToken = builder.clientToken;
         this.clusterNodeCount = builder.clusterNodeCount;
         this.clusterNodeType = builder.clusterNodeType;
+        this.configPatternType = builder.configPatternType;
         this.connectionString = builder.connectionString;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
@@ -207,6 +212,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getClusterNodeType() {
         return this.clusterNodeType;
+    }
+
+    /**
+     * @return configPatternType
+     */
+    public String getConfigPatternType() {
+        return this.configPatternType;
     }
 
     /**
@@ -349,6 +361,7 @@ public class CreateDBInstanceRequest extends Request {
         private String clientToken; 
         private Integer clusterNodeCount; 
         private String clusterNodeType; 
+        private String configPatternType; 
         private String connectionString; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
@@ -381,6 +394,7 @@ public class CreateDBInstanceRequest extends Request {
             this.clientToken = request.clientToken;
             this.clusterNodeCount = request.clusterNodeCount;
             this.clusterNodeType = request.clusterNodeType;
+            this.configPatternType = request.configPatternType;
             this.connectionString = request.connectionString;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
@@ -475,6 +489,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder clusterNodeType(String clusterNodeType) {
             this.putQueryParameter("ClusterNodeType", clusterNodeType);
             this.clusterNodeType = clusterNodeType;
+            return this;
+        }
+
+        /**
+         * ConfigPatternType.
+         */
+        public Builder configPatternType(String configPatternType) {
+            this.putQueryParameter("ConfigPatternType", configPatternType);
+            this.configPatternType = configPatternType;
             return this;
         }
 

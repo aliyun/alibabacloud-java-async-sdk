@@ -23,6 +23,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
+    @com.aliyun.core.annotation.NameInMap("ConfigPatternType")
+    private String configPatternType;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -116,6 +119,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
         this.canUpgradeVersions = builder.canUpgradeVersions;
         this.chargeType = builder.chargeType;
+        this.configPatternType = builder.configPatternType;
         this.createTime = builder.createTime;
         this.DBClusterList = builder.DBClusterList;
         this.DBInstanceId = builder.DBInstanceId;
@@ -172,6 +176,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return configPatternType
+     */
+    public String getConfigPatternType() {
+        return this.configPatternType;
     }
 
     /**
@@ -387,6 +398,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> canUpgradeVersions; 
         private String chargeType; 
+        private String configPatternType; 
         private String createTime; 
         private java.util.List<DBClusterList> DBClusterList; 
         private String DBInstanceId; 
@@ -424,6 +436,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private Builder(DescribeDBInstanceAttributeResponseBody model) {
             this.canUpgradeVersions = model.canUpgradeVersions;
             this.chargeType = model.chargeType;
+            this.configPatternType = model.configPatternType;
             this.createTime = model.createTime;
             this.DBClusterList = model.DBClusterList;
             this.DBInstanceId = model.DBInstanceId;
@@ -476,6 +489,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ConfigPatternType.
+         */
+        public Builder configPatternType(String configPatternType) {
+            this.configPatternType = configPatternType;
             return this;
         }
 
