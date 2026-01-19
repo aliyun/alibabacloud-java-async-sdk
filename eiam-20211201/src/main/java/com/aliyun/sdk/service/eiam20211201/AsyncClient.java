@@ -62,6 +62,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AuthorizeApplicationToUsersResponse> authorizeApplicationToUsers(AuthorizeApplicationToUsersRequest request);
 
     /**
+     * @param request the request parameters of AuthorizeResourceServerScopesToClient  AuthorizeResourceServerScopesToClientRequest
+     * @return AuthorizeResourceServerScopesToClientResponse
+     */
+    CompletableFuture<AuthorizeResourceServerScopesToClientResponse> authorizeResourceServerScopesToClient(AuthorizeResourceServerScopesToClientRequest request);
+
+    /**
+     * @param request the request parameters of AuthorizeResourceServerScopesToGroup  AuthorizeResourceServerScopesToGroupRequest
+     * @return AuthorizeResourceServerScopesToGroupResponse
+     */
+    CompletableFuture<AuthorizeResourceServerScopesToGroupResponse> authorizeResourceServerScopesToGroup(AuthorizeResourceServerScopesToGroupRequest request);
+
+    /**
+     * @param request the request parameters of AuthorizeResourceServerScopesToOrganizationalUnit  AuthorizeResourceServerScopesToOrganizationalUnitRequest
+     * @return AuthorizeResourceServerScopesToOrganizationalUnitResponse
+     */
+    CompletableFuture<AuthorizeResourceServerScopesToOrganizationalUnitResponse> authorizeResourceServerScopesToOrganizationalUnit(AuthorizeResourceServerScopesToOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of AuthorizeResourceServerScopesToUser  AuthorizeResourceServerScopesToUserRequest
+     * @return AuthorizeResourceServerScopesToUserResponse
+     */
+    CompletableFuture<AuthorizeResourceServerScopesToUserResponse> authorizeResourceServerScopesToUser(AuthorizeResourceServerScopesToUserRequest request);
+
+    /**
+     * @param request the request parameters of AuthorizeResourceServerToClient  AuthorizeResourceServerToClientRequest
+     * @return AuthorizeResourceServerToClientResponse
+     */
+    CompletableFuture<AuthorizeResourceServerToClientResponse> authorizeResourceServerToClient(AuthorizeResourceServerToClientRequest request);
+
+    /**
      * @param request the request parameters of BindUserAuthnSourceMapping  BindUserAuthnSourceMappingRequest
      * @return BindUserAuthnSourceMappingResponse
      */
@@ -89,6 +119,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationFederatedCredentialResponse> createApplicationFederatedCredential(CreateApplicationFederatedCredentialRequest request);
 
     /**
+     * @param request the request parameters of CreateApplicationRole  CreateApplicationRoleRequest
+     * @return CreateApplicationRoleResponse
+     */
+    CompletableFuture<CreateApplicationRoleResponse> createApplicationRole(CreateApplicationRoleRequest request);
+
+    /**
      * @param request the request parameters of CreateApplicationToken  CreateApplicationTokenRequest
      * @return CreateApplicationTokenResponse
      */
@@ -99,6 +135,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateBrandResponse
      */
     CompletableFuture<CreateBrandResponse> createBrand(CreateBrandRequest request);
+
+    /**
+     * @param request the request parameters of CreateClientPublicKey  CreateClientPublicKeyRequest
+     * @return CreateClientPublicKeyResponse
+     */
+    CompletableFuture<CreateClientPublicKeyResponse> createClientPublicKey(CreateClientPublicKeyRequest request);
+
+    /**
+     * @param request the request parameters of CreateCloudAccount  CreateCloudAccountRequest
+     * @return CreateCloudAccountResponse
+     */
+    CompletableFuture<CreateCloudAccountResponse> createCloudAccount(CreateCloudAccountRequest request);
+
+    /**
+     * @param request the request parameters of CreateCloudAccountRole  CreateCloudAccountRoleRequest
+     * @return CreateCloudAccountRoleResponse
+     */
+    CompletableFuture<CreateCloudAccountRoleResponse> createCloudAccountRole(CreateCloudAccountRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -176,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOrganizationalUnitResponse> createOrganizationalUnit(CreateOrganizationalUnitRequest request);
 
     /**
+     * @param request the request parameters of CreateResourceServerScope  CreateResourceServerScopeRequest
+     * @return CreateResourceServerScopeResponse
+     */
+    CompletableFuture<CreateResourceServerScopeResponse> createResourceServerScope(CreateResourceServerScopeRequest request);
+
+    /**
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -203,6 +263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApplicationFederatedCredentialResponse> deleteApplicationFederatedCredential(DeleteApplicationFederatedCredentialRequest request);
 
     /**
+     * @param request the request parameters of DeleteApplicationRole  DeleteApplicationRoleRequest
+     * @return DeleteApplicationRoleResponse
+     */
+    CompletableFuture<DeleteApplicationRoleResponse> deleteApplicationRole(DeleteApplicationRoleRequest request);
+
+    /**
      * @param request the request parameters of DeleteApplicationToken  DeleteApplicationTokenRequest
      * @return DeleteApplicationTokenResponse
      */
@@ -213,6 +279,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteBrandResponse
      */
     CompletableFuture<DeleteBrandResponse> deleteBrand(DeleteBrandRequest request);
+
+    /**
+     * @param request the request parameters of DeleteClientPublicKey  DeleteClientPublicKeyRequest
+     * @return DeleteClientPublicKeyResponse
+     */
+    CompletableFuture<DeleteClientPublicKeyResponse> deleteClientPublicKey(DeleteClientPublicKeyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudAccount  DeleteCloudAccountRequest
+     * @return DeleteCloudAccountResponse
+     */
+    CompletableFuture<DeleteCloudAccountResponse> deleteCloudAccount(DeleteCloudAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudAccountRole  DeleteCloudAccountRoleRequest
+     * @return DeleteCloudAccountRoleResponse
+     */
+    CompletableFuture<DeleteCloudAccountRoleResponse> deleteCloudAccountRole(DeleteCloudAccountRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -293,6 +377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteOrganizationalUnitChildrenResponse> deleteOrganizationalUnitChildren(DeleteOrganizationalUnitChildrenRequest request);
 
     /**
+     * @param request the request parameters of DeleteResourceServerScope  DeleteResourceServerScopeRequest
+     * @return DeleteResourceServerScopeResponse
+     */
+    CompletableFuture<DeleteResourceServerScopeResponse> deleteResourceServerScope(DeleteResourceServerScopeRequest request);
+
+    /**
      * @param request the request parameters of DeleteUser  DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -338,10 +428,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationFederatedCredentialResponse> disableApplicationFederatedCredential(DisableApplicationFederatedCredentialRequest request);
 
     /**
+     * @param request the request parameters of DisableApplicationM2MClient  DisableApplicationM2MClientRequest
+     * @return DisableApplicationM2MClientResponse
+     */
+    CompletableFuture<DisableApplicationM2MClientResponse> disableApplicationM2MClient(DisableApplicationM2MClientRequest request);
+
+    /**
      * @param request the request parameters of DisableApplicationProvisioning  DisableApplicationProvisioningRequest
      * @return DisableApplicationProvisioningResponse
      */
     CompletableFuture<DisableApplicationProvisioningResponse> disableApplicationProvisioning(DisableApplicationProvisioningRequest request);
+
+    /**
+     * @param request the request parameters of DisableApplicationResourceServer  DisableApplicationResourceServerRequest
+     * @return DisableApplicationResourceServerResponse
+     */
+    CompletableFuture<DisableApplicationResourceServerResponse> disableApplicationResourceServer(DisableApplicationResourceServerRequest request);
 
     /**
      * @param request the request parameters of DisableApplicationSso  DisableApplicationSsoRequest
@@ -360,6 +462,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableBrandResponse
      */
     CompletableFuture<DisableBrandResponse> disableBrand(DisableBrandRequest request);
+
+    /**
+     * @param request the request parameters of DisableClientPublicKey  DisableClientPublicKeyRequest
+     * @return DisableClientPublicKeyResponse
+     */
+    CompletableFuture<DisableClientPublicKeyResponse> disableClientPublicKey(DisableClientPublicKeyRequest request);
+
+    /**
+     * @param request the request parameters of DisableCloudAccountRole  DisableCloudAccountRoleRequest
+     * @return DisableCloudAccountRoleResponse
+     */
+    CompletableFuture<DisableCloudAccountRoleResponse> disableCloudAccountRole(DisableCloudAccountRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -419,6 +533,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableInternalAuthenticationSourceResponse> disableInternalAuthenticationSource(DisableInternalAuthenticationSourceRequest request);
 
     /**
+     * @param request the request parameters of DisableResourceServerCustomSubject  DisableResourceServerCustomSubjectRequest
+     * @return DisableResourceServerCustomSubjectResponse
+     */
+    CompletableFuture<DisableResourceServerCustomSubjectResponse> disableResourceServerCustomSubject(DisableResourceServerCustomSubjectRequest request);
+
+    /**
      * @param request the request parameters of DisableUser  DisableUserRequest
      * @return DisableUserResponse
      */
@@ -449,10 +569,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableApplicationFederatedCredentialResponse> enableApplicationFederatedCredential(EnableApplicationFederatedCredentialRequest request);
 
     /**
+     * @param request the request parameters of EnableApplicationM2MClient  EnableApplicationM2MClientRequest
+     * @return EnableApplicationM2MClientResponse
+     */
+    CompletableFuture<EnableApplicationM2MClientResponse> enableApplicationM2MClient(EnableApplicationM2MClientRequest request);
+
+    /**
      * @param request the request parameters of EnableApplicationProvisioning  EnableApplicationProvisioningRequest
      * @return EnableApplicationProvisioningResponse
      */
     CompletableFuture<EnableApplicationProvisioningResponse> enableApplicationProvisioning(EnableApplicationProvisioningRequest request);
+
+    /**
+     * @param request the request parameters of EnableApplicationResourceServer  EnableApplicationResourceServerRequest
+     * @return EnableApplicationResourceServerResponse
+     */
+    CompletableFuture<EnableApplicationResourceServerResponse> enableApplicationResourceServer(EnableApplicationResourceServerRequest request);
 
     /**
      * @param request the request parameters of EnableApplicationSso  EnableApplicationSsoRequest
@@ -471,6 +603,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableBrandResponse
      */
     CompletableFuture<EnableBrandResponse> enableBrand(EnableBrandRequest request);
+
+    /**
+     * @param request the request parameters of EnableClientPublicKey  EnableClientPublicKeyRequest
+     * @return EnableClientPublicKeyResponse
+     */
+    CompletableFuture<EnableClientPublicKeyResponse> enableClientPublicKey(EnableClientPublicKeyRequest request);
+
+    /**
+     * @param request the request parameters of EnableCloudAccountRole  EnableCloudAccountRoleRequest
+     * @return EnableCloudAccountRoleResponse
+     */
+    CompletableFuture<EnableCloudAccountRoleResponse> enableCloudAccountRole(EnableCloudAccountRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -528,6 +672,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableInternalAuthenticationSourceResponse
      */
     CompletableFuture<EnableInternalAuthenticationSourceResponse> enableInternalAuthenticationSource(EnableInternalAuthenticationSourceRequest request);
+
+    /**
+     * @param request the request parameters of EnableResourceServerCustomSubject  EnableResourceServerCustomSubjectRequest
+     * @return EnableResourceServerCustomSubjectResponse
+     */
+    CompletableFuture<EnableResourceServerCustomSubjectResponse> enableResourceServerCustomSubject(EnableResourceServerCustomSubjectRequest request);
 
     /**
      * @param request the request parameters of EnableUser  EnableUserRequest
@@ -590,6 +740,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationRole  GetApplicationRoleRequest
+     * @return GetApplicationRoleResponse
+     */
+    CompletableFuture<GetApplicationRoleResponse> getApplicationRole(GetApplicationRoleRequest request);
+
+    /**
      * @param request the request parameters of GetApplicationSsoConfig  GetApplicationSsoConfigRequest
      * @return GetApplicationSsoConfigResponse
      */
@@ -606,6 +762,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetBrandResponse
      */
     CompletableFuture<GetBrandResponse> getBrand(GetBrandRequest request);
+
+    /**
+     * @param request the request parameters of GetClientPublicKey  GetClientPublicKeyRequest
+     * @return GetClientPublicKeyResponse
+     */
+    CompletableFuture<GetClientPublicKeyResponse> getClientPublicKey(GetClientPublicKeyRequest request);
+
+    /**
+     * @param request the request parameters of GetCloudAccount  GetCloudAccountRequest
+     * @return GetCloudAccountResponse
+     */
+    CompletableFuture<GetCloudAccountResponse> getCloudAccount(GetCloudAccountRequest request);
+
+    /**
+     * @param request the request parameters of GetCloudAccountRole  GetCloudAccountRoleRequest
+     * @return GetCloudAccountRoleResponse
+     */
+    CompletableFuture<GetCloudAccountRoleResponse> getCloudAccountRole(GetCloudAccountRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -728,6 +902,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPasswordInitializationConfigurationResponse> getPasswordInitializationConfiguration(GetPasswordInitializationConfigurationRequest request);
 
     /**
+     * @param request the request parameters of GetResourceServerScope  GetResourceServerScopeRequest
+     * @return GetResourceServerScopeResponse
+     */
+    CompletableFuture<GetResourceServerScopeResponse> getResourceServerScope(GetResourceServerScopeRequest request);
+
+    /**
      * @param request the request parameters of GetRootOrganizationalUnit  GetRootOrganizationalUnitRequest
      * @return GetRootOrganizationalUnitResponse
      */
@@ -774,6 +954,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationFederatedCredentialsForProviderResponse
      */
     CompletableFuture<ListApplicationFederatedCredentialsForProviderResponse> listApplicationFederatedCredentialsForProvider(ListApplicationFederatedCredentialsForProviderRequest request);
+
+    /**
+     * @param request the request parameters of ListApplicationRoles  ListApplicationRolesRequest
+     * @return ListApplicationRolesResponse
+     */
+    CompletableFuture<ListApplicationRolesResponse> listApplicationRoles(ListApplicationRolesRequest request);
 
     /**
      * @param request the request parameters of ListApplicationSupportedProvisionProtocolTypes  ListApplicationSupportedProvisionProtocolTypesRequest
@@ -831,6 +1017,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBrandsResponse
      */
     CompletableFuture<ListBrandsResponse> listBrands(ListBrandsRequest request);
+
+    /**
+     * @param request the request parameters of ListClientPublicKeys  ListClientPublicKeysRequest
+     * @return ListClientPublicKeysResponse
+     */
+    CompletableFuture<ListClientPublicKeysResponse> listClientPublicKeys(ListClientPublicKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudAccountRoles  ListCloudAccountRolesRequest
+     * @return ListCloudAccountRolesResponse
+     */
+    CompletableFuture<ListCloudAccountRolesResponse> listCloudAccountRoles(ListCloudAccountRolesRequest request);
+
+    /**
+     * @param request the request parameters of ListCloudAccounts  ListCloudAccountsRequest
+     * @return ListCloudAccountsResponse
+     */
+    CompletableFuture<ListCloudAccountsResponse> listCloudAccounts(ListCloudAccountsRequest request);
 
     /**
      * <b>description</b> :
@@ -917,6 +1121,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupsForApplicationResponse> listGroupsForApplication(ListGroupsForApplicationRequest request);
 
     /**
+     * @param request the request parameters of ListGroupsForResourceServer  ListGroupsForResourceServerRequest
+     * @return ListGroupsForResourceServerResponse
+     */
+    CompletableFuture<ListGroupsForResourceServerResponse> listGroupsForResourceServer(ListGroupsForResourceServerRequest request);
+
+    /**
      * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
      */
@@ -989,10 +1199,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOrganizationalUnitsForApplicationResponse> listOrganizationalUnitsForApplication(ListOrganizationalUnitsForApplicationRequest request);
 
     /**
+     * @param request the request parameters of ListOrganizationalUnitsForResourceServer  ListOrganizationalUnitsForResourceServerRequest
+     * @return ListOrganizationalUnitsForResourceServerResponse
+     */
+    CompletableFuture<ListOrganizationalUnitsForResourceServerResponse> listOrganizationalUnitsForResourceServer(ListOrganizationalUnitsForResourceServerRequest request);
+
+    /**
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
      */
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    /**
+     * @param request the request parameters of ListResourceServersForUser  ListResourceServersForUserRequest
+     * @return ListResourceServersForUserResponse
+     */
+    CompletableFuture<ListResourceServersForUserResponse> listResourceServersForUser(ListResourceServersForUserRequest request);
 
     /**
      * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
@@ -1023,6 +1245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUsersForGroupResponse
      */
     CompletableFuture<ListUsersForGroupResponse> listUsersForGroup(ListUsersForGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListUsersForResourceServer  ListUsersForResourceServerRequest
+     * @return ListUsersForResourceServerResponse
+     */
+    CompletableFuture<ListUsersForResourceServerResponse> listUsersForResourceServer(ListUsersForResourceServerRequest request);
 
     /**
      * @param request the request parameters of ObtainApplicationClientSecret  ObtainApplicationClientSecretRequest
@@ -1085,6 +1313,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeApplicationFromUsersResponse> revokeApplicationFromUsers(RevokeApplicationFromUsersRequest request);
 
     /**
+     * @param request the request parameters of RevokeResourceServerFromClient  RevokeResourceServerFromClientRequest
+     * @return RevokeResourceServerFromClientResponse
+     */
+    CompletableFuture<RevokeResourceServerFromClientResponse> revokeResourceServerFromClient(RevokeResourceServerFromClientRequest request);
+
+    /**
+     * @param request the request parameters of RevokeResourceServerScopesFromClient  RevokeResourceServerScopesFromClientRequest
+     * @return RevokeResourceServerScopesFromClientResponse
+     */
+    CompletableFuture<RevokeResourceServerScopesFromClientResponse> revokeResourceServerScopesFromClient(RevokeResourceServerScopesFromClientRequest request);
+
+    /**
+     * @param request the request parameters of RevokeResourceServerScopesFromGroup  RevokeResourceServerScopesFromGroupRequest
+     * @return RevokeResourceServerScopesFromGroupResponse
+     */
+    CompletableFuture<RevokeResourceServerScopesFromGroupResponse> revokeResourceServerScopesFromGroup(RevokeResourceServerScopesFromGroupRequest request);
+
+    /**
+     * @param request the request parameters of RevokeResourceServerScopesFromOrganizationalUnit  RevokeResourceServerScopesFromOrganizationalUnitRequest
+     * @return RevokeResourceServerScopesFromOrganizationalUnitResponse
+     */
+    CompletableFuture<RevokeResourceServerScopesFromOrganizationalUnitResponse> revokeResourceServerScopesFromOrganizationalUnit(RevokeResourceServerScopesFromOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of RevokeResourceServerScopesFromUser  RevokeResourceServerScopesFromUserRequest
+     * @return RevokeResourceServerScopesFromUserResponse
+     */
+    CompletableFuture<RevokeResourceServerScopesFromUserResponse> revokeResourceServerScopesFromUser(RevokeResourceServerScopesFromUserRequest request);
+
+    /**
      * @param request the request parameters of RunSynchronizationJob  RunSynchronizationJobRequest
      * @return RunSynchronizationJobResponse
      */
@@ -1113,6 +1371,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
      */
     CompletableFuture<SetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> setApplicationProvisioningUserPrimaryOrganizationalUnit(SetApplicationProvisioningUserPrimaryOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of SetApplicationResourceServerIdentifier  SetApplicationResourceServerIdentifierRequest
+     * @return SetApplicationResourceServerIdentifierResponse
+     */
+    CompletableFuture<SetApplicationResourceServerIdentifierResponse> setApplicationResourceServerIdentifier(SetApplicationResourceServerIdentifierRequest request);
 
     /**
      * <b>description</b> :
@@ -1170,6 +1434,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetPasswordInitializationConfigurationResponse
      */
     CompletableFuture<SetPasswordInitializationConfigurationResponse> setPasswordInitializationConfiguration(SetPasswordInitializationConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of SetPrimaryClientPublicKey  SetPrimaryClientPublicKeyRequest
+     * @return SetPrimaryClientPublicKeyResponse
+     */
+    CompletableFuture<SetPrimaryClientPublicKeyResponse> setPrimaryClientPublicKey(SetPrimaryClientPublicKeyRequest request);
 
     /**
      * @param request the request parameters of SetUserPrimaryOrganizationalUnit  SetUserPrimaryOrganizationalUnitRequest
@@ -1232,6 +1502,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationInfoResponse> updateApplicationInfo(UpdateApplicationInfoRequest request);
 
     /**
+     * @param request the request parameters of UpdateApplicationRole  UpdateApplicationRoleRequest
+     * @return UpdateApplicationRoleResponse
+     */
+    CompletableFuture<UpdateApplicationRoleResponse> updateApplicationRole(UpdateApplicationRoleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateApplicationRoleDescription  UpdateApplicationRoleDescriptionRequest
+     * @return UpdateApplicationRoleDescriptionResponse
+     */
+    CompletableFuture<UpdateApplicationRoleDescriptionResponse> updateApplicationRoleDescription(UpdateApplicationRoleDescriptionRequest request);
+
+    /**
      * @param request the request parameters of UpdateApplicationSsoFormParams  UpdateApplicationSsoFormParamsRequest
      * @return UpdateApplicationSsoFormParamsResponse
      */
@@ -1248,6 +1530,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateBrandResponse
      */
     CompletableFuture<UpdateBrandResponse> updateBrand(UpdateBrandRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCloudAccount  UpdateCloudAccountRequest
+     * @return UpdateCloudAccountResponse
+     */
+    CompletableFuture<UpdateCloudAccountResponse> updateCloudAccount(UpdateCloudAccountRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCloudAccountDescription  UpdateCloudAccountDescriptionRequest
+     * @return UpdateCloudAccountDescriptionResponse
+     */
+    CompletableFuture<UpdateCloudAccountDescriptionResponse> updateCloudAccountDescription(UpdateCloudAccountDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCloudAccountRoleDescription  UpdateCloudAccountRoleDescriptionRequest
+     * @return UpdateCloudAccountRoleDescriptionResponse
+     */
+    CompletableFuture<UpdateCloudAccountRoleDescriptionResponse> updateCloudAccountRoleDescription(UpdateCloudAccountRoleDescriptionRequest request);
 
     /**
      * <b>description</b> :
@@ -1356,6 +1656,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateOrganizationalUnitParentIdResponse
      */
     CompletableFuture<UpdateOrganizationalUnitParentIdResponse> updateOrganizationalUnitParentId(UpdateOrganizationalUnitParentIdRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResourceServerScope  UpdateResourceServerScopeRequest
+     * @return UpdateResourceServerScopeResponse
+     */
+    CompletableFuture<UpdateResourceServerScopeResponse> updateResourceServerScope(UpdateResourceServerScopeRequest request);
 
     /**
      * @param request the request parameters of UpdateUser  UpdateUserRequest
