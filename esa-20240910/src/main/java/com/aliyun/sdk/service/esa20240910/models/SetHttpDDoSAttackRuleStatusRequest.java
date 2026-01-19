@@ -90,6 +90,10 @@ public class SetHttpDDoSAttackRuleStatusRequest extends Request {
         } 
 
         /**
+         * <p>List of rule IDs to be operated on, separated by English commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeHttpDDoSAttackRules~~">DescribeHttpDDoSAttackRules</a> interface to get this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +106,7 @@ public class SetHttpDDoSAttackRuleStatusRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +119,11 @@ public class SetHttpDDoSAttackRuleStatusRequest extends Request {
         }
 
         /**
+         * <p>Rule status</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable.</li>
+         * <li><strong>off</strong>: Disable.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

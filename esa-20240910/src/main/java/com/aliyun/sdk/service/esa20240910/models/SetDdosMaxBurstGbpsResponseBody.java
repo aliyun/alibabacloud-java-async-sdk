@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SetHttpDDoSAttackRuleActionResponseBody} extends {@link TeaModel}
+ * {@link SetDdosMaxBurstGbpsResponseBody} extends {@link TeaModel}
  *
- * <p>SetHttpDDoSAttackRuleActionResponseBody</p>
+ * <p>SetDdosMaxBurstGbpsResponseBody</p>
  */
-public class SetHttpDDoSAttackRuleActionResponseBody extends TeaModel {
+public class SetDdosMaxBurstGbpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SetHttpDDoSAttackRuleActionResponseBody(Builder builder) {
+    private SetDdosMaxBurstGbpsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class SetHttpDDoSAttackRuleActionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SetHttpDDoSAttackRuleActionResponseBody create() {
+    public static SetDdosMaxBurstGbpsResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class SetHttpDDoSAttackRuleActionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SetHttpDDoSAttackRuleActionResponseBody model) {
+        private Builder(SetDdosMaxBurstGbpsResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>Request ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>C370DAF1-C838-4288-A1A0-9A87633D2***</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public SetHttpDDoSAttackRuleActionResponseBody build() {
-            return new SetHttpDDoSAttackRuleActionResponseBody(this);
+        public SetDdosMaxBurstGbpsResponseBody build() {
+            return new SetDdosMaxBurstGbpsResponseBody(this);
         } 
 
     } 

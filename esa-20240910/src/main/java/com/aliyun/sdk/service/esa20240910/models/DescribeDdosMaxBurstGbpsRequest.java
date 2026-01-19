@@ -12,24 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteUserWafRulesetRequest} extends {@link RequestModel}
+ * {@link DescribeDdosMaxBurstGbpsRequest} extends {@link RequestModel}
  *
- * <p>DeleteUserWafRulesetRequest</p>
+ * <p>DescribeDdosMaxBurstGbpsRequest</p>
  */
-public class DeleteUserWafRulesetRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Id")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long id;
-
+public class DescribeDdosMaxBurstGbpsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private DeleteUserWafRulesetRequest(Builder builder) {
+    private DescribeDdosMaxBurstGbpsRequest(Builder builder) {
         super(builder);
-        this.id = builder.id;
         this.instanceId = builder.instanceId;
     }
 
@@ -37,7 +31,7 @@ public class DeleteUserWafRulesetRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteUserWafRulesetRequest create() {
+    public static DescribeDdosMaxBurstGbpsRequest create() {
         return builder().build();
     }
 
@@ -47,52 +41,29 @@ public class DeleteUserWafRulesetRequest extends Request {
     }
 
     /**
-     * @return id
-     */
-    public Long getId() {
-        return this.id;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteUserWafRulesetRequest, Builder> {
-        private Long id; 
+    public static final class Builder extends Request.Builder<DescribeDdosMaxBurstGbpsRequest, Builder> {
         private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteUserWafRulesetRequest request) {
+        private Builder(DescribeDdosMaxBurstGbpsRequest request) {
             super(request);
-            this.id = request.id;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * <p>WAF ruleset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10000001</p>
-         */
-        public Builder id(Long id) {
-            this.putBodyParameter("Id", id);
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * <p>Instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>esa-xxxxxxx</p>
+         * <p>esa-site-a71k7bw19dz4</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,8 +72,8 @@ public class DeleteUserWafRulesetRequest extends Request {
         }
 
         @Override
-        public DeleteUserWafRulesetRequest build() {
-            return new DeleteUserWafRulesetRequest(this);
+        public DescribeDdosMaxBurstGbpsRequest build() {
+            return new DescribeDdosMaxBurstGbpsRequest(this);
         } 
 
     } 

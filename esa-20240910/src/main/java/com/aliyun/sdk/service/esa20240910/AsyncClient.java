@@ -735,16 +735,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteUserWafRuleset  DeleteUserWafRulesetRequest
@@ -813,6 +806,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDDoSL7QpsListResponse> describeDDoSL7QpsList(DescribeDDoSL7QpsListRequest request);
 
     /**
+     * @param request the request parameters of DescribeDdosMaxBurstGbps  DescribeDdosMaxBurstGbpsRequest
+     * @return DescribeDdosMaxBurstGbpsResponse
+     */
+    CompletableFuture<DescribeDdosMaxBurstGbpsResponse> describeDdosMaxBurstGbps(DescribeDdosMaxBurstGbpsRequest request);
+
+    /**
      * @param request the request parameters of DescribeEdgeContainerAppStats  DescribeEdgeContainerAppStatsRequest
      * @return DescribeEdgeContainerAppStatsResponse
      */
@@ -829,6 +828,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHttpDDoSAttackProtectionResponse
      */
     CompletableFuture<DescribeHttpDDoSAttackProtectionResponse> describeHttpDDoSAttackProtection(DescribeHttpDDoSAttackProtectionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHttpDDoSAttackRules  DescribeHttpDDoSAttackRulesRequest
+     * @return DescribeHttpDDoSAttackRulesResponse
+     */
+    CompletableFuture<DescribeHttpDDoSAttackRulesResponse> describeHttpDDoSAttackRules(DescribeHttpDDoSAttackRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHttpDDoSIntelligentAclRules  DescribeHttpDDoSIntelligentAclRulesRequest
+     * @return DescribeHttpDDoSIntelligentAclRulesResponse
+     */
+    CompletableFuture<DescribeHttpDDoSIntelligentAclRulesResponse> describeHttpDDoSIntelligentAclRules(DescribeHttpDDoSIntelligentAclRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHttpDDoSIntelligentRateLimitRules  DescribeHttpDDoSIntelligentRateLimitRulesRequest
+     * @return DescribeHttpDDoSIntelligentRateLimitRulesResponse
+     */
+    CompletableFuture<DescribeHttpDDoSIntelligentRateLimitRulesResponse> describeHttpDDoSIntelligentRateLimitRules(DescribeHttpDDoSIntelligentRateLimitRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeKvAccountStatus  DescribeKvAccountStatusRequest
@@ -2002,6 +2019,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetClientCertificateHostnamesResponse
      */
     CompletableFuture<SetClientCertificateHostnamesResponse> setClientCertificateHostnames(SetClientCertificateHostnamesRequest request);
+
+    /**
+     * @param request the request parameters of SetDdosMaxBurstGbps  SetDdosMaxBurstGbpsRequest
+     * @return SetDdosMaxBurstGbpsResponse
+     */
+    CompletableFuture<SetDdosMaxBurstGbpsResponse> setDdosMaxBurstGbps(SetDdosMaxBurstGbpsRequest request);
 
     /**
      * @param request the request parameters of SetHttpDDoSAttackIntelligentProtection  SetHttpDDoSAttackIntelligentProtectionRequest

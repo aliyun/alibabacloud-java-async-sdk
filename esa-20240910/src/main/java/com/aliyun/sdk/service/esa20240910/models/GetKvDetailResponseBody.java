@@ -80,7 +80,10 @@ public class GetKvDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * ExpirationTtl.
+         * <p>The expiration time of the key. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder expirationTtl(String expirationTtl) {
             this.expirationTtl = expirationTtl;
@@ -88,7 +91,10 @@ public class GetKvDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The expiration time of the key. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class GetKvDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the key. The value of the root node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         public Builder value(String value) {
             this.value = value;

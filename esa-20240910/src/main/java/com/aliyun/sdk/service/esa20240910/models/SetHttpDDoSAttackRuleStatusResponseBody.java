@@ -54,7 +54,7 @@ public class SetHttpDDoSAttackRuleStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F7B84CF8-F8A4-53F8-9B91-2643FD72042B</p>

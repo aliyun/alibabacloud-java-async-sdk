@@ -90,6 +90,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends Request {
         } 
 
         /**
+         * <p>Record name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends Request {
         }
 
         /**
+         * <p>Rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteHttpDDoSIntelligentRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

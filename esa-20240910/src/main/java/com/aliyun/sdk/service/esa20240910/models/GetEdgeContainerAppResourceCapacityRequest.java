@@ -60,6 +60,7 @@ public class GetEdgeContainerAppResourceCapacityRequest extends Request {
         } 
 
         /**
+         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

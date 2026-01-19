@@ -54,7 +54,10 @@ public class DeleteUserWafRulesetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

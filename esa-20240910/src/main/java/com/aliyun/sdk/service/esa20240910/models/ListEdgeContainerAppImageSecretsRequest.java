@@ -60,6 +60,7 @@ public class ListEdgeContainerAppImageSecretsRequest extends Request {
         } 
 
         /**
+         * <p>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

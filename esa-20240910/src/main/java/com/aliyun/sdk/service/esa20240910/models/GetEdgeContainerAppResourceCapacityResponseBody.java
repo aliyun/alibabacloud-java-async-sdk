@@ -67,7 +67,7 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The queried region.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -75,7 +75,10 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50423A7F-A83D-1E24-B80E-86DD25790759</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,15 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
             } 
 
             /**
-             * Isp.
+             * <p>Supported ISPs are as follows. The parameter is left empty for regions outside the Chinese mainland. ISP:</p>
+             * <ul>
+             * <li>China Mobile: cmcc</li>
+             * <li>China Telecom: chinanet</li>
+             * <li>China Unicom: unicom</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -162,7 +173,51 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>Chinese mainland:</p>
+             * <ul>
+             * <li>East China: huadong</li>
+             * <li>South China: huanan</li>
+             * <li>Central China: huazhong</li>
+             * <li>North China: huabei</li>
+             * <li>Northwest China: xibei</li>
+             * <li>Southwest China: xinan</li>
+             * <li>Northeast China: dongbei</li>
+             * </ul>
+             * <p>Special Administrative Regions and Overseas:</p>
+             * <ul>
+             * <li>Taiwan, China: tw</li>
+             * <li>Macau, China: mo</li>
+             * <li>Hong Kong, China: hk</li>
+             * <li>Japan: jp</li>
+             * <li>United States: us</li>
+             * <li>Thailand: th</li>
+             * <li>Korea: kr</li>
+             * <li>Russia: ru</li>
+             * <li>Singapore: sg</li>
+             * <li>France: fr</li>
+             * <li>Spain: es</li>
+             * <li>Italy: it</li>
+             * <li>Sweden: se</li>
+             * <li>UAE: ae</li>
+             * <li>Indonesia: id</li>
+             * <li>Chile: cl</li>
+             * <li>Philippines: ph</li>
+             * <li>Malaysia: my</li>
+             * <li>Vietnam: vn</li>
+             * <li>Argentina: AR</li>
+             * <li>Australia: au</li>
+             * <li>Brazil: br</li>
+             * <li>Colombia: co</li>
+             * <li>Germany: de</li>
+             * <li>UK: GB</li>
+             * <li>Peru: pe</li>
+             * <li>Saudi Arabia: sa</li>
+             * <li>Netherlands: nl</li>
+             * <li>South Africa: za</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>huadong</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -170,7 +225,10 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * Replicas.
+             * <p>The number of container replicas that can be deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
