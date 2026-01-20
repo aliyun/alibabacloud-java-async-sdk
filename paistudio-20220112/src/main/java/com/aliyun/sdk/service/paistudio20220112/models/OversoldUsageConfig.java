@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OversoldUsageConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Disabled")
-    private String disabled;
+    private Boolean disabled;
 
     @com.aliyun.core.annotation.NameInMap("DisabledBy")
     private String disabledBy;
@@ -43,7 +43,7 @@ public class OversoldUsageConfig extends TeaModel {
     /**
      * @return disabled
      */
-    public String getDisabled() {
+    public Boolean getDisabled() {
         return this.disabled;
     }
 
@@ -55,7 +55,7 @@ public class OversoldUsageConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private String disabled; 
+        private Boolean disabled; 
         private String disabledBy; 
 
         private Builder() {
@@ -69,7 +69,7 @@ public class OversoldUsageConfig extends TeaModel {
         /**
          * Disabled.
          */
-        public Builder disabled(String disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
