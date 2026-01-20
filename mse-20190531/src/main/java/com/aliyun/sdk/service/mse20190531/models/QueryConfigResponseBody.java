@@ -204,9 +204,13 @@ public class QueryConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("interceptPolicy")
         private java.util.Map<String, String> interceptPolicy;
 
+        @com.aliyun.core.annotation.NameInMap("serviceName")
+        private String serviceName;
+
         private FencePolicy(Builder builder) {
             this.enabledModules = builder.enabledModules;
             this.interceptPolicy = builder.interceptPolicy;
+            this.serviceName = builder.serviceName;
         }
 
         public static Builder builder() {
@@ -231,9 +235,17 @@ public class QueryConfigResponseBody extends TeaModel {
             return this.interceptPolicy;
         }
 
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
         public static final class Builder {
             private java.util.List<String> enabledModules; 
             private java.util.Map<String, String> interceptPolicy; 
+            private String serviceName; 
 
             private Builder() {
             } 
@@ -241,6 +253,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Builder(FencePolicy model) {
                 this.enabledModules = model.enabledModules;
                 this.interceptPolicy = model.interceptPolicy;
+                this.serviceName = model.serviceName;
             } 
 
             /**
@@ -256,6 +269,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder interceptPolicy(java.util.Map<String, String> interceptPolicy) {
                 this.interceptPolicy = interceptPolicy;
+                return this;
+            }
+
+            /**
+             * serviceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 
