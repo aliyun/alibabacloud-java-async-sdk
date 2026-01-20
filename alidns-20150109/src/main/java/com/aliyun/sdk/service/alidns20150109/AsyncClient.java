@@ -124,13 +124,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
      * </ul>
      * 
      * @param request the request parameters of AddRspDomainServerHoldStatusForGateway  AddRspDomainServerHoldStatusForGatewayRequest
      * @return AddRspDomainServerHoldStatusForGatewayResponse
      */
     CompletableFuture<AddRspDomainServerHoldStatusForGatewayResponse> addRspDomainServerHoldStatusForGateway(AddRspDomainServerHoldStatusForGatewayRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddRspDomainServerHoldStatusForGatewayOte  AddRspDomainServerHoldStatusForGatewayOteRequest
+     * @return AddRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    CompletableFuture<AddRspDomainServerHoldStatusForGatewayOteResponse> addRspDomainServerHoldStatusForGatewayOte(AddRspDomainServerHoldStatusForGatewayOteRequest request);
 
     /**
      * <b>description</b> :
@@ -1085,6 +1105,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayResponse> removeRspDomainServerHoldStatusForGateway(RemoveRspDomainServerHoldStatusForGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveRspDomainServerHoldStatusForGatewayOte  RemoveRspDomainServerHoldStatusForGatewayOteRequest
+     * @return RemoveRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayOteResponse> removeRspDomainServerHoldStatusForGatewayOte(RemoveRspDomainServerHoldStatusForGatewayOteRequest request);
+
+    /**
      * @param request the request parameters of ReplaceCloudGtmAddressPoolAddress  ReplaceCloudGtmAddressPoolAddressRequest
      * @return ReplaceCloudGtmAddressPoolAddressResponse
      */
@@ -1554,6 +1590,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRspDomainServerProhibitStatusForGatewayResponse
      */
     CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayResponse> updateRspDomainServerProhibitStatusForGateway(UpdateRspDomainServerProhibitStatusForGatewayRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainServerProhibitStatusForGatewayOte  UpdateRspDomainServerProhibitStatusForGatewayOteRequest
+     * @return UpdateRspDomainServerProhibitStatusForGatewayOteResponse
+     */
+    CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayOteResponse> updateRspDomainServerProhibitStatusForGatewayOte(UpdateRspDomainServerProhibitStatusForGatewayOteRequest request);
 
     /**
      * @param request the request parameters of ValidateDnsGtmCnameRrCanUse  ValidateDnsGtmCnameRrCanUseRequest

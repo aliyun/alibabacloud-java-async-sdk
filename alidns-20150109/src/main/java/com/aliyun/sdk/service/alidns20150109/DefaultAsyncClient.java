@@ -324,7 +324,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>本接口专为网关用户设计，允许他们添加指定域名的serverHold属性。</li>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
      * </ul>
      * 
      * @param request the request parameters of AddRspDomainServerHoldStatusForGateway  AddRspDomainServerHoldStatusForGatewayRequest
@@ -339,6 +343,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddRspDomainServerHoldStatusForGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AddRspDomainServerHoldStatusForGatewayOte  AddRspDomainServerHoldStatusForGatewayOteRequest
+     * @return AddRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    @Override
+    public CompletableFuture<AddRspDomainServerHoldStatusForGatewayOteResponse> addRspDomainServerHoldStatusForGatewayOte(AddRspDomainServerHoldStatusForGatewayOteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRspDomainServerHoldStatusForGatewayOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRspDomainServerHoldStatusForGatewayOteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddRspDomainServerHoldStatusForGatewayOteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3013,6 +3045,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RemoveRspDomainServerHoldStatusForGatewayOte  RemoveRspDomainServerHoldStatusForGatewayOteRequest
+     * @return RemoveRspDomainServerHoldStatusForGatewayOteResponse
+     */
+    @Override
+    public CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayOteResponse> removeRspDomainServerHoldStatusForGatewayOte(RemoveRspDomainServerHoldStatusForGatewayOteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveRspDomainServerHoldStatusForGatewayOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveRspDomainServerHoldStatusForGatewayOteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveRspDomainServerHoldStatusForGatewayOteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ReplaceCloudGtmAddressPoolAddress  ReplaceCloudGtmAddressPoolAddressRequest
      * @return ReplaceCloudGtmAddressPoolAddressResponse
      */
@@ -4330,6 +4390,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
+     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
+     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
+     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
+     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateRspDomainServerProhibitStatusForGatewayOte  UpdateRspDomainServerProhibitStatusForGatewayOteRequest
+     * @return UpdateRspDomainServerProhibitStatusForGatewayOteResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayOteResponse> updateRspDomainServerProhibitStatusForGatewayOte(UpdateRspDomainServerProhibitStatusForGatewayOteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRspDomainServerProhibitStatusForGatewayOte").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRspDomainServerProhibitStatusForGatewayOteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRspDomainServerProhibitStatusForGatewayOteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

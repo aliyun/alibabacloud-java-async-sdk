@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RemoveRspDomainServerHoldStatusForGatewayRequest} extends {@link RequestModel}
+ * {@link RemoveRspDomainServerHoldStatusForGatewayOteRequest} extends {@link RequestModel}
  *
- * <p>RemoveRspDomainServerHoldStatusForGatewayRequest</p>
+ * <p>RemoveRspDomainServerHoldStatusForGatewayOteRequest</p>
  */
-public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
+public class RemoveRspDomainServerHoldStatusForGatewayOteRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -31,7 +31,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StatusMsg")
     private String statusMsg;
 
-    private RemoveRspDomainServerHoldStatusForGatewayRequest(Builder builder) {
+    private RemoveRspDomainServerHoldStatusForGatewayOteRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.domainName = builder.domainName;
@@ -42,7 +42,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         return new Builder();
     }
 
-    public static RemoveRspDomainServerHoldStatusForGatewayRequest create() {
+    public static RemoveRspDomainServerHoldStatusForGatewayOteRequest create() {
         return builder().build();
     }
 
@@ -72,7 +72,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         return this.statusMsg;
     }
 
-    public static final class Builder extends Request.Builder<RemoveRspDomainServerHoldStatusForGatewayRequest, Builder> {
+    public static final class Builder extends Request.Builder<RemoveRspDomainServerHoldStatusForGatewayOteRequest, Builder> {
         private String clientToken; 
         private String domainName; 
         private String statusMsg; 
@@ -81,7 +81,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveRspDomainServerHoldStatusForGatewayRequest request) {
+        private Builder(RemoveRspDomainServerHoldStatusForGatewayOteRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.domainName = request.domainName;
@@ -92,7 +92,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>asdf</p>
+         * <p>qwoefasdf</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,8 +122,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         }
 
         @Override
-        public RemoveRspDomainServerHoldStatusForGatewayRequest build() {
-            return new RemoveRspDomainServerHoldStatusForGatewayRequest(this);
+        public RemoveRspDomainServerHoldStatusForGatewayOteRequest build() {
+            return new RemoveRspDomainServerHoldStatusForGatewayOteRequest(this);
         } 
 
     } 

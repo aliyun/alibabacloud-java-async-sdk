@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RemoveRspDomainServerHoldStatusForGatewayRequest} extends {@link RequestModel}
+ * {@link AddRspDomainServerHoldStatusForGatewayOteRequest} extends {@link RequestModel}
  *
- * <p>RemoveRspDomainServerHoldStatusForGatewayRequest</p>
+ * <p>AddRspDomainServerHoldStatusForGatewayOteRequest</p>
  */
-public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
+public class AddRspDomainServerHoldStatusForGatewayOteRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,9 +29,10 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusMsg")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statusMsg;
 
-    private RemoveRspDomainServerHoldStatusForGatewayRequest(Builder builder) {
+    private AddRspDomainServerHoldStatusForGatewayOteRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.domainName = builder.domainName;
@@ -42,7 +43,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         return new Builder();
     }
 
-    public static RemoveRspDomainServerHoldStatusForGatewayRequest create() {
+    public static AddRspDomainServerHoldStatusForGatewayOteRequest create() {
         return builder().build();
     }
 
@@ -72,7 +73,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         return this.statusMsg;
     }
 
-    public static final class Builder extends Request.Builder<RemoveRspDomainServerHoldStatusForGatewayRequest, Builder> {
+    public static final class Builder extends Request.Builder<AddRspDomainServerHoldStatusForGatewayOteRequest, Builder> {
         private String clientToken; 
         private String domainName; 
         private String statusMsg; 
@@ -81,7 +82,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveRspDomainServerHoldStatusForGatewayRequest request) {
+        private Builder(AddRspDomainServerHoldStatusForGatewayOteRequest request) {
             super(request);
             this.clientToken = request.clientToken;
             this.domainName = request.domainName;
@@ -92,7 +93,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>asdf</p>
+         * <p>qwoefasdf</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -104,7 +105,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>example.com</p>
+         * <p>dns-example.top</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -113,7 +114,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         }
 
         /**
-         * StatusMsg.
+         * <p>This parameter is required.</p>
          */
         public Builder statusMsg(String statusMsg) {
             this.putQueryParameter("StatusMsg", statusMsg);
@@ -122,8 +123,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayRequest extends Request {
         }
 
         @Override
-        public RemoveRspDomainServerHoldStatusForGatewayRequest build() {
-            return new RemoveRspDomainServerHoldStatusForGatewayRequest(this);
+        public AddRspDomainServerHoldStatusForGatewayOteRequest build() {
+            return new AddRspDomainServerHoldStatusForGatewayOteRequest(this);
         } 
 
     } 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+ * {@link UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody} extends {@link TeaModel}
  *
- * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+ * <p>UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody</p>
  */
-public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel {
+public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
@@ -32,7 +32,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RemoveRspDomainServerHoldStatusForGatewayResponseBody(Builder builder) {
+    private UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.recoverableError = builder.recoverableError;
@@ -44,7 +44,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         return new Builder();
     }
 
-    public static RemoveRspDomainServerHoldStatusForGatewayResponseBody create() {
+    public static UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         private Builder() {
         } 
 
-        private Builder(RemoveRspDomainServerHoldStatusForGatewayResponseBody model) {
+        private Builder(UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.data = model.data;
             this.recoverableError = model.recoverableError;
@@ -145,17 +145,17 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBody build() {
-            return new RemoveRspDomainServerHoldStatusForGatewayResponseBody(this);
+        public UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody build() {
+            return new UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody} extends {@link TeaModel}
      *
-     * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody</p>
      */
     public static class AccessDeniedDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
@@ -333,20 +333,116 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     }
     /**
      * 
-     * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody} extends {@link TeaModel}
      *
-     * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody</p>
+     */
+    public static class StatusList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StatusMsg")
+        private String statusMsg;
+
+        private StatusList(Builder builder) {
+            this.domainName = builder.domainName;
+            this.status = builder.status;
+            this.statusMsg = builder.statusMsg;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StatusList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return statusMsg
+         */
+        public String getStatusMsg() {
+            return this.statusMsg;
+        }
+
+        public static final class Builder {
+            private String domainName; 
+            private String status; 
+            private String statusMsg; 
+
+            private Builder() {
+            } 
+
+            private Builder(StatusList model) {
+                this.domainName = model.domainName;
+                this.status = model.status;
+                this.statusMsg = model.statusMsg;
+            } 
+
+            /**
+             * DomainName.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StatusMsg.
+             */
+            public Builder statusMsg(String statusMsg) {
+                this.statusMsg = statusMsg;
+                return this;
+            }
+
+            public StatusList build() {
+                return new StatusList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @com.aliyun.core.annotation.NameInMap("ServerHoldStatus")
-        private String serverHoldStatus;
+        @com.aliyun.core.annotation.NameInMap("StatusList")
+        private java.util.List<StatusList> statusList;
 
         private Data(Builder builder) {
             this.domainName = builder.domainName;
-            this.serverHoldStatus = builder.serverHoldStatus;
+            this.statusList = builder.statusList;
         }
 
         public static Builder builder() {
@@ -365,22 +461,22 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         }
 
         /**
-         * @return serverHoldStatus
+         * @return statusList
          */
-        public String getServerHoldStatus() {
-            return this.serverHoldStatus;
+        public java.util.List<StatusList> getStatusList() {
+            return this.statusList;
         }
 
         public static final class Builder {
             private String domainName; 
-            private String serverHoldStatus; 
+            private java.util.List<StatusList> statusList; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.domainName = model.domainName;
-                this.serverHoldStatus = model.serverHoldStatus;
+                this.statusList = model.statusList;
             } 
 
             /**
@@ -392,10 +488,10 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             }
 
             /**
-             * ServerHoldStatus.
+             * StatusList.
              */
-            public Builder serverHoldStatus(String serverHoldStatus) {
-                this.serverHoldStatus = serverHoldStatus;
+            public Builder statusList(java.util.List<StatusList> statusList) {
+                this.statusList = statusList;
                 return this;
             }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+ * {@link AddRspDomainServerHoldStatusForGatewayOteResponseBody} extends {@link TeaModel}
  *
- * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+ * <p>AddRspDomainServerHoldStatusForGatewayOteResponseBody</p>
  */
-public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel {
+public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
@@ -32,7 +32,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private RemoveRspDomainServerHoldStatusForGatewayResponseBody(Builder builder) {
+    private AddRspDomainServerHoldStatusForGatewayOteResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.recoverableError = builder.recoverableError;
@@ -44,7 +44,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         return new Builder();
     }
 
-    public static RemoveRspDomainServerHoldStatusForGatewayResponseBody create() {
+    public static AddRspDomainServerHoldStatusForGatewayOteResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         private Builder() {
         } 
 
-        private Builder(RemoveRspDomainServerHoldStatusForGatewayResponseBody model) {
+        private Builder(AddRspDomainServerHoldStatusForGatewayOteResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.data = model.data;
             this.recoverableError = model.recoverableError;
@@ -145,17 +145,17 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this;
         }
 
-        public RemoveRspDomainServerHoldStatusForGatewayResponseBody build() {
-            return new RemoveRspDomainServerHoldStatusForGatewayResponseBody(this);
+        public AddRspDomainServerHoldStatusForGatewayOteResponseBody build() {
+            return new AddRspDomainServerHoldStatusForGatewayOteResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+     * {@link AddRspDomainServerHoldStatusForGatewayOteResponseBody} extends {@link TeaModel}
      *
-     * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+     * <p>AddRspDomainServerHoldStatusForGatewayOteResponseBody</p>
      */
     public static class AccessDeniedDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAction")
@@ -333,20 +333,16 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     }
     /**
      * 
-     * {@link RemoveRspDomainServerHoldStatusForGatewayResponseBody} extends {@link TeaModel}
+     * {@link AddRspDomainServerHoldStatusForGatewayOteResponseBody} extends {@link TeaModel}
      *
-     * <p>RemoveRspDomainServerHoldStatusForGatewayResponseBody</p>
+     * <p>AddRspDomainServerHoldStatusForGatewayOteResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @com.aliyun.core.annotation.NameInMap("ServerHoldStatus")
-        private String serverHoldStatus;
-
         private Data(Builder builder) {
             this.domainName = builder.domainName;
-            this.serverHoldStatus = builder.serverHoldStatus;
         }
 
         public static Builder builder() {
@@ -364,23 +360,14 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
             return this.domainName;
         }
 
-        /**
-         * @return serverHoldStatus
-         */
-        public String getServerHoldStatus() {
-            return this.serverHoldStatus;
-        }
-
         public static final class Builder {
             private String domainName; 
-            private String serverHoldStatus; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.domainName = model.domainName;
-                this.serverHoldStatus = model.serverHoldStatus;
             } 
 
             /**
@@ -388,14 +375,6 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
-                return this;
-            }
-
-            /**
-             * ServerHoldStatus.
-             */
-            public Builder serverHoldStatus(String serverHoldStatus) {
-                this.serverHoldStatus = serverHoldStatus;
                 return this;
             }
 
