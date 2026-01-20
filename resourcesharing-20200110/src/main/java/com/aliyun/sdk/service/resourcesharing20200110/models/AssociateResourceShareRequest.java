@@ -30,6 +30,10 @@ public class AssociateResourceShareRequest extends Request {
     private java.util.List<String> resourceArns;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceProperties")
+    private java.util.List<ResourceProperties> resourceProperties;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceShareId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String resourceShareId;
@@ -51,6 +55,7 @@ public class AssociateResourceShareRequest extends Request {
         this.regionId = builder.regionId;
         this.permissionNames = builder.permissionNames;
         this.resourceArns = builder.resourceArns;
+        this.resourceProperties = builder.resourceProperties;
         this.resourceShareId = builder.resourceShareId;
         this.resources = builder.resources;
         this.targetProperties = builder.targetProperties;
@@ -92,6 +97,13 @@ public class AssociateResourceShareRequest extends Request {
     }
 
     /**
+     * @return resourceProperties
+     */
+    public java.util.List<ResourceProperties> getResourceProperties() {
+        return this.resourceProperties;
+    }
+
+    /**
      * @return resourceShareId
      */
     public String getResourceShareId() {
@@ -123,6 +135,7 @@ public class AssociateResourceShareRequest extends Request {
         private String regionId; 
         private java.util.List<String> permissionNames; 
         private java.util.List<String> resourceArns; 
+        private java.util.List<ResourceProperties> resourceProperties; 
         private String resourceShareId; 
         private java.util.List<Resources> resources; 
         private java.util.List<TargetProperties> targetProperties; 
@@ -137,6 +150,7 @@ public class AssociateResourceShareRequest extends Request {
             this.regionId = request.regionId;
             this.permissionNames = request.permissionNames;
             this.resourceArns = request.resourceArns;
+            this.resourceProperties = request.resourceProperties;
             this.resourceShareId = request.resourceShareId;
             this.resources = request.resources;
             this.targetProperties = request.targetProperties;
@@ -167,6 +181,15 @@ public class AssociateResourceShareRequest extends Request {
         public Builder resourceArns(java.util.List<String> resourceArns) {
             this.putQueryParameter("ResourceArns", resourceArns);
             this.resourceArns = resourceArns;
+            return this;
+        }
+
+        /**
+         * ResourceProperties.
+         */
+        public Builder resourceProperties(java.util.List<ResourceProperties> resourceProperties) {
+            this.putQueryParameter("ResourceProperties", resourceProperties);
+            this.resourceProperties = resourceProperties;
             return this;
         }
 
@@ -223,6 +246,81 @@ public class AssociateResourceShareRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AssociateResourceShareRequest} extends {@link TeaModel}
+     *
+     * <p>AssociateResourceShareRequest</p>
+     */
+    public static class ResourceProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Property")
+        private String property;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceArn")
+        private String resourceArn;
+
+        private ResourceProperties(Builder builder) {
+            this.property = builder.property;
+            this.resourceArn = builder.resourceArn;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return property
+         */
+        public String getProperty() {
+            return this.property;
+        }
+
+        /**
+         * @return resourceArn
+         */
+        public String getResourceArn() {
+            return this.resourceArn;
+        }
+
+        public static final class Builder {
+            private String property; 
+            private String resourceArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceProperties model) {
+                this.property = model.property;
+                this.resourceArn = model.resourceArn;
+            } 
+
+            /**
+             * Property.
+             */
+            public Builder property(String property) {
+                this.property = property;
+                return this;
+            }
+
+            /**
+             * ResourceArn.
+             */
+            public Builder resourceArn(String resourceArn) {
+                this.resourceArn = resourceArn;
+                return this;
+            }
+
+            public ResourceProperties build() {
+                return new ResourceProperties(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AssociateResourceShareRequest} extends {@link TeaModel}

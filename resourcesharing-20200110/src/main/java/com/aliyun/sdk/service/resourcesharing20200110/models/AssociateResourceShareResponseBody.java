@@ -119,6 +119,9 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceArn")
         private String resourceArn;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceProperty")
+        private String resourceProperty;
+
         @com.aliyun.core.annotation.NameInMap("ResourceShareId")
         private String resourceShareId;
 
@@ -139,6 +142,7 @@ public class AssociateResourceShareResponseBody extends TeaModel {
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
             this.resourceArn = builder.resourceArn;
+            this.resourceProperty = builder.resourceProperty;
             this.resourceShareId = builder.resourceShareId;
             this.resourceShareName = builder.resourceShareName;
             this.targetProperty = builder.targetProperty;
@@ -203,6 +207,13 @@ public class AssociateResourceShareResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceProperty
+         */
+        public String getResourceProperty() {
+            return this.resourceProperty;
+        }
+
+        /**
          * @return resourceShareId
          */
         public String getResourceShareId() {
@@ -238,6 +249,7 @@ public class AssociateResourceShareResponseBody extends TeaModel {
             private String entityId; 
             private String entityType; 
             private String resourceArn; 
+            private String resourceProperty; 
             private String resourceShareId; 
             private String resourceShareName; 
             private String targetProperty; 
@@ -254,6 +266,7 @@ public class AssociateResourceShareResponseBody extends TeaModel {
                 this.entityId = model.entityId;
                 this.entityType = model.entityType;
                 this.resourceArn = model.resourceArn;
+                this.resourceProperty = model.resourceProperty;
                 this.resourceShareId = model.resourceShareId;
                 this.resourceShareName = model.resourceShareName;
                 this.targetProperty = model.targetProperty;
@@ -357,6 +370,14 @@ public class AssociateResourceShareResponseBody extends TeaModel {
              */
             public Builder resourceArn(String resourceArn) {
                 this.resourceArn = resourceArn;
+                return this;
+            }
+
+            /**
+             * ResourceProperty.
+             */
+            public Builder resourceProperty(String resourceProperty) {
+                this.resourceProperty = resourceProperty;
                 return this;
             }
 
