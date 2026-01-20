@@ -352,6 +352,102 @@ public class ListCustomAgentResponseBody extends TeaModel {
      *
      * <p>ListCustomAgentResponseBody</p>
      */
+    public static class ScheduleTaskConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
+        private String cronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("Query")
+        private String query;
+
+        @com.aliyun.core.annotation.NameInMap("RelatedSessionId")
+        private String relatedSessionId;
+
+        private ScheduleTaskConfig(Builder builder) {
+            this.cronExpression = builder.cronExpression;
+            this.query = builder.query;
+            this.relatedSessionId = builder.relatedSessionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScheduleTaskConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cronExpression
+         */
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        /**
+         * @return query
+         */
+        public String getQuery() {
+            return this.query;
+        }
+
+        /**
+         * @return relatedSessionId
+         */
+        public String getRelatedSessionId() {
+            return this.relatedSessionId;
+        }
+
+        public static final class Builder {
+            private String cronExpression; 
+            private String query; 
+            private String relatedSessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleTaskConfig model) {
+                this.cronExpression = model.cronExpression;
+                this.query = model.query;
+                this.relatedSessionId = model.relatedSessionId;
+            } 
+
+            /**
+             * CronExpression.
+             */
+            public Builder cronExpression(String cronExpression) {
+                this.cronExpression = cronExpression;
+                return this;
+            }
+
+            /**
+             * Query.
+             */
+            public Builder query(String query) {
+                this.query = query;
+                return this;
+            }
+
+            /**
+             * RelatedSessionId.
+             */
+            public Builder relatedSessionId(String relatedSessionId) {
+                this.relatedSessionId = relatedSessionId;
+                return this;
+            }
+
+            public ScheduleTaskConfig build() {
+                return new ScheduleTaskConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunParentId")
         private String aliyunParentId;
@@ -364,6 +460,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CustomAgentId")
         private String customAgentId;
+
+        @com.aliyun.core.annotation.NameInMap("DMSUnit")
+        private String DMSUnit;
 
         @com.aliyun.core.annotation.NameInMap("DataJson")
         private String dataJson;
@@ -389,6 +488,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instruction")
         private String instruction;
 
+        @com.aliyun.core.annotation.NameInMap("IsScheduleTask")
+        private Boolean isScheduleTask;
+
         @com.aliyun.core.annotation.NameInMap("Knowledge")
         private String knowledge;
 
@@ -404,6 +506,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("NextRuntime")
+        private Long nextRuntime;
+
         @com.aliyun.core.annotation.NameInMap("OfflineTime")
         private String offlineTime;
 
@@ -412,6 +517,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
+
+        @com.aliyun.core.annotation.NameInMap("ScheduleTaskConfig")
+        private ScheduleTaskConfig scheduleTaskConfig;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -430,6 +538,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.aliyunUid = builder.aliyunUid;
             this.creatorUserName = builder.creatorUserName;
             this.customAgentId = builder.customAgentId;
+            this.DMSUnit = builder.DMSUnit;
             this.dataJson = builder.dataJson;
             this.defaultAgent = builder.defaultAgent;
             this.description = builder.description;
@@ -438,14 +547,17 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.instruction = builder.instruction;
+            this.isScheduleTask = builder.isScheduleTask;
             this.knowledge = builder.knowledge;
             this.knowledgeConfigList = builder.knowledgeConfigList;
             this.modifier = builder.modifier;
             this.modifierUserName = builder.modifierUserName;
             this.name = builder.name;
+            this.nextRuntime = builder.nextRuntime;
             this.offlineTime = builder.offlineTime;
             this.region = builder.region;
             this.releaseTime = builder.releaseTime;
+            this.scheduleTaskConfig = builder.scheduleTaskConfig;
             this.status = builder.status;
             this.textReportConfig = builder.textReportConfig;
             this.webReportConfig = builder.webReportConfig;
@@ -486,6 +598,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         public String getCustomAgentId() {
             return this.customAgentId;
+        }
+
+        /**
+         * @return DMSUnit
+         */
+        public String getDMSUnit() {
+            return this.DMSUnit;
         }
 
         /**
@@ -545,6 +664,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return isScheduleTask
+         */
+        public Boolean getIsScheduleTask() {
+            return this.isScheduleTask;
+        }
+
+        /**
          * @return knowledge
          */
         public String getKnowledge() {
@@ -580,6 +706,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return nextRuntime
+         */
+        public Long getNextRuntime() {
+            return this.nextRuntime;
+        }
+
+        /**
          * @return offlineTime
          */
         public String getOfflineTime() {
@@ -598,6 +731,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         public String getReleaseTime() {
             return this.releaseTime;
+        }
+
+        /**
+         * @return scheduleTaskConfig
+         */
+        public ScheduleTaskConfig getScheduleTaskConfig() {
+            return this.scheduleTaskConfig;
         }
 
         /**
@@ -633,6 +773,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             private String aliyunUid; 
             private String creatorUserName; 
             private String customAgentId; 
+            private String DMSUnit; 
             private String dataJson; 
             private Integer defaultAgent; 
             private String description; 
@@ -641,14 +782,17 @@ public class ListCustomAgentResponseBody extends TeaModel {
             private String gmtCreated; 
             private String gmtModified; 
             private String instruction; 
+            private Boolean isScheduleTask; 
             private String knowledge; 
             private java.util.List<KnowledgeConfigList> knowledgeConfigList; 
             private String modifier; 
             private String modifierUserName; 
             private String name; 
+            private Long nextRuntime; 
             private String offlineTime; 
             private String region; 
             private String releaseTime; 
+            private ScheduleTaskConfig scheduleTaskConfig; 
             private String status; 
             private String textReportConfig; 
             private String webReportConfig; 
@@ -662,6 +806,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
                 this.aliyunUid = model.aliyunUid;
                 this.creatorUserName = model.creatorUserName;
                 this.customAgentId = model.customAgentId;
+                this.DMSUnit = model.DMSUnit;
                 this.dataJson = model.dataJson;
                 this.defaultAgent = model.defaultAgent;
                 this.description = model.description;
@@ -670,14 +815,17 @@ public class ListCustomAgentResponseBody extends TeaModel {
                 this.gmtCreated = model.gmtCreated;
                 this.gmtModified = model.gmtModified;
                 this.instruction = model.instruction;
+                this.isScheduleTask = model.isScheduleTask;
                 this.knowledge = model.knowledge;
                 this.knowledgeConfigList = model.knowledgeConfigList;
                 this.modifier = model.modifier;
                 this.modifierUserName = model.modifierUserName;
                 this.name = model.name;
+                this.nextRuntime = model.nextRuntime;
                 this.offlineTime = model.offlineTime;
                 this.region = model.region;
                 this.releaseTime = model.releaseTime;
+                this.scheduleTaskConfig = model.scheduleTaskConfig;
                 this.status = model.status;
                 this.textReportConfig = model.textReportConfig;
                 this.webReportConfig = model.webReportConfig;
@@ -713,6 +861,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
+                return this;
+            }
+
+            /**
+             * DMSUnit.
+             */
+            public Builder DMSUnit(String DMSUnit) {
+                this.DMSUnit = DMSUnit;
                 return this;
             }
 
@@ -781,6 +937,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
+             * IsScheduleTask.
+             */
+            public Builder isScheduleTask(Boolean isScheduleTask) {
+                this.isScheduleTask = isScheduleTask;
+                return this;
+            }
+
+            /**
              * Knowledge.
              */
             public Builder knowledge(String knowledge) {
@@ -821,6 +985,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
             }
 
             /**
+             * NextRuntime.
+             */
+            public Builder nextRuntime(Long nextRuntime) {
+                this.nextRuntime = nextRuntime;
+                return this;
+            }
+
+            /**
              * OfflineTime.
              */
             public Builder offlineTime(String offlineTime) {
@@ -841,6 +1013,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
+                return this;
+            }
+
+            /**
+             * ScheduleTaskConfig.
+             */
+            public Builder scheduleTaskConfig(ScheduleTaskConfig scheduleTaskConfig) {
+                this.scheduleTaskConfig = scheduleTaskConfig;
                 return this;
             }
 
