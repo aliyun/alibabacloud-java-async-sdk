@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEndpointsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputingGroupId")
+    private String computingGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -28,6 +32,7 @@ public class DescribeEndpointsRequest extends Request {
 
     private DescribeEndpointsRequest(Builder builder) {
         super(builder);
+        this.computingGroupId = builder.computingGroupId;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
     }
@@ -46,6 +51,13 @@ public class DescribeEndpointsRequest extends Request {
     }
 
     /**
+     * @return computingGroupId
+     */
+    public String getComputingGroupId() {
+        return this.computingGroupId;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -60,6 +72,7 @@ public class DescribeEndpointsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEndpointsRequest, Builder> {
+        private String computingGroupId; 
         private String DBInstanceId; 
         private String regionId; 
 
@@ -69,9 +82,19 @@ public class DescribeEndpointsRequest extends Request {
 
         private Builder(DescribeEndpointsRequest request) {
             super(request);
+            this.computingGroupId = request.computingGroupId;
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ComputingGroupId.
+         */
+        public Builder computingGroupId(String computingGroupId) {
+            this.putQueryParameter("ComputingGroupId", computingGroupId);
+            this.computingGroupId = computingGroupId;
+            return this;
+        }
 
         /**
          * <p>The cluster ID.</p>

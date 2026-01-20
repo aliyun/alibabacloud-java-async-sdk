@@ -195,6 +195,9 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
+        private String endpointName;
+
         @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
@@ -219,6 +222,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         private Endpoints(Builder builder) {
             this.computingGroupId = builder.computingGroupId;
             this.connectionString = builder.connectionString;
+            this.endpointName = builder.endpointName;
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.ports = builder.ports;
@@ -248,6 +252,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
          */
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        /**
+         * @return endpointName
+         */
+        public String getEndpointName() {
+            return this.endpointName;
         }
 
         /**
@@ -302,6 +313,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private String computingGroupId; 
             private String connectionString; 
+            private String endpointName; 
             private String IPAddress; 
             private String netType; 
             private java.util.List<Ports> ports; 
@@ -316,6 +328,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
             private Builder(Endpoints model) {
                 this.computingGroupId = model.computingGroupId;
                 this.connectionString = model.connectionString;
+                this.endpointName = model.endpointName;
                 this.IPAddress = model.IPAddress;
                 this.netType = model.netType;
                 this.ports = model.ports;
@@ -341,6 +354,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * EndpointName.
+             */
+            public Builder endpointName(String endpointName) {
+                this.endpointName = endpointName;
                 return this;
             }
 
