@@ -17,14 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetThreadDataResponseBody</p>
  */
 public class GetThreadDataResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Data> data;
+
     @com.aliyun.core.annotation.NameInMap("digitalEmployeeName")
     private String digitalEmployeeName;
 
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
-
-    @com.aliyun.core.annotation.NameInMap("messages")
-    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -36,9 +36,9 @@ public class GetThreadDataResponseBody extends TeaModel {
     private String threadId;
 
     private GetThreadDataResponseBody(Builder builder) {
+        this.data = builder.data;
         this.digitalEmployeeName = builder.digitalEmployeeName;
         this.maxResults = builder.maxResults;
-        this.messages = builder.messages;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.threadId = builder.threadId;
@@ -57,6 +57,13 @@ public class GetThreadDataResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public java.util.List<Data> getData() {
+        return this.data;
+    }
+
+    /**
      * @return digitalEmployeeName
      */
     public String getDigitalEmployeeName() {
@@ -68,13 +75,6 @@ public class GetThreadDataResponseBody extends TeaModel {
      */
     public Long getMaxResults() {
         return this.maxResults;
-    }
-
-    /**
-     * @return messages
-     */
-    public java.util.List<Messages> getMessages() {
-        return this.messages;
     }
 
     /**
@@ -99,9 +99,9 @@ public class GetThreadDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<Data> data; 
         private String digitalEmployeeName; 
         private Long maxResults; 
-        private java.util.List<Messages> messages; 
         private String nextToken; 
         private String requestId; 
         private String threadId; 
@@ -110,13 +110,21 @@ public class GetThreadDataResponseBody extends TeaModel {
         } 
 
         private Builder(GetThreadDataResponseBody model) {
+            this.data = model.data;
             this.digitalEmployeeName = model.digitalEmployeeName;
             this.maxResults = model.maxResults;
-            this.messages = model.messages;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.threadId = model.threadId;
         } 
+
+        /**
+         * data.
+         */
+        public Builder data(java.util.List<Data> data) {
+            this.data = data;
+            return this;
+        }
 
         /**
          * digitalEmployeeName.
@@ -131,14 +139,6 @@ public class GetThreadDataResponseBody extends TeaModel {
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * messages.
-         */
-        public Builder messages(java.util.List<Messages> messages) {
-            this.messages = messages;
             return this;
         }
 
@@ -182,59 +182,59 @@ public class GetThreadDataResponseBody extends TeaModel {
      * <p>GetThreadDataResponseBody</p>
      */
     public static class Messages extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("callerUid")
-        private String callerUid;
+        @com.aliyun.core.annotation.NameInMap("agents")
+        private java.util.List<java.util.Map<String, ?>> agents;
 
-        @com.aliyun.core.annotation.NameInMap("digitalEmployeeName")
-        private String digitalEmployeeName;
+        @com.aliyun.core.annotation.NameInMap("artifacts")
+        private java.util.List<java.util.Map<String, ?>> artifacts;
 
-        @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List<java.util.Map<String, ?>> items;
+        @com.aliyun.core.annotation.NameInMap("callId")
+        private String callId;
 
-        @com.aliyun.core.annotation.NameInMap("messageId")
-        private String messageId;
+        @com.aliyun.core.annotation.NameInMap("contents")
+        private java.util.List<java.util.Map<String, ?>> contents;
 
-        @com.aliyun.core.annotation.NameInMap("ownerUid")
-        private String ownerUid;
+        @com.aliyun.core.annotation.NameInMap("detail")
+        private String detail;
 
-        @com.aliyun.core.annotation.NameInMap("parentMessageId")
-        private String parentMessageId;
+        @com.aliyun.core.annotation.NameInMap("events")
+        private java.util.List<java.util.Map<String, ?>> events;
 
-        @com.aliyun.core.annotation.NameInMap("region")
-        private String region;
+        @com.aliyun.core.annotation.NameInMap("parentCallId")
+        private String parentCallId;
 
         @com.aliyun.core.annotation.NameInMap("role")
         private String role;
 
-        @com.aliyun.core.annotation.NameInMap("runId")
-        private String runId;
-
-        @com.aliyun.core.annotation.NameInMap("threadId")
-        private String threadId;
+        @com.aliyun.core.annotation.NameInMap("seq")
+        private Integer seq;
 
         @com.aliyun.core.annotation.NameInMap("timestamp")
         private String timestamp;
 
-        @com.aliyun.core.annotation.NameInMap("traceId")
-        private String traceId;
+        @com.aliyun.core.annotation.NameInMap("tools")
+        private java.util.List<java.util.Map<String, ?>> tools;
 
-        @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.Map<String, String> variables;
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
 
         private Messages(Builder builder) {
-            this.callerUid = builder.callerUid;
-            this.digitalEmployeeName = builder.digitalEmployeeName;
-            this.items = builder.items;
-            this.messageId = builder.messageId;
-            this.ownerUid = builder.ownerUid;
-            this.parentMessageId = builder.parentMessageId;
-            this.region = builder.region;
+            this.agents = builder.agents;
+            this.artifacts = builder.artifacts;
+            this.callId = builder.callId;
+            this.contents = builder.contents;
+            this.detail = builder.detail;
+            this.events = builder.events;
+            this.parentCallId = builder.parentCallId;
             this.role = builder.role;
-            this.runId = builder.runId;
-            this.threadId = builder.threadId;
+            this.seq = builder.seq;
             this.timestamp = builder.timestamp;
-            this.traceId = builder.traceId;
-            this.variables = builder.variables;
+            this.tools = builder.tools;
+            this.type = builder.type;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -246,52 +246,52 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return callerUid
+         * @return agents
          */
-        public String getCallerUid() {
-            return this.callerUid;
+        public java.util.List<java.util.Map<String, ?>> getAgents() {
+            return this.agents;
         }
 
         /**
-         * @return digitalEmployeeName
+         * @return artifacts
          */
-        public String getDigitalEmployeeName() {
-            return this.digitalEmployeeName;
+        public java.util.List<java.util.Map<String, ?>> getArtifacts() {
+            return this.artifacts;
         }
 
         /**
-         * @return items
+         * @return callId
          */
-        public java.util.List<java.util.Map<String, ?>> getItems() {
-            return this.items;
+        public String getCallId() {
+            return this.callId;
         }
 
         /**
-         * @return messageId
+         * @return contents
          */
-        public String getMessageId() {
-            return this.messageId;
+        public java.util.List<java.util.Map<String, ?>> getContents() {
+            return this.contents;
         }
 
         /**
-         * @return ownerUid
+         * @return detail
          */
-        public String getOwnerUid() {
-            return this.ownerUid;
+        public String getDetail() {
+            return this.detail;
         }
 
         /**
-         * @return parentMessageId
+         * @return events
          */
-        public String getParentMessageId() {
-            return this.parentMessageId;
+        public java.util.List<java.util.Map<String, ?>> getEvents() {
+            return this.events;
         }
 
         /**
-         * @return region
+         * @return parentCallId
          */
-        public String getRegion() {
-            return this.region;
+        public String getParentCallId() {
+            return this.parentCallId;
         }
 
         /**
@@ -302,17 +302,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return runId
+         * @return seq
          */
-        public String getRunId() {
-            return this.runId;
-        }
-
-        /**
-         * @return threadId
-         */
-        public String getThreadId() {
-            return this.threadId;
+        public Integer getSeq() {
+            return this.seq;
         }
 
         /**
@@ -323,106 +316,113 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return traceId
+         * @return tools
          */
-        public String getTraceId() {
-            return this.traceId;
+        public java.util.List<java.util.Map<String, ?>> getTools() {
+            return this.tools;
         }
 
         /**
-         * @return variables
+         * @return type
          */
-        public java.util.Map<String, String> getVariables() {
-            return this.variables;
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
         }
 
         public static final class Builder {
-            private String callerUid; 
-            private String digitalEmployeeName; 
-            private java.util.List<java.util.Map<String, ?>> items; 
-            private String messageId; 
-            private String ownerUid; 
-            private String parentMessageId; 
-            private String region; 
+            private java.util.List<java.util.Map<String, ?>> agents; 
+            private java.util.List<java.util.Map<String, ?>> artifacts; 
+            private String callId; 
+            private java.util.List<java.util.Map<String, ?>> contents; 
+            private String detail; 
+            private java.util.List<java.util.Map<String, ?>> events; 
+            private String parentCallId; 
             private String role; 
-            private String runId; 
-            private String threadId; 
+            private Integer seq; 
             private String timestamp; 
-            private String traceId; 
-            private java.util.Map<String, String> variables; 
+            private java.util.List<java.util.Map<String, ?>> tools; 
+            private String type; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(Messages model) {
-                this.callerUid = model.callerUid;
-                this.digitalEmployeeName = model.digitalEmployeeName;
-                this.items = model.items;
-                this.messageId = model.messageId;
-                this.ownerUid = model.ownerUid;
-                this.parentMessageId = model.parentMessageId;
-                this.region = model.region;
+                this.agents = model.agents;
+                this.artifacts = model.artifacts;
+                this.callId = model.callId;
+                this.contents = model.contents;
+                this.detail = model.detail;
+                this.events = model.events;
+                this.parentCallId = model.parentCallId;
                 this.role = model.role;
-                this.runId = model.runId;
-                this.threadId = model.threadId;
+                this.seq = model.seq;
                 this.timestamp = model.timestamp;
-                this.traceId = model.traceId;
-                this.variables = model.variables;
+                this.tools = model.tools;
+                this.type = model.type;
+                this.version = model.version;
             } 
 
             /**
-             * callerUid.
+             * agents.
              */
-            public Builder callerUid(String callerUid) {
-                this.callerUid = callerUid;
+            public Builder agents(java.util.List<java.util.Map<String, ?>> agents) {
+                this.agents = agents;
                 return this;
             }
 
             /**
-             * digitalEmployeeName.
+             * artifacts.
              */
-            public Builder digitalEmployeeName(String digitalEmployeeName) {
-                this.digitalEmployeeName = digitalEmployeeName;
+            public Builder artifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
+                this.artifacts = artifacts;
                 return this;
             }
 
             /**
-             * items.
+             * callId.
              */
-            public Builder items(java.util.List<java.util.Map<String, ?>> items) {
-                this.items = items;
+            public Builder callId(String callId) {
+                this.callId = callId;
                 return this;
             }
 
             /**
-             * messageId.
+             * contents.
              */
-            public Builder messageId(String messageId) {
-                this.messageId = messageId;
+            public Builder contents(java.util.List<java.util.Map<String, ?>> contents) {
+                this.contents = contents;
                 return this;
             }
 
             /**
-             * ownerUid.
+             * detail.
              */
-            public Builder ownerUid(String ownerUid) {
-                this.ownerUid = ownerUid;
+            public Builder detail(String detail) {
+                this.detail = detail;
                 return this;
             }
 
             /**
-             * parentMessageId.
+             * events.
              */
-            public Builder parentMessageId(String parentMessageId) {
-                this.parentMessageId = parentMessageId;
+            public Builder events(java.util.List<java.util.Map<String, ?>> events) {
+                this.events = events;
                 return this;
             }
 
             /**
-             * region.
+             * parentCallId.
              */
-            public Builder region(String region) {
-                this.region = region;
+            public Builder parentCallId(String parentCallId) {
+                this.parentCallId = parentCallId;
                 return this;
             }
 
@@ -435,18 +435,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * runId.
+             * seq.
              */
-            public Builder runId(String runId) {
-                this.runId = runId;
-                return this;
-            }
-
-            /**
-             * threadId.
-             */
-            public Builder threadId(String threadId) {
-                this.threadId = threadId;
+            public Builder seq(Integer seq) {
+                this.seq = seq;
                 return this;
             }
 
@@ -459,6 +451,121 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
+             * tools.
+             */
+            public Builder tools(java.util.List<java.util.Map<String, ?>> tools) {
+                this.tools = tools;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public Messages build() {
+                return new Messages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetThreadDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetThreadDataResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("messages")
+        private java.util.List<Messages> messages;
+
+        @com.aliyun.core.annotation.NameInMap("requestId")
+        private String requestId;
+
+        @com.aliyun.core.annotation.NameInMap("traceId")
+        private String traceId;
+
+        private Data(Builder builder) {
+            this.messages = builder.messages;
+            this.requestId = builder.requestId;
+            this.traceId = builder.traceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return messages
+         */
+        public java.util.List<Messages> getMessages() {
+            return this.messages;
+        }
+
+        /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
+         * @return traceId
+         */
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<Messages> messages; 
+            private String requestId; 
+            private String traceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.messages = model.messages;
+                this.requestId = model.requestId;
+                this.traceId = model.traceId;
+            } 
+
+            /**
+             * messages.
+             */
+            public Builder messages(java.util.List<Messages> messages) {
+                this.messages = messages;
+                return this;
+            }
+
+            /**
+             * <p>Id of the request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8FDE2569-626B-5176-9844-28877A*****</p>
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
              * traceId.
              */
             public Builder traceId(String traceId) {
@@ -466,16 +573,8 @@ public class GetThreadDataResponseBody extends TeaModel {
                 return this;
             }
 
-            /**
-             * variables.
-             */
-            public Builder variables(java.util.Map<String, String> variables) {
-                this.variables = variables;
-                return this;
-            }
-
-            public Messages build() {
-                return new Messages(this);
+            public Data build() {
+                return new Data(this);
             } 
 
         } 

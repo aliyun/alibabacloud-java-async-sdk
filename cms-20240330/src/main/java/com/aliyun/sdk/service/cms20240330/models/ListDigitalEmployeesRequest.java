@@ -22,6 +22,10 @@ public class ListDigitalEmployeesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("displayName")
+    private String displayName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("employeeType")
     private String employeeType;
 
@@ -41,6 +45,7 @@ public class ListDigitalEmployeesRequest extends Request {
     private ListDigitalEmployeesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.displayName = builder.displayName;
         this.employeeType = builder.employeeType;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
@@ -65,6 +70,13 @@ public class ListDigitalEmployeesRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return displayName
+     */
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ListDigitalEmployeesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDigitalEmployeesRequest, Builder> {
         private String regionId; 
+        private String displayName; 
         private String employeeType; 
         private Integer maxResults; 
         private String name; 
@@ -109,6 +122,7 @@ public class ListDigitalEmployeesRequest extends Request {
         private Builder(ListDigitalEmployeesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.displayName = request.displayName;
             this.employeeType = request.employeeType;
             this.maxResults = request.maxResults;
             this.name = request.name;
@@ -121,6 +135,15 @@ public class ListDigitalEmployeesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * displayName.
+         */
+        public Builder displayName(String displayName) {
+            this.putQueryParameter("displayName", displayName);
+            this.displayName = displayName;
             return this;
         }
 

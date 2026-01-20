@@ -411,8 +411,12 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bailian")
         private java.util.List<Bailian> bailian;
 
+        @com.aliyun.core.annotation.NameInMap("sop")
+        private java.util.List<java.util.Map<String, ?>> sop;
+
         private Knowledges(Builder builder) {
             this.bailian = builder.bailian;
+            this.sop = builder.sop;
         }
 
         public static Builder builder() {
@@ -430,14 +434,23 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             return this.bailian;
         }
 
+        /**
+         * @return sop
+         */
+        public java.util.List<java.util.Map<String, ?>> getSop() {
+            return this.sop;
+        }
+
         public static final class Builder {
             private java.util.List<Bailian> bailian; 
+            private java.util.List<java.util.Map<String, ?>> sop; 
 
             private Builder() {
             } 
 
             private Builder(Knowledges model) {
                 this.bailian = model.bailian;
+                this.sop = model.sop;
             } 
 
             /**
@@ -445,6 +458,14 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
+                return this;
+            }
+
+            /**
+             * sop.
+             */
+            public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
+                this.sop = sop;
                 return this;
             }
 

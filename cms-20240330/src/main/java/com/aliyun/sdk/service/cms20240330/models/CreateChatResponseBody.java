@@ -119,6 +119,9 @@ public class CreateChatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agents")
         private java.util.List<java.util.Map<String, ?>> agents;
 
+        @com.aliyun.core.annotation.NameInMap("artifacts")
+        private java.util.List<java.util.Map<String, ?>> artifacts;
+
         @com.aliyun.core.annotation.NameInMap("callId")
         private String callId;
 
@@ -127,6 +130,9 @@ public class CreateChatResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("detail")
         private String detail;
+
+        @com.aliyun.core.annotation.NameInMap("events")
+        private java.util.List<java.util.Map<String, ?>> events;
 
         @com.aliyun.core.annotation.NameInMap("parentCallId")
         private String parentCallId;
@@ -138,7 +144,7 @@ public class CreateChatResponseBody extends TeaModel {
         private Integer seq;
 
         @com.aliyun.core.annotation.NameInMap("timestamp")
-        private Long timestamp;
+        private String timestamp;
 
         @com.aliyun.core.annotation.NameInMap("tools")
         private java.util.List<java.util.Map<String, ?>> tools;
@@ -146,17 +152,23 @@ public class CreateChatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
         private Messages(Builder builder) {
             this.agents = builder.agents;
+            this.artifacts = builder.artifacts;
             this.callId = builder.callId;
             this.contents = builder.contents;
             this.detail = builder.detail;
+            this.events = builder.events;
             this.parentCallId = builder.parentCallId;
             this.role = builder.role;
             this.seq = builder.seq;
             this.timestamp = builder.timestamp;
             this.tools = builder.tools;
             this.type = builder.type;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -172,6 +184,13 @@ public class CreateChatResponseBody extends TeaModel {
          */
         public java.util.List<java.util.Map<String, ?>> getAgents() {
             return this.agents;
+        }
+
+        /**
+         * @return artifacts
+         */
+        public java.util.List<java.util.Map<String, ?>> getArtifacts() {
+            return this.artifacts;
         }
 
         /**
@@ -193,6 +212,13 @@ public class CreateChatResponseBody extends TeaModel {
          */
         public String getDetail() {
             return this.detail;
+        }
+
+        /**
+         * @return events
+         */
+        public java.util.List<java.util.Map<String, ?>> getEvents() {
+            return this.events;
         }
 
         /**
@@ -219,7 +245,7 @@ public class CreateChatResponseBody extends TeaModel {
         /**
          * @return timestamp
          */
-        public Long getTimestamp() {
+        public String getTimestamp() {
             return this.timestamp;
         }
 
@@ -237,32 +263,45 @@ public class CreateChatResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private java.util.List<java.util.Map<String, ?>> agents; 
+            private java.util.List<java.util.Map<String, ?>> artifacts; 
             private String callId; 
             private java.util.List<java.util.Map<String, ?>> contents; 
             private String detail; 
+            private java.util.List<java.util.Map<String, ?>> events; 
             private String parentCallId; 
             private String role; 
             private Integer seq; 
-            private Long timestamp; 
+            private String timestamp; 
             private java.util.List<java.util.Map<String, ?>> tools; 
             private String type; 
+            private String version; 
 
             private Builder() {
             } 
 
             private Builder(Messages model) {
                 this.agents = model.agents;
+                this.artifacts = model.artifacts;
                 this.callId = model.callId;
                 this.contents = model.contents;
                 this.detail = model.detail;
+                this.events = model.events;
                 this.parentCallId = model.parentCallId;
                 this.role = model.role;
                 this.seq = model.seq;
                 this.timestamp = model.timestamp;
                 this.tools = model.tools;
                 this.type = model.type;
+                this.version = model.version;
             } 
 
             /**
@@ -270,6 +309,14 @@ public class CreateChatResponseBody extends TeaModel {
              */
             public Builder agents(java.util.List<java.util.Map<String, ?>> agents) {
                 this.agents = agents;
+                return this;
+            }
+
+            /**
+             * artifacts.
+             */
+            public Builder artifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
+                this.artifacts = artifacts;
                 return this;
             }
 
@@ -294,6 +341,14 @@ public class CreateChatResponseBody extends TeaModel {
              */
             public Builder detail(String detail) {
                 this.detail = detail;
+                return this;
+            }
+
+            /**
+             * events.
+             */
+            public Builder events(java.util.List<java.util.Map<String, ?>> events) {
+                this.events = events;
                 return this;
             }
 
@@ -324,7 +379,7 @@ public class CreateChatResponseBody extends TeaModel {
             /**
              * timestamp.
              */
-            public Builder timestamp(Long timestamp) {
+            public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
                 return this;
             }
@@ -342,6 +397,14 @@ public class CreateChatResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
