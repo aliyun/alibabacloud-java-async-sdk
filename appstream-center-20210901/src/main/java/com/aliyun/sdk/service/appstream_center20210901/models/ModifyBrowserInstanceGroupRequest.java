@@ -657,6 +657,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ClipboardScope")
         private String clipboardScope;
 
+        @com.aliyun.core.annotation.NameInMap("ClipboardSizeUnit")
+        private String clipboardSizeUnit;
+
         @com.aliyun.core.annotation.NameInMap("ClipboardWriteLimit")
         private Integer clipboardWriteLimit;
 
@@ -673,6 +676,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.clipboard = builder.clipboard;
             this.clipboardReadLimit = builder.clipboardReadLimit;
             this.clipboardScope = builder.clipboardScope;
+            this.clipboardSizeUnit = builder.clipboardSizeUnit;
             this.clipboardWriteLimit = builder.clipboardWriteLimit;
             this.fileClipboard = builder.fileClipboard;
             this.richTextClipboard = builder.richTextClipboard;
@@ -709,6 +713,13 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return clipboardSizeUnit
+         */
+        public String getClipboardSizeUnit() {
+            return this.clipboardSizeUnit;
+        }
+
+        /**
          * @return clipboardWriteLimit
          */
         public Integer getClipboardWriteLimit() {
@@ -740,6 +751,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private String clipboard; 
             private Integer clipboardReadLimit; 
             private String clipboardScope; 
+            private String clipboardSizeUnit; 
             private Integer clipboardWriteLimit; 
             private String fileClipboard; 
             private String richTextClipboard; 
@@ -752,6 +764,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.clipboard = model.clipboard;
                 this.clipboardReadLimit = model.clipboardReadLimit;
                 this.clipboardScope = model.clipboardScope;
+                this.clipboardSizeUnit = model.clipboardSizeUnit;
                 this.clipboardWriteLimit = model.clipboardWriteLimit;
                 this.fileClipboard = model.fileClipboard;
                 this.richTextClipboard = model.richTextClipboard;
@@ -800,6 +813,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder clipboardScope(String clipboardScope) {
                 this.clipboardScope = clipboardScope;
+                return this;
+            }
+
+            /**
+             * ClipboardSizeUnit.
+             */
+            public Builder clipboardSizeUnit(String clipboardSizeUnit) {
+                this.clipboardSizeUnit = clipboardSizeUnit;
                 return this;
             }
 
