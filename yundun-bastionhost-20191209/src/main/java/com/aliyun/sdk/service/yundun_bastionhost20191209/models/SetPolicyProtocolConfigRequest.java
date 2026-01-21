@@ -184,6 +184,12 @@ public class SetPolicyProtocolConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DiskRedirection")
         private String diskRedirection;
 
+        @com.aliyun.core.annotation.NameInMap("DiskRedirectionDownload")
+        private String diskRedirectionDownload;
+
+        @com.aliyun.core.annotation.NameInMap("DiskRedirectionUpload")
+        private String diskRedirectionUpload;
+
         @com.aliyun.core.annotation.NameInMap("RecordKeyboard")
         private String recordKeyboard;
 
@@ -191,6 +197,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
             this.clipboardDownload = builder.clipboardDownload;
             this.clipboardUpload = builder.clipboardUpload;
             this.diskRedirection = builder.diskRedirection;
+            this.diskRedirectionDownload = builder.diskRedirectionDownload;
+            this.diskRedirectionUpload = builder.diskRedirectionUpload;
             this.recordKeyboard = builder.recordKeyboard;
         }
 
@@ -224,6 +232,20 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         /**
+         * @return diskRedirectionDownload
+         */
+        public String getDiskRedirectionDownload() {
+            return this.diskRedirectionDownload;
+        }
+
+        /**
+         * @return diskRedirectionUpload
+         */
+        public String getDiskRedirectionUpload() {
+            return this.diskRedirectionUpload;
+        }
+
+        /**
          * @return recordKeyboard
          */
         public String getRecordKeyboard() {
@@ -234,6 +256,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
             private String clipboardDownload; 
             private String clipboardUpload; 
             private String diskRedirection; 
+            private String diskRedirectionDownload; 
+            private String diskRedirectionUpload; 
             private String recordKeyboard; 
 
             private Builder() {
@@ -243,6 +267,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
                 this.clipboardDownload = model.clipboardDownload;
                 this.clipboardUpload = model.clipboardUpload;
                 this.diskRedirection = model.diskRedirection;
+                this.diskRedirectionDownload = model.diskRedirectionDownload;
+                this.diskRedirectionUpload = model.diskRedirectionUpload;
                 this.recordKeyboard = model.recordKeyboard;
             } 
 
@@ -301,6 +327,22 @@ public class SetPolicyProtocolConfigRequest extends Request {
             }
 
             /**
+             * DiskRedirectionDownload.
+             */
+            public Builder diskRedirectionDownload(String diskRedirectionDownload) {
+                this.diskRedirectionDownload = diskRedirectionDownload;
+                return this;
+            }
+
+            /**
+             * DiskRedirectionUpload.
+             */
+            public Builder diskRedirectionUpload(String diskRedirectionUpload) {
+                this.diskRedirectionUpload = diskRedirectionUpload;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether to enable keyboard operation recording. Valid values:</p>
              * <ul>
              * <li>Enable</li>
@@ -332,6 +374,12 @@ public class SetPolicyProtocolConfigRequest extends Request {
      * <p>SetPolicyProtocolConfigRequest</p>
      */
     public static class SSH extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowDirectTcp")
+        private String allowDirectTcp;
+
+        @com.aliyun.core.annotation.NameInMap("AllowTcpForwarding")
+        private String allowTcpForwarding;
+
         @com.aliyun.core.annotation.NameInMap("ExecCommand")
         private String execCommand;
 
@@ -363,6 +411,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
         private String x11Forwarding;
 
         private SSH(Builder builder) {
+            this.allowDirectTcp = builder.allowDirectTcp;
+            this.allowTcpForwarding = builder.allowTcpForwarding;
             this.execCommand = builder.execCommand;
             this.SFTPChannel = builder.SFTPChannel;
             this.SFTPDownloadFile = builder.SFTPDownloadFile;
@@ -381,6 +431,20 @@ public class SetPolicyProtocolConfigRequest extends Request {
 
         public static SSH create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowDirectTcp
+         */
+        public String getAllowDirectTcp() {
+            return this.allowDirectTcp;
+        }
+
+        /**
+         * @return allowTcpForwarding
+         */
+        public String getAllowTcpForwarding() {
+            return this.allowTcpForwarding;
         }
 
         /**
@@ -454,6 +518,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private String allowDirectTcp; 
+            private String allowTcpForwarding; 
             private String execCommand; 
             private String SFTPChannel; 
             private String SFTPDownloadFile; 
@@ -469,6 +535,8 @@ public class SetPolicyProtocolConfigRequest extends Request {
             } 
 
             private Builder(SSH model) {
+                this.allowDirectTcp = model.allowDirectTcp;
+                this.allowTcpForwarding = model.allowTcpForwarding;
                 this.execCommand = model.execCommand;
                 this.SFTPChannel = model.SFTPChannel;
                 this.SFTPDownloadFile = model.SFTPDownloadFile;
@@ -480,6 +548,22 @@ public class SetPolicyProtocolConfigRequest extends Request {
                 this.SSHChannel = model.SSHChannel;
                 this.x11Forwarding = model.x11Forwarding;
             } 
+
+            /**
+             * AllowDirectTcp.
+             */
+            public Builder allowDirectTcp(String allowDirectTcp) {
+                this.allowDirectTcp = allowDirectTcp;
+                return this;
+            }
+
+            /**
+             * AllowTcpForwarding.
+             */
+            public Builder allowTcpForwarding(String allowTcpForwarding) {
+                this.allowTcpForwarding = allowTcpForwarding;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to enable remote command execution. Valid values:</p>

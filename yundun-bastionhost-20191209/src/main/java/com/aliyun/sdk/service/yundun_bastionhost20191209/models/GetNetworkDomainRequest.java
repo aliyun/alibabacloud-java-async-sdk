@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetNetworkDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckProxyState")
+    private String checkProxyState;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -33,6 +37,7 @@ public class GetNetworkDomainRequest extends Request {
 
     private GetNetworkDomainRequest(Builder builder) {
         super(builder);
+        this.checkProxyState = builder.checkProxyState;
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
         this.regionId = builder.regionId;
@@ -49,6 +54,13 @@ public class GetNetworkDomainRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return checkProxyState
+     */
+    public String getCheckProxyState() {
+        return this.checkProxyState;
     }
 
     /**
@@ -73,6 +85,7 @@ public class GetNetworkDomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetNetworkDomainRequest, Builder> {
+        private String checkProxyState; 
         private String instanceId; 
         private String networkDomainId; 
         private String regionId; 
@@ -83,10 +96,20 @@ public class GetNetworkDomainRequest extends Request {
 
         private Builder(GetNetworkDomainRequest request) {
             super(request);
+            this.checkProxyState = request.checkProxyState;
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * CheckProxyState.
+         */
+        public Builder checkProxyState(String checkProxyState) {
+            this.putQueryParameter("CheckProxyState", checkProxyState);
+            this.checkProxyState = checkProxyState;
+            return this;
+        }
 
         /**
          * <p>The bastion host ID.</p>
