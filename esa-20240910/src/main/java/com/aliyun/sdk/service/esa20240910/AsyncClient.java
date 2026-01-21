@@ -1799,6 +1799,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSiteDeliveryTasksResponse> listSiteDeliveryTasks(ListSiteDeliveryTasksRequest request);
 
     /**
+     * @param request the request parameters of ListSiteOriginClientCertificates  ListSiteOriginClientCertificatesRequest
+     * @return ListSiteOriginClientCertificatesResponse
+     */
+    CompletableFuture<ListSiteOriginClientCertificatesResponse> listSiteOriginClientCertificates(ListSiteOriginClientCertificatesRequest request);
+
+    /**
      * @param request the request parameters of ListSiteRoutes  ListSiteRoutesRequest
      * @return ListSiteRoutesResponse
      */
