@@ -1080,6 +1080,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionInfoResponse> describeRegionInfo(DescribeRegionInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeRegionResourceTypeAutoEnable  DescribeRegionResourceTypeAutoEnableRequest
+     * @return DescribeRegionResourceTypeAutoEnableResponse
+     */
+    CompletableFuture<DescribeRegionResourceTypeAutoEnableResponse> describeRegionResourceTypeAutoEnable(DescribeRegionResourceTypeAutoEnableRequest request);
+
+    /**
      * @param request the request parameters of DescribeResourceTypeAutoEnable  DescribeResourceTypeAutoEnableRequest
      * @return DescribeResourceTypeAutoEnableResponse
      */
@@ -1857,6 +1863,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetVpcFirewallRuleHitCountResponse
      */
     CompletableFuture<ResetVpcFirewallRuleHitCountResponse> resetVpcFirewallRuleHitCount(ResetVpcFirewallRuleHitCountRequest request);
+
+    /**
+     * @param request the request parameters of SetAutoProtectNewAssets  SetAutoProtectNewAssetsRequest
+     * @return SetAutoProtectNewAssetsResponse
+     */
+    CompletableFuture<SetAutoProtectNewAssetsResponse> setAutoProtectNewAssets(SetAutoProtectNewAssetsRequest request);
 
     /**
      * @param request the request parameters of SwitchSecurityProxy  SwitchSecurityProxyRequest

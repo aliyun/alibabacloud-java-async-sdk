@@ -23,6 +23,14 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogVersion")
+    private Integer logVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsRegionId")
+    private String slsRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer storageTime;
@@ -30,6 +38,8 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
     private ModifyUserSlsLogStorageTimeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.logVersion = builder.logVersion;
+        this.slsRegionId = builder.slsRegionId;
         this.storageTime = builder.storageTime;
     }
 
@@ -54,6 +64,20 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
     }
 
     /**
+     * @return logVersion
+     */
+    public Integer getLogVersion() {
+        return this.logVersion;
+    }
+
+    /**
+     * @return slsRegionId
+     */
+    public String getSlsRegionId() {
+        return this.slsRegionId;
+    }
+
+    /**
      * @return storageTime
      */
     public Integer getStorageTime() {
@@ -62,6 +86,8 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyUserSlsLogStorageTimeRequest, Builder> {
         private String instanceId; 
+        private Integer logVersion; 
+        private String slsRegionId; 
         private Integer storageTime; 
 
         private Builder() {
@@ -71,6 +97,8 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         private Builder(ModifyUserSlsLogStorageTimeRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.logVersion = request.logVersion;
+            this.slsRegionId = request.slsRegionId;
             this.storageTime = request.storageTime;
         } 
 
@@ -83,6 +111,24 @@ public class ModifyUserSlsLogStorageTimeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * LogVersion.
+         */
+        public Builder logVersion(Integer logVersion) {
+            this.putQueryParameter("LogVersion", logVersion);
+            this.logVersion = logVersion;
+            return this;
+        }
+
+        /**
+         * SlsRegionId.
+         */
+        public Builder slsRegionId(String slsRegionId) {
+            this.putQueryParameter("SlsRegionId", slsRegionId);
+            this.slsRegionId = slsRegionId;
             return this;
         }
 

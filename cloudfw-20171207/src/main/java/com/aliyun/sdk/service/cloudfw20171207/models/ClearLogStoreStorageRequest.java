@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ClearLogStoreStorageRequest</p>
  */
 public class ClearLogStoreStorageRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Site")
+    private String site;
+
     private ClearLogStoreStorageRequest(Builder builder) {
         super(builder);
+        this.site = builder.site;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class ClearLogStoreStorageRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return site
+     */
+    public String getSite() {
+        return this.site;
+    }
+
     public static final class Builder extends Request.Builder<ClearLogStoreStorageRequest, Builder> {
+        private String site; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class ClearLogStoreStorageRequest extends Request {
 
         private Builder(ClearLogStoreStorageRequest request) {
             super(request);
+            this.site = request.site;
         } 
+
+        /**
+         * Site.
+         */
+        public Builder site(String site) {
+            this.putQueryParameter("Site", site);
+            this.site = site;
+            return this;
+        }
 
         @Override
         public ClearLogStoreStorageRequest build() {

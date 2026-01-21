@@ -33,12 +33,17 @@ public class ModifySlsDispatchStatusRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NewRegionId")
     private String newRegionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Site")
+    private String site;
+
     private ModifySlsDispatchStatusRequest(Builder builder) {
         super(builder);
         this.dispatchValue = builder.dispatchValue;
         this.enableStatus = builder.enableStatus;
         this.filterKeys = builder.filterKeys;
         this.newRegionId = builder.newRegionId;
+        this.site = builder.site;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ModifySlsDispatchStatusRequest extends Request {
         return this.newRegionId;
     }
 
+    /**
+     * @return site
+     */
+    public String getSite() {
+        return this.site;
+    }
+
     public static final class Builder extends Request.Builder<ModifySlsDispatchStatusRequest, Builder> {
         private String dispatchValue; 
         private Boolean enableStatus; 
         private String filterKeys; 
         private String newRegionId; 
+        private String site; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ModifySlsDispatchStatusRequest extends Request {
             this.enableStatus = request.enableStatus;
             this.filterKeys = request.filterKeys;
             this.newRegionId = request.newRegionId;
+            this.site = request.site;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class ModifySlsDispatchStatusRequest extends Request {
         public Builder newRegionId(String newRegionId) {
             this.putQueryParameter("NewRegionId", newRegionId);
             this.newRegionId = newRegionId;
+            return this;
+        }
+
+        /**
+         * Site.
+         */
+        public Builder site(String site) {
+            this.putQueryParameter("Site", site);
+            this.site = site;
             return this;
         }
 

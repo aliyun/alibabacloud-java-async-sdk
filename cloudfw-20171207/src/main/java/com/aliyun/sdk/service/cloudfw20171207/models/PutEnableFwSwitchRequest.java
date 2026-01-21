@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutEnableFwSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpaddrList")
     private java.util.List<String> ipaddrList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
+    private String memberUid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionList")
@@ -40,8 +48,10 @@ public class PutEnableFwSwitchRequest extends Request {
 
     private PutEnableFwSwitchRequest(Builder builder) {
         super(builder);
+        this.ipVersion = builder.ipVersion;
         this.ipaddrList = builder.ipaddrList;
         this.lang = builder.lang;
+        this.memberUid = builder.memberUid;
         this.regionList = builder.regionList;
         this.resourceTypeList = builder.resourceTypeList;
         this.sourceIp = builder.sourceIp;
@@ -61,6 +71,13 @@ public class PutEnableFwSwitchRequest extends Request {
     }
 
     /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
+    /**
      * @return ipaddrList
      */
     public java.util.List<String> getIpaddrList() {
@@ -72,6 +89,13 @@ public class PutEnableFwSwitchRequest extends Request {
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return memberUid
+     */
+    public String getMemberUid() {
+        return this.memberUid;
     }
 
     /**
@@ -96,8 +120,10 @@ public class PutEnableFwSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutEnableFwSwitchRequest, Builder> {
+        private String ipVersion; 
         private java.util.List<String> ipaddrList; 
         private String lang; 
+        private String memberUid; 
         private java.util.List<String> regionList; 
         private java.util.List<String> resourceTypeList; 
         private String sourceIp; 
@@ -108,12 +134,23 @@ public class PutEnableFwSwitchRequest extends Request {
 
         private Builder(PutEnableFwSwitchRequest request) {
             super(request);
+            this.ipVersion = request.ipVersion;
             this.ipaddrList = request.ipaddrList;
             this.lang = request.lang;
+            this.memberUid = request.memberUid;
             this.regionList = request.regionList;
             this.resourceTypeList = request.resourceTypeList;
             this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
 
         /**
          * <p>The IP addresses.</p>
@@ -143,6 +180,15 @@ public class PutEnableFwSwitchRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * MemberUid.
+         */
+        public Builder memberUid(String memberUid) {
+            this.putQueryParameter("MemberUid", memberUid);
+            this.memberUid = memberUid;
             return this;
         }
 

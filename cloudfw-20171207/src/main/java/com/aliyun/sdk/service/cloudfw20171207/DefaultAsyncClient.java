@@ -2963,6 +2963,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeRegionResourceTypeAutoEnable  DescribeRegionResourceTypeAutoEnableRequest
+     * @return DescribeRegionResourceTypeAutoEnableResponse
+     */
+    @Override
+    public CompletableFuture<DescribeRegionResourceTypeAutoEnableResponse> describeRegionResourceTypeAutoEnable(DescribeRegionResourceTypeAutoEnableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRegionResourceTypeAutoEnable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRegionResourceTypeAutoEnableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRegionResourceTypeAutoEnableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeResourceTypeAutoEnable  DescribeResourceTypeAutoEnableRequest
      * @return DescribeResourceTypeAutoEnableResponse
      */
@@ -5008,6 +5026,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetVpcFirewallRuleHitCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetAutoProtectNewAssets  SetAutoProtectNewAssetsRequest
+     * @return SetAutoProtectNewAssetsResponse
+     */
+    @Override
+    public CompletableFuture<SetAutoProtectNewAssetsResponse> setAutoProtectNewAssets(SetAutoProtectNewAssetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetAutoProtectNewAssets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetAutoProtectNewAssetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetAutoProtectNewAssetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

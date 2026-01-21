@@ -22,12 +22,17 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
+    private String regionNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTypeAutoEnable")
     private String resourceTypeAutoEnable;
 
     private ModifyResourceTypeAutoEnableRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.regionNo = builder.regionNo;
         this.resourceTypeAutoEnable = builder.resourceTypeAutoEnable;
     }
 
@@ -52,6 +57,13 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
     }
 
     /**
+     * @return regionNo
+     */
+    public String getRegionNo() {
+        return this.regionNo;
+    }
+
+    /**
      * @return resourceTypeAutoEnable
      */
     public String getResourceTypeAutoEnable() {
@@ -60,6 +72,7 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyResourceTypeAutoEnableRequest, Builder> {
         private String lang; 
+        private String regionNo; 
         private String resourceTypeAutoEnable; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
         private Builder(ModifyResourceTypeAutoEnableRequest request) {
             super(request);
             this.lang = request.lang;
+            this.regionNo = request.regionNo;
             this.resourceTypeAutoEnable = request.resourceTypeAutoEnable;
         } 
 
@@ -78,6 +92,15 @@ public class ModifyResourceTypeAutoEnableRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * RegionNo.
+         */
+        public Builder regionNo(String regionNo) {
+            this.putQueryParameter("RegionNo", regionNo);
+            this.regionNo = regionNo;
             return this;
         }
 
