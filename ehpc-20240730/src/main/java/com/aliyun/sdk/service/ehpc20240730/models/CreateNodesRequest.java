@@ -54,6 +54,10 @@ public class CreateNodesRequest extends Request {
     private String keepAlive;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinCount")
+    private Integer minCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueName")
     private String queueName;
 
@@ -80,6 +84,7 @@ public class CreateNodesRequest extends Request {
         this.hostnameSuffix = builder.hostnameSuffix;
         this.hostnames = builder.hostnames;
         this.keepAlive = builder.keepAlive;
+        this.minCount = builder.minCount;
         this.queueName = builder.queueName;
         this.ramRole = builder.ramRole;
         this.reservedNodePoolId = builder.reservedNodePoolId;
@@ -163,6 +168,13 @@ public class CreateNodesRequest extends Request {
     }
 
     /**
+     * @return minCount
+     */
+    public Integer getMinCount() {
+        return this.minCount;
+    }
+
+    /**
      * @return queueName
      */
     public String getQueueName() {
@@ -200,6 +212,7 @@ public class CreateNodesRequest extends Request {
         private String hostnameSuffix; 
         private java.util.List<String> hostnames; 
         private String keepAlive; 
+        private Integer minCount; 
         private String queueName; 
         private String ramRole; 
         private String reservedNodePoolId; 
@@ -220,6 +233,7 @@ public class CreateNodesRequest extends Request {
             this.hostnameSuffix = request.hostnameSuffix;
             this.hostnames = request.hostnames;
             this.keepAlive = request.keepAlive;
+            this.minCount = request.minCount;
             this.queueName = request.queueName;
             this.ramRole = request.ramRole;
             this.reservedNodePoolId = request.reservedNodePoolId;
@@ -337,6 +351,15 @@ public class CreateNodesRequest extends Request {
         public Builder keepAlive(String keepAlive) {
             this.putQueryParameter("KeepAlive", keepAlive);
             this.keepAlive = keepAlive;
+            return this;
+        }
+
+        /**
+         * MinCount.
+         */
+        public Builder minCount(Integer minCount) {
+            this.putQueryParameter("MinCount", minCount);
+            this.minCount = minCount;
             return this;
         }
 
