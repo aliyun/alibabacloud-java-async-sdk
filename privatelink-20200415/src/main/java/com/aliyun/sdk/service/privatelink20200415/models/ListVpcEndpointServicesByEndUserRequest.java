@@ -44,6 +44,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
     private String serviceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+    private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
@@ -59,6 +63,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
+        this.serviceRegionId = builder.serviceRegionId;
         this.serviceType = builder.serviceType;
         this.tag = builder.tag;
     }
@@ -119,6 +124,13 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
     }
 
     /**
+     * @return serviceRegionId
+     */
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
+    }
+
+    /**
      * @return serviceType
      */
     public String getServiceType() {
@@ -139,6 +151,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         private String resourceGroupId; 
         private String serviceId; 
         private String serviceName; 
+        private String serviceRegionId; 
         private String serviceType; 
         private java.util.List<Tag> tag; 
 
@@ -154,6 +167,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.serviceId = request.serviceId;
             this.serviceName = request.serviceName;
+            this.serviceRegionId = request.serviceRegionId;
             this.serviceType = request.serviceType;
             this.tag = request.tag;
         } 
@@ -233,6 +247,15 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * ServiceRegionId.
+         */
+        public Builder serviceRegionId(String serviceRegionId) {
+            this.putQueryParameter("ServiceRegionId", serviceRegionId);
+            this.serviceRegionId = serviceRegionId;
             return this;
         }
 

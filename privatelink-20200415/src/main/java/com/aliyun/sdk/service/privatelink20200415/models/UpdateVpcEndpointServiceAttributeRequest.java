@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateVpcEndpointServiceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddSupportedRegionSet")
+    private java.util.List<String> addSupportedRegionSet;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
     private String addressIpVersion;
 
@@ -32,6 +36,10 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectBandwidth")
     private Integer connectBandwidth;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteSupportedRegionSet")
+    private java.util.List<String> deleteSupportedRegionSet;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -62,10 +70,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
 
     private UpdateVpcEndpointServiceAttributeRequest(Builder builder) {
         super(builder);
+        this.addSupportedRegionSet = builder.addSupportedRegionSet;
         this.addressIpVersion = builder.addressIpVersion;
         this.autoAcceptEnabled = builder.autoAcceptEnabled;
         this.clientToken = builder.clientToken;
         this.connectBandwidth = builder.connectBandwidth;
+        this.deleteSupportedRegionSet = builder.deleteSupportedRegionSet;
         this.dryRun = builder.dryRun;
         this.regionId = builder.regionId;
         this.serviceDescription = builder.serviceDescription;
@@ -85,6 +95,13 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addSupportedRegionSet
+     */
+    public java.util.List<String> getAddSupportedRegionSet() {
+        return this.addSupportedRegionSet;
     }
 
     /**
@@ -113,6 +130,13 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
      */
     public Integer getConnectBandwidth() {
         return this.connectBandwidth;
+    }
+
+    /**
+     * @return deleteSupportedRegionSet
+     */
+    public java.util.List<String> getDeleteSupportedRegionSet() {
+        return this.deleteSupportedRegionSet;
     }
 
     /**
@@ -158,10 +182,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateVpcEndpointServiceAttributeRequest, Builder> {
+        private java.util.List<String> addSupportedRegionSet; 
         private String addressIpVersion; 
         private Boolean autoAcceptEnabled; 
         private String clientToken; 
         private Integer connectBandwidth; 
+        private java.util.List<String> deleteSupportedRegionSet; 
         private Boolean dryRun; 
         private String regionId; 
         private String serviceDescription; 
@@ -175,10 +201,12 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
 
         private Builder(UpdateVpcEndpointServiceAttributeRequest request) {
             super(request);
+            this.addSupportedRegionSet = request.addSupportedRegionSet;
             this.addressIpVersion = request.addressIpVersion;
             this.autoAcceptEnabled = request.autoAcceptEnabled;
             this.clientToken = request.clientToken;
             this.connectBandwidth = request.connectBandwidth;
+            this.deleteSupportedRegionSet = request.deleteSupportedRegionSet;
             this.dryRun = request.dryRun;
             this.regionId = request.regionId;
             this.serviceDescription = request.serviceDescription;
@@ -186,6 +214,15 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
             this.serviceSupportIPv6 = request.serviceSupportIPv6;
             this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
+
+        /**
+         * AddSupportedRegionSet.
+         */
+        public Builder addSupportedRegionSet(java.util.List<String> addSupportedRegionSet) {
+            this.putQueryParameter("AddSupportedRegionSet", addSupportedRegionSet);
+            this.addSupportedRegionSet = addSupportedRegionSet;
+            return this;
+        }
 
         /**
          * <p>The protocol. Valid values:</p>
@@ -248,6 +285,15 @@ public class UpdateVpcEndpointServiceAttributeRequest extends Request {
         public Builder connectBandwidth(Integer connectBandwidth) {
             this.putQueryParameter("ConnectBandwidth", connectBandwidth);
             this.connectBandwidth = connectBandwidth;
+            return this;
+        }
+
+        /**
+         * DeleteSupportedRegionSet.
+         */
+        public Builder deleteSupportedRegionSet(java.util.List<String> deleteSupportedRegionSet) {
+            this.putQueryParameter("DeleteSupportedRegionSet", deleteSupportedRegionSet);
+            this.deleteSupportedRegionSet = deleteSupportedRegionSet;
             return this;
         }
 

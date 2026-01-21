@@ -54,6 +54,9 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     @Deprecated
     private Boolean serviceSupportIPv6;
 
+    @com.aliyun.core.annotation.NameInMap("SupportedRegionSet")
+    private java.util.List<SupportedRegionSet> supportedRegionSet;
+
     @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
@@ -70,6 +73,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
         this.serviceSupportIPv6 = builder.serviceSupportIPv6;
+        this.supportedRegionSet = builder.supportedRegionSet;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
 
@@ -170,6 +174,13 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportedRegionSet
+     */
+    public java.util.List<SupportedRegionSet> getSupportedRegionSet() {
+        return this.supportedRegionSet;
+    }
+
+    /**
      * @return zoneAffinityEnabled
      */
     public Boolean getZoneAffinityEnabled() {
@@ -189,6 +200,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         private String serviceName; 
         private String serviceStatus; 
         private Boolean serviceSupportIPv6; 
+        private java.util.List<SupportedRegionSet> supportedRegionSet; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
@@ -207,6 +219,7 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
             this.serviceName = model.serviceName;
             this.serviceStatus = model.serviceStatus;
             this.serviceSupportIPv6 = model.serviceSupportIPv6;
+            this.supportedRegionSet = model.supportedRegionSet;
             this.zoneAffinityEnabled = model.zoneAffinityEnabled;
         } 
 
@@ -365,6 +378,14 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
         }
 
         /**
+         * SupportedRegionSet.
+         */
+        public Builder supportedRegionSet(java.util.List<SupportedRegionSet> supportedRegionSet) {
+            this.supportedRegionSet = supportedRegionSet;
+            return this;
+        }
+
+        /**
          * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
@@ -385,4 +406,100 @@ public class CreateVpcEndpointServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVpcEndpointServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointServiceResponseBody</p>
+     */
+    public static class SupportedRegionSet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionBusinessStatus")
+        private String regionBusinessStatus;
+
+        @com.aliyun.core.annotation.NameInMap("RegionServiceStatus")
+        private String regionServiceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+        private String serviceRegionId;
+
+        private SupportedRegionSet(Builder builder) {
+            this.regionBusinessStatus = builder.regionBusinessStatus;
+            this.regionServiceStatus = builder.regionServiceStatus;
+            this.serviceRegionId = builder.serviceRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedRegionSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionBusinessStatus
+         */
+        public String getRegionBusinessStatus() {
+            return this.regionBusinessStatus;
+        }
+
+        /**
+         * @return regionServiceStatus
+         */
+        public String getRegionServiceStatus() {
+            return this.regionServiceStatus;
+        }
+
+        /**
+         * @return serviceRegionId
+         */
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
+        public static final class Builder {
+            private String regionBusinessStatus; 
+            private String regionServiceStatus; 
+            private String serviceRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedRegionSet model) {
+                this.regionBusinessStatus = model.regionBusinessStatus;
+                this.regionServiceStatus = model.regionServiceStatus;
+                this.serviceRegionId = model.serviceRegionId;
+            } 
+
+            /**
+             * RegionBusinessStatus.
+             */
+            public Builder regionBusinessStatus(String regionBusinessStatus) {
+                this.regionBusinessStatus = regionBusinessStatus;
+                return this;
+            }
+
+            /**
+             * RegionServiceStatus.
+             */
+            public Builder regionServiceStatus(String regionServiceStatus) {
+                this.regionServiceStatus = regionServiceStatus;
+                return this;
+            }
+
+            /**
+             * ServiceRegionId.
+             */
+            public Builder serviceRegionId(String serviceRegionId) {
+                this.serviceRegionId = serviceRegionId;
+                return this;
+            }
+
+            public SupportedRegionSet build() {
+                return new SupportedRegionSet(this);
+            } 
+
+        } 
+
+    }
 }

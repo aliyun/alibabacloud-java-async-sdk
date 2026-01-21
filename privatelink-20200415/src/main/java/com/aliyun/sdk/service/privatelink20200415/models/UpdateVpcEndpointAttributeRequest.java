@@ -26,6 +26,10 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionBandwidth")
+    private Integer crossRegionBandwidth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -63,6 +67,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         super(builder);
         this.addressIpVersion = builder.addressIpVersion;
         this.clientToken = builder.clientToken;
+        this.crossRegionBandwidth = builder.crossRegionBandwidth;
         this.dryRun = builder.dryRun;
         this.endpointDescription = builder.endpointDescription;
         this.endpointId = builder.endpointId;
@@ -98,6 +103,13 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return crossRegionBandwidth
+     */
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     /**
@@ -159,6 +171,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateVpcEndpointAttributeRequest, Builder> {
         private String addressIpVersion; 
         private String clientToken; 
+        private Integer crossRegionBandwidth; 
         private Boolean dryRun; 
         private String endpointDescription; 
         private String endpointId; 
@@ -176,6 +189,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
             super(request);
             this.addressIpVersion = request.addressIpVersion;
             this.clientToken = request.clientToken;
+            this.crossRegionBandwidth = request.crossRegionBandwidth;
             this.dryRun = request.dryRun;
             this.endpointDescription = request.endpointDescription;
             this.endpointId = request.endpointId;
@@ -215,6 +229,15 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CrossRegionBandwidth.
+         */
+        public Builder crossRegionBandwidth(Integer crossRegionBandwidth) {
+            this.putQueryParameter("CrossRegionBandwidth", crossRegionBandwidth);
+            this.crossRegionBandwidth = crossRegionBandwidth;
             return this;
         }
 

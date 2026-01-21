@@ -422,6 +422,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndpointOwnerId")
         private Long endpointOwnerId;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointRegionId")
+        private String endpointRegionId;
+
         @com.aliyun.core.annotation.NameInMap("EndpointVpcId")
         private String endpointVpcId;
 
@@ -437,6 +440,9 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+        private String serviceRegionId;
+
         @com.aliyun.core.annotation.NameInMap("TrafficControlMode")
         private String trafficControlMode;
 
@@ -448,11 +454,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             this.connectionStatus = builder.connectionStatus;
             this.endpointId = builder.endpointId;
             this.endpointOwnerId = builder.endpointOwnerId;
+            this.endpointRegionId = builder.endpointRegionId;
             this.endpointVpcId = builder.endpointVpcId;
             this.modifiedTime = builder.modifiedTime;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceOwner = builder.resourceOwner;
             this.serviceId = builder.serviceId;
+            this.serviceRegionId = builder.serviceRegionId;
             this.trafficControlMode = builder.trafficControlMode;
             this.zones = builder.zones;
         }
@@ -494,6 +502,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return endpointRegionId
+         */
+        public String getEndpointRegionId() {
+            return this.endpointRegionId;
+        }
+
+        /**
          * @return endpointVpcId
          */
         public String getEndpointVpcId() {
@@ -529,6 +544,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceRegionId
+         */
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
+        /**
          * @return trafficControlMode
          */
         public String getTrafficControlMode() {
@@ -547,11 +569,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
             private String connectionStatus; 
             private String endpointId; 
             private Long endpointOwnerId; 
+            private String endpointRegionId; 
             private String endpointVpcId; 
             private String modifiedTime; 
             private String resourceGroupId; 
             private Boolean resourceOwner; 
             private String serviceId; 
+            private String serviceRegionId; 
             private String trafficControlMode; 
             private java.util.List<Zones> zones; 
 
@@ -563,11 +587,13 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
                 this.connectionStatus = model.connectionStatus;
                 this.endpointId = model.endpointId;
                 this.endpointOwnerId = model.endpointOwnerId;
+                this.endpointRegionId = model.endpointRegionId;
                 this.endpointVpcId = model.endpointVpcId;
                 this.modifiedTime = model.modifiedTime;
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceOwner = model.resourceOwner;
                 this.serviceId = model.serviceId;
+                this.serviceRegionId = model.serviceRegionId;
                 this.trafficControlMode = model.trafficControlMode;
                 this.zones = model.zones;
             } 
@@ -622,6 +648,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
              */
             public Builder endpointOwnerId(Long endpointOwnerId) {
                 this.endpointOwnerId = endpointOwnerId;
+                return this;
+            }
+
+            /**
+             * EndpointRegionId.
+             */
+            public Builder endpointRegionId(String endpointRegionId) {
+                this.endpointRegionId = endpointRegionId;
                 return this;
             }
 
@@ -681,6 +715,14 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * ServiceRegionId.
+             */
+            public Builder serviceRegionId(String serviceRegionId) {
+                this.serviceRegionId = serviceRegionId;
                 return this;
             }
 

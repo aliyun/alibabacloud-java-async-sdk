@@ -64,6 +64,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
     private Boolean serviceSupportIPv6;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportedRegionList")
+    private java.util.List<String> supportedRegionList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -84,6 +88,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         this.serviceDescription = builder.serviceDescription;
         this.serviceResourceType = builder.serviceResourceType;
         this.serviceSupportIPv6 = builder.serviceSupportIPv6;
+        this.supportedRegionList = builder.supportedRegionList;
         this.tag = builder.tag;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
     }
@@ -179,6 +184,13 @@ public class CreateVpcEndpointServiceRequest extends Request {
     }
 
     /**
+     * @return supportedRegionList
+     */
+    public java.util.List<String> getSupportedRegionList() {
+        return this.supportedRegionList;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -204,6 +216,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
         private String serviceDescription; 
         private String serviceResourceType; 
         private Boolean serviceSupportIPv6; 
+        private java.util.List<String> supportedRegionList; 
         private java.util.List<Tag> tag; 
         private Boolean zoneAffinityEnabled; 
 
@@ -224,6 +237,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
             this.serviceDescription = request.serviceDescription;
             this.serviceResourceType = request.serviceResourceType;
             this.serviceSupportIPv6 = request.serviceSupportIPv6;
+            this.supportedRegionList = request.supportedRegionList;
             this.tag = request.tag;
             this.zoneAffinityEnabled = request.zoneAffinityEnabled;
         } 
@@ -388,6 +402,15 @@ public class CreateVpcEndpointServiceRequest extends Request {
         public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
             this.putQueryParameter("ServiceSupportIPv6", serviceSupportIPv6);
             this.serviceSupportIPv6 = serviceSupportIPv6;
+            return this;
+        }
+
+        /**
+         * SupportedRegionList.
+         */
+        public Builder supportedRegionList(java.util.List<String> supportedRegionList) {
+            this.putQueryParameter("SupportedRegionList", supportedRegionList);
+            this.supportedRegionList = supportedRegionList;
             return this;
         }
 

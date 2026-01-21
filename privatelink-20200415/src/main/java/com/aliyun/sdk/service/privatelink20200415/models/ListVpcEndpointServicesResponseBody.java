@@ -173,6 +173,102 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
      *
      * <p>ListVpcEndpointServicesResponseBody</p>
      */
+    public static class SupportedRegionSet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegionBusinessStatus")
+        private String regionBusinessStatus;
+
+        @com.aliyun.core.annotation.NameInMap("RegionServiceStatus")
+        private String regionServiceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+        private String serviceRegionId;
+
+        private SupportedRegionSet(Builder builder) {
+            this.regionBusinessStatus = builder.regionBusinessStatus;
+            this.regionServiceStatus = builder.regionServiceStatus;
+            this.serviceRegionId = builder.serviceRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedRegionSet create() {
+            return builder().build();
+        }
+
+        /**
+         * @return regionBusinessStatus
+         */
+        public String getRegionBusinessStatus() {
+            return this.regionBusinessStatus;
+        }
+
+        /**
+         * @return regionServiceStatus
+         */
+        public String getRegionServiceStatus() {
+            return this.regionServiceStatus;
+        }
+
+        /**
+         * @return serviceRegionId
+         */
+        public String getServiceRegionId() {
+            return this.serviceRegionId;
+        }
+
+        public static final class Builder {
+            private String regionBusinessStatus; 
+            private String regionServiceStatus; 
+            private String serviceRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedRegionSet model) {
+                this.regionBusinessStatus = model.regionBusinessStatus;
+                this.regionServiceStatus = model.regionServiceStatus;
+                this.serviceRegionId = model.serviceRegionId;
+            } 
+
+            /**
+             * RegionBusinessStatus.
+             */
+            public Builder regionBusinessStatus(String regionBusinessStatus) {
+                this.regionBusinessStatus = regionBusinessStatus;
+                return this;
+            }
+
+            /**
+             * RegionServiceStatus.
+             */
+            public Builder regionServiceStatus(String regionServiceStatus) {
+                this.regionServiceStatus = regionServiceStatus;
+                return this;
+            }
+
+            /**
+             * ServiceRegionId.
+             */
+            public Builder serviceRegionId(String serviceRegionId) {
+                this.serviceRegionId = serviceRegionId;
+                return this;
+            }
+
+            public SupportedRegionSet build() {
+                return new SupportedRegionSet(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListVpcEndpointServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -310,6 +406,9 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
+        @com.aliyun.core.annotation.NameInMap("SupportedRegionSet")
+        private java.util.List<SupportedRegionSet> supportedRegionSet;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -335,6 +434,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             this.serviceStatus = builder.serviceStatus;
             this.serviceSupportIPv6 = builder.serviceSupportIPv6;
             this.serviceType = builder.serviceType;
+            this.supportedRegionSet = builder.supportedRegionSet;
             this.tags = builder.tags;
             this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
         }
@@ -474,6 +574,13 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedRegionSet
+         */
+        public java.util.List<SupportedRegionSet> getSupportedRegionSet() {
+            return this.supportedRegionSet;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -506,6 +613,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
             private String serviceStatus; 
             private Boolean serviceSupportIPv6; 
             private String serviceType; 
+            private java.util.List<SupportedRegionSet> supportedRegionSet; 
             private java.util.List<Tags> tags; 
             private Boolean zoneAffinityEnabled; 
 
@@ -531,6 +639,7 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
                 this.serviceStatus = model.serviceStatus;
                 this.serviceSupportIPv6 = model.serviceSupportIPv6;
                 this.serviceType = model.serviceType;
+                this.supportedRegionSet = model.supportedRegionSet;
                 this.tags = model.tags;
                 this.zoneAffinityEnabled = model.zoneAffinityEnabled;
             } 
@@ -764,6 +873,14 @@ public class ListVpcEndpointServicesResponseBody extends TeaModel {
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * SupportedRegionSet.
+             */
+            public Builder supportedRegionSet(java.util.List<SupportedRegionSet> supportedRegionSet) {
+                this.supportedRegionSet = supportedRegionSet;
                 return this;
             }
 

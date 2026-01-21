@@ -26,6 +26,10 @@ public class CreateVpcEndpointRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionBandwidth")
+    private Integer crossRegionBandwidth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -71,6 +75,10 @@ public class CreateVpcEndpointRequest extends Request {
     private String serviceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+    private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -95,6 +103,7 @@ public class CreateVpcEndpointRequest extends Request {
         super(builder);
         this.addressIpVersion = builder.addressIpVersion;
         this.clientToken = builder.clientToken;
+        this.crossRegionBandwidth = builder.crossRegionBandwidth;
         this.dryRun = builder.dryRun;
         this.endpointDescription = builder.endpointDescription;
         this.endpointName = builder.endpointName;
@@ -106,6 +115,7 @@ public class CreateVpcEndpointRequest extends Request {
         this.securityGroupId = builder.securityGroupId;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
+        this.serviceRegionId = builder.serviceRegionId;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
         this.zone = builder.zone;
@@ -138,6 +148,13 @@ public class CreateVpcEndpointRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return crossRegionBandwidth
+     */
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     /**
@@ -218,6 +235,13 @@ public class CreateVpcEndpointRequest extends Request {
     }
 
     /**
+     * @return serviceRegionId
+     */
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -255,6 +279,7 @@ public class CreateVpcEndpointRequest extends Request {
     public static final class Builder extends Request.Builder<CreateVpcEndpointRequest, Builder> {
         private String addressIpVersion; 
         private String clientToken; 
+        private Integer crossRegionBandwidth; 
         private Boolean dryRun; 
         private String endpointDescription; 
         private String endpointName; 
@@ -266,6 +291,7 @@ public class CreateVpcEndpointRequest extends Request {
         private java.util.List<String> securityGroupId; 
         private String serviceId; 
         private String serviceName; 
+        private String serviceRegionId; 
         private java.util.List<Tag> tag; 
         private String vpcId; 
         private java.util.List<Zone> zone; 
@@ -280,6 +306,7 @@ public class CreateVpcEndpointRequest extends Request {
             super(request);
             this.addressIpVersion = request.addressIpVersion;
             this.clientToken = request.clientToken;
+            this.crossRegionBandwidth = request.crossRegionBandwidth;
             this.dryRun = request.dryRun;
             this.endpointDescription = request.endpointDescription;
             this.endpointName = request.endpointName;
@@ -291,6 +318,7 @@ public class CreateVpcEndpointRequest extends Request {
             this.securityGroupId = request.securityGroupId;
             this.serviceId = request.serviceId;
             this.serviceName = request.serviceName;
+            this.serviceRegionId = request.serviceRegionId;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
             this.zone = request.zone;
@@ -327,6 +355,15 @@ public class CreateVpcEndpointRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CrossRegionBandwidth.
+         */
+        public Builder crossRegionBandwidth(Integer crossRegionBandwidth) {
+            this.putQueryParameter("CrossRegionBandwidth", crossRegionBandwidth);
+            this.crossRegionBandwidth = crossRegionBandwidth;
             return this;
         }
 
@@ -475,6 +512,15 @@ public class CreateVpcEndpointRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * ServiceRegionId.
+         */
+        public Builder serviceRegionId(String serviceRegionId) {
+            this.putQueryParameter("ServiceRegionId", serviceRegionId);
+            this.serviceRegionId = serviceRegionId;
             return this;
         }
 

@@ -29,6 +29,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CrossRegionBandwidth")
+    private Integer crossRegionBandwidth;
+
     @com.aliyun.core.annotation.NameInMap("EndpointBusinessStatus")
     private String endpointBusinessStatus;
 
@@ -74,6 +77,9 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+    private String serviceRegionId;
+
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
@@ -88,6 +94,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         this.bandwidth = builder.bandwidth;
         this.connectionStatus = builder.connectionStatus;
         this.createTime = builder.createTime;
+        this.crossRegionBandwidth = builder.crossRegionBandwidth;
         this.endpointBusinessStatus = builder.endpointBusinessStatus;
         this.endpointDescription = builder.endpointDescription;
         this.endpointDomain = builder.endpointDomain;
@@ -103,6 +110,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         this.resourceOwner = builder.resourceOwner;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
+        this.serviceRegionId = builder.serviceRegionId;
         this.vpcId = builder.vpcId;
         this.zoneAffinityEnabled = builder.zoneAffinityEnabled;
         this.zonePrivateIpAddressCount = builder.zonePrivateIpAddressCount;
@@ -146,6 +154,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return crossRegionBandwidth
+     */
+    public Integer getCrossRegionBandwidth() {
+        return this.crossRegionBandwidth;
     }
 
     /**
@@ -254,6 +269,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceRegionId
+     */
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -279,6 +301,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private Integer bandwidth; 
         private String connectionStatus; 
         private String createTime; 
+        private Integer crossRegionBandwidth; 
         private String endpointBusinessStatus; 
         private String endpointDescription; 
         private String endpointDomain; 
@@ -294,6 +317,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private Boolean resourceOwner; 
         private String serviceId; 
         private String serviceName; 
+        private String serviceRegionId; 
         private String vpcId; 
         private Boolean zoneAffinityEnabled; 
         private Long zonePrivateIpAddressCount; 
@@ -306,6 +330,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
             this.bandwidth = model.bandwidth;
             this.connectionStatus = model.connectionStatus;
             this.createTime = model.createTime;
+            this.crossRegionBandwidth = model.crossRegionBandwidth;
             this.endpointBusinessStatus = model.endpointBusinessStatus;
             this.endpointDescription = model.endpointDescription;
             this.endpointDomain = model.endpointDomain;
@@ -321,6 +346,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
             this.resourceOwner = model.resourceOwner;
             this.serviceId = model.serviceId;
             this.serviceName = model.serviceName;
+            this.serviceRegionId = model.serviceRegionId;
             this.vpcId = model.vpcId;
             this.zoneAffinityEnabled = model.zoneAffinityEnabled;
             this.zonePrivateIpAddressCount = model.zonePrivateIpAddressCount;
@@ -379,6 +405,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CrossRegionBandwidth.
+         */
+        public Builder crossRegionBandwidth(Integer crossRegionBandwidth) {
+            this.crossRegionBandwidth = crossRegionBandwidth;
             return this;
         }
 
@@ -560,6 +594,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * ServiceRegionId.
+         */
+        public Builder serviceRegionId(String serviceRegionId) {
+            this.serviceRegionId = serviceRegionId;
             return this;
         }
 
