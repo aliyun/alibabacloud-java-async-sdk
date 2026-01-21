@@ -1049,6 +1049,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ManageTerraformState  ManageTerraformStateRequest
+     * @return ManageTerraformStateResponse
+     */
+    @Override
+    public CompletableFuture<ManageTerraformStateResponse> manageTerraformState(ManageTerraformStateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ManageTerraformState").setMethod(HttpMethod.POST).setPathRegex("/terraformState/manage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageTerraformStateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ManageTerraformStateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of OperateJob  OperateJobRequest
      * @return OperateJobResponse
      */

@@ -356,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTerraformProviderVersionsResponse> listTerraformProviderVersions(ListTerraformProviderVersionsRequest request);
 
     /**
+     * @param request the request parameters of ManageTerraformState  ManageTerraformStateRequest
+     * @return ManageTerraformStateResponse
+     */
+    CompletableFuture<ManageTerraformStateResponse> manageTerraformState(ManageTerraformStateRequest request);
+
+    /**
      * @param request the request parameters of OperateJob  OperateJobRequest
      * @return OperateJobResponse
      */
