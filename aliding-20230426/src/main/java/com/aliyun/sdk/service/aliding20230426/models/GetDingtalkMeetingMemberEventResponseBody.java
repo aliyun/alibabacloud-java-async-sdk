@@ -137,6 +137,9 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
      * <p>GetDingtalkMeetingMemberEventResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("confModule")
+        private String confModule;
+
         @com.aliyun.core.annotation.NameInMap("eventId")
         private String eventId;
 
@@ -150,6 +153,7 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
         private Long ts;
 
         private Data(Builder builder) {
+            this.confModule = builder.confModule;
             this.eventId = builder.eventId;
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
@@ -162,6 +166,13 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return confModule
+         */
+        public String getConfModule() {
+            return this.confModule;
         }
 
         /**
@@ -193,6 +204,7 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String confModule; 
             private String eventId; 
             private String eventName; 
             private String eventType; 
@@ -202,11 +214,20 @@ public class GetDingtalkMeetingMemberEventResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.confModule = model.confModule;
                 this.eventId = model.eventId;
                 this.eventName = model.eventName;
                 this.eventType = model.eventType;
                 this.ts = model.ts;
             } 
+
+            /**
+             * confModule.
+             */
+            public Builder confModule(String confModule) {
+                this.confModule = confModule;
+                return this;
+            }
 
             /**
              * eventId.

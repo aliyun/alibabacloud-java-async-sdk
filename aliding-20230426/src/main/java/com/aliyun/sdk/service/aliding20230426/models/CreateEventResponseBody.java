@@ -26,6 +26,9 @@ public class CreateEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("encryptedId")
+    private String encryptedId;
+
     @com.aliyun.core.annotation.NameInMap("end")
     private End end;
 
@@ -72,6 +75,7 @@ public class CreateEventResponseBody extends TeaModel {
         this.attendees = builder.attendees;
         this.createTime = builder.createTime;
         this.description = builder.description;
+        this.encryptedId = builder.encryptedId;
         this.end = builder.end;
         this.id = builder.id;
         this.isAllDay = builder.isAllDay;
@@ -119,6 +123,13 @@ public class CreateEventResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return encryptedId
+     */
+    public String getEncryptedId() {
+        return this.encryptedId;
     }
 
     /**
@@ -223,6 +234,7 @@ public class CreateEventResponseBody extends TeaModel {
         private java.util.List<Attendees> attendees; 
         private String createTime; 
         private String description; 
+        private String encryptedId; 
         private End end; 
         private String id; 
         private Boolean isAllDay; 
@@ -245,6 +257,7 @@ public class CreateEventResponseBody extends TeaModel {
             this.attendees = model.attendees;
             this.createTime = model.createTime;
             this.description = model.description;
+            this.encryptedId = model.encryptedId;
             this.end = model.end;
             this.id = model.id;
             this.isAllDay = model.isAllDay;
@@ -282,6 +295,14 @@ public class CreateEventResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * encryptedId.
+         */
+        public Builder encryptedId(String encryptedId) {
+            this.encryptedId = encryptedId;
             return this;
         }
 
