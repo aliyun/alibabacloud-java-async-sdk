@@ -27,6 +27,10 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
     private java.util.List<String> domains;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    private String owner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -34,6 +38,7 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.domains = builder.domains;
+        this.owner = builder.owner;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -65,6 +70,13 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
     }
 
     /**
+     * @return owner
+     */
+    public String getOwner() {
+        return this.owner;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -74,6 +86,7 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeWebPreciseAccessRuleRequest, Builder> {
         private String regionId; 
         private java.util.List<String> domains; 
+        private String owner; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.domains = request.domains;
+            this.owner = request.owner;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
@@ -109,6 +123,15 @@ public class DescribeWebPreciseAccessRuleRequest extends Request {
         public Builder domains(java.util.List<String> domains) {
             this.putQueryParameter("Domains", domains);
             this.domains = domains;
+            return this;
+        }
+
+        /**
+         * Owner.
+         */
+        public Builder owner(String owner) {
+            this.putQueryParameter("Owner", owner);
+            this.owner = owner;
             return this;
         }
 

@@ -257,6 +257,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionList")
         private java.util.List<ConditionList> conditionList;
 
+        @com.aliyun.core.annotation.NameInMap("ExpirePeriod")
+        private Long expirePeriod;
+
         @com.aliyun.core.annotation.NameInMap("Expires")
         private Long expires;
 
@@ -269,6 +272,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         private RuleList(Builder builder) {
             this.action = builder.action;
             this.conditionList = builder.conditionList;
+            this.expirePeriod = builder.expirePeriod;
             this.expires = builder.expires;
             this.name = builder.name;
             this.owner = builder.owner;
@@ -297,6 +301,13 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return expirePeriod
+         */
+        public Long getExpirePeriod() {
+            return this.expirePeriod;
+        }
+
+        /**
          * @return expires
          */
         public Long getExpires() {
@@ -320,6 +331,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String action; 
             private java.util.List<ConditionList> conditionList; 
+            private Long expirePeriod; 
             private Long expires; 
             private String name; 
             private String owner; 
@@ -330,6 +342,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             private Builder(RuleList model) {
                 this.action = model.action;
                 this.conditionList = model.conditionList;
+                this.expirePeriod = model.expirePeriod;
                 this.expires = model.expires;
                 this.name = model.name;
                 this.owner = model.owner;
@@ -356,6 +369,14 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
              */
             public Builder conditionList(java.util.List<ConditionList> conditionList) {
                 this.conditionList = conditionList;
+                return this;
+            }
+
+            /**
+             * ExpirePeriod.
+             */
+            public Builder expirePeriod(Long expirePeriod) {
+                this.expirePeriod = expirePeriod;
                 return this;
             }
 
