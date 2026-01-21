@@ -1,6 +1,9 @@
 2026-01-21 Version: 2.0.6
 - Generated java-async 2021-08-06 for IaCService.
 
+2026-01-21 Version: 2.0.6
+- Generated java-async 2021-08-06 for IaCService.
+
 2026-01-14 Version: 2.0.5
 - Generated java-async 2021-08-06 for IaCService.
 
