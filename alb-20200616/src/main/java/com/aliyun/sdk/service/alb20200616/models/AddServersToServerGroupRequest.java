@@ -30,7 +30,7 @@ public class AddServersToServerGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Servers")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Servers> servers;
@@ -148,11 +148,10 @@ public class AddServersToServerGroupRequest extends Request {
         }
 
         /**
-         * <p>The backend servers. You can specify at most 200 servers in each call.</p>
          * <p>This parameter is required.</p>
          */
         public Builder servers(java.util.List<Servers> servers) {
-            this.putQueryParameter("Servers", servers);
+            this.putBodyParameter("Servers", servers);
             this.servers = servers;
             return this;
         }
@@ -283,10 +282,7 @@ public class AddServersToServerGroupRequest extends Request {
             } 
 
             /**
-             * <p>The description of the backend server. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,13 +290,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>
-             * <blockquote>
-             * <p> This parameter is required if you set <strong>ServerType</strong> to <strong>Ecs</strong>, <strong>Eni</strong>, <strong>Eci</strong>, or <strong>Ip</strong>. You do not need to set this parameter if <strong>ServerType</strong> is set to <strong>Fc</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -308,17 +298,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the remote IP feature. You can specify at most 200 servers in each call. Default values:</p>
-             * <ul>
-             * <li><strong>true</strong>: enables the feature.</li>
-             * <li><strong>false</strong>: disables the feature.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter takes effect only when <strong>ServerType</strong> is set to <strong>Ip</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * RemoteIpEnabled.
              */
             public Builder remoteIpEnabled(Boolean remoteIpEnabled) {
                 this.remoteIpEnabled = remoteIpEnabled;
@@ -326,15 +306,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the server group. You can specify at most 200 servers in each call.</p>
-             * <ul>
-             * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-             * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
-             * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ecs-bp67acfmxazb4p****</p>
+             * ServerId.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -342,13 +314,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the backend server. You can specify at most 200 servers in each call.</p>
-             * <blockquote>
-             * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.1</p>
+             * ServerIp.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -356,18 +322,10 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the backend server. You can specify at most 200 servers in each call. Default values:</p>
-             * <ul>
-             * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
-             * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
-             * <li><strong>Eci</strong>: elastic container instance</li>
-             * <li><strong>Ip</strong>: IP address</li>
-             * <li><strong>Fc</strong>: Function Compute</li>
-             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Ecs</p>
+             * <p>ecs</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -375,13 +333,7 @@ public class AddServersToServerGroupRequest extends Request {
             }
 
             /**
-             * <p>The weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If the value is set to <strong>0</strong>, no requests are forwarded to the server. You can specify at most 200 servers in each call.</p>
-             * <blockquote>
-             * <p> You do not need to set this parameter if you set <strong>ServerType</strong> to <strong>Fc</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
