@@ -3165,6 +3165,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("private_crt_file_name")
+        private String privateCrtFileName;
+
         @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
@@ -3222,6 +3225,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
         private TrafficHijackElementWhitelist trafficHijackElementWhitelist;
 
+        @com.aliyun.core.annotation.NameInMap("use_private_crt")
+        private Boolean usePrivateCrt;
+
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
@@ -3267,6 +3273,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.pingPort = builder.pingPort;
             this.pingType = builder.pingType;
             this.port = builder.port;
+            this.privateCrtFileName = builder.privateCrtFileName;
             this.protocol = builder.protocol;
             this.quicEnabled = builder.quicEnabled;
             this.quicTarget = builder.quicTarget;
@@ -3286,6 +3293,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
             this.trafficHijackElementCount = builder.trafficHijackElementCount;
             this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
+            this.usePrivateCrt = builder.usePrivateCrt;
             this.username = builder.username;
             this.waitTimeAfterCompletion = builder.waitTimeAfterCompletion;
         }
@@ -3565,6 +3573,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateCrtFileName
+         */
+        public String getPrivateCrtFileName() {
+            return this.privateCrtFileName;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
@@ -3698,6 +3713,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return usePrivateCrt
+         */
+        public Boolean getUsePrivateCrt() {
+            return this.usePrivateCrt;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -3750,6 +3772,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private Integer pingPort; 
             private String pingType; 
             private Integer port; 
+            private String privateCrtFileName; 
             private String protocol; 
             private Boolean quicEnabled; 
             private QuicTarget quicTarget; 
@@ -3769,6 +3792,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private TrafficHijackElementBlacklist trafficHijackElementBlacklist; 
             private Integer trafficHijackElementCount; 
             private TrafficHijackElementWhitelist trafficHijackElementWhitelist; 
+            private Boolean usePrivateCrt; 
             private String username; 
             private Integer waitTimeAfterCompletion; 
 
@@ -3814,6 +3838,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.pingPort = model.pingPort;
                 this.pingType = model.pingType;
                 this.port = model.port;
+                this.privateCrtFileName = model.privateCrtFileName;
                 this.protocol = model.protocol;
                 this.quicEnabled = model.quicEnabled;
                 this.quicTarget = model.quicTarget;
@@ -3833,6 +3858,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.trafficHijackElementBlacklist = model.trafficHijackElementBlacklist;
                 this.trafficHijackElementCount = model.trafficHijackElementCount;
                 this.trafficHijackElementWhitelist = model.trafficHijackElementWhitelist;
+                this.usePrivateCrt = model.usePrivateCrt;
                 this.username = model.username;
                 this.waitTimeAfterCompletion = model.waitTimeAfterCompletion;
             } 
@@ -4278,6 +4304,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * private_crt_file_name.
+             */
+            public Builder privateCrtFileName(String privateCrtFileName) {
+                this.privateCrtFileName = privateCrtFileName;
+                return this;
+            }
+
+            /**
              * <p>The protocol that is used to send the request.</p>
              * 
              * <strong>example:</strong>
@@ -4470,6 +4504,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder trafficHijackElementWhitelist(TrafficHijackElementWhitelist trafficHijackElementWhitelist) {
                 this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
+                return this;
+            }
+
+            /**
+             * use_private_crt.
+             */
+            public Builder usePrivateCrt(Boolean usePrivateCrt) {
+                this.usePrivateCrt = usePrivateCrt;
                 return this;
             }
 
