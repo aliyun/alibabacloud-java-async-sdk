@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateAgentPlatform  CreateAgentPlatformRequest
+     * @return CreateAgentPlatformResponse
+     */
+    CompletableFuture<CreateAgentPlatformResponse> createAgentPlatform(CreateAgentPlatformRequest request);
+
+    /**
      * @param request the request parameters of CreateEmbodiedAIPlatform  CreateEmbodiedAIPlatformRequest
      * @return CreateEmbodiedAIPlatformResponse
      */
