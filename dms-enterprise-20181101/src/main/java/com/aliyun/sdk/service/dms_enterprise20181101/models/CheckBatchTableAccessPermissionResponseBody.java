@@ -93,7 +93,7 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The dataset.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -109,7 +112,7 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
@@ -120,7 +123,14 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -199,7 +209,10 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message that is returned if the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The productKey is empty.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -207,7 +220,13 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <ul>
+             * <li><strong>true</strong>: Permission granted</li>
+             * <li><strong>false</strong>: Permissions denied</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -215,7 +234,10 @@ public class CheckBatchTableAccessPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tab_add_teacher_record</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

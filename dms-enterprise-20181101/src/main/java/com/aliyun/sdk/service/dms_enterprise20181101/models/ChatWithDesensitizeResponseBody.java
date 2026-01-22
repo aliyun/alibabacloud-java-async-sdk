@@ -106,7 +106,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -130,7 +136,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
@@ -141,7 +147,14 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +233,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The content of the model&quot;s response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好呀！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -228,7 +244,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningContent.
+             * <p>The internal reasoning content of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>嗯，用户发了个“你好”，看起来是想打招呼...</p>
              */
             public Builder reasoningContent(String reasoningContent) {
                 this.reasoningContent = reasoningContent;
@@ -236,7 +255,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Message role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -316,7 +338,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             } 
 
             /**
-             * FinishReason.
+             * <p>Finish reason: ● stop: The model reached a natural stop point or a specified stop sequence. ● length: Generation ended because the maximum number of tokens was reached. ● tool_calls: The model stopped because it needs to call a tool to proceed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -324,7 +349,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Logprobs.
+             * <p>Token probability information of model output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder logprobs(java.util.Map<String, ?> logprobs) {
                 this.logprobs = logprobs;
@@ -332,7 +360,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The message body output by the model.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -438,7 +466,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             } 
 
             /**
-             * CompletionTokens.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder completionTokens(String completionTokens) {
                 this.completionTokens = completionTokens;
@@ -446,7 +477,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * CompletionTokensDetails.
+             * <p>Fine-grained classification of output tokens when using the Qwen-VL model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder completionTokensDetails(java.util.Map<String, String> completionTokensDetails) {
                 this.completionTokensDetails = completionTokensDetails;
@@ -454,7 +488,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * PromptTokens.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder promptTokens(String promptTokens) {
                 this.promptTokens = promptTokens;
@@ -462,7 +499,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * PromptTokensDetails.
+             * <p>Fine-grained classification of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder promptTokensDetails(java.util.Map<String, String> promptTokensDetails) {
                 this.promptTokensDetails = promptTokensDetails;
@@ -470,7 +510,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalTokens(String totalTokens) {
                 this.totalTokens = totalTokens;
@@ -602,7 +645,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             } 
 
             /**
-             * Choices.
+             * <p>The candidate array for model-generated content.</p>
              */
             public Builder choices(java.util.List<Choices> choices) {
                 this.choices = choices;
@@ -610,7 +653,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Created.
+             * <p>The Unix timestamp (in seconds) when the request was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1763710100</p>
              */
             public Builder created(String created) {
                 this.created = created;
@@ -618,7 +664,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Error message, provided when StatusCode is not 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -626,7 +675,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model used for this request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -634,7 +686,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>Error code, 200 for normal calls, others for exceptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -642,7 +697,10 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Error type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>invalid_request_error</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -650,7 +708,7 @@ public class ChatWithDesensitizeResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The token consumption information of this request.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;

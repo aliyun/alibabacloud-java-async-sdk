@@ -475,7 +475,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * AudioJson.
+         * <p>Output audio voice and format; only applicable to the Qwen-Omni model, provided that the modalities parameter is set to [&quot;text&quot;, &quot;audio&quot;].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder audioJson(String audioJson) {
             this.putQueryParameter("AudioJson", audioJson);
@@ -484,7 +487,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * DesensitizationRule.
+         * <p>Masking category. Required when needDataMasking is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserInfo</p>
          */
         public Builder desensitizationRule(String desensitizationRule) {
             this.putQueryParameter("DesensitizationRule", desensitizationRule);
@@ -493,7 +499,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * <p>The embedding dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder dimensions(Integer dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -502,7 +511,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * EnableCodeInterpreter.
+         * <p>Specifies whether to enable the code interpreter feature. Takes effect only when model is qwen3-max-preview and enable_thinking is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableCodeInterpreter(Boolean enableCodeInterpreter) {
             this.putQueryParameter("EnableCodeInterpreter", enableCodeInterpreter);
@@ -511,7 +523,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * EnableSearch.
+         * <p>Whether to enable web search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableSearch(Boolean enableSearch) {
             this.putQueryParameter("EnableSearch", enableSearch);
@@ -520,7 +535,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * EnableThinking.
+         * <p>Specifies whether to enable thinking mode when using hybrid thinking models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableThinking(Boolean enableThinking) {
             this.putQueryParameter("EnableThinking", enableThinking);
@@ -529,7 +547,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * IncludeUsage.
+         * <p>Specifies whether to include token usage information in the final chunk of the streaming response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeUsage(Boolean includeUsage) {
             this.putQueryParameter("IncludeUsage", includeUsage);
@@ -538,7 +559,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The input to the embedding model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -547,6 +571,7 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance, used to specify the corresponding data masking rules. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -559,7 +584,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Logprobs.
+         * <p>Specifies whether to return the log probabilities of the output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder logprobs(Boolean logprobs) {
             this.putQueryParameter("Logprobs", logprobs);
@@ -568,7 +596,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * MaxTokens.
+         * <p>Limits the maximum number of tokens the model can generate. If the output exceeds this value, generation will be truncated. Suitable for scenarios where you need to control the output length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder maxTokens(Integer maxTokens) {
             this.putQueryParameter("MaxTokens", maxTokens);
@@ -577,7 +608,15 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Messages.
+         * <p>The conversation context passed to the model, arranged in chronological order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;content&quot;: &quot;你好&quot;,
+         *         &quot;role&quot;: &quot;user&quot;
+         *     }
+         * ]</p>
          */
         public Builder messages(java.util.List<?> messages) {
             String messagesShrink = shrink(messages, "Messages", "json");
@@ -587,7 +626,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * ModalitiesList.
+         * <p>Output data modality; only applicable to the Qwen-Omni model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;text&quot;,&quot;audio&quot;]</p>
          */
         public Builder modalitiesList(java.util.List<String> modalitiesList) {
             String modalitiesListShrink = shrink(modalitiesList, "ModalitiesList", "json");
@@ -597,7 +639,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model name. Supported models: Qwen series text-only Large Language Models (commercial and open-source). Multi-modal models are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -606,7 +651,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * NeedDesensitization.
+         * <p>Whether to enable data masking. Defaults to false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDesensitization(Boolean needDesensitization) {
             this.putQueryParameter("NeedDesensitization", needDesensitization);
@@ -615,7 +663,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>Model configuration parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -624,7 +675,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * PresencePenalty.
+         * <p>Controls the degree of repetition in generated text. Valid values: [-2.0, 2.0]. Positive values decrease repetition, while negative values increase it.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         public Builder presencePenalty(String presencePenalty) {
             this.putQueryParameter("PresencePenalty", presencePenalty);
@@ -633,7 +687,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * ResponseFormat.
+         * <p>The format of the returned content. Valid values: text: Plain text response; json_object: Standardized JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder responseFormat(String responseFormat) {
             this.putQueryParameter("ResponseFormat", responseFormat);
@@ -642,7 +699,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * SearchOptions.
+         * <p>Web search strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder searchOptions(java.util.Map<String, String> searchOptions) {
             String searchOptionsShrink = shrink(searchOptions, "SearchOptions", "json");
@@ -652,7 +712,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Seed.
+         * <p>Random seed. Used to ensure the reproducibility of results under the same input and parameters. Valid values: [0, 2^31−1].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder seed(Integer seed) {
             this.putQueryParameter("Seed", seed);
@@ -661,7 +724,7 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Stop.
+         * <p>Stop sequences.</p>
          */
         public Builder stop(java.util.List<String> stop) {
             String stopShrink = shrink(stop, "Stop", "json");
@@ -671,7 +734,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>Specifies whether to use streaming output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-68f11da7e2b826dcc63c5877-hd</p>
          */
         public Builder stream(Boolean stream) {
             this.putQueryParameter("Stream", stream);
@@ -680,7 +746,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * Temperature.
+         * <p>The sampling temperature controls the diversity of the generated text. The higher the temperature, the more diverse the generated text, and conversely, the more deterministic the generated text. Valid values: [0, 2).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder temperature(String temperature) {
             this.putQueryParameter("Temperature", temperature);
@@ -689,7 +758,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * ThinkingBudget.
+         * <p>The maximum number of tokens allowed for the model&quot;s internal reasoning process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         public Builder thinkingBudget(Integer thinkingBudget) {
             this.putQueryParameter("ThinkingBudget", thinkingBudget);
@@ -698,7 +770,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>Specifies the number of candidate tokens to consider during sampling. Higher values increase randomness, while lower values make the output more deterministic. Set to null or a value greater than 100 to disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topK(Integer topK) {
             this.putQueryParameter("TopK", topK);
@@ -707,7 +782,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * TopLogprobs.
+         * <p>Specifies the number of most likely candidate tokens to return at each generation step. Valid values: [0, 5].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder topLogprobs(Integer topLogprobs) {
             this.putQueryParameter("TopLogprobs", topLogprobs);
@@ -716,7 +794,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * TopP.
+         * <p>The probability threshold for nucleus sampling, used to control the diversity of the generated text. Higher Top-P values result in more diverse generated text. Valid values: (0,1.0].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder topP(String topP) {
             this.putQueryParameter("TopP", topP);
@@ -725,7 +806,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * VlHighResolutionImages.
+         * <p>Specifies whether to increase the maximum pixel limit of input images to the equivalent of 16,384 tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vlHighResolutionImages(Boolean vlHighResolutionImages) {
             this.putQueryParameter("VlHighResolutionImages", vlHighResolutionImages);
@@ -734,7 +818,10 @@ public class ChatWithDesensitizeSSERequest extends Request {
         }
 
         /**
-         * XDashScopeDataInspection.
+         * <p>Specifies whether to further identify non-compliant information in both input and output content, building upon the built-in content safety capabilities of the Tongyi Qianwen API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder xDashScopeDataInspection(String xDashScopeDataInspection) {
             this.putQueryParameter("XDashScopeDataInspection", xDashScopeDataInspection);

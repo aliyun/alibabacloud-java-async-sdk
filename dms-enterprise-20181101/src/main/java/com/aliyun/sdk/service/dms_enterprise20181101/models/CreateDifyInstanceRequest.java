@@ -26,6 +26,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String adbpgInstanceMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupVSwitchId")
     private String backupVSwitchId;
 
@@ -267,6 +271,7 @@ public class CreateDifyInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.adbpgInstanceMode = builder.adbpgInstanceMode;
+        this.autoRenew = builder.autoRenew;
         this.backupVSwitchId = builder.backupVSwitchId;
         this.clientToken = builder.clientToken;
         this.dataRegion = builder.dataRegion;
@@ -352,6 +357,13 @@ public class CreateDifyInstanceRequest extends Request {
      */
     public String getAdbpgInstanceMode() {
         return this.adbpgInstanceMode;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -763,6 +775,7 @@ public class CreateDifyInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDifyInstanceRequest, Builder> {
         private String regionId; 
         private String adbpgInstanceMode; 
+        private Boolean autoRenew; 
         private String backupVSwitchId; 
         private String clientToken; 
         private String dataRegion; 
@@ -830,6 +843,7 @@ public class CreateDifyInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.adbpgInstanceMode = request.adbpgInstanceMode;
+            this.autoRenew = request.autoRenew;
             this.backupVSwitchId = request.backupVSwitchId;
             this.clientToken = request.clientToken;
             this.dataRegion = request.dataRegion;
@@ -905,6 +919,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder adbpgInstanceMode(String adbpgInstanceMode) {
             this.putQueryParameter("AdbpgInstanceMode", adbpgInstanceMode);
             this.adbpgInstanceMode = adbpgInstanceMode;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 

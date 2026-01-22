@@ -114,6 +114,10 @@ public class AddInstanceRequest extends Request {
     private Integer queryTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
+    private String roleArn;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SafeRule")
     private String safeRule;
 
@@ -173,6 +177,7 @@ public class AddInstanceRequest extends Request {
         this.networkType = builder.networkType;
         this.port = builder.port;
         this.queryTimeout = builder.queryTimeout;
+        this.roleArn = builder.roleArn;
         this.safeRule = builder.safeRule;
         this.sid = builder.sid;
         this.skipTest = builder.skipTest;
@@ -345,6 +350,13 @@ public class AddInstanceRequest extends Request {
     }
 
     /**
+     * @return roleArn
+     */
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
      * @return safeRule
      */
     public String getSafeRule() {
@@ -429,6 +441,7 @@ public class AddInstanceRequest extends Request {
         private String networkType; 
         private Integer port; 
         private Integer queryTimeout; 
+        private String roleArn; 
         private String safeRule; 
         private String sid; 
         private Boolean skipTest; 
@@ -466,6 +479,7 @@ public class AddInstanceRequest extends Request {
             this.networkType = request.networkType;
             this.port = request.port;
             this.queryTimeout = request.queryTimeout;
+            this.roleArn = request.roleArn;
             this.safeRule = request.safeRule;
             this.sid = request.sid;
             this.skipTest = request.skipTest;
@@ -793,6 +807,15 @@ public class AddInstanceRequest extends Request {
         public Builder queryTimeout(Integer queryTimeout) {
             this.putQueryParameter("QueryTimeout", queryTimeout);
             this.queryTimeout = queryTimeout;
+            return this;
+        }
+
+        /**
+         * RoleArn.
+         */
+        public Builder roleArn(String roleArn) {
+            this.putQueryParameter("RoleArn", roleArn);
+            this.roleArn = roleArn;
             return this;
         }
 

@@ -168,7 +168,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天API接口</p>
+     * <p>Chat API with DMS Data Masking capabilities.</p>
      * 
      * @param request the request parameters of ChatWithDesensitize  ChatWithDesensitizeRequest
      * @return ChatWithDesensitizeResponse
@@ -177,7 +177,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>带有DMS脱敏能力的聊天SSE API接口</p>
+     * <p>Chat SSE API with DMS Data Masking capability.</p>
      * 
      * @param request the request parameters of ChatWithDesensitizeSSE  ChatWithDesensitizeSSERequest
      * @return ChatWithDesensitizeSSEResponse
@@ -187,6 +187,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<ChatWithDesensitizeSSEResponseBody> chatWithDesensitizeSSEWithResponseIterable(ChatWithDesensitizeSSERequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Verify the permissions on multiple tables at a time.</p>
+     * 
      * @param request the request parameters of CheckBatchTableAccessPermission  CheckBatchTableAccessPermissionRequest
      * @return CheckBatchTableAccessPermissionResponse
      */
