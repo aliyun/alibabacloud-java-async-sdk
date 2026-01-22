@@ -87,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeJobMetricLastResponse> describeJobMetricLast(DescribeJobMetricLastRequest request);
 
     /**
+     * @param request the request parameters of DescribeJobResults  DescribeJobResultsRequest
+     * @return DescribeJobResultsResponse
+     */
+    CompletableFuture<DescribeJobResultsResponse> describeJobResults(DescribeJobResultsRequest request);
+
+    /**
      * @param request the request parameters of GetActionPlan  GetActionPlanRequest
      * @return GetActionPlanResponse
      */
