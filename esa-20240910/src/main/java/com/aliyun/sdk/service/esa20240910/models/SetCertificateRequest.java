@@ -29,6 +29,10 @@ public class SetCertificateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyServerId")
+    private String keyServerId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
@@ -65,6 +69,7 @@ public class SetCertificateRequest extends Request {
         this.casId = builder.casId;
         this.certificate = builder.certificate;
         this.id = builder.id;
+        this.keyServerId = builder.keyServerId;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.privateKey = builder.privateKey;
@@ -106,6 +111,13 @@ public class SetCertificateRequest extends Request {
      */
     public String getId() {
         return this.id;
+    }
+
+    /**
+     * @return keyServerId
+     */
+    public String getKeyServerId() {
+        return this.keyServerId;
     }
 
     /**
@@ -161,6 +173,7 @@ public class SetCertificateRequest extends Request {
         private Long casId; 
         private String certificate; 
         private String id; 
+        private String keyServerId; 
         private String name; 
         private Long ownerId; 
         private String privateKey; 
@@ -178,6 +191,7 @@ public class SetCertificateRequest extends Request {
             this.casId = request.casId;
             this.certificate = request.certificate;
             this.id = request.id;
+            this.keyServerId = request.keyServerId;
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.privateKey = request.privateKey;
@@ -220,6 +234,15 @@ public class SetCertificateRequest extends Request {
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * KeyServerId.
+         */
+        public Builder keyServerId(String keyServerId) {
+            this.putQueryParameter("KeyServerId", keyServerId);
+            this.keyServerId = keyServerId;
             return this;
         }
 

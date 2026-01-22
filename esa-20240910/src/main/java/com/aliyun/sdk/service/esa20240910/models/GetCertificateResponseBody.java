@@ -377,6 +377,9 @@ public class GetCertificateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IssuerCN")
         private String issuerCN;
 
+        @com.aliyun.core.annotation.NameInMap("KeyServerId")
+        private String keyServerId;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -421,6 +424,7 @@ public class GetCertificateResponseBody extends TeaModel {
             this.id = builder.id;
             this.issuer = builder.issuer;
             this.issuerCN = builder.issuerCN;
+            this.keyServerId = builder.keyServerId;
             this.name = builder.name;
             this.notAfter = builder.notAfter;
             this.notBefore = builder.notBefore;
@@ -513,6 +517,13 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyServerId
+         */
+        public String getKeyServerId() {
+            return this.keyServerId;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -600,6 +611,7 @@ public class GetCertificateResponseBody extends TeaModel {
             private String id; 
             private String issuer; 
             private String issuerCN; 
+            private String keyServerId; 
             private String name; 
             private String notAfter; 
             private String notBefore; 
@@ -626,6 +638,7 @@ public class GetCertificateResponseBody extends TeaModel {
                 this.id = model.id;
                 this.issuer = model.issuer;
                 this.issuerCN = model.issuerCN;
+                this.keyServerId = model.keyServerId;
                 this.name = model.name;
                 this.notAfter = model.notAfter;
                 this.notBefore = model.notBefore;
@@ -743,6 +756,14 @@ public class GetCertificateResponseBody extends TeaModel {
              */
             public Builder issuerCN(String issuerCN) {
                 this.issuerCN = issuerCN;
+                return this;
+            }
+
+            /**
+             * KeyServerId.
+             */
+            public Builder keyServerId(String keyServerId) {
+                this.keyServerId = keyServerId;
                 return this;
             }
 
