@@ -54,6 +54,14 @@ public class SetSecurityPreferenceRequest extends Request {
     private String MFAOperationForLogin;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForAccessKeys")
+    private Integer maxIdleDaysForAccessKeys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForUsers")
+    private Integer maxIdleDaysForUsers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
     @Deprecated
     private String operationForRiskLogin;
@@ -73,6 +81,8 @@ public class SetSecurityPreferenceRequest extends Request {
         this.loginNetworkMasks = builder.loginNetworkMasks;
         this.loginSessionDuration = builder.loginSessionDuration;
         this.MFAOperationForLogin = builder.MFAOperationForLogin;
+        this.maxIdleDaysForAccessKeys = builder.maxIdleDaysForAccessKeys;
+        this.maxIdleDaysForUsers = builder.maxIdleDaysForUsers;
         this.operationForRiskLogin = builder.operationForRiskLogin;
         this.verificationTypes = builder.verificationTypes;
     }
@@ -154,6 +164,20 @@ public class SetSecurityPreferenceRequest extends Request {
     }
 
     /**
+     * @return maxIdleDaysForAccessKeys
+     */
+    public Integer getMaxIdleDaysForAccessKeys() {
+        return this.maxIdleDaysForAccessKeys;
+    }
+
+    /**
+     * @return maxIdleDaysForUsers
+     */
+    public Integer getMaxIdleDaysForUsers() {
+        return this.maxIdleDaysForUsers;
+    }
+
+    /**
      * @return operationForRiskLogin
      */
     public String getOperationForRiskLogin() {
@@ -177,6 +201,8 @@ public class SetSecurityPreferenceRequest extends Request {
         private String loginNetworkMasks; 
         private Integer loginSessionDuration; 
         private String MFAOperationForLogin; 
+        private Integer maxIdleDaysForAccessKeys; 
+        private Integer maxIdleDaysForUsers; 
         private String operationForRiskLogin; 
         private java.util.List<String> verificationTypes; 
 
@@ -195,6 +221,8 @@ public class SetSecurityPreferenceRequest extends Request {
             this.loginNetworkMasks = request.loginNetworkMasks;
             this.loginSessionDuration = request.loginSessionDuration;
             this.MFAOperationForLogin = request.MFAOperationForLogin;
+            this.maxIdleDaysForAccessKeys = request.maxIdleDaysForAccessKeys;
+            this.maxIdleDaysForUsers = request.maxIdleDaysForUsers;
             this.operationForRiskLogin = request.operationForRiskLogin;
             this.verificationTypes = request.verificationTypes;
         } 
@@ -341,6 +369,24 @@ public class SetSecurityPreferenceRequest extends Request {
         public Builder MFAOperationForLogin(String MFAOperationForLogin) {
             this.putQueryParameter("MFAOperationForLogin", MFAOperationForLogin);
             this.MFAOperationForLogin = MFAOperationForLogin;
+            return this;
+        }
+
+        /**
+         * MaxIdleDaysForAccessKeys.
+         */
+        public Builder maxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
+            this.putQueryParameter("MaxIdleDaysForAccessKeys", maxIdleDaysForAccessKeys);
+            this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
+            return this;
+        }
+
+        /**
+         * MaxIdleDaysForUsers.
+         */
+        public Builder maxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
+            this.putQueryParameter("MaxIdleDaysForUsers", maxIdleDaysForUsers);
+            this.maxIdleDaysForUsers = maxIdleDaysForUsers;
             return this;
         }
 

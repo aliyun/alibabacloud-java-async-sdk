@@ -101,6 +101,9 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HardExpire")
         private Boolean hardExpire;
 
+        @com.aliyun.core.annotation.NameInMap("InitialPasswordAge")
+        private Integer initialPasswordAge;
+
         @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
         private Integer maxLoginAttemps;
 
@@ -133,6 +136,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
         private PasswordPolicy(Builder builder) {
             this.hardExpire = builder.hardExpire;
+            this.initialPasswordAge = builder.initialPasswordAge;
             this.maxLoginAttemps = builder.maxLoginAttemps;
             this.maxPasswordAge = builder.maxPasswordAge;
             this.minimumPasswordDifferentCharacter = builder.minimumPasswordDifferentCharacter;
@@ -158,6 +162,13 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
          */
         public Boolean getHardExpire() {
             return this.hardExpire;
+        }
+
+        /**
+         * @return initialPasswordAge
+         */
+        public Integer getInitialPasswordAge() {
+            return this.initialPasswordAge;
         }
 
         /**
@@ -232,6 +243,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean hardExpire; 
+            private Integer initialPasswordAge; 
             private Integer maxLoginAttemps; 
             private Integer maxPasswordAge; 
             private Integer minimumPasswordDifferentCharacter; 
@@ -248,6 +260,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
 
             private Builder(PasswordPolicy model) {
                 this.hardExpire = model.hardExpire;
+                this.initialPasswordAge = model.initialPasswordAge;
                 this.maxLoginAttemps = model.maxLoginAttemps;
                 this.maxPasswordAge = model.maxPasswordAge;
                 this.minimumPasswordDifferentCharacter = model.minimumPasswordDifferentCharacter;
@@ -268,6 +281,14 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
              */
             public Builder hardExpire(Boolean hardExpire) {
                 this.hardExpire = hardExpire;
+                return this;
+            }
+
+            /**
+             * InitialPasswordAge.
+             */
+            public Builder initialPasswordAge(Integer initialPasswordAge) {
+                this.initialPasswordAge = initialPasswordAge;
                 return this;
             }
 

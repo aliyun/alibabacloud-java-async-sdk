@@ -22,6 +22,10 @@ public class SetPasswordPolicyRequest extends Request {
     private Boolean hardExpire;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialPasswordAge")
+    private Integer initialPasswordAge;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
@@ -64,6 +68,7 @@ public class SetPasswordPolicyRequest extends Request {
     private SetPasswordPolicyRequest(Builder builder) {
         super(builder);
         this.hardExpire = builder.hardExpire;
+        this.initialPasswordAge = builder.initialPasswordAge;
         this.maxLoginAttemps = builder.maxLoginAttemps;
         this.maxPasswordAge = builder.maxPasswordAge;
         this.minimumPasswordDifferentCharacter = builder.minimumPasswordDifferentCharacter;
@@ -94,6 +99,13 @@ public class SetPasswordPolicyRequest extends Request {
      */
     public Boolean getHardExpire() {
         return this.hardExpire;
+    }
+
+    /**
+     * @return initialPasswordAge
+     */
+    public Integer getInitialPasswordAge() {
+        return this.initialPasswordAge;
     }
 
     /**
@@ -168,6 +180,7 @@ public class SetPasswordPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetPasswordPolicyRequest, Builder> {
         private Boolean hardExpire; 
+        private Integer initialPasswordAge; 
         private Integer maxLoginAttemps; 
         private Integer maxPasswordAge; 
         private Integer minimumPasswordDifferentCharacter; 
@@ -186,6 +199,7 @@ public class SetPasswordPolicyRequest extends Request {
         private Builder(SetPasswordPolicyRequest request) {
             super(request);
             this.hardExpire = request.hardExpire;
+            this.initialPasswordAge = request.initialPasswordAge;
             this.maxLoginAttemps = request.maxLoginAttemps;
             this.maxPasswordAge = request.maxPasswordAge;
             this.minimumPasswordDifferentCharacter = request.minimumPasswordDifferentCharacter;
@@ -211,6 +225,15 @@ public class SetPasswordPolicyRequest extends Request {
         public Builder hardExpire(Boolean hardExpire) {
             this.putQueryParameter("HardExpire", hardExpire);
             this.hardExpire = hardExpire;
+            return this;
+        }
+
+        /**
+         * InitialPasswordAge.
+         */
+        public Builder initialPasswordAge(Integer initialPasswordAge) {
+            this.putQueryParameter("InitialPasswordAge", initialPasswordAge);
+            this.initialPasswordAge = initialPasswordAge;
             return this;
         }
 

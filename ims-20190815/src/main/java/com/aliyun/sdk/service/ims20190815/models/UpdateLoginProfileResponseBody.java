@@ -107,6 +107,9 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
         private Boolean passwordResetRequired;
 
+        @com.aliyun.core.annotation.NameInMap("PasswordStatus")
+        private String passwordStatus;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -120,6 +123,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             this.autoDisableLoginStatus = builder.autoDisableLoginStatus;
             this.MFABindRequired = builder.MFABindRequired;
             this.passwordResetRequired = builder.passwordResetRequired;
+            this.passwordStatus = builder.passwordStatus;
             this.status = builder.status;
             this.updateDate = builder.updateDate;
             this.userPrincipalName = builder.userPrincipalName;
@@ -155,6 +159,13 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
+         * @return passwordStatus
+         */
+        public String getPasswordStatus() {
+            return this.passwordStatus;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -179,6 +190,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             private String autoDisableLoginStatus; 
             private Boolean MFABindRequired; 
             private Boolean passwordResetRequired; 
+            private String passwordStatus; 
             private String status; 
             private String updateDate; 
             private String userPrincipalName; 
@@ -190,6 +202,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
                 this.autoDisableLoginStatus = model.autoDisableLoginStatus;
                 this.MFABindRequired = model.MFABindRequired;
                 this.passwordResetRequired = model.passwordResetRequired;
+                this.passwordStatus = model.passwordStatus;
                 this.status = model.status;
                 this.updateDate = model.updateDate;
                 this.userPrincipalName = model.userPrincipalName;
@@ -225,6 +238,14 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
+                return this;
+            }
+
+            /**
+             * PasswordStatus.
+             */
+            public Builder passwordStatus(String passwordStatus) {
+                this.passwordStatus = passwordStatus;
                 return this;
             }
 
