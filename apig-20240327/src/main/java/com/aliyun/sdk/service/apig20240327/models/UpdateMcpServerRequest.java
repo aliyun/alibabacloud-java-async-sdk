@@ -54,6 +54,10 @@ public class UpdateMcpServerRequest extends Request {
     private HttpRouteMatch match;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mcpServerConfig")
+    private McpServerConfig mcpServerConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("mcpStatisticsEnable")
     private Boolean mcpStatisticsEnable;
 
@@ -78,6 +82,7 @@ public class UpdateMcpServerRequest extends Request {
         this.exposedUriPath = builder.exposedUriPath;
         this.grayMcpServerConfigs = builder.grayMcpServerConfigs;
         this.match = builder.match;
+        this.mcpServerConfig = builder.mcpServerConfig;
         this.mcpStatisticsEnable = builder.mcpStatisticsEnable;
         this.protocol = builder.protocol;
         this.type = builder.type;
@@ -160,6 +165,13 @@ public class UpdateMcpServerRequest extends Request {
     }
 
     /**
+     * @return mcpServerConfig
+     */
+    public McpServerConfig getMcpServerConfig() {
+        return this.mcpServerConfig;
+    }
+
+    /**
      * @return mcpStatisticsEnable
      */
     public Boolean getMcpStatisticsEnable() {
@@ -190,6 +202,7 @@ public class UpdateMcpServerRequest extends Request {
         private String exposedUriPath; 
         private java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs; 
         private HttpRouteMatch match; 
+        private McpServerConfig mcpServerConfig; 
         private Boolean mcpStatisticsEnable; 
         private String protocol; 
         private String type; 
@@ -209,6 +222,7 @@ public class UpdateMcpServerRequest extends Request {
             this.exposedUriPath = request.exposedUriPath;
             this.grayMcpServerConfigs = request.grayMcpServerConfigs;
             this.match = request.match;
+            this.mcpServerConfig = request.mcpServerConfig;
             this.mcpStatisticsEnable = request.mcpStatisticsEnable;
             this.protocol = request.protocol;
             this.type = request.type;
@@ -298,6 +312,15 @@ public class UpdateMcpServerRequest extends Request {
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
             this.match = match;
+            return this;
+        }
+
+        /**
+         * mcpServerConfig.
+         */
+        public Builder mcpServerConfig(McpServerConfig mcpServerConfig) {
+            this.putBodyParameter("mcpServerConfig", mcpServerConfig);
+            this.mcpServerConfig = mcpServerConfig;
             return this;
         }
 
@@ -1011,6 +1034,81 @@ public class UpdateMcpServerRequest extends Request {
 
             public GrayMcpServerConfigs build() {
                 return new GrayMcpServerConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateMcpServerRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateMcpServerRequest</p>
+     */
+    public static class McpServerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mcpServerSpec")
+        private String mcpServerSpec;
+
+        @com.aliyun.core.annotation.NameInMap("swaggerConfig")
+        private String swaggerConfig;
+
+        private McpServerConfig(Builder builder) {
+            this.mcpServerSpec = builder.mcpServerSpec;
+            this.swaggerConfig = builder.swaggerConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpServerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mcpServerSpec
+         */
+        public String getMcpServerSpec() {
+            return this.mcpServerSpec;
+        }
+
+        /**
+         * @return swaggerConfig
+         */
+        public String getSwaggerConfig() {
+            return this.swaggerConfig;
+        }
+
+        public static final class Builder {
+            private String mcpServerSpec; 
+            private String swaggerConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpServerConfig model) {
+                this.mcpServerSpec = model.mcpServerSpec;
+                this.swaggerConfig = model.swaggerConfig;
+            } 
+
+            /**
+             * mcpServerSpec.
+             */
+            public Builder mcpServerSpec(String mcpServerSpec) {
+                this.mcpServerSpec = mcpServerSpec;
+                return this;
+            }
+
+            /**
+             * swaggerConfig.
+             */
+            public Builder swaggerConfig(String swaggerConfig) {
+                this.swaggerConfig = swaggerConfig;
+                return this;
+            }
+
+            public McpServerConfig build() {
+                return new McpServerConfig(this);
             } 
 
         } 
