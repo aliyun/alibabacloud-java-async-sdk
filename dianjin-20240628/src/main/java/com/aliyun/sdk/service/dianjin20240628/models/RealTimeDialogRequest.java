@@ -365,6 +365,9 @@ public class RealTimeDialogRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("end")
         private Integer end;
 
+        @com.aliyun.core.annotation.NameInMap("intentionCode")
+        private String intentionCode;
+
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer role;
@@ -381,6 +384,7 @@ public class RealTimeDialogRequest extends Request {
             this.customerServiceId = builder.customerServiceId;
             this.customerServiceType = builder.customerServiceType;
             this.end = builder.end;
+            this.intentionCode = builder.intentionCode;
             this.role = builder.role;
             this.type = builder.type;
         }
@@ -443,6 +447,13 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
+         * @return intentionCode
+         */
+        public String getIntentionCode() {
+            return this.intentionCode;
+        }
+
+        /**
          * @return role
          */
         public Integer getRole() {
@@ -464,6 +475,7 @@ public class RealTimeDialogRequest extends Request {
             private String customerServiceId; 
             private String customerServiceType; 
             private Integer end; 
+            private String intentionCode; 
             private Integer role; 
             private String type; 
 
@@ -478,6 +490,7 @@ public class RealTimeDialogRequest extends Request {
                 this.customerServiceId = model.customerServiceId;
                 this.customerServiceType = model.customerServiceType;
                 this.end = model.end;
+                this.intentionCode = model.intentionCode;
                 this.role = model.role;
                 this.type = model.type;
             } 
@@ -535,6 +548,14 @@ public class RealTimeDialogRequest extends Request {
              */
             public Builder end(Integer end) {
                 this.end = end;
+                return this;
+            }
+
+            /**
+             * intentionCode.
+             */
+            public Builder intentionCode(String intentionCode) {
+                this.intentionCode = intentionCode;
                 return this;
             }
 
