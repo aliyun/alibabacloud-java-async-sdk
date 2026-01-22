@@ -72,6 +72,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("protocolConfiguration")
     private ProtocolConfiguration protocolConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyLimitPerInstance")
     @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer sessionConcurrencyLimitPerInstance;
@@ -96,6 +99,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.networkConfiguration = builder.networkConfiguration;
         this.port = builder.port;
         this.protocolConfiguration = builder.protocolConfiguration;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sessionConcurrencyLimitPerInstance = builder.sessionConcurrencyLimitPerInstance;
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
     }
@@ -225,6 +229,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sessionConcurrencyLimitPerInstance
      */
     public Integer getSessionConcurrencyLimitPerInstance() {
@@ -255,6 +266,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private NetworkConfiguration networkConfiguration; 
         private Integer port; 
         private ProtocolConfiguration protocolConfiguration; 
+        private String resourceGroupId; 
         private Integer sessionConcurrencyLimitPerInstance; 
         private Integer sessionIdleTimeoutSeconds; 
 
@@ -278,6 +290,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.networkConfiguration = model.networkConfiguration;
             this.port = model.port;
             this.protocolConfiguration = model.protocolConfiguration;
+            this.resourceGroupId = model.resourceGroupId;
             this.sessionConcurrencyLimitPerInstance = model.sessionConcurrencyLimitPerInstance;
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
         } 
@@ -461,6 +474,14 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder protocolConfiguration(ProtocolConfiguration protocolConfiguration) {
             this.protocolConfiguration = protocolConfiguration;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

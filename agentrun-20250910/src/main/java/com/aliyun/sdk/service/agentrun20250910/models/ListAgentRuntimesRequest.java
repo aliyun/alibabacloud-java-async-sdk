@@ -30,6 +30,10 @@ public class ListAgentRuntimesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("searchMode")
     private String searchMode;
 
@@ -42,6 +46,7 @@ public class ListAgentRuntimesRequest extends Request {
         this.agentRuntimeName = builder.agentRuntimeName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.searchMode = builder.searchMode;
         this.status = builder.status;
     }
@@ -81,6 +86,13 @@ public class ListAgentRuntimesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return searchMode
      */
     public String getSearchMode() {
@@ -98,6 +110,7 @@ public class ListAgentRuntimesRequest extends Request {
         private String agentRuntimeName; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String searchMode; 
         private String status; 
 
@@ -110,6 +123,7 @@ public class ListAgentRuntimesRequest extends Request {
             this.agentRuntimeName = request.agentRuntimeName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.searchMode = request.searchMode;
             this.status = request.status;
         } 
@@ -147,6 +161,15 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
