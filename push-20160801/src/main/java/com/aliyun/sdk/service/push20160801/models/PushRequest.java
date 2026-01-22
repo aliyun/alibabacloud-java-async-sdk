@@ -56,6 +56,10 @@ public class PushRequest extends Request {
     private Integer androidHonorTargetUserType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidHuaweiBusinessType")
+    private Integer androidHuaweiBusinessType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidHuaweiLiveNotificationPayload")
     private String androidHuaweiLiveNotificationPayload;
 
@@ -505,6 +509,7 @@ public class PushRequest extends Request {
         this.androidBigTitle = builder.androidBigTitle;
         this.androidExtParameters = builder.androidExtParameters;
         this.androidHonorTargetUserType = builder.androidHonorTargetUserType;
+        this.androidHuaweiBusinessType = builder.androidHuaweiBusinessType;
         this.androidHuaweiLiveNotificationPayload = builder.androidHuaweiLiveNotificationPayload;
         this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
         this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
@@ -687,6 +692,13 @@ public class PushRequest extends Request {
      */
     public Integer getAndroidHonorTargetUserType() {
         return this.androidHonorTargetUserType;
+    }
+
+    /**
+     * @return androidHuaweiBusinessType
+     */
+    public Integer getAndroidHuaweiBusinessType() {
+        return this.androidHuaweiBusinessType;
     }
 
     /**
@@ -1441,6 +1453,7 @@ public class PushRequest extends Request {
         private String androidBigTitle; 
         private String androidExtParameters; 
         private Integer androidHonorTargetUserType; 
+        private Integer androidHuaweiBusinessType; 
         private String androidHuaweiLiveNotificationPayload; 
         private String androidHuaweiReceiptId; 
         private Integer androidHuaweiTargetUserType; 
@@ -1563,6 +1576,7 @@ public class PushRequest extends Request {
             this.androidBigTitle = request.androidBigTitle;
             this.androidExtParameters = request.androidExtParameters;
             this.androidHonorTargetUserType = request.androidHonorTargetUserType;
+            this.androidHuaweiBusinessType = request.androidHuaweiBusinessType;
             this.androidHuaweiLiveNotificationPayload = request.androidHuaweiLiveNotificationPayload;
             this.androidHuaweiReceiptId = request.androidHuaweiReceiptId;
             this.androidHuaweiTargetUserType = request.androidHuaweiTargetUserType;
@@ -1749,6 +1763,15 @@ public class PushRequest extends Request {
         public Builder androidHonorTargetUserType(Integer androidHonorTargetUserType) {
             this.putQueryParameter("AndroidHonorTargetUserType", androidHonorTargetUserType);
             this.androidHonorTargetUserType = androidHonorTargetUserType;
+            return this;
+        }
+
+        /**
+         * AndroidHuaweiBusinessType.
+         */
+        public Builder androidHuaweiBusinessType(Integer androidHuaweiBusinessType) {
+            this.putQueryParameter("AndroidHuaweiBusinessType", androidHuaweiBusinessType);
+            this.androidHuaweiBusinessType = androidHuaweiBusinessType;
             return this;
         }
 

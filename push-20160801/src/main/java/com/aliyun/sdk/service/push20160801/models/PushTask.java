@@ -467,6 +467,9 @@ public class PushTask extends TeaModel {
      * <p>PushTask</p>
      */
     public static class Huawei extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
+        private Integer businessType;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -483,6 +486,7 @@ public class PushTask extends TeaModel {
         private String urgency;
 
         private Huawei(Builder builder) {
+            this.businessType = builder.businessType;
             this.category = builder.category;
             this.importance = builder.importance;
             this.liveNotificationPayload = builder.liveNotificationPayload;
@@ -496,6 +500,13 @@ public class PushTask extends TeaModel {
 
         public static Huawei create() {
             return builder().build();
+        }
+
+        /**
+         * @return businessType
+         */
+        public Integer getBusinessType() {
+            return this.businessType;
         }
 
         /**
@@ -534,6 +545,7 @@ public class PushTask extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer businessType; 
             private String category; 
             private Integer importance; 
             private String liveNotificationPayload; 
@@ -544,12 +556,21 @@ public class PushTask extends TeaModel {
             } 
 
             private Builder(Huawei model) {
+                this.businessType = model.businessType;
                 this.category = model.category;
                 this.importance = model.importance;
                 this.liveNotificationPayload = model.liveNotificationPayload;
                 this.receiptId = model.receiptId;
                 this.urgency = model.urgency;
             } 
+
+            /**
+             * BusinessType.
+             */
+            public Builder businessType(Integer businessType) {
+                this.businessType = businessType;
+                return this;
+            }
 
             /**
              * Category.

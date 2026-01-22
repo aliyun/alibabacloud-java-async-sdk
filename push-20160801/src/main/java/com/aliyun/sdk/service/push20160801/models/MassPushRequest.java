@@ -160,6 +160,9 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidHonorTargetUserType")
         private Integer androidHonorTargetUserType;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidHuaweiBusinessType")
+        private Integer androidHuaweiBusinessType;
+
         @com.aliyun.core.annotation.NameInMap("AndroidHuaweiLiveNotificationPayload")
         private String androidHuaweiLiveNotificationPayload;
 
@@ -245,12 +248,15 @@ public class MassPushRequest extends Request {
         private Integer androidOppoIntentEnv;
 
         @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateContentParameters")
+        @Deprecated
         private java.util.Map<String, String> androidOppoPrivateContentParameters;
 
         @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateMsgTemplateId")
+        @Deprecated
         private String androidOppoPrivateMsgTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("AndroidOppoPrivateTitleParameters")
+        @Deprecated
         private java.util.Map<String, String> androidOppoPrivateTitleParameters;
 
         @com.aliyun.core.annotation.NameInMap("AndroidPopupActivity")
@@ -477,6 +483,7 @@ public class MassPushRequest extends Request {
             this.androidBigTitle = builder.androidBigTitle;
             this.androidExtParameters = builder.androidExtParameters;
             this.androidHonorTargetUserType = builder.androidHonorTargetUserType;
+            this.androidHuaweiBusinessType = builder.androidHuaweiBusinessType;
             this.androidHuaweiLiveNotificationPayload = builder.androidHuaweiLiveNotificationPayload;
             this.androidHuaweiReceiptId = builder.androidHuaweiReceiptId;
             this.androidHuaweiTargetUserType = builder.androidHuaweiTargetUserType;
@@ -647,6 +654,13 @@ public class MassPushRequest extends Request {
          */
         public Integer getAndroidHonorTargetUserType() {
             return this.androidHonorTargetUserType;
+        }
+
+        /**
+         * @return androidHuaweiBusinessType
+         */
+        public Integer getAndroidHuaweiBusinessType() {
+            return this.androidHuaweiBusinessType;
         }
 
         /**
@@ -1352,6 +1366,7 @@ public class MassPushRequest extends Request {
             private String androidBigTitle; 
             private String androidExtParameters; 
             private Integer androidHonorTargetUserType; 
+            private Integer androidHuaweiBusinessType; 
             private String androidHuaweiLiveNotificationPayload; 
             private String androidHuaweiReceiptId; 
             private Integer androidHuaweiTargetUserType; 
@@ -1465,6 +1480,7 @@ public class MassPushRequest extends Request {
                 this.androidBigTitle = model.androidBigTitle;
                 this.androidExtParameters = model.androidExtParameters;
                 this.androidHonorTargetUserType = model.androidHonorTargetUserType;
+                this.androidHuaweiBusinessType = model.androidHuaweiBusinessType;
                 this.androidHuaweiLiveNotificationPayload = model.androidHuaweiLiveNotificationPayload;
                 this.androidHuaweiReceiptId = model.androidHuaweiReceiptId;
                 this.androidHuaweiTargetUserType = model.androidHuaweiTargetUserType;
@@ -1635,6 +1651,14 @@ public class MassPushRequest extends Request {
              */
             public Builder androidHonorTargetUserType(Integer androidHonorTargetUserType) {
                 this.androidHonorTargetUserType = androidHonorTargetUserType;
+                return this;
+            }
+
+            /**
+             * AndroidHuaweiBusinessType.
+             */
+            public Builder androidHuaweiBusinessType(Integer androidHuaweiBusinessType) {
+                this.androidHuaweiBusinessType = androidHuaweiBusinessType;
                 return this;
             }
 
