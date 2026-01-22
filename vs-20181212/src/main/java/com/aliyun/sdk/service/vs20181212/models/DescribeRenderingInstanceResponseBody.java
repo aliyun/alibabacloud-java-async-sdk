@@ -32,6 +32,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    private String instanceChargeType;
+
     @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
@@ -68,6 +71,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.egressIp = builder.egressIp;
         this.hostname = builder.hostname;
+        this.instanceChargeType = builder.instanceChargeType;
         this.internalIp = builder.internalIp;
         this.isp = builder.isp;
         this.portMappings = builder.portMappings;
@@ -125,6 +129,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     public String getHostname() {
         return this.hostname;
+    }
+
+    /**
+     * @return instanceChargeType
+     */
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
     }
 
     /**
@@ -203,6 +214,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private String creationTime; 
         private String egressIp; 
         private String hostname; 
+        private String instanceChargeType; 
         private String internalIp; 
         private String isp; 
         private java.util.List<PortMappings> portMappings; 
@@ -223,6 +235,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             this.creationTime = model.creationTime;
             this.egressIp = model.egressIp;
             this.hostname = model.hostname;
+            this.instanceChargeType = model.instanceChargeType;
             this.internalIp = model.internalIp;
             this.isp = model.isp;
             this.portMappings = model.portMappings;
@@ -272,6 +285,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
+            return this;
+        }
+
+        /**
+         * InstanceChargeType.
+         */
+        public Builder instanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
             return this;
         }
 
