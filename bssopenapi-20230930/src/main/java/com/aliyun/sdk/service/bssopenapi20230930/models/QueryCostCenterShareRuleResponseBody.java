@@ -647,6 +647,9 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FromCostCenterShareRuleDetails")
         private java.util.List<FromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails;
 
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
         @com.aliyun.core.annotation.NameInMap("OwnerAccountId")
         private Long ownerAccountId;
 
@@ -664,6 +667,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.fromCostCenterShareRuleDetails = builder.fromCostCenterShareRuleDetails;
+            this.gmtModified = builder.gmtModified;
             this.ownerAccountId = builder.ownerAccountId;
             this.shareRuleId = builder.shareRuleId;
             this.shareRuleName = builder.shareRuleName;
@@ -684,6 +688,13 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
          */
         public java.util.List<FromCostCenterShareRuleDetails> getFromCostCenterShareRuleDetails() {
             return this.fromCostCenterShareRuleDetails;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         /**
@@ -723,6 +734,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails; 
+            private String gmtModified; 
             private Long ownerAccountId; 
             private Long shareRuleId; 
             private String shareRuleName; 
@@ -734,6 +746,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.fromCostCenterShareRuleDetails = model.fromCostCenterShareRuleDetails;
+                this.gmtModified = model.gmtModified;
                 this.ownerAccountId = model.ownerAccountId;
                 this.shareRuleId = model.shareRuleId;
                 this.shareRuleName = model.shareRuleName;
@@ -746,6 +759,14 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
              */
             public Builder fromCostCenterShareRuleDetails(java.util.List<FromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails) {
                 this.fromCostCenterShareRuleDetails = fromCostCenterShareRuleDetails;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 
