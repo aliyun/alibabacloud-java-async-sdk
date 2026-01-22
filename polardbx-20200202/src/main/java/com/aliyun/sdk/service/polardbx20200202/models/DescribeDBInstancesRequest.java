@@ -22,6 +22,10 @@ public class DescribeDBInstancesRequest extends Request {
     private String dbVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -58,6 +62,7 @@ public class DescribeDBInstancesRequest extends Request {
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
         this.dbVersion = builder.dbVersion;
+        this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.mustHasCdc = builder.mustHasCdc;
         this.pageNumber = builder.pageNumber;
@@ -86,6 +91,13 @@ public class DescribeDBInstancesRequest extends Request {
      */
     public String getDbVersion() {
         return this.dbVersion;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -146,6 +158,7 @@ public class DescribeDBInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
         private String dbVersion; 
+        private String description; 
         private String instanceId; 
         private Boolean mustHasCdc; 
         private Integer pageNumber; 
@@ -162,6 +175,7 @@ public class DescribeDBInstancesRequest extends Request {
         private Builder(DescribeDBInstancesRequest request) {
             super(request);
             this.dbVersion = request.dbVersion;
+            this.description = request.description;
             this.instanceId = request.instanceId;
             this.mustHasCdc = request.mustHasCdc;
             this.pageNumber = request.pageNumber;
@@ -178,6 +192,15 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder dbVersion(String dbVersion) {
             this.putQueryParameter("DbVersion", dbVersion);
             this.dbVersion = dbVersion;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
