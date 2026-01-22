@@ -93,4 +93,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEmbodiedAIPlatformResourceUsageInfo  GetEmbodiedAIPlatformResourceUsageInfoRequest
+     * @return GetEmbodiedAIPlatformResourceUsageInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetEmbodiedAIPlatformResourceUsageInfoResponse> getEmbodiedAIPlatformResourceUsageInfo(GetEmbodiedAIPlatformResourceUsageInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEmbodiedAIPlatformResourceUsageInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEmbodiedAIPlatformResourceUsageInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEmbodiedAIPlatformResourceUsageInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResetEmbodiedAIPlatformPassword  ResetEmbodiedAIPlatformPasswordRequest
+     * @return ResetEmbodiedAIPlatformPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ResetEmbodiedAIPlatformPasswordResponse> resetEmbodiedAIPlatformPassword(ResetEmbodiedAIPlatformPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetEmbodiedAIPlatformPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetEmbodiedAIPlatformPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetEmbodiedAIPlatformPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }

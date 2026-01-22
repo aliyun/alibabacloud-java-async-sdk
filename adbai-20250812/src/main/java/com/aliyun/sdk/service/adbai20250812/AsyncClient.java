@@ -37,4 +37,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeEmbodiedAIPlatformsResponse> describeEmbodiedAIPlatforms(DescribeEmbodiedAIPlatformsRequest request);
 
+    /**
+     * @param request the request parameters of GetEmbodiedAIPlatformResourceUsageInfo  GetEmbodiedAIPlatformResourceUsageInfoRequest
+     * @return GetEmbodiedAIPlatformResourceUsageInfoResponse
+     */
+    CompletableFuture<GetEmbodiedAIPlatformResourceUsageInfoResponse> getEmbodiedAIPlatformResourceUsageInfo(GetEmbodiedAIPlatformResourceUsageInfoRequest request);
+
+    /**
+     * @param request the request parameters of ResetEmbodiedAIPlatformPassword  ResetEmbodiedAIPlatformPasswordRequest
+     * @return ResetEmbodiedAIPlatformPasswordResponse
+     */
+    CompletableFuture<ResetEmbodiedAIPlatformPasswordResponse> resetEmbodiedAIPlatformPassword(ResetEmbodiedAIPlatformPasswordRequest request);
+
 }
