@@ -1171,6 +1171,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePendingMaintenanceActionsResponse> describePendingMaintenanceActions(DescribePendingMaintenanceActionsRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarAgentChatRecords  DescribePolarAgentChatRecordsRequest
+     * @return DescribePolarAgentChatRecordsResponse
+     */
+    CompletableFuture<DescribePolarAgentChatRecordsResponse> describePolarAgentChatRecords(DescribePolarAgentChatRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarAgentSessionStatus  DescribePolarAgentSessionStatusRequest
+     * @return DescribePolarAgentSessionStatusResponse
+     */
+    CompletableFuture<DescribePolarAgentSessionStatusResponse> describePolarAgentSessionStatus(DescribePolarAgentSessionStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarAgentUserSessions  DescribePolarAgentUserSessionsRequest
+     * @return DescribePolarAgentUserSessionsResponse
+     */
+    CompletableFuture<DescribePolarAgentUserSessionsResponse> describePolarAgentUserSessions(DescribePolarAgentUserSessionsRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarFsAttribute  DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
      */
@@ -1362,6 +1380,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateUpgradeReportForSyncCloneResponse
      */
     CompletableFuture<GenerateUpgradeReportForSyncCloneResponse> generateUpgradeReportForSyncClone(GenerateUpgradeReportForSyncCloneRequest request);
+
+    /**
+     * @param request the request parameters of GetPolarAgent  GetPolarAgentRequest
+     * @return GetPolarAgentResponse
+     */
+    CompletableFuture<GetPolarAgentResponse> getPolarAgent(GetPolarAgentRequest request);
+
+    ResponseIterable<GetPolarAgentResponseBody> getPolarAgentWithResponseIterable(GetPolarAgentRequest request);
 
     /**
      * <b>description</b> :
