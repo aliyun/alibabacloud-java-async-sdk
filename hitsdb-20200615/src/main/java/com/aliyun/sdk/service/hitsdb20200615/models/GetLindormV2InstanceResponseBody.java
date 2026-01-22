@@ -53,6 +53,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableCompute")
     private Boolean enableCompute;
 
+    @com.aliyun.core.annotation.NameInMap("EnableFS")
+    private Boolean enableFS;
+
+    @com.aliyun.core.annotation.NameInMap("EnableStoreTDE")
+    private Boolean enableStoreTDE;
+
     @com.aliyun.core.annotation.NameInMap("EngineList")
     private java.util.List<EngineList> engineList;
 
@@ -141,6 +147,8 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         this.diskThreshold = builder.diskThreshold;
         this.diskUsage = builder.diskUsage;
         this.enableCompute = builder.enableCompute;
+        this.enableFS = builder.enableFS;
+        this.enableStoreTDE = builder.enableStoreTDE;
         this.engineList = builder.engineList;
         this.expiredMilliseconds = builder.expiredMilliseconds;
         this.initialRootPassword = builder.initialRootPassword;
@@ -262,6 +270,20 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
      */
     public Boolean getEnableCompute() {
         return this.enableCompute;
+    }
+
+    /**
+     * @return enableFS
+     */
+    public Boolean getEnableFS() {
+        return this.enableFS;
+    }
+
+    /**
+     * @return enableStoreTDE
+     */
+    public Boolean getEnableStoreTDE() {
+        return this.enableStoreTDE;
     }
 
     /**
@@ -452,6 +474,8 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         private String diskThreshold; 
         private String diskUsage; 
         private Boolean enableCompute; 
+        private Boolean enableFS; 
+        private Boolean enableStoreTDE; 
         private java.util.List<EngineList> engineList; 
         private Long expiredMilliseconds; 
         private String initialRootPassword; 
@@ -494,6 +518,8 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             this.diskThreshold = model.diskThreshold;
             this.diskUsage = model.diskUsage;
             this.enableCompute = model.enableCompute;
+            this.enableFS = model.enableFS;
+            this.enableStoreTDE = model.enableStoreTDE;
             this.engineList = model.engineList;
             this.expiredMilliseconds = model.expiredMilliseconds;
             this.initialRootPassword = model.initialRootPassword;
@@ -614,6 +640,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public Builder enableCompute(Boolean enableCompute) {
             this.enableCompute = enableCompute;
+            return this;
+        }
+
+        /**
+         * EnableFS.
+         */
+        public Builder enableFS(Boolean enableFS) {
+            this.enableFS = enableFS;
+            return this;
+        }
+
+        /**
+         * EnableStoreTDE.
+         */
+        public Builder enableStoreTDE(Boolean enableStoreTDE) {
+            this.enableStoreTDE = enableStoreTDE;
             return this;
         }
 

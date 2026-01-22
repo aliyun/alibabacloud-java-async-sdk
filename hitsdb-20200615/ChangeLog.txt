@@ -1,3 +1,6 @@
+2026-01-22 Version: 4.0.23
+- Generated java-async 2020-06-15 for hitsdb.
+
 2026-01-12 Version: 4.0.22
 - Generated java-async 2020-06-15 for hitsdb.
 
