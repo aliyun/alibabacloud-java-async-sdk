@@ -98,6 +98,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAlertWebhook  CreateAlertWebhookRequest
+     * @return CreateAlertWebhookResponse
+     */
+    @Override
+    public CompletableFuture<CreateAlertWebhookResponse> createAlertWebhook(CreateAlertWebhookRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAlertWebhook").setMethod(HttpMethod.POST).setPathRegex("/webhook").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAlertWebhookResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAlertWebhookResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateBizTrace  CreateBizTraceRequest
      * @return CreateBizTraceResponse
      */
@@ -431,6 +449,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAggTaskGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAlertWebhooks  DeleteAlertWebhooksRequest
+     * @return DeleteAlertWebhooksResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAlertWebhooksResponse> deleteAlertWebhooks(DeleteAlertWebhooksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAlertWebhooks").setMethod(HttpMethod.DELETE).setPathRegex("/webhooks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAlertWebhooksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAlertWebhooksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1238,6 +1274,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAlertWebhooks  ListAlertWebhooksRequest
+     * @return ListAlertWebhooksResponse
+     */
+    @Override
+    public CompletableFuture<ListAlertWebhooksResponse> listAlertWebhooks(ListAlertWebhooksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAlertWebhooks").setMethod(HttpMethod.GET).setPathRegex("/webhooks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAlertWebhooksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAlertWebhooksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListBizTraces  ListBizTracesRequest
      * @return ListBizTracesResponse
      */
@@ -1689,6 +1743,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAggTaskGroupStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAlertWebhook  UpdateAlertWebhookRequest
+     * @return UpdateAlertWebhookResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAlertWebhookResponse> updateAlertWebhook(UpdateAlertWebhookRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAlertWebhook").setMethod(HttpMethod.PATCH).setPathRegex("/webhook/{webhookId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAlertWebhookResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAlertWebhookResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

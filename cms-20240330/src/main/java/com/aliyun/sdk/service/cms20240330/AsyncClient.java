@@ -41,6 +41,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggTaskGroupResponse> createAggTaskGroup(CreateAggTaskGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAlertWebhook  CreateAlertWebhookRequest
+     * @return CreateAlertWebhookResponse
+     */
+    CompletableFuture<CreateAlertWebhookResponse> createAlertWebhook(CreateAlertWebhookRequest request);
+
+    /**
      * @param request the request parameters of CreateBizTrace  CreateBizTraceRequest
      * @return CreateBizTraceResponse
      */
@@ -153,6 +159,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAggTaskGroupResponse
      */
     CompletableFuture<DeleteAggTaskGroupResponse> deleteAggTaskGroup(DeleteAggTaskGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAlertWebhooks  DeleteAlertWebhooksRequest
+     * @return DeleteAlertWebhooksResponse
+     */
+    CompletableFuture<DeleteAlertWebhooksResponse> deleteAlertWebhooks(DeleteAlertWebhooksRequest request);
 
     /**
      * @param request the request parameters of DeleteBizTrace  DeleteBizTraceRequest
@@ -440,6 +452,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * @param request the request parameters of ListAlertWebhooks  ListAlertWebhooksRequest
+     * @return ListAlertWebhooksResponse
+     */
+    CompletableFuture<ListAlertWebhooksResponse> listAlertWebhooks(ListAlertWebhooksRequest request);
+
+    /**
      * @param request the request parameters of ListBizTraces  ListBizTracesRequest
      * @return ListBizTracesResponse
      */
@@ -607,6 +625,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAggTaskGroupStatusResponse
      */
     CompletableFuture<UpdateAggTaskGroupStatusResponse> updateAggTaskGroupStatus(UpdateAggTaskGroupStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlertWebhook  UpdateAlertWebhookRequest
+     * @return UpdateAlertWebhookResponse
+     */
+    CompletableFuture<UpdateAlertWebhookResponse> updateAlertWebhook(UpdateAlertWebhookRequest request);
 
     /**
      * @param request the request parameters of UpdateBizTrace  UpdateBizTraceRequest
