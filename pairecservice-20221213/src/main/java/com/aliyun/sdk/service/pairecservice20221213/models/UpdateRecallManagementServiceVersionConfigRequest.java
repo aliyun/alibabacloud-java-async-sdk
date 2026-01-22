@@ -929,6 +929,12 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ExtendedConfig")
         private String extendedConfig;
 
+        @com.aliyun.core.annotation.NameInMap("ItemConditionArray")
+        private String itemConditionArray;
+
+        @com.aliyun.core.annotation.NameInMap("ItemConditionExpression")
+        private String itemConditionExpression;
+
         @com.aliyun.core.annotation.NameInMap("ItemVectorField")
         private String itemVectorField;
 
@@ -959,6 +965,8 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         private RecallConfig(Builder builder) {
             this.description = builder.description;
             this.extendedConfig = builder.extendedConfig;
+            this.itemConditionArray = builder.itemConditionArray;
+            this.itemConditionExpression = builder.itemConditionExpression;
             this.itemVectorField = builder.itemVectorField;
             this.itemVectorRecallManagementTableId = builder.itemVectorRecallManagementTableId;
             this.name = builder.name;
@@ -990,6 +998,20 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
          */
         public String getExtendedConfig() {
             return this.extendedConfig;
+        }
+
+        /**
+         * @return itemConditionArray
+         */
+        public String getItemConditionArray() {
+            return this.itemConditionArray;
+        }
+
+        /**
+         * @return itemConditionExpression
+         */
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         /**
@@ -1058,6 +1080,8 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         public static final class Builder {
             private String description; 
             private String extendedConfig; 
+            private String itemConditionArray; 
+            private String itemConditionExpression; 
             private String itemVectorField; 
             private String itemVectorRecallManagementTableId; 
             private String name; 
@@ -1074,6 +1098,8 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             private Builder(RecallConfig model) {
                 this.description = model.description;
                 this.extendedConfig = model.extendedConfig;
+                this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpression = model.itemConditionExpression;
                 this.itemVectorField = model.itemVectorField;
                 this.itemVectorRecallManagementTableId = model.itemVectorRecallManagementTableId;
                 this.name = model.name;
@@ -1098,6 +1124,22 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
+                return this;
+            }
+
+            /**
+             * ItemConditionArray.
+             */
+            public Builder itemConditionArray(String itemConditionArray) {
+                this.itemConditionArray = itemConditionArray;
+                return this;
+            }
+
+            /**
+             * ItemConditionExpression.
+             */
+            public Builder itemConditionExpression(String itemConditionExpression) {
+                this.itemConditionExpression = itemConditionExpression;
                 return this;
             }
 

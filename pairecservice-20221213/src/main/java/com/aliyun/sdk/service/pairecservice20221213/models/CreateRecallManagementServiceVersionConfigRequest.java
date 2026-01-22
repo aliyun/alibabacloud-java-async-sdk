@@ -909,6 +909,9 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ItemConditionArray")
         private String itemConditionArray;
 
+        @com.aliyun.core.annotation.NameInMap("ItemConditionExpression")
+        private String itemConditionExpression;
+
         @com.aliyun.core.annotation.NameInMap("ItemVectorField")
         private String itemVectorField;
 
@@ -940,6 +943,7 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
             this.description = builder.description;
             this.extendedConfig = builder.extendedConfig;
             this.itemConditionArray = builder.itemConditionArray;
+            this.itemConditionExpression = builder.itemConditionExpression;
             this.itemVectorField = builder.itemVectorField;
             this.itemVectorRecallManagementTableId = builder.itemVectorRecallManagementTableId;
             this.name = builder.name;
@@ -978,6 +982,13 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
          */
         public String getItemConditionArray() {
             return this.itemConditionArray;
+        }
+
+        /**
+         * @return itemConditionExpression
+         */
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         /**
@@ -1047,6 +1058,7 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
             private String description; 
             private String extendedConfig; 
             private String itemConditionArray; 
+            private String itemConditionExpression; 
             private String itemVectorField; 
             private String itemVectorRecallManagementTableId; 
             private String name; 
@@ -1064,6 +1076,7 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
                 this.description = model.description;
                 this.extendedConfig = model.extendedConfig;
                 this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpression = model.itemConditionExpression;
                 this.itemVectorField = model.itemVectorField;
                 this.itemVectorRecallManagementTableId = model.itemVectorRecallManagementTableId;
                 this.name = model.name;
@@ -1096,6 +1109,14 @@ public class CreateRecallManagementServiceVersionConfigRequest extends Request {
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
+                return this;
+            }
+
+            /**
+             * ItemConditionExpression.
+             */
+            public Builder itemConditionExpression(String itemConditionExpression) {
+                this.itemConditionExpression = itemConditionExpression;
                 return this;
             }
 

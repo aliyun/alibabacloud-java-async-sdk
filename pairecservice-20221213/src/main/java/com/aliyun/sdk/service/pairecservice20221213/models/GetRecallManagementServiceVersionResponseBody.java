@@ -29,6 +29,9 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IsDefault")
     private String isDefault;
 
+    @com.aliyun.core.annotation.NameInMap("IsEffective")
+    private Boolean isEffective;
+
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -43,6 +46,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.isDefault = builder.isDefault;
+        this.isEffective = builder.isEffective;
         this.name = builder.name;
         this.recallManagementServiceVersionId = builder.recallManagementServiceVersionId;
         this.requestId = builder.requestId;
@@ -89,6 +93,13 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return isEffective
+     */
+    public Boolean getIsEffective() {
+        return this.isEffective;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -114,6 +125,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String isDefault; 
+        private Boolean isEffective; 
         private String name; 
         private String recallManagementServiceVersionId; 
         private String requestId; 
@@ -126,6 +138,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.isDefault = model.isDefault;
+            this.isEffective = model.isEffective;
             this.name = model.name;
             this.recallManagementServiceVersionId = model.recallManagementServiceVersionId;
             this.requestId = model.requestId;
@@ -160,6 +173,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
          */
         public Builder isDefault(String isDefault) {
             this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
+         * IsEffective.
+         */
+        public Builder isEffective(Boolean isEffective) {
+            this.isEffective = isEffective;
             return this;
         }
 
@@ -893,6 +914,9 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemConditionArray")
         private String itemConditionArray;
 
+        @com.aliyun.core.annotation.NameInMap("ItemConditionExpression")
+        private String itemConditionExpression;
+
         @com.aliyun.core.annotation.NameInMap("ItemVectorField")
         private String itemVectorField;
 
@@ -927,6 +951,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             this.description = builder.description;
             this.extendedConfig = builder.extendedConfig;
             this.itemConditionArray = builder.itemConditionArray;
+            this.itemConditionExpression = builder.itemConditionExpression;
             this.itemVectorField = builder.itemVectorField;
             this.itemVectorRecallManagementTableId = builder.itemVectorRecallManagementTableId;
             this.name = builder.name;
@@ -966,6 +991,13 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
          */
         public String getItemConditionArray() {
             return this.itemConditionArray;
+        }
+
+        /**
+         * @return itemConditionExpression
+         */
+        public String getItemConditionExpression() {
+            return this.itemConditionExpression;
         }
 
         /**
@@ -1042,6 +1074,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
             private String description; 
             private String extendedConfig; 
             private String itemConditionArray; 
+            private String itemConditionExpression; 
             private String itemVectorField; 
             private String itemVectorRecallManagementTableId; 
             private String name; 
@@ -1060,6 +1093,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
                 this.description = model.description;
                 this.extendedConfig = model.extendedConfig;
                 this.itemConditionArray = model.itemConditionArray;
+                this.itemConditionExpression = model.itemConditionExpression;
                 this.itemVectorField = model.itemVectorField;
                 this.itemVectorRecallManagementTableId = model.itemVectorRecallManagementTableId;
                 this.name = model.name;
@@ -1093,6 +1127,14 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
+                return this;
+            }
+
+            /**
+             * ItemConditionExpression.
+             */
+            public Builder itemConditionExpression(String itemConditionExpression) {
+                this.itemConditionExpression = itemConditionExpression;
                 return this;
             }
 
