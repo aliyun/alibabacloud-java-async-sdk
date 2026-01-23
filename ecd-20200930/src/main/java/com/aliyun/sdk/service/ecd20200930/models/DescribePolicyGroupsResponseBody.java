@@ -1520,6 +1520,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
 
+        @com.aliyun.core.annotation.NameInMap("HoverConfigMsg")
+        private String hoverConfigMsg;
+
         @com.aliyun.core.annotation.NameInMap("Html5Access")
         private String html5Access;
 
@@ -1576,6 +1579,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ModelLibrary")
         private String modelLibrary;
+
+        @com.aliyun.core.annotation.NameInMap("MultiScreen")
+        private String multiScreen;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1663,6 +1669,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ResetDesktop")
         private String resetDesktop;
+
+        @com.aliyun.core.annotation.NameInMap("ResolutionDpi")
+        private Integer resolutionDpi;
 
         @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
         private Integer resolutionHeight;
@@ -1822,6 +1831,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.fileTransferSpeed = builder.fileTransferSpeed;
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
+            this.hoverConfigMsg = builder.hoverConfigMsg;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
@@ -1841,6 +1851,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
             this.mobileWyAssistant = builder.mobileWyAssistant;
             this.modelLibrary = builder.modelLibrary;
+            this.multiScreen = builder.multiScreen;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
@@ -1870,6 +1881,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
             this.resetDesktop = builder.resetDesktop;
+            this.resolutionDpi = builder.resolutionDpi;
             this.resolutionHeight = builder.resolutionHeight;
             this.resolutionModel = builder.resolutionModel;
             this.resolutionWidth = builder.resolutionWidth;
@@ -2200,6 +2212,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return hoverConfigMsg
+         */
+        public String getHoverConfigMsg() {
+            return this.hoverConfigMsg;
+        }
+
+        /**
          * @return html5Access
          */
         public String getHtml5Access() {
@@ -2330,6 +2349,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getModelLibrary() {
             return this.modelLibrary;
+        }
+
+        /**
+         * @return multiScreen
+         */
+        public String getMultiScreen() {
+            return this.multiScreen;
         }
 
         /**
@@ -2533,6 +2559,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getResetDesktop() {
             return this.resetDesktop;
+        }
+
+        /**
+         * @return resolutionDpi
+         */
+        public Integer getResolutionDpi() {
+            return this.resolutionDpi;
         }
 
         /**
@@ -2849,6 +2882,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String fileTransferSpeed; 
             private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
+            private String hoverConfigMsg; 
             private String html5Access; 
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
@@ -2868,6 +2902,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String mobileWuyingKeeper; 
             private String mobileWyAssistant; 
             private String modelLibrary; 
+            private String multiScreen; 
             private String name; 
             private String netRedirect; 
             private java.util.List<NetRedirectRule> netRedirectRule; 
@@ -2897,6 +2932,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
             private String resetDesktop; 
+            private Integer resolutionDpi; 
             private Integer resolutionHeight; 
             private String resolutionModel; 
             private Integer resolutionWidth; 
@@ -2981,6 +3017,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.fileTransferSpeed = model.fileTransferSpeed;
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
+                this.hoverConfigMsg = model.hoverConfigMsg;
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
@@ -3000,6 +3037,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.mobileWuyingKeeper = model.mobileWuyingKeeper;
                 this.mobileWyAssistant = model.mobileWyAssistant;
                 this.modelLibrary = model.modelLibrary;
+                this.multiScreen = model.multiScreen;
                 this.name = model.name;
                 this.netRedirect = model.netRedirect;
                 this.netRedirectRule = model.netRedirectRule;
@@ -3029,6 +3067,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.recordingUserNotifyMessage = model.recordingUserNotifyMessage;
                 this.remoteCoordinate = model.remoteCoordinate;
                 this.resetDesktop = model.resetDesktop;
+                this.resolutionDpi = model.resolutionDpi;
                 this.resolutionHeight = model.resolutionHeight;
                 this.resolutionModel = model.resolutionModel;
                 this.resolutionWidth = model.resolutionWidth;
@@ -3516,6 +3555,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * HoverConfigMsg.
+             */
+            public Builder hoverConfigMsg(String hoverConfigMsg) {
+                this.hoverConfigMsg = hoverConfigMsg;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether to allow web client access.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -3753,6 +3800,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder modelLibrary(String modelLibrary) {
                 this.modelLibrary = modelLibrary;
+                return this;
+            }
+
+            /**
+             * MultiScreen.
+             */
+            public Builder multiScreen(String multiScreen) {
+                this.multiScreen = multiScreen;
                 return this;
             }
 
@@ -4133,6 +4188,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder resetDesktop(String resetDesktop) {
                 this.resetDesktop = resetDesktop;
+                return this;
+            }
+
+            /**
+             * ResolutionDpi.
+             */
+            public Builder resolutionDpi(Integer resolutionDpi) {
+                this.resolutionDpi = resolutionDpi;
                 return this;
             }
 

@@ -187,6 +187,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private String gpuAcceleration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoverConfigMsg")
+    private String hoverConfigMsg;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Html5FileTransfer")
     private String html5FileTransfer;
 
@@ -257,6 +261,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelLibrary")
     private String modelLibrary;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiScreen")
+    private String multiScreen;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -367,6 +375,11 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResetDesktop")
     private String resetDesktop;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResolutionDpi")
+    @com.aliyun.core.annotation.Validation(maximum = 400, minimum = 25)
+    private Integer resolutionDpi;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
@@ -581,6 +594,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.fileTransferSpeed = builder.fileTransferSpeed;
         this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
         this.gpuAcceleration = builder.gpuAcceleration;
+        this.hoverConfigMsg = builder.hoverConfigMsg;
         this.html5FileTransfer = builder.html5FileTransfer;
         this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
         this.internetPrinter = builder.internetPrinter;
@@ -599,6 +613,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
         this.mobileWyAssistant = builder.mobileWyAssistant;
         this.modelLibrary = builder.modelLibrary;
+        this.multiScreen = builder.multiScreen;
         this.name = builder.name;
         this.netRedirect = builder.netRedirect;
         this.netRedirectRule = builder.netRedirectRule;
@@ -626,6 +641,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.regionId = builder.regionId;
         this.remoteCoordinate = builder.remoteCoordinate;
         this.resetDesktop = builder.resetDesktop;
+        this.resolutionDpi = builder.resolutionDpi;
         this.resolutionHeight = builder.resolutionHeight;
         this.resolutionModel = builder.resolutionModel;
         this.resolutionWidth = builder.resolutionWidth;
@@ -978,6 +994,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return hoverConfigMsg
+     */
+    public String getHoverConfigMsg() {
+        return this.hoverConfigMsg;
+    }
+
+    /**
      * @return html5FileTransfer
      */
     public String getHtml5FileTransfer() {
@@ -1101,6 +1124,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getModelLibrary() {
         return this.modelLibrary;
+    }
+
+    /**
+     * @return multiScreen
+     */
+    public String getMultiScreen() {
+        return this.multiScreen;
     }
 
     /**
@@ -1290,6 +1320,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getResetDesktop() {
         return this.resetDesktop;
+    }
+
+    /**
+     * @return resolutionDpi
+     */
+    public Integer getResolutionDpi() {
+        return this.resolutionDpi;
     }
 
     /**
@@ -1629,6 +1666,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String fileTransferSpeed; 
         private String fileTransferSpeedLocation; 
         private String gpuAcceleration; 
+        private String hoverConfigMsg; 
         private String html5FileTransfer; 
         private String internetCommunicationProtocol; 
         private String internetPrinter; 
@@ -1647,6 +1685,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String mobileWuyingKeeper; 
         private String mobileWyAssistant; 
         private String modelLibrary; 
+        private String multiScreen; 
         private String name; 
         private String netRedirect; 
         private java.util.List<NetRedirectRule> netRedirectRule; 
@@ -1674,6 +1713,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String regionId; 
         private String remoteCoordinate; 
         private String resetDesktop; 
+        private Integer resolutionDpi; 
         private Integer resolutionHeight; 
         private String resolutionModel; 
         private Integer resolutionWidth; 
@@ -1765,6 +1805,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.fileTransferSpeed = request.fileTransferSpeed;
             this.fileTransferSpeedLocation = request.fileTransferSpeedLocation;
             this.gpuAcceleration = request.gpuAcceleration;
+            this.hoverConfigMsg = request.hoverConfigMsg;
             this.html5FileTransfer = request.html5FileTransfer;
             this.internetCommunicationProtocol = request.internetCommunicationProtocol;
             this.internetPrinter = request.internetPrinter;
@@ -1783,6 +1824,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.mobileWuyingKeeper = request.mobileWuyingKeeper;
             this.mobileWyAssistant = request.mobileWyAssistant;
             this.modelLibrary = request.modelLibrary;
+            this.multiScreen = request.multiScreen;
             this.name = request.name;
             this.netRedirect = request.netRedirect;
             this.netRedirectRule = request.netRedirectRule;
@@ -1810,6 +1852,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.regionId = request.regionId;
             this.remoteCoordinate = request.remoteCoordinate;
             this.resetDesktop = request.resetDesktop;
+            this.resolutionDpi = request.resolutionDpi;
             this.resolutionHeight = request.resolutionHeight;
             this.resolutionModel = request.resolutionModel;
             this.resolutionWidth = request.resolutionWidth;
@@ -2391,6 +2434,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * HoverConfigMsg.
+         */
+        public Builder hoverConfigMsg(String hoverConfigMsg) {
+            this.putQueryParameter("HoverConfigMsg", hoverConfigMsg);
+            this.hoverConfigMsg = hoverConfigMsg;
+            return this;
+        }
+
+        /**
          * <p>The file transfer policy on the web client.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -2623,6 +2675,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder modelLibrary(String modelLibrary) {
             this.putQueryParameter("ModelLibrary", modelLibrary);
             this.modelLibrary = modelLibrary;
+            return this;
+        }
+
+        /**
+         * MultiScreen.
+         */
+        public Builder multiScreen(String multiScreen) {
+            this.putQueryParameter("MultiScreen", multiScreen);
+            this.multiScreen = multiScreen;
             return this;
         }
 
@@ -2987,6 +3048,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder resetDesktop(String resetDesktop) {
             this.putQueryParameter("ResetDesktop", resetDesktop);
             this.resetDesktop = resetDesktop;
+            return this;
+        }
+
+        /**
+         * ResolutionDpi.
+         */
+        public Builder resolutionDpi(Integer resolutionDpi) {
+            this.putQueryParameter("ResolutionDpi", resolutionDpi);
+            this.resolutionDpi = resolutionDpi;
             return this;
         }
 
@@ -4013,11 +4083,27 @@ public class ModifyCenterPolicyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("GrainedType")
         private String grainedType;
 
+        @com.aliyun.core.annotation.NameInMap("InClipboardSize")
+        private Integer inClipboardSize;
+
+        @com.aliyun.core.annotation.NameInMap("InClipboardSizeUnit")
+        private String inClipboardSizeUnit;
+
+        @com.aliyun.core.annotation.NameInMap("OutClipboardSize")
+        private Integer outClipboardSize;
+
+        @com.aliyun.core.annotation.NameInMap("OutClipboardSizeUnit")
+        private String outClipboardSizeUnit;
+
         private ClipboardGraineds(Builder builder) {
             this.clipboardSize = builder.clipboardSize;
             this.clipboardSizeUnit = builder.clipboardSizeUnit;
             this.clipboardType = builder.clipboardType;
             this.grainedType = builder.grainedType;
+            this.inClipboardSize = builder.inClipboardSize;
+            this.inClipboardSizeUnit = builder.inClipboardSizeUnit;
+            this.outClipboardSize = builder.outClipboardSize;
+            this.outClipboardSizeUnit = builder.outClipboardSizeUnit;
         }
 
         public static Builder builder() {
@@ -4056,11 +4142,43 @@ public class ModifyCenterPolicyRequest extends Request {
             return this.grainedType;
         }
 
+        /**
+         * @return inClipboardSize
+         */
+        public Integer getInClipboardSize() {
+            return this.inClipboardSize;
+        }
+
+        /**
+         * @return inClipboardSizeUnit
+         */
+        public String getInClipboardSizeUnit() {
+            return this.inClipboardSizeUnit;
+        }
+
+        /**
+         * @return outClipboardSize
+         */
+        public Integer getOutClipboardSize() {
+            return this.outClipboardSize;
+        }
+
+        /**
+         * @return outClipboardSizeUnit
+         */
+        public String getOutClipboardSizeUnit() {
+            return this.outClipboardSizeUnit;
+        }
+
         public static final class Builder {
             private Integer clipboardSize; 
             private String clipboardSizeUnit; 
             private String clipboardType; 
             private String grainedType; 
+            private Integer inClipboardSize; 
+            private String inClipboardSizeUnit; 
+            private Integer outClipboardSize; 
+            private String outClipboardSizeUnit; 
 
             private Builder() {
             } 
@@ -4070,6 +4188,10 @@ public class ModifyCenterPolicyRequest extends Request {
                 this.clipboardSizeUnit = model.clipboardSizeUnit;
                 this.clipboardType = model.clipboardType;
                 this.grainedType = model.grainedType;
+                this.inClipboardSize = model.inClipboardSize;
+                this.inClipboardSizeUnit = model.inClipboardSizeUnit;
+                this.outClipboardSize = model.outClipboardSize;
+                this.outClipboardSizeUnit = model.outClipboardSizeUnit;
             } 
 
             /**
@@ -4101,6 +4223,38 @@ public class ModifyCenterPolicyRequest extends Request {
              */
             public Builder grainedType(String grainedType) {
                 this.grainedType = grainedType;
+                return this;
+            }
+
+            /**
+             * InClipboardSize.
+             */
+            public Builder inClipboardSize(Integer inClipboardSize) {
+                this.inClipboardSize = inClipboardSize;
+                return this;
+            }
+
+            /**
+             * InClipboardSizeUnit.
+             */
+            public Builder inClipboardSizeUnit(String inClipboardSizeUnit) {
+                this.inClipboardSizeUnit = inClipboardSizeUnit;
+                return this;
+            }
+
+            /**
+             * OutClipboardSize.
+             */
+            public Builder outClipboardSize(Integer outClipboardSize) {
+                this.outClipboardSize = outClipboardSize;
+                return this;
+            }
+
+            /**
+             * OutClipboardSizeUnit.
+             */
+            public Builder outClipboardSizeUnit(String outClipboardSizeUnit) {
+                this.outClipboardSizeUnit = outClipboardSizeUnit;
                 return this;
             }
 

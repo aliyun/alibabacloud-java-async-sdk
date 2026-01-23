@@ -1217,6 +1217,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
 
+        @com.aliyun.core.annotation.NameInMap("HoverConfigMsg")
+        private String hoverConfigMsg;
+
         @com.aliyun.core.annotation.NameInMap("Html5Access")
         private String html5Access;
 
@@ -1333,6 +1336,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
+
+        @com.aliyun.core.annotation.NameInMap("ResolutionDpi")
+        private Integer resolutionDpi;
 
         @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
         private Integer resolutionHeight;
@@ -1475,6 +1481,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.fileTransferSpeed = builder.fileTransferSpeed;
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
+            this.hoverConfigMsg = builder.hoverConfigMsg;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
@@ -1514,6 +1521,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.recordingUserNotify = builder.recordingUserNotify;
             this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
+            this.resolutionDpi = builder.resolutionDpi;
             this.resolutionHeight = builder.resolutionHeight;
             this.resolutionModel = builder.resolutionModel;
             this.resolutionWidth = builder.resolutionWidth;
@@ -1782,6 +1790,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getGpuAcceleration() {
             return this.gpuAcceleration;
+        }
+
+        /**
+         * @return hoverConfigMsg
+         */
+        public String getHoverConfigMsg() {
+            return this.hoverConfigMsg;
         }
 
         /**
@@ -2055,6 +2070,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getRemoteCoordinate() {
             return this.remoteCoordinate;
+        }
+
+        /**
+         * @return resolutionDpi
+         */
+        public Integer getResolutionDpi() {
+            return this.resolutionDpi;
         }
 
         /**
@@ -2342,6 +2364,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String fileTransferSpeed; 
             private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
+            private String hoverConfigMsg; 
             private String html5Access; 
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
@@ -2381,6 +2404,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String recordingUserNotify; 
             private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
+            private Integer resolutionDpi; 
             private Integer resolutionHeight; 
             private String resolutionModel; 
             private Integer resolutionWidth; 
@@ -2454,6 +2478,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.fileTransferSpeed = model.fileTransferSpeed;
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
+                this.hoverConfigMsg = model.hoverConfigMsg;
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
@@ -2493,6 +2518,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.recordingUserNotify = model.recordingUserNotify;
                 this.recordingUserNotifyMessage = model.recordingUserNotifyMessage;
                 this.remoteCoordinate = model.remoteCoordinate;
+                this.resolutionDpi = model.resolutionDpi;
                 this.resolutionHeight = model.resolutionHeight;
                 this.resolutionModel = model.resolutionModel;
                 this.resolutionWidth = model.resolutionWidth;
@@ -2853,6 +2879,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder gpuAcceleration(String gpuAcceleration) {
                 this.gpuAcceleration = gpuAcceleration;
+                return this;
+            }
+
+            /**
+             * HoverConfigMsg.
+             */
+            public Builder hoverConfigMsg(String hoverConfigMsg) {
+                this.hoverConfigMsg = hoverConfigMsg;
                 return this;
             }
 
@@ -3282,6 +3316,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder remoteCoordinate(String remoteCoordinate) {
                 this.remoteCoordinate = remoteCoordinate;
+                return this;
+            }
+
+            /**
+             * ResolutionDpi.
+             */
+            public Builder resolutionDpi(Integer resolutionDpi) {
+                this.resolutionDpi = resolutionDpi;
                 return this;
             }
 
