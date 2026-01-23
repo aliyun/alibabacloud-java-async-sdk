@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterAndNodesParametersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClearBinlog")
+    private Boolean clearBinlog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -68,6 +72,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
 
     private ModifyDBClusterAndNodesParametersRequest(Builder builder) {
         super(builder);
+        this.clearBinlog = builder.clearBinlog;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeIds = builder.DBNodeIds;
         this.fromTimeService = builder.fromTimeService;
@@ -93,6 +98,13 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clearBinlog
+     */
+    public Boolean getClearBinlog() {
+        return this.clearBinlog;
     }
 
     /**
@@ -180,6 +192,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterAndNodesParametersRequest, Builder> {
+        private Boolean clearBinlog; 
         private String DBClusterId; 
         private String DBNodeIds; 
         private Boolean fromTimeService; 
@@ -199,6 +212,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
 
         private Builder(ModifyDBClusterAndNodesParametersRequest request) {
             super(request);
+            this.clearBinlog = request.clearBinlog;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeIds = request.DBNodeIds;
             this.fromTimeService = request.fromTimeService;
@@ -212,6 +226,15 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.standbyClusterIdListNeedToSync = request.standbyClusterIdListNeedToSync;
         } 
+
+        /**
+         * ClearBinlog.
+         */
+        public Builder clearBinlog(Boolean clearBinlog) {
+            this.putQueryParameter("ClearBinlog", clearBinlog);
+            this.clearBinlog = clearBinlog;
+            return this;
+        }
 
         /**
          * <p>The ID of the cluster.</p>

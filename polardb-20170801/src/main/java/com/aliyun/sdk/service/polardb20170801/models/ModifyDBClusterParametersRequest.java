@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterParametersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClearBinlog")
+    private Boolean clearBinlog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -60,6 +64,7 @@ public class ModifyDBClusterParametersRequest extends Request {
 
     private ModifyDBClusterParametersRequest(Builder builder) {
         super(builder);
+        this.clearBinlog = builder.clearBinlog;
         this.DBClusterId = builder.DBClusterId;
         this.fromTimeService = builder.fromTimeService;
         this.ownerAccount = builder.ownerAccount;
@@ -83,6 +88,13 @@ public class ModifyDBClusterParametersRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clearBinlog
+     */
+    public Boolean getClearBinlog() {
+        return this.clearBinlog;
     }
 
     /**
@@ -156,6 +168,7 @@ public class ModifyDBClusterParametersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterParametersRequest, Builder> {
+        private Boolean clearBinlog; 
         private String DBClusterId; 
         private Boolean fromTimeService; 
         private String ownerAccount; 
@@ -173,6 +186,7 @@ public class ModifyDBClusterParametersRequest extends Request {
 
         private Builder(ModifyDBClusterParametersRequest request) {
             super(request);
+            this.clearBinlog = request.clearBinlog;
             this.DBClusterId = request.DBClusterId;
             this.fromTimeService = request.fromTimeService;
             this.ownerAccount = request.ownerAccount;
@@ -184,6 +198,15 @@ public class ModifyDBClusterParametersRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ClearBinlog.
+         */
+        public Builder clearBinlog(Boolean clearBinlog) {
+            this.putQueryParameter("ClearBinlog", clearBinlog);
+            this.clearBinlog = clearBinlog;
+            return this;
+        }
 
         /**
          * <p>The ID of the cluster.</p>
