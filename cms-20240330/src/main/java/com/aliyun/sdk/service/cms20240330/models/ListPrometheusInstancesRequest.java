@@ -55,6 +55,10 @@ public class ListPrometheusInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    private String workspace;
+
     private ListPrometheusInstancesRequest(Builder builder) {
         super(builder);
         this.filterRegionIds = builder.filterRegionIds;
@@ -66,6 +70,7 @@ public class ListPrometheusInstancesRequest extends Request {
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
         this.version = builder.version;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class ListPrometheusInstancesRequest extends Request {
         return this.version;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<ListPrometheusInstancesRequest, Builder> {
         private String filterRegionIds; 
         private Integer maxResults; 
@@ -154,6 +166,7 @@ public class ListPrometheusInstancesRequest extends Request {
         private String resourceType; 
         private java.util.List<Tag> tag; 
         private String version; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class ListPrometheusInstancesRequest extends Request {
             this.resourceType = request.resourceType;
             this.tag = request.tag;
             this.version = request.version;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -275,6 +289,15 @@ public class ListPrometheusInstancesRequest extends Request {
         public Builder version(String version) {
             this.putQueryParameter("version", version);
             this.version = version;
+            return this;
+        }
+
+        /**
+         * workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

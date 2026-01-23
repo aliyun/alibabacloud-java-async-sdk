@@ -171,87 +171,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
      *
      * <p>ListPrometheusViewsResponseBody</p>
      */
-    public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
-
-        private Tags(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
-            /**
-             * <p>Tag key</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key1</p>
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * <p>Match value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Tags build() {
-                return new Tags(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListPrometheusViewsResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListPrometheusViewsResponseBody</p>
-     */
     public static class PrometheusViews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -277,17 +196,11 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
-        private String resourceGroupId;
-
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
-
-        @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
@@ -307,10 +220,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             this.prometheusViewId = builder.prometheusViewId;
             this.prometheusViewName = builder.prometheusViewName;
             this.regionId = builder.regionId;
-            this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
-            this.tags = builder.tags;
             this.userId = builder.userId;
             this.version = builder.version;
             this.workspace = builder.workspace;
@@ -381,13 +292,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -399,13 +303,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
-        }
-
-        /**
-         * @return tags
-         */
-        public java.util.List<Tags> getTags() {
-            return this.tags;
         }
 
         /**
@@ -438,10 +335,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             private String prometheusViewId; 
             private String prometheusViewName; 
             private String regionId; 
-            private String resourceGroupId; 
             private String resourceType; 
             private String status; 
-            private java.util.List<Tags> tags; 
             private String userId; 
             private String version; 
             private String workspace; 
@@ -458,10 +353,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
                 this.prometheusViewId = model.prometheusViewId;
                 this.prometheusViewName = model.prometheusViewName;
                 this.regionId = model.regionId;
-                this.resourceGroupId = model.resourceGroupId;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
-                this.tags = model.tags;
                 this.userId = model.userId;
                 this.version = model.version;
                 this.workspace = model.workspace;
@@ -558,17 +451,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-acfm3gn5i6bigbi</p>
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
              * <p>Fixed value: PrometheusView.</p>
              * 
              * <strong>example:</strong>
@@ -587,14 +469,6 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * <p>Tag values.</p>
-             */
-            public Builder tags(java.util.List<Tags> tags) {
-                this.tags = tags;
                 return this;
             }
 

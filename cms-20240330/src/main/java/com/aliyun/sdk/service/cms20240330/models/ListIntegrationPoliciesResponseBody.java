@@ -1424,87 +1424,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
      *
      * <p>ListIntegrationPoliciesResponseBody</p>
      */
-    public static class PoliciesTags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
-
-        private PoliciesTags(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static PoliciesTags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(PoliciesTags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
-            /**
-             * <p>Tag key</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key</p>
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * <p>Match value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public PoliciesTags build() {
-                return new PoliciesTags(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListIntegrationPoliciesResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListIntegrationPoliciesResponseBody</p>
-     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bindResource")
         private BindResource bindResource;
@@ -1539,9 +1458,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("subAddonRelease")
         private SubAddonRelease subAddonRelease;
 
-        @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List<PoliciesTags> tags;
-
         @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
@@ -1560,7 +1476,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.subAddonRelease = builder.subAddonRelease;
-            this.tags = builder.tags;
             this.userId = builder.userId;
             this.workspace = builder.workspace;
         }
@@ -1651,13 +1566,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tags
-         */
-        public java.util.List<PoliciesTags> getTags() {
-            return this.tags;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -1683,7 +1591,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private SubAddonRelease subAddonRelease; 
-            private java.util.List<PoliciesTags> tags; 
             private String userId; 
             private String workspace; 
 
@@ -1702,7 +1609,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.subAddonRelease = model.subAddonRelease;
-                this.tags = model.tags;
                 this.userId = model.userId;
                 this.workspace = model.workspace;
             } 
@@ -1813,14 +1719,6 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
              */
             public Builder subAddonRelease(SubAddonRelease subAddonRelease) {
                 this.subAddonRelease = subAddonRelease;
-                return this;
-            }
-
-            /**
-             * <p>Resource tag key values.</p>
-             */
-            public Builder tags(java.util.List<PoliciesTags> tags) {
-                this.tags = tags;
                 return this;
             }
 

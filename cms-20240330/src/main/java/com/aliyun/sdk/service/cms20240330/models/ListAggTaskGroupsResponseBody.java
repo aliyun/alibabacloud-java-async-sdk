@@ -170,87 +170,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
      *
      * <p>ListAggTaskGroupsResponseBody</p>
      */
-    public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
-
-        private Tags(Builder builder) {
-            this.key = builder.key;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Tags model) {
-                this.key = model.key;
-                this.value = model.value;
-            } 
-
-            /**
-             * <p>Key of the resource group tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key1</p>
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * <p>Value of the resource group tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Tags build() {
-                return new Tags(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListAggTaskGroupsResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListAggTaskGroupsResponseBody</p>
-     */
     public static class AggTaskGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aggTaskGroupConfigHash")
         private String aggTaskGroupConfigHash;
@@ -297,9 +216,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List<Tags> tags;
-
         @com.aliyun.core.annotation.NameInMap("targetPrometheusId")
         private String targetPrometheusId;
 
@@ -325,7 +241,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             this.scheduleTimeExpr = builder.scheduleTimeExpr;
             this.sourcePrometheusId = builder.sourcePrometheusId;
             this.status = builder.status;
-            this.tags = builder.tags;
             this.targetPrometheusId = builder.targetPrometheusId;
             this.toTime = builder.toTime;
             this.updateTime = builder.updateTime;
@@ -445,13 +360,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return tags
-         */
-        public java.util.List<Tags> getTags() {
-            return this.tags;
-        }
-
-        /**
          * @return targetPrometheusId
          */
         public String getTargetPrometheusId() {
@@ -488,7 +396,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
             private String scheduleTimeExpr; 
             private String sourcePrometheusId; 
             private String status; 
-            private java.util.List<Tags> tags; 
             private String targetPrometheusId; 
             private Long toTime; 
             private String updateTime; 
@@ -512,7 +419,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
                 this.scheduleTimeExpr = model.scheduleTimeExpr;
                 this.sourcePrometheusId = model.sourcePrometheusId;
                 this.status = model.status;
-                this.tags = model.tags;
                 this.targetPrometheusId = model.targetPrometheusId;
                 this.toTime = model.toTime;
                 this.updateTime = model.updateTime;
@@ -680,14 +586,6 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * <p>Resource group tags</p>
-             */
-            public Builder tags(java.util.List<Tags> tags) {
-                this.tags = tags;
                 return this;
             }
 
