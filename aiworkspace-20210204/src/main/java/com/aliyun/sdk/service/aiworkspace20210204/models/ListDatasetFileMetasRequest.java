@@ -23,6 +23,10 @@ public class ListDatasetFileMetasRequest extends Request {
     private String datasetId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetFileMetaIds")
+    private java.util.List<String> datasetFileMetaIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String datasetVersion;
@@ -137,6 +141,7 @@ public class ListDatasetFileMetasRequest extends Request {
     private ListDatasetFileMetasRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
+        this.datasetFileMetaIds = builder.datasetFileMetaIds;
         this.datasetVersion = builder.datasetVersion;
         this.endFileUpdateTime = builder.endFileUpdateTime;
         this.endTagUpdateTime = builder.endTagUpdateTime;
@@ -184,6 +189,13 @@ public class ListDatasetFileMetasRequest extends Request {
      */
     public String getDatasetId() {
         return this.datasetId;
+    }
+
+    /**
+     * @return datasetFileMetaIds
+     */
+    public java.util.List<String> getDatasetFileMetaIds() {
+        return this.datasetFileMetaIds;
     }
 
     /**
@@ -377,6 +389,7 @@ public class ListDatasetFileMetasRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDatasetFileMetasRequest, Builder> {
         private String datasetId; 
+        private java.util.List<String> datasetFileMetaIds; 
         private String datasetVersion; 
         private String endFileUpdateTime; 
         private String endTagUpdateTime; 
@@ -412,6 +425,7 @@ public class ListDatasetFileMetasRequest extends Request {
         private Builder(ListDatasetFileMetasRequest request) {
             super(request);
             this.datasetId = request.datasetId;
+            this.datasetFileMetaIds = request.datasetFileMetaIds;
             this.datasetVersion = request.datasetVersion;
             this.endFileUpdateTime = request.endFileUpdateTime;
             this.endTagUpdateTime = request.endTagUpdateTime;
@@ -451,6 +465,16 @@ public class ListDatasetFileMetasRequest extends Request {
         public Builder datasetId(String datasetId) {
             this.putPathParameter("DatasetId", datasetId);
             this.datasetId = datasetId;
+            return this;
+        }
+
+        /**
+         * DatasetFileMetaIds.
+         */
+        public Builder datasetFileMetaIds(java.util.List<String> datasetFileMetaIds) {
+            String datasetFileMetaIdsShrink = shrink(datasetFileMetaIds, "DatasetFileMetaIds", "simple");
+            this.putQueryParameter("DatasetFileMetaIds", datasetFileMetaIdsShrink);
+            this.datasetFileMetaIds = datasetFileMetaIds;
             return this;
         }
 
