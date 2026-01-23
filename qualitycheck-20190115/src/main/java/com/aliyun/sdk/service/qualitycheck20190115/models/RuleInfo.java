@@ -102,7 +102,7 @@ public class RuleInfo extends TeaModel {
     private Integer operationMode;
 
     @com.aliyun.core.annotation.NameInMap("PreqRule")
-    private java.util.List<PreqRule> preqRule;
+    private PreqRule preqRule;
 
     @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
@@ -455,7 +455,7 @@ public class RuleInfo extends TeaModel {
     /**
      * @return preqRule
      */
-    public java.util.List<PreqRule> getPreqRule() {
+    public PreqRule getPreqRule() {
         return this.preqRule;
     }
 
@@ -677,7 +677,7 @@ public class RuleInfo extends TeaModel {
         private Integer modifyType; 
         private String name; 
         private Integer operationMode; 
-        private java.util.List<PreqRule> preqRule; 
+        private PreqRule preqRule; 
         private Integer qualityCheckType; 
         private String rid; 
         private String ruleCategoryName; 
@@ -995,7 +995,7 @@ public class RuleInfo extends TeaModel {
         /**
          * PreqRule.
          */
-        public Builder preqRule(java.util.List<PreqRule> preqRule) {
+        public Builder preqRule(PreqRule preqRule) {
             this.preqRule = preqRule;
             return this;
         }
