@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyDataServiceAppResponse> applyDataServiceApp(ApplyDataServiceAppRequest request);
 
     /**
+     * @param request the request parameters of AssignQualityRuleOfAllRuleScopeSchedules  AssignQualityRuleOfAllRuleScopeSchedulesRequest
+     * @return AssignQualityRuleOfAllRuleScopeSchedulesResponse
+     */
+    CompletableFuture<AssignQualityRuleOfAllRuleScopeSchedulesResponse> assignQualityRuleOfAllRuleScopeSchedules(AssignQualityRuleOfAllRuleScopeSchedulesRequest request);
+
+    /**
      * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
      * @return CheckComputeSourceConnectivityResponse
      */
@@ -200,6 +206,72 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRowPermissionResponse> createRowPermission(CreateRowPermissionRequest request);
 
     /**
+     * @param request the request parameters of CreateSecurityClassify  CreateSecurityClassifyRequest
+     * @return CreateSecurityClassifyResponse
+     */
+    CompletableFuture<CreateSecurityClassifyResponse> createSecurityClassify(CreateSecurityClassifyRequest request);
+
+    /**
+     * @param request the request parameters of CreateSecurityClassifyCatalog  CreateSecurityClassifyCatalogRequest
+     * @return CreateSecurityClassifyCatalogResponse
+     */
+    CompletableFuture<CreateSecurityClassifyCatalogResponse> createSecurityClassifyCatalog(CreateSecurityClassifyCatalogRequest request);
+
+    /**
+     * @param request the request parameters of CreateSecurityIdentifyResult  CreateSecurityIdentifyResultRequest
+     * @return CreateSecurityIdentifyResultResponse
+     */
+    CompletableFuture<CreateSecurityIdentifyResultResponse> createSecurityIdentifyResult(CreateSecurityIdentifyResultRequest request);
+
+    /**
+     * @param request the request parameters of CreateSecurityLevel  CreateSecurityLevelRequest
+     * @return CreateSecurityLevelResponse
+     */
+    CompletableFuture<CreateSecurityLevelResponse> createSecurityLevel(CreateSecurityLevelRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandard  CreateStandardRequest
+     * @return CreateStandardResponse
+     */
+    CompletableFuture<CreateStandardResponse> createStandard(CreateStandardRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardLookupTable  CreateStandardLookupTableRequest
+     * @return CreateStandardLookupTableResponse
+     */
+    CompletableFuture<CreateStandardLookupTableResponse> createStandardLookupTable(CreateStandardLookupTableRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardMapping  CreateStandardMappingRequest
+     * @return CreateStandardMappingResponse
+     */
+    CompletableFuture<CreateStandardMappingResponse> createStandardMapping(CreateStandardMappingRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardRelations  CreateStandardRelationsRequest
+     * @return CreateStandardRelationsResponse
+     */
+    CompletableFuture<CreateStandardRelationsResponse> createStandardRelations(CreateStandardRelationsRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardSet  CreateStandardSetRequest
+     * @return CreateStandardSetResponse
+     */
+    CompletableFuture<CreateStandardSetResponse> createStandardSet(CreateStandardSetRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardTemplate  CreateStandardTemplateRequest
+     * @return CreateStandardTemplateResponse
+     */
+    CompletableFuture<CreateStandardTemplateResponse> createStandardTemplate(CreateStandardTemplateRequest request);
+
+    /**
+     * @param request the request parameters of CreateStandardWordRoot  CreateStandardWordRootRequest
+     * @return CreateStandardWordRootResponse
+     */
+    CompletableFuture<CreateStandardWordRootResponse> createStandardWordRoot(CreateStandardWordRootRequest request);
+
+    /**
      * @param request the request parameters of CreateStreamBatchJobMapping  CreateStreamBatchJobMappingRequest
      * @return CreateStreamBatchJobMappingResponse
      */
@@ -272,6 +344,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteQualityRules  DeleteQualityRulesRequest
+     * @return DeleteQualityRulesResponse
+     */
+    CompletableFuture<DeleteQualityRulesResponse> deleteQualityRules(DeleteQualityRulesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteQualitySchedules  DeleteQualitySchedulesRequest
+     * @return DeleteQualitySchedulesResponse
+     */
+    CompletableFuture<DeleteQualitySchedulesResponse> deleteQualitySchedules(DeleteQualitySchedulesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteQualityTemplates  DeleteQualityTemplatesRequest
+     * @return DeleteQualityTemplatesResponse
+     */
+    CompletableFuture<DeleteQualityTemplatesResponse> deleteQualityTemplates(DeleteQualityTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteQualityWatches  DeleteQualityWatchesRequest
+     * @return DeleteQualityWatchesResponse
+     */
+    CompletableFuture<DeleteQualityWatchesResponse> deleteQualityWatches(DeleteQualityWatchesRequest request);
+
+    /**
      * @param request the request parameters of DeleteRegisterLineage  DeleteRegisterLineageRequest
      * @return DeleteRegisterLineageResponse
      */
@@ -288,6 +384,72 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRowPermissionResponse
      */
     CompletableFuture<DeleteRowPermissionResponse> deleteRowPermission(DeleteRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityClassify  DeleteSecurityClassifyRequest
+     * @return DeleteSecurityClassifyResponse
+     */
+    CompletableFuture<DeleteSecurityClassifyResponse> deleteSecurityClassify(DeleteSecurityClassifyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityClassifyCatalog  DeleteSecurityClassifyCatalogRequest
+     * @return DeleteSecurityClassifyCatalogResponse
+     */
+    CompletableFuture<DeleteSecurityClassifyCatalogResponse> deleteSecurityClassifyCatalog(DeleteSecurityClassifyCatalogRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityIdentifyResults  DeleteSecurityIdentifyResultsRequest
+     * @return DeleteSecurityIdentifyResultsResponse
+     */
+    CompletableFuture<DeleteSecurityIdentifyResultsResponse> deleteSecurityIdentifyResults(DeleteSecurityIdentifyResultsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSecurityLevel  DeleteSecurityLevelRequest
+     * @return DeleteSecurityLevelResponse
+     */
+    CompletableFuture<DeleteSecurityLevelResponse> deleteSecurityLevel(DeleteSecurityLevelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandard  DeleteStandardRequest
+     * @return DeleteStandardResponse
+     */
+    CompletableFuture<DeleteStandardResponse> deleteStandard(DeleteStandardRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardInValidMapping  DeleteStandardInValidMappingRequest
+     * @return DeleteStandardInValidMappingResponse
+     */
+    CompletableFuture<DeleteStandardInValidMappingResponse> deleteStandardInValidMapping(DeleteStandardInValidMappingRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardLookupTable  DeleteStandardLookupTableRequest
+     * @return DeleteStandardLookupTableResponse
+     */
+    CompletableFuture<DeleteStandardLookupTableResponse> deleteStandardLookupTable(DeleteStandardLookupTableRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardRelations  DeleteStandardRelationsRequest
+     * @return DeleteStandardRelationsResponse
+     */
+    CompletableFuture<DeleteStandardRelationsResponse> deleteStandardRelations(DeleteStandardRelationsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardSet  DeleteStandardSetRequest
+     * @return DeleteStandardSetResponse
+     */
+    CompletableFuture<DeleteStandardSetResponse> deleteStandardSet(DeleteStandardSetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardValidMapping  DeleteStandardValidMappingRequest
+     * @return DeleteStandardValidMappingResponse
+     */
+    CompletableFuture<DeleteStandardValidMappingResponse> deleteStandardValidMapping(DeleteStandardValidMappingRequest request);
+
+    /**
+     * @param request the request parameters of DeleteStandardWordRoot  DeleteStandardWordRootRequest
+     * @return DeleteStandardWordRootResponse
+     */
+    CompletableFuture<DeleteStandardWordRootResponse> deleteStandardWordRoot(DeleteStandardWordRootRequest request);
 
     /**
      * @param request the request parameters of DeleteUdf  DeleteUdfRequest
@@ -312,6 +474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteManualNodeResponse
      */
     CompletableFuture<ExecuteManualNodeResponse> executeManualNode(ExecuteManualNodeRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteTriggerNode  ExecuteTriggerNodeRequest
+     * @return ExecuteTriggerNodeResponse
+     */
+    CompletableFuture<ExecuteTriggerNodeResponse> executeTriggerNode(ExecuteTriggerNodeRequest request);
 
     /**
      * @param request the request parameters of FixData  FixDataRequest
@@ -350,6 +518,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertEventResponse> getAlertEvent(GetAlertEventRequest request);
 
     /**
+     * @param request the request parameters of GetAssetMappingRelations  GetAssetMappingRelationsRequest
+     * @return GetAssetMappingRelationsResponse
+     */
+    CompletableFuture<GetAssetMappingRelationsResponse> getAssetMappingRelations(GetAssetMappingRelationsRequest request);
+
+    /**
      * @param request the request parameters of GetBatchTaskInfo  GetBatchTaskInfoRequest
      * @return GetBatchTaskInfoResponse
      */
@@ -372,6 +546,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetBatchTaskVersionsResponse
      */
     CompletableFuture<GetBatchTaskVersionsResponse> getBatchTaskVersions(GetBatchTaskVersionsRequest request);
+
+    /**
+     * @param request the request parameters of GetBelongAssetMapping  GetBelongAssetMappingRequest
+     * @return GetBelongAssetMappingResponse
+     */
+    CompletableFuture<GetBelongAssetMappingResponse> getBelongAssetMapping(GetBelongAssetMappingRequest request);
 
     /**
      * @param request the request parameters of GetBizEntityInfo  GetBizEntityInfoRequest
@@ -632,6 +812,72 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectWhiteListsResponse> getProjectWhiteLists(GetProjectWhiteListsRequest request);
 
     /**
+     * @param request the request parameters of GetQualityAlertOfAllRuleScopeByWatchId  GetQualityAlertOfAllRuleScopeByWatchIdRequest
+     * @return GetQualityAlertOfAllRuleScopeByWatchIdResponse
+     */
+    CompletableFuture<GetQualityAlertOfAllRuleScopeByWatchIdResponse> getQualityAlertOfAllRuleScopeByWatchId(GetQualityAlertOfAllRuleScopeByWatchIdRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityRule  GetQualityRuleRequest
+     * @return GetQualityRuleResponse
+     */
+    CompletableFuture<GetQualityRuleResponse> getQualityRule(GetQualityRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityRuleTask  GetQualityRuleTaskRequest
+     * @return GetQualityRuleTaskResponse
+     */
+    CompletableFuture<GetQualityRuleTaskResponse> getQualityRuleTask(GetQualityRuleTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityRuleTaskLog  GetQualityRuleTaskLogRequest
+     * @return GetQualityRuleTaskLogResponse
+     */
+    CompletableFuture<GetQualityRuleTaskLogResponse> getQualityRuleTaskLog(GetQualityRuleTaskLogRequest request);
+
+    /**
+     * @param request the request parameters of GetQualitySchedule  GetQualityScheduleRequest
+     * @return GetQualityScheduleResponse
+     */
+    CompletableFuture<GetQualityScheduleResponse> getQualitySchedule(GetQualityScheduleRequest request);
+
+    /**
+     * @param request the request parameters of GetQualitySchedulesByWatchId  GetQualitySchedulesByWatchIdRequest
+     * @return GetQualitySchedulesByWatchIdResponse
+     */
+    CompletableFuture<GetQualitySchedulesByWatchIdResponse> getQualitySchedulesByWatchId(GetQualitySchedulesByWatchIdRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityTemplate  GetQualityTemplateRequest
+     * @return GetQualityTemplateResponse
+     */
+    CompletableFuture<GetQualityTemplateResponse> getQualityTemplate(GetQualityTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityWatch  GetQualityWatchRequest
+     * @return GetQualityWatchResponse
+     */
+    CompletableFuture<GetQualityWatchResponse> getQualityWatch(GetQualityWatchRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityWatchByObjectId  GetQualityWatchByObjectIdRequest
+     * @return GetQualityWatchByObjectIdResponse
+     */
+    CompletableFuture<GetQualityWatchByObjectIdResponse> getQualityWatchByObjectId(GetQualityWatchByObjectIdRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityWatchTask  GetQualityWatchTaskRequest
+     * @return GetQualityWatchTaskResponse
+     */
+    CompletableFuture<GetQualityWatchTaskResponse> getQualityWatchTask(GetQualityWatchTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityWatchTaskLog  GetQualityWatchTaskLogRequest
+     * @return GetQualityWatchTaskLogResponse
+     */
+    CompletableFuture<GetQualityWatchTaskLogResponse> getQualityWatchTaskLog(GetQualityWatchTaskLogRequest request);
+
+    /**
      * @param request the request parameters of GetQueueEngineVersionByEnv  GetQueueEngineVersionByEnvRequest
      * @return GetQueueEngineVersionByEnvResponse
      */
@@ -650,10 +896,70 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceByVersionResponse> getResourceByVersion(GetResourceByVersionRequest request);
 
     /**
+     * @param request the request parameters of GetSecurityClassify  GetSecurityClassifyRequest
+     * @return GetSecurityClassifyResponse
+     */
+    CompletableFuture<GetSecurityClassifyResponse> getSecurityClassify(GetSecurityClassifyRequest request);
+
+    /**
+     * @param request the request parameters of GetSecurityIdentifyResult  GetSecurityIdentifyResultRequest
+     * @return GetSecurityIdentifyResultResponse
+     */
+    CompletableFuture<GetSecurityIdentifyResultResponse> getSecurityIdentifyResult(GetSecurityIdentifyResultRequest request);
+
+    /**
+     * @param request the request parameters of GetSecurityLevel  GetSecurityLevelRequest
+     * @return GetSecurityLevelResponse
+     */
+    CompletableFuture<GetSecurityLevelResponse> getSecurityLevel(GetSecurityLevelRequest request);
+
+    /**
+     * @param request the request parameters of GetSecuritySecretKey  GetSecuritySecretKeyRequest
+     * @return GetSecuritySecretKeyResponse
+     */
+    CompletableFuture<GetSecuritySecretKeyResponse> getSecuritySecretKey(GetSecuritySecretKeyRequest request);
+
+    /**
      * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
      * @return GetSparkLocalClientInfoResponse
      */
     CompletableFuture<GetSparkLocalClientInfoResponse> getSparkLocalClientInfo(GetSparkLocalClientInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetStandard  GetStandardRequest
+     * @return GetStandardResponse
+     */
+    CompletableFuture<GetStandardResponse> getStandard(GetStandardRequest request);
+
+    /**
+     * @param request the request parameters of GetStandardLookupTable  GetStandardLookupTableRequest
+     * @return GetStandardLookupTableResponse
+     */
+    CompletableFuture<GetStandardLookupTableResponse> getStandardLookupTable(GetStandardLookupTableRequest request);
+
+    /**
+     * @param request the request parameters of GetStandardSet  GetStandardSetRequest
+     * @return GetStandardSetResponse
+     */
+    CompletableFuture<GetStandardSetResponse> getStandardSet(GetStandardSetRequest request);
+
+    /**
+     * @param request the request parameters of GetStandardStatistics  GetStandardStatisticsRequest
+     * @return GetStandardStatisticsResponse
+     */
+    CompletableFuture<GetStandardStatisticsResponse> getStandardStatistics(GetStandardStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of GetStandardTemplate  GetStandardTemplateRequest
+     * @return GetStandardTemplateResponse
+     */
+    CompletableFuture<GetStandardTemplateResponse> getStandardTemplate(GetStandardTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetStandardWordRoot  GetStandardWordRootRequest
+     * @return GetStandardWordRootResponse
+     */
+    CompletableFuture<GetStandardWordRootResponse> getStandardWordRoot(GetStandardWordRootRequest request);
 
     /**
      * @param request the request parameters of GetStreamJobs  GetStreamJobsRequest
@@ -680,10 +986,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableColumnLineageByTaskIdResponse> getTableColumnLineageByTaskId(GetTableColumnLineageByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of GetTableColumnLineages  GetTableColumnLineagesRequest
+     * @return GetTableColumnLineagesResponse
+     */
+    CompletableFuture<GetTableColumnLineagesResponse> getTableColumnLineages(GetTableColumnLineagesRequest request);
+
+    /**
+     * @param request the request parameters of GetTableColumns  GetTableColumnsRequest
+     * @return GetTableColumnsResponse
+     */
+    CompletableFuture<GetTableColumnsResponse> getTableColumns(GetTableColumnsRequest request);
+
+    /**
      * @param request the request parameters of GetTableLineageByTaskId  GetTableLineageByTaskIdRequest
      * @return GetTableLineageByTaskIdResponse
      */
     CompletableFuture<GetTableLineageByTaskIdResponse> getTableLineageByTaskId(GetTableLineageByTaskIdRequest request);
+
+    /**
+     * @param request the request parameters of GetTableLineages  GetTableLineagesRequest
+     * @return GetTableLineagesResponse
+     */
+    CompletableFuture<GetTableLineagesResponse> getTableLineages(GetTableLineagesRequest request);
 
     /**
      * @param request the request parameters of GetTransferInfo  GetTransferInfoRequest
@@ -884,6 +1208,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublishRecordsResponse> listPublishRecords(ListPublishRecordsRequest request);
 
     /**
+     * @param request the request parameters of ListQualityRuleTasks  ListQualityRuleTasksRequest
+     * @return ListQualityRuleTasksResponse
+     */
+    CompletableFuture<ListQualityRuleTasksResponse> listQualityRuleTasks(ListQualityRuleTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListQualityRules  ListQualityRulesRequest
+     * @return ListQualityRulesResponse
+     */
+    CompletableFuture<ListQualityRulesResponse> listQualityRules(ListQualityRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListQualityTemplates  ListQualityTemplatesRequest
+     * @return ListQualityTemplatesResponse
+     */
+    CompletableFuture<ListQualityTemplatesResponse> listQualityTemplates(ListQualityTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of ListQualityWatchTasks  ListQualityWatchTasksRequest
+     * @return ListQualityWatchTasksResponse
+     */
+    CompletableFuture<ListQualityWatchTasksResponse> listQualityWatchTasks(ListQualityWatchTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListQualityWatches  ListQualityWatchesRequest
+     * @return ListQualityWatchesResponse
+     */
+    CompletableFuture<ListQualityWatchesResponse> listQualityWatches(ListQualityWatchesRequest request);
+
+    /**
      * @param request the request parameters of ListResourcePermissionOperationLog  ListResourcePermissionOperationLogRequest
      * @return ListResourcePermissionOperationLogResponse
      */
@@ -908,10 +1262,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRowPermissionByUserIdResponse> listRowPermissionByUserId(ListRowPermissionByUserIdRequest request);
 
     /**
+     * @param request the request parameters of ListSecurityIdentifyRecords  ListSecurityIdentifyRecordsRequest
+     * @return ListSecurityIdentifyRecordsResponse
+     */
+    CompletableFuture<ListSecurityIdentifyRecordsResponse> listSecurityIdentifyRecords(ListSecurityIdentifyRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListSecurityIdentifyResults  ListSecurityIdentifyResultsRequest
+     * @return ListSecurityIdentifyResultsResponse
+     */
+    CompletableFuture<ListSecurityIdentifyResultsResponse> listSecurityIdentifyResults(ListSecurityIdentifyResultsRequest request);
+
+    /**
+     * @param request the request parameters of ListStandards  ListStandardsRequest
+     * @return ListStandardsResponse
+     */
+    CompletableFuture<ListStandardsResponse> listStandards(ListStandardsRequest request);
+
+    /**
      * @param request the request parameters of ListSubmitRecords  ListSubmitRecordsRequest
      * @return ListSubmitRecordsResponse
      */
     CompletableFuture<ListSubmitRecordsResponse> listSubmitRecords(ListSubmitRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     /**
      * @param request the request parameters of ListTenantMembers  ListTenantMembersRequest
@@ -956,6 +1334,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OfflinePipelineByAsyncResponse> offlinePipelineByAsync(OfflinePipelineByAsyncRequest request);
 
     /**
+     * @param request the request parameters of OfflineStandard  OfflineStandardRequest
+     * @return OfflineStandardResponse
+     */
+    CompletableFuture<OfflineStandardResponse> offlineStandard(OfflineStandardRequest request);
+
+    /**
      * @param request the request parameters of OnlineBizEntity  OnlineBizEntityRequest
      * @return OnlineBizEntityResponse
      */
@@ -992,10 +1376,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishObjectListResponse> publishObjectList(PublishObjectListRequest request);
 
     /**
+     * @param request the request parameters of PublishStandard  PublishStandardRequest
+     * @return PublishStandardResponse
+     */
+    CompletableFuture<PublishStandardResponse> publishStandard(PublishStandardRequest request);
+
+    /**
      * @param request the request parameters of RemoveProjectMember  RemoveProjectMemberRequest
      * @return RemoveProjectMemberResponse
      */
     CompletableFuture<RemoveProjectMemberResponse> removeProjectMember(RemoveProjectMemberRequest request);
+
+    /**
+     * @param request the request parameters of RemoveQualityRuleSchedules  RemoveQualityRuleSchedulesRequest
+     * @return RemoveQualityRuleSchedulesResponse
+     */
+    CompletableFuture<RemoveQualityRuleSchedulesResponse> removeQualityRuleSchedules(RemoveQualityRuleSchedulesRequest request);
 
     /**
      * @param request the request parameters of RemoveTenantMember  RemoveTenantMemberRequest
@@ -1050,6 +1446,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitBatchTaskResponse
      */
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitQualityRuleTasks  SubmitQualityRuleTasksRequest
+     * @return SubmitQualityRuleTasksResponse
+     */
+    CompletableFuture<SubmitQualityRuleTasksResponse> submitQualityRuleTasks(SubmitQualityRuleTasksRequest request);
+
+    /**
+     * @param request the request parameters of SubmitQualityWatchTasks  SubmitQualityWatchTasksRequest
+     * @return SubmitQualityWatchTasksResponse
+     */
+    CompletableFuture<SubmitQualityWatchTasksResponse> submitQualityWatchTasks(SubmitQualityWatchTasksRequest request);
 
     /**
      * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
@@ -1160,6 +1568,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
 
     /**
+     * @param request the request parameters of UpdateQualityRuleSwitch  UpdateQualityRuleSwitchRequest
+     * @return UpdateQualityRuleSwitchResponse
+     */
+    CompletableFuture<UpdateQualityRuleSwitchResponse> updateQualityRuleSwitch(UpdateQualityRuleSwitchRequest request);
+
+    /**
+     * @param request the request parameters of UpdateQualityWatchSwitch  UpdateQualityWatchSwitchRequest
+     * @return UpdateQualityWatchSwitchResponse
+     */
+    CompletableFuture<UpdateQualityWatchSwitchResponse> updateQualityWatchSwitch(UpdateQualityWatchSwitchRequest request);
+
+    /**
      * @param request the request parameters of UpdateResource  UpdateResourceRequest
      * @return UpdateResourceResponse
      */
@@ -1170,6 +1590,66 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRowPermissionResponse
      */
     CompletableFuture<UpdateRowPermissionResponse> updateRowPermission(UpdateRowPermissionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecurityClassify  UpdateSecurityClassifyRequest
+     * @return UpdateSecurityClassifyResponse
+     */
+    CompletableFuture<UpdateSecurityClassifyResponse> updateSecurityClassify(UpdateSecurityClassifyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecurityClassifyCatalog  UpdateSecurityClassifyCatalogRequest
+     * @return UpdateSecurityClassifyCatalogResponse
+     */
+    CompletableFuture<UpdateSecurityClassifyCatalogResponse> updateSecurityClassifyCatalog(UpdateSecurityClassifyCatalogRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecurityIdentifyResultStatus  UpdateSecurityIdentifyResultStatusRequest
+     * @return UpdateSecurityIdentifyResultStatusResponse
+     */
+    CompletableFuture<UpdateSecurityIdentifyResultStatusResponse> updateSecurityIdentifyResultStatus(UpdateSecurityIdentifyResultStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSecurityLevel  UpdateSecurityLevelRequest
+     * @return UpdateSecurityLevelResponse
+     */
+    CompletableFuture<UpdateSecurityLevelResponse> updateSecurityLevel(UpdateSecurityLevelRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandard  UpdateStandardRequest
+     * @return UpdateStandardResponse
+     */
+    CompletableFuture<UpdateStandardResponse> updateStandard(UpdateStandardRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandardLookupTable  UpdateStandardLookupTableRequest
+     * @return UpdateStandardLookupTableResponse
+     */
+    CompletableFuture<UpdateStandardLookupTableResponse> updateStandardLookupTable(UpdateStandardLookupTableRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandardMappingToInvalid  UpdateStandardMappingToInvalidRequest
+     * @return UpdateStandardMappingToInvalidResponse
+     */
+    CompletableFuture<UpdateStandardMappingToInvalidResponse> updateStandardMappingToInvalid(UpdateStandardMappingToInvalidRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandardSet  UpdateStandardSetRequest
+     * @return UpdateStandardSetResponse
+     */
+    CompletableFuture<UpdateStandardSetResponse> updateStandardSet(UpdateStandardSetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandardTemplate  UpdateStandardTemplateRequest
+     * @return UpdateStandardTemplateResponse
+     */
+    CompletableFuture<UpdateStandardTemplateResponse> updateStandardTemplate(UpdateStandardTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpdateStandardWordRoot  UpdateStandardWordRootRequest
+     * @return UpdateStandardWordRootResponse
+     */
+    CompletableFuture<UpdateStandardWordRootResponse> updateStandardWordRoot(UpdateStandardWordRootRequest request);
 
     /**
      * @param request the request parameters of UpdateTenantComputeEngine  UpdateTenantComputeEngineRequest
@@ -1200,5 +1680,35 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserGroupSwitchResponse
      */
     CompletableFuture<UpdateUserGroupSwitchResponse> updateUserGroupSwitch(UpdateUserGroupSwitchRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualityRule  UpsertQualityRuleRequest
+     * @return UpsertQualityRuleResponse
+     */
+    CompletableFuture<UpsertQualityRuleResponse> upsertQualityRule(UpsertQualityRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualitySchedule  UpsertQualityScheduleRequest
+     * @return UpsertQualityScheduleResponse
+     */
+    CompletableFuture<UpsertQualityScheduleResponse> upsertQualitySchedule(UpsertQualityScheduleRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualityTemplate  UpsertQualityTemplateRequest
+     * @return UpsertQualityTemplateResponse
+     */
+    CompletableFuture<UpsertQualityTemplateResponse> upsertQualityTemplate(UpsertQualityTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualityWatch  UpsertQualityWatchRequest
+     * @return UpsertQualityWatchResponse
+     */
+    CompletableFuture<UpsertQualityWatchResponse> upsertQualityWatch(UpsertQualityWatchRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualityWatchAlert  UpsertQualityWatchAlertRequest
+     * @return UpsertQualityWatchAlertResponse
+     */
+    CompletableFuture<UpsertQualityWatchAlertResponse> upsertQualityWatchAlert(UpsertQualityWatchAlertRequest request);
 
 }
