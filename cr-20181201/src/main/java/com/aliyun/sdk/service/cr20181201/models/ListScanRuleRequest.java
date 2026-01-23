@@ -124,7 +124,10 @@ public class ListScanRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-upoulewerx*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +136,10 @@ public class ListScanRuleRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -142,7 +148,10 @@ public class ListScanRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +160,15 @@ public class ListScanRuleRequest extends Request {
         }
 
         /**
-         * ScanType.
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><code>VUL</code>: Products Cloud Security Scanner.</li>
+         * <li><code>SBOM</code>: Product Content Analysis.</li>
+         * </ul>
+         * <p>Default value: <code>VUL</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>SBOM</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);

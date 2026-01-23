@@ -228,6 +228,9 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildRuleId")
         private String buildRuleId;
 
+        @com.aliyun.core.annotation.NameInMap("DestArtifactType")
+        private String destArtifactType;
+
         @com.aliyun.core.annotation.NameInMap("DockerfileLocation")
         private String dockerfileLocation;
 
@@ -249,6 +252,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         private BuildRules(Builder builder) {
             this.buildArgs = builder.buildArgs;
             this.buildRuleId = builder.buildRuleId;
+            this.destArtifactType = builder.destArtifactType;
             this.dockerfileLocation = builder.dockerfileLocation;
             this.dockerfileName = builder.dockerfileName;
             this.imageTag = builder.imageTag;
@@ -277,6 +281,13 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
          */
         public String getBuildRuleId() {
             return this.buildRuleId;
+        }
+
+        /**
+         * @return destArtifactType
+         */
+        public String getDestArtifactType() {
+            return this.destArtifactType;
         }
 
         /**
@@ -324,6 +335,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> buildArgs; 
             private String buildRuleId; 
+            private String destArtifactType; 
             private String dockerfileLocation; 
             private String dockerfileName; 
             private String imageTag; 
@@ -337,6 +349,7 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
             private Builder(BuildRules model) {
                 this.buildArgs = model.buildArgs;
                 this.buildRuleId = model.buildRuleId;
+                this.destArtifactType = model.destArtifactType;
                 this.dockerfileLocation = model.dockerfileLocation;
                 this.dockerfileName = model.dockerfileName;
                 this.imageTag = model.imageTag;
@@ -361,6 +374,14 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
              */
             public Builder buildRuleId(String buildRuleId) {
                 this.buildRuleId = buildRuleId;
+                return this;
+            }
+
+            /**
+             * DestArtifactType.
+             */
+            public Builder destArtifactType(String destArtifactType) {
+                this.destArtifactType = destArtifactType;
                 return this;
             }
 

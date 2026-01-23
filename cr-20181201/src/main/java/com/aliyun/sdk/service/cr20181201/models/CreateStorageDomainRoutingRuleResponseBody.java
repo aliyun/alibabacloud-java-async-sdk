@@ -93,7 +93,10 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8E90AB5-0A96-5D12-9E59-11EE463*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crsdr-n6pbhgjx*****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
@@ -117,7 +126,10 @@ public class CreateStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Identification of whether the request is successful or not</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

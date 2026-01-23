@@ -96,7 +96,10 @@ public class DeleteScanRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +108,10 @@ public class DeleteScanRuleRequest extends Request {
         }
 
         /**
-         * ScanRuleId.
+         * <p>The rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crscnr-aemytkwad2h7fyhb</p>
          */
         public Builder scanRuleId(String scanRuleId) {
             this.putQueryParameter("ScanRuleId", scanRuleId);

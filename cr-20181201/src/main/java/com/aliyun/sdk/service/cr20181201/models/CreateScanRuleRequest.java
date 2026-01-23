@@ -185,6 +185,7 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +198,11 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
-         * Namespaces.
+         * <p>The list of namespaces.</p>
+         * <ul>
+         * <li>When the scan scope is NAMESPACE, this parameter cannot be empty.</li>
+         * <li>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</li>
+         * </ul>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -207,7 +212,11 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
-         * RepoNames.
+         * <p>The list of repositories.</p>
+         * <ul>
+         * <li>When the scan scope is NAMESPACE, this parameter must be empty.</li>
+         * <li>When the scan scope is REPO, this parameter cannot be empty.</li>
+         * </ul>
          */
         public Builder repoNames(java.util.List<String> repoNames) {
             String repoNamesShrink = shrink(repoNames, "RepoNames", "json");
@@ -217,6 +226,7 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The tag that triggers the scan matches the regular expression</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +239,7 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +252,12 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The scan scope</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NAMESPACE: namespace.</li>
+         * <li>REPO: repository.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +270,15 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
-         * ScanType.
+         * <p>The scan type. Valid values:</p>
+         * <ul>
+         * <li><code>VUL</code>: Products Cloud Security Scanner</li>
+         * <li><code>SBOM</code>: Product Content Analysis</li>
+         * </ul>
+         * <p>Default value: <code>VUL</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>VUL</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -262,6 +287,12 @@ public class CreateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>Trigger type</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AUTO: automatically trigger.</li>
+         * <li>MANUAL: manually trigger.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

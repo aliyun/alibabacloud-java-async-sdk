@@ -80,7 +80,10 @@ public class CreateScanRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned HTTP or HTTPS status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -99,7 +102,10 @@ public class CreateScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ScanRuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crscnr-k3gdm5vrn2nzf5hw</p>
          */
         public Builder scanRuleId(String scanRuleId) {
             this.scanRuleId = scanRuleId;

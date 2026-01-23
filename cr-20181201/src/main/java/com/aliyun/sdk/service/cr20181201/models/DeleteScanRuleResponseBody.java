@@ -67,7 +67,10 @@ public class DeleteScanRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;

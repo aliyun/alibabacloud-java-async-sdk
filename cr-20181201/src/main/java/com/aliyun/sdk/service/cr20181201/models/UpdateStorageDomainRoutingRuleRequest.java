@@ -113,6 +113,7 @@ public class UpdateStorageDomainRoutingRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class UpdateStorageDomainRoutingRuleRequest extends Request {
         }
 
         /**
+         * <p>The route list</p>
          * <p>This parameter is required.</p>
          */
         public Builder routes(java.util.List<RouteItem> routes) {
@@ -135,6 +137,7 @@ public class UpdateStorageDomainRoutingRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

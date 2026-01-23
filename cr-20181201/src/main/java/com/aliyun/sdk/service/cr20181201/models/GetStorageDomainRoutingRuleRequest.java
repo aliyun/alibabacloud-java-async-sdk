@@ -97,6 +97,7 @@ public class GetStorageDomainRoutingRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class GetStorageDomainRoutingRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crasr-mdbpung4i1rm****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

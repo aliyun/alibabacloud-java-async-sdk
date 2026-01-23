@@ -186,6 +186,7 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,11 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * Namespaces.
+         * <p>The list of namespaces.</p>
+         * <ul>
+         * <li>When the scan scope is NAMESPACE, this parameter cannot be empty.</li>
+         * <li>If the scan scope is REPO, you must specify a unique Namespace for this parameter.</li>
+         * </ul>
          */
         public Builder namespaces(java.util.List<String> namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -208,7 +213,11 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
-         * RepoNames.
+         * <p>The list of repositories.</p>
+         * <ul>
+         * <li>When the scan scope is NAMESPACE, this parameter must be empty.</li>
+         * <li>When the scan scope is REPO, this parameter cannot be empty.</li>
+         * </ul>
          */
         public Builder repoNames(java.util.List<String> repoNames) {
             String repoNamesShrink = shrink(repoNames, "RepoNames", "json");
@@ -218,6 +227,7 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The tag filtering rules.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +240,7 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +253,7 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +266,12 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The scan scope.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NAMESPACE: namespace.</li>
+         * <li>REPO: repository.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +284,12 @@ public class UpdateScanRuleRequest extends Request {
         }
 
         /**
+         * <p>The trigger type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AUTO: automatically triggers.</li>
+         * <li>MANUAL: manually triggers.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

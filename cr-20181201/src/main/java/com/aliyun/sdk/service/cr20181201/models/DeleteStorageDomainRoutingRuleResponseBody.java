@@ -80,7 +80,10 @@ public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4978DCC-ECBD-40B0-A714-EE6959B*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class DeleteStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Request status ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

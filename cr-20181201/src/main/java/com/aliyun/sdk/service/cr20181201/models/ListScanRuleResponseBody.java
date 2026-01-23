@@ -132,7 +132,10 @@ public class ListScanRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -148,7 +154,10 @@ public class ListScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +165,10 @@ public class ListScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +187,7 @@ public class ListScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ScanRules.
+         * <p>The list of scan rules.</p>
          */
         public Builder scanRules(java.util.List<ScanRules> scanRules) {
             this.scanRules = scanRules;
@@ -183,7 +195,10 @@ public class ListScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -353,7 +368,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702361810000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -361,7 +379,7 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespaces.
+             * <p>The list of namespaces.</p>
              */
             public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
@@ -369,7 +387,7 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNames.
+             * <p>The repository name.</p>
              */
             public Builder repoNames(java.util.List<String> repoNames) {
                 this.repoNames = repoNames;
@@ -377,7 +395,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepoTagFilterPattern.
+             * <p>The tag that triggers the scan matches the regular expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.*</p>
              */
             public Builder repoTagFilterPattern(String repoTagFilterPattern) {
                 this.repoTagFilterPattern = repoTagFilterPattern;
@@ -385,7 +406,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cicd-prod</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -393,7 +417,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRuleId.
+             * <p>The scan rule id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crscnr-2sdveqjhpzd****</p>
              */
             public Builder scanRuleId(String scanRuleId) {
                 this.scanRuleId = scanRuleId;
@@ -401,7 +428,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanScope.
+             * <p>The scan scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REPO</p>
              */
             public Builder scanScope(String scanScope) {
                 this.scanScope = scanScope;
@@ -409,7 +439,14 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanType.
+             * <p>The scan type. Valid values:</p>
+             * <ul>
+             * <li><code>VUL</code>: Products Cloud Security Scanner</li>
+             * <li><code>SBOM</code>: Product Content Analysis</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SBOM</p>
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -417,7 +454,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -425,7 +465,10 @@ public class ListScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764122725000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

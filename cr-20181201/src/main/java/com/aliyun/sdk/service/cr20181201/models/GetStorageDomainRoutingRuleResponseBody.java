@@ -132,7 +132,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926439000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -148,7 +154,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926439000</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -156,7 +165,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4978DCC-ECBD-40B0-A714-EE695******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +176,7 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Routes.
+         * <p>The routing list.</p>
          */
         public Builder routes(java.util.List<RouteItem> routes) {
             this.routes = routes;
@@ -172,7 +184,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crsdr-luq6qiegzvx****</p>
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;
@@ -180,7 +195,10 @@ public class GetStorageDomainRoutingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

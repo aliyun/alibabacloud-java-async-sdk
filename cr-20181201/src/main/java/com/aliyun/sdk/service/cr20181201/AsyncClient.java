@@ -177,12 +177,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRepositoryResponse> createRepository(CreateRepositoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a scan or content analysis rule.</p>
+     * 
      * @param request the request parameters of CreateScanRule  CreateScanRuleRequest
      * @return CreateScanRuleResponse
      */
     CompletableFuture<CreateScanRuleResponse> createScanRule(CreateScanRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * @param request the request parameters of CreateStorageDomainRoutingRule  CreateStorageDomainRoutingRuleRequest
      * @return CreateStorageDomainRoutingRuleResponse
      */
@@ -292,12 +298,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRepositoryResponse> deleteRepository(DeleteRepositoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a scan rule.</p>
+     * 
      * @param request the request parameters of DeleteScanRule  DeleteScanRuleRequest
      * @return DeleteScanRuleResponse
      */
     CompletableFuture<DeleteScanRuleResponse> deleteScanRule(DeleteScanRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * @param request the request parameters of DeleteStorageDomainRoutingRule  DeleteStorageDomainRoutingRuleRequest
      * @return DeleteStorageDomainRoutingRuleResponse
      */
@@ -341,7 +353,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the Container Registry instance.</p>
+     * <p>The validity period of the temporary password is 1 hour. If you use STS to request a token, the validity period of the temporary password is the same as the validity period of the STS token.</p>
+     * <ul>
+     * <li>If you log on to an instance by using the temporary password obtained through an Alibaba Cloud account, you have the same permissions on resources as the user of the Alibaba Cloud account.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through a RAM user, you have the same permissions as the RAM user.</li>
+     * <li>If you log on to an instance by using the temporary password obtained through STS, you have the same permissions as the STS token.</li>
+     * </ul>
      * 
      * @param request the request parameters of GetAuthorizationToken  GetAuthorizationTokenRequest
      * @return GetAuthorizationTokenResponse
@@ -454,12 +471,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Get scan rule.</p>
+     * 
      * @param request the request parameters of GetScanRule  GetScanRuleRequest
      * @return GetScanRuleResponse
      */
     CompletableFuture<GetScanRuleResponse> getScanRule(GetScanRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API is open to a whitelist. Please <a href="https://smartservice.console.aliyun.com/service/create-ticket">submit a ticket</a> for support.</p>
+     * 
      * @param request the request parameters of GetStorageDomainRoutingRule  GetStorageDomainRoutingRuleRequest
      * @return GetStorageDomainRoutingRuleResponse
      */
@@ -628,6 +651,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListScanMaliciousFileByTaskResponse> listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Lists the scan rules.</p>
+     * 
      * @param request the request parameters of ListScanRule  ListScanRuleRequest
      * @return ListScanRuleResponse
      */
@@ -730,12 +756,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRepositoryResponse> updateRepository(UpdateRepositoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * @param request the request parameters of UpdateScanRule  UpdateScanRuleRequest
      * @return UpdateScanRuleResponse
      */
     CompletableFuture<UpdateScanRuleResponse> updateScanRule(UpdateScanRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The whitelist of this API operation is available. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a>.</p>
+     * 
      * @param request the request parameters of UpdateStorageDomainRoutingRule  UpdateStorageDomainRoutingRuleRequest
      * @return UpdateStorageDomainRoutingRuleResponse
      */

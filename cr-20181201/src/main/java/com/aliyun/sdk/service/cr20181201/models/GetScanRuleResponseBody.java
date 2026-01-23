@@ -93,7 +93,10 @@ public class GetScanRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,16 @@ public class GetScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the API call was successful, valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The API call was successful</p>
+         * </li>
+         * <li><p><code>false</code>: The API call failed</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -109,7 +121,10 @@ public class GetScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C87993B5-7D61-5CAC-8D64-1AC732DD69FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,7 @@ public class GetScanRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ScanRule.
+         * <p>The scan rule.</p>
          */
         public Builder scanRule(ScanRule scanRule) {
             this.scanRule = scanRule;
@@ -300,7 +315,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-15T17:08Z</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -308,7 +326,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-szw6f6bhrky0c8jk</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -316,7 +337,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Namespaces.
+             * <p>Names of namespaces where the event is effective.</p>
              */
             public Builder namespaces(java.util.List<String> namespaces) {
                 this.namespaces = namespaces;
@@ -324,7 +345,7 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNames.
+             * <p>Names of repositories where the event is effective.</p>
              */
             public Builder repoNames(java.util.List<String> repoNames) {
                 this.repoNames = repoNames;
@@ -332,7 +353,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RepoTagFilterPattern.
+             * <p>Tag filter pattern for event triggering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.*</p>
              */
             public Builder repoTagFilterPattern(String repoTagFilterPattern) {
                 this.repoTagFilterPattern = repoTagFilterPattern;
@@ -340,7 +364,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The event rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>protection</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -348,7 +375,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRuleId.
+             * <p>The scan rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crscnr-aemytkwad2h7fyhb</p>
              */
             public Builder scanRuleId(String scanRuleId) {
                 this.scanRuleId = scanRuleId;
@@ -356,7 +386,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanScope.
+             * <p>The scan scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REPO</p>
              */
             public Builder scanScope(String scanScope) {
                 this.scanScope = scanScope;
@@ -364,7 +397,16 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScanType.
+             * <p>The vulnerability type: </p>
+             * <ul>
+             * <li><p><code>cve</code>: System vulnerability</p>
+             * </li>
+             * <li><p><code>sca</code>: Application vulnerability</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SBOM</p>
              */
             public Builder scanType(String scanType) {
                 this.scanType = scanType;
@@ -372,7 +414,18 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger type, valid values:</p>
+             * <ul>
+             * <li><p><code>ALL</code>: All triggers</p>
+             * </li>
+             * <li><p><code>TAG_LISTTAG</code>: Trigger</p>
+             * </li>
+             * <li><p><code>TAG_REG_EXP</code>: Expression trigger</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -380,7 +433,10 @@ public class GetScanRuleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-28T20:07:33.164</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
