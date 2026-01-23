@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
+     * @param request the request parameters of GetRecords  GetRecordsRequest
+     * @return GetRecordsResponse
+     */
+    CompletableFuture<GetRecordsResponse> getRecords(GetRecordsRequest request);
+
+    /**
      * @param request the request parameters of GetSchema  GetSchemaRequest
      * @return GetSchemaResponse
      */
@@ -90,5 +96,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTopicsResponse
      */
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
+
+    /**
+     * @param request the request parameters of PutRecords  PutRecordsRequest
+     * @return PutRecordsResponse
+     */
+    CompletableFuture<PutRecordsResponse> putRecords(PutRecordsRequest request);
 
 }
