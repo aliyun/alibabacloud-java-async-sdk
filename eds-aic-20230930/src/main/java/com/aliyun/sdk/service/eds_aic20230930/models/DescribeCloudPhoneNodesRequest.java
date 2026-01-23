@@ -46,6 +46,10 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     private String nodeName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeNameList")
+    private java.util.List<String> nodeNameList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerType")
     private String serverType;
 
@@ -62,6 +66,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.nodeIds = builder.nodeIds;
         this.nodeName = builder.nodeName;
+        this.nodeNameList = builder.nodeNameList;
         this.serverType = builder.serverType;
         this.status = builder.status;
     }
@@ -129,6 +134,13 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     }
 
     /**
+     * @return nodeNameList
+     */
+    public java.util.List<String> getNodeNameList() {
+        return this.nodeNameList;
+    }
+
+    /**
      * @return serverType
      */
     public String getServerType() {
@@ -150,6 +162,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         private String nextToken; 
         private java.util.List<String> nodeIds; 
         private String nodeName; 
+        private java.util.List<String> nodeNameList; 
         private String serverType; 
         private String status; 
 
@@ -166,6 +179,7 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             this.nextToken = request.nextToken;
             this.nodeIds = request.nodeIds;
             this.nodeName = request.nodeName;
+            this.nodeNameList = request.nodeNameList;
             this.serverType = request.serverType;
             this.status = request.status;
         } 
@@ -245,6 +259,15 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
             this.nodeName = nodeName;
+            return this;
+        }
+
+        /**
+         * NodeNameList.
+         */
+        public Builder nodeNameList(java.util.List<String> nodeNameList) {
+            this.putQueryParameter("NodeNameList", nodeNameList);
+            this.nodeNameList = nodeNameList;
             return this;
         }
 

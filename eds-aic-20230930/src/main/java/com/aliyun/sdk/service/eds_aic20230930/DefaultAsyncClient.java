@@ -1051,6 +1051,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetNetworkBlacklist  GetNetworkBlacklistRequest
+     * @return GetNetworkBlacklistResponse
+     */
+    @Override
+    public CompletableFuture<GetNetworkBlacklistResponse> getNetworkBlacklist(GetNetworkBlacklistRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetNetworkBlacklist").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNetworkBlacklistResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNetworkBlacklistResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ImportImage  ImportImageRequest
      * @return ImportImageResponse
      */
@@ -1591,6 +1609,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetAdbSecureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetNetworkBlacklist  SetNetworkBlacklistRequest
+     * @return SetNetworkBlacklistResponse
+     */
+    @Override
+    public CompletableFuture<SetNetworkBlacklistResponse> setNetworkBlacklist(SetNetworkBlacklistRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetNetworkBlacklist").setMethod(HttpMethod.POST).setPathRegex("/instances/{instanceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetNetworkBlacklistResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetNetworkBlacklistResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

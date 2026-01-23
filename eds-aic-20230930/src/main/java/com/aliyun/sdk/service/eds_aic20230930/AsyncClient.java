@@ -419,6 +419,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstancePropertiesResponse> getInstanceProperties(GetInstancePropertiesRequest request);
 
     /**
+     * @param request the request parameters of GetNetworkBlacklist  GetNetworkBlacklistRequest
+     * @return GetNetworkBlacklistResponse
+     */
+    CompletableFuture<GetNetworkBlacklistResponse> getNetworkBlacklist(GetNetworkBlacklistRequest request);
+
+    /**
      * @param request the request parameters of ImportImage  ImportImageRequest
      * @return ImportImageResponse
      */
@@ -615,6 +621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetAdbSecureResponse
      */
     CompletableFuture<SetAdbSecureResponse> setAdbSecure(SetAdbSecureRequest request);
+
+    /**
+     * @param request the request parameters of SetNetworkBlacklist  SetNetworkBlacklistRequest
+     * @return SetNetworkBlacklistResponse
+     */
+    CompletableFuture<SetNetworkBlacklistResponse> setNetworkBlacklist(SetNetworkBlacklistRequest request);
 
     /**
      * <b>description</b> :
