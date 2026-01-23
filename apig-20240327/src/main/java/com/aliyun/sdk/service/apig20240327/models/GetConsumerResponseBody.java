@@ -147,7 +147,7 @@ public class GetConsumerResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("akSkIdentityConfigs")
-        private AkSkIdentityConfig akSkIdentityConfigs;
+        private java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         @com.aliyun.core.annotation.NameInMap("apiKeyIdentityConfig")
         private ApiKeyIdentityConfig apiKeyIdentityConfig;
@@ -200,7 +200,7 @@ public class GetConsumerResponseBody extends TeaModel {
         /**
          * @return akSkIdentityConfigs
          */
-        public AkSkIdentityConfig getAkSkIdentityConfigs() {
+        public java.util.List<AkSkIdentityConfig> getAkSkIdentityConfigs() {
             return this.akSkIdentityConfigs;
         }
 
@@ -268,7 +268,7 @@ public class GetConsumerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private AkSkIdentityConfig akSkIdentityConfigs; 
+            private java.util.List<AkSkIdentityConfig> akSkIdentityConfigs; 
             private ApiKeyIdentityConfig apiKeyIdentityConfig; 
             private String consumerId; 
             private Long createTimestamp; 
@@ -298,7 +298,7 @@ public class GetConsumerResponseBody extends TeaModel {
             /**
              * <p>The AK/SK authentication configurations.</p>
              */
-            public Builder akSkIdentityConfigs(AkSkIdentityConfig akSkIdentityConfigs) {
+            public Builder akSkIdentityConfigs(java.util.List<AkSkIdentityConfig> akSkIdentityConfigs) {
                 this.akSkIdentityConfigs = akSkIdentityConfigs;
                 return this;
             }
