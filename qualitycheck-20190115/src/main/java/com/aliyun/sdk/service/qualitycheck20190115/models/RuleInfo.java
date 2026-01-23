@@ -101,6 +101,9 @@ public class RuleInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OperationMode")
     private Integer operationMode;
 
+    @com.aliyun.core.annotation.NameInMap("PreqRule")
+    private java.util.List<PreqRule> preqRule;
+
     @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
 
@@ -211,6 +214,7 @@ public class RuleInfo extends TeaModel {
         this.modifyType = builder.modifyType;
         this.name = builder.name;
         this.operationMode = builder.operationMode;
+        this.preqRule = builder.preqRule;
         this.qualityCheckType = builder.qualityCheckType;
         this.rid = builder.rid;
         this.ruleCategoryName = builder.ruleCategoryName;
@@ -449,6 +453,13 @@ public class RuleInfo extends TeaModel {
     }
 
     /**
+     * @return preqRule
+     */
+    public java.util.List<PreqRule> getPreqRule() {
+        return this.preqRule;
+    }
+
+    /**
      * @return qualityCheckType
      */
     public Integer getQualityCheckType() {
@@ -666,6 +677,7 @@ public class RuleInfo extends TeaModel {
         private Integer modifyType; 
         private String name; 
         private Integer operationMode; 
+        private java.util.List<PreqRule> preqRule; 
         private Integer qualityCheckType; 
         private String rid; 
         private String ruleCategoryName; 
@@ -726,6 +738,7 @@ public class RuleInfo extends TeaModel {
             this.modifyType = model.modifyType;
             this.name = model.name;
             this.operationMode = model.operationMode;
+            this.preqRule = model.preqRule;
             this.qualityCheckType = model.qualityCheckType;
             this.rid = model.rid;
             this.ruleCategoryName = model.ruleCategoryName;
@@ -980,6 +993,14 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
+         * PreqRule.
+         */
+        public Builder preqRule(java.util.List<PreqRule> preqRule) {
+            this.preqRule = preqRule;
+            return this;
+        }
+
+        /**
          * QualityCheckType.
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
@@ -1201,4 +1222,58 @@ public class RuleInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RuleInfo} extends {@link TeaModel}
+     *
+     * <p>RuleInfo</p>
+     */
+    public static class PreqRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Rid")
+        private String rid;
+
+        private PreqRule(Builder builder) {
+            this.rid = builder.rid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PreqRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rid
+         */
+        public String getRid() {
+            return this.rid;
+        }
+
+        public static final class Builder {
+            private String rid; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreqRule model) {
+                this.rid = model.rid;
+            } 
+
+            /**
+             * Rid.
+             */
+            public Builder rid(String rid) {
+                this.rid = rid;
+                return this;
+            }
+
+            public PreqRule build() {
+                return new PreqRule(this);
+            } 
+
+        } 
+
+    }
 }
