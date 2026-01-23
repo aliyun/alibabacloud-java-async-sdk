@@ -22,12 +22,18 @@ public class IssueCouponForCustomerRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationReason")
+    @com.aliyun.core.annotation.Validation(maxLength = 500)
+    private String applicationReason;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CouponTemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long couponTemplateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsUseBenefit")
+    @Deprecated
     private Boolean isUseBenefit;
 
     @com.aliyun.core.annotation.Query
@@ -38,6 +44,7 @@ public class IssueCouponForCustomerRequest extends Request {
     private IssueCouponForCustomerRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.applicationReason = builder.applicationReason;
         this.couponTemplateId = builder.couponTemplateId;
         this.isUseBenefit = builder.isUseBenefit;
         this.uidlist = builder.uidlist;
@@ -64,6 +71,13 @@ public class IssueCouponForCustomerRequest extends Request {
     }
 
     /**
+     * @return applicationReason
+     */
+    public String getApplicationReason() {
+        return this.applicationReason;
+    }
+
+    /**
      * @return couponTemplateId
      */
     public Long getCouponTemplateId() {
@@ -86,6 +100,7 @@ public class IssueCouponForCustomerRequest extends Request {
 
     public static final class Builder extends Request.Builder<IssueCouponForCustomerRequest, Builder> {
         private String acceptLanguage; 
+        private String applicationReason; 
         private Long couponTemplateId; 
         private Boolean isUseBenefit; 
         private String uidlist; 
@@ -97,6 +112,7 @@ public class IssueCouponForCustomerRequest extends Request {
         private Builder(IssueCouponForCustomerRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.applicationReason = request.applicationReason;
             this.couponTemplateId = request.couponTemplateId;
             this.isUseBenefit = request.isUseBenefit;
             this.uidlist = request.uidlist;
@@ -108,6 +124,15 @@ public class IssueCouponForCustomerRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * ApplicationReason.
+         */
+        public Builder applicationReason(String applicationReason) {
+            this.putQueryParameter("ApplicationReason", applicationReason);
+            this.applicationReason = applicationReason;
             return this;
         }
 

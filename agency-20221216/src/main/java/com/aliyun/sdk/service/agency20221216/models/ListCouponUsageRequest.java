@@ -39,6 +39,10 @@ public class ListCouponUsageRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("T2PartnerUid")
+    private Long t2PartnerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
@@ -49,6 +53,7 @@ public class ListCouponUsageRequest extends Request {
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.t2PartnerUid = builder.t2PartnerUid;
         this.uid = builder.uid;
     }
 
@@ -101,6 +106,13 @@ public class ListCouponUsageRequest extends Request {
     }
 
     /**
+     * @return t2PartnerUid
+     */
+    public Long getT2PartnerUid() {
+        return this.t2PartnerUid;
+    }
+
+    /**
      * @return uid
      */
     public Long getUid() {
@@ -113,6 +125,7 @@ public class ListCouponUsageRequest extends Request {
         private Integer page; 
         private Integer pageSize; 
         private String status; 
+        private Long t2PartnerUid; 
         private Long uid; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class ListCouponUsageRequest extends Request {
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.t2PartnerUid = request.t2PartnerUid;
             this.uid = request.uid;
         } 
 
@@ -171,6 +185,15 @@ public class ListCouponUsageRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * T2PartnerUid.
+         */
+        public Builder t2PartnerUid(Long t2PartnerUid) {
+            this.putQueryParameter("T2PartnerUid", t2PartnerUid);
+            this.t2PartnerUid = t2PartnerUid;
             return this;
         }
 
