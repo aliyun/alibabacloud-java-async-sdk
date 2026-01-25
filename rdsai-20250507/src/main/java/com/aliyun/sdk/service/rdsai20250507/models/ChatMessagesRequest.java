@@ -22,6 +22,10 @@ public class ChatMessagesRequest extends Request {
     private String conversationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventMode")
+    private String eventMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Inputs")
     private Inputs inputs;
 
@@ -37,6 +41,7 @@ public class ChatMessagesRequest extends Request {
     private ChatMessagesRequest(Builder builder) {
         super(builder);
         this.conversationId = builder.conversationId;
+        this.eventMode = builder.eventMode;
         this.inputs = builder.inputs;
         this.parentMessageId = builder.parentMessageId;
         this.query = builder.query;
@@ -63,6 +68,13 @@ public class ChatMessagesRequest extends Request {
     }
 
     /**
+     * @return eventMode
+     */
+    public String getEventMode() {
+        return this.eventMode;
+    }
+
+    /**
      * @return inputs
      */
     public Inputs getInputs() {
@@ -85,6 +97,7 @@ public class ChatMessagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ChatMessagesRequest, Builder> {
         private String conversationId; 
+        private String eventMode; 
         private Inputs inputs; 
         private String parentMessageId; 
         private String query; 
@@ -96,6 +109,7 @@ public class ChatMessagesRequest extends Request {
         private Builder(ChatMessagesRequest request) {
             super(request);
             this.conversationId = request.conversationId;
+            this.eventMode = request.eventMode;
             this.inputs = request.inputs;
             this.parentMessageId = request.parentMessageId;
             this.query = request.query;
@@ -110,6 +124,15 @@ public class ChatMessagesRequest extends Request {
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
             this.conversationId = conversationId;
+            return this;
+        }
+
+        /**
+         * EventMode.
+         */
+        public Builder eventMode(String eventMode) {
+            this.putQueryParameter("EventMode", eventMode);
+            this.eventMode = eventMode;
             return this;
         }
 

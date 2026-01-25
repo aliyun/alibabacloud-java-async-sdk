@@ -269,6 +269,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceStorageConfigResponse> modifyInstanceStorageConfig(ModifyInstanceStorageConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstancesSSL  ModifyInstancesSSLRequest
+     * @return ModifyInstancesSSLResponse
+     */
+    CompletableFuture<ModifyInstancesSSLResponse> modifyInstancesSSL(ModifyInstancesSSLRequest request);
+
+    /**
      * @param request the request parameters of ModifyMessagesFeedbacks  ModifyMessagesFeedbacksRequest
      * @return ModifyMessagesFeedbacksResponse
      */

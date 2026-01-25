@@ -22,6 +22,10 @@ public class GetMessagesRequest extends Request {
     private String conversationId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventMode")
+    private String eventMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirstId")
     private String firstId;
 
@@ -32,6 +36,7 @@ public class GetMessagesRequest extends Request {
     private GetMessagesRequest(Builder builder) {
         super(builder);
         this.conversationId = builder.conversationId;
+        this.eventMode = builder.eventMode;
         this.firstId = builder.firstId;
         this.limit = builder.limit;
     }
@@ -57,6 +62,13 @@ public class GetMessagesRequest extends Request {
     }
 
     /**
+     * @return eventMode
+     */
+    public String getEventMode() {
+        return this.eventMode;
+    }
+
+    /**
      * @return firstId
      */
     public String getFirstId() {
@@ -72,6 +84,7 @@ public class GetMessagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetMessagesRequest, Builder> {
         private String conversationId; 
+        private String eventMode; 
         private String firstId; 
         private Long limit; 
 
@@ -82,6 +95,7 @@ public class GetMessagesRequest extends Request {
         private Builder(GetMessagesRequest request) {
             super(request);
             this.conversationId = request.conversationId;
+            this.eventMode = request.eventMode;
             this.firstId = request.firstId;
             this.limit = request.limit;
         } 
@@ -95,6 +109,15 @@ public class GetMessagesRequest extends Request {
         public Builder conversationId(String conversationId) {
             this.putQueryParameter("ConversationId", conversationId);
             this.conversationId = conversationId;
+            return this;
+        }
+
+        /**
+         * EventMode.
+         */
+        public Builder eventMode(String eventMode) {
+            this.putQueryParameter("EventMode", eventMode);
+            this.eventMode = eventMode;
             return this;
         }
 

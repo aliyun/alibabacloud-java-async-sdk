@@ -145,6 +145,81 @@ public class GetMessagesResponseBody extends TeaModel {
      *
      * <p>GetMessagesResponseBody</p>
      */
+    public static class Events extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("answer")
+        private String answer;
+
+        @com.aliyun.core.annotation.NameInMap("event")
+        private String event;
+
+        private Events(Builder builder) {
+            this.answer = builder.answer;
+            this.event = builder.event;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Events create() {
+            return builder().build();
+        }
+
+        /**
+         * @return answer
+         */
+        public String getAnswer() {
+            return this.answer;
+        }
+
+        /**
+         * @return event
+         */
+        public String getEvent() {
+            return this.event;
+        }
+
+        public static final class Builder {
+            private String answer; 
+            private String event; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.answer = model.answer;
+                this.event = model.event;
+            } 
+
+            /**
+             * answer.
+             */
+            public Builder answer(String answer) {
+                this.answer = answer;
+                return this;
+            }
+
+            /**
+             * event.
+             */
+            public Builder event(String event) {
+                this.event = event;
+                return this;
+            }
+
+            public Events build() {
+                return new Events(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
@@ -154,6 +229,9 @@ public class GetMessagesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreatedAt")
         private String createdAt;
+
+        @com.aliyun.core.annotation.NameInMap("Events")
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
@@ -171,6 +249,7 @@ public class GetMessagesResponseBody extends TeaModel {
             this.answer = builder.answer;
             this.conversationId = builder.conversationId;
             this.createdAt = builder.createdAt;
+            this.events = builder.events;
             this.feedback = builder.feedback;
             this.id = builder.id;
             this.query = builder.query;
@@ -207,6 +286,13 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return events
+         */
+        public java.util.List<Events> getEvents() {
+            return this.events;
+        }
+
+        /**
          * @return feedback
          */
         public String getFeedback() {
@@ -238,6 +324,7 @@ public class GetMessagesResponseBody extends TeaModel {
             private String answer; 
             private String conversationId; 
             private String createdAt; 
+            private java.util.List<Events> events; 
             private String feedback; 
             private String id; 
             private String query; 
@@ -250,6 +337,7 @@ public class GetMessagesResponseBody extends TeaModel {
                 this.answer = model.answer;
                 this.conversationId = model.conversationId;
                 this.createdAt = model.createdAt;
+                this.events = model.events;
                 this.feedback = model.feedback;
                 this.id = model.id;
                 this.query = model.query;
@@ -283,6 +371,14 @@ public class GetMessagesResponseBody extends TeaModel {
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * Events.
+             */
+            public Builder events(java.util.List<Events> events) {
+                this.events = events;
                 return this;
             }
 
