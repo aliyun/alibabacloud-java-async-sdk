@@ -93,7 +93,10 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>F7781D4A-2818-41E7-B7BB-79D809E9****</p>
@@ -186,7 +192,10 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * DropMetrics.
+             * <p>The list of discarded metrics. Separate multiple metrics with line feeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kube_pod_created</p>
              */
             public Builder dropMetrics(String dropMetrics) {
                 this.dropMetrics = dropMetrics;
@@ -194,7 +203,10 @@ public class DescribeEnvDropMetricsRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the discarded metric rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruleName1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

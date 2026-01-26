@@ -106,7 +106,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * <p>The status code. The status code 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -128,7 +128,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PrometheusAlertRule.
+         * <p>The returned struct.</p>
          */
         public Builder prometheusAlertRule(PrometheusAlertRule prometheusAlertRule) {
             this.prometheusAlertRule = prometheusAlertRule;
@@ -136,7 +136,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FEA6D00-317F-45E3-9004-7FB8B0B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +220,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +231,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the annotation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -292,7 +301,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>severity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +312,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>critical</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -497,7 +512,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertId.
+             * <p>The ID of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3888704</p>
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -505,7 +523,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * <p>The name of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus_Alert</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -513,7 +534,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * <p>The annotation of the alert rule.</p>
              */
             public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
@@ -521,7 +542,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0bad479465464e1d8c1e641b0afb****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -529,7 +553,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleId.
+             * <p>The ID of the notification policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10282</p>
              */
             public Builder dispatchRuleId(Long dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -537,7 +564,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration. The value ranges from 1 to 1440 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -545,7 +575,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The expression of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100 * (sum(rate(container_cpu_usage_seconds_total[1m])) by (pod_name) / sum(label_replace(kube_pod_container_resource_limits_cpu_cores, &quot;pod_name&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (pod_name))&gt;75</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -553,7 +586,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The tags of the alert rule.</p>
              */
             public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
@@ -564,7 +597,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
              * <p>The returned message.</p>
              * 
              * <strong>example:</strong>
-             * <p>success</p>
+             * <p>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -572,7 +605,14 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * <p>The method of that is used to send alert notifications. Valid values:</p>
+             * <ul>
+             * <li><code>ALERT_MANAGER</code>: Alert notifications are sent by Operation Center.</li>
+             * <li><code>DISPATCH_RULE</code>: Alert notifications are sent based on the specified notification policy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALERT_MANAGER</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -580,7 +620,14 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the alert rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><code>1</code>: The alert rule is enabled.</li>
+             * <li><code>0</code>: The alert rule is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -588,7 +635,10 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the alert rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Kubernetes component alert</p>
              */
             public Builder type(String type) {
                 this.type = type;

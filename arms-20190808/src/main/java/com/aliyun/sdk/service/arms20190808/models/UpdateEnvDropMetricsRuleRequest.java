@@ -104,7 +104,14 @@ public class UpdateEnvDropMetricsRuleRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh (default)</li>
+         * <li>en</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -113,6 +120,7 @@ public class UpdateEnvDropMetricsRuleRequest extends Request {
         }
 
         /**
+         * <p>The metric to be discarded. Separate multiple metrics with line feeds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +135,7 @@ public class UpdateEnvDropMetricsRuleRequest extends Request {
         }
 
         /**
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +148,7 @@ public class UpdateEnvDropMetricsRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

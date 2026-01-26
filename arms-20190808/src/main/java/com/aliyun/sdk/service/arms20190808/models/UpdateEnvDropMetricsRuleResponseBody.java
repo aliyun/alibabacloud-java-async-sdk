@@ -93,7 +93,10 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +126,7 @@ public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>

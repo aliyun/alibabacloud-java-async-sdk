@@ -140,6 +140,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliyunLang")
+    private String aliyunLang;
+
     private CreateOrUpdateAlertRuleRequest(Builder builder) {
         super(builder);
         this.alertCheckType = builder.alertCheckType;
@@ -172,6 +176,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.promQL = builder.promQL;
         this.regionId = builder.regionId;
         this.tags = builder.tags;
+        this.aliyunLang = builder.aliyunLang;
     }
 
     public static Builder builder() {
@@ -397,6 +402,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return aliyunLang
+     */
+    public String getAliyunLang() {
+        return this.aliyunLang;
+    }
+
     public static final class Builder extends Request.Builder<CreateOrUpdateAlertRuleRequest, Builder> {
         private String alertCheckType; 
         private Long alertGroup; 
@@ -428,6 +440,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String promQL; 
         private String regionId; 
         private java.util.List<Tags> tags; 
+        private String aliyunLang; 
 
         private Builder() {
             super();
@@ -465,6 +478,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.promQL = request.promQL;
             this.regionId = request.regionId;
             this.tags = request.tags;
+            this.aliyunLang = request.aliyunLang;
         } 
 
         /**
@@ -928,6 +942,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * aliyunLang.
+         */
+        public Builder aliyunLang(String aliyunLang) {
+            this.putBodyParameter("aliyunLang", aliyunLang);
+            this.aliyunLang = aliyunLang;
             return this;
         }
 

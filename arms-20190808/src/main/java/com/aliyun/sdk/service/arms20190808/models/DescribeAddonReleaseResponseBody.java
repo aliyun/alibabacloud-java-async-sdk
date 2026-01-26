@@ -136,7 +136,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>78901766-3806-4E96-8E47-CFEF59E4****</p>
