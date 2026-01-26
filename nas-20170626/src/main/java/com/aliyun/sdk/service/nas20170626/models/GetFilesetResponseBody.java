@@ -67,7 +67,7 @@ public class GetFilesetResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetFilesetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,14 @@ public class GetFilesetResponseBody extends TeaModel {
             } 
 
             /**
-             * FileCountLimit.
+             * <p>The file quantity quota. Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 10,000.</li>
+             * <li>Maximum value: 10,000,000,000.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -149,7 +159,15 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The total quota capacity limit. Unit: bytes.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
+             * <li>Step size: 1,073,741,824 (1 GiB).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10,737,418,240</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -333,7 +351,11 @@ public class GetFilesetResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the fileset was created.</p>
+             * <p>Return format: <code>yyyy-MM-dd HH:mm:ss</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-21 12:49:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -341,7 +363,17 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Specifies whether the fileset is protected from being released through the console or the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
+             * <ul>
+             * <li>true: Enables release protection. The fileset cannot be released.</li>
+             * <li>false (default): Disables release protection. The fileset can be released.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -349,7 +381,10 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the fileset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -357,7 +392,13 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountUsage.
+             * <p>The usage of the file quantity.</p>
+             * <blockquote>
+             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder fileCountUsage(Long fileCountUsage) {
                 this.fileCountUsage = fileCountUsage;
@@ -365,7 +406,14 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The ID of the file system.</p>
+             * <ul>
+             * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+             * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-0244729a8ef8****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -373,7 +421,10 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemPath.
+             * <p>The directory of the fileset in the CPFS file system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pathtoroot/fset/</p>
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -381,7 +432,13 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * FsetId.
+             * <p>The fileset ID.</p>
+             * <blockquote>
+             * <p> This parameter is required for CPFS file systems.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>fset-03250e8fe78d****</p>
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -389,7 +446,10 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The quota information.</p>
+             * <blockquote>
+             * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
+             * </blockquote>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -397,7 +457,13 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceUsage.
+             * <p>The capacity usage. Unit: bytes.</p>
+             * <blockquote>
+             * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -405,7 +471,16 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The fileset status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The fileset is being created.</li>
+             * <li>CREATED: The fileset has been created and is running properly.</li>
+             * <li>RELEASING: The fileset is being released.</li>
+             * <li>RELEASED: The fileset has been deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -413,7 +488,11 @@ public class GetFilesetResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the fileset was last updated.</p>
+             * <p>Return format: <code>yyyy-MM-dd HH:mm:ss</code></p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-22 12:49:25</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

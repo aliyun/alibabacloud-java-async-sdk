@@ -134,7 +134,14 @@ public class GetProtocolMountTargetRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client-generated, case-sensitive token that you can use to ensure the idempotency of the request. The token must be unique for each request.</p>
+         * <p>It must be an ASCII string with a maximum length of 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -143,6 +150,7 @@ public class GetProtocolMountTargetRequest extends Request {
         }
 
         /**
+         * <p>The ID of the export directory for the protocol service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +163,12 @@ public class GetProtocolMountTargetRequest extends Request {
         }
 
         /**
+         * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * <li>The IDs of CPFS SE file systems must start with <code>cpfsse-</code>. Example: cpfsse-022c71b134****.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +181,11 @@ public class GetProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -176,7 +194,10 @@ public class GetProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M18xMA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -185,6 +206,7 @@ public class GetProtocolMountTargetRequest extends Request {
         }
 
         /**
+         * <p>The ID of the protocol service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

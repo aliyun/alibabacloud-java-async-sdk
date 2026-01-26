@@ -198,7 +198,10 @@ public class DescribeProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * ProtocolServiceIds.
+         * <p>Protocol service ID list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ptc-123xxx</p>
          */
         public Builder protocolServiceIds(String protocolServiceIds) {
             this.putQueryParameter("ProtocolServiceIds", protocolServiceIds);
@@ -268,13 +271,12 @@ public class DescribeProtocolMountTargetRequest extends Request {
             /**
              * <p>The filter name.</p>
              * <ul>
-             * <li>ProtocolServiceIds: filters export directories by protocol service ID.</li>
-             * <li>ExportIds: filters export directories by export directory ID.</li>
-             * <li>VpcIds: filters export directories by virtual private cloud (VPC) ID.</li>
-             * <li>VSwitchIds: filters export directories by vSwitch ID.</li>
-             * <li>FsetIds: filters export directories by fileset ID.</li>
-             * <li>Paths: filters export directories based on the path of the file system corresponding to the mount target.</li>
-             * <li>AccessGroupNames: filters export directories by permission group name.</li>
+             * <li>ProtocolServiceIds: Filters export directories by protocol service ID.</li>
+             * <li>ExportIds: Filters export directories by export directory ID.</li>
+             * <li>VpcIds: Filters export directories by VPC ID.</li>
+             * <li>FsetIds: Filters export directories by fileset ID.</li>
+             * <li>Paths: Filters export directories based on the path of the file system corresponding to the mount target.</li>
+             * <li>AccessGroupNames: Filters export directories by permission group name.</li>
              * </ul>
              * 
              * <strong>example:</strong>

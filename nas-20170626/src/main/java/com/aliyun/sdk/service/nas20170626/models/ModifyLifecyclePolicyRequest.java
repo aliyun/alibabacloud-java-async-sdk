@@ -143,7 +143,10 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyId.
+         * <p>The ID of the lifecycle policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-xxx</p>
          */
         public Builder lifecyclePolicyId(String lifecyclePolicyId) {
             this.putQueryParameter("LifecyclePolicyId", lifecyclePolicyId);
@@ -168,11 +171,15 @@ public class ModifyLifecyclePolicyRequest extends Request {
          * <p>The management rule that is associated with the lifecycle policy.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>DEFAULT_ATIME_14: Files that are not accessed in the last 14 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_30: Files that are not accessed in the last 30 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
-         * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
+         * <li>DEFAULT_ATIME_14: Files not accessed for 14 days.</li>
+         * <li>DEFAULT_ATIME_30: Files not accessed for 30 days.</li>
+         * <li>DEFAULT_ATIME_60: Files not accessed for 60 days.</li>
+         * <li>DEFAULT_ATIME_90: Files not accessed for 90 days.</li>
+         * <li>DEFAULT_ATIME_180: Files not accessed for 180 days. DEFAULT_ATIME_180 is supported only when the StorageType parameter is set to Archive.</li>
          * </ul>
+         * <blockquote>
+         * <p> If an IA policy has already been set for the directory, any subsequent archival policy must have a longer duration than the IA policy.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_ATIME_14</p>
@@ -197,8 +204,11 @@ public class ModifyLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The storage type of the data that is dumped to the IA storage medium.</p>
-         * <p>Default value: InfrequentAccess (IA).</p>
+         * <p>The storage class.</p>
+         * <ul>
+         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
+         * <li>Archive: the Archive storage class.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>InfrequentAccess</p>

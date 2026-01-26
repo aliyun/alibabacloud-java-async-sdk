@@ -102,7 +102,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -113,7 +113,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -401,7 +401,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag that is added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -409,7 +412,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -696,7 +702,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
              * <p>The ID of the access point.</p>
              * 
              * <strong>example:</strong>
-             * <p>ap-ie15yd****</p>
+             * <p>ap-ie15y*****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -835,7 +841,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the access point.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -843,7 +849,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>Switch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2zevmwkwyztjuoffg****</p>

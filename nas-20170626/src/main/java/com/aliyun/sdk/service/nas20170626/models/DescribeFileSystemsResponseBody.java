@@ -2042,11 +2042,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The file system type.</p>
-             * <p>The following information is displayed:</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>standard: General-purpose NAS file system.</li>
-             * <li>extreme: Extreme NAS file system.</li>
-             * <li>cpfs: CPFS file system.</li>
+             * <li>standard: General-purpose NAS</li>
+             * <li>extreme: Extreme NAS</li>
+             * <li>cpfs: CPFS (locally redundant storage)</li>
+             * <li>cpfsse: CPFS SE (zone-redundant storage)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2139,7 +2140,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             /**
              * <p>The protocol type of the file system.</p>
-             * <p>The following information is displayed:</p>
+             * <p>Valid values:</p>
              * <ul>
              * <li>NFS: Network File System.</li>
              * <li>SMB: Server Message Block.</li>
@@ -2166,7 +2167,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RedundancyType.
+             * <p>Storage redundancy type. Returned only for CPFS SE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LRS</p>
              */
             public Builder redundancyType(String redundancyType) {
                 this.redundancyType = redundancyType;
@@ -2174,7 +2178,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * RedundancyVSwitchIds.
+             * <p>A list of IDs for the zone-redundant vSwitches.</p>
              */
             public Builder redundancyVSwitchIds(RedundancyVSwitchIds redundancyVSwitchIds) {
                 this.redundancyVSwitchIds = redundancyVSwitchIds;
@@ -2223,12 +2227,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the storage.</p>
-             * <p>The following information is displayed:</p>
+             * <p>The storage type.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>Valid values for General-purpose NAS file systems: Capacity, Performance, and Premium</li>
-             * <li>Valid values for Extreme NAS file systems: standard and advance</li>
-             * <li>Valid values for Cloud Parallel File Storage (CPFS) file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline)</li>
+             * <li>General-purpose NAS: Capacity, Performance, Premium</li>
+             * <li>Extreme NAS: standard, advance</li>
+             * <li>CPFS: advance_100 (100 MB/s/TiB Baseline), advance_200 (200 MB/s/TiB Baseline), economic</li>
+             * <li>CPFS SE: advance_100 (100 MB/s/TiB Baseline)</li>
              * </ul>
              * 
              * <strong>example:</strong>

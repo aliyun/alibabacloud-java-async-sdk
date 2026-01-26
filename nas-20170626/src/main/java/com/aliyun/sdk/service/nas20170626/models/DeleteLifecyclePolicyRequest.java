@@ -101,7 +101,10 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * LifecyclePolicyId.
+         * <p>The ID of the lifecycle policy. Required for the CPFS for Lingjun file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lc-xxx</p>
          */
         public Builder lifecyclePolicyId(String lifecyclePolicyId) {
             this.putQueryParameter("LifecyclePolicyId", lifecyclePolicyId);
@@ -110,7 +113,10 @@ public class DeleteLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * <p>The name of the lifecycle policy.</p>
+         * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <blockquote>
+         * <p> Optional for General-purpose NAS file systems. If this parameter is provided, it takes precedence over LifecyclePolicyId. If left empty, LifecyclePolicyId is used.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>lifecyclepolicy1</p>

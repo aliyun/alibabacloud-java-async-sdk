@@ -80,7 +80,10 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * LifecyclePolicyId.
+         * <p>The ID of the lifecycle policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsp-bp1234567890ab****</p>
          */
         public Builder lifecyclePolicyId(String lifecyclePolicyId) {
             this.lifecyclePolicyId = lifecyclePolicyId;
@@ -99,7 +102,7 @@ public class CreateLifecyclePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>true</li>

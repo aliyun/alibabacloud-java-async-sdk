@@ -91,7 +91,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about protocol services.</p>
+         * <p>The information about protocol service list.</p>
          */
         public Builder protocolServices(java.util.List<ProtocolServices> protocolServices) {
             this.protocolServices = protocolServices;
@@ -504,7 +504,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The VSW ID associated with the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-123xxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -512,7 +515,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID associated with the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-123xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

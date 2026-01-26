@@ -80,7 +80,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M18xMA==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * ProtocolMountTarget.
+         * <p>Information of the export directory for the protocol service</p>
          */
         public Builder protocolMountTarget(ProtocolMountTarget protocolMountTarget) {
             this.protocolMountTarget = protocolMountTarget;
@@ -96,7 +99,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6299428C-3861-435D-AE54-9B330A00****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -292,7 +298,11 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessGroupName.
+             * <p>The name of the permission group.</p>
+             * <p>Default permission group: DEFAULT\_VPC\_GROUP\_NAME</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEFAULT_VPC_GROUP_NAME</p>
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -300,7 +310,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the export directory was created. Return format: yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-22 17:49:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -308,7 +321,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the export directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the export directory.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -316,7 +332,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * ExportId.
+             * <p>The ID of the export directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exp-19abf5beab8d****</p>
              */
             public Builder exportId(String exportId) {
                 this.exportId = exportId;
@@ -324,7 +343,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Fileset ID。</p>
+             * <p>The fileset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fset-299b4ca04de8****</p>
@@ -335,7 +354,16 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The path of the CPFS directory that was queried.</p>
+             * <p>Format:</p>
+             * <ul>
+             * <li>Must be 1 to 1,024 characters in length.</li>
+             * <li>Must be encoded in UTF-8.</li>
+             * <li>Must start and end with a forward slash (/). The root directory is <code>/</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -343,7 +371,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolMountTargetDomain.
+             * <p>The domain name of the export directory for the protocol service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpfs-0229cb80bcc0****-x******.cn-*****.cpfs.aliyuncs.com</p>
              */
             public Builder protocolMountTargetDomain(String protocolMountTargetDomain) {
                 this.protocolMountTargetDomain = protocolMountTargetDomain;
@@ -351,7 +382,16 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The protocol type of the file system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NFS: Network File System (NFS)</li>
+             * <li>SMB: Server Message Block (SMB)</li>
+             * <li>cpfs: The protocol type supported by the CPFS file system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NFS</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -359,7 +399,17 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the export directory. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The export directory is being created.</li>
+             * <li>AVAILABLE : The export directory is available.</li>
+             * <li>MODIFYING: The export directory is being modified.</li>
+             * <li>DELETING: The export directory is being deleted.</li>
+             * <li>STOPPING: The export directory is being stopped.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -367,7 +417,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID of the export directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-8vb2qjnxs6hiobzve****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -375,7 +428,7 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID list of the export directory.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -383,7 +436,10 @@ public class GetProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID of the export directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1h5mxoqfuo3xurf****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

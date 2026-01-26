@@ -353,7 +353,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -361,7 +364,10 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of a tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -808,7 +814,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the access point.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

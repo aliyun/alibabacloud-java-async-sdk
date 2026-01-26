@@ -335,7 +335,8 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the export directory for the protocol service.</p>
+         * <p>The vSwitch ID of the export directory.</p>
+         * <p>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-123****</p>
@@ -347,7 +348,7 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The list of vSwitch IDs of the export directory.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -356,7 +357,7 @@ public class CreateProtocolMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID of the export directory for the protocol service.</p>
+         * <p>The VPC ID of the export directory.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123****</p>

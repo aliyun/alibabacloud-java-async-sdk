@@ -374,7 +374,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
+     * <p>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</p>
      * <ul>
      * <li>Before you create a file system, you must complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</li>
      * <li>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
@@ -424,9 +424,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can create lifecycle policies only for General-purpose NAS file systems.</p>
+     * <p>  Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * <ul>
-     * <li>You can create up to 20 lifecycle policies in each region within an Alibaba Cloud account.</li>
+     * <li>Up to 10 Auto and 100 OnDemand lifecycle policies can be created for each CPFS for Lingjun file system.</li>
+     * <li>For general-purpose NAS file systems, up to 20 lifecycle policies can be created in each region.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLifecyclePolicy  CreateLifecyclePolicyRequest
@@ -648,7 +649,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * @param request the request parameters of DeleteLifecyclePolicy  DeleteLifecyclePolicyRequest
      * @return DeleteLifecyclePolicyResponse
@@ -720,7 +721,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Network File System (NFS) file systems support this operation.</p>
+     * <p>Only General-purpose NAS file systems that use the NFS protocol support this operation.</p>
      * 
      * @param request the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
@@ -833,6 +834,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFilesetsResponse> describeFilesets(DescribeFilesetsRequest request);
 
     /**
+     * @param request the request parameters of DescribeFilesystemsAssociatedHpnZones  DescribeFilesystemsAssociatedHpnZonesRequest
+     * @return DescribeFilesystemsAssociatedHpnZonesResponse
+     */
+    CompletableFuture<DescribeFilesystemsAssociatedHpnZonesResponse> describeFilesystemsAssociatedHpnZones(DescribeFilesystemsAssociatedHpnZonesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Only CPFS for Lingjun supports this operation.</p>
      * <ul>
@@ -846,7 +853,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose NAS file systems support this operation.</p>
+     * <p>Only General-purpose NAS and CPFS for Lingjun file systems support this operation.</p>
      * 
      * @param request the request parameters of DescribeLifecyclePolicies  DescribeLifecyclePoliciesRequest
      * @return DescribeLifecyclePoliciesResponse
@@ -1005,6 +1012,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDirectoryOrFilePropertiesResponse> getDirectoryOrFileProperties(GetDirectoryOrFilePropertiesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Only CPFS V2.2.0 and CPFS for Lingjun V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * 
      * @param request the request parameters of GetFileset  GetFilesetRequest
      * @return GetFilesetResponse
      */

@@ -432,7 +432,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>A list of IDs for the zone-redundant vSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;

@@ -391,7 +391,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the access point.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -485,7 +485,16 @@ public class CreateAccessPointRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of a tag. Limits:</p>
+             * <ul>
+             * <li>Cannot be null or an empty string.</li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot start with aliyun or acs:.</li>
+             * <li>Cannot contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,7 +502,15 @@ public class CreateAccessPointRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of a tag. Limits:</p>
+             * <ul>
+             * <li>Cannot be null or an empty string.</li>
+             * <li>Can be up to 128 characters in length.</li>
+             * <li>Cannot contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
