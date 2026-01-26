@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyCertificateResponse> applyCertificate(ApplyCertificateRequest request);
 
     /**
+     * @param request the request parameters of ApplyCustomHostnameCertificate  ApplyCustomHostnameCertificateRequest
+     * @return ApplyCustomHostnameCertificateResponse
+     */
+    CompletableFuture<ApplyCustomHostnameCertificateResponse> applyCustomHostnameCertificate(ApplyCustomHostnameCertificateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
      * Successful and failed records along with error messages are listed in the response.</p>
@@ -130,6 +136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCompressionRuleResponse
      */
     CompletableFuture<CreateCompressionRuleResponse> createCompressionRule(CreateCompressionRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateCustomHostname  CreateCustomHostnameRequest
+     * @return CreateCustomHostnameResponse
+     */
+    CompletableFuture<CreateCustomHostnameResponse> createCustomHostname(CreateCustomHostnameRequest request);
 
     /**
      * @param request the request parameters of CreateCustomScenePolicy  CreateCustomScenePolicyRequest
@@ -487,6 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCompressionRuleResponse
      */
     CompletableFuture<DeleteCompressionRuleResponse> deleteCompressionRule(DeleteCompressionRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomHostname  DeleteCustomHostnameRequest
+     * @return DeleteCustomHostnameResponse
+     */
+    CompletableFuture<DeleteCustomHostnameResponse> deleteCustomHostname(DeleteCustomHostnameRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomScenePolicy  DeleteCustomScenePolicyRequest
@@ -1023,6 +1041,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCrossBorderOptimizationResponse> getCrossBorderOptimization(GetCrossBorderOptimizationRequest request);
 
     /**
+     * @param request the request parameters of GetCustomHostname  GetCustomHostnameRequest
+     * @return GetCustomHostnameResponse
+     */
+    CompletableFuture<GetCustomHostnameResponse> getCustomHostname(GetCustomHostnameRequest request);
+
+    /**
      * @param request the request parameters of GetDevelopmentMode  GetDevelopmentModeRequest
      * @return GetDevelopmentModeResponse
      */
@@ -1532,6 +1556,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCompressionRulesResponse
      */
     CompletableFuture<ListCompressionRulesResponse> listCompressionRules(ListCompressionRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomHostnames  ListCustomHostnamesRequest
+     * @return ListCustomHostnamesResponse
+     */
+    CompletableFuture<ListCustomHostnamesResponse> listCustomHostnames(ListCustomHostnamesRequest request);
 
     /**
      * <b>description</b> :
@@ -2123,6 +2153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCrossBorderOptimizationResponse> updateCrossBorderOptimization(UpdateCrossBorderOptimizationRequest request);
 
     /**
+     * @param request the request parameters of UpdateCustomHostname  UpdateCustomHostnameRequest
+     * @return UpdateCustomHostnameResponse
+     */
+    CompletableFuture<UpdateCustomHostnameResponse> updateCustomHostname(UpdateCustomHostnameRequest request);
+
+    /**
      * @param request the request parameters of UpdateCustomScenePolicy  UpdateCustomScenePolicyRequest
      * @return UpdateCustomScenePolicyResponse
      */
@@ -2480,6 +2516,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadSiteOriginClientCertificateResponse
      */
     CompletableFuture<UploadSiteOriginClientCertificateResponse> uploadSiteOriginClientCertificate(UploadSiteOriginClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of VerifyCustomHostname  VerifyCustomHostnameRequest
+     * @return VerifyCustomHostnameResponse
+     */
+    CompletableFuture<VerifyCustomHostnameResponse> verifyCustomHostname(VerifyCustomHostnameRequest request);
 
     /**
      * <b>description</b> :
