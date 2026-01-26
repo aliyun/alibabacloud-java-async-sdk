@@ -800,11 +800,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("approval_required")
         private Boolean approvalRequired;
 
+        @com.aliyun.core.annotation.NameInMap("auto_repair_policy_id")
+        private String autoRepairPolicyId;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
             this.approvalRequired = builder.approvalRequired;
+            this.autoRepairPolicyId = builder.autoRepairPolicyId;
             this.restartNode = builder.restartNode;
         }
 
@@ -824,6 +828,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoRepairPolicyId
+         */
+        public String getAutoRepairPolicyId() {
+            return this.autoRepairPolicyId;
+        }
+
+        /**
          * @return restartNode
          */
         public Boolean getRestartNode() {
@@ -832,6 +843,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean approvalRequired; 
+            private String autoRepairPolicyId; 
             private Boolean restartNode; 
 
             private Builder() {
@@ -839,6 +851,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
             private Builder(AutoRepairPolicy model) {
                 this.approvalRequired = model.approvalRequired;
+                this.autoRepairPolicyId = model.autoRepairPolicyId;
                 this.restartNode = model.restartNode;
             } 
 
@@ -847,6 +860,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder approvalRequired(Boolean approvalRequired) {
                 this.approvalRequired = approvalRequired;
+                return this;
+            }
+
+            /**
+             * auto_repair_policy_id.
+             */
+            public Builder autoRepairPolicyId(String autoRepairPolicyId) {
+                this.autoRepairPolicyId = autoRepairPolicyId;
                 return this;
             }
 
