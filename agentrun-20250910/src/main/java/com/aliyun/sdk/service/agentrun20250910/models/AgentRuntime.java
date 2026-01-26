@@ -56,6 +56,9 @@ public class AgentRuntime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("executionRoleArn")
     private String executionRoleArn;
 
+    @com.aliyun.core.annotation.NameInMap("externalAgentEndpointUrl")
+    private String externalAgentEndpointUrl;
+
     @com.aliyun.core.annotation.NameInMap("healthCheckConfiguration")
     private HealthCheckConfiguration healthCheckConfiguration;
 
@@ -68,8 +71,14 @@ public class AgentRuntime extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memory")
     private Integer memory;
 
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
+
     @com.aliyun.core.annotation.NameInMap("networkConfiguration")
     private NetworkConfiguration networkConfiguration;
+
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OSSMountConfig ossMountConfig;
 
     @com.aliyun.core.annotation.NameInMap("port")
     private Integer port;
@@ -107,11 +116,14 @@ public class AgentRuntime extends TeaModel {
         this.description = builder.description;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
+        this.externalAgentEndpointUrl = builder.externalAgentEndpointUrl;
         this.healthCheckConfiguration = builder.healthCheckConfiguration;
         this.lastUpdatedAt = builder.lastUpdatedAt;
         this.logConfiguration = builder.logConfiguration;
         this.memory = builder.memory;
+        this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
+        this.ossMountConfig = builder.ossMountConfig;
         this.port = builder.port;
         this.protocolConfiguration = builder.protocolConfiguration;
         this.resourceGroupId = builder.resourceGroupId;
@@ -225,6 +237,13 @@ public class AgentRuntime extends TeaModel {
     }
 
     /**
+     * @return externalAgentEndpointUrl
+     */
+    public String getExternalAgentEndpointUrl() {
+        return this.externalAgentEndpointUrl;
+    }
+
+    /**
      * @return healthCheckConfiguration
      */
     public HealthCheckConfiguration getHealthCheckConfiguration() {
@@ -253,10 +272,24 @@ public class AgentRuntime extends TeaModel {
     }
 
     /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
+    }
+
+    /**
      * @return networkConfiguration
      */
     public NetworkConfiguration getNetworkConfiguration() {
         return this.networkConfiguration;
+    }
+
+    /**
+     * @return ossMountConfig
+     */
+    public OSSMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     /**
@@ -322,11 +355,14 @@ public class AgentRuntime extends TeaModel {
         private String description; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
+        private String externalAgentEndpointUrl; 
         private HealthCheckConfiguration healthCheckConfiguration; 
         private String lastUpdatedAt; 
         private LogConfiguration logConfiguration; 
         private Integer memory; 
+        private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
+        private OSSMountConfig ossMountConfig; 
         private Integer port; 
         private ProtocolConfiguration protocolConfiguration; 
         private String resourceGroupId; 
@@ -352,11 +388,14 @@ public class AgentRuntime extends TeaModel {
             this.description = model.description;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
+            this.externalAgentEndpointUrl = model.externalAgentEndpointUrl;
             this.healthCheckConfiguration = model.healthCheckConfiguration;
             this.lastUpdatedAt = model.lastUpdatedAt;
             this.logConfiguration = model.logConfiguration;
             this.memory = model.memory;
+            this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
+            this.ossMountConfig = model.ossMountConfig;
             this.port = model.port;
             this.protocolConfiguration = model.protocolConfiguration;
             this.resourceGroupId = model.resourceGroupId;
@@ -510,6 +549,17 @@ public class AgentRuntime extends TeaModel {
         }
 
         /**
+         * <p>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></p>
+         */
+        public Builder externalAgentEndpointUrl(String externalAgentEndpointUrl) {
+            this.externalAgentEndpointUrl = externalAgentEndpointUrl;
+            return this;
+        }
+
+        /**
          * <p>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</p>
          * 
          * <strong>example:</strong>
@@ -554,6 +604,17 @@ public class AgentRuntime extends TeaModel {
         }
 
         /**
+         * <p>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
          * <p>智能体运行时的网络配置信息</p>
          * 
          * <strong>example:</strong>
@@ -561,6 +622,17 @@ public class AgentRuntime extends TeaModel {
          */
         public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
             return this;
         }
 

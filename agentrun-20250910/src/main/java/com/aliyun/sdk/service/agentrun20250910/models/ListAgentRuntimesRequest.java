@@ -22,6 +22,10 @@ public class ListAgentRuntimesRequest extends Request {
     private String agentRuntimeName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("discoveryResourceGroupId")
+    private String discoveryResourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -44,6 +48,7 @@ public class ListAgentRuntimesRequest extends Request {
     private ListAgentRuntimesRequest(Builder builder) {
         super(builder);
         this.agentRuntimeName = builder.agentRuntimeName;
+        this.discoveryResourceGroupId = builder.discoveryResourceGroupId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -69,6 +74,13 @@ public class ListAgentRuntimesRequest extends Request {
      */
     public String getAgentRuntimeName() {
         return this.agentRuntimeName;
+    }
+
+    /**
+     * @return discoveryResourceGroupId
+     */
+    public String getDiscoveryResourceGroupId() {
+        return this.discoveryResourceGroupId;
     }
 
     /**
@@ -108,6 +120,7 @@ public class ListAgentRuntimesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAgentRuntimesRequest, Builder> {
         private String agentRuntimeName; 
+        private String discoveryResourceGroupId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -121,6 +134,7 @@ public class ListAgentRuntimesRequest extends Request {
         private Builder(ListAgentRuntimesRequest request) {
             super(request);
             this.agentRuntimeName = request.agentRuntimeName;
+            this.discoveryResourceGroupId = request.discoveryResourceGroupId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
@@ -137,6 +151,18 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder agentRuntimeName(String agentRuntimeName) {
             this.putQueryParameter("agentRuntimeName", agentRuntimeName);
             this.agentRuntimeName = agentRuntimeName;
+            return this;
+        }
+
+        /**
+         * <p>用于服务发现的资源组标识符</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123456</p>
+         */
+        public Builder discoveryResourceGroupId(String discoveryResourceGroupId) {
+            this.putQueryParameter("discoveryResourceGroupId", discoveryResourceGroupId);
+            this.discoveryResourceGroupId = discoveryResourceGroupId;
             return this;
         }
 
