@@ -39,6 +39,10 @@ public class PublishRecallManagementTableRequest extends Request {
     private java.util.Map<String, String> partition;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Partitions")
+    private java.util.Map<String, String> partitions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SkipThresholdCheck")
     private Boolean skipThresholdCheck;
 
@@ -49,6 +53,7 @@ public class PublishRecallManagementTableRequest extends Request {
         this.instanceId = builder.instanceId;
         this.mode = builder.mode;
         this.partition = builder.partition;
+        this.partitions = builder.partitions;
         this.skipThresholdCheck = builder.skipThresholdCheck;
     }
 
@@ -101,6 +106,13 @@ public class PublishRecallManagementTableRequest extends Request {
     }
 
     /**
+     * @return partitions
+     */
+    public java.util.Map<String, String> getPartitions() {
+        return this.partitions;
+    }
+
+    /**
      * @return skipThresholdCheck
      */
     public Boolean getSkipThresholdCheck() {
@@ -113,6 +125,7 @@ public class PublishRecallManagementTableRequest extends Request {
         private String instanceId; 
         private String mode; 
         private java.util.Map<String, String> partition; 
+        private java.util.Map<String, String> partitions; 
         private Boolean skipThresholdCheck; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class PublishRecallManagementTableRequest extends Request {
             this.instanceId = request.instanceId;
             this.mode = request.mode;
             this.partition = request.partition;
+            this.partitions = request.partitions;
             this.skipThresholdCheck = request.skipThresholdCheck;
         } 
 
@@ -174,6 +188,15 @@ public class PublishRecallManagementTableRequest extends Request {
         public Builder partition(java.util.Map<String, String> partition) {
             this.putBodyParameter("Partition", partition);
             this.partition = partition;
+            return this;
+        }
+
+        /**
+         * Partitions.
+         */
+        public Builder partitions(java.util.Map<String, String> partitions) {
+            this.putBodyParameter("Partitions", partitions);
+            this.partitions = partitions;
             return this;
         }
 
