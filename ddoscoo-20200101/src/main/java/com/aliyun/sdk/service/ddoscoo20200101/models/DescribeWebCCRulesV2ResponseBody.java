@@ -150,7 +150,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("ContentList")
-        private String contentList;
+        private java.util.List<String> contentList;
 
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -187,7 +187,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         /**
          * @return contentList
          */
-        public String getContentList() {
+        public java.util.List<String> getContentList() {
             return this.contentList;
         }
 
@@ -214,7 +214,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
-            private String contentList; 
+            private java.util.List<String> contentList; 
             private String field; 
             private String headerName; 
             private String matchMethod; 
@@ -247,7 +247,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[&quot;2&quot;,&quot;3&quot;,&quot;ad&quot;]</p>
              */
-            public Builder contentList(String contentList) {
+            public Builder contentList(java.util.List<String> contentList) {
                 this.contentList = contentList;
                 return this;
             }
@@ -927,6 +927,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
             /**
              * <p>The parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>废弃</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -946,6 +949,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
             /**
              * <p>The parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>废弃</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;

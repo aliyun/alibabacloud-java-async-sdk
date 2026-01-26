@@ -1,3 +1,6 @@
+2026-01-26 Version: 5.0.0
+- Generated java-async 2020-01-01 for ddoscoo.
+
 2026-01-21 Version: 4.0.9
 - Generated java-async 2020-01-01 for ddoscoo.
 
