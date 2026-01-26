@@ -112,8 +112,11 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoUrl")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String videoUrl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("videoUrls")
+    private java.util.List<String> videoUrls;
 
     private SubmitVideoAnalysisTaskRequest(Builder builder) {
         super(builder);
@@ -141,6 +144,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         this.videoRoles = builder.videoRoles;
         this.videoShotFaceIdentityCount = builder.videoShotFaceIdentityCount;
         this.videoUrl = builder.videoUrl;
+        this.videoUrls = builder.videoUrls;
     }
 
     public static Builder builder() {
@@ -324,6 +328,13 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         return this.videoUrl;
     }
 
+    /**
+     * @return videoUrls
+     */
+    public java.util.List<String> getVideoUrls() {
+        return this.videoUrls;
+    }
+
     public static final class Builder extends Request.Builder<SubmitVideoAnalysisTaskRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
@@ -349,6 +360,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         private java.util.List<VideoRoles> videoRoles; 
         private Integer videoShotFaceIdentityCount; 
         private String videoUrl; 
+        private java.util.List<String> videoUrls; 
 
         private Builder() {
             super();
@@ -380,6 +392,7 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
             this.videoRoles = request.videoRoles;
             this.videoShotFaceIdentityCount = request.videoShotFaceIdentityCount;
             this.videoUrl = request.videoUrl;
+            this.videoUrls = request.videoUrls;
         } 
 
         /**
@@ -600,14 +613,21 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://xxxx.mp4">http://xxxx.mp4</a></p>
+         * videoUrl.
          */
         public Builder videoUrl(String videoUrl) {
             this.putBodyParameter("videoUrl", videoUrl);
             this.videoUrl = videoUrl;
+            return this;
+        }
+
+        /**
+         * videoUrls.
+         */
+        public Builder videoUrls(java.util.List<String> videoUrls) {
+            String videoUrlsShrink = shrink(videoUrls, "videoUrls", "json");
+            this.putBodyParameter("videoUrls", videoUrlsShrink);
+            this.videoUrls = videoUrls;
             return this;
         }
 
