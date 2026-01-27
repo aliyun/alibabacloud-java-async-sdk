@@ -1324,6 +1324,81 @@ public class ListInstanceResponseBody extends TeaModel {
      *
      * <p>ListInstanceResponseBody</p>
      */
+    public static class ZoneInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private ZoneInfos(Builder builder) {
+            this.status = builder.status;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ZoneInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneInfos model) {
+                this.status = model.status;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * zoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public ZoneInfos build() {
+                return new ZoneInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
         private Boolean advancedDedicateMaster;
@@ -1421,6 +1496,12 @@ public class ListInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vpcInstanceId")
         private String vpcInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("zoneCount")
+        private Integer zoneCount;
+
+        @com.aliyun.core.annotation.NameInMap("zoneInfos")
+        private java.util.List<ZoneInfos> zoneInfos;
+
         private Result(Builder builder) {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
             this.archType = builder.archType;
@@ -1454,6 +1535,8 @@ public class ListInstanceResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.updatedAt = builder.updatedAt;
             this.vpcInstanceId = builder.vpcInstanceId;
+            this.zoneCount = builder.zoneCount;
+            this.zoneInfos = builder.zoneInfos;
         }
 
         public static Builder builder() {
@@ -1688,6 +1771,20 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.vpcInstanceId;
         }
 
+        /**
+         * @return zoneCount
+         */
+        public Integer getZoneCount() {
+            return this.zoneCount;
+        }
+
+        /**
+         * @return zoneInfos
+         */
+        public java.util.List<ZoneInfos> getZoneInfos() {
+            return this.zoneInfos;
+        }
+
         public static final class Builder {
             private Boolean advancedDedicateMaster; 
             private String archType; 
@@ -1721,6 +1818,8 @@ public class ListInstanceResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String updatedAt; 
             private String vpcInstanceId; 
+            private Integer zoneCount; 
+            private java.util.List<ZoneInfos> zoneInfos; 
 
             private Builder() {
             } 
@@ -1758,6 +1857,8 @@ public class ListInstanceResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.updatedAt = model.updatedAt;
                 this.vpcInstanceId = model.vpcInstanceId;
+                this.zoneCount = model.zoneCount;
+                this.zoneInfos = model.zoneInfos;
             } 
 
             /**
@@ -2064,6 +2165,22 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
+                return this;
+            }
+
+            /**
+             * zoneCount.
+             */
+            public Builder zoneCount(Integer zoneCount) {
+                this.zoneCount = zoneCount;
+                return this;
+            }
+
+            /**
+             * zoneInfos.
+             */
+            public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
+                this.zoneInfos = zoneInfos;
                 return this;
             }
 
