@@ -197,11 +197,17 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
+        @com.aliyun.core.annotation.NameInMap("AddressGroups")
+        private java.util.List<AddressGroup> addressGroups;
+
         @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List<String> addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigMode")
+        private String configMode;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -214,8 +220,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
         private Applications(Builder builder) {
             this.action = builder.action;
+            this.addressGroups = builder.addressGroups;
             this.addresses = builder.addresses;
             this.applicationId = builder.applicationId;
+            this.configMode = builder.configMode;
             this.name = builder.name;
             this.portRanges = builder.portRanges;
             this.protocol = builder.protocol;
@@ -237,6 +245,13 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return addressGroups
+         */
+        public java.util.List<AddressGroup> getAddressGroups() {
+            return this.addressGroups;
+        }
+
+        /**
          * @return addresses
          */
         public java.util.List<String> getAddresses() {
@@ -248,6 +263,13 @@ public class ListUserApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        /**
+         * @return configMode
+         */
+        public String getConfigMode() {
+            return this.configMode;
         }
 
         /**
@@ -273,8 +295,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
+            private java.util.List<AddressGroup> addressGroups; 
             private java.util.List<String> addresses; 
             private String applicationId; 
+            private String configMode; 
             private String name; 
             private java.util.List<PortRanges> portRanges; 
             private String protocol; 
@@ -284,8 +308,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
             private Builder(Applications model) {
                 this.action = model.action;
+                this.addressGroups = model.addressGroups;
                 this.addresses = model.addresses;
                 this.applicationId = model.applicationId;
+                this.configMode = model.configMode;
                 this.name = model.name;
                 this.portRanges = model.portRanges;
                 this.protocol = model.protocol;
@@ -296,6 +322,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
              */
             public Builder action(String action) {
                 this.action = action;
+                return this;
+            }
+
+            /**
+             * AddressGroups.
+             */
+            public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
+                this.addressGroups = addressGroups;
                 return this;
             }
 
@@ -312,6 +346,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
+                return this;
+            }
+
+            /**
+             * ConfigMode.
+             */
+            public Builder configMode(String configMode) {
+                this.configMode = configMode;
                 return this;
             }
 

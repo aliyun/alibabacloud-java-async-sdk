@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddressGroups")
+    private java.util.List<AddressGroup> addressGroups;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Addresses")
     private java.util.List<String> addresses;
 
@@ -25,6 +29,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ApplicationId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigMode")
+    private String configMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -52,6 +60,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     private String modifyType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List<PortRanges> portRanges;
 
@@ -69,14 +81,17 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
 
     private UpdatePrivateAccessApplicationRequest(Builder builder) {
         super(builder);
+        this.addressGroups = builder.addressGroups;
         this.addresses = builder.addresses;
         this.applicationId = builder.applicationId;
+        this.configMode = builder.configMode;
         this.description = builder.description;
         this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
         this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
         this.l7ProxyDomainPrivate = builder.l7ProxyDomainPrivate;
         this.modifyType = builder.modifyType;
+        this.name = builder.name;
         this.portRanges = builder.portRanges;
         this.protocol = builder.protocol;
         this.status = builder.status;
@@ -97,6 +112,13 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return addressGroups
+     */
+    public java.util.List<AddressGroup> getAddressGroups() {
+        return this.addressGroups;
+    }
+
+    /**
      * @return addresses
      */
     public java.util.List<String> getAddresses() {
@@ -108,6 +130,13 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
      */
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    /**
+     * @return configMode
+     */
+    public String getConfigMode() {
+        return this.configMode;
     }
 
     /**
@@ -153,6 +182,13 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return portRanges
      */
     public java.util.List<PortRanges> getPortRanges() {
@@ -181,14 +217,17 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePrivateAccessApplicationRequest, Builder> {
+        private java.util.List<AddressGroup> addressGroups; 
         private java.util.List<String> addresses; 
         private String applicationId; 
+        private String configMode; 
         private String description; 
         private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
         private String l7ProxyDomainPrivate; 
         private String modifyType; 
+        private String name; 
         private java.util.List<PortRanges> portRanges; 
         private String protocol; 
         private String status; 
@@ -200,19 +239,31 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
 
         private Builder(UpdatePrivateAccessApplicationRequest request) {
             super(request);
+            this.addressGroups = request.addressGroups;
             this.addresses = request.addresses;
             this.applicationId = request.applicationId;
+            this.configMode = request.configMode;
             this.description = request.description;
             this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
             this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
             this.l7ProxyDomainPrivate = request.l7ProxyDomainPrivate;
             this.modifyType = request.modifyType;
+            this.name = request.name;
             this.portRanges = request.portRanges;
             this.protocol = request.protocol;
             this.status = request.status;
             this.tagIds = request.tagIds;
         } 
+
+        /**
+         * AddressGroups.
+         */
+        public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
+            this.putBodyParameter("AddressGroups", addressGroups);
+            this.addressGroups = addressGroups;
+            return this;
+        }
 
         /**
          * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
@@ -237,6 +288,15 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
             this.applicationId = applicationId;
+            return this;
+        }
+
+        /**
+         * ConfigMode.
+         */
+        public Builder configMode(String configMode) {
+            this.putBodyParameter("ConfigMode", configMode);
+            this.configMode = configMode;
             return this;
         }
 
@@ -308,6 +368,15 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 

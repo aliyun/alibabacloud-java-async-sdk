@@ -18,13 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddressGroups")
+    private java.util.List<AddressGroup> addressGroups;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> addresses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BrowserAccessStatus")
     private String browserAccessStatus;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigMode")
+    private String configMode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -49,7 +56,6 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PortRanges")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<PortRanges> portRanges;
 
     @com.aliyun.core.annotation.Body
@@ -68,8 +74,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
     private CreatePrivateAccessApplicationRequest(Builder builder) {
         super(builder);
+        this.addressGroups = builder.addressGroups;
         this.addresses = builder.addresses;
         this.browserAccessStatus = builder.browserAccessStatus;
+        this.configMode = builder.configMode;
         this.description = builder.description;
         this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
@@ -95,6 +103,13 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     }
 
     /**
+     * @return addressGroups
+     */
+    public java.util.List<AddressGroup> getAddressGroups() {
+        return this.addressGroups;
+    }
+
+    /**
      * @return addresses
      */
     public java.util.List<String> getAddresses() {
@@ -106,6 +121,13 @@ public class CreatePrivateAccessApplicationRequest extends Request {
      */
     public String getBrowserAccessStatus() {
         return this.browserAccessStatus;
+    }
+
+    /**
+     * @return configMode
+     */
+    public String getConfigMode() {
+        return this.configMode;
     }
 
     /**
@@ -172,8 +194,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePrivateAccessApplicationRequest, Builder> {
+        private java.util.List<AddressGroup> addressGroups; 
         private java.util.List<String> addresses; 
         private String browserAccessStatus; 
+        private String configMode; 
         private String description; 
         private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
@@ -190,8 +214,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
         private Builder(CreatePrivateAccessApplicationRequest request) {
             super(request);
+            this.addressGroups = request.addressGroups;
             this.addresses = request.addresses;
             this.browserAccessStatus = request.browserAccessStatus;
+            this.configMode = request.configMode;
             this.description = request.description;
             this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
@@ -204,8 +230,16 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
+         * AddressGroups.
+         */
+        public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
+            this.putBodyParameter("AddressGroups", addressGroups);
+            this.addressGroups = addressGroups;
+            return this;
+        }
+
+        /**
          * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
@@ -226,6 +260,15 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         public Builder browserAccessStatus(String browserAccessStatus) {
             this.putBodyParameter("BrowserAccessStatus", browserAccessStatus);
             this.browserAccessStatus = browserAccessStatus;
+            return this;
+        }
+
+        /**
+         * ConfigMode.
+         */
+        public Builder configMode(String configMode) {
+            this.putBodyParameter("ConfigMode", configMode);
+            this.configMode = configMode;
             return this;
         }
 
@@ -287,7 +330,6 @@ public class CreatePrivateAccessApplicationRequest extends Request {
 
         /**
          * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);

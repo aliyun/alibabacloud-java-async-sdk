@@ -46,6 +46,10 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
     private String modifyType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PolicyAction")
     private String policyAction;
 
@@ -111,6 +115,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         this.deviceAttributeAction = builder.deviceAttributeAction;
         this.deviceAttributeId = builder.deviceAttributeId;
         this.modifyType = builder.modifyType;
+        this.name = builder.name;
         this.policyAction = builder.policyAction;
         this.policyId = builder.policyId;
         this.priority = builder.priority;
@@ -187,6 +192,13 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
      */
     public String getModifyType() {
         return this.modifyType;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -295,6 +307,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         private String deviceAttributeAction; 
         private String deviceAttributeId; 
         private String modifyType; 
+        private String name; 
         private String policyAction; 
         private String policyId; 
         private Integer priority; 
@@ -323,6 +336,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
             this.deviceAttributeAction = request.deviceAttributeAction;
             this.deviceAttributeId = request.deviceAttributeId;
             this.modifyType = request.modifyType;
+            this.name = request.name;
             this.policyAction = request.policyAction;
             this.policyId = request.policyId;
             this.priority = request.priority;
@@ -426,6 +440,15 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 
