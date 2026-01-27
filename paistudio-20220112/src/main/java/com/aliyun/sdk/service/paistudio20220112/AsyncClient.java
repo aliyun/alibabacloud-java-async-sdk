@@ -296,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request);
 
     /**
+     * @param request the request parameters of OperateNode  OperateNodeRequest
+     * @return OperateNodeResponse
+     */
+    CompletableFuture<OperateNodeResponse> operateNode(OperateNodeRequest request);
+
+    /**
      * @param request the request parameters of ScaleQuota  ScaleQuotaRequest
      * @return ScaleQuotaResponse
      */

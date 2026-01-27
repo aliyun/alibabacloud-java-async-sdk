@@ -876,6 +876,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of OperateNode  OperateNodeRequest
+     * @return OperateNodeResponse
+     */
+    @Override
+    public CompletableFuture<OperateNodeResponse> operateNode(OperateNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("OperateNode").setMethod(HttpMethod.POST).setPathRegex("/api/v1/nodes/{NodeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OperateNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OperateNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ScaleQuota  ScaleQuotaRequest
      * @return ScaleQuotaResponse
      */
