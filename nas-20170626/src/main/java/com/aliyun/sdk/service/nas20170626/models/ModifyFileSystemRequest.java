@@ -147,10 +147,14 @@ public class ModifyFileSystemRequest extends Request {
      * <p>ModifyFileSystemRequest</p>
      */
     public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableABE")
+        private Boolean enableABE;
+
         @com.aliyun.core.annotation.NameInMap("EnableOplock")
         private Boolean enableOplock;
 
         private Options(Builder builder) {
+            this.enableABE = builder.enableABE;
             this.enableOplock = builder.enableOplock;
         }
 
@@ -163,6 +167,13 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
+         * @return enableABE
+         */
+        public Boolean getEnableABE() {
+            return this.enableABE;
+        }
+
+        /**
          * @return enableOplock
          */
         public Boolean getEnableOplock() {
@@ -170,14 +181,24 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableABE; 
             private Boolean enableOplock; 
 
             private Builder() {
             } 
 
             private Builder(Options model) {
+                this.enableABE = model.enableABE;
                 this.enableOplock = model.enableOplock;
             } 
+
+            /**
+             * EnableABE.
+             */
+            public Builder enableABE(Boolean enableABE) {
+                this.enableABE = enableABE;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to enable the oplock feature. Valid values:</p>

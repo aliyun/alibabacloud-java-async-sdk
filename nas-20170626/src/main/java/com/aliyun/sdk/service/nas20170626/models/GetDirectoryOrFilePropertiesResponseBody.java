@@ -119,6 +119,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OfflineDuration")
+        private Long offlineDuration;
+
+        @com.aliyun.core.annotation.NameInMap("OfflineUnchangedDuration")
+        private Long offlineUnchangedDuration;
+
         @com.aliyun.core.annotation.NameInMap("RetrieveTime")
         private String retrieveTime;
 
@@ -139,6 +145,8 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             this.inode = builder.inode;
             this.mTime = builder.mTime;
             this.name = builder.name;
+            this.offlineDuration = builder.offlineDuration;
+            this.offlineUnchangedDuration = builder.offlineUnchangedDuration;
             this.retrieveTime = builder.retrieveTime;
             this.size = builder.size;
             this.storageType = builder.storageType;
@@ -203,6 +211,20 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return offlineDuration
+         */
+        public Long getOfflineDuration() {
+            return this.offlineDuration;
+        }
+
+        /**
+         * @return offlineUnchangedDuration
+         */
+        public Long getOfflineUnchangedDuration() {
+            return this.offlineUnchangedDuration;
+        }
+
+        /**
          * @return retrieveTime
          */
         public String getRetrieveTime() {
@@ -238,6 +260,8 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             private String inode; 
             private String mTime; 
             private String name; 
+            private Long offlineDuration; 
+            private Long offlineUnchangedDuration; 
             private String retrieveTime; 
             private Long size; 
             private String storageType; 
@@ -254,6 +278,8 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
                 this.inode = model.inode;
                 this.mTime = model.mTime;
                 this.name = model.name;
+                this.offlineDuration = model.offlineDuration;
+                this.offlineUnchangedDuration = model.offlineUnchangedDuration;
                 this.retrieveTime = model.retrieveTime;
                 this.size = model.size;
                 this.storageType = model.storageType;
@@ -352,6 +378,22 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OfflineDuration.
+             */
+            public Builder offlineDuration(Long offlineDuration) {
+                this.offlineDuration = offlineDuration;
+                return this;
+            }
+
+            /**
+             * OfflineUnchangedDuration.
+             */
+            public Builder offlineUnchangedDuration(Long offlineUnchangedDuration) {
+                this.offlineUnchangedDuration = offlineUnchangedDuration;
                 return this;
             }
 
