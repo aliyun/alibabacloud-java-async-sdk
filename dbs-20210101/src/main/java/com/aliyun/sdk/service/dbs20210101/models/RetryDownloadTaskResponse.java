@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDownloadResponse} extends {@link TeaModel}
+ * {@link RetryDownloadTaskResponse} extends {@link TeaModel}
  *
- * <p>CreateDownloadResponse</p>
+ * <p>RetryDownloadTaskResponse</p>
  */
-public class CreateDownloadResponse extends Response {
+public class RetryDownloadTaskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateDownloadResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateDownloadResponseBody body;
+    private RetryDownloadTaskResponseBody body;
 
-    private CreateDownloadResponse(BuilderImpl builder) {
+    private RetryDownloadTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateDownloadResponse create() {
+    public static RetryDownloadTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateDownloadResponse extends Response {
     /**
      * @return body
      */
-    public CreateDownloadResponseBody getBody() {
+    public RetryDownloadTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateDownloadResponse, Builder> {
+    public interface Builder extends Response.Builder<RetryDownloadTaskResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateDownloadResponseBody body);
+        Builder body(RetryDownloadTaskResponseBody body);
 
         @Override
-        CreateDownloadResponse build();
+        RetryDownloadTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateDownloadResponse, Builder>
+            extends Response.BuilderImpl<RetryDownloadTaskResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateDownloadResponseBody body; 
+        private RetryDownloadTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateDownloadResponse response) {
+        private BuilderImpl(RetryDownloadTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateDownloadResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateDownloadResponseBody body) {
+        public Builder body(RetryDownloadTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateDownloadResponse build() {
-            return new CreateDownloadResponse(this);
+        public RetryDownloadTaskResponse build() {
+            return new RetryDownloadTaskResponse(this);
         } 
 
     } 

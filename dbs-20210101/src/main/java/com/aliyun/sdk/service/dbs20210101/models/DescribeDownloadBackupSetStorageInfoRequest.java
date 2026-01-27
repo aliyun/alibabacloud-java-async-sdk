@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadBackupSetStorageInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDownloadBackupSetStorageInfoRequest</p>
@@ -18,6 +24,10 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    private String clusterName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Duration")
@@ -41,6 +51,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupSetId = builder.backupSetId;
+        this.clusterName = builder.clusterName;
         this.duration = builder.duration;
         this.instanceName = builder.instanceName;
         this.regionCode = builder.regionCode;
@@ -55,7 +66,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -72,6 +83,13 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     /**
@@ -105,6 +123,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDownloadBackupSetStorageInfoRequest, Builder> {
         private String regionId; 
         private String backupSetId; 
+        private String clusterName; 
         private String duration; 
         private String instanceName; 
         private String regionCode; 
@@ -118,6 +137,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupSetId = request.backupSetId;
+            this.clusterName = request.clusterName;
             this.duration = request.duration;
             this.instanceName = request.instanceName;
             this.regionCode = request.regionCode;
@@ -134,7 +154,10 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The ID of the backup set.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30****</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -143,12 +166,25 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The validity period of the URL that is used as the download destination. Take note of the following items:
-         * <p>
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * <p>The validity period of the URL that is used as the download destination. Take note of the following items:</p>
+         * <ul>
+         * <li>Default value: 7200. This means that the URL is valid for 2 hours by default.</li>
+         * <li>Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.</li>
+         * <li>Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Default value: 7200. This means that the URL is valid for 2 hours by default.
-         * *   Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.
-         * *   Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -157,10 +193,13 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>The <strong>BackupSetId</strong> parameter is required if you specify the <strong>InstanceName</strong> parameter.</p>
+         * </blockquote>
          * 
-         * > The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
+         * <strong>example:</strong>
+         * <p>rm-uf6qqf569n435****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -169,7 +208,11 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+         * <p>The ID of the region in which the instance resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -178,11 +221,14 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The download task ID.
-         * <p>
+         * <p>The download task ID.</p>
+         * <ul>
+         * <li>The <strong>BackupSetId</strong> and <strong>InstanceName</strong> parameters are required if you do not specify the <strong>TaskId</strong> parameter.</li>
+         * <li>To view the download task ID, go to the instance details page in the console and click <strong>Backup and Restoration</strong> in the left-side navigation pane. On the <strong>Backup Download</strong> tab, view the task ID.</li>
+         * </ul>
          * 
-         * *   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.
-         * *   To view the download task ID, go to the instance details page in the console and click **Backup and Restoration** in the left-side navigation pane. On the **Backup Download** tab, view the task ID.
+         * <strong>example:</strong>
+         * <p>dt-s0ugzak9****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

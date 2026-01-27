@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBTablesRecoveryStateRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBTablesRecoveryStateRequest</p>
@@ -18,6 +24,10 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    private String clusterName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -35,6 +45,7 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.category = builder.category;
+        this.clusterName = builder.clusterName;
         this.instanceId = builder.instanceId;
         this.regionCode = builder.regionCode;
         this.retention = builder.retention;
@@ -48,7 +59,7 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -65,6 +76,13 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     /**
@@ -91,6 +109,7 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBTablesRecoveryStateRequest, Builder> {
         private String regionId; 
         private String category; 
+        private String clusterName; 
         private String instanceId; 
         private String regionCode; 
         private String retention; 
@@ -103,6 +122,7 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.category = request.category;
+            this.clusterName = request.clusterName;
             this.instanceId = request.instanceId;
             this.regionCode = request.regionCode;
             this.retention = request.retention;
@@ -123,6 +143,15 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
             return this;
         }
 

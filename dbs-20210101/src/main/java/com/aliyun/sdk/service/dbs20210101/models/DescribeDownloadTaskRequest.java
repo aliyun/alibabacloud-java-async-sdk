@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeDownloadTaskRequest</p>
@@ -18,6 +24,10 @@ public class DescribeDownloadTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    private String clusterName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -68,6 +78,7 @@ public class DescribeDownloadTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.backupSetId = builder.backupSetId;
+        this.clusterName = builder.clusterName;
         this.currentPage = builder.currentPage;
         this.datasourceId = builder.datasourceId;
         this.endTime = builder.endTime;
@@ -89,7 +100,7 @@ public class DescribeDownloadTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,6 +117,13 @@ public class DescribeDownloadTaskRequest extends Request {
      */
     public String getBackupSetId() {
         return this.backupSetId;
+    }
+
+    /**
+     * @return clusterName
+     */
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     /**
@@ -188,6 +206,7 @@ public class DescribeDownloadTaskRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDownloadTaskRequest, Builder> {
         private String regionId; 
         private String backupSetId; 
+        private String clusterName; 
         private String currentPage; 
         private String datasourceId; 
         private String endTime; 
@@ -208,6 +227,7 @@ public class DescribeDownloadTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.backupSetId = request.backupSetId;
+            this.clusterName = request.clusterName;
             this.currentPage = request.currentPage;
             this.datasourceId = request.datasourceId;
             this.endTime = request.endTime;
@@ -231,7 +251,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.
+         * <p>The ID of the backup set generated when you create a download task. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216****</p>
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -240,7 +263,19 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * ClusterName.
+         */
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
+            return this;
+        }
+
+        /**
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -249,7 +284,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The ID of the Database Backup (DBS) data source. Specify the parameter in the format of *ds-${Instance ID}\_${regionId}*.
+         * <p>The ID of the Database Backup (DBS) data source. Specify the parameter in the format of <em>ds-${Instance ID}_${regionId}</em>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-rm-2ze8g2am97624****_cn-hangzhou</p>
          */
         public Builder datasourceId(String datasourceId) {
             this.putQueryParameter("DatasourceId", datasourceId);
@@ -258,7 +296,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.
+         * <p>The end of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661941556000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -267,10 +308,13 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p>This parameter is required.</p>
+         * </blockquote>
          * 
-         * > This parameter is required.
+         * <strong>example:</strong>
+         * <p>rm-bp1imnmcjxdz7****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -279,7 +323,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to **gmt_create**.
+         * <p>The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to <strong>gmt_create</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmt_create</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -288,11 +335,14 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the entries. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the entries. Valid values:</p>
+         * <ul>
+         * <li><strong>asc</strong>: the ascending order.</li>
+         * <li><strong>desc</strong>: the descending order. This is the default value.</li>
+         * </ul>
          * 
-         * *   **asc**: the ascending order.
-         * *   **desc**: the descending order. This is the default value.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder orderDirect(String orderDirect) {
             this.putQueryParameter("OrderDirect", orderDirect);
@@ -301,7 +351,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -310,7 +363,11 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+         * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/26231.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -319,7 +376,10 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Specify this parameter as a timestamp of the LONG type. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661941554000</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,15 +388,18 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The state of the download task. Valid values:
-         * <p>
+         * <p>The state of the download task. Valid values:</p>
+         * <ul>
+         * <li><strong>Initializing</strong>: The download task is being initialized.</li>
+         * <li><strong>queueing</strong>: The download task is queuing.</li>
+         * <li><strong>running</strong>: The download task is running.</li>
+         * <li><strong>failed</strong>: The download task fails.</li>
+         * <li><strong>finished</strong>: The download task is complete.</li>
+         * <li><strong>expired</strong>: The download task expires.</li>
+         * </ul>
          * 
-         * *   **Initializing**: The download task is being initialized.
-         * *   **queueing**: The download task is queuing.
-         * *   **running**: The download task is running.
-         * *   **failed**: The download task fails.
-         * *   **finished**: The download task is complete.
-         * *   **expired**: The download task expires.
+         * <strong>example:</strong>
+         * <p>queueing</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -345,11 +408,14 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The type of the download task. Valid values:
-         * <p>
+         * <p>The type of the download task. Valid values:</p>
+         * <ul>
+         * <li><strong>full</strong>: downloads a full backup set.</li>
+         * <li><strong>pitr</strong>: downloads a backup set at a specific point in time.</li>
+         * </ul>
          * 
-         * *   **full**: downloads a full backup set.
-         * *   **pitr**: downloads a backup set at a specific point in time.
+         * <strong>example:</strong>
+         * <p>full</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -63,6 +63,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -77,6 +81,35 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfigureBackupSetInfo  ConfigureBackupSetInfoRequest
+     * @return ConfigureBackupSetInfoResponse
+     */
+    @Override
+    public CompletableFuture<ConfigureBackupSetInfoResponse> configureBackupSetInfo(ConfigureBackupSetInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfigureBackupSetInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfigureBackupSetInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfigureBackupSetInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PolarDB for MySQL</p>
+     * <blockquote>
+     * <p> This API operation is available only to specific customers. If you want to call this API operation, join the Database Backup (DBS) DingTalk group (ID 35585947) for customer consultation to request permissions.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateAdvancedPolicy  CreateAdvancedPolicyRequest
+     * @return CreateAdvancedPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateAdvancedPolicyResponse> createAdvancedPolicy(CreateAdvancedPolicyRequest request) {
         try {
@@ -92,16 +125,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>PolarDB for MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p>For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98819.html">Download the backup files of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96774.html">Download the backup files of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2627635.html">Download the backup files of a PolarDB for MySQL cluster</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateDownload  CreateDownloadRequest
+     * @return CreateDownloadResponse
      */
     @Override
     public CompletableFuture<CreateDownloadResponse> createDownload(CreateDownloadRequest request) {
@@ -118,8 +158,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
+     * <b>description</b> :
+     * <p>This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.</p>
+     * 
+     * @param request the request parameters of DeleteSandboxInstance  DeleteSandboxInstanceRequest
+     * @return DeleteSandboxInstanceResponse
      */
     @Override
     public CompletableFuture<DeleteSandboxInstanceResponse> deleteSandboxInstance(DeleteSandboxInstanceRequest request) {
@@ -135,6 +178,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>PolarDB for MySQL</p>
+     * <blockquote>
+     * <p> This API operation is available only to specific customers. If you want to call this API operation, join the Database Backup (DBS) DingTalk group (ID: 35585947) for customer consultation to request permissions.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/88172.html">Back up data of PolarDB for MySQL</a></p>
+     * 
+     * @param request the request parameters of DescribeBackupDataList  DescribeBackupDataListRequest
+     * @return DescribeBackupDataListResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupDataListResponse> describeBackupDataList(DescribeBackupDataListRequest request) {
         try {
@@ -149,6 +205,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>PolarDB for MySQL</p>
+     * <blockquote>
+     * <p> The API operation is available only to specific customers. If you want to call this API operation, request permissions by joining the Database Backup (DBS) DingTalk group (ID 35585947) for customer consultation.</p>
+     * </blockquote>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/280422.html">Topics related to backup policies of PolarDB for MySQL instances</a></p>
+     * 
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -163,6 +232,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBakDataSourceStorageAccessInfo  DescribeBakDataSourceStorageAccessInfoRequest
+     * @return DescribeBakDataSourceStorageAccessInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeBakDataSourceStorageAccessInfoResponse> describeBakDataSourceStorageAccessInfo(DescribeBakDataSourceStorageAccessInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBakDataSourceStorageAccessInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBakDataSourceStorageAccessInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBakDataSourceStorageAccessInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCostInfoByDbsInstance  DescribeCostInfoByDbsInstanceRequest
+     * @return DescribeCostInfoByDbsInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCostInfoByDbsInstanceResponse> describeCostInfoByDbsInstance(DescribeCostInfoByDbsInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCostInfoByDbsInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCostInfoByDbsInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCostInfoByDbsInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeDBTablesRecoveryBackupSet  DescribeDBTablesRecoveryBackupSetRequest
+     * @return DescribeDBTablesRecoveryBackupSetResponse
+     */
     @Override
     public CompletableFuture<DescribeDBTablesRecoveryBackupSetResponse> describeDBTablesRecoveryBackupSet(DescribeDBTablesRecoveryBackupSetRequest request) {
         try {
@@ -177,6 +286,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBTablesRecoveryState  DescribeDBTablesRecoveryStateRequest
+     * @return DescribeDBTablesRecoveryStateResponse
+     */
     @Override
     public CompletableFuture<DescribeDBTablesRecoveryStateResponse> describeDBTablesRecoveryState(DescribeDBTablesRecoveryStateRequest request) {
         try {
@@ -191,6 +304,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDBTablesRecoveryTimeRange  DescribeDBTablesRecoveryTimeRangeRequest
+     * @return DescribeDBTablesRecoveryTimeRangeResponse
+     */
     @Override
     public CompletableFuture<DescribeDBTablesRecoveryTimeRangeResponse> describeDBTablesRecoveryTimeRange(DescribeDBTablesRecoveryTimeRangeRequest request) {
         try {
@@ -206,15 +323,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL that uses Enterprise SSDs (ESSDs)</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>PolarDB for MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98819.html">Download the backup files of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96774.html">Download the backup files of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2627635.html">Download the backup files of a PolarDB for MySQL cluster</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDownloadBackupSetStorageInfo  DescribeDownloadBackupSetStorageInfoRequest
+     * @return DescribeDownloadBackupSetStorageInfoResponse
      */
     @Override
     public CompletableFuture<DescribeDownloadBackupSetStorageInfoResponse> describeDownloadBackupSetStorageInfo(DescribeDownloadBackupSetStorageInfoRequest request) {
@@ -231,16 +355,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>PolarDB for MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <p>You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98819.html">Download the backup files of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96774.html">Download the backup files of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2627635.html">Download the backup files of a PolarDB for MySQL cluster</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDownloadSupport  DescribeDownloadSupportRequest
+     * @return DescribeDownloadSupportResponse
      */
     @Override
     public CompletableFuture<DescribeDownloadSupportResponse> describeDownloadSupport(DescribeDownloadSupportRequest request) {
@@ -257,15 +388,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### [](#)Supported database engines
-      * *   ApsaraDB RDS for MySQL
-      * *   ApsaraDB RDS for PostgreSQL
-      * *   PolarDB for MySQL
-      * ### [](#)References
-      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
-      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
-      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
-      *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>PolarDB for MySQL</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/98819.html">Download the backup files of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96774.html">Download the backup files of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2627635.html">Download the backup files of a PolarDB for MySQL cluster</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeDownloadTask  DescribeDownloadTaskRequest
+     * @return DescribeDownloadTaskResponse
      */
     @Override
     public CompletableFuture<DescribeDownloadTaskResponse> describeDownloadTask(DescribeDownloadTaskRequest request) {
@@ -282,8 +420,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see <a href="https://help.aliyun.com/document_detail/203154.html">Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/185577.html">Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database</a>. This operation is available only for the Database Backup (DBS) API of the 2021-01-01 version.</p>
+     * 
+     * @param request the request parameters of DescribeSandboxBackupSets  DescribeSandboxBackupSetsRequest
+     * @return DescribeSandboxBackupSetsResponse
      */
     @Override
     public CompletableFuture<DescribeSandboxBackupSetsResponse> describeSandboxBackupSets(DescribeSandboxBackupSetsRequest request) {
@@ -300,8 +441,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
+     * <b>description</b> :
+     * <p>This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.</p>
+     * 
+     * @param request the request parameters of DescribeSandboxInstances  DescribeSandboxInstancesRequest
+     * @return DescribeSandboxInstancesResponse
      */
     @Override
     public CompletableFuture<DescribeSandboxInstancesResponse> describeSandboxInstances(DescribeSandboxInstancesRequest request) {
@@ -318,8 +462,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see <a href="https://help.aliyun.com/document_detail/203154.html">Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/185577.html">Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database</a>. This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.</p>
+     * 
+     * @param request the request parameters of DescribeSandboxRecoveryTime  DescribeSandboxRecoveryTimeRequest
+     * @return DescribeSandboxRecoveryTimeResponse
      */
     @Override
     public CompletableFuture<DescribeSandboxRecoveryTimeResponse> describeSandboxRecoveryTime(DescribeSandboxRecoveryTimeRequest request) {
@@ -335,6 +482,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <p>PolarDB for MySQL</p>
+     * <blockquote>
+     * <p> This API operation is available only to specific customers. If you want to call this API operation, join the Database Backup (DBS) DingTalk group (ID 35585947) for customer consultation to request permissions.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -349,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDBTablesRecoveryState  ModifyDBTablesRecoveryStateRequest
+     * @return ModifyDBTablesRecoveryStateResponse
+     */
     @Override
     public CompletableFuture<ModifyDBTablesRecoveryStateResponse> modifyDBTablesRecoveryState(ModifyDBTablesRecoveryStateRequest request) {
         try {
@@ -363,6 +525,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryDownloadTask  RetryDownloadTaskRequest
+     * @return RetryDownloadTaskResponse
+     */
+    @Override
+    public CompletableFuture<RetryDownloadTaskResponse> retryDownloadTask(RetryDownloadTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetryDownloadTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryDownloadTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryDownloadTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SupportDBTableRecovery  SupportDBTableRecoveryRequest
+     * @return SupportDBTableRecoveryResponse
+     */
     @Override
     public CompletableFuture<SupportDBTableRecoveryResponse> supportDBTableRecovery(SupportDBTableRecoveryRequest request) {
         try {

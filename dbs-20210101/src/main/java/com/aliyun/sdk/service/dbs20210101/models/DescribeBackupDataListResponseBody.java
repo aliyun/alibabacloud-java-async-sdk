@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDataListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupDataListResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
 
     public static DescribeBackupDataListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupDataListResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,7 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +151,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request.Forbidden</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +162,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +173,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +184,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A5FFD0-7F46-5A7D-9DFE-6A376B4E2A28</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +195,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,6 +215,12 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDataListResponseBody</p>
+     */
     public static class PolarSnapshot extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DumpId")
         private Long dumpId;
@@ -232,8 +283,21 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             private String expectExpireTime; 
             private String expectExpireType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolarSnapshot model) {
+                this.dumpId = model.dumpId;
+                this.dumpSize = model.dumpSize;
+                this.expectExpireTime = model.expectExpireTime;
+                this.expectExpireType = model.expectExpireType;
+            } 
+
             /**
-             * DumpId.
+             * <p>The dump backup ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc****</p>
              */
             public Builder dumpId(Long dumpId) {
                 this.dumpId = dumpId;
@@ -241,7 +305,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * DumpSize.
+             * <p>The size of the dump backup. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25669140589</p>
              */
             public Builder dumpSize(Long dumpSize) {
                 this.dumpSize = dumpSize;
@@ -249,7 +316,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectExpireTime.
+             * <p>The time when the backup set expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-19T05:00:49Z</p>
              */
             public Builder expectExpireTime(String expectExpireTime) {
                 this.expectExpireTime = expectExpireTime;
@@ -257,7 +327,15 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * expectExpireType.
+             * <p>Indicates whether the backup set expires. Valid values:</p>
+             * <ul>
+             * <li>NEVER: The backup set does not expire.</li>
+             * <li>EXPIRED: The backup set expired.</li>
+             * <li>DELAY: The backup set expires after a specific period of time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DELAY</p>
              */
             public Builder expectExpireType(String expectExpireType) {
                 this.expectExpireType = expectExpireType;
@@ -271,6 +349,12 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDataListResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
@@ -573,8 +657,44 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             private PolarSnapshot polarSnapshot; 
             private Integer supportDeletion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.backupDownloadURL = model.backupDownloadURL;
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
+                this.backupLocation = model.backupLocation;
+                this.backupMethod = model.backupMethod;
+                this.backupMode = model.backupMode;
+                this.backupName = model.backupName;
+                this.backupScale = model.backupScale;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.checksum = model.checksum;
+                this.consistentTime = model.consistentTime;
+                this.encryption = model.encryption;
+                this.engine = model.engine;
+                this.engineVersion = model.engineVersion;
+                this.expectExpireTime = model.expectExpireTime;
+                this.expectExpireType = model.expectExpireType;
+                this.instanceName = model.instanceName;
+                this.isAvail = model.isAvail;
+                this.polarSnapshot = model.polarSnapshot;
+                this.supportDeletion = model.supportDeletion;
+            } 
+
             /**
-             * BackupDownloadURL.
+             * <p>The URL that is used to download the backup set over the Internet.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of BackupMethod is <strong>Physical</strong> or <strong>Logical</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.com/">http://oss.com/</a>****</p>
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -582,7 +702,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEndTime.
+             * <p>The end time of the backup. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-17T17:00:32Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -590,7 +713,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>213088****</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -598,7 +724,13 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupIntranetDownloadURL.
+             * <p>The URL that is used to download the backup set over the internal network.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of BackupMethod is <strong>Physical</strong> or <strong>Logical</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.com/">http://oss.com/</a>****</p>
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -606,7 +738,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLocation.
+             * <p>The storage path of backup files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic</p>
              */
             public Builder backupLocation(String backupLocation) {
                 this.backupLocation = backupLocation;
@@ -614,7 +749,15 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * <p>The backup method. Valid values:</p>
+             * <ul>
+             * <li><strong>Physical</strong></li>
+             * <li><strong>Logical</strong></li>
+             * <li><strong>Snapshot</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Snapshot</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -622,7 +765,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Automated</strong></li>
+             * <li><strong>Manual</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Automated</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -630,7 +780,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupName.
+             * <p>The name of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic_backup</p>
              */
             public Builder backupName(String backupName) {
                 this.backupName = backupName;
@@ -638,7 +791,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupScale.
+             * <p>The backup scale. Valid values:</p>
+             * <ul>
+             * <li><strong>DBInstance</strong></li>
+             * <li><strong>DBTable</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DBInstance</p>
              */
             public Builder backupScale(String backupScale) {
                 this.backupScale = backupScale;
@@ -646,7 +806,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * <p>The size of the backup set. Unit: byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25669140480</p>
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -654,7 +817,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>The start time of the backup. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-17T17:00:16Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -662,7 +828,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The status of the backup set. Valid values:</p>
+             * <ul>
+             * <li><strong>OK</strong>: The backup succeeded.</li>
+             * <li><strong>ERROR</strong>: The backup failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -670,7 +843,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>FullBackup</strong></li>
+             * <li><strong>IncrementBackup</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -678,7 +858,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * Checksum.
+             * <p>The checksum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84a4c16431f969712e6895992719****</p>
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -686,7 +869,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * <p>The snapshot checkpoint time. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1713373221</p>
              */
             public Builder consistentTime(Long consistentTime) {
                 this.consistentTime = consistentTime;
@@ -694,7 +880,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * Encryption.
+             * <p>The information about the encryption.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>psk2</p>
              */
             public Builder encryption(String encryption) {
                 this.encryption = encryption;
@@ -702,7 +891,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The type of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_mysql</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -710,7 +902,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -718,7 +913,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectExpireTime.
+             * <p>The time when the backup set expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-19T05:00:49Z</p>
              */
             public Builder expectExpireTime(String expectExpireTime) {
                 this.expectExpireTime = expectExpireTime;
@@ -726,7 +924,15 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectExpireType.
+             * <p>Indicates whether the backup set expires. Valid values:</p>
+             * <ul>
+             * <li>NEVER: The backup set does not expire.</li>
+             * <li>EXPIRED: The backup set expired.</li>
+             * <li>DELAY: The backup set expires after a specific period of time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DELAY</p>
              */
             public Builder expectExpireType(String expectExpireType) {
                 this.expectExpireType = expectExpireType;
@@ -734,7 +940,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-2ze3nrr64c5******</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -742,7 +951,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvail.
+             * <p>Indicates whether the backup set is available. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The backup set is available.</li>
+             * <li><strong>0</strong>: The backup set is unavailable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -750,7 +966,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * PolarSnapshot.
+             * <p>The information about the PolarDB level-2 dump.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the level-2 dump feature is enabled for the PolarDB for MySQL cluster and the level-1 backup is dumped.</p>
+             * </blockquote>
              */
             public Builder polarSnapshot(PolarSnapshot polarSnapshot) {
                 this.polarSnapshot = polarSnapshot;
@@ -758,7 +977,14 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDeletion.
+             * <p>Indicates whether the backup set can be deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The backup set can be deleted.</li>
+             * <li><strong>1</strong>: The backup set cannot be deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder supportDeletion(Integer supportDeletion) {
                 this.supportDeletion = supportDeletion;
@@ -772,9 +998,15 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupDataListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupDataListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
@@ -811,7 +1043,7 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -851,23 +1083,38 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private String extra; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalElements; 
             private Long totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.extra = model.extra;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalElements = model.totalElements;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * Content.
+             * <p>The information about the task.</p>
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
 
             /**
-             * Extra.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -875,7 +1122,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -883,7 +1133,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -891,7 +1144,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * <p>The total number of backup sets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -899,7 +1155,10 @@ public class DescribeBackupDataListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

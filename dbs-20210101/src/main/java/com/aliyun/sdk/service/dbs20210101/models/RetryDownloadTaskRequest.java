@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SupportDBTableRecoveryRequest} extends {@link RequestModel}
+ * {@link RetryDownloadTaskRequest} extends {@link RequestModel}
  *
- * <p>SupportDBTableRecoveryRequest</p>
+ * <p>RetryDownloadTaskRequest</p>
  */
-public class SupportDBTableRecoveryRequest extends Request {
+public class RetryDownloadTaskRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -26,26 +26,31 @@ public class SupportDBTableRecoveryRequest extends Request {
     private String clusterName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionCode")
     private String regionCode;
 
-    private SupportDBTableRecoveryRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    private RetryDownloadTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.clusterName = builder.clusterName;
-        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
         this.regionCode = builder.regionCode;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SupportDBTableRecoveryRequest create() {
+    public static RetryDownloadTaskRequest create() {
         return builder().build();
     }
 
@@ -69,10 +74,10 @@ public class SupportDBTableRecoveryRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return instanceName
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -82,22 +87,31 @@ public class SupportDBTableRecoveryRequest extends Request {
         return this.regionCode;
     }
 
-    public static final class Builder extends Request.Builder<SupportDBTableRecoveryRequest, Builder> {
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public static final class Builder extends Request.Builder<RetryDownloadTaskRequest, Builder> {
         private String regionId; 
         private String clusterName; 
-        private String instanceId; 
+        private String instanceName; 
         private String regionCode; 
+        private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SupportDBTableRecoveryRequest request) {
+        private Builder(RetryDownloadTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.clusterName = request.clusterName;
-            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
             this.regionCode = request.regionCode;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -119,11 +133,11 @@ public class SupportDBTableRecoveryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * InstanceName.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -136,9 +150,18 @@ public class SupportDBTableRecoveryRequest extends Request {
             return this;
         }
 
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
+            return this;
+        }
+
         @Override
-        public SupportDBTableRecoveryRequest build() {
-            return new SupportDBTableRecoveryRequest(this);
+        public RetryDownloadTaskRequest build() {
+            return new RetryDownloadTaskRequest(this);
         } 
 
     } 

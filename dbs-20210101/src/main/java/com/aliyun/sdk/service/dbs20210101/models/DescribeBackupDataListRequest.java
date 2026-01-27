@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupDataListRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupDataListRequest</p>
@@ -108,7 +114,7 @@ public class DescribeBackupDataListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -286,7 +292,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213064****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -295,7 +304,15 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupMethod.
+         * <p>The backup method. Valid values:</p>
+         * <ul>
+         * <li><strong>Physical</strong></li>
+         * <li><strong>Logical</strong></li>
+         * <li><strong>Snapshot</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot</p>
          */
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
@@ -304,7 +321,14 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -313,7 +337,14 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupScale.
+         * <p>The backup scale. Valid values:</p>
+         * <ul>
+         * <li><strong>DBInstance</strong></li>
+         * <li><strong>DBTable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstance</p>
          */
         public Builder backupScale(String backupScale) {
             this.putQueryParameter("BackupScale", backupScale);
@@ -322,7 +353,14 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupStatus.
+         * <p>The status of the backup set. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The backup succeeded.</li>
+         * <li><strong>ERROR</strong>: The backup failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -331,7 +369,14 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * BackupType.
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>FullBackup</strong></li>
+         * <li><strong>IncrementBackup</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullBackup</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -340,7 +385,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * <p>This is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test****</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -349,7 +397,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The end time must be later than the start time. The time follows the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-17T17:00:32Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -358,7 +409,14 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * InstanceIsDeleted.
+         * <p>Specifies whether the cluster is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder instanceIsDeleted(Boolean instanceIsDeleted) {
             this.putQueryParameter("InstanceIsDeleted", instanceIsDeleted);
@@ -367,7 +425,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the PolarDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze3nrr64c5******</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -376,7 +437,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * InstanceRegion.
+         * <p>The region in which the original cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegion(String instanceRegion) {
             this.putQueryParameter("InstanceRegion", instanceRegion);
@@ -385,7 +449,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -394,7 +461,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -403,7 +473,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * RegionCode.
+         * <p>The region in which the backup set resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -412,7 +485,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * SceneType.
+         * <p>The type of the backup scenario. Set the value to <strong>LEVEL_1</strong>, which indicates the level-1 backup of the region in which the PolarDB for MySQL cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LEVEL_1</p>
          */
         public Builder sceneType(String sceneType) {
             this.putQueryParameter("SceneType", sceneType);
@@ -421,7 +497,10 @@ public class DescribeBackupDataListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-17T17:00:16Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

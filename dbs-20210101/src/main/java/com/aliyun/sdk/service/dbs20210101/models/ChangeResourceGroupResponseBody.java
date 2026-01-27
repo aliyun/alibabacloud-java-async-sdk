@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeResourceGroupResponseBody</p>
@@ -48,6 +54,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
 
     public static ChangeResourceGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ChangeResourceGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,11 +143,14 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the resource was successfully moved. Valid values:
-         * <p>
+         * <p>Indicates whether the resource was successfully moved. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The resource was successfully moved.</li>
+         * <li><strong>false</strong>: The resource failed to be moved.</li>
+         * </ul>
          * 
-         * *   **true**: The resource was successfully moved.
-         * *   **false**: The resource failed to be moved.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -129,7 +158,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request.Forbidden</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -137,7 +169,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM DENY</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -145,7 +180,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource group is forbidden to operate</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +191,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04EBD9F5-F06F-5302-8499-005C72*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,11 +202,14 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

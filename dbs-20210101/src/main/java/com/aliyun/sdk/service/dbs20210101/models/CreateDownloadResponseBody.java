@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDownloadResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDownloadResponseBody</p>
@@ -48,6 +54,10 @@ public class CreateDownloadResponseBody extends TeaModel {
 
     public static CreateDownloadResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class CreateDownloadResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDownloadResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The status code returned.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.ParamIsInValid</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the download task.
+         * <p>The information about the download task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +151,10 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.ParamIsInValid</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +162,10 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>formatType can not be empty</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +173,10 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>formatType can not be empty</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +184,10 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A08F908D-2C35-583F-93C1-ED80753F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +195,14 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -174,6 +215,12 @@ public class CreateDownloadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDownloadResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDownloadResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupSetTime")
         private Long backupSetTime;
@@ -344,8 +391,30 @@ public class CreateDownloadResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupSetTime = model.backupSetTime;
+                this.bakSetId = model.bakSetId;
+                this.dbList = model.dbList;
+                this.downloadStatus = model.downloadStatus;
+                this.exportDataSize = model.exportDataSize;
+                this.format = model.format;
+                this.gmtCreate = model.gmtCreate;
+                this.importDataSize = model.importDataSize;
+                this.progress = model.progress;
+                this.regionCode = model.regionCode;
+                this.targetPath = model.targetPath;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661373070000</p>
              */
             public Builder backupSetTime(Long backupSetTime) {
                 this.backupSetTime = backupSetTime;
@@ -353,7 +422,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the full backup set.
+             * <p>The ID of the full backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>146005****</p>
              */
             public Builder bakSetId(String bakSetId) {
                 this.bakSetId = bakSetId;
@@ -361,7 +433,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The database and table information that is returned if databases and tables are filtered by the download task.
+             * <p>The database and table information that is returned if databases and tables are filtered by the download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -369,17 +444,21 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the download task. Valid values:
-             * <p>
+             * <p>The state of the download task. Valid values:</p>
+             * <ul>
+             * <li>initializing: The download task was being initialized.</li>
+             * <li>queuing: The download task was queuing.</li>
+             * <li>running: The download task was running.</li>
+             * <li>failed: The download task failed.</li>
+             * <li>finished: The download task was complete.</li>
+             * <li>expired: The download task expired.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.</p>
+             * </blockquote>
              * 
-             * *   initializing: The download task was being initialized.
-             * *   queuing: The download task was queuing.
-             * *   running: The download task was running.
-             * *   failed: The download task failed.
-             * *   finished: The download task was complete.
-             * *   expired: The download task expired.
-             * 
-             * > If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.
+             * <strong>example:</strong>
+             * <p>initializing</p>
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -387,7 +466,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the downloaded data. Unit: bytes.
+             * <p>The size of the downloaded data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exportDataSize(Long exportDataSize) {
                 this.exportDataSize = exportDataSize;
@@ -395,7 +477,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The format to which the downloaded data is converted.
+             * <p>The format to which the downloaded data is converted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSV</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -403,7 +488,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the download task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the download task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661940917570</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -411,7 +499,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the processed data. Unit: bytes.
+             * <p>The size of the processed data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder importDataSize(Long importDataSize) {
                 this.importDataSize = importDataSize;
@@ -419,10 +510,13 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been downloaded and the total number of tables to be downloaded.
-             * <p>
+             * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
+             * <blockquote>
+             * <p>If the task is in the preparation stage, 0/0 is returned.</p>
+             * </blockquote>
              * 
-             * > If the task is in the preparation stage, 0/0 is returned.
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -430,7 +524,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -438,10 +535,13 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The destination path to which the backup set is downloaded.
-             * <p>
+             * <p>The destination path to which the backup set is downloaded.</p>
+             * <blockquote>
+             * <p> This parameter is returned if the value of <strong>TargetType is OSS</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned if the value of **TargetType is OSS**.
+             * <strong>example:</strong>
+             * <p>test_db/path</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -449,7 +549,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination to which the backup set is downloaded.
+             * <p>The type of the destination to which the backup set is downloaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -457,7 +560,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the download task.
+             * <p>The ID of the download task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt-qxnsfq5s****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSandboxInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSandboxInstancesResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
 
     public static DescribeSandboxInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSandboxInstancesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,20 +143,23 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
-         * <p>
+         * <p>The response parameters.</p>
+         * <ul>
+         * <li><strong>connectionString</strong>: the connection string of the sandbox instance, in the format of IP address:Port number. This parameter indicates the endpoint of the sandbox instance if the value of the SandboxType parameter is <strong>Sandbox</strong>. This parameter indicates the Network File System (NFS) mount address if the value of the SandboxType parameter is <strong>NFS</strong>.</li>
+         * <li><strong>restoreSeconds</strong>: the time required to create the sandbox instance. Unit: seconds.</li>
+         * <li><strong>restoreTime</strong>: the point in time to which the sandbox instance is restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</li>
+         * <li><strong>instanceId</strong>: the ID of the sandbox instance.</li>
+         * <li><strong>backupSetId</strong>: the ID of the backup set.</li>
+         * <li><strong>createTime</strong>: the point in time when the sandbox instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</li>
+         * <li><strong>backupPlanId</strong>: the ID of the backup schedule.</li>
+         * <li><strong>vpcId</strong>: the ID of the virtual private cloud (VPC).</li>
+         * <li><strong>vpcSwitchId</strong>: the ID of the VSwitch.</li>
+         * <li><strong>sandboxSpecification</strong>: the specifications of the sandbox instance.</li>
+         * <li><strong>status</strong>: the status of the sandbox instance. Valid values: <strong>running</strong>, <strong>check_pass</strong>, and <strong>stop</strong>.</li>
+         * </ul>
          * 
-         * *   **connectionString**: the connection string of the sandbox instance, in the format of IP address:Port number. This parameter indicates the endpoint of the sandbox instance if the value of the SandboxType parameter is **Sandbox**. This parameter indicates the Network File System (NFS) mount address if the value of the SandboxType parameter is **NFS**.
-         * *   **restoreSeconds**: the time required to create the sandbox instance. Unit: seconds.
-         * *   **restoreTime**: the point in time to which the sandbox instance is restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
-         * *   **instanceId**: the ID of the sandbox instance.
-         * *   **backupSetId**: the ID of the backup set.
-         * *   **createTime**: the point in time when the sandbox instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
-         * *   **backupPlanId**: the ID of the backup schedule.
-         * *   **vpcId**: the ID of the virtual private cloud (VPC).
-         * *   **vpcSwitchId**: the ID of the VSwitch.
-         * *   **sandboxSpecification**: the specifications of the sandbox instance.
-         * *   **status**: the status of the sandbox instance. Valid values: **running**, **check_pass**, and **stop**.
+         * <strong>example:</strong>
+         * <p>{     &quot;number&quot;: 1,     &quot;size&quot;: 1,     &quot;content&quot;: [       {         &quot;connectionString&quot;: &quot;172.26.178.229:3306&quot;,         &quot;restoreSeconds&quot;: 15,         &quot;restoreTime&quot;: &quot;2021-08-11T07:26:24Z&quot;,         &quot;instanceId&quot;: &quot;1jxxxxx9xxxms&quot;,         &quot;backupSetId&quot;: &quot;1hxxxx8xxxxxa_20210811152624&quot;,         &quot;createTime&quot;: &quot;2021-08-12T07:40:29Z&quot;,         &quot;backupPlanId&quot;: &quot;1hxxxx8xxxxxa&quot;,         &quot;vpcId&quot;: &quot;vpc-bp1dxxxxxjy0xxxxx1xxp&quot;,         &quot;sandboxSpecification&quot;: &quot;MYSQL_1C_1M_SD&quot;,         &quot;status&quot;: &quot;running&quot;,         &quot;vpcSwitchId&quot;: &quot;vsw-bp1bxxxxxumxxxxxwxx2w&quot;       }     ],     &quot;totalElements&quot;: 1   }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -138,7 +167,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -146,7 +178,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -154,7 +189,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +200,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +211,10 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

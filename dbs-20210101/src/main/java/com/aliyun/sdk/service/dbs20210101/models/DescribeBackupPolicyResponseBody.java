@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static DescribeBackupPolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the backup policy.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +151,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +162,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +173,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceName can not be empty.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +184,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54A63B3B-AA10-1CC3-A6BB-6CCE98D19628</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +195,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,6 +215,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class AdvanceDataPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoCreated")
         private Boolean autoCreated;
@@ -210,8 +261,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SrcType")
         private String srcType;
 
-        @com.aliyun.core.annotation.NameInMap("StrategyId")
-        private String strategyId;
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
+        private String storageClass;
 
         private AdvanceDataPolicies(Builder builder) {
             this.autoCreated = builder.autoCreated;
@@ -227,7 +278,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.retentionValue = builder.retentionValue;
             this.srcRegion = builder.srcRegion;
             this.srcType = builder.srcType;
-            this.strategyId = builder.strategyId;
+            this.storageClass = builder.storageClass;
         }
 
         public static Builder builder() {
@@ -330,10 +381,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * @return strategyId
+         * @return storageClass
          */
-        public String getStrategyId() {
-            return this.strategyId;
+        public String getStorageClass() {
+            return this.storageClass;
         }
 
         public static final class Builder {
@@ -350,10 +401,37 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String retentionValue; 
             private String srcRegion; 
             private String srcType; 
-            private String strategyId; 
+            private String storageClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvanceDataPolicies model) {
+                this.autoCreated = model.autoCreated;
+                this.bakType = model.bakType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.dumpAction = model.dumpAction;
+                this.filterKey = model.filterKey;
+                this.filterType = model.filterType;
+                this.filterValue = model.filterValue;
+                this.policyId = model.policyId;
+                this.retentionType = model.retentionType;
+                this.retentionValue = model.retentionValue;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+                this.storageClass = model.storageClass;
+            } 
 
             /**
-             * AutoCreated.
+             * <p>Indicates whether the backup policy is generated by the system. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The backup policy is generated by the system.</li>
+             * <li><strong>false</strong>: The backup policy is a custom one.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreated(Boolean autoCreated) {
                 this.autoCreated = autoCreated;
@@ -361,7 +439,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BakType.
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>F</strong>: full backup</li>
+             * <li><strong>L</strong>: log backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>F</p>
              */
             public Builder bakType(String bakType) {
                 this.bakType = bakType;
@@ -369,7 +454,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestRegion.
+             * <p>The region in which the backup files are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder destRegion(String destRegion) {
                 this.destRegion = destRegion;
@@ -377,7 +465,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestType.
+             * <p>The storage method of backup files. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder destType(String destType) {
                 this.destType = destType;
@@ -385,7 +482,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DumpAction.
+             * <p>The information about the dump policy. Valid values:</p>
+             * <ul>
+             * <li><strong>copy</strong>: The backup data is copied from the data source to the destination.</li>
+             * <li><strong>move</strong>: The backup data is moved from the data source to the destination.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>copy</p>
              */
             public Builder dumpAction(String dumpAction) {
                 this.dumpAction = dumpAction;
@@ -393,7 +497,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FilterKey.
+             * <p>The scheduling frequency. Valid values:</p>
+             * <ul>
+             * <li><strong>dayOfWeek</strong>: scheduling by week</li>
+             * <li><strong>dayOfMonth</strong>: scheduling by month</li>
+             * <li><strong>dayOfYear</strong>: scheduling by year</li>
+             * <li><strong>backupInterval</strong>: scheduling at a specific interval</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of FilterType is <strong>crontab</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dayOfWeek</p>
              */
             public Builder filterKey(String filterKey) {
                 this.filterKey = filterKey;
@@ -401,7 +517,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FilterType.
+             * <p>The scheduling mode of the advanced backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>crontab</strong>: periodic scheduling</li>
+             * <li><strong>event</strong>: event-based scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
              */
             public Builder filterType(String filterType) {
                 this.filterType = filterType;
@@ -409,7 +532,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FilterValue.
+             * <p>The day of a week on which you want to back up data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,4,5,6,7</p>
              */
             public Builder filterValue(String filterValue) {
                 this.filterValue = filterValue;
@@ -417,7 +543,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the advanced backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71930ac2e9f15e41615e10627c******</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -425,7 +554,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RetentionType.
+             * <p>The retention type of backup sets. Valid values:</p>
+             * <ul>
+             * <li><strong>never</strong>: Backup sets never expire.</li>
+             * <li><strong>delay</strong>: Backup sets are retained for a specific number of days.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delay</p>
              */
             public Builder retentionType(String retentionType) {
                 this.retentionType = retentionType;
@@ -433,7 +569,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RetentionValue.
+             * <p>The validity period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retentionValue(String retentionValue) {
                 this.retentionValue = retentionValue;
@@ -441,7 +580,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SrcRegion.
+             * <p>The region in which the data source of the backup policy resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -449,7 +591,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SrcType.
+             * <p>The type of the data source of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>db</p>
              */
             public Builder srcType(String srcType) {
                 this.srcType = srcType;
@@ -457,10 +608,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * StorageClass.
              */
-            public Builder strategyId(String strategyId) {
-                this.strategyId = strategyId;
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
                 return this;
             }
 
@@ -471,6 +622,398 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
+    public static class AdvanceIncPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoCreated")
+        private Boolean autoCreated;
+
+        @com.aliyun.core.annotation.NameInMap("BakType")
+        private String bakType;
+
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
+        private String destRegion;
+
+        @com.aliyun.core.annotation.NameInMap("DestType")
+        private String destType;
+
+        @com.aliyun.core.annotation.NameInMap("DumpAction")
+        private String dumpAction;
+
+        @com.aliyun.core.annotation.NameInMap("FilterKey")
+        private String filterKey;
+
+        @com.aliyun.core.annotation.NameInMap("FilterType")
+        private String filterType;
+
+        @com.aliyun.core.annotation.NameInMap("FilterValue")
+        private String filterValue;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
+        @com.aliyun.core.annotation.NameInMap("RetentionType")
+        private String retentionType;
+
+        @com.aliyun.core.annotation.NameInMap("RetentionValue")
+        private String retentionValue;
+
+        @com.aliyun.core.annotation.NameInMap("SrcRegion")
+        private String srcRegion;
+
+        @com.aliyun.core.annotation.NameInMap("SrcType")
+        private String srcType;
+
+        private AdvanceIncPolicies(Builder builder) {
+            this.autoCreated = builder.autoCreated;
+            this.bakType = builder.bakType;
+            this.destRegion = builder.destRegion;
+            this.destType = builder.destType;
+            this.dumpAction = builder.dumpAction;
+            this.filterKey = builder.filterKey;
+            this.filterType = builder.filterType;
+            this.filterValue = builder.filterValue;
+            this.policyId = builder.policyId;
+            this.retentionType = builder.retentionType;
+            this.retentionValue = builder.retentionValue;
+            this.srcRegion = builder.srcRegion;
+            this.srcType = builder.srcType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdvanceIncPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoCreated
+         */
+        public Boolean getAutoCreated() {
+            return this.autoCreated;
+        }
+
+        /**
+         * @return bakType
+         */
+        public String getBakType() {
+            return this.bakType;
+        }
+
+        /**
+         * @return destRegion
+         */
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        /**
+         * @return destType
+         */
+        public String getDestType() {
+            return this.destType;
+        }
+
+        /**
+         * @return dumpAction
+         */
+        public String getDumpAction() {
+            return this.dumpAction;
+        }
+
+        /**
+         * @return filterKey
+         */
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        /**
+         * @return filterType
+         */
+        public String getFilterType() {
+            return this.filterType;
+        }
+
+        /**
+         * @return filterValue
+         */
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
+         * @return retentionType
+         */
+        public String getRetentionType() {
+            return this.retentionType;
+        }
+
+        /**
+         * @return retentionValue
+         */
+        public String getRetentionValue() {
+            return this.retentionValue;
+        }
+
+        /**
+         * @return srcRegion
+         */
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        /**
+         * @return srcType
+         */
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+        public static final class Builder {
+            private Boolean autoCreated; 
+            private String bakType; 
+            private String destRegion; 
+            private String destType; 
+            private String dumpAction; 
+            private String filterKey; 
+            private String filterType; 
+            private String filterValue; 
+            private String policyId; 
+            private String retentionType; 
+            private String retentionValue; 
+            private String srcRegion; 
+            private String srcType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvanceIncPolicies model) {
+                this.autoCreated = model.autoCreated;
+                this.bakType = model.bakType;
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.dumpAction = model.dumpAction;
+                this.filterKey = model.filterKey;
+                this.filterType = model.filterType;
+                this.filterValue = model.filterValue;
+                this.policyId = model.policyId;
+                this.retentionType = model.retentionType;
+                this.retentionValue = model.retentionValue;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+            } 
+
+            /**
+             * <p>Indicates whether the backup policy is generated by the system. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The backup policy is generated by the system.</li>
+             * <li><strong>false</strong>: The backup policy is a custom one.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder autoCreated(Boolean autoCreated) {
+                this.autoCreated = autoCreated;
+                return this;
+            }
+
+            /**
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>F</strong>: full backup</li>
+             * <li><strong>L</strong>: log backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>F</p>
+             */
+            public Builder bakType(String bakType) {
+                this.bakType = bakType;
+                return this;
+            }
+
+            /**
+             * <p>The region in which the backup files are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
+             */
+            public Builder destRegion(String destRegion) {
+                this.destRegion = destRegion;
+                return this;
+            }
+
+            /**
+             * <p>The storage method of backup files. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
+             */
+            public Builder destType(String destType) {
+                this.destType = destType;
+                return this;
+            }
+
+            /**
+             * <p>The information about the dump policy. Valid values:</p>
+             * <ul>
+             * <li><strong>copy</strong>: The backup data is copied from the data source to the destination.</li>
+             * <li><strong>move</strong>: The backup data is moved from the data source to the destination.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>copy</p>
+             */
+            public Builder dumpAction(String dumpAction) {
+                this.dumpAction = dumpAction;
+                return this;
+            }
+
+            /**
+             * <p>The scheduling frequency. Valid values:</p>
+             * <ul>
+             * <li><strong>dayOfWeek</strong>: scheduling by week</li>
+             * <li><strong>dayOfMonth</strong>: scheduling by month</li>
+             * <li><strong>dayOfYear</strong>: scheduling by year</li>
+             * <li><strong>backupInterval</strong>: scheduling at a specific interval</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of FilterType is <strong>crontab</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dayOfWeek</p>
+             */
+            public Builder filterKey(String filterKey) {
+                this.filterKey = filterKey;
+                return this;
+            }
+
+            /**
+             * <p>The scheduling mode of the advanced backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>crontab</strong>: periodic scheduling</li>
+             * <li><strong>event</strong>: event-based scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
+             */
+            public Builder filterType(String filterType) {
+                this.filterType = filterType;
+                return this;
+            }
+
+            /**
+             * <p>The day of a week on which you want to back up data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,4,5,6,7</p>
+             */
+            public Builder filterValue(String filterValue) {
+                this.filterValue = filterValue;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the advanced backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71930ac2e9f15e41615e10627c******</p>
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * <p>The retention type of backup sets. Valid values:</p>
+             * <ul>
+             * <li><strong>never</strong>: Backup sets never expire.</li>
+             * <li><strong>delay</strong>: Backup sets are retained for a specific number of days.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delay</p>
+             */
+            public Builder retentionType(String retentionType) {
+                this.retentionType = retentionType;
+                return this;
+            }
+
+            /**
+             * <p>The validity period, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
+             */
+            public Builder retentionValue(String retentionValue) {
+                this.retentionValue = retentionValue;
+                return this;
+            }
+
+            /**
+             * <p>The region in which the data source of the backup policy resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
+             */
+            public Builder srcRegion(String srcRegion) {
+                this.srcRegion = srcRegion;
+                return this;
+            }
+
+            /**
+             * <p>The type of the data source of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>db</p>
+             */
+            public Builder srcType(String srcType) {
+                this.srcType = srcType;
+                return this;
+            }
+
+            public AdvanceIncPolicies build() {
+                return new AdvanceIncPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class AdvanceLogPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestRegion")
         private String destRegion;
@@ -479,7 +1022,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String destType;
 
         @com.aliyun.core.annotation.NameInMap("EnableLogBackup")
-        private Boolean enableLogBackup;
+        private Long enableLogBackup;
+
+        @com.aliyun.core.annotation.NameInMap("FilterKey")
+        private String filterKey;
+
+        @com.aliyun.core.annotation.NameInMap("FilterType")
+        private String filterType;
+
+        @com.aliyun.core.annotation.NameInMap("FilterValue")
+        private String filterValue;
 
         @com.aliyun.core.annotation.NameInMap("LogRetentionType")
         private String logRetentionType;
@@ -487,24 +1039,27 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogRetentionValue")
         private String logRetentionValue;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
+        private String policyId;
+
         @com.aliyun.core.annotation.NameInMap("SrcRegion")
         private String srcRegion;
 
         @com.aliyun.core.annotation.NameInMap("SrcType")
         private String srcType;
 
-        @com.aliyun.core.annotation.NameInMap("StrategyId")
-        private String strategyId;
-
         private AdvanceLogPolicies(Builder builder) {
             this.destRegion = builder.destRegion;
             this.destType = builder.destType;
             this.enableLogBackup = builder.enableLogBackup;
+            this.filterKey = builder.filterKey;
+            this.filterType = builder.filterType;
+            this.filterValue = builder.filterValue;
             this.logRetentionType = builder.logRetentionType;
             this.logRetentionValue = builder.logRetentionValue;
+            this.policyId = builder.policyId;
             this.srcRegion = builder.srcRegion;
             this.srcType = builder.srcType;
-            this.strategyId = builder.strategyId;
         }
 
         public static Builder builder() {
@@ -532,8 +1087,29 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * @return enableLogBackup
          */
-        public Boolean getEnableLogBackup() {
+        public Long getEnableLogBackup() {
             return this.enableLogBackup;
+        }
+
+        /**
+         * @return filterKey
+         */
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        /**
+         * @return filterType
+         */
+        public String getFilterType() {
+            return this.filterType;
+        }
+
+        /**
+         * @return filterValue
+         */
+        public String getFilterValue() {
+            return this.filterValue;
         }
 
         /**
@@ -551,6 +1127,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyId
+         */
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        /**
          * @return srcRegion
          */
         public String getSrcRegion() {
@@ -564,25 +1147,41 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             return this.srcType;
         }
 
-        /**
-         * @return strategyId
-         */
-        public String getStrategyId() {
-            return this.strategyId;
-        }
-
         public static final class Builder {
             private String destRegion; 
             private String destType; 
-            private Boolean enableLogBackup; 
+            private Long enableLogBackup; 
+            private String filterKey; 
+            private String filterType; 
+            private String filterValue; 
             private String logRetentionType; 
             private String logRetentionValue; 
+            private String policyId; 
             private String srcRegion; 
             private String srcType; 
-            private String strategyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvanceLogPolicies model) {
+                this.destRegion = model.destRegion;
+                this.destType = model.destType;
+                this.enableLogBackup = model.enableLogBackup;
+                this.filterKey = model.filterKey;
+                this.filterType = model.filterType;
+                this.filterValue = model.filterValue;
+                this.logRetentionType = model.logRetentionType;
+                this.logRetentionValue = model.logRetentionValue;
+                this.policyId = model.policyId;
+                this.srcRegion = model.srcRegion;
+                this.srcType = model.srcType;
+            } 
 
             /**
-             * DestRegion.
+             * <p>The region in which the backup files are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder destRegion(String destRegion) {
                 this.destRegion = destRegion;
@@ -590,7 +1189,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DestType.
+             * <p>The storage method of backup files. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder destType(String destType) {
                 this.destType = destType;
@@ -598,15 +1206,71 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EnableLogBackup.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder enableLogBackup(Boolean enableLogBackup) {
+            public Builder enableLogBackup(Long enableLogBackup) {
                 this.enableLogBackup = enableLogBackup;
                 return this;
             }
 
             /**
-             * LogRetentionType.
+             * <p>The scheduling frequency. Valid values:</p>
+             * <ul>
+             * <li><strong>dayOfWeek</strong>: scheduling by week</li>
+             * <li><strong>dayOfMonth</strong>: scheduling by month</li>
+             * <li><strong>dayOfYear</strong>: scheduling by year</li>
+             * <li><strong>backupInterval</strong>: scheduling at a specific interval</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of FilterType is <strong>crontab</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dayOfWeek</p>
+             */
+            public Builder filterKey(String filterKey) {
+                this.filterKey = filterKey;
+                return this;
+            }
+
+            /**
+             * <p>The scheduling mode of the advanced backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>crontab</strong>: periodic scheduling</li>
+             * <li><strong>event</strong>: event-based scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
+             */
+            public Builder filterType(String filterType) {
+                this.filterType = filterType;
+                return this;
+            }
+
+            /**
+             * <p>The day of a week on which you want to back up data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,4,5,6,7</p>
+             */
+            public Builder filterValue(String filterValue) {
+                this.filterValue = filterValue;
+                return this;
+            }
+
+            /**
+             * <p>The retention type of log backups. Valid values:</p>
+             * <ul>
+             * <li><strong>never</strong>: Log backups never expire.</li>
+             * <li><strong>delay</strong>: Log backups are retained for a specific number of days.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delay</p>
              */
             public Builder logRetentionType(String logRetentionType) {
                 this.logRetentionType = logRetentionType;
@@ -614,7 +1278,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LogRetentionValue.
+             * <p>The retention period of log backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder logRetentionValue(String logRetentionValue) {
                 this.logRetentionValue = logRetentionValue;
@@ -622,7 +1289,21 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SrcRegion.
+             * <p>The backup policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6s67c7i3y8f8p72808p******</p>
+             */
+            public Builder policyId(String policyId) {
+                this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * <p>The region in which the data source of the backup policy resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -630,18 +1311,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SrcType.
+             * <p>The type of the data source of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder srcType(String srcType) {
                 this.srcType = srcType;
-                return this;
-            }
-
-            /**
-             * StrategyId.
-             */
-            public Builder strategyId(String strategyId) {
-                this.strategyId = strategyId;
                 return this;
             }
 
@@ -652,12 +1334,21 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPolicyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdvanceDataPolicies")
-        private java.util.List < AdvanceDataPolicies> advanceDataPolicies;
+        private java.util.List<AdvanceDataPolicies> advanceDataPolicies;
+
+        @com.aliyun.core.annotation.NameInMap("AdvanceIncPolicies")
+        private java.util.List<AdvanceIncPolicies> advanceIncPolicies;
 
         @com.aliyun.core.annotation.NameInMap("AdvanceLogPolicies")
-        private java.util.List < AdvanceLogPolicies> advanceLogPolicies;
+        private java.util.List<AdvanceLogPolicies> advanceLogPolicies;
 
         @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
@@ -712,6 +1403,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.advanceDataPolicies = builder.advanceDataPolicies;
+            this.advanceIncPolicies = builder.advanceIncPolicies;
             this.advanceLogPolicies = builder.advanceLogPolicies;
             this.backupMethod = builder.backupMethod;
             this.backupPriority = builder.backupPriority;
@@ -743,14 +1435,21 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         /**
          * @return advanceDataPolicies
          */
-        public java.util.List < AdvanceDataPolicies> getAdvanceDataPolicies() {
+        public java.util.List<AdvanceDataPolicies> getAdvanceDataPolicies() {
             return this.advanceDataPolicies;
+        }
+
+        /**
+         * @return advanceIncPolicies
+         */
+        public java.util.List<AdvanceIncPolicies> getAdvanceIncPolicies() {
+            return this.advanceIncPolicies;
         }
 
         /**
          * @return advanceLogPolicies
          */
-        public java.util.List < AdvanceLogPolicies> getAdvanceLogPolicies() {
+        public java.util.List<AdvanceLogPolicies> getAdvanceLogPolicies() {
             return this.advanceLogPolicies;
         }
 
@@ -874,8 +1573,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AdvanceDataPolicies> advanceDataPolicies; 
-            private java.util.List < AdvanceLogPolicies> advanceLogPolicies; 
+            private java.util.List<AdvanceDataPolicies> advanceDataPolicies; 
+            private java.util.List<AdvanceIncPolicies> advanceIncPolicies; 
+            private java.util.List<AdvanceLogPolicies> advanceLogPolicies; 
             private String backupMethod; 
             private Integer backupPriority; 
             private Integer backupRetentionPeriod; 
@@ -894,24 +1594,65 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String preferredBackupWindow; 
             private String preferredBackupWindowBegin; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.advanceDataPolicies = model.advanceDataPolicies;
+                this.advanceIncPolicies = model.advanceIncPolicies;
+                this.advanceLogPolicies = model.advanceLogPolicies;
+                this.backupMethod = model.backupMethod;
+                this.backupPriority = model.backupPriority;
+                this.backupRetentionPeriod = model.backupRetentionPeriod;
+                this.backupRetentionPolicyOnClusterDeletion = model.backupRetentionPolicyOnClusterDeletion;
+                this.category = model.category;
+                this.enableBackup = model.enableBackup;
+                this.enableIncBackup = model.enableIncBackup;
+                this.enableLogBackup = model.enableLogBackup;
+                this.highFrequencyBakInterval = model.highFrequencyBakInterval;
+                this.highSpaceUsageProtection = model.highSpaceUsageProtection;
+                this.incBackupInterval = model.incBackupInterval;
+                this.localLogRetentionSpace = model.localLogRetentionSpace;
+                this.logBackupLocalRetentionNumber = model.logBackupLocalRetentionNumber;
+                this.logBackupRetention = model.logBackupRetention;
+                this.preferredBackupDate = model.preferredBackupDate;
+                this.preferredBackupWindow = model.preferredBackupWindow;
+                this.preferredBackupWindowBegin = model.preferredBackupWindowBegin;
+            } 
+
             /**
-             * AdvanceDataPolicies.
+             * <p>The details of data backup policies.</p>
              */
-            public Builder advanceDataPolicies(java.util.List < AdvanceDataPolicies> advanceDataPolicies) {
+            public Builder advanceDataPolicies(java.util.List<AdvanceDataPolicies> advanceDataPolicies) {
                 this.advanceDataPolicies = advanceDataPolicies;
                 return this;
             }
 
             /**
-             * AdvanceLogPolicies.
+             * AdvanceIncPolicies.
              */
-            public Builder advanceLogPolicies(java.util.List < AdvanceLogPolicies> advanceLogPolicies) {
+            public Builder advanceIncPolicies(java.util.List<AdvanceIncPolicies> advanceIncPolicies) {
+                this.advanceIncPolicies = advanceIncPolicies;
+                return this;
+            }
+
+            /**
+             * <p>The details of log backup policies.</p>
+             */
+            public Builder advanceLogPolicies(java.util.List<AdvanceLogPolicies> advanceLogPolicies) {
                 this.advanceLogPolicies = advanceLogPolicies;
                 return this;
             }
 
             /**
-             * BackupMethod.
+             * <p>The method that is used to generate backup files. Valid values:</p>
+             * <ul>
+             * <li><strong>Physical</strong>: physical backup</li>
+             * <li><strong>Snapshot</strong>: snapshot backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Physical</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -919,7 +1660,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPriority.
+             * <p>Indicates whether the secondary database is preferentially backed up. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The secondary database is preferentially backed up.</li>
+             * <li><strong>2</strong>: Only the primary database is backed up.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for ApsaraDB RDS for SQL Server instances. If the instance runs a different database engine, <strong>0</strong> is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder backupPriority(Integer backupPriority) {
                 this.backupPriority = backupPriority;
@@ -927,7 +1678,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupRetentionPeriod.
+             * <p>The retention period of basic backup files. If an advanced backup policy is enabled, the value indicates the retention period of the level-1 backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
                 this.backupRetentionPeriod = backupRetentionPeriod;
@@ -935,7 +1689,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BackupRetentionPolicyOnClusterDeletion.
+             * <p>The policy that is used to retain the archived backup files if the instance is deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>NONE</strong>: No archived backup file is retained.</li>
+             * <li><strong>LATEST</strong>: Only the latest archived backup file is retained.</li>
+             * <li><strong>ALL</strong>: All archived backup files are retained.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LATEST</p>
              */
             public Builder backupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
                 this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
@@ -943,7 +1705,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>Indicates whether the second-granularity backup feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>Flash</strong>: The second-granularity backup feature is enabled.</li>
+             * <li><strong>Standard</strong>: The standard backup feature is enabled.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned only for MySQL instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -951,7 +1723,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EnableBackup.
+             * <p>Indicates whether the backup feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableBackup(Integer enableBackup) {
                 this.enableBackup = enableBackup;
@@ -959,7 +1734,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIncBackup.
+             * <p>Indicates whether the incremental backup feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableIncBackup(Integer enableIncBackup) {
                 this.enableIncBackup = enableIncBackup;
@@ -967,7 +1745,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EnableLogBackup.
+             * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The log backup feature is enabled.</li>
+             * <li><strong>0</strong>: The log backup feature is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableLogBackup(Integer enableLogBackup) {
                 this.enableLogBackup = enableLogBackup;
@@ -975,7 +1760,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HighFrequencyBakInterval.
+             * <p>The interval for high-frequency backups. Unit: minutes. For example, a value of 120 indicates that a backup is performed every two hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder highFrequencyBakInterval(Integer highFrequencyBakInterval) {
                 this.highFrequencyBakInterval = highFrequencyBakInterval;
@@ -983,7 +1771,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * HighSpaceUsageProtection.
+             * <p>Indicates whether logs are forcibly cleared if the storage usage of the instance is greater than 80% or the available storage space of the instance is smaller than 5 GB. Valid values:</p>
+             * <ul>
+             * <li><strong>Disable</strong>: Logs are not forcibly cleared.</li>
+             * <li><strong>Enable</strong>: Logs are forcibly cleared.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
                 this.highSpaceUsageProtection = highSpaceUsageProtection;
@@ -991,7 +1786,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IncBackupInterval.
+             * <p>The interval for high-frequency incremental backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder incBackupInterval(Integer incBackupInterval) {
                 this.incBackupInterval = incBackupInterval;
@@ -999,7 +1797,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LocalLogRetentionSpace.
+             * <p>The maximum storage usage that is allowed for log files on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder localLogRetentionSpace(Integer localLogRetentionSpace) {
                 this.localLogRetentionSpace = localLogRetentionSpace;
@@ -1007,7 +1808,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LogBackupLocalRetentionNumber.
+             * <p>The number of local binary log files that are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logBackupLocalRetentionNumber(String logBackupLocalRetentionNumber) {
                 this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
@@ -1015,7 +1819,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LogBackupRetention.
+             * <p>The retention period of log backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder logBackupRetention(Integer logBackupRetention) {
                 this.logBackupRetention = logBackupRetention;
@@ -1023,7 +1830,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupDate.
+             * <p>The backup cycle of a basic backup. The backup cycle is represented by a seven-digit string, which corresponds to the days of the week from Monday to Sunday. A value of 1 indicates that a basic backup is performed on that day, and a value of 0 indicates that no basic backup is performed on that day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1010101</p>
              */
             public Builder preferredBackupDate(String preferredBackupDate) {
                 this.preferredBackupDate = preferredBackupDate;
@@ -1031,7 +1841,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupWindow.
+             * <p>The time period during which a basic backup is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:00Z-24:00Z</p>
              */
             public Builder preferredBackupWindow(String preferredBackupWindow) {
                 this.preferredBackupWindow = preferredBackupWindow;
@@ -1039,7 +1852,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PreferredBackupWindowBegin.
+             * <p>The start time of a basic backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:00Z</p>
              */
             public Builder preferredBackupWindowBegin(String preferredBackupWindowBegin) {
                 this.preferredBackupWindowBegin = preferredBackupWindowBegin;

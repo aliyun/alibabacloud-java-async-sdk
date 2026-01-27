@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSandboxRecoveryTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSandboxRecoveryTimeResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
 
     public static DescribeSandboxRecoveryTimeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeSandboxRecoveryTimeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,7 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +151,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Param.NotFound</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +162,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +173,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter %s value is not valid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +184,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4F1888AC-1138-4995-B9FE-D2734F61C058</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +195,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -170,6 +211,12 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSandboxRecoveryTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSandboxRecoveryTimeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupPlanId")
         private String backupPlanId;
@@ -220,8 +267,20 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             private String recoveryBeginTime; 
             private String recoveryEndTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupPlanId = model.backupPlanId;
+                this.recoveryBeginTime = model.recoveryBeginTime;
+                this.recoveryEndTime = model.recoveryEndTime;
+            } 
+
             /**
-             * The backup schedule of the sandbox instance.
+             * <p>The backup schedule of the sandbox instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1hxxxx8xxxxxa</p>
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;
@@ -229,7 +288,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The beginning of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-01T12:01:01Z</p>
              */
             public Builder recoveryBeginTime(String recoveryBeginTime) {
                 this.recoveryBeginTime = recoveryBeginTime;
@@ -237,7 +299,10 @@ public class DescribeSandboxRecoveryTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
+             * <p>The end of the time range during which the sandbox instance can be restored. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-02T12:01:01Z</p>
              */
             public Builder recoveryEndTime(String recoveryEndTime) {
                 this.recoveryEndTime = recoveryEndTime;

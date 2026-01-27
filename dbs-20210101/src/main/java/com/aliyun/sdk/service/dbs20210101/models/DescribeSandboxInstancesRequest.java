@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSandboxInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSandboxInstancesRequest</p>
@@ -49,7 +55,7 @@ public class DescribeSandboxInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -119,10 +125,14 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
-         * <p>
+         * <p>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/437215.html">DescribeBackupPlanList</a> operation to obtain the ID of the backup schedule.</p>
+         * <blockquote>
+         * <p>If your instance is an ApsaraDB RDS for MySQL instance, you can <a href="https://help.aliyun.com/document_detail/193091.html">configure automatic access to a data source</a> to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+         * <strong>example:</strong>
+         * <p>1hxxxx8xxxxxa</p>
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -131,7 +141,10 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) operation to obtain the ID of the sandbox instance.
+         * <p>The ID of the sandbox instance. You can call the <a href="https://help.aliyun.com/document_detail/437252.html">CreateSandboxInstance</a> operation to obtain the ID of the sandbox instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1jxxxxnxxx1xc</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -140,7 +153,10 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -149,12 +165,15 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
-         * <p>
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li>30. This is the default value.</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
          * 
-         * *   30\. This is the default value.
-         * *   50
-         * *   100
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

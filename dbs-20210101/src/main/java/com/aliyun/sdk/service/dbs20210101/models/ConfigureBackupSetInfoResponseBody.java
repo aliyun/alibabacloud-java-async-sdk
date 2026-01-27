@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAdvancedPolicyResponseBody} extends {@link TeaModel}
+ * {@link ConfigureBackupSetInfoResponseBody} extends {@link TeaModel}
  *
- * <p>CreateAdvancedPolicyResponseBody</p>
+ * <p>ConfigureBackupSetInfoResponseBody</p>
  */
-public class CreateAdvancedPolicyResponseBody extends TeaModel {
+public class ConfigureBackupSetInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
@@ -38,7 +38,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    private CreateAdvancedPolicyResponseBody(Builder builder) {
+    private ConfigureBackupSetInfoResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.errCode = builder.errCode;
@@ -52,7 +52,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateAdvancedPolicyResponseBody create() {
+    public static ConfigureBackupSetInfoResponseBody create() {
         return builder().build();
     }
 
@@ -70,7 +70,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -111,7 +111,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
+        private Data data; 
         private String errCode; 
         private String errMessage; 
         private String message; 
@@ -121,7 +121,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreateAdvancedPolicyResponseBody model) {
+        private Builder(ConfigureBackupSetInfoResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.errCode = model.errCode;
@@ -132,10 +132,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -143,25 +140,15 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the advanced backup policy takes effect. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Data.
          */
-        public Builder data(Boolean data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * ErrCode.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,10 +156,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The specified parameter %s value is not valid.</p>
+         * ErrMessage.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,10 +164,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceName can not be empty.</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -191,10 +172,7 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1EFBAC73-4A72-5AD0-BE27-932491FCB848</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,24 +180,71 @@ public class CreateAdvancedPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
             return this;
         }
 
-        public CreateAdvancedPolicyResponseBody build() {
-            return new CreateAdvancedPolicyResponseBody(this);
+        public ConfigureBackupSetInfoResponseBody build() {
+            return new ConfigureBackupSetInfoResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ConfigureBackupSetInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>ConfigureBackupSetInfoResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
+        private String backupSetId;
+
+        private Data(Builder builder) {
+            this.backupSetId = builder.backupSetId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backupSetId
+         */
+        public String getBackupSetId() {
+            return this.backupSetId;
+        }
+
+        public static final class Builder {
+            private String backupSetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.backupSetId = model.backupSetId;
+            } 
+
+            /**
+             * BackupSetId.
+             */
+            public Builder backupSetId(String backupSetId) {
+                this.backupSetId = backupSetId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

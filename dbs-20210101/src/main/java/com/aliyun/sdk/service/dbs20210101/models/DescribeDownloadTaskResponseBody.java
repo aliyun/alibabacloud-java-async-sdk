@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadTaskResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     public static DescribeDownloadTaskResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.InternalError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +143,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tasks.
+         * <p>The details of the tasks.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +151,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +162,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceName can not be empty</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +173,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceName can not be empty</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +184,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5D285EB9-A443-592D-9F3D-A888FAC3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +195,14 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -174,6 +215,12 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadTaskResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupSetTime")
         private String backupSetTime;
@@ -344,8 +391,30 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.backupSetTime = model.backupSetTime;
+                this.bakSetId = model.bakSetId;
+                this.dbList = model.dbList;
+                this.downloadStatus = model.downloadStatus;
+                this.exportDataSize = model.exportDataSize;
+                this.format = model.format;
+                this.gmtCreate = model.gmtCreate;
+                this.importDataSize = model.importDataSize;
+                this.progress = model.progress;
+                this.regionCode = model.regionCode;
+                this.targetPath = model.targetPath;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.
+             * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663162216000</p>
              */
             public Builder backupSetTime(String backupSetTime) {
                 this.backupSetTime = backupSetTime;
@@ -353,7 +422,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the full backup set.
+             * <p>The ID of the full backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>148261****</p>
              */
             public Builder bakSetId(String bakSetId) {
                 this.bakSetId = bakSetId;
@@ -361,7 +433,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the databases.
+             * <p>The details of the databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[dbtest]</p>
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -369,15 +444,18 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download task. Valid values:
-             * <p>
+             * <p>The status of the download task. Valid values:</p>
+             * <ul>
+             * <li><strong>Initializing</strong>: The download task is being initialized.</li>
+             * <li><strong>queuing</strong>: The download task is queuing.</li>
+             * <li><strong>running</strong>: The download task is running.</li>
+             * <li><strong>failed</strong>: The download task fails.</li>
+             * <li><strong>finished</strong>: The download task is complete.</li>
+             * <li><strong>expired</strong>: The download task expires.</li>
+             * </ul>
              * 
-             * *   **Initializing**: The download task is being initialized.
-             * *   **queuing**: The download task is queuing.
-             * *   **running**: The download task is running.
-             * *   **failed**: The download task fails.
-             * *   **finished**: The download task is complete.
-             * *   **expired**: The download task expires.
+             * <strong>example:</strong>
+             * <p>queueing</p>
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -385,7 +463,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of output data. Unit: bytes.
+             * <p>The amount of output data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exportDataSize(String exportDataSize) {
                 this.exportDataSize = exportDataSize;
@@ -393,12 +474,15 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The format to which the downloaded backup set is converted. Valid values:
-             * <p>
+             * <p>The format to which the downloaded backup set is converted. Valid values:</p>
+             * <ul>
+             * <li><strong>csv</strong></li>
+             * <li><strong>SQL</strong></li>
+             * <li><strong>Parquet</strong></li>
+             * </ul>
              * 
-             * *   **csv**
-             * *   **SQL**
-             * *   **Parquet**
+             * <strong>example:</strong>
+             * <p>csv</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -406,7 +490,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the download task was created. The value is a timestamp.
+             * <p>The time when the download task was created. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663321957000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -414,7 +501,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that is processed. Unit: bytes.
+             * <p>The amount of data that is processed. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder importDataSize(String importDataSize) {
                 this.importDataSize = importDataSize;
@@ -422,7 +512,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been downloaded and the total number of tables to be downloaded.
+             * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -430,7 +523,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -438,7 +534,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination path to which the data is downloaded if the value of **TargetType is OSS**.
+             * <p>The destination path to which the data is downloaded if the value of <strong>TargetType is OSS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db/path</p>
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -446,11 +545,14 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the method in which the backup set is downloaded. Valid values:
-             * <p>
+             * <p>The type of the method in which the backup set is downloaded. Valid values:</p>
+             * <ul>
+             * <li><strong>OSS</strong></li>
+             * <li><strong>URL</strong></li>
+             * </ul>
              * 
-             * *   **OSS**
-             * *   **URL**
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -458,7 +560,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The download task ID.
+             * <p>The download task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt-qxntlvgu****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -472,9 +577,15 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadTaskResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         private Content(Builder builder) {
             this.list = builder.list;
@@ -491,17 +602,24 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.list = model.list;
+            } 
 
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
@@ -513,6 +631,12 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDownloadTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -599,8 +723,20 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private Long totalElements; 
             private Long totalPages; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.extra = model.extra;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalElements = model.totalElements;
+                this.totalPages = model.totalPages;
+            } 
+
             /**
-             * The details of the task.
+             * <p>The details of the task.</p>
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -608,7 +744,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The extra description of the download tasks.
+             * <p>The extra description of the download tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dbtest</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -616,7 +755,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+             * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -624,7 +766,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -632,7 +777,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of full backup tasks.
+             * <p>The total number of full backup tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;
@@ -640,7 +788,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned pages.
+             * <p>The total number of returned pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;

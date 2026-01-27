@@ -12,32 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SupportDBTableRecoveryRequest} extends {@link RequestModel}
+ * {@link DescribeCostInfoByDbsInstanceRequest} extends {@link RequestModel}
  *
- * <p>SupportDBTableRecoveryRequest</p>
+ * <p>DescribeCostInfoByDbsInstanceRequest</p>
  */
-public class SupportDBTableRecoveryRequest extends Request {
+public class DescribeCostInfoByDbsInstanceRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClusterName")
-    private String clusterName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("BackupPlanId")
+    private String backupPlanId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionCode")
     private String regionCode;
 
-    private SupportDBTableRecoveryRequest(Builder builder) {
+    private DescribeCostInfoByDbsInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.clusterName = builder.clusterName;
-        this.instanceId = builder.instanceId;
+        this.backupPlanId = builder.backupPlanId;
         this.regionCode = builder.regionCode;
     }
 
@@ -45,7 +40,7 @@ public class SupportDBTableRecoveryRequest extends Request {
         return new Builder();
     }
 
-    public static SupportDBTableRecoveryRequest create() {
+    public static DescribeCostInfoByDbsInstanceRequest create() {
         return builder().build();
     }
 
@@ -62,17 +57,10 @@ public class SupportDBTableRecoveryRequest extends Request {
     }
 
     /**
-     * @return clusterName
+     * @return backupPlanId
      */
-    public String getClusterName() {
-        return this.clusterName;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getBackupPlanId() {
+        return this.backupPlanId;
     }
 
     /**
@@ -82,21 +70,19 @@ public class SupportDBTableRecoveryRequest extends Request {
         return this.regionCode;
     }
 
-    public static final class Builder extends Request.Builder<SupportDBTableRecoveryRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeCostInfoByDbsInstanceRequest, Builder> {
         private String regionId; 
-        private String clusterName; 
-        private String instanceId; 
+        private String backupPlanId; 
         private String regionCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SupportDBTableRecoveryRequest request) {
+        private Builder(DescribeCostInfoByDbsInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.clusterName = request.clusterName;
-            this.instanceId = request.instanceId;
+            this.backupPlanId = request.backupPlanId;
             this.regionCode = request.regionCode;
         } 
 
@@ -110,20 +96,11 @@ public class SupportDBTableRecoveryRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * BackupPlanId.
          */
-        public Builder clusterName(String clusterName) {
-            this.putQueryParameter("ClusterName", clusterName);
-            this.clusterName = clusterName;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder backupPlanId(String backupPlanId) {
+            this.putQueryParameter("BackupPlanId", backupPlanId);
+            this.backupPlanId = backupPlanId;
             return this;
         }
 
@@ -137,8 +114,8 @@ public class SupportDBTableRecoveryRequest extends Request {
         }
 
         @Override
-        public SupportDBTableRecoveryRequest build() {
-            return new SupportDBTableRecoveryRequest(this);
+        public DescribeCostInfoByDbsInstanceRequest build() {
+            return new DescribeCostInfoByDbsInstanceRequest(this);
         } 
 
     } 

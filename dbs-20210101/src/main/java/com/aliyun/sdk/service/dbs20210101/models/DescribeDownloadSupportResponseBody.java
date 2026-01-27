@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadSupportResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadSupportResponseBody</p>
@@ -48,6 +54,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
 
     public static DescribeDownloadSupportResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,8 +118,24 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDownloadSupportResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.ParamIsInValid</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,11 +143,14 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the advanced download feature is supported. Valid values:
-         * <p>
+         * <p>Indicates whether the advanced download feature is supported. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The advanced download feature is supported.</li>
+         * <li><strong>false</strong>: The advanced download feature is not supported.</li>
+         * </ul>
          * 
-         * *   **true**: The advanced download feature is supported.
-         * *   **false**: The advanced download feature is not supported.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -129,7 +158,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBS.ParamIsInValid</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -137,7 +169,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Argument: regionCode Must not be empty</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -145,7 +180,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Argument: regionCode Must not be empty</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +191,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1A186F7-7B34-5C11-A903-EE23876B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,11 +202,14 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

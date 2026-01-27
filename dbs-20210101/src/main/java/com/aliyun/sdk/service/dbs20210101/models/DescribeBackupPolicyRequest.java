@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPolicyRequest</p>
@@ -38,7 +44,7 @@ public class DescribeBackupPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -90,7 +96,10 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The ID of the PolarDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze3nrr64c5******</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -99,7 +108,10 @@ public class DescribeBackupPolicyRequest extends Request {
         }
 
         /**
-         * RegionCode.
+         * <p>The region in which the backup set resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
