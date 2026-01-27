@@ -23,10 +23,6 @@ public class CreateClusterRequest extends Request {
     private String clusterType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClusterVersion")
-    private String clusterVersion;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerCidr")
     private String containerCidr;
 
@@ -78,7 +74,6 @@ public class CreateClusterRequest extends Request {
     private CreateClusterRequest(Builder builder) {
         super(builder);
         this.clusterType = builder.clusterType;
-        this.clusterVersion = builder.clusterVersion;
         this.containerCidr = builder.containerCidr;
         this.controlPlaneConfig = builder.controlPlaneConfig;
         this.ensRegionId = builder.ensRegionId;
@@ -111,13 +106,6 @@ public class CreateClusterRequest extends Request {
      */
     public String getClusterType() {
         return this.clusterType;
-    }
-
-    /**
-     * @return clusterVersion
-     */
-    public String getClusterVersion() {
-        return this.clusterVersion;
     }
 
     /**
@@ -206,7 +194,6 @@ public class CreateClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
         private String clusterType; 
-        private String clusterVersion; 
         private String containerCidr; 
         private ControlPlaneConfig controlPlaneConfig; 
         private String ensRegionId; 
@@ -227,7 +214,6 @@ public class CreateClusterRequest extends Request {
         private Builder(CreateClusterRequest request) {
             super(request);
             this.clusterType = request.clusterType;
-            this.clusterVersion = request.clusterVersion;
             this.containerCidr = request.containerCidr;
             this.controlPlaneConfig = request.controlPlaneConfig;
             this.ensRegionId = request.ensRegionId;
@@ -251,18 +237,6 @@ public class CreateClusterRequest extends Request {
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
             this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * <p>The version of the cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.18.8</p>
-         */
-        public Builder clusterVersion(String clusterVersion) {
-            this.putQueryParameter("ClusterVersion", clusterVersion);
-            this.clusterVersion = clusterVersion;
             return this;
         }
 
