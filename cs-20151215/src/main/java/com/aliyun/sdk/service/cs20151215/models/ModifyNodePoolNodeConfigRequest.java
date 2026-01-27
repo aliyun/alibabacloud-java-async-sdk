@@ -36,6 +36,10 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     private KubeletConfig kubeletConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_names")
+    private java.util.List<String> nodeNames;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("os_config")
     private OsConfig osConfig;
 
@@ -49,6 +53,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.containerdConfig = builder.containerdConfig;
         this.kubeletConfig = builder.kubeletConfig;
+        this.nodeNames = builder.nodeNames;
         this.osConfig = builder.osConfig;
         this.rollingPolicy = builder.rollingPolicy;
     }
@@ -95,6 +100,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     }
 
     /**
+     * @return nodeNames
+     */
+    public java.util.List<String> getNodeNames() {
+        return this.nodeNames;
+    }
+
+    /**
      * @return osConfig
      */
     public OsConfig getOsConfig() {
@@ -113,6 +125,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         private String nodepoolId; 
         private ContainerdConfig containerdConfig; 
         private KubeletConfig kubeletConfig; 
+        private java.util.List<String> nodeNames; 
         private OsConfig osConfig; 
         private RollingPolicy rollingPolicy; 
 
@@ -126,6 +139,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.containerdConfig = request.containerdConfig;
             this.kubeletConfig = request.kubeletConfig;
+            this.nodeNames = request.nodeNames;
             this.osConfig = request.osConfig;
             this.rollingPolicy = request.rollingPolicy;
         } 
@@ -171,6 +185,15 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
             this.kubeletConfig = kubeletConfig;
+            return this;
+        }
+
+        /**
+         * node_names.
+         */
+        public Builder nodeNames(java.util.List<String> nodeNames) {
+            this.putBodyParameter("node_names", nodeNames);
+            this.nodeNames = nodeNames;
             return this;
         }
 
