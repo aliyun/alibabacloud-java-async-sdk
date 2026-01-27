@@ -30,11 +30,16 @@ public class StopRCInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoppedMode")
+    private String stoppedMode;
+
     private StopRCInstanceRequest(Builder builder) {
         super(builder);
         this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.stoppedMode = builder.stoppedMode;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class StopRCInstanceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return stoppedMode
+     */
+    public String getStoppedMode() {
+        return this.stoppedMode;
+    }
+
     public static final class Builder extends Request.Builder<StopRCInstanceRequest, Builder> {
         private Boolean forceStop; 
         private String instanceId; 
         private String regionId; 
+        private String stoppedMode; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class StopRCInstanceRequest extends Request {
             this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.stoppedMode = request.stoppedMode;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class StopRCInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StoppedMode.
+         */
+        public Builder stoppedMode(String stoppedMode) {
+            this.putQueryParameter("StoppedMode", stoppedMode);
+            this.stoppedMode = stoppedMode;
             return this;
         }
 

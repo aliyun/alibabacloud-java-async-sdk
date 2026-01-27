@@ -149,6 +149,9 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("PodCount")
+        private Long podCount;
+
         @com.aliyun.core.annotation.NameInMap("RuntimeVersion")
         private String runtimeVersion;
 
@@ -166,6 +169,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             this.nodeName = builder.nodeName;
             this.nodePoolId = builder.nodePoolId;
             this.nodeStatus = builder.nodeStatus;
+            this.podCount = builder.podCount;
             this.runtimeVersion = builder.runtimeVersion;
             this.state = builder.state;
         }
@@ -249,6 +253,13 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return podCount
+         */
+        public Long getPodCount() {
+            return this.podCount;
+        }
+
+        /**
          * @return runtimeVersion
          */
         public String getRuntimeVersion() {
@@ -273,6 +284,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             private String nodeName; 
             private String nodePoolId; 
             private String nodeStatus; 
+            private Long podCount; 
             private String runtimeVersion; 
             private String state; 
 
@@ -290,6 +302,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
                 this.nodeName = model.nodeName;
                 this.nodePoolId = model.nodePoolId;
                 this.nodeStatus = model.nodeStatus;
+                this.podCount = model.podCount;
                 this.runtimeVersion = model.runtimeVersion;
                 this.state = model.state;
             } 
@@ -412,6 +425,14 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
+                return this;
+            }
+
+            /**
+             * PodCount.
+             */
+            public Builder podCount(Long podCount) {
+                this.podCount = podCount;
                 return this;
             }
 

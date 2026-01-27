@@ -31,6 +31,10 @@ public class RebootRCInstanceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebootTime")
+    private String rebootTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -39,6 +43,7 @@ public class RebootRCInstanceRequest extends Request {
         this.dryRun = builder.dryRun;
         this.forceStop = builder.forceStop;
         this.instanceId = builder.instanceId;
+        this.rebootTime = builder.rebootTime;
         this.regionId = builder.regionId;
     }
 
@@ -77,6 +82,13 @@ public class RebootRCInstanceRequest extends Request {
     }
 
     /**
+     * @return rebootTime
+     */
+    public String getRebootTime() {
+        return this.rebootTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -87,6 +99,7 @@ public class RebootRCInstanceRequest extends Request {
         private Boolean dryRun; 
         private Boolean forceStop; 
         private String instanceId; 
+        private String rebootTime; 
         private String regionId; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class RebootRCInstanceRequest extends Request {
             this.dryRun = request.dryRun;
             this.forceStop = request.forceStop;
             this.instanceId = request.instanceId;
+            this.rebootTime = request.rebootTime;
             this.regionId = request.regionId;
         } 
 
@@ -144,6 +158,15 @@ public class RebootRCInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * RebootTime.
+         */
+        public Builder rebootTime(String rebootTime) {
+            this.putQueryParameter("RebootTime", rebootTime);
+            this.rebootTime = rebootTime;
             return this;
         }
 

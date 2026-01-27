@@ -30,6 +30,10 @@ public class RebootRCInstancesRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RebootTime")
+    private String rebootTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -38,6 +42,7 @@ public class RebootRCInstancesRequest extends Request {
         this.batchOptimization = builder.batchOptimization;
         this.forceReboot = builder.forceReboot;
         this.instanceIds = builder.instanceIds;
+        this.rebootTime = builder.rebootTime;
         this.regionId = builder.regionId;
     }
 
@@ -76,6 +81,13 @@ public class RebootRCInstancesRequest extends Request {
     }
 
     /**
+     * @return rebootTime
+     */
+    public String getRebootTime() {
+        return this.rebootTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -86,6 +98,7 @@ public class RebootRCInstancesRequest extends Request {
         private String batchOptimization; 
         private Boolean forceReboot; 
         private java.util.List<String> instanceIds; 
+        private String rebootTime; 
         private String regionId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class RebootRCInstancesRequest extends Request {
             this.batchOptimization = request.batchOptimization;
             this.forceReboot = request.forceReboot;
             this.instanceIds = request.instanceIds;
+            this.rebootTime = request.rebootTime;
             this.regionId = request.regionId;
         } 
 
@@ -135,6 +149,15 @@ public class RebootRCInstancesRequest extends Request {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * RebootTime.
+         */
+        public Builder rebootTime(String rebootTime) {
+            this.putQueryParameter("RebootTime", rebootTime);
+            this.rebootTime = rebootTime;
             return this;
         }
 

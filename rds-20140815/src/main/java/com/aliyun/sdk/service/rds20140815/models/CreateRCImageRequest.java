@@ -12,42 +12,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DetachRCDiskRequest} extends {@link RequestModel}
+ * {@link CreateRCImageRequest} extends {@link RequestModel}
  *
- * <p>DetachRCDiskRequest</p>
+ * <p>CreateRCImageRequest</p>
  */
-public class DetachRCDiskRequest extends Request {
+public class CreateRCImageRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
-    private Boolean deleteWithInstance;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DiskId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String diskId;
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private String imageName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private DetachRCDiskRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    private String snapshotId;
+
+    private CreateRCImageRequest(Builder builder) {
         super(builder);
-        this.deleteWithInstance = builder.deleteWithInstance;
-        this.diskId = builder.diskId;
+        this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DetachRCDiskRequest create() {
+    public static CreateRCImageRequest create() {
         return builder().build();
     }
 
@@ -57,17 +55,10 @@ public class DetachRCDiskRequest extends Request {
     }
 
     /**
-     * @return deleteWithInstance
+     * @return imageName
      */
-    public Boolean getDeleteWithInstance() {
-        return this.deleteWithInstance;
-    }
-
-    /**
-     * @return diskId
-     */
-    public String getDiskId() {
-        return this.diskId;
+    public String getImageName() {
+        return this.imageName;
     }
 
     /**
@@ -84,55 +75,48 @@ public class DetachRCDiskRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DetachRCDiskRequest, Builder> {
-        private Boolean deleteWithInstance; 
-        private String diskId; 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public static final class Builder extends Request.Builder<CreateRCImageRequest, Builder> {
+        private String imageName; 
         private String instanceId; 
         private String regionId; 
+        private String snapshotId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetachRCDiskRequest request) {
+        private Builder(CreateRCImageRequest request) {
             super(request);
-            this.deleteWithInstance = request.deleteWithInstance;
-            this.diskId = request.diskId;
+            this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>The name of the custom image.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>Created_from_rc-vma9w5z699x9********</p>
          */
-        public Builder deleteWithInstance(Boolean deleteWithInstance) {
-            this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
-            this.deleteWithInstance = deleteWithInstance;
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
             return this;
         }
 
         /**
-         * <p>The ID of the disk that you want to detach.</p>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>rcd-f8zh55g5gbk1byjr****</p>
-         */
-        public Builder diskId(String diskId) {
-            this.putQueryParameter("DiskId", diskId);
-            this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * <p>The instance ID.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rc-dh2jf9n6j4s14926****</p>
+         * <p>rc-vma9w5z699x93204****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -144,7 +128,7 @@ public class DetachRCDiskRequest extends Request {
          * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -152,9 +136,21 @@ public class DetachRCDiskRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the snapshot from which to create the custom image. You can call the DescribeRCSnapshots operation to query the snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rcds-c9bjdl79vz5dx********</p>
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
         @Override
-        public DetachRCDiskRequest build() {
-            return new DetachRCDiskRequest(this);
+        public CreateRCImageRequest build() {
+            return new CreateRCImageRequest(this);
         } 
 
     } 

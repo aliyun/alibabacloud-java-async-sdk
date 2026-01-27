@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCClusterNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodePoolId")
+    private String nodePoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -35,6 +43,8 @@ public class DescribeRCClusterNodesRequest extends Request {
 
     private DescribeRCClusterNodesRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
+        this.nodePoolId = builder.nodePoolId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -52,6 +62,20 @@ public class DescribeRCClusterNodesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
+     * @return nodePoolId
+     */
+    public String getNodePoolId() {
+        return this.nodePoolId;
     }
 
     /**
@@ -83,6 +107,8 @@ public class DescribeRCClusterNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCClusterNodesRequest, Builder> {
+        private String clusterId; 
+        private String nodePoolId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
@@ -94,11 +120,31 @@ public class DescribeRCClusterNodesRequest extends Request {
 
         private Builder(DescribeRCClusterNodesRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
+            this.nodePoolId = request.nodePoolId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * NodePoolId.
+         */
+        public Builder nodePoolId(String nodePoolId) {
+            this.putQueryParameter("NodePoolId", nodePoolId);
+            this.nodePoolId = nodePoolId;
+            return this;
+        }
 
         /**
          * <p>The page number.</p>

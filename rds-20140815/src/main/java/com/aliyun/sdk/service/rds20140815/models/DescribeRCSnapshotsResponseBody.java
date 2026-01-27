@@ -263,6 +263,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
+        private String lastModifiedTime;
+
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
@@ -309,6 +312,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             this.description = builder.description;
             this.encrypted = builder.encrypted;
             this.instantAccess = builder.instantAccess;
+            this.lastModifiedTime = builder.lastModifiedTime;
             this.progress = builder.progress;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -372,6 +376,13 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
          */
         public Boolean getInstantAccess() {
             return this.instantAccess;
+        }
+
+        /**
+         * @return lastModifiedTime
+         */
+        public String getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         /**
@@ -472,6 +483,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             private String description; 
             private Boolean encrypted; 
             private Boolean instantAccess; 
+            private String lastModifiedTime; 
             private String progress; 
             private String regionId; 
             private String resourceGroupId; 
@@ -496,6 +508,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.encrypted = model.encrypted;
                 this.instantAccess = model.instantAccess;
+                this.lastModifiedTime = model.lastModifiedTime;
                 this.progress = model.progress;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
@@ -587,6 +600,14 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
+                return this;
+            }
+
+            /**
+             * LastModifiedTime.
+             */
+            public Builder lastModifiedTime(String lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
                 return this;
             }
 

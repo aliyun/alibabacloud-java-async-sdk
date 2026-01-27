@@ -708,6 +708,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGadInstanceMemberResponse> createGadInstanceMember(CreateGadInstanceMemberRequest request);
 
     /**
+     * @param request the request parameters of CreateImportTask  CreateImportTaskRequest
+     * @return CreateImportTaskResponse
+     */
+    CompletableFuture<CreateImportTaskResponse> createImportTask(CreateImportTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateMaskingRules  CreateMaskingRulesRequest
      * @return CreateMaskingRulesResponse
      */
@@ -831,6 +837,29 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRCDiskResponse
      */
     CompletableFuture<CreateRCDiskResponse> createRCDisk(CreateRCDiskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
+     * </ul>
+     * <h3><a href="#"></a>Usage</h3>
+     * <ul>
+     * <li>Method 1: Create a custom image by using a snapshot generated from the <strong>system disk</strong>. In this case, specify the SnapshotId and ImageName parameters at the same time in the request.</li>
+     * <li>Method 2: Create a custom image by using an RDS Custom instance. In this case, specify the InstanceId and ImageName parameters at the same time in the request.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateRCImage  CreateRCImageRequest
+     * @return CreateRCImageResponse
+     */
+    CompletableFuture<CreateRCImageResponse> createRCImage(CreateRCImageRequest request);
 
     /**
      * @param request the request parameters of CreateRCNodePool  CreateRCNodePoolRequest
@@ -2404,6 +2433,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHostWebShellResponse> describeHostWebShell(DescribeHostWebShellRequest request);
 
     /**
+     * @param request the request parameters of DescribeImportTask  DescribeImportTaskRequest
+     * @return DescribeImportTaskResponse
+     */
+    CompletableFuture<DescribeImportTaskResponse> describeImportTask(DescribeImportTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeImportTaskValidation  DescribeImportTaskValidationRequest
+     * @return DescribeImportTaskValidationResponse
+     */
+    CompletableFuture<DescribeImportTaskValidationResponse> describeImportTaskValidation(DescribeImportTaskValidationRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -3454,6 +3495,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClassesResponse> listClasses(ListClassesRequest request);
 
     /**
+     * @param request the request parameters of ListImportTasks  ListImportTasksRequest
+     * @return ListImportTasksResponse
+     */
+    CompletableFuture<ListImportTasksResponse> listImportTasks(ListImportTasksRequest request);
+
+    /**
      * @param request the request parameters of ListRCVClusters  ListRCVClustersRequest
      * @return ListRCVClustersResponse
      */
@@ -4167,6 +4214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceTDEResponse> modifyDBInstanceTDE(ModifyDBInstanceTDERequest request);
 
     /**
+     * @param request the request parameters of ModifyDBInstanceVectorSupportStatus  ModifyDBInstanceVectorSupportStatusRequest
+     * @return ModifyDBInstanceVectorSupportStatusResponse
+     */
+    CompletableFuture<ModifyDBInstanceVectorSupportStatusResponse> modifyDBInstanceVectorSupportStatus(ModifyDBInstanceVectorSupportStatusRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <ul>
@@ -4385,6 +4438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyHASwitchConfigResponse> modifyHASwitchConfig(ModifyHASwitchConfigRequest request);
 
     /**
+     * @param request the request parameters of ModifyImportTask  ModifyImportTaskRequest
+     * @return ModifyImportTaskResponse
+     */
+    CompletableFuture<ModifyImportTaskResponse> modifyImportTask(ModifyImportTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -4501,6 +4560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyParameterGroupResponse
      */
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyRCDiskAttribute  ModifyRCDiskAttributeRequest
+     * @return ModifyRCDiskAttributeResponse
+     */
+    CompletableFuture<ModifyRCDiskAttributeResponse> modifyRCDiskAttribute(ModifyRCDiskAttributeRequest request);
 
     /**
      * @param request the request parameters of ModifyRCDiskChargeType  ModifyRCDiskChargeTypeRequest
@@ -5660,5 +5725,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeDBProxyInstanceKernelVersionResponse
      */
     CompletableFuture<UpgradeDBProxyInstanceKernelVersionResponse> upgradeDBProxyInstanceKernelVersion(UpgradeDBProxyInstanceKernelVersionRequest request);
+
+    /**
+     * @param request the request parameters of ValidateImportTask  ValidateImportTaskRequest
+     * @return ValidateImportTaskResponse
+     */
+    CompletableFuture<ValidateImportTaskResponse> validateImportTask(ValidateImportTaskRequest request);
 
 }
