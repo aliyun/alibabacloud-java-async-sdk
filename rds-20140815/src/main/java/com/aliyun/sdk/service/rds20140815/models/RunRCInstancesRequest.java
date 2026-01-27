@@ -23,7 +23,7 @@ public class RunRCInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 1)
     private Integer amount;
 
     @com.aliyun.core.annotation.Query

@@ -33,6 +33,7 @@ public class DetachRCDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DetachRCDiskRequest(Builder builder) {
@@ -142,6 +143,7 @@ public class DetachRCDiskRequest extends Request {
 
         /**
          * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

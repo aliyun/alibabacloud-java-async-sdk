@@ -254,9 +254,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
-        private Boolean burstingEnabled;
-
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -302,9 +299,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @com.aliyun.core.annotation.NameInMap("Portable")
-        private Boolean portable;
-
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -340,7 +334,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
         private Disks(Builder builder) {
             this.attachedTime = builder.attachedTime;
-            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.creationTime = builder.creationTime;
             this.deleteAutoSnapshot = builder.deleteAutoSnapshot;
@@ -356,7 +349,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.instanceId = builder.instanceId;
             this.performanceLevel = builder.performanceLevel;
-            this.portable = builder.portable;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.serialNumber = builder.serialNumber;
@@ -383,13 +375,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
          */
         public String getAttachedTime() {
             return this.attachedTime;
-        }
-
-        /**
-         * @return burstingEnabled
-         */
-        public Boolean getBurstingEnabled() {
-            return this.burstingEnabled;
         }
 
         /**
@@ -498,13 +483,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
 
         /**
-         * @return portable
-         */
-        public Boolean getPortable() {
-            return this.portable;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -583,7 +561,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attachedTime; 
-            private Boolean burstingEnabled; 
             private String category; 
             private String creationTime; 
             private Boolean deleteAutoSnapshot; 
@@ -599,7 +576,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             private String imageId; 
             private String instanceId; 
             private String performanceLevel; 
-            private Boolean portable; 
             private String regionId; 
             private String resourceGroupId; 
             private String serialNumber; 
@@ -617,7 +593,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
             private Builder(Disks model) {
                 this.attachedTime = model.attachedTime;
-                this.burstingEnabled = model.burstingEnabled;
                 this.category = model.category;
                 this.creationTime = model.creationTime;
                 this.deleteAutoSnapshot = model.deleteAutoSnapshot;
@@ -633,7 +608,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
                 this.imageId = model.imageId;
                 this.instanceId = model.instanceId;
                 this.performanceLevel = model.performanceLevel;
-                this.portable = model.portable;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.serialNumber = model.serialNumber;
@@ -652,14 +626,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
-                return this;
-            }
-
-            /**
-             * BurstingEnabled.
-             */
-            public Builder burstingEnabled(Boolean burstingEnabled) {
-                this.burstingEnabled = burstingEnabled;
                 return this;
             }
 
@@ -851,14 +817,6 @@ public class DescribeRCDisksResponseBody extends TeaModel {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
-                return this;
-            }
-
-            /**
-             * Portable.
-             */
-            public Builder portable(Boolean portable) {
-                this.portable = portable;
                 return this;
             }
 

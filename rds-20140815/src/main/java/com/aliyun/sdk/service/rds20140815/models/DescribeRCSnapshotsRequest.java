@@ -22,10 +22,6 @@ public class DescribeRCSnapshotsRequest extends Request {
     private String diskId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -36,6 +32,7 @@ public class DescribeRCSnapshotsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -49,7 +46,6 @@ public class DescribeRCSnapshotsRequest extends Request {
     private DescribeRCSnapshotsRequest(Builder builder) {
         super(builder);
         this.diskId = builder.diskId;
-        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -75,13 +71,6 @@ public class DescribeRCSnapshotsRequest extends Request {
      */
     public String getDiskId() {
         return this.diskId;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     /**
@@ -121,7 +110,6 @@ public class DescribeRCSnapshotsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCSnapshotsRequest, Builder> {
         private String diskId; 
-        private String instanceId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String regionId; 
@@ -135,7 +123,6 @@ public class DescribeRCSnapshotsRequest extends Request {
         private Builder(DescribeRCSnapshotsRequest request) {
             super(request);
             this.diskId = request.diskId;
-            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -152,15 +139,6 @@ public class DescribeRCSnapshotsRequest extends Request {
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
             this.diskId = diskId;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 
@@ -190,6 +168,7 @@ public class DescribeRCSnapshotsRequest extends Request {
 
         /**
          * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

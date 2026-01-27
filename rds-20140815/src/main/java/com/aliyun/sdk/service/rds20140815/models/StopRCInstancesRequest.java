@@ -33,17 +33,12 @@ public class StopRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StoppedMode")
-    private String stoppedMode;
-
     private StopRCInstancesRequest(Builder builder) {
         super(builder);
         this.batchOptimization = builder.batchOptimization;
         this.forceStop = builder.forceStop;
         this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
-        this.stoppedMode = builder.stoppedMode;
     }
 
     public static Builder builder() {
@@ -87,19 +82,11 @@ public class StopRCInstancesRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return stoppedMode
-     */
-    public String getStoppedMode() {
-        return this.stoppedMode;
-    }
-
     public static final class Builder extends Request.Builder<StopRCInstancesRequest, Builder> {
         private String batchOptimization; 
         private Boolean forceStop; 
         private java.util.List<String> instanceIds; 
         private String regionId; 
-        private String stoppedMode; 
 
         private Builder() {
             super();
@@ -111,7 +98,6 @@ public class StopRCInstancesRequest extends Request {
             this.forceStop = request.forceStop;
             this.instanceIds = request.instanceIds;
             this.regionId = request.regionId;
-            this.stoppedMode = request.stoppedMode;
         } 
 
         /**
@@ -161,15 +147,6 @@ public class StopRCInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * StoppedMode.
-         */
-        public Builder stoppedMode(String stoppedMode) {
-            this.putQueryParameter("StoppedMode", stoppedMode);
-            this.stoppedMode = stoppedMode;
             return this;
         }
 
