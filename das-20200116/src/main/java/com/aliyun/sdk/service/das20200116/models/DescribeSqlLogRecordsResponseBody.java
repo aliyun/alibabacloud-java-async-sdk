@@ -180,8 +180,20 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
+        @com.aliyun.core.annotation.NameInMap("AffectColumns")
+        private String affectColumns;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("ClientPort")
+        private Long clientPort;
+
         @com.aliyun.core.annotation.NameInMap("Collection")
         private String collection;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
+        private String connectionId;
 
         @com.aliyun.core.annotation.NameInMap("Consume")
         private Long consume;
@@ -222,6 +234,9 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParallelQueueTime")
         private String parallelQueueTime;
 
+        @com.aliyun.core.annotation.NameInMap("Params")
+        private String params;
+
         @com.aliyun.core.annotation.NameInMap("PhysicAsyncRead")
         private Long physicAsyncRead;
 
@@ -231,8 +246,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhysicSyncRead")
         private Long physicSyncRead;
 
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
         @com.aliyun.core.annotation.NameInMap("ReturnRows")
         private Long returnRows;
+
+        @com.aliyun.core.annotation.NameInMap("RowKey")
+        private String rowKey;
 
         @com.aliyun.core.annotation.NameInMap("Rows")
         private Long rows;
@@ -281,7 +302,11 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
         private SQLLogRecord(Builder builder) {
             this.accountName = builder.accountName;
+            this.affectColumns = builder.affectColumns;
+            this.clientIp = builder.clientIp;
+            this.clientPort = builder.clientPort;
             this.collection = builder.collection;
+            this.connectionId = builder.connectionId;
             this.consume = builder.consume;
             this.cpuTime = builder.cpuTime;
             this.DBName = builder.DBName;
@@ -295,10 +320,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             this.originTime = builder.originTime;
             this.parallelDegree = builder.parallelDegree;
             this.parallelQueueTime = builder.parallelQueueTime;
+            this.params = builder.params;
             this.physicAsyncRead = builder.physicAsyncRead;
             this.physicRead = builder.physicRead;
             this.physicSyncRead = builder.physicSyncRead;
+            this.protocol = builder.protocol;
             this.returnRows = builder.returnRows;
+            this.rowKey = builder.rowKey;
             this.rows = builder.rows;
             this.scanRows = builder.scanRows;
             this.scnt = builder.scnt;
@@ -332,10 +360,38 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return affectColumns
+         */
+        public String getAffectColumns() {
+            return this.affectColumns;
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return clientPort
+         */
+        public Long getClientPort() {
+            return this.clientPort;
+        }
+
+        /**
          * @return collection
          */
         public String getCollection() {
             return this.collection;
+        }
+
+        /**
+         * @return connectionId
+         */
+        public String getConnectionId() {
+            return this.connectionId;
         }
 
         /**
@@ -430,6 +486,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return params
+         */
+        public String getParams() {
+            return this.params;
+        }
+
+        /**
          * @return physicAsyncRead
          */
         public Long getPhysicAsyncRead() {
@@ -451,10 +514,24 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        /**
          * @return returnRows
          */
         public Long getReturnRows() {
             return this.returnRows;
+        }
+
+        /**
+         * @return rowKey
+         */
+        public String getRowKey() {
+            return this.rowKey;
         }
 
         /**
@@ -564,7 +641,11 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String affectColumns; 
+            private String clientIp; 
+            private Long clientPort; 
             private String collection; 
+            private String connectionId; 
             private Long consume; 
             private Long cpuTime; 
             private String DBName; 
@@ -578,10 +659,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private Long originTime; 
             private String parallelDegree; 
             private String parallelQueueTime; 
+            private String params; 
             private Long physicAsyncRead; 
             private Long physicRead; 
             private Long physicSyncRead; 
+            private String protocol; 
             private Long returnRows; 
+            private String rowKey; 
             private Long rows; 
             private Long scanRows; 
             private Long scnt; 
@@ -603,7 +687,11 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
             private Builder(SQLLogRecord model) {
                 this.accountName = model.accountName;
+                this.affectColumns = model.affectColumns;
+                this.clientIp = model.clientIp;
+                this.clientPort = model.clientPort;
                 this.collection = model.collection;
+                this.connectionId = model.connectionId;
                 this.consume = model.consume;
                 this.cpuTime = model.cpuTime;
                 this.DBName = model.DBName;
@@ -617,10 +705,13 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
                 this.originTime = model.originTime;
                 this.parallelDegree = model.parallelDegree;
                 this.parallelQueueTime = model.parallelQueueTime;
+                this.params = model.params;
                 this.physicAsyncRead = model.physicAsyncRead;
                 this.physicRead = model.physicRead;
                 this.physicSyncRead = model.physicSyncRead;
+                this.protocol = model.protocol;
                 this.returnRows = model.returnRows;
+                this.rowKey = model.rowKey;
                 this.rows = model.rows;
                 this.scanRows = model.scanRows;
                 this.scnt = model.scnt;
@@ -650,6 +741,30 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * AffectColumns.
+             */
+            public Builder affectColumns(String affectColumns) {
+                this.affectColumns = affectColumns;
+                return this;
+            }
+
+            /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * ClientPort.
+             */
+            public Builder clientPort(Long clientPort) {
+                this.clientPort = clientPort;
+                return this;
+            }
+
+            /**
              * <p>A reserved parameter.</p>
              * 
              * <strong>example:</strong>
@@ -657,6 +772,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
              */
             public Builder collection(String collection) {
                 this.collection = collection;
+                return this;
+            }
+
+            /**
+             * ConnectionId.
+             */
+            public Builder connectionId(String connectionId) {
+                this.connectionId = connectionId;
                 return this;
             }
 
@@ -804,6 +927,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * Params.
+             */
+            public Builder params(String params) {
+                this.params = params;
+                return this;
+            }
+
+            /**
              * <p>The number of physical asynchronous reads.</p>
              * 
              * <strong>example:</strong>
@@ -837,6 +968,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
              * <p>The number of rows returned by the SQL statement.</p>
              * 
              * <strong>example:</strong>
@@ -844,6 +983,14 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
+                return this;
+            }
+
+            /**
+             * RowKey.
+             */
+            public Builder rowKey(String rowKey) {
+                this.rowKey = rowKey;
                 return this;
             }
 
