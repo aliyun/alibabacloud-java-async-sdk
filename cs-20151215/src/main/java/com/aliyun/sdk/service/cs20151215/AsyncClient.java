@@ -100,6 +100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CleanUserPermissionsResponse> cleanUserPermissions(CleanUserPermissionsRequest request);
 
     /**
+     * @param request the request parameters of CreateAutoRepairPolicy  CreateAutoRepairPolicyRequest
+     * @return CreateAutoRepairPolicyResponse
+     */
+    CompletableFuture<CreateAutoRepairPolicyResponse> createAutoRepairPolicy(CreateAutoRepairPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateAutoscalingConfig  CreateAutoscalingConfigRequest
      * @return CreateAutoscalingConfigResponse
      */
@@ -170,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAlertContactGroupResponse
      */
     CompletableFuture<DeleteAlertContactGroupResponse> deleteAlertContactGroup(DeleteAlertContactGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAutoRepairPolicy  DeleteAutoRepairPolicyRequest
+     * @return DeleteAutoRepairPolicyResponse
+     */
+    CompletableFuture<DeleteAutoRepairPolicyResponse> deleteAutoRepairPolicy(DeleteAutoRepairPolicyRequest request);
 
     /**
      * <b>description</b> :
@@ -258,6 +270,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DescribeAddonsResponse> describeAddons(DescribeAddonsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAutoRepairPolicy  DescribeAutoRepairPolicyRequest
+     * @return DescribeAutoRepairPolicyResponse
+     */
+    CompletableFuture<DescribeAutoRepairPolicyResponse> describeAutoRepairPolicy(DescribeAutoRepairPolicyRequest request);
 
     /**
      * @deprecated OpenAPI DescribeClusterAddonInstance is deprecated, please use CS::2015-12-15::GetClusterAddonInstance instead.  * @param request  the request parameters of DescribeClusterAddonInstance  DescribeClusterAddonInstanceRequest
@@ -625,6 +643,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAddonsResponse> listAddons(ListAddonsRequest request);
 
     /**
+     * @param request the request parameters of ListAutoRepairPolicies  ListAutoRepairPoliciesRequest
+     * @return ListAutoRepairPoliciesResponse
+     */
+    CompletableFuture<ListAutoRepairPoliciesResponse> listAutoRepairPolicies(ListAutoRepairPoliciesRequest request);
+
+    /**
      * @param request the request parameters of ListClusterAddonInstanceResources  ListClusterAddonInstanceResourcesRequest
      * @return ListClusterAddonInstanceResourcesResponse
      */
@@ -696,6 +720,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MigrateClusterResponse
      */
     CompletableFuture<MigrateClusterResponse> migrateCluster(MigrateClusterRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAutoRepairPolicy  ModifyAutoRepairPolicyRequest
+     * @return ModifyAutoRepairPolicyResponse
+     */
+    CompletableFuture<ModifyAutoRepairPolicyResponse> modifyAutoRepairPolicy(ModifyAutoRepairPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyCluster  ModifyClusterRequest

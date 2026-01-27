@@ -271,6 +271,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAutoRepairPolicy  CreateAutoRepairPolicyRequest
+     * @return CreateAutoRepairPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateAutoRepairPolicyResponse> createAutoRepairPolicy(CreateAutoRepairPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAutoRepairPolicy").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/auto_repair_policies").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAutoRepairPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAutoRepairPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAutoscalingConfig  CreateAutoscalingConfigRequest
      * @return CreateAutoscalingConfigResponse
      */
@@ -457,6 +475,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAlertContactGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAutoRepairPolicy  DeleteAutoRepairPolicyRequest
+     * @return DeleteAutoRepairPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAutoRepairPolicyResponse> deleteAutoRepairPolicy(DeleteAutoRepairPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAutoRepairPolicy").setMethod(HttpMethod.DELETE).setPathRegex("/clusters/{cluster_id}/auto_repair_policies/{policy_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAutoRepairPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAutoRepairPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -677,6 +713,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAddonsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAutoRepairPolicy  DescribeAutoRepairPolicyRequest
+     * @return DescribeAutoRepairPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAutoRepairPolicyResponse> describeAutoRepairPolicy(DescribeAutoRepairPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeAutoRepairPolicy").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/auto_repair_policies/{policy_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAutoRepairPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAutoRepairPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1696,6 +1750,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAutoRepairPolicies  ListAutoRepairPoliciesRequest
+     * @return ListAutoRepairPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListAutoRepairPoliciesResponse> listAutoRepairPolicies(ListAutoRepairPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAutoRepairPolicies").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/auto_repair_policies").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAutoRepairPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAutoRepairPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListClusterAddonInstanceResources  ListClusterAddonInstanceResourcesRequest
      * @return ListClusterAddonInstanceResourcesResponse
      */
@@ -1883,6 +1955,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<MigrateClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAutoRepairPolicy  ModifyAutoRepairPolicyRequest
+     * @return ModifyAutoRepairPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAutoRepairPolicyResponse> modifyAutoRepairPolicy(ModifyAutoRepairPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyAutoRepairPolicy").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{cluster_id}/auto_repair_policies/{policy_id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAutoRepairPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAutoRepairPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
