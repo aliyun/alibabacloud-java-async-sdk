@@ -80,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClearReplicaGroupDrillResponse> clearReplicaGroupDrill(ClearReplicaGroupDrillRequest request);
 
     /**
+     * @param request the request parameters of CreateApp  CreateAppRequest
+     * @return CreateAppResponse
+     */
+    CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
@@ -133,6 +139,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateEnterpriseSnapshotPolicyResponse
      */
     CompletableFuture<CreateEnterpriseSnapshotPolicyResponse> createEnterpriseSnapshotPolicy(CreateEnterpriseSnapshotPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApp  DeleteAppRequest
+     * @return DeleteAppResponse
+     */
+    CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
 
     /**
      * <b>description</b> :
