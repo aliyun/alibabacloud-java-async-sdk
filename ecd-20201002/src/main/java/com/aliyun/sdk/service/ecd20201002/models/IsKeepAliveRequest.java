@@ -88,6 +88,7 @@ public class IsKeepAliveRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class IsKeepAliveRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-885351****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -109,7 +113,10 @@ public class IsKeepAliveRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

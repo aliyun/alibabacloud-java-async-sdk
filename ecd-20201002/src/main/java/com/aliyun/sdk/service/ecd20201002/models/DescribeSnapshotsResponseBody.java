@@ -80,7 +80,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Snapshots.
+         * <p>The snapshots.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -305,7 +311,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-20T14:52:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -313,7 +322,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The snapshot description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -321,7 +333,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-g03l3tlm8djoj****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -329,7 +344,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of creating the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -337,7 +355,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RemainTime.
+             * <p>The remaining time required to complete snapshot creation. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -345,7 +366,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RestorePointId.
+             * <p>The ID of the restore point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rp-btgmaa20wkcju****</p>
              */
             public Builder restorePointId(String restorePointId) {
                 this.restorePointId = restorePointId;
@@ -353,7 +377,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RestorePointName.
+             * <p>The name of the restore point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Disk Backup</p>
              */
             public Builder restorePointName(String restorePointName) {
                 this.restorePointName = restorePointName;
@@ -361,7 +388,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-2zeipxmnhej803x7****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -369,7 +399,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotName.
+             * <p>The snapshot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSnapshotName</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -377,7 +410,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotType.
+             * <p>The snapshot type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AUTO: an automatic snapshot.</li>
+             * <li>USER: a manual snapshot.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;
@@ -385,7 +426,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskSize.
+             * <p>The size of the source disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder sourceDiskSize(String sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -393,7 +437,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDiskType.
+             * <p>The type of the source disk.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: a system disk.</li>
+             * <li>DATA: a data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -401,7 +453,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The snapshot status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PROGRESSING: The snapshot is being created.</li>
+             * <li>FAILED: The snapshot failed to be created.</li>
+             * <li>ACCOMPLISHED: The snapshot is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCOMPLISHED</p>
              */
             public Builder status(String status) {
                 this.status = status;

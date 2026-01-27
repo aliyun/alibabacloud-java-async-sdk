@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConnectionTicketResponseBody</p>
  */
 public class GetConnectionTicketResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
+    private String desktopId;
+
+    @com.aliyun.core.annotation.NameInMap("P2PToken")
+    private String p2PToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -36,6 +42,8 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     private String ticket;
 
     private GetConnectionTicketResponseBody(Builder builder) {
+        this.desktopId = builder.desktopId;
+        this.p2PToken = builder.p2PToken;
         this.requestId = builder.requestId;
         this.taskCode = builder.taskCode;
         this.taskId = builder.taskId;
@@ -54,6 +62,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return desktopId
+     */
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
+    /**
+     * @return p2PToken
+     */
+    public String getP2PToken() {
+        return this.p2PToken;
     }
 
     /**
@@ -99,6 +121,8 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String desktopId; 
+        private String p2PToken; 
         private String requestId; 
         private String taskCode; 
         private String taskId; 
@@ -110,6 +134,8 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         } 
 
         private Builder(GetConnectionTicketResponseBody model) {
+            this.desktopId = model.desktopId;
+            this.p2PToken = model.p2PToken;
             this.requestId = model.requestId;
             this.taskCode = model.taskCode;
             this.taskId = model.taskId;
@@ -117,6 +143,22 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             this.taskStatus = model.taskStatus;
             this.ticket = model.ticket;
         } 
+
+        /**
+         * DesktopId.
+         */
+        public Builder desktopId(String desktopId) {
+            this.desktopId = desktopId;
+            return this;
+        }
+
+        /**
+         * P2PToken.
+         */
+        public Builder p2PToken(String p2PToken) {
+            this.p2PToken = p2PToken;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -135,7 +177,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task to connect to the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c63862da</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -159,7 +204,10 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * Ticket.
+         * <p>The credentials for connecting to the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

@@ -54,7 +54,10 @@ public class DeleteFingerPrintTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134BD0B2-B848-5743-9CE2-C1FD3D5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

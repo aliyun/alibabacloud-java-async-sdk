@@ -162,6 +162,7 @@ public class VerifyCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +175,7 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +188,16 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
-         * CredentialType.
+         * <p>The type of the logon credential that you want to clear.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MfaPasscode: the multi-factor verification code.</li>
+         * <li>FingerPrint: the fingerprint.</li>
+         * <li>Password: the password.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Password</p>
          */
         public Builder credentialType(String credentialType) {
             this.putQueryParameter("CredentialType", credentialType);
@@ -195,7 +206,10 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
-         * EncryptedKey.
+         * <p>The ID of the key that you want to encrypt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drjfs****</p>
          */
         public Builder encryptedKey(String encryptedKey) {
             this.putQueryParameter("EncryptedKey", encryptedKey);
@@ -204,6 +218,7 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +231,7 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
+         * <p>The office network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +244,7 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +257,10 @@ public class VerifyCredentialRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb17af2e-1dd6-4cc4-a3ee-3a14d0d7****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

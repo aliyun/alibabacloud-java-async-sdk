@@ -31,11 +31,16 @@ public class DescribeOfficeSitesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    private String uuid;
+
     private DescribeOfficeSitesRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
         this.officeSiteId = builder.officeSiteId;
         this.regionId = builder.regionId;
+        this.uuid = builder.uuid;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class DescribeOfficeSitesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return uuid
+     */
+    public String getUuid() {
+        return this.uuid;
+    }
+
     public static final class Builder extends Request.Builder<DescribeOfficeSitesRequest, Builder> {
         private String clientId; 
         private java.util.List<String> officeSiteId; 
         private String regionId; 
+        private String uuid; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class DescribeOfficeSitesRequest extends Request {
             this.clientId = request.clientId;
             this.officeSiteId = request.officeSiteId;
             this.regionId = request.regionId;
+            this.uuid = request.uuid;
         } 
 
         /**
@@ -118,6 +132,18 @@ public class DescribeOfficeSitesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>uuid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASDASD</p>
+         */
+        public Builder uuid(String uuid) {
+            this.putQueryParameter("Uuid", uuid);
+            this.uuid = uuid;
             return this;
         }
 

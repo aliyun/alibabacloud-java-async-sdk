@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessType")
+    private String accessType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
@@ -78,11 +82,16 @@ public class GetConnectionTicketRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TicketBlackList")
+    private java.util.List<String> ticketBlackList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private GetConnectionTicketRequest(Builder builder) {
         super(builder);
+        this.accessType = builder.accessType;
         this.clientId = builder.clientId;
         this.clientOS = builder.clientOS;
         this.clientType = builder.clientType;
@@ -97,6 +106,7 @@ public class GetConnectionTicketRequest extends Request {
         this.sessionId = builder.sessionId;
         this.tag = builder.tag;
         this.taskId = builder.taskId;
+        this.ticketBlackList = builder.ticketBlackList;
         this.uuid = builder.uuid;
     }
 
@@ -111,6 +121,13 @@ public class GetConnectionTicketRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessType
+     */
+    public String getAccessType() {
+        return this.accessType;
     }
 
     /**
@@ -212,6 +229,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return ticketBlackList
+     */
+    public java.util.List<String> getTicketBlackList() {
+        return this.ticketBlackList;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -219,6 +243,7 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
+        private String accessType; 
         private String clientId; 
         private String clientOS; 
         private String clientType; 
@@ -233,6 +258,7 @@ public class GetConnectionTicketRequest extends Request {
         private String sessionId; 
         private java.util.List<Tag> tag; 
         private String taskId; 
+        private java.util.List<String> ticketBlackList; 
         private String uuid; 
 
         private Builder() {
@@ -241,6 +267,7 @@ public class GetConnectionTicketRequest extends Request {
 
         private Builder(GetConnectionTicketRequest request) {
             super(request);
+            this.accessType = request.accessType;
             this.clientId = request.clientId;
             this.clientOS = request.clientOS;
             this.clientType = request.clientType;
@@ -255,8 +282,18 @@ public class GetConnectionTicketRequest extends Request {
             this.sessionId = request.sessionId;
             this.tag = request.tag;
             this.taskId = request.taskId;
+            this.ticketBlackList = request.ticketBlackList;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * AccessType.
+         */
+        public Builder accessType(String accessType) {
+            this.putQueryParameter("AccessType", accessType);
+            this.accessType = accessType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -280,7 +317,19 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>The type of the client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>html5: web client</li>
+         * <li>Linux: self-developed hardware terminal</li>
+         * <li>android: Android client</li>
+         * <li>windows: Windows client</li>
+         * <li>ios: iOS client</li>
+         * <li>macos: macOS client</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -307,7 +356,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>The cloud compute ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -337,6 +389,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -376,7 +429,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags. You can specify 1 to 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -385,11 +438,23 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the cloud computer connection task.<br>The first time you call the GetConnectionTicket operation, you do not need to configure this parameter. When you call the GetConnectionTicket operation later, set this parameter to the value of the <code>TaskId</code> parameter returned from the previous invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2afbad19-778a-4fc5-9674-1f19c638****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TicketBlackList.
+         */
+        public Builder ticketBlackList(java.util.List<String> ticketBlackList) {
+            this.putQueryParameter("TicketBlackList", ticketBlackList);
+            this.ticketBlackList = ticketBlackList;
             return this;
         }
 
@@ -462,7 +527,10 @@ public class GetConnectionTicketRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code> and contain only spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -470,7 +538,10 @@ public class GetConnectionTicketRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify an empty string as a tag value. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

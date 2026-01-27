@@ -440,7 +440,15 @@ public class DescribeUserResourcesRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>The access type. If you leave this parameter empty, both types will be displayed.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>INTERNET: access over the Internet.</li>
+         * <li>VPC: access over an enterprise virtual private cloud (VPC).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -449,7 +457,18 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * AutoRefresh.
+         * <p>Specifies whether to enable the immediate refresh feature.</p>
+         * <blockquote>
+         * <p> To ensure the operation response speed, we recommend that you set the value to <code>false</code>.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRefresh(Boolean autoRefresh) {
             this.putQueryParameter("AutoRefresh", autoRefresh);
@@ -458,7 +477,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * <p>The level-2 resource category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder categoryId(Integer categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -467,7 +489,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * CategoryType.
+         * <p>The level-1 resource category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder categoryType(Integer categoryType) {
             this.putQueryParameter("CategoryType", categoryType);
@@ -476,6 +501,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client. This parameter is non-sensitive and does not need encryption.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,7 +514,18 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ClientType.
+         * <p>The client type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>html5: the web client.</li>
+         * <li>android: the Android client.</li>
+         * <li>windows: the Windows client.</li>
+         * <li>ios: the iOS client.</li>
+         * <li>macos: the macOS client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -497,7 +534,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ClientVersion.
+         * <p>The client version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.6.0-R-20241112.222305</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -506,7 +546,14 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * DualCenterForward.
+         * <p>Specifies whether to enable geo-redundant forwarding. Set the value to <code>false</code>.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>false: disables geo-redundant forwarding.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dualCenterForward(Boolean dualCenterForward) {
             this.putQueryParameter("DualCenterForward", dualCenterForward);
@@ -515,7 +562,16 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The client language.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en_US: English.</li>
+         * <li>zh_CN: Simplified Chinese.</li>
+         * <li>ja_JP: Japanese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -524,7 +580,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * LoginRegionId.
+         * <p>The ID of the region where end users log on to clients. This parameter applies to office network ID-based logons. For organization ID-based logons, you can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder loginRegionId(String loginRegionId) {
             this.putQueryParameter("LoginRegionId", loginRegionId);
@@ -533,6 +592,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
+         * <p>The logon token. You can call the <code>GetLoginToken</code> or <code>RefreshLoginToken</code> operation to retrieve the logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -545,7 +605,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -554,7 +617,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -563,7 +629,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * OfficeSiteIds.
+         * <p>The office network IDs. This parameter is required for logons by using enterprise Active Directory (AD) accounts.</p>
          */
         public Builder officeSiteIds(java.util.List<String> officeSiteIds) {
             this.putQueryParameter("OfficeSiteIds", officeSiteIds);
@@ -572,7 +638,15 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting field. If you do not specify this parameter, resources are sorted by creation time by default.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CreateTime: the time when resources are created.</li>
+         * <li>AssignTime: the time when resources are assigned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AssignTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -581,7 +655,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ProductTypes.
+         * <p>The service types. If you leave this parameter empty, services of all supported types will be queried.</p>
          */
         public Builder productTypes(java.util.List<String> productTypes) {
             this.putQueryParameter("ProductTypes", productTypes);
@@ -590,7 +664,15 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ProtocolType.
+         * <p>The protocol type. You can specify this parameter to filter cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX).</li>
+         * <li>ASP: Adaptive Streaming Protocol (ASP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -599,7 +681,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * QueryDesktopDurationList.
+         * <p>是否查询云桌面套餐包信息，默认为true。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryDesktopDurationList(Boolean queryDesktopDurationList) {
             this.putQueryParameter("QueryDesktopDurationList", queryDesktopDurationList);
@@ -608,7 +693,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * QueryDesktopTimers.
+         * <p>是否查询云电脑定时任务信息，默认为true。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryDesktopTimers(Boolean queryDesktopTimers) {
             this.putQueryParameter("QueryDesktopTimers", queryDesktopTimers);
@@ -617,7 +705,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * QueryFotaUpdate.
+         * <p>Specifies whether to return the image version information of cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryFotaUpdate(Boolean queryFotaUpdate) {
             this.putQueryParameter("QueryFotaUpdate", queryFotaUpdate);
@@ -626,7 +717,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * RefreshFotaUpdate.
+         * <p>Specifies whether to refresh over-the-air (OTA) information in real time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder refreshFotaUpdate(Boolean refreshFotaUpdate) {
             this.putQueryParameter("RefreshFotaUpdate", refreshFotaUpdate);
@@ -635,7 +729,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The resource IDs. You can specify up to 100 resource IDs.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -644,7 +738,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * <p>The resource name. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -653,7 +750,7 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * ResourceTypes.
+         * <p>The resource types. If you leave this parameter empty, resources of all supported types will be queried.</p>
          */
         public Builder resourceTypes(java.util.List<String> resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -662,7 +759,14 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The client usage scenario. Set the value to <code>desktop</code>.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>desktop: cloud computers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -671,7 +775,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * SearchRegionId.
+         * <p>The ID of the searched region. You can specify this parameter to filter cloud resources in specific regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder searchRegionId(String searchRegionId) {
             this.putQueryParameter("SearchRegionId", searchRegionId);
@@ -680,7 +787,10 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. You can call the <code>GetLoginToken</code> operation to retrieve the session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd45e873-650d-4d70-acb9-f996187a****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -689,7 +799,15 @@ public class DescribeUserResourcesRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sorting method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ASC (default): the ascending order.</li>
+         * <li>DESC: the descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);

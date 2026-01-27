@@ -160,6 +160,7 @@ public class DescribeSnapshotsRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * DesktopId.
+         * <p>The cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         public Builder desktopId(String desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -181,6 +185,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +198,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -202,7 +210,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -211,6 +222,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +235,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a99b9aca-bac5-4da2-819e-400ce98f****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -232,7 +247,10 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2ze81owrnv9pity4****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

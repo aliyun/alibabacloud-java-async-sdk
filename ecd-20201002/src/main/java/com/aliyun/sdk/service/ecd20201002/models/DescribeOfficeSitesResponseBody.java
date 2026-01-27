@@ -67,7 +67,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         } 
 
         /**
-         * OfficeSites.
+         * <p>The office networks.</p>
          */
         public Builder officeSites(java.util.List<OfficeSites> officeSites) {
             this.officeSites = officeSites;
@@ -95,6 +95,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
      * <p>DescribeOfficeSitesResponseBody</p>
      */
     public static class OfficeSites extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AliUid")
+        private Long aliUid;
+
+        @com.aliyun.core.annotation.NameInMap("BizType")
+        private Integer bizType;
+
         @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;
 
@@ -114,6 +120,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String ssoServiceUrl;
 
         private OfficeSites(Builder builder) {
+            this.aliUid = builder.aliUid;
+            this.bizType = builder.bizType;
             this.desktopAccessType = builder.desktopAccessType;
             this.desktopVpcEndpoint = builder.desktopVpcEndpoint;
             this.officeSiteId = builder.officeSiteId;
@@ -128,6 +136,20 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
         public static OfficeSites create() {
             return builder().build();
+        }
+
+        /**
+         * @return aliUid
+         */
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        /**
+         * @return bizType
+         */
+        public Integer getBizType() {
+            return this.bizType;
         }
 
         /**
@@ -173,6 +195,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long aliUid; 
+            private Integer bizType; 
             private String desktopAccessType; 
             private String desktopVpcEndpoint; 
             private String officeSiteId; 
@@ -184,6 +208,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             } 
 
             private Builder(OfficeSites model) {
+                this.aliUid = model.aliUid;
+                this.bizType = model.bizType;
                 this.desktopAccessType = model.desktopAccessType;
                 this.desktopVpcEndpoint = model.desktopVpcEndpoint;
                 this.officeSiteId = model.officeSiteId;
@@ -191,6 +217,28 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.providerId = model.providerId;
                 this.ssoServiceUrl = model.ssoServiceUrl;
             } 
+
+            /**
+             * <p>aliuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125552</p>
+             */
+            public Builder aliUid(Long aliUid) {
+                this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * <p>biztype</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENTERPRISE</p>
+             */
+            public Builder bizType(Integer bizType) {
+                this.bizType = bizType;
+                return this;
+            }
 
             /**
              * DesktopAccessType.

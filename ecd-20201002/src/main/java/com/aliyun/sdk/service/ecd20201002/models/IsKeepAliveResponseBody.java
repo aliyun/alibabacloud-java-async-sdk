@@ -93,7 +93,10 @@ public class IsKeepAliveResponseBody extends TeaModel {
         } 
 
         /**
-         * IsKeepAlive.
+         * <p>Identifies whether the user should remain logged on to the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder isKeepAlive(Boolean isKeepAlive) {
             this.isKeepAlive = isKeepAlive;
@@ -101,7 +104,10 @@ public class IsKeepAliveResponseBody extends TeaModel {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-885351****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
@@ -109,7 +115,10 @@ public class IsKeepAliveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class IsKeepAliveResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The unique ID (UID) of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141631846826****</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

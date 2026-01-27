@@ -75,7 +75,7 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The tokens.</p>
          */
         public Builder token(Token token) {
             this.token = token;
@@ -217,7 +217,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7836fa6eced7dc8d54c775k34iu3h4i2kh534f****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -225,7 +228,10 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total capacity of the enterprise drive. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6050416754750</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

@@ -80,7 +80,10 @@ public class SetFingerPrintTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * EncryptedPassword.
+         * <p>The encrypted password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0711abb9-4cf8-41b2-9d0e-b51209468631;da4VFPNxwY3CZegFjOrCNw==;iHp2l9/qGcfD4tWx7jZIZQ==</p>
          */
         public Builder encryptedPassword(String encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
@@ -88,7 +91,10 @@ public class SetFingerPrintTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -96,7 +102,10 @@ public class SetFingerPrintTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDE666EA-4FCD-5024-895C-8698E3D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

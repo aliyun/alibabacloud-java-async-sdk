@@ -80,7 +80,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * Desktops.
+         * <p>The details about the cloud computer.</p>
          */
         public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
@@ -88,7 +88,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. If NextToken is empty, it indicates that there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJkZWZhdWx0IjpbIjIwMjItMDgtMTdUM****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4686A731-D601-548C-83E2-4CB6371E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,14 +168,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>客户端类型，取值：</p>
+             * <p>The client type.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>macos：Mac客户端</li>
-             * <li>ios：IOS客户端</li>
-             * <li>android：Android客户端</li>
-             * <li>html5：Web客户端</li>
-             * <li>windows：Windows客户端</li>
-             * <li>linux：Linux客户端</li>
+             * <li>html5: the web client.</li>
+             * <li>android: the Android client.</li>
+             * <li>linux: Linux client.</li>
+             * <li>ios: the iOS client.</li>
+             * <li>windows: the Windows client.</li>
+             * <li>macos: the macOS client.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -181,10 +188,11 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>客户端状态，取值：</p>
+             * <p>The status of the client.</p>
+             * <p>Valid values:</p>
              * <ul>
-             * <li>ON：允许登录</li>
-             * <li>OFF：不允许登录</li>
+             * <li>OFF: does not allow logon.</li>
+             * <li>ON: allows logon.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -333,7 +341,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowClientSetting.
+             * <p>Whether to allow clients to set policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowClientSetting(Boolean allowClientSetting) {
                 this.allowClientSetting = allowClientSetting;
@@ -341,7 +352,11 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The CRON expression for the scheduled task.</p>
+             * <p>For example, a <code>0 0 4 1/1 * ?</code> indicates that the operation is executed every day from 4:00 a.m. on the first day of each month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 ? * 1</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -349,7 +364,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Enforce.
+             * <p>Indicates whether to forcibly execute the scheduled task. To <code>true</code> indicates that cloud computer and connection status detection are ignored, and scheduled tasks are forcibly executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enforce(Boolean enforce) {
                 this.enforce = enforce;
@@ -357,7 +375,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionTime.
+             * <p>The task duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-31T15:59Z</p>
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -365,7 +386,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval at which the monitoring data was queried. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -373,7 +397,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>The type of the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>HIBERNATE</li>
+             * <li>SHUTDOWN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHUTDOWN</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -381,7 +413,16 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ResetType.
+             * <p>For a reset task, you must set the reset type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
+             * <li>RESET_TYPE_USER_DISK: resets the data disk.</li>
+             * <li>RESET_TYPE_BOTH: resets the system disk and data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RESET_TYPE_BOTH</p>
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
@@ -389,7 +430,21 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * TimerType.
+             * <p>The type of the scheduled task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
+             * <li>NoConnectShutdown: connectionless shutdown.</li>
+             * <li>TimerBoot: scheduled start.</li>
+             * <li>TimerReset: scheduled reset.</li>
+             * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
+             * <li>TimerShutdown: Stops the cloud computers on schedule.</li>
+             * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
+             * <li>TimerReboot: scheduled restart.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoConnectShutdown</p>
              */
             public Builder timerType(String timerType) {
                 this.timerType = timerType;
@@ -469,7 +524,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * DiskId.
+             * <p>The disk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-jedbpr4sl9l37****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -477,7 +535,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * <p>The disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -485,7 +546,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The disk type.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>SYSTEM: a system disk.</li>
+             * <li>DATA: a data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -656,7 +725,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * Channel.
+             * <p>Subscription Channel</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -664,7 +736,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentAppVersion.
+             * <p>The current version number of the cloud computer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0-D-20220102.xxxx</p>
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -672,7 +747,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Force.
+             * <p>Whether to force upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder force(Boolean force) {
                 this.force = force;
@@ -680,7 +758,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * NewAppVersion.
+             * <p>The version number of the application after the update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0-R-20220307.xxxx</p>
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -696,7 +777,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testProject</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -704,7 +788,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNote.
+             * <p>The description of the version that can be upgraded.</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -712,7 +796,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteEn.
+             * <p>The English release note for the new image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Release note</p>
              */
             public Builder releaseNoteEn(String releaseNoteEn) {
                 this.releaseNoteEn = releaseNoteEn;
@@ -720,7 +807,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNoteJp.
+             * <p>The Japanese release note for the new image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>リリースノート</p>
              */
             public Builder releaseNoteJp(String releaseNoteJp) {
                 this.releaseNoteJp = releaseNoteJp;
@@ -728,7 +818,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the update package for the cloud computer image. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -795,7 +888,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndUserId.
+             * <p>End user information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -803,7 +899,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * EstablishmentTime.
+             * <p>The time when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-07T08:23Z</p>
              */
             public Builder establishmentTime(String establishmentTime) {
                 this.establishmentTime = establishmentTime;
@@ -1364,7 +1463,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing method of the cloud computer pool.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>PostPaid: pay-as-you-go</li>
+             * <li>PrePaid: subscription</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1372,7 +1479,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>支持的客户端信息</p>
+             * <p>The information about the supported clients.</p>
              */
             public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
@@ -1380,7 +1487,19 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStatus.
+             * <p>The state of the endpoint connection.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Connected</li>
+             * <li>Disconnecting</li>
+             * <li>Pending.</li>
+             * <li>Connecting.</li>
+             * <li>Disconnected.</li>
+             * <li>Deleting</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disconnected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -1388,7 +1507,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1396,7 +1518,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the cloud computer was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-06T08:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1404,7 +1529,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * <p>The ID of the cloud computer share.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dg-3uiojcc0j4kh7****</p>
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -1412,7 +1540,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The cloud compute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsmucyy****</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1420,7 +1551,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The cloud computer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesktopName</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -1428,7 +1562,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * <p>The cloud computer status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -1436,7 +1573,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopTimers.
+             * <p>The cloud computer timer object.</p>
              */
             public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
                 this.desktopTimers = desktopTimers;
@@ -1444,7 +1581,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopType.
+             * <p>The cloud computer type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd.basic.large</p>
              */
             public Builder desktopType(String desktopType) {
                 this.desktopType = desktopType;
@@ -1452,7 +1592,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The network ID of the office. Same as <code>OfficeSiteId</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -1460,7 +1603,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>The disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1468,7 +1611,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>The names of end users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User1</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -1476,7 +1622,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserIds.
+             * <p>The list of end user.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1484,7 +1630,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time of the cloud computer.</p>
+             * <ul>
+             * <li>For a cloud computer that is a package year or month, the return value is meaningful.</li>
+             * <li>For pay-as-you-go cloud computers, the <code>2099-12-31T15:59Z</code> is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-31T15:59Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1492,7 +1645,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * FotaUpdate.
+             * <p>The information about image update.</p>
              */
             public Builder fotaUpdate(FotaUpdate fotaUpdate) {
                 this.fotaUpdate = fotaUpdate;
@@ -1500,7 +1653,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuMemory.
+             * <p>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder gpuMemory(Integer gpuMemory) {
                 this.gpuMemory = gpuMemory;
@@ -1508,7 +1664,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * HibernationBeta.
+             * <p>Indicates whether this is a beta version of the hibernation feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hibernationBeta(Boolean hibernationBeta) {
                 this.hibernationBeta = hibernationBeta;
@@ -1516,7 +1675,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The hostname of the cloud desktop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1524,7 +1686,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-4zfb6zj728hhr****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1532,7 +1697,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * LastStartTime.
+             * <p>The time when the cloud desktop was last started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-13T15:59Z</p>
              */
             public Builder lastStartTime(String lastStartTime) {
                 this.lastStartTime = lastStartTime;
@@ -1540,7 +1708,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The region name.</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -1548,7 +1716,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementFlags.
+             * <p>The list of cloud computer status.</p>
              */
             public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
@@ -1556,7 +1724,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory of the cloud computer. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -1564,7 +1735,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * <p>The IP address of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -1572,7 +1746,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The IDs of the office networks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-363353****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -1580,7 +1757,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>OS Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -1596,7 +1776,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The operating system.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Linux</li>
+             * <li>Windows</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1604,7 +1792,18 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The OS platform.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Ubuntu</li>
+             * <li>UOS</li>
+             * <li>CentOS</li>
+             * <li>Windows Server 2019</li>
+             * <li>Windows Server 2016</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1612,7 +1811,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>The cloud computer policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-9cktlowtxfl6****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -1620,7 +1822,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolType.
+             * <p>The type of the protocol.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>High-definition Experience (HDX)</li>
+             * <li>ASP</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ASP</p>
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -1628,7 +1838,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * RealDesktopId.
+             * <p>If a shared cloud computer is assigned a real cloud computer, the ID of the cloud computer is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-gx2x1dhsm****</p>
              */
             public Builder realDesktopId(String realDesktopId) {
                 this.realDesktopId = realDesktopId;
@@ -1636,7 +1849,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1652,7 +1868,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionType.
+             * <p>The type of the session.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>SINGLE_SESSION</li>
+             * <li>MULTIPLE_SESSION</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SINGLE_SESSION</p>
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
@@ -1660,7 +1884,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The list of session information.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -1668,7 +1892,15 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportHibernation.
+             * <p>Indicates whether hibernation is supported.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: supported</li>
+             * <li>false: not supported</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportHibernation(Boolean supportHibernation) {
                 this.supportHibernation = supportHibernation;
@@ -1676,7 +1908,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCustomName.
+             * <p>The custom cloud computer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesktop</p>
              */
             public Builder userCustomName(String userCustomName) {
                 this.userCustomName = userCustomName;

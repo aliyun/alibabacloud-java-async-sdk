@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFingerPrintTemplatesResponse> describeFingerPrintTemplates(DescribeFingerPrintTemplatesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</p>
+     * <ul>
+     * <li>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeGlobalDesktops  DescribeGlobalDesktopsRequest
      * @return DescribeGlobalDesktopsResponse
      */
@@ -74,6 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</p>
+     * 
      * @param request the request parameters of DescribeUserResources  DescribeUserResourcesRequest
      * @return DescribeUserResourcesResponse
      */
@@ -92,6 +101,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCloudDriveServiceMountTokenResponse> getCloudDriveServiceMountToken(GetCloudDriveServiceMountTokenRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The first time you call this operation, the system returns a task ID in the <code>TaskID</code> parameter. Use the task ID indicated in the <code>TaskID</code> parameter to continue calling this operation until the value of the <code>TaskStatus</code> parameter becomes <code>FINISHED</code> or <code>FAILED</code>. When <code>TaskStatus</code> becomes <code>FINISHED</code>, the value of the <code>Ticket</code> parameter is the ticket that is used to connect the client to the cloud computer.</p>
+     * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
      */

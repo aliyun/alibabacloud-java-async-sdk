@@ -149,6 +149,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         } 
 
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +162,10 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40401e62-5caf-4508-8de7-bf98af12****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -170,6 +174,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +187,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The index.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +200,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The logon token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +213,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +226,7 @@ public class SetFingerPrintTemplateDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

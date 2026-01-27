@@ -54,7 +54,10 @@ public class SetFingerPrintTemplateDescriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBD7DFD1-A5DE-51D9-8FD6-3BF54EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
