@@ -575,6 +575,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualKubeletIp")
+        private String virtualKubeletIp;
+
         @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
         private String virtualNodePoolId;
 
@@ -607,6 +610,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskSize = builder.systemDiskSize;
+            this.virtualKubeletIp = builder.virtualKubeletIp;
             this.virtualNodePoolId = builder.virtualNodePoolId;
             this.wuyingServerId = builder.wuyingServerId;
             this.wuyingServerName = builder.wuyingServerName;
@@ -775,6 +779,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return virtualKubeletIp
+         */
+        public String getVirtualKubeletIp() {
+            return this.virtualKubeletIp;
+        }
+
+        /**
          * @return virtualNodePoolId
          */
         public String getVirtualNodePoolId() {
@@ -818,6 +829,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String systemDiskCategory; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
+            private String virtualKubeletIp; 
             private String virtualNodePoolId; 
             private String wuyingServerId; 
             private String wuyingServerName; 
@@ -848,6 +860,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskSize = model.systemDiskSize;
+                this.virtualKubeletIp = model.virtualKubeletIp;
                 this.virtualNodePoolId = model.virtualNodePoolId;
                 this.wuyingServerId = model.wuyingServerId;
                 this.wuyingServerName = model.wuyingServerName;
@@ -1068,6 +1081,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * VirtualKubeletIp.
+             */
+            public Builder virtualKubeletIp(String virtualKubeletIp) {
+                this.virtualKubeletIp = virtualKubeletIp;
                 return this;
             }
 
