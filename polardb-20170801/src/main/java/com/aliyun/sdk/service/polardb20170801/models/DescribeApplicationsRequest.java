@@ -22,6 +22,10 @@ public class DescribeApplicationsRequest extends Request {
     private String applicationIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationTypes")
+    private String applicationTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
@@ -41,6 +45,7 @@ public class DescribeApplicationsRequest extends Request {
     private DescribeApplicationsRequest(Builder builder) {
         super(builder);
         this.applicationIds = builder.applicationIds;
+        this.applicationTypes = builder.applicationTypes;
         this.DBClusterId = builder.DBClusterId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -65,6 +70,13 @@ public class DescribeApplicationsRequest extends Request {
      */
     public String getApplicationIds() {
         return this.applicationIds;
+    }
+
+    /**
+     * @return applicationTypes
+     */
+    public String getApplicationTypes() {
+        return this.applicationTypes;
     }
 
     /**
@@ -97,6 +109,7 @@ public class DescribeApplicationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeApplicationsRequest, Builder> {
         private String applicationIds; 
+        private String applicationTypes; 
         private String DBClusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -109,6 +122,7 @@ public class DescribeApplicationsRequest extends Request {
         private Builder(DescribeApplicationsRequest request) {
             super(request);
             this.applicationIds = request.applicationIds;
+            this.applicationTypes = request.applicationTypes;
             this.DBClusterId = request.DBClusterId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -121,6 +135,15 @@ public class DescribeApplicationsRequest extends Request {
         public Builder applicationIds(String applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
+            return this;
+        }
+
+        /**
+         * ApplicationTypes.
+         */
+        public Builder applicationTypes(String applicationTypes) {
+            this.putQueryParameter("ApplicationTypes", applicationTypes);
+            this.applicationTypes = applicationTypes;
             return this;
         }
 

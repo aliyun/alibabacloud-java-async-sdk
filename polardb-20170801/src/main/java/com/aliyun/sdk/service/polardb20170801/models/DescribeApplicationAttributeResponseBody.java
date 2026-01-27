@@ -56,6 +56,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
     private String maintainStartTime;
 
+    @com.aliyun.core.annotation.NameInMap("MemApplicationAttribute")
+    private MemApplicationAttribute memApplicationAttribute;
+
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -109,6 +112,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.lockMode = builder.lockMode;
         this.maintainEndTime = builder.maintainEndTime;
         this.maintainStartTime = builder.maintainStartTime;
+        this.memApplicationAttribute = builder.memApplicationAttribute;
         this.payType = builder.payType;
         this.polarFSInstanceId = builder.polarFSInstanceId;
         this.regionId = builder.regionId;
@@ -228,6 +232,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return memApplicationAttribute
+     */
+    public MemApplicationAttribute getMemApplicationAttribute() {
+        return this.memApplicationAttribute;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -332,6 +343,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String lockMode; 
         private String maintainEndTime; 
         private String maintainStartTime; 
+        private MemApplicationAttribute memApplicationAttribute; 
         private String payType; 
         private String polarFSInstanceId; 
         private String regionId; 
@@ -363,6 +375,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.lockMode = model.lockMode;
             this.maintainEndTime = model.maintainEndTime;
             this.maintainStartTime = model.maintainStartTime;
+            this.memApplicationAttribute = model.memApplicationAttribute;
             this.payType = model.payType;
             this.polarFSInstanceId = model.polarFSInstanceId;
             this.regionId = model.regionId;
@@ -479,6 +492,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.maintainStartTime = maintainStartTime;
+            return this;
+        }
+
+        /**
+         * MemApplicationAttribute.
+         */
+        public Builder memApplicationAttribute(MemApplicationAttribute memApplicationAttribute) {
+            this.memApplicationAttribute = memApplicationAttribute;
             return this;
         }
 
@@ -1367,6 +1388,165 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             public Endpoints build() {
                 return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationAttributeResponseBody</p>
+     */
+    public static class MemApplicationAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DbName")
+        private String dbName;
+
+        @com.aliyun.core.annotation.NameInMap("EmbedderModelName")
+        private String embedderModelName;
+
+        @com.aliyun.core.annotation.NameInMap("LlmModelName")
+        private String llmModelName;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
+        @com.aliyun.core.annotation.NameInMap("RerankerModelName")
+        private String rerankerModelName;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private String userName;
+
+        private MemApplicationAttribute(Builder builder) {
+            this.dbName = builder.dbName;
+            this.embedderModelName = builder.embedderModelName;
+            this.llmModelName = builder.llmModelName;
+            this.projectName = builder.projectName;
+            this.rerankerModelName = builder.rerankerModelName;
+            this.userName = builder.userName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MemApplicationAttribute create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbName
+         */
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        /**
+         * @return embedderModelName
+         */
+        public String getEmbedderModelName() {
+            return this.embedderModelName;
+        }
+
+        /**
+         * @return llmModelName
+         */
+        public String getLlmModelName() {
+            return this.llmModelName;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        /**
+         * @return rerankerModelName
+         */
+        public String getRerankerModelName() {
+            return this.rerankerModelName;
+        }
+
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public static final class Builder {
+            private String dbName; 
+            private String embedderModelName; 
+            private String llmModelName; 
+            private String projectName; 
+            private String rerankerModelName; 
+            private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemApplicationAttribute model) {
+                this.dbName = model.dbName;
+                this.embedderModelName = model.embedderModelName;
+                this.llmModelName = model.llmModelName;
+                this.projectName = model.projectName;
+                this.rerankerModelName = model.rerankerModelName;
+                this.userName = model.userName;
+            } 
+
+            /**
+             * DbName.
+             */
+            public Builder dbName(String dbName) {
+                this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * EmbedderModelName.
+             */
+            public Builder embedderModelName(String embedderModelName) {
+                this.embedderModelName = embedderModelName;
+                return this;
+            }
+
+            /**
+             * LlmModelName.
+             */
+            public Builder llmModelName(String llmModelName) {
+                this.llmModelName = llmModelName;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * RerankerModelName.
+             */
+            public Builder rerankerModelName(String rerankerModelName) {
+                this.rerankerModelName = rerankerModelName;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            public MemApplicationAttribute build() {
+                return new MemApplicationAttribute(this);
             } 
 
         } 

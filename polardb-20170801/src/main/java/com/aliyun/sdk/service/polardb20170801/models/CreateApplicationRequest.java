@@ -60,6 +60,10 @@ public class CreateApplicationRequest extends Request {
     private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemApplicationSpec")
+    private MemApplicationSpec memApplicationSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -82,6 +86,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
@@ -111,12 +119,14 @@ public class CreateApplicationRequest extends Request {
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.endpoints = builder.endpoints;
+        this.memApplicationSpec = builder.memApplicationSpec;
         this.payType = builder.payType;
         this.period = builder.period;
         this.polarFSInstanceId = builder.polarFSInstanceId;
         this.promotionCode = builder.promotionCode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupId = builder.securityGroupId;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -207,6 +217,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return memApplicationSpec
+     */
+    public MemApplicationSpec getMemApplicationSpec() {
+        return this.memApplicationSpec;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -249,6 +266,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -287,12 +311,14 @@ public class CreateApplicationRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private java.util.List<Endpoints> endpoints; 
+        private MemApplicationSpec memApplicationSpec; 
         private String payType; 
         private String period; 
         private String polarFSInstanceId; 
         private String promotionCode; 
         private String regionId; 
         private String resourceGroupId; 
+        private String securityGroupId; 
         private String usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -314,12 +340,14 @@ public class CreateApplicationRequest extends Request {
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.endpoints = request.endpoints;
+            this.memApplicationSpec = request.memApplicationSpec;
             this.payType = request.payType;
             this.period = request.period;
             this.polarFSInstanceId = request.polarFSInstanceId;
             this.promotionCode = request.promotionCode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.securityGroupId = request.securityGroupId;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -425,6 +453,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * MemApplicationSpec.
+         */
+        public Builder memApplicationSpec(MemApplicationSpec memApplicationSpec) {
+            String memApplicationSpecShrink = shrink(memApplicationSpec, "MemApplicationSpec", "json");
+            this.putQueryParameter("MemApplicationSpec", memApplicationSpecShrink);
+            this.memApplicationSpec = memApplicationSpec;
+            return this;
+        }
+
+        /**
          * PayType.
          */
         public Builder payType(String payType) {
@@ -475,6 +513,15 @@ public class CreateApplicationRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 
@@ -834,6 +881,186 @@ public class CreateApplicationRequest extends Request {
 
             public Endpoints build() {
                 return new Endpoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class MemApplicationSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DbName")
+        private String dbName;
+
+        @com.aliyun.core.annotation.NameInMap("DbPassword")
+        private String dbPassword;
+
+        @com.aliyun.core.annotation.NameInMap("DbUser")
+        private String dbUser;
+
+        @com.aliyun.core.annotation.NameInMap("EmbedderModel")
+        private String embedderModel;
+
+        @com.aliyun.core.annotation.NameInMap("LlmModel")
+        private String llmModel;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
+        @com.aliyun.core.annotation.NameInMap("RerankerModel")
+        private String rerankerModel;
+
+        private MemApplicationSpec(Builder builder) {
+            this.dbName = builder.dbName;
+            this.dbPassword = builder.dbPassword;
+            this.dbUser = builder.dbUser;
+            this.embedderModel = builder.embedderModel;
+            this.llmModel = builder.llmModel;
+            this.projectName = builder.projectName;
+            this.rerankerModel = builder.rerankerModel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MemApplicationSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbName
+         */
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        /**
+         * @return dbPassword
+         */
+        public String getDbPassword() {
+            return this.dbPassword;
+        }
+
+        /**
+         * @return dbUser
+         */
+        public String getDbUser() {
+            return this.dbUser;
+        }
+
+        /**
+         * @return embedderModel
+         */
+        public String getEmbedderModel() {
+            return this.embedderModel;
+        }
+
+        /**
+         * @return llmModel
+         */
+        public String getLlmModel() {
+            return this.llmModel;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        /**
+         * @return rerankerModel
+         */
+        public String getRerankerModel() {
+            return this.rerankerModel;
+        }
+
+        public static final class Builder {
+            private String dbName; 
+            private String dbPassword; 
+            private String dbUser; 
+            private String embedderModel; 
+            private String llmModel; 
+            private String projectName; 
+            private String rerankerModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemApplicationSpec model) {
+                this.dbName = model.dbName;
+                this.dbPassword = model.dbPassword;
+                this.dbUser = model.dbUser;
+                this.embedderModel = model.embedderModel;
+                this.llmModel = model.llmModel;
+                this.projectName = model.projectName;
+                this.rerankerModel = model.rerankerModel;
+            } 
+
+            /**
+             * DbName.
+             */
+            public Builder dbName(String dbName) {
+                this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * DbPassword.
+             */
+            public Builder dbPassword(String dbPassword) {
+                this.dbPassword = dbPassword;
+                return this;
+            }
+
+            /**
+             * DbUser.
+             */
+            public Builder dbUser(String dbUser) {
+                this.dbUser = dbUser;
+                return this;
+            }
+
+            /**
+             * EmbedderModel.
+             */
+            public Builder embedderModel(String embedderModel) {
+                this.embedderModel = embedderModel;
+                return this;
+            }
+
+            /**
+             * LlmModel.
+             */
+            public Builder llmModel(String llmModel) {
+                this.llmModel = llmModel;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * RerankerModel.
+             */
+            public Builder rerankerModel(String rerankerModel) {
+                this.rerankerModel = rerankerModel;
+                return this;
+            }
+
+            public MemApplicationSpec build() {
+                return new MemApplicationSpec(this);
             } 
 
         } 
