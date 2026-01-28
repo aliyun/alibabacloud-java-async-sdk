@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePlaybookResponse> deletePlaybook(DeletePlaybookRequest request);
 
     /**
+     * @param request the request parameters of ExecuteComponent  ExecuteComponentRequest
+     * @return ExecuteComponentResponse
+     */
+    CompletableFuture<ExecuteComponentResponse> executeComponent(ExecuteComponentRequest request);
+
+    /**
      * @param request the request parameters of GetPlaybook  GetPlaybookRequest
      * @return GetPlaybookResponse
      */
