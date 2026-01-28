@@ -23,6 +23,7 @@ public class ModifyVpcFirewallAclEngineModeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StrictMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strictMode;
 
     @com.aliyun.core.annotation.Query
@@ -97,7 +98,10 @@ public class ModifyVpcFirewallAclEngineModeRequest extends Request {
         }
 
         /**
-         * StrictMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder strictMode(String strictMode) {
             this.putQueryParameter("StrictMode", strictMode);
