@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateDatasource  CreateDatasourceRequest
+     * @return CreateDatasourceResponse
+     */
+    CompletableFuture<CreateDatasourceResponse> createDatasource(CreateDatasourceRequest request);
+
+    /**
      * @param request the request parameters of CreateExecutors  CreateExecutorsRequest
      * @return CreateExecutorsResponse
      */
@@ -72,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteClusterResponse
      */
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDatasource  DeleteDatasourceRequest
+     * @return DeleteDatasourceResponse
+     */
+    CompletableFuture<DeleteDatasourceResponse> deleteDatasource(DeleteDatasourceRequest request);
 
     /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
@@ -242,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
+     * @param request the request parameters of ListDatasources  ListDatasourcesRequest
+     * @return ListDatasourcesResponse
+     */
+    CompletableFuture<ListDatasourcesResponse> listDatasources(ListDatasourcesRequest request);
+
+    /**
      * @param request the request parameters of ListExecutors  ListExecutorsRequest
      * @return ListExecutorsResponse
      */
@@ -324,6 +342,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateBackfillWorkflowResponse
      */
     CompletableFuture<OperateBackfillWorkflowResponse> operateBackfillWorkflow(OperateBackfillWorkflowRequest request);
+
+    /**
+     * @param request the request parameters of OperateConnectDatasource  OperateConnectDatasourceRequest
+     * @return OperateConnectDatasourceResponse
+     */
+    CompletableFuture<OperateConnectDatasourceResponse> operateConnectDatasource(OperateConnectDatasourceRequest request);
 
     /**
      * @param request the request parameters of OperateDesignateExecutors  OperateDesignateExecutorsRequest
@@ -470,6 +494,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
     /**
+     * @param request the request parameters of UpdateDatasource  UpdateDatasourceRequest
+     * @return UpdateDatasourceResponse
+     */
+    CompletableFuture<UpdateDatasourceResponse> updateDatasource(UpdateDatasourceRequest request);
+
+    /**
      * @param request the request parameters of UpdateExecutors  UpdateExecutorsRequest
      * @return UpdateExecutorsResponse
      */
@@ -480,6 +510,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobResponse
      */
     CompletableFuture<UpdateJobResponse> updateJob(UpdateJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobExecution  UpdateJobExecutionRequest
+     * @return UpdateJobExecutionResponse
+     */
+    CompletableFuture<UpdateJobExecutionResponse> updateJobExecution(UpdateJobExecutionRequest request);
 
     /**
      * @param request the request parameters of UpdateJobScript  UpdateJobScriptRequest

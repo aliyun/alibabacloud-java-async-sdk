@@ -265,6 +265,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetDomain")
         private String intranetDomain;
 
+        @com.aliyun.core.annotation.NameInMap("IpWhitelist")
+        private String ipWhitelist;
+
         @com.aliyun.core.annotation.NameInMap("JobNum")
         private Integer jobNum;
 
@@ -318,6 +321,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.engineVersion = builder.engineVersion;
             this.internetDomain = builder.internetDomain;
             this.intranetDomain = builder.intranetDomain;
+            this.ipWhitelist = builder.ipWhitelist;
             this.jobNum = builder.jobNum;
             this.kubeConfig = builder.kubeConfig;
             this.maxJobNum = builder.maxJobNum;
@@ -410,6 +414,13 @@ public class GetClusterResponseBody extends TeaModel {
          */
         public String getIntranetDomain() {
             return this.intranetDomain;
+        }
+
+        /**
+         * @return ipWhitelist
+         */
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
         }
 
         /**
@@ -521,6 +532,7 @@ public class GetClusterResponseBody extends TeaModel {
             private String engineVersion; 
             private String internetDomain; 
             private String intranetDomain; 
+            private String ipWhitelist; 
             private Integer jobNum; 
             private String kubeConfig; 
             private Integer maxJobNum; 
@@ -550,6 +562,7 @@ public class GetClusterResponseBody extends TeaModel {
                 this.engineVersion = model.engineVersion;
                 this.internetDomain = model.internetDomain;
                 this.intranetDomain = model.intranetDomain;
+                this.ipWhitelist = model.ipWhitelist;
                 this.jobNum = model.jobNum;
                 this.kubeConfig = model.kubeConfig;
                 this.maxJobNum = model.maxJobNum;
@@ -643,6 +656,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
+                return this;
+            }
+
+            /**
+             * IpWhitelist.
+             */
+            public Builder ipWhitelist(String ipWhitelist) {
+                this.ipWhitelist = ipWhitelist;
                 return this;
             }
 

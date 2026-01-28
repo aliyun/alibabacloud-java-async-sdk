@@ -23,7 +23,7 @@ public class UpdateWorkflowRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
     @com.aliyun.core.annotation.Body
@@ -41,7 +41,6 @@ public class UpdateWorkflowRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -50,7 +49,6 @@ public class UpdateWorkflowRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(maxLength = 32, minLength = 6)
     private String name;
 
     @com.aliyun.core.annotation.Body

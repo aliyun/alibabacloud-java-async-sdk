@@ -12,17 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExportWorkflowsRequest} extends {@link RequestModel}
+ * {@link UpdateJobExecutionRequest} extends {@link RequestModel}
  *
- * <p>ExportWorkflowsRequest</p>
+ * <p>UpdateJobExecutionRequest</p>
  */
-public class ExportWorkflowsRequest extends Request {
+public class UpdateJobExecutionRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
     @com.aliyun.core.annotation.Body
@@ -31,22 +32,28 @@ public class ExportWorkflowsRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("WorkflowId")
-    private java.util.List<Long> workflowId;
+    @com.aliyun.core.annotation.NameInMap("JobExecutionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String jobExecutionId;
 
-    private ExportWorkflowsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleTime")
+    private Long scheduleTime;
+
+    private UpdateJobExecutionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
-        this.workflowId = builder.workflowId;
+        this.jobExecutionId = builder.jobExecutionId;
+        this.scheduleTime = builder.scheduleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ExportWorkflowsRequest create() {
+    public static UpdateJobExecutionRequest create() {
         return builder().build();
     }
 
@@ -77,28 +84,37 @@ public class ExportWorkflowsRequest extends Request {
     }
 
     /**
-     * @return workflowId
+     * @return jobExecutionId
      */
-    public java.util.List<Long> getWorkflowId() {
-        return this.workflowId;
+    public String getJobExecutionId() {
+        return this.jobExecutionId;
     }
 
-    public static final class Builder extends Request.Builder<ExportWorkflowsRequest, Builder> {
+    /**
+     * @return scheduleTime
+     */
+    public Long getScheduleTime() {
+        return this.scheduleTime;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateJobExecutionRequest, Builder> {
         private String regionId; 
         private String appName; 
         private String clusterId; 
-        private java.util.List<Long> workflowId; 
+        private String jobExecutionId; 
+        private Long scheduleTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExportWorkflowsRequest request) {
+        private Builder(UpdateJobExecutionRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.appName = request.appName;
             this.clusterId = request.clusterId;
-            this.workflowId = request.workflowId;
+            this.jobExecutionId = request.jobExecutionId;
+            this.scheduleTime = request.scheduleTime;
         } 
 
         /**
@@ -111,7 +127,10 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -120,7 +139,6 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * <p>A short description of struct</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,18 +151,29 @@ public class ExportWorkflowsRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310630367761285120</p>
          */
-        public Builder workflowId(java.util.List<Long> workflowId) {
-            String workflowIdShrink = shrink(workflowId, "WorkflowId", "json");
-            this.putBodyParameter("WorkflowId", workflowIdShrink);
-            this.workflowId = workflowId;
+        public Builder jobExecutionId(String jobExecutionId) {
+            this.putBodyParameter("JobExecutionId", jobExecutionId);
+            this.jobExecutionId = jobExecutionId;
+            return this;
+        }
+
+        /**
+         * ScheduleTime.
+         */
+        public Builder scheduleTime(Long scheduleTime) {
+            this.putBodyParameter("ScheduleTime", scheduleTime);
+            this.scheduleTime = scheduleTime;
             return this;
         }
 
         @Override
-        public ExportWorkflowsRequest build() {
-            return new ExportWorkflowsRequest(this);
+        public UpdateJobExecutionRequest build() {
+            return new UpdateJobExecutionRequest(this);
         } 
 
     } 

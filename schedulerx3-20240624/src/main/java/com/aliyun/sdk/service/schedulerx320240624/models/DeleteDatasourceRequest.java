@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateClusterRequest} extends {@link RequestModel}
+ * {@link DeleteDatasourceRequest} extends {@link RequestModel}
  *
- * <p>UpdateClusterRequest</p>
+ * <p>DeleteDatasourceRequest</p>
  */
-public class UpdateClusterRequest extends Request {
+public class DeleteDatasourceRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -27,27 +27,22 @@ public class UpdateClusterRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClusterName")
-    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
-    private String clusterName;
+    @com.aliyun.core.annotation.NameInMap("DatasourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long datasourceId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("IpWhitelist")
-    private String ipWhitelist;
-
-    private UpdateClusterRequest(Builder builder) {
+    private DeleteDatasourceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.clusterId = builder.clusterId;
-        this.clusterName = builder.clusterName;
-        this.ipWhitelist = builder.ipWhitelist;
+        this.datasourceId = builder.datasourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateClusterRequest create() {
+    public static DeleteDatasourceRequest create() {
         return builder().build();
     }
 
@@ -71,35 +66,26 @@ public class UpdateClusterRequest extends Request {
     }
 
     /**
-     * @return clusterName
+     * @return datasourceId
      */
-    public String getClusterName() {
-        return this.clusterName;
+    public Long getDatasourceId() {
+        return this.datasourceId;
     }
 
-    /**
-     * @return ipWhitelist
-     */
-    public String getIpWhitelist() {
-        return this.ipWhitelist;
-    }
-
-    public static final class Builder extends Request.Builder<UpdateClusterRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteDatasourceRequest, Builder> {
         private String regionId; 
         private String clusterId; 
-        private String clusterName; 
-        private String ipWhitelist; 
+        private Long datasourceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateClusterRequest request) {
+        private Builder(DeleteDatasourceRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.clusterId = request.clusterId;
-            this.clusterName = request.clusterName;
-            this.ipWhitelist = request.ipWhitelist;
+            this.datasourceId = request.datasourceId;
         } 
 
         /**
@@ -113,6 +99,9 @@ public class UpdateClusterRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxljob-b6ec1xxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -121,26 +110,20 @@ public class UpdateClusterRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>195</p>
          */
-        public Builder clusterName(String clusterName) {
-            this.putBodyParameter("ClusterName", clusterName);
-            this.clusterName = clusterName;
-            return this;
-        }
-
-        /**
-         * IpWhitelist.
-         */
-        public Builder ipWhitelist(String ipWhitelist) {
-            this.putBodyParameter("IpWhitelist", ipWhitelist);
-            this.ipWhitelist = ipWhitelist;
+        public Builder datasourceId(Long datasourceId) {
+            this.putBodyParameter("DatasourceId", datasourceId);
+            this.datasourceId = datasourceId;
             return this;
         }
 
         @Override
-        public UpdateClusterRequest build() {
-            return new UpdateClusterRequest(this);
+        public DeleteDatasourceRequest build() {
+            return new DeleteDatasourceRequest(this);
         } 
 
     } 
