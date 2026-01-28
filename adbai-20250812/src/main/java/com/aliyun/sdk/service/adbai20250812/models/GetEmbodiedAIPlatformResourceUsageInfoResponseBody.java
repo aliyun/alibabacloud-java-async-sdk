@@ -182,6 +182,9 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
      * <p>GetEmbodiedAIPlatformResourceUsageInfoResponseBody</p>
      */
     public static class GpuDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllocatedUnit")
+        private Integer allocatedUnit;
+
         @com.aliyun.core.annotation.NameInMap("GpuModel")
         private String gpuModel;
 
@@ -189,6 +192,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         private Integer totalCount;
 
         private GpuDetails(Builder builder) {
+            this.allocatedUnit = builder.allocatedUnit;
             this.gpuModel = builder.gpuModel;
             this.totalCount = builder.totalCount;
         }
@@ -199,6 +203,13 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
 
         public static GpuDetails create() {
             return builder().build();
+        }
+
+        /**
+         * @return allocatedUnit
+         */
+        public Integer getAllocatedUnit() {
+            return this.allocatedUnit;
         }
 
         /**
@@ -216,6 +227,7 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
         }
 
         public static final class Builder {
+            private Integer allocatedUnit; 
             private String gpuModel; 
             private Integer totalCount; 
 
@@ -223,9 +235,18 @@ public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody extends TeaModel
             } 
 
             private Builder(GpuDetails model) {
+                this.allocatedUnit = model.allocatedUnit;
                 this.gpuModel = model.gpuModel;
                 this.totalCount = model.totalCount;
             } 
+
+            /**
+             * AllocatedUnit.
+             */
+            public Builder allocatedUnit(Integer allocatedUnit) {
+                this.allocatedUnit = allocatedUnit;
+                return this;
+            }
 
             /**
              * GpuModel.
