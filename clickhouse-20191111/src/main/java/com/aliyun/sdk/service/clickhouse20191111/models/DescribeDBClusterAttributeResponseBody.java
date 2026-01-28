@@ -413,6 +413,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsExpired")
         private String isExpired;
 
+        @com.aliyun.core.annotation.NameInMap("LbKind")
+        private String lbKind;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -520,6 +523,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.extStorageSize = builder.extStorageSize;
             this.extStorageType = builder.extStorageType;
             this.isExpired = builder.isExpired;
+            this.lbKind = builder.lbKind;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainAutoType = builder.maintainAutoType;
@@ -773,6 +777,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return lbKind
+         */
+        public String getLbKind() {
+            return this.lbKind;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -979,6 +990,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer extStorageSize; 
             private String extStorageType; 
             private String isExpired; 
+            private String lbKind; 
             private String lockMode; 
             private String lockReason; 
             private Boolean maintainAutoType; 
@@ -1040,6 +1052,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.extStorageSize = model.extStorageSize;
                 this.extStorageType = model.extStorageType;
                 this.isExpired = model.isExpired;
+                this.lbKind = model.lbKind;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
                 this.maintainAutoType = model.maintainAutoType;
@@ -1467,6 +1480,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder isExpired(String isExpired) {
                 this.isExpired = isExpired;
+                return this;
+            }
+
+            /**
+             * LbKind.
+             */
+            public Builder lbKind(String lbKind) {
+                this.lbKind = lbKind;
                 return this;
             }
 
