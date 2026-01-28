@@ -26,10 +26,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddApplicationAccountToUserResponse> addApplicationAccountToUser(AddApplicationAccountToUserRequest request);
 
     /**
+     * @param request the request parameters of AddApplicationToAuthorizationRule  AddApplicationToAuthorizationRuleRequest
+     * @return AddApplicationToAuthorizationRuleResponse
+     */
+    CompletableFuture<AddApplicationToAuthorizationRuleResponse> addApplicationToAuthorizationRule(AddApplicationToAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of AddCustomPrivacyPoliciesToBrand  AddCustomPrivacyPoliciesToBrandRequest
      * @return AddCustomPrivacyPoliciesToBrandResponse
      */
     CompletableFuture<AddCustomPrivacyPoliciesToBrandResponse> addCustomPrivacyPoliciesToBrand(AddCustomPrivacyPoliciesToBrandRequest request);
+
+    /**
+     * @param request the request parameters of AddGroupToAuthorizationRule  AddGroupToAuthorizationRuleRequest
+     * @return AddGroupToAuthorizationRuleResponse
+     */
+    CompletableFuture<AddGroupToAuthorizationRuleResponse> addGroupToAuthorizationRule(AddGroupToAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of AddUserToAuthorizationRule  AddUserToAuthorizationRuleRequest
+     * @return AddUserToAuthorizationRuleResponse
+     */
+    CompletableFuture<AddUserToAuthorizationRuleResponse> addUserToAuthorizationRule(AddUserToAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of AddUserToOrganizationalUnits  AddUserToOrganizationalUnitsRequest
@@ -129,6 +147,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateApplicationTokenResponse
      */
     CompletableFuture<CreateApplicationTokenResponse> createApplicationToken(CreateApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of CreateAuthorizationResource  CreateAuthorizationResourceRequest
+     * @return CreateAuthorizationResourceResponse
+     */
+    CompletableFuture<CreateAuthorizationResourceResponse> createAuthorizationResource(CreateAuthorizationResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateAuthorizationRule  CreateAuthorizationRuleRequest
+     * @return CreateAuthorizationRuleResponse
+     */
+    CompletableFuture<CreateAuthorizationRuleResponse> createAuthorizationRule(CreateAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of CreateBrand  CreateBrandRequest
@@ -273,6 +303,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteApplicationTokenResponse
      */
     CompletableFuture<DeleteApplicationTokenResponse> deleteApplicationToken(DeleteApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAuthorizationResource  DeleteAuthorizationResourceRequest
+     * @return DeleteAuthorizationResourceResponse
+     */
+    CompletableFuture<DeleteAuthorizationResourceResponse> deleteAuthorizationResource(DeleteAuthorizationResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAuthorizationRule  DeleteAuthorizationRuleRequest
+     * @return DeleteAuthorizationRuleResponse
+     */
+    CompletableFuture<DeleteAuthorizationRuleResponse> deleteAuthorizationRule(DeleteAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteBrand  DeleteBrandRequest
@@ -458,6 +500,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableApplicationTokenResponse> disableApplicationToken(DisableApplicationTokenRequest request);
 
     /**
+     * @param request the request parameters of DisableAuthorizationRule  DisableAuthorizationRuleRequest
+     * @return DisableAuthorizationRuleResponse
+     */
+    CompletableFuture<DisableAuthorizationRuleResponse> disableAuthorizationRule(DisableAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of DisableBrand  DisableBrandRequest
      * @return DisableBrandResponse
      */
@@ -597,6 +645,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableApplicationTokenResponse
      */
     CompletableFuture<EnableApplicationTokenResponse> enableApplicationToken(EnableApplicationTokenRequest request);
+
+    /**
+     * @param request the request parameters of EnableAuthorizationRule  EnableAuthorizationRuleRequest
+     * @return EnableAuthorizationRuleResponse
+     */
+    CompletableFuture<EnableAuthorizationRuleResponse> enableAuthorizationRule(EnableAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of EnableBrand  EnableBrandRequest
@@ -756,6 +810,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetApplicationTemplateResponse
      */
     CompletableFuture<GetApplicationTemplateResponse> getApplicationTemplate(GetApplicationTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GetAuthorizationResource  GetAuthorizationResourceRequest
+     * @return GetAuthorizationResourceResponse
+     */
+    CompletableFuture<GetAuthorizationResourceResponse> getAuthorizationResource(GetAuthorizationResourceRequest request);
+
+    /**
+     * @param request the request parameters of GetAuthorizationRule  GetAuthorizationRuleRequest
+     * @return GetAuthorizationRuleResponse
+     */
+    CompletableFuture<GetAuthorizationRuleResponse> getAuthorizationRule(GetAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of GetBrand  GetBrandRequest
@@ -980,6 +1046,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
     /**
+     * @param request the request parameters of ListApplicationsForAuthorizationRule  ListApplicationsForAuthorizationRuleRequest
+     * @return ListApplicationsForAuthorizationRuleResponse
+     */
+    CompletableFuture<ListApplicationsForAuthorizationRuleResponse> listApplicationsForAuthorizationRule(ListApplicationsForAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of ListApplicationsForGroup  ListApplicationsForGroupRequest
      * @return ListApplicationsForGroupResponse
      */
@@ -1011,6 +1083,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListApplicationsForUserResponse
      */
     CompletableFuture<ListApplicationsForUserResponse> listApplicationsForUser(ListApplicationsForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationResources  ListAuthorizationResourcesRequest
+     * @return ListAuthorizationResourcesResponse
+     */
+    CompletableFuture<ListAuthorizationResourcesResponse> listAuthorizationResources(ListAuthorizationResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationRules  ListAuthorizationRulesRequest
+     * @return ListAuthorizationRulesResponse
+     */
+    CompletableFuture<ListAuthorizationRulesResponse> listAuthorizationRules(ListAuthorizationRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationRulesForApplication  ListAuthorizationRulesForApplicationRequest
+     * @return ListAuthorizationRulesForApplicationResponse
+     */
+    CompletableFuture<ListAuthorizationRulesForApplicationResponse> listAuthorizationRulesForApplication(ListAuthorizationRulesForApplicationRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationRulesForGroup  ListAuthorizationRulesForGroupRequest
+     * @return ListAuthorizationRulesForGroupResponse
+     */
+    CompletableFuture<ListAuthorizationRulesForGroupResponse> listAuthorizationRulesForGroup(ListAuthorizationRulesForGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationRulesForUser  ListAuthorizationRulesForUserRequest
+     * @return ListAuthorizationRulesForUserResponse
+     */
+    CompletableFuture<ListAuthorizationRulesForUserResponse> listAuthorizationRulesForUser(ListAuthorizationRulesForUserRequest request);
 
     /**
      * @param request the request parameters of ListBrands  ListBrandsRequest
@@ -1119,6 +1221,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListGroupsForApplicationResponse
      */
     CompletableFuture<ListGroupsForApplicationResponse> listGroupsForApplication(ListGroupsForApplicationRequest request);
+
+    /**
+     * @param request the request parameters of ListGroupsForAuthorizationRule  ListGroupsForAuthorizationRuleRequest
+     * @return ListGroupsForAuthorizationRuleResponse
+     */
+    CompletableFuture<ListGroupsForAuthorizationRuleResponse> listGroupsForAuthorizationRule(ListGroupsForAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of ListGroupsForResourceServer  ListGroupsForResourceServerRequest
@@ -1241,6 +1349,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersForApplicationResponse> listUsersForApplication(ListUsersForApplicationRequest request);
 
     /**
+     * @param request the request parameters of ListUsersForAuthorizationRule  ListUsersForAuthorizationRuleRequest
+     * @return ListUsersForAuthorizationRuleResponse
+     */
+    CompletableFuture<ListUsersForAuthorizationRuleResponse> listUsersForAuthorizationRule(ListUsersForAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of ListUsersForGroup  ListUsersForGroupRequest
      * @return ListUsersForGroupResponse
      */
@@ -1277,10 +1391,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveApplicationAccountFromUserResponse> removeApplicationAccountFromUser(RemoveApplicationAccountFromUserRequest request);
 
     /**
+     * @param request the request parameters of RemoveApplicationFromAuthorizationRule  RemoveApplicationFromAuthorizationRuleRequest
+     * @return RemoveApplicationFromAuthorizationRuleResponse
+     */
+    CompletableFuture<RemoveApplicationFromAuthorizationRuleResponse> removeApplicationFromAuthorizationRule(RemoveApplicationFromAuthorizationRuleRequest request);
+
+    /**
      * @param request the request parameters of RemoveCustomPrivacyPoliciesFromBrand  RemoveCustomPrivacyPoliciesFromBrandRequest
      * @return RemoveCustomPrivacyPoliciesFromBrandResponse
      */
     CompletableFuture<RemoveCustomPrivacyPoliciesFromBrandResponse> removeCustomPrivacyPoliciesFromBrand(RemoveCustomPrivacyPoliciesFromBrandRequest request);
+
+    /**
+     * @param request the request parameters of RemoveGroupFromAuthorizationRule  RemoveGroupFromAuthorizationRuleRequest
+     * @return RemoveGroupFromAuthorizationRuleResponse
+     */
+    CompletableFuture<RemoveGroupFromAuthorizationRuleResponse> removeGroupFromAuthorizationRule(RemoveGroupFromAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of RemoveUserFromAuthorizationRule  RemoveUserFromAuthorizationRuleRequest
+     * @return RemoveUserFromAuthorizationRuleResponse
+     */
+    CompletableFuture<RemoveUserFromAuthorizationRuleResponse> removeUserFromAuthorizationRule(RemoveUserFromAuthorizationRuleRequest request);
 
     /**
      * @param request the request parameters of RemoveUserFromOrganizationalUnits  RemoveUserFromOrganizationalUnitsRequest
@@ -1524,6 +1656,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApplicationTokenExpirationTimeResponse
      */
     CompletableFuture<UpdateApplicationTokenExpirationTimeResponse> updateApplicationTokenExpirationTime(UpdateApplicationTokenExpirationTimeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationRule  UpdateAuthorizationRuleRequest
+     * @return UpdateAuthorizationRuleResponse
+     */
+    CompletableFuture<UpdateAuthorizationRuleResponse> updateAuthorizationRule(UpdateAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationRuleApplicationAttachment  UpdateAuthorizationRuleApplicationAttachmentRequest
+     * @return UpdateAuthorizationRuleApplicationAttachmentResponse
+     */
+    CompletableFuture<UpdateAuthorizationRuleApplicationAttachmentResponse> updateAuthorizationRuleApplicationAttachment(UpdateAuthorizationRuleApplicationAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationRuleDescription  UpdateAuthorizationRuleDescriptionRequest
+     * @return UpdateAuthorizationRuleDescriptionResponse
+     */
+    CompletableFuture<UpdateAuthorizationRuleDescriptionResponse> updateAuthorizationRuleDescription(UpdateAuthorizationRuleDescriptionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationRuleGroupAttachment  UpdateAuthorizationRuleGroupAttachmentRequest
+     * @return UpdateAuthorizationRuleGroupAttachmentResponse
+     */
+    CompletableFuture<UpdateAuthorizationRuleGroupAttachmentResponse> updateAuthorizationRuleGroupAttachment(UpdateAuthorizationRuleGroupAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationRuleUserAttachment  UpdateAuthorizationRuleUserAttachmentRequest
+     * @return UpdateAuthorizationRuleUserAttachmentResponse
+     */
+    CompletableFuture<UpdateAuthorizationRuleUserAttachmentResponse> updateAuthorizationRuleUserAttachment(UpdateAuthorizationRuleUserAttachmentRequest request);
 
     /**
      * @param request the request parameters of UpdateBrand  UpdateBrandRequest
