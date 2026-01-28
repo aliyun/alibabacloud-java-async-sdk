@@ -192,6 +192,9 @@ public class CreateDataAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
+        @com.aliyun.core.annotation.NameInMap("UserOssBucket")
+        private String userOssBucket;
+
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
@@ -199,6 +202,7 @@ public class CreateDataAgentSessionRequest extends Request {
             this.language = builder.language;
             this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
+            this.userOssBucket = builder.userOssBucket;
         }
 
         public static Builder builder() {
@@ -251,6 +255,13 @@ public class CreateDataAgentSessionRequest extends Request {
             return this.mode;
         }
 
+        /**
+         * @return userOssBucket
+         */
+        public String getUserOssBucket() {
+            return this.userOssBucket;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
@@ -258,6 +269,7 @@ public class CreateDataAgentSessionRequest extends Request {
             private String language; 
             private java.util.List<String> mcpServerIds; 
             private String mode; 
+            private String userOssBucket; 
 
             private Builder() {
             } 
@@ -269,6 +281,7 @@ public class CreateDataAgentSessionRequest extends Request {
                 this.language = model.language;
                 this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
+                this.userOssBucket = model.userOssBucket;
             } 
 
             /**
@@ -316,6 +329,14 @@ public class CreateDataAgentSessionRequest extends Request {
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * UserOssBucket.
+             */
+            public Builder userOssBucket(String userOssBucket) {
+                this.userOssBucket = userOssBucket;
                 return this;
             }
 
