@@ -998,9 +998,17 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
+        @com.aliyun.core.annotation.NameInMap("TyxmPlusCount")
+        private String tyxmPlusCount;
+
+        @com.aliyun.core.annotation.NameInMap("TyxmTurboCount")
+        private String tyxmTurboCount;
+
         private ResultInfo(Builder builder) {
             this.rules = builder.rules;
             this.score = builder.score;
+            this.tyxmPlusCount = builder.tyxmPlusCount;
+            this.tyxmTurboCount = builder.tyxmTurboCount;
         }
 
         public static Builder builder() {
@@ -1025,9 +1033,25 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
             return this.score;
         }
 
+        /**
+         * @return tyxmPlusCount
+         */
+        public String getTyxmPlusCount() {
+            return this.tyxmPlusCount;
+        }
+
+        /**
+         * @return tyxmTurboCount
+         */
+        public String getTyxmTurboCount() {
+            return this.tyxmTurboCount;
+        }
+
         public static final class Builder {
             private Rules rules; 
             private Integer score; 
+            private String tyxmPlusCount; 
+            private String tyxmTurboCount; 
 
             private Builder() {
             } 
@@ -1035,6 +1059,8 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
             private Builder(ResultInfo model) {
                 this.rules = model.rules;
                 this.score = model.score;
+                this.tyxmPlusCount = model.tyxmPlusCount;
+                this.tyxmTurboCount = model.tyxmTurboCount;
             } 
 
             /**
@@ -1050,6 +1076,22 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
              */
             public Builder score(Integer score) {
                 this.score = score;
+                return this;
+            }
+
+            /**
+             * TyxmPlusCount.
+             */
+            public Builder tyxmPlusCount(String tyxmPlusCount) {
+                this.tyxmPlusCount = tyxmPlusCount;
+                return this;
+            }
+
+            /**
+             * TyxmTurboCount.
+             */
+            public Builder tyxmTurboCount(String tyxmTurboCount) {
+                this.tyxmTurboCount = tyxmTurboCount;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2026-01-28 Version: 7.0.15
+- Generated java-async 2019-01-15 for Qualitycheck.
+
 2026-01-23 Version: 7.0.14
 - Generated java-async 2019-01-15 for Qualitycheck.
 
