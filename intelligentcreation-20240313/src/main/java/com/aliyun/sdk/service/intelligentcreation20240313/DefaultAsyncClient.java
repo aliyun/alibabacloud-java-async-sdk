@@ -95,6 +95,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchDeletePracticeTask  BatchDeletePracticeTaskRequest
+     * @return BatchDeletePracticeTaskResponse
+     */
+    @Override
+    public CompletableFuture<BatchDeletePracticeTaskResponse> batchDeletePracticeTask(BatchDeletePracticeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchDeletePracticeTask").setMethod(HttpMethod.DELETE).setPathRegex("/yic/yic-console/openService/v1/aicoach/batchDeletePracticeTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeletePracticeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeletePracticeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchGetProjectTask  BatchGetProjectTaskRequest
      * @return BatchGetProjectTaskResponse
      */
