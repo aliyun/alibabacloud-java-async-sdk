@@ -26,6 +26,14 @@ public class QueryDomainGroupListRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByType")
+    private String orderByType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderKeyType")
+    private String orderKeyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowDeletingGroup")
     private Boolean showDeletingGroup;
 
@@ -37,6 +45,8 @@ public class QueryDomainGroupListRequest extends Request {
         super(builder);
         this.domainGroupName = builder.domainGroupName;
         this.lang = builder.lang;
+        this.orderByType = builder.orderByType;
+        this.orderKeyType = builder.orderKeyType;
         this.showDeletingGroup = builder.showDeletingGroup;
         this.userClientIp = builder.userClientIp;
     }
@@ -69,6 +79,20 @@ public class QueryDomainGroupListRequest extends Request {
     }
 
     /**
+     * @return orderByType
+     */
+    public String getOrderByType() {
+        return this.orderByType;
+    }
+
+    /**
+     * @return orderKeyType
+     */
+    public String getOrderKeyType() {
+        return this.orderKeyType;
+    }
+
+    /**
      * @return showDeletingGroup
      */
     public Boolean getShowDeletingGroup() {
@@ -85,6 +109,8 @@ public class QueryDomainGroupListRequest extends Request {
     public static final class Builder extends Request.Builder<QueryDomainGroupListRequest, Builder> {
         private String domainGroupName; 
         private String lang; 
+        private String orderByType; 
+        private String orderKeyType; 
         private Boolean showDeletingGroup; 
         private String userClientIp; 
 
@@ -96,6 +122,8 @@ public class QueryDomainGroupListRequest extends Request {
             super(request);
             this.domainGroupName = request.domainGroupName;
             this.lang = request.lang;
+            this.orderByType = request.orderByType;
+            this.orderKeyType = request.orderKeyType;
             this.showDeletingGroup = request.showDeletingGroup;
             this.userClientIp = request.userClientIp;
         } 
@@ -115,6 +143,24 @@ public class QueryDomainGroupListRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * OrderByType.
+         */
+        public Builder orderByType(String orderByType) {
+            this.putQueryParameter("OrderByType", orderByType);
+            this.orderByType = orderByType;
+            return this;
+        }
+
+        /**
+         * OrderKeyType.
+         */
+        public Builder orderKeyType(String orderKeyType) {
+            this.putQueryParameter("OrderKeyType", orderKeyType);
+            this.orderKeyType = orderKeyType;
             return this;
         }
 

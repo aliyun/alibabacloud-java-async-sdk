@@ -241,6 +241,60 @@ public class QueryDomainListResponseBody extends TeaModel {
      *
      * <p>QueryDomainListResponseBody</p>
      */
+    public static class DnsList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DnsList")
+        private java.util.List<String> dnsList;
+
+        private DnsList(Builder builder) {
+            this.dnsList = builder.dnsList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dnsList
+         */
+        public java.util.List<String> getDnsList() {
+            return this.dnsList;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> dnsList; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsList model) {
+                this.dnsList = model.dnsList;
+            } 
+
+            /**
+             * DnsList.
+             */
+            public Builder dnsList(java.util.List<String> dnsList) {
+                this.dnsList = dnsList;
+                return this;
+            }
+
+            public DnsList build() {
+                return new DnsList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryDomainListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDomainListResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -383,6 +437,9 @@ public class QueryDomainListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChgholderStatus")
         private String chgholderStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DnsList")
+        private DnsList dnsList;
+
         @com.aliyun.core.annotation.NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
 
@@ -446,6 +503,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         private Domain(Builder builder) {
             this.ccompany = builder.ccompany;
             this.chgholderStatus = builder.chgholderStatus;
+            this.dnsList = builder.dnsList;
             this.domainAuditStatus = builder.domainAuditStatus;
             this.domainGroupId = builder.domainGroupId;
             this.domainGroupName = builder.domainGroupName;
@@ -488,6 +546,13 @@ public class QueryDomainListResponseBody extends TeaModel {
          */
         public String getChgholderStatus() {
             return this.chgholderStatus;
+        }
+
+        /**
+         * @return dnsList
+         */
+        public DnsList getDnsList() {
+            return this.dnsList;
         }
 
         /**
@@ -633,6 +698,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         public static final class Builder {
             private String ccompany; 
             private String chgholderStatus; 
+            private DnsList dnsList; 
             private String domainAuditStatus; 
             private String domainGroupId; 
             private String domainGroupName; 
@@ -660,6 +726,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             private Builder(Domain model) {
                 this.ccompany = model.ccompany;
                 this.chgholderStatus = model.chgholderStatus;
+                this.dnsList = model.dnsList;
                 this.domainAuditStatus = model.domainAuditStatus;
                 this.domainGroupId = model.domainGroupId;
                 this.domainGroupName = model.domainGroupName;
@@ -706,6 +773,14 @@ public class QueryDomainListResponseBody extends TeaModel {
              */
             public Builder chgholderStatus(String chgholderStatus) {
                 this.chgholderStatus = chgholderStatus;
+                return this;
+            }
+
+            /**
+             * DnsList.
+             */
+            public Builder dnsList(DnsList dnsList) {
+                this.dnsList = dnsList;
                 return this;
             }
 

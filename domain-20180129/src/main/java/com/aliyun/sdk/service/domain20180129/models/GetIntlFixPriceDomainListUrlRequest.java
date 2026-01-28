@@ -59,7 +59,10 @@ public class GetIntlFixPriceDomainListUrlRequest extends Request {
         } 
 
         /**
-         * ListDate.
+         * <p>The date when the list is exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240809</p>
          */
         public Builder listDate(String listDate) {
             this.putQueryParameter("ListDate", listDate);

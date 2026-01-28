@@ -22,6 +22,10 @@ public class QueryDomainListRequest extends Request {
     private String ccompany;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dns")
+    private String dns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private String domainGroupId;
 
@@ -94,6 +98,7 @@ public class QueryDomainListRequest extends Request {
     private QueryDomainListRequest(Builder builder) {
         super(builder);
         this.ccompany = builder.ccompany;
+        this.dns = builder.dns;
         this.domainGroupId = builder.domainGroupId;
         this.domainName = builder.domainName;
         this.endExpirationDate = builder.endExpirationDate;
@@ -131,6 +136,13 @@ public class QueryDomainListRequest extends Request {
      */
     public String getCcompany() {
         return this.ccompany;
+    }
+
+    /**
+     * @return dns
+     */
+    public String getDns() {
+        return this.dns;
     }
 
     /**
@@ -254,6 +266,7 @@ public class QueryDomainListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryDomainListRequest, Builder> {
         private String ccompany; 
+        private String dns; 
         private String domainGroupId; 
         private String domainName; 
         private Long endExpirationDate; 
@@ -279,6 +292,7 @@ public class QueryDomainListRequest extends Request {
         private Builder(QueryDomainListRequest request) {
             super(request);
             this.ccompany = request.ccompany;
+            this.dns = request.dns;
             this.domainGroupId = request.domainGroupId;
             this.domainName = request.domainName;
             this.endExpirationDate = request.endExpirationDate;
@@ -307,6 +321,15 @@ public class QueryDomainListRequest extends Request {
         public Builder ccompany(String ccompany) {
             this.putQueryParameter("Ccompany", ccompany);
             this.ccompany = ccompany;
+            return this;
+        }
+
+        /**
+         * Dns.
+         */
+        public Builder dns(String dns) {
+            this.putQueryParameter("Dns", dns);
+            this.dns = dns;
             return this;
         }
 
