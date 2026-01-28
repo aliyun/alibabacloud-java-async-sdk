@@ -423,6 +423,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ModifyApp  ModifyAppRequest
+     * @return ModifyAppResponse
+     */
+    CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to modify the information of a dedicated block storage cluster. The information includes the name and description of the cluster.</p>
      * 
