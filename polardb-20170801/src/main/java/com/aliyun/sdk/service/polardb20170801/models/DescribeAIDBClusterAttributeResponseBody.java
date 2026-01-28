@@ -20,6 +20,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AiNodeType")
     private String aiNodeType;
 
+    @com.aliyun.core.annotation.NameInMap("ApiKey")
+    private String apiKey;
+
     @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
@@ -106,6 +109,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     private DescribeAIDBClusterAttributeResponseBody(Builder builder) {
         this.aiNodeType = builder.aiNodeType;
+        this.apiKey = builder.apiKey;
         this.creationTime = builder.creationTime;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
@@ -153,6 +157,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getAiNodeType() {
         return this.aiNodeType;
+    }
+
+    /**
+     * @return apiKey
+     */
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     /**
@@ -353,6 +364,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String aiNodeType; 
+        private String apiKey; 
         private String creationTime; 
         private String DBClusterDescription; 
         private String DBClusterId; 
@@ -387,6 +399,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
         private Builder(DescribeAIDBClusterAttributeResponseBody model) {
             this.aiNodeType = model.aiNodeType;
+            this.apiKey = model.apiKey;
             this.creationTime = model.creationTime;
             this.DBClusterDescription = model.DBClusterDescription;
             this.DBClusterId = model.DBClusterId;
@@ -422,6 +435,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder aiNodeType(String aiNodeType) {
             this.aiNodeType = aiNodeType;
+            return this;
+        }
+
+        /**
+         * ApiKey.
+         */
+        public Builder apiKey(String apiKey) {
+            this.apiKey = apiKey;
             return this;
         }
 
