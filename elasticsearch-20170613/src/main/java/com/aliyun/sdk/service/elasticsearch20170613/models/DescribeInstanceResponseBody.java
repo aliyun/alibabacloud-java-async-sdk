@@ -2039,6 +2039,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ikHotDicts")
         private java.util.List<IkHotDicts> ikHotDicts;
 
+        @com.aliyun.core.annotation.NameInMap("inited")
+        private Boolean inited;
+
         @com.aliyun.core.annotation.NameInMap("instanceCategory")
         private String instanceCategory;
 
@@ -2163,6 +2166,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.haveClientNode = builder.haveClientNode;
             this.haveKibana = builder.haveKibana;
             this.ikHotDicts = builder.ikHotDicts;
+            this.inited = builder.inited;
             this.instanceCategory = builder.instanceCategory;
             this.instanceId = builder.instanceId;
             this.isNewDeployment = builder.isNewDeployment;
@@ -2372,6 +2376,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public java.util.List<IkHotDicts> getIkHotDicts() {
             return this.ikHotDicts;
+        }
+
+        /**
+         * @return inited
+         */
+        public Boolean getInited() {
+            return this.inited;
         }
 
         /**
@@ -2630,6 +2641,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean haveClientNode; 
             private Boolean haveKibana; 
             private java.util.List<IkHotDicts> ikHotDicts; 
+            private Boolean inited; 
             private String instanceCategory; 
             private String instanceId; 
             private Boolean isNewDeployment; 
@@ -2692,6 +2704,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.haveClientNode = model.haveClientNode;
                 this.haveKibana = model.haveKibana;
                 this.ikHotDicts = model.ikHotDicts;
+                this.inited = model.inited;
                 this.instanceCategory = model.instanceCategory;
                 this.instanceId = model.instanceId;
                 this.isNewDeployment = model.isNewDeployment;
@@ -2916,6 +2929,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder ikHotDicts(java.util.List<IkHotDicts> ikHotDicts) {
                 this.ikHotDicts = ikHotDicts;
+                return this;
+            }
+
+            /**
+             * inited.
+             */
+            public Builder inited(Boolean inited) {
+                this.inited = inited;
                 return this;
             }
 
