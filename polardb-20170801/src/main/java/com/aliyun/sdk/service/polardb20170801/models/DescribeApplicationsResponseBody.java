@@ -307,6 +307,135 @@ public class DescribeApplicationsResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -347,6 +476,9 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -364,6 +496,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
             this.polarFSInstanceId = builder.polarFSInstanceId;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.zoneId = builder.zoneId;
         }
 
@@ -467,6 +600,13 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -487,6 +627,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
             private String polarFSInstanceId; 
             private String regionId; 
             private String status; 
+            private Tags tags; 
             private String zoneId; 
 
             private Builder() {
@@ -506,6 +647,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
                 this.polarFSInstanceId = model.polarFSInstanceId;
                 this.regionId = model.regionId;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.zoneId = model.zoneId;
             } 
 
@@ -610,6 +752,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
