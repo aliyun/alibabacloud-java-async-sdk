@@ -132,7 +132,16 @@ public class ExecJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code. Valid values: </p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +149,7 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +157,11 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +169,14 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +184,10 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67DD9A98-9CCC-5BE8-8C9E-B45E72F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +195,14 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +210,10 @@ public class ExecJobResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * <p>The ID of the trace. This parameter is used to query the exact call information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7e716575071334387401e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -272,7 +305,16 @@ public class ExecJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The HTTP status code. Valid values: </p>
+             * <ul>
+             * <li><strong>2xx</strong>: The call was successful.</li>
+             * <li><strong>3xx</strong>: The call was redirected.</li>
+             * <li><strong>4xx</strong>: The call failed.</li>
+             * <li><strong>5xx</strong>: A server error occurred.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -280,7 +322,10 @@ public class ExecJobResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual-3db7a8fa-5d40-4edc-92e4-49d50eab****</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -288,7 +333,14 @@ public class ExecJobResponseBody extends TeaModel {
             }
 
             /**
-             * Msg.
+             * <p>The returned message. Valid values:</p>
+             * <ul>
+             * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+             * <li>An error code: If the call fails, an error code is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -296,7 +348,14 @@ public class ExecJobResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;

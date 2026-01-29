@@ -382,6 +382,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIdle")
+        private String enableIdle;
+
         @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
@@ -432,6 +435,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.appType = builder.appType;
             this.baseAppId = builder.baseAppId;
             this.cpu = builder.cpu;
+            this.enableIdle = builder.enableIdle;
             this.instances = builder.instances;
             this.isStateful = builder.isStateful;
             this.mem = builder.mem;
@@ -503,6 +507,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return enableIdle
+         */
+        public String getEnableIdle() {
+            return this.enableIdle;
         }
 
         /**
@@ -611,6 +622,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appType; 
             private String baseAppId; 
             private Integer cpu; 
+            private String enableIdle; 
             private Integer instances; 
             private Boolean isStateful; 
             private Integer mem; 
@@ -637,6 +649,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.appType = model.appType;
                 this.baseAppId = model.baseAppId;
                 this.cpu = model.cpu;
+                this.enableIdle = model.enableIdle;
                 this.instances = model.instances;
                 this.isStateful = model.isStateful;
                 this.mem = model.mem;
@@ -727,6 +740,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EnableIdle.
+             */
+            public Builder enableIdle(String enableIdle) {
+                this.enableIdle = enableIdle;
                 return this;
             }
 
