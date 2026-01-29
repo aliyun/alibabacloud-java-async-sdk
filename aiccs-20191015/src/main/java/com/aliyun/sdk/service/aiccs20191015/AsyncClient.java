@@ -794,6 +794,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryConversationDetailInfoResponse> queryConversationDetailInfo(QueryConversationDetailInfoRequest request);
 
     /**
+     * @param request the request parameters of QueryConversationDetailInfoNew  QueryConversationDetailInfoNewRequest
+     * @return QueryConversationDetailInfoNewResponse
+     */
+    CompletableFuture<QueryConversationDetailInfoNewResponse> queryConversationDetailInfoNew(QueryConversationDetailInfoNewRequest request);
+
+    /**
      * @param request the request parameters of QueryHotlineInQueue  QueryHotlineInQueueRequest
      * @return QueryHotlineInQueueResponse
      */
