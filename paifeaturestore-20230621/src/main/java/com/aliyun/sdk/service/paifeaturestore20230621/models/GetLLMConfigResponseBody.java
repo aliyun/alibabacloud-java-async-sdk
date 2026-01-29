@@ -26,6 +26,9 @@ public class GetLLMConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BatchSize")
     private Integer batchSize;
 
+    @com.aliyun.core.annotation.NameInMap("EmbeddingDimension")
+    private Integer embeddingDimension;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -57,6 +60,7 @@ public class GetLLMConfigResponseBody extends TeaModel {
         this.apiKey = builder.apiKey;
         this.baseUrl = builder.baseUrl;
         this.batchSize = builder.batchSize;
+        this.embeddingDimension = builder.embeddingDimension;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.LLMConfigId = builder.LLMConfigId;
@@ -99,6 +103,13 @@ public class GetLLMConfigResponseBody extends TeaModel {
      */
     public Integer getBatchSize() {
         return this.batchSize;
+    }
+
+    /**
+     * @return embeddingDimension
+     */
+    public Integer getEmbeddingDimension() {
+        return this.embeddingDimension;
     }
 
     /**
@@ -168,6 +179,7 @@ public class GetLLMConfigResponseBody extends TeaModel {
         private String apiKey; 
         private String baseUrl; 
         private Integer batchSize; 
+        private Integer embeddingDimension; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String LLMConfigId; 
@@ -185,6 +197,7 @@ public class GetLLMConfigResponseBody extends TeaModel {
             this.apiKey = model.apiKey;
             this.baseUrl = model.baseUrl;
             this.batchSize = model.batchSize;
+            this.embeddingDimension = model.embeddingDimension;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.LLMConfigId = model.LLMConfigId;
@@ -217,6 +230,14 @@ public class GetLLMConfigResponseBody extends TeaModel {
          */
         public Builder batchSize(Integer batchSize) {
             this.batchSize = batchSize;
+            return this;
+        }
+
+        /**
+         * EmbeddingDimension.
+         */
+        public Builder embeddingDimension(Integer embeddingDimension) {
+            this.embeddingDimension = embeddingDimension;
             return this;
         }
 

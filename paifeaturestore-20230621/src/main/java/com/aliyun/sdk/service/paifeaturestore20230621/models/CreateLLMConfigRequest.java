@@ -40,6 +40,10 @@ public class CreateLLMConfigRequest extends Request {
     private Integer batchSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EmbeddingDimension")
+    private Integer embeddingDimension;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxTokens")
     private Integer maxTokens;
 
@@ -69,6 +73,7 @@ public class CreateLLMConfigRequest extends Request {
         this.apiKey = builder.apiKey;
         this.baseUrl = builder.baseUrl;
         this.batchSize = builder.batchSize;
+        this.embeddingDimension = builder.embeddingDimension;
         this.maxTokens = builder.maxTokens;
         this.model = builder.model;
         this.name = builder.name;
@@ -125,6 +130,13 @@ public class CreateLLMConfigRequest extends Request {
     }
 
     /**
+     * @return embeddingDimension
+     */
+    public Integer getEmbeddingDimension() {
+        return this.embeddingDimension;
+    }
+
+    /**
      * @return maxTokens
      */
     public Integer getMaxTokens() {
@@ -165,6 +177,7 @@ public class CreateLLMConfigRequest extends Request {
         private String apiKey; 
         private String baseUrl; 
         private Integer batchSize; 
+        private Integer embeddingDimension; 
         private Integer maxTokens; 
         private String model; 
         private String name; 
@@ -182,6 +195,7 @@ public class CreateLLMConfigRequest extends Request {
             this.apiKey = request.apiKey;
             this.baseUrl = request.baseUrl;
             this.batchSize = request.batchSize;
+            this.embeddingDimension = request.embeddingDimension;
             this.maxTokens = request.maxTokens;
             this.model = request.model;
             this.name = request.name;
@@ -237,6 +251,15 @@ public class CreateLLMConfigRequest extends Request {
         public Builder batchSize(Integer batchSize) {
             this.putBodyParameter("BatchSize", batchSize);
             this.batchSize = batchSize;
+            return this;
+        }
+
+        /**
+         * EmbeddingDimension.
+         */
+        public Builder embeddingDimension(Integer embeddingDimension) {
+            this.putBodyParameter("EmbeddingDimension", embeddingDimension);
+            this.embeddingDimension = embeddingDimension;
             return this;
         }
 
