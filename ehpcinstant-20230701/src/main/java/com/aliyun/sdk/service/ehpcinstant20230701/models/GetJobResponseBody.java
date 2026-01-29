@@ -546,6 +546,114 @@ public class GetJobResponseBody extends TeaModel {
      *
      * <p>GetJobResponseBody</p>
      */
+    public static class SecurityGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
+
+        private SecurityGroup(Builder builder) {
+            this.securityGroupIds = builder.securityGroupIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> securityGroupIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroup model) {
+                this.securityGroupIds = model.securityGroupIds;
+            } 
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            public SecurityGroup build() {
+                return new SecurityGroup(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class SecurityPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
+        private SecurityGroup securityGroup;
+
+        private SecurityPolicy(Builder builder) {
+            this.securityGroup = builder.securityGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroup
+         */
+        public SecurityGroup getSecurityGroup() {
+            return this.securityGroup;
+        }
+
+        public static final class Builder {
+            private SecurityGroup securityGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicy model) {
+                this.securityGroup = model.securityGroup;
+            } 
+
+            /**
+             * SecurityGroup.
+             */
+            public Builder securityGroup(SecurityGroup securityGroup) {
+                this.securityGroup = securityGroup;
+                return this;
+            }
+
+            public SecurityPolicy build() {
+                return new SecurityPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class ArraySpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Integer indexEnd;
@@ -1468,6 +1576,102 @@ public class GetJobResponseBody extends TeaModel {
      *
      * <p>GetJobResponseBody</p>
      */
+    public static class VolumeMount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountOptions")
+        private String mountOptions;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("VolumeDriver")
+        private String volumeDriver;
+
+        private VolumeMount(Builder builder) {
+            this.mountOptions = builder.mountOptions;
+            this.mountPath = builder.mountPath;
+            this.volumeDriver = builder.volumeDriver;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VolumeMount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountOptions
+         */
+        public String getMountOptions() {
+            return this.mountOptions;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return volumeDriver
+         */
+        public String getVolumeDriver() {
+            return this.volumeDriver;
+        }
+
+        public static final class Builder {
+            private String mountOptions; 
+            private String mountPath; 
+            private String volumeDriver; 
+
+            private Builder() {
+            } 
+
+            private Builder(VolumeMount model) {
+                this.mountOptions = model.mountOptions;
+                this.mountPath = model.mountPath;
+                this.volumeDriver = model.volumeDriver;
+            } 
+
+            /**
+             * MountOptions.
+             */
+            public Builder mountOptions(String mountOptions) {
+                this.mountOptions = mountOptions;
+                return this;
+            }
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * VolumeDriver.
+             */
+            public Builder volumeDriver(String volumeDriver) {
+                this.volumeDriver = volumeDriver;
+                return this;
+            }
+
+            public VolumeMount build() {
+                return new VolumeMount(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
     public static class TaskSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
@@ -1478,10 +1682,14 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskExecutor")
         private java.util.List<TaskExecutor> taskExecutor;
 
+        @com.aliyun.core.annotation.NameInMap("VolumeMount")
+        private java.util.List<VolumeMount> volumeMount;
+
         private TaskSpec(Builder builder) {
             this.resource = builder.resource;
             this.retryPolicy = builder.retryPolicy;
             this.taskExecutor = builder.taskExecutor;
+            this.volumeMount = builder.volumeMount;
         }
 
         public static Builder builder() {
@@ -1513,10 +1721,18 @@ public class GetJobResponseBody extends TeaModel {
             return this.taskExecutor;
         }
 
+        /**
+         * @return volumeMount
+         */
+        public java.util.List<VolumeMount> getVolumeMount() {
+            return this.volumeMount;
+        }
+
         public static final class Builder {
             private Resource resource; 
             private RetryPolicy retryPolicy; 
             private java.util.List<TaskExecutor> taskExecutor; 
+            private java.util.List<VolumeMount> volumeMount; 
 
             private Builder() {
             } 
@@ -1525,6 +1741,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.resource = model.resource;
                 this.retryPolicy = model.retryPolicy;
                 this.taskExecutor = model.taskExecutor;
+                this.volumeMount = model.volumeMount;
             } 
 
             /**
@@ -1548,6 +1765,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder taskExecutor(java.util.List<TaskExecutor> taskExecutor) {
                 this.taskExecutor = taskExecutor;
+                return this;
+            }
+
+            /**
+             * VolumeMount.
+             */
+            public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
+                this.volumeMount = volumeMount;
                 return this;
             }
 
@@ -1736,6 +1961,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobScheduler")
         private String jobScheduler;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
+        private SecurityPolicy securityPolicy;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -1755,6 +1983,7 @@ public class GetJobResponseBody extends TeaModel {
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
             this.jobScheduler = builder.jobScheduler;
+            this.securityPolicy = builder.securityPolicy;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.tasks = builder.tasks;
@@ -1832,6 +2061,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityPolicy
+         */
+        public SecurityPolicy getSecurityPolicy() {
+            return this.securityPolicy;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -1862,6 +2098,7 @@ public class GetJobResponseBody extends TeaModel {
             private String jobId; 
             private String jobName; 
             private String jobScheduler; 
+            private SecurityPolicy securityPolicy; 
             private String startTime; 
             private String status; 
             private java.util.List<Tasks> tasks; 
@@ -1879,6 +2116,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.jobId = model.jobId;
                 this.jobName = model.jobName;
                 this.jobScheduler = model.jobScheduler;
+                this.securityPolicy = model.securityPolicy;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.tasks = model.tasks;
@@ -1974,6 +2212,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder jobScheduler(String jobScheduler) {
                 this.jobScheduler = jobScheduler;
+                return this;
+            }
+
+            /**
+             * SecurityPolicy.
+             */
+            public Builder securityPolicy(SecurityPolicy securityPolicy) {
+                this.securityPolicy = securityPolicy;
                 return this;
             }
 
