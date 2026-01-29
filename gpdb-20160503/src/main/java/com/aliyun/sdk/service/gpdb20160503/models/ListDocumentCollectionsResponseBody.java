@@ -195,6 +195,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parser")
         private String parser;
 
+        @com.aliyun.core.annotation.NameInMap("SparseRetrievalFields")
+        private String sparseRetrievalFields;
+
+        @com.aliyun.core.annotation.NameInMap("SupportSparse")
+        private Boolean supportSparse;
+
         private CollectionList(Builder builder) {
             this.collectionName = builder.collectionName;
             this.dimension = builder.dimension;
@@ -203,6 +209,8 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             this.metadata = builder.metadata;
             this.metrics = builder.metrics;
             this.parser = builder.parser;
+            this.sparseRetrievalFields = builder.sparseRetrievalFields;
+            this.supportSparse = builder.supportSparse;
         }
 
         public static Builder builder() {
@@ -262,6 +270,20 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             return this.parser;
         }
 
+        /**
+         * @return sparseRetrievalFields
+         */
+        public String getSparseRetrievalFields() {
+            return this.sparseRetrievalFields;
+        }
+
+        /**
+         * @return supportSparse
+         */
+        public Boolean getSupportSparse() {
+            return this.supportSparse;
+        }
+
         public static final class Builder {
             private String collectionName; 
             private Integer dimension; 
@@ -270,6 +292,8 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             private String metadata; 
             private String metrics; 
             private String parser; 
+            private String sparseRetrievalFields; 
+            private Boolean supportSparse; 
 
             private Builder() {
             } 
@@ -282,6 +306,8 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
                 this.metadata = model.metadata;
                 this.metrics = model.metrics;
                 this.parser = model.parser;
+                this.sparseRetrievalFields = model.sparseRetrievalFields;
+                this.supportSparse = model.supportSparse;
             } 
 
             /**
@@ -358,6 +384,22 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
              */
             public Builder parser(String parser) {
                 this.parser = parser;
+                return this;
+            }
+
+            /**
+             * SparseRetrievalFields.
+             */
+            public Builder sparseRetrievalFields(String sparseRetrievalFields) {
+                this.sparseRetrievalFields = sparseRetrievalFields;
+                return this;
+            }
+
+            /**
+             * SupportSparse.
+             */
+            public Builder supportSparse(Boolean supportSparse) {
+                this.supportSparse = supportSparse;
                 return this;
             }
 

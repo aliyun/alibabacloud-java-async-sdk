@@ -115,6 +115,18 @@ public class CreateDocumentCollectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RelationshipTypes")
     private java.util.List<String> relationshipTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SparseRetrievalFields")
+    private String sparseRetrievalFields;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SparseVectorIndexConfig")
+    private SparseVectorIndexConfig sparseVectorIndexConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportSparse")
+    private Boolean supportSparse;
+
     private CreateDocumentCollectionRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -140,6 +152,9 @@ public class CreateDocumentCollectionRequest extends Request {
         this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
         this.relationshipTypes = builder.relationshipTypes;
+        this.sparseRetrievalFields = builder.sparseRetrievalFields;
+        this.sparseVectorIndexConfig = builder.sparseVectorIndexConfig;
+        this.supportSparse = builder.supportSparse;
     }
 
     public static Builder builder() {
@@ -316,6 +331,27 @@ public class CreateDocumentCollectionRequest extends Request {
         return this.relationshipTypes;
     }
 
+    /**
+     * @return sparseRetrievalFields
+     */
+    public String getSparseRetrievalFields() {
+        return this.sparseRetrievalFields;
+    }
+
+    /**
+     * @return sparseVectorIndexConfig
+     */
+    public SparseVectorIndexConfig getSparseVectorIndexConfig() {
+        return this.sparseVectorIndexConfig;
+    }
+
+    /**
+     * @return supportSparse
+     */
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
+    }
+
     public static final class Builder extends Request.Builder<CreateDocumentCollectionRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -340,6 +376,9 @@ public class CreateDocumentCollectionRequest extends Request {
         private Integer pqEnable; 
         private String regionId; 
         private java.util.List<String> relationshipTypes; 
+        private String sparseRetrievalFields; 
+        private SparseVectorIndexConfig sparseVectorIndexConfig; 
+        private Boolean supportSparse; 
 
         private Builder() {
             super();
@@ -370,6 +409,9 @@ public class CreateDocumentCollectionRequest extends Request {
             this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
             this.relationshipTypes = request.relationshipTypes;
+            this.sparseRetrievalFields = request.sparseRetrievalFields;
+            this.sparseVectorIndexConfig = request.sparseVectorIndexConfig;
+            this.supportSparse = request.supportSparse;
         } 
 
         /**
@@ -714,6 +756,34 @@ public class CreateDocumentCollectionRequest extends Request {
             return this;
         }
 
+        /**
+         * SparseRetrievalFields.
+         */
+        public Builder sparseRetrievalFields(String sparseRetrievalFields) {
+            this.putQueryParameter("SparseRetrievalFields", sparseRetrievalFields);
+            this.sparseRetrievalFields = sparseRetrievalFields;
+            return this;
+        }
+
+        /**
+         * SparseVectorIndexConfig.
+         */
+        public Builder sparseVectorIndexConfig(SparseVectorIndexConfig sparseVectorIndexConfig) {
+            String sparseVectorIndexConfigShrink = shrink(sparseVectorIndexConfig, "SparseVectorIndexConfig", "json");
+            this.putQueryParameter("SparseVectorIndexConfig", sparseVectorIndexConfigShrink);
+            this.sparseVectorIndexConfig = sparseVectorIndexConfig;
+            return this;
+        }
+
+        /**
+         * SupportSparse.
+         */
+        public Builder supportSparse(Boolean supportSparse) {
+            this.putQueryParameter("SupportSparse", supportSparse);
+            this.supportSparse = supportSparse;
+            return this;
+        }
+
         @Override
         public CreateDocumentCollectionRequest build() {
             return new CreateDocumentCollectionRequest(this);
@@ -721,4 +791,95 @@ public class CreateDocumentCollectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDocumentCollectionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDocumentCollectionRequest</p>
+     */
+    public static class SparseVectorIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
+        private Integer hnswEfConstruction;
+
+        @com.aliyun.core.annotation.NameInMap("HnswM")
+        private Integer hnswM;
+
+        private SparseVectorIndexConfig(Builder builder) {
+            this.hnswEfConstruction = builder.hnswEfConstruction;
+            this.hnswM = builder.hnswM;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SparseVectorIndexConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hnswEfConstruction
+         */
+        public Integer getHnswEfConstruction() {
+            return this.hnswEfConstruction;
+        }
+
+        /**
+         * @return hnswM
+         */
+        public Integer getHnswM() {
+            return this.hnswM;
+        }
+
+        public static final class Builder {
+            private Integer hnswEfConstruction; 
+            private Integer hnswM; 
+
+            private Builder() {
+            } 
+
+            private Builder(SparseVectorIndexConfig model) {
+                this.hnswEfConstruction = model.hnswEfConstruction;
+                this.hnswM = model.hnswM;
+            } 
+
+            /**
+             * HnswEfConstruction.
+             */
+            public Builder hnswEfConstruction(Integer hnswEfConstruction) {
+                this.hnswEfConstruction = hnswEfConstruction;
+                return this;
+            }
+
+            /**
+             * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+             * <blockquote>
+             * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
+             * </li>
+             * <li><p>If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
+             * </li>
+             * <li><p>If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
+             * </li>
+             * <li><p>If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
+             */
+            public Builder hnswM(Integer hnswM) {
+                this.hnswM = hnswM;
+                return this;
+            }
+
+            public SparseVectorIndexConfig build() {
+                return new SparseVectorIndexConfig(this);
+            } 
+
+        } 
+
+    }
 }
