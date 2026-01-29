@@ -201,7 +201,532 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
      *
      * <p>ChatappSyncPhoneNumberResponseBody</p>
      */
+    public static class HolidaySchedule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Date")
+        private String date;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private HolidaySchedule(Builder builder) {
+            this.date = builder.date;
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HolidaySchedule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return date
+         */
+        public String getDate() {
+            return this.date;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String date; 
+            private String endTime; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(HolidaySchedule model) {
+                this.date = model.date;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * Date.
+             */
+            public Builder date(String date) {
+                this.date = date;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public HolidaySchedule build() {
+                return new HolidaySchedule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
+    public static class WeeklyOperatingHours extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloseTime")
+        private String closeTime;
+
+        @com.aliyun.core.annotation.NameInMap("DayOfWeek")
+        private String dayOfWeek;
+
+        @com.aliyun.core.annotation.NameInMap("OpenTime")
+        private String openTime;
+
+        private WeeklyOperatingHours(Builder builder) {
+            this.closeTime = builder.closeTime;
+            this.dayOfWeek = builder.dayOfWeek;
+            this.openTime = builder.openTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WeeklyOperatingHours create() {
+            return builder().build();
+        }
+
+        /**
+         * @return closeTime
+         */
+        public String getCloseTime() {
+            return this.closeTime;
+        }
+
+        /**
+         * @return dayOfWeek
+         */
+        public String getDayOfWeek() {
+            return this.dayOfWeek;
+        }
+
+        /**
+         * @return openTime
+         */
+        public String getOpenTime() {
+            return this.openTime;
+        }
+
+        public static final class Builder {
+            private String closeTime; 
+            private String dayOfWeek; 
+            private String openTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeeklyOperatingHours model) {
+                this.closeTime = model.closeTime;
+                this.dayOfWeek = model.dayOfWeek;
+                this.openTime = model.openTime;
+            } 
+
+            /**
+             * CloseTime.
+             */
+            public Builder closeTime(String closeTime) {
+                this.closeTime = closeTime;
+                return this;
+            }
+
+            /**
+             * DayOfWeek.
+             */
+            public Builder dayOfWeek(String dayOfWeek) {
+                this.dayOfWeek = dayOfWeek;
+                return this;
+            }
+
+            /**
+             * OpenTime.
+             */
+            public Builder openTime(String openTime) {
+                this.openTime = openTime;
+                return this;
+            }
+
+            public WeeklyOperatingHours build() {
+                return new WeeklyOperatingHours(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
+    public static class CallHours extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HolidaySchedule")
+        private java.util.List<HolidaySchedule> holidaySchedule;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TimezoneId")
+        private String timezoneId;
+
+        @com.aliyun.core.annotation.NameInMap("WeeklyOperatingHours")
+        private java.util.List<WeeklyOperatingHours> weeklyOperatingHours;
+
+        private CallHours(Builder builder) {
+            this.holidaySchedule = builder.holidaySchedule;
+            this.status = builder.status;
+            this.timezoneId = builder.timezoneId;
+            this.weeklyOperatingHours = builder.weeklyOperatingHours;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallHours create() {
+            return builder().build();
+        }
+
+        /**
+         * @return holidaySchedule
+         */
+        public java.util.List<HolidaySchedule> getHolidaySchedule() {
+            return this.holidaySchedule;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return timezoneId
+         */
+        public String getTimezoneId() {
+            return this.timezoneId;
+        }
+
+        /**
+         * @return weeklyOperatingHours
+         */
+        public java.util.List<WeeklyOperatingHours> getWeeklyOperatingHours() {
+            return this.weeklyOperatingHours;
+        }
+
+        public static final class Builder {
+            private java.util.List<HolidaySchedule> holidaySchedule; 
+            private String status; 
+            private String timezoneId; 
+            private java.util.List<WeeklyOperatingHours> weeklyOperatingHours; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallHours model) {
+                this.holidaySchedule = model.holidaySchedule;
+                this.status = model.status;
+                this.timezoneId = model.timezoneId;
+                this.weeklyOperatingHours = model.weeklyOperatingHours;
+            } 
+
+            /**
+             * HolidaySchedule.
+             */
+            public Builder holidaySchedule(java.util.List<HolidaySchedule> holidaySchedule) {
+                this.holidaySchedule = holidaySchedule;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TimezoneId.
+             */
+            public Builder timezoneId(String timezoneId) {
+                this.timezoneId = timezoneId;
+                return this;
+            }
+
+            /**
+             * WeeklyOperatingHours.
+             */
+            public Builder weeklyOperatingHours(java.util.List<WeeklyOperatingHours> weeklyOperatingHours) {
+                this.weeklyOperatingHours = weeklyOperatingHours;
+                return this;
+            }
+
+            public CallHours build() {
+                return new CallHours(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
+    public static class Calling extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallHours")
+        private CallHours callHours;
+
+        @com.aliyun.core.annotation.NameInMap("CallIconVisibility")
+        private String callIconVisibility;
+
+        @com.aliyun.core.annotation.NameInMap("CallbackPermissionStatus")
+        private String callbackPermissionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private Calling(Builder builder) {
+            this.callHours = builder.callHours;
+            this.callIconVisibility = builder.callIconVisibility;
+            this.callbackPermissionStatus = builder.callbackPermissionStatus;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Calling create() {
+            return builder().build();
+        }
+
+        /**
+         * @return callHours
+         */
+        public CallHours getCallHours() {
+            return this.callHours;
+        }
+
+        /**
+         * @return callIconVisibility
+         */
+        public String getCallIconVisibility() {
+            return this.callIconVisibility;
+        }
+
+        /**
+         * @return callbackPermissionStatus
+         */
+        public String getCallbackPermissionStatus() {
+            return this.callbackPermissionStatus;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private CallHours callHours; 
+            private String callIconVisibility; 
+            private String callbackPermissionStatus; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Calling model) {
+                this.callHours = model.callHours;
+                this.callIconVisibility = model.callIconVisibility;
+                this.callbackPermissionStatus = model.callbackPermissionStatus;
+                this.status = model.status;
+            } 
+
+            /**
+             * CallHours.
+             */
+            public Builder callHours(CallHours callHours) {
+                this.callHours = callHours;
+                return this;
+            }
+
+            /**
+             * CallIconVisibility.
+             */
+            public Builder callIconVisibility(String callIconVisibility) {
+                this.callIconVisibility = callIconVisibility;
+                return this;
+            }
+
+            /**
+             * CallbackPermissionStatus.
+             */
+            public Builder callbackPermissionStatus(String callbackPermissionStatus) {
+                this.callbackPermissionStatus = callbackPermissionStatus;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Calling build() {
+                return new Calling(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
+    public static class CallingConfigure extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Calling")
+        private Calling calling;
+
+        @com.aliyun.core.annotation.NameInMap("CallingCallbackUrl")
+        private String callingCallbackUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MaxTalkTime")
+        private Long maxTalkTime;
+
+        private CallingConfigure(Builder builder) {
+            this.calling = builder.calling;
+            this.callingCallbackUrl = builder.callingCallbackUrl;
+            this.maxTalkTime = builder.maxTalkTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallingConfigure create() {
+            return builder().build();
+        }
+
+        /**
+         * @return calling
+         */
+        public Calling getCalling() {
+            return this.calling;
+        }
+
+        /**
+         * @return callingCallbackUrl
+         */
+        public String getCallingCallbackUrl() {
+            return this.callingCallbackUrl;
+        }
+
+        /**
+         * @return maxTalkTime
+         */
+        public Long getMaxTalkTime() {
+            return this.maxTalkTime;
+        }
+
+        public static final class Builder {
+            private Calling calling; 
+            private String callingCallbackUrl; 
+            private Long maxTalkTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallingConfigure model) {
+                this.calling = model.calling;
+                this.callingCallbackUrl = model.callingCallbackUrl;
+                this.maxTalkTime = model.maxTalkTime;
+            } 
+
+            /**
+             * Calling.
+             */
+            public Builder calling(Calling calling) {
+                this.calling = calling;
+                return this;
+            }
+
+            /**
+             * CallingCallbackUrl.
+             */
+            public Builder callingCallbackUrl(String callingCallbackUrl) {
+                this.callingCallbackUrl = callingCallbackUrl;
+                return this;
+            }
+
+            /**
+             * MaxTalkTime.
+             */
+            public Builder maxTalkTime(Long maxTalkTime) {
+                this.maxTalkTime = maxTalkTime;
+                return this;
+            }
+
+            public CallingConfigure build() {
+                return new CallingConfigure(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ChatappSyncPhoneNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatappSyncPhoneNumberResponseBody</p>
+     */
     public static class PhoneNumbers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CallingConfigure")
+        private CallingConfigure callingConfigure;
+
         @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
 
@@ -242,6 +767,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         private String verifiedName;
 
         private PhoneNumbers(Builder builder) {
+            this.callingConfigure = builder.callingConfigure;
             this.codeVerificationStatus = builder.codeVerificationStatus;
             this.isOfficial = builder.isOfficial;
             this.messagingLimitTier = builder.messagingLimitTier;
@@ -263,6 +789,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
         public static PhoneNumbers create() {
             return builder().build();
+        }
+
+        /**
+         * @return callingConfigure
+         */
+        public CallingConfigure getCallingConfigure() {
+            return this.callingConfigure;
         }
 
         /**
@@ -357,6 +890,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CallingConfigure callingConfigure; 
             private String codeVerificationStatus; 
             private String isOfficial; 
             private String messagingLimitTier; 
@@ -375,6 +909,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
             } 
 
             private Builder(PhoneNumbers model) {
+                this.callingConfigure = model.callingConfigure;
                 this.codeVerificationStatus = model.codeVerificationStatus;
                 this.isOfficial = model.isOfficial;
                 this.messagingLimitTier = model.messagingLimitTier;
@@ -389,6 +924,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
                 this.upQueue = model.upQueue;
                 this.verifiedName = model.verifiedName;
             } 
+
+            /**
+             * CallingConfigure.
+             */
+            public Builder callingConfigure(CallingConfigure callingConfigure) {
+                this.callingConfigure = callingConfigure;
+                return this;
+            }
 
             /**
              * <p>The verification state of the phone number.</p>

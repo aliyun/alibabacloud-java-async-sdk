@@ -1150,4 +1150,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateWabaMmlStatusResponse> updateWabaMmlStatus(UpdateWabaMmlStatusRequest request);
 
+    /**
+     * @param request the request parameters of WhatsappCall  WhatsappCallRequest
+     * @return WhatsappCallResponse
+     */
+    CompletableFuture<WhatsappCallResponse> whatsappCall(WhatsappCallRequest request);
+
 }
