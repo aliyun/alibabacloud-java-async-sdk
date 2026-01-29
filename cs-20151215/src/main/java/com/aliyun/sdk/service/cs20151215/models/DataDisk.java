@@ -18,6 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DataDisk extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("auto_format")
+    @Deprecated
     private Boolean autoFormat;
 
     @com.aliyun.core.annotation.NameInMap("auto_snapshot_policy_id")
@@ -39,12 +40,14 @@ public class DataDisk extends TeaModel {
     private String encrypted;
 
     @com.aliyun.core.annotation.NameInMap("file_system")
+    @Deprecated
     private String fileSystem;
 
     @com.aliyun.core.annotation.NameInMap("kms_key_id")
     private String kmsKeyId;
 
     @com.aliyun.core.annotation.NameInMap("mount_target")
+    @Deprecated
     private String mountTarget;
 
     @com.aliyun.core.annotation.NameInMap("performance_level")

@@ -1886,6 +1886,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("desired_size")
         private Long desiredSize;
 
+        @com.aliyun.core.annotation.NameInMap("disk_init")
+        private java.util.List<DiskInit> diskInit;
+
         @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
@@ -2002,6 +2005,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.dataDisks = builder.dataDisks;
             this.deploymentsetId = builder.deploymentsetId;
             this.desiredSize = builder.desiredSize;
+            this.diskInit = builder.diskInit;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
@@ -2088,6 +2092,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public Long getDesiredSize() {
             return this.desiredSize;
+        }
+
+        /**
+         * @return diskInit
+         */
+        public java.util.List<DiskInit> getDiskInit() {
+            return this.diskInit;
         }
 
         /**
@@ -2349,6 +2360,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private java.util.List<DataDisk> dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
+            private java.util.List<DiskInit> diskInit; 
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
@@ -2396,6 +2408,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.dataDisks = model.dataDisks;
                 this.deploymentsetId = model.deploymentsetId;
                 this.desiredSize = model.desiredSize;
+                this.diskInit = model.diskInit;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
                 this.instanceChargeType = model.instanceChargeType;
@@ -2507,6 +2520,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder desiredSize(Long desiredSize) {
                 this.desiredSize = desiredSize;
+                return this;
+            }
+
+            /**
+             * disk_init.
+             */
+            public Builder diskInit(java.util.List<DiskInit> diskInit) {
+                this.diskInit = diskInit;
                 return this;
             }
 
