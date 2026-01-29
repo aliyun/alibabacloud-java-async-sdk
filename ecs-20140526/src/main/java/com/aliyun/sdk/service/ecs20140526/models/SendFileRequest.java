@@ -22,6 +22,10 @@ public class SendFileRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
     @com.aliyun.core.annotation.Validation(required = true)
     private String content;
@@ -101,6 +105,7 @@ public class SendFileRequest extends Request {
     private SendFileRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.content = builder.content;
         this.contentType = builder.contentType;
         this.description = builder.description;
@@ -139,6 +144,13 @@ public class SendFileRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -269,6 +281,7 @@ public class SendFileRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendFileRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String content; 
         private String contentType; 
         private String description; 
@@ -295,6 +308,7 @@ public class SendFileRequest extends Request {
         private Builder(SendFileRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.content = request.content;
             this.contentType = request.contentType;
             this.description = request.description;
@@ -321,6 +335,15 @@ public class SendFileRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

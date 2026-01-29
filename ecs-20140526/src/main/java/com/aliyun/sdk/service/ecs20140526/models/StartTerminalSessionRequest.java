@@ -22,6 +22,10 @@ public class StartTerminalSessionRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommandLine")
     private String commandLine;
 
@@ -78,6 +82,7 @@ public class StartTerminalSessionRequest extends Request {
     private StartTerminalSessionRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.commandLine = builder.commandLine;
         this.connectionType = builder.connectionType;
         this.encryptionOptions = builder.encryptionOptions;
@@ -111,6 +116,13 @@ public class StartTerminalSessionRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -206,6 +218,7 @@ public class StartTerminalSessionRequest extends Request {
 
     public static final class Builder extends Request.Builder<StartTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String commandLine; 
         private String connectionType; 
         private EncryptionOptions encryptionOptions; 
@@ -227,6 +240,7 @@ public class StartTerminalSessionRequest extends Request {
         private Builder(StartTerminalSessionRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.commandLine = request.commandLine;
             this.connectionType = request.connectionType;
             this.encryptionOptions = request.encryptionOptions;
@@ -248,6 +262,15 @@ public class StartTerminalSessionRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

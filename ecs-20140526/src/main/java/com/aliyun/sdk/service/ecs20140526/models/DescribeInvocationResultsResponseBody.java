@@ -316,6 +316,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OssOutputDelivery")
         private String ossOutputDelivery;
 
+        @com.aliyun.core.annotation.NameInMap("OssOutputErrorCode")
+        private String ossOutputErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("OssOutputErrorInfo")
+        private String ossOutputErrorInfo;
+
         @com.aliyun.core.annotation.NameInMap("OssOutputStatus")
         private String ossOutputStatus;
 
@@ -358,6 +364,8 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.invokeRecordStatus = builder.invokeRecordStatus;
             this.launcher = builder.launcher;
             this.ossOutputDelivery = builder.ossOutputDelivery;
+            this.ossOutputErrorCode = builder.ossOutputErrorCode;
+            this.ossOutputErrorInfo = builder.ossOutputErrorInfo;
             this.ossOutputStatus = builder.ossOutputStatus;
             this.ossOutputUri = builder.ossOutputUri;
             this.output = builder.output;
@@ -476,6 +484,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ossOutputErrorCode
+         */
+        public String getOssOutputErrorCode() {
+            return this.ossOutputErrorCode;
+        }
+
+        /**
+         * @return ossOutputErrorInfo
+         */
+        public String getOssOutputErrorInfo() {
+            return this.ossOutputErrorInfo;
+        }
+
+        /**
          * @return ossOutputStatus
          */
         public String getOssOutputStatus() {
@@ -553,6 +575,8 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String invokeRecordStatus; 
             private String launcher; 
             private String ossOutputDelivery; 
+            private String ossOutputErrorCode; 
+            private String ossOutputErrorInfo; 
             private String ossOutputStatus; 
             private String ossOutputUri; 
             private String output; 
@@ -581,6 +605,8 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
                 this.invokeRecordStatus = model.invokeRecordStatus;
                 this.launcher = model.launcher;
                 this.ossOutputDelivery = model.ossOutputDelivery;
+                this.ossOutputErrorCode = model.ossOutputErrorCode;
+                this.ossOutputErrorInfo = model.ossOutputErrorInfo;
                 this.ossOutputStatus = model.ossOutputStatus;
                 this.ossOutputUri = model.ossOutputUri;
                 this.output = model.output;
@@ -812,6 +838,22 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder ossOutputDelivery(String ossOutputDelivery) {
                 this.ossOutputDelivery = ossOutputDelivery;
+                return this;
+            }
+
+            /**
+             * OssOutputErrorCode.
+             */
+            public Builder ossOutputErrorCode(String ossOutputErrorCode) {
+                this.ossOutputErrorCode = ossOutputErrorCode;
+                return this;
+            }
+
+            /**
+             * OssOutputErrorInfo.
+             */
+            public Builder ossOutputErrorInfo(String ossOutputErrorInfo) {
+                this.ossOutputErrorInfo = ossOutputErrorInfo;
                 return this;
             }
 

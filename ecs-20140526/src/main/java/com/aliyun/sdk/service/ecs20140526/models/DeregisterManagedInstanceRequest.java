@@ -22,6 +22,10 @@ public class DeregisterManagedInstanceRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -50,6 +54,7 @@ public class DeregisterManagedInstanceRequest extends Request {
     private DeregisterManagedInstanceRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -76,6 +81,13 @@ public class DeregisterManagedInstanceRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DeregisterManagedInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeregisterManagedInstanceRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -136,6 +149,7 @@ public class DeregisterManagedInstanceRequest extends Request {
         private Builder(DeregisterManagedInstanceRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -150,6 +164,15 @@ public class DeregisterManagedInstanceRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

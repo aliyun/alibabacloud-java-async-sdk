@@ -22,6 +22,10 @@ public class ModifyInvocationAttributeRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommandContent")
     private String commandContent;
 
@@ -74,6 +78,7 @@ public class ModifyInvocationAttributeRequest extends Request {
     private ModifyInvocationAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.commandContent = builder.commandContent;
         this.contentEncoding = builder.contentEncoding;
         this.enableParameter = builder.enableParameter;
@@ -106,6 +111,13 @@ public class ModifyInvocationAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -194,6 +206,7 @@ public class ModifyInvocationAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyInvocationAttributeRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String commandContent; 
         private String contentEncoding; 
         private Boolean enableParameter; 
@@ -214,6 +227,7 @@ public class ModifyInvocationAttributeRequest extends Request {
         private Builder(ModifyInvocationAttributeRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.commandContent = request.commandContent;
             this.contentEncoding = request.contentEncoding;
             this.enableParameter = request.enableParameter;
@@ -234,6 +248,15 @@ public class ModifyInvocationAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

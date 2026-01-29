@@ -22,6 +22,10 @@ public class CreateActivationRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -73,6 +77,7 @@ public class CreateActivationRequest extends Request {
     private CreateActivationRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.instanceCount = builder.instanceCount;
         this.instanceName = builder.instanceName;
@@ -105,6 +110,13 @@ public class CreateActivationRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -193,6 +205,7 @@ public class CreateActivationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateActivationRequest, Builder> {
         private String sourceRegionId; 
+        private String clientToken; 
         private String description; 
         private Integer instanceCount; 
         private String instanceName; 
@@ -213,6 +226,7 @@ public class CreateActivationRequest extends Request {
         private Builder(CreateActivationRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.instanceCount = request.instanceCount;
             this.instanceName = request.instanceName;
@@ -233,6 +247,15 @@ public class CreateActivationRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
