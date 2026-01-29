@@ -110,6 +110,10 @@ public class CreateIndexRequest extends Request {
     private String chunkMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("connectId")
+    private String connectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("database")
     private String database;
 
@@ -120,6 +124,10 @@ public class CreateIndexRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("enableHeaders")
     private Boolean enableHeaders;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("knowledgeScene")
+    private String knowledgeScene;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
@@ -166,9 +174,11 @@ public class CreateIndexRequest extends Request {
         this.structureType = builder.structureType;
         this.tableIds = builder.tableIds;
         this.chunkMode = builder.chunkMode;
+        this.connectId = builder.connectId;
         this.database = builder.database;
         this.datasourceCode = builder.datasourceCode;
         this.enableHeaders = builder.enableHeaders;
+        this.knowledgeScene = builder.knowledgeScene;
         this.metaExtractColumns = builder.metaExtractColumns;
         this.pipelineCommercialCu = builder.pipelineCommercialCu;
         this.pipelineCommercialType = builder.pipelineCommercialType;
@@ -344,6 +354,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return connectId
+     */
+    public String getConnectId() {
+        return this.connectId;
+    }
+
+    /**
      * @return database
      */
     public String getDatabase() {
@@ -362,6 +379,13 @@ public class CreateIndexRequest extends Request {
      */
     public Boolean getEnableHeaders() {
         return this.enableHeaders;
+    }
+
+    /**
+     * @return knowledgeScene
+     */
+    public String getKnowledgeScene() {
+        return this.knowledgeScene;
     }
 
     /**
@@ -422,9 +446,11 @@ public class CreateIndexRequest extends Request {
         private String structureType; 
         private java.util.List<String> tableIds; 
         private String chunkMode; 
+        private String connectId; 
         private String database; 
         private String datasourceCode; 
         private Boolean enableHeaders; 
+        private String knowledgeScene; 
         private java.util.List<MetaExtractColumns> metaExtractColumns; 
         private Integer pipelineCommercialCu; 
         private String pipelineCommercialType; 
@@ -459,9 +485,11 @@ public class CreateIndexRequest extends Request {
             this.structureType = request.structureType;
             this.tableIds = request.tableIds;
             this.chunkMode = request.chunkMode;
+            this.connectId = request.connectId;
             this.database = request.database;
             this.datasourceCode = request.datasourceCode;
             this.enableHeaders = request.enableHeaders;
+            this.knowledgeScene = request.knowledgeScene;
             this.metaExtractColumns = request.metaExtractColumns;
             this.pipelineCommercialCu = request.pipelineCommercialCu;
             this.pipelineCommercialType = request.pipelineCommercialType;
@@ -781,6 +809,15 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * connectId.
+         */
+        public Builder connectId(String connectId) {
+            this.putQueryParameter("connectId", connectId);
+            this.connectId = connectId;
+            return this;
+        }
+
+        /**
          * database.
          */
         public Builder database(String database) {
@@ -816,6 +853,15 @@ public class CreateIndexRequest extends Request {
         public Builder enableHeaders(Boolean enableHeaders) {
             this.putQueryParameter("enableHeaders", enableHeaders);
             this.enableHeaders = enableHeaders;
+            return this;
+        }
+
+        /**
+         * knowledgeScene.
+         */
+        public Builder knowledgeScene(String knowledgeScene) {
+            this.putQueryParameter("knowledgeScene", knowledgeScene);
+            this.knowledgeScene = knowledgeScene;
             return this;
         }
 
