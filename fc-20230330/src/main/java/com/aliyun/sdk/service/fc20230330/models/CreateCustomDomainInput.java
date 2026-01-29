@@ -23,6 +23,9 @@ public class CreateCustomDomainInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
+    @com.aliyun.core.annotation.NameInMap("corsConfig")
+    private CORSConfig corsConfig;
+
     @com.aliyun.core.annotation.NameInMap("domainName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String domainName;
@@ -42,6 +45,7 @@ public class CreateCustomDomainInput extends TeaModel {
     private CreateCustomDomainInput(Builder builder) {
         this.authConfig = builder.authConfig;
         this.certConfig = builder.certConfig;
+        this.corsConfig = builder.corsConfig;
         this.domainName = builder.domainName;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
@@ -73,6 +77,13 @@ public class CreateCustomDomainInput extends TeaModel {
      */
     public CertConfig getCertConfig() {
         return this.certConfig;
+    }
+
+    /**
+     * @return corsConfig
+     */
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
     }
 
     /**
@@ -113,6 +124,7 @@ public class CreateCustomDomainInput extends TeaModel {
     public static final class Builder {
         private AuthConfig authConfig; 
         private CertConfig certConfig; 
+        private CORSConfig corsConfig; 
         private String domainName; 
         private String protocol; 
         private RouteConfig routeConfig; 
@@ -125,6 +137,7 @@ public class CreateCustomDomainInput extends TeaModel {
         private Builder(CreateCustomDomainInput model) {
             this.authConfig = model.authConfig;
             this.certConfig = model.certConfig;
+            this.corsConfig = model.corsConfig;
             this.domainName = model.domainName;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
@@ -145,6 +158,14 @@ public class CreateCustomDomainInput extends TeaModel {
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
+            return this;
+        }
+
+        /**
+         * corsConfig.
+         */
+        public Builder corsConfig(CORSConfig corsConfig) {
+            this.corsConfig = corsConfig;
             return this;
         }
 

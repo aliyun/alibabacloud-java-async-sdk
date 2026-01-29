@@ -23,6 +23,9 @@ public class HTTPTriggerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("authType")
     private String authType;
 
+    @com.aliyun.core.annotation.NameInMap("corsConfig")
+    private CORSConfig corsConfig;
+
     @com.aliyun.core.annotation.NameInMap("disableURLInternet")
     private Boolean disableURLInternet;
 
@@ -32,6 +35,7 @@ public class HTTPTriggerConfig extends TeaModel {
     private HTTPTriggerConfig(Builder builder) {
         this.authConfig = builder.authConfig;
         this.authType = builder.authType;
+        this.corsConfig = builder.corsConfig;
         this.disableURLInternet = builder.disableURLInternet;
         this.methods = builder.methods;
     }
@@ -63,6 +67,13 @@ public class HTTPTriggerConfig extends TeaModel {
     }
 
     /**
+     * @return corsConfig
+     */
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
+    }
+
+    /**
      * @return disableURLInternet
      */
     public Boolean getDisableURLInternet() {
@@ -79,6 +90,7 @@ public class HTTPTriggerConfig extends TeaModel {
     public static final class Builder {
         private String authConfig; 
         private String authType; 
+        private CORSConfig corsConfig; 
         private Boolean disableURLInternet; 
         private java.util.List<String> methods; 
 
@@ -88,6 +100,7 @@ public class HTTPTriggerConfig extends TeaModel {
         private Builder(HTTPTriggerConfig model) {
             this.authConfig = model.authConfig;
             this.authType = model.authType;
+            this.corsConfig = model.corsConfig;
             this.disableURLInternet = model.disableURLInternet;
             this.methods = model.methods;
         } 
@@ -105,6 +118,14 @@ public class HTTPTriggerConfig extends TeaModel {
          */
         public Builder authType(String authType) {
             this.authType = authType;
+            return this;
+        }
+
+        /**
+         * corsConfig.
+         */
+        public Builder corsConfig(CORSConfig corsConfig) {
+            this.corsConfig = corsConfig;
             return this;
         }
 

@@ -23,6 +23,9 @@ public class UpdateCustomDomainInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
+    @com.aliyun.core.annotation.NameInMap("corsConfig")
+    private CORSConfig corsConfig;
+
     @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
@@ -38,6 +41,7 @@ public class UpdateCustomDomainInput extends TeaModel {
     private UpdateCustomDomainInput(Builder builder) {
         this.authConfig = builder.authConfig;
         this.certConfig = builder.certConfig;
+        this.corsConfig = builder.corsConfig;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
         this.tlsConfig = builder.tlsConfig;
@@ -71,6 +75,13 @@ public class UpdateCustomDomainInput extends TeaModel {
     }
 
     /**
+     * @return corsConfig
+     */
+    public CORSConfig getCorsConfig() {
+        return this.corsConfig;
+    }
+
+    /**
      * @return protocol
      */
     public String getProtocol() {
@@ -101,6 +112,7 @@ public class UpdateCustomDomainInput extends TeaModel {
     public static final class Builder {
         private AuthConfig authConfig; 
         private CertConfig certConfig; 
+        private CORSConfig corsConfig; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
@@ -112,6 +124,7 @@ public class UpdateCustomDomainInput extends TeaModel {
         private Builder(UpdateCustomDomainInput model) {
             this.authConfig = model.authConfig;
             this.certConfig = model.certConfig;
+            this.corsConfig = model.corsConfig;
             this.protocol = model.protocol;
             this.routeConfig = model.routeConfig;
             this.tlsConfig = model.tlsConfig;
@@ -131,6 +144,14 @@ public class UpdateCustomDomainInput extends TeaModel {
          */
         public Builder certConfig(CertConfig certConfig) {
             this.certConfig = certConfig;
+            return this;
+        }
+
+        /**
+         * corsConfig.
+         */
+        public Builder corsConfig(CORSConfig corsConfig) {
+            this.corsConfig = corsConfig;
             return this;
         }
 
