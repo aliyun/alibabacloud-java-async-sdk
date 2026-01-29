@@ -184,6 +184,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRayCluster  CreateRayClusterRequest
+     * @return CreateRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<CreateRayClusterResponse> createRayCluster(CreateRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRayCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRayClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
      */
@@ -304,6 +322,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRayCluster  DeleteRayClusterRequest
+     * @return DeleteRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRayClusterResponse> deleteRayCluster(DeleteRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteRayCluster").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster/{clusterId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRayClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -466,6 +502,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRayCluster  GetRayClusterRequest
+     * @return GetRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<GetRayClusterResponse> getRayCluster(GetRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRayCluster").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster/{clusterId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRayClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -760,6 +814,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRayCluster  ListRayClusterRequest
+     * @return ListRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<ListRayClusterResponse> listRayCluster(ListRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRayCluster").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRayClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -958,6 +1030,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartRayCluster  StartRayClusterRequest
+     * @return StartRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<StartRayClusterResponse> startRayCluster(StartRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartRayCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster/{clusterId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartRayClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartSessionCluster  StartSessionClusterRequest
      * @return StartSessionClusterResponse
      */
@@ -1006,6 +1096,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopRayCluster  StopRayClusterRequest
+     * @return StopRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<StopRayClusterResponse> stopRayCluster(StopRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopRayCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster/{clusterId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopRayClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1114,6 +1222,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateProcessDefinitionWithScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateRayCluster  UpdateRayClusterRequest
+     * @return UpdateRayClusterResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRayClusterResponse> updateRayCluster(UpdateRayClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRayCluster").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{workspaceId}/rayCluster/{clusterId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRayClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRayClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

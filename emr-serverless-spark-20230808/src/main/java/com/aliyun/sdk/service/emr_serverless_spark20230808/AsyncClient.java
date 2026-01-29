@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProcessDefinitionWithScheduleResponse> createProcessDefinitionWithSchedule(CreateProcessDefinitionWithScheduleRequest request);
 
     /**
+     * @param request the request parameters of CreateRayCluster  CreateRayClusterRequest
+     * @return CreateRayClusterResponse
+     */
+    CompletableFuture<CreateRayClusterResponse> createRayCluster(CreateRayClusterRequest request);
+
+    /**
      * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
      */
@@ -108,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteLivyComputeTokenResponse
      */
     CompletableFuture<DeleteLivyComputeTokenResponse> deleteLivyComputeToken(DeleteLivyComputeTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRayCluster  DeleteRayClusterRequest
+     * @return DeleteRayClusterResponse
+     */
+    CompletableFuture<DeleteRayClusterResponse> deleteRayCluster(DeleteRayClusterRequest request);
 
     /**
      * @param request the request parameters of EditWorkspaceQueue  EditWorkspaceQueueRequest
@@ -162,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLivyComputeTokenResponse
      */
     CompletableFuture<GetLivyComputeTokenResponse> getLivyComputeToken(GetLivyComputeTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetRayCluster  GetRayClusterRequest
+     * @return GetRayClusterResponse
+     */
+    CompletableFuture<GetRayClusterResponse> getRayCluster(GetRayClusterRequest request);
 
     /**
      * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
@@ -260,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request);
 
     /**
+     * @param request the request parameters of ListRayCluster  ListRayClusterRequest
+     * @return ListRayClusterResponse
+     */
+    CompletableFuture<ListRayClusterResponse> listRayCluster(ListRayClusterRequest request);
+
+    /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -326,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartProcessInstanceResponse> startProcessInstance(StartProcessInstanceRequest request);
 
     /**
+     * @param request the request parameters of StartRayCluster  StartRayClusterRequest
+     * @return StartRayClusterResponse
+     */
+    CompletableFuture<StartRayClusterResponse> startRayCluster(StartRayClusterRequest request);
+
+    /**
      * @param request the request parameters of StartSessionCluster  StartSessionClusterRequest
      * @return StartSessionClusterResponse
      */
@@ -342,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopLivyComputeResponse
      */
     CompletableFuture<StopLivyComputeResponse> stopLivyCompute(StopLivyComputeRequest request);
+
+    /**
+     * @param request the request parameters of StopRayCluster  StopRayClusterRequest
+     * @return StopRayClusterResponse
+     */
+    CompletableFuture<StopRayClusterResponse> stopRayCluster(StopRayClusterRequest request);
 
     /**
      * @param request the request parameters of StopSessionCluster  StopSessionClusterRequest
@@ -378,5 +414,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProcessDefinitionWithScheduleResponse
      */
     CompletableFuture<UpdateProcessDefinitionWithScheduleResponse> updateProcessDefinitionWithSchedule(UpdateProcessDefinitionWithScheduleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRayCluster  UpdateRayClusterRequest
+     * @return UpdateRayClusterResponse
+     */
+    CompletableFuture<UpdateRayClusterResponse> updateRayCluster(UpdateRayClusterRequest request);
 
 }
