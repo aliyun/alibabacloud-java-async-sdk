@@ -27,6 +27,10 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
     private String endPeriod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterParam")
+    private FilterParam filterParam;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -48,6 +52,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         super(builder);
         this.billOwnerId = builder.billOwnerId;
         this.endPeriod = builder.endPeriod;
+        this.filterParam = builder.filterParam;
         this.maxResults = builder.maxResults;
         this.periodType = builder.periodType;
         this.startPeriod = builder.startPeriod;
@@ -82,6 +87,13 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
     }
 
     /**
+     * @return filterParam
+     */
+    public FilterParam getFilterParam() {
+        return this.filterParam;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -112,6 +124,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSavingsPlansUsageDetailRequest, Builder> {
         private Long billOwnerId; 
         private String endPeriod; 
+        private FilterParam filterParam; 
         private Integer maxResults; 
         private String periodType; 
         private String startPeriod; 
@@ -125,6 +138,7 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
             super(request);
             this.billOwnerId = request.billOwnerId;
             this.endPeriod = request.endPeriod;
+            this.filterParam = request.filterParam;
             this.maxResults = request.maxResults;
             this.periodType = request.periodType;
             this.startPeriod = request.startPeriod;
@@ -152,6 +166,16 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
         public Builder endPeriod(String endPeriod) {
             this.putQueryParameter("EndPeriod", endPeriod);
             this.endPeriod = endPeriod;
+            return this;
+        }
+
+        /**
+         * FilterParam.
+         */
+        public Builder filterParam(FilterParam filterParam) {
+            String filterParamShrink = shrink(filterParam, "FilterParam", "json");
+            this.putQueryParameter("FilterParam", filterParamShrink);
+            this.filterParam = filterParam;
             return this;
         }
 
@@ -212,4 +236,271 @@ public class DescribeSavingsPlansUsageDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageDetailRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageDetailRequest</p>
+     */
+    public static class Dimensions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("SelectType")
+        private String selectType;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Dimensions(Builder builder) {
+            this.code = builder.code;
+            this.selectType = builder.selectType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dimensions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return selectType
+         */
+        public String getSelectType() {
+            return this.selectType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String selectType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.code = model.code;
+                this.selectType = model.selectType;
+                this.values = model.values;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * SelectType.
+             */
+            public Builder selectType(String selectType) {
+                this.selectType = selectType;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Dimensions build() {
+                return new Dimensions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageDetailRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageDetailRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("SelectType")
+        private String selectType;
+
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<String> values;
+
+        private Tags(Builder builder) {
+            this.code = builder.code;
+            this.selectType = builder.selectType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return selectType
+         */
+        public String getSelectType() {
+            return this.selectType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String selectType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.code = model.code;
+                this.selectType = model.selectType;
+                this.values = model.values;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * SelectType.
+             */
+            public Builder selectType(String selectType) {
+                this.selectType = selectType;
+                return this;
+            }
+
+            /**
+             * Values.
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeSavingsPlansUsageDetailRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSavingsPlansUsageDetailRequest</p>
+     */
+    public static class FilterParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
+        private java.util.List<Dimensions> dimensions;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
+        private FilterParam(Builder builder) {
+            this.dimensions = builder.dimensions;
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FilterParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dimensions
+         */
+        public java.util.List<Dimensions> getDimensions() {
+            return this.dimensions;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private java.util.List<Dimensions> dimensions; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(FilterParam model) {
+                this.dimensions = model.dimensions;
+                this.tags = model.tags;
+            } 
+
+            /**
+             * Dimensions.
+             */
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
+                this.dimensions = dimensions;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public FilterParam build() {
+                return new FilterParam(this);
+            } 
+
+        } 
+
+    }
 }
