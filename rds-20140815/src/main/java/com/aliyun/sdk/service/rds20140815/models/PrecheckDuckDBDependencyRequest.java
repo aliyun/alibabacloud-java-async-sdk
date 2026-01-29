@@ -34,12 +34,17 @@ public class PrecheckDuckDBDependencyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMode")
+    private String targetMode;
+
     private PrecheckDuckDBDependencyRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.targetMode = builder.targetMode;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class PrecheckDuckDBDependencyRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return targetMode
+     */
+    public String getTargetMode() {
+        return this.targetMode;
+    }
+
     public static final class Builder extends Request.Builder<PrecheckDuckDBDependencyRequest, Builder> {
         private String DBInstanceId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String targetMode; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class PrecheckDuckDBDependencyRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.targetMode = request.targetMode;
         } 
 
         /**
@@ -138,6 +152,15 @@ public class PrecheckDuckDBDependencyRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * TargetMode.
+         */
+        public Builder targetMode(String targetMode) {
+            this.putQueryParameter("TargetMode", targetMode);
+            this.targetMode = targetMode;
             return this;
         }
 
