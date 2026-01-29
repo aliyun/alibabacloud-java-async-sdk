@@ -38,20 +38,48 @@ public class RunMarketingInformationWritingRequest extends Request {
     private String customPrompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extParameters")
+    private java.util.Map<String, String> extParameters;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generateCount")
+    private String generateCount;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("inputExample")
     private String inputExample;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keywords")
+    private String keywords;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("language")
+    private String language;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelId")
     private String modelId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("otherRequirements")
+    private String otherRequirements;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("outputExample")
     private String outputExample;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceMaterial")
     private String sourceMaterial;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wordCountRange")
+    private String wordCountRange;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("writingType")
@@ -64,10 +92,17 @@ public class RunMarketingInformationWritingRequest extends Request {
         this.apiKey = builder.apiKey;
         this.customLimitation = builder.customLimitation;
         this.customPrompt = builder.customPrompt;
+        this.extParameters = builder.extParameters;
+        this.generateCount = builder.generateCount;
         this.inputExample = builder.inputExample;
+        this.keywords = builder.keywords;
+        this.language = builder.language;
         this.modelId = builder.modelId;
+        this.otherRequirements = builder.otherRequirements;
         this.outputExample = builder.outputExample;
+        this.prompt = builder.prompt;
         this.sourceMaterial = builder.sourceMaterial;
+        this.wordCountRange = builder.wordCountRange;
         this.writingType = builder.writingType;
     }
 
@@ -120,10 +155,38 @@ public class RunMarketingInformationWritingRequest extends Request {
     }
 
     /**
+     * @return extParameters
+     */
+    public java.util.Map<String, String> getExtParameters() {
+        return this.extParameters;
+    }
+
+    /**
+     * @return generateCount
+     */
+    public String getGenerateCount() {
+        return this.generateCount;
+    }
+
+    /**
      * @return inputExample
      */
     public String getInputExample() {
         return this.inputExample;
+    }
+
+    /**
+     * @return keywords
+     */
+    public String getKeywords() {
+        return this.keywords;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -134,6 +197,13 @@ public class RunMarketingInformationWritingRequest extends Request {
     }
 
     /**
+     * @return otherRequirements
+     */
+    public String getOtherRequirements() {
+        return this.otherRequirements;
+    }
+
+    /**
      * @return outputExample
      */
     public String getOutputExample() {
@@ -141,10 +211,24 @@ public class RunMarketingInformationWritingRequest extends Request {
     }
 
     /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
      * @return sourceMaterial
      */
     public String getSourceMaterial() {
         return this.sourceMaterial;
+    }
+
+    /**
+     * @return wordCountRange
+     */
+    public String getWordCountRange() {
+        return this.wordCountRange;
     }
 
     /**
@@ -160,10 +244,17 @@ public class RunMarketingInformationWritingRequest extends Request {
         private String apiKey; 
         private String customLimitation; 
         private String customPrompt; 
+        private java.util.Map<String, String> extParameters; 
+        private String generateCount; 
         private String inputExample; 
+        private String keywords; 
+        private String language; 
         private String modelId; 
+        private String otherRequirements; 
         private String outputExample; 
+        private String prompt; 
         private String sourceMaterial; 
+        private String wordCountRange; 
         private String writingType; 
 
         private Builder() {
@@ -177,10 +268,17 @@ public class RunMarketingInformationWritingRequest extends Request {
             this.apiKey = request.apiKey;
             this.customLimitation = request.customLimitation;
             this.customPrompt = request.customPrompt;
+            this.extParameters = request.extParameters;
+            this.generateCount = request.generateCount;
             this.inputExample = request.inputExample;
+            this.keywords = request.keywords;
+            this.language = request.language;
             this.modelId = request.modelId;
+            this.otherRequirements = request.otherRequirements;
             this.outputExample = request.outputExample;
+            this.prompt = request.prompt;
             this.sourceMaterial = request.sourceMaterial;
+            this.wordCountRange = request.wordCountRange;
             this.writingType = request.writingType;
         } 
 
@@ -230,11 +328,48 @@ public class RunMarketingInformationWritingRequest extends Request {
         }
 
         /**
+         * extParameters.
+         */
+        public Builder extParameters(java.util.Map<String, String> extParameters) {
+            String extParametersShrink = shrink(extParameters, "extParameters", "json");
+            this.putBodyParameter("extParameters", extParametersShrink);
+            this.extParameters = extParameters;
+            return this;
+        }
+
+        /**
+         * generateCount.
+         */
+        public Builder generateCount(String generateCount) {
+            this.putBodyParameter("generateCount", generateCount);
+            this.generateCount = generateCount;
+            return this;
+        }
+
+        /**
          * inputExample.
          */
         public Builder inputExample(String inputExample) {
             this.putBodyParameter("inputExample", inputExample);
             this.inputExample = inputExample;
+            return this;
+        }
+
+        /**
+         * keywords.
+         */
+        public Builder keywords(String keywords) {
+            this.putBodyParameter("keywords", keywords);
+            this.keywords = keywords;
+            return this;
+        }
+
+        /**
+         * language.
+         */
+        public Builder language(String language) {
+            this.putBodyParameter("language", language);
+            this.language = language;
             return this;
         }
 
@@ -248,6 +383,15 @@ public class RunMarketingInformationWritingRequest extends Request {
         }
 
         /**
+         * otherRequirements.
+         */
+        public Builder otherRequirements(String otherRequirements) {
+            this.putBodyParameter("otherRequirements", otherRequirements);
+            this.otherRequirements = otherRequirements;
+            return this;
+        }
+
+        /**
          * outputExample.
          */
         public Builder outputExample(String outputExample) {
@@ -257,11 +401,29 @@ public class RunMarketingInformationWritingRequest extends Request {
         }
 
         /**
+         * prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putBodyParameter("prompt", prompt);
+            this.prompt = prompt;
+            return this;
+        }
+
+        /**
          * sourceMaterial.
          */
         public Builder sourceMaterial(String sourceMaterial) {
             this.putBodyParameter("sourceMaterial", sourceMaterial);
             this.sourceMaterial = sourceMaterial;
+            return this;
+        }
+
+        /**
+         * wordCountRange.
+         */
+        public Builder wordCountRange(String wordCountRange) {
+            this.putBodyParameter("wordCountRange", wordCountRange);
+            this.wordCountRange = wordCountRange;
             return this;
         }
 
