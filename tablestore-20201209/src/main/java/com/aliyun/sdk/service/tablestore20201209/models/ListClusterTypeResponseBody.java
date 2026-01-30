@@ -17,18 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterTypeResponseBody</p>
  */
 public class ListClusterTypeResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("ClusterTypeDetailList")
-    private java.util.List<ClusterTypeDetailList> clusterTypeDetailList;
+    @com.aliyun.core.annotation.NameInMap("ClusterTypeInfos")
+    private java.util.List<ClusterTypeInfos> clusterTypeInfos;
 
-    @com.aliyun.core.annotation.NameInMap("ClusterTypeList")
-    private java.util.List<String> clusterTypeList;
+    @com.aliyun.core.annotation.NameInMap("ClusterTypes")
+    private java.util.List<String> clusterTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterTypeResponseBody(Builder builder) {
-        this.clusterTypeDetailList = builder.clusterTypeDetailList;
-        this.clusterTypeList = builder.clusterTypeList;
+        this.clusterTypeInfos = builder.clusterTypeInfos;
+        this.clusterTypes = builder.clusterTypes;
         this.requestId = builder.requestId;
     }
 
@@ -45,17 +45,17 @@ public class ListClusterTypeResponseBody extends TeaModel {
     }
 
     /**
-     * @return clusterTypeDetailList
+     * @return clusterTypeInfos
      */
-    public java.util.List<ClusterTypeDetailList> getClusterTypeDetailList() {
-        return this.clusterTypeDetailList;
+    public java.util.List<ClusterTypeInfos> getClusterTypeInfos() {
+        return this.clusterTypeInfos;
     }
 
     /**
-     * @return clusterTypeList
+     * @return clusterTypes
      */
-    public java.util.List<String> getClusterTypeList() {
-        return this.clusterTypeList;
+    public java.util.List<String> getClusterTypes() {
+        return this.clusterTypes;
     }
 
     /**
@@ -66,32 +66,32 @@ public class ListClusterTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List<ClusterTypeDetailList> clusterTypeDetailList; 
-        private java.util.List<String> clusterTypeList; 
+        private java.util.List<ClusterTypeInfos> clusterTypeInfos; 
+        private java.util.List<String> clusterTypes; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(ListClusterTypeResponseBody model) {
-            this.clusterTypeDetailList = model.clusterTypeDetailList;
-            this.clusterTypeList = model.clusterTypeList;
+            this.clusterTypeInfos = model.clusterTypeInfos;
+            this.clusterTypes = model.clusterTypes;
             this.requestId = model.requestId;
         } 
 
         /**
-         * ClusterTypeDetailList.
+         * ClusterTypeInfos.
          */
-        public Builder clusterTypeDetailList(java.util.List<ClusterTypeDetailList> clusterTypeDetailList) {
-            this.clusterTypeDetailList = clusterTypeDetailList;
+        public Builder clusterTypeInfos(java.util.List<ClusterTypeInfos> clusterTypeInfos) {
+            this.clusterTypeInfos = clusterTypeInfos;
             return this;
         }
 
         /**
-         * ClusterTypeList.
+         * ClusterTypes.
          */
-        public Builder clusterTypeList(java.util.List<String> clusterTypeList) {
-            this.clusterTypeList = clusterTypeList;
+        public Builder clusterTypes(java.util.List<String> clusterTypes) {
+            this.clusterTypes = clusterTypes;
             return this;
         }
 
@@ -115,14 +115,14 @@ public class ListClusterTypeResponseBody extends TeaModel {
      *
      * <p>ListClusterTypeResponseBody</p>
      */
-    public static class ClusterTypeDetailList extends TeaModel {
+    public static class ClusterTypeInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
         @com.aliyun.core.annotation.NameInMap("IsMultiAZ")
         private Boolean isMultiAZ;
 
-        private ClusterTypeDetailList(Builder builder) {
+        private ClusterTypeInfos(Builder builder) {
             this.clusterType = builder.clusterType;
             this.isMultiAZ = builder.isMultiAZ;
         }
@@ -131,7 +131,7 @@ public class ListClusterTypeResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ClusterTypeDetailList create() {
+        public static ClusterTypeInfos create() {
             return builder().build();
         }
 
@@ -156,7 +156,7 @@ public class ListClusterTypeResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(ClusterTypeDetailList model) {
+            private Builder(ClusterTypeInfos model) {
                 this.clusterType = model.clusterType;
                 this.isMultiAZ = model.isMultiAZ;
             } 
@@ -177,8 +177,8 @@ public class ListClusterTypeResponseBody extends TeaModel {
                 return this;
             }
 
-            public ClusterTypeDetailList build() {
-                return new ClusterTypeDetailList(this);
+            public ClusterTypeInfos build() {
+                return new ClusterTypeInfos(this);
             } 
 
         } 
