@@ -644,6 +644,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFeatureConsistencyCheckJobsResponse> listFeatureConsistencyCheckJobs(ListFeatureConsistencyCheckJobsRequest request);
 
     /**
+     * @param request the request parameters of ListInstanceResourceSchemas  ListInstanceResourceSchemasRequest
+     * @return ListInstanceResourceSchemasResponse
+     */
+    CompletableFuture<ListInstanceResourceSchemasResponse> listInstanceResourceSchemas(ListInstanceResourceSchemasRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceResourceTables  ListInstanceResourceTablesRequest
+     * @return ListInstanceResourceTablesResponse
+     */
+    CompletableFuture<ListInstanceResourceTablesResponse> listInstanceResourceTables(ListInstanceResourceTablesRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceResources  ListInstanceResourcesRequest
      * @return ListInstanceResourcesResponse
      */

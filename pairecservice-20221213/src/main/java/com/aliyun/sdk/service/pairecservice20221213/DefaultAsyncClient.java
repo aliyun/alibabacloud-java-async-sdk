@@ -1912,6 +1912,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListInstanceResourceSchemas  ListInstanceResourceSchemasRequest
+     * @return ListInstanceResourceSchemasResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceResourceSchemasResponse> listInstanceResourceSchemas(ListInstanceResourceSchemasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceResourceSchemas").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/resources/{ResourceId}/schemas").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceResourceSchemasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceResourceSchemasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListInstanceResourceTables  ListInstanceResourceTablesRequest
+     * @return ListInstanceResourceTablesResponse
+     */
+    @Override
+    public CompletableFuture<ListInstanceResourceTablesResponse> listInstanceResourceTables(ListInstanceResourceTablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListInstanceResourceTables").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/resources/{ResourceId}/tables").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInstanceResourceTablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListInstanceResourceTablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListInstanceResources  ListInstanceResourcesRequest
      * @return ListInstanceResourcesResponse
      */
