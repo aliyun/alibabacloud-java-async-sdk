@@ -86,6 +86,10 @@ public class InitializeRequest extends Request {
     private String editOcrResult;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    private String email;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperienceCode")
     private String experienceCode;
 
@@ -140,6 +144,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetaInfo")
     private String metaInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
+    private String mobile;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Model")
@@ -236,6 +244,7 @@ public class InitializeRequest extends Request {
         this.docVideo = builder.docVideo;
         this.documentNumber = builder.documentNumber;
         this.editOcrResult = builder.editOcrResult;
+        this.email = builder.email;
         this.experienceCode = builder.experienceCode;
         this.faceGroupCodes = builder.faceGroupCodes;
         this.facePictureBase64 = builder.facePictureBase64;
@@ -250,6 +259,7 @@ public class InitializeRequest extends Request {
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.metaInfo = builder.metaInfo;
+        this.mobile = builder.mobile;
         this.model = builder.model;
         this.ocr = builder.ocr;
         this.pages = builder.pages;
@@ -404,6 +414,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return email
+     */
+    public String getEmail() {
+        return this.email;
+    }
+
+    /**
      * @return experienceCode
      */
     public String getExperienceCode() {
@@ -499,6 +516,13 @@ public class InitializeRequest extends Request {
      */
     public String getMetaInfo() {
         return this.metaInfo;
+    }
+
+    /**
+     * @return mobile
+     */
+    public String getMobile() {
+        return this.mobile;
     }
 
     /**
@@ -652,6 +676,7 @@ public class InitializeRequest extends Request {
         private String docVideo; 
         private String documentNumber; 
         private String editOcrResult; 
+        private String email; 
         private String experienceCode; 
         private String faceGroupCodes; 
         private String facePictureBase64; 
@@ -666,6 +691,7 @@ public class InitializeRequest extends Request {
         private String merchantBizId; 
         private String merchantUserId; 
         private String metaInfo; 
+        private String mobile; 
         private String model; 
         private String ocr; 
         private String pages; 
@@ -709,6 +735,7 @@ public class InitializeRequest extends Request {
             this.docVideo = request.docVideo;
             this.documentNumber = request.documentNumber;
             this.editOcrResult = request.editOcrResult;
+            this.email = request.email;
             this.experienceCode = request.experienceCode;
             this.faceGroupCodes = request.faceGroupCodes;
             this.facePictureBase64 = request.facePictureBase64;
@@ -723,6 +750,7 @@ public class InitializeRequest extends Request {
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.metaInfo = request.metaInfo;
+            this.mobile = request.mobile;
             this.model = request.model;
             this.ocr = request.ocr;
             this.pages = request.pages;
@@ -985,6 +1013,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * Email.
+         */
+        public Builder email(String email) {
+            this.putQueryParameter("Email", email);
+            this.email = email;
+            return this;
+        }
+
+        /**
          * <p>Experience code</p>
          * 
          * <strong>example:</strong>
@@ -1164,6 +1201,15 @@ public class InitializeRequest extends Request {
         public Builder metaInfo(String metaInfo) {
             this.putQueryParameter("MetaInfo", metaInfo);
             this.metaInfo = metaInfo;
+            return this;
+        }
+
+        /**
+         * Mobile.
+         */
+        public Builder mobile(String mobile) {
+            this.putQueryParameter("Mobile", mobile);
+            this.mobile = mobile;
             return this;
         }
 

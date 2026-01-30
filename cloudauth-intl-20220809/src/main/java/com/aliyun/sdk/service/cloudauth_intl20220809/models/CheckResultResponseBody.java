@@ -164,6 +164,9 @@ public class CheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtRiskInfo")
         private String extRiskInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ExtSourceInfo")
+        private String extSourceInfo;
+
         @com.aliyun.core.annotation.NameInMap("Passed")
         private String passed;
 
@@ -177,6 +180,7 @@ public class CheckResultResponseBody extends TeaModel {
             this.extIdInfo = builder.extIdInfo;
             this.extInfo = builder.extInfo;
             this.extRiskInfo = builder.extRiskInfo;
+            this.extSourceInfo = builder.extSourceInfo;
             this.passed = builder.passed;
             this.subCode = builder.subCode;
         }
@@ -232,6 +236,13 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return extSourceInfo
+         */
+        public String getExtSourceInfo() {
+            return this.extSourceInfo;
+        }
+
+        /**
          * @return passed
          */
         public String getPassed() {
@@ -252,6 +263,7 @@ public class CheckResultResponseBody extends TeaModel {
             private String extIdInfo; 
             private String extInfo; 
             private String extRiskInfo; 
+            private String extSourceInfo; 
             private String passed; 
             private String subCode; 
 
@@ -265,6 +277,7 @@ public class CheckResultResponseBody extends TeaModel {
                 this.extIdInfo = model.extIdInfo;
                 this.extInfo = model.extInfo;
                 this.extRiskInfo = model.extRiskInfo;
+                this.extSourceInfo = model.extSourceInfo;
                 this.passed = model.passed;
                 this.subCode = model.subCode;
             } 
@@ -332,6 +345,14 @@ public class CheckResultResponseBody extends TeaModel {
              */
             public Builder extRiskInfo(String extRiskInfo) {
                 this.extRiskInfo = extRiskInfo;
+                return this;
+            }
+
+            /**
+             * ExtSourceInfo.
+             */
+            public Builder extSourceInfo(String extSourceInfo) {
+                this.extSourceInfo = extSourceInfo;
                 return this;
             }
 
