@@ -87,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateQueueResponse> createQueue(CreateQueueRequest request);
 
     /**
+     * @param request the request parameters of CreateReservedNodePool  CreateReservedNodePoolRequest
+     * @return CreateReservedNodePoolResponse
+     */
+    CompletableFuture<CreateReservedNodePoolResponse> createReservedNodePool(CreateReservedNodePoolRequest request);
+
+    /**
      * @param request the request parameters of CreateUsers  CreateUsersRequest
      * @return CreateUsersResponse
      */
@@ -124,6 +130,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteQueuesResponse
      */
     CompletableFuture<DeleteQueuesResponse> deleteQueues(DeleteQueuesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteReservedNodePool  DeleteReservedNodePoolRequest
+     * @return DeleteReservedNodePoolResponse
+     */
+    CompletableFuture<DeleteReservedNodePoolResponse> deleteReservedNodePool(DeleteReservedNodePoolRequest request);
 
     /**
      * @param request the request parameters of DeleteUsers  DeleteUsersRequest
