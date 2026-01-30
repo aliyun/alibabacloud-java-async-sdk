@@ -22,9 +22,14 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
+    private Boolean privateIpAddress;
+
     private DescribeClusterUserKubeconfigRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.privateIpAddress = builder.privateIpAddress;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return privateIpAddress
+     */
+    public Boolean getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
     public static final class Builder extends Request.Builder<DescribeClusterUserKubeconfigRequest, Builder> {
         private String clusterId; 
+        private Boolean privateIpAddress; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         private Builder(DescribeClusterUserKubeconfigRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.privateIpAddress = request.privateIpAddress;
         } 
 
         /**
@@ -68,6 +82,15 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * PrivateIpAddress.
+         */
+        public Builder privateIpAddress(Boolean privateIpAddress) {
+            this.putQueryParameter("PrivateIpAddress", privateIpAddress);
+            this.privateIpAddress = privateIpAddress;
             return this;
         }
 
