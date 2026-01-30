@@ -844,6 +844,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParentPlatformResponse> modifyParentPlatform(ModifyParentPlatformRequest request);
 
     /**
+     * @param request the request parameters of ModifyRenderingChargeType  ModifyRenderingChargeTypeRequest
+     * @return ModifyRenderingChargeTypeResponse
+     */
+    CompletableFuture<ModifyRenderingChargeTypeResponse> modifyRenderingChargeType(ModifyRenderingChargeTypeRequest request);
+
+    /**
      * @param request the request parameters of ModifyRenderingInstance  ModifyRenderingInstanceRequest
      * @return ModifyRenderingInstanceResponse
      */
