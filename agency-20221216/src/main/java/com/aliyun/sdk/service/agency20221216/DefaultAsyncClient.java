@@ -554,6 +554,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetTier2CouponApprovalDetail  GetTier2CouponApprovalDetailRequest
+     * @return GetTier2CouponApprovalDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetTier2CouponApprovalDetailResponse> getTier2CouponApprovalDetail(GetTier2CouponApprovalDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTier2CouponApprovalDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTier2CouponApprovalDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTier2CouponApprovalDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUnassociatedCustomer  GetUnassociatedCustomerRequest
      * @return GetUnassociatedCustomerResponse
      */
@@ -662,6 +680,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListExportTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTier2CouponApproval  ListTier2CouponApprovalRequest
+     * @return ListTier2CouponApprovalResponse
+     */
+    @Override
+    public CompletableFuture<ListTier2CouponApprovalResponse> listTier2CouponApproval(ListTier2CouponApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTier2CouponApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTier2CouponApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTier2CouponApprovalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ProcessApproval  ProcessApprovalRequest
+     * @return ProcessApprovalResponse
+     */
+    @Override
+    public CompletableFuture<ProcessApprovalResponse> processApproval(ProcessApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ProcessApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProcessApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProcessApprovalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

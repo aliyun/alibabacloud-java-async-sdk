@@ -189,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetShutdownPolicyRecordResponse> getShutdownPolicyRecord(GetShutdownPolicyRecordRequest request);
 
     /**
+     * @param request the request parameters of GetTier2CouponApprovalDetail  GetTier2CouponApprovalDetailRequest
+     * @return GetTier2CouponApprovalDetailResponse
+     */
+    CompletableFuture<GetTier2CouponApprovalDetailResponse> getTier2CouponApprovalDetail(GetTier2CouponApprovalDetailRequest request);
+
+    /**
      * @param request the request parameters of GetUnassociatedCustomer  GetUnassociatedCustomerRequest
      * @return GetUnassociatedCustomerResponse
      */
@@ -229,6 +235,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListExportTasksResponse
      */
     CompletableFuture<ListExportTasksResponse> listExportTasks(ListExportTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListTier2CouponApproval  ListTier2CouponApprovalRequest
+     * @return ListTier2CouponApprovalResponse
+     */
+    CompletableFuture<ListTier2CouponApprovalResponse> listTier2CouponApproval(ListTier2CouponApprovalRequest request);
+
+    /**
+     * @param request the request parameters of ProcessApproval  ProcessApprovalRequest
+     * @return ProcessApprovalResponse
+     */
+    CompletableFuture<ProcessApprovalResponse> processApproval(ProcessApprovalRequest request);
 
     /**
      * @param request the request parameters of QueryReversedDeductionHistory  QueryReversedDeductionHistoryRequest
