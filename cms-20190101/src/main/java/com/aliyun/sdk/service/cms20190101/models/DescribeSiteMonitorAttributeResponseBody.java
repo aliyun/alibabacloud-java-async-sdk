@@ -3147,6 +3147,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("match_rule")
         private Integer matchRule;
 
+        @com.aliyun.core.annotation.NameInMap("max_tls_version")
+        private String maxTlsVersion;
+
         @com.aliyun.core.annotation.NameInMap("min_tls_version")
         private String minTlsVersion;
 
@@ -3201,11 +3204,17 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scroll_end")
         private Boolean scrollEnd;
 
+        @com.aliyun.core.annotation.NameInMap("server_name")
+        private String serverName;
+
         @com.aliyun.core.annotation.NameInMap("steps")
         private OptionJsonSteps steps;
 
         @com.aliyun.core.annotation.NameInMap("strict_mode")
         private Boolean strictMode;
+
+        @com.aliyun.core.annotation.NameInMap("supported_cipher_suits")
+        private String supportedCipherSuits;
 
         @com.aliyun.core.annotation.NameInMap("time_out")
         private Long timeOut;
@@ -3227,6 +3236,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("use_private_crt")
         private Boolean usePrivateCrt;
+
+        @com.aliyun.core.annotation.NameInMap("use_ssl")
+        private Boolean useSsl;
 
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
@@ -3267,6 +3279,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.ipNetwork = builder.ipNetwork;
             this.isBase64Encode = builder.isBase64Encode;
             this.matchRule = builder.matchRule;
+            this.maxTlsVersion = builder.maxTlsVersion;
             this.minTlsVersion = builder.minTlsVersion;
             this.password = builder.password;
             this.pingNum = builder.pingNum;
@@ -3285,8 +3298,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.safeLink = builder.safeLink;
             this.screenShot = builder.screenShot;
             this.scrollEnd = builder.scrollEnd;
+            this.serverName = builder.serverName;
             this.steps = builder.steps;
             this.strictMode = builder.strictMode;
+            this.supportedCipherSuits = builder.supportedCipherSuits;
             this.timeOut = builder.timeOut;
             this.traceRegion = builder.traceRegion;
             this.traceType = builder.traceType;
@@ -3294,6 +3309,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.trafficHijackElementCount = builder.trafficHijackElementCount;
             this.trafficHijackElementWhitelist = builder.trafficHijackElementWhitelist;
             this.usePrivateCrt = builder.usePrivateCrt;
+            this.useSsl = builder.useSsl;
             this.username = builder.username;
             this.waitTimeAfterCompletion = builder.waitTimeAfterCompletion;
         }
@@ -3531,6 +3547,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxTlsVersion
+         */
+        public String getMaxTlsVersion() {
+            return this.maxTlsVersion;
+        }
+
+        /**
          * @return minTlsVersion
          */
         public String getMinTlsVersion() {
@@ -3657,6 +3680,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverName
+         */
+        public String getServerName() {
+            return this.serverName;
+        }
+
+        /**
          * @return steps
          */
         public OptionJsonSteps getSteps() {
@@ -3668,6 +3698,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public Boolean getStrictMode() {
             return this.strictMode;
+        }
+
+        /**
+         * @return supportedCipherSuits
+         */
+        public String getSupportedCipherSuits() {
+            return this.supportedCipherSuits;
         }
 
         /**
@@ -3720,6 +3757,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return useSsl
+         */
+        public Boolean getUseSsl() {
+            return this.useSsl;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -3766,6 +3810,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String ipNetwork; 
             private String isBase64Encode; 
             private Integer matchRule; 
+            private String maxTlsVersion; 
             private String minTlsVersion; 
             private String password; 
             private Integer pingNum; 
@@ -3784,8 +3829,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private Integer safeLink; 
             private Boolean screenShot; 
             private Boolean scrollEnd; 
+            private String serverName; 
             private OptionJsonSteps steps; 
             private Boolean strictMode; 
+            private String supportedCipherSuits; 
             private Long timeOut; 
             private String traceRegion; 
             private String traceType; 
@@ -3793,6 +3840,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private Integer trafficHijackElementCount; 
             private TrafficHijackElementWhitelist trafficHijackElementWhitelist; 
             private Boolean usePrivateCrt; 
+            private Boolean useSsl; 
             private String username; 
             private Integer waitTimeAfterCompletion; 
 
@@ -3832,6 +3880,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.ipNetwork = model.ipNetwork;
                 this.isBase64Encode = model.isBase64Encode;
                 this.matchRule = model.matchRule;
+                this.maxTlsVersion = model.maxTlsVersion;
                 this.minTlsVersion = model.minTlsVersion;
                 this.password = model.password;
                 this.pingNum = model.pingNum;
@@ -3850,8 +3899,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.safeLink = model.safeLink;
                 this.screenShot = model.screenShot;
                 this.scrollEnd = model.scrollEnd;
+                this.serverName = model.serverName;
                 this.steps = model.steps;
                 this.strictMode = model.strictMode;
+                this.supportedCipherSuits = model.supportedCipherSuits;
                 this.timeOut = model.timeOut;
                 this.traceRegion = model.traceRegion;
                 this.traceType = model.traceType;
@@ -3859,6 +3910,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
                 this.trafficHijackElementCount = model.trafficHijackElementCount;
                 this.trafficHijackElementWhitelist = model.trafficHijackElementWhitelist;
                 this.usePrivateCrt = model.usePrivateCrt;
+                this.useSsl = model.useSsl;
                 this.username = model.username;
                 this.waitTimeAfterCompletion = model.waitTimeAfterCompletion;
             } 
@@ -4233,6 +4285,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * max_tls_version.
+             */
+            public Builder maxTlsVersion(String maxTlsVersion) {
+                this.maxTlsVersion = maxTlsVersion;
+                return this;
+            }
+
+            /**
              * <p>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</p>
              * 
              * <strong>example:</strong>
@@ -4435,6 +4495,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * server_name.
+             */
+            public Builder serverName(String serverName) {
+                this.serverName = serverName;
+                return this;
+            }
+
+            /**
              * steps.
              */
             public Builder steps(OptionJsonSteps steps) {
@@ -4450,6 +4518,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder strictMode(Boolean strictMode) {
                 this.strictMode = strictMode;
+                return this;
+            }
+
+            /**
+             * supported_cipher_suits.
+             */
+            public Builder supportedCipherSuits(String supportedCipherSuits) {
+                this.supportedCipherSuits = supportedCipherSuits;
                 return this;
             }
 
@@ -4512,6 +4588,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder usePrivateCrt(Boolean usePrivateCrt) {
                 this.usePrivateCrt = usePrivateCrt;
+                return this;
+            }
+
+            /**
+             * use_ssl.
+             */
+            public Builder useSsl(Boolean useSsl) {
+                this.useSsl = useSsl;
                 return this;
             }
 
