@@ -68,6 +68,10 @@ public class DescribeTasksRequest extends Request {
     private String taskAction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskGroupId")
+    private String taskGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
     private String taskIds;
 
@@ -89,6 +93,7 @@ public class DescribeTasksRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
         this.taskAction = builder.taskAction;
+        this.taskGroupId = builder.taskGroupId;
         this.taskIds = builder.taskIds;
         this.taskStatus = builder.taskStatus;
     }
@@ -191,6 +196,13 @@ public class DescribeTasksRequest extends Request {
     }
 
     /**
+     * @return taskGroupId
+     */
+    public String getTaskGroupId() {
+        return this.taskGroupId;
+    }
+
+    /**
      * @return taskIds
      */
     public String getTaskIds() {
@@ -217,6 +229,7 @@ public class DescribeTasksRequest extends Request {
         private Long resourceOwnerId; 
         private String startTime; 
         private String taskAction; 
+        private String taskGroupId; 
         private String taskIds; 
         private String taskStatus; 
 
@@ -238,6 +251,7 @@ public class DescribeTasksRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
             this.taskAction = request.taskAction;
+            this.taskGroupId = request.taskGroupId;
             this.taskIds = request.taskIds;
             this.taskStatus = request.taskStatus;
         } 
@@ -377,6 +391,15 @@ public class DescribeTasksRequest extends Request {
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
             this.taskAction = taskAction;
+            return this;
+        }
+
+        /**
+         * TaskGroupId.
+         */
+        public Builder taskGroupId(String taskGroupId) {
+            this.putQueryParameter("TaskGroupId", taskGroupId);
+            this.taskGroupId = taskGroupId;
             return this;
         }
 
