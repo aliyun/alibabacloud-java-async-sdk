@@ -263,6 +263,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private String displaySandboxResult;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
         @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
@@ -284,8 +287,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
+        @com.aliyun.core.annotation.NameInMap("OperateResult")
+        private String operateResult;
+
         @com.aliyun.core.annotation.NameInMap("OssKey")
         private String ossKey;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -299,10 +308,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private Integer status;
+
         private Data(Builder builder) {
             this.bucketName = builder.bucketName;
             this.details = builder.details;
             this.displaySandboxResult = builder.displaySandboxResult;
+            this.errorMsg = builder.errorMsg;
             this.eventId = builder.eventId;
             this.eventName = builder.eventName;
             this.filePath = builder.filePath;
@@ -310,11 +323,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             this.hasSubEvent = builder.hasSubEvent;
             this.lastTime = builder.lastTime;
             this.md5 = builder.md5;
+            this.operateResult = builder.operateResult;
             this.ossKey = builder.ossKey;
+            this.remark = builder.remark;
             this.riskLevel = builder.riskLevel;
             this.sha1 = builder.sha1;
             this.sha256 = builder.sha256;
             this.source = builder.source;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -344,6 +360,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
          */
         public String getDisplaySandboxResult() {
             return this.displaySandboxResult;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -396,10 +419,24 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return operateResult
+         */
+        public String getOperateResult() {
+            return this.operateResult;
+        }
+
+        /**
          * @return ossKey
          */
         public String getOssKey() {
             return this.ossKey;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
         }
 
         /**
@@ -430,10 +467,18 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             return this.source;
         }
 
+        /**
+         * @return status
+         */
+        public Integer getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String bucketName; 
             private java.util.List<Details> details; 
             private String displaySandboxResult; 
+            private String errorMsg; 
             private Long eventId; 
             private String eventName; 
             private String filePath; 
@@ -441,11 +486,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             private Boolean hasSubEvent; 
             private Long lastTime; 
             private String md5; 
+            private String operateResult; 
             private String ossKey; 
+            private String remark; 
             private String riskLevel; 
             private String sha1; 
             private String sha256; 
             private String source; 
+            private Integer status; 
 
             private Builder() {
             } 
@@ -454,6 +502,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
                 this.bucketName = model.bucketName;
                 this.details = model.details;
                 this.displaySandboxResult = model.displaySandboxResult;
+                this.errorMsg = model.errorMsg;
                 this.eventId = model.eventId;
                 this.eventName = model.eventName;
                 this.filePath = model.filePath;
@@ -461,11 +510,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
                 this.hasSubEvent = model.hasSubEvent;
                 this.lastTime = model.lastTime;
                 this.md5 = model.md5;
+                this.operateResult = model.operateResult;
                 this.ossKey = model.ossKey;
+                this.remark = model.remark;
                 this.riskLevel = model.riskLevel;
                 this.sha1 = model.sha1;
                 this.sha256 = model.sha256;
                 this.source = model.source;
+                this.status = model.status;
             } 
 
             /**
@@ -489,6 +541,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
              */
             public Builder displaySandboxResult(String displaySandboxResult) {
                 this.displaySandboxResult = displaySandboxResult;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
                 return this;
             }
 
@@ -549,10 +609,26 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             }
 
             /**
+             * OperateResult.
+             */
+            public Builder operateResult(String operateResult) {
+                this.operateResult = operateResult;
+                return this;
+            }
+
+            /**
              * OssKey.
              */
             public Builder ossKey(String ossKey) {
                 this.ossKey = ossKey;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
@@ -585,6 +661,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
              */
             public Builder source(String source) {
                 this.source = source;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(Integer status) {
+                this.status = status;
                 return this;
             }
 
