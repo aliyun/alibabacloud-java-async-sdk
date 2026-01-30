@@ -1284,9 +1284,9 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The server groups.</p>
+         * <p>The information about the server groups.</p>
          * <blockquote>
-         * <p> You cannot use AlbServerGroups and ServerGroups to specify the same server group.</p>
+         * <p>You cannot use AlbServerGroups and ServerGroups to specify the same server group.</p>
          * </blockquote>
          */
         public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
@@ -1373,7 +1373,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * <p>The information about the tags of the scaling group.</p>
+         * <p>The collection of tag information for the scaling group.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -2333,10 +2333,11 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the server group. Valid values:</p>
+             * <p>The type of server group N. Valid Values:</p>
              * <ul>
              * <li>ALB</li>
              * <li>NLB</li>
+             * <li>GWLB</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2349,7 +2350,10 @@ public class CreateScalingGroupRequest extends Request {
 
             /**
              * <p>The weight of each ECS instance as a backend server in the server group. Valid values: 0 to 100.</p>
-             * <p>If you increase the weight for an ECS instance, the number of requests that are forwarded to the ECS instance also increases. If you set the weight for an ECS instance to 0, no requests are forwarded to the ECS instance.</p>
+             * <p>The higher the weight, the more access requests the instance will be assigned. If the weight is 0, the instance will not receive any access requests.</p>
+             * <blockquote>
+             * <p>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>100</p>

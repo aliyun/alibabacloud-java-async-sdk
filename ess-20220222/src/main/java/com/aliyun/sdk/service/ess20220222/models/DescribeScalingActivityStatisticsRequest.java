@@ -160,6 +160,7 @@ public class DescribeScalingActivityStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,15 @@ public class DescribeScalingActivityStatisticsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The name of the metric on which the scaling activity is counted. Valid values:</p>
+         * <ul>
+         * <li>ScalingActivityStatus: collects statistics on the distribution of scaling activities in different states within a time range.</li>
+         * <li>ScalingActivityErrorCodes: the distribution of error codes in failed scaling activities within a time range.</li>
+         * </ul>
+         * <p>Default value: ScalingActivityStatus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScalingActivityStatus</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -190,6 +199,7 @@ public class DescribeScalingActivityStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +230,10 @@ public class DescribeScalingActivityStatisticsRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-8vbje5pofxxxxxxxx</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -229,6 +242,7 @@ public class DescribeScalingActivityStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

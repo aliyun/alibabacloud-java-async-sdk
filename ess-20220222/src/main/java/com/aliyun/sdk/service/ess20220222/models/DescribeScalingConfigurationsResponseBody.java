@@ -1280,6 +1280,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
+        @com.aliyun.core.annotation.NameInMap("SecondaryPrivateIpAddressCount")
+        private Integer secondaryPrivateIpAddressCount;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List<String> securityGroupIds;
 
@@ -1287,6 +1290,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.ipv6AddressCount = builder.ipv6AddressCount;
             this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.secondaryPrivateIpAddressCount = builder.secondaryPrivateIpAddressCount;
             this.securityGroupIds = builder.securityGroupIds;
         }
 
@@ -1320,6 +1324,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return secondaryPrivateIpAddressCount
+         */
+        public Integer getSecondaryPrivateIpAddressCount() {
+            return this.secondaryPrivateIpAddressCount;
+        }
+
+        /**
          * @return securityGroupIds
          */
         public java.util.List<String> getSecurityGroupIds() {
@@ -1330,6 +1341,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String instanceType; 
             private Integer ipv6AddressCount; 
             private String networkInterfaceTrafficMode; 
+            private Integer secondaryPrivateIpAddressCount; 
             private java.util.List<String> securityGroupIds; 
 
             private Builder() {
@@ -1339,6 +1351,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
                 this.instanceType = model.instanceType;
                 this.ipv6AddressCount = model.ipv6AddressCount;
                 this.networkInterfaceTrafficMode = model.networkInterfaceTrafficMode;
+                this.secondaryPrivateIpAddressCount = model.secondaryPrivateIpAddressCount;
                 this.securityGroupIds = model.securityGroupIds;
             } 
 
@@ -1380,6 +1393,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * SecondaryPrivateIpAddressCount.
+             */
+            public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+                this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
                 return this;
             }
 

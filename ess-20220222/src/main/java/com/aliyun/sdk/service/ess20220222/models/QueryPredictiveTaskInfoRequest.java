@@ -147,6 +147,8 @@ public class QueryPredictiveTaskInfoRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</p>
+         * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +170,7 @@ public class QueryPredictiveTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +201,7 @@ public class QueryPredictiveTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the prediction scaling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +214,8 @@ public class QueryPredictiveTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The start time of the prediction task. The time follows the ISO8601 standard and uses UTC time.</p>
+         * <p>Format: yyyy-MM-ddTHH:mmZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

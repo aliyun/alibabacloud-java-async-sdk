@@ -80,7 +80,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8F44B4D-BAB4-5176-8705-5984xxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityErrorCodeStatistics.
+         * <p>The error message statistics of the scaling activity.</p>
          */
         public Builder scalingActivityErrorCodeStatistics(ScalingActivityErrorCodeStatistics scalingActivityErrorCodeStatistics) {
             this.scalingActivityErrorCodeStatistics = scalingActivityErrorCodeStatistics;
@@ -96,7 +99,7 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityStatusStatistics.
+         * <p>The statistical metrics of the scaling activity status.</p>
          */
         public Builder scalingActivityStatusStatistics(ScalingActivityStatusStatistics scalingActivityStatusStatistics) {
             this.scalingActivityStatusStatistics = scalingActivityStatusStatistics;
@@ -175,7 +178,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of failed scaling activities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -183,7 +189,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>Scaling Activity Error Codes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QuotaExceeded.PrivateIpAddress</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -191,7 +200,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025121623</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -338,7 +350,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedActivityCount.
+             * <p>The number of failed scaling activities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failedActivityCount(Integer failedActivityCount) {
                 this.failedActivityCount = failedActivityCount;
@@ -346,7 +361,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessActivityCount.
+             * <p>The number of successful scaling activities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder successActivityCount(Integer successActivityCount) {
                 this.successActivityCount = successActivityCount;
@@ -354,7 +372,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025121623</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -362,7 +383,10 @@ public class DescribeScalingActivityStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * WarningActivityCount.
+             * <p>The number of partially executed scaling activities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder warningActivityCount(Integer warningActivityCount) {
                 this.warningActivityCount = warningActivityCount;

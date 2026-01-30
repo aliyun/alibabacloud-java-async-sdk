@@ -305,6 +305,9 @@ public class DetachServerGroupsRequest extends Request {
 
             /**
              * <p>The port used by ECS instances or elastic container instances as backend servers of the server group.</p>
+             * <blockquote>
+             * <p> For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>22</p>
@@ -331,6 +334,7 @@ public class DetachServerGroupsRequest extends Request {
              * <ul>
              * <li>ALB</li>
              * <li>NLB</li>
+             * <li>GWLB</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

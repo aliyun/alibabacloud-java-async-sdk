@@ -146,6 +146,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +168,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The region ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +199,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-2ze4057nqfbxxxxxxxx</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -206,6 +211,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the statistical interval. The time follows the ISO 8601 standard and uses UTC time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

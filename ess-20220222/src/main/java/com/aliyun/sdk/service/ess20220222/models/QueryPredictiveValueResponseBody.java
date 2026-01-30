@@ -67,7 +67,7 @@ public class QueryPredictiveValueResponseBody extends TeaModel {
         } 
 
         /**
-         * PredictiveValues.
+         * <p>The number of predicted instances in the scaling group.</p>
          */
         public Builder predictiveValues(PredictiveValues predictiveValues) {
             this.predictiveValues = predictiveValues;
@@ -75,7 +75,10 @@ public class QueryPredictiveValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA5F448E-DC84-5EBC-B6D5-F659ADxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryPredictiveValueResponseBody extends TeaModel {
             } 
 
             /**
-             * Time.
+             * <p>The point in time, in the ISO 8601 standard, in the yyyy-MM-ddTHH:mmZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-17T10:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -149,7 +155,10 @@ public class QueryPredictiveValueResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(Integer value) {
                 this.value = value;

@@ -811,7 +811,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port number used by an ECS instance as a backend server in the server group.</p>
+             * <p>The port number used by each ECS instance in the server group.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -837,6 +837,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * <ul>
              * <li>ALB</li>
              * <li>NLB</li>
+             * <li>GWLB</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2604,9 +2605,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server groups.</p>
+             * <p>The information about the server groups.</p>
              * <blockquote>
-             * <p> You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to the scaling group.</p>
+             * <p> You can use this parameter to obtain the information about the ALB, NLB, and GWLB server groups associated with a scaling group.</p>
              * </blockquote>
              */
             public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {

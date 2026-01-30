@@ -67,7 +67,7 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         } 
 
         /**
-         * InstanceCreateAndDeleteStatistics.
+         * <p>Metrics for instance creation and deletion.</p>
          */
         public Builder instanceCreateAndDeleteStatistics(InstanceCreateAndDeleteStatistics instanceCreateAndDeleteStatistics) {
             this.instanceCreateAndDeleteStatistics = instanceCreateAndDeleteStatistics;
@@ -75,7 +75,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>086EFCD4-C76F-4DC6-9EE9-0D9B711E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
             } 
 
             /**
-             * CreatedVmCount.
+             * <p>The number of new instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder createdVmCount(Integer createdVmCount) {
                 this.createdVmCount = createdVmCount;
@@ -188,7 +194,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
             }
 
             /**
-             * DestroyedVmCount.
+             * <p>The number of released instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder destroyedVmCount(Integer destroyedVmCount) {
                 this.destroyedVmCount = destroyedVmCount;
@@ -196,7 +205,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
             }
 
             /**
-             * StartedVmCount.
+             * <p>The number of instances that are started from economical mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder startedVmCount(Integer startedVmCount) {
                 this.startedVmCount = startedVmCount;
@@ -204,7 +216,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
             }
 
             /**
-             * StoppedVmCount.
+             * <p>The number of instances that are stopped in economical mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder stoppedVmCount(Integer stoppedVmCount) {
                 this.stoppedVmCount = stoppedVmCount;
@@ -212,7 +227,10 @@ public class DescribeInstanceCreateAndDeleteStatisticsResponseBody extends TeaMo
             }
 
             /**
-             * Time.
+             * <p>The time when the statistics are generated. The time is in UTC. Format: yyyyMMddHH.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025121623</p>
              */
             public Builder time(String time) {
                 this.time = time;

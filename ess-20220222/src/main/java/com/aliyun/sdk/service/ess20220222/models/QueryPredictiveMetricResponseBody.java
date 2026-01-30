@@ -67,7 +67,7 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * PredictiveMetrics.
+         * <p>Predicted monitoring metrics.</p>
          */
         public Builder predictiveMetrics(PredictiveMetrics predictiveMetrics) {
             this.predictiveMetrics = predictiveMetrics;
@@ -75,7 +75,10 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * MetricValue.
+             * <p>Predicted monitoring value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder metricValue(String metricValue) {
                 this.metricValue = metricValue;
@@ -149,7 +155,10 @@ public class QueryPredictiveMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-17T16:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
