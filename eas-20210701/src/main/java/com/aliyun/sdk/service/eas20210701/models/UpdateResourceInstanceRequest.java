@@ -41,6 +41,11 @@ public class UpdateResourceInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NewDiskSize")
     private String newDiskSize;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    @com.aliyun.core.annotation.Validation(maxLength = 200)
+    private String reason;
+
     private UpdateResourceInstanceRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -48,6 +53,7 @@ public class UpdateResourceInstanceRequest extends Request {
         this.instanceId = builder.instanceId;
         this.action = builder.action;
         this.newDiskSize = builder.newDiskSize;
+        this.reason = builder.reason;
     }
 
     public static Builder builder() {
@@ -98,12 +104,20 @@ public class UpdateResourceInstanceRequest extends Request {
         return this.newDiskSize;
     }
 
+    /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
     public static final class Builder extends Request.Builder<UpdateResourceInstanceRequest, Builder> {
         private String clusterId; 
         private String resourceId; 
         private String instanceId; 
         private String action; 
         private String newDiskSize; 
+        private String reason; 
 
         private Builder() {
             super();
@@ -116,6 +130,7 @@ public class UpdateResourceInstanceRequest extends Request {
             this.instanceId = request.instanceId;
             this.action = request.action;
             this.newDiskSize = request.newDiskSize;
+            this.reason = request.reason;
         } 
 
         /**
@@ -181,6 +196,15 @@ public class UpdateResourceInstanceRequest extends Request {
         public Builder newDiskSize(String newDiskSize) {
             this.putBodyParameter("NewDiskSize", newDiskSize);
             this.newDiskSize = newDiskSize;
+            return this;
+        }
+
+        /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.putBodyParameter("Reason", reason);
+            this.reason = reason;
             return this;
         }
 

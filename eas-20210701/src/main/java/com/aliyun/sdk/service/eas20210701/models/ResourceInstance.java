@@ -83,6 +83,12 @@ public class ResourceInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Labels> labels;
 
+    @com.aliyun.core.annotation.NameInMap("LastCordonOperator")
+    private String lastCordonOperator;
+
+    @com.aliyun.core.annotation.NameInMap("LastCordonReason")
+    private String lastCordonReason;
+
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
@@ -115,6 +121,8 @@ public class ResourceInstance extends TeaModel {
         this.instanceUsedGpuMemory = builder.instanceUsedGpuMemory;
         this.instanceUsedMemory = builder.instanceUsedMemory;
         this.labels = builder.labels;
+        this.lastCordonOperator = builder.lastCordonOperator;
+        this.lastCordonReason = builder.lastCordonReason;
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.zone = builder.zone;
@@ -287,6 +295,20 @@ public class ResourceInstance extends TeaModel {
     }
 
     /**
+     * @return lastCordonOperator
+     */
+    public String getLastCordonOperator() {
+        return this.lastCordonOperator;
+    }
+
+    /**
+     * @return lastCordonReason
+     */
+    public String getLastCordonReason() {
+        return this.lastCordonReason;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -330,6 +352,8 @@ public class ResourceInstance extends TeaModel {
         private String instanceUsedGpuMemory; 
         private String instanceUsedMemory; 
         private java.util.List<Labels> labels; 
+        private String lastCordonOperator; 
+        private String lastCordonReason; 
         private String region; 
         private String resourceId; 
         private String zone; 
@@ -360,6 +384,8 @@ public class ResourceInstance extends TeaModel {
             this.instanceUsedGpuMemory = model.instanceUsedGpuMemory;
             this.instanceUsedMemory = model.instanceUsedMemory;
             this.labels = model.labels;
+            this.lastCordonOperator = model.lastCordonOperator;
+            this.lastCordonReason = model.lastCordonReason;
             this.region = model.region;
             this.resourceId = model.resourceId;
             this.zone = model.zone;
@@ -538,6 +564,22 @@ public class ResourceInstance extends TeaModel {
          */
         public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LastCordonOperator.
+         */
+        public Builder lastCordonOperator(String lastCordonOperator) {
+            this.lastCordonOperator = lastCordonOperator;
+            return this;
+        }
+
+        /**
+         * LastCordonReason.
+         */
+        public Builder lastCordonReason(String lastCordonReason) {
+            this.lastCordonReason = lastCordonReason;
             return this;
         }
 
