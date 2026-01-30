@@ -33,12 +33,17 @@ public class CreateServiceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
+
     private CreateServiceRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceConfigs = builder.serviceConfigs;
         this.sourceType = builder.sourceType;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class CreateServiceRequest extends Request {
         return this.sourceType;
     }
 
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
         private String gatewayId; 
         private String resourceGroupId; 
         private java.util.List<ServiceConfigs> serviceConfigs; 
         private String sourceType; 
+        private String clientToken; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class CreateServiceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.serviceConfigs = request.serviceConfigs;
             this.sourceType = request.sourceType;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -162,6 +176,15 @@ public class CreateServiceRequest extends Request {
             return this;
         }
 
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
         @Override
         public CreateServiceRequest build() {
             return new CreateServiceRequest(this);
@@ -169,6 +192,60 @@ public class CreateServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceRequest</p>
+     */
+    public static class ValidationOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("skipVerifyAIChatCompletion")
+        private Boolean skipVerifyAIChatCompletion;
+
+        private ValidationOptions(Builder builder) {
+            this.skipVerifyAIChatCompletion = builder.skipVerifyAIChatCompletion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ValidationOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return skipVerifyAIChatCompletion
+         */
+        public Boolean getSkipVerifyAIChatCompletion() {
+            return this.skipVerifyAIChatCompletion;
+        }
+
+        public static final class Builder {
+            private Boolean skipVerifyAIChatCompletion; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValidationOptions model) {
+                this.skipVerifyAIChatCompletion = model.skipVerifyAIChatCompletion;
+            } 
+
+            /**
+             * skipVerifyAIChatCompletion.
+             */
+            public Builder skipVerifyAIChatCompletion(Boolean skipVerifyAIChatCompletion) {
+                this.skipVerifyAIChatCompletion = skipVerifyAIChatCompletion;
+                return this;
+            }
+
+            public ValidationOptions build() {
+                return new ValidationOptions(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateServiceRequest} extends {@link TeaModel}
@@ -188,6 +265,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("dnsServers")
         private java.util.List<String> dnsServers;
 
+        @com.aliyun.core.annotation.NameInMap("expressType")
+        private String expressType;
+
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
@@ -203,16 +283,21 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("sourceId")
         private String sourceId;
 
+        @com.aliyun.core.annotation.NameInMap("validationOptions")
+        private ValidationOptions validationOptions;
+
         private ServiceConfigs(Builder builder) {
             this.addresses = builder.addresses;
             this.agentServiceConfig = builder.agentServiceConfig;
             this.aiServiceConfig = builder.aiServiceConfig;
             this.dnsServers = builder.dnsServers;
+            this.expressType = builder.expressType;
             this.groupName = builder.groupName;
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.qualifier = builder.qualifier;
             this.sourceId = builder.sourceId;
+            this.validationOptions = builder.validationOptions;
         }
 
         public static Builder builder() {
@@ -252,6 +337,13 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * @return expressType
+         */
+        public String getExpressType() {
+            return this.expressType;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -286,16 +378,25 @@ public class CreateServiceRequest extends Request {
             return this.sourceId;
         }
 
+        /**
+         * @return validationOptions
+         */
+        public ValidationOptions getValidationOptions() {
+            return this.validationOptions;
+        }
+
         public static final class Builder {
             private java.util.List<String> addresses; 
             private AgentServiceConfig agentServiceConfig; 
             private AiServiceConfig aiServiceConfig; 
             private java.util.List<String> dnsServers; 
+            private String expressType; 
             private String groupName; 
             private String name; 
             private String namespace; 
             private String qualifier; 
             private String sourceId; 
+            private ValidationOptions validationOptions; 
 
             private Builder() {
             } 
@@ -305,11 +406,13 @@ public class CreateServiceRequest extends Request {
                 this.agentServiceConfig = model.agentServiceConfig;
                 this.aiServiceConfig = model.aiServiceConfig;
                 this.dnsServers = model.dnsServers;
+                this.expressType = model.expressType;
                 this.groupName = model.groupName;
                 this.name = model.name;
                 this.namespace = model.namespace;
                 this.qualifier = model.qualifier;
                 this.sourceId = model.sourceId;
+                this.validationOptions = model.validationOptions;
             } 
 
             /**
@@ -341,6 +444,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
+                return this;
+            }
+
+            /**
+             * expressType.
+             */
+            public Builder expressType(String expressType) {
+                this.expressType = expressType;
                 return this;
             }
 
@@ -397,6 +508,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * validationOptions.
+             */
+            public Builder validationOptions(ValidationOptions validationOptions) {
+                this.validationOptions = validationOptions;
                 return this;
             }
 

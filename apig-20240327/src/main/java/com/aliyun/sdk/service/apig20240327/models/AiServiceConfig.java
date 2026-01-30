@@ -29,8 +29,17 @@ public class AiServiceConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("bedrockServiceConfig")
     private BedrockServiceConfig bedrockServiceConfig;
 
+    @com.aliyun.core.annotation.NameInMap("compatibleProtocols")
+    private java.util.List<String> compatibleProtocols;
+
+    @com.aliyun.core.annotation.NameInMap("defaultModelName")
+    private String defaultModelName;
+
     @com.aliyun.core.annotation.NameInMap("enableHealthCheck")
     private Boolean enableHealthCheck;
+
+    @com.aliyun.core.annotation.NameInMap("enableOutlierDetection")
+    private Boolean enableOutlierDetection;
 
     @com.aliyun.core.annotation.NameInMap("paiEASServiceConfig")
     private PaiEASServiceConfig paiEASServiceConfig;
@@ -41,15 +50,22 @@ public class AiServiceConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("provider")
     private String provider;
 
+    @com.aliyun.core.annotation.NameInMap("vertexServiceConfig")
+    private VertexServiceConfig vertexServiceConfig;
+
     private AiServiceConfig(Builder builder) {
         this.apiKeyGenerateMode = builder.apiKeyGenerateMode;
         this.address = builder.address;
         this.apiKeys = builder.apiKeys;
         this.bedrockServiceConfig = builder.bedrockServiceConfig;
+        this.compatibleProtocols = builder.compatibleProtocols;
+        this.defaultModelName = builder.defaultModelName;
         this.enableHealthCheck = builder.enableHealthCheck;
+        this.enableOutlierDetection = builder.enableOutlierDetection;
         this.paiEASServiceConfig = builder.paiEASServiceConfig;
         this.protocols = builder.protocols;
         this.provider = builder.provider;
+        this.vertexServiceConfig = builder.vertexServiceConfig;
     }
 
     public static Builder builder() {
@@ -93,10 +109,31 @@ public class AiServiceConfig extends TeaModel {
     }
 
     /**
+     * @return compatibleProtocols
+     */
+    public java.util.List<String> getCompatibleProtocols() {
+        return this.compatibleProtocols;
+    }
+
+    /**
+     * @return defaultModelName
+     */
+    public String getDefaultModelName() {
+        return this.defaultModelName;
+    }
+
+    /**
      * @return enableHealthCheck
      */
     public Boolean getEnableHealthCheck() {
         return this.enableHealthCheck;
+    }
+
+    /**
+     * @return enableOutlierDetection
+     */
+    public Boolean getEnableOutlierDetection() {
+        return this.enableOutlierDetection;
     }
 
     /**
@@ -120,15 +157,26 @@ public class AiServiceConfig extends TeaModel {
         return this.provider;
     }
 
+    /**
+     * @return vertexServiceConfig
+     */
+    public VertexServiceConfig getVertexServiceConfig() {
+        return this.vertexServiceConfig;
+    }
+
     public static final class Builder {
         private String apiKeyGenerateMode; 
         private String address; 
         private java.util.List<String> apiKeys; 
         private BedrockServiceConfig bedrockServiceConfig; 
+        private java.util.List<String> compatibleProtocols; 
+        private String defaultModelName; 
         private Boolean enableHealthCheck; 
+        private Boolean enableOutlierDetection; 
         private PaiEASServiceConfig paiEASServiceConfig; 
         private java.util.List<String> protocols; 
         private String provider; 
+        private VertexServiceConfig vertexServiceConfig; 
 
         private Builder() {
         } 
@@ -138,10 +186,14 @@ public class AiServiceConfig extends TeaModel {
             this.address = model.address;
             this.apiKeys = model.apiKeys;
             this.bedrockServiceConfig = model.bedrockServiceConfig;
+            this.compatibleProtocols = model.compatibleProtocols;
+            this.defaultModelName = model.defaultModelName;
             this.enableHealthCheck = model.enableHealthCheck;
+            this.enableOutlierDetection = model.enableOutlierDetection;
             this.paiEASServiceConfig = model.paiEASServiceConfig;
             this.protocols = model.protocols;
             this.provider = model.provider;
+            this.vertexServiceConfig = model.vertexServiceConfig;
         } 
 
         /**
@@ -177,10 +229,34 @@ public class AiServiceConfig extends TeaModel {
         }
 
         /**
+         * compatibleProtocols.
+         */
+        public Builder compatibleProtocols(java.util.List<String> compatibleProtocols) {
+            this.compatibleProtocols = compatibleProtocols;
+            return this;
+        }
+
+        /**
+         * defaultModelName.
+         */
+        public Builder defaultModelName(String defaultModelName) {
+            this.defaultModelName = defaultModelName;
+            return this;
+        }
+
+        /**
          * enableHealthCheck.
          */
         public Builder enableHealthCheck(Boolean enableHealthCheck) {
             this.enableHealthCheck = enableHealthCheck;
+            return this;
+        }
+
+        /**
+         * enableOutlierDetection.
+         */
+        public Builder enableOutlierDetection(Boolean enableOutlierDetection) {
+            this.enableOutlierDetection = enableOutlierDetection;
             return this;
         }
 
@@ -205,6 +281,14 @@ public class AiServiceConfig extends TeaModel {
          */
         public Builder provider(String provider) {
             this.provider = provider;
+            return this;
+        }
+
+        /**
+         * vertexServiceConfig.
+         */
+        public Builder vertexServiceConfig(VertexServiceConfig vertexServiceConfig) {
+            this.vertexServiceConfig = vertexServiceConfig;
             return this;
         }
 
@@ -422,6 +506,165 @@ public class AiServiceConfig extends TeaModel {
 
             public PaiEASServiceConfig build() {
                 return new PaiEASServiceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AiServiceConfig} extends {@link TeaModel}
+     *
+     * <p>AiServiceConfig</p>
+     */
+    public static class VertexServiceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("geminiSafetySetting")
+        private java.util.Map<String, String> geminiSafetySetting;
+
+        @com.aliyun.core.annotation.NameInMap("vertexAuthKey")
+        private String vertexAuthKey;
+
+        @com.aliyun.core.annotation.NameInMap("vertexAuthServiceName")
+        private String vertexAuthServiceName;
+
+        @com.aliyun.core.annotation.NameInMap("vertexProjectId")
+        private String vertexProjectId;
+
+        @com.aliyun.core.annotation.NameInMap("vertexRegion")
+        private String vertexRegion;
+
+        @com.aliyun.core.annotation.NameInMap("vertexTokenRefreshAhead")
+        private Integer vertexTokenRefreshAhead;
+
+        private VertexServiceConfig(Builder builder) {
+            this.geminiSafetySetting = builder.geminiSafetySetting;
+            this.vertexAuthKey = builder.vertexAuthKey;
+            this.vertexAuthServiceName = builder.vertexAuthServiceName;
+            this.vertexProjectId = builder.vertexProjectId;
+            this.vertexRegion = builder.vertexRegion;
+            this.vertexTokenRefreshAhead = builder.vertexTokenRefreshAhead;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VertexServiceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return geminiSafetySetting
+         */
+        public java.util.Map<String, String> getGeminiSafetySetting() {
+            return this.geminiSafetySetting;
+        }
+
+        /**
+         * @return vertexAuthKey
+         */
+        public String getVertexAuthKey() {
+            return this.vertexAuthKey;
+        }
+
+        /**
+         * @return vertexAuthServiceName
+         */
+        public String getVertexAuthServiceName() {
+            return this.vertexAuthServiceName;
+        }
+
+        /**
+         * @return vertexProjectId
+         */
+        public String getVertexProjectId() {
+            return this.vertexProjectId;
+        }
+
+        /**
+         * @return vertexRegion
+         */
+        public String getVertexRegion() {
+            return this.vertexRegion;
+        }
+
+        /**
+         * @return vertexTokenRefreshAhead
+         */
+        public Integer getVertexTokenRefreshAhead() {
+            return this.vertexTokenRefreshAhead;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> geminiSafetySetting; 
+            private String vertexAuthKey; 
+            private String vertexAuthServiceName; 
+            private String vertexProjectId; 
+            private String vertexRegion; 
+            private Integer vertexTokenRefreshAhead; 
+
+            private Builder() {
+            } 
+
+            private Builder(VertexServiceConfig model) {
+                this.geminiSafetySetting = model.geminiSafetySetting;
+                this.vertexAuthKey = model.vertexAuthKey;
+                this.vertexAuthServiceName = model.vertexAuthServiceName;
+                this.vertexProjectId = model.vertexProjectId;
+                this.vertexRegion = model.vertexRegion;
+                this.vertexTokenRefreshAhead = model.vertexTokenRefreshAhead;
+            } 
+
+            /**
+             * geminiSafetySetting.
+             */
+            public Builder geminiSafetySetting(java.util.Map<String, String> geminiSafetySetting) {
+                this.geminiSafetySetting = geminiSafetySetting;
+                return this;
+            }
+
+            /**
+             * vertexAuthKey.
+             */
+            public Builder vertexAuthKey(String vertexAuthKey) {
+                this.vertexAuthKey = vertexAuthKey;
+                return this;
+            }
+
+            /**
+             * vertexAuthServiceName.
+             */
+            public Builder vertexAuthServiceName(String vertexAuthServiceName) {
+                this.vertexAuthServiceName = vertexAuthServiceName;
+                return this;
+            }
+
+            /**
+             * vertexProjectId.
+             */
+            public Builder vertexProjectId(String vertexProjectId) {
+                this.vertexProjectId = vertexProjectId;
+                return this;
+            }
+
+            /**
+             * vertexRegion.
+             */
+            public Builder vertexRegion(String vertexRegion) {
+                this.vertexRegion = vertexRegion;
+                return this;
+            }
+
+            /**
+             * vertexTokenRefreshAhead.
+             */
+            public Builder vertexTokenRefreshAhead(Integer vertexTokenRefreshAhead) {
+                this.vertexTokenRefreshAhead = vertexTokenRefreshAhead;
+                return this;
+            }
+
+            public VertexServiceConfig build() {
+                return new VertexServiceConfig(this);
             } 
 
         } 

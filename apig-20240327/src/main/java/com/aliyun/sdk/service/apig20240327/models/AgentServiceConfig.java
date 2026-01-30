@@ -21,6 +21,9 @@ public class AgentServiceConfig extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String address;
 
+    @com.aliyun.core.annotation.NameInMap("customConfig")
+    private CustomConfig customConfig;
+
     @com.aliyun.core.annotation.NameInMap("dashScopeConfig")
     private DashScopeConfig dashScopeConfig;
 
@@ -29,6 +32,9 @@ public class AgentServiceConfig extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("enableHealthCheck")
     private Boolean enableHealthCheck;
+
+    @com.aliyun.core.annotation.NameInMap("enableOutlierDetection")
+    private Boolean enableOutlierDetection;
 
     @com.aliyun.core.annotation.NameInMap("protocols")
     private java.util.List<String> protocols;
@@ -39,9 +45,11 @@ public class AgentServiceConfig extends TeaModel {
 
     private AgentServiceConfig(Builder builder) {
         this.address = builder.address;
+        this.customConfig = builder.customConfig;
         this.dashScopeConfig = builder.dashScopeConfig;
         this.difyConfig = builder.difyConfig;
         this.enableHealthCheck = builder.enableHealthCheck;
+        this.enableOutlierDetection = builder.enableOutlierDetection;
         this.protocols = builder.protocols;
         this.provider = builder.provider;
     }
@@ -66,6 +74,13 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     /**
+     * @return customConfig
+     */
+    public CustomConfig getCustomConfig() {
+        return this.customConfig;
+    }
+
+    /**
      * @return dashScopeConfig
      */
     public DashScopeConfig getDashScopeConfig() {
@@ -87,6 +102,13 @@ public class AgentServiceConfig extends TeaModel {
     }
 
     /**
+     * @return enableOutlierDetection
+     */
+    public Boolean getEnableOutlierDetection() {
+        return this.enableOutlierDetection;
+    }
+
+    /**
      * @return protocols
      */
     public java.util.List<String> getProtocols() {
@@ -102,9 +124,11 @@ public class AgentServiceConfig extends TeaModel {
 
     public static final class Builder {
         private String address; 
+        private CustomConfig customConfig; 
         private DashScopeConfig dashScopeConfig; 
         private DifyConfig difyConfig; 
         private Boolean enableHealthCheck; 
+        private Boolean enableOutlierDetection; 
         private java.util.List<String> protocols; 
         private String provider; 
 
@@ -113,9 +137,11 @@ public class AgentServiceConfig extends TeaModel {
 
         private Builder(AgentServiceConfig model) {
             this.address = model.address;
+            this.customConfig = model.customConfig;
             this.dashScopeConfig = model.dashScopeConfig;
             this.difyConfig = model.difyConfig;
             this.enableHealthCheck = model.enableHealthCheck;
+            this.enableOutlierDetection = model.enableOutlierDetection;
             this.protocols = model.protocols;
             this.provider = model.provider;
         } 
@@ -128,6 +154,14 @@ public class AgentServiceConfig extends TeaModel {
          */
         public Builder address(String address) {
             this.address = address;
+            return this;
+        }
+
+        /**
+         * customConfig.
+         */
+        public Builder customConfig(CustomConfig customConfig) {
+            this.customConfig = customConfig;
             return this;
         }
 
@@ -156,6 +190,14 @@ public class AgentServiceConfig extends TeaModel {
         }
 
         /**
+         * enableOutlierDetection.
+         */
+        public Builder enableOutlierDetection(Boolean enableOutlierDetection) {
+            this.enableOutlierDetection = enableOutlierDetection;
+            return this;
+        }
+
+        /**
          * protocols.
          */
         public Builder protocols(java.util.List<String> protocols) {
@@ -177,6 +219,81 @@ public class AgentServiceConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AgentServiceConfig} extends {@link TeaModel}
+     *
+     * <p>AgentServiceConfig</p>
+     */
+    public static class CustomConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apiKey")
+        private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("apiKeyGenerateMode")
+        private String apiKeyGenerateMode;
+
+        private CustomConfig(Builder builder) {
+            this.apiKey = builder.apiKey;
+            this.apiKeyGenerateMode = builder.apiKeyGenerateMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiKey
+         */
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        /**
+         * @return apiKeyGenerateMode
+         */
+        public String getApiKeyGenerateMode() {
+            return this.apiKeyGenerateMode;
+        }
+
+        public static final class Builder {
+            private String apiKey; 
+            private String apiKeyGenerateMode; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomConfig model) {
+                this.apiKey = model.apiKey;
+                this.apiKeyGenerateMode = model.apiKeyGenerateMode;
+            } 
+
+            /**
+             * apiKey.
+             */
+            public Builder apiKey(String apiKey) {
+                this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * apiKeyGenerateMode.
+             */
+            public Builder apiKeyGenerateMode(String apiKeyGenerateMode) {
+                this.apiKeyGenerateMode = apiKeyGenerateMode;
+                return this;
+            }
+
+            public CustomConfig build() {
+                return new CustomConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AgentServiceConfig} extends {@link TeaModel}

@@ -53,6 +53,10 @@ public class CreateHttpApiRouteRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("policyConfigs")
+    private java.util.List<HttpApiPolicyConfigs> policyConfigs;
+
     private CreateHttpApiRouteRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
@@ -64,6 +68,7 @@ public class CreateHttpApiRouteRequest extends Request {
         this.match = builder.match;
         this.mcpRouteConfig = builder.mcpRouteConfig;
         this.name = builder.name;
+        this.policyConfigs = builder.policyConfigs;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class CreateHttpApiRouteRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return policyConfigs
+     */
+    public java.util.List<HttpApiPolicyConfigs> getPolicyConfigs() {
+        return this.policyConfigs;
+    }
+
     public static final class Builder extends Request.Builder<CreateHttpApiRouteRequest, Builder> {
         private String httpApiId; 
         private BackendConfig backendConfig; 
@@ -152,6 +164,7 @@ public class CreateHttpApiRouteRequest extends Request {
         private HttpRouteMatch match; 
         private McpRouteConfig mcpRouteConfig; 
         private String name; 
+        private java.util.List<HttpApiPolicyConfigs> policyConfigs; 
 
         private Builder() {
             super();
@@ -168,6 +181,7 @@ public class CreateHttpApiRouteRequest extends Request {
             this.match = request.match;
             this.mcpRouteConfig = request.mcpRouteConfig;
             this.name = request.name;
+            this.policyConfigs = request.policyConfigs;
         } 
 
         /**
@@ -260,6 +274,15 @@ public class CreateHttpApiRouteRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * policyConfigs.
+         */
+        public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
+            this.putBodyParameter("policyConfigs", policyConfigs);
+            this.policyConfigs = policyConfigs;
             return this;
         }
 
