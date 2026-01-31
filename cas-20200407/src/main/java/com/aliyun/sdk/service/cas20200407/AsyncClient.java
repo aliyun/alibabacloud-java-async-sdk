@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ApplyCertificate  ApplyCertificateRequest
+     * @return ApplyCertificateResponse
+     */
+    CompletableFuture<ApplyCertificateResponse> applyCertificate(ApplyCertificateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CancelOrderRequestResponse
      */
     CompletableFuture<CancelOrderRequestResponse> cancelOrderRequest(CancelOrderRequestRequest request);
+
+    /**
+     * @param request the request parameters of CancelPendingCertificate  CancelPendingCertificateRequest
+     * @return CancelPendingCertificateResponse
+     */
+    CompletableFuture<CancelPendingCertificateResponse> cancelPendingCertificate(CancelPendingCertificateRequest request);
 
     /**
      * <b>description</b> :
@@ -128,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDeploymentJobResponse> deleteDeploymentJob(DeleteDeploymentJobRequest request);
 
     /**
+     * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
+     * @return DeleteInstanceResponse
+     */
+    CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the DeletePCACert operation to delete a private certificate from a certificate application repository.</p>
      * <h3>Limits</h3>
@@ -206,10 +224,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCertWarehouseQuotaResponse> getCertWarehouseQuota(GetCertWarehouseQuotaRequest request);
 
     /**
+     * @param request the request parameters of GetCertificateDetail  GetCertificateDetailRequest
+     * @return GetCertificateDetailResponse
+     */
+    CompletableFuture<GetCertificateDetailResponse> getCertificateDetail(GetCertificateDetailRequest request);
+
+    /**
      * @param request the request parameters of GetCsrDetail  GetCsrDetailRequest
      * @return GetCsrDetailResponse
      */
     CompletableFuture<GetCsrDetailResponse> getCsrDetail(GetCsrDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceDetail  GetInstanceDetailRequest
+     * @return GetInstanceDetailResponse
+     */
+    CompletableFuture<GetInstanceDetailResponse> getInstanceDetail(GetInstanceDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceSummary  GetInstanceSummaryRequest
+     * @return GetInstanceSummaryResponse
+     */
+    CompletableFuture<GetInstanceSummaryResponse> getInstanceSummary(GetInstanceSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetTaskAttribute  GetTaskAttributeRequest
+     * @return GetTaskAttributeResponse
+     */
+    CompletableFuture<GetTaskAttributeResponse> getTaskAttribute(GetTaskAttributeRequest request);
 
     /**
      * <b>description</b> :
@@ -239,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCertWarehouseResponse
      */
     CompletableFuture<ListCertWarehouseResponse> listCertWarehouse(ListCertWarehouseRequest request);
+
+    /**
+     * @param request the request parameters of ListCertificates  ListCertificatesRequest
+     * @return ListCertificatesResponse
+     */
+    CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
 
     /**
      * @param request the request parameters of ListCloudAccess  ListCloudAccessRequest
@@ -283,6 +331,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDeploymentJobResourceResponse> listDeploymentJobResource(ListDeploymentJobResourceRequest request);
 
     /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
+    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the ListUserCertificateOrder operation to query the certificates or certificate orders of users. If you set OrderType to CERT or UPLOAD, certificates are returned. If you set OrderType to CPACK or BUY, certificate orders are returned.</p>
      * <h2>Limits</h2>
@@ -306,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of RefundInstance  RefundInstanceRequest
+     * @return RefundInstanceResponse
+     */
+    CompletableFuture<RefundInstanceResponse> refundInstance(RefundInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the RenewCertificateOrderForPackageRequest operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.</p>
      * <blockquote>
@@ -316,6 +376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewCertificateOrderForPackageRequestResponse
      */
     CompletableFuture<RenewCertificateOrderForPackageRequestResponse> renewCertificateOrderForPackageRequest(RenewCertificateOrderForPackageRequestRequest request);
+
+    /**
+     * @param request the request parameters of RevokeCertificate  RevokeCertificateRequest
+     * @return RevokeCertificateResponse
+     */
+    CompletableFuture<RevokeCertificateResponse> revokeCertificate(RevokeCertificateRequest request);
 
     /**
      * <b>description</b> :
@@ -345,6 +411,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDeploymentJobStatusResponse
      */
     CompletableFuture<UpdateDeploymentJobStatusResponse> updateDeploymentJobStatus(UpdateDeploymentJobStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
+     * @return UpdateInstanceResponse
+     */
+    CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateWorkerResourceStatus  UpdateWorkerResourceStatusRequest
