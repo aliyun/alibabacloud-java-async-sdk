@@ -140,6 +140,12 @@ public class GetAgentTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("error")
         private String error;
 
+        @com.aliyun.core.annotation.NameInMap("errorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("errorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("instance")
         private String instance;
 
@@ -157,6 +163,8 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
         private Jobs(Builder builder) {
             this.error = builder.error;
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
             this.instance = builder.instance;
             this.params = builder.params;
             this.region = builder.region;
@@ -177,6 +185,20 @@ public class GetAgentTaskResponseBody extends TeaModel {
          */
         public String getError() {
             return this.error;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -216,6 +238,8 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String error; 
+            private String errorCode; 
+            private String errorMessage; 
             private String instance; 
             private Object params; 
             private String region; 
@@ -227,6 +251,8 @@ public class GetAgentTaskResponseBody extends TeaModel {
 
             private Builder(Jobs model) {
                 this.error = model.error;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
                 this.instance = model.instance;
                 this.params = model.params;
                 this.region = model.region;
@@ -239,6 +265,22 @@ public class GetAgentTaskResponseBody extends TeaModel {
              */
             public Builder error(String error) {
                 this.error = error;
+                return this;
+            }
+
+            /**
+             * errorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * errorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 
