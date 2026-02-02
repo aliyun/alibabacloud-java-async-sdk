@@ -178,6 +178,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRemediationResponse> createRemediation(CreateRemediationRequest request);
 
     /**
+     * @param request the request parameters of CreateReportTemplate  CreateReportTemplateRequest
+     * @return CreateReportTemplateResponse
+     */
+    CompletableFuture<CreateReportTemplateResponse> createReportTemplate(CreateReportTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Prerequisites</h3>
      * <p>The status of the rule is <code>ACTIVE</code>.</p>
@@ -761,6 +767,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetReportFromTemplateResponse> getReportFromTemplate(GetReportFromTemplateRequest request);
 
     /**
+     * @param request the request parameters of GetReportTemplate  GetReportTemplateRequest
+     * @return GetReportTemplateResponse
+     */
+    CompletableFuture<GetReportTemplateResponse> getReportTemplate(GetReportTemplateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>In this topic, the <code>cr-d369626622af008e****</code> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <code>five</code> of them are evaluated as compliant.</p>
      * 
@@ -1108,6 +1120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRemediationsResponse> listRemediations(ListRemediationsRequest request);
 
     /**
+     * @param request the request parameters of ListReportTemplates  ListReportTemplatesRequest
+     * @return ListReportTemplatesResponse
+     */
+    CompletableFuture<ListReportTemplatesResponse> listReportTemplates(ListReportTemplatesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>In this example, the compliance evaluation result of the <code>23642660635396****</code> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <code>NON_COMPLIANT</code> by using the <code>cr-7f7d626622af0041****</code> rule.</p>
      * 
@@ -1368,5 +1386,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRemediationResponse
      */
     CompletableFuture<UpdateRemediationResponse> updateRemediation(UpdateRemediationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateReportTemplate  UpdateReportTemplateRequest
+     * @return UpdateReportTemplateResponse
+     */
+    CompletableFuture<UpdateReportTemplateResponse> updateReportTemplate(UpdateReportTemplateRequest request);
 
 }
