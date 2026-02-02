@@ -26,6 +26,9 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RecallManagementJobId")
     private String recallManagementJobId;
 
+    @com.aliyun.core.annotation.NameInMap("RecallManagementTableInfo")
+    private RecallManagementTableInfo recallManagementTableInfo;
+
     @com.aliyun.core.annotation.NameInMap("RecallManagerTableInfo")
     private RecallManagerTableInfo recallManagerTableInfo;
 
@@ -42,6 +45,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         this.endTime = builder.endTime;
         this.log = builder.log;
         this.recallManagementJobId = builder.recallManagementJobId;
+        this.recallManagementTableInfo = builder.recallManagementTableInfo;
         this.recallManagerTableInfo = builder.recallManagerTableInfo;
         this.requestId = builder.requestId;
         this.startTime = builder.startTime;
@@ -82,6 +86,13 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return recallManagementTableInfo
+     */
+    public RecallManagementTableInfo getRecallManagementTableInfo() {
+        return this.recallManagementTableInfo;
+    }
+
+    /**
      * @return recallManagerTableInfo
      */
     public RecallManagerTableInfo getRecallManagerTableInfo() {
@@ -113,6 +124,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         private String endTime; 
         private String log; 
         private String recallManagementJobId; 
+        private RecallManagementTableInfo recallManagementTableInfo; 
         private RecallManagerTableInfo recallManagerTableInfo; 
         private String requestId; 
         private String startTime; 
@@ -125,6 +137,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             this.endTime = model.endTime;
             this.log = model.log;
             this.recallManagementJobId = model.recallManagementJobId;
+            this.recallManagementTableInfo = model.recallManagementTableInfo;
             this.recallManagerTableInfo = model.recallManagerTableInfo;
             this.requestId = model.requestId;
             this.startTime = model.startTime;
@@ -152,6 +165,14 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
          */
         public Builder recallManagementJobId(String recallManagementJobId) {
             this.recallManagementJobId = recallManagementJobId;
+            return this;
+        }
+
+        /**
+         * RecallManagementTableInfo.
+         */
+        public Builder recallManagementTableInfo(RecallManagementTableInfo recallManagementTableInfo) {
+            this.recallManagementTableInfo = recallManagementTableInfo;
             return this;
         }
 
@@ -193,6 +214,123 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRecallManagementJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRecallManagementJobResponseBody</p>
+     */
+    public static class RecallManagementTableInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataVersion")
+        private String dataVersion;
+
+        @com.aliyun.core.annotation.NameInMap("RecallManagementTableVersionId")
+        private String recallManagementTableVersionId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceTableDataSize")
+        private String sourceTableDataSize;
+
+        @com.aliyun.core.annotation.NameInMap("SourceTableRowCount")
+        private String sourceTableRowCount;
+
+        private RecallManagementTableInfo(Builder builder) {
+            this.dataVersion = builder.dataVersion;
+            this.recallManagementTableVersionId = builder.recallManagementTableVersionId;
+            this.sourceTableDataSize = builder.sourceTableDataSize;
+            this.sourceTableRowCount = builder.sourceTableRowCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecallManagementTableInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataVersion
+         */
+        public String getDataVersion() {
+            return this.dataVersion;
+        }
+
+        /**
+         * @return recallManagementTableVersionId
+         */
+        public String getRecallManagementTableVersionId() {
+            return this.recallManagementTableVersionId;
+        }
+
+        /**
+         * @return sourceTableDataSize
+         */
+        public String getSourceTableDataSize() {
+            return this.sourceTableDataSize;
+        }
+
+        /**
+         * @return sourceTableRowCount
+         */
+        public String getSourceTableRowCount() {
+            return this.sourceTableRowCount;
+        }
+
+        public static final class Builder {
+            private String dataVersion; 
+            private String recallManagementTableVersionId; 
+            private String sourceTableDataSize; 
+            private String sourceTableRowCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecallManagementTableInfo model) {
+                this.dataVersion = model.dataVersion;
+                this.recallManagementTableVersionId = model.recallManagementTableVersionId;
+                this.sourceTableDataSize = model.sourceTableDataSize;
+                this.sourceTableRowCount = model.sourceTableRowCount;
+            } 
+
+            /**
+             * DataVersion.
+             */
+            public Builder dataVersion(String dataVersion) {
+                this.dataVersion = dataVersion;
+                return this;
+            }
+
+            /**
+             * RecallManagementTableVersionId.
+             */
+            public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
+                this.recallManagementTableVersionId = recallManagementTableVersionId;
+                return this;
+            }
+
+            /**
+             * SourceTableDataSize.
+             */
+            public Builder sourceTableDataSize(String sourceTableDataSize) {
+                this.sourceTableDataSize = sourceTableDataSize;
+                return this;
+            }
+
+            /**
+             * SourceTableRowCount.
+             */
+            public Builder sourceTableRowCount(String sourceTableRowCount) {
+                this.sourceTableRowCount = sourceTableRowCount;
+                return this;
+            }
+
+            public RecallManagementTableInfo build() {
+                return new RecallManagementTableInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetRecallManagementJobResponseBody} extends {@link TeaModel}
