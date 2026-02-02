@@ -245,6 +245,9 @@ public class GetDialogDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intentName")
         private String intentName;
 
+        @com.aliyun.core.annotation.NameInMap("recordId")
+        private String recordId;
+
         @com.aliyun.core.annotation.NameInMap("role")
         private String role;
 
@@ -260,6 +263,7 @@ public class GetDialogDetailResponseBody extends TeaModel {
             this.id = builder.id;
             this.intentCode = builder.intentCode;
             this.intentName = builder.intentName;
+            this.recordId = builder.recordId;
             this.role = builder.role;
             this.type = builder.type;
         }
@@ -329,6 +333,13 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return recordId
+         */
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -351,6 +362,7 @@ public class GetDialogDetailResponseBody extends TeaModel {
             private Long id; 
             private String intentCode; 
             private String intentName; 
+            private String recordId; 
             private String role; 
             private String type; 
 
@@ -366,6 +378,7 @@ public class GetDialogDetailResponseBody extends TeaModel {
                 this.id = model.id;
                 this.intentCode = model.intentCode;
                 this.intentName = model.intentName;
+                this.recordId = model.recordId;
                 this.role = model.role;
                 this.type = model.type;
             } 
@@ -431,6 +444,14 @@ public class GetDialogDetailResponseBody extends TeaModel {
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
+                return this;
+            }
+
+            /**
+             * recordId.
+             */
+            public Builder recordId(String recordId) {
+                this.recordId = recordId;
                 return this;
             }
 

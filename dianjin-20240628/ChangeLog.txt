@@ -1,3 +1,6 @@
+2026-02-02 Version: 1.0.39
+- Generated java-async 2024-06-28 for DianJin.
+
 2026-01-23 Version: 1.0.38
 - Generated java-async 2024-06-28 for DianJin.
 
