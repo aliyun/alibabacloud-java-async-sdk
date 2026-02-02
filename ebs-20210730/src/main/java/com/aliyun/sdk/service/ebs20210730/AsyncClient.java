@@ -181,6 +181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEnterpriseSnapshotPolicyResponse> deleteEnterpriseSnapshotPolicy(DeleteEnterpriseSnapshotPolicyRequest request);
 
     /**
+     * @param request the request parameters of DescribeApps  DescribeAppsRequest
+     * @return DescribeAppsResponse
+     */
+    CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can use one of the following methods to check the responses:
      *     *   Method 1: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value that is returned in the last call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.
