@@ -86,7 +86,7 @@ public class EntElementVerifyV2Request extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,7 +201,11 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Enterprise Name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****有限公司</p>
          */
         public Builder entName(String entName) {
             this.putQueryParameter("EntName", entName);
@@ -210,6 +214,12 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Type of enterprise element verification.</p>
+         * <ul>
+         * <li>ENT_2META: Two-element verification (enterprise name + unified social credit code)</li>
+         * <li>ENT_3META: Three-element verification (enterprise name + unified social credit code + legal person&quot;s name or organization head)</li>
+         * <li>ENT_4META: Four-element verification (enterprise name + unified social credit code + legal person&quot;s name or organization head + legal person&quot;s ID number)</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +232,10 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
-         * LegalPersonCertNo.
+         * <p>Legal Person&quot;s ID Number. Required for four-element scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1******************9</p>
          */
         public Builder legalPersonCertNo(String legalPersonCertNo) {
             this.putQueryParameter("LegalPersonCertNo", legalPersonCertNo);
@@ -231,7 +244,10 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
-         * LegalPersonName.
+         * <p>Legal Person&quot;s Name. Required for three-element and four-element scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张**</p>
          */
         public Builder legalPersonName(String legalPersonName) {
             this.putQueryParameter("LegalPersonName", legalPersonName);
@@ -240,6 +256,7 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Unified Social Credit Code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,6 +269,7 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>A unique business identifier defined by the merchant side, used for subsequent problem localization and troubleshooting. Supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,6 +282,7 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Merchant-side user ID. Supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +295,7 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Custom scene code, defined by the user to distinguish between different business scenarios. Supports a combination of letters, numbers, and underscores, with a maximum length of 32 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +308,11 @@ public class EntElementVerifyV2Request extends Request {
         }
 
         /**
+         * <p>Whether user authorization has been obtained.</p>
+         * <ul>
+         * <li>1: Authorization obtained</li>
+         * <li>0: No authorization obtained</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -12,18 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EntVerifyRequest} extends {@link RequestModel}
+ * {@link EntElementVerifyPRORequest} extends {@link RequestModel}
  *
- * <p>EntVerifyRequest</p>
+ * <p>EntElementVerifyPRORequest</p>
  */
-public class EntVerifyRequest extends Request {
+public class EntElementVerifyPRORequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountNo")
-    private String accountNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntName")
@@ -36,10 +32,6 @@ public class EntVerifyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LegalPersonCertNo")
     private String legalPersonCertNo;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("LegalPersonMobile")
-    private String legalPersonMobile;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LegalPersonName")
@@ -58,14 +50,6 @@ public class EntVerifyRequest extends Request {
     private String merchantUserId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RiskModelVersion")
-    private String riskModelVersion;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RiskVerifyType")
-    private String riskVerifyType;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
@@ -73,20 +57,16 @@ public class EntVerifyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserAuthorization")
     private String userAuthorization;
 
-    private EntVerifyRequest(Builder builder) {
+    private EntElementVerifyPRORequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.accountNo = builder.accountNo;
         this.entName = builder.entName;
         this.infoVerifyType = builder.infoVerifyType;
         this.legalPersonCertNo = builder.legalPersonCertNo;
-        this.legalPersonMobile = builder.legalPersonMobile;
         this.legalPersonName = builder.legalPersonName;
         this.licenseNo = builder.licenseNo;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
-        this.riskModelVersion = builder.riskModelVersion;
-        this.riskVerifyType = builder.riskVerifyType;
         this.sceneCode = builder.sceneCode;
         this.userAuthorization = builder.userAuthorization;
     }
@@ -95,7 +75,7 @@ public class EntVerifyRequest extends Request {
         return new Builder();
     }
 
-    public static EntVerifyRequest create() {
+    public static EntElementVerifyPRORequest create() {
         return builder().build();
     }
 
@@ -109,13 +89,6 @@ public class EntVerifyRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return accountNo
-     */
-    public String getAccountNo() {
-        return this.accountNo;
     }
 
     /**
@@ -137,13 +110,6 @@ public class EntVerifyRequest extends Request {
      */
     public String getLegalPersonCertNo() {
         return this.legalPersonCertNo;
-    }
-
-    /**
-     * @return legalPersonMobile
-     */
-    public String getLegalPersonMobile() {
-        return this.legalPersonMobile;
     }
 
     /**
@@ -175,20 +141,6 @@ public class EntVerifyRequest extends Request {
     }
 
     /**
-     * @return riskModelVersion
-     */
-    public String getRiskModelVersion() {
-        return this.riskModelVersion;
-    }
-
-    /**
-     * @return riskVerifyType
-     */
-    public String getRiskVerifyType() {
-        return this.riskVerifyType;
-    }
-
-    /**
      * @return sceneCode
      */
     public String getSceneCode() {
@@ -202,19 +154,15 @@ public class EntVerifyRequest extends Request {
         return this.userAuthorization;
     }
 
-    public static final class Builder extends Request.Builder<EntVerifyRequest, Builder> {
+    public static final class Builder extends Request.Builder<EntElementVerifyPRORequest, Builder> {
         private String regionId; 
-        private String accountNo; 
         private String entName; 
         private String infoVerifyType; 
         private String legalPersonCertNo; 
-        private String legalPersonMobile; 
         private String legalPersonName; 
         private String licenseNo; 
         private String merchantBizId; 
         private String merchantUserId; 
-        private String riskModelVersion; 
-        private String riskVerifyType; 
         private String sceneCode; 
         private String userAuthorization; 
 
@@ -222,20 +170,16 @@ public class EntVerifyRequest extends Request {
             super();
         } 
 
-        private Builder(EntVerifyRequest request) {
+        private Builder(EntElementVerifyPRORequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.accountNo = request.accountNo;
             this.entName = request.entName;
             this.infoVerifyType = request.infoVerifyType;
             this.legalPersonCertNo = request.legalPersonCertNo;
-            this.legalPersonMobile = request.legalPersonMobile;
             this.legalPersonName = request.legalPersonName;
             this.licenseNo = request.licenseNo;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
-            this.riskModelVersion = request.riskModelVersion;
-            this.riskVerifyType = request.riskVerifyType;
             this.sceneCode = request.sceneCode;
             this.userAuthorization = request.userAuthorization;
         } 
@@ -250,22 +194,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Receiving account, to assist in improving the risk assessment effect.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>321324***38293</p>
-         */
-        public Builder accountNo(String accountNo) {
-            this.putQueryParameter("AccountNo", accountNo);
-            this.accountNo = accountNo;
-            return this;
-        }
-
-        /**
-         * <p>Enterprise name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>***有限公司</p>
+         * EntName.
          */
         public Builder entName(String entName) {
             this.putQueryParameter("EntName", entName);
@@ -274,10 +203,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Enterprise element verification type, currently not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>无</p>
+         * InfoVerifyType.
          */
         public Builder infoVerifyType(String infoVerifyType) {
             this.putQueryParameter("InfoVerifyType", infoVerifyType);
@@ -286,10 +212,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Legal person&quot;s ID number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>370105*****3892</p>
+         * LegalPersonCertNo.
          */
         public Builder legalPersonCertNo(String legalPersonCertNo) {
             this.putQueryParameter("LegalPersonCertNo", legalPersonCertNo);
@@ -298,22 +221,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Legal person&quot;s mobile phone number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1300***53</p>
-         */
-        public Builder legalPersonMobile(String legalPersonMobile) {
-            this.putQueryParameter("LegalPersonMobile", legalPersonMobile);
-            this.legalPersonMobile = legalPersonMobile;
-            return this;
-        }
-
-        /**
-         * <p>Legal person&quot;s name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>张**</p>
+         * LegalPersonName.
          */
         public Builder legalPersonName(String legalPersonName) {
             this.putQueryParameter("LegalPersonName", legalPersonName);
@@ -322,10 +230,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Business license number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32132***328932</p>
+         * LicenseNo.
          */
         public Builder licenseNo(String licenseNo) {
             this.putQueryParameter("LicenseNo", licenseNo);
@@ -334,10 +239,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32198****193000</p>
+         * MerchantBizId.
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -346,10 +248,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Merchant-side user ID. It supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>432***421</p>
+         * MerchantUserId.
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -358,40 +257,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Enterprise risk verification model version, required when RiskVerifyType is not empty. Currently supported:</p>
-         * <ul>
-         * <li>BASIC: Basic version</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BASIC</p>
-         */
-        public Builder riskModelVersion(String riskModelVersion) {
-            this.putQueryParameter("RiskModelVersion", riskModelVersion);
-            this.riskModelVersion = riskModelVersion;
-            return this;
-        }
-
-        /**
-         * <p>Enterprise risk verification type, at least one of InfoVerifyType or this must be selected. Currently supported:</p>
-         * <ul>
-         * <li>BUSINESS_ANTIFRAUD</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>BUSINESS_ANTIFRAUD</p>
-         */
-        public Builder riskVerifyType(String riskVerifyType) {
-            this.putQueryParameter("RiskVerifyType", riskVerifyType);
-            this.riskVerifyType = riskVerifyType;
-            return this;
-        }
-
-        /**
-         * <p>Scene code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>withdraw</p>
+         * SceneCode.
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -400,16 +266,7 @@ public class EntVerifyRequest extends Request {
         }
 
         /**
-         * <p>Whether the user authorization is obtained.</p>
-         * <ul>
-         * <li><p>1: Authorized</p>
-         * </li>
-         * <li><p>0: Not authorized</p>
-         * </li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * UserAuthorization.
          */
         public Builder userAuthorization(String userAuthorization) {
             this.putQueryParameter("UserAuthorization", userAuthorization);
@@ -418,8 +275,8 @@ public class EntVerifyRequest extends Request {
         }
 
         @Override
-        public EntVerifyRequest build() {
-            return new EntVerifyRequest(this);
+        public EntElementVerifyPRORequest build() {
+            return new EntElementVerifyPRORequest(this);
         } 
 
     } 

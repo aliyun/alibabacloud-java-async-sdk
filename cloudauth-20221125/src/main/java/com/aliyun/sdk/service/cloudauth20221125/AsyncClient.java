@@ -20,12 +20,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only enterprises and individual businesses.</p>
+     * 
      * @param request the request parameters of EntElementVerify  EntElementVerifyRequest
      * @return EntElementVerifyResponse
      */
     CompletableFuture<EntElementVerifyResponse> entElementVerify(EntElementVerifyRequest request);
 
     /**
+     * @param request the request parameters of EntElementVerifyPRO  EntElementVerifyPRORequest
+     * @return EntElementVerifyPROResponse
+     */
+    CompletableFuture<EntElementVerifyPROResponse> entElementVerifyPRO(EntElementVerifyPRORequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+     * It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+     * For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</p>
+     * 
      * @param request the request parameters of EntElementVerifyV2  EntElementVerifyV2Request
      * @return EntElementVerifyV2Response
      */

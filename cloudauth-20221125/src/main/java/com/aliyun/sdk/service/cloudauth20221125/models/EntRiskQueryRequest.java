@@ -64,7 +64,7 @@ public class EntRiskQueryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,7 +152,10 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant side, used for subsequent problem localization and troubleshooting. Supports a combination of 32 alphanumeric characters, please ensure uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32198****193000</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -161,7 +164,10 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>A custom user ID in your business, used for subsequent problem localization and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -170,7 +176,14 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * ParamType.
+         * <p>Parameter type.
+         * 00: Company name;
+         * 01: Business registration number;
+         * 02: Unified Social Credit Code;
+         * 03: Organization code;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00</p>
          */
         public Builder paramType(String paramType) {
             this.putQueryParameter("ParamType", paramType);
@@ -179,7 +192,10 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * ParamValue.
+         * <p>Enter one of the following based on the ParamType: company name, business registration number, unified social credit code, or organization code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91330106673959****</p>
          */
         public Builder paramValue(String paramValue) {
             this.putQueryParameter("ParamValue", paramValue);
@@ -188,7 +204,10 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Custom scene code, used to distinguish business scenarios, a 10-digit number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000086</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -197,7 +216,12 @@ public class EntRiskQueryRequest extends Request {
         }
 
         /**
-         * UserAuthorization.
+         * <p>Whether user authorization is obtained.
+         * 1: Authorized
+         * 0: Not authorized</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userAuthorization(String userAuthorization) {
             this.putQueryParameter("UserAuthorization", userAuthorization);

@@ -79,7 +79,7 @@ public class EntElementVerifyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -194,7 +194,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * EntName.
+         * <p>Enterprise name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***有限公司</p>
          */
         public Builder entName(String entName) {
             this.putQueryParameter("EntName", entName);
@@ -203,7 +206,15 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * InfoVerifyType.
+         * <p>Type of enterprise element verification.</p>
+         * <ul>
+         * <li>ENT_2META: Two elements</li>
+         * <li>ENT_3META: Three elements</li>
+         * <li>ENT_4META: Four elements</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENT_2META</p>
          */
         public Builder infoVerifyType(String infoVerifyType) {
             this.putQueryParameter("InfoVerifyType", infoVerifyType);
@@ -212,7 +223,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * LegalPersonCertNo.
+         * <p>Legal representative&quot;s ID number. Required for the four-element scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>370105*****3892</p>
          */
         public Builder legalPersonCertNo(String legalPersonCertNo) {
             this.putQueryParameter("LegalPersonCertNo", legalPersonCertNo);
@@ -221,7 +235,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * LegalPersonName.
+         * <p>Legal representative&quot;s name. Required for three-element and four-element scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张**</p>
          */
         public Builder legalPersonName(String legalPersonName) {
             this.putQueryParameter("LegalPersonName", legalPersonName);
@@ -230,7 +247,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * LicenseNo.
+         * <p>Business license number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32132***328932</p>
          */
         public Builder licenseNo(String licenseNo) {
             this.putQueryParameter("LicenseNo", licenseNo);
@@ -239,7 +259,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * MerchantBizId.
+         * <p>A unique business identifier defined by the merchant for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32198****193000</p>
          */
         public Builder merchantBizId(String merchantBizId) {
             this.putQueryParameter("MerchantBizId", merchantBizId);
@@ -248,7 +271,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * MerchantUserId.
+         * <p>Merchant-side user ID. Supports a combination of letters and numbers, with a maximum length of 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432***421</p>
          */
         public Builder merchantUserId(String merchantUserId) {
             this.putQueryParameter("MerchantUserId", merchantUserId);
@@ -257,7 +283,10 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * SceneCode.
+         * <p>Scene code. Supports a combination of letters, numbers, and underscores, with a maximum length of 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>withdraw</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putQueryParameter("SceneCode", sceneCode);
@@ -266,7 +295,14 @@ public class EntElementVerifyRequest extends Request {
         }
 
         /**
-         * UserAuthorization.
+         * <p>Whether user authorization is obtained.</p>
+         * <ul>
+         * <li>1: Authorized</li>
+         * <li>0: Not authorized</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userAuthorization(String userAuthorization) {
             this.putQueryParameter("UserAuthorization", userAuthorization);

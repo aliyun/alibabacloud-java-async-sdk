@@ -40,6 +40,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supports only enterprises and individual businesses.</p>
+     * 
      * @param request the request parameters of EntElementVerify  EntElementVerifyRequest
      * @return EntElementVerifyResponse
      */
@@ -58,6 +61,29 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EntElementVerifyPRO  EntElementVerifyPRORequest
+     * @return EntElementVerifyPROResponse
+     */
+    @Override
+    public CompletableFuture<EntElementVerifyPROResponse> entElementVerifyPRO(EntElementVerifyPRORequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EntElementVerifyPRO").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EntElementVerifyPROResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EntElementVerifyPROResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Enterprise Element Verification API provides a service for verifying the consistency of enterprise element information, used to identify the authenticity of enterprise information.
+     * It supports various institutions including enterprises, individual businesses, farmers\&quot; professional cooperatives, government agencies, public institutions, social organizations, legal profession institutions, and owners\&quot; meetings for 2-3 elements;
+     * For 4 elements, it supports enterprises, individual businesses, farmers\&quot; professional cooperatives, and legal professions.</p>
+     * 
      * @param request the request parameters of EntElementVerifyV2  EntElementVerifyV2Request
      * @return EntElementVerifyV2Response
      */

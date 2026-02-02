@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EntElementVerifyResponse} extends {@link TeaModel}
+ * {@link EntElementVerifyPROResponse} extends {@link TeaModel}
  *
- * <p>EntElementVerifyResponse</p>
+ * <p>EntElementVerifyPROResponse</p>
  */
-public class EntElementVerifyResponse extends Response {
+public class EntElementVerifyPROResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class EntElementVerifyResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private EntElementVerifyResponseBody body;
+    private EntElementVerifyPROResponseBody body;
 
-    private EntElementVerifyResponse(BuilderImpl builder) {
+    private EntElementVerifyPROResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static EntElementVerifyResponse create() {
+    public static EntElementVerifyPROResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class EntElementVerifyResponse extends Response {
     /**
      * @return body
      */
-    public EntElementVerifyResponseBody getBody() {
+    public EntElementVerifyPROResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<EntElementVerifyResponse, Builder> {
+    public interface Builder extends Response.Builder<EntElementVerifyPROResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(EntElementVerifyResponseBody body);
+        Builder body(EntElementVerifyPROResponseBody body);
 
         @Override
-        EntElementVerifyResponse build();
+        EntElementVerifyPROResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<EntElementVerifyResponse, Builder>
+            extends Response.BuilderImpl<EntElementVerifyPROResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private EntElementVerifyResponseBody body; 
+        private EntElementVerifyPROResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(EntElementVerifyResponse response) {
+        private BuilderImpl(EntElementVerifyPROResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class EntElementVerifyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(EntElementVerifyResponseBody body) {
+        public Builder body(EntElementVerifyPROResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public EntElementVerifyResponse build() {
-            return new EntElementVerifyResponse(this);
+        public EntElementVerifyPROResponse build() {
+            return new EntElementVerifyPROResponse(this);
         } 
 
     } 

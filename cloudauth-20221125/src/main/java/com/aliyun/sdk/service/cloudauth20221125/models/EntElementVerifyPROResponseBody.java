@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EntElementVerifyV2ResponseBody} extends {@link TeaModel}
+ * {@link EntElementVerifyPROResponseBody} extends {@link TeaModel}
  *
- * <p>EntElementVerifyV2ResponseBody</p>
+ * <p>EntElementVerifyPROResponseBody</p>
  */
-public class EntElementVerifyV2ResponseBody extends TeaModel {
+public class EntElementVerifyPROResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -29,7 +29,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    private EntElementVerifyV2ResponseBody(Builder builder) {
+    private EntElementVerifyPROResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -40,7 +40,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static EntElementVerifyV2ResponseBody create() {
+    public static EntElementVerifyPROResponseBody create() {
         return builder().build();
     }
 
@@ -85,7 +85,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(EntElementVerifyV2ResponseBody model) {
+        private Builder(EntElementVerifyPROResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
@@ -93,10 +93,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Return code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Success</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,10 +101,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +112,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7***B-A3DC0DE3C83E</p>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,24 +120,24 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result</p>
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
             return this;
         }
 
-        public EntElementVerifyV2ResponseBody build() {
-            return new EntElementVerifyV2ResponseBody(this);
+        public EntElementVerifyPROResponseBody build() {
+            return new EntElementVerifyPROResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link EntElementVerifyV2ResponseBody} extends {@link TeaModel}
+     * {@link EntElementVerifyPROResponseBody} extends {@link TeaModel}
      *
-     * <p>EntElementVerifyV2ResponseBody</p>
+     * <p>EntElementVerifyPROResponseBody</p>
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
@@ -218,15 +212,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Verification result code.</p>
-             * <ul>
-             * <li>1: Verification consistent</li>
-             * <li>2: Verification inconsistent</li>
-             * <li>3: Not found</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * BizCode.
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -234,14 +220,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Business term: start and end time of operations.</p>
-             * <ul>
-             * <li>Format: yyyy-MM-dd/yyyy-MM-dd.</li>
-             * <li>Example: 2018-09-25/9999-09-09.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-09-25/9999-09-09</p>
+             * OpenTime.
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -249,16 +228,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details of inconsistencies, multiple inconsistencies will be separated by commas.</p>
-             * <ul>
-             * <li>LegalPersonNameFlag: Legal person&quot;s name does not match</li>
-             * <li>LegalPersonCertNoFlag: Legal person&quot;s ID number does not match</li>
-             * <li>EntNameFlag: Enterprise name does not match</li>
-             * <li>LicenseNoFlag: Business license number does not match</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>LegalPersonNameFlag,LegalPersonCertNoFlag</p>
+             * ReasonDetail.
              */
             public Builder reasonDetail(String reasonDetail) {
                 this.reasonDetail = reasonDetail;
@@ -266,19 +236,7 @@ public class EntElementVerifyV2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Business operation status.</p>
-             * <ul>
-             * <li>1: In operation (open)</li>
-             * <li>2: Relocated</li>
-             * <li>3: Deregistered</li>
-             * <li>4: Revoked</li>
-             * <li>5: Canceled</li>
-             * <li>6: Suspended</li>
-             * <li>0: Other</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

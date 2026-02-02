@@ -44,6 +44,10 @@ public class EntVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class EntVerifyResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(EntVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,10 @@ public class EntVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -95,7 +115,7 @@ public class EntVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-A***B-A3DC0DE3C83E</p>
@@ -106,7 +126,7 @@ public class EntVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -163,8 +183,19 @@ public class EntVerifyResponseBody extends TeaModel {
             private String modelName; 
             private String result; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModelResults model) {
+                this.modelName = model.modelName;
+                this.result = model.result;
+            } 
+
             /**
-             * ModelName.
+             * <p>Model name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_1</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -172,7 +203,10 @@ public class EntVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Model result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -230,8 +264,19 @@ public class EntVerifyResponseBody extends TeaModel {
             private Boolean found; 
             private java.util.List<ModelResults> modelResults; 
 
+            private Builder() {
+            } 
+
+            private Builder(RiskVerifyResult model) {
+                this.found = model.found;
+                this.modelResults = model.modelResults;
+            } 
+
             /**
-             * Found.
+             * <p>Whether found</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder found(Boolean found) {
                 this.found = found;
@@ -239,7 +284,7 @@ public class EntVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * ModelResults.
+             * <p>List of enterprise risk verification model results</p>
              */
             public Builder modelResults(java.util.List<ModelResults> modelResults) {
                 this.modelResults = modelResults;
@@ -285,8 +330,15 @@ public class EntVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private RiskVerifyResult riskVerifyResult; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.riskVerifyResult = model.riskVerifyResult;
+            } 
+
             /**
-             * RiskVerifyResult.
+             * <p>Enterprise risk verification result</p>
              */
             public Builder riskVerifyResult(RiskVerifyResult riskVerifyResult) {
                 this.riskVerifyResult = riskVerifyResult;

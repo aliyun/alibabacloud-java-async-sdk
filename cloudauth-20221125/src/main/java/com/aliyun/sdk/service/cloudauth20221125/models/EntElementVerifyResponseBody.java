@@ -44,6 +44,10 @@ public class EntElementVerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class EntElementVerifyResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(EntElementVerifyResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,10 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -95,7 +115,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7***B-A3DC0DE3C83E</p>
@@ -106,7 +126,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -199,8 +219,27 @@ public class EntElementVerifyResponseBody extends TeaModel {
             private String reasonDetail; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bizCode = model.bizCode;
+                this.openTime = model.openTime;
+                this.reasonCode = model.reasonCode;
+                this.reasonDetail = model.reasonDetail;
+                this.status = model.status;
+            } 
+
             /**
-             * BizCode.
+             * <p>Verification result code.</p>
+             * <ul>
+             * <li>1: Verification consistent</li>
+             * <li>2: Verification inconsistent</li>
+             * <li>3: Not found</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -208,7 +247,14 @@ public class EntElementVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * OpenTime.
+             * <p>Operating period: start and end time of operations.</p>
+             * <ul>
+             * <li>Format: yyyy-MM-dd/yyyy-MM-dd.</li>
+             * <li>Example: 2018-09-25/9999-09-09.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-25/9999-09-09</p>
              */
             public Builder openTime(String openTime) {
                 this.openTime = openTime;
@@ -216,7 +262,25 @@ public class EntElementVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>ReasonCode explanation:</p>
+             * <ul>
+             * <li><p>100: Verification consistent</p>
+             * </li>
+             * <li><p>201: Inconsistent between person and enterprise</p>
+             * </li>
+             * <li><p>202: Inconsistent in two elements of the enterprise</p>
+             * </li>
+             * <li><p>301: No enterprise found, unable to verify</p>
+             * </li>
+             * <li><p>302: Legal representative does not exist in the database</p>
+             * <blockquote>
+             * <p>Warning: This field will be discontinued on June 15, 2023. Existing customers are not affected.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -224,7 +288,16 @@ public class EntElementVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonDetail.
+             * <p>Details of inconsistencies, multiple inconsistencies will be separated by commas.</p>
+             * <ul>
+             * <li>LegalPersonNameFlag: Inconsistent legal representative name</li>
+             * <li>LegalPersonCertNoFlag: Inconsistent legal representative ID number</li>
+             * <li>EntNameFlag: Inconsistent enterprise name</li>
+             * <li>LicenseNoFlag: Inconsistent business license number</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LegalPersonNameFlag,LegalPersonCertNoFlag</p>
              */
             public Builder reasonDetail(String reasonDetail) {
                 this.reasonDetail = reasonDetail;
@@ -232,7 +305,19 @@ public class EntElementVerifyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Enterprise operating status.</p>
+             * <ul>
+             * <li>1: In operation (open)</li>
+             * <li>2: Relocated</li>
+             * <li>3: Deregistered</li>
+             * <li>4: Revoked</li>
+             * <li>5: Canceled</li>
+             * <li>6: Suspended</li>
+             * <li>0: Other</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;

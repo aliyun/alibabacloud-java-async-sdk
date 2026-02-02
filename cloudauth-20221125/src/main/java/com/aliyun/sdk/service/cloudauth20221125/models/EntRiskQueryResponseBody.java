@@ -44,6 +44,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class EntRiskQueryResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(EntRiskQueryResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Code.
+         * <p>Error code. For details about error codes, see <strong><a href="https://help.aliyun.com/document_detail/215420.html">Error Codes</a></strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message for the request information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -95,7 +115,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +126,7 @@ public class EntRiskQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -244,8 +267,26 @@ public class EntRiskQueryResponseBody extends TeaModel {
             private String removedOrg; 
             private String removedReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(RiskList model) {
+                this.creditCode = model.creditCode;
+                this.entName = model.entName;
+                this.listedDate = model.listedDate;
+                this.listedReason = model.listedReason;
+                this.operationOrg = model.operationOrg;
+                this.regNo = model.regNo;
+                this.removedDate = model.removedDate;
+                this.removedOrg = model.removedOrg;
+                this.removedReason = model.removedReason;
+            } 
+
             /**
-             * CreditCode.
+             * <p>Unified Social Credit Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92500112MA5UHU****</p>
              */
             public Builder creditCode(String creditCode) {
                 this.creditCode = creditCode;
@@ -253,7 +294,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * EntName.
+             * <p>Company name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州****</p>
              */
             public Builder entName(String entName) {
                 this.entName = entName;
@@ -261,7 +305,11 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ListedDate.
+             * <p>Date listed as abnormal
+             * Example: 2023-02-03</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-03</p>
              */
             public Builder listedDate(String listedDate) {
                 this.listedDate = listedDate;
@@ -269,7 +317,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * ListedReason.
+             * <p>Reason for being listed as abnormal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未按照《个体工商户年度报告暂行办法》***</p>
              */
             public Builder listedReason(String listedReason) {
                 this.listedReason = listedReason;
@@ -277,7 +328,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * OperationOrg.
+             * <p>Authority that handled the inclusion</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>市场监督</strong></em></p>
              */
             public Builder operationOrg(String operationOrg) {
                 this.operationOrg = operationOrg;
@@ -285,7 +339,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RegNo.
+             * <p>Business registration number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50011260996****</p>
              */
             public Builder regNo(String regNo) {
                 this.regNo = regNo;
@@ -293,7 +350,11 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RemovedDate.
+             * <p>Date removed from the abnormal list
+             * Example: 2023-02-03</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-06</p>
              */
             public Builder removedDate(String removedDate) {
                 this.removedDate = removedDate;
@@ -301,7 +362,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RemovedOrg.
+             * <p>Authority that handled the removal</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>市场监督</strong></em></p>
              */
             public Builder removedOrg(String removedOrg) {
                 this.removedOrg = removedOrg;
@@ -309,7 +373,10 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RemovedReason.
+             * <p>Reason for being removed from the abnormal list</p>
+             * 
+             * <strong>example:</strong>
+             * <p>根据《个体工商户年度报告暂行办法》第十三条的规定******</p>
              */
             public Builder removedReason(String removedReason) {
                 this.removedReason = removedReason;
@@ -379,8 +446,23 @@ public class EntRiskQueryResponseBody extends TeaModel {
             private java.util.List<RiskList> riskList; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.bizCode = model.bizCode;
+                this.riskList = model.riskList;
+                this.status = model.status;
+            } 
+
             /**
-             * BizCode.
+             * <p>Query result
+             * 0: Normal business operation
+             * 1: Abnormal business operation
+             * 2: Not found</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -388,7 +470,7 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskList.
+             * <p>List of abnormal information</p>
              */
             public Builder riskList(java.util.List<RiskList> riskList) {
                 this.riskList = riskList;
@@ -396,7 +478,19 @@ public class EntRiskQueryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Business operation status.</p>
+             * <ul>
+             * <li>1: In operation (open)</li>
+             * <li>2: Relocated</li>
+             * <li>3: Deregistered</li>
+             * <li>4: Revoked</li>
+             * <li>5: Canceled</li>
+             * <li>6: Suspended</li>
+             * <li>0: Other</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
