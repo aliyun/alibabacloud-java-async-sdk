@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateTrainPicAvatarRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("gender")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gender;
@@ -46,6 +50,7 @@ public class CreateTrainPicAvatarRequest extends Request {
 
     private CreateTrainPicAvatarRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.gender = builder.gender;
         this.generateAssets = builder.generateAssets;
         this.imageOssPath = builder.imageOssPath;
@@ -65,6 +70,13 @@ public class CreateTrainPicAvatarRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -110,6 +122,7 @@ public class CreateTrainPicAvatarRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTrainPicAvatarRequest, Builder> {
+        private String bizType; 
         private String gender; 
         private Boolean generateAssets; 
         private String imageOssPath; 
@@ -123,6 +136,7 @@ public class CreateTrainPicAvatarRequest extends Request {
 
         private Builder(CreateTrainPicAvatarRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.gender = request.gender;
             this.generateAssets = request.generateAssets;
             this.imageOssPath = request.imageOssPath;
@@ -130,6 +144,15 @@ public class CreateTrainPicAvatarRequest extends Request {
             this.templateId = request.templateId;
             this.transparent = request.transparent;
         } 
+
+        /**
+         * bizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("bizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

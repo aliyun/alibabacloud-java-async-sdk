@@ -489,7 +489,10 @@ public class ListPrivateTTSVoicesCustomResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>错误码。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Audio.AudioShortError</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
