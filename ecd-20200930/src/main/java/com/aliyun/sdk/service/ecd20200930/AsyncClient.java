@@ -444,6 +444,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateQosRule  CreateQosRuleRequest
+     * @return CreateQosRuleResponse
+     */
+    CompletableFuture<CreateQosRuleResponse> createQosRule(CreateQosRuleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you create a RAM directory, complete the following preparations:</p>
      * <ul>
@@ -668,6 +674,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolicyGroupsResponse
      */
     CompletableFuture<DeletePolicyGroupsResponse> deletePolicyGroups(DeletePolicyGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteQosRules  DeleteQosRulesRequest
+     * @return DeleteQosRulesResponse
+     */
+    CompletableFuture<DeleteQosRulesResponse> deleteQosRules(DeleteQosRulesRequest request);
 
     /**
      * @param request the request parameters of DeleteRouteEntry  DeleteRouteEntryRequest
@@ -1089,6 +1101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePriceForRenewDesktopOversoldGroupResponse
      */
     CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request);
+
+    /**
+     * @param request the request parameters of DescribeQosRules  DescribeQosRulesRequest
+     * @return DescribeQosRulesResponse
+     */
+    CompletableFuture<DescribeQosRulesResponse> describeQosRules(DescribeQosRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeRecordFile  DescribeRecordFileRequest
@@ -1742,6 +1760,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyGroupResponse
      */
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyQosEntries  ModifyQosEntriesRequest
+     * @return ModifyQosEntriesResponse
+     */
+    CompletableFuture<ModifyQosEntriesResponse> modifyQosEntries(ModifyQosEntriesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyQosRule  ModifyQosRuleRequest
+     * @return ModifyQosRuleResponse
+     */
+    CompletableFuture<ModifyQosRuleResponse> modifyQosRule(ModifyQosRuleRequest request);
 
     /**
      * @param request the request parameters of ModifyResourceCenterPolicy  ModifyResourceCenterPolicyRequest
