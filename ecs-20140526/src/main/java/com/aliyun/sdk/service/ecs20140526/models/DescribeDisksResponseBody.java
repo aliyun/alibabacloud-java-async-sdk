@@ -937,6 +937,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
+        private String sourceDiskId;
+
         @com.aliyun.core.annotation.NameInMap("SourceSnapshotId")
         private String sourceSnapshotId;
 
@@ -1009,6 +1012,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.serialNumber = builder.serialNumber;
             this.size = builder.size;
+            this.sourceDiskId = builder.sourceDiskId;
             this.sourceSnapshotId = builder.sourceSnapshotId;
             this.status = builder.status;
             this.storageClusterId = builder.storageClusterId;
@@ -1297,6 +1301,13 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceDiskId
+         */
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
+        }
+
+        /**
          * @return sourceSnapshotId
          */
         public String getSourceSnapshotId() {
@@ -1412,6 +1423,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String serialNumber; 
             private Integer size; 
+            private String sourceDiskId; 
             private String sourceSnapshotId; 
             private String status; 
             private String storageClusterId; 
@@ -1466,6 +1478,7 @@ public class DescribeDisksResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.serialNumber = model.serialNumber;
                 this.size = model.size;
+                this.sourceDiskId = model.sourceDiskId;
                 this.sourceSnapshotId = model.sourceSnapshotId;
                 this.status = model.status;
                 this.storageClusterId = model.storageClusterId;
@@ -1939,6 +1952,14 @@ public class DescribeDisksResponseBody extends TeaModel {
              */
             public Builder size(Integer size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * SourceDiskId.
+             */
+            public Builder sourceDiskId(String sourceDiskId) {
+                this.sourceDiskId = sourceDiskId;
                 return this;
             }
 

@@ -113,7 +113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
      * @return AddBandwidthPackageIpsResponse
      */
     @Deprecated
@@ -1559,6 +1559,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreatePlanMaintenanceWindow  CreatePlanMaintenanceWindowRequest
+     * @return CreatePlanMaintenanceWindowResponse
+     */
+    @Override
+    public CompletableFuture<CreatePlanMaintenanceWindowResponse> createPlanMaintenanceWindow(CreatePlanMaintenanceWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePlanMaintenanceWindow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePlanMaintenanceWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePlanMaintenanceWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePortRangeList  CreatePortRangeListRequest
      * @return CreatePortRangeListResponse
      */
@@ -1963,10 +1981,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.  * @param request  the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
+     * @param request the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      */
-    @Deprecated
     @Override
     public CompletableFuture<DeleteBandwidthPackageResponse> deleteBandwidthPackage(DeleteBandwidthPackageRequest request) {
         try {
@@ -2459,6 +2476,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeletePhysicalConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePlanMaintenanceWindow  DeletePlanMaintenanceWindowRequest
+     * @return DeletePlanMaintenanceWindowResponse
+     */
+    @Override
+    public CompletableFuture<DeletePlanMaintenanceWindowResponse> deletePlanMaintenanceWindow(DeletePlanMaintenanceWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePlanMaintenanceWindow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePlanMaintenanceWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePlanMaintenanceWindowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4377,6 +4412,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribePlanMaintenanceWindows  DescribePlanMaintenanceWindowsRequest
+     * @return DescribePlanMaintenanceWindowsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePlanMaintenanceWindowsResponse> describePlanMaintenanceWindows(DescribePlanMaintenanceWindowsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePlanMaintenanceWindows").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePlanMaintenanceWindowsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePlanMaintenanceWindowsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePortRangeListAssociations  DescribePortRangeListAssociationsRequest
      * @return DescribePortRangeListAssociationsResponse
      */
@@ -6226,7 +6279,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
      * @return ModifyBandwidthPackageSpecResponse
      */
     @Deprecated
@@ -7307,6 +7360,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyPlanMaintenanceWindow  ModifyPlanMaintenanceWindowRequest
+     * @return ModifyPlanMaintenanceWindowResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPlanMaintenanceWindowResponse> modifyPlanMaintenanceWindow(ModifyPlanMaintenanceWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPlanMaintenanceWindow").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPlanMaintenanceWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPlanMaintenanceWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyPortRangeList  ModifyPortRangeListRequest
      * @return ModifyPortRangeListResponse
      */
@@ -8225,10 +8296,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.  * @param request  the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
+     * @param request the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
      * @return RemoveBandwidthPackageIpsResponse
      */
-    @Deprecated
     @Override
     public CompletableFuture<RemoveBandwidthPackageIpsResponse> removeBandwidthPackageIps(RemoveBandwidthPackageIpsRequest request) {
         try {

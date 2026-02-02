@@ -33,7 +33,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateRouterInterfaceResponse> activateRouterInterface(ActivateRouterInterfaceRequest request);
 
     /**
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
      * @return AddBandwidthPackageIpsResponse
      */
     @Deprecated
@@ -855,6 +855,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePhysicalConnectionResponse> createPhysicalConnection(CreatePhysicalConnectionRequest request);
 
     /**
+     * @param request the request parameters of CreatePlanMaintenanceWindow  CreatePlanMaintenanceWindowRequest
+     * @return CreatePlanMaintenanceWindowResponse
+     */
+    CompletableFuture<CreatePlanMaintenanceWindowResponse> createPlanMaintenanceWindow(CreatePlanMaintenanceWindowRequest request);
+
+    /**
      * @param request the request parameters of CreatePortRangeList  CreatePortRangeListRequest
      * @return CreatePortRangeListResponse
      */
@@ -1055,10 +1061,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAutoSnapshotPolicyResponse> deleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest request);
 
     /**
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.  * @param request  the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
+     * @param request the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      */
-    @Deprecated
     CompletableFuture<DeleteBandwidthPackageResponse> deleteBandwidthPackage(DeleteBandwidthPackageRequest request);
 
     /**
@@ -1291,6 +1296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DeletePhysicalConnectionResponse> deletePhysicalConnection(DeletePhysicalConnectionRequest request);
+
+    /**
+     * @param request the request parameters of DeletePlanMaintenanceWindow  DeletePlanMaintenanceWindowRequest
+     * @return DeletePlanMaintenanceWindowResponse
+     */
+    CompletableFuture<DeletePlanMaintenanceWindowResponse> deletePlanMaintenanceWindow(DeletePlanMaintenanceWindowRequest request);
 
     /**
      * @param request the request parameters of DeletePortRangeList  DeletePortRangeListRequest
@@ -2123,6 +2134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DescribePhysicalConnectionsResponse> describePhysicalConnections(DescribePhysicalConnectionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePlanMaintenanceWindows  DescribePlanMaintenanceWindowsRequest
+     * @return DescribePlanMaintenanceWindowsResponse
+     */
+    CompletableFuture<DescribePlanMaintenanceWindowsResponse> describePlanMaintenanceWindows(DescribePlanMaintenanceWindowsRequest request);
 
     /**
      * @param request the request parameters of DescribePortRangeListAssociations  DescribePortRangeListAssociationsRequest
@@ -3098,7 +3115,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAutoSnapshotPolicyExResponse> modifyAutoSnapshotPolicyEx(ModifyAutoSnapshotPolicyExRequest request);
 
     /**
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
      * @return ModifyBandwidthPackageSpecResponse
      */
     @Deprecated
@@ -3651,6 +3668,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPhysicalConnectionAttributeResponse> modifyPhysicalConnectionAttribute(ModifyPhysicalConnectionAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifyPlanMaintenanceWindow  ModifyPlanMaintenanceWindowRequest
+     * @return ModifyPlanMaintenanceWindowResponse
+     */
+    CompletableFuture<ModifyPlanMaintenanceWindowResponse> modifyPlanMaintenanceWindow(ModifyPlanMaintenanceWindowRequest request);
+
+    /**
      * @param request the request parameters of ModifyPortRangeList  ModifyPortRangeListRequest
      * @return ModifyPortRangeListResponse
      */
@@ -4125,10 +4148,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleasePublicIpAddressResponse> releasePublicIpAddress(ReleasePublicIpAddressRequest request);
 
     /**
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.  * @param request  the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
+     * @param request the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
      * @return RemoveBandwidthPackageIpsResponse
      */
-    @Deprecated
     CompletableFuture<RemoveBandwidthPackageIpsResponse> removeBandwidthPackageIps(RemoveBandwidthPackageIpsRequest request);
 
     /**

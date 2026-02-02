@@ -385,6 +385,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
+        @com.aliyun.core.annotation.NameInMap("RepairStatus")
+        private String repairStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Repairable")
+        private Boolean repairable;
+
         @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
@@ -392,6 +398,8 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             this.additional = builder.additional;
             this.issueId = builder.issueId;
             this.occurrenceTime = builder.occurrenceTime;
+            this.repairStatus = builder.repairStatus;
+            this.repairable = builder.repairable;
             this.severity = builder.severity;
         }
 
@@ -425,6 +433,20 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return repairStatus
+         */
+        public String getRepairStatus() {
+            return this.repairStatus;
+        }
+
+        /**
+         * @return repairable
+         */
+        public Boolean getRepairable() {
+            return this.repairable;
+        }
+
+        /**
          * @return severity
          */
         public String getSeverity() {
@@ -435,6 +457,8 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String additional; 
             private String issueId; 
             private String occurrenceTime; 
+            private String repairStatus; 
+            private Boolean repairable; 
             private String severity; 
 
             private Builder() {
@@ -444,6 +468,8 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
                 this.additional = model.additional;
                 this.issueId = model.issueId;
                 this.occurrenceTime = model.occurrenceTime;
+                this.repairStatus = model.repairStatus;
+                this.repairable = model.repairable;
                 this.severity = model.severity;
             } 
 
@@ -486,6 +512,22 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
+                return this;
+            }
+
+            /**
+             * RepairStatus.
+             */
+            public Builder repairStatus(String repairStatus) {
+                this.repairStatus = repairStatus;
+                return this;
+            }
+
+            /**
+             * Repairable.
+             */
+            public Builder repairable(Boolean repairable) {
+                this.repairable = repairable;
                 return this;
             }
 
