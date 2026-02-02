@@ -42,6 +42,14 @@ public class ListDigitalEmployeesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tag> tags;
+
     private ListDigitalEmployeesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -50,6 +58,8 @@ public class ListDigitalEmployeesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -107,6 +117,20 @@ public class ListDigitalEmployeesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tag> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListDigitalEmployeesRequest, Builder> {
         private String regionId; 
         private String displayName; 
@@ -114,6 +138,8 @@ public class ListDigitalEmployeesRequest extends Request {
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
+        private String resourceGroupId; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -127,6 +153,8 @@ public class ListDigitalEmployeesRequest extends Request {
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -180,6 +208,25 @@ public class ListDigitalEmployeesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tag> tags) {
+            String tagsShrink = shrink(tags, "tags", "json");
+            this.putQueryParameter("tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 

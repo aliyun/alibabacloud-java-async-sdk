@@ -914,8 +914,14 @@ public class NotifyStrategyForModify extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channels")
         private java.util.List<Channels> channels;
 
+        @com.aliyun.core.annotation.NameInMap("digitalEmployeeName")
+        private String digitalEmployeeName;
+
         @com.aliyun.core.annotation.NameInMap("effectTimeRange")
         private EffectTimeRange effectTimeRange;
+
+        @com.aliyun.core.annotation.NameInMap("enableRca")
+        private Boolean enableRca;
 
         @com.aliyun.core.annotation.NameInMap("filterSetting")
         private FilterSetting filterSetting;
@@ -925,7 +931,9 @@ public class NotifyStrategyForModify extends TeaModel {
 
         private Routes(Builder builder) {
             this.channels = builder.channels;
+            this.digitalEmployeeName = builder.digitalEmployeeName;
             this.effectTimeRange = builder.effectTimeRange;
+            this.enableRca = builder.enableRca;
             this.filterSetting = builder.filterSetting;
             this.severities = builder.severities;
         }
@@ -946,10 +954,24 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
+         * @return digitalEmployeeName
+         */
+        public String getDigitalEmployeeName() {
+            return this.digitalEmployeeName;
+        }
+
+        /**
          * @return effectTimeRange
          */
         public EffectTimeRange getEffectTimeRange() {
             return this.effectTimeRange;
+        }
+
+        /**
+         * @return enableRca
+         */
+        public Boolean getEnableRca() {
+            return this.enableRca;
         }
 
         /**
@@ -968,7 +990,9 @@ public class NotifyStrategyForModify extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Channels> channels; 
+            private String digitalEmployeeName; 
             private EffectTimeRange effectTimeRange; 
+            private Boolean enableRca; 
             private FilterSetting filterSetting; 
             private java.util.List<String> severities; 
 
@@ -977,7 +1001,9 @@ public class NotifyStrategyForModify extends TeaModel {
 
             private Builder(Routes model) {
                 this.channels = model.channels;
+                this.digitalEmployeeName = model.digitalEmployeeName;
                 this.effectTimeRange = model.effectTimeRange;
+                this.enableRca = model.enableRca;
                 this.filterSetting = model.filterSetting;
                 this.severities = model.severities;
             } 
@@ -991,10 +1017,26 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
+             * digitalEmployeeName.
+             */
+            public Builder digitalEmployeeName(String digitalEmployeeName) {
+                this.digitalEmployeeName = digitalEmployeeName;
+                return this;
+            }
+
+            /**
              * effectTimeRange.
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
+                return this;
+            }
+
+            /**
+             * enableRca.
+             */
+            public Builder enableRca(Boolean enableRca) {
+                this.enableRca = enableRca;
                 return this;
             }
 

@@ -44,9 +44,17 @@ public class CreateDigitalEmployeeRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("roleArn")
     @com.aliyun.core.annotation.Validation(required = true)
     private String roleArn;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tag> tags;
 
     private CreateDigitalEmployeeRequest(Builder builder) {
         super(builder);
@@ -56,7 +64,9 @@ public class CreateDigitalEmployeeRequest extends Request {
         this.displayName = builder.displayName;
         this.knowledges = builder.knowledges;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -115,10 +125,24 @@ public class CreateDigitalEmployeeRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return roleArn
      */
     public String getRoleArn() {
         return this.roleArn;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tag> getTags() {
+        return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateDigitalEmployeeRequest, Builder> {
@@ -128,7 +152,9 @@ public class CreateDigitalEmployeeRequest extends Request {
         private String displayName; 
         private Knowledges knowledges; 
         private String name; 
+        private String resourceGroupId; 
         private String roleArn; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -142,7 +168,9 @@ public class CreateDigitalEmployeeRequest extends Request {
             this.displayName = request.displayName;
             this.knowledges = request.knowledges;
             this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
             this.roleArn = request.roleArn;
+            this.tags = request.tags;
         } 
 
         /**
@@ -203,6 +231,15 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +248,15 @@ public class CreateDigitalEmployeeRequest extends Request {
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("roleArn", roleArn);
             this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tag> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 

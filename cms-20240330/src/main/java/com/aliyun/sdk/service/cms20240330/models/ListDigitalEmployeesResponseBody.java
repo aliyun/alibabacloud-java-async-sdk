@@ -372,8 +372,14 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("roleArn")
         private String roleArn;
+
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tag> tags;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
@@ -386,7 +392,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             this.employeeType = builder.employeeType;
             this.knowledges = builder.knowledges;
             this.name = builder.name;
+            this.resourceGroupId = builder.resourceGroupId;
             this.roleArn = builder.roleArn;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
 
@@ -448,10 +456,24 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return roleArn
          */
         public String getRoleArn() {
             return this.roleArn;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tag> getTags() {
+            return this.tags;
         }
 
         /**
@@ -469,7 +491,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             private String employeeType; 
             private Knowledges knowledges; 
             private String name; 
+            private String resourceGroupId; 
             private String roleArn; 
+            private java.util.List<Tag> tags; 
             private String updateTime; 
 
             private Builder() {
@@ -483,7 +507,9 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
                 this.employeeType = model.employeeType;
                 this.knowledges = model.knowledges;
                 this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
                 this.roleArn = model.roleArn;
+                this.tags = model.tags;
                 this.updateTime = model.updateTime;
             } 
 
@@ -547,10 +573,26 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
+             * resourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * roleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tag> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -54,6 +54,9 @@ public class SubscriptionForView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceFilterSetting")
+    private WorkspaceFilterSetting workspaceFilterSetting;
+
     private SubscriptionForView(Builder builder) {
         this.createTime = builder.createTime;
         this.description = builder.description;
@@ -67,6 +70,7 @@ public class SubscriptionForView extends TeaModel {
         this.updateTime = builder.updateTime;
         this.userId = builder.userId;
         this.workspace = builder.workspace;
+        this.workspaceFilterSetting = builder.workspaceFilterSetting;
     }
 
     public static Builder builder() {
@@ -165,6 +169,13 @@ public class SubscriptionForView extends TeaModel {
         return this.workspace;
     }
 
+    /**
+     * @return workspaceFilterSetting
+     */
+    public WorkspaceFilterSetting getWorkspaceFilterSetting() {
+        return this.workspaceFilterSetting;
+    }
+
     public static final class Builder {
         private String createTime; 
         private String description; 
@@ -178,6 +189,7 @@ public class SubscriptionForView extends TeaModel {
         private String updateTime; 
         private String userId; 
         private String workspace; 
+        private WorkspaceFilterSetting workspaceFilterSetting; 
 
         private Builder() {
         } 
@@ -195,6 +207,7 @@ public class SubscriptionForView extends TeaModel {
             this.updateTime = model.updateTime;
             this.userId = model.userId;
             this.workspace = model.workspace;
+            this.workspaceFilterSetting = model.workspaceFilterSetting;
         } 
 
         /**
@@ -290,6 +303,14 @@ public class SubscriptionForView extends TeaModel {
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
+            return this;
+        }
+
+        /**
+         * workspaceFilterSetting.
+         */
+        public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
+            this.workspaceFilterSetting = workspaceFilterSetting;
             return this;
         }
 
