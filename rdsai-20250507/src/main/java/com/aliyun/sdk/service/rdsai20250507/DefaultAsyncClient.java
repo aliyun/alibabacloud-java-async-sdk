@@ -610,6 +610,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></p>
+     * 
      * @param request the request parameters of ModifyInstancesSSL  ModifyInstancesSSLRequest
      * @return ModifyInstancesSSLResponse
      */

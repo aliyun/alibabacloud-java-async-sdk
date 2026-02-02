@@ -32,6 +32,9 @@ public class GetCustomAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Skills")
+    private java.util.List<Skills> skills;
+
     @com.aliyun.core.annotation.NameInMap("SystemPrompt")
     private String systemPrompt;
 
@@ -47,6 +50,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         this.id = builder.id;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.skills = builder.skills;
         this.systemPrompt = builder.systemPrompt;
         this.tools = builder.tools;
         this.updatedAt = builder.updatedAt;
@@ -100,6 +104,13 @@ public class GetCustomAgentResponseBody extends TeaModel {
     }
 
     /**
+     * @return skills
+     */
+    public java.util.List<Skills> getSkills() {
+        return this.skills;
+    }
+
+    /**
      * @return systemPrompt
      */
     public String getSystemPrompt() {
@@ -126,6 +137,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
         private String id; 
         private String name; 
         private String requestId; 
+        private java.util.List<Skills> skills; 
         private String systemPrompt; 
         private java.util.List<String> tools; 
         private String updatedAt; 
@@ -139,6 +151,7 @@ public class GetCustomAgentResponseBody extends TeaModel {
             this.id = model.id;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.skills = model.skills;
             this.systemPrompt = model.systemPrompt;
             this.tools = model.tools;
             this.updatedAt = model.updatedAt;
@@ -197,6 +210,14 @@ public class GetCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * Skills.
+         */
+        public Builder skills(java.util.List<Skills> skills) {
+            this.skills = skills;
+            return this;
+        }
+
+        /**
          * <p>The system prompts.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
@@ -229,4 +250,124 @@ public class GetCustomAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomAgentResponseBody</p>
+     */
+    public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("SkillType")
+        private String skillType;
+
+        private Skills(Builder builder) {
+            this.description = builder.description;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.skillType = builder.skillType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Skills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return skillType
+         */
+        public String getSkillType() {
+            return this.skillType;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String id; 
+            private String name; 
+            private String skillType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Skills model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.skillType = model.skillType;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17053</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the dedicated agent.</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SkillType.
+             */
+            public Builder skillType(String skillType) {
+                this.skillType = skillType;
+                return this;
+            }
+
+            public Skills build() {
+                return new Skills(this);
+            } 
+
+        } 
+
+    }
 }

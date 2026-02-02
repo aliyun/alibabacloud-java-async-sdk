@@ -31,6 +31,10 @@ public class UpdateCustomAgentRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillIds")
+    private java.util.List<String> skillIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemPrompt")
     private String systemPrompt;
 
@@ -43,6 +47,7 @@ public class UpdateCustomAgentRequest extends Request {
         this.customAgentId = builder.customAgentId;
         this.enableTools = builder.enableTools;
         this.name = builder.name;
+        this.skillIds = builder.skillIds;
         this.systemPrompt = builder.systemPrompt;
         this.tools = builder.tools;
     }
@@ -82,6 +87,13 @@ public class UpdateCustomAgentRequest extends Request {
     }
 
     /**
+     * @return skillIds
+     */
+    public java.util.List<String> getSkillIds() {
+        return this.skillIds;
+    }
+
+    /**
      * @return systemPrompt
      */
     public String getSystemPrompt() {
@@ -99,6 +111,7 @@ public class UpdateCustomAgentRequest extends Request {
         private String customAgentId; 
         private Boolean enableTools; 
         private String name; 
+        private java.util.List<String> skillIds; 
         private String systemPrompt; 
         private java.util.List<String> tools; 
 
@@ -111,6 +124,7 @@ public class UpdateCustomAgentRequest extends Request {
             this.customAgentId = request.customAgentId;
             this.enableTools = request.enableTools;
             this.name = request.name;
+            this.skillIds = request.skillIds;
             this.systemPrompt = request.systemPrompt;
             this.tools = request.tools;
         } 
@@ -146,6 +160,16 @@ public class UpdateCustomAgentRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * SkillIds.
+         */
+        public Builder skillIds(java.util.List<String> skillIds) {
+            String skillIdsShrink = shrink(skillIds, "SkillIds", "json");
+            this.putQueryParameter("SkillIds", skillIdsShrink);
+            this.skillIds = skillIds;
             return this;
         }
 

@@ -29,6 +29,9 @@ public class ListCustomAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Skills")
+    private java.util.List<Skills> skills;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
@@ -37,6 +40,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.skills = builder.skills;
         this.totalCount = builder.totalCount;
     }
 
@@ -81,6 +85,13 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     /**
+     * @return skills
+     */
+    public java.util.List<Skills> getSkills() {
+        return this.skills;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -92,6 +103,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
+        private java.util.List<Skills> skills; 
         private Integer totalCount; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
+            this.skills = model.skills;
             this.totalCount = model.totalCount;
         } 
 
@@ -143,6 +156,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Skills.
+         */
+        public Builder skills(java.util.List<Skills> skills) {
+            this.skills = skills;
             return this;
         }
 
@@ -350,6 +371,126 @@ public class ListCustomAgentResponseBody extends TeaModel {
 
             public Data build() {
                 return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCustomAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomAgentResponseBody</p>
+     */
+    public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("SkillType")
+        private String skillType;
+
+        private Skills(Builder builder) {
+            this.description = builder.description;
+            this.id = builder.id;
+            this.name = builder.name;
+            this.skillType = builder.skillType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Skills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return skillType
+         */
+        public String getSkillType() {
+            return this.skillType;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String id; 
+            private String name; 
+            private String skillType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Skills model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.skillType = model.skillType;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * <p>The name of the dedicated agent.</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SkillType.
+             */
+            public Builder skillType(String skillType) {
+                this.skillType = skillType;
+                return this;
+            }
+
+            public Skills build() {
+                return new Skills(this);
             } 
 
         } 

@@ -67,7 +67,13 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceNames.
+         * <p>The RDS Supabase instances whose SSL settings are modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     &quot;ra-supabase-xxx&quot;,
+         *     &quot;ra-supabase-xxx&quot;
+         *   ]</p>
          */
         public Builder instanceNames(java.util.List<String> instanceNames) {
             this.instanceNames = instanceNames;
@@ -75,7 +81,10 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32DEFB4A-xxxx-ADD5-918E4FD7AB8C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
