@@ -1740,6 +1740,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManageAICLoginResponse> manageAICLogin(ManageAICLoginRequest request);
 
     /**
+     * @param request the request parameters of ModifyAICInstanceType  ModifyAICInstanceTypeRequest
+     * @return ModifyAICInstanceTypeResponse
+     */
+    CompletableFuture<ModifyAICInstanceTypeResponse> modifyAICInstanceType(ModifyAICInstanceTypeRequest request);
+
+    /**
      * @param request the request parameters of ModifyClusterAddon  ModifyClusterAddonRequest
      * @return ModifyClusterAddonResponse
      */
