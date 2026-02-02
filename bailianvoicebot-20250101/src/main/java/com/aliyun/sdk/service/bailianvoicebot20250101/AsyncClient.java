@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
     /**
+     * @param request the request parameters of GetDataChannelCredential  GetDataChannelCredentialRequest
+     * @return GetDataChannelCredentialResponse
+     */
+    CompletableFuture<GetDataChannelCredentialResponse> getDataChannelCredential(GetDataChannelCredentialRequest request);
+
+    /**
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse
      */
