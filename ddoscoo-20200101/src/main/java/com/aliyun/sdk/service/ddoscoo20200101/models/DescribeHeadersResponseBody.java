@@ -20,11 +20,15 @@ public class DescribeHeadersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomHeader")
     private CustomHeader customHeader;
 
+    @com.aliyun.core.annotation.NameInMap("EmbeddedHeaders")
+    private String embeddedHeaders;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHeadersResponseBody(Builder builder) {
         this.customHeader = builder.customHeader;
+        this.embeddedHeaders = builder.embeddedHeaders;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class DescribeHeadersResponseBody extends TeaModel {
     }
 
     /**
+     * @return embeddedHeaders
+     */
+    public String getEmbeddedHeaders() {
+        return this.embeddedHeaders;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
 
     public static final class Builder {
         private CustomHeader customHeader; 
+        private String embeddedHeaders; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class DescribeHeadersResponseBody extends TeaModel {
 
         private Builder(DescribeHeadersResponseBody model) {
             this.customHeader = model.customHeader;
+            this.embeddedHeaders = model.embeddedHeaders;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class DescribeHeadersResponseBody extends TeaModel {
          */
         public Builder customHeader(CustomHeader customHeader) {
             this.customHeader = customHeader;
+            return this;
+        }
+
+        /**
+         * EmbeddedHeaders.
+         */
+        public Builder embeddedHeaders(String embeddedHeaders) {
+            this.embeddedHeaders = embeddedHeaders;
             return this;
         }
 

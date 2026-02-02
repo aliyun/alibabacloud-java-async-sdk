@@ -32,6 +32,10 @@ public class ModifyHeadersRequest extends Request {
     private String domain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmbeddedHeaders")
+    private String embeddedHeaders;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -40,6 +44,7 @@ public class ModifyHeadersRequest extends Request {
         this.regionId = builder.regionId;
         this.customHeaders = builder.customHeaders;
         this.domain = builder.domain;
+        this.embeddedHeaders = builder.embeddedHeaders;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -78,6 +83,13 @@ public class ModifyHeadersRequest extends Request {
     }
 
     /**
+     * @return embeddedHeaders
+     */
+    public String getEmbeddedHeaders() {
+        return this.embeddedHeaders;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -88,6 +100,7 @@ public class ModifyHeadersRequest extends Request {
         private String regionId; 
         private String customHeaders; 
         private String domain; 
+        private String embeddedHeaders; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ModifyHeadersRequest extends Request {
             this.regionId = request.regionId;
             this.customHeaders = request.customHeaders;
             this.domain = request.domain;
+            this.embeddedHeaders = request.embeddedHeaders;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
@@ -152,6 +166,15 @@ public class ModifyHeadersRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * EmbeddedHeaders.
+         */
+        public Builder embeddedHeaders(String embeddedHeaders) {
+            this.putQueryParameter("EmbeddedHeaders", embeddedHeaders);
+            this.embeddedHeaders = embeddedHeaders;
             return this;
         }
 
