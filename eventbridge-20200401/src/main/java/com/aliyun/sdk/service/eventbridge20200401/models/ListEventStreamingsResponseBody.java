@@ -12472,6 +12472,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkMQTTParameters")
+        private SinkMQTTParameters sinkMQTTParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkOSSParameters")
         private SinkOSSParameters sinkOSSParameters;
 
@@ -12510,6 +12513,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             this.sinkHttpsParameters = builder.sinkHttpsParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
             this.sinkMNSParameters = builder.sinkMNSParameters;
+            this.sinkMQTTParameters = builder.sinkMQTTParameters;
             this.sinkOSSParameters = builder.sinkOSSParameters;
             this.sinkOpenSourceRabbitMQParameters = builder.sinkOpenSourceRabbitMQParameters;
             this.sinkRabbitMQMetaParameters = builder.sinkRabbitMQMetaParameters;
@@ -12620,6 +12624,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sinkMQTTParameters
+         */
+        public SinkMQTTParameters getSinkMQTTParameters() {
+            return this.sinkMQTTParameters;
+        }
+
+        /**
          * @return sinkOSSParameters
          */
         public SinkOSSParameters getSinkOSSParameters() {
@@ -12689,6 +12700,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             private SinkHttpsParameters sinkHttpsParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
             private SinkMNSParameters sinkMNSParameters; 
+            private SinkMQTTParameters sinkMQTTParameters; 
             private SinkOSSParameters sinkOSSParameters; 
             private SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters; 
             private SinkRabbitMQMetaParameters sinkRabbitMQMetaParameters; 
@@ -12715,6 +12727,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 this.sinkHttpsParameters = model.sinkHttpsParameters;
                 this.sinkKafkaParameters = model.sinkKafkaParameters;
                 this.sinkMNSParameters = model.sinkMNSParameters;
+                this.sinkMQTTParameters = model.sinkMQTTParameters;
                 this.sinkOSSParameters = model.sinkOSSParameters;
                 this.sinkOpenSourceRabbitMQParameters = model.sinkOpenSourceRabbitMQParameters;
                 this.sinkRabbitMQMetaParameters = model.sinkRabbitMQMetaParameters;
@@ -12826,6 +12839,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
+                return this;
+            }
+
+            /**
+             * SinkMQTTParameters.
+             */
+            public Builder sinkMQTTParameters(SinkMQTTParameters sinkMQTTParameters) {
+                this.sinkMQTTParameters = sinkMQTTParameters;
                 return this;
             }
 
