@@ -59,6 +59,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RouteMode")
     private String routeMode;
 
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentId")
+    private String trAttachmentId;
+
     @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
     private String trAttachmentMasterCidr;
 
@@ -89,6 +92,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         this.regionNo = builder.regionNo;
         this.requestId = builder.requestId;
         this.routeMode = builder.routeMode;
+        this.trAttachmentId = builder.trAttachmentId;
         this.trAttachmentMasterCidr = builder.trAttachmentMasterCidr;
         this.trAttachmentMasterZone = builder.trAttachmentMasterZone;
         this.trAttachmentSlaveCidr = builder.trAttachmentSlaveCidr;
@@ -207,6 +211,13 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return trAttachmentId
+     */
+    public String getTrAttachmentId() {
+        return this.trAttachmentId;
+    }
+
+    /**
      * @return trAttachmentMasterCidr
      */
     public String getTrAttachmentMasterCidr() {
@@ -256,6 +267,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         private String regionNo; 
         private String requestId; 
         private String routeMode; 
+        private String trAttachmentId; 
         private String trAttachmentMasterCidr; 
         private String trAttachmentMasterZone; 
         private String trAttachmentSlaveCidr; 
@@ -280,6 +292,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
             this.regionNo = model.regionNo;
             this.requestId = model.requestId;
             this.routeMode = model.routeMode;
+            this.trAttachmentId = model.trAttachmentId;
             this.trAttachmentMasterCidr = model.trAttachmentMasterCidr;
             this.trAttachmentMasterZone = model.trAttachmentMasterZone;
             this.trAttachmentSlaveCidr = model.trAttachmentSlaveCidr;
@@ -459,6 +472,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
          */
         public Builder routeMode(String routeMode) {
             this.routeMode = routeMode;
+            return this;
+        }
+
+        /**
+         * TrAttachmentId.
+         */
+        public Builder trAttachmentId(String trAttachmentId) {
+            this.trAttachmentId = trAttachmentId;
             return this;
         }
 
