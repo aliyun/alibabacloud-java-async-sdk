@@ -32,12 +32,16 @@ public class TableSnapshot extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("snapshot")
     private Snapshot snapshot;
 
+    @com.aliyun.core.annotation.NameInMap("totalBuckets")
+    private Integer totalBuckets;
+
     private TableSnapshot(Builder builder) {
         this.fileCount = builder.fileCount;
         this.fileSizeInBytes = builder.fileSizeInBytes;
         this.lastFileCreationTime = builder.lastFileCreationTime;
         this.recordCount = builder.recordCount;
         this.snapshot = builder.snapshot;
+        this.totalBuckets = builder.totalBuckets;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class TableSnapshot extends TeaModel {
         return this.snapshot;
     }
 
+    /**
+     * @return totalBuckets
+     */
+    public Integer getTotalBuckets() {
+        return this.totalBuckets;
+    }
+
     public static final class Builder {
         private Long fileCount; 
         private Long fileSizeInBytes; 
         private Long lastFileCreationTime; 
         private Long recordCount; 
         private Snapshot snapshot; 
+        private Integer totalBuckets; 
 
         private Builder() {
         } 
@@ -103,6 +115,7 @@ public class TableSnapshot extends TeaModel {
             this.lastFileCreationTime = model.lastFileCreationTime;
             this.recordCount = model.recordCount;
             this.snapshot = model.snapshot;
+            this.totalBuckets = model.totalBuckets;
         } 
 
         /**
@@ -142,6 +155,14 @@ public class TableSnapshot extends TeaModel {
          */
         public Builder snapshot(Snapshot snapshot) {
             this.snapshot = snapshot;
+            return this;
+        }
+
+        /**
+         * totalBuckets.
+         */
+        public Builder totalBuckets(Integer totalBuckets) {
+            this.totalBuckets = totalBuckets;
             return this;
         }
 

@@ -53,6 +53,9 @@ public class DatabaseSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private Long totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("totalMetaFileCount")
+    private Long totalMetaFileCount;
+
     @com.aliyun.core.annotation.NameInMap("totalMetaSizeInBytes")
     private Long totalMetaSizeInBytes;
 
@@ -69,6 +72,7 @@ public class DatabaseSummary extends TeaModel {
         this.tableCount = builder.tableCount;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.totalMetaFileCount = builder.totalMetaFileCount;
         this.totalMetaSizeInBytes = builder.totalMetaSizeInBytes;
     }
 
@@ -169,6 +173,13 @@ public class DatabaseSummary extends TeaModel {
     }
 
     /**
+     * @return totalMetaFileCount
+     */
+    public Long getTotalMetaFileCount() {
+        return this.totalMetaFileCount;
+    }
+
+    /**
      * @return totalMetaSizeInBytes
      */
     public Long getTotalMetaSizeInBytes() {
@@ -188,6 +199,7 @@ public class DatabaseSummary extends TeaModel {
         private Long tableCount; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
+        private Long totalMetaFileCount; 
         private Long totalMetaSizeInBytes; 
 
         private Builder() {
@@ -206,6 +218,7 @@ public class DatabaseSummary extends TeaModel {
             this.tableCount = model.tableCount;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.totalMetaFileCount = model.totalMetaFileCount;
             this.totalMetaSizeInBytes = model.totalMetaSizeInBytes;
         } 
 
@@ -302,6 +315,14 @@ public class DatabaseSummary extends TeaModel {
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
+            return this;
+        }
+
+        /**
+         * totalMetaFileCount.
+         */
+        public Builder totalMetaFileCount(Long totalMetaFileCount) {
+            this.totalMetaFileCount = totalMetaFileCount;
             return this;
         }
 

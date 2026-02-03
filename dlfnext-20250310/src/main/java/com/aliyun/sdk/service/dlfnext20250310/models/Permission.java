@@ -38,6 +38,9 @@ public class Permission extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.NameInMap("rowFilter")
+    private RowFilter rowFilter;
+
     @com.aliyun.core.annotation.NameInMap("table")
     private String table;
 
@@ -52,6 +55,7 @@ public class Permission extends TeaModel {
         this.function = builder.function;
         this.principal = builder.principal;
         this.resourceType = builder.resourceType;
+        this.rowFilter = builder.rowFilter;
         this.table = builder.table;
         this.view = builder.view;
     }
@@ -118,6 +122,13 @@ public class Permission extends TeaModel {
     }
 
     /**
+     * @return rowFilter
+     */
+    public RowFilter getRowFilter() {
+        return this.rowFilter;
+    }
+
+    /**
      * @return table
      */
     public String getTable() {
@@ -139,6 +150,7 @@ public class Permission extends TeaModel {
         private String function; 
         private String principal; 
         private String resourceType; 
+        private RowFilter rowFilter; 
         private String table; 
         private String view; 
 
@@ -153,6 +165,7 @@ public class Permission extends TeaModel {
             this.function = model.function;
             this.principal = model.principal;
             this.resourceType = model.resourceType;
+            this.rowFilter = model.rowFilter;
             this.table = model.table;
             this.view = model.view;
         } 
@@ -210,6 +223,14 @@ public class Permission extends TeaModel {
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * rowFilter.
+         */
+        public Builder rowFilter(RowFilter rowFilter) {
+            this.rowFilter = rowFilter;
             return this;
         }
 

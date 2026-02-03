@@ -50,6 +50,9 @@ public class Partition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("storageClass")
     private String storageClass;
 
+    @com.aliyun.core.annotation.NameInMap("totalBuckets")
+    private Integer totalBuckets;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
 
@@ -68,6 +71,7 @@ public class Partition extends TeaModel {
         this.storageAction = builder.storageAction;
         this.storageActionTimestamp = builder.storageActionTimestamp;
         this.storageClass = builder.storageClass;
+        this.totalBuckets = builder.totalBuckets;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -162,6 +166,13 @@ public class Partition extends TeaModel {
     }
 
     /**
+     * @return totalBuckets
+     */
+    public Integer getTotalBuckets() {
+        return this.totalBuckets;
+    }
+
+    /**
      * @return updatedAt
      */
     public Long getUpdatedAt() {
@@ -187,6 +198,7 @@ public class Partition extends TeaModel {
         private String storageAction; 
         private Long storageActionTimestamp; 
         private String storageClass; 
+        private Integer totalBuckets; 
         private Long updatedAt; 
         private String updatedBy; 
 
@@ -205,6 +217,7 @@ public class Partition extends TeaModel {
             this.storageAction = model.storageAction;
             this.storageActionTimestamp = model.storageActionTimestamp;
             this.storageClass = model.storageClass;
+            this.totalBuckets = model.totalBuckets;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
@@ -294,6 +307,14 @@ public class Partition extends TeaModel {
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
+            return this;
+        }
+
+        /**
+         * totalBuckets.
+         */
+        public Builder totalBuckets(Integer totalBuckets) {
+            this.totalBuckets = totalBuckets;
             return this;
         }
 

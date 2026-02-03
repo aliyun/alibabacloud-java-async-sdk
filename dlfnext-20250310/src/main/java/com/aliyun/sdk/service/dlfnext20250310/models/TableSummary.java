@@ -65,8 +65,17 @@ public class TableSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("totalFileSizeInBytes")
     private Long totalFileSizeInBytes;
 
+    @com.aliyun.core.annotation.NameInMap("totalMetaFileCount")
+    private Long totalMetaFileCount;
+
     @com.aliyun.core.annotation.NameInMap("totalMetaSizeInBytes")
     private Long totalMetaSizeInBytes;
+
+    @com.aliyun.core.annotation.NameInMap("unaccessedStdIaPartitionCount180d")
+    private Long unaccessedStdIaPartitionCount180d;
+
+    @com.aliyun.core.annotation.NameInMap("unaccessedStdPartitionCount30d")
+    private Long unaccessedStdPartitionCount30d;
 
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
@@ -88,7 +97,10 @@ public class TableSummary extends TeaModel {
         this.tableName = builder.tableName;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
+        this.totalMetaFileCount = builder.totalMetaFileCount;
         this.totalMetaSizeInBytes = builder.totalMetaSizeInBytes;
+        this.unaccessedStdIaPartitionCount180d = builder.unaccessedStdIaPartitionCount180d;
+        this.unaccessedStdPartitionCount30d = builder.unaccessedStdPartitionCount30d;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -217,10 +229,31 @@ public class TableSummary extends TeaModel {
     }
 
     /**
+     * @return totalMetaFileCount
+     */
+    public Long getTotalMetaFileCount() {
+        return this.totalMetaFileCount;
+    }
+
+    /**
      * @return totalMetaSizeInBytes
      */
     public Long getTotalMetaSizeInBytes() {
         return this.totalMetaSizeInBytes;
+    }
+
+    /**
+     * @return unaccessedStdIaPartitionCount180d
+     */
+    public Long getUnaccessedStdIaPartitionCount180d() {
+        return this.unaccessedStdIaPartitionCount180d;
+    }
+
+    /**
+     * @return unaccessedStdPartitionCount30d
+     */
+    public Long getUnaccessedStdPartitionCount30d() {
+        return this.unaccessedStdPartitionCount30d;
     }
 
     /**
@@ -247,7 +280,10 @@ public class TableSummary extends TeaModel {
         private String tableName; 
         private Long totalFileCount; 
         private Long totalFileSizeInBytes; 
+        private Long totalMetaFileCount; 
         private Long totalMetaSizeInBytes; 
+        private Long unaccessedStdIaPartitionCount180d; 
+        private Long unaccessedStdPartitionCount30d; 
         private Long updatedAt; 
 
         private Builder() {
@@ -270,7 +306,10 @@ public class TableSummary extends TeaModel {
             this.tableName = model.tableName;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
+            this.totalMetaFileCount = model.totalMetaFileCount;
             this.totalMetaSizeInBytes = model.totalMetaSizeInBytes;
+            this.unaccessedStdIaPartitionCount180d = model.unaccessedStdIaPartitionCount180d;
+            this.unaccessedStdPartitionCount30d = model.unaccessedStdPartitionCount30d;
             this.updatedAt = model.updatedAt;
         } 
 
@@ -403,10 +442,34 @@ public class TableSummary extends TeaModel {
         }
 
         /**
+         * totalMetaFileCount.
+         */
+        public Builder totalMetaFileCount(Long totalMetaFileCount) {
+            this.totalMetaFileCount = totalMetaFileCount;
+            return this;
+        }
+
+        /**
          * totalMetaSizeInBytes.
          */
         public Builder totalMetaSizeInBytes(Long totalMetaSizeInBytes) {
             this.totalMetaSizeInBytes = totalMetaSizeInBytes;
+            return this;
+        }
+
+        /**
+         * <p>Creation timestamp in milliseconds</p>
+         */
+        public Builder unaccessedStdIaPartitionCount180d(Long unaccessedStdIaPartitionCount180d) {
+            this.unaccessedStdIaPartitionCount180d = unaccessedStdIaPartitionCount180d;
+            return this;
+        }
+
+        /**
+         * <p>Creation timestamp in milliseconds</p>
+         */
+        public Builder unaccessedStdPartitionCount30d(Long unaccessedStdPartitionCount30d) {
+            this.unaccessedStdPartitionCount30d = unaccessedStdPartitionCount30d;
             return this;
         }
 
