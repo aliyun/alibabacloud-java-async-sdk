@@ -12,32 +12,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModelConfig} extends {@link TeaModel}
+ * {@link ModelTemplate} extends {@link TeaModel}
  *
- * <p>ModelConfig</p>
+ * <p>ModelTemplate</p>
  */
-public class ModelConfig extends TeaModel {
+public class ModelTemplate extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Collections")
+    private String collections;
+
     @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
 
-    @com.aliyun.core.annotation.NameInMap("ModelTemplate")
-    private ModelTemplate modelTemplate;
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    private String provider;
 
-    private ModelConfig(Builder builder) {
+    private ModelTemplate(Builder builder) {
+        this.collections = builder.collections;
         this.modelName = builder.modelName;
-        this.modelTemplate = builder.modelTemplate;
+        this.provider = builder.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModelConfig create() {
+    public static ModelTemplate create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return collections
+     */
+    public String getCollections() {
+        return this.collections;
     }
 
     /**
@@ -48,23 +59,33 @@ public class ModelConfig extends TeaModel {
     }
 
     /**
-     * @return modelTemplate
+     * @return provider
      */
-    public ModelTemplate getModelTemplate() {
-        return this.modelTemplate;
+    public String getProvider() {
+        return this.provider;
     }
 
     public static final class Builder {
+        private String collections; 
         private String modelName; 
-        private ModelTemplate modelTemplate; 
+        private String provider; 
 
         private Builder() {
         } 
 
-        private Builder(ModelConfig model) {
+        private Builder(ModelTemplate model) {
+            this.collections = model.collections;
             this.modelName = model.modelName;
-            this.modelTemplate = model.modelTemplate;
+            this.provider = model.provider;
         } 
+
+        /**
+         * Collections.
+         */
+        public Builder collections(String collections) {
+            this.collections = collections;
+            return this;
+        }
 
         /**
          * ModelName.
@@ -75,15 +96,15 @@ public class ModelConfig extends TeaModel {
         }
 
         /**
-         * ModelTemplate.
+         * Provider.
          */
-        public Builder modelTemplate(ModelTemplate modelTemplate) {
-            this.modelTemplate = modelTemplate;
+        public Builder provider(String provider) {
+            this.provider = provider;
             return this;
         }
 
-        public ModelConfig build() {
-            return new ModelConfig(this);
+        public ModelTemplate build() {
+            return new ModelTemplate(this);
         } 
 
     } 

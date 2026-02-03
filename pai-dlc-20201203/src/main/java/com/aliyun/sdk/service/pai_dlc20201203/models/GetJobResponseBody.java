@@ -29,6 +29,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CredentialConfig")
     private CredentialConfig credentialConfig;
 
+    @com.aliyun.core.annotation.NameInMap("CustomEnvs")
+    private java.util.List<CustomEnvs> customEnvs;
+
     @com.aliyun.core.annotation.NameInMap("DataSources")
     private java.util.List<DataSources> dataSources;
 
@@ -151,6 +154,7 @@ public class GetJobResponseBody extends TeaModel {
         this.clusterId = builder.clusterId;
         this.codeSource = builder.codeSource;
         this.credentialConfig = builder.credentialConfig;
+        this.customEnvs = builder.customEnvs;
         this.dataSources = builder.dataSources;
         this.displayName = builder.displayName;
         this.duration = builder.duration;
@@ -230,6 +234,13 @@ public class GetJobResponseBody extends TeaModel {
      */
     public CredentialConfig getCredentialConfig() {
         return this.credentialConfig;
+    }
+
+    /**
+     * @return customEnvs
+     */
+    public java.util.List<CustomEnvs> getCustomEnvs() {
+        return this.customEnvs;
     }
 
     /**
@@ -510,6 +521,7 @@ public class GetJobResponseBody extends TeaModel {
         private String clusterId; 
         private CodeSource codeSource; 
         private CredentialConfig credentialConfig; 
+        private java.util.List<CustomEnvs> customEnvs; 
         private java.util.List<DataSources> dataSources; 
         private String displayName; 
         private Long duration; 
@@ -558,6 +570,7 @@ public class GetJobResponseBody extends TeaModel {
             this.clusterId = model.clusterId;
             this.codeSource = model.codeSource;
             this.credentialConfig = model.credentialConfig;
+            this.customEnvs = model.customEnvs;
             this.dataSources = model.dataSources;
             this.displayName = model.displayName;
             this.duration = model.duration;
@@ -638,6 +651,14 @@ public class GetJobResponseBody extends TeaModel {
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
+         * CustomEnvs.
+         */
+        public Builder customEnvs(java.util.List<CustomEnvs> customEnvs) {
+            this.customEnvs = customEnvs;
             return this;
         }
 
@@ -1182,6 +1203,102 @@ public class GetJobResponseBody extends TeaModel {
 
             public CodeSource build() {
                 return new CodeSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetJobResponseBody</p>
+     */
+    public static class CustomEnvs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        @com.aliyun.core.annotation.NameInMap("Visible")
+        private String visible;
+
+        private CustomEnvs(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+            this.visible = builder.visible;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomEnvs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        /**
+         * @return visible
+         */
+        public String getVisible() {
+            return this.visible;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+            private String visible; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomEnvs model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.visible = model.visible;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            /**
+             * Visible.
+             */
+            public Builder visible(String visible) {
+                this.visible = visible;
+                return this;
+            }
+
+            public CustomEnvs build() {
+                return new CustomEnvs(this);
             } 
 
         } 
