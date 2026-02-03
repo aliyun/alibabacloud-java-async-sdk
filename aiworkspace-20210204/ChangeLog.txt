@@ -1,3 +1,6 @@
+2026-02-03 Version: 6.0.4
+- Generated java-async 2021-02-04 for AIWorkSpace.
+
 2026-01-23 Version: 6.0.3
 - Generated java-async 2021-02-04 for AIWorkSpace.
 

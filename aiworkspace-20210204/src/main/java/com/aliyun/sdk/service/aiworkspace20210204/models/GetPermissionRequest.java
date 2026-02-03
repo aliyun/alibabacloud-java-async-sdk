@@ -32,6 +32,14 @@ public class GetPermissionRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerType")
+    private String callerType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
+    private String callerUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
@@ -47,15 +55,22 @@ public class GetPermissionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
     private GetPermissionRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.permissionCode = builder.permissionCode;
         this.accessibility = builder.accessibility;
+        this.callerType = builder.callerType;
+        this.callerUid = builder.callerUid;
         this.creator = builder.creator;
         this.labels = builder.labels;
         this.option = builder.option;
         this.resource = builder.resource;
+        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -93,6 +108,20 @@ public class GetPermissionRequest extends Request {
     }
 
     /**
+     * @return callerType
+     */
+    public String getCallerType() {
+        return this.callerType;
+    }
+
+    /**
+     * @return callerUid
+     */
+    public String getCallerUid() {
+        return this.callerUid;
+    }
+
+    /**
      * @return creator
      */
     public String getCreator() {
@@ -120,14 +149,24 @@ public class GetPermissionRequest extends Request {
         return this.resource;
     }
 
+    /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
     public static final class Builder extends Request.Builder<GetPermissionRequest, Builder> {
         private String workspaceId; 
         private String permissionCode; 
         private String accessibility; 
+        private String callerType; 
+        private String callerUid; 
         private String creator; 
         private java.util.Map<String, ?> labels; 
         private String option; 
         private String resource; 
+        private String securityToken; 
 
         private Builder() {
             super();
@@ -138,10 +177,13 @@ public class GetPermissionRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.permissionCode = request.permissionCode;
             this.accessibility = request.accessibility;
+            this.callerType = request.callerType;
+            this.callerUid = request.callerUid;
             this.creator = request.creator;
             this.labels = request.labels;
             this.option = request.option;
             this.resource = request.resource;
+            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -183,6 +225,24 @@ public class GetPermissionRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CallerType.
+         */
+        public Builder callerType(String callerType) {
+            this.putQueryParameter("CallerType", callerType);
+            this.callerType = callerType;
+            return this;
+        }
+
+        /**
+         * CallerUid.
+         */
+        public Builder callerUid(String callerUid) {
+            this.putQueryParameter("CallerUid", callerUid);
+            this.callerUid = callerUid;
             return this;
         }
 
@@ -233,6 +293,15 @@ public class GetPermissionRequest extends Request {
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.putQueryParameter("SecurityToken", securityToken);
+            this.securityToken = securityToken;
             return this;
         }
 

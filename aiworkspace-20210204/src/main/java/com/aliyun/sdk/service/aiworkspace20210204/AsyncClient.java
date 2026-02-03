@@ -722,4 +722,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateWorkspaceResourceResponse> updateWorkspaceResource(UpdateWorkspaceResourceRequest request);
 
+    /**
+     * @param request the request parameters of ValidateConnection  ValidateConnectionRequest
+     * @return ValidateConnectionResponse
+     */
+    CompletableFuture<ValidateConnectionResponse> validateConnection(ValidateConnectionRequest request);
+
 }

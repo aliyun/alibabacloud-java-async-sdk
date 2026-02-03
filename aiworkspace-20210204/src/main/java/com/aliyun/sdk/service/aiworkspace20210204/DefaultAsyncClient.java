@@ -2163,4 +2163,22 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateConnection  ValidateConnectionRequest
+     * @return ValidateConnectionResponse
+     */
+    @Override
+    public CompletableFuture<ValidateConnectionResponse> validateConnection(ValidateConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ValidateConnection").setMethod(HttpMethod.POST).setPathRegex("/api/v1/connections/validate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidateConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ValidateConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }
