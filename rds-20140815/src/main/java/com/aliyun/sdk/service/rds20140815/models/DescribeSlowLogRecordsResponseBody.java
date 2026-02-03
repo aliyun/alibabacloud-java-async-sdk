@@ -239,6 +239,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastRowsAffectedCount")
         private Long lastRowsAffectedCount;
 
+        @com.aliyun.core.annotation.NameInMap("LockTimeMS")
+        private Long lockTimeMS;
+
         @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
@@ -283,6 +286,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.executionStartTime = builder.executionStartTime;
             this.hostAddress = builder.hostAddress;
             this.lastRowsAffectedCount = builder.lastRowsAffectedCount;
+            this.lockTimeMS = builder.lockTimeMS;
             this.lockTimes = builder.lockTimes;
             this.logicalIORead = builder.logicalIORead;
             this.parseRowCounts = builder.parseRowCounts;
@@ -352,6 +356,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public Long getLastRowsAffectedCount() {
             return this.lastRowsAffectedCount;
+        }
+
+        /**
+         * @return lockTimeMS
+         */
+        public Long getLockTimeMS() {
+            return this.lockTimeMS;
         }
 
         /**
@@ -446,6 +457,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String executionStartTime; 
             private String hostAddress; 
             private Long lastRowsAffectedCount; 
+            private Long lockTimeMS; 
             private Long lockTimes; 
             private Long logicalIORead; 
             private Long parseRowCounts; 
@@ -470,6 +482,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.executionStartTime = model.executionStartTime;
                 this.hostAddress = model.hostAddress;
                 this.lastRowsAffectedCount = model.lastRowsAffectedCount;
+                this.lockTimeMS = model.lockTimeMS;
                 this.lockTimes = model.lockTimes;
                 this.logicalIORead = model.logicalIORead;
                 this.parseRowCounts = model.parseRowCounts;
@@ -570,6 +583,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder lastRowsAffectedCount(Long lastRowsAffectedCount) {
                 this.lastRowsAffectedCount = lastRowsAffectedCount;
+                return this;
+            }
+
+            /**
+             * LockTimeMS.
+             */
+            public Builder lockTimeMS(Long lockTimeMS) {
+                this.lockTimeMS = lockTimeMS;
                 return this;
             }
 
