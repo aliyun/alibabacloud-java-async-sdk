@@ -39,6 +39,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
+    private String couponNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -74,6 +78,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
+        this.couponNo = builder.couponNo;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -132,6 +137,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
     }
 
     /**
+     * @return couponNo
+     */
+    public String getCouponNo() {
+        return this.couponNo;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -186,6 +198,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         private String autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
+        private String couponNo; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -205,6 +218,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
+            this.couponNo = request.couponNo;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -289,6 +303,15 @@ public class TransformInstanceChargeTypeRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * CouponNo.
+         */
+        public Builder couponNo(String couponNo) {
+            this.putQueryParameter("CouponNo", couponNo);
+            this.couponNo = couponNo;
             return this;
         }
 

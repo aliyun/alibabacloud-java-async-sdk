@@ -32,6 +32,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HasPrePaidBandWidthOrderRunning")
     private Boolean hasPrePaidBandWidthOrderRunning;
 
+    @com.aliyun.core.annotation.NameInMap("IntranetBandWidthBurst")
+    private Integer intranetBandWidthBurst;
+
     @com.aliyun.core.annotation.NameInMap("IntranetBandwidth")
     private Integer intranetBandwidth;
 
@@ -44,6 +47,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         this.bandwidthPrePaid = builder.bandwidthPrePaid;
         this.expireTime = builder.expireTime;
         this.hasPrePaidBandWidthOrderRunning = builder.hasPrePaidBandWidthOrderRunning;
+        this.intranetBandWidthBurst = builder.intranetBandWidthBurst;
         this.intranetBandwidth = builder.intranetBandwidth;
         this.requestId = builder.requestId;
     }
@@ -96,6 +100,13 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return intranetBandWidthBurst
+     */
+    public Integer getIntranetBandWidthBurst() {
+        return this.intranetBandWidthBurst;
+    }
+
+    /**
      * @return intranetBandwidth
      */
     public Integer getIntranetBandwidth() {
@@ -115,6 +126,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         private String bandwidthPrePaid; 
         private String expireTime; 
         private Boolean hasPrePaidBandWidthOrderRunning; 
+        private Integer intranetBandWidthBurst; 
         private Integer intranetBandwidth; 
         private String requestId; 
 
@@ -127,6 +139,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
             this.bandwidthPrePaid = model.bandwidthPrePaid;
             this.expireTime = model.expireTime;
             this.hasPrePaidBandWidthOrderRunning = model.hasPrePaidBandWidthOrderRunning;
+            this.intranetBandWidthBurst = model.intranetBandWidthBurst;
             this.intranetBandwidth = model.intranetBandwidth;
             this.requestId = model.requestId;
         } 
@@ -207,6 +220,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
          */
         public Builder hasPrePaidBandWidthOrderRunning(Boolean hasPrePaidBandWidthOrderRunning) {
             this.hasPrePaidBandWidthOrderRunning = hasPrePaidBandWidthOrderRunning;
+            return this;
+        }
+
+        /**
+         * IntranetBandWidthBurst.
+         */
+        public Builder intranetBandWidthBurst(Integer intranetBandWidthBurst) {
+            this.intranetBandWidthBurst = intranetBandWidthBurst;
             return this;
         }
 

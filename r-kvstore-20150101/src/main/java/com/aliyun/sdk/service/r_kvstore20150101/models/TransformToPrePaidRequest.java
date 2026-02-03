@@ -34,6 +34,10 @@ public class TransformToPrePaidRequest extends Request {
     private Long autoRenewPeriod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
+    private String couponNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -69,6 +73,7 @@ public class TransformToPrePaidRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
+        this.couponNo = builder.couponNo;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -117,6 +122,13 @@ public class TransformToPrePaidRequest extends Request {
      */
     public Long getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    /**
+     * @return couponNo
+     */
+    public String getCouponNo() {
+        return this.couponNo;
     }
 
     /**
@@ -173,6 +185,7 @@ public class TransformToPrePaidRequest extends Request {
         private Boolean autoPay; 
         private String autoRenew; 
         private Long autoRenewPeriod; 
+        private String couponNo; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -191,6 +204,7 @@ public class TransformToPrePaidRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
+            this.couponNo = request.couponNo;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -253,6 +267,15 @@ public class TransformToPrePaidRequest extends Request {
         public Builder autoRenewPeriod(Long autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
             this.autoRenewPeriod = autoRenewPeriod;
+            return this;
+        }
+
+        /**
+         * CouponNo.
+         */
+        public Builder couponNo(String couponNo) {
+            this.putQueryParameter("CouponNo", couponNo);
+            this.couponNo = couponNo;
             return this;
         }
 

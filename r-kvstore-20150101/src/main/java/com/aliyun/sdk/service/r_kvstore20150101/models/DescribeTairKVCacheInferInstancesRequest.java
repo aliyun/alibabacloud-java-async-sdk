@@ -341,7 +341,14 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing method of the simple application servers. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -350,7 +357,14 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * Expired.
+         * <p>Specifies whether the instance has expired. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance has expired.</li>
+         * <li><strong>false</strong>: The instance has not expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -359,7 +373,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kvcache.cu.g4c.2</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -368,7 +385,13 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The IDs of the instances that you want to query.</p>
+         * <blockquote>
+         * <p> If you want to specify multiple instance IDs, separate the instance IDs with commas (,). You can specify a maximum of 30 instance IDs in a single request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tk-2zefe7728c2c****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -377,7 +400,17 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The state of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The instance is normal.</li>
+         * <li><strong>Creating</strong>: The instance is being created.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about instance states, see <a href="https://help.aliyun.com/document_detail/200740.html">Instance states and impacts</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -386,7 +419,18 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type of the instance. Default value: VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong> (default)</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CLASSIC</li>
+         * <li>VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -413,7 +457,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the instance list. Start value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -422,7 +469,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -431,7 +481,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * PrivateIp.
+         * <p>The private IP address of the instance. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.49.***</p>
          */
         public Builder privateIp(String privateIp) {
             this.putQueryParameter("PrivateIp", privateIp);
@@ -440,6 +493,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -452,7 +506,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID. You can leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -479,7 +536,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * <p>The keyword that you want to use for fuzzy match. The keyword can be a part of an instance name or an instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -497,7 +557,7 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Details of the tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -506,7 +566,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e7clcw529l773d****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -515,7 +578,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1nme44gek34slfc****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -524,7 +590,10 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -592,7 +661,13 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <blockquote>
+             * <p> A maximum of five key-value pairs can be specified at a time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>key1_test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -600,7 +675,13 @@ public class DescribeTairKVCacheInferInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N of the instance.</p>
+             * <blockquote>
+             * <p> <strong>N</strong> specifies the value of the nth tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;
