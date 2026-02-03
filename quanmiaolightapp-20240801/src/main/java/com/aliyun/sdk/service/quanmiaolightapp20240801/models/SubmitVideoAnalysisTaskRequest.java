@@ -644,15 +644,168 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
      *
      * <p>SubmitVideoAnalysisTaskRequest</p>
      */
+    public static class KeyValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private KeyValues(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KeyValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyValues model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public KeyValues build() {
+                return new KeyValues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitVideoAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitVideoAnalysisTaskRequest</p>
+     */
+    public static class Metadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("keyValues")
+        private java.util.List<KeyValues> keyValues;
+
+        private Metadata(Builder builder) {
+            this.keyValues = builder.keyValues;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Metadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyValues
+         */
+        public java.util.List<KeyValues> getKeyValues() {
+            return this.keyValues;
+        }
+
+        public static final class Builder {
+            private java.util.List<KeyValues> keyValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.keyValues = model.keyValues;
+            } 
+
+            /**
+             * keyValues.
+             */
+            public Builder keyValues(java.util.List<KeyValues> keyValues) {
+                this.keyValues = keyValues;
+                return this;
+            }
+
+            public Metadata build() {
+                return new Metadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitVideoAnalysisTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitVideoAnalysisTaskRequest</p>
+     */
     public static class Document extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("categoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("extend3")
+        private String extend3;
+
+        @com.aliyun.core.annotation.NameInMap("metadata")
+        private Metadata metadata;
+
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Document(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
+            this.metadata = builder.metadata;
+            this.tags = builder.tags;
             this.title = builder.title;
         }
 
@@ -665,10 +818,52 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
+        /**
          * @return docId
          */
         public String getDocId() {
             return this.docId;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
+         * @return metadata
+         */
+        public Metadata getMetadata() {
+            return this.metadata;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -679,22 +874,82 @@ public class SubmitVideoAnalysisTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
+            private Metadata metadata; 
+            private java.util.List<String> tags; 
             private String title; 
 
             private Builder() {
             } 
 
             private Builder(Document model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.metadata = model.metadata;
+                this.tags = model.tags;
                 this.title = model.title;
             } 
+
+            /**
+             * categoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * docId.
              */
             public Builder docId(String docId) {
                 this.docId = docId;
+                return this;
+            }
+
+            /**
+             * extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * metadata.
+             */
+            public Builder metadata(Metadata metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
