@@ -27,6 +27,14 @@ public class DescribeConfigurationPriceRequest extends Request {
     private Integer cpu;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuA10")
+    private String gpuA10;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuPpu810e")
+    private String gpuPpu810e;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer memory;
@@ -47,6 +55,8 @@ public class DescribeConfigurationPriceRequest extends Request {
         super(builder);
         this.bestEffortType = builder.bestEffortType;
         this.cpu = builder.cpu;
+        this.gpuA10 = builder.gpuA10;
+        this.gpuPpu810e = builder.gpuPpu810e;
         this.memory = builder.memory;
         this.newSaeVersion = builder.newSaeVersion;
         this.resourceType = builder.resourceType;
@@ -81,6 +91,20 @@ public class DescribeConfigurationPriceRequest extends Request {
     }
 
     /**
+     * @return gpuA10
+     */
+    public String getGpuA10() {
+        return this.gpuA10;
+    }
+
+    /**
+     * @return gpuPpu810e
+     */
+    public String getGpuPpu810e() {
+        return this.gpuPpu810e;
+    }
+
+    /**
      * @return memory
      */
     public Integer getMemory() {
@@ -111,6 +135,8 @@ public class DescribeConfigurationPriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeConfigurationPriceRequest, Builder> {
         private String bestEffortType; 
         private Integer cpu; 
+        private String gpuA10; 
+        private String gpuPpu810e; 
         private Integer memory; 
         private String newSaeVersion; 
         private String resourceType; 
@@ -124,6 +150,8 @@ public class DescribeConfigurationPriceRequest extends Request {
             super(request);
             this.bestEffortType = request.bestEffortType;
             this.cpu = request.cpu;
+            this.gpuA10 = request.gpuA10;
+            this.gpuPpu810e = request.gpuPpu810e;
             this.memory = request.memory;
             this.newSaeVersion = request.newSaeVersion;
             this.resourceType = request.resourceType;
@@ -159,6 +187,24 @@ public class DescribeConfigurationPriceRequest extends Request {
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * GpuA10.
+         */
+        public Builder gpuA10(String gpuA10) {
+            this.putQueryParameter("GpuA10", gpuA10);
+            this.gpuA10 = gpuA10;
+            return this;
+        }
+
+        /**
+         * GpuPpu810e.
+         */
+        public Builder gpuPpu810e(String gpuPpu810e) {
+            this.putQueryParameter("GpuPpu810e", gpuPpu810e);
+            this.gpuPpu810e = gpuPpu810e;
             return this;
         }
 
