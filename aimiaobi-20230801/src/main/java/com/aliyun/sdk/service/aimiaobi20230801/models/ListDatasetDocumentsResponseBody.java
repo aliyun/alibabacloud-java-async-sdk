@@ -347,6 +347,9 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
+        private String createUser;
+
         @com.aliyun.core.annotation.NameInMap("DisableHandleMultimodalMedia")
         private Boolean disableHandleMultimodalMedia;
 
@@ -383,11 +386,17 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateUser")
+        private String updateUser;
 
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
@@ -396,6 +405,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             this.categoryUuid = builder.categoryUuid;
             this.content = builder.content;
             this.createTime = builder.createTime;
+            this.createUser = builder.createUser;
             this.disableHandleMultimodalMedia = builder.disableHandleMultimodalMedia;
             this.docId = builder.docId;
             this.docType = builder.docType;
@@ -408,8 +418,10 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             this.sourceFrom = builder.sourceFrom;
             this.status = builder.status;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.updateTime = builder.updateTime;
+            this.updateUser = builder.updateUser;
             this.url = builder.url;
         }
 
@@ -440,6 +452,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return createUser
+         */
+        public String getCreateUser() {
+            return this.createUser;
         }
 
         /**
@@ -527,6 +546,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -541,6 +567,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateUser
+         */
+        public String getUpdateUser() {
+            return this.updateUser;
+        }
+
+        /**
          * @return url
          */
         public String getUrl() {
@@ -551,6 +584,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             private String categoryUuid; 
             private String content; 
             private String createTime; 
+            private String createUser; 
             private Boolean disableHandleMultimodalMedia; 
             private String docId; 
             private String docType; 
@@ -563,8 +597,10 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             private String sourceFrom; 
             private Integer status; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String updateTime; 
+            private String updateUser; 
             private String url; 
 
             private Builder() {
@@ -574,6 +610,7 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
                 this.categoryUuid = model.categoryUuid;
                 this.content = model.content;
                 this.createTime = model.createTime;
+                this.createUser = model.createUser;
                 this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
                 this.docId = model.docId;
                 this.docType = model.docType;
@@ -586,8 +623,10 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
                 this.sourceFrom = model.sourceFrom;
                 this.status = model.status;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.updateTime = model.updateTime;
+                this.updateUser = model.updateUser;
                 this.url = model.url;
             } 
 
@@ -612,6 +651,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreateUser.
+             */
+            public Builder createUser(String createUser) {
+                this.createUser = createUser;
                 return this;
             }
 
@@ -712,6 +759,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
             }
 
             /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * Title.
              */
             public Builder title(String title) {
@@ -724,6 +779,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * UpdateUser.
+             */
+            public Builder updateUser(String updateUser) {
+                this.updateUser = updateUser;
                 return this;
             }
 

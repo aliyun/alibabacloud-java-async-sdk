@@ -179,18 +179,38 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
      * <p>UpdateDatasetDocumentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
+            this.tags = builder.tags;
             this.title = builder.title;
         }
 
@@ -200,6 +220,13 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -217,6 +244,34 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -224,18 +279,36 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
+            private java.util.List<String> tags; 
             private String title; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.tags = model.tags;
                 this.title = model.title;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -250,6 +323,38 @@ public class UpdateDatasetDocumentResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

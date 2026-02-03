@@ -274,6 +274,81 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
      *
      * <p>GetDatasetDocumentResponseBody</p>
      */
+    public static class KeyValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private KeyValues(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KeyValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyValues model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public KeyValues build() {
+                return new KeyValues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetDocumentResponseBody</p>
+     */
     public static class VideoShots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -374,6 +449,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrSentences")
         private java.util.List<AsrSentences> asrSentences;
 
+        @com.aliyun.core.annotation.NameInMap("KeyValues")
+        private java.util.List<KeyValues> keyValues;
+
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
@@ -382,6 +460,7 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
         private Metadata(Builder builder) {
             this.asrSentences = builder.asrSentences;
+            this.keyValues = builder.keyValues;
             this.text = builder.text;
             this.videoShots = builder.videoShots;
         }
@@ -402,6 +481,13 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyValues
+         */
+        public java.util.List<KeyValues> getKeyValues() {
+            return this.keyValues;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -417,6 +503,7 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AsrSentences> asrSentences; 
+            private java.util.List<KeyValues> keyValues; 
             private String text; 
             private java.util.List<VideoShots> videoShots; 
 
@@ -425,6 +512,7 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
             private Builder(Metadata model) {
                 this.asrSentences = model.asrSentences;
+                this.keyValues = model.keyValues;
                 this.text = model.text;
                 this.videoShots = model.videoShots;
             } 
@@ -434,6 +522,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
              */
             public Builder asrSentences(java.util.List<AsrSentences> asrSentences) {
                 this.asrSentences = asrSentences;
+                return this;
+            }
+
+            /**
+             * KeyValues.
+             */
+            public Builder keyValues(java.util.List<KeyValues> keyValues) {
+                this.keyValues = keyValues;
                 return this;
             }
 
@@ -467,6 +563,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
      * <p>GetDatasetDocumentResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -481,6 +580,15 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private Metadata metadata;
@@ -497,6 +605,9 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -504,16 +615,21 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         private String url;
 
         private Data(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.content = builder.content;
             this.disableHandleMultimodalMedia = builder.disableHandleMultimodalMedia;
             this.docId = builder.docId;
             this.docType = builder.docType;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.metadata = builder.metadata;
             this.pubTime = builder.pubTime;
             this.sourceFrom = builder.sourceFrom;
             this.status = builder.status;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -524,6 +640,13 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -562,6 +685,27 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return metadata
          */
         public Metadata getMetadata() {
@@ -597,6 +741,13 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -611,16 +762,21 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String content; 
             private Boolean disableHandleMultimodalMedia; 
             private String docId; 
             private String docType; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private Metadata metadata; 
             private String pubTime; 
             private String sourceFrom; 
             private Integer status; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -628,19 +784,32 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.categoryUuid = model.categoryUuid;
                 this.content = model.content;
                 this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
                 this.docId = model.docId;
                 this.docType = model.docType;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.metadata = model.metadata;
                 this.pubTime = model.pubTime;
                 this.sourceFrom = model.sourceFrom;
                 this.status = model.status;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Content.
@@ -683,6 +852,30 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * Metadata.
              */
             public Builder metadata(Metadata metadata) {
@@ -719,6 +912,14 @@ public class GetDatasetDocumentResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

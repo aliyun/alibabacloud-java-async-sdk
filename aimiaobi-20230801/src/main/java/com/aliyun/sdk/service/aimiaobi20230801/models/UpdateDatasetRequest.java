@@ -201,6 +201,123 @@ public class UpdateDatasetRequest extends Request {
      *
      * <p>UpdateDatasetRequest</p>
      */
+    public static class SearchSourceConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MetadataKeyValueGenerateEnable")
+        private Boolean metadataKeyValueGenerateEnable;
+
+        @com.aliyun.core.annotation.NameInMap("MetadataKeyValueSearchEnable")
+        private Boolean metadataKeyValueSearchEnable;
+
+        @com.aliyun.core.annotation.NameInMap("TagGenerateEnable")
+        private Boolean tagGenerateEnable;
+
+        @com.aliyun.core.annotation.NameInMap("TagSearchEnable")
+        private Boolean tagSearchEnable;
+
+        private SearchSourceConfig(Builder builder) {
+            this.metadataKeyValueGenerateEnable = builder.metadataKeyValueGenerateEnable;
+            this.metadataKeyValueSearchEnable = builder.metadataKeyValueSearchEnable;
+            this.tagGenerateEnable = builder.tagGenerateEnable;
+            this.tagSearchEnable = builder.tagSearchEnable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchSourceConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return metadataKeyValueGenerateEnable
+         */
+        public Boolean getMetadataKeyValueGenerateEnable() {
+            return this.metadataKeyValueGenerateEnable;
+        }
+
+        /**
+         * @return metadataKeyValueSearchEnable
+         */
+        public Boolean getMetadataKeyValueSearchEnable() {
+            return this.metadataKeyValueSearchEnable;
+        }
+
+        /**
+         * @return tagGenerateEnable
+         */
+        public Boolean getTagGenerateEnable() {
+            return this.tagGenerateEnable;
+        }
+
+        /**
+         * @return tagSearchEnable
+         */
+        public Boolean getTagSearchEnable() {
+            return this.tagSearchEnable;
+        }
+
+        public static final class Builder {
+            private Boolean metadataKeyValueGenerateEnable; 
+            private Boolean metadataKeyValueSearchEnable; 
+            private Boolean tagGenerateEnable; 
+            private Boolean tagSearchEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchSourceConfig model) {
+                this.metadataKeyValueGenerateEnable = model.metadataKeyValueGenerateEnable;
+                this.metadataKeyValueSearchEnable = model.metadataKeyValueSearchEnable;
+                this.tagGenerateEnable = model.tagGenerateEnable;
+                this.tagSearchEnable = model.tagSearchEnable;
+            } 
+
+            /**
+             * MetadataKeyValueGenerateEnable.
+             */
+            public Builder metadataKeyValueGenerateEnable(Boolean metadataKeyValueGenerateEnable) {
+                this.metadataKeyValueGenerateEnable = metadataKeyValueGenerateEnable;
+                return this;
+            }
+
+            /**
+             * MetadataKeyValueSearchEnable.
+             */
+            public Builder metadataKeyValueSearchEnable(Boolean metadataKeyValueSearchEnable) {
+                this.metadataKeyValueSearchEnable = metadataKeyValueSearchEnable;
+                return this;
+            }
+
+            /**
+             * TagGenerateEnable.
+             */
+            public Builder tagGenerateEnable(Boolean tagGenerateEnable) {
+                this.tagGenerateEnable = tagGenerateEnable;
+                return this;
+            }
+
+            /**
+             * TagSearchEnable.
+             */
+            public Builder tagSearchEnable(Boolean tagSearchEnable) {
+                this.tagSearchEnable = tagSearchEnable;
+                return this;
+            }
+
+            public SearchSourceConfig build() {
+                return new SearchSourceConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1138,10 +1255,14 @@ public class UpdateDatasetRequest extends Request {
      * <p>UpdateDatasetRequest</p>
      */
     public static class DatasetConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SearchSourceConfig")
+        private SearchSourceConfig searchSourceConfig;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceConfigs")
         private java.util.List<SearchSourceConfigs> searchSourceConfigs;
 
         private DatasetConfig(Builder builder) {
+            this.searchSourceConfig = builder.searchSourceConfig;
             this.searchSourceConfigs = builder.searchSourceConfigs;
         }
 
@@ -1154,6 +1275,13 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * @return searchSourceConfig
+         */
+        public SearchSourceConfig getSearchSourceConfig() {
+            return this.searchSourceConfig;
+        }
+
+        /**
          * @return searchSourceConfigs
          */
         public java.util.List<SearchSourceConfigs> getSearchSourceConfigs() {
@@ -1161,14 +1289,24 @@ public class UpdateDatasetRequest extends Request {
         }
 
         public static final class Builder {
+            private SearchSourceConfig searchSourceConfig; 
             private java.util.List<SearchSourceConfigs> searchSourceConfigs; 
 
             private Builder() {
             } 
 
             private Builder(DatasetConfig model) {
+                this.searchSourceConfig = model.searchSourceConfig;
                 this.searchSourceConfigs = model.searchSourceConfigs;
             } 
+
+            /**
+             * SearchSourceConfig.
+             */
+            public Builder searchSourceConfig(SearchSourceConfig searchSourceConfig) {
+                this.searchSourceConfig = searchSourceConfig;
+                return this;
+            }
 
             /**
              * SearchSourceConfigs.

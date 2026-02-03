@@ -254,23 +254,47 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
      * <p>RunSearchSimilarArticlesResponseBody</p>
      */
     public static class Articles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
+
+        @com.aliyun.core.annotation.NameInMap("DocType")
+        private String docType;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -279,12 +303,20 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         private String url;
 
         private Articles(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
+            this.docType = builder.docType;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
+            this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
             this.source = builder.source;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -298,10 +330,24 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
+        /**
          * @return docId
          */
         public String getDocId() {
             return this.docId;
+        }
+
+        /**
+         * @return docType
+         */
+        public String getDocType() {
+            return this.docType;
         }
 
         /**
@@ -312,6 +358,27 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return pubTime
          */
         public String getPubTime() {
@@ -319,10 +386,24 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
             return this.searchSourceName;
+        }
+
+        /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
         }
 
         /**
@@ -340,6 +421,13 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -354,12 +442,20 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
+            private String docType; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
+            private String searchSource; 
             private String searchSourceName; 
+            private String searchSourceType; 
             private String source; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -367,21 +463,45 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             } 
 
             private Builder(Articles model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
+                this.docType = model.docType;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
+                this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
                 this.source = model.source;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
              */
             public Builder docId(String docId) {
                 this.docId = docId;
+                return this;
+            }
+
+            /**
+             * DocType.
+             */
+            public Builder docType(String docType) {
+                this.docType = docType;
                 return this;
             }
 
@@ -394,6 +514,30 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * PubTime.
              */
             public Builder pubTime(String pubTime) {
@@ -402,10 +546,26 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
             }
 
             /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
                 this.searchSourceName = searchSourceName;
+                return this;
+            }
+
+            /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
                 return this;
             }
 
@@ -422,6 +582,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

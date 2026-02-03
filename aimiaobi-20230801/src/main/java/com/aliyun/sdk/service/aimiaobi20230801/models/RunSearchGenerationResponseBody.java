@@ -338,17 +338,32 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class Article extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -357,10 +372,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private Article(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.searchSourceName = builder.searchSourceName;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -371,6 +391,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static Article create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -388,6 +415,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -399,6 +447,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -416,10 +471,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String searchSourceName; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -427,13 +487,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(Article model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.searchSourceName = model.searchSourceName;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -452,6 +525,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -464,6 +561,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -827,17 +932,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class SearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -846,10 +972,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private SearchResultArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
+            this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -860,6 +993,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static SearchResultArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -877,6 +1017,34 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -884,10 +1052,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -905,10 +1087,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
+            private String searchSource; 
             private String searchSourceName; 
+            private String searchSourceType; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -916,13 +1105,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(SearchResultArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -941,6 +1145,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -949,10 +1185,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
+                return this;
+            }
+
+            /**
              * Summary.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -1358,17 +1610,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class ImageSearchResultSearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -1377,10 +1650,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private ImageSearchResultSearchResultArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
+            this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -1391,6 +1671,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static ImageSearchResultSearchResultArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -1408,6 +1695,34 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -1415,10 +1730,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -1436,10 +1765,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
+            private String searchSource; 
             private String searchSourceName; 
+            private String searchSourceType; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -1447,13 +1783,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(ImageSearchResultSearchResultArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -1472,6 +1823,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -1480,10 +1863,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
+                return this;
+            }
+
+            /**
              * Summary.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -1826,11 +2225,23 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class TextSearchResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("MultimodalMedias")
         private java.util.List<MultimodalMedias> multimodalMedias;
@@ -1850,6 +2261,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -1857,14 +2271,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private TextSearchResultSearchResult(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.multimodalMedias = builder.multimodalMedias;
             this.pubTime = builder.pubTime;
             this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
             this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -1875,6 +2294,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static TextSearchResultSearchResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -1889,6 +2315,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -1934,6 +2381,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -1948,14 +2402,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private java.util.List<MultimodalMedias> multimodalMedias; 
             private String pubTime; 
             private String searchSource; 
             private String searchSourceName; 
             private String searchSourceType; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -1963,17 +2422,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(TextSearchResultSearchResult model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.multimodalMedias = model.multimodalMedias;
                 this.pubTime = model.pubTime;
                 this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
                 this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -1988,6 +2460,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -2036,6 +2532,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -2186,17 +2690,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class VideoSearchResultSearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -2205,10 +2730,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private VideoSearchResultSearchResultArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
+            this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -2219,6 +2751,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static VideoSearchResultSearchResultArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -2236,6 +2775,34 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -2243,10 +2810,24 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
+        /**
          * @return summary
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -2264,10 +2845,17 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
+            private String searchSource; 
             private String searchSourceName; 
+            private String searchSourceType; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -2275,13 +2863,28 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(VideoSearchResultSearchResultArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
+                this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -2300,6 +2903,38 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -2308,10 +2943,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
+                return this;
+            }
+
+            /**
              * Summary.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -3419,6 +4070,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class ExcerptResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Chunks")
         private java.util.List<String> chunks;
 
@@ -3433,6 +4087,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Excerpt")
         private String excerpt;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("MultimodalMedias")
         private java.util.List<SearchResultMultimodalMedias> multimodalMedias;
@@ -3458,6 +4121,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("TextGenerateMultimodalMediaList")
         private java.util.List<TextGenerateMultimodalMediaList> textGenerateMultimodalMediaList;
 
@@ -3471,11 +4137,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private ExcerptResultSearchResult(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.chunks = builder.chunks;
             this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.excerpt = builder.excerpt;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.multimodalMedias = builder.multimodalMedias;
             this.pubTime = builder.pubTime;
             this.score = builder.score;
@@ -3484,6 +4154,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.searchSourceType = builder.searchSourceType;
             this.select = builder.select;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.textGenerateMultimodalMediaList = builder.textGenerateMultimodalMediaList;
             this.title = builder.title;
             this.traceabilityId = builder.traceabilityId;
@@ -3496,6 +4167,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static ExcerptResultSearchResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -3531,6 +4209,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getExcerpt() {
             return this.excerpt;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -3590,6 +4289,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return textGenerateMultimodalMediaList
          */
         public java.util.List<TextGenerateMultimodalMediaList> getTextGenerateMultimodalMediaList() {
@@ -3618,11 +4324,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private java.util.List<String> chunks; 
             private String content; 
             private String docId; 
             private String docUuid; 
             private String excerpt; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private java.util.List<SearchResultMultimodalMedias> multimodalMedias; 
             private String pubTime; 
             private Float score; 
@@ -3631,6 +4341,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String searchSourceType; 
             private Boolean select; 
             private String summary; 
+            private java.util.List<String> tags; 
             private java.util.List<TextGenerateMultimodalMediaList> textGenerateMultimodalMediaList; 
             private String title; 
             private Integer traceabilityId; 
@@ -3640,11 +4351,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(ExcerptResultSearchResult model) {
+                this.categoryUuid = model.categoryUuid;
                 this.chunks = model.chunks;
                 this.content = model.content;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
                 this.excerpt = model.excerpt;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.multimodalMedias = model.multimodalMedias;
                 this.pubTime = model.pubTime;
                 this.score = model.score;
@@ -3653,11 +4368,20 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.searchSourceType = model.searchSourceType;
                 this.select = model.select;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.textGenerateMultimodalMediaList = model.textGenerateMultimodalMediaList;
                 this.title = model.title;
                 this.traceabilityId = model.traceabilityId;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Chunks.
@@ -3696,6 +4420,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder excerpt(String excerpt) {
                 this.excerpt = excerpt;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -3760,6 +4508,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -3947,17 +4703,32 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class GeneratedContentImageSearchResultSearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -3966,10 +4737,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private GeneratedContentImageSearchResultSearchResultArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.searchSourceName = builder.searchSourceName;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -3980,6 +4756,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static GeneratedContentImageSearchResultSearchResultArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -3997,6 +4780,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -4008,6 +4812,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -4025,10 +4836,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String searchSourceName; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -4036,13 +4852,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(GeneratedContentImageSearchResultSearchResultArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.searchSourceName = model.searchSourceName;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -4061,6 +4890,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -4073,6 +4926,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -4277,6 +5138,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class NewsElementArticleListArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -4285,6 +5149,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -4307,6 +5180,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -4314,9 +5190,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private NewsElementArticleListArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
             this.score = builder.score;
             this.searchSource = builder.searchSource;
@@ -4324,6 +5204,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.searchSourceType = builder.searchSourceType;
             this.select = builder.select;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -4334,6 +5215,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static NewsElementArticleListArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -4355,6 +5243,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -4407,6 +5316,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -4421,9 +5337,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String content; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
             private Float score; 
             private String searchSource; 
@@ -4431,6 +5351,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private String searchSourceType; 
             private Boolean select; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -4438,9 +5359,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(NewsElementArticleListArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.content = model.content;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
                 this.score = model.score;
                 this.searchSource = model.searchSource;
@@ -4448,9 +5373,18 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.searchSourceType = model.searchSourceType;
                 this.select = model.select;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Content.
@@ -4473,6 +5407,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -4529,6 +5487,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -5945,6 +6911,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class ReferenceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Chunks")
         private java.util.List<String> chunks;
 
@@ -5956,6 +6925,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -5981,6 +6959,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -5991,10 +6972,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private ReferenceList(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.chunks = builder.chunks;
             this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
             this.score = builder.score;
             this.searchSource = builder.searchSource;
@@ -6003,6 +6988,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.select = builder.select;
             this.source = builder.source;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.traceabilityId = builder.traceabilityId;
             this.url = builder.url;
@@ -6014,6 +7000,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static ReferenceList create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -6042,6 +7035,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -6101,6 +7115,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -6122,10 +7143,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private java.util.List<String> chunks; 
             private String content; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
             private Float score; 
             private String searchSource; 
@@ -6134,6 +7159,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Boolean select; 
             private String source; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private Integer traceabilityId; 
             private String url; 
@@ -6142,10 +7168,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(ReferenceList model) {
+                this.categoryUuid = model.categoryUuid;
                 this.chunks = model.chunks;
                 this.content = model.content;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
                 this.score = model.score;
                 this.searchSource = model.searchSource;
@@ -6154,10 +7184,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.select = model.select;
                 this.source = model.source;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.traceabilityId = model.traceabilityId;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Chunks.
@@ -6188,6 +7227,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -6252,6 +7315,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -6866,6 +7937,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class GeneratedContentTextSearchResultSearchResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -6874,6 +7948,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -6890,6 +7973,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -6900,14 +7986,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private GeneratedContentTextSearchResultSearchResult(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
             this.searchSource = builder.searchSource;
             this.searchSourceName = builder.searchSourceName;
             this.searchSourceType = builder.searchSourceType;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.traceabilityId = builder.traceabilityId;
             this.url = builder.url;
@@ -6919,6 +8010,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static GeneratedContentTextSearchResultSearchResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -6940,6 +8038,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -6978,6 +8097,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -6999,14 +8125,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String content; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
             private String searchSource; 
             private String searchSourceName; 
             private String searchSourceType; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String traceabilityId; 
             private String url; 
@@ -7015,18 +8146,31 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(GeneratedContentTextSearchResultSearchResult model) {
+                this.categoryUuid = model.categoryUuid;
                 this.content = model.content;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
                 this.searchSource = model.searchSource;
                 this.searchSourceName = model.searchSourceName;
                 this.searchSourceType = model.searchSourceType;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.traceabilityId = model.traceabilityId;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Content.
@@ -7049,6 +8193,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -7089,6 +8257,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -8120,6 +9296,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class TimelineResultReferenceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Chunks")
         private java.util.List<String> chunks;
 
@@ -8131,6 +9310,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
@@ -8156,6 +9344,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -8166,10 +9357,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private TimelineResultReferenceList(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.chunks = builder.chunks;
             this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
             this.score = builder.score;
             this.searchSource = builder.searchSource;
@@ -8178,6 +9373,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             this.select = builder.select;
             this.source = builder.source;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.traceabilityId = builder.traceabilityId;
             this.url = builder.url;
@@ -8189,6 +9385,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static TimelineResultReferenceList create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -8217,6 +9420,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getDocUuid() {
             return this.docUuid;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -8276,6 +9500,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -8297,10 +9528,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private java.util.List<String> chunks; 
             private String content; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
             private Float score; 
             private String searchSource; 
@@ -8309,6 +9544,7 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             private Boolean select; 
             private String source; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private Integer traceabilityId; 
             private String url; 
@@ -8317,10 +9553,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(TimelineResultReferenceList model) {
+                this.categoryUuid = model.categoryUuid;
                 this.chunks = model.chunks;
                 this.content = model.content;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
                 this.score = model.score;
                 this.searchSource = model.searchSource;
@@ -8329,10 +9569,19 @@ public class RunSearchGenerationResponseBody extends TeaModel {
                 this.select = model.select;
                 this.source = model.source;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.traceabilityId = model.traceabilityId;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Chunks.
@@ -8363,6 +9612,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder docUuid(String docUuid) {
                 this.docUuid = docUuid;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -8427,6 +9700,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -9020,17 +10301,32 @@ public class RunSearchGenerationResponseBody extends TeaModel {
      * <p>RunSearchGenerationResponseBody</p>
      */
     public static class GeneratedContentVideoSearchResultSearchResultArticle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -9039,10 +10335,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         private String url;
 
         private GeneratedContentVideoSearchResultSearchResultArticle(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.searchSourceName = builder.searchSourceName;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -9053,6 +10354,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         public static GeneratedContentVideoSearchResultSearchResultArticle create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -9070,6 +10378,27 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return searchSourceName
          */
         public String getSearchSourceName() {
@@ -9081,6 +10410,13 @@ public class RunSearchGenerationResponseBody extends TeaModel {
          */
         public String getSummary() {
             return this.summary;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -9098,10 +10434,15 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String docId; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String searchSourceName; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -9109,13 +10450,26 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             } 
 
             private Builder(GeneratedContentVideoSearchResultSearchResultArticle model) {
+                this.categoryUuid = model.categoryUuid;
                 this.docId = model.docId;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.searchSourceName = model.searchSourceName;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * DocId.
@@ -9134,6 +10488,30 @@ public class RunSearchGenerationResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * SearchSourceName.
              */
             public Builder searchSourceName(String searchSourceName) {
@@ -9146,6 +10524,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

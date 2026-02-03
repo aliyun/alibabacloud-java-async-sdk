@@ -274,6 +274,81 @@ public class AddDatasetDocumentRequest extends Request {
      *
      * <p>AddDatasetDocumentRequest</p>
      */
+    public static class KeyValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private KeyValues(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KeyValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyValues model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public KeyValues build() {
+                return new KeyValues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddDatasetDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>AddDatasetDocumentRequest</p>
+     */
     public static class VideoShots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -374,6 +449,9 @@ public class AddDatasetDocumentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AsrSentences")
         private java.util.List<AsrSentences> asrSentences;
 
+        @com.aliyun.core.annotation.NameInMap("KeyValues")
+        private java.util.List<KeyValues> keyValues;
+
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
@@ -382,6 +460,7 @@ public class AddDatasetDocumentRequest extends Request {
 
         private Metadata(Builder builder) {
             this.asrSentences = builder.asrSentences;
+            this.keyValues = builder.keyValues;
             this.text = builder.text;
             this.videoShots = builder.videoShots;
         }
@@ -402,6 +481,13 @@ public class AddDatasetDocumentRequest extends Request {
         }
 
         /**
+         * @return keyValues
+         */
+        public java.util.List<KeyValues> getKeyValues() {
+            return this.keyValues;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -417,6 +503,7 @@ public class AddDatasetDocumentRequest extends Request {
 
         public static final class Builder {
             private java.util.List<AsrSentences> asrSentences; 
+            private java.util.List<KeyValues> keyValues; 
             private String text; 
             private java.util.List<VideoShots> videoShots; 
 
@@ -425,6 +512,7 @@ public class AddDatasetDocumentRequest extends Request {
 
             private Builder(Metadata model) {
                 this.asrSentences = model.asrSentences;
+                this.keyValues = model.keyValues;
                 this.text = model.text;
                 this.videoShots = model.videoShots;
             } 
@@ -434,6 +522,14 @@ public class AddDatasetDocumentRequest extends Request {
              */
             public Builder asrSentences(java.util.List<AsrSentences> asrSentences) {
                 this.asrSentences = asrSentences;
+                return this;
+            }
+
+            /**
+             * KeyValues.
+             */
+            public Builder keyValues(java.util.List<KeyValues> keyValues) {
+                this.keyValues = keyValues;
                 return this;
             }
 
@@ -563,6 +659,9 @@ public class AddDatasetDocumentRequest extends Request {
      * <p>AddDatasetDocumentRequest</p>
      */
     public static class Document extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -605,6 +704,9 @@ public class AddDatasetDocumentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -612,6 +714,7 @@ public class AddDatasetDocumentRequest extends Request {
         private String url;
 
         private Document(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
             this.content = builder.content;
             this.disableHandleMultimodalMedia = builder.disableHandleMultimodalMedia;
             this.docId = builder.docId;
@@ -626,6 +729,7 @@ public class AddDatasetDocumentRequest extends Request {
             this.pubTime = builder.pubTime;
             this.sourceFrom = builder.sourceFrom;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -636,6 +740,13 @@ public class AddDatasetDocumentRequest extends Request {
 
         public static Document create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
         }
 
         /**
@@ -737,6 +848,13 @@ public class AddDatasetDocumentRequest extends Request {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -751,6 +869,7 @@ public class AddDatasetDocumentRequest extends Request {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
             private String content; 
             private Boolean disableHandleMultimodalMedia; 
             private String docId; 
@@ -765,6 +884,7 @@ public class AddDatasetDocumentRequest extends Request {
             private String pubTime; 
             private String sourceFrom; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -772,6 +892,7 @@ public class AddDatasetDocumentRequest extends Request {
             } 
 
             private Builder(Document model) {
+                this.categoryUuid = model.categoryUuid;
                 this.content = model.content;
                 this.disableHandleMultimodalMedia = model.disableHandleMultimodalMedia;
                 this.docId = model.docId;
@@ -786,9 +907,18 @@ public class AddDatasetDocumentRequest extends Request {
                 this.pubTime = model.pubTime;
                 this.sourceFrom = model.sourceFrom;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
 
             /**
              * Content.
@@ -899,6 +1029,14 @@ public class AddDatasetDocumentRequest extends Request {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

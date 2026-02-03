@@ -178,24 +178,135 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
      *
      * <p>SearchDatasetDocumentsResponseBody</p>
      */
+    public static class ChunkInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Chunk")
+        private String chunk;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        private ChunkInfos(Builder builder) {
+            this.chunk = builder.chunk;
+            this.score = builder.score;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChunkInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return chunk
+         */
+        public String getChunk() {
+            return this.chunk;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        public static final class Builder {
+            private String chunk; 
+            private Double score; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChunkInfos model) {
+                this.chunk = model.chunk;
+                this.score = model.score;
+            } 
+
+            /**
+             * Chunk.
+             */
+            public Builder chunk(String chunk) {
+                this.chunk = chunk;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            public ChunkInfos build() {
+                return new ChunkInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SearchDatasetDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDatasetDocumentsResponseBody</p>
+     */
     public static class Documents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+        private String categoryUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Chunk")
+        private String chunk;
+
+        @com.aliyun.core.annotation.NameInMap("ChunkInfos")
+        private java.util.List<ChunkInfos> chunkInfos;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
+        @com.aliyun.core.annotation.NameInMap("DocType")
+        private String docType;
+
         @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
+
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
+        private String searchSource;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
+        private String searchSourceName;
+
+        @com.aliyun.core.annotation.NameInMap("SearchSourceType")
+        private String searchSourceType;
 
         @com.aliyun.core.annotation.NameInMap("SourceFrom")
         private String sourceFrom;
 
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -204,12 +315,24 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         private String url;
 
         private Documents(Builder builder) {
+            this.categoryUuid = builder.categoryUuid;
+            this.chunk = builder.chunk;
+            this.chunkInfos = builder.chunkInfos;
             this.content = builder.content;
             this.docId = builder.docId;
+            this.docType = builder.docType;
             this.docUuid = builder.docUuid;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.pubTime = builder.pubTime;
+            this.score = builder.score;
+            this.searchSource = builder.searchSource;
+            this.searchSourceName = builder.searchSourceName;
+            this.searchSourceType = builder.searchSourceType;
             this.sourceFrom = builder.sourceFrom;
             this.summary = builder.summary;
+            this.tags = builder.tags;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -220,6 +343,27 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
 
         public static Documents create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryUuid
+         */
+        public String getCategoryUuid() {
+            return this.categoryUuid;
+        }
+
+        /**
+         * @return chunk
+         */
+        public String getChunk() {
+            return this.chunk;
+        }
+
+        /**
+         * @return chunkInfos
+         */
+        public java.util.List<ChunkInfos> getChunkInfos() {
+            return this.chunkInfos;
         }
 
         /**
@@ -237,6 +381,13 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return docType
+         */
+        public String getDocType() {
+            return this.docType;
+        }
+
+        /**
          * @return docUuid
          */
         public String getDocUuid() {
@@ -244,10 +395,59 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
+        }
+
+        /**
          * @return pubTime
          */
         public String getPubTime() {
             return this.pubTime;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return searchSource
+         */
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        /**
+         * @return searchSourceName
+         */
+        public String getSearchSourceName() {
+            return this.searchSourceName;
+        }
+
+        /**
+         * @return searchSourceType
+         */
+        public String getSearchSourceType() {
+            return this.searchSourceType;
         }
 
         /**
@@ -265,6 +465,13 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -279,12 +486,24 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String categoryUuid; 
+            private String chunk; 
+            private java.util.List<ChunkInfos> chunkInfos; 
             private String content; 
             private String docId; 
+            private String docType; 
             private String docUuid; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private String pubTime; 
+            private Double score; 
+            private String searchSource; 
+            private String searchSourceName; 
+            private String searchSourceType; 
             private String sourceFrom; 
             private String summary; 
+            private java.util.List<String> tags; 
             private String title; 
             private String url; 
 
@@ -292,15 +511,51 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
             } 
 
             private Builder(Documents model) {
+                this.categoryUuid = model.categoryUuid;
+                this.chunk = model.chunk;
+                this.chunkInfos = model.chunkInfos;
                 this.content = model.content;
                 this.docId = model.docId;
+                this.docType = model.docType;
                 this.docUuid = model.docUuid;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.pubTime = model.pubTime;
+                this.score = model.score;
+                this.searchSource = model.searchSource;
+                this.searchSourceName = model.searchSourceName;
+                this.searchSourceType = model.searchSourceType;
                 this.sourceFrom = model.sourceFrom;
                 this.summary = model.summary;
+                this.tags = model.tags;
                 this.title = model.title;
                 this.url = model.url;
             } 
+
+            /**
+             * CategoryUuid.
+             */
+            public Builder categoryUuid(String categoryUuid) {
+                this.categoryUuid = categoryUuid;
+                return this;
+            }
+
+            /**
+             * Chunk.
+             */
+            public Builder chunk(String chunk) {
+                this.chunk = chunk;
+                return this;
+            }
+
+            /**
+             * ChunkInfos.
+             */
+            public Builder chunkInfos(java.util.List<ChunkInfos> chunkInfos) {
+                this.chunkInfos = chunkInfos;
+                return this;
+            }
 
             /**
              * Content.
@@ -319,6 +574,14 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
             }
 
             /**
+             * DocType.
+             */
+            public Builder docType(String docType) {
+                this.docType = docType;
+                return this;
+            }
+
+            /**
              * DocUuid.
              */
             public Builder docUuid(String docUuid) {
@@ -327,10 +590,66 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
             }
 
             /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
+                return this;
+            }
+
+            /**
              * PubTime.
              */
             public Builder pubTime(String pubTime) {
                 this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * SearchSource.
+             */
+            public Builder searchSource(String searchSource) {
+                this.searchSource = searchSource;
+                return this;
+            }
+
+            /**
+             * SearchSourceName.
+             */
+            public Builder searchSourceName(String searchSourceName) {
+                this.searchSourceName = searchSourceName;
+                return this;
+            }
+
+            /**
+             * SearchSourceType.
+             */
+            public Builder searchSourceType(String searchSourceType) {
+                this.searchSourceType = searchSourceType;
                 return this;
             }
 
@@ -347,6 +666,14 @@ public class SearchDatasetDocumentsResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 

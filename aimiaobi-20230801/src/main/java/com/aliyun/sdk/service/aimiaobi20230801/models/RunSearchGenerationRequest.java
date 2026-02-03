@@ -1162,8 +1162,32 @@ public class RunSearchGenerationRequest extends Request {
      * <p>RunSearchGenerationRequest</p>
      */
     public static class SearchParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryUuids")
+        private java.util.List<String> categoryUuids;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
+        private Long createTimeEnd;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
+        private Long createTimeStart;
+
+        @com.aliyun.core.annotation.NameInMap("DocIds")
+        private java.util.List<String> docIds;
+
+        @com.aliyun.core.annotation.NameInMap("DocUuids")
+        private java.util.List<String> docUuids;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("Extend1")
+        private String extend1;
+
+        @com.aliyun.core.annotation.NameInMap("Extend2")
+        private String extend2;
+
+        @com.aliyun.core.annotation.NameInMap("Extend3")
+        private String extend3;
 
         @com.aliyun.core.annotation.NameInMap("MultimodalSearchTypes")
         private java.util.List<String> multimodalSearchTypes;
@@ -1186,8 +1210,19 @@ public class RunSearchGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
+
         private SearchParam(Builder builder) {
+            this.categoryUuids = builder.categoryUuids;
+            this.createTimeEnd = builder.createTimeEnd;
+            this.createTimeStart = builder.createTimeStart;
+            this.docIds = builder.docIds;
+            this.docUuids = builder.docUuids;
             this.endTime = builder.endTime;
+            this.extend1 = builder.extend1;
+            this.extend2 = builder.extend2;
+            this.extend3 = builder.extend3;
             this.multimodalSearchTypes = builder.multimodalSearchTypes;
             this.searchAudioMinScore = builder.searchAudioMinScore;
             this.searchImageMinScore = builder.searchImageMinScore;
@@ -1195,6 +1230,7 @@ public class RunSearchGenerationRequest extends Request {
             this.searchTextMinScore = builder.searchTextMinScore;
             this.searchVideoMinScore = builder.searchVideoMinScore;
             this.startTime = builder.startTime;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -1206,10 +1242,66 @@ public class RunSearchGenerationRequest extends Request {
         }
 
         /**
+         * @return categoryUuids
+         */
+        public java.util.List<String> getCategoryUuids() {
+            return this.categoryUuids;
+        }
+
+        /**
+         * @return createTimeEnd
+         */
+        public Long getCreateTimeEnd() {
+            return this.createTimeEnd;
+        }
+
+        /**
+         * @return createTimeStart
+         */
+        public Long getCreateTimeStart() {
+            return this.createTimeStart;
+        }
+
+        /**
+         * @return docIds
+         */
+        public java.util.List<String> getDocIds() {
+            return this.docIds;
+        }
+
+        /**
+         * @return docUuids
+         */
+        public java.util.List<String> getDocUuids() {
+            return this.docUuids;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return extend1
+         */
+        public String getExtend1() {
+            return this.extend1;
+        }
+
+        /**
+         * @return extend2
+         */
+        public String getExtend2() {
+            return this.extend2;
+        }
+
+        /**
+         * @return extend3
+         */
+        public String getExtend3() {
+            return this.extend3;
         }
 
         /**
@@ -1261,8 +1353,23 @@ public class RunSearchGenerationRequest extends Request {
             return this.startTime;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
+            private java.util.List<String> categoryUuids; 
+            private Long createTimeEnd; 
+            private Long createTimeStart; 
+            private java.util.List<String> docIds; 
+            private java.util.List<String> docUuids; 
             private Long endTime; 
+            private String extend1; 
+            private String extend2; 
+            private String extend3; 
             private java.util.List<String> multimodalSearchTypes; 
             private Double searchAudioMinScore; 
             private Double searchImageMinScore; 
@@ -1270,12 +1377,21 @@ public class RunSearchGenerationRequest extends Request {
             private Double searchTextMinScore; 
             private Double searchVideoMinScore; 
             private Long startTime; 
+            private java.util.List<String> tags; 
 
             private Builder() {
             } 
 
             private Builder(SearchParam model) {
+                this.categoryUuids = model.categoryUuids;
+                this.createTimeEnd = model.createTimeEnd;
+                this.createTimeStart = model.createTimeStart;
+                this.docIds = model.docIds;
+                this.docUuids = model.docUuids;
                 this.endTime = model.endTime;
+                this.extend1 = model.extend1;
+                this.extend2 = model.extend2;
+                this.extend3 = model.extend3;
                 this.multimodalSearchTypes = model.multimodalSearchTypes;
                 this.searchAudioMinScore = model.searchAudioMinScore;
                 this.searchImageMinScore = model.searchImageMinScore;
@@ -1283,13 +1399,78 @@ public class RunSearchGenerationRequest extends Request {
                 this.searchTextMinScore = model.searchTextMinScore;
                 this.searchVideoMinScore = model.searchVideoMinScore;
                 this.startTime = model.startTime;
+                this.tags = model.tags;
             } 
+
+            /**
+             * CategoryUuids.
+             */
+            public Builder categoryUuids(java.util.List<String> categoryUuids) {
+                this.categoryUuids = categoryUuids;
+                return this;
+            }
+
+            /**
+             * CreateTimeEnd.
+             */
+            public Builder createTimeEnd(Long createTimeEnd) {
+                this.createTimeEnd = createTimeEnd;
+                return this;
+            }
+
+            /**
+             * CreateTimeStart.
+             */
+            public Builder createTimeStart(Long createTimeStart) {
+                this.createTimeStart = createTimeStart;
+                return this;
+            }
+
+            /**
+             * DocIds.
+             */
+            public Builder docIds(java.util.List<String> docIds) {
+                this.docIds = docIds;
+                return this;
+            }
+
+            /**
+             * DocUuids.
+             */
+            public Builder docUuids(java.util.List<String> docUuids) {
+                this.docUuids = docUuids;
+                return this;
+            }
 
             /**
              * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Extend1.
+             */
+            public Builder extend1(String extend1) {
+                this.extend1 = extend1;
+                return this;
+            }
+
+            /**
+             * Extend2.
+             */
+            public Builder extend2(String extend2) {
+                this.extend2 = extend2;
+                return this;
+            }
+
+            /**
+             * Extend3.
+             */
+            public Builder extend3(String extend3) {
+                this.extend3 = extend3;
                 return this;
             }
 
@@ -1346,6 +1527,14 @@ public class RunSearchGenerationRequest extends Request {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<String> tags) {
+                this.tags = tags;
                 return this;
             }
 
