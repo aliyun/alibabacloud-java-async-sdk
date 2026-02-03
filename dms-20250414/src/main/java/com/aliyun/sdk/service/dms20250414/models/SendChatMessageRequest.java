@@ -40,6 +40,10 @@ public class SendChatMessageRequest extends Request {
     private String messageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentSessionId")
+    private String parentSessionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Question")
     private String question;
 
@@ -67,6 +71,7 @@ public class SendChatMessageRequest extends Request {
         this.dataSource = builder.dataSource;
         this.message = builder.message;
         this.messageType = builder.messageType;
+        this.parentSessionId = builder.parentSessionId;
         this.question = builder.question;
         this.quotedMessage = builder.quotedMessage;
         this.replyTo = builder.replyTo;
@@ -123,6 +128,13 @@ public class SendChatMessageRequest extends Request {
     }
 
     /**
+     * @return parentSessionId
+     */
+    public String getParentSessionId() {
+        return this.parentSessionId;
+    }
+
+    /**
      * @return question
      */
     public String getQuestion() {
@@ -163,6 +175,7 @@ public class SendChatMessageRequest extends Request {
         private DataSource dataSource; 
         private String message; 
         private String messageType; 
+        private String parentSessionId; 
         private String question; 
         private String quotedMessage; 
         private String replyTo; 
@@ -180,6 +193,7 @@ public class SendChatMessageRequest extends Request {
             this.dataSource = request.dataSource;
             this.message = request.message;
             this.messageType = request.messageType;
+            this.parentSessionId = request.parentSessionId;
             this.question = request.question;
             this.quotedMessage = request.quotedMessage;
             this.replyTo = request.replyTo;
@@ -236,6 +250,15 @@ public class SendChatMessageRequest extends Request {
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);
             this.messageType = messageType;
+            return this;
+        }
+
+        /**
+         * ParentSessionId.
+         */
+        public Builder parentSessionId(String parentSessionId) {
+            this.putQueryParameter("ParentSessionId", parentSessionId);
+            this.parentSessionId = parentSessionId;
             return this;
         }
 
