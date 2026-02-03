@@ -230,6 +230,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
+        @com.aliyun.core.annotation.NameInMap("LockTimeMS")
+        private Long lockTimeMS;
+
         @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
@@ -256,6 +259,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.DBNodeId = builder.DBNodeId;
             this.executionStartTime = builder.executionStartTime;
             this.hostAddress = builder.hostAddress;
+            this.lockTimeMS = builder.lockTimeMS;
             this.lockTimes = builder.lockTimes;
             this.parseRowCounts = builder.parseRowCounts;
             this.queryTimeMS = builder.queryTimeMS;
@@ -299,6 +303,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          */
         public String getHostAddress() {
             return this.hostAddress;
+        }
+
+        /**
+         * @return lockTimeMS
+         */
+        public Long getLockTimeMS() {
+            return this.lockTimeMS;
         }
 
         /**
@@ -355,6 +366,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String DBNodeId; 
             private String executionStartTime; 
             private String hostAddress; 
+            private Long lockTimeMS; 
             private Long lockTimes; 
             private Long parseRowCounts; 
             private Long queryTimeMS; 
@@ -371,6 +383,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
                 this.DBNodeId = model.DBNodeId;
                 this.executionStartTime = model.executionStartTime;
                 this.hostAddress = model.hostAddress;
+                this.lockTimeMS = model.lockTimeMS;
                 this.lockTimes = model.lockTimes;
                 this.parseRowCounts = model.parseRowCounts;
                 this.queryTimeMS = model.queryTimeMS;
@@ -421,6 +434,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
+                return this;
+            }
+
+            /**
+             * LockTimeMS.
+             */
+            public Builder lockTimeMS(Long lockTimeMS) {
+                this.lockTimeMS = lockTimeMS;
                 return this;
             }
 
