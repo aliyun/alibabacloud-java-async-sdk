@@ -543,6 +543,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("VmncLearn")
+        private Boolean vmncLearn;
+
         private NetworkInterfaceSet(Builder builder) {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
@@ -560,6 +563,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             this.status = builder.status;
             this.type = builder.type;
             this.vSwitchId = builder.vSwitchId;
+            this.vmncLearn = builder.vmncLearn;
         }
 
         public static Builder builder() {
@@ -682,6 +686,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
+        /**
+         * @return vmncLearn
+         */
+        public Boolean getVmncLearn() {
+            return this.vmncLearn;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String description; 
@@ -699,6 +710,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private String vSwitchId; 
+            private Boolean vmncLearn; 
 
             private Builder() {
             } 
@@ -720,6 +732,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.type = model.type;
                 this.vSwitchId = model.vSwitchId;
+                this.vmncLearn = model.vmncLearn;
             } 
 
             /**
@@ -901,6 +914,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VmncLearn.
+             */
+            public Builder vmncLearn(Boolean vmncLearn) {
+                this.vmncLearn = vmncLearn;
                 return this;
             }
 
