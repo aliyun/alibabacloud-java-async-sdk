@@ -22,6 +22,14 @@ public class ListTagOptionsRequest extends Request {
     private Filters filters;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -40,6 +48,8 @@ public class ListTagOptionsRequest extends Request {
     private ListTagOptionsRequest(Builder builder) {
         super(builder);
         this.filters = builder.filters;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.sortBy = builder.sortBy;
@@ -64,6 +74,20 @@ public class ListTagOptionsRequest extends Request {
      */
     public Filters getFilters() {
         return this.filters;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -96,6 +120,8 @@ public class ListTagOptionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListTagOptionsRequest, Builder> {
         private Filters filters; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String sortBy; 
@@ -108,6 +134,8 @@ public class ListTagOptionsRequest extends Request {
         private Builder(ListTagOptionsRequest request) {
             super(request);
             this.filters = request.filters;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.sortBy = request.sortBy;
@@ -121,6 +149,24 @@ public class ListTagOptionsRequest extends Request {
             String filtersShrink = shrink(filters, "Filters", "json");
             this.putQueryParameter("Filters", filtersShrink);
             this.filters = filters;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

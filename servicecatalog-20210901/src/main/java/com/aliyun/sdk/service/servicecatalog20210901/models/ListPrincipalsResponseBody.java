@@ -101,11 +101,15 @@ public class ListPrincipalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
+        @com.aliyun.core.annotation.NameInMap("PrincipalPattern")
+        private String principalPattern;
+
         @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
         private Principals(Builder builder) {
             this.principalId = builder.principalId;
+            this.principalPattern = builder.principalPattern;
             this.principalType = builder.principalType;
         }
 
@@ -125,6 +129,13 @@ public class ListPrincipalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return principalPattern
+         */
+        public String getPrincipalPattern() {
+            return this.principalPattern;
+        }
+
+        /**
          * @return principalType
          */
         public String getPrincipalType() {
@@ -133,6 +144,7 @@ public class ListPrincipalsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String principalId; 
+            private String principalPattern; 
             private String principalType; 
 
             private Builder() {
@@ -140,6 +152,7 @@ public class ListPrincipalsResponseBody extends TeaModel {
 
             private Builder(Principals model) {
                 this.principalId = model.principalId;
+                this.principalPattern = model.principalPattern;
                 this.principalType = model.principalType;
             } 
 
@@ -151,6 +164,14 @@ public class ListPrincipalsResponseBody extends TeaModel {
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
+                return this;
+            }
+
+            /**
+             * PrincipalPattern.
+             */
+            public Builder principalPattern(String principalPattern) {
+                this.principalPattern = principalPattern;
                 return this;
             }
 

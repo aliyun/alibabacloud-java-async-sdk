@@ -24,8 +24,11 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PrincipalId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String principalId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrincipalPattern")
+    private String principalPattern;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PrincipalType")
@@ -36,6 +39,7 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         super(builder);
         this.portfolioId = builder.portfolioId;
         this.principalId = builder.principalId;
+        this.principalPattern = builder.principalPattern;
         this.principalType = builder.principalType;
     }
 
@@ -67,6 +71,13 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
     }
 
     /**
+     * @return principalPattern
+     */
+    public String getPrincipalPattern() {
+        return this.principalPattern;
+    }
+
+    /**
      * @return principalType
      */
     public String getPrincipalType() {
@@ -76,6 +87,7 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
     public static final class Builder extends Request.Builder<DisassociatePrincipalFromPortfolioRequest, Builder> {
         private String portfolioId; 
         private String principalId; 
+        private String principalPattern; 
         private String principalType; 
 
         private Builder() {
@@ -86,6 +98,7 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
             super(request);
             this.portfolioId = request.portfolioId;
             this.principalId = request.principalId;
+            this.principalPattern = request.principalPattern;
             this.principalType = request.principalType;
         } 
 
@@ -106,7 +119,6 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
          * <p>The ID of the RAM entity.</p>
          * <p>For more information about how to obtain the ID of a RAM user, see <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a>.</p>
          * <p>For more information about how to obtain the ID of a RAM role, see <a href="https://help.aliyun.com/document_detail/28711.html">GetRole</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>24477111603637****</p>
@@ -114,6 +126,15 @@ public class DisassociatePrincipalFromPortfolioRequest extends Request {
         public Builder principalId(String principalId) {
             this.putBodyParameter("PrincipalId", principalId);
             this.principalId = principalId;
+            return this;
+        }
+
+        /**
+         * PrincipalPattern.
+         */
+        public Builder principalPattern(String principalPattern) {
+            this.putBodyParameter("PrincipalPattern", principalPattern);
+            this.principalPattern = principalPattern;
             return this;
         }
 

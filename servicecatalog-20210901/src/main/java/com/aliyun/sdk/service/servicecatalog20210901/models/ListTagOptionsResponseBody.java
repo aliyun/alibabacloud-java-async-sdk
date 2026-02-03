@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagOptionsResponseBody</p>
  */
 public class ListTagOptionsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -33,6 +36,7 @@ public class ListTagOptionsResponseBody extends TeaModel {
     private Integer totalCount;
 
     private ListTagOptionsResponseBody(Builder builder) {
+        this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -50,6 +54,13 @@ public class ListTagOptionsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -88,6 +99,7 @@ public class ListTagOptionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -98,12 +110,21 @@ public class ListTagOptionsResponseBody extends TeaModel {
         } 
 
         private Builder(ListTagOptionsResponseBody model) {
+            this.nextToken = model.nextToken;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.tagOptionDetails = model.tagOptionDetails;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>The page number of the returned page.</p>
