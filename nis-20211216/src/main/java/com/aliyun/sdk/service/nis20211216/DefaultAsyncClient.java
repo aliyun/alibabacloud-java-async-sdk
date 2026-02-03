@@ -272,6 +272,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeNisTrafficRanking  DescribeNisTrafficRankingRequest
+     * @return DescribeNisTrafficRankingResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNisTrafficRankingResponse> describeNisTrafficRanking(DescribeNisTrafficRankingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNisTrafficRanking").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNisTrafficRankingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNisTrafficRankingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetInternetTuple  GetInternetTupleRequest
      * @return GetInternetTupleResponse
      */
@@ -475,6 +493,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartNisInspectionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartNisTrafficRanking  StartNisTrafficRankingRequest
+     * @return StartNisTrafficRankingResponse
+     */
+    @Override
+    public CompletableFuture<StartNisTrafficRankingResponse> startNisTrafficRanking(StartNisTrafficRankingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartNisTrafficRanking").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartNisTrafficRankingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartNisTrafficRankingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

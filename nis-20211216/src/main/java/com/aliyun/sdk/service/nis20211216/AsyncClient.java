@@ -108,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNisInspectionTaskResponse> describeNisInspectionTask(DescribeNisInspectionTaskRequest request);
 
     /**
+     * @param request the request parameters of DescribeNisTrafficRanking  DescribeNisTrafficRankingRequest
+     * @return DescribeNisTrafficRankingResponse
+     */
+    CompletableFuture<DescribeNisTrafficRankingResponse> describeNisTrafficRanking(DescribeNisTrafficRankingRequest request);
+
+    /**
      * @deprecated OpenAPI GetInternetTuple is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetInternetTuple  GetInternetTupleRequest
      * @return GetInternetTupleResponse
      */
@@ -183,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartNisInspectionTaskResponse
      */
     CompletableFuture<StartNisInspectionTaskResponse> startNisInspectionTask(StartNisInspectionTaskRequest request);
+
+    /**
+     * @param request the request parameters of StartNisTrafficRanking  StartNisTrafficRankingRequest
+     * @return StartNisTrafficRankingResponse
+     */
+    CompletableFuture<StartNisTrafficRankingResponse> startNisTrafficRanking(StartNisTrafficRankingRequest request);
 
     /**
      * @param request the request parameters of UpdateNisInspectionTask  UpdateNisInspectionTaskRequest
