@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserSolutionsResponse> listUserSolutions(ListUserSolutionsRequest request);
 
     /**
+     * @param request the request parameters of LlmSmartCall  LlmSmartCallRequest
+     * @return LlmSmartCallResponse
+     */
+    CompletableFuture<LlmSmartCallResponse> llmSmartCall(LlmSmartCallRequest request);
+
+    /**
      * @param request the request parameters of OperateCallCenterForPartner  OperateCallCenterForPartnerRequest
      * @return OperateCallCenterForPartnerResponse
      */
