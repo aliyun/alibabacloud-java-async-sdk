@@ -22,6 +22,10 @@ public class QueryAiCallTaskPageRequest extends Request {
     private String agentName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationCode")
+    private String applicationCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -42,6 +46,10 @@ public class QueryAiCallTaskPageRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private Long source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -56,11 +64,13 @@ public class QueryAiCallTaskPageRequest extends Request {
     private QueryAiCallTaskPageRequest(Builder builder) {
         super(builder);
         this.agentName = builder.agentName;
+        this.applicationCode = builder.applicationCode;
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.source = builder.source;
         this.status = builder.status;
         this.taskId = builder.taskId;
         this.taskName = builder.taskName;
@@ -84,6 +94,13 @@ public class QueryAiCallTaskPageRequest extends Request {
      */
     public String getAgentName() {
         return this.agentName;
+    }
+
+    /**
+     * @return applicationCode
+     */
+    public String getApplicationCode() {
+        return this.applicationCode;
     }
 
     /**
@@ -122,6 +139,13 @@ public class QueryAiCallTaskPageRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public Long getSource() {
+        return this.source;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -144,11 +168,13 @@ public class QueryAiCallTaskPageRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryAiCallTaskPageRequest, Builder> {
         private String agentName; 
+        private String applicationCode; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Long source; 
         private String status; 
         private String taskId; 
         private String taskName; 
@@ -160,11 +186,13 @@ public class QueryAiCallTaskPageRequest extends Request {
         private Builder(QueryAiCallTaskPageRequest request) {
             super(request);
             this.agentName = request.agentName;
+            this.applicationCode = request.applicationCode;
             this.ownerId = request.ownerId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.source = request.source;
             this.status = request.status;
             this.taskId = request.taskId;
             this.taskName = request.taskName;
@@ -176,6 +204,15 @@ public class QueryAiCallTaskPageRequest extends Request {
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
             this.agentName = agentName;
+            return this;
+        }
+
+        /**
+         * ApplicationCode.
+         */
+        public Builder applicationCode(String applicationCode) {
+            this.putQueryParameter("ApplicationCode", applicationCode);
+            this.applicationCode = applicationCode;
             return this;
         }
 
@@ -221,6 +258,15 @@ public class QueryAiCallTaskPageRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(Long source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

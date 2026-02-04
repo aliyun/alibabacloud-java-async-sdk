@@ -260,6 +260,12 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationCode")
+        private String applicationCode;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
+        private String applicationName;
+
         @com.aliyun.core.annotation.NameInMap("CallDays")
         private java.util.List<String> callDays;
 
@@ -271,6 +277,15 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ConcurrentCount")
         private Long concurrentCount;
+
+        @com.aliyun.core.annotation.NameInMap("LineEncoding")
+        private String lineEncoding;
+
+        @com.aliyun.core.annotation.NameInMap("LinePhoneNum")
+        private String linePhoneNum;
+
+        @com.aliyun.core.annotation.NameInMap("PhoneType")
+        private Long phoneType;
 
         @com.aliyun.core.annotation.NameInMap("RealStartTime")
         private Long realStartTime;
@@ -302,10 +317,15 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.agentId = builder.agentId;
             this.agentName = builder.agentName;
+            this.applicationCode = builder.applicationCode;
+            this.applicationName = builder.applicationName;
             this.callDays = builder.callDays;
             this.callTimes = builder.callTimes;
             this.callerNumber = builder.callerNumber;
             this.concurrentCount = builder.concurrentCount;
+            this.lineEncoding = builder.lineEncoding;
+            this.linePhoneNum = builder.linePhoneNum;
+            this.phoneType = builder.phoneType;
             this.realStartTime = builder.realStartTime;
             this.retryCount = builder.retryCount;
             this.retryEnable = builder.retryEnable;
@@ -340,6 +360,20 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return applicationCode
+         */
+        public String getApplicationCode() {
+            return this.applicationCode;
+        }
+
+        /**
+         * @return applicationName
+         */
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        /**
          * @return callDays
          */
         public java.util.List<String> getCallDays() {
@@ -365,6 +399,27 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
          */
         public Long getConcurrentCount() {
             return this.concurrentCount;
+        }
+
+        /**
+         * @return lineEncoding
+         */
+        public String getLineEncoding() {
+            return this.lineEncoding;
+        }
+
+        /**
+         * @return linePhoneNum
+         */
+        public String getLinePhoneNum() {
+            return this.linePhoneNum;
+        }
+
+        /**
+         * @return phoneType
+         */
+        public Long getPhoneType() {
+            return this.phoneType;
         }
 
         /**
@@ -433,10 +488,15 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentName; 
+            private String applicationCode; 
+            private String applicationName; 
             private java.util.List<String> callDays; 
             private java.util.List<CallTimes> callTimes; 
             private String callerNumber; 
             private Long concurrentCount; 
+            private String lineEncoding; 
+            private String linePhoneNum; 
+            private Long phoneType; 
             private Long realStartTime; 
             private Long retryCount; 
             private Boolean retryEnable; 
@@ -453,10 +513,15 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.agentId = model.agentId;
                 this.agentName = model.agentName;
+                this.applicationCode = model.applicationCode;
+                this.applicationName = model.applicationName;
                 this.callDays = model.callDays;
                 this.callTimes = model.callTimes;
                 this.callerNumber = model.callerNumber;
                 this.concurrentCount = model.concurrentCount;
+                this.lineEncoding = model.lineEncoding;
+                this.linePhoneNum = model.linePhoneNum;
+                this.phoneType = model.phoneType;
                 this.realStartTime = model.realStartTime;
                 this.retryCount = model.retryCount;
                 this.retryEnable = model.retryEnable;
@@ -481,6 +546,22 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * ApplicationCode.
+             */
+            public Builder applicationCode(String applicationCode) {
+                this.applicationCode = applicationCode;
+                return this;
+            }
+
+            /**
+             * ApplicationName.
+             */
+            public Builder applicationName(String applicationName) {
+                this.applicationName = applicationName;
                 return this;
             }
 
@@ -513,6 +594,30 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
              */
             public Builder concurrentCount(Long concurrentCount) {
                 this.concurrentCount = concurrentCount;
+                return this;
+            }
+
+            /**
+             * LineEncoding.
+             */
+            public Builder lineEncoding(String lineEncoding) {
+                this.lineEncoding = lineEncoding;
+                return this;
+            }
+
+            /**
+             * LinePhoneNum.
+             */
+            public Builder linePhoneNum(String linePhoneNum) {
+                this.linePhoneNum = linePhoneNum;
+                return this;
+            }
+
+            /**
+             * PhoneType.
+             */
+            public Builder phoneType(Long phoneType) {
+                this.phoneType = phoneType;
                 return this;
             }
 

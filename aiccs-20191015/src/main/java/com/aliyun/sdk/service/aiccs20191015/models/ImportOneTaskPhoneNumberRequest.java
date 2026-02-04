@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImportOneTaskPhoneNumberRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
+    private Long encryptionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
@@ -49,6 +53,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
 
     private ImportOneTaskPhoneNumberRequest(Builder builder) {
         super(builder);
+        this.encryptionType = builder.encryptionType;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
@@ -69,6 +74,13 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -121,6 +133,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportOneTaskPhoneNumberRequest, Builder> {
+        private Long encryptionType; 
         private String outId; 
         private Long ownerId; 
         private String phoneNumber; 
@@ -135,6 +148,7 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
 
         private Builder(ImportOneTaskPhoneNumberRequest request) {
             super(request);
+            this.encryptionType = request.encryptionType;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
@@ -143,6 +157,15 @@ public class ImportOneTaskPhoneNumberRequest extends Request {
             this.taskId = request.taskId;
             this.variables = request.variables;
         } 
+
+        /**
+         * EncryptionType.
+         */
+        public Builder encryptionType(Long encryptionType) {
+            this.putQueryParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
+            return this;
+        }
 
         /**
          * OutId.

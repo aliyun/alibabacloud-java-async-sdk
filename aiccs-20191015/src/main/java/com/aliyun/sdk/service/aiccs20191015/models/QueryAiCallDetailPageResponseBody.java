@@ -182,6 +182,12 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private String batchId;
 
+        @com.aliyun.core.annotation.NameInMap("BranchId")
+        private Long branchId;
+
+        @com.aliyun.core.annotation.NameInMap("BranchVersionId")
+        private Long branchVersionId;
+
         @com.aliyun.core.annotation.NameInMap("CallResult")
         private String callResult;
 
@@ -202,6 +208,9 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DetailId")
         private String detailId;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
+        private Long encryptionType;
 
         @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
@@ -229,6 +238,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.batchId = builder.batchId;
+            this.branchId = builder.branchId;
+            this.branchVersionId = builder.branchVersionId;
             this.callResult = builder.callResult;
             this.calledNumber = builder.calledNumber;
             this.callingTime = builder.callingTime;
@@ -236,6 +247,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             this.conversationRecord = builder.conversationRecord;
             this.conversationTurnCount = builder.conversationTurnCount;
             this.detailId = builder.detailId;
+            this.encryptionType = builder.encryptionType;
             this.failedReason = builder.failedReason;
             this.importedTime = builder.importedTime;
             this.majorIntent = builder.majorIntent;
@@ -259,6 +271,20 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          */
         public String getBatchId() {
             return this.batchId;
+        }
+
+        /**
+         * @return branchId
+         */
+        public Long getBranchId() {
+            return this.branchId;
+        }
+
+        /**
+         * @return branchVersionId
+         */
+        public Long getBranchVersionId() {
+            return this.branchVersionId;
         }
 
         /**
@@ -308,6 +334,13 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          */
         public String getDetailId() {
             return this.detailId;
+        }
+
+        /**
+         * @return encryptionType
+         */
+        public Long getEncryptionType() {
+            return this.encryptionType;
         }
 
         /**
@@ -368,6 +401,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String batchId; 
+            private Long branchId; 
+            private Long branchVersionId; 
             private String callResult; 
             private String calledNumber; 
             private Long callingTime; 
@@ -375,6 +410,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private String conversationRecord; 
             private Long conversationTurnCount; 
             private String detailId; 
+            private Long encryptionType; 
             private String failedReason; 
             private Long importedTime; 
             private String majorIntent; 
@@ -389,6 +425,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
 
             private Builder(List model) {
                 this.batchId = model.batchId;
+                this.branchId = model.branchId;
+                this.branchVersionId = model.branchVersionId;
                 this.callResult = model.callResult;
                 this.calledNumber = model.calledNumber;
                 this.callingTime = model.callingTime;
@@ -396,6 +434,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
                 this.conversationRecord = model.conversationRecord;
                 this.conversationTurnCount = model.conversationTurnCount;
                 this.detailId = model.detailId;
+                this.encryptionType = model.encryptionType;
                 this.failedReason = model.failedReason;
                 this.importedTime = model.importedTime;
                 this.majorIntent = model.majorIntent;
@@ -411,6 +450,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
+                return this;
+            }
+
+            /**
+             * BranchId.
+             */
+            public Builder branchId(Long branchId) {
+                this.branchId = branchId;
+                return this;
+            }
+
+            /**
+             * BranchVersionId.
+             */
+            public Builder branchVersionId(Long branchVersionId) {
+                this.branchVersionId = branchVersionId;
                 return this;
             }
 
@@ -467,6 +522,14 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder detailId(String detailId) {
                 this.detailId = detailId;
+                return this;
+            }
+
+            /**
+             * EncryptionType.
+             */
+            public Builder encryptionType(Long encryptionType) {
+                this.encryptionType = encryptionType;
                 return this;
             }
 

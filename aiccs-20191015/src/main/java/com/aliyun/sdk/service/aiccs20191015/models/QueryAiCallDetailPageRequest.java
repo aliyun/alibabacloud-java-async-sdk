@@ -34,6 +34,10 @@ public class QueryAiCallDetailPageRequest extends Request {
     private java.util.List<Long> detailIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
+    private Long encryptionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndCallingTime")
     private Long endCallingTime;
 
@@ -101,6 +105,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         this.callResult = builder.callResult;
         this.calledNumber = builder.calledNumber;
         this.detailIds = builder.detailIds;
+        this.encryptionType = builder.encryptionType;
         this.endCallingTime = builder.endCallingTime;
         this.endImportedTime = builder.endImportedTime;
         this.majorIntent = builder.majorIntent;
@@ -157,6 +162,13 @@ public class QueryAiCallDetailPageRequest extends Request {
      */
     public java.util.List<Long> getDetailIds() {
         return this.detailIds;
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -269,6 +281,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         private String callResult; 
         private String calledNumber; 
         private java.util.List<Long> detailIds; 
+        private Long encryptionType; 
         private Long endCallingTime; 
         private Long endImportedTime; 
         private String majorIntent; 
@@ -295,6 +308,7 @@ public class QueryAiCallDetailPageRequest extends Request {
             this.callResult = request.callResult;
             this.calledNumber = request.calledNumber;
             this.detailIds = request.detailIds;
+            this.encryptionType = request.encryptionType;
             this.endCallingTime = request.endCallingTime;
             this.endImportedTime = request.endImportedTime;
             this.majorIntent = request.majorIntent;
@@ -346,6 +360,15 @@ public class QueryAiCallDetailPageRequest extends Request {
             String detailIdsShrink = shrink(detailIds, "DetailIds", "json");
             this.putQueryParameter("DetailIds", detailIdsShrink);
             this.detailIds = detailIds;
+            return this;
+        }
+
+        /**
+         * EncryptionType.
+         */
+        public Builder encryptionType(Long encryptionType) {
+            this.putQueryParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
             return this;
         }
 

@@ -26,6 +26,10 @@ public class CancelAiCallDetailsRequest extends Request {
     private java.util.List<String> detailIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
+    private Long encryptionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -50,6 +54,7 @@ public class CancelAiCallDetailsRequest extends Request {
         super(builder);
         this.batchId = builder.batchId;
         this.detailIdList = builder.detailIdList;
+        this.encryptionType = builder.encryptionType;
         this.ownerId = builder.ownerId;
         this.phoneNumbers = builder.phoneNumbers;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -82,6 +87,13 @@ public class CancelAiCallDetailsRequest extends Request {
      */
     public java.util.List<String> getDetailIdList() {
         return this.detailIdList;
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -122,6 +134,7 @@ public class CancelAiCallDetailsRequest extends Request {
     public static final class Builder extends Request.Builder<CancelAiCallDetailsRequest, Builder> {
         private String batchId; 
         private java.util.List<String> detailIdList; 
+        private Long encryptionType; 
         private Long ownerId; 
         private java.util.List<String> phoneNumbers; 
         private String resourceOwnerAccount; 
@@ -136,6 +149,7 @@ public class CancelAiCallDetailsRequest extends Request {
             super(request);
             this.batchId = request.batchId;
             this.detailIdList = request.detailIdList;
+            this.encryptionType = request.encryptionType;
             this.ownerId = request.ownerId;
             this.phoneNumbers = request.phoneNumbers;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -159,6 +173,15 @@ public class CancelAiCallDetailsRequest extends Request {
             String detailIdListShrink = shrink(detailIdList, "DetailIdList", "json");
             this.putQueryParameter("DetailIdList", detailIdListShrink);
             this.detailIdList = detailIdList;
+            return this;
+        }
+
+        /**
+         * EncryptionType.
+         */
+        public Builder encryptionType(Long encryptionType) {
+            this.putQueryParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
             return this;
         }
 

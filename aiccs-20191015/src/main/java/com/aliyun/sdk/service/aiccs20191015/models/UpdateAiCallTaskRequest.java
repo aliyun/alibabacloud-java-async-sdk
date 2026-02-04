@@ -40,6 +40,14 @@ public class UpdateAiCallTaskRequest extends Request {
     private java.util.List<String> callTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineEncoding")
+    private String lineEncoding;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LinePhoneNum")
+    private String linePhoneNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MissCallRetry")
     private Boolean missCallRetry;
 
@@ -48,12 +56,20 @@ public class UpdateAiCallTaskRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneType")
+    private Long phoneType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private Long source;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartType")
@@ -81,7 +97,6 @@ public class UpdateAiCallTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualNumber;
 
     private UpdateAiCallTaskRequest(Builder builder) {
@@ -91,10 +106,14 @@ public class UpdateAiCallTaskRequest extends Request {
         this.callRetryReason = builder.callRetryReason;
         this.callRetryTimes = builder.callRetryTimes;
         this.callTime = builder.callTime;
+        this.lineEncoding = builder.lineEncoding;
+        this.linePhoneNum = builder.linePhoneNum;
         this.missCallRetry = builder.missCallRetry;
         this.ownerId = builder.ownerId;
+        this.phoneType = builder.phoneType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.source = builder.source;
         this.startType = builder.startType;
         this.taskCps = builder.taskCps;
         this.taskId = builder.taskId;
@@ -152,6 +171,20 @@ public class UpdateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return lineEncoding
+     */
+    public String getLineEncoding() {
+        return this.lineEncoding;
+    }
+
+    /**
+     * @return linePhoneNum
+     */
+    public String getLinePhoneNum() {
+        return this.linePhoneNum;
+    }
+
+    /**
      * @return missCallRetry
      */
     public Boolean getMissCallRetry() {
@@ -166,6 +199,13 @@ public class UpdateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return phoneType
+     */
+    public Long getPhoneType() {
+        return this.phoneType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -177,6 +217,13 @@ public class UpdateAiCallTaskRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return source
+     */
+    public Long getSource() {
+        return this.source;
     }
 
     /**
@@ -227,10 +274,14 @@ public class UpdateAiCallTaskRequest extends Request {
         private java.util.List<String> callRetryReason; 
         private Long callRetryTimes; 
         private java.util.List<String> callTime; 
+        private String lineEncoding; 
+        private String linePhoneNum; 
         private Boolean missCallRetry; 
         private Long ownerId; 
+        private Long phoneType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Long source; 
         private String startType; 
         private Long taskCps; 
         private String taskId; 
@@ -249,10 +300,14 @@ public class UpdateAiCallTaskRequest extends Request {
             this.callRetryReason = request.callRetryReason;
             this.callRetryTimes = request.callRetryTimes;
             this.callTime = request.callTime;
+            this.lineEncoding = request.lineEncoding;
+            this.linePhoneNum = request.linePhoneNum;
             this.missCallRetry = request.missCallRetry;
             this.ownerId = request.ownerId;
+            this.phoneType = request.phoneType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.source = request.source;
             this.startType = request.startType;
             this.taskCps = request.taskCps;
             this.taskId = request.taskId;
@@ -310,6 +365,24 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * LineEncoding.
+         */
+        public Builder lineEncoding(String lineEncoding) {
+            this.putQueryParameter("LineEncoding", lineEncoding);
+            this.lineEncoding = lineEncoding;
+            return this;
+        }
+
+        /**
+         * LinePhoneNum.
+         */
+        public Builder linePhoneNum(String linePhoneNum) {
+            this.putQueryParameter("LinePhoneNum", linePhoneNum);
+            this.linePhoneNum = linePhoneNum;
+            return this;
+        }
+
+        /**
          * MissCallRetry.
          */
         public Builder missCallRetry(Boolean missCallRetry) {
@@ -328,6 +401,15 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
+         * PhoneType.
+         */
+        public Builder phoneType(Long phoneType) {
+            this.putQueryParameter("PhoneType", phoneType);
+            this.phoneType = phoneType;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -342,6 +424,15 @@ public class UpdateAiCallTaskRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(Long source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 
@@ -403,10 +494,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0537022*****</p>
+         * VirtualNumber.
          */
         public Builder virtualNumber(String virtualNumber) {
             this.putQueryParameter("VirtualNumber", virtualNumber);

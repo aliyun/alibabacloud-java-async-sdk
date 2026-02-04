@@ -185,6 +185,12 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationCode")
+        private String applicationCode;
+
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
+        private String applicationName;
+
         @com.aliyun.core.annotation.NameInMap("CallingCount")
         private Long callingCount;
 
@@ -242,6 +248,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         private List(Builder builder) {
             this.agentId = builder.agentId;
             this.agentName = builder.agentName;
+            this.applicationCode = builder.applicationCode;
+            this.applicationName = builder.applicationName;
             this.callingCount = builder.callingCount;
             this.completeRate = builder.completeRate;
             this.concurrentCount = builder.concurrentCount;
@@ -282,6 +290,20 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          */
         public String getAgentName() {
             return this.agentName;
+        }
+
+        /**
+         * @return applicationCode
+         */
+        public String getApplicationCode() {
+            return this.applicationCode;
+        }
+
+        /**
+         * @return applicationName
+         */
+        public String getApplicationName() {
+            return this.applicationName;
         }
 
         /**
@@ -413,6 +435,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentName; 
+            private String applicationCode; 
+            private String applicationName; 
             private Long callingCount; 
             private String completeRate; 
             private Long concurrentCount; 
@@ -438,6 +462,8 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             private Builder(List model) {
                 this.agentId = model.agentId;
                 this.agentName = model.agentName;
+                this.applicationCode = model.applicationCode;
+                this.applicationName = model.applicationName;
                 this.callingCount = model.callingCount;
                 this.completeRate = model.completeRate;
                 this.concurrentCount = model.concurrentCount;
@@ -471,6 +497,22 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * ApplicationCode.
+             */
+            public Builder applicationCode(String applicationCode) {
+                this.applicationCode = applicationCode;
+                return this;
+            }
+
+            /**
+             * ApplicationName.
+             */
+            public Builder applicationName(String applicationName) {
+                this.applicationName = applicationName;
                 return this;
             }
 

@@ -23,6 +23,10 @@ public class ImportTaskNumberDatasRequest extends Request {
     private String dataType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
+    private Long encryptionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OssFileName")
     private String ossFileName;
 
@@ -50,6 +54,7 @@ public class ImportTaskNumberDatasRequest extends Request {
     private ImportTaskNumberDatasRequest(Builder builder) {
         super(builder);
         this.dataType = builder.dataType;
+        this.encryptionType = builder.encryptionType;
         this.ossFileName = builder.ossFileName;
         this.ownerId = builder.ownerId;
         this.phoneNumberList = builder.phoneNumberList;
@@ -76,6 +81,13 @@ public class ImportTaskNumberDatasRequest extends Request {
      */
     public String getDataType() {
         return this.dataType;
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public Long getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -122,6 +134,7 @@ public class ImportTaskNumberDatasRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportTaskNumberDatasRequest, Builder> {
         private String dataType; 
+        private Long encryptionType; 
         private String ossFileName; 
         private Long ownerId; 
         private java.util.List<java.util.Map<String, ?>> phoneNumberList; 
@@ -136,6 +149,7 @@ public class ImportTaskNumberDatasRequest extends Request {
         private Builder(ImportTaskNumberDatasRequest request) {
             super(request);
             this.dataType = request.dataType;
+            this.encryptionType = request.encryptionType;
             this.ossFileName = request.ossFileName;
             this.ownerId = request.ownerId;
             this.phoneNumberList = request.phoneNumberList;
@@ -153,6 +167,15 @@ public class ImportTaskNumberDatasRequest extends Request {
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
             this.dataType = dataType;
+            return this;
+        }
+
+        /**
+         * EncryptionType.
+         */
+        public Builder encryptionType(Long encryptionType) {
+            this.putQueryParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
             return this;
         }
 

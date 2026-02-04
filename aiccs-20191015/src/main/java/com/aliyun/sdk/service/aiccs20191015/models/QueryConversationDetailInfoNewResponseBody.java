@@ -482,6 +482,9 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
+        private Long encryptionType;
+
         @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
@@ -540,6 +543,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
             this.conversationTurnCount = builder.conversationTurnCount;
             this.detailId = builder.detailId;
             this.duration = builder.duration;
+            this.encryptionType = builder.encryptionType;
             this.failedReason = builder.failedReason;
             this.hangupDirection = builder.hangupDirection;
             this.importedTime = builder.importedTime;
@@ -627,6 +631,13 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          */
         public Long getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return encryptionType
+         */
+        public Long getEncryptionType() {
+            return this.encryptionType;
         }
 
         /**
@@ -751,6 +762,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
             private Long conversationTurnCount; 
             private String detailId; 
             private Long duration; 
+            private Long encryptionType; 
             private String failedReason; 
             private String hangupDirection; 
             private Long importedTime; 
@@ -781,6 +793,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
                 this.conversationTurnCount = model.conversationTurnCount;
                 this.detailId = model.detailId;
                 this.duration = model.duration;
+                this.encryptionType = model.encryptionType;
                 this.failedReason = model.failedReason;
                 this.hangupDirection = model.hangupDirection;
                 this.importedTime = model.importedTime;
@@ -868,6 +881,14 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * EncryptionType.
+             */
+            public Builder encryptionType(Long encryptionType) {
+                this.encryptionType = encryptionType;
                 return this;
             }
 

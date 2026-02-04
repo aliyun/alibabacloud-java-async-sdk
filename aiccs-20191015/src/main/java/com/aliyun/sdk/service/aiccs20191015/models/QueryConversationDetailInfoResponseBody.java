@@ -473,6 +473,9 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
+        private String encryptionType;
+
         @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
@@ -516,6 +519,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             this.callerPhone = builder.callerPhone;
             this.conversationRecord = builder.conversationRecord;
             this.duration = builder.duration;
+            this.encryptionType = builder.encryptionType;
             this.failedReason = builder.failedReason;
             this.hangupDirection = builder.hangupDirection;
             this.majorIntent = builder.majorIntent;
@@ -578,6 +582,13 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
          */
         public Long getDuration() {
             return this.duration;
+        }
+
+        /**
+         * @return encryptionType
+         */
+        public String getEncryptionType() {
+            return this.encryptionType;
         }
 
         /**
@@ -671,6 +682,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
             private String callerPhone; 
             private String conversationRecord; 
             private Long duration; 
+            private String encryptionType; 
             private String failedReason; 
             private String hangupDirection; 
             private String majorIntent; 
@@ -694,6 +706,7 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
                 this.callerPhone = model.callerPhone;
                 this.conversationRecord = model.conversationRecord;
                 this.duration = model.duration;
+                this.encryptionType = model.encryptionType;
                 this.failedReason = model.failedReason;
                 this.hangupDirection = model.hangupDirection;
                 this.majorIntent = model.majorIntent;
@@ -753,6 +766,14 @@ public class QueryConversationDetailInfoResponseBody extends TeaModel {
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * EncryptionType.
+             */
+            public Builder encryptionType(String encryptionType) {
+                this.encryptionType = encryptionType;
                 return this;
             }
 

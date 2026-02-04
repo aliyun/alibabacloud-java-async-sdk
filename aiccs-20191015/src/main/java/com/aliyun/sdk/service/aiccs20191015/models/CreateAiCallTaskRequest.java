@@ -19,8 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAiCallTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String agentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationCode")
+    private String applicationCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    private String applicationName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallDay")
@@ -45,6 +52,14 @@ public class CreateAiCallTaskRequest extends Request {
     private java.util.List<String> callTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineEncoding")
+    private String lineEncoding;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LinePhoneNum")
+    private String linePhoneNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MissCallRetry")
     private Boolean missCallRetry;
 
@@ -53,12 +68,20 @@ public class CreateAiCallTaskRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneType")
+    private Long phoneType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private Long source;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartType")
@@ -80,21 +103,26 @@ public class CreateAiCallTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VirtualNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualNumber;
 
     private CreateAiCallTaskRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
+        this.applicationCode = builder.applicationCode;
+        this.applicationName = builder.applicationName;
         this.callDay = builder.callDay;
         this.callRetryInterval = builder.callRetryInterval;
         this.callRetryReason = builder.callRetryReason;
         this.callRetryTimes = builder.callRetryTimes;
         this.callTime = builder.callTime;
+        this.lineEncoding = builder.lineEncoding;
+        this.linePhoneNum = builder.linePhoneNum;
         this.missCallRetry = builder.missCallRetry;
         this.ownerId = builder.ownerId;
+        this.phoneType = builder.phoneType;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.source = builder.source;
         this.startType = builder.startType;
         this.taskCps = builder.taskCps;
         this.taskName = builder.taskName;
@@ -120,6 +148,20 @@ public class CreateAiCallTaskRequest extends Request {
      */
     public String getAgentId() {
         return this.agentId;
+    }
+
+    /**
+     * @return applicationCode
+     */
+    public String getApplicationCode() {
+        return this.applicationCode;
+    }
+
+    /**
+     * @return applicationName
+     */
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     /**
@@ -158,6 +200,20 @@ public class CreateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return lineEncoding
+     */
+    public String getLineEncoding() {
+        return this.lineEncoding;
+    }
+
+    /**
+     * @return linePhoneNum
+     */
+    public String getLinePhoneNum() {
+        return this.linePhoneNum;
+    }
+
+    /**
      * @return missCallRetry
      */
     public Boolean getMissCallRetry() {
@@ -172,6 +228,13 @@ public class CreateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return phoneType
+     */
+    public Long getPhoneType() {
+        return this.phoneType;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -183,6 +246,13 @@ public class CreateAiCallTaskRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return source
+     */
+    public Long getSource() {
+        return this.source;
     }
 
     /**
@@ -222,15 +292,21 @@ public class CreateAiCallTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAiCallTaskRequest, Builder> {
         private String agentId; 
+        private String applicationCode; 
+        private String applicationName; 
         private java.util.List<String> callDay; 
         private Long callRetryInterval; 
         private java.util.List<String> callRetryReason; 
         private Long callRetryTimes; 
         private java.util.List<String> callTime; 
+        private String lineEncoding; 
+        private String linePhoneNum; 
         private Boolean missCallRetry; 
         private Long ownerId; 
+        private Long phoneType; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Long source; 
         private String startType; 
         private Long taskCps; 
         private String taskName; 
@@ -244,15 +320,21 @@ public class CreateAiCallTaskRequest extends Request {
         private Builder(CreateAiCallTaskRequest request) {
             super(request);
             this.agentId = request.agentId;
+            this.applicationCode = request.applicationCode;
+            this.applicationName = request.applicationName;
             this.callDay = request.callDay;
             this.callRetryInterval = request.callRetryInterval;
             this.callRetryReason = request.callRetryReason;
             this.callRetryTimes = request.callRetryTimes;
             this.callTime = request.callTime;
+            this.lineEncoding = request.lineEncoding;
+            this.linePhoneNum = request.linePhoneNum;
             this.missCallRetry = request.missCallRetry;
             this.ownerId = request.ownerId;
+            this.phoneType = request.phoneType;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.source = request.source;
             this.startType = request.startType;
             this.taskCps = request.taskCps;
             this.taskName = request.taskName;
@@ -261,14 +343,29 @@ public class CreateAiCallTaskRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>121223123123****</p>
+         * AgentId.
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
             this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * ApplicationCode.
+         */
+        public Builder applicationCode(String applicationCode) {
+            this.putQueryParameter("ApplicationCode", applicationCode);
+            this.applicationCode = applicationCode;
+            return this;
+        }
+
+        /**
+         * ApplicationName.
+         */
+        public Builder applicationName(String applicationName) {
+            this.putQueryParameter("ApplicationName", applicationName);
+            this.applicationName = applicationName;
             return this;
         }
 
@@ -321,6 +418,24 @@ public class CreateAiCallTaskRequest extends Request {
         }
 
         /**
+         * LineEncoding.
+         */
+        public Builder lineEncoding(String lineEncoding) {
+            this.putQueryParameter("LineEncoding", lineEncoding);
+            this.lineEncoding = lineEncoding;
+            return this;
+        }
+
+        /**
+         * LinePhoneNum.
+         */
+        public Builder linePhoneNum(String linePhoneNum) {
+            this.putQueryParameter("LinePhoneNum", linePhoneNum);
+            this.linePhoneNum = linePhoneNum;
+            return this;
+        }
+
+        /**
          * MissCallRetry.
          */
         public Builder missCallRetry(Boolean missCallRetry) {
@@ -339,6 +454,15 @@ public class CreateAiCallTaskRequest extends Request {
         }
 
         /**
+         * PhoneType.
+         */
+        public Builder phoneType(Long phoneType) {
+            this.putQueryParameter("PhoneType", phoneType);
+            this.phoneType = phoneType;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -353,6 +477,15 @@ public class CreateAiCallTaskRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(Long source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 
@@ -399,10 +532,7 @@ public class CreateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>032712122*****</p>
+         * VirtualNumber.
          */
         public Builder virtualNumber(String virtualNumber) {
             this.putQueryParameter("VirtualNumber", virtualNumber);
