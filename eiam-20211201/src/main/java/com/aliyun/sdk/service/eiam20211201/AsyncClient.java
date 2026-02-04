@@ -116,6 +116,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindUserAuthnSourceMappingResponse> bindUserAuthnSourceMapping(BindUserAuthnSourceMappingRequest request);
 
     /**
+     * @param request the request parameters of CheckApplicationProvisioningUserPrimaryOrganizationalUnit  CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    CompletableFuture<CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse> checkApplicationProvisioningUserPrimaryOrganizationalUnit(CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of CheckInstanceForDelete  CheckInstanceForDeleteRequest
+     * @return CheckInstanceForDeleteResponse
+     */
+    CompletableFuture<CheckInstanceForDeleteResponse> checkInstanceForDelete(CheckInstanceForDeleteRequest request);
+
+    /**
+     * @param request the request parameters of CheckInstanceModuleStatus  CheckInstanceModuleStatusRequest
+     * @return CheckInstanceModuleStatusResponse
+     */
+    CompletableFuture<CheckInstanceModuleStatusResponse> checkInstanceModuleStatus(CheckInstanceModuleStatusRequest request);
+
+    /**
      * <b>description</b> :
      * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
      * 
@@ -194,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConditionalAccessPolicyResponse> createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomField  CreateCustomFieldRequest
+     * @return CreateCustomFieldResponse
+     */
+    CompletableFuture<CreateCustomFieldResponse> createCustomField(CreateCustomFieldRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomPrivacyPolicy  CreateCustomPrivacyPolicyRequest
      * @return CreateCustomPrivacyPolicyResponse
      */
@@ -240,6 +264,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateInstanceResponse
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateInstanceTrialLicense  CreateInstanceTrialLicenseRequest
+     * @return CreateInstanceTrialLicenseResponse
+     */
+    CompletableFuture<CreateInstanceTrialLicenseResponse> createInstanceTrialLicense(CreateInstanceTrialLicenseRequest request);
 
     /**
      * @param request the request parameters of CreateNetworkAccessEndpoint  CreateNetworkAccessEndpointRequest
@@ -348,6 +378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConditionalAccessPolicyResponse
      */
     CompletableFuture<DeleteConditionalAccessPolicyResponse> deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomField  DeleteCustomFieldRequest
+     * @return DeleteCustomFieldResponse
+     */
+    CompletableFuture<DeleteCustomFieldResponse> deleteCustomField(DeleteCustomFieldRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomPrivacyPolicy  DeleteCustomPrivacyPolicyRequest
@@ -533,6 +569,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableConditionalAccessPolicyResponse> disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of DisableCustomField  DisableCustomFieldRequest
+     * @return DisableCustomFieldResponse
+     */
+    CompletableFuture<DisableCustomFieldResponse> disableCustomField(DisableCustomFieldRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomPrivacyPolicy  DisableCustomPrivacyPolicyRequest
      * @return DisableCustomPrivacyPolicyResponse
      */
@@ -680,6 +722,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableConditionalAccessPolicyResponse> enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
+     * @return EnableCustomFieldResponse
+     */
+    CompletableFuture<EnableCustomFieldResponse> enableCustomField(EnableCustomFieldRequest request);
+
+    /**
      * @param request the request parameters of EnableCustomPrivacyPolicy  EnableCustomPrivacyPolicyRequest
      * @return EnableCustomPrivacyPolicyResponse
      */
@@ -794,6 +842,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request);
 
     /**
+     * @param request the request parameters of GetApplicationProvisioningUserPrimaryOrganizationalUnit  GetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    CompletableFuture<GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> getApplicationProvisioningUserPrimaryOrganizationalUnit(GetApplicationProvisioningUserPrimaryOrganizationalUnitRequest request);
+
+    /**
      * @param request the request parameters of GetApplicationRole  GetApplicationRoleRequest
      * @return GetApplicationRoleResponse
      */
@@ -857,6 +911,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConditionalAccessPolicyResponse> getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of GetCustomField  GetCustomFieldRequest
+     * @return GetCustomFieldResponse
+     */
+    CompletableFuture<GetCustomFieldResponse> getCustomField(GetCustomFieldRequest request);
+
+    /**
      * @param request the request parameters of GetCustomPrivacyPolicy  GetCustomPrivacyPolicyRequest
      * @return GetCustomPrivacyPolicyResponse
      */
@@ -899,16 +959,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request);
 
     /**
+     * @param request the request parameters of GetIdentityProviderAdvancedConfiguration  GetIdentityProviderAdvancedConfigurationRequest
+     * @return GetIdentityProviderAdvancedConfigurationResponse
+     */
+    CompletableFuture<GetIdentityProviderAdvancedConfigurationResponse> getIdentityProviderAdvancedConfiguration(GetIdentityProviderAdvancedConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of GetIdentityProviderStatusCheckJob  GetIdentityProviderStatusCheckJobRequest
+     * @return GetIdentityProviderStatusCheckJobResponse
+     */
+    CompletableFuture<GetIdentityProviderStatusCheckJobResponse> getIdentityProviderStatusCheckJob(GetIdentityProviderStatusCheckJobRequest request);
+
+    /**
      * @param request the request parameters of GetIdentityProviderUdPullConfiguration  GetIdentityProviderUdPullConfigurationRequest
      * @return GetIdentityProviderUdPullConfigurationResponse
      */
     CompletableFuture<GetIdentityProviderUdPullConfigurationResponse> getIdentityProviderUdPullConfiguration(GetIdentityProviderUdPullConfigurationRequest request);
 
     /**
+     * @param request the request parameters of GetIdentityProviderUdPushConfiguration  GetIdentityProviderUdPushConfigurationRequest
+     * @return GetIdentityProviderUdPushConfigurationResponse
+     */
+    CompletableFuture<GetIdentityProviderUdPushConfigurationResponse> getIdentityProviderUdPushConfiguration(GetIdentityProviderUdPushConfigurationRequest request);
+
+    /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
      * @return GetInstanceResponse
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceControlConfiguration  GetInstanceControlConfigurationRequest
+     * @return GetInstanceControlConfigurationResponse
+     */
+    CompletableFuture<GetInstanceControlConfigurationResponse> getInstanceControlConfiguration(GetInstanceControlConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceGlobalizationConfig  GetInstanceGlobalizationConfigRequest
+     * @return GetInstanceGlobalizationConfigResponse
+     */
+    CompletableFuture<GetInstanceGlobalizationConfigResponse> getInstanceGlobalizationConfig(GetInstanceGlobalizationConfigRequest request);
 
     /**
      * <b>description</b> :
@@ -918,6 +1008,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceLicenseResponse
      */
     CompletableFuture<GetInstanceLicenseResponse> getInstanceLicense(GetInstanceLicenseRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceModuleInfo  GetInstanceModuleInfoRequest
+     * @return GetInstanceModuleInfoResponse
+     */
+    CompletableFuture<GetInstanceModuleInfoResponse> getInstanceModuleInfo(GetInstanceModuleInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceQuota  GetInstanceQuotaRequest
+     * @return GetInstanceQuotaResponse
+     */
+    CompletableFuture<GetInstanceQuotaResponse> getInstanceQuota(GetInstanceQuotaRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceTrialStatus  GetInstanceTrialStatusRequest
+     * @return GetInstanceTrialStatusResponse
+     */
+    CompletableFuture<GetInstanceTrialStatusResponse> getInstanceTrialStatus(GetInstanceTrialStatusRequest request);
 
     /**
      * @param request the request parameters of GetLoginRedirectApplicationForBrand  GetLoginRedirectApplicationForBrandRequest

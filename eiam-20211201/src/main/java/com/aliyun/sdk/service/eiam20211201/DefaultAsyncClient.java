@@ -328,6 +328,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CheckApplicationProvisioningUserPrimaryOrganizationalUnit  CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    @Override
+    public CompletableFuture<CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse> checkApplicationProvisioningUserPrimaryOrganizationalUnit(CheckApplicationProvisioningUserPrimaryOrganizationalUnitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckApplicationProvisioningUserPrimaryOrganizationalUnit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckInstanceForDelete  CheckInstanceForDeleteRequest
+     * @return CheckInstanceForDeleteResponse
+     */
+    @Override
+    public CompletableFuture<CheckInstanceForDeleteResponse> checkInstanceForDelete(CheckInstanceForDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckInstanceForDelete").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckInstanceForDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckInstanceForDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckInstanceModuleStatus  CheckInstanceModuleStatusRequest
+     * @return CheckInstanceModuleStatusResponse
+     */
+    @Override
+    public CompletableFuture<CheckInstanceModuleStatusResponse> checkInstanceModuleStatus(CheckInstanceModuleStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckInstanceModuleStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckInstanceModuleStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckInstanceModuleStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
      * 
@@ -550,6 +604,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCustomField  CreateCustomFieldRequest
+     * @return CreateCustomFieldResponse
+     */
+    @Override
+    public CompletableFuture<CreateCustomFieldResponse> createCustomField(CreateCustomFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCustomField").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCustomFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCustomFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateCustomPrivacyPolicy  CreateCustomPrivacyPolicyRequest
      * @return CreateCustomPrivacyPolicyResponse
      */
@@ -688,6 +760,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInstanceTrialLicense  CreateInstanceTrialLicenseRequest
+     * @return CreateInstanceTrialLicenseResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceTrialLicenseResponse> createInstanceTrialLicense(CreateInstanceTrialLicenseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInstanceTrialLicense").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceTrialLicenseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceTrialLicenseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1000,6 +1090,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteConditionalAccessPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCustomField  DeleteCustomFieldRequest
+     * @return DeleteCustomFieldResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCustomFieldResponse> deleteCustomField(DeleteCustomFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCustomField").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCustomFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCustomFieldResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1537,6 +1645,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableCustomField  DisableCustomFieldRequest
+     * @return DisableCustomFieldResponse
+     */
+    @Override
+    public CompletableFuture<DisableCustomFieldResponse> disableCustomField(DisableCustomFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableCustomField").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableCustomFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableCustomFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DisableCustomPrivacyPolicy  DisableCustomPrivacyPolicyRequest
      * @return DisableCustomPrivacyPolicyResponse
      */
@@ -1972,6 +2098,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
+     * @return EnableCustomFieldResponse
+     */
+    @Override
+    public CompletableFuture<EnableCustomFieldResponse> enableCustomField(EnableCustomFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableCustomField").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableCustomFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableCustomFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnableCustomPrivacyPolicy  EnableCustomPrivacyPolicyRequest
      * @return EnableCustomPrivacyPolicyResponse
      */
@@ -2314,6 +2458,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetApplicationProvisioningUserPrimaryOrganizationalUnit  GetApplicationProvisioningUserPrimaryOrganizationalUnitRequest
+     * @return GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse
+     */
+    @Override
+    public CompletableFuture<GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> getApplicationProvisioningUserPrimaryOrganizationalUnit(GetApplicationProvisioningUserPrimaryOrganizationalUnitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetApplicationProvisioningUserPrimaryOrganizationalUnit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetApplicationProvisioningUserPrimaryOrganizationalUnitResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetApplicationRole  GetApplicationRoleRequest
      * @return GetApplicationRoleResponse
      */
@@ -2497,6 +2659,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCustomField  GetCustomFieldRequest
+     * @return GetCustomFieldResponse
+     */
+    @Override
+    public CompletableFuture<GetCustomFieldResponse> getCustomField(GetCustomFieldRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCustomField").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCustomFieldResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCustomFieldResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCustomPrivacyPolicy  GetCustomPrivacyPolicyRequest
      * @return GetCustomPrivacyPolicyResponse
      */
@@ -2623,6 +2803,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetIdentityProviderAdvancedConfiguration  GetIdentityProviderAdvancedConfigurationRequest
+     * @return GetIdentityProviderAdvancedConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetIdentityProviderAdvancedConfigurationResponse> getIdentityProviderAdvancedConfiguration(GetIdentityProviderAdvancedConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIdentityProviderAdvancedConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIdentityProviderAdvancedConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIdentityProviderAdvancedConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIdentityProviderStatusCheckJob  GetIdentityProviderStatusCheckJobRequest
+     * @return GetIdentityProviderStatusCheckJobResponse
+     */
+    @Override
+    public CompletableFuture<GetIdentityProviderStatusCheckJobResponse> getIdentityProviderStatusCheckJob(GetIdentityProviderStatusCheckJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIdentityProviderStatusCheckJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIdentityProviderStatusCheckJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIdentityProviderStatusCheckJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetIdentityProviderUdPullConfiguration  GetIdentityProviderUdPullConfigurationRequest
      * @return GetIdentityProviderUdPullConfigurationResponse
      */
@@ -2635,6 +2851,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIdentityProviderUdPullConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIdentityProviderUdPushConfiguration  GetIdentityProviderUdPushConfigurationRequest
+     * @return GetIdentityProviderUdPushConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetIdentityProviderUdPushConfigurationResponse> getIdentityProviderUdPushConfiguration(GetIdentityProviderUdPushConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetIdentityProviderUdPushConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIdentityProviderUdPushConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIdentityProviderUdPushConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2659,6 +2893,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetInstanceControlConfiguration  GetInstanceControlConfigurationRequest
+     * @return GetInstanceControlConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceControlConfigurationResponse> getInstanceControlConfiguration(GetInstanceControlConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceControlConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceControlConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceControlConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceGlobalizationConfig  GetInstanceGlobalizationConfigRequest
+     * @return GetInstanceGlobalizationConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceGlobalizationConfigResponse> getInstanceGlobalizationConfig(GetInstanceGlobalizationConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceGlobalizationConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceGlobalizationConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceGlobalizationConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</p>
      * 
@@ -2674,6 +2944,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceLicenseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceModuleInfo  GetInstanceModuleInfoRequest
+     * @return GetInstanceModuleInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceModuleInfoResponse> getInstanceModuleInfo(GetInstanceModuleInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceModuleInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceModuleInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceModuleInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceQuota  GetInstanceQuotaRequest
+     * @return GetInstanceQuotaResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceQuotaResponse> getInstanceQuota(GetInstanceQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceTrialStatus  GetInstanceTrialStatusRequest
+     * @return GetInstanceTrialStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceTrialStatusResponse> getInstanceTrialStatus(GetInstanceTrialStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetInstanceTrialStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceTrialStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceTrialStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
