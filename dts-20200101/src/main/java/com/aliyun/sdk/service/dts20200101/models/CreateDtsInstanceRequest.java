@@ -56,6 +56,10 @@ public class CreateDtsInstanceRequest extends Request {
     private String feeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InsightModule")
+    private Boolean insightModule;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
@@ -124,6 +128,7 @@ public class CreateDtsInstanceRequest extends Request {
         this.dtsRegion = builder.dtsRegion;
         this.du = builder.du;
         this.feeType = builder.feeType;
+        this.insightModule = builder.insightModule;
         this.instanceClass = builder.instanceClass;
         this.jobId = builder.jobId;
         this.maxDu = builder.maxDu;
@@ -214,6 +219,13 @@ public class CreateDtsInstanceRequest extends Request {
      */
     public String getFeeType() {
         return this.feeType;
+    }
+
+    /**
+     * @return insightModule
+     */
+    public Boolean getInsightModule() {
+        return this.insightModule;
     }
 
     /**
@@ -324,6 +336,7 @@ public class CreateDtsInstanceRequest extends Request {
         private String dtsRegion; 
         private Integer du; 
         private String feeType; 
+        private Boolean insightModule; 
         private String instanceClass; 
         private String jobId; 
         private Double maxDu; 
@@ -354,6 +367,7 @@ public class CreateDtsInstanceRequest extends Request {
             this.dtsRegion = request.dtsRegion;
             this.du = request.du;
             this.feeType = request.feeType;
+            this.insightModule = request.insightModule;
             this.instanceClass = request.instanceClass;
             this.jobId = request.jobId;
             this.maxDu = request.maxDu;
@@ -526,6 +540,15 @@ public class CreateDtsInstanceRequest extends Request {
         public Builder feeType(String feeType) {
             this.putQueryParameter("FeeType", feeType);
             this.feeType = feeType;
+            return this;
+        }
+
+        /**
+         * InsightModule.
+         */
+        public Builder insightModule(Boolean insightModule) {
+            this.putQueryParameter("InsightModule", insightModule);
+            this.insightModule = insightModule;
             return this;
         }
 

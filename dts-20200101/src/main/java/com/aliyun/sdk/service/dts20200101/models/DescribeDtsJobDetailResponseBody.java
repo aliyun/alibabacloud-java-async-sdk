@@ -128,6 +128,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InitCheckpoint")
     private String initCheckpoint;
 
+    @com.aliyun.core.annotation.NameInMap("InsightModule")
+    private Boolean insightModule;
+
     @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
@@ -229,6 +232,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         this.groupId = builder.groupId;
         this.httpStatusCode = builder.httpStatusCode;
         this.initCheckpoint = builder.initCheckpoint;
+        this.insightModule = builder.insightModule;
         this.jobType = builder.jobType;
         this.lastUpdateTime = builder.lastUpdateTime;
         this.maxDu = builder.maxDu;
@@ -524,6 +528,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return insightModule
+     */
+    public Boolean getInsightModule() {
+        return this.insightModule;
+    }
+
+    /**
      * @return jobType
      */
     public String getJobType() {
@@ -708,6 +719,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String groupId; 
         private Integer httpStatusCode; 
         private String initCheckpoint; 
+        private Boolean insightModule; 
         private String jobType; 
         private String lastUpdateTime; 
         private Double maxDu; 
@@ -771,6 +783,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.groupId = model.groupId;
             this.httpStatusCode = model.httpStatusCode;
             this.initCheckpoint = model.initCheckpoint;
+            this.insightModule = model.insightModule;
             this.jobType = model.jobType;
             this.lastUpdateTime = model.lastUpdateTime;
             this.maxDu = model.maxDu;
@@ -1220,6 +1233,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public Builder initCheckpoint(String initCheckpoint) {
             this.initCheckpoint = initCheckpoint;
+            return this;
+        }
+
+        /**
+         * InsightModule.
+         */
+        public Builder insightModule(Boolean insightModule) {
+            this.insightModule = insightModule;
             return this;
         }
 
