@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aclInfo")
+    private AclInfo aclInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
@@ -88,6 +92,7 @@ public class CreateInstanceRequest extends Request {
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
+        this.aclInfo = builder.aclInfo;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.commodityCode = builder.commodityCode;
@@ -117,6 +122,13 @@ public class CreateInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aclInfo
+     */
+    public AclInfo getAclInfo() {
+        return this.aclInfo;
     }
 
     /**
@@ -232,6 +244,7 @@ public class CreateInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+        private AclInfo aclInfo; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String commodityCode; 
@@ -255,6 +268,7 @@ public class CreateInstanceRequest extends Request {
 
         private Builder(CreateInstanceRequest request) {
             super(request);
+            this.aclInfo = request.aclInfo;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.commodityCode = request.commodityCode;
@@ -272,6 +286,15 @@ public class CreateInstanceRequest extends Request {
             this.tags = request.tags;
             this.clientToken = request.clientToken;
         } 
+
+        /**
+         * aclInfo.
+         */
+        public Builder aclInfo(AclInfo aclInfo) {
+            this.putBodyParameter("aclInfo", aclInfo);
+            this.aclInfo = aclInfo;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set paymentType to Subscription. Valid values:</p>
@@ -524,6 +547,60 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class AclInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("defaultVpcAuthFree")
+        private Boolean defaultVpcAuthFree;
+
+        private AclInfo(Builder builder) {
+            this.defaultVpcAuthFree = builder.defaultVpcAuthFree;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultVpcAuthFree
+         */
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
+        public static final class Builder {
+            private Boolean defaultVpcAuthFree; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclInfo model) {
+                this.defaultVpcAuthFree = model.defaultVpcAuthFree;
+            } 
+
+            /**
+             * defaultVpcAuthFree.
+             */
+            public Builder defaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+                this.defaultVpcAuthFree = defaultVpcAuthFree;
+                return this;
+            }
+
+            public AclInfo build() {
+                return new AclInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateInstanceRequest} extends {@link TeaModel}
