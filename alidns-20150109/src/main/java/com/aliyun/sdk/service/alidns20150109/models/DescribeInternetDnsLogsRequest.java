@@ -46,6 +46,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreciseSort")
+    private Boolean preciseSort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryCondition")
     private String queryCondition;
 
@@ -66,6 +70,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
         this.module = builder.module;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.preciseSort = builder.preciseSort;
         this.queryCondition = builder.queryCondition;
         this.recursionProtocolType = builder.recursionProtocolType;
         this.startTimestamp = builder.startTimestamp;
@@ -134,6 +139,13 @@ public class DescribeInternetDnsLogsRequest extends Request {
     }
 
     /**
+     * @return preciseSort
+     */
+    public Boolean getPreciseSort() {
+        return this.preciseSort;
+    }
+
+    /**
      * @return queryCondition
      */
     public String getQueryCondition() {
@@ -162,6 +174,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
         private String module; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean preciseSort; 
         private String queryCondition; 
         private String recursionProtocolType; 
         private Long startTimestamp; 
@@ -179,6 +192,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
             this.module = request.module;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.preciseSort = request.preciseSort;
             this.queryCondition = request.queryCondition;
             this.recursionProtocolType = request.recursionProtocolType;
             this.startTimestamp = request.startTimestamp;
@@ -274,6 +288,15 @@ public class DescribeInternetDnsLogsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * PreciseSort.
+         */
+        public Builder preciseSort(Boolean preciseSort) {
+            this.putQueryParameter("PreciseSort", preciseSort);
+            this.preciseSort = preciseSort;
             return this;
         }
 
