@@ -35,6 +35,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
+    @com.aliyun.core.annotation.NameInMap("BackupInstance")
+    private String backupInstance;
+
     @com.aliyun.core.annotation.NameInMap("ColdStorage")
     private Integer coldStorage;
 
@@ -195,6 +198,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.archVersion = builder.archVersion;
         this.archiveStorage = builder.archiveStorage;
         this.autoRenew = builder.autoRenew;
+        this.backupInstance = builder.backupInstance;
         this.coldStorage = builder.coldStorage;
         this.coreDiskCategory = builder.coreDiskCategory;
         this.coreNum = builder.coreNum;
@@ -300,6 +304,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return backupInstance
+     */
+    public String getBackupInstance() {
+        return this.backupInstance;
     }
 
     /**
@@ -666,6 +677,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private String archVersion; 
         private Integer archiveStorage; 
         private Boolean autoRenew; 
+        private String backupInstance; 
         private Integer coldStorage; 
         private String coreDiskCategory; 
         private Integer coreNum; 
@@ -728,6 +740,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             this.archVersion = model.archVersion;
             this.archiveStorage = model.archiveStorage;
             this.autoRenew = model.autoRenew;
+            this.backupInstance = model.backupInstance;
             this.coldStorage = model.coldStorage;
             this.coreDiskCategory = model.coreDiskCategory;
             this.coreNum = model.coreNum;
@@ -855,6 +868,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BackupInstance.
+         */
+        public Builder backupInstance(String backupInstance) {
+            this.backupInstance = backupInstance;
             return this;
         }
 
