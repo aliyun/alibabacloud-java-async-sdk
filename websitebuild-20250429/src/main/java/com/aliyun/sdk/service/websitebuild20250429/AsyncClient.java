@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserTmpIdentityForPartnerResponse> getUserTmpIdentityForPartner(GetUserTmpIdentityForPartnerRequest request);
 
     /**
+     * @param request the request parameters of IntrospectAppInstanceTicketForPreview  IntrospectAppInstanceTicketForPreviewRequest
+     * @return IntrospectAppInstanceTicketForPreviewResponse
+     */
+    CompletableFuture<IntrospectAppInstanceTicketForPreviewResponse> introspectAppInstanceTicketForPreview(IntrospectAppInstanceTicketForPreviewRequest request);
+
+    /**
      * @param request the request parameters of ListAppDomainRedirectRecords  ListAppDomainRedirectRecordsRequest
      * @return ListAppDomainRedirectRecordsResponse
      */

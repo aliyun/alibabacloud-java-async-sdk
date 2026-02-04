@@ -59,7 +59,10 @@ public class GetAppInstanceRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250801152639000005</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);

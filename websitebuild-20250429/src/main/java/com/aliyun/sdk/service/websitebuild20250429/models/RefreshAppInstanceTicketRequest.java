@@ -87,7 +87,10 @@ public class RefreshAppInstanceTicketRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>Business ID of the application instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -96,7 +99,10 @@ public class RefreshAppInstanceTicketRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>Updated token information</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -105,7 +111,10 @@ public class RefreshAppInstanceTicketRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5c354d7-5e68-443a-b7fc-767e6ede9deb</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

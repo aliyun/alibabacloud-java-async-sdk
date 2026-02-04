@@ -96,7 +96,10 @@ public class DeleteAppDomainRedirectRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID of the application instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class DeleteAppDomainRedirectRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>ID of the domain redirect record</p>
+         * 
+         * <strong>example:</strong>
+         * <p>803858889404426240</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);

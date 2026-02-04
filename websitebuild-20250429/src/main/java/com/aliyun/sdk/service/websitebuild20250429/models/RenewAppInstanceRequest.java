@@ -129,7 +129,10 @@ public class RenewAppInstanceRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250718165839000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -138,7 +141,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Ensures idempotence of requests. Generate a unique value from your client to ensure it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdfjafdfadfenjeora</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +153,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Required. The number of subscription periods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -156,7 +165,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Extended information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;交付质检&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -165,7 +177,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * <p>Payment type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -174,7 +189,10 @@ public class RenewAppInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

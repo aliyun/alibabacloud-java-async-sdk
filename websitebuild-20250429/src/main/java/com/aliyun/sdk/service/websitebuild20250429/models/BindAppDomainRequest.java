@@ -124,7 +124,10 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250820143531000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -133,7 +136,10 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoniu.link</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +148,10 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Extended Information (OverwriteExistingRecord)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;deliveryNodeName&quot;:&quot;网站验收&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -151,7 +160,10 @@ public class BindAppDomainRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>Domain Binding - Operation Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul_fix</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);

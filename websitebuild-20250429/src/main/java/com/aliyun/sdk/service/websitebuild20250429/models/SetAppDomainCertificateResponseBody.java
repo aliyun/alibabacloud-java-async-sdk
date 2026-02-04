@@ -184,7 +184,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>No permission information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,14 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether to allow retry. Values:</p>
+         * <ul>
+         * <li>false: Do not allow retry.</li>
+         * <li>true: Allow retry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +210,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>应用名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mar</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +221,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +232,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +243,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>Return error parameters</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +251,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Response data</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -240,7 +259,7 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -251,7 +270,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +281,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Exception message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +292,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Whether it is processed synchronously</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -320,7 +348,10 @@ public class SetAppDomainCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * Success.
+             * <p>Whether it is successful</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

@@ -110,7 +110,10 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Application instance business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250703155602000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,11 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results per query.</p>
+         * <p>Range: 10~100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +135,10 @@ public class ListAppDomainRedirectRecordsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token for the next query. It is empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yPkgBbQln0gmUnIZSGizGw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

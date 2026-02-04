@@ -184,7 +184,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>No permission information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>App name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,13 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the incoming request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +242,7 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>Returned error parameters</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +250,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Response data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Success&quot;: True}</p>
          */
         public Builder module(AppInstanceAggregate module) {
             this.module = module;
@@ -240,7 +261,7 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -251,7 +272,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +283,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Exception message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +294,10 @@ public class GetAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;

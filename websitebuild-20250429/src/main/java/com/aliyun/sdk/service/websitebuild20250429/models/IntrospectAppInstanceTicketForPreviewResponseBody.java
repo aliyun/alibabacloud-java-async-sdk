@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RefreshAppInstanceTicketResponseBody} extends {@link TeaModel}
+ * {@link IntrospectAppInstanceTicketForPreviewResponseBody} extends {@link TeaModel}
  *
- * <p>RefreshAppInstanceTicketResponseBody</p>
+ * <p>IntrospectAppInstanceTicketForPreviewResponseBody</p>
  */
-public class RefreshAppInstanceTicketResponseBody extends TeaModel {
+public class IntrospectAppInstanceTicketForPreviewResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -50,7 +50,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
-    private RefreshAppInstanceTicketResponseBody(Builder builder) {
+    private IntrospectAppInstanceTicketForPreviewResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.allowRetry = builder.allowRetry;
         this.appName = builder.appName;
@@ -68,7 +68,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RefreshAppInstanceTicketResponseBody create() {
+    public static IntrospectAppInstanceTicketForPreviewResponseBody create() {
         return builder().build();
     }
 
@@ -169,7 +169,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(RefreshAppInstanceTicketResponseBody model) {
+        private Builder(IntrospectAppInstanceTicketForPreviewResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.allowRetry = model.allowRetry;
             this.appName = model.appName;
@@ -184,10 +184,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed reason for access denial.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * AccessDeniedDetail.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -195,10 +192,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to allow retry</p>
-         * 
-         * <strong>example:</strong>
-         * <p>False</p>
+         * AllowRetry.
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -206,10 +200,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>App name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mar</p>
+         * AppName.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -217,10 +208,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ERROR-oo1</p>
+         * DynamicCode.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -228,13 +216,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message, used to replace the <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
-         * <blockquote>
-         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEM_ERROR</p>
+         * DynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -242,7 +224,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned error parameters</p>
+         * ErrorArgs.
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -250,7 +232,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Application module</p>
+         * Module.
          */
         public Builder module(Module module) {
             this.module = module;
@@ -258,7 +240,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -269,10 +251,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SYSTEM.ERROR</p>
+         * RootErrorCode.
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -280,10 +259,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Exception message</p>
-         * 
-         * <strong>example:</strong>
-         * <p>系统异常</p>
+         * RootErrorMsg.
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -291,27 +267,24 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Reserved parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>True</p>
+         * Synchro.
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
             return this;
         }
 
-        public RefreshAppInstanceTicketResponseBody build() {
-            return new RefreshAppInstanceTicketResponseBody(this);
+        public IntrospectAppInstanceTicketForPreviewResponseBody build() {
+            return new IntrospectAppInstanceTicketForPreviewResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RefreshAppInstanceTicketResponseBody} extends {@link TeaModel}
+     * {@link IntrospectAppInstanceTicketForPreviewResponseBody} extends {@link TeaModel}
      *
-     * <p>RefreshAppInstanceTicketResponseBody</p>
+     * <p>IntrospectAppInstanceTicketForPreviewResponseBody</p>
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessTokenExpiresAt")
@@ -490,10 +463,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Access token expiration time</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-12-18T22:30:00+08:00</p>
+             * AccessTokenExpiresAt.
              */
             public Builder accessTokenExpiresAt(String accessTokenExpiresAt) {
                 this.accessTokenExpiresAt = accessTokenExpiresAt;
@@ -501,10 +471,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Access token issuance time</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-12-18T22:30:00+08:00</p>
+             * AccessTokenIssuedAt.
              */
             public Builder accessTokenIssuedAt(String accessTokenIssuedAt) {
                 this.accessTokenIssuedAt = accessTokenIssuedAt;
@@ -512,10 +479,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Access token value</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2108341e17661121129745384e79f9</p>
+             * AccessTokenValue.
              */
             public Builder accessTokenValue(String accessTokenValue) {
                 this.accessTokenValue = accessTokenValue;
@@ -523,10 +487,10 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID</p>
+             * <p>aliyunPk</p>
              * 
              * <strong>example:</strong>
-             * <p>1907880872137014</p>
+             * <p>12343131221311</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -534,10 +498,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extended attributes</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{}</p>
+             * Attributes.
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -545,10 +506,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Authorization grant type</p>
-             * 
-             * <strong>example:</strong>
-             * <p>authorization_code</p>
+             * AuthorizationGrantType.
              */
             public Builder authorizationGrantType(String authorizationGrantType) {
                 this.authorizationGrantType = authorizationGrantType;
@@ -556,10 +514,10 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>business id for user</p>
+             * <p>bid</p>
              * 
              * <strong>example:</strong>
-             * <p>26842</p>
+             * <p>123131</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -567,10 +525,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1907880872137014</p>
+             * ParentPk.
              */
             public Builder parentPk(String parentPk) {
                 this.parentPk = parentPk;
@@ -578,10 +533,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>刷新token过期时间</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-12-18T22:30:00+08:00</p>
+             * RefreshTokenExpiresAt.
              */
             public Builder refreshTokenExpiresAt(String refreshTokenExpiresAt) {
                 this.refreshTokenExpiresAt = refreshTokenExpiresAt;
@@ -589,10 +541,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>刷新token颁发时间</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2025-12-18T22:30:00+08:00</p>
+             * RefreshTokenIssuedAt.
              */
             public Builder refreshTokenIssuedAt(String refreshTokenIssuedAt) {
                 this.refreshTokenIssuedAt = refreshTokenIssuedAt;
@@ -600,10 +549,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>刷新token值</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2108341e17661121129745384e79f9</p>
+             * RefreshTokenValue.
              */
             public Builder refreshTokenValue(String refreshTokenValue) {
                 this.refreshTokenValue = refreshTokenValue;
@@ -611,10 +557,7 @@ public class RefreshAppInstanceTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier externally</p>
-             * 
-             * <strong>example:</strong>
-             * <p>357504C7F21FCAE502756332ECE8B533</p>
+             * Uuid.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

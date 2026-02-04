@@ -110,7 +110,10 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821114240000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -119,7 +122,10 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rayihealth.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -128,7 +134,10 @@ public class DescribeAppDomainDnsRecordRequest extends Request {
         }
 
         /**
-         * Purpose.
+         * <p>Purpose for querying DNS configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restore</p>
          */
         public Builder purpose(String purpose) {
             this.putQueryParameter("Purpose", purpose);

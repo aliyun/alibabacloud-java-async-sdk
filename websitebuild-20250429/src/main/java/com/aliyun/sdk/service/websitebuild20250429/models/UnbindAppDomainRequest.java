@@ -96,7 +96,10 @@ public class UnbindAppDomainRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250908140837000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -105,7 +108,10 @@ public class UnbindAppDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conway.cn</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

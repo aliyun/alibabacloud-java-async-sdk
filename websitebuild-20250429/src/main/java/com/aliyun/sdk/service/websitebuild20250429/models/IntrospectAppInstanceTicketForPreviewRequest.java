@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteAppDomainCertificateRequest} extends {@link RequestModel}
+ * {@link IntrospectAppInstanceTicketForPreviewRequest} extends {@link RequestModel}
  *
- * <p>DeleteAppDomainCertificateRequest</p>
+ * <p>IntrospectAppInstanceTicketForPreviewRequest</p>
  */
-public class DeleteAppDomainCertificateRequest extends Request {
+public class IntrospectAppInstanceTicketForPreviewRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -26,21 +26,21 @@ public class DeleteAppDomainCertificateRequest extends Request {
     private String bizId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DomainName")
-    private String domainName;
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
 
-    private DeleteAppDomainCertificateRequest(Builder builder) {
+    private IntrospectAppInstanceTicketForPreviewRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
-        this.domainName = builder.domainName;
+        this.token = builder.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteAppDomainCertificateRequest create() {
+    public static IntrospectAppInstanceTicketForPreviewRequest create() {
         return builder().build();
     }
 
@@ -64,26 +64,26 @@ public class DeleteAppDomainCertificateRequest extends Request {
     }
 
     /**
-     * @return domainName
+     * @return token
      */
-    public String getDomainName() {
-        return this.domainName;
+    public String getToken() {
+        return this.token;
     }
 
-    public static final class Builder extends Request.Builder<DeleteAppDomainCertificateRequest, Builder> {
+    public static final class Builder extends Request.Builder<IntrospectAppInstanceTicketForPreviewRequest, Builder> {
         private String regionId; 
         private String bizId; 
-        private String domainName; 
+        private String token; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteAppDomainCertificateRequest request) {
+        private Builder(IntrospectAppInstanceTicketForPreviewRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.bizId = request.bizId;
-            this.domainName = request.domainName;
+            this.token = request.token;
         } 
 
         /**
@@ -96,10 +96,7 @@ public class DeleteAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Business ID of the application instance</p>
-         * 
-         * <strong>example:</strong>
-         * <p>202506170003</p>
+         * BizId.
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -108,20 +105,17 @@ public class DeleteAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>Domain name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>aliwmzs.com</p>
+         * Token.
          */
-        public Builder domainName(String domainName) {
-            this.putQueryParameter("DomainName", domainName);
-            this.domainName = domainName;
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 
         @Override
-        public DeleteAppDomainCertificateRequest build() {
-            return new DeleteAppDomainCertificateRequest(this);
+        public IntrospectAppInstanceTicketForPreviewRequest build() {
+            return new IntrospectAppInstanceTicketForPreviewRequest(this);
         } 
 
     } 

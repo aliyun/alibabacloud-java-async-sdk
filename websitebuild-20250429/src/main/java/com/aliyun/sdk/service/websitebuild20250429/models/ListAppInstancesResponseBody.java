@@ -288,7 +288,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -296,7 +299,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -304,7 +310,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>App name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -312,7 +321,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPageNum.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -320,7 +332,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Query result.</p>
          */
         public Builder data(java.util.List<AppInstanceAggregate> data) {
             this.data = data;
@@ -328,7 +340,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -336,7 +351,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic message, not in use, please ignore</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -344,7 +362,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>返回错误参数</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -352,7 +370,11 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results per query.</p>
+         * <p>Value range: 10~100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -360,7 +382,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Whether there is a next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -368,7 +393,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. It is empty when there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -376,7 +404,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -384,7 +415,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Whether there is a previous page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -392,7 +426,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -403,7 +437,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ResultLimit.
+         * <p>For the current query, apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         public Builder resultLimit(Boolean resultLimit) {
             this.resultLimit = resultLimit;
@@ -411,7 +445,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -419,7 +456,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -427,7 +467,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -435,7 +478,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

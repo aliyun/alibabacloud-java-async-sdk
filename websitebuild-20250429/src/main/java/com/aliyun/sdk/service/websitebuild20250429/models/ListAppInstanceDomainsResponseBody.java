@@ -210,7 +210,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Detailed reason for access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -218,7 +221,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -226,7 +232,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>App name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuApp</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -234,7 +243,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -242,7 +254,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace <code>%s</code> in the error message of the returned parameter <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it means that the input request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -250,7 +268,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>Returned error parameters</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -258,7 +276,11 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of results per query.</p>
+         * <p>Range: 10~100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -266,7 +288,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Response data</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -274,7 +296,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>下一个查询开始的Token。没有下一个查询时为空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -282,7 +307,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -293,7 +318,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -301,7 +329,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Exception message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -309,7 +340,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -401,7 +435,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateName.
+             * <p>Certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -409,7 +446,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateStatus.
+             * <p>Certificate status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder certificateStatus(String certificateStatus) {
                 this.certificateStatus = certificateStatus;
@@ -417,7 +457,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * <p>Certificate type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>self-signed</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -425,7 +468,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>Certificate expiration date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4885718400000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -505,7 +551,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>Account owner type: CURRENT OTHER</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1813244684017878</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -513,7 +562,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>Registrar type: ALIYUN OTHER</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROS</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -521,7 +573,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RootDomain.
+             * <p>The root domain name of the domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tjouya.cn</p>
              */
             public Builder rootDomain(String rootDomain) {
                 this.rootDomain = rootDomain;
@@ -601,7 +656,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>portal-dev.bambulab.net</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -609,7 +667,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -617,7 +678,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maintenance</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -697,7 +761,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsRecord.
+             * <p>DNS record information</p>
              */
             public Builder dnsRecord(DnsRecord dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -705,7 +769,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code: 400, invalid unionId request id: 09CC0F8B-49C2-7EFB-81E8-9AEF49068D02</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -713,7 +780,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionStatus.
+             * <p>Domain resolution status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder resolutionStatus(String resolutionStatus) {
                 this.resolutionStatus = resolutionStatus;
@@ -793,7 +863,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${host}</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -801,7 +874,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -809,7 +885,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>159.138.94.138</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -902,7 +981,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsRecord.
+             * <p>DNS record guide that the user needs to configure.</p>
              */
             public Builder dnsRecord(VerificationDnsRecord dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -910,7 +989,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>code: 400, invalid unionId request id: 2270AB0B-6FD0-7F72-9DC5-7A02B67CBB3B</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -918,7 +1000,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationStatus.
+             * <p>Ownership verification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder verificationStatus(String verificationStatus) {
                 this.verificationStatus = verificationStatus;
@@ -926,7 +1011,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationStatusCode.
+             * <p>Ownership verification status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoAliyunServiceRoleForWebsiteBuildPublishAuth</p>
              */
             public Builder verificationStatusCode(String verificationStatusCode) {
                 this.verificationStatusCode = verificationStatusCode;
@@ -1058,7 +1146,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Certificate.
+             * <p>Domain SSL certificate information</p>
              */
             public Builder certificate(Certificate certificate) {
                 this.certificate = certificate;
@@ -1066,7 +1154,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Instance creation time (required, format: yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683256054000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1074,7 +1165,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kaibaidu.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1082,7 +1176,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * OverallStatus.
+             * <p>Binding overall status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder overallStatus(String overallStatus) {
                 this.overallStatus = overallStatus;
@@ -1090,7 +1187,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Ownership.
+             * <p>Domain ownership information</p>
              */
             public Builder ownership(Ownership ownership) {
                 this.ownership = ownership;
@@ -1098,7 +1195,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>Domain resolution information</p>
              */
             public Builder resolution(Resolution resolution) {
                 this.resolution = resolution;
@@ -1106,7 +1203,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Verification.
+             * <p>Domain verification information</p>
              */
             public Builder verification(Verification verification) {
                 this.verification = verification;
@@ -1199,7 +1296,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateName.
+             * <p>Certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jfztkg202502</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -1207,7 +1307,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateStatus.
+             * <p>Certificate status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder certificateStatus(String certificateStatus) {
                 this.certificateStatus = certificateStatus;
@@ -1215,7 +1318,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * <p>Certificate type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Server</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -1223,7 +1329,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>证书的到期日期</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-15T02:04:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1290,7 +1399,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>Account owner type: CURRENT OTHER</p>
+             * 
+             * <strong>example:</strong>
+             * <p>拾肆gavin</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -1298,7 +1410,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>Registrar type: ALIYUN OTHER</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pai</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -1378,7 +1493,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.6.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1386,7 +1504,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -1394,7 +1515,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025032000000054nuba0r0b0a79y70c1c983tsz09xw9hg3p04kqxmbt4g2p65h</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1474,7 +1598,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsRecord.
+             * <p>DNS record information</p>
              */
             public Builder dnsRecord(ResolutionDnsRecord dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -1482,7 +1606,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliuid:1133664521498319 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1490,7 +1617,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionStatus.
+             * <p>Domain resolution status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder resolutionStatus(String resolutionStatus) {
                 this.resolutionStatus = resolutionStatus;
@@ -1570,7 +1700,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.abc.com">www.abc.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1578,7 +1711,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -1586,7 +1722,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>faHuBlyPcodSjBvBJYpm3-9W_cCSowLLQ4zAUyguEGM</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1666,7 +1805,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsRecord.
+             * <p>Guide for DNS records that the user needs to configure.</p>
              */
             public Builder dnsRecord(NextVerificationDnsRecord dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -1674,7 +1813,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliuid:1133664521498319 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -1682,7 +1824,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationStatus.
+             * <p>Ownership verification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESSFUL</p>
              */
             public Builder verificationStatus(String verificationStatus) {
                 this.verificationStatus = verificationStatus;
@@ -1814,7 +1959,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * Certificate.
+             * <p>Domain SSL certificate information</p>
              */
             public Builder certificate(NextCertificate certificate) {
                 this.certificate = certificate;
@@ -1822,7 +1967,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Instance creation time (required, format: yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1741572465000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1830,7 +1978,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usdcoin.xin</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -1838,7 +1989,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * OverallStatus.
+             * <p>Binding overall status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder overallStatus(String overallStatus) {
                 this.overallStatus = overallStatus;
@@ -1846,7 +2000,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Ownership.
+             * <p>Domain ownership information</p>
              */
             public Builder ownership(NextOwnership ownership) {
                 this.ownership = ownership;
@@ -1854,7 +2008,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>Domain resolution information</p>
              */
             public Builder resolution(NextResolution resolution) {
                 this.resolution = resolution;
@@ -1862,7 +2016,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Verification.
+             * <p>Domain verification information</p>
              */
             public Builder verification(NextVerification verification) {
                 this.verification = verification;
@@ -2020,7 +2174,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -2028,7 +2185,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>Query result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -2036,7 +2193,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Next.
+             * <p>Decision weight</p>
              */
             public Builder next(Next next) {
                 this.next = next;
@@ -2044,7 +2201,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * <p>Whether there is a next page.</p>
              */
             public Builder nextPage(Boolean nextPage) {
                 this.nextPage = nextPage;
@@ -2052,7 +2209,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -2060,7 +2220,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * PrePage.
+             * <p>Whether there is a previous page</p>
              */
             public Builder prePage(Boolean prePage) {
                 this.prePage = prePage;
@@ -2068,7 +2228,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultLimit.
+             * <p>Apart from pagination limits, the server can process up to the most recent 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> will be <strong>true</strong>, please narrow down the time range and search again; otherwise, <strong>ResultLimit</strong> will be <strong>false</strong>.</p>
              */
             public Builder resultLimit(Boolean resultLimit) {
                 this.resultLimit = resultLimit;
@@ -2076,7 +2236,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>Total number of items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -2084,7 +2247,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

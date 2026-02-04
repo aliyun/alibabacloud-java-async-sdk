@@ -213,7 +213,10 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WS20250731233102000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -222,7 +225,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * EndTimeBegin.
+         * <p>End time start</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-18T14:30:00Z</p>
          */
         public Builder endTimeBegin(String endTimeBegin) {
             this.putQueryParameter("EndTimeBegin", endTimeBegin);
@@ -231,7 +237,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * EndTimeEnd.
+         * <p>End time end</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-31T14:30:00Z</p>
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putQueryParameter("EndTimeEnd", endTimeEnd);
@@ -240,7 +249,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>Extended information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -249,7 +261,11 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of results per query.</p>
+         * <p>Range: 10~100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -258,7 +274,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token for the next query. It will be empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -267,7 +286,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>Order column</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -276,7 +298,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>Order type ASC|DESC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOWNGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -285,7 +310,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number, default is 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -294,7 +322,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, default is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -303,7 +334,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>Query parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RequestId&quot;:&quot;&quot;}</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -312,7 +346,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>Status range</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");

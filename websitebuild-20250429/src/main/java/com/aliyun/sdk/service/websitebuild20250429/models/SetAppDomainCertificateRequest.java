@@ -152,7 +152,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID of the application instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250821161210000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -161,7 +164,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * CertificateName.
+         * <p>SSL certificate name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder certificateName(String certificateName) {
             this.putQueryParameter("CertificateName", certificateName);
@@ -170,7 +176,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * CertificateType.
+         * <p>Certificate type: Default free certificate or customer&quot;s own certificate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server</p>
          */
         public Builder certificateType(String certificateType) {
             this.putQueryParameter("CertificateType", certificateType);
@@ -179,7 +188,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kaibaidu.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -188,7 +200,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * <p>Private key</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -197,7 +212,10 @@ public class SetAppDomainCertificateRequest extends Request {
         }
 
         /**
-         * PublicKey.
+         * <p>Public key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUxGQnQxUUpyT3IxK2hTTGRkbERMZUx4WGRIZ3hBalBxWHJIbWNFNWxqSk8gbm93Y29kZXJAbm93Y29kZXJkZU1hY0Jvb2stUHJvLmxvY2Fs</p>
          */
         public Builder publicKey(String publicKey) {
             this.putQueryParameter("PublicKey", publicKey);

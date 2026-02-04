@@ -184,7 +184,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Details of access denial; this field is returned only when RAM verification fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -192,7 +195,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * AllowRetry.
+         * <p>Whether retry is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -200,7 +206,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>应用名称，查询此名称的应用</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ish-intelligence-store-platform-admin-web</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -208,7 +217,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR-oo1</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -216,7 +228,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ERROR</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -224,7 +239,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * <p>返回错误参数</p>
          */
         public Builder errorArgs(java.util.List<?> errorArgs) {
             this.errorArgs = errorArgs;
@@ -232,7 +247,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>Application module</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -240,7 +255,7 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -251,7 +266,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM.ERROR</p>
          */
         public Builder rootErrorCode(String rootErrorCode) {
             this.rootErrorCode = rootErrorCode;
@@ -259,7 +277,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RootErrorMsg.
+         * <p>Exception message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统异常</p>
          */
         public Builder rootErrorMsg(String rootErrorMsg) {
             this.rootErrorMsg = rootErrorMsg;
@@ -267,7 +288,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>Backup parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder synchro(Boolean synchro) {
             this.synchro = synchro;
@@ -346,7 +370,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Host.
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -354,7 +381,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * RecordType.
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -362,7 +392,10 @@ public class DescribeAppDomainDnsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maintenance</p>
              */
             public Builder value(String value) {
                 this.value = value;

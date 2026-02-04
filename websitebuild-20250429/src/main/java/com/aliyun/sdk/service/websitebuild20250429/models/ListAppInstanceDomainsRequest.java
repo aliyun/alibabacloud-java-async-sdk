@@ -166,7 +166,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>Business ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WD20250718165839000001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -175,7 +178,11 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>Number of results per query.</p>
+         * <p>Range: 10~100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -184,7 +191,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token for the next query. It will be empty if there is no next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,7 +203,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * OrderColumn.
+         * <p>Sorting field</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationTime</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -202,7 +215,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>Sorting type ASC|DESC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -211,7 +227,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number, default is 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -220,7 +239,10 @@ public class ListAppInstanceDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, default is 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
