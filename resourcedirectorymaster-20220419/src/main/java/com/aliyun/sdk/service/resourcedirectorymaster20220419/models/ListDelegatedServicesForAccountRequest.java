@@ -22,9 +22,19 @@ public class ListDelegatedServicesForAccountRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     private ListDelegatedServicesForAccountRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
     }
 
     public static Builder builder() {
@@ -47,8 +57,24 @@ public class ListDelegatedServicesForAccountRequest extends Request {
         return this.accountId;
     }
 
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public static final class Builder extends Request.Builder<ListDelegatedServicesForAccountRequest, Builder> {
         private String accountId; 
+        private Integer maxResults; 
+        private String nextToken; 
 
         private Builder() {
             super();
@@ -57,6 +83,8 @@ public class ListDelegatedServicesForAccountRequest extends Request {
         private Builder(ListDelegatedServicesForAccountRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
         } 
 
         /**
@@ -69,6 +97,24 @@ public class ListDelegatedServicesForAccountRequest extends Request {
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

@@ -20,11 +20,19 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DelegatedServices")
     private DelegatedServices delegatedServices;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDelegatedServicesForAccountResponseBody(Builder builder) {
         this.delegatedServices = builder.delegatedServices;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +56,20 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +78,8 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
 
     public static final class Builder {
         private DelegatedServices delegatedServices; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +87,8 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
 
         private Builder(ListDelegatedServicesForAccountResponseBody model) {
             this.delegatedServices = model.delegatedServices;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
         } 
 
@@ -74,6 +100,22 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
          */
         public Builder delegatedServices(DelegatedServices delegatedServices) {
             this.delegatedServices = delegatedServices;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
