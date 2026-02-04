@@ -5466,6 +5466,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RefreshErObjectCachesByCacheTag  RefreshErObjectCachesByCacheTagRequest
+     * @return RefreshErObjectCachesByCacheTagResponse
+     */
+    @Override
+    public CompletableFuture<RefreshErObjectCachesByCacheTagResponse> refreshErObjectCachesByCacheTag(RefreshErObjectCachesByCacheTagRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshErObjectCachesByCacheTag").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshErObjectCachesByCacheTagResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshErObjectCachesByCacheTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 30 times per second per account.</p>

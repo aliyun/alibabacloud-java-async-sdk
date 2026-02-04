@@ -2919,6 +2919,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshErObjectCachesResponse> refreshErObjectCaches(RefreshErObjectCachesRequest request);
 
     /**
+     * @param request the request parameters of RefreshErObjectCachesByCacheTag  RefreshErObjectCachesByCacheTagRequest
+     * @return RefreshErObjectCachesByCacheTagResponse
+     */
+    CompletableFuture<RefreshErObjectCachesByCacheTagResponse> refreshErObjectCachesByCacheTag(RefreshErObjectCachesByCacheTagRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You can call this operation up to 30 times per second per account.</p>
