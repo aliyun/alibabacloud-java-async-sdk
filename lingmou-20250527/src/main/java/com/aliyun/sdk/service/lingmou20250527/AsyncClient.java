@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackgroundPicResponse> createBackgroundPic(CreateBackgroundPicRequest request);
 
     /**
+     * @param request the request parameters of CreateBroadcastAudio  CreateBroadcastAudioRequest
+     * @return CreateBroadcastAudioResponse
+     */
+    CompletableFuture<CreateBroadcastAudioResponse> createBroadcastAudio(CreateBroadcastAudioRequest request);
+
+    /**
      * @param request the request parameters of CreateBroadcastSticker  CreateBroadcastStickerRequest
      * @return CreateBroadcastStickerResponse
      */
@@ -102,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUploadPolicyResponse
      */
     CompletableFuture<GetUploadPolicyResponse> getUploadPolicy(GetUploadPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ListBroadcastAudiosById  ListBroadcastAudiosByIdRequest
+     * @return ListBroadcastAudiosByIdResponse
+     */
+    CompletableFuture<ListBroadcastAudiosByIdResponse> listBroadcastAudiosById(ListBroadcastAudiosByIdRequest request);
 
     /**
      * @param request the request parameters of ListBroadcastTemplates  ListBroadcastTemplatesRequest
