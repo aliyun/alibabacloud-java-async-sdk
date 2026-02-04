@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210218.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthCodeRequest} extends {@link RequestModel}
  *
  * <p>GetAuthCodeRequest</p>
  */
 public class GetAuthCodeRequest extends Request {
-    @Body
-    @NameInMap("AutoCreateUser")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoCreateUser")
     private Boolean autoCreateUser;
 
-    @Body
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Body
-    @NameInMap("ExternalUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
     private String externalUserId;
 
-    @Body
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
     private GetAuthCodeRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class GetAuthCodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

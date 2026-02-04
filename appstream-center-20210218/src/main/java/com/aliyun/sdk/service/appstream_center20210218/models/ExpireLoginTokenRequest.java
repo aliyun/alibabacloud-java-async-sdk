@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210218.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExpireLoginTokenRequest} extends {@link RequestModel}
  *
  * <p>ExpireLoginTokenRequest</p>
  */
 public class ExpireLoginTokenRequest extends Request {
-    @Body
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endUserId;
 
-    @Body
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Body
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Body
-    @NameInMap("SessionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
     private ExpireLoginTokenRequest(Builder builder) {
@@ -47,7 +52,7 @@ public class ExpireLoginTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +104,10 @@ public class ExpireLoginTokenRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         public Builder endUserId(String endUserId) {
             this.putBodyParameter("EndUserId", endUserId);
@@ -108,7 +116,10 @@ public class ExpireLoginTokenRequest extends Request {
         }
 
         /**
-         * LoginToken.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v185fdd7f6d39fa7861981639366085772e150a390a5bb7b43c4e62440d94fc392b945770e1596cebe90085ce0af4d****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putBodyParameter("LoginToken", loginToken);
@@ -126,7 +137,10 @@ public class ExpireLoginTokenRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a863f4c3-2f1d-4971-8cf7-e2b92ae9****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

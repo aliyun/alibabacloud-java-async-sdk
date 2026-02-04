@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExpireLoginTokenResponse} extends {@link TeaModel}
+ * {@link GetStsTokenResponse} extends {@link TeaModel}
  *
- * <p>ExpireLoginTokenResponse</p>
+ * <p>GetStsTokenResponse</p>
  */
-public class ExpireLoginTokenResponse extends Response {
+public class GetStsTokenResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ExpireLoginTokenResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ExpireLoginTokenResponseBody body;
+    private GetStsTokenResponseBody body;
 
-    private ExpireLoginTokenResponse(BuilderImpl builder) {
+    private GetStsTokenResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ExpireLoginTokenResponse create() {
+    public static GetStsTokenResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ExpireLoginTokenResponse extends Response {
     /**
      * @return body
      */
-    public ExpireLoginTokenResponseBody getBody() {
+    public GetStsTokenResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ExpireLoginTokenResponse, Builder> {
+    public interface Builder extends Response.Builder<GetStsTokenResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ExpireLoginTokenResponseBody body);
+        Builder body(GetStsTokenResponseBody body);
 
         @Override
-        ExpireLoginTokenResponse build();
+        GetStsTokenResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ExpireLoginTokenResponse, Builder>
+            extends Response.BuilderImpl<GetStsTokenResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ExpireLoginTokenResponseBody body; 
+        private GetStsTokenResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ExpireLoginTokenResponse response) {
+        private BuilderImpl(GetStsTokenResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ExpireLoginTokenResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ExpireLoginTokenResponseBody body) {
+        public Builder body(GetStsTokenResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ExpireLoginTokenResponse build() {
-            return new ExpireLoginTokenResponse(this);
+        public GetStsTokenResponse build() {
+            return new GetStsTokenResponse(this);
         } 
 
     } 

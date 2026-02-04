@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ExpireLoginToken  ExpireLoginTokenRequest
+     * @return ExpireLoginTokenResponse
+     */
     @Override
     public CompletableFuture<ExpireLoginTokenResponse> expireLoginToken(ExpireLoginTokenRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAuthCode  GetAuthCodeRequest
+     * @return GetAuthCodeResponse
+     */
     @Override
     public CompletableFuture<GetAuthCodeResponse> getAuthCode(GetAuthCodeRequest request) {
         try {
@@ -62,6 +70,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAuthCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetStsToken  GetStsTokenRequest
+     * @return GetStsTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetStsTokenResponse> getStsToken(GetStsTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetStsToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStsTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStsTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

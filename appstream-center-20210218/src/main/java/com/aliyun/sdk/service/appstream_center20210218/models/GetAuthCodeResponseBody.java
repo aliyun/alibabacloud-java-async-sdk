@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210218.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthCodeResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthCodeResponseBody</p>
  */
 public class GetAuthCodeResponseBody extends TeaModel {
-    @NameInMap("AuthModel")
+    @com.aliyun.core.annotation.NameInMap("AuthModel")
     private AuthModel authModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAuthCodeResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetAuthCodeResponseBody extends TeaModel {
 
     public static GetAuthCodeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,6 +58,14 @@ public class GetAuthCodeResponseBody extends TeaModel {
         private AuthModel authModel; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAuthCodeResponseBody model) {
+            this.authModel = model.authModel;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * AuthModel.
          */
@@ -58,7 +75,7 @@ public class GetAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +88,20 @@ public class GetAuthCodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthCodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthCodeResponseBody</p>
+     */
     public static class AuthModel extends TeaModel {
-        @NameInMap("AuthCode")
+        @com.aliyun.core.annotation.NameInMap("AuthCode")
         private String authCode;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
         private AuthModel(Builder builder) {
@@ -120,6 +143,15 @@ public class GetAuthCodeResponseBody extends TeaModel {
             private String authCode; 
             private String endUserId; 
             private String expireTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthModel model) {
+                this.authCode = model.authCode;
+                this.endUserId = model.endUserId;
+                this.expireTime = model.expireTime;
+            } 
 
             /**
              * AuthCode.

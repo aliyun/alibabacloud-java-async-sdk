@@ -1,3 +1,6 @@
+2026-02-04 Version: 1.0.5
+- Generated java-async 2021-02-18 for appstream-center.
+
 2023-06-05 Version: 1.0.4
 - Auto create user when GetAuthCode.
 
