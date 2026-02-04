@@ -788,6 +788,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
 
     /**
+     * @param request the request parameters of ExecIdentityProviderMetadataUrlResolution  ExecIdentityProviderMetadataUrlResolutionRequest
+     * @return ExecIdentityProviderMetadataUrlResolutionResponse
+     */
+    CompletableFuture<ExecIdentityProviderMetadataUrlResolutionResponse> execIdentityProviderMetadataUrlResolution(ExecIdentityProviderMetadataUrlResolutionRequest request);
+
+    /**
      * @param request the request parameters of GenerateDownloadUrlForSynchronizationJob  GenerateDownloadUrlForSynchronizationJobRequest
      * @return GenerateDownloadUrlForSynchronizationJobResponse
      */
@@ -798,6 +804,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateFileImportTemplateResponse
      */
     CompletableFuture<GenerateFileImportTemplateResponse> generateFileImportTemplate(GenerateFileImportTemplateRequest request);
+
+    /**
+     * @param request the request parameters of GenerateOauthToken  GenerateOauthTokenRequest
+     * @return GenerateOauthTokenResponse
+     */
+    CompletableFuture<GenerateOauthTokenResponse> generateOauthToken(GenerateOauthTokenRequest request);
 
     /**
      * @param request the request parameters of GenerateUploadAuth  GenerateUploadAuthRequest
@@ -1088,6 +1100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRootOrganizationalUnitResponse> getRootOrganizationalUnit(GetRootOrganizationalUnitRequest request);
 
     /**
+     * @param request the request parameters of GetServiceQuota  GetServiceQuotaRequest
+     * @return GetServiceQuotaResponse
+     */
+    CompletableFuture<GetServiceQuotaResponse> getServiceQuota(GetServiceQuotaRequest request);
+
+    /**
      * @param request the request parameters of GetSynchronizationJob  GetSynchronizationJobRequest
      * @return GetSynchronizationJobResponse
      */
@@ -1098,6 +1116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserResponse
      */
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    /**
+     * @param request the request parameters of ListActionTrackEventTypes  ListActionTrackEventTypesRequest
+     * @return ListActionTrackEventTypesResponse
+     */
+    CompletableFuture<ListActionTrackEventTypesResponse> listActionTrackEventTypes(ListActionTrackEventTypesRequest request);
 
     /**
      * @param request the request parameters of ListApplicationAccounts  ListApplicationAccountsRequest
@@ -1311,6 +1335,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEiamRegionsResponse
      */
     CompletableFuture<ListEiamRegionsResponse> listEiamRegions(ListEiamRegionsRequest request);
+
+    /**
+     * @param request the request parameters of ListEventTypes  ListEventTypesRequest
+     * @return ListEventTypesResponse
+     */
+    CompletableFuture<ListEventTypesResponse> listEventTypes(ListEventTypesRequest request);
 
     /**
      * @param request the request parameters of ListFederatedCredentialProviders  ListFederatedCredentialProvidersRequest
@@ -1535,6 +1565,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveUsersFromGroupResponse> removeUsersFromGroup(RemoveUsersFromGroupRequest request);
 
     /**
+     * @param request the request parameters of RenewFreeLicenseEndTime  RenewFreeLicenseEndTimeRequest
+     * @return RenewFreeLicenseEndTimeResponse
+     */
+    CompletableFuture<RenewFreeLicenseEndTimeResponse> renewFreeLicenseEndTime(RenewFreeLicenseEndTimeRequest request);
+
+    /**
      * @param request the request parameters of RevokeApplicationFromGroups  RevokeApplicationFromGroupsRequest
      * @return RevokeApplicationFromGroupsResponse
      */
@@ -1640,10 +1676,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetForgetPasswordConfigurationResponse> setForgetPasswordConfiguration(SetForgetPasswordConfigurationRequest request);
 
     /**
+     * @param request the request parameters of SetIdentityProviderAuthnConfiguration  SetIdentityProviderAuthnConfigurationRequest
+     * @return SetIdentityProviderAuthnConfigurationResponse
+     */
+    CompletableFuture<SetIdentityProviderAuthnConfigurationResponse> setIdentityProviderAuthnConfiguration(SetIdentityProviderAuthnConfigurationRequest request);
+
+    /**
      * @param request the request parameters of SetIdentityProviderUdPullConfiguration  SetIdentityProviderUdPullConfigurationRequest
      * @return SetIdentityProviderUdPullConfigurationResponse
      */
     CompletableFuture<SetIdentityProviderUdPullConfigurationResponse> setIdentityProviderUdPullConfiguration(SetIdentityProviderUdPullConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of SetIdentityProviderUdPushConfiguration  SetIdentityProviderUdPushConfigurationRequest
+     * @return SetIdentityProviderUdPushConfigurationResponse
+     */
+    CompletableFuture<SetIdentityProviderUdPushConfigurationResponse> setIdentityProviderUdPushConfiguration(SetIdentityProviderUdPushConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of SetInstanceControlConfiguration  SetInstanceControlConfigurationRequest
+     * @return SetInstanceControlConfigurationResponse
+     */
+    CompletableFuture<SetInstanceControlConfigurationResponse> setInstanceControlConfiguration(SetInstanceControlConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of SetInstanceGlobalizationConfig  SetInstanceGlobalizationConfigRequest
+     * @return SetInstanceGlobalizationConfigResponse
+     */
+    CompletableFuture<SetInstanceGlobalizationConfigResponse> setInstanceGlobalizationConfig(SetInstanceGlobalizationConfigRequest request);
 
     /**
      * @param request the request parameters of SetLoginRedirectApplicationForBrand  SetLoginRedirectApplicationForBrandRequest
@@ -1686,6 +1746,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetUserPrimaryOrganizationalUnitResponse
      */
     CompletableFuture<SetUserPrimaryOrganizationalUnitResponse> setUserPrimaryOrganizationalUnit(SetUserPrimaryOrganizationalUnitRequest request);
+
+    /**
+     * @param request the request parameters of SetWebAuthnConfiguration  SetWebAuthnConfigurationRequest
+     * @return SetWebAuthnConfigurationResponse
+     */
+    CompletableFuture<SetWebAuthnConfigurationResponse> setWebAuthnConfiguration(SetWebAuthnConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of UnbindTotpAuthenticator  UnbindTotpAuthenticatorRequest
+     * @return UnbindTotpAuthenticatorResponse
+     */
+    CompletableFuture<UnbindTotpAuthenticatorResponse> unbindTotpAuthenticator(UnbindTotpAuthenticatorRequest request);
 
     /**
      * @param request the request parameters of UnbindUserAuthnSourceMapping  UnbindUserAuthnSourceMappingRequest
