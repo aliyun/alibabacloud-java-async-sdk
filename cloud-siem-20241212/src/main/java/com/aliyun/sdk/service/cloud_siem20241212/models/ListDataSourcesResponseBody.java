@@ -290,6 +290,9 @@ public class ListDataSourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceStoreStatus")
         private String dataSourceStoreStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DataSourceStoreStatusCode")
+        private String dataSourceStoreStatusCode;
+
         @com.aliyun.core.annotation.NameInMap("LogProjectName")
         private String logProjectName;
 
@@ -308,6 +311,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             this.dataSourceStoreFrom = builder.dataSourceStoreFrom;
             this.dataSourceStoreId = builder.dataSourceStoreId;
             this.dataSourceStoreStatus = builder.dataSourceStoreStatus;
+            this.dataSourceStoreStatusCode = builder.dataSourceStoreStatusCode;
             this.logProjectName = builder.logProjectName;
             this.logRegionId = builder.logRegionId;
             this.logStoreName = builder.logStoreName;
@@ -358,6 +362,13 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataSourceStoreStatusCode
+         */
+        public String getDataSourceStoreStatusCode() {
+            return this.dataSourceStoreStatusCode;
+        }
+
+        /**
          * @return logProjectName
          */
         public String getLogProjectName() {
@@ -391,6 +402,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String dataSourceStoreFrom; 
             private String dataSourceStoreId; 
             private String dataSourceStoreStatus; 
+            private String dataSourceStoreStatusCode; 
             private String logProjectName; 
             private String logRegionId; 
             private String logStoreName; 
@@ -405,6 +417,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
                 this.dataSourceStoreFrom = model.dataSourceStoreFrom;
                 this.dataSourceStoreId = model.dataSourceStoreId;
                 this.dataSourceStoreStatus = model.dataSourceStoreStatus;
+                this.dataSourceStoreStatusCode = model.dataSourceStoreStatusCode;
                 this.logProjectName = model.logProjectName;
                 this.logRegionId = model.logRegionId;
                 this.logStoreName = model.logStoreName;
@@ -448,6 +461,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
              */
             public Builder dataSourceStoreStatus(String dataSourceStoreStatus) {
                 this.dataSourceStoreStatus = dataSourceStoreStatus;
+                return this;
+            }
+
+            /**
+             * DataSourceStoreStatusCode.
+             */
+            public Builder dataSourceStoreStatusCode(String dataSourceStoreStatusCode) {
+                this.dataSourceStoreStatusCode = dataSourceStoreStatusCode;
                 return this;
             }
 

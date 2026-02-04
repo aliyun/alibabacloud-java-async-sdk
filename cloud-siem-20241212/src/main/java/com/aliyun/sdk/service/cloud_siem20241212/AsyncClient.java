@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNormalizationRuleResponse> createNormalizationRule(CreateNormalizationRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateNormalizationSchema  CreateNormalizationSchemaRequest
+     * @return CreateNormalizationSchemaResponse
+     */
+    CompletableFuture<CreateNormalizationSchemaResponse> createNormalizationSchema(CreateNormalizationSchemaRequest request);
+
+    /**
      * @param request the request parameters of CreateProduct  CreateProductRequest
      * @return CreateProductResponse
      */
@@ -350,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVendorsResponse> listVendors(ListVendorsRequest request);
 
     /**
+     * @param request the request parameters of RefreshDataSource  RefreshDataSourceRequest
+     * @return RefreshDataSourceResponse
+     */
+    CompletableFuture<RefreshDataSourceResponse> refreshDataSource(RefreshDataSourceRequest request);
+
+    /**
      * @param request the request parameters of ResetDataStorage  ResetDataStorageRequest
      * @return ResetDataStorageResponse
      */
@@ -432,6 +444,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateNormalizationRuleResponse
      */
     CompletableFuture<UpdateNormalizationRuleResponse> updateNormalizationRule(UpdateNormalizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNormalizationSchema  UpdateNormalizationSchemaRequest
+     * @return UpdateNormalizationSchemaResponse
+     */
+    CompletableFuture<UpdateNormalizationSchemaResponse> updateNormalizationSchema(UpdateNormalizationSchemaRequest request);
 
     /**
      * @param request the request parameters of UpdateProduct  UpdateProductRequest

@@ -449,8 +449,14 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertAttCk")
         private String alertAttCk;
 
+        @com.aliyun.core.annotation.NameInMap("AlertDescription")
+        private String alertDescription;
+
         @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
+
+        @com.aliyun.core.annotation.NameInMap("AlertName")
+        private String alertName;
 
         @com.aliyun.core.annotation.NameInMap("AlertSchemaId")
         private String alertSchemaId;
@@ -541,7 +547,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         private DetectionRules(Builder builder) {
             this.alertAttCk = builder.alertAttCk;
+            this.alertDescription = builder.alertDescription;
             this.alertLevel = builder.alertLevel;
+            this.alertName = builder.alertName;
             this.alertSchemaId = builder.alertSchemaId;
             this.alertTacticId = builder.alertTacticId;
             this.alertThresholdCount = builder.alertThresholdCount;
@@ -589,10 +597,24 @@ public class ListDetectionRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return alertDescription
+         */
+        public String getAlertDescription() {
+            return this.alertDescription;
+        }
+
+        /**
          * @return alertLevel
          */
         public String getAlertLevel() {
             return this.alertLevel;
+        }
+
+        /**
+         * @return alertName
+         */
+        public String getAlertName() {
+            return this.alertName;
         }
 
         /**
@@ -800,7 +822,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertAttCk; 
+            private String alertDescription; 
             private String alertLevel; 
+            private String alertName; 
             private String alertSchemaId; 
             private String alertTacticId; 
             private Integer alertThresholdCount; 
@@ -836,7 +860,9 @@ public class ListDetectionRulesResponseBody extends TeaModel {
 
             private Builder(DetectionRules model) {
                 this.alertAttCk = model.alertAttCk;
+                this.alertDescription = model.alertDescription;
                 this.alertLevel = model.alertLevel;
+                this.alertName = model.alertName;
                 this.alertSchemaId = model.alertSchemaId;
                 this.alertTacticId = model.alertTacticId;
                 this.alertThresholdCount = model.alertThresholdCount;
@@ -877,10 +903,26 @@ public class ListDetectionRulesResponseBody extends TeaModel {
             }
 
             /**
+             * AlertDescription.
+             */
+            public Builder alertDescription(String alertDescription) {
+                this.alertDescription = alertDescription;
+                return this;
+            }
+
+            /**
              * AlertLevel.
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
+                return this;
+            }
+
+            /**
+             * AlertName.
+             */
+            public Builder alertName(String alertName) {
+                this.alertName = alertName;
                 return this;
             }
 

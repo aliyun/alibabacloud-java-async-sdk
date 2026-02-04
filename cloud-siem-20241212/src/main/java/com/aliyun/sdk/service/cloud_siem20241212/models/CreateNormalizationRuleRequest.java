@@ -22,6 +22,10 @@ public class CreateNormalizationRuleRequest extends Request {
     private String extendContentPacked;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendFieldStoreMode")
+    private String extendFieldStoreMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -88,6 +92,7 @@ public class CreateNormalizationRuleRequest extends Request {
     private CreateNormalizationRuleRequest(Builder builder) {
         super(builder);
         this.extendContentPacked = builder.extendContentPacked;
+        this.extendFieldStoreMode = builder.extendFieldStoreMode;
         this.lang = builder.lang;
         this.normalizationCategoryId = builder.normalizationCategoryId;
         this.normalizationRuleDescription = builder.normalizationRuleDescription;
@@ -124,6 +129,13 @@ public class CreateNormalizationRuleRequest extends Request {
      */
     public String getExtendContentPacked() {
         return this.extendContentPacked;
+    }
+
+    /**
+     * @return extendFieldStoreMode
+     */
+    public String getExtendFieldStoreMode() {
+        return this.extendFieldStoreMode;
     }
 
     /**
@@ -240,6 +252,7 @@ public class CreateNormalizationRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNormalizationRuleRequest, Builder> {
         private String extendContentPacked; 
+        private String extendFieldStoreMode; 
         private String lang; 
         private String normalizationCategoryId; 
         private String normalizationRuleDescription; 
@@ -264,6 +277,7 @@ public class CreateNormalizationRuleRequest extends Request {
         private Builder(CreateNormalizationRuleRequest request) {
             super(request);
             this.extendContentPacked = request.extendContentPacked;
+            this.extendFieldStoreMode = request.extendFieldStoreMode;
             this.lang = request.lang;
             this.normalizationCategoryId = request.normalizationCategoryId;
             this.normalizationRuleDescription = request.normalizationRuleDescription;
@@ -288,6 +302,15 @@ public class CreateNormalizationRuleRequest extends Request {
         public Builder extendContentPacked(String extendContentPacked) {
             this.putBodyParameter("ExtendContentPacked", extendContentPacked);
             this.extendContentPacked = extendContentPacked;
+            return this;
+        }
+
+        /**
+         * ExtendFieldStoreMode.
+         */
+        public Builder extendFieldStoreMode(String extendFieldStoreMode) {
+            this.putBodyParameter("ExtendFieldStoreMode", extendFieldStoreMode);
+            this.extendFieldStoreMode = extendFieldStoreMode;
             return this;
         }
 

@@ -22,8 +22,16 @@ public class UpdateDetectionRuleRequest extends Request {
     private String alertAttCk;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertDescription")
+    private String alertDescription;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertLevel")
     private String alertLevel;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertName")
+    private String alertName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertSchemaId")
@@ -144,7 +152,9 @@ public class UpdateDetectionRuleRequest extends Request {
     private UpdateDetectionRuleRequest(Builder builder) {
         super(builder);
         this.alertAttCk = builder.alertAttCk;
+        this.alertDescription = builder.alertDescription;
         this.alertLevel = builder.alertLevel;
+        this.alertName = builder.alertName;
         this.alertSchemaId = builder.alertSchemaId;
         this.alertTacticId = builder.alertTacticId;
         this.alertThresholdCount = builder.alertThresholdCount;
@@ -196,10 +206,24 @@ public class UpdateDetectionRuleRequest extends Request {
     }
 
     /**
+     * @return alertDescription
+     */
+    public String getAlertDescription() {
+        return this.alertDescription;
+    }
+
+    /**
      * @return alertLevel
      */
     public String getAlertLevel() {
         return this.alertLevel;
+    }
+
+    /**
+     * @return alertName
+     */
+    public String getAlertName() {
+        return this.alertName;
     }
 
     /**
@@ -400,7 +424,9 @@ public class UpdateDetectionRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDetectionRuleRequest, Builder> {
         private String alertAttCk; 
+        private String alertDescription; 
         private String alertLevel; 
+        private String alertName; 
         private String alertSchemaId; 
         private String alertTacticId; 
         private Integer alertThresholdCount; 
@@ -437,7 +463,9 @@ public class UpdateDetectionRuleRequest extends Request {
         private Builder(UpdateDetectionRuleRequest request) {
             super(request);
             this.alertAttCk = request.alertAttCk;
+            this.alertDescription = request.alertDescription;
             this.alertLevel = request.alertLevel;
+            this.alertName = request.alertName;
             this.alertSchemaId = request.alertSchemaId;
             this.alertTacticId = request.alertTacticId;
             this.alertThresholdCount = request.alertThresholdCount;
@@ -478,11 +506,29 @@ public class UpdateDetectionRuleRequest extends Request {
         }
 
         /**
+         * AlertDescription.
+         */
+        public Builder alertDescription(String alertDescription) {
+            this.putBodyParameter("AlertDescription", alertDescription);
+            this.alertDescription = alertDescription;
+            return this;
+        }
+
+        /**
          * AlertLevel.
          */
         public Builder alertLevel(String alertLevel) {
             this.putBodyParameter("AlertLevel", alertLevel);
             this.alertLevel = alertLevel;
+            return this;
+        }
+
+        /**
+         * AlertName.
+         */
+        public Builder alertName(String alertName) {
+            this.putBodyParameter("AlertName", alertName);
+            this.alertName = alertName;
             return this;
         }
 

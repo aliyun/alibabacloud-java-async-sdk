@@ -12,58 +12,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListNormalizationFieldsResponseBody} extends {@link TeaModel}
+ * {@link UpdateNormalizationSchemaRequest} extends {@link RequestModel}
  *
- * <p>ListNormalizationFieldsResponseBody</p>
+ * <p>UpdateNormalizationSchemaRequest</p>
  */
-public class ListNormalizationFieldsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
+public class UpdateNormalizationSchemaRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
 
-    @com.aliyun.core.annotation.NameInMap("NextToken")
-    private String nextToken;
-
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationFields")
     private java.util.List<NormalizationFields> normalizationFields;
 
-    @com.aliyun.core.annotation.NameInMap("RequestId")
-    private String requestId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaDescription")
+    private String normalizationSchemaDescription;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Integer totalCount;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String normalizationSchemaId;
 
-    private ListNormalizationFieldsResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String normalizationSchemaName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String normalizationSchemaType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    private UpdateNormalizationSchemaRequest(Builder builder) {
+        super(builder);
+        this.lang = builder.lang;
         this.normalizationFields = builder.normalizationFields;
-        this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
+        this.normalizationSchemaDescription = builder.normalizationSchemaDescription;
+        this.normalizationSchemaId = builder.normalizationSchemaId;
+        this.normalizationSchemaName = builder.normalizationSchemaName;
+        this.normalizationSchemaType = builder.normalizationSchemaType;
+        this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListNormalizationFieldsResponseBody create() {
+    public static UpdateNormalizationSchemaRequest create() {
         return builder().build();
     }
 
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return maxResults
+     * @return lang
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -74,50 +92,79 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return normalizationSchemaDescription
      */
-    public String getRequestId() {
-        return this.requestId;
+    public String getNormalizationSchemaDescription() {
+        return this.normalizationSchemaDescription;
     }
 
     /**
-     * @return totalCount
+     * @return normalizationSchemaId
      */
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getNormalizationSchemaId() {
+        return this.normalizationSchemaId;
     }
 
-    public static final class Builder {
-        private Integer maxResults; 
-        private String nextToken; 
+    /**
+     * @return normalizationSchemaName
+     */
+    public String getNormalizationSchemaName() {
+        return this.normalizationSchemaName;
+    }
+
+    /**
+     * @return normalizationSchemaType
+     */
+    public String getNormalizationSchemaType() {
+        return this.normalizationSchemaType;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    public static final class Builder extends Request.Builder<UpdateNormalizationSchemaRequest, Builder> {
+        private String lang; 
         private java.util.List<NormalizationFields> normalizationFields; 
-        private String requestId; 
-        private Integer totalCount; 
+        private String normalizationSchemaDescription; 
+        private String normalizationSchemaId; 
+        private String normalizationSchemaName; 
+        private String normalizationSchemaType; 
+        private String regionId; 
+        private Long roleFor; 
 
         private Builder() {
+            super();
         } 
 
-        private Builder(ListNormalizationFieldsResponseBody model) {
-            this.maxResults = model.maxResults;
-            this.nextToken = model.nextToken;
-            this.normalizationFields = model.normalizationFields;
-            this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
+        private Builder(UpdateNormalizationSchemaRequest request) {
+            super(request);
+            this.lang = request.lang;
+            this.normalizationFields = request.normalizationFields;
+            this.normalizationSchemaDescription = request.normalizationSchemaDescription;
+            this.normalizationSchemaId = request.normalizationSchemaId;
+            this.normalizationSchemaName = request.normalizationSchemaName;
+            this.normalizationSchemaType = request.normalizationSchemaType;
+            this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
         } 
 
         /**
-         * MaxResults.
+         * Lang.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * NextToken.
-         */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
+        public Builder lang(String lang) {
+            this.putBodyParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 
@@ -125,42 +172,88 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
          * NormalizationFields.
          */
         public Builder normalizationFields(java.util.List<NormalizationFields> normalizationFields) {
+            this.putBodyParameter("NormalizationFields", normalizationFields);
             this.normalizationFields = normalizationFields;
             return this;
         }
 
         /**
-         * RequestId.
+         * NormalizationSchemaDescription.
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
+            this.putBodyParameter("NormalizationSchemaDescription", normalizationSchemaDescription);
+            this.normalizationSchemaDescription = normalizationSchemaDescription;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WAF_ALERT_ACTIVITY</p>
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder normalizationSchemaId(String normalizationSchemaId) {
+            this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
+            this.normalizationSchemaId = normalizationSchemaId;
             return this;
         }
 
-        public ListNormalizationFieldsResponseBody build() {
-            return new ListNormalizationFieldsResponseBody(this);
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProcessQuery</p>
+         */
+        public Builder normalizationSchemaName(String normalizationSchemaName) {
+            this.putBodyParameter("NormalizationSchemaName", normalizationSchemaName);
+            this.normalizationSchemaName = normalizationSchemaName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log</p>
+         */
+        public Builder normalizationSchemaType(String normalizationSchemaType) {
+            this.putBodyParameter("NormalizationSchemaType", normalizationSchemaType);
+            this.normalizationSchemaType = normalizationSchemaType;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putBodyParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        @Override
+        public UpdateNormalizationSchemaRequest build() {
+            return new UpdateNormalizationSchemaRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListNormalizationFieldsResponseBody} extends {@link TeaModel}
+     * {@link UpdateNormalizationSchemaRequest} extends {@link TeaModel}
      *
-     * <p>ListNormalizationFieldsResponseBody</p>
+     * <p>UpdateNormalizationSchemaRequest</p>
      */
     public static class NormalizationFieldJsonKeys extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CreateTime")
-        private Long createTime;
-
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldDescription")
         private String normalizationFieldDescription;
 
@@ -171,34 +264,27 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         private String normalizationFieldFrom;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String normalizationFieldName;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldRequired")
         private Boolean normalizationFieldRequired;
 
-        @com.aliyun.core.annotation.NameInMap("NormalizationFieldReserved")
-        private Boolean normalizationFieldReserved;
-
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldTokenize")
         private Boolean normalizationFieldTokenize;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String normalizationFieldType;
 
-        @com.aliyun.core.annotation.NameInMap("UpdateTime")
-        private Long updateTime;
-
         private NormalizationFieldJsonKeys(Builder builder) {
-            this.createTime = builder.createTime;
             this.normalizationFieldDescription = builder.normalizationFieldDescription;
             this.normalizationFieldExample = builder.normalizationFieldExample;
             this.normalizationFieldFrom = builder.normalizationFieldFrom;
             this.normalizationFieldName = builder.normalizationFieldName;
             this.normalizationFieldRequired = builder.normalizationFieldRequired;
-            this.normalizationFieldReserved = builder.normalizationFieldReserved;
             this.normalizationFieldTokenize = builder.normalizationFieldTokenize;
             this.normalizationFieldType = builder.normalizationFieldType;
-            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -207,13 +293,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
         public static NormalizationFieldJsonKeys create() {
             return builder().build();
-        }
-
-        /**
-         * @return createTime
-         */
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         /**
@@ -252,13 +331,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * @return normalizationFieldReserved
-         */
-        public Boolean getNormalizationFieldReserved() {
-            return this.normalizationFieldReserved;
-        }
-
-        /**
          * @return normalizationFieldTokenize
          */
         public Boolean getNormalizationFieldTokenize() {
@@ -272,48 +344,27 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             return this.normalizationFieldType;
         }
 
-        /**
-         * @return updateTime
-         */
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
         public static final class Builder {
-            private Long createTime; 
             private String normalizationFieldDescription; 
             private String normalizationFieldExample; 
             private String normalizationFieldFrom; 
             private String normalizationFieldName; 
             private Boolean normalizationFieldRequired; 
-            private Boolean normalizationFieldReserved; 
             private Boolean normalizationFieldTokenize; 
             private String normalizationFieldType; 
-            private Long updateTime; 
 
             private Builder() {
             } 
 
             private Builder(NormalizationFieldJsonKeys model) {
-                this.createTime = model.createTime;
                 this.normalizationFieldDescription = model.normalizationFieldDescription;
                 this.normalizationFieldExample = model.normalizationFieldExample;
                 this.normalizationFieldFrom = model.normalizationFieldFrom;
                 this.normalizationFieldName = model.normalizationFieldName;
                 this.normalizationFieldRequired = model.normalizationFieldRequired;
-                this.normalizationFieldReserved = model.normalizationFieldReserved;
                 this.normalizationFieldTokenize = model.normalizationFieldTokenize;
                 this.normalizationFieldType = model.normalizationFieldType;
-                this.updateTime = model.updateTime;
             } 
-
-            /**
-             * CreateTime.
-             */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
 
             /**
              * NormalizationFieldDescription.
@@ -340,7 +391,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert_name</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -356,14 +410,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldReserved.
-             */
-            public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
-                this.normalizationFieldReserved = normalizationFieldReserved;
-                return this;
-            }
-
-            /**
              * NormalizationFieldTokenize.
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
@@ -372,18 +418,13 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
-                return this;
-            }
-
-            /**
-             * UpdateTime.
-             */
-            public Builder updateTime(Long updateTime) {
-                this.updateTime = updateTime;
                 return this;
             }
 
@@ -396,17 +437,11 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link ListNormalizationFieldsResponseBody} extends {@link TeaModel}
+     * {@link UpdateNormalizationSchemaRequest} extends {@link TeaModel}
      *
-     * <p>ListNormalizationFieldsResponseBody</p>
+     * <p>UpdateNormalizationSchemaRequest</p>
      */
     public static class NormalizationFields extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CreateTime")
-        private Long createTime;
-
-        @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
-        private String normalizationCategoryId;
-
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldDescription")
         private String normalizationFieldDescription;
 
@@ -423,32 +458,20 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         private java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String normalizationFieldName;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldRequired")
         private Boolean normalizationFieldRequired;
 
-        @com.aliyun.core.annotation.NameInMap("NormalizationFieldRequirement")
-        private Boolean normalizationFieldRequirement;
-
-        @com.aliyun.core.annotation.NameInMap("NormalizationFieldReserved")
-        private Boolean normalizationFieldReserved;
-
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldTokenize")
         private Boolean normalizationFieldTokenize;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String normalizationFieldType;
 
-        @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
-        private String normalizationSchemaId;
-
-        @com.aliyun.core.annotation.NameInMap("UpdateTime")
-        private Long updateTime;
-
         private NormalizationFields(Builder builder) {
-            this.createTime = builder.createTime;
-            this.normalizationCategoryId = builder.normalizationCategoryId;
             this.normalizationFieldDescription = builder.normalizationFieldDescription;
             this.normalizationFieldExample = builder.normalizationFieldExample;
             this.normalizationFieldFrom = builder.normalizationFieldFrom;
@@ -456,12 +479,8 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             this.normalizationFieldJsonKeys = builder.normalizationFieldJsonKeys;
             this.normalizationFieldName = builder.normalizationFieldName;
             this.normalizationFieldRequired = builder.normalizationFieldRequired;
-            this.normalizationFieldRequirement = builder.normalizationFieldRequirement;
-            this.normalizationFieldReserved = builder.normalizationFieldReserved;
             this.normalizationFieldTokenize = builder.normalizationFieldTokenize;
             this.normalizationFieldType = builder.normalizationFieldType;
-            this.normalizationSchemaId = builder.normalizationSchemaId;
-            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -470,20 +489,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
 
         public static NormalizationFields create() {
             return builder().build();
-        }
-
-        /**
-         * @return createTime
-         */
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        /**
-         * @return normalizationCategoryId
-         */
-        public String getNormalizationCategoryId() {
-            return this.normalizationCategoryId;
         }
 
         /**
@@ -536,20 +541,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * @return normalizationFieldRequirement
-         */
-        public Boolean getNormalizationFieldRequirement() {
-            return this.normalizationFieldRequirement;
-        }
-
-        /**
-         * @return normalizationFieldReserved
-         */
-        public Boolean getNormalizationFieldReserved() {
-            return this.normalizationFieldReserved;
-        }
-
-        /**
          * @return normalizationFieldTokenize
          */
         public Boolean getNormalizationFieldTokenize() {
@@ -563,23 +554,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             return this.normalizationFieldType;
         }
 
-        /**
-         * @return normalizationSchemaId
-         */
-        public String getNormalizationSchemaId() {
-            return this.normalizationSchemaId;
-        }
-
-        /**
-         * @return updateTime
-         */
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
         public static final class Builder {
-            private Long createTime; 
-            private String normalizationCategoryId; 
             private String normalizationFieldDescription; 
             private String normalizationFieldExample; 
             private String normalizationFieldFrom; 
@@ -587,19 +562,13 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             private java.util.List<NormalizationFieldJsonKeys> normalizationFieldJsonKeys; 
             private String normalizationFieldName; 
             private Boolean normalizationFieldRequired; 
-            private Boolean normalizationFieldRequirement; 
-            private Boolean normalizationFieldReserved; 
             private Boolean normalizationFieldTokenize; 
             private String normalizationFieldType; 
-            private String normalizationSchemaId; 
-            private Long updateTime; 
 
             private Builder() {
             } 
 
             private Builder(NormalizationFields model) {
-                this.createTime = model.createTime;
-                this.normalizationCategoryId = model.normalizationCategoryId;
                 this.normalizationFieldDescription = model.normalizationFieldDescription;
                 this.normalizationFieldExample = model.normalizationFieldExample;
                 this.normalizationFieldFrom = model.normalizationFieldFrom;
@@ -607,29 +576,9 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
                 this.normalizationFieldJsonKeys = model.normalizationFieldJsonKeys;
                 this.normalizationFieldName = model.normalizationFieldName;
                 this.normalizationFieldRequired = model.normalizationFieldRequired;
-                this.normalizationFieldRequirement = model.normalizationFieldRequirement;
-                this.normalizationFieldReserved = model.normalizationFieldReserved;
                 this.normalizationFieldTokenize = model.normalizationFieldTokenize;
                 this.normalizationFieldType = model.normalizationFieldType;
-                this.normalizationSchemaId = model.normalizationSchemaId;
-                this.updateTime = model.updateTime;
             } 
-
-            /**
-             * CreateTime.
-             */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * NormalizationCategoryId.
-             */
-            public Builder normalizationCategoryId(String normalizationCategoryId) {
-                this.normalizationCategoryId = normalizationCategoryId;
-                return this;
-            }
 
             /**
              * NormalizationFieldDescription.
@@ -672,7 +621,10 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_user</p>
              */
             public Builder normalizationFieldName(String normalizationFieldName) {
                 this.normalizationFieldName = normalizationFieldName;
@@ -688,22 +640,6 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldRequirement.
-             */
-            public Builder normalizationFieldRequirement(Boolean normalizationFieldRequirement) {
-                this.normalizationFieldRequirement = normalizationFieldRequirement;
-                return this;
-            }
-
-            /**
-             * NormalizationFieldReserved.
-             */
-            public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
-                this.normalizationFieldReserved = normalizationFieldReserved;
-                return this;
-            }
-
-            /**
              * NormalizationFieldTokenize.
              */
             public Builder normalizationFieldTokenize(Boolean normalizationFieldTokenize) {
@@ -712,26 +648,13 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalizationFieldType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder normalizationFieldType(String normalizationFieldType) {
                 this.normalizationFieldType = normalizationFieldType;
-                return this;
-            }
-
-            /**
-             * NormalizationSchemaId.
-             */
-            public Builder normalizationSchemaId(String normalizationSchemaId) {
-                this.normalizationSchemaId = normalizationSchemaId;
-                return this;
-            }
-
-            /**
-             * UpdateTime.
-             */
-            public Builder updateTime(Long updateTime) {
-                this.updateTime = updateTime;
                 return this;
             }
 

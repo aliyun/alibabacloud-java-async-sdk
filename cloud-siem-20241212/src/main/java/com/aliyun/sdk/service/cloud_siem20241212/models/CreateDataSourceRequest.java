@@ -85,10 +85,6 @@ public class CreateDataSourceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("UpdateTime")
-    private Long updateTime;
-
     private CreateDataSourceRequest(Builder builder) {
         super(builder);
         this.dataSourceFrom = builder.dataSourceFrom;
@@ -108,7 +104,6 @@ public class CreateDataSourceRequest extends Request {
         this.order = builder.order;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
-        this.updateTime = builder.updateTime;
     }
 
     public static Builder builder() {
@@ -243,13 +238,6 @@ public class CreateDataSourceRequest extends Request {
         return this.roleFor;
     }
 
-    /**
-     * @return updateTime
-     */
-    public Long getUpdateTime() {
-        return this.updateTime;
-    }
-
     public static final class Builder extends Request.Builder<CreateDataSourceRequest, Builder> {
         private String dataSourceFrom; 
         private java.util.List<String> dataSourceIds; 
@@ -268,7 +256,6 @@ public class CreateDataSourceRequest extends Request {
         private String order; 
         private String regionId; 
         private Long roleFor; 
-        private Long updateTime; 
 
         private Builder() {
             super();
@@ -293,7 +280,6 @@ public class CreateDataSourceRequest extends Request {
             this.order = request.order;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
-            this.updateTime = request.updateTime;
         } 
 
         /**
@@ -451,15 +437,6 @@ public class CreateDataSourceRequest extends Request {
             return this;
         }
 
-        /**
-         * UpdateTime.
-         */
-        public Builder updateTime(Long updateTime) {
-            this.putBodyParameter("UpdateTime", updateTime);
-            this.updateTime = updateTime;
-            return this;
-        }
-
         @Override
         public CreateDataSourceRequest build() {
             return new CreateDataSourceRequest(this);
@@ -474,9 +451,6 @@ public class CreateDataSourceRequest extends Request {
      * <p>CreateDataSourceRequest</p>
      */
     public static class DataSourceStores extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CreateTime")
-        private Long createTime;
-
         @com.aliyun.core.annotation.NameInMap("DataSourceStoreFrom")
         private String dataSourceStoreFrom;
 
@@ -495,18 +469,13 @@ public class CreateDataSourceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
-        @com.aliyun.core.annotation.NameInMap("UpdateTime")
-        private Long updateTime;
-
         private DataSourceStores(Builder builder) {
-            this.createTime = builder.createTime;
             this.dataSourceStoreFrom = builder.dataSourceStoreFrom;
             this.dataSourceStoreId = builder.dataSourceStoreId;
             this.dataSourceStoreStatus = builder.dataSourceStoreStatus;
             this.logProjectName = builder.logProjectName;
             this.logRegionId = builder.logRegionId;
             this.logStoreName = builder.logStoreName;
-            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -515,13 +484,6 @@ public class CreateDataSourceRequest extends Request {
 
         public static DataSourceStores create() {
             return builder().build();
-        }
-
-        /**
-         * @return createTime
-         */
-        public Long getCreateTime() {
-            return this.createTime;
         }
 
         /**
@@ -566,44 +528,25 @@ public class CreateDataSourceRequest extends Request {
             return this.logStoreName;
         }
 
-        /**
-         * @return updateTime
-         */
-        public Long getUpdateTime() {
-            return this.updateTime;
-        }
-
         public static final class Builder {
-            private Long createTime; 
             private String dataSourceStoreFrom; 
             private String dataSourceStoreId; 
             private String dataSourceStoreStatus; 
             private String logProjectName; 
             private String logRegionId; 
             private String logStoreName; 
-            private Long updateTime; 
 
             private Builder() {
             } 
 
             private Builder(DataSourceStores model) {
-                this.createTime = model.createTime;
                 this.dataSourceStoreFrom = model.dataSourceStoreFrom;
                 this.dataSourceStoreId = model.dataSourceStoreId;
                 this.dataSourceStoreStatus = model.dataSourceStoreStatus;
                 this.logProjectName = model.logProjectName;
                 this.logRegionId = model.logRegionId;
                 this.logStoreName = model.logStoreName;
-                this.updateTime = model.updateTime;
             } 
-
-            /**
-             * CreateTime.
-             */
-            public Builder createTime(Long createTime) {
-                this.createTime = createTime;
-                return this;
-            }
 
             /**
              * DataSourceStoreFrom.
@@ -650,14 +593,6 @@ public class CreateDataSourceRequest extends Request {
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
-                return this;
-            }
-
-            /**
-             * UpdateTime.
-             */
-            public Builder updateTime(Long updateTime) {
-                this.updateTime = updateTime;
                 return this;
             }
 

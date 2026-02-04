@@ -22,16 +22,36 @@ public class ValidateNormalizationRuleRequest extends Request {
     private String data;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendFieldStoreMode")
+    private String extendFieldStoreMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSample")
+    private String logSample;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
     private String normalizationCategoryId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationRuleExpression")
+    private String normalizationRuleExpression;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationRuleMode")
+    private String normalizationRuleMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
     private String normalizationSchemaId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    private String productId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -41,14 +61,24 @@ public class ValidateNormalizationRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorId")
+    private String vendorId;
+
     private ValidateNormalizationRuleRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
+        this.extendFieldStoreMode = builder.extendFieldStoreMode;
         this.lang = builder.lang;
+        this.logSample = builder.logSample;
         this.normalizationCategoryId = builder.normalizationCategoryId;
+        this.normalizationRuleExpression = builder.normalizationRuleExpression;
+        this.normalizationRuleMode = builder.normalizationRuleMode;
         this.normalizationSchemaId = builder.normalizationSchemaId;
+        this.productId = builder.productId;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
+        this.vendorId = builder.vendorId;
     }
 
     public static Builder builder() {
@@ -72,10 +102,24 @@ public class ValidateNormalizationRuleRequest extends Request {
     }
 
     /**
+     * @return extendFieldStoreMode
+     */
+    public String getExtendFieldStoreMode() {
+        return this.extendFieldStoreMode;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return logSample
+     */
+    public String getLogSample() {
+        return this.logSample;
     }
 
     /**
@@ -86,10 +130,31 @@ public class ValidateNormalizationRuleRequest extends Request {
     }
 
     /**
+     * @return normalizationRuleExpression
+     */
+    public String getNormalizationRuleExpression() {
+        return this.normalizationRuleExpression;
+    }
+
+    /**
+     * @return normalizationRuleMode
+     */
+    public String getNormalizationRuleMode() {
+        return this.normalizationRuleMode;
+    }
+
+    /**
      * @return normalizationSchemaId
      */
     public String getNormalizationSchemaId() {
         return this.normalizationSchemaId;
+    }
+
+    /**
+     * @return productId
+     */
+    public String getProductId() {
+        return this.productId;
     }
 
     /**
@@ -106,13 +171,26 @@ public class ValidateNormalizationRuleRequest extends Request {
         return this.roleFor;
     }
 
+    /**
+     * @return vendorId
+     */
+    public String getVendorId() {
+        return this.vendorId;
+    }
+
     public static final class Builder extends Request.Builder<ValidateNormalizationRuleRequest, Builder> {
         private String data; 
+        private String extendFieldStoreMode; 
         private String lang; 
+        private String logSample; 
         private String normalizationCategoryId; 
+        private String normalizationRuleExpression; 
+        private String normalizationRuleMode; 
         private String normalizationSchemaId; 
+        private String productId; 
         private String regionId; 
         private Long roleFor; 
+        private String vendorId; 
 
         private Builder() {
             super();
@@ -121,11 +199,17 @@ public class ValidateNormalizationRuleRequest extends Request {
         private Builder(ValidateNormalizationRuleRequest request) {
             super(request);
             this.data = request.data;
+            this.extendFieldStoreMode = request.extendFieldStoreMode;
             this.lang = request.lang;
+            this.logSample = request.logSample;
             this.normalizationCategoryId = request.normalizationCategoryId;
+            this.normalizationRuleExpression = request.normalizationRuleExpression;
+            this.normalizationRuleMode = request.normalizationRuleMode;
             this.normalizationSchemaId = request.normalizationSchemaId;
+            this.productId = request.productId;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
+            this.vendorId = request.vendorId;
         } 
 
         /**
@@ -134,6 +218,15 @@ public class ValidateNormalizationRuleRequest extends Request {
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
             this.data = data;
+            return this;
+        }
+
+        /**
+         * ExtendFieldStoreMode.
+         */
+        public Builder extendFieldStoreMode(String extendFieldStoreMode) {
+            this.putBodyParameter("ExtendFieldStoreMode", extendFieldStoreMode);
+            this.extendFieldStoreMode = extendFieldStoreMode;
             return this;
         }
 
@@ -147,6 +240,15 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
+         * LogSample.
+         */
+        public Builder logSample(String logSample) {
+            this.putBodyParameter("LogSample", logSample);
+            this.logSample = logSample;
+            return this;
+        }
+
+        /**
          * NormalizationCategoryId.
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
@@ -156,11 +258,38 @@ public class ValidateNormalizationRuleRequest extends Request {
         }
 
         /**
+         * NormalizationRuleExpression.
+         */
+        public Builder normalizationRuleExpression(String normalizationRuleExpression) {
+            this.putBodyParameter("NormalizationRuleExpression", normalizationRuleExpression);
+            this.normalizationRuleExpression = normalizationRuleExpression;
+            return this;
+        }
+
+        /**
+         * NormalizationRuleMode.
+         */
+        public Builder normalizationRuleMode(String normalizationRuleMode) {
+            this.putBodyParameter("NormalizationRuleMode", normalizationRuleMode);
+            this.normalizationRuleMode = normalizationRuleMode;
+            return this;
+        }
+
+        /**
          * NormalizationSchemaId.
          */
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
             this.normalizationSchemaId = normalizationSchemaId;
+            return this;
+        }
+
+        /**
+         * ProductId.
+         */
+        public Builder productId(String productId) {
+            this.putBodyParameter("ProductId", productId);
+            this.productId = productId;
             return this;
         }
 
@@ -179,6 +308,15 @@ public class ValidateNormalizationRuleRequest extends Request {
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
             this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * VendorId.
+         */
+        public Builder vendorId(String vendorId) {
+            this.putBodyParameter("VendorId", vendorId);
+            this.vendorId = vendorId;
             return this;
         }
 

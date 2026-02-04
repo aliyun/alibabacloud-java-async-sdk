@@ -101,6 +101,9 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtendContentPacked")
         private String extendContentPacked;
 
+        @com.aliyun.core.annotation.NameInMap("ExtendFieldStoreMode")
+        private String extendFieldStoreMode;
+
         @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
         private String normalizationCategoryId;
 
@@ -152,6 +155,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         private NormalizationRule(Builder builder) {
             this.createTime = builder.createTime;
             this.extendContentPacked = builder.extendContentPacked;
+            this.extendFieldStoreMode = builder.extendFieldStoreMode;
             this.normalizationCategoryId = builder.normalizationCategoryId;
             this.normalizationRuleDescription = builder.normalizationRuleDescription;
             this.normalizationRuleExpression = builder.normalizationRuleExpression;
@@ -190,6 +194,13 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
          */
         public String getExtendContentPacked() {
             return this.extendContentPacked;
+        }
+
+        /**
+         * @return extendFieldStoreMode
+         */
+        public String getExtendFieldStoreMode() {
+            return this.extendFieldStoreMode;
         }
 
         /**
@@ -307,6 +318,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String extendContentPacked; 
+            private String extendFieldStoreMode; 
             private String normalizationCategoryId; 
             private String normalizationRuleDescription; 
             private String normalizationRuleExpression; 
@@ -330,6 +342,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             private Builder(NormalizationRule model) {
                 this.createTime = model.createTime;
                 this.extendContentPacked = model.extendContentPacked;
+                this.extendFieldStoreMode = model.extendFieldStoreMode;
                 this.normalizationCategoryId = model.normalizationCategoryId;
                 this.normalizationRuleDescription = model.normalizationRuleDescription;
                 this.normalizationRuleExpression = model.normalizationRuleExpression;
@@ -361,6 +374,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
              */
             public Builder extendContentPacked(String extendContentPacked) {
                 this.extendContentPacked = extendContentPacked;
+                return this;
+            }
+
+            /**
+             * ExtendFieldStoreMode.
+             */
+            public Builder extendFieldStoreMode(String extendFieldStoreMode) {
+                this.extendFieldStoreMode = extendFieldStoreMode;
                 return this;
             }
 

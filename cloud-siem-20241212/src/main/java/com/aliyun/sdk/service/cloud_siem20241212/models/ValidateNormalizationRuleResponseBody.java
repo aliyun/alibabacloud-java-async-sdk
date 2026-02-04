@@ -101,8 +101,17 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
+        @com.aliyun.core.annotation.NameInMap("LogFieldName")
+        private String logFieldName;
+
+        @com.aliyun.core.annotation.NameInMap("LogFieldValue")
+        private String logFieldValue;
+
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldFrom")
+        private String normalizationFieldFrom;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldName")
         private String normalizationFieldName;
@@ -110,15 +119,34 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationFieldRequired")
         private Boolean normalizationFieldRequired;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldReserved")
+        private Boolean normalizationFieldReserved;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldType")
+        private String normalizationFieldType;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldValidationReason")
+        private String normalizationFieldValidationReason;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldValidationStatus")
+        private String normalizationFieldValidationStatus;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private Integer result;
 
         private ValidateResult(Builder builder) {
             this.fieldName = builder.fieldName;
             this.fieldValue = builder.fieldValue;
+            this.logFieldName = builder.logFieldName;
+            this.logFieldValue = builder.logFieldValue;
             this.message = builder.message;
+            this.normalizationFieldFrom = builder.normalizationFieldFrom;
             this.normalizationFieldName = builder.normalizationFieldName;
             this.normalizationFieldRequired = builder.normalizationFieldRequired;
+            this.normalizationFieldReserved = builder.normalizationFieldReserved;
+            this.normalizationFieldType = builder.normalizationFieldType;
+            this.normalizationFieldValidationReason = builder.normalizationFieldValidationReason;
+            this.normalizationFieldValidationStatus = builder.normalizationFieldValidationStatus;
             this.result = builder.result;
         }
 
@@ -145,10 +173,31 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return logFieldName
+         */
+        public String getLogFieldName() {
+            return this.logFieldName;
+        }
+
+        /**
+         * @return logFieldValue
+         */
+        public String getLogFieldValue() {
+            return this.logFieldValue;
+        }
+
+        /**
          * @return message
          */
         public String getMessage() {
             return this.message;
+        }
+
+        /**
+         * @return normalizationFieldFrom
+         */
+        public String getNormalizationFieldFrom() {
+            return this.normalizationFieldFrom;
         }
 
         /**
@@ -166,6 +215,34 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return normalizationFieldReserved
+         */
+        public Boolean getNormalizationFieldReserved() {
+            return this.normalizationFieldReserved;
+        }
+
+        /**
+         * @return normalizationFieldType
+         */
+        public String getNormalizationFieldType() {
+            return this.normalizationFieldType;
+        }
+
+        /**
+         * @return normalizationFieldValidationReason
+         */
+        public String getNormalizationFieldValidationReason() {
+            return this.normalizationFieldValidationReason;
+        }
+
+        /**
+         * @return normalizationFieldValidationStatus
+         */
+        public String getNormalizationFieldValidationStatus() {
+            return this.normalizationFieldValidationStatus;
+        }
+
+        /**
          * @return result
          */
         public Integer getResult() {
@@ -175,9 +252,16 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldName; 
             private String fieldValue; 
+            private String logFieldName; 
+            private String logFieldValue; 
             private String message; 
+            private String normalizationFieldFrom; 
             private String normalizationFieldName; 
             private Boolean normalizationFieldRequired; 
+            private Boolean normalizationFieldReserved; 
+            private String normalizationFieldType; 
+            private String normalizationFieldValidationReason; 
+            private String normalizationFieldValidationStatus; 
             private Integer result; 
 
             private Builder() {
@@ -186,9 +270,16 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             private Builder(ValidateResult model) {
                 this.fieldName = model.fieldName;
                 this.fieldValue = model.fieldValue;
+                this.logFieldName = model.logFieldName;
+                this.logFieldValue = model.logFieldValue;
                 this.message = model.message;
+                this.normalizationFieldFrom = model.normalizationFieldFrom;
                 this.normalizationFieldName = model.normalizationFieldName;
                 this.normalizationFieldRequired = model.normalizationFieldRequired;
+                this.normalizationFieldReserved = model.normalizationFieldReserved;
+                this.normalizationFieldType = model.normalizationFieldType;
+                this.normalizationFieldValidationReason = model.normalizationFieldValidationReason;
+                this.normalizationFieldValidationStatus = model.normalizationFieldValidationStatus;
                 this.result = model.result;
             } 
 
@@ -209,10 +300,34 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
             }
 
             /**
+             * LogFieldName.
+             */
+            public Builder logFieldName(String logFieldName) {
+                this.logFieldName = logFieldName;
+                return this;
+            }
+
+            /**
+             * LogFieldValue.
+             */
+            public Builder logFieldValue(String logFieldValue) {
+                this.logFieldValue = logFieldValue;
+                return this;
+            }
+
+            /**
              * Message.
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldFrom.
+             */
+            public Builder normalizationFieldFrom(String normalizationFieldFrom) {
+                this.normalizationFieldFrom = normalizationFieldFrom;
                 return this;
             }
 
@@ -229,6 +344,38 @@ public class ValidateNormalizationRuleResponseBody extends TeaModel {
              */
             public Builder normalizationFieldRequired(Boolean normalizationFieldRequired) {
                 this.normalizationFieldRequired = normalizationFieldRequired;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldReserved.
+             */
+            public Builder normalizationFieldReserved(Boolean normalizationFieldReserved) {
+                this.normalizationFieldReserved = normalizationFieldReserved;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldType.
+             */
+            public Builder normalizationFieldType(String normalizationFieldType) {
+                this.normalizationFieldType = normalizationFieldType;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldValidationReason.
+             */
+            public Builder normalizationFieldValidationReason(String normalizationFieldValidationReason) {
+                this.normalizationFieldValidationReason = normalizationFieldValidationReason;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldValidationStatus.
+             */
+            public Builder normalizationFieldValidationStatus(String normalizationFieldValidationStatus) {
+                this.normalizationFieldValidationStatus = normalizationFieldValidationStatus;
                 return this;
             }
 

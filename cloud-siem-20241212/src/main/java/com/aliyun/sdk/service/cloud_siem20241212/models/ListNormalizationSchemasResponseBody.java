@@ -158,8 +158,17 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
      * <p>ListNormalizationSchemasResponseBody</p>
      */
     public static class NormalizationSchemas extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
         private String normalizationCategoryId;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationSchemaDescription")
+        private String normalizationSchemaDescription;
+
+        @com.aliyun.core.annotation.NameInMap("NormalizationSchemaFrom")
+        private String normalizationSchemaFrom;
 
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
         private String normalizationSchemaId;
@@ -170,11 +179,26 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaTargetLogStore")
         private String normalizationSchemaTargetLogStore;
 
+        @com.aliyun.core.annotation.NameInMap("TargetLogStore")
+        private String targetLogStore;
+
+        @com.aliyun.core.annotation.NameInMap("TargetStoreView")
+        private String targetStoreView;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
+
         private NormalizationSchemas(Builder builder) {
+            this.createTime = builder.createTime;
             this.normalizationCategoryId = builder.normalizationCategoryId;
+            this.normalizationSchemaDescription = builder.normalizationSchemaDescription;
+            this.normalizationSchemaFrom = builder.normalizationSchemaFrom;
             this.normalizationSchemaId = builder.normalizationSchemaId;
             this.normalizationSchemaName = builder.normalizationSchemaName;
             this.normalizationSchemaTargetLogStore = builder.normalizationSchemaTargetLogStore;
+            this.targetLogStore = builder.targetLogStore;
+            this.targetStoreView = builder.targetStoreView;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -186,10 +210,31 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return normalizationCategoryId
          */
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        /**
+         * @return normalizationSchemaDescription
+         */
+        public String getNormalizationSchemaDescription() {
+            return this.normalizationSchemaDescription;
+        }
+
+        /**
+         * @return normalizationSchemaFrom
+         */
+        public String getNormalizationSchemaFrom() {
+            return this.normalizationSchemaFrom;
         }
 
         /**
@@ -213,27 +258,84 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
             return this.normalizationSchemaTargetLogStore;
         }
 
+        /**
+         * @return targetLogStore
+         */
+        public String getTargetLogStore() {
+            return this.targetLogStore;
+        }
+
+        /**
+         * @return targetStoreView
+         */
+        public String getTargetStoreView() {
+            return this.targetStoreView;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
+            private Long createTime; 
             private String normalizationCategoryId; 
+            private String normalizationSchemaDescription; 
+            private String normalizationSchemaFrom; 
             private String normalizationSchemaId; 
             private String normalizationSchemaName; 
             private String normalizationSchemaTargetLogStore; 
+            private String targetLogStore; 
+            private String targetStoreView; 
+            private Long updateTime; 
 
             private Builder() {
             } 
 
             private Builder(NormalizationSchemas model) {
+                this.createTime = model.createTime;
                 this.normalizationCategoryId = model.normalizationCategoryId;
+                this.normalizationSchemaDescription = model.normalizationSchemaDescription;
+                this.normalizationSchemaFrom = model.normalizationSchemaFrom;
                 this.normalizationSchemaId = model.normalizationSchemaId;
                 this.normalizationSchemaName = model.normalizationSchemaName;
                 this.normalizationSchemaTargetLogStore = model.normalizationSchemaTargetLogStore;
+                this.targetLogStore = model.targetLogStore;
+                this.targetStoreView = model.targetStoreView;
+                this.updateTime = model.updateTime;
             } 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
 
             /**
              * NormalizationCategoryId.
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
+                return this;
+            }
+
+            /**
+             * NormalizationSchemaDescription.
+             */
+            public Builder normalizationSchemaDescription(String normalizationSchemaDescription) {
+                this.normalizationSchemaDescription = normalizationSchemaDescription;
+                return this;
+            }
+
+            /**
+             * NormalizationSchemaFrom.
+             */
+            public Builder normalizationSchemaFrom(String normalizationSchemaFrom) {
+                this.normalizationSchemaFrom = normalizationSchemaFrom;
                 return this;
             }
 
@@ -258,6 +360,30 @@ public class ListNormalizationSchemasResponseBody extends TeaModel {
              */
             public Builder normalizationSchemaTargetLogStore(String normalizationSchemaTargetLogStore) {
                 this.normalizationSchemaTargetLogStore = normalizationSchemaTargetLogStore;
+                return this;
+            }
+
+            /**
+             * TargetLogStore.
+             */
+            public Builder targetLogStore(String targetLogStore) {
+                this.targetLogStore = targetLogStore;
+                return this;
+            }
+
+            /**
+             * TargetStoreView.
+             */
+            public Builder targetStoreView(String targetStoreView) {
+                this.targetStoreView = targetStoreView;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

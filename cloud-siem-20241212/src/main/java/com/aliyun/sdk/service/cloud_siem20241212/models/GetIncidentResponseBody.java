@@ -125,6 +125,9 @@ public class GetIncidentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("RelateAlertCount")
         private Integer relateAlertCount;
 
@@ -157,6 +160,7 @@ public class GetIncidentResponseBody extends TeaModel {
             this.incidentStatus = builder.incidentStatus;
             this.incidentTags = builder.incidentTags;
             this.incidentUuid = builder.incidentUuid;
+            this.owner = builder.owner;
             this.relateAlertCount = builder.relateAlertCount;
             this.relateAssetCount = builder.relateAssetCount;
             this.relateDataSourceIds = builder.relateDataSourceIds;
@@ -245,6 +249,13 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return relateAlertCount
          */
         public Integer getRelateAlertCount() {
@@ -304,6 +315,7 @@ public class GetIncidentResponseBody extends TeaModel {
             private Integer incidentStatus; 
             private String incidentTags; 
             private String incidentUuid; 
+            private String owner; 
             private Integer relateAlertCount; 
             private Integer relateAssetCount; 
             private Object relateDataSourceIds; 
@@ -326,6 +338,7 @@ public class GetIncidentResponseBody extends TeaModel {
                 this.incidentStatus = model.incidentStatus;
                 this.incidentTags = model.incidentTags;
                 this.incidentUuid = model.incidentUuid;
+                this.owner = model.owner;
                 this.relateAlertCount = model.relateAlertCount;
                 this.relateAssetCount = model.relateAssetCount;
                 this.relateDataSourceIds = model.relateDataSourceIds;
@@ -412,6 +425,14 @@ public class GetIncidentResponseBody extends TeaModel {
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
                 return this;
             }
 

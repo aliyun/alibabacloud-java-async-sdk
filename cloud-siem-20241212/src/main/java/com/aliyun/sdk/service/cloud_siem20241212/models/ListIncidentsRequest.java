@@ -62,6 +62,10 @@ public class ListIncidentsRequest extends Request {
     private String orderFieldName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owners")
+    private java.util.List<String> owners;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer pageNumber;
@@ -112,6 +116,7 @@ public class ListIncidentsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.orderDirection = builder.orderDirection;
         this.orderFieldName = builder.orderFieldName;
+        this.owners = builder.owners;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -214,6 +219,13 @@ public class ListIncidentsRequest extends Request {
     }
 
     /**
+     * @return owners
+     */
+    public java.util.List<String> getOwners() {
+        return this.owners;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -288,6 +300,7 @@ public class ListIncidentsRequest extends Request {
         private String nextToken; 
         private String orderDirection; 
         private String orderFieldName; 
+        private java.util.List<String> owners; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -315,6 +328,7 @@ public class ListIncidentsRequest extends Request {
             this.nextToken = request.nextToken;
             this.orderDirection = request.orderDirection;
             this.orderFieldName = request.orderFieldName;
+            this.owners = request.owners;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -423,6 +437,15 @@ public class ListIncidentsRequest extends Request {
         public Builder orderFieldName(String orderFieldName) {
             this.putBodyParameter("OrderFieldName", orderFieldName);
             this.orderFieldName = orderFieldName;
+            return this;
+        }
+
+        /**
+         * Owners.
+         */
+        public Builder owners(java.util.List<String> owners) {
+            this.putBodyParameter("Owners", owners);
+            this.owners = owners;
             return this;
         }
 

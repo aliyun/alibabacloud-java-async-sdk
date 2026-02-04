@@ -203,6 +203,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DetectionRuleId")
+        private String detectionRuleId;
+
         @com.aliyun.core.annotation.NameInMap("IncidentName")
         private String incidentName;
 
@@ -218,6 +221,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @com.aliyun.core.annotation.NameInMap("Owner")
+        private String owner;
+
         @com.aliyun.core.annotation.NameInMap("RelateAlertCount")
         private Integer relateAlertCount;
 
@@ -232,11 +238,13 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         private Incidents(Builder builder) {
             this.createTime = builder.createTime;
+            this.detectionRuleId = builder.detectionRuleId;
             this.incidentName = builder.incidentName;
             this.incidentRemark = builder.incidentRemark;
             this.incidentStatus = builder.incidentStatus;
             this.incidentTags = builder.incidentTags;
             this.incidentUuid = builder.incidentUuid;
+            this.owner = builder.owner;
             this.relateAlertCount = builder.relateAlertCount;
             this.relateAssetCount = builder.relateAssetCount;
             this.threatLevel = builder.threatLevel;
@@ -256,6 +264,13 @@ public class ListIncidentsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return detectionRuleId
+         */
+        public String getDetectionRuleId() {
+            return this.detectionRuleId;
         }
 
         /**
@@ -294,6 +309,13 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return owner
+         */
+        public String getOwner() {
+            return this.owner;
+        }
+
+        /**
          * @return relateAlertCount
          */
         public Integer getRelateAlertCount() {
@@ -323,11 +345,13 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private String detectionRuleId; 
             private String incidentName; 
             private String incidentRemark; 
             private Integer incidentStatus; 
             private String incidentTags; 
             private String incidentUuid; 
+            private String owner; 
             private Integer relateAlertCount; 
             private Integer relateAssetCount; 
             private String threatLevel; 
@@ -338,11 +362,13 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             private Builder(Incidents model) {
                 this.createTime = model.createTime;
+                this.detectionRuleId = model.detectionRuleId;
                 this.incidentName = model.incidentName;
                 this.incidentRemark = model.incidentRemark;
                 this.incidentStatus = model.incidentStatus;
                 this.incidentTags = model.incidentTags;
                 this.incidentUuid = model.incidentUuid;
+                this.owner = model.owner;
                 this.relateAlertCount = model.relateAlertCount;
                 this.relateAssetCount = model.relateAssetCount;
                 this.threatLevel = model.threatLevel;
@@ -354,6 +380,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DetectionRuleId.
+             */
+            public Builder detectionRuleId(String detectionRuleId) {
+                this.detectionRuleId = detectionRuleId;
                 return this;
             }
 
@@ -394,6 +428,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
+                return this;
+            }
+
+            /**
+             * Owner.
+             */
+            public Builder owner(String owner) {
+                this.owner = owner;
                 return this;
             }
 
