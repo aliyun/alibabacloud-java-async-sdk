@@ -1827,6 +1827,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstanceByTagsResponse> describeDBInstanceByTags(DescribeDBInstanceByTagsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBInstanceCLS  DescribeDBInstanceCLSRequest
+     * @return DescribeDBInstanceCLSResponse
+     */
+    CompletableFuture<DescribeDBInstanceCLSResponse> describeDBInstanceCLS(DescribeDBInstanceCLSRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBInstanceConnectivity  DescribeDBInstanceConnectivityRequest
      * @return DescribeDBInstanceConnectivityResponse
      */
@@ -3863,6 +3869,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceAutoUpgradeMinorVersionResponse> modifyDBInstanceAutoUpgradeMinorVersion(ModifyDBInstanceAutoUpgradeMinorVersionRequest request);
 
     /**
+     * @param request the request parameters of ModifyDBInstanceCLS  ModifyDBInstanceCLSRequest
+     * @return ModifyDBInstanceCLSResponse
+     */
+    CompletableFuture<ModifyDBInstanceCLSResponse> modifyDBInstanceCLS(ModifyDBInstanceCLSRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -4560,6 +4572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyParameterGroupResponse
      */
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyParameterTimedScheduleTask  ModifyParameterTimedScheduleTaskRequest
+     * @return ModifyParameterTimedScheduleTaskResponse
+     */
+    CompletableFuture<ModifyParameterTimedScheduleTaskResponse> modifyParameterTimedScheduleTask(ModifyParameterTimedScheduleTaskRequest request);
 
     /**
      * @param request the request parameters of ModifyRCDiskAttribute  ModifyRCDiskAttributeRequest

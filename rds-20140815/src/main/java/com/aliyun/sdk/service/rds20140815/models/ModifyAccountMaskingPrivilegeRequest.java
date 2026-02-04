@@ -175,6 +175,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4n8t18o******6d5</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -211,6 +214,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>restrictedAccess</p>
          */
         public Builder privilege(String privilege) {
             this.putQueryParameter("Privilege", privilege);
@@ -247,6 +253,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

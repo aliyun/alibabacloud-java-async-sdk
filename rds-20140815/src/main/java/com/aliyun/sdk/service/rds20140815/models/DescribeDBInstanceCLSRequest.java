@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeMaskingRulesRequest} extends {@link RequestModel}
+ * {@link DescribeDBInstanceCLSRequest} extends {@link RequestModel}
  *
- * <p>DescribeMaskingRulesRequest</p>
+ * <p>DescribeDBInstanceCLSRequest</p>
  */
-public class DescribeMaskingRulesRequest extends Request {
+public class DescribeDBInstanceCLSRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String DBInstanceName;
+    private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBName")
-    private String DBName;
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private String ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+    private Long ownerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -42,26 +38,20 @@ public class DescribeMaskingRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RuleName")
-    private String ruleName;
-
-    private DescribeMaskingRulesRequest(Builder builder) {
+    private DescribeDBInstanceCLSRequest(Builder builder) {
         super(builder);
-        this.DBInstanceName = builder.DBInstanceName;
-        this.DBName = builder.DBName;
+        this.DBInstanceId = builder.DBInstanceId;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.ruleName = builder.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeMaskingRulesRequest create() {
+    public static DescribeDBInstanceCLSRequest create() {
         return builder().build();
     }
 
@@ -71,31 +61,24 @@ public class DescribeMaskingRulesRequest extends Request {
     }
 
     /**
-     * @return DBInstanceName
+     * @return DBInstanceId
      */
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     /**
-     * @return DBName
+     * @return ownerAccount
      */
-    public String getDBName() {
-        return this.DBName;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
      * @return ownerId
      */
-    public String getOwnerId() {
+    public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -112,73 +95,53 @@ public class DescribeMaskingRulesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return ruleName
-     */
-    public String getRuleName() {
-        return this.ruleName;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeMaskingRulesRequest, Builder> {
-        private String DBInstanceName; 
-        private String DBName; 
-        private String ownerId; 
-        private String regionId; 
+    public static final class Builder extends Request.Builder<DescribeDBInstanceCLSRequest, Builder> {
+        private String DBInstanceId; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String ruleName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeMaskingRulesRequest request) {
+        private Builder(DescribeDBInstanceCLSRequest request) {
             super(request);
-            this.DBInstanceName = request.DBInstanceName;
-            this.DBName = request.DBName;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.ruleName = request.ruleName;
         } 
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-t4n8t18o******5</p>
+         * <p>rm-t4n8t18o******6d5</p>
          */
-        public Builder DBInstanceName(String DBInstanceName) {
-            this.putQueryParameter("DBInstanceName", DBInstanceName);
-            this.DBInstanceName = DBInstanceName;
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
             return this;
         }
 
         /**
-         * DBName.
+         * OwnerAccount.
          */
-        public Builder DBName(String DBName) {
-            this.putQueryParameter("DBName", DBName);
-            this.DBName = DBName;
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
         /**
          * OwnerId.
          */
-        public Builder ownerId(String ownerId) {
+        public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -200,18 +163,9 @@ public class DescribeMaskingRulesRequest extends Request {
             return this;
         }
 
-        /**
-         * RuleName.
-         */
-        public Builder ruleName(String ruleName) {
-            this.putQueryParameter("RuleName", ruleName);
-            this.ruleName = ruleName;
-            return this;
-        }
-
         @Override
-        public DescribeMaskingRulesRequest build() {
-            return new DescribeMaskingRulesRequest(this);
+        public DescribeDBInstanceCLSRequest build() {
+            return new DescribeDBInstanceCLSRequest(this);
         } 
 
     } 
