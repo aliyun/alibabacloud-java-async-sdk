@@ -455,18 +455,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConnectRouterInterfaceResponse> connectRouterInterface(ConnectRouterInterfaceRequest request);
 
     /**
-     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated  * @description Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
-     * *   You are not charged for the conversion.
-     * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
-     * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
-     * 
-     * @param request the request parameters of ConvertBandwidthPackage  ConvertBandwidthPackageRequest
-     * @return ConvertBandwidthPackageResponse
-     */
-    @Deprecated
-    CompletableFuture<ConvertBandwidthPackageResponse> convertBandwidthPackage(ConvertBandwidthPackageRequest request);
-
-    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Description</h2>
      * <ul>
@@ -2588,13 +2576,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DiagnoseVpnGatewayResponse> diagnoseVpnGateway(DiagnoseVpnGatewayRequest request);
 
     /**
-     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of DisableNatGatewayEcsMetric  DisableNatGatewayEcsMetricRequest
-     * @return DisableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    CompletableFuture<DisableNatGatewayEcsMetricResponse> disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request);
-
-    /**
      * @param request the request parameters of DisableVpcClassicLink  DisableVpcClassicLinkRequest
      * @return DisableVpcClassicLinkResponse
      */
@@ -2631,13 +2612,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DownloadVpnConnectionConfigResponse
      */
     CompletableFuture<DownloadVpnConnectionConfigResponse> downloadVpnConnectionConfig(DownloadVpnConnectionConfigRequest request);
-
-    /**
-     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of EnableNatGatewayEcsMetric  EnableNatGatewayEcsMetricRequest
-     * @return EnableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    CompletableFuture<EnableNatGatewayEcsMetricResponse> enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request);
 
     /**
      * <b>description</b> :
@@ -2703,18 +2677,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNatGatewayAttributeResponse
      */
     CompletableFuture<GetNatGatewayAttributeResponse> getNatGatewayAttribute(GetNatGatewayAttributeRequest request);
-
-    /**
-     * @param request the request parameters of GetNatIpAttribute  GetNatIpAttributeRequest
-     * @return GetNatIpAttributeResponse
-     */
-    CompletableFuture<GetNatIpAttributeResponse> getNatIpAttribute(GetNatIpAttributeRequest request);
-
-    /**
-     * @param request the request parameters of GetNatIpCidrAttribute  GetNatIpCidrAttributeRequest
-     * @return GetNatIpCidrAttributeResponse
-     */
-    CompletableFuture<GetNatIpCidrAttributeResponse> getNatIpCidrAttribute(GetNatIpCidrAttributeRequest request);
 
     /**
      * <b>description</b> :

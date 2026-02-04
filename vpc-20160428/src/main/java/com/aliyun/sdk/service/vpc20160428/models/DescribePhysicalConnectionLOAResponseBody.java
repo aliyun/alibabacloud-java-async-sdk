@@ -323,6 +323,9 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConstructionTime")
         private String constructionTime;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -357,6 +360,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             this.companyLocalizedName = builder.companyLocalizedName;
             this.companyName = builder.companyName;
             this.constructionTime = builder.constructionTime;
+            this.description = builder.description;
             this.instanceId = builder.instanceId;
             this.lineCode = builder.lineCode;
             this.lineLabel = builder.lineLabel;
@@ -396,6 +400,13 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
          */
         public String getConstructionTime() {
             return this.constructionTime;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -472,6 +483,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
             private String companyLocalizedName; 
             private String companyName; 
             private String constructionTime; 
+            private String description; 
             private String instanceId; 
             private String lineCode; 
             private String lineLabel; 
@@ -490,6 +502,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
                 this.companyLocalizedName = model.companyLocalizedName;
                 this.companyName = model.companyName;
                 this.constructionTime = model.constructionTime;
+                this.description = model.description;
                 this.instanceId = model.instanceId;
                 this.lineCode = model.lineCode;
                 this.lineLabel = model.lineLabel;
@@ -532,6 +545,14 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
              */
             public Builder constructionTime(String constructionTime) {
                 this.constructionTime = constructionTime;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

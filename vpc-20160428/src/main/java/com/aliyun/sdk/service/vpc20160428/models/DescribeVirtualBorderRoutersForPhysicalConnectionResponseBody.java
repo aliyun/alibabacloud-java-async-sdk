@@ -233,6 +233,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
+        @com.aliyun.core.annotation.NameInMap("VbrName")
+        private String vbrName;
+
         @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
         private Long vbrOwnerUid;
 
@@ -261,6 +264,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             this.terminationTime = builder.terminationTime;
             this.type = builder.type;
             this.vbrId = builder.vbrId;
+            this.vbrName = builder.vbrName;
             this.vbrOwnerUid = builder.vbrOwnerUid;
             this.vlanId = builder.vlanId;
         }
@@ -421,6 +425,13 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         }
 
         /**
+         * @return vbrName
+         */
+        public String getVbrName() {
+            return this.vbrName;
+        }
+
+        /**
          * @return vbrOwnerUid
          */
         public Long getVbrOwnerUid() {
@@ -456,6 +467,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
             private String terminationTime; 
             private String type; 
             private String vbrId; 
+            private String vbrName; 
             private Long vbrOwnerUid; 
             private Integer vlanId; 
 
@@ -484,6 +496,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
                 this.terminationTime = model.terminationTime;
                 this.type = model.type;
                 this.vbrId = model.vbrId;
+                this.vbrName = model.vbrName;
                 this.vbrOwnerUid = model.vbrOwnerUid;
                 this.vlanId = model.vlanId;
             } 
@@ -743,6 +756,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
              */
             public Builder vbrId(String vbrId) {
                 this.vbrId = vbrId;
+                return this;
+            }
+
+            /**
+             * VbrName.
+             */
+            public Builder vbrName(String vbrName) {
+                this.vbrName = vbrName;
                 return this;
             }
 

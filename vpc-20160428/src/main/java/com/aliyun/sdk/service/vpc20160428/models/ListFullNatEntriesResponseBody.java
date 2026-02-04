@@ -222,6 +222,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
      * <p>ListFullNatEntriesResponseBody</p>
      */
     public static class FullNatEntries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessDomain")
+        private String accessDomain;
+
         @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
@@ -230,6 +233,9 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
+
+        @com.aliyun.core.annotation.NameInMap("DomainResolve")
+        private String domainResolve;
 
         @com.aliyun.core.annotation.NameInMap("FullNatEntryDescription")
         private String fullNatEntryDescription;
@@ -262,9 +268,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         private String networkInterfaceType;
 
         private FullNatEntries(Builder builder) {
+            this.accessDomain = builder.accessDomain;
             this.accessIp = builder.accessIp;
             this.accessPort = builder.accessPort;
             this.creationTime = builder.creationTime;
+            this.domainResolve = builder.domainResolve;
             this.fullNatEntryDescription = builder.fullNatEntryDescription;
             this.fullNatEntryId = builder.fullNatEntryId;
             this.fullNatEntryName = builder.fullNatEntryName;
@@ -286,6 +294,13 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return accessDomain
+         */
+        public String getAccessDomain() {
+            return this.accessDomain;
+        }
+
+        /**
          * @return accessIp
          */
         public String getAccessIp() {
@@ -304,6 +319,13 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return domainResolve
+         */
+        public String getDomainResolve() {
+            return this.domainResolve;
         }
 
         /**
@@ -377,9 +399,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessDomain; 
             private String accessIp; 
             private String accessPort; 
             private String creationTime; 
+            private String domainResolve; 
             private String fullNatEntryDescription; 
             private String fullNatEntryId; 
             private String fullNatEntryName; 
@@ -395,9 +419,11 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
             } 
 
             private Builder(FullNatEntries model) {
+                this.accessDomain = model.accessDomain;
                 this.accessIp = model.accessIp;
                 this.accessPort = model.accessPort;
                 this.creationTime = model.creationTime;
+                this.domainResolve = model.domainResolve;
                 this.fullNatEntryDescription = model.fullNatEntryDescription;
                 this.fullNatEntryId = model.fullNatEntryId;
                 this.fullNatEntryName = model.fullNatEntryName;
@@ -409,6 +435,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
                 this.networkInterfaceId = model.networkInterfaceId;
                 this.networkInterfaceType = model.networkInterfaceType;
             } 
+
+            /**
+             * AccessDomain.
+             */
+            public Builder accessDomain(String accessDomain) {
+                this.accessDomain = accessDomain;
+                return this;
+            }
 
             /**
              * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>
@@ -440,6 +474,14 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DomainResolve.
+             */
+            public Builder domainResolve(String domainResolve) {
+                this.domainResolve = domainResolve;
                 return this;
             }
 

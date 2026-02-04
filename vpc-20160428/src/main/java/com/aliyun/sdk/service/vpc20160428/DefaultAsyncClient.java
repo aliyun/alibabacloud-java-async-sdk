@@ -944,30 +944,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated  * @description Before you convert a NAT service plan to an Internet Shared Bandwidth instance, take note of the following limits:
-     * *   You are not charged for the conversion.
-     * *   When you convert a NAT service plan to an Internet Shared Bandwidth instance, you can continue to use the SNAT and DNAT features of the NAT gateway, and your workloads are not affected. However, we recommend that you convert your NAT service plan during off-peak hours.
-     * *   After the NAT service plan is converted to an Internet Shared Bandwidth instance, the public IP addresses in the NAT service plan are converted to elastic IP addresses (EIPs). The maximum bandwidth and billing method of the Internet Shared Bandwidth instance are the same as those of the NAT service plan.
-     * 
-     * @param request the request parameters of ConvertBandwidthPackage  ConvertBandwidthPackageRequest
-     * @return ConvertBandwidthPackageResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<ConvertBandwidthPackageResponse> convertBandwidthPackage(ConvertBandwidthPackageRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConvertBandwidthPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConvertBandwidthPackageResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ConvertBandwidthPackageResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Description</h2>
      * <ul>
@@ -5465,25 +5441,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DisableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of DisableNatGatewayEcsMetric  DisableNatGatewayEcsMetricRequest
-     * @return DisableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<DisableNatGatewayEcsMetricResponse> disableNatGatewayEcsMetric(DisableNatGatewayEcsMetricRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableNatGatewayEcsMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableNatGatewayEcsMetricResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DisableNatGatewayEcsMetricResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of DisableVpcClassicLink  DisableVpcClassicLinkRequest
      * @return DisableVpcClassicLinkResponse
      */
@@ -5576,25 +5533,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DownloadVpnConnectionConfigResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI EnableNatGatewayEcsMetric is deprecated  * @param request  the request parameters of EnableNatGatewayEcsMetric  EnableNatGatewayEcsMetricRequest
-     * @return EnableNatGatewayEcsMetricResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<EnableNatGatewayEcsMetricResponse> enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableNatGatewayEcsMetric").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableNatGatewayEcsMetricResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<EnableNatGatewayEcsMetricResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5744,42 +5682,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetNatGatewayAttributeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of GetNatIpAttribute  GetNatIpAttributeRequest
-     * @return GetNatIpAttributeResponse
-     */
-    @Override
-    public CompletableFuture<GetNatIpAttributeResponse> getNatIpAttribute(GetNatIpAttributeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetNatIpAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNatIpAttributeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetNatIpAttributeResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of GetNatIpCidrAttribute  GetNatIpCidrAttributeRequest
-     * @return GetNatIpCidrAttributeResponse
-     */
-    @Override
-    public CompletableFuture<GetNatIpCidrAttributeResponse> getNatIpCidrAttribute(GetNatIpCidrAttributeRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetNatIpCidrAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNatIpCidrAttributeResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetNatIpCidrAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

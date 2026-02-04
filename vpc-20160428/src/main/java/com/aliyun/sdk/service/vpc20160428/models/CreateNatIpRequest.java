@@ -31,7 +31,7 @@ public class CreateNatIpRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4PrefixCount")
-    private Long ipv4PrefixCount;
+    private Integer ipv4PrefixCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
@@ -131,7 +131,7 @@ public class CreateNatIpRequest extends Request {
     /**
      * @return ipv4PrefixCount
      */
-    public Long getIpv4PrefixCount() {
+    public Integer getIpv4PrefixCount() {
         return this.ipv4PrefixCount;
     }
 
@@ -209,7 +209,7 @@ public class CreateNatIpRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String ipv4Prefix; 
-        private Long ipv4PrefixCount; 
+        private Integer ipv4PrefixCount; 
         private String natGatewayId; 
         private String natIp; 
         private String natIpCidr; 
@@ -293,7 +293,7 @@ public class CreateNatIpRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder ipv4PrefixCount(Long ipv4PrefixCount) {
+        public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
             this.ipv4PrefixCount = ipv4PrefixCount;
             return this;

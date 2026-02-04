@@ -22,6 +22,10 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayType")
+    private String gatewayType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -50,6 +54,7 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
     private DescribeVpnGatewayAvailableZonesRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.gatewayType = builder.gatewayType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -76,6 +81,13 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return gatewayType
+     */
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVpnGatewayAvailableZonesRequest, Builder> {
         private String acceptLanguage; 
+        private String gatewayType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -136,6 +149,7 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         private Builder(DescribeVpnGatewayAvailableZonesRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.gatewayType = request.gatewayType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -157,6 +171,15 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * GatewayType.
+         */
+        public Builder gatewayType(String gatewayType) {
+            this.putQueryParameter("GatewayType", gatewayType);
+            this.gatewayType = gatewayType;
             return this;
         }
 

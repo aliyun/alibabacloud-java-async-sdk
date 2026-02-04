@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyFullNatEntryAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessDomain")
+    private String accessDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccessIp")
     private String accessIp;
 
@@ -90,6 +94,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
 
     private ModifyFullNatEntryAttributeRequest(Builder builder) {
         super(builder);
+        this.accessDomain = builder.accessDomain;
         this.accessIp = builder.accessIp;
         this.accessPort = builder.accessPort;
         this.clientToken = builder.clientToken;
@@ -120,6 +125,13 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDomain
+     */
+    public String getAccessDomain() {
+        return this.accessDomain;
     }
 
     /**
@@ -242,6 +254,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyFullNatEntryAttributeRequest, Builder> {
+        private String accessDomain; 
         private String accessIp; 
         private String accessPort; 
         private String clientToken; 
@@ -266,6 +279,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
 
         private Builder(ModifyFullNatEntryAttributeRequest request) {
             super(request);
+            this.accessDomain = request.accessDomain;
             this.accessIp = request.accessIp;
             this.accessPort = request.accessPort;
             this.clientToken = request.clientToken;
@@ -284,6 +298,15 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * AccessDomain.
+         */
+        public Builder accessDomain(String accessDomain) {
+            this.putQueryParameter("AccessDomain", accessDomain);
+            this.accessDomain = accessDomain;
+            return this;
+        }
 
         /**
          * <p>The backend IP address to be modified in FULLNAT address translation.</p>
