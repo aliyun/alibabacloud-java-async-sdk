@@ -182,6 +182,9 @@ public class ListCouponUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("T2PartnerUid")
+        private String t2PartnerUid;
+
         @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
@@ -194,6 +197,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             this.effDate = builder.effDate;
             this.publishDate = builder.publishDate;
             this.status = builder.status;
+            this.t2PartnerUid = builder.t2PartnerUid;
             this.uid = builder.uid;
         }
 
@@ -262,6 +266,13 @@ public class ListCouponUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return t2PartnerUid
+         */
+        public String getT2PartnerUid() {
+            return this.t2PartnerUid;
+        }
+
+        /**
          * @return uid
          */
         public Long getUid() {
@@ -277,6 +288,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
             private String effDate; 
             private String publishDate; 
             private String status; 
+            private String t2PartnerUid; 
             private Long uid; 
 
             private Builder() {
@@ -291,6 +303,7 @@ public class ListCouponUsageResponseBody extends TeaModel {
                 this.effDate = model.effDate;
                 this.publishDate = model.publishDate;
                 this.status = model.status;
+                this.t2PartnerUid = model.t2PartnerUid;
                 this.uid = model.uid;
             } 
 
@@ -355,6 +368,14 @@ public class ListCouponUsageResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * T2PartnerUid.
+             */
+            public Builder t2PartnerUid(String t2PartnerUid) {
+                this.t2PartnerUid = t2PartnerUid;
                 return this;
             }
 
