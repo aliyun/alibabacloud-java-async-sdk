@@ -619,12 +619,17 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
         private String regionServiceStatus;
 
         @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+        @Deprecated
         private String serviceRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("SupportedRegionId")
+        private String supportedRegionId;
 
         private SupportedRegionSet(Builder builder) {
             this.regionBusinessStatus = builder.regionBusinessStatus;
             this.regionServiceStatus = builder.regionServiceStatus;
             this.serviceRegionId = builder.serviceRegionId;
+            this.supportedRegionId = builder.supportedRegionId;
         }
 
         public static Builder builder() {
@@ -656,10 +661,18 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
             return this.serviceRegionId;
         }
 
+        /**
+         * @return supportedRegionId
+         */
+        public String getSupportedRegionId() {
+            return this.supportedRegionId;
+        }
+
         public static final class Builder {
             private String regionBusinessStatus; 
             private String regionServiceStatus; 
             private String serviceRegionId; 
+            private String supportedRegionId; 
 
             private Builder() {
             } 
@@ -668,6 +681,7 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
                 this.regionBusinessStatus = model.regionBusinessStatus;
                 this.regionServiceStatus = model.regionServiceStatus;
                 this.serviceRegionId = model.serviceRegionId;
+                this.supportedRegionId = model.supportedRegionId;
             } 
 
             /**
@@ -691,6 +705,14 @@ public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
              */
             public Builder serviceRegionId(String serviceRegionId) {
                 this.serviceRegionId = serviceRegionId;
+                return this;
+            }
+
+            /**
+             * SupportedRegionId.
+             */
+            public Builder supportedRegionId(String supportedRegionId) {
+                this.supportedRegionId = supportedRegionId;
                 return this;
             }
 
