@@ -90,6 +90,9 @@ public class GetRecallManagementJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementJobId(String recallManagementJobId) {
             this.putPathParameter("RecallManagementJobId", recallManagementJobId);
@@ -108,6 +111,9 @@ public class GetRecallManagementJobRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -36,7 +36,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     private Boolean enableRowCountFluctuationThreshold;
 
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private Fields fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -173,7 +173,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public Fields getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -303,7 +303,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         private String description; 
         private Boolean enableDataSizeFluctuationThreshold; 
         private Boolean enableRowCountFluctuationThreshold; 
-        private Fields fields; 
+        private java.util.List<Fields> fields; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String indexEffectiveTime; 
@@ -403,7 +403,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         /**
          * Fields.
          */
-        public Builder fields(Fields fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
