@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnterpriseSupportPlanResponseBody</p>
  */
 public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Data> data;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListEnterpriseSupportPlanResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,11 +100,23 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnterpriseSupportPlanResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -108,7 +129,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,30 +172,44 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
     } 
 
-    public static class Docs extends TeaModel {
-        @NameInMap("docId")
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
+    public static class Attachments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("docId")
         private Long docId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("evaluated")
+        private Boolean evaluated;
+
+        @com.aliyun.core.annotation.NameInMap("evaluationUrl")
+        private String evaluationUrl;
+
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
-        @NameInMap("uploadTime")
+        @com.aliyun.core.annotation.NameInMap("uploadTime")
         private String uploadTime;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
-        private Docs(Builder builder) {
+        private Attachments(Builder builder) {
             this.docId = builder.docId;
+            this.evaluated = builder.evaluated;
+            this.evaluationUrl = builder.evaluationUrl;
             this.fileName = builder.fileName;
             this.freeOrderApplyCode = builder.freeOrderApplyCode;
             this.name = builder.name;
@@ -187,7 +222,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Docs create() {
+        public static Attachments create() {
             return builder().build();
         }
 
@@ -196,6 +231,20 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
          */
         public Long getDocId() {
             return this.docId;
+        }
+
+        /**
+         * @return evaluated
+         */
+        public Boolean getEvaluated() {
+            return this.evaluated;
+        }
+
+        /**
+         * @return evaluationUrl
+         */
+        public String getEvaluationUrl() {
+            return this.evaluationUrl;
         }
 
         /**
@@ -242,6 +291,8 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long docId; 
+            private Boolean evaluated; 
+            private String evaluationUrl; 
             private String fileName; 
             private String freeOrderApplyCode; 
             private String name; 
@@ -249,11 +300,285 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private String uploadTime; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.docId = model.docId;
+                this.evaluated = model.evaluated;
+                this.evaluationUrl = model.evaluationUrl;
+                this.fileName = model.fileName;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.name = model.name;
+                this.orderId = model.orderId;
+                this.uploadTime = model.uploadTime;
+                this.url = model.url;
+            } 
+
             /**
              * docId.
              */
             public Builder docId(Long docId) {
                 this.docId = docId;
+                return this;
+            }
+
+            /**
+             * evaluated.
+             */
+            public Builder evaluated(Boolean evaluated) {
+                this.evaluated = evaluated;
+                return this;
+            }
+
+            /**
+             * evaluationUrl.
+             */
+            public Builder evaluationUrl(String evaluationUrl) {
+                this.evaluationUrl = evaluationUrl;
+                return this;
+            }
+
+            /**
+             * fileName.
+             */
+            public Builder fileName(String fileName) {
+                this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * freeOrderApplyCode.
+             */
+            public Builder freeOrderApplyCode(String freeOrderApplyCode) {
+                this.freeOrderApplyCode = freeOrderApplyCode;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * orderId.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * uploadTime.
+             */
+            public Builder uploadTime(String uploadTime) {
+                this.uploadTime = uploadTime;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public Attachments build() {
+                return new Attachments(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
+    public static class Docs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("attachments")
+        private java.util.List<Attachments> attachments;
+
+        @com.aliyun.core.annotation.NameInMap("docId")
+        private Long docId;
+
+        @com.aliyun.core.annotation.NameInMap("evaluated")
+        private Boolean evaluated;
+
+        @com.aliyun.core.annotation.NameInMap("evaluationUrl")
+        private String evaluationUrl;
+
+        @com.aliyun.core.annotation.NameInMap("fileName")
+        private String fileName;
+
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
+        private String freeOrderApplyCode;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("orderId")
+        private String orderId;
+
+        @com.aliyun.core.annotation.NameInMap("uploadTime")
+        private String uploadTime;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private Docs(Builder builder) {
+            this.attachments = builder.attachments;
+            this.docId = builder.docId;
+            this.evaluated = builder.evaluated;
+            this.evaluationUrl = builder.evaluationUrl;
+            this.fileName = builder.fileName;
+            this.freeOrderApplyCode = builder.freeOrderApplyCode;
+            this.name = builder.name;
+            this.orderId = builder.orderId;
+            this.uploadTime = builder.uploadTime;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Docs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attachments
+         */
+        public java.util.List<Attachments> getAttachments() {
+            return this.attachments;
+        }
+
+        /**
+         * @return docId
+         */
+        public Long getDocId() {
+            return this.docId;
+        }
+
+        /**
+         * @return evaluated
+         */
+        public Boolean getEvaluated() {
+            return this.evaluated;
+        }
+
+        /**
+         * @return evaluationUrl
+         */
+        public String getEvaluationUrl() {
+            return this.evaluationUrl;
+        }
+
+        /**
+         * @return fileName
+         */
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        /**
+         * @return freeOrderApplyCode
+         */
+        public String getFreeOrderApplyCode() {
+            return this.freeOrderApplyCode;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        /**
+         * @return uploadTime
+         */
+        public String getUploadTime() {
+            return this.uploadTime;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private java.util.List<Attachments> attachments; 
+            private Long docId; 
+            private Boolean evaluated; 
+            private String evaluationUrl; 
+            private String fileName; 
+            private String freeOrderApplyCode; 
+            private String name; 
+            private String orderId; 
+            private String uploadTime; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Docs model) {
+                this.attachments = model.attachments;
+                this.docId = model.docId;
+                this.evaluated = model.evaluated;
+                this.evaluationUrl = model.evaluationUrl;
+                this.fileName = model.fileName;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.name = model.name;
+                this.orderId = model.orderId;
+                this.uploadTime = model.uploadTime;
+                this.url = model.url;
+            } 
+
+            /**
+             * attachments.
+             */
+            public Builder attachments(java.util.List<Attachments> attachments) {
+                this.attachments = attachments;
+                return this;
+            }
+
+            /**
+             * docId.
+             */
+            public Builder docId(Long docId) {
+                this.docId = docId;
+                return this;
+            }
+
+            /**
+             * evaluated.
+             */
+            public Builder evaluated(Boolean evaluated) {
+                this.evaluated = evaluated;
+                return this;
+            }
+
+            /**
+             * evaluationUrl.
+             */
+            public Builder evaluationUrl(String evaluationUrl) {
+                this.evaluationUrl = evaluationUrl;
                 return this;
             }
 
@@ -312,26 +637,36 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class DocNode extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("attachments")
+        private java.util.List<?> attachments;
+
+        @com.aliyun.core.annotation.NameInMap("docId")
         private Long docId;
 
-        @NameInMap("docName")
+        @com.aliyun.core.annotation.NameInMap("docName")
         private String docName;
 
-        @NameInMap("docSubmitTime")
+        @com.aliyun.core.annotation.NameInMap("docSubmitTime")
         private String docSubmitTime;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private DocNode(Builder builder) {
+            this.attachments = builder.attachments;
             this.docId = builder.docId;
             this.docName = builder.docName;
             this.docSubmitTime = builder.docSubmitTime;
@@ -346,6 +681,13 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
         public static DocNode create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachments
+         */
+        public java.util.List<?> getAttachments() {
+            return this.attachments;
         }
 
         /**
@@ -391,12 +733,34 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<?> attachments; 
             private Long docId; 
             private String docName; 
             private String docSubmitTime; 
             private String fileName; 
             private String freeOrderApplyCode; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DocNode model) {
+                this.attachments = model.attachments;
+                this.docId = model.docId;
+                this.docName = model.docName;
+                this.docSubmitTime = model.docSubmitTime;
+                this.fileName = model.fileName;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.orderId = model.orderId;
+            } 
+
+            /**
+             * attachments.
+             */
+            public Builder attachments(java.util.List<?> attachments) {
+                this.attachments = attachments;
+                return this;
+            }
 
             /**
              * docId.
@@ -453,8 +817,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class FinishNode extends TeaModel {
-        @NameInMap("finishTime")
+        @com.aliyun.core.annotation.NameInMap("finishTime")
         private String finishTime;
 
         private FinishNode(Builder builder) {
@@ -479,6 +849,13 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         public static final class Builder {
             private String finishTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FinishNode model) {
+                this.finishTime = model.finishTime;
+            } 
+
             /**
              * finishTime.
              */
@@ -494,14 +871,20 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class FreeOrderAuditNode extends TeaModel {
-        @NameInMap("auditTime")
+        @com.aliyun.core.annotation.NameInMap("auditTime")
         private String auditTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusName")
+        @com.aliyun.core.annotation.NameInMap("statusName")
         private String statusName;
 
         private FreeOrderAuditNode(Builder builder) {
@@ -544,6 +927,15 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private String status; 
             private String statusName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FreeOrderAuditNode model) {
+                this.auditTime = model.auditTime;
+                this.status = model.status;
+                this.statusName = model.statusName;
+            } 
+
             /**
              * auditTime.
              */
@@ -575,12 +967,18 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class FreeOrderNode extends TeaModel {
-        @NameInMap("applyTime")
+        @com.aliyun.core.annotation.NameInMap("applyTime")
         private String applyTime;
 
-        @NameInMap("uid")
-        private Long uid;
+        @com.aliyun.core.annotation.NameInMap("uid")
+        private String uid;
 
         private FreeOrderNode(Builder builder) {
             this.applyTime = builder.applyTime;
@@ -605,13 +1003,21 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         /**
          * @return uid
          */
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
         public static final class Builder {
             private String applyTime; 
-            private Long uid; 
+            private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreeOrderNode model) {
+                this.applyTime = model.applyTime;
+                this.uid = model.uid;
+            } 
 
             /**
              * applyTime.
@@ -624,7 +1030,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * uid.
              */
-            public Builder uid(Long uid) {
+            public Builder uid(String uid) {
                 this.uid = uid;
                 return this;
             }
@@ -636,12 +1042,18 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class OrderNode extends TeaModel {
-        @NameInMap("payTime")
+        @com.aliyun.core.annotation.NameInMap("payTime")
         private String payTime;
 
-        @NameInMap("uid")
-        private Long uid;
+        @com.aliyun.core.annotation.NameInMap("uid")
+        private String uid;
 
         private OrderNode(Builder builder) {
             this.payTime = builder.payTime;
@@ -666,13 +1078,21 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         /**
          * @return uid
          */
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
         public static final class Builder {
             private String payTime; 
-            private Long uid; 
+            private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderNode model) {
+                this.payTime = model.payTime;
+                this.uid = model.uid;
+            } 
 
             /**
              * payTime.
@@ -685,7 +1105,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * uid.
              */
-            public Builder uid(Long uid) {
+            public Builder uid(String uid) {
                 this.uid = uid;
                 return this;
             }
@@ -697,11 +1117,17 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class ServiceImplementation extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
         private ServiceImplementation(Builder builder) {
@@ -735,6 +1161,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceImplementation model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * endTime.
              */
@@ -758,32 +1192,38 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("docNode")
+        @com.aliyun.core.annotation.NameInMap("docNode")
         private DocNode docNode;
 
-        @NameInMap("finishNode")
+        @com.aliyun.core.annotation.NameInMap("finishNode")
         private FinishNode finishNode;
 
-        @NameInMap("freeOrderAuditNode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderAuditNode")
         private FreeOrderAuditNode freeOrderAuditNode;
 
-        @NameInMap("freeOrderNode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderNode")
         private FreeOrderNode freeOrderNode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("orderDate")
+        @com.aliyun.core.annotation.NameInMap("orderDate")
         private Long orderDate;
 
-        @NameInMap("orderNode")
+        @com.aliyun.core.annotation.NameInMap("orderNode")
         private OrderNode orderNode;
 
-        @NameInMap("serviceImplementation")
+        @com.aliyun.core.annotation.NameInMap("serviceImplementation")
         private ServiceImplementation serviceImplementation;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private Nodes(Builder builder) {
@@ -880,6 +1320,21 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private ServiceImplementation serviceImplementation; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.docNode = model.docNode;
+                this.finishNode = model.finishNode;
+                this.freeOrderAuditNode = model.freeOrderAuditNode;
+                this.freeOrderNode = model.freeOrderNode;
+                this.name = model.name;
+                this.orderDate = model.orderDate;
+                this.orderNode = model.orderNode;
+                this.serviceImplementation = model.serviceImplementation;
+                this.status = model.status;
+            } 
+
             /**
              * docNode.
              */
@@ -959,14 +1414,20 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class OperateInfos extends TeaModel {
-        @NameInMap("canClick")
+        @com.aliyun.core.annotation.NameInMap("canClick")
         private Boolean canClick;
 
-        @NameInMap("text")
+        @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private OperateInfos(Builder builder) {
@@ -1009,6 +1470,15 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private String text; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(OperateInfos model) {
+                this.canClick = model.canClick;
+                this.text = model.text;
+                this.url = model.url;
+            } 
+
             /**
              * canClick.
              */
@@ -1040,68 +1510,197 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extendInfos")
+        private java.util.List<String> extendInfos;
+
+        @com.aliyun.core.annotation.NameInMap("show")
+        private Boolean show;
+
+        @com.aliyun.core.annotation.NameInMap("tagCode")
+        private String tagCode;
+
+        @com.aliyun.core.annotation.NameInMap("tagName")
+        private String tagName;
+
+        private Tags(Builder builder) {
+            this.extendInfos = builder.extendInfos;
+            this.show = builder.show;
+            this.tagCode = builder.tagCode;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extendInfos
+         */
+        public java.util.List<String> getExtendInfos() {
+            return this.extendInfos;
+        }
+
+        /**
+         * @return show
+         */
+        public Boolean getShow() {
+            return this.show;
+        }
+
+        /**
+         * @return tagCode
+         */
+        public String getTagCode() {
+            return this.tagCode;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> extendInfos; 
+            private Boolean show; 
+            private String tagCode; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.extendInfos = model.extendInfos;
+                this.show = model.show;
+                this.tagCode = model.tagCode;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * extendInfos.
+             */
+            public Builder extendInfos(java.util.List<String> extendInfos) {
+                this.extendInfos = extendInfos;
+                return this;
+            }
+
+            /**
+             * show.
+             */
+            public Builder show(Boolean show) {
+                this.show = show;
+                return this;
+            }
+
+            /**
+             * tagCode.
+             */
+            public Builder tagCode(String tagCode) {
+                this.tagCode = tagCode;
+                return this;
+            }
+
+            /**
+             * tagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("canApplyFreeOrder")
+        @com.aliyun.core.annotation.NameInMap("canApplyFreeOrder")
         private Boolean canApplyFreeOrder;
 
-        @NameInMap("customerId")
-        private Long customerId;
+        @com.aliyun.core.annotation.NameInMap("customerId")
+        private String customerId;
 
-        @NameInMap("docs")
-        private java.util.List < Docs> docs;
+        @com.aliyun.core.annotation.NameInMap("docs")
+        private java.util.List<Docs> docs;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @NameInMap("firstPayTime")
+        @com.aliyun.core.annotation.NameInMap("firstPayTime")
         private String firstPayTime;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("freeOrderApplyId")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyId")
         private Long freeOrderApplyId;
 
-        @NameInMap("freeOrderApplyTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyTime")
         private String freeOrderApplyTime;
 
-        @NameInMap("freeOrderApprovedTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApprovedTime")
         private String freeOrderApprovedTime;
 
-        @NameInMap("freeOrderExpectStartTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderExpectStartTime")
         private String freeOrderExpectStartTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("gtspProjectId")
+        private Long gtspProjectId;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("operateInfos")
-        private java.util.List < OperateInfos> operateInfos;
+        @com.aliyun.core.annotation.NameInMap("operateInfos")
+        private java.util.List<OperateInfos> operateInfos;
 
-        @NameInMap("orderIds")
-        private java.util.List < Long > orderIds;
+        @com.aliyun.core.annotation.NameInMap("orderIds")
+        private java.util.List<Long> orderIds;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("serviceStatus")
+        @com.aliyun.core.annotation.NameInMap("serviceStatus")
         private String serviceStatus;
 
-        @NameInMap("serviceStatusName")
+        @com.aliyun.core.annotation.NameInMap("serviceStatusName")
         private String serviceStatusName;
 
-        @NameInMap("serviceType")
+        @com.aliyun.core.annotation.NameInMap("serviceType")
         private String serviceType;
 
-        @NameInMap("sortTime")
+        @com.aliyun.core.annotation.NameInMap("sortTime")
         private String sortTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
-        @NameInMap("taskNum")
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("taskNum")
         private Long taskNum;
 
         private Data(Builder builder) {
@@ -1115,6 +1714,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             this.freeOrderApplyTime = builder.freeOrderApplyTime;
             this.freeOrderApprovedTime = builder.freeOrderApprovedTime;
             this.freeOrderExpectStartTime = builder.freeOrderExpectStartTime;
+            this.gtspProjectId = builder.gtspProjectId;
             this.instanceId = builder.instanceId;
             this.nodes = builder.nodes;
             this.operateInfos = builder.operateInfos;
@@ -1125,6 +1725,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             this.serviceType = builder.serviceType;
             this.sortTime = builder.sortTime;
             this.startTime = builder.startTime;
+            this.tags = builder.tags;
             this.taskNum = builder.taskNum;
         }
 
@@ -1146,14 +1747,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         /**
          * @return customerId
          */
-        public Long getCustomerId() {
+        public String getCustomerId() {
             return this.customerId;
         }
 
         /**
          * @return docs
          */
-        public java.util.List < Docs> getDocs() {
+        public java.util.List<Docs> getDocs() {
             return this.docs;
         }
 
@@ -1207,6 +1808,13 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         }
 
         /**
+         * @return gtspProjectId
+         */
+        public Long getGtspProjectId() {
+            return this.gtspProjectId;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -1216,21 +1824,21 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
         }
 
         /**
          * @return operateInfos
          */
-        public java.util.List < OperateInfos> getOperateInfos() {
+        public java.util.List<OperateInfos> getOperateInfos() {
             return this.operateInfos;
         }
 
         /**
          * @return orderIds
          */
-        public java.util.List < Long > getOrderIds() {
+        public java.util.List<Long> getOrderIds() {
             return this.orderIds;
         }
 
@@ -1277,6 +1885,13 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return taskNum
          */
         public Long getTaskNum() {
@@ -1285,8 +1900,8 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canApplyFreeOrder; 
-            private Long customerId; 
-            private java.util.List < Docs> docs; 
+            private String customerId; 
+            private java.util.List<Docs> docs; 
             private String endTime; 
             private String firstPayTime; 
             private String freeOrderApplyCode; 
@@ -1294,17 +1909,48 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             private String freeOrderApplyTime; 
             private String freeOrderApprovedTime; 
             private String freeOrderExpectStartTime; 
+            private Long gtspProjectId; 
             private String instanceId; 
-            private java.util.List < Nodes> nodes; 
-            private java.util.List < OperateInfos> operateInfos; 
-            private java.util.List < Long > orderIds; 
+            private java.util.List<Nodes> nodes; 
+            private java.util.List<OperateInfos> operateInfos; 
+            private java.util.List<Long> orderIds; 
             private String serviceName; 
             private String serviceStatus; 
             private String serviceStatusName; 
             private String serviceType; 
             private String sortTime; 
             private String startTime; 
+            private java.util.List<Tags> tags; 
             private Long taskNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canApplyFreeOrder = model.canApplyFreeOrder;
+                this.customerId = model.customerId;
+                this.docs = model.docs;
+                this.endTime = model.endTime;
+                this.firstPayTime = model.firstPayTime;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.freeOrderApplyId = model.freeOrderApplyId;
+                this.freeOrderApplyTime = model.freeOrderApplyTime;
+                this.freeOrderApprovedTime = model.freeOrderApprovedTime;
+                this.freeOrderExpectStartTime = model.freeOrderExpectStartTime;
+                this.gtspProjectId = model.gtspProjectId;
+                this.instanceId = model.instanceId;
+                this.nodes = model.nodes;
+                this.operateInfos = model.operateInfos;
+                this.orderIds = model.orderIds;
+                this.serviceName = model.serviceName;
+                this.serviceStatus = model.serviceStatus;
+                this.serviceStatusName = model.serviceStatusName;
+                this.serviceType = model.serviceType;
+                this.sortTime = model.sortTime;
+                this.startTime = model.startTime;
+                this.tags = model.tags;
+                this.taskNum = model.taskNum;
+            } 
 
             /**
              * canApplyFreeOrder.
@@ -1317,7 +1963,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * customerId.
              */
-            public Builder customerId(Long customerId) {
+            public Builder customerId(String customerId) {
                 this.customerId = customerId;
                 return this;
             }
@@ -1325,7 +1971,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * docs.
              */
-            public Builder docs(java.util.List < Docs> docs) {
+            public Builder docs(java.util.List<Docs> docs) {
                 this.docs = docs;
                 return this;
             }
@@ -1387,6 +2033,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             }
 
             /**
+             * gtspProjectId.
+             */
+            public Builder gtspProjectId(Long gtspProjectId) {
+                this.gtspProjectId = gtspProjectId;
+                return this;
+            }
+
+            /**
              * instanceId.
              */
             public Builder instanceId(String instanceId) {
@@ -1397,7 +2051,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
                 return this;
             }
@@ -1405,7 +2059,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * operateInfos.
              */
-            public Builder operateInfos(java.util.List < OperateInfos> operateInfos) {
+            public Builder operateInfos(java.util.List<OperateInfos> operateInfos) {
                 this.operateInfos = operateInfos;
                 return this;
             }
@@ -1413,7 +2067,7 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
             /**
              * orderIds.
              */
-            public Builder orderIds(java.util.List < Long > orderIds) {
+            public Builder orderIds(java.util.List<Long> orderIds) {
                 this.orderIds = orderIds;
                 return this;
             }
@@ -1463,6 +2117,14 @@ public class ListEnterpriseSupportPlanResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseSupportPlanSimpleRequest} extends {@link RequestModel}
  *
  * <p>ListEnterpriseSupportPlanSimpleRequest</p>
  */
 public class ListEnterpriseSupportPlanSimpleRequest extends Request {
-    @Body
-    @NameInMap("pageNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNum")
     private Integer pageNum;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
     private ListEnterpriseSupportPlanSimpleRequest(Builder builder) {
@@ -34,7 +39,7 @@ public class ListEnterpriseSupportPlanSimpleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

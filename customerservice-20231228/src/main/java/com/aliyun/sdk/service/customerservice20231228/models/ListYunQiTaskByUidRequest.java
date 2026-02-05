@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListYunQiTaskByUidRequest} extends {@link RequestModel}
  *
  * <p>ListYunQiTaskByUidRequest</p>
  */
 public class ListYunQiTaskByUidRequest extends Request {
-    @Body
-    @NameInMap("createTimeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createTimeEnd")
     private Long createTimeEnd;
 
-    @Body
-    @NameInMap("createTimeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("createTimeStart")
     private Long createTimeStart;
 
-    @Body
-    @NameInMap("freeOrderApplyCodes")
-    private java.util.List < String > freeOrderApplyCodes;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("freeOrderApplyCodes")
+    private java.util.List<String> freeOrderApplyCodes;
 
-    @Body
-    @NameInMap("freeOrderApplyIds")
-    private java.util.List < Long > freeOrderApplyIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("freeOrderApplyIds")
+    private java.util.List<Long> freeOrderApplyIds;
 
-    @Body
-    @NameInMap("orderIds")
-    private java.util.List < Long > orderIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("orderIds")
+    private java.util.List<Long> orderIds;
 
-    @Body
-    @NameInMap("pageNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNum")
     private Integer pageNum;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("statusList")
-    private java.util.List < String > statusList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("statusList")
+    private java.util.List<String> statusList;
 
     private ListYunQiTaskByUidRequest(Builder builder) {
         super(builder);
@@ -64,7 +69,7 @@ public class ListYunQiTaskByUidRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,21 +91,21 @@ public class ListYunQiTaskByUidRequest extends Request {
     /**
      * @return freeOrderApplyCodes
      */
-    public java.util.List < String > getFreeOrderApplyCodes() {
+    public java.util.List<String> getFreeOrderApplyCodes() {
         return this.freeOrderApplyCodes;
     }
 
     /**
      * @return freeOrderApplyIds
      */
-    public java.util.List < Long > getFreeOrderApplyIds() {
+    public java.util.List<Long> getFreeOrderApplyIds() {
         return this.freeOrderApplyIds;
     }
 
     /**
      * @return orderIds
      */
-    public java.util.List < Long > getOrderIds() {
+    public java.util.List<Long> getOrderIds() {
         return this.orderIds;
     }
 
@@ -121,19 +126,19 @@ public class ListYunQiTaskByUidRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
     public static final class Builder extends Request.Builder<ListYunQiTaskByUidRequest, Builder> {
         private Long createTimeEnd; 
         private Long createTimeStart; 
-        private java.util.List < String > freeOrderApplyCodes; 
-        private java.util.List < Long > freeOrderApplyIds; 
-        private java.util.List < Long > orderIds; 
+        private java.util.List<String> freeOrderApplyCodes; 
+        private java.util.List<Long> freeOrderApplyIds; 
+        private java.util.List<Long> orderIds; 
         private Integer pageNum; 
         private Integer pageSize; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -172,7 +177,7 @@ public class ListYunQiTaskByUidRequest extends Request {
         /**
          * freeOrderApplyCodes.
          */
-        public Builder freeOrderApplyCodes(java.util.List < String > freeOrderApplyCodes) {
+        public Builder freeOrderApplyCodes(java.util.List<String> freeOrderApplyCodes) {
             this.putBodyParameter("freeOrderApplyCodes", freeOrderApplyCodes);
             this.freeOrderApplyCodes = freeOrderApplyCodes;
             return this;
@@ -181,7 +186,7 @@ public class ListYunQiTaskByUidRequest extends Request {
         /**
          * freeOrderApplyIds.
          */
-        public Builder freeOrderApplyIds(java.util.List < Long > freeOrderApplyIds) {
+        public Builder freeOrderApplyIds(java.util.List<Long> freeOrderApplyIds) {
             this.putBodyParameter("freeOrderApplyIds", freeOrderApplyIds);
             this.freeOrderApplyIds = freeOrderApplyIds;
             return this;
@@ -190,7 +195,7 @@ public class ListYunQiTaskByUidRequest extends Request {
         /**
          * orderIds.
          */
-        public Builder orderIds(java.util.List < Long > orderIds) {
+        public Builder orderIds(java.util.List<Long> orderIds) {
             this.putBodyParameter("orderIds", orderIds);
             this.orderIds = orderIds;
             return this;
@@ -217,7 +222,7 @@ public class ListYunQiTaskByUidRequest extends Request {
         /**
          * statusList.
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
             this.statusList = statusList;
             return this;

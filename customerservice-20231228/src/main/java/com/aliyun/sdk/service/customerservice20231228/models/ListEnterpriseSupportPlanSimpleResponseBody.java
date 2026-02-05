@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
  */
 public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private java.util.List<Data> data;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListEnterpriseSupportPlanSimpleResponseBody(Builder builder) {
@@ -47,6 +52,10 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -57,7 +66,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,11 +100,23 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnterpriseSupportPlanSimpleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -108,7 +129,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -151,26 +172,32 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class Docs extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("docId")
         private Long docId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
-        @NameInMap("uploadTime")
+        @com.aliyun.core.annotation.NameInMap("uploadTime")
         private String uploadTime;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Docs(Builder builder) {
@@ -249,6 +276,19 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String uploadTime; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Docs model) {
+                this.docId = model.docId;
+                this.fileName = model.fileName;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.name = model.name;
+                this.orderId = model.orderId;
+                this.uploadTime = model.uploadTime;
+                this.url = model.url;
+            } 
+
             /**
              * docId.
              */
@@ -312,23 +352,29 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class DocNode extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("docId")
         private Long docId;
 
-        @NameInMap("docName")
+        @com.aliyun.core.annotation.NameInMap("docName")
         private String docName;
 
-        @NameInMap("docSubmitTime")
+        @com.aliyun.core.annotation.NameInMap("docSubmitTime")
         private String docSubmitTime;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private DocNode(Builder builder) {
@@ -398,6 +444,18 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String freeOrderApplyCode; 
             private String orderId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DocNode model) {
+                this.docId = model.docId;
+                this.docName = model.docName;
+                this.docSubmitTime = model.docSubmitTime;
+                this.fileName = model.fileName;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.orderId = model.orderId;
+            } 
+
             /**
              * docId.
              */
@@ -453,8 +511,14 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class FinishNode extends TeaModel {
-        @NameInMap("finishTime")
+        @com.aliyun.core.annotation.NameInMap("finishTime")
         private String finishTime;
 
         private FinishNode(Builder builder) {
@@ -479,6 +543,13 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         public static final class Builder {
             private String finishTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(FinishNode model) {
+                this.finishTime = model.finishTime;
+            } 
+
             /**
              * finishTime.
              */
@@ -494,14 +565,20 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class FreeOrderAuditNode extends TeaModel {
-        @NameInMap("auditTime")
+        @com.aliyun.core.annotation.NameInMap("auditTime")
         private String auditTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusName")
+        @com.aliyun.core.annotation.NameInMap("statusName")
         private String statusName;
 
         private FreeOrderAuditNode(Builder builder) {
@@ -544,6 +621,15 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String status; 
             private String statusName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FreeOrderAuditNode model) {
+                this.auditTime = model.auditTime;
+                this.status = model.status;
+                this.statusName = model.statusName;
+            } 
+
             /**
              * auditTime.
              */
@@ -575,12 +661,18 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class FreeOrderNode extends TeaModel {
-        @NameInMap("applyTime")
+        @com.aliyun.core.annotation.NameInMap("applyTime")
         private String applyTime;
 
-        @NameInMap("uid")
-        private Long uid;
+        @com.aliyun.core.annotation.NameInMap("uid")
+        private String uid;
 
         private FreeOrderNode(Builder builder) {
             this.applyTime = builder.applyTime;
@@ -605,13 +697,21 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         /**
          * @return uid
          */
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
         public static final class Builder {
             private String applyTime; 
-            private Long uid; 
+            private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreeOrderNode model) {
+                this.applyTime = model.applyTime;
+                this.uid = model.uid;
+            } 
 
             /**
              * applyTime.
@@ -624,7 +724,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             /**
              * uid.
              */
-            public Builder uid(Long uid) {
+            public Builder uid(String uid) {
                 this.uid = uid;
                 return this;
             }
@@ -636,12 +736,18 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class OrderNode extends TeaModel {
-        @NameInMap("payTime")
+        @com.aliyun.core.annotation.NameInMap("payTime")
         private String payTime;
 
-        @NameInMap("uid")
-        private Long uid;
+        @com.aliyun.core.annotation.NameInMap("uid")
+        private String uid;
 
         private OrderNode(Builder builder) {
             this.payTime = builder.payTime;
@@ -666,13 +772,21 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         /**
          * @return uid
          */
-        public Long getUid() {
+        public String getUid() {
             return this.uid;
         }
 
         public static final class Builder {
             private String payTime; 
-            private Long uid; 
+            private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrderNode model) {
+                this.payTime = model.payTime;
+                this.uid = model.uid;
+            } 
 
             /**
              * payTime.
@@ -685,7 +799,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             /**
              * uid.
              */
-            public Builder uid(Long uid) {
+            public Builder uid(String uid) {
                 this.uid = uid;
                 return this;
             }
@@ -697,11 +811,17 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class ServiceImplementation extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
         private ServiceImplementation(Builder builder) {
@@ -735,6 +855,14 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String endTime; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceImplementation model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * endTime.
              */
@@ -758,32 +886,38 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
-        @NameInMap("docNode")
+        @com.aliyun.core.annotation.NameInMap("docNode")
         private DocNode docNode;
 
-        @NameInMap("finishNode")
+        @com.aliyun.core.annotation.NameInMap("finishNode")
         private FinishNode finishNode;
 
-        @NameInMap("freeOrderAuditNode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderAuditNode")
         private FreeOrderAuditNode freeOrderAuditNode;
 
-        @NameInMap("freeOrderNode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderNode")
         private FreeOrderNode freeOrderNode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("orderDate")
+        @com.aliyun.core.annotation.NameInMap("orderDate")
         private Long orderDate;
 
-        @NameInMap("orderNode")
+        @com.aliyun.core.annotation.NameInMap("orderNode")
         private OrderNode orderNode;
 
-        @NameInMap("serviceImplementation")
+        @com.aliyun.core.annotation.NameInMap("serviceImplementation")
         private ServiceImplementation serviceImplementation;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private Nodes(Builder builder) {
@@ -880,6 +1014,21 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private ServiceImplementation serviceImplementation; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Nodes model) {
+                this.docNode = model.docNode;
+                this.finishNode = model.finishNode;
+                this.freeOrderAuditNode = model.freeOrderAuditNode;
+                this.freeOrderNode = model.freeOrderNode;
+                this.name = model.name;
+                this.orderDate = model.orderDate;
+                this.orderNode = model.orderNode;
+                this.serviceImplementation = model.serviceImplementation;
+                this.status = model.status;
+            } 
+
             /**
              * docNode.
              */
@@ -959,65 +1108,170 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
+    public static class OperateInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("canClick")
+        private Boolean canClick;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private OperateInfos(Builder builder) {
+            this.canClick = builder.canClick;
+            this.text = builder.text;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperateInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canClick
+         */
+        public Boolean getCanClick() {
+            return this.canClick;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private Boolean canClick; 
+            private String text; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperateInfos model) {
+                this.canClick = model.canClick;
+                this.text = model.text;
+                this.url = model.url;
+            } 
+
+            /**
+             * canClick.
+             */
+            public Builder canClick(Boolean canClick) {
+                this.canClick = canClick;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public OperateInfos build() {
+                return new OperateInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListEnterpriseSupportPlanSimpleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnterpriseSupportPlanSimpleResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("canApplyFreeOrder")
+        @com.aliyun.core.annotation.NameInMap("canApplyFreeOrder")
         private Boolean canApplyFreeOrder;
 
-        @NameInMap("customerId")
-        private Long customerId;
+        @com.aliyun.core.annotation.NameInMap("customerId")
+        private String customerId;
 
-        @NameInMap("docs")
-        private java.util.List < Docs> docs;
+        @com.aliyun.core.annotation.NameInMap("docs")
+        private java.util.List<Docs> docs;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @NameInMap("firstPayTime")
+        @com.aliyun.core.annotation.NameInMap("firstPayTime")
         private String firstPayTime;
 
-        @NameInMap("freeOrderApplyCode")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyCode")
         private String freeOrderApplyCode;
 
-        @NameInMap("freeOrderApplyId")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyId")
         private Long freeOrderApplyId;
 
-        @NameInMap("freeOrderApplyTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApplyTime")
         private String freeOrderApplyTime;
 
-        @NameInMap("freeOrderApprovedTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderApprovedTime")
         private String freeOrderApprovedTime;
 
-        @NameInMap("freeOrderExpectStartTime")
+        @com.aliyun.core.annotation.NameInMap("freeOrderExpectStartTime")
         private String freeOrderExpectStartTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("nodes")
-        private java.util.List < Nodes> nodes;
+        @com.aliyun.core.annotation.NameInMap("nodes")
+        private java.util.List<Nodes> nodes;
 
-        @NameInMap("orderIds")
-        private java.util.List < Long > orderIds;
+        @com.aliyun.core.annotation.NameInMap("operateInfos")
+        private java.util.List<OperateInfos> operateInfos;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("orderIds")
+        private java.util.List<Long> orderIds;
+
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("serviceStatus")
+        @com.aliyun.core.annotation.NameInMap("serviceStatus")
         private String serviceStatus;
 
-        @NameInMap("serviceStatusName")
+        @com.aliyun.core.annotation.NameInMap("serviceStatusName")
         private String serviceStatusName;
 
-        @NameInMap("serviceType")
+        @com.aliyun.core.annotation.NameInMap("serviceType")
         private String serviceType;
 
-        @NameInMap("sortTime")
+        @com.aliyun.core.annotation.NameInMap("sortTime")
         private String sortTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
-        @NameInMap("taskNum")
+        @com.aliyun.core.annotation.NameInMap("taskNum")
         private Long taskNum;
 
         private Data(Builder builder) {
@@ -1033,6 +1287,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             this.freeOrderExpectStartTime = builder.freeOrderExpectStartTime;
             this.instanceId = builder.instanceId;
             this.nodes = builder.nodes;
+            this.operateInfos = builder.operateInfos;
             this.orderIds = builder.orderIds;
             this.serviceName = builder.serviceName;
             this.serviceStatus = builder.serviceStatus;
@@ -1061,14 +1316,14 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         /**
          * @return customerId
          */
-        public Long getCustomerId() {
+        public String getCustomerId() {
             return this.customerId;
         }
 
         /**
          * @return docs
          */
-        public java.util.List < Docs> getDocs() {
+        public java.util.List<Docs> getDocs() {
             return this.docs;
         }
 
@@ -1131,14 +1386,21 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
         /**
          * @return nodes
          */
-        public java.util.List < Nodes> getNodes() {
+        public java.util.List<Nodes> getNodes() {
             return this.nodes;
+        }
+
+        /**
+         * @return operateInfos
+         */
+        public java.util.List<OperateInfos> getOperateInfos() {
+            return this.operateInfos;
         }
 
         /**
          * @return orderIds
          */
-        public java.util.List < Long > getOrderIds() {
+        public java.util.List<Long> getOrderIds() {
             return this.orderIds;
         }
 
@@ -1193,8 +1455,8 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canApplyFreeOrder; 
-            private Long customerId; 
-            private java.util.List < Docs> docs; 
+            private String customerId; 
+            private java.util.List<Docs> docs; 
             private String endTime; 
             private String firstPayTime; 
             private String freeOrderApplyCode; 
@@ -1203,8 +1465,9 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String freeOrderApprovedTime; 
             private String freeOrderExpectStartTime; 
             private String instanceId; 
-            private java.util.List < Nodes> nodes; 
-            private java.util.List < Long > orderIds; 
+            private java.util.List<Nodes> nodes; 
+            private java.util.List<OperateInfos> operateInfos; 
+            private java.util.List<Long> orderIds; 
             private String serviceName; 
             private String serviceStatus; 
             private String serviceStatusName; 
@@ -1212,6 +1475,33 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             private String sortTime; 
             private String startTime; 
             private Long taskNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canApplyFreeOrder = model.canApplyFreeOrder;
+                this.customerId = model.customerId;
+                this.docs = model.docs;
+                this.endTime = model.endTime;
+                this.firstPayTime = model.firstPayTime;
+                this.freeOrderApplyCode = model.freeOrderApplyCode;
+                this.freeOrderApplyId = model.freeOrderApplyId;
+                this.freeOrderApplyTime = model.freeOrderApplyTime;
+                this.freeOrderApprovedTime = model.freeOrderApprovedTime;
+                this.freeOrderExpectStartTime = model.freeOrderExpectStartTime;
+                this.instanceId = model.instanceId;
+                this.nodes = model.nodes;
+                this.operateInfos = model.operateInfos;
+                this.orderIds = model.orderIds;
+                this.serviceName = model.serviceName;
+                this.serviceStatus = model.serviceStatus;
+                this.serviceStatusName = model.serviceStatusName;
+                this.serviceType = model.serviceType;
+                this.sortTime = model.sortTime;
+                this.startTime = model.startTime;
+                this.taskNum = model.taskNum;
+            } 
 
             /**
              * canApplyFreeOrder.
@@ -1224,7 +1514,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             /**
              * customerId.
              */
-            public Builder customerId(Long customerId) {
+            public Builder customerId(String customerId) {
                 this.customerId = customerId;
                 return this;
             }
@@ -1232,7 +1522,7 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             /**
              * docs.
              */
-            public Builder docs(java.util.List < Docs> docs) {
+            public Builder docs(java.util.List<Docs> docs) {
                 this.docs = docs;
                 return this;
             }
@@ -1304,15 +1594,23 @@ public class ListEnterpriseSupportPlanSimpleResponseBody extends TeaModel {
             /**
              * nodes.
              */
-            public Builder nodes(java.util.List < Nodes> nodes) {
+            public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
+                return this;
+            }
+
+            /**
+             * operateInfos.
+             */
+            public Builder operateInfos(java.util.List<OperateInfos> operateInfos) {
+                this.operateInfos = operateInfos;
                 return this;
             }
 
             /**
              * orderIds.
              */
-            public Builder orderIds(java.util.List < Long > orderIds) {
+            public Builder orderIds(java.util.List<Long> orderIds) {
                 this.orderIds = orderIds;
                 return this;
             }

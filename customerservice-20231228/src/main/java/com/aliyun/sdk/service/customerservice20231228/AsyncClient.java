@@ -19,26 +19,28 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<GetDownloadUrlResponse> getDownloadUrl(GetDownloadUrlRequest request);
-
-    CompletableFuture<GetEnterpriseSupportPlanDetailResponse> getEnterpriseSupportPlanDetail(GetEnterpriseSupportPlanDetailRequest request);
-
-    CompletableFuture<GetPreViewUrlResponse> getPreViewUrl(GetPreViewUrlRequest request);
-
-    CompletableFuture<GetServiceDetailResponse> getServiceDetail(GetServiceDetailRequest request);
-
-    CompletableFuture<GetYunQiTaskByRecordIdResponse> getYunQiTaskByRecordId(GetYunQiTaskByRecordIdRequest request);
-
-    CompletableFuture<ListDocsGroupByYearResponse> listDocsGroupByYear(ListDocsGroupByYearRequest request);
-
+    /**
+     * @param request the request parameters of ListEnterpriseSupportPlan  ListEnterpriseSupportPlanRequest
+     * @return ListEnterpriseSupportPlanResponse
+     */
     CompletableFuture<ListEnterpriseSupportPlanResponse> listEnterpriseSupportPlan(ListEnterpriseSupportPlanRequest request);
 
+    /**
+     * @param request the request parameters of ListEnterpriseSupportPlanSimple  ListEnterpriseSupportPlanSimpleRequest
+     * @return ListEnterpriseSupportPlanSimpleResponse
+     */
     CompletableFuture<ListEnterpriseSupportPlanSimpleResponse> listEnterpriseSupportPlanSimple(ListEnterpriseSupportPlanSimpleRequest request);
 
+    /**
+     * @param request the request parameters of ListServiceApply  ListServiceApplyRequest
+     * @return ListServiceApplyResponse
+     */
     CompletableFuture<ListServiceApplyResponse> listServiceApply(ListServiceApplyRequest request);
 
+    /**
+     * @param request the request parameters of ListYunQiTaskByUid  ListYunQiTaskByUidRequest
+     * @return ListYunQiTaskByUidResponse
+     */
     CompletableFuture<ListYunQiTaskByUidResponse> listYunQiTaskByUid(ListYunQiTaskByUidRequest request);
-
-    CompletableFuture<MarkFileReadedResponse> markFileReaded(MarkFileReadedRequest request);
 
 }

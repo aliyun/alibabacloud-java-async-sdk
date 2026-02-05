@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListYunQiTaskByUidResponseBody} extends {@link TeaModel}
  *
  * <p>ListYunQiTaskByUidResponseBody</p>
  */
 public class ListYunQiTaskByUidResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListYunQiTaskByUidResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
 
     public static ListYunQiTaskByUidResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListYunQiTaskByUidResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -151,53 +172,59 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListYunQiTaskByUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListYunQiTaskByUidResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("chatId")
+        @com.aliyun.core.annotation.NameInMap("chatId")
         private String chatId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorName")
+        @com.aliyun.core.annotation.NameInMap("creatorName")
         private String creatorName;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("evaluationStar")
+        @com.aliyun.core.annotation.NameInMap("evaluationStar")
         private Integer evaluationStar;
 
-        @NameInMap("important")
+        @com.aliyun.core.annotation.NameInMap("important")
         private String important;
 
-        @NameInMap("mainDingDepartmentId")
+        @com.aliyun.core.annotation.NameInMap("mainDingDepartmentId")
         private String mainDingDepartmentId;
 
-        @NameInMap("mainDingGroupId")
+        @com.aliyun.core.annotation.NameInMap("mainDingGroupId")
         private String mainDingGroupId;
 
-        @NameInMap("mainDingGroupName")
+        @com.aliyun.core.annotation.NameInMap("mainDingGroupName")
         private String mainDingGroupName;
 
-        @NameInMap("productName")
+        @com.aliyun.core.annotation.NameInMap("productName")
         private String productName;
 
-        @NameInMap("recordId")
+        @com.aliyun.core.annotation.NameInMap("recordId")
         private String recordId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("subDingDepartmentId")
+        @com.aliyun.core.annotation.NameInMap("subDingDepartmentId")
         private String subDingDepartmentId;
 
-        @NameInMap("subDingGroupId")
+        @com.aliyun.core.annotation.NameInMap("subDingGroupId")
         private String subDingGroupId;
 
-        @NameInMap("subDingGroupName")
+        @com.aliyun.core.annotation.NameInMap("subDingGroupName")
         private String subDingGroupName;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private List(Builder builder) {
@@ -357,6 +384,28 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
             private String subDingGroupName; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.chatId = model.chatId;
+                this.createTime = model.createTime;
+                this.creatorName = model.creatorName;
+                this.endTime = model.endTime;
+                this.evaluationStar = model.evaluationStar;
+                this.important = model.important;
+                this.mainDingDepartmentId = model.mainDingDepartmentId;
+                this.mainDingGroupId = model.mainDingGroupId;
+                this.mainDingGroupName = model.mainDingGroupName;
+                this.productName = model.productName;
+                this.recordId = model.recordId;
+                this.status = model.status;
+                this.subDingDepartmentId = model.subDingDepartmentId;
+                this.subDingGroupId = model.subDingGroupId;
+                this.subDingGroupName = model.subDingGroupName;
+                this.title = model.title;
+            } 
+
             /**
              * chatId.
              */
@@ -492,20 +541,26 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListYunQiTaskByUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListYunQiTaskByUidResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("extend")
+        @com.aliyun.core.annotation.NameInMap("extend")
         private Object extend;
 
-        @NameInMap("list")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("list")
+        private java.util.List<List> list;
 
-        @NameInMap("pageNum")
+        @com.aliyun.core.annotation.NameInMap("pageNum")
         private Integer pageNum;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Integer pageSize;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -534,7 +589,7 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -561,10 +616,21 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
 
         public static final class Builder {
             private Object extend; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extend = model.extend;
+                this.list = model.list;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * extend.
@@ -577,7 +643,7 @@ public class ListYunQiTaskByUidResponseBody extends TeaModel {
             /**
              * list.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

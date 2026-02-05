@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceApplyRequest} extends {@link RequestModel}
  *
  * <p>ListServiceApplyRequest</p>
  */
 public class ListServiceApplyRequest extends Request {
-    @Body
-    @NameInMap("applyType")
-    private java.util.List < String > applyType;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("applyType")
+    private java.util.List<String> applyType;
 
-    @Body
-    @NameInMap("endDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
 
-    @Body
-    @NameInMap("pageNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNum")
     private Integer pageNum;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("productCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("productCode")
     private Integer productCode;
 
-    @Body
-    @NameInMap("startDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startDate")
     private Long startDate;
 
-    @Body
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private ListServiceApplyRequest(Builder builder) {
@@ -59,7 +64,7 @@ public class ListServiceApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +72,7 @@ public class ListServiceApplyRequest extends Request {
     /**
      * @return applyType
      */
-    public java.util.List < String > getApplyType() {
+    public java.util.List<String> getApplyType() {
         return this.applyType;
     }
 
@@ -114,7 +119,7 @@ public class ListServiceApplyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServiceApplyRequest, Builder> {
-        private java.util.List < String > applyType; 
+        private java.util.List<String> applyType; 
         private Long endDate; 
         private Integer pageNum; 
         private Integer pageSize; 
@@ -140,7 +145,7 @@ public class ListServiceApplyRequest extends Request {
         /**
          * applyType.
          */
-        public Builder applyType(java.util.List < String > applyType) {
+        public Builder applyType(java.util.List<String> applyType) {
             this.putBodyParameter("applyType", applyType);
             this.applyType = applyType;
             return this;

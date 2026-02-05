@@ -39,90 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
-    @Override
-    public CompletableFuture<GetDownloadUrlResponse> getDownloadUrl(GetDownloadUrlRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDownloadUrl").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/file/getDownloadUrl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDownloadUrlResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetDownloadUrlResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetEnterpriseSupportPlanDetailResponse> getEnterpriseSupportPlanDetail(GetEnterpriseSupportPlanDetailRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEnterpriseSupportPlanDetail").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/enterpriseSupport/getEnterpriseSupportPlanDetail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEnterpriseSupportPlanDetailResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetEnterpriseSupportPlanDetailResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetPreViewUrlResponse> getPreViewUrl(GetPreViewUrlRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPreViewUrl").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/file/getPreViewUrl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPreViewUrlResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetPreViewUrlResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetServiceDetailResponse> getServiceDetail(GetServiceDetailRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetServiceDetail").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/expert/service/getServiceDetail").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceDetailResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetServiceDetailResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetYunQiTaskByRecordIdResponse> getYunQiTaskByRecordId(GetYunQiTaskByRecordIdRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetYunQiTaskByRecordId").setMethod(HttpMethod.GET).setPathRegex("/customerWorkbench/pop/api/record/getYunQiTaskByRecordId").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetYunQiTaskByRecordIdResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetYunQiTaskByRecordIdResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListDocsGroupByYearResponse> listDocsGroupByYear(ListDocsGroupByYearRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDocsGroupByYear").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/file/listDocsGroupByYear").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDocsGroupByYearResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListDocsGroupByYearResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of ListEnterpriseSupportPlan  ListEnterpriseSupportPlanRequest
+     * @return ListEnterpriseSupportPlanResponse
+     */
     @Override
     public CompletableFuture<ListEnterpriseSupportPlanResponse> listEnterpriseSupportPlan(ListEnterpriseSupportPlanRequest request) {
         try {
@@ -137,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEnterpriseSupportPlanSimple  ListEnterpriseSupportPlanSimpleRequest
+     * @return ListEnterpriseSupportPlanSimpleResponse
+     */
     @Override
     public CompletableFuture<ListEnterpriseSupportPlanSimpleResponse> listEnterpriseSupportPlanSimple(ListEnterpriseSupportPlanSimpleRequest request) {
         try {
@@ -151,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListServiceApply  ListServiceApplyRequest
+     * @return ListServiceApplyResponse
+     */
     @Override
     public CompletableFuture<ListServiceApplyResponse> listServiceApply(ListServiceApplyRequest request) {
         try {
@@ -165,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListYunQiTaskByUid  ListYunQiTaskByUidRequest
+     * @return ListYunQiTaskByUidResponse
+     */
     @Override
     public CompletableFuture<ListYunQiTaskByUidResponse> listYunQiTaskByUid(ListYunQiTaskByUidRequest request) {
         try {
@@ -174,20 +106,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListYunQiTaskByUidResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<MarkFileReadedResponse> markFileReaded(MarkFileReadedRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MarkFileReaded").setMethod(HttpMethod.POST).setPathRegex("/customerWorkbench/pop/api/file/markFileReaded").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MarkFileReadedResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<MarkFileReadedResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.customerservice20231228.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceApplyResponseBody</p>
  */
 public class ListServiceApplyResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListServiceApplyResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class ListServiceApplyResponseBody extends TeaModel {
 
     public static ListServiceApplyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class ListServiceApplyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServiceApplyResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * code.
@@ -151,20 +172,26 @@ public class ListServiceApplyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class Appointments extends TeaModel {
-        @NameInMap("huhangId")
+        @com.aliyun.core.annotation.NameInMap("huhangId")
         private Long huhangId;
 
-        @NameInMap("purchaseCode")
+        @com.aliyun.core.annotation.NameInMap("purchaseCode")
         private Integer purchaseCode;
 
-        @NameInMap("purchaseDesc")
+        @com.aliyun.core.annotation.NameInMap("purchaseDesc")
         private String purchaseDesc;
 
-        @NameInMap("supportDays")
+        @com.aliyun.core.annotation.NameInMap("supportDays")
         private Integer supportDays;
 
-        @NameInMap("travelDays")
+        @com.aliyun.core.annotation.NameInMap("travelDays")
         private Integer travelDays;
 
         private Appointments(Builder builder) {
@@ -225,6 +252,17 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer supportDays; 
             private Integer travelDays; 
 
+            private Builder() {
+            } 
+
+            private Builder(Appointments model) {
+                this.huhangId = model.huhangId;
+                this.purchaseCode = model.purchaseCode;
+                this.purchaseDesc = model.purchaseDesc;
+                this.supportDays = model.supportDays;
+                this.travelDays = model.travelDays;
+            } 
+
             /**
              * huhangId.
              */
@@ -272,71 +310,77 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PayOrders extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
 
-        @NameInMap("compassCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("compassCommodityCode")
         private String compassCommodityCode;
 
-        @NameInMap("compassCommodityName")
+        @com.aliyun.core.annotation.NameInMap("compassCommodityName")
         private String compassCommodityName;
 
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("operate")
-        private java.util.Map < String, ? > operate;
+        @com.aliyun.core.annotation.NameInMap("operate")
+        private java.util.Map<String, ?> operate;
 
-        @NameInMap("orderDetail")
+        @com.aliyun.core.annotation.NameInMap("orderDetail")
         private Object orderDetail;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private Long orderId;
 
-        @NameInMap("originalPrice")
+        @com.aliyun.core.annotation.NameInMap("originalPrice")
         private Double originalPrice;
 
-        @NameInMap("payAmount")
+        @com.aliyun.core.annotation.NameInMap("payAmount")
         private Double payAmount;
 
-        @NameInMap("payTime")
+        @com.aliyun.core.annotation.NameInMap("payTime")
         private String payTime;
 
-        @NameInMap("productName")
+        @com.aliyun.core.annotation.NameInMap("productName")
         private String productName;
 
-        @NameInMap("reneWalUrl")
+        @com.aliyun.core.annotation.NameInMap("reneWalUrl")
         private String reneWalUrl;
 
-        @NameInMap("serviceContentMap")
-        private java.util.Map < String, ? > serviceContentMap;
+        @com.aliyun.core.annotation.NameInMap("serviceContentMap")
+        private java.util.Map<String, ?> serviceContentMap;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("statusStr")
+        @com.aliyun.core.annotation.NameInMap("statusStr")
         private String statusStr;
 
-        @NameInMap("supportDays")
+        @com.aliyun.core.annotation.NameInMap("supportDays")
         private Integer supportDays;
 
-        @NameInMap("uid")
+        @com.aliyun.core.annotation.NameInMap("uid")
         private String uid;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PayOrders(Builder builder) {
@@ -431,7 +475,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return operate
          */
-        public java.util.Map < String, ? > getOperate() {
+        public java.util.Map<String, ?> getOperate() {
             return this.operate;
         }
 
@@ -487,7 +531,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return serviceContentMap
          */
-        public java.util.Map < String, ? > getServiceContentMap() {
+        public java.util.Map<String, ?> getServiceContentMap() {
             return this.serviceContentMap;
         }
 
@@ -535,7 +579,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private String modifierEmpId; 
-            private java.util.Map < String, ? > operate; 
+            private java.util.Map<String, ?> operate; 
             private Object orderDetail; 
             private Long orderId; 
             private Double originalPrice; 
@@ -543,12 +587,40 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String payTime; 
             private String productName; 
             private String reneWalUrl; 
-            private java.util.Map < String, ? > serviceContentMap; 
+            private java.util.Map<String, ?> serviceContentMap; 
             private Integer status; 
             private String statusStr; 
             private Integer supportDays; 
             private String uid; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(PayOrders model) {
+                this.amount = model.amount;
+                this.compassCommodityCode = model.compassCommodityCode;
+                this.compassCommodityName = model.compassCommodityName;
+                this.creatorEmpId = model.creatorEmpId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.modifierEmpId = model.modifierEmpId;
+                this.operate = model.operate;
+                this.orderDetail = model.orderDetail;
+                this.orderId = model.orderId;
+                this.originalPrice = model.originalPrice;
+                this.payAmount = model.payAmount;
+                this.payTime = model.payTime;
+                this.productName = model.productName;
+                this.reneWalUrl = model.reneWalUrl;
+                this.serviceContentMap = model.serviceContentMap;
+                this.status = model.status;
+                this.statusStr = model.statusStr;
+                this.supportDays = model.supportDays;
+                this.uid = model.uid;
+                this.url = model.url;
+            } 
 
             /**
              * amount.
@@ -617,7 +689,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * operate.
              */
-            public Builder operate(java.util.Map < String, ? > operate) {
+            public Builder operate(java.util.Map<String, ?> operate) {
                 this.operate = operate;
                 return this;
             }
@@ -681,7 +753,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceContentMap.
              */
-            public Builder serviceContentMap(java.util.Map < String, ? > serviceContentMap) {
+            public Builder serviceContentMap(java.util.Map<String, ?> serviceContentMap) {
                 this.serviceContentMap = serviceContentMap;
                 return this;
             }
@@ -733,41 +805,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ApplyFileVOList extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ApplyFileVOList(Builder builder) {
@@ -891,6 +969,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplyFileVOList model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -994,17 +1090,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ExtList extends TeaModel {
-        @NameInMap("keyCode")
+        @com.aliyun.core.annotation.NameInMap("keyCode")
         private String keyCode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Object value;
 
-        @NameInMap("view")
+        @com.aliyun.core.annotation.NameInMap("view")
         private String view;
 
         private ExtList(Builder builder) {
@@ -1056,6 +1158,16 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Object value; 
             private String view; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtList model) {
+                this.keyCode = model.keyCode;
+                this.name = model.name;
+                this.value = model.value;
+                this.view = model.view;
+            } 
+
             /**
              * keyCode.
              */
@@ -1095,20 +1207,26 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceNodeDTOS extends TeaModel {
-        @NameInMap("display")
+        @com.aliyun.core.annotation.NameInMap("display")
         private Boolean display;
 
-        @NameInMap("extendInfo")
+        @com.aliyun.core.annotation.NameInMap("extendInfo")
         private Object extendInfo;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("nodeName")
+        @com.aliyun.core.annotation.NameInMap("nodeName")
         private String nodeName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private PerformanceNodeDTOS(Builder builder) {
@@ -1169,6 +1287,17 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String nodeName; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceNodeDTOS model) {
+                this.display = model.display;
+                this.extendInfo = model.extendInfo;
+                this.index = model.index;
+                this.nodeName = model.nodeName;
+                this.status = model.status;
+            } 
+
             /**
              * display.
              */
@@ -1216,41 +1345,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksApplyFileVOList extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformancePacksApplyFileVOList(Builder builder) {
@@ -1374,6 +1509,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksApplyFileVOList model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -1477,17 +1630,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksExtList extends TeaModel {
-        @NameInMap("keyCode")
+        @com.aliyun.core.annotation.NameInMap("keyCode")
         private String keyCode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Object value;
 
-        @NameInMap("view")
+        @com.aliyun.core.annotation.NameInMap("view")
         private String view;
 
         private PerformancePacksExtList(Builder builder) {
@@ -1539,6 +1698,16 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Object value; 
             private String view; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksExtList model) {
+                this.keyCode = model.keyCode;
+                this.name = model.name;
+                this.value = model.value;
+                this.view = model.view;
+            } 
+
             /**
              * keyCode.
              */
@@ -1578,20 +1747,26 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksPerformanceNodeDTOS extends TeaModel {
-        @NameInMap("display")
+        @com.aliyun.core.annotation.NameInMap("display")
         private Boolean display;
 
-        @NameInMap("extendInfo")
+        @com.aliyun.core.annotation.NameInMap("extendInfo")
         private Object extendInfo;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("nodeName")
+        @com.aliyun.core.annotation.NameInMap("nodeName")
         private String nodeName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private PerformancePacksPerformanceNodeDTOS(Builder builder) {
@@ -1652,6 +1827,17 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String nodeName; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksPerformanceNodeDTOS model) {
+                this.display = model.display;
+                this.extendInfo = model.extendInfo;
+                this.index = model.index;
+                this.nodeName = model.nodeName;
+                this.status = model.status;
+            } 
+
             /**
              * display.
              */
@@ -1699,41 +1885,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ServiceMonthReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ServiceMonthReports(Builder builder) {
@@ -1857,6 +2049,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceMonthReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -1960,41 +2170,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ServiceReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ServiceReports(Builder builder) {
@@ -2118,6 +2334,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -2221,41 +2455,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ServiceSchemes extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ServiceSchemes(Builder builder) {
@@ -2379,6 +2619,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceSchemes model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -2482,38 +2740,44 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class TamEngineers extends TeaModel {
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("hrStatus")
+        @com.aliyun.core.annotation.NameInMap("hrStatus")
         private String hrStatus;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastName")
+        @com.aliyun.core.annotation.NameInMap("lastName")
         private String lastName;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickNameEn")
+        @com.aliyun.core.annotation.NameInMap("nickNameEn")
         private String nickNameEn;
 
-        @NameInMap("realmId")
+        @com.aliyun.core.annotation.NameInMap("realmId")
         private Long realmId;
 
-        @NameInMap("workid")
+        @com.aliyun.core.annotation.NameInMap("workid")
         private String workid;
 
         private TamEngineers(Builder builder) {
@@ -2628,6 +2892,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Long realmId; 
             private String workid; 
 
+            private Builder() {
+            } 
+
+            private Builder(TamEngineers model) {
+                this.creatorEmpId = model.creatorEmpId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hrStatus = model.hrStatus;
+                this.id = model.id;
+                this.lastName = model.lastName;
+                this.modifierEmpId = model.modifierEmpId;
+                this.name = model.name;
+                this.nickNameEn = model.nickNameEn;
+                this.realmId = model.realmId;
+                this.workid = model.workid;
+            } 
+
             /**
              * creatorEmpId.
              */
@@ -2723,90 +3004,96 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacks extends TeaModel {
-        @NameInMap("applyFileVOList")
-        private java.util.List < PerformancePacksApplyFileVOList> applyFileVOList;
+        @com.aliyun.core.annotation.NameInMap("applyFileVOList")
+        private java.util.List<PerformancePacksApplyFileVOList> applyFileVOList;
 
-        @NameInMap("appointmentCode")
+        @com.aliyun.core.annotation.NameInMap("appointmentCode")
         private String appointmentCode;
 
-        @NameInMap("appointmentEndTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentEndTime")
         private Long appointmentEndTime;
 
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("appointmentPassTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentPassTime")
         private Long appointmentPassTime;
 
-        @NameInMap("appointmentTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentTime")
         private Long appointmentTime;
 
-        @NameInMap("commodityDesc")
+        @com.aliyun.core.annotation.NameInMap("commodityDesc")
         private String commodityDesc;
 
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("cycleService")
+        @com.aliyun.core.annotation.NameInMap("cycleService")
         private Boolean cycleService;
 
-        @NameInMap("extList")
-        private java.util.List < PerformancePacksExtList> extList;
+        @com.aliyun.core.annotation.NameInMap("extList")
+        private java.util.List<PerformancePacksExtList> extList;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("mergeSolutionAndReporterOneStep")
+        @com.aliyun.core.annotation.NameInMap("mergeSolutionAndReporterOneStep")
         private Boolean mergeSolutionAndReporterOneStep;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("ntmCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("ntmCommodityCode")
         private String ntmCommodityCode;
 
-        @NameInMap("orderDetail")
+        @com.aliyun.core.annotation.NameInMap("orderDetail")
         private Object orderDetail;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private Long orderId;
 
-        @NameInMap("performanceNodeDTOS")
-        private java.util.List < PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS;
+        @com.aliyun.core.annotation.NameInMap("performanceNodeDTOS")
+        private java.util.List<PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS;
 
-        @NameInMap("purchasePackCode")
+        @com.aliyun.core.annotation.NameInMap("purchasePackCode")
         private Integer purchasePackCode;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("serviceMonthReports")
-        private java.util.List < ServiceMonthReports> serviceMonthReports;
+        @com.aliyun.core.annotation.NameInMap("serviceMonthReports")
+        private java.util.List<ServiceMonthReports> serviceMonthReports;
 
-        @NameInMap("serviceReports")
-        private java.util.List < ServiceReports> serviceReports;
+        @com.aliyun.core.annotation.NameInMap("serviceReports")
+        private java.util.List<ServiceReports> serviceReports;
 
-        @NameInMap("serviceSchemes")
-        private java.util.List < ServiceSchemes> serviceSchemes;
+        @com.aliyun.core.annotation.NameInMap("serviceSchemes")
+        private java.util.List<ServiceSchemes> serviceSchemes;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("statusStr")
+        @com.aliyun.core.annotation.NameInMap("statusStr")
         private String statusStr;
 
-        @NameInMap("supportTime")
-        private java.util.List < Long > supportTime;
+        @com.aliyun.core.annotation.NameInMap("supportTime")
+        private java.util.List<Long> supportTime;
 
-        @NameInMap("tamEngineers")
-        private java.util.List < TamEngineers> tamEngineers;
+        @com.aliyun.core.annotation.NameInMap("tamEngineers")
+        private java.util.List<TamEngineers> tamEngineers;
 
         private PerformancePacks(Builder builder) {
             this.applyFileVOList = builder.applyFileVOList;
@@ -2850,7 +3137,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return applyFileVOList
          */
-        public java.util.List < PerformancePacksApplyFileVOList> getApplyFileVOList() {
+        public java.util.List<PerformancePacksApplyFileVOList> getApplyFileVOList() {
             return this.applyFileVOList;
         }
 
@@ -2913,7 +3200,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return extList
          */
-        public java.util.List < PerformancePacksExtList> getExtList() {
+        public java.util.List<PerformancePacksExtList> getExtList() {
             return this.extList;
         }
 
@@ -2976,7 +3263,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return performanceNodeDTOS
          */
-        public java.util.List < PerformancePacksPerformanceNodeDTOS> getPerformanceNodeDTOS() {
+        public java.util.List<PerformancePacksPerformanceNodeDTOS> getPerformanceNodeDTOS() {
             return this.performanceNodeDTOS;
         }
 
@@ -2997,21 +3284,21 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return serviceMonthReports
          */
-        public java.util.List < ServiceMonthReports> getServiceMonthReports() {
+        public java.util.List<ServiceMonthReports> getServiceMonthReports() {
             return this.serviceMonthReports;
         }
 
         /**
          * @return serviceReports
          */
-        public java.util.List < ServiceReports> getServiceReports() {
+        public java.util.List<ServiceReports> getServiceReports() {
             return this.serviceReports;
         }
 
         /**
          * @return serviceSchemes
          */
-        public java.util.List < ServiceSchemes> getServiceSchemes() {
+        public java.util.List<ServiceSchemes> getServiceSchemes() {
             return this.serviceSchemes;
         }
 
@@ -3032,19 +3319,19 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return supportTime
          */
-        public java.util.List < Long > getSupportTime() {
+        public java.util.List<Long> getSupportTime() {
             return this.supportTime;
         }
 
         /**
          * @return tamEngineers
          */
-        public java.util.List < TamEngineers> getTamEngineers() {
+        public java.util.List<TamEngineers> getTamEngineers() {
             return this.tamEngineers;
         }
 
         public static final class Builder {
-            private java.util.List < PerformancePacksApplyFileVOList> applyFileVOList; 
+            private java.util.List<PerformancePacksApplyFileVOList> applyFileVOList; 
             private String appointmentCode; 
             private Long appointmentEndTime; 
             private String appointmentId; 
@@ -3053,7 +3340,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String commodityDesc; 
             private String creatorEmpId; 
             private Boolean cycleService; 
-            private java.util.List < PerformancePacksExtList> extList; 
+            private java.util.List<PerformancePacksExtList> extList; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -3062,21 +3349,55 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String ntmCommodityCode; 
             private Object orderDetail; 
             private Long orderId; 
-            private java.util.List < PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS; 
+            private java.util.List<PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS; 
             private Integer purchasePackCode; 
             private Long serviceApplyId; 
-            private java.util.List < ServiceMonthReports> serviceMonthReports; 
-            private java.util.List < ServiceReports> serviceReports; 
-            private java.util.List < ServiceSchemes> serviceSchemes; 
+            private java.util.List<ServiceMonthReports> serviceMonthReports; 
+            private java.util.List<ServiceReports> serviceReports; 
+            private java.util.List<ServiceSchemes> serviceSchemes; 
             private Integer status; 
             private String statusStr; 
-            private java.util.List < Long > supportTime; 
-            private java.util.List < TamEngineers> tamEngineers; 
+            private java.util.List<Long> supportTime; 
+            private java.util.List<TamEngineers> tamEngineers; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacks model) {
+                this.applyFileVOList = model.applyFileVOList;
+                this.appointmentCode = model.appointmentCode;
+                this.appointmentEndTime = model.appointmentEndTime;
+                this.appointmentId = model.appointmentId;
+                this.appointmentPassTime = model.appointmentPassTime;
+                this.appointmentTime = model.appointmentTime;
+                this.commodityDesc = model.commodityDesc;
+                this.creatorEmpId = model.creatorEmpId;
+                this.cycleService = model.cycleService;
+                this.extList = model.extList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mergeSolutionAndReporterOneStep = model.mergeSolutionAndReporterOneStep;
+                this.modifierEmpId = model.modifierEmpId;
+                this.ntmCommodityCode = model.ntmCommodityCode;
+                this.orderDetail = model.orderDetail;
+                this.orderId = model.orderId;
+                this.performanceNodeDTOS = model.performanceNodeDTOS;
+                this.purchasePackCode = model.purchasePackCode;
+                this.serviceApplyId = model.serviceApplyId;
+                this.serviceMonthReports = model.serviceMonthReports;
+                this.serviceReports = model.serviceReports;
+                this.serviceSchemes = model.serviceSchemes;
+                this.status = model.status;
+                this.statusStr = model.statusStr;
+                this.supportTime = model.supportTime;
+                this.tamEngineers = model.tamEngineers;
+            } 
 
             /**
              * applyFileVOList.
              */
-            public Builder applyFileVOList(java.util.List < PerformancePacksApplyFileVOList> applyFileVOList) {
+            public Builder applyFileVOList(java.util.List<PerformancePacksApplyFileVOList> applyFileVOList) {
                 this.applyFileVOList = applyFileVOList;
                 return this;
             }
@@ -3148,7 +3469,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * extList.
              */
-            public Builder extList(java.util.List < PerformancePacksExtList> extList) {
+            public Builder extList(java.util.List<PerformancePacksExtList> extList) {
                 this.extList = extList;
                 return this;
             }
@@ -3220,7 +3541,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performanceNodeDTOS.
              */
-            public Builder performanceNodeDTOS(java.util.List < PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS) {
+            public Builder performanceNodeDTOS(java.util.List<PerformancePacksPerformanceNodeDTOS> performanceNodeDTOS) {
                 this.performanceNodeDTOS = performanceNodeDTOS;
                 return this;
             }
@@ -3244,7 +3565,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceMonthReports.
              */
-            public Builder serviceMonthReports(java.util.List < ServiceMonthReports> serviceMonthReports) {
+            public Builder serviceMonthReports(java.util.List<ServiceMonthReports> serviceMonthReports) {
                 this.serviceMonthReports = serviceMonthReports;
                 return this;
             }
@@ -3252,7 +3573,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceReports.
              */
-            public Builder serviceReports(java.util.List < ServiceReports> serviceReports) {
+            public Builder serviceReports(java.util.List<ServiceReports> serviceReports) {
                 this.serviceReports = serviceReports;
                 return this;
             }
@@ -3260,7 +3581,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceSchemes.
              */
-            public Builder serviceSchemes(java.util.List < ServiceSchemes> serviceSchemes) {
+            public Builder serviceSchemes(java.util.List<ServiceSchemes> serviceSchemes) {
                 this.serviceSchemes = serviceSchemes;
                 return this;
             }
@@ -3284,7 +3605,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * supportTime.
              */
-            public Builder supportTime(java.util.List < Long > supportTime) {
+            public Builder supportTime(java.util.List<Long> supportTime) {
                 this.supportTime = supportTime;
                 return this;
             }
@@ -3292,7 +3613,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * tamEngineers.
              */
-            public Builder tamEngineers(java.util.List < TamEngineers> tamEngineers) {
+            public Builder tamEngineers(java.util.List<TamEngineers> tamEngineers) {
                 this.tamEngineers = tamEngineers;
                 return this;
             }
@@ -3304,41 +3625,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceOrdersServiceMonthReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformanceOrdersServiceMonthReports(Builder builder) {
@@ -3462,6 +3789,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceOrdersServiceMonthReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -3565,41 +3910,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceOrdersServiceReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformanceOrdersServiceReports(Builder builder) {
@@ -3723,6 +4074,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceOrdersServiceReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -3826,41 +4195,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceOrdersServiceSchemes extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformanceOrdersServiceSchemes(Builder builder) {
@@ -3984,6 +4359,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceOrdersServiceSchemes model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -4087,38 +4480,44 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceOrdersTamEngineers extends TeaModel {
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("hrStatus")
+        @com.aliyun.core.annotation.NameInMap("hrStatus")
         private String hrStatus;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastName")
+        @com.aliyun.core.annotation.NameInMap("lastName")
         private String lastName;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickNameEn")
+        @com.aliyun.core.annotation.NameInMap("nickNameEn")
         private String nickNameEn;
 
-        @NameInMap("realmId")
+        @com.aliyun.core.annotation.NameInMap("realmId")
         private Long realmId;
 
-        @NameInMap("workid")
+        @com.aliyun.core.annotation.NameInMap("workid")
         private String workid;
 
         private PerformanceOrdersTamEngineers(Builder builder) {
@@ -4233,6 +4632,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Long realmId; 
             private String workid; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceOrdersTamEngineers model) {
+                this.creatorEmpId = model.creatorEmpId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hrStatus = model.hrStatus;
+                this.id = model.id;
+                this.lastName = model.lastName;
+                this.modifierEmpId = model.modifierEmpId;
+                this.name = model.name;
+                this.nickNameEn = model.nickNameEn;
+                this.realmId = model.realmId;
+                this.workid = model.workid;
+            } 
+
             /**
              * creatorEmpId.
              */
@@ -4328,99 +4744,105 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformanceOrders extends TeaModel {
-        @NameInMap("applyFileVOList")
-        private java.util.List < ApplyFileVOList> applyFileVOList;
+        @com.aliyun.core.annotation.NameInMap("applyFileVOList")
+        private java.util.List<ApplyFileVOList> applyFileVOList;
 
-        @NameInMap("appointmentCode")
+        @com.aliyun.core.annotation.NameInMap("appointmentCode")
         private String appointmentCode;
 
-        @NameInMap("appointmentEndTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentEndTime")
         private Long appointmentEndTime;
 
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("appointmentPassTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentPassTime")
         private Long appointmentPassTime;
 
-        @NameInMap("appointmentTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentTime")
         private Long appointmentTime;
 
-        @NameInMap("commodityDesc")
+        @com.aliyun.core.annotation.NameInMap("commodityDesc")
         private String commodityDesc;
 
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("cycleService")
+        @com.aliyun.core.annotation.NameInMap("cycleService")
         private Boolean cycleService;
 
-        @NameInMap("extList")
-        private java.util.List < ExtList> extList;
+        @com.aliyun.core.annotation.NameInMap("extList")
+        private java.util.List<ExtList> extList;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("mergeSolutionAndReporterOneStep")
+        @com.aliyun.core.annotation.NameInMap("mergeSolutionAndReporterOneStep")
         private Boolean mergeSolutionAndReporterOneStep;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("ntmCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("ntmCommodityCode")
         private String ntmCommodityCode;
 
-        @NameInMap("orderDetail")
+        @com.aliyun.core.annotation.NameInMap("orderDetail")
         private Object orderDetail;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private Long orderId;
 
-        @NameInMap("packCount")
+        @com.aliyun.core.annotation.NameInMap("packCount")
         private Integer packCount;
 
-        @NameInMap("packDetails")
-        private java.util.List < java.util.Map<String, ?>> packDetails;
+        @com.aliyun.core.annotation.NameInMap("packDetails")
+        private java.util.List<java.util.Map<String, ?>> packDetails;
 
-        @NameInMap("performanceNodeDTOS")
-        private java.util.List < PerformanceNodeDTOS> performanceNodeDTOS;
+        @com.aliyun.core.annotation.NameInMap("performanceNodeDTOS")
+        private java.util.List<PerformanceNodeDTOS> performanceNodeDTOS;
 
-        @NameInMap("performancePacks")
-        private java.util.List < PerformancePacks> performancePacks;
+        @com.aliyun.core.annotation.NameInMap("performancePacks")
+        private java.util.List<PerformancePacks> performancePacks;
 
-        @NameInMap("purchasePackCode")
+        @com.aliyun.core.annotation.NameInMap("purchasePackCode")
         private Integer purchasePackCode;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("serviceMonthReports")
-        private java.util.List < PerformanceOrdersServiceMonthReports> serviceMonthReports;
+        @com.aliyun.core.annotation.NameInMap("serviceMonthReports")
+        private java.util.List<PerformanceOrdersServiceMonthReports> serviceMonthReports;
 
-        @NameInMap("serviceReports")
-        private java.util.List < PerformanceOrdersServiceReports> serviceReports;
+        @com.aliyun.core.annotation.NameInMap("serviceReports")
+        private java.util.List<PerformanceOrdersServiceReports> serviceReports;
 
-        @NameInMap("serviceSchemes")
-        private java.util.List < PerformanceOrdersServiceSchemes> serviceSchemes;
+        @com.aliyun.core.annotation.NameInMap("serviceSchemes")
+        private java.util.List<PerformanceOrdersServiceSchemes> serviceSchemes;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("statusStr")
+        @com.aliyun.core.annotation.NameInMap("statusStr")
         private String statusStr;
 
-        @NameInMap("supportTime")
-        private java.util.List < Long > supportTime;
+        @com.aliyun.core.annotation.NameInMap("supportTime")
+        private java.util.List<Long> supportTime;
 
-        @NameInMap("tamEngineers")
-        private java.util.List < PerformanceOrdersTamEngineers> tamEngineers;
+        @com.aliyun.core.annotation.NameInMap("tamEngineers")
+        private java.util.List<PerformanceOrdersTamEngineers> tamEngineers;
 
         private PerformanceOrders(Builder builder) {
             this.applyFileVOList = builder.applyFileVOList;
@@ -4467,7 +4889,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return applyFileVOList
          */
-        public java.util.List < ApplyFileVOList> getApplyFileVOList() {
+        public java.util.List<ApplyFileVOList> getApplyFileVOList() {
             return this.applyFileVOList;
         }
 
@@ -4530,7 +4952,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return extList
          */
-        public java.util.List < ExtList> getExtList() {
+        public java.util.List<ExtList> getExtList() {
             return this.extList;
         }
 
@@ -4600,21 +5022,21 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return packDetails
          */
-        public java.util.List < java.util.Map<String, ?>> getPackDetails() {
+        public java.util.List<java.util.Map<String, ?>> getPackDetails() {
             return this.packDetails;
         }
 
         /**
          * @return performanceNodeDTOS
          */
-        public java.util.List < PerformanceNodeDTOS> getPerformanceNodeDTOS() {
+        public java.util.List<PerformanceNodeDTOS> getPerformanceNodeDTOS() {
             return this.performanceNodeDTOS;
         }
 
         /**
          * @return performancePacks
          */
-        public java.util.List < PerformancePacks> getPerformancePacks() {
+        public java.util.List<PerformancePacks> getPerformancePacks() {
             return this.performancePacks;
         }
 
@@ -4635,21 +5057,21 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return serviceMonthReports
          */
-        public java.util.List < PerformanceOrdersServiceMonthReports> getServiceMonthReports() {
+        public java.util.List<PerformanceOrdersServiceMonthReports> getServiceMonthReports() {
             return this.serviceMonthReports;
         }
 
         /**
          * @return serviceReports
          */
-        public java.util.List < PerformanceOrdersServiceReports> getServiceReports() {
+        public java.util.List<PerformanceOrdersServiceReports> getServiceReports() {
             return this.serviceReports;
         }
 
         /**
          * @return serviceSchemes
          */
-        public java.util.List < PerformanceOrdersServiceSchemes> getServiceSchemes() {
+        public java.util.List<PerformanceOrdersServiceSchemes> getServiceSchemes() {
             return this.serviceSchemes;
         }
 
@@ -4670,19 +5092,19 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return supportTime
          */
-        public java.util.List < Long > getSupportTime() {
+        public java.util.List<Long> getSupportTime() {
             return this.supportTime;
         }
 
         /**
          * @return tamEngineers
          */
-        public java.util.List < PerformanceOrdersTamEngineers> getTamEngineers() {
+        public java.util.List<PerformanceOrdersTamEngineers> getTamEngineers() {
             return this.tamEngineers;
         }
 
         public static final class Builder {
-            private java.util.List < ApplyFileVOList> applyFileVOList; 
+            private java.util.List<ApplyFileVOList> applyFileVOList; 
             private String appointmentCode; 
             private Long appointmentEndTime; 
             private String appointmentId; 
@@ -4691,7 +5113,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String commodityDesc; 
             private String creatorEmpId; 
             private Boolean cycleService; 
-            private java.util.List < ExtList> extList; 
+            private java.util.List<ExtList> extList; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -4701,23 +5123,60 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Object orderDetail; 
             private Long orderId; 
             private Integer packCount; 
-            private java.util.List < java.util.Map<String, ?>> packDetails; 
-            private java.util.List < PerformanceNodeDTOS> performanceNodeDTOS; 
-            private java.util.List < PerformancePacks> performancePacks; 
+            private java.util.List<java.util.Map<String, ?>> packDetails; 
+            private java.util.List<PerformanceNodeDTOS> performanceNodeDTOS; 
+            private java.util.List<PerformancePacks> performancePacks; 
             private Integer purchasePackCode; 
             private Long serviceApplyId; 
-            private java.util.List < PerformanceOrdersServiceMonthReports> serviceMonthReports; 
-            private java.util.List < PerformanceOrdersServiceReports> serviceReports; 
-            private java.util.List < PerformanceOrdersServiceSchemes> serviceSchemes; 
+            private java.util.List<PerformanceOrdersServiceMonthReports> serviceMonthReports; 
+            private java.util.List<PerformanceOrdersServiceReports> serviceReports; 
+            private java.util.List<PerformanceOrdersServiceSchemes> serviceSchemes; 
             private Integer status; 
             private String statusStr; 
-            private java.util.List < Long > supportTime; 
-            private java.util.List < PerformanceOrdersTamEngineers> tamEngineers; 
+            private java.util.List<Long> supportTime; 
+            private java.util.List<PerformanceOrdersTamEngineers> tamEngineers; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceOrders model) {
+                this.applyFileVOList = model.applyFileVOList;
+                this.appointmentCode = model.appointmentCode;
+                this.appointmentEndTime = model.appointmentEndTime;
+                this.appointmentId = model.appointmentId;
+                this.appointmentPassTime = model.appointmentPassTime;
+                this.appointmentTime = model.appointmentTime;
+                this.commodityDesc = model.commodityDesc;
+                this.creatorEmpId = model.creatorEmpId;
+                this.cycleService = model.cycleService;
+                this.extList = model.extList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mergeSolutionAndReporterOneStep = model.mergeSolutionAndReporterOneStep;
+                this.modifierEmpId = model.modifierEmpId;
+                this.ntmCommodityCode = model.ntmCommodityCode;
+                this.orderDetail = model.orderDetail;
+                this.orderId = model.orderId;
+                this.packCount = model.packCount;
+                this.packDetails = model.packDetails;
+                this.performanceNodeDTOS = model.performanceNodeDTOS;
+                this.performancePacks = model.performancePacks;
+                this.purchasePackCode = model.purchasePackCode;
+                this.serviceApplyId = model.serviceApplyId;
+                this.serviceMonthReports = model.serviceMonthReports;
+                this.serviceReports = model.serviceReports;
+                this.serviceSchemes = model.serviceSchemes;
+                this.status = model.status;
+                this.statusStr = model.statusStr;
+                this.supportTime = model.supportTime;
+                this.tamEngineers = model.tamEngineers;
+            } 
 
             /**
              * applyFileVOList.
              */
-            public Builder applyFileVOList(java.util.List < ApplyFileVOList> applyFileVOList) {
+            public Builder applyFileVOList(java.util.List<ApplyFileVOList> applyFileVOList) {
                 this.applyFileVOList = applyFileVOList;
                 return this;
             }
@@ -4789,7 +5248,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * extList.
              */
-            public Builder extList(java.util.List < ExtList> extList) {
+            public Builder extList(java.util.List<ExtList> extList) {
                 this.extList = extList;
                 return this;
             }
@@ -4869,7 +5328,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * packDetails.
              */
-            public Builder packDetails(java.util.List < java.util.Map<String, ?>> packDetails) {
+            public Builder packDetails(java.util.List<java.util.Map<String, ?>> packDetails) {
                 this.packDetails = packDetails;
                 return this;
             }
@@ -4877,7 +5336,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performanceNodeDTOS.
              */
-            public Builder performanceNodeDTOS(java.util.List < PerformanceNodeDTOS> performanceNodeDTOS) {
+            public Builder performanceNodeDTOS(java.util.List<PerformanceNodeDTOS> performanceNodeDTOS) {
                 this.performanceNodeDTOS = performanceNodeDTOS;
                 return this;
             }
@@ -4885,7 +5344,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performancePacks.
              */
-            public Builder performancePacks(java.util.List < PerformancePacks> performancePacks) {
+            public Builder performancePacks(java.util.List<PerformancePacks> performancePacks) {
                 this.performancePacks = performancePacks;
                 return this;
             }
@@ -4909,7 +5368,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceMonthReports.
              */
-            public Builder serviceMonthReports(java.util.List < PerformanceOrdersServiceMonthReports> serviceMonthReports) {
+            public Builder serviceMonthReports(java.util.List<PerformanceOrdersServiceMonthReports> serviceMonthReports) {
                 this.serviceMonthReports = serviceMonthReports;
                 return this;
             }
@@ -4917,7 +5376,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceReports.
              */
-            public Builder serviceReports(java.util.List < PerformanceOrdersServiceReports> serviceReports) {
+            public Builder serviceReports(java.util.List<PerformanceOrdersServiceReports> serviceReports) {
                 this.serviceReports = serviceReports;
                 return this;
             }
@@ -4925,7 +5384,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceSchemes.
              */
-            public Builder serviceSchemes(java.util.List < PerformanceOrdersServiceSchemes> serviceSchemes) {
+            public Builder serviceSchemes(java.util.List<PerformanceOrdersServiceSchemes> serviceSchemes) {
                 this.serviceSchemes = serviceSchemes;
                 return this;
             }
@@ -4949,7 +5408,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * supportTime.
              */
-            public Builder supportTime(java.util.List < Long > supportTime) {
+            public Builder supportTime(java.util.List<Long> supportTime) {
                 this.supportTime = supportTime;
                 return this;
             }
@@ -4957,7 +5416,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * tamEngineers.
              */
-            public Builder tamEngineers(java.util.List < PerformanceOrdersTamEngineers> tamEngineers) {
+            public Builder tamEngineers(java.util.List<PerformanceOrdersTamEngineers> tamEngineers) {
                 this.tamEngineers = tamEngineers;
                 return this;
             }
@@ -4969,41 +5428,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ListPerformancePacksApplyFileVOList extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ListPerformancePacksApplyFileVOList(Builder builder) {
@@ -5127,6 +5592,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListPerformancePacksApplyFileVOList model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -5230,17 +5713,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ListPerformancePacksExtList extends TeaModel {
-        @NameInMap("keyCode")
+        @com.aliyun.core.annotation.NameInMap("keyCode")
         private String keyCode;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Object value;
 
-        @NameInMap("view")
+        @com.aliyun.core.annotation.NameInMap("view")
         private String view;
 
         private ListPerformancePacksExtList(Builder builder) {
@@ -5292,6 +5781,16 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Object value; 
             private String view; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListPerformancePacksExtList model) {
+                this.keyCode = model.keyCode;
+                this.name = model.name;
+                this.value = model.value;
+                this.view = model.view;
+            } 
+
             /**
              * keyCode.
              */
@@ -5331,20 +5830,26 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ListPerformancePacksPerformanceNodeDTOS extends TeaModel {
-        @NameInMap("display")
+        @com.aliyun.core.annotation.NameInMap("display")
         private Boolean display;
 
-        @NameInMap("extendInfo")
+        @com.aliyun.core.annotation.NameInMap("extendInfo")
         private Object extendInfo;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("nodeName")
+        @com.aliyun.core.annotation.NameInMap("nodeName")
         private String nodeName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private ListPerformancePacksPerformanceNodeDTOS(Builder builder) {
@@ -5405,6 +5910,17 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String nodeName; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListPerformancePacksPerformanceNodeDTOS model) {
+                this.display = model.display;
+                this.extendInfo = model.extendInfo;
+                this.index = model.index;
+                this.nodeName = model.nodeName;
+                this.status = model.status;
+            } 
+
             /**
              * display.
              */
@@ -5452,41 +5968,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksServiceMonthReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformancePacksServiceMonthReports(Builder builder) {
@@ -5610,6 +6132,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksServiceMonthReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -5713,41 +6253,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksServiceReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformancePacksServiceReports(Builder builder) {
@@ -5871,6 +6417,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksServiceReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -5974,41 +6538,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksServiceSchemes extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private PerformancePacksServiceSchemes(Builder builder) {
@@ -6132,6 +6702,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksServiceSchemes model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -6235,38 +6823,44 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class PerformancePacksTamEngineers extends TeaModel {
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("hrStatus")
+        @com.aliyun.core.annotation.NameInMap("hrStatus")
         private String hrStatus;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastName")
+        @com.aliyun.core.annotation.NameInMap("lastName")
         private String lastName;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickNameEn")
+        @com.aliyun.core.annotation.NameInMap("nickNameEn")
         private String nickNameEn;
 
-        @NameInMap("realmId")
+        @com.aliyun.core.annotation.NameInMap("realmId")
         private Long realmId;
 
-        @NameInMap("workid")
+        @com.aliyun.core.annotation.NameInMap("workid")
         private String workid;
 
         private PerformancePacksTamEngineers(Builder builder) {
@@ -6381,6 +6975,23 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Long realmId; 
             private String workid; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformancePacksTamEngineers model) {
+                this.creatorEmpId = model.creatorEmpId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.hrStatus = model.hrStatus;
+                this.id = model.id;
+                this.lastName = model.lastName;
+                this.modifierEmpId = model.modifierEmpId;
+                this.name = model.name;
+                this.nickNameEn = model.nickNameEn;
+                this.realmId = model.realmId;
+                this.workid = model.workid;
+            } 
+
             /**
              * creatorEmpId.
              */
@@ -6476,90 +7087,96 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ListPerformancePacks extends TeaModel {
-        @NameInMap("applyFileVOList")
-        private java.util.List < ListPerformancePacksApplyFileVOList> applyFileVOList;
+        @com.aliyun.core.annotation.NameInMap("applyFileVOList")
+        private java.util.List<ListPerformancePacksApplyFileVOList> applyFileVOList;
 
-        @NameInMap("appointmentCode")
+        @com.aliyun.core.annotation.NameInMap("appointmentCode")
         private String appointmentCode;
 
-        @NameInMap("appointmentEndTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentEndTime")
         private Long appointmentEndTime;
 
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("appointmentPassTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentPassTime")
         private Long appointmentPassTime;
 
-        @NameInMap("appointmentTime")
+        @com.aliyun.core.annotation.NameInMap("appointmentTime")
         private Long appointmentTime;
 
-        @NameInMap("commodityDesc")
+        @com.aliyun.core.annotation.NameInMap("commodityDesc")
         private String commodityDesc;
 
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("cycleService")
+        @com.aliyun.core.annotation.NameInMap("cycleService")
         private Boolean cycleService;
 
-        @NameInMap("extList")
-        private java.util.List < ListPerformancePacksExtList> extList;
+        @com.aliyun.core.annotation.NameInMap("extList")
+        private java.util.List<ListPerformancePacksExtList> extList;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("mergeSolutionAndReporterOneStep")
+        @com.aliyun.core.annotation.NameInMap("mergeSolutionAndReporterOneStep")
         private Boolean mergeSolutionAndReporterOneStep;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("ntmCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("ntmCommodityCode")
         private String ntmCommodityCode;
 
-        @NameInMap("orderDetail")
+        @com.aliyun.core.annotation.NameInMap("orderDetail")
         private Object orderDetail;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private Long orderId;
 
-        @NameInMap("performanceNodeDTOS")
-        private java.util.List < ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS;
+        @com.aliyun.core.annotation.NameInMap("performanceNodeDTOS")
+        private java.util.List<ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS;
 
-        @NameInMap("purchasePackCode")
+        @com.aliyun.core.annotation.NameInMap("purchasePackCode")
         private Integer purchasePackCode;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("serviceMonthReports")
-        private java.util.List < PerformancePacksServiceMonthReports> serviceMonthReports;
+        @com.aliyun.core.annotation.NameInMap("serviceMonthReports")
+        private java.util.List<PerformancePacksServiceMonthReports> serviceMonthReports;
 
-        @NameInMap("serviceReports")
-        private java.util.List < PerformancePacksServiceReports> serviceReports;
+        @com.aliyun.core.annotation.NameInMap("serviceReports")
+        private java.util.List<PerformancePacksServiceReports> serviceReports;
 
-        @NameInMap("serviceSchemes")
-        private java.util.List < PerformancePacksServiceSchemes> serviceSchemes;
+        @com.aliyun.core.annotation.NameInMap("serviceSchemes")
+        private java.util.List<PerformancePacksServiceSchemes> serviceSchemes;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("statusStr")
+        @com.aliyun.core.annotation.NameInMap("statusStr")
         private String statusStr;
 
-        @NameInMap("supportTime")
-        private java.util.List < Long > supportTime;
+        @com.aliyun.core.annotation.NameInMap("supportTime")
+        private java.util.List<Long> supportTime;
 
-        @NameInMap("tamEngineers")
-        private java.util.List < PerformancePacksTamEngineers> tamEngineers;
+        @com.aliyun.core.annotation.NameInMap("tamEngineers")
+        private java.util.List<PerformancePacksTamEngineers> tamEngineers;
 
         private ListPerformancePacks(Builder builder) {
             this.applyFileVOList = builder.applyFileVOList;
@@ -6603,7 +7220,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return applyFileVOList
          */
-        public java.util.List < ListPerformancePacksApplyFileVOList> getApplyFileVOList() {
+        public java.util.List<ListPerformancePacksApplyFileVOList> getApplyFileVOList() {
             return this.applyFileVOList;
         }
 
@@ -6666,7 +7283,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return extList
          */
-        public java.util.List < ListPerformancePacksExtList> getExtList() {
+        public java.util.List<ListPerformancePacksExtList> getExtList() {
             return this.extList;
         }
 
@@ -6729,7 +7346,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return performanceNodeDTOS
          */
-        public java.util.List < ListPerformancePacksPerformanceNodeDTOS> getPerformanceNodeDTOS() {
+        public java.util.List<ListPerformancePacksPerformanceNodeDTOS> getPerformanceNodeDTOS() {
             return this.performanceNodeDTOS;
         }
 
@@ -6750,21 +7367,21 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return serviceMonthReports
          */
-        public java.util.List < PerformancePacksServiceMonthReports> getServiceMonthReports() {
+        public java.util.List<PerformancePacksServiceMonthReports> getServiceMonthReports() {
             return this.serviceMonthReports;
         }
 
         /**
          * @return serviceReports
          */
-        public java.util.List < PerformancePacksServiceReports> getServiceReports() {
+        public java.util.List<PerformancePacksServiceReports> getServiceReports() {
             return this.serviceReports;
         }
 
         /**
          * @return serviceSchemes
          */
-        public java.util.List < PerformancePacksServiceSchemes> getServiceSchemes() {
+        public java.util.List<PerformancePacksServiceSchemes> getServiceSchemes() {
             return this.serviceSchemes;
         }
 
@@ -6785,19 +7402,19 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return supportTime
          */
-        public java.util.List < Long > getSupportTime() {
+        public java.util.List<Long> getSupportTime() {
             return this.supportTime;
         }
 
         /**
          * @return tamEngineers
          */
-        public java.util.List < PerformancePacksTamEngineers> getTamEngineers() {
+        public java.util.List<PerformancePacksTamEngineers> getTamEngineers() {
             return this.tamEngineers;
         }
 
         public static final class Builder {
-            private java.util.List < ListPerformancePacksApplyFileVOList> applyFileVOList; 
+            private java.util.List<ListPerformancePacksApplyFileVOList> applyFileVOList; 
             private String appointmentCode; 
             private Long appointmentEndTime; 
             private String appointmentId; 
@@ -6806,7 +7423,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String commodityDesc; 
             private String creatorEmpId; 
             private Boolean cycleService; 
-            private java.util.List < ListPerformancePacksExtList> extList; 
+            private java.util.List<ListPerformancePacksExtList> extList; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -6815,21 +7432,55 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String ntmCommodityCode; 
             private Object orderDetail; 
             private Long orderId; 
-            private java.util.List < ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS; 
+            private java.util.List<ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS; 
             private Integer purchasePackCode; 
             private Long serviceApplyId; 
-            private java.util.List < PerformancePacksServiceMonthReports> serviceMonthReports; 
-            private java.util.List < PerformancePacksServiceReports> serviceReports; 
-            private java.util.List < PerformancePacksServiceSchemes> serviceSchemes; 
+            private java.util.List<PerformancePacksServiceMonthReports> serviceMonthReports; 
+            private java.util.List<PerformancePacksServiceReports> serviceReports; 
+            private java.util.List<PerformancePacksServiceSchemes> serviceSchemes; 
             private Integer status; 
             private String statusStr; 
-            private java.util.List < Long > supportTime; 
-            private java.util.List < PerformancePacksTamEngineers> tamEngineers; 
+            private java.util.List<Long> supportTime; 
+            private java.util.List<PerformancePacksTamEngineers> tamEngineers; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListPerformancePacks model) {
+                this.applyFileVOList = model.applyFileVOList;
+                this.appointmentCode = model.appointmentCode;
+                this.appointmentEndTime = model.appointmentEndTime;
+                this.appointmentId = model.appointmentId;
+                this.appointmentPassTime = model.appointmentPassTime;
+                this.appointmentTime = model.appointmentTime;
+                this.commodityDesc = model.commodityDesc;
+                this.creatorEmpId = model.creatorEmpId;
+                this.cycleService = model.cycleService;
+                this.extList = model.extList;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.mergeSolutionAndReporterOneStep = model.mergeSolutionAndReporterOneStep;
+                this.modifierEmpId = model.modifierEmpId;
+                this.ntmCommodityCode = model.ntmCommodityCode;
+                this.orderDetail = model.orderDetail;
+                this.orderId = model.orderId;
+                this.performanceNodeDTOS = model.performanceNodeDTOS;
+                this.purchasePackCode = model.purchasePackCode;
+                this.serviceApplyId = model.serviceApplyId;
+                this.serviceMonthReports = model.serviceMonthReports;
+                this.serviceReports = model.serviceReports;
+                this.serviceSchemes = model.serviceSchemes;
+                this.status = model.status;
+                this.statusStr = model.statusStr;
+                this.supportTime = model.supportTime;
+                this.tamEngineers = model.tamEngineers;
+            } 
 
             /**
              * applyFileVOList.
              */
-            public Builder applyFileVOList(java.util.List < ListPerformancePacksApplyFileVOList> applyFileVOList) {
+            public Builder applyFileVOList(java.util.List<ListPerformancePacksApplyFileVOList> applyFileVOList) {
                 this.applyFileVOList = applyFileVOList;
                 return this;
             }
@@ -6901,7 +7552,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * extList.
              */
-            public Builder extList(java.util.List < ListPerformancePacksExtList> extList) {
+            public Builder extList(java.util.List<ListPerformancePacksExtList> extList) {
                 this.extList = extList;
                 return this;
             }
@@ -6973,7 +7624,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performanceNodeDTOS.
              */
-            public Builder performanceNodeDTOS(java.util.List < ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS) {
+            public Builder performanceNodeDTOS(java.util.List<ListPerformancePacksPerformanceNodeDTOS> performanceNodeDTOS) {
                 this.performanceNodeDTOS = performanceNodeDTOS;
                 return this;
             }
@@ -6997,7 +7648,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceMonthReports.
              */
-            public Builder serviceMonthReports(java.util.List < PerformancePacksServiceMonthReports> serviceMonthReports) {
+            public Builder serviceMonthReports(java.util.List<PerformancePacksServiceMonthReports> serviceMonthReports) {
                 this.serviceMonthReports = serviceMonthReports;
                 return this;
             }
@@ -7005,7 +7656,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceReports.
              */
-            public Builder serviceReports(java.util.List < PerformancePacksServiceReports> serviceReports) {
+            public Builder serviceReports(java.util.List<PerformancePacksServiceReports> serviceReports) {
                 this.serviceReports = serviceReports;
                 return this;
             }
@@ -7013,7 +7664,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceSchemes.
              */
-            public Builder serviceSchemes(java.util.List < PerformancePacksServiceSchemes> serviceSchemes) {
+            public Builder serviceSchemes(java.util.List<PerformancePacksServiceSchemes> serviceSchemes) {
                 this.serviceSchemes = serviceSchemes;
                 return this;
             }
@@ -7037,7 +7688,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * supportTime.
              */
-            public Builder supportTime(java.util.List < Long > supportTime) {
+            public Builder supportTime(java.util.List<Long> supportTime) {
                 this.supportTime = supportTime;
                 return this;
             }
@@ -7045,7 +7696,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * tamEngineers.
              */
-            public Builder tamEngineers(java.util.List < PerformancePacksTamEngineers> tamEngineers) {
+            public Builder tamEngineers(java.util.List<PerformancePacksTamEngineers> tamEngineers) {
                 this.tamEngineers = tamEngineers;
                 return this;
             }
@@ -7057,41 +7708,47 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class ListServiceReports extends TeaModel {
-        @NameInMap("appointmentId")
+        @com.aliyun.core.annotation.NameInMap("appointmentId")
         private String appointmentId;
 
-        @NameInMap("batchGroup")
+        @com.aliyun.core.annotation.NameInMap("batchGroup")
         private String batchGroup;
 
-        @NameInMap("customerId")
+        @com.aliyun.core.annotation.NameInMap("customerId")
         private String customerId;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private Integer fileType;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("remarke")
+        @com.aliyun.core.annotation.NameInMap("remarke")
         private String remarke;
 
-        @NameInMap("serviceApplyId")
+        @com.aliyun.core.annotation.NameInMap("serviceApplyId")
         private Long serviceApplyId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private ListServiceReports(Builder builder) {
@@ -7215,6 +7872,24 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer status; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListServiceReports model) {
+                this.appointmentId = model.appointmentId;
+                this.batchGroup = model.batchGroup;
+                this.customerId = model.customerId;
+                this.fileName = model.fileName;
+                this.fileType = model.fileType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.remarke = model.remarke;
+                this.serviceApplyId = model.serviceApplyId;
+                this.status = model.status;
+                this.url = model.url;
+            } 
+
             /**
              * appointmentId.
              */
@@ -7318,105 +7993,117 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("applierId")
+        @com.aliyun.core.annotation.NameInMap("applierId")
         private String applierId;
 
-        @NameInMap("applyCode")
+        @com.aliyun.core.annotation.NameInMap("applyCode")
         private String applyCode;
 
-        @NameInMap("applyComponentDetails")
-        private java.util.List < java.util.List < String > > applyComponentDetails;
+        @com.aliyun.core.annotation.NameInMap("applyComponentDetails")
+        private java.util.List<java.util.List<String>> applyComponentDetails;
 
-        @NameInMap("applyTime")
+        @com.aliyun.core.annotation.NameInMap("applyTime")
         private Long applyTime;
 
-        @NameInMap("appointments")
-        private java.util.List < Appointments> appointments;
+        @com.aliyun.core.annotation.NameInMap("appointments")
+        private java.util.List<Appointments> appointments;
 
-        @NameInMap("buyUrl")
+        @com.aliyun.core.annotation.NameInMap("buyUrl")
         private String buyUrl;
 
-        @NameInMap("creatorEmpId")
+        @com.aliyun.core.annotation.NameInMap("creatorEmpId")
         private String creatorEmpId;
 
-        @NameInMap("customerName")
+        @com.aliyun.core.annotation.NameInMap("customerName")
         private String customerName;
 
-        @NameInMap("cycleService")
+        @com.aliyun.core.annotation.NameInMap("cycleService")
         private Boolean cycleService;
 
-        @NameInMap("executedCount")
+        @com.aliyun.core.annotation.NameInMap("executedCount")
         private Long executedCount;
 
-        @NameInMap("finishCount")
+        @com.aliyun.core.annotation.NameInMap("finishCount")
         private Long finishCount;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("mergeSolutionAndReporterOneStep")
+        @com.aliyun.core.annotation.NameInMap("isOneToOneExpertServiceByTime")
+        private Boolean isOneToOneExpertServiceByTime;
+
+        @com.aliyun.core.annotation.NameInMap("mergeSolutionAndReporterOneStep")
         private Boolean mergeSolutionAndReporterOneStep;
 
-        @NameInMap("modifierEmpId")
+        @com.aliyun.core.annotation.NameInMap("modifierEmpId")
         private String modifierEmpId;
 
-        @NameInMap("packDetails")
-        private java.util.List < java.util.Map<String, ?>> packDetails;
+        @com.aliyun.core.annotation.NameInMap("packDetails")
+        private java.util.List<java.util.Map<String, ?>> packDetails;
 
-        @NameInMap("payOrders")
-        private java.util.List < PayOrders> payOrders;
+        @com.aliyun.core.annotation.NameInMap("payOrders")
+        private java.util.List<PayOrders> payOrders;
 
-        @NameInMap("payUrl")
+        @com.aliyun.core.annotation.NameInMap("payUrl")
         private String payUrl;
 
-        @NameInMap("performanceOrders")
-        private java.util.List < PerformanceOrders> performanceOrders;
+        @com.aliyun.core.annotation.NameInMap("performanceOrders")
+        private java.util.List<PerformanceOrders> performanceOrders;
 
-        @NameInMap("performancePacks")
-        private java.util.List < ListPerformancePacks> performancePacks;
+        @com.aliyun.core.annotation.NameInMap("performancePacks")
+        private java.util.List<ListPerformancePacks> performancePacks;
 
-        @NameInMap("reneWalUrl")
+        @com.aliyun.core.annotation.NameInMap("reneWalUrl")
         private String reneWalUrl;
 
-        @NameInMap("serviceCode")
+        @com.aliyun.core.annotation.NameInMap("serviceCode")
         private String serviceCode;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("serviceReports")
-        private java.util.List < ListServiceReports> serviceReports;
+        @com.aliyun.core.annotation.NameInMap("serviceReports")
+        private java.util.List<ListServiceReports> serviceReports;
 
-        @NameInMap("serviceTimeRange")
-        private java.util.List < Long > serviceTimeRange;
+        @com.aliyun.core.annotation.NameInMap("serviceTimeRange")
+        private java.util.List<Long> serviceTimeRange;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusCode")
+        @com.aliyun.core.annotation.NameInMap("statusCode")
         private Integer statusCode;
 
-        @NameInMap("statusStr")
+        @com.aliyun.core.annotation.NameInMap("statusStr")
         private String statusStr;
 
-        @NameInMap("termOfValidity")
+        @com.aliyun.core.annotation.NameInMap("termOfValidity")
         private String termOfValidity;
 
-        @NameInMap("totalPack")
+        @com.aliyun.core.annotation.NameInMap("totalPack")
         private Integer totalPack;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("usePack")
+        @com.aliyun.core.annotation.NameInMap("usePack")
         private Long usePack;
+
+        @com.aliyun.core.annotation.NameInMap("userRights")
+        private String userRights;
 
         private List(Builder builder) {
             this.applierId = builder.applierId;
@@ -7433,6 +8120,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
+            this.isOneToOneExpertServiceByTime = builder.isOneToOneExpertServiceByTime;
             this.mergeSolutionAndReporterOneStep = builder.mergeSolutionAndReporterOneStep;
             this.modifierEmpId = builder.modifierEmpId;
             this.packDetails = builder.packDetails;
@@ -7452,6 +8140,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             this.totalPack = builder.totalPack;
             this.type = builder.type;
             this.usePack = builder.usePack;
+            this.userRights = builder.userRights;
         }
 
         public static Builder builder() {
@@ -7479,7 +8168,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return applyComponentDetails
          */
-        public java.util.List < java.util.List < String > > getApplyComponentDetails() {
+        public java.util.List<java.util.List<String>> getApplyComponentDetails() {
             return this.applyComponentDetails;
         }
 
@@ -7493,7 +8182,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return appointments
          */
-        public java.util.List < Appointments> getAppointments() {
+        public java.util.List<Appointments> getAppointments() {
             return this.appointments;
         }
 
@@ -7561,6 +8250,13 @@ public class ListServiceApplyResponseBody extends TeaModel {
         }
 
         /**
+         * @return isOneToOneExpertServiceByTime
+         */
+        public Boolean getIsOneToOneExpertServiceByTime() {
+            return this.isOneToOneExpertServiceByTime;
+        }
+
+        /**
          * @return mergeSolutionAndReporterOneStep
          */
         public Boolean getMergeSolutionAndReporterOneStep() {
@@ -7577,14 +8273,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return packDetails
          */
-        public java.util.List < java.util.Map<String, ?>> getPackDetails() {
+        public java.util.List<java.util.Map<String, ?>> getPackDetails() {
             return this.packDetails;
         }
 
         /**
          * @return payOrders
          */
-        public java.util.List < PayOrders> getPayOrders() {
+        public java.util.List<PayOrders> getPayOrders() {
             return this.payOrders;
         }
 
@@ -7598,14 +8294,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return performanceOrders
          */
-        public java.util.List < PerformanceOrders> getPerformanceOrders() {
+        public java.util.List<PerformanceOrders> getPerformanceOrders() {
             return this.performanceOrders;
         }
 
         /**
          * @return performancePacks
          */
-        public java.util.List < ListPerformancePacks> getPerformancePacks() {
+        public java.util.List<ListPerformancePacks> getPerformancePacks() {
             return this.performancePacks;
         }
 
@@ -7633,14 +8329,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return serviceReports
          */
-        public java.util.List < ListServiceReports> getServiceReports() {
+        public java.util.List<ListServiceReports> getServiceReports() {
             return this.serviceReports;
         }
 
         /**
          * @return serviceTimeRange
          */
-        public java.util.List < Long > getServiceTimeRange() {
+        public java.util.List<Long> getServiceTimeRange() {
             return this.serviceTimeRange;
         }
 
@@ -7693,12 +8389,19 @@ public class ListServiceApplyResponseBody extends TeaModel {
             return this.usePack;
         }
 
+        /**
+         * @return userRights
+         */
+        public String getUserRights() {
+            return this.userRights;
+        }
+
         public static final class Builder {
             private String applierId; 
             private String applyCode; 
-            private java.util.List < java.util.List < String > > applyComponentDetails; 
+            private java.util.List<java.util.List<String>> applyComponentDetails; 
             private Long applyTime; 
-            private java.util.List < Appointments> appointments; 
+            private java.util.List<Appointments> appointments; 
             private String buyUrl; 
             private String creatorEmpId; 
             private String customerName; 
@@ -7708,18 +8411,19 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
+            private Boolean isOneToOneExpertServiceByTime; 
             private Boolean mergeSolutionAndReporterOneStep; 
             private String modifierEmpId; 
-            private java.util.List < java.util.Map<String, ?>> packDetails; 
-            private java.util.List < PayOrders> payOrders; 
+            private java.util.List<java.util.Map<String, ?>> packDetails; 
+            private java.util.List<PayOrders> payOrders; 
             private String payUrl; 
-            private java.util.List < PerformanceOrders> performanceOrders; 
-            private java.util.List < ListPerformancePacks> performancePacks; 
+            private java.util.List<PerformanceOrders> performanceOrders; 
+            private java.util.List<ListPerformancePacks> performancePacks; 
             private String reneWalUrl; 
             private String serviceCode; 
             private String serviceName; 
-            private java.util.List < ListServiceReports> serviceReports; 
-            private java.util.List < Long > serviceTimeRange; 
+            private java.util.List<ListServiceReports> serviceReports; 
+            private java.util.List<Long> serviceTimeRange; 
             private String status; 
             private Integer statusCode; 
             private String statusStr; 
@@ -7727,6 +8431,48 @@ public class ListServiceApplyResponseBody extends TeaModel {
             private Integer totalPack; 
             private String type; 
             private Long usePack; 
+            private String userRights; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.applierId = model.applierId;
+                this.applyCode = model.applyCode;
+                this.applyComponentDetails = model.applyComponentDetails;
+                this.applyTime = model.applyTime;
+                this.appointments = model.appointments;
+                this.buyUrl = model.buyUrl;
+                this.creatorEmpId = model.creatorEmpId;
+                this.customerName = model.customerName;
+                this.cycleService = model.cycleService;
+                this.executedCount = model.executedCount;
+                this.finishCount = model.finishCount;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.isOneToOneExpertServiceByTime = model.isOneToOneExpertServiceByTime;
+                this.mergeSolutionAndReporterOneStep = model.mergeSolutionAndReporterOneStep;
+                this.modifierEmpId = model.modifierEmpId;
+                this.packDetails = model.packDetails;
+                this.payOrders = model.payOrders;
+                this.payUrl = model.payUrl;
+                this.performanceOrders = model.performanceOrders;
+                this.performancePacks = model.performancePacks;
+                this.reneWalUrl = model.reneWalUrl;
+                this.serviceCode = model.serviceCode;
+                this.serviceName = model.serviceName;
+                this.serviceReports = model.serviceReports;
+                this.serviceTimeRange = model.serviceTimeRange;
+                this.status = model.status;
+                this.statusCode = model.statusCode;
+                this.statusStr = model.statusStr;
+                this.termOfValidity = model.termOfValidity;
+                this.totalPack = model.totalPack;
+                this.type = model.type;
+                this.usePack = model.usePack;
+                this.userRights = model.userRights;
+            } 
 
             /**
              * applierId.
@@ -7747,7 +8493,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * applyComponentDetails.
              */
-            public Builder applyComponentDetails(java.util.List < java.util.List < String > > applyComponentDetails) {
+            public Builder applyComponentDetails(java.util.List<java.util.List<String>> applyComponentDetails) {
                 this.applyComponentDetails = applyComponentDetails;
                 return this;
             }
@@ -7763,7 +8509,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * appointments.
              */
-            public Builder appointments(java.util.List < Appointments> appointments) {
+            public Builder appointments(java.util.List<Appointments> appointments) {
                 this.appointments = appointments;
                 return this;
             }
@@ -7841,6 +8587,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
             }
 
             /**
+             * isOneToOneExpertServiceByTime.
+             */
+            public Builder isOneToOneExpertServiceByTime(Boolean isOneToOneExpertServiceByTime) {
+                this.isOneToOneExpertServiceByTime = isOneToOneExpertServiceByTime;
+                return this;
+            }
+
+            /**
              * mergeSolutionAndReporterOneStep.
              */
             public Builder mergeSolutionAndReporterOneStep(Boolean mergeSolutionAndReporterOneStep) {
@@ -7859,7 +8613,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * packDetails.
              */
-            public Builder packDetails(java.util.List < java.util.Map<String, ?>> packDetails) {
+            public Builder packDetails(java.util.List<java.util.Map<String, ?>> packDetails) {
                 this.packDetails = packDetails;
                 return this;
             }
@@ -7867,7 +8621,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * payOrders.
              */
-            public Builder payOrders(java.util.List < PayOrders> payOrders) {
+            public Builder payOrders(java.util.List<PayOrders> payOrders) {
                 this.payOrders = payOrders;
                 return this;
             }
@@ -7883,7 +8637,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performanceOrders.
              */
-            public Builder performanceOrders(java.util.List < PerformanceOrders> performanceOrders) {
+            public Builder performanceOrders(java.util.List<PerformanceOrders> performanceOrders) {
                 this.performanceOrders = performanceOrders;
                 return this;
             }
@@ -7891,7 +8645,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * performancePacks.
              */
-            public Builder performancePacks(java.util.List < ListPerformancePacks> performancePacks) {
+            public Builder performancePacks(java.util.List<ListPerformancePacks> performancePacks) {
                 this.performancePacks = performancePacks;
                 return this;
             }
@@ -7923,7 +8677,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceReports.
              */
-            public Builder serviceReports(java.util.List < ListServiceReports> serviceReports) {
+            public Builder serviceReports(java.util.List<ListServiceReports> serviceReports) {
                 this.serviceReports = serviceReports;
                 return this;
             }
@@ -7931,7 +8685,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * serviceTimeRange.
              */
-            public Builder serviceTimeRange(java.util.List < Long > serviceTimeRange) {
+            public Builder serviceTimeRange(java.util.List<Long> serviceTimeRange) {
                 this.serviceTimeRange = serviceTimeRange;
                 return this;
             }
@@ -7992,6 +8746,14 @@ public class ListServiceApplyResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * userRights.
+             */
+            public Builder userRights(String userRights) {
+                this.userRights = userRights;
+                return this;
+            }
+
             public List build() {
                 return new List(this);
             } 
@@ -7999,20 +8761,26 @@ public class ListServiceApplyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServiceApplyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceApplyResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("extend")
+        @com.aliyun.core.annotation.NameInMap("extend")
         private Object extend;
 
-        @NameInMap("list")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("list")
+        private java.util.List<List> list;
 
-        @NameInMap("pageNum")
+        @com.aliyun.core.annotation.NameInMap("pageNum")
         private Integer pageNum;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Integer pageSize;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -8041,7 +8809,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -8068,10 +8836,21 @@ public class ListServiceApplyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Object extend; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.extend = model.extend;
+                this.list = model.list;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * extend.
@@ -8084,7 +8863,7 @@ public class ListServiceApplyResponseBody extends TeaModel {
             /**
              * list.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
