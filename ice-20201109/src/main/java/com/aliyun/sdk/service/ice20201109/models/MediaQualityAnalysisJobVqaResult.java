@@ -587,6 +587,9 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Noise")
         private Noise noise;
 
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
         @com.aliyun.core.annotation.NameInMap("Sharp")
         private Sharp sharp;
 
@@ -595,6 +598,7 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
             this.color = builder.color;
             this.detail = builder.detail;
             this.noise = builder.noise;
+            this.score = builder.score;
             this.sharp = builder.sharp;
         }
 
@@ -635,6 +639,13 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
         }
 
         /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
          * @return sharp
          */
         public Sharp getSharp() {
@@ -646,6 +657,7 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
             private Color color; 
             private Detail detail; 
             private Noise noise; 
+            private Double score; 
             private Sharp sharp; 
 
             private Builder() {
@@ -656,6 +668,7 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
                 this.color = model.color;
                 this.detail = model.detail;
                 this.noise = model.noise;
+                this.score = model.score;
                 this.sharp = model.sharp;
             } 
 
@@ -688,6 +701,14 @@ public class MediaQualityAnalysisJobVqaResult extends TeaModel {
              */
             public Builder noise(Noise noise) {
                 this.noise = noise;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
                 return this;
             }
 

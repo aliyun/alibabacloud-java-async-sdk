@@ -36,7 +36,11 @@ public class AIAgentConfig extends TeaModel {
     private String avatarUrlType;
 
     @com.aliyun.core.annotation.NameInMap("BackChannelingConfig")
+    @Deprecated
     private java.util.List<BackChannelingConfig> backChannelingConfig;
+
+    @com.aliyun.core.annotation.NameInMap("BackChannelingConfigs")
+    private java.util.List<BackChannelingConfigs> backChannelingConfigs;
 
     @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
     private Boolean enableIntelligentSegment;
@@ -97,6 +101,7 @@ public class AIAgentConfig extends TeaModel {
         this.avatarUrl = builder.avatarUrl;
         this.avatarUrlType = builder.avatarUrlType;
         this.backChannelingConfig = builder.backChannelingConfig;
+        this.backChannelingConfigs = builder.backChannelingConfigs;
         this.enableIntelligentSegment = builder.enableIntelligentSegment;
         this.enablePushToTalk = builder.enablePushToTalk;
         this.experimentalConfig = builder.experimentalConfig;
@@ -175,6 +180,13 @@ public class AIAgentConfig extends TeaModel {
      */
     public java.util.List<BackChannelingConfig> getBackChannelingConfig() {
         return this.backChannelingConfig;
+    }
+
+    /**
+     * @return backChannelingConfigs
+     */
+    public java.util.List<BackChannelingConfigs> getBackChannelingConfigs() {
+        return this.backChannelingConfigs;
     }
 
     /**
@@ -304,6 +316,7 @@ public class AIAgentConfig extends TeaModel {
         private String avatarUrl; 
         private String avatarUrlType; 
         private java.util.List<BackChannelingConfig> backChannelingConfig; 
+        private java.util.List<BackChannelingConfigs> backChannelingConfigs; 
         private Boolean enableIntelligentSegment; 
         private Boolean enablePushToTalk; 
         private String experimentalConfig; 
@@ -333,6 +346,7 @@ public class AIAgentConfig extends TeaModel {
             this.avatarUrl = model.avatarUrl;
             this.avatarUrlType = model.avatarUrlType;
             this.backChannelingConfig = model.backChannelingConfig;
+            this.backChannelingConfigs = model.backChannelingConfigs;
             this.enableIntelligentSegment = model.enableIntelligentSegment;
             this.enablePushToTalk = model.enablePushToTalk;
             this.experimentalConfig = model.experimentalConfig;
@@ -405,6 +419,14 @@ public class AIAgentConfig extends TeaModel {
          */
         public Builder backChannelingConfig(java.util.List<BackChannelingConfig> backChannelingConfig) {
             this.backChannelingConfig = backChannelingConfig;
+            return this;
+        }
+
+        /**
+         * BackChannelingConfigs.
+         */
+        public Builder backChannelingConfigs(java.util.List<BackChannelingConfigs> backChannelingConfigs) {
+            this.backChannelingConfigs = backChannelingConfigs;
             return this;
         }
 
@@ -1421,6 +1443,198 @@ public class AIAgentConfig extends TeaModel {
 
             public BackChannelingConfig build() {
                 return new BackChannelingConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class BackChannelingConfigsWords extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private BackChannelingConfigsWords(Builder builder) {
+            this.probability = builder.probability;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelingConfigsWords create() {
+            return builder().build();
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Double probability; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelingConfigsWords model) {
+                this.probability = model.probability;
+                this.text = model.text;
+            } 
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public BackChannelingConfigsWords build() {
+                return new BackChannelingConfigsWords(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AIAgentConfig} extends {@link TeaModel}
+     *
+     * <p>AIAgentConfig</p>
+     */
+    public static class BackChannelingConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("Probability")
+        private Double probability;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerStage")
+        private String triggerStage;
+
+        @com.aliyun.core.annotation.NameInMap("Words")
+        private java.util.List<BackChannelingConfigsWords> words;
+
+        private BackChannelingConfigs(Builder builder) {
+            this.enabled = builder.enabled;
+            this.probability = builder.probability;
+            this.triggerStage = builder.triggerStage;
+            this.words = builder.words;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackChannelingConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return probability
+         */
+        public Double getProbability() {
+            return this.probability;
+        }
+
+        /**
+         * @return triggerStage
+         */
+        public String getTriggerStage() {
+            return this.triggerStage;
+        }
+
+        /**
+         * @return words
+         */
+        public java.util.List<BackChannelingConfigsWords> getWords() {
+            return this.words;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private Double probability; 
+            private String triggerStage; 
+            private java.util.List<BackChannelingConfigsWords> words; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackChannelingConfigs model) {
+                this.enabled = model.enabled;
+                this.probability = model.probability;
+                this.triggerStage = model.triggerStage;
+                this.words = model.words;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * Probability.
+             */
+            public Builder probability(Double probability) {
+                this.probability = probability;
+                return this;
+            }
+
+            /**
+             * TriggerStage.
+             */
+            public Builder triggerStage(String triggerStage) {
+                this.triggerStage = triggerStage;
+                return this;
+            }
+
+            /**
+             * Words.
+             */
+            public Builder words(java.util.List<BackChannelingConfigsWords> words) {
+                this.words = words;
+                return this;
+            }
+
+            public BackChannelingConfigs build() {
+                return new BackChannelingConfigs(this);
             } 
 
         } 
@@ -2840,6 +3054,9 @@ public class AIAgentConfig extends TeaModel {
      * <p>AIAgentConfig</p>
      */
     public static class VoiceprintConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegistrationMode")
+        private String registrationMode;
+
         @com.aliyun.core.annotation.NameInMap("UseVoiceprint")
         private Boolean useVoiceprint;
 
@@ -2847,6 +3064,7 @@ public class AIAgentConfig extends TeaModel {
         private String voiceprintId;
 
         private VoiceprintConfig(Builder builder) {
+            this.registrationMode = builder.registrationMode;
             this.useVoiceprint = builder.useVoiceprint;
             this.voiceprintId = builder.voiceprintId;
         }
@@ -2857,6 +3075,13 @@ public class AIAgentConfig extends TeaModel {
 
         public static VoiceprintConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return registrationMode
+         */
+        public String getRegistrationMode() {
+            return this.registrationMode;
         }
 
         /**
@@ -2874,6 +3099,7 @@ public class AIAgentConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String registrationMode; 
             private Boolean useVoiceprint; 
             private String voiceprintId; 
 
@@ -2881,9 +3107,18 @@ public class AIAgentConfig extends TeaModel {
             } 
 
             private Builder(VoiceprintConfig model) {
+                this.registrationMode = model.registrationMode;
                 this.useVoiceprint = model.useVoiceprint;
                 this.voiceprintId = model.voiceprintId;
             } 
+
+            /**
+             * RegistrationMode.
+             */
+            public Builder registrationMode(String registrationMode) {
+                this.registrationMode = registrationMode;
+                return this;
+            }
 
             /**
              * UseVoiceprint.

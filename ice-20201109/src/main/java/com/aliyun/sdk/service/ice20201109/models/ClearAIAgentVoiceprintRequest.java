@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ClearAIAgentVoiceprintRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrationMode")
+    private String registrationMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VoiceprintId")
     private String voiceprintId;
 
     private ClearAIAgentVoiceprintRequest(Builder builder) {
         super(builder);
+        this.registrationMode = builder.registrationMode;
         this.voiceprintId = builder.voiceprintId;
     }
 
@@ -40,6 +45,13 @@ public class ClearAIAgentVoiceprintRequest extends Request {
     }
 
     /**
+     * @return registrationMode
+     */
+    public String getRegistrationMode() {
+        return this.registrationMode;
+    }
+
+    /**
      * @return voiceprintId
      */
     public String getVoiceprintId() {
@@ -47,6 +59,7 @@ public class ClearAIAgentVoiceprintRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ClearAIAgentVoiceprintRequest, Builder> {
+        private String registrationMode; 
         private String voiceprintId; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class ClearAIAgentVoiceprintRequest extends Request {
 
         private Builder(ClearAIAgentVoiceprintRequest request) {
             super(request);
+            this.registrationMode = request.registrationMode;
             this.voiceprintId = request.voiceprintId;
         } 
+
+        /**
+         * RegistrationMode.
+         */
+        public Builder registrationMode(String registrationMode) {
+            this.putQueryParameter("RegistrationMode", registrationMode);
+            this.registrationMode = registrationMode;
+            return this;
+        }
 
         /**
          * <p>The unique identifier for the voiceprint.</p>

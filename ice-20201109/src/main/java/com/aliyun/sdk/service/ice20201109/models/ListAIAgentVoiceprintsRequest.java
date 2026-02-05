@@ -26,6 +26,10 @@ public class ListAIAgentVoiceprintsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrationMode")
+    private String registrationMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VoiceprintId")
     private String voiceprintId;
 
@@ -33,6 +37,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.registrationMode = builder.registrationMode;
         this.voiceprintId = builder.voiceprintId;
     }
 
@@ -64,6 +69,13 @@ public class ListAIAgentVoiceprintsRequest extends Request {
     }
 
     /**
+     * @return registrationMode
+     */
+    public String getRegistrationMode() {
+        return this.registrationMode;
+    }
+
+    /**
      * @return voiceprintId
      */
     public String getVoiceprintId() {
@@ -73,6 +85,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
     public static final class Builder extends Request.Builder<ListAIAgentVoiceprintsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String registrationMode; 
         private String voiceprintId; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class ListAIAgentVoiceprintsRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.registrationMode = request.registrationMode;
             this.voiceprintId = request.voiceprintId;
         } 
 
@@ -107,6 +121,15 @@ public class ListAIAgentVoiceprintsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegistrationMode.
+         */
+        public Builder registrationMode(String registrationMode) {
+            this.putQueryParameter("RegistrationMode", registrationMode);
+            this.registrationMode = registrationMode;
             return this;
         }
 
