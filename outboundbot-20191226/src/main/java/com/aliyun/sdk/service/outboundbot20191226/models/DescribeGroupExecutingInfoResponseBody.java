@@ -422,6 +422,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
      * <p>DescribeGroupExecutingInfoResponseBody</p>
      */
     public static class ExecutingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvgTalkTime")
+        private Integer avgTalkTime;
+
         @com.aliyun.core.annotation.NameInMap("CallFailedNum")
         private Integer callFailedNum;
 
@@ -430,6 +433,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
+
+        @com.aliyun.core.annotation.NameInMap("DurationDistribution")
+        private String durationDistribution;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -449,6 +455,9 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
+        @com.aliyun.core.annotation.NameInMap("TalkTurnsDistribution")
+        private String talkTurnsDistribution;
+
         @com.aliyun.core.annotation.NameInMap("TransferByIntentNum")
         private Integer transferByIntentNum;
 
@@ -456,15 +465,18 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         private Integer transferByNoAnswer;
 
         private ExecutingInfo(Builder builder) {
+            this.avgTalkTime = builder.avgTalkTime;
             this.callFailedNum = builder.callFailedNum;
             this.callNum = builder.callNum;
             this.creatorName = builder.creatorName;
+            this.durationDistribution = builder.durationDistribution;
             this.endTime = builder.endTime;
             this.finishedNum = builder.finishedNum;
             this.hangUpByClientNum = builder.hangUpByClientNum;
             this.jobsProgress = builder.jobsProgress;
             this.noInteractionNum = builder.noInteractionNum;
             this.startTime = builder.startTime;
+            this.talkTurnsDistribution = builder.talkTurnsDistribution;
             this.transferByIntentNum = builder.transferByIntentNum;
             this.transferByNoAnswer = builder.transferByNoAnswer;
         }
@@ -475,6 +487,13 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
 
         public static ExecutingInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return avgTalkTime
+         */
+        public Integer getAvgTalkTime() {
+            return this.avgTalkTime;
         }
 
         /**
@@ -496,6 +515,13 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
          */
         public String getCreatorName() {
             return this.creatorName;
+        }
+
+        /**
+         * @return durationDistribution
+         */
+        public String getDurationDistribution() {
+            return this.durationDistribution;
         }
 
         /**
@@ -541,6 +567,13 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return talkTurnsDistribution
+         */
+        public String getTalkTurnsDistribution() {
+            return this.talkTurnsDistribution;
+        }
+
+        /**
          * @return transferByIntentNum
          */
         public Integer getTransferByIntentNum() {
@@ -555,15 +588,18 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer avgTalkTime; 
             private Integer callFailedNum; 
             private Integer callNum; 
             private String creatorName; 
+            private String durationDistribution; 
             private Long endTime; 
             private Integer finishedNum; 
             private Integer hangUpByClientNum; 
             private JobsProgress jobsProgress; 
             private Integer noInteractionNum; 
             private Long startTime; 
+            private String talkTurnsDistribution; 
             private Integer transferByIntentNum; 
             private Integer transferByNoAnswer; 
 
@@ -571,18 +607,29 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
             } 
 
             private Builder(ExecutingInfo model) {
+                this.avgTalkTime = model.avgTalkTime;
                 this.callFailedNum = model.callFailedNum;
                 this.callNum = model.callNum;
                 this.creatorName = model.creatorName;
+                this.durationDistribution = model.durationDistribution;
                 this.endTime = model.endTime;
                 this.finishedNum = model.finishedNum;
                 this.hangUpByClientNum = model.hangUpByClientNum;
                 this.jobsProgress = model.jobsProgress;
                 this.noInteractionNum = model.noInteractionNum;
                 this.startTime = model.startTime;
+                this.talkTurnsDistribution = model.talkTurnsDistribution;
                 this.transferByIntentNum = model.transferByIntentNum;
                 this.transferByNoAnswer = model.transferByNoAnswer;
             } 
+
+            /**
+             * AvgTalkTime.
+             */
+            public Builder avgTalkTime(Integer avgTalkTime) {
+                this.avgTalkTime = avgTalkTime;
+                return this;
+            }
 
             /**
              * CallFailedNum.
@@ -605,6 +652,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
+                return this;
+            }
+
+            /**
+             * DurationDistribution.
+             */
+            public Builder durationDistribution(String durationDistribution) {
+                this.durationDistribution = durationDistribution;
                 return this;
             }
 
@@ -653,6 +708,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TalkTurnsDistribution.
+             */
+            public Builder talkTurnsDistribution(String talkTurnsDistribution) {
+                this.talkTurnsDistribution = talkTurnsDistribution;
                 return this;
             }
 

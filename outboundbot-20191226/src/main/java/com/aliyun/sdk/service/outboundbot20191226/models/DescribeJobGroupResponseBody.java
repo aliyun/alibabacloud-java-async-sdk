@@ -1544,6 +1544,9 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
+        @com.aliyun.core.annotation.NameInMap("ScriptNluEngine")
+        private String scriptNluEngine;
+
         @com.aliyun.core.annotation.NameInMap("ScriptVersion")
         private String scriptVersion;
 
@@ -1574,6 +1577,7 @@ public class DescribeJobGroupResponseBody extends TeaModel {
             this.scenarioId = builder.scenarioId;
             this.scriptId = builder.scriptId;
             this.scriptName = builder.scriptName;
+            this.scriptNluEngine = builder.scriptNluEngine;
             this.scriptVersion = builder.scriptVersion;
             this.status = builder.status;
             this.strategy = builder.strategy;
@@ -1728,6 +1732,13 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return scriptNluEngine
+         */
+        public String getScriptNluEngine() {
+            return this.scriptNluEngine;
+        }
+
+        /**
          * @return scriptVersion
          */
         public String getScriptVersion() {
@@ -1769,6 +1780,7 @@ public class DescribeJobGroupResponseBody extends TeaModel {
             private String scenarioId; 
             private String scriptId; 
             private String scriptName; 
+            private String scriptNluEngine; 
             private String scriptVersion; 
             private String status; 
             private Strategy strategy; 
@@ -1797,6 +1809,7 @@ public class DescribeJobGroupResponseBody extends TeaModel {
                 this.scenarioId = model.scenarioId;
                 this.scriptId = model.scriptId;
                 this.scriptName = model.scriptName;
+                this.scriptNluEngine = model.scriptNluEngine;
                 this.scriptVersion = model.scriptVersion;
                 this.status = model.status;
                 this.strategy = model.strategy;
@@ -1959,6 +1972,14 @@ public class DescribeJobGroupResponseBody extends TeaModel {
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
+                return this;
+            }
+
+            /**
+             * ScriptNluEngine.
+             */
+            public Builder scriptNluEngine(String scriptNluEngine) {
+                this.scriptNluEngine = scriptNluEngine;
                 return this;
             }
 
