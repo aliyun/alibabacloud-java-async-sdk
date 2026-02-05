@@ -26,7 +26,12 @@ public class CreateSandboxInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sandboxId")
     private String sandboxId;
 
+    @com.aliyun.core.annotation.NameInMap("sandboxIdleTimeoutInSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 21600)
+    private Integer sandboxIdleTimeoutInSeconds;
+
     @com.aliyun.core.annotation.NameInMap("sandboxIdleTimeoutSeconds")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
     private Integer sandboxIdleTimeoutSeconds;
 
@@ -38,6 +43,7 @@ public class CreateSandboxInput extends TeaModel {
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
         this.sandboxId = builder.sandboxId;
+        this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
         this.sandboxIdleTimeoutSeconds = builder.sandboxIdleTimeoutSeconds;
         this.templateName = builder.templateName;
     }
@@ -76,6 +82,13 @@ public class CreateSandboxInput extends TeaModel {
     }
 
     /**
+     * @return sandboxIdleTimeoutInSeconds
+     */
+    public Integer getSandboxIdleTimeoutInSeconds() {
+        return this.sandboxIdleTimeoutInSeconds;
+    }
+
+    /**
      * @return sandboxIdleTimeoutSeconds
      */
     public Integer getSandboxIdleTimeoutSeconds() {
@@ -93,6 +106,7 @@ public class CreateSandboxInput extends TeaModel {
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
         private String sandboxId; 
+        private Integer sandboxIdleTimeoutInSeconds; 
         private Integer sandboxIdleTimeoutSeconds; 
         private String templateName; 
 
@@ -103,6 +117,7 @@ public class CreateSandboxInput extends TeaModel {
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
             this.sandboxId = model.sandboxId;
+            this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
             this.sandboxIdleTimeoutSeconds = model.sandboxIdleTimeoutSeconds;
             this.templateName = model.templateName;
         } 
@@ -128,6 +143,14 @@ public class CreateSandboxInput extends TeaModel {
          */
         public Builder sandboxId(String sandboxId) {
             this.sandboxId = sandboxId;
+            return this;
+        }
+
+        /**
+         * sandboxIdleTimeoutInSeconds.
+         */
+        public Builder sandboxIdleTimeoutInSeconds(Integer sandboxIdleTimeoutInSeconds) {
+            this.sandboxIdleTimeoutInSeconds = sandboxIdleTimeoutInSeconds;
             return this;
         }
 
