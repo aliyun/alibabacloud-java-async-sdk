@@ -39,6 +39,7 @@ public class DescribeRCImageListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query

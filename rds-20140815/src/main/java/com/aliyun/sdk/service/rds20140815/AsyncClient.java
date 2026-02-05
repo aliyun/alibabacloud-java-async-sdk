@@ -1410,6 +1410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeActionEventPolicyResponse> describeActionEventPolicy(DescribeActionEventPolicyRequest request);
 
     /**
+     * @param request the request parameters of DescribeActiveOperationMaintainConf  DescribeActiveOperationMaintainConfRequest
+     * @return DescribeActiveOperationMaintainConfResponse
+     */
+    CompletableFuture<DescribeActiveOperationMaintainConfResponse> describeActiveOperationMaintainConf(DescribeActiveOperationMaintainConfRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -3143,6 +3149,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSQLLogReportListResponse
      */
     CompletableFuture<DescribeSQLLogReportListResponse> describeSQLLogReportList(DescribeSQLLogReportListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSQLServerUpgradeVersions  DescribeSQLServerUpgradeVersionsRequest
+     * @return DescribeSQLServerUpgradeVersionsResponse
+     */
+    CompletableFuture<DescribeSQLServerUpgradeVersionsResponse> describeSQLServerUpgradeVersions(DescribeSQLServerUpgradeVersionsRequest request);
 
     /**
      * <b>description</b> :
