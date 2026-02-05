@@ -74,6 +74,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WindowDisplayMode")
     private String windowDisplayMode;
 
+    @com.aliyun.core.annotation.NameInMap("WyId")
+    private String wyId;
+
     private GetLoginTokenResponseBody(Builder builder) {
         this.email = builder.email;
         this.endUserId = builder.endUserId;
@@ -94,6 +97,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.sessionId = builder.sessionId;
         this.tenantId = builder.tenantId;
         this.windowDisplayMode = builder.windowDisplayMode;
+        this.wyId = builder.wyId;
     }
 
     public static Builder builder() {
@@ -241,6 +245,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
         return this.windowDisplayMode;
     }
 
+    /**
+     * @return wyId
+     */
+    public String getWyId() {
+        return this.wyId;
+    }
+
     public static final class Builder {
         private String email; 
         private String endUserId; 
@@ -261,6 +272,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String sessionId; 
         private Long tenantId; 
         private String windowDisplayMode; 
+        private String wyId; 
 
         private Builder() {
         } 
@@ -285,6 +297,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             this.sessionId = model.sessionId;
             this.tenantId = model.tenantId;
             this.windowDisplayMode = model.windowDisplayMode;
+            this.wyId = model.wyId;
         } 
 
         /**
@@ -507,6 +520,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder windowDisplayMode(String windowDisplayMode) {
             this.windowDisplayMode = windowDisplayMode;
+            return this;
+        }
+
+        /**
+         * WyId.
+         */
+        public Builder wyId(String wyId) {
+            this.wyId = wyId;
             return this;
         }
 
