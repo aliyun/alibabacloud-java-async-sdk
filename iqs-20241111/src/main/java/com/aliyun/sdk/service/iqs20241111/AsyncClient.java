@@ -52,6 +52,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GlobalSearchResponse> globalSearch(GlobalSearchRequest request);
 
     /**
+     * @param request the request parameters of MultimodalSearch  MultimodalSearchRequest
+     * @return MultimodalSearchResponse
+     */
+    CompletableFuture<MultimodalSearchResponse> multimodalSearch(MultimodalSearchRequest request);
+
+    /**
      * @param request the request parameters of ReadPageBasic  ReadPageBasicRequest
      * @return ReadPageBasicResponse
      */
