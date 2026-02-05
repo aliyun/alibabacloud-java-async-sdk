@@ -397,6 +397,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SccMode")
         private String sccMode;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
+        private String serviceName;
+
         private Items(Builder builder) {
             this.addressItems = builder.addressItems;
             this.autoAddNewNodes = builder.autoAddNewNodes;
@@ -411,6 +414,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
             this.readWriteMode = builder.readWriteMode;
             this.sccMode = builder.sccMode;
+            this.serviceName = builder.serviceName;
         }
 
         public static Builder builder() {
@@ -512,6 +516,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             return this.sccMode;
         }
 
+        /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
         public static final class Builder {
             private java.util.List<AddressItems> addressItems; 
             private String autoAddNewNodes; 
@@ -526,6 +537,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String polarSccWaitTimeout; 
             private String readWriteMode; 
             private String sccMode; 
+            private String serviceName; 
 
             private Builder() {
             } 
@@ -544,6 +556,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
                 this.polarSccWaitTimeout = model.polarSccWaitTimeout;
                 this.readWriteMode = model.readWriteMode;
                 this.sccMode = model.sccMode;
+                this.serviceName = model.serviceName;
             } 
 
             /**
@@ -730,6 +743,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder sccMode(String sccMode) {
                 this.sccMode = sccMode;
+                return this;
+            }
+
+            /**
+             * ServiceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 
