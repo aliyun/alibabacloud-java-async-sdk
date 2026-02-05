@@ -26,6 +26,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
+    @com.aliyun.core.annotation.NameInMap("EipId")
+    private String eipId;
+
     @com.aliyun.core.annotation.NameInMap("EipStatus")
     private String eipStatus;
 
@@ -37,6 +40,12 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
+
+    @com.aliyun.core.annotation.NameInMap("NatCreatedBy")
+    private String natCreatedBy;
+
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    private String natGatewayId;
 
     @com.aliyun.core.annotation.NameInMap("NatStatus")
     private String natStatus;
@@ -66,10 +75,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         this.appName = builder.appName;
         this.appType = builder.appType;
         this.DBInstanceName = builder.DBInstanceName;
+        this.eipId = builder.eipId;
         this.eipStatus = builder.eipStatus;
         this.instanceClass = builder.instanceClass;
         this.instanceMinorVersion = builder.instanceMinorVersion;
         this.instanceName = builder.instanceName;
+        this.natCreatedBy = builder.natCreatedBy;
+        this.natGatewayId = builder.natGatewayId;
         this.natStatus = builder.natStatus;
         this.publicConnectionString = builder.publicConnectionString;
         this.regionId = builder.regionId;
@@ -114,6 +126,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return eipId
+     */
+    public String getEipId() {
+        return this.eipId;
+    }
+
+    /**
      * @return eipStatus
      */
     public String getEipStatus() {
@@ -139,6 +158,20 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return natCreatedBy
+     */
+    public String getNatCreatedBy() {
+        return this.natCreatedBy;
+    }
+
+    /**
+     * @return natGatewayId
+     */
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     /**
@@ -201,10 +234,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         private String appName; 
         private String appType; 
         private String DBInstanceName; 
+        private String eipId; 
         private String eipStatus; 
         private String instanceClass; 
         private String instanceMinorVersion; 
         private String instanceName; 
+        private String natCreatedBy; 
+        private String natGatewayId; 
         private String natStatus; 
         private String publicConnectionString; 
         private String regionId; 
@@ -221,10 +257,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             this.appName = model.appName;
             this.appType = model.appType;
             this.DBInstanceName = model.DBInstanceName;
+            this.eipId = model.eipId;
             this.eipStatus = model.eipStatus;
             this.instanceClass = model.instanceClass;
             this.instanceMinorVersion = model.instanceMinorVersion;
             this.instanceName = model.instanceName;
+            this.natCreatedBy = model.natCreatedBy;
+            this.natGatewayId = model.natGatewayId;
             this.natStatus = model.natStatus;
             this.publicConnectionString = model.publicConnectionString;
             this.regionId = model.regionId;
@@ -269,6 +308,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * EipId.
+         */
+        public Builder eipId(String eipId) {
+            this.eipId = eipId;
+            return this;
+        }
+
+        /**
          * EipStatus.
          */
         public Builder eipStatus(String eipStatus) {
@@ -306,6 +353,22 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * NatCreatedBy.
+         */
+        public Builder natCreatedBy(String natCreatedBy) {
+            this.natCreatedBy = natCreatedBy;
+            return this;
+        }
+
+        /**
+         * NatGatewayId.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
             return this;
         }
 

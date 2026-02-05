@@ -55,6 +55,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
+     * @return CreateScheduledTaskResponse
+     */
+    CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
@@ -75,6 +87,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomAgentResponse
      */
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
+     * @return DeleteScheduledTaskResponse
+     */
+    CompletableFuture<DeleteScheduledTaskResponse> deleteScheduledTask(DeleteScheduledTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -188,10 +206,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCustomAgentResponse> getCustomAgent(GetCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of GetInspectionReport  GetInspectionReportRequest
+     * @return GetInspectionReportResponse
+     */
+    CompletableFuture<GetInspectionReportResponse> getInspectionReport(GetInspectionReportRequest request);
+
+    /**
      * @param request the request parameters of GetMessages  GetMessagesRequest
      * @return GetMessagesResponse
      */
     CompletableFuture<GetMessagesResponse> getMessages(GetMessagesRequest request);
+
+    /**
+     * @param request the request parameters of GetScheduledInstances  GetScheduledInstancesRequest
+     * @return GetScheduledInstancesResponse
+     */
+    CompletableFuture<GetScheduledInstancesResponse> getScheduledInstances(GetScheduledInstancesRequest request);
+
+    /**
+     * @param request the request parameters of GetScheduledReports  GetScheduledReportsRequest
+     * @return GetScheduledReportsResponse
+     */
+    CompletableFuture<GetScheduledReportsResponse> getScheduledReports(GetScheduledReportsRequest request);
+
+    /**
+     * @param request the request parameters of GetStandAloneReports  GetStandAloneReportsRequest
+     * @return GetStandAloneReportsResponse
+     */
+    CompletableFuture<GetStandAloneReportsResponse> getStandAloneReports(GetStandAloneReportsRequest request);
 
     /**
      * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
@@ -204,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomAgentToolsResponse
      */
     CompletableFuture<ListCustomAgentToolsResponse> listCustomAgentTools(ListCustomAgentToolsRequest request);
+
+    /**
+     * @param request the request parameters of ListScheduledTasks  ListScheduledTasksRequest
+     * @return ListScheduledTasksResponse
+     */
+    CompletableFuture<ListScheduledTasksResponse> listScheduledTasks(ListScheduledTasksRequest request);
 
     /**
      * <b>description</b> :
@@ -285,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyMessagesFeedbacksResponse
      */
     CompletableFuture<ModifyMessagesFeedbacksResponse> modifyMessagesFeedbacks(ModifyMessagesFeedbacksRequest request);
+
+    /**
+     * @param request the request parameters of ModifyScheduledTask  ModifyScheduledTaskRequest
+     * @return ModifyScheduledTaskResponse
+     */
+    CompletableFuture<ModifyScheduledTaskResponse> modifyScheduledTask(ModifyScheduledTaskRequest request);
 
     /**
      * <b>description</b> :
