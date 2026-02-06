@@ -27,6 +27,10 @@ public class CreateFlowRequest extends Request {
     private String custSpaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointUri")
+    private String endpointUri;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
@@ -47,6 +51,7 @@ public class CreateFlowRequest extends Request {
         super(builder);
         this.categories = builder.categories;
         this.custSpaceId = builder.custSpaceId;
+        this.endpointUri = builder.endpointUri;
         this.flowName = builder.flowName;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -81,6 +86,13 @@ public class CreateFlowRequest extends Request {
     }
 
     /**
+     * @return endpointUri
+     */
+    public String getEndpointUri() {
+        return this.endpointUri;
+    }
+
+    /**
      * @return flowName
      */
     public String getFlowName() {
@@ -111,6 +123,7 @@ public class CreateFlowRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFlowRequest, Builder> {
         private java.util.List<String> categories; 
         private String custSpaceId; 
+        private String endpointUri; 
         private String flowName; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -124,6 +137,7 @@ public class CreateFlowRequest extends Request {
             super(request);
             this.categories = request.categories;
             this.custSpaceId = request.custSpaceId;
+            this.endpointUri = request.endpointUri;
             this.flowName = request.flowName;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -146,6 +160,15 @@ public class CreateFlowRequest extends Request {
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
+            return this;
+        }
+
+        /**
+         * EndpointUri.
+         */
+        public Builder endpointUri(String endpointUri) {
+            this.putQueryParameter("EndpointUri", endpointUri);
+            this.endpointUri = endpointUri;
             return this;
         }
 

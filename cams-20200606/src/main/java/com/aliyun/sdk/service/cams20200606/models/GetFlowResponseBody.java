@@ -173,6 +173,9 @@ public class GetFlowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataApiVersion")
         private String dataApiVersion;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointUri")
+        private String endpointUri;
+
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
@@ -194,6 +197,7 @@ public class GetFlowResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.categories = builder.categories;
             this.dataApiVersion = builder.dataApiVersion;
+            this.endpointUri = builder.endpointUri;
             this.flowId = builder.flowId;
             this.flowName = builder.flowName;
             this.JSONVersion = builder.JSONVersion;
@@ -222,6 +226,13 @@ public class GetFlowResponseBody extends TeaModel {
          */
         public String getDataApiVersion() {
             return this.dataApiVersion;
+        }
+
+        /**
+         * @return endpointUri
+         */
+        public String getEndpointUri() {
+            return this.endpointUri;
         }
 
         /**
@@ -269,6 +280,7 @@ public class GetFlowResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> categories; 
             private String dataApiVersion; 
+            private String endpointUri; 
             private String flowId; 
             private String flowName; 
             private String JSONVersion; 
@@ -282,6 +294,7 @@ public class GetFlowResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.categories = model.categories;
                 this.dataApiVersion = model.dataApiVersion;
+                this.endpointUri = model.endpointUri;
                 this.flowId = model.flowId;
                 this.flowName = model.flowName;
                 this.JSONVersion = model.JSONVersion;
@@ -306,6 +319,14 @@ public class GetFlowResponseBody extends TeaModel {
              */
             public Builder dataApiVersion(String dataApiVersion) {
                 this.dataApiVersion = dataApiVersion;
+                return this;
+            }
+
+            /**
+             * EndpointUri.
+             */
+            public Builder endpointUri(String endpointUri) {
+                this.endpointUri = endpointUri;
                 return this;
             }
 

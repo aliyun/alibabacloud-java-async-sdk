@@ -170,6 +170,9 @@ public class ModifyFlowResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List<String> categories;
 
+        @com.aliyun.core.annotation.NameInMap("EndpointUri")
+        private String endpointUri;
+
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
@@ -178,6 +181,7 @@ public class ModifyFlowResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.categories = builder.categories;
+            this.endpointUri = builder.endpointUri;
             this.flowId = builder.flowId;
             this.flowName = builder.flowName;
         }
@@ -198,6 +202,13 @@ public class ModifyFlowResponseBody extends TeaModel {
         }
 
         /**
+         * @return endpointUri
+         */
+        public String getEndpointUri() {
+            return this.endpointUri;
+        }
+
+        /**
          * @return flowId
          */
         public String getFlowId() {
@@ -213,6 +224,7 @@ public class ModifyFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> categories; 
+            private String endpointUri; 
             private String flowId; 
             private String flowName; 
 
@@ -221,6 +233,7 @@ public class ModifyFlowResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.categories = model.categories;
+                this.endpointUri = model.endpointUri;
                 this.flowId = model.flowId;
                 this.flowName = model.flowName;
             } 
@@ -230,6 +243,14 @@ public class ModifyFlowResponseBody extends TeaModel {
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
+                return this;
+            }
+
+            /**
+             * EndpointUri.
+             */
+            public Builder endpointUri(String endpointUri) {
+                this.endpointUri = endpointUri;
                 return this;
             }
 
