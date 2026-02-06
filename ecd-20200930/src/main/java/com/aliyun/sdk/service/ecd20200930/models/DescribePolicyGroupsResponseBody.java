@@ -1427,6 +1427,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientCreateSnapshot")
         private String clientCreateSnapshot;
 
+        @com.aliyun.core.annotation.NameInMap("ClientHibernate")
+        private String clientHibernate;
+
+        @com.aliyun.core.annotation.NameInMap("ClientRestart")
+        private String clientRestart;
+
+        @com.aliyun.core.annotation.NameInMap("ClientShutdown")
+        private String clientShutdown;
+
         @com.aliyun.core.annotation.NameInMap("ClientTypes")
         private java.util.List<ClientTypes> clientTypes;
 
@@ -1522,6 +1531,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("HoverConfigMsg")
         private String hoverConfigMsg;
+
+        @com.aliyun.core.annotation.NameInMap("HoverHibernate")
+        private String hoverHibernate;
+
+        @com.aliyun.core.annotation.NameInMap("HoverRestart")
+        private String hoverRestart;
+
+        @com.aliyun.core.annotation.NameInMap("HoverShutdown")
+        private String hoverShutdown;
 
         @com.aliyun.core.annotation.NameInMap("Html5Access")
         private String html5Access;
@@ -1800,6 +1818,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
             this.clientCreateSnapshot = builder.clientCreateSnapshot;
+            this.clientHibernate = builder.clientHibernate;
+            this.clientRestart = builder.clientRestart;
+            this.clientShutdown = builder.clientShutdown;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.colorEnhancement = builder.colorEnhancement;
@@ -1832,6 +1853,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.hoverConfigMsg = builder.hoverConfigMsg;
+            this.hoverHibernate = builder.hoverHibernate;
+            this.hoverRestart = builder.hoverRestart;
+            this.hoverShutdown = builder.hoverShutdown;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
@@ -1992,6 +2016,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getClientCreateSnapshot() {
             return this.clientCreateSnapshot;
+        }
+
+        /**
+         * @return clientHibernate
+         */
+        public String getClientHibernate() {
+            return this.clientHibernate;
+        }
+
+        /**
+         * @return clientRestart
+         */
+        public String getClientRestart() {
+            return this.clientRestart;
+        }
+
+        /**
+         * @return clientShutdown
+         */
+        public String getClientShutdown() {
+            return this.clientShutdown;
         }
 
         /**
@@ -2216,6 +2261,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getHoverConfigMsg() {
             return this.hoverConfigMsg;
+        }
+
+        /**
+         * @return hoverHibernate
+         */
+        public String getHoverHibernate() {
+            return this.hoverHibernate;
+        }
+
+        /**
+         * @return hoverRestart
+         */
+        public String getHoverRestart() {
+            return this.hoverRestart;
+        }
+
+        /**
+         * @return hoverShutdown
+         */
+        public String getHoverShutdown() {
+            return this.hoverShutdown;
         }
 
         /**
@@ -2851,6 +2917,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String cameraRedirect; 
             private String clientControlMenu; 
             private String clientCreateSnapshot; 
+            private String clientHibernate; 
+            private String clientRestart; 
+            private String clientShutdown; 
             private java.util.List<ClientTypes> clientTypes; 
             private String clipboard; 
             private String colorEnhancement; 
@@ -2883,6 +2952,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
             private String hoverConfigMsg; 
+            private String hoverHibernate; 
+            private String hoverRestart; 
+            private String hoverShutdown; 
             private String html5Access; 
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
@@ -2986,6 +3058,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
                 this.clientCreateSnapshot = model.clientCreateSnapshot;
+                this.clientHibernate = model.clientHibernate;
+                this.clientRestart = model.clientRestart;
+                this.clientShutdown = model.clientShutdown;
                 this.clientTypes = model.clientTypes;
                 this.clipboard = model.clipboard;
                 this.colorEnhancement = model.colorEnhancement;
@@ -3018,6 +3093,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
                 this.hoverConfigMsg = model.hoverConfigMsg;
+                this.hoverHibernate = model.hoverHibernate;
+                this.hoverRestart = model.hoverRestart;
+                this.hoverShutdown = model.hoverShutdown;
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
@@ -3203,6 +3281,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder clientCreateSnapshot(String clientCreateSnapshot) {
                 this.clientCreateSnapshot = clientCreateSnapshot;
+                return this;
+            }
+
+            /**
+             * ClientHibernate.
+             */
+            public Builder clientHibernate(String clientHibernate) {
+                this.clientHibernate = clientHibernate;
+                return this;
+            }
+
+            /**
+             * ClientRestart.
+             */
+            public Builder clientRestart(String clientRestart) {
+                this.clientRestart = clientRestart;
+                return this;
+            }
+
+            /**
+             * ClientShutdown.
+             */
+            public Builder clientShutdown(String clientShutdown) {
+                this.clientShutdown = clientShutdown;
                 return this;
             }
 
@@ -3559,6 +3661,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder hoverConfigMsg(String hoverConfigMsg) {
                 this.hoverConfigMsg = hoverConfigMsg;
+                return this;
+            }
+
+            /**
+             * HoverHibernate.
+             */
+            public Builder hoverHibernate(String hoverHibernate) {
+                this.hoverHibernate = hoverHibernate;
+                return this;
+            }
+
+            /**
+             * HoverRestart.
+             */
+            public Builder hoverRestart(String hoverRestart) {
+                this.hoverRestart = hoverRestart;
+                return this;
+            }
+
+            /**
+             * HoverShutdown.
+             */
+            public Builder hoverShutdown(String hoverShutdown) {
+                this.hoverShutdown = hoverShutdown;
                 return this;
             }
 
