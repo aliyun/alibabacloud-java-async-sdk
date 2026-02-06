@@ -35,6 +35,10 @@ public class ListDatabasesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
+    private String searchKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
@@ -44,6 +48,7 @@ public class ListDatabasesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.searchKey = builder.searchKey;
         this.tid = builder.tid;
     }
 
@@ -89,6 +94,13 @@ public class ListDatabasesRequest extends Request {
     }
 
     /**
+     * @return searchKey
+     */
+    public String getSearchKey() {
+        return this.searchKey;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -100,6 +112,7 @@ public class ListDatabasesRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String searchKey; 
         private Long tid; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListDatabasesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.searchKey = request.searchKey;
             this.tid = request.tid;
         } 
 
@@ -158,6 +172,15 @@ public class ListDatabasesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SearchKey.
+         */
+        public Builder searchKey(String searchKey) {
+            this.putQueryParameter("SearchKey", searchKey);
+            this.searchKey = searchKey;
             return this;
         }
 
