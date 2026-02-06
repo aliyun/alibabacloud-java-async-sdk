@@ -57,6 +57,10 @@ public class CreateImageByInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubInstanceId")
     private String subInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    private java.util.List<TagList> tagList;
+
     private CreateImageByInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -69,6 +73,7 @@ public class CreateImageByInstanceRequest extends Request {
         this.instanceType = builder.instanceType;
         this.productType = builder.productType;
         this.subInstanceId = builder.subInstanceId;
+        this.tagList = builder.tagList;
     }
 
     public static Builder builder() {
@@ -154,6 +159,13 @@ public class CreateImageByInstanceRequest extends Request {
         return this.subInstanceId;
     }
 
+    /**
+     * @return tagList
+     */
+    public java.util.List<TagList> getTagList() {
+        return this.tagList;
+    }
+
     public static final class Builder extends Request.Builder<CreateImageByInstanceRequest, Builder> {
         private String regionId; 
         private Boolean autoCleanUserdata; 
@@ -165,6 +177,7 @@ public class CreateImageByInstanceRequest extends Request {
         private String instanceType; 
         private String productType; 
         private String subInstanceId; 
+        private java.util.List<TagList> tagList; 
 
         private Builder() {
             super();
@@ -182,6 +195,7 @@ public class CreateImageByInstanceRequest extends Request {
             this.instanceType = request.instanceType;
             this.productType = request.productType;
             this.subInstanceId = request.subInstanceId;
+            this.tagList = request.tagList;
         } 
 
         /**
@@ -316,6 +330,15 @@ public class CreateImageByInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * TagList.
+         */
+        public Builder tagList(java.util.List<TagList> tagList) {
+            this.putQueryParameter("TagList", tagList);
+            this.tagList = tagList;
+            return this;
+        }
+
         @Override
         public CreateImageByInstanceRequest build() {
             return new CreateImageByInstanceRequest(this);
@@ -323,4 +346,79 @@ public class CreateImageByInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateImageByInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageByInstanceRequest</p>
+     */
+    public static class TagList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagList(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagList build() {
+                return new TagList(this);
+            } 
+
+        } 
+
+    }
 }
