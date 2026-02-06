@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aliding20230426.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetSkillDetailResponseBody} extends {@link TeaModel}
+ *
+ * <p>GetSkillDetailResponseBody</p>
+ */
+public class GetSkillDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Object data;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private GetSkillDetailResponseBody(Builder builder) {
+        this.data = builder.data;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetSkillDetailResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return data
+     */
+    public Object getData() {
+        return this.data;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private Object data; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSkillDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * Data.
+         */
+        public Builder data(Object data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * <p>RequestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A348BA5D-FFD4-57E4-9450-23A14D72F331</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public GetSkillDetailResponseBody build() {
+            return new GetSkillDetailResponseBody(this);
+        } 
+
+    } 
+
+}

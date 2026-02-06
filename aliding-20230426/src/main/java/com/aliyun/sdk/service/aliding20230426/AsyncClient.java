@@ -880,6 +880,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSheetContentJobIdResponse> getSheetContentJobId(GetSheetContentJobIdRequest request);
 
     /**
+     * @param request the request parameters of GetSkillDetail  GetSkillDetailRequest
+     * @return GetSkillDetailResponse
+     */
+    CompletableFuture<GetSkillDetailResponse> getSkillDetail(GetSkillDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetSkills  GetSkillsRequest
+     * @return GetSkillsResponse
+     */
+    CompletableFuture<GetSkillsResponse> getSkills(GetSkillsRequest request);
+
+    /**
      * @param request the request parameters of GetSpaceDirectories  GetSpaceDirectoriesRequest
      * @return GetSpaceDirectoriesResponse
      */

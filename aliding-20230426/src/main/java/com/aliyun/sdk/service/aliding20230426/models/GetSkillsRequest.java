@@ -12,27 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AuthorizeSkillRequest} extends {@link RequestModel}
+ * {@link GetSkillsRequest} extends {@link RequestModel}
  *
- * <p>AuthorizeSkillRequest</p>
+ * <p>GetSkillsRequest</p>
  */
-public class AuthorizeSkillRequest extends Request {
+public class GetSkillsRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
-    private java.util.List<String> permissionCodes;
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<String> groupIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillIds")
+    private java.util.List<String> skillIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceIdOfAssistantId")
     private String sourceIdOfAssistantId;
 
-    private AuthorizeSkillRequest(Builder builder) {
+    private GetSkillsRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.permissionCodes = builder.permissionCodes;
+        this.groupIds = builder.groupIds;
+        this.skillIds = builder.skillIds;
         this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
     }
 
@@ -40,7 +45,7 @@ public class AuthorizeSkillRequest extends Request {
         return new Builder();
     }
 
-    public static AuthorizeSkillRequest create() {
+    public static GetSkillsRequest create() {
         return builder().build();
     }
 
@@ -57,10 +62,17 @@ public class AuthorizeSkillRequest extends Request {
     }
 
     /**
-     * @return permissionCodes
+     * @return groupIds
      */
-    public java.util.List<String> getPermissionCodes() {
-        return this.permissionCodes;
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
+    }
+
+    /**
+     * @return skillIds
+     */
+    public java.util.List<String> getSkillIds() {
+        return this.skillIds;
     }
 
     /**
@@ -70,19 +82,21 @@ public class AuthorizeSkillRequest extends Request {
         return this.sourceIdOfAssistantId;
     }
 
-    public static final class Builder extends Request.Builder<AuthorizeSkillRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetSkillsRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List<String> permissionCodes; 
+        private java.util.List<String> groupIds; 
+        private java.util.List<String> skillIds; 
         private String sourceIdOfAssistantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AuthorizeSkillRequest request) {
+        private Builder(GetSkillsRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.permissionCodes = request.permissionCodes;
+            this.groupIds = request.groupIds;
+            this.skillIds = request.skillIds;
             this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
         } 
 
@@ -97,12 +111,22 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         /**
-         * PermissionCodes.
+         * GroupIds.
          */
-        public Builder permissionCodes(java.util.List<String> permissionCodes) {
-            String permissionCodesShrink = shrink(permissionCodes, "PermissionCodes", "json");
-            this.putBodyParameter("PermissionCodes", permissionCodesShrink);
-            this.permissionCodes = permissionCodes;
+        public Builder groupIds(java.util.List<String> groupIds) {
+            String groupIdsShrink = shrink(groupIds, "GroupIds", "json");
+            this.putBodyParameter("GroupIds", groupIdsShrink);
+            this.groupIds = groupIds;
+            return this;
+        }
+
+        /**
+         * SkillIds.
+         */
+        public Builder skillIds(java.util.List<String> skillIds) {
+            String skillIdsShrink = shrink(skillIds, "SkillIds", "json");
+            this.putBodyParameter("SkillIds", skillIdsShrink);
+            this.skillIds = skillIds;
             return this;
         }
 
@@ -116,24 +140,28 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         @Override
-        public AuthorizeSkillRequest build() {
-            return new AuthorizeSkillRequest(this);
+        public GetSkillsRequest build() {
+            return new GetSkillsRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link AuthorizeSkillRequest} extends {@link TeaModel}
+     * {@link GetSkillsRequest} extends {@link TeaModel}
      *
-     * <p>AuthorizeSkillRequest</p>
+     * <p>GetSkillsRequest</p>
      */
     public static class AccountContext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SsoTicket")
+        private String ssoTicket;
+
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
+            this.ssoTicket = builder.ssoTicket;
             this.accountId = builder.accountId;
         }
 
@@ -146,6 +174,13 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         /**
+         * @return ssoTicket
+         */
+        public String getSsoTicket() {
+            return this.ssoTicket;
+        }
+
+        /**
          * @return accountId
          */
         public String getAccountId() {
@@ -153,14 +188,27 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         public static final class Builder {
+            private String ssoTicket; 
             private String accountId; 
 
             private Builder() {
             } 
 
             private Builder(AccountContext model) {
+                this.ssoTicket = model.ssoTicket;
                 this.accountId = model.accountId;
             } 
+
+            /**
+             * <p>Buc SsoTicket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucxxx</p>
+             */
+            public Builder ssoTicket(String ssoTicket) {
+                this.ssoTicket = ssoTicket;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>

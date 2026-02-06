@@ -12,27 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AuthorizeSkillRequest} extends {@link RequestModel}
+ * {@link GetSkillDetailRequest} extends {@link RequestModel}
  *
- * <p>AuthorizeSkillRequest</p>
+ * <p>GetSkillDetailRequest</p>
  */
-public class AuthorizeSkillRequest extends Request {
+public class GetSkillDetailRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
-    private java.util.List<String> permissionCodes;
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    private String groupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillId")
+    private String skillId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceIdOfAssistantId")
     private String sourceIdOfAssistantId;
 
-    private AuthorizeSkillRequest(Builder builder) {
+    private GetSkillDetailRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.permissionCodes = builder.permissionCodes;
+        this.groupId = builder.groupId;
+        this.skillId = builder.skillId;
         this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
     }
 
@@ -40,7 +45,7 @@ public class AuthorizeSkillRequest extends Request {
         return new Builder();
     }
 
-    public static AuthorizeSkillRequest create() {
+    public static GetSkillDetailRequest create() {
         return builder().build();
     }
 
@@ -57,10 +62,17 @@ public class AuthorizeSkillRequest extends Request {
     }
 
     /**
-     * @return permissionCodes
+     * @return groupId
      */
-    public java.util.List<String> getPermissionCodes() {
-        return this.permissionCodes;
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
+     * @return skillId
+     */
+    public String getSkillId() {
+        return this.skillId;
     }
 
     /**
@@ -70,19 +82,21 @@ public class AuthorizeSkillRequest extends Request {
         return this.sourceIdOfAssistantId;
     }
 
-    public static final class Builder extends Request.Builder<AuthorizeSkillRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetSkillDetailRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List<String> permissionCodes; 
+        private String groupId; 
+        private String skillId; 
         private String sourceIdOfAssistantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AuthorizeSkillRequest request) {
+        private Builder(GetSkillDetailRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.permissionCodes = request.permissionCodes;
+            this.groupId = request.groupId;
+            this.skillId = request.skillId;
             this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
         } 
 
@@ -97,12 +111,20 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         /**
-         * PermissionCodes.
+         * GroupId.
          */
-        public Builder permissionCodes(java.util.List<String> permissionCodes) {
-            String permissionCodesShrink = shrink(permissionCodes, "PermissionCodes", "json");
-            this.putBodyParameter("PermissionCodes", permissionCodesShrink);
-            this.permissionCodes = permissionCodes;
+        public Builder groupId(String groupId) {
+            this.putBodyParameter("GroupId", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * SkillId.
+         */
+        public Builder skillId(String skillId) {
+            this.putBodyParameter("SkillId", skillId);
+            this.skillId = skillId;
             return this;
         }
 
@@ -116,24 +138,28 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         @Override
-        public AuthorizeSkillRequest build() {
-            return new AuthorizeSkillRequest(this);
+        public GetSkillDetailRequest build() {
+            return new GetSkillDetailRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link AuthorizeSkillRequest} extends {@link TeaModel}
+     * {@link GetSkillDetailRequest} extends {@link TeaModel}
      *
-     * <p>AuthorizeSkillRequest</p>
+     * <p>GetSkillDetailRequest</p>
      */
     public static class AccountContext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SsoTicket")
+        private String ssoTicket;
+
         @com.aliyun.core.annotation.NameInMap("accountId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
+            this.ssoTicket = builder.ssoTicket;
             this.accountId = builder.accountId;
         }
 
@@ -146,6 +172,13 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         /**
+         * @return ssoTicket
+         */
+        public String getSsoTicket() {
+            return this.ssoTicket;
+        }
+
+        /**
          * @return accountId
          */
         public String getAccountId() {
@@ -153,14 +186,27 @@ public class AuthorizeSkillRequest extends Request {
         }
 
         public static final class Builder {
+            private String ssoTicket; 
             private String accountId; 
 
             private Builder() {
             } 
 
             private Builder(AccountContext model) {
+                this.ssoTicket = model.ssoTicket;
                 this.accountId = model.accountId;
             } 
+
+            /**
+             * <p>Buc SsoTicket</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucxxx</p>
+             */
+            public Builder ssoTicket(String ssoTicket) {
+                this.ssoTicket = ssoTicket;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>
