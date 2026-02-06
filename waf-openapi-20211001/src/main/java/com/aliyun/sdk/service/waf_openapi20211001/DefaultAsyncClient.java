@@ -209,6 +209,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateCloudResourceExtensionCert  CreateCloudResourceExtensionCertRequest
+     * @return CreateCloudResourceExtensionCertResponse
+     */
+    @Override
+    public CompletableFuture<CreateCloudResourceExtensionCertResponse> createCloudResourceExtensionCert(CreateCloudResourceExtensionCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCloudResourceExtensionCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCloudResourceExtensionCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCloudResourceExtensionCertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDefenseResource  CreateDefenseResourceRequest
      * @return CreateDefenseResourceResponse
      */
@@ -530,6 +548,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCloudResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteCloudResourceExtensionCert  DeleteCloudResourceExtensionCertRequest
+     * @return DeleteCloudResourceExtensionCertResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCloudResourceExtensionCertResponse> deleteCloudResourceExtensionCert(DeleteCloudResourceExtensionCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCloudResourceExtensionCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCloudResourceExtensionCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCloudResourceExtensionCertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3632,6 +3668,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyCloudResourceCertResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyCloudResourceDefaultCert  ModifyCloudResourceDefaultCertRequest
+     * @return ModifyCloudResourceDefaultCertResponse
+     */
+    @Override
+    public CompletableFuture<ModifyCloudResourceDefaultCertResponse> modifyCloudResourceDefaultCert(ModifyCloudResourceDefaultCertRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyCloudResourceDefaultCert").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyCloudResourceDefaultCertResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyCloudResourceDefaultCertResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

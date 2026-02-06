@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
 
     /**
+     * @param request the request parameters of CreateCloudResourceExtensionCert  CreateCloudResourceExtensionCertRequest
+     * @return CreateCloudResourceExtensionCertResponse
+     */
+    CompletableFuture<CreateCloudResourceExtensionCertResponse> createCloudResourceExtensionCert(CreateCloudResourceExtensionCertRequest request);
+
+    /**
      * @param request the request parameters of CreateDefenseResource  CreateDefenseResourceRequest
      * @return CreateDefenseResourceResponse
      */
@@ -177,6 +183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudResourceResponse
      */
     CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudResourceExtensionCert  DeleteCloudResourceExtensionCertRequest
+     * @return DeleteCloudResourceExtensionCertResponse
+     */
+    CompletableFuture<DeleteCloudResourceExtensionCertResponse> deleteCloudResourceExtensionCert(DeleteCloudResourceExtensionCertRequest request);
 
     /**
      * @param request the request parameters of DeleteDefenseResource  DeleteDefenseResourceRequest
@@ -1227,6 +1239,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCloudResourceCertResponse
      */
     CompletableFuture<ModifyCloudResourceCertResponse> modifyCloudResourceCert(ModifyCloudResourceCertRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCloudResourceDefaultCert  ModifyCloudResourceDefaultCertRequest
+     * @return ModifyCloudResourceDefaultCertResponse
+     */
+    CompletableFuture<ModifyCloudResourceDefaultCertResponse> modifyCloudResourceDefaultCert(ModifyCloudResourceDefaultCertRequest request);
 
     /**
      * @param request the request parameters of ModifyDefaultHttps  ModifyDefaultHttpsRequest
