@@ -26,6 +26,10 @@ public class GetPlayInfoRequest extends Request {
     private Long authTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CodecName")
+    private String codecName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
@@ -73,6 +77,7 @@ public class GetPlayInfoRequest extends Request {
         super(builder);
         this.additionType = builder.additionType;
         this.authTimeout = builder.authTimeout;
+        this.codecName = builder.codecName;
         this.definition = builder.definition;
         this.digitalWatermarkType = builder.digitalWatermarkType;
         this.formats = builder.formats;
@@ -111,6 +116,13 @@ public class GetPlayInfoRequest extends Request {
      */
     public Long getAuthTimeout() {
         return this.authTimeout;
+    }
+
+    /**
+     * @return codecName
+     */
+    public String getCodecName() {
+        return this.codecName;
     }
 
     /**
@@ -193,6 +205,7 @@ public class GetPlayInfoRequest extends Request {
     public static final class Builder extends Request.Builder<GetPlayInfoRequest, Builder> {
         private String additionType; 
         private Long authTimeout; 
+        private String codecName; 
         private String definition; 
         private String digitalWatermarkType; 
         private String formats; 
@@ -213,6 +226,7 @@ public class GetPlayInfoRequest extends Request {
             super(request);
             this.additionType = request.additionType;
             this.authTimeout = request.authTimeout;
+            this.codecName = request.codecName;
             this.definition = request.definition;
             this.digitalWatermarkType = request.digitalWatermarkType;
             this.formats = request.formats;
@@ -268,6 +282,15 @@ public class GetPlayInfoRequest extends Request {
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
             this.authTimeout = authTimeout;
+            return this;
+        }
+
+        /**
+         * CodecName.
+         */
+        public Builder codecName(String codecName) {
+            this.putQueryParameter("CodecName", codecName);
+            this.codecName = codecName;
             return this;
         }
 

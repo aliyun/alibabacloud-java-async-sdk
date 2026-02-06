@@ -140,6 +140,9 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
+        @com.aliyun.core.annotation.NameInMap("RegisteredMediaId")
+        private String registeredMediaId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -157,6 +160,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             this.fileSize = builder.fileSize;
             this.jobId = builder.jobId;
             this.mediaId = builder.mediaId;
+            this.registeredMediaId = builder.registeredMediaId;
             this.status = builder.status;
             this.uploadURL = builder.uploadURL;
             this.userData = builder.userData;
@@ -220,6 +224,13 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return registeredMediaId
+         */
+        public String getRegisteredMediaId() {
+            return this.registeredMediaId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -248,6 +259,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
             private String fileSize; 
             private String jobId; 
             private String mediaId; 
+            private String registeredMediaId; 
             private String status; 
             private String uploadURL; 
             private String userData; 
@@ -263,6 +275,7 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
                 this.fileSize = model.fileSize;
                 this.jobId = model.jobId;
                 this.mediaId = model.mediaId;
+                this.registeredMediaId = model.registeredMediaId;
                 this.status = model.status;
                 this.uploadURL = model.uploadURL;
                 this.userData = model.userData;
@@ -342,6 +355,14 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * RegisteredMediaId.
+             */
+            public Builder registeredMediaId(String registeredMediaId) {
+                this.registeredMediaId = registeredMediaId;
                 return this;
             }
 
