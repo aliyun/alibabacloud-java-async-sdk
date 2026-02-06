@@ -2136,6 +2136,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteParameterTimedScheduleTask  DeleteParameterTimedScheduleTaskRequest
+     * @return DeleteParameterTimedScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteParameterTimedScheduleTaskResponse> deleteParameterTimedScheduleTask(DeleteParameterTimedScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteParameterTimedScheduleTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteParameterTimedScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteParameterTimedScheduleTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <p>RDS PostgreSQL</p>
@@ -4973,6 +4991,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeParameterTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeParameterTimedScheduleTask  DescribeParameterTimedScheduleTaskRequest
+     * @return DescribeParameterTimedScheduleTaskResponse
+     */
+    @Override
+    public CompletableFuture<DescribeParameterTimedScheduleTaskResponse> describeParameterTimedScheduleTask(DescribeParameterTimedScheduleTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeParameterTimedScheduleTask").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeParameterTimedScheduleTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeParameterTimedScheduleTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

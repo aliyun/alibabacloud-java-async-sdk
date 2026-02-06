@@ -1218,6 +1218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteParameterTimedScheduleTask  DeleteParameterTimedScheduleTaskRequest
+     * @return DeleteParameterTimedScheduleTaskResponse
+     */
+    CompletableFuture<DeleteParameterTimedScheduleTaskResponse> deleteParameterTimedScheduleTask(DeleteParameterTimedScheduleTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <p>RDS PostgreSQL</p>
@@ -2727,6 +2733,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeParameterTemplatesResponse
      */
     CompletableFuture<DescribeParameterTemplatesResponse> describeParameterTemplates(DescribeParameterTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeParameterTimedScheduleTask  DescribeParameterTimedScheduleTaskRequest
+     * @return DescribeParameterTimedScheduleTaskResponse
+     */
+    CompletableFuture<DescribeParameterTimedScheduleTaskResponse> describeParameterTimedScheduleTask(DescribeParameterTimedScheduleTaskRequest request);
 
     /**
      * <b>description</b> :
