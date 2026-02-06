@@ -144,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomHostnameResponse> createCustomHostname(CreateCustomHostnameRequest request);
 
     /**
+     * @param request the request parameters of CreateCustomResponseCodeRule  CreateCustomResponseCodeRuleRequest
+     * @return CreateCustomResponseCodeRuleResponse
+     */
+    CompletableFuture<CreateCustomResponseCodeRuleResponse> createCustomResponseCodeRule(CreateCustomResponseCodeRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomScenePolicy  CreateCustomScenePolicyRequest
      * @return CreateCustomScenePolicyResponse
      */
@@ -505,6 +511,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomHostnameResponse
      */
     CompletableFuture<DeleteCustomHostnameResponse> deleteCustomHostname(DeleteCustomHostnameRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCustomResponseCodeRule  DeleteCustomResponseCodeRuleRequest
+     * @return DeleteCustomResponseCodeRuleResponse
+     */
+    CompletableFuture<DeleteCustomResponseCodeRuleResponse> deleteCustomResponseCodeRule(DeleteCustomResponseCodeRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomScenePolicy  DeleteCustomScenePolicyRequest
@@ -1047,6 +1059,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCustomHostnameResponse> getCustomHostname(GetCustomHostnameRequest request);
 
     /**
+     * @param request the request parameters of GetCustomResponseCodeRule  GetCustomResponseCodeRuleRequest
+     * @return GetCustomResponseCodeRuleResponse
+     */
+    CompletableFuture<GetCustomResponseCodeRuleResponse> getCustomResponseCodeRule(GetCustomResponseCodeRuleRequest request);
+
+    /**
      * @param request the request parameters of GetDevelopmentMode  GetDevelopmentModeRequest
      * @return GetDevelopmentModeResponse
      */
@@ -1562,6 +1580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomHostnamesResponse
      */
     CompletableFuture<ListCustomHostnamesResponse> listCustomHostnames(ListCustomHostnamesRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomResponseCodeRules  ListCustomResponseCodeRulesRequest
+     * @return ListCustomResponseCodeRulesResponse
+     */
+    CompletableFuture<ListCustomResponseCodeRulesResponse> listCustomResponseCodeRules(ListCustomResponseCodeRulesRequest request);
 
     /**
      * <b>description</b> :
@@ -2157,6 +2181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomHostnameResponse
      */
     CompletableFuture<UpdateCustomHostnameResponse> updateCustomHostname(UpdateCustomHostnameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCustomResponseCodeRule  UpdateCustomResponseCodeRuleRequest
+     * @return UpdateCustomResponseCodeRuleResponse
+     */
+    CompletableFuture<UpdateCustomResponseCodeRuleResponse> updateCustomResponseCodeRule(UpdateCustomResponseCodeRuleRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomScenePolicy  UpdateCustomScenePolicyRequest
