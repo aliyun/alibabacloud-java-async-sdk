@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLogoTaskResponse> createLogoTask(CreateLogoTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateMaterialDirectory  CreateMaterialDirectoryRequest
+     * @return CreateMaterialDirectoryResponse
+     */
+    CompletableFuture<CreateMaterialDirectoryResponse> createMaterialDirectory(CreateMaterialDirectoryRequest request);
+
+    /**
      * @param request the request parameters of DeleteAppDomainCertificate  DeleteAppDomainCertificateRequest
      * @return DeleteAppDomainCertificateResponse
      */
@@ -56,6 +62,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppDomainRedirectResponse> deleteAppDomainRedirect(DeleteAppDomainRedirectRequest request);
 
     /**
+     * @param request the request parameters of DeleteMaterialDirectory  DeleteMaterialDirectoryRequest
+     * @return DeleteMaterialDirectoryResponse
+     */
+    CompletableFuture<DeleteMaterialDirectoryResponse> deleteMaterialDirectory(DeleteMaterialDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMaterialTask  DeleteMaterialTaskRequest
+     * @return DeleteMaterialTaskResponse
+     */
+    CompletableFuture<DeleteMaterialTaskResponse> deleteMaterialTask(DeleteMaterialTaskRequest request);
+
+    /**
      * @param request the request parameters of DescribeAppDomainDnsRecord  DescribeAppDomainDnsRecordRequest
      * @return DescribeAppDomainDnsRecordResponse
      */
@@ -66,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DispatchConsoleAPIForPartnerResponse
      */
     CompletableFuture<DispatchConsoleAPIForPartnerResponse> dispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of ExportMaterialFile  ExportMaterialFileRequest
+     * @return ExportMaterialFileResponse
+     */
+    CompletableFuture<ExportMaterialFileResponse> exportMaterialFile(ExportMaterialFileRequest request);
 
     /**
      * @param request the request parameters of GetAppInstance  GetAppInstanceRequest
@@ -134,6 +158,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppInstanceSpecResponse> modifyAppInstanceSpec(ModifyAppInstanceSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyMaterialDirectory  ModifyMaterialDirectoryRequest
+     * @return ModifyMaterialDirectoryResponse
+     */
+    CompletableFuture<ModifyMaterialDirectoryResponse> modifyMaterialDirectory(ModifyMaterialDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of ModifyMaterialFile  ModifyMaterialFileRequest
+     * @return ModifyMaterialFileResponse
+     */
+    CompletableFuture<ModifyMaterialFileResponse> modifyMaterialFile(ModifyMaterialFileRequest request);
+
+    /**
+     * @param request the request parameters of ModifyMaterialFileStatus  ModifyMaterialFileStatusRequest
+     * @return ModifyMaterialFileStatusResponse
+     */
+    CompletableFuture<ModifyMaterialFileStatusResponse> modifyMaterialFileStatus(ModifyMaterialFileStatusRequest request);
+
+    /**
+     * @param request the request parameters of MoveMaterialDirectory  MoveMaterialDirectoryRequest
+     * @return MoveMaterialDirectoryResponse
+     */
+    CompletableFuture<MoveMaterialDirectoryResponse> moveMaterialDirectory(MoveMaterialDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of MoveMaterialFile  MoveMaterialFileRequest
+     * @return MoveMaterialFileResponse
+     */
+    CompletableFuture<MoveMaterialFileResponse> moveMaterialFile(MoveMaterialFileRequest request);
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
@@ -144,6 +198,42 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OperateAppServiceForPartnerResponse
      */
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialDirectoryTree  QueryMaterialDirectoryTreeRequest
+     * @return QueryMaterialDirectoryTreeResponse
+     */
+    CompletableFuture<QueryMaterialDirectoryTreeResponse> queryMaterialDirectoryTree(QueryMaterialDirectoryTreeRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialFileDetail  QueryMaterialFileDetailRequest
+     * @return QueryMaterialFileDetailResponse
+     */
+    CompletableFuture<QueryMaterialFileDetailResponse> queryMaterialFileDetail(QueryMaterialFileDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialFileList  QueryMaterialFileListRequest
+     * @return QueryMaterialFileListResponse
+     */
+    CompletableFuture<QueryMaterialFileListResponse> queryMaterialFileList(QueryMaterialFileListRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialFileSummaryInfo  QueryMaterialFileSummaryInfoRequest
+     * @return QueryMaterialFileSummaryInfoResponse
+     */
+    CompletableFuture<QueryMaterialFileSummaryInfoResponse> queryMaterialFileSummaryInfo(QueryMaterialFileSummaryInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialTaskDetail  QueryMaterialTaskDetailRequest
+     * @return QueryMaterialTaskDetailResponse
+     */
+    CompletableFuture<QueryMaterialTaskDetailResponse> queryMaterialTaskDetail(QueryMaterialTaskDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryMaterialTaskList  QueryMaterialTaskListRequest
+     * @return QueryMaterialTaskListResponse
+     */
+    CompletableFuture<QueryMaterialTaskListResponse> queryMaterialTaskList(QueryMaterialTaskListRequest request);
 
     /**
      * @param request the request parameters of RefreshAppInstanceTicket  RefreshAppInstanceTicketRequest
@@ -176,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetAppDomainCertificateResponse> setAppDomainCertificate(SetAppDomainCertificateRequest request);
 
     /**
+     * @param request the request parameters of SubmitMaterialTask  SubmitMaterialTaskRequest
+     * @return SubmitMaterialTaskResponse
+     */
+    CompletableFuture<SubmitMaterialTaskResponse> submitMaterialTask(SubmitMaterialTaskRequest request);
+
+    /**
      * @param request the request parameters of SyncAppInstanceForPartner  SyncAppInstanceForPartnerRequest
      * @return SyncAppInstanceForPartnerResponse
      */
@@ -186,5 +282,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindAppDomainResponse
      */
     CompletableFuture<UnbindAppDomainResponse> unbindAppDomain(UnbindAppDomainRequest request);
+
+    /**
+     * @param request the request parameters of UploadMaterialFile  UploadMaterialFileRequest
+     * @return UploadMaterialFileResponse
+     */
+    CompletableFuture<UploadMaterialFileResponse> uploadMaterialFile(UploadMaterialFileRequest request);
 
 }
