@@ -23,6 +23,10 @@ public class ListAivppResourcesRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
@@ -30,6 +34,7 @@ public class ListAivppResourcesRequest extends Request {
     private ListAivppResourcesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.instanceType = builder.instanceType;
         this.maxResults = builder.maxResults;
     }
 
@@ -54,6 +59,13 @@ public class ListAivppResourcesRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -62,6 +74,7 @@ public class ListAivppResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAivppResourcesRequest, Builder> {
         private Integer currentPage; 
+        private String instanceType; 
         private Integer maxResults; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class ListAivppResourcesRequest extends Request {
         private Builder(ListAivppResourcesRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.instanceType = request.instanceType;
             this.maxResults = request.maxResults;
         } 
 
@@ -80,6 +94,15 @@ public class ListAivppResourcesRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putBodyParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 

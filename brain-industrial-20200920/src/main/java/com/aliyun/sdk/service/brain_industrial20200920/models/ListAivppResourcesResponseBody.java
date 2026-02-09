@@ -224,6 +224,9 @@ public class ListAivppResourcesResponseBody extends TeaModel {
      * <p>ListAivppResourcesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectNum")
+        private Integer connectNum;
+
         @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
@@ -238,6 +241,9 @@ public class ListAivppResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LeftQuantity")
         private String leftQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("MessageTps")
+        private Integer messageTps;
 
         @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
@@ -258,11 +264,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         private String userId;
 
         private Data(Builder builder) {
+            this.connectNum = builder.connectNum;
             this.detail = builder.detail;
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.leftQuantity = builder.leftQuantity;
+            this.messageTps = builder.messageTps;
             this.orderId = builder.orderId;
             this.quantity = builder.quantity;
             this.specification = builder.specification;
@@ -277,6 +285,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return connectNum
+         */
+        public Integer getConnectNum() {
+            return this.connectNum;
         }
 
         /**
@@ -312,6 +327,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
          */
         public String getLeftQuantity() {
             return this.leftQuantity;
+        }
+
+        /**
+         * @return messageTps
+         */
+        public Integer getMessageTps() {
+            return this.messageTps;
         }
 
         /**
@@ -357,11 +379,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer connectNum; 
             private String detail; 
             private String expireTime; 
             private String instanceId; 
             private String instanceType; 
             private String leftQuantity; 
+            private Integer messageTps; 
             private String orderId; 
             private String quantity; 
             private String specification; 
@@ -373,11 +397,13 @@ public class ListAivppResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.connectNum = model.connectNum;
                 this.detail = model.detail;
                 this.expireTime = model.expireTime;
                 this.instanceId = model.instanceId;
                 this.instanceType = model.instanceType;
                 this.leftQuantity = model.leftQuantity;
+                this.messageTps = model.messageTps;
                 this.orderId = model.orderId;
                 this.quantity = model.quantity;
                 this.specification = model.specification;
@@ -385,6 +411,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.userId = model.userId;
             } 
+
+            /**
+             * ConnectNum.
+             */
+            public Builder connectNum(Integer connectNum) {
+                this.connectNum = connectNum;
+                return this;
+            }
 
             /**
              * Detail.
@@ -423,6 +457,14 @@ public class ListAivppResourcesResponseBody extends TeaModel {
              */
             public Builder leftQuantity(String leftQuantity) {
                 this.leftQuantity = leftQuantity;
+                return this;
+            }
+
+            /**
+             * MessageTps.
+             */
+            public Builder messageTps(Integer messageTps) {
+                this.messageTps = messageTps;
                 return this;
             }
 
