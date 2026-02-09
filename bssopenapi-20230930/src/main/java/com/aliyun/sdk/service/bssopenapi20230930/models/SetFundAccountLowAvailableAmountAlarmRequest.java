@@ -23,6 +23,7 @@ public class SetFundAccountLowAvailableAmountAlarmRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThresholdAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thresholdAmount;
 
     private SetFundAccountLowAvailableAmountAlarmRequest(Builder builder) {
@@ -82,7 +83,10 @@ public class SetFundAccountLowAvailableAmountAlarmRequest extends Request {
         }
 
         /**
-         * ThresholdAmount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder thresholdAmount(String thresholdAmount) {
             this.putBodyParameter("ThresholdAmount", thresholdAmount);
