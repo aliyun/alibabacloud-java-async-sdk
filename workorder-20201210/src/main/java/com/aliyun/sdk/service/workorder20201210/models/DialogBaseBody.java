@@ -96,6 +96,10 @@ public class DialogBaseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attachments
      */
@@ -233,6 +237,29 @@ public class DialogBaseBody extends TeaModel {
         private String tip; 
         private Integer type; 
         private UserInfo userInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DialogBaseBody model) {
+            this.attachments = model.attachments;
+            this.channelCode = model.channelCode;
+            this.createTime = model.createTime;
+            this.dataInfo = model.dataInfo;
+            this.dialogId = model.dialogId;
+            this.footerInfo = model.footerInfo;
+            this.hitWords = model.hitWords;
+            this.modifiedTime = model.modifiedTime;
+            this.referInfo = model.referInfo;
+            this.stage = model.stage;
+            this.status = model.status;
+            this.ticketId = model.ticketId;
+            this.ticketStatus = model.ticketStatus;
+            this.timestamp = model.timestamp;
+            this.tip = model.tip;
+            this.type = model.type;
+            this.userInfo = model.userInfo;
+        } 
 
         /**
          * Attachments.
@@ -444,6 +471,16 @@ public class DialogBaseBody extends TeaModel {
             private String type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attachments model) {
+                this.name = model.name;
+                this.size = model.size;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * Name.
              */
@@ -499,6 +536,9 @@ public class DialogBaseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Component")
         private java.util.List<java.util.Map<String, ?>> component;
 
+        @com.aliyun.core.annotation.NameInMap("Container")
+        private Object container;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -530,6 +570,7 @@ public class DialogBaseBody extends TeaModel {
             this.bizId = builder.bizId;
             this.bizType = builder.bizType;
             this.component = builder.component;
+            this.container = builder.container;
             this.content = builder.content;
             this.contentDesensitized = builder.contentDesensitized;
             this.editable = builder.editable;
@@ -568,6 +609,13 @@ public class DialogBaseBody extends TeaModel {
          */
         public java.util.List<java.util.Map<String, ?>> getComponent() {
             return this.component;
+        }
+
+        /**
+         * @return container
+         */
+        public Object getContainer() {
+            return this.container;
         }
 
         /**
@@ -637,6 +685,7 @@ public class DialogBaseBody extends TeaModel {
             private String bizId; 
             private Integer bizType; 
             private java.util.List<java.util.Map<String, ?>> component; 
+            private Object container; 
             private String content; 
             private String contentDesensitized; 
             private Integer editable; 
@@ -646,6 +695,25 @@ public class DialogBaseBody extends TeaModel {
             private String serviceChannel; 
             private String title; 
             private java.util.Map<String, ?> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataInfo model) {
+                this.bizId = model.bizId;
+                this.bizType = model.bizType;
+                this.component = model.component;
+                this.container = model.container;
+                this.content = model.content;
+                this.contentDesensitized = model.contentDesensitized;
+                this.editable = model.editable;
+                this.props = model.props;
+                this.schema = model.schema;
+                this.schemaId = model.schemaId;
+                this.serviceChannel = model.serviceChannel;
+                this.title = model.title;
+                this.values = model.values;
+            } 
 
             /**
              * BizId.
@@ -668,6 +736,14 @@ public class DialogBaseBody extends TeaModel {
              */
             public Builder component(java.util.List<java.util.Map<String, ?>> component) {
                 this.component = component;
+                return this;
+            }
+
+            /**
+             * Container.
+             */
+            public Builder container(Object container) {
+                this.container = container;
                 return this;
             }
 
@@ -794,6 +870,14 @@ public class DialogBaseBody extends TeaModel {
             private java.util.Map<String, ?> ext; 
             private String schema; 
 
+            private Builder() {
+            } 
+
+            private Builder(FooterInfo model) {
+                this.ext = model.ext;
+                this.schema = model.schema;
+            } 
+
             /**
              * Ext.
              */
@@ -884,6 +968,16 @@ public class DialogBaseBody extends TeaModel {
             private Integer role; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserInfo model) {
+                this.avatar = model.avatar;
+                this.role = model.role;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * Avatar.

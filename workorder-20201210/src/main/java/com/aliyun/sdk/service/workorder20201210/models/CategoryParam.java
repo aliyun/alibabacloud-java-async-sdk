@@ -48,6 +48,10 @@ public class CategoryParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categoryId
      */
@@ -89,6 +93,17 @@ public class CategoryParam extends TeaModel {
         private Boolean isSelectFromDialog; 
         private Long productId; 
         private String productName; 
+
+        private Builder() {
+        } 
+
+        private Builder(CategoryParam model) {
+            this.categoryId = model.categoryId;
+            this.categoryName = model.categoryName;
+            this.isSelectFromDialog = model.isSelectFromDialog;
+            this.productId = model.productId;
+            this.productName = model.productName;
+        } 
 
         /**
          * CategoryId.
