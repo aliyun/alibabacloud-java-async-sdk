@@ -31,6 +31,14 @@ public class CreateSupabaseProjectRequest extends Request {
     private String diskPerformanceLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    private String payType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    private String period;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
@@ -54,6 +62,10 @@ public class CreateSupabaseProjectRequest extends Request {
     private Long storageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    private String usedTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
@@ -73,11 +85,14 @@ public class CreateSupabaseProjectRequest extends Request {
         this.accountPassword = builder.accountPassword;
         this.clientToken = builder.clientToken;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
+        this.payType = builder.payType;
+        this.period = builder.period;
         this.projectName = builder.projectName;
         this.projectSpec = builder.projectSpec;
         this.regionId = builder.regionId;
         this.securityIPList = builder.securityIPList;
         this.storageSize = builder.storageSize;
+        this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -118,6 +133,20 @@ public class CreateSupabaseProjectRequest extends Request {
     }
 
     /**
+     * @return payType
+     */
+    public String getPayType() {
+        return this.payType;
+    }
+
+    /**
+     * @return period
+     */
+    public String getPeriod() {
+        return this.period;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -153,6 +182,13 @@ public class CreateSupabaseProjectRequest extends Request {
     }
 
     /**
+     * @return usedTime
+     */
+    public String getUsedTime() {
+        return this.usedTime;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -177,11 +213,14 @@ public class CreateSupabaseProjectRequest extends Request {
         private String accountPassword; 
         private String clientToken; 
         private String diskPerformanceLevel; 
+        private String payType; 
+        private String period; 
         private String projectName; 
         private String projectSpec; 
         private String regionId; 
         private String securityIPList; 
         private Long storageSize; 
+        private String usedTime; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -195,11 +234,14 @@ public class CreateSupabaseProjectRequest extends Request {
             this.accountPassword = request.accountPassword;
             this.clientToken = request.clientToken;
             this.diskPerformanceLevel = request.diskPerformanceLevel;
+            this.payType = request.payType;
+            this.period = request.period;
             this.projectName = request.projectName;
             this.projectSpec = request.projectSpec;
             this.regionId = request.regionId;
             this.securityIPList = request.securityIPList;
             this.storageSize = request.storageSize;
+            this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -248,6 +290,24 @@ public class CreateSupabaseProjectRequest extends Request {
         public Builder diskPerformanceLevel(String diskPerformanceLevel) {
             this.putQueryParameter("DiskPerformanceLevel", diskPerformanceLevel);
             this.diskPerformanceLevel = diskPerformanceLevel;
+            return this;
+        }
+
+        /**
+         * PayType.
+         */
+        public Builder payType(String payType) {
+            this.putQueryParameter("PayType", payType);
+            this.payType = payType;
+            return this;
+        }
+
+        /**
+         * Period.
+         */
+        public Builder period(String period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
             return this;
         }
 
@@ -317,6 +377,15 @@ public class CreateSupabaseProjectRequest extends Request {
         public Builder storageSize(Long storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
             this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
+         * UsedTime.
+         */
+        public Builder usedTime(String usedTime) {
+            this.putQueryParameter("UsedTime", usedTime);
+            this.usedTime = usedTime;
             return this;
         }
 

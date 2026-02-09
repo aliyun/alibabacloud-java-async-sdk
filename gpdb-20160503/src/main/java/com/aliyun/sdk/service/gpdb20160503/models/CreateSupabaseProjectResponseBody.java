@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSupabaseProjectResponseBody</p>
  */
 public class CreateSupabaseProjectResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
@@ -24,6 +27,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     private String requestId;
 
     private CreateSupabaseProjectResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.projectId = builder.projectId;
         this.requestId = builder.requestId;
     }
@@ -41,6 +45,13 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -55,6 +66,7 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String orderId; 
         private String projectId; 
         private String requestId; 
 
@@ -62,9 +74,18 @@ public class CreateSupabaseProjectResponseBody extends TeaModel {
         } 
 
         private Builder(CreateSupabaseProjectResponseBody model) {
+            this.orderId = model.orderId;
             this.projectId = model.projectId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
 
         /**
          * <p>The Supabase project ID.</p>
