@@ -4,7 +4,11 @@
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-gpdb20160503</artifactId>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <version>3.0.1</version>
+=======
+  <version>3.0.2</version>
+>>>>>>> Stashed changes
 =======
   <version>3.0.2</version>
 >>>>>>> Stashed changes
