@@ -23,6 +23,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllocateAllRDMADevices")
     private Boolean allocateAllRDMADevices;
 
+    @com.aliyun.core.annotation.NameInMap("AllowUnschedulableNodes")
+    private Boolean allowUnschedulableNodes;
+
     @com.aliyun.core.annotation.NameInMap("BusinessUserId")
     private String businessUserId;
 
@@ -86,6 +89,7 @@ public class JobSettings extends TeaModel {
     private JobSettings(Builder builder) {
         this.advancedSettings = builder.advancedSettings;
         this.allocateAllRDMADevices = builder.allocateAllRDMADevices;
+        this.allowUnschedulableNodes = builder.allowUnschedulableNodes;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
         this.dataJuicerConfig = builder.dataJuicerConfig;
@@ -132,6 +136,13 @@ public class JobSettings extends TeaModel {
      */
     public Boolean getAllocateAllRDMADevices() {
         return this.allocateAllRDMADevices;
+    }
+
+    /**
+     * @return allowUnschedulableNodes
+     */
+    public Boolean getAllowUnschedulableNodes() {
+        return this.allowUnschedulableNodes;
     }
 
     /**
@@ -277,6 +288,7 @@ public class JobSettings extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, ?> advancedSettings; 
         private Boolean allocateAllRDMADevices; 
+        private Boolean allowUnschedulableNodes; 
         private String businessUserId; 
         private String caller; 
         private DataJuicerConfig dataJuicerConfig; 
@@ -304,6 +316,7 @@ public class JobSettings extends TeaModel {
         private Builder(JobSettings model) {
             this.advancedSettings = model.advancedSettings;
             this.allocateAllRDMADevices = model.allocateAllRDMADevices;
+            this.allowUnschedulableNodes = model.allowUnschedulableNodes;
             this.businessUserId = model.businessUserId;
             this.caller = model.caller;
             this.dataJuicerConfig = model.dataJuicerConfig;
@@ -339,6 +352,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder allocateAllRDMADevices(Boolean allocateAllRDMADevices) {
             this.allocateAllRDMADevices = allocateAllRDMADevices;
+            return this;
+        }
+
+        /**
+         * AllowUnschedulableNodes.
+         */
+        public Builder allowUnschedulableNodes(Boolean allowUnschedulableNodes) {
+            this.allowUnschedulableNodes = allowUnschedulableNodes;
             return this;
         }
 
