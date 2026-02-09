@@ -86,6 +86,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMcdpZoneResponse> createMcdpZone(CreateMcdpZoneRequest request);
 
     /**
+     * @param request the request parameters of CreateMcubeHotpatchResource  CreateMcubeHotpatchResourceRequest
+     * @return CreateMcubeHotpatchResourceResponse
+     */
+    CompletableFuture<CreateMcubeHotpatchResourceResponse> createMcubeHotpatchResource(CreateMcubeHotpatchResourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateMcubeHotpatchRollbackTask  CreateMcubeHotpatchRollbackTaskRequest
+     * @return CreateMcubeHotpatchRollbackTaskResponse
+     */
+    CompletableFuture<CreateMcubeHotpatchRollbackTaskResponse> createMcubeHotpatchRollbackTask(CreateMcubeHotpatchRollbackTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateMcubeHotpatchTask  CreateMcubeHotpatchTaskRequest
+     * @return CreateMcubeHotpatchTaskResponse
+     */
+    CompletableFuture<CreateMcubeHotpatchTaskResponse> createMcubeHotpatchTask(CreateMcubeHotpatchTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateMcubeMiniApp  CreateMcubeMiniAppRequest
      * @return CreateMcubeMiniAppResponse
      */
@@ -212,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMcdpZoneResponse> deleteMcdpZone(DeleteMcdpZoneRequest request);
 
     /**
+     * @param request the request parameters of DeleteMcubeHotpatchResource  DeleteMcubeHotpatchResourceRequest
+     * @return DeleteMcubeHotpatchResourceResponse
+     */
+    CompletableFuture<DeleteMcubeHotpatchResourceResponse> deleteMcubeHotpatchResource(DeleteMcubeHotpatchResourceRequest request);
+
+    /**
      * @param request the request parameters of DeleteMcubeMiniApp  DeleteMcubeMiniAppRequest
      * @return DeleteMcubeMiniAppResponse
      */
@@ -270,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFileTokenForUploadToMsaResponse
      */
     CompletableFuture<GetFileTokenForUploadToMsaResponse> getFileTokenForUploadToMsa(GetFileTokenForUploadToMsaRequest request);
+
+    /**
+     * @param request the request parameters of GetGameReviewByStatus  GetGameReviewByStatusRequest
+     * @return GetGameReviewByStatusResponse
+     */
+    CompletableFuture<GetGameReviewByStatusResponse> getGameReviewByStatus(GetGameReviewByStatusRequest request);
 
     /**
      * @param request the request parameters of GetLogUrlInMsa  GetLogUrlInMsaRequest
@@ -366,6 +396,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMcdpAimResponse
      */
     CompletableFuture<ListMcdpAimResponse> listMcdpAim(ListMcdpAimRequest request);
+
+    /**
+     * @param request the request parameters of ListMcubeHotpatchResources  ListMcubeHotpatchResourcesRequest
+     * @return ListMcubeHotpatchResourcesResponse
+     */
+    CompletableFuture<ListMcubeHotpatchResourcesResponse> listMcubeHotpatchResources(ListMcubeHotpatchResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListMcubeHotpatchTasks  ListMcubeHotpatchTasksRequest
+     * @return ListMcubeHotpatchTasksResponse
+     */
+    CompletableFuture<ListMcubeHotpatchTasksResponse> listMcubeHotpatchTasks(ListMcubeHotpatchTasksRequest request);
 
     /**
      * @param request the request parameters of ListMcubeMiniApps  ListMcubeMiniAppsRequest
@@ -542,6 +584,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMcdpZoneResponse> queryMcdpZone(QueryMcdpZoneRequest request);
 
     /**
+     * @param request the request parameters of QueryMcubeHotpatchTaskDetail  QueryMcubeHotpatchTaskDetailRequest
+     * @return QueryMcubeHotpatchTaskDetailResponse
+     */
+    CompletableFuture<QueryMcubeHotpatchTaskDetailResponse> queryMcubeHotpatchTaskDetail(QueryMcubeHotpatchTaskDetailRequest request);
+
+    /**
      * @param request the request parameters of QueryMcubeMiniPackage  QueryMcubeMiniPackageRequest
      * @return QueryMcubeMiniPackageResponse
      */
@@ -588,6 +636,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryMpsSchedulerListResponse
      */
     CompletableFuture<QueryMpsSchedulerListResponse> queryMpsSchedulerList(QueryMpsSchedulerListRequest request);
+
+    /**
+     * @param request the request parameters of QueryMscpRiskInfo  QueryMscpRiskInfoRequest
+     * @return QueryMscpRiskInfoResponse
+     */
+    CompletableFuture<QueryMscpRiskInfoResponse> queryMscpRiskInfo(QueryMscpRiskInfoRequest request);
 
     /**
      * @param request the request parameters of QueryPushAnalysisCoreIndex  QueryPushAnalysisCoreIndexRequest
@@ -648,6 +702,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateLinkResponse
      */
     CompletableFuture<UpdateLinkResponse> updateLink(UpdateLinkRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMcubeHotpatchTaskStatus  UpdateMcubeHotpatchTaskStatusRequest
+     * @return UpdateMcubeHotpatchTaskStatusResponse
+     */
+    CompletableFuture<UpdateMcubeHotpatchTaskStatusResponse> updateMcubeHotpatchTaskStatus(UpdateMcubeHotpatchTaskStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateMcubeWhitelist  UpdateMcubeWhitelistRequest
