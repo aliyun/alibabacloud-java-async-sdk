@@ -181,6 +181,453 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
      *
      * <p>GetAutoClipsTaskInfoResponseBody</p>
      */
+    public static class EndTime extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Hour")
+        private Integer hour;
+
+        @com.aliyun.core.annotation.NameInMap("MillSecond")
+        private Integer millSecond;
+
+        @com.aliyun.core.annotation.NameInMap("Minute")
+        private Integer minute;
+
+        @com.aliyun.core.annotation.NameInMap("Second")
+        private Integer second;
+
+        private EndTime(Builder builder) {
+            this.hour = builder.hour;
+            this.millSecond = builder.millSecond;
+            this.minute = builder.minute;
+            this.second = builder.second;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndTime create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hour
+         */
+        public Integer getHour() {
+            return this.hour;
+        }
+
+        /**
+         * @return millSecond
+         */
+        public Integer getMillSecond() {
+            return this.millSecond;
+        }
+
+        /**
+         * @return minute
+         */
+        public Integer getMinute() {
+            return this.minute;
+        }
+
+        /**
+         * @return second
+         */
+        public Integer getSecond() {
+            return this.second;
+        }
+
+        public static final class Builder {
+            private Integer hour; 
+            private Integer millSecond; 
+            private Integer minute; 
+            private Integer second; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndTime model) {
+                this.hour = model.hour;
+                this.millSecond = model.millSecond;
+                this.minute = model.minute;
+                this.second = model.second;
+            } 
+
+            /**
+             * Hour.
+             */
+            public Builder hour(Integer hour) {
+                this.hour = hour;
+                return this;
+            }
+
+            /**
+             * MillSecond.
+             */
+            public Builder millSecond(Integer millSecond) {
+                this.millSecond = millSecond;
+                return this;
+            }
+
+            /**
+             * Minute.
+             */
+            public Builder minute(Integer minute) {
+                this.minute = minute;
+                return this;
+            }
+
+            /**
+             * Second.
+             */
+            public Builder second(Integer second) {
+                this.second = second;
+                return this;
+            }
+
+            public EndTime build() {
+                return new EndTime(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
+    public static class StartTime extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Hour")
+        private Integer hour;
+
+        @com.aliyun.core.annotation.NameInMap("MillSecond")
+        private Integer millSecond;
+
+        @com.aliyun.core.annotation.NameInMap("Minute")
+        private Integer minute;
+
+        @com.aliyun.core.annotation.NameInMap("Second")
+        private Integer second;
+
+        private StartTime(Builder builder) {
+            this.hour = builder.hour;
+            this.millSecond = builder.millSecond;
+            this.minute = builder.minute;
+            this.second = builder.second;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StartTime create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hour
+         */
+        public Integer getHour() {
+            return this.hour;
+        }
+
+        /**
+         * @return millSecond
+         */
+        public Integer getMillSecond() {
+            return this.millSecond;
+        }
+
+        /**
+         * @return minute
+         */
+        public Integer getMinute() {
+            return this.minute;
+        }
+
+        /**
+         * @return second
+         */
+        public Integer getSecond() {
+            return this.second;
+        }
+
+        public static final class Builder {
+            private Integer hour; 
+            private Integer millSecond; 
+            private Integer minute; 
+            private Integer second; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartTime model) {
+                this.hour = model.hour;
+                this.millSecond = model.millSecond;
+                this.minute = model.minute;
+                this.second = model.second;
+            } 
+
+            /**
+             * Hour.
+             */
+            public Builder hour(Integer hour) {
+                this.hour = hour;
+                return this;
+            }
+
+            /**
+             * MillSecond.
+             */
+            public Builder millSecond(Integer millSecond) {
+                this.millSecond = millSecond;
+                return this;
+            }
+
+            /**
+             * Minute.
+             */
+            public Builder minute(Integer minute) {
+                this.minute = minute;
+                return this;
+            }
+
+            /**
+             * Second.
+             */
+            public Builder second(Integer second) {
+                this.second = second;
+                return this;
+            }
+
+            public StartTime build() {
+                return new StartTime(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
+    public static class LensInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AnalysisContent")
+        private String analysisContent;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private EndTime endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private StartTime startTime;
+
+        private LensInfos(Builder builder) {
+            this.analysisContent = builder.analysisContent;
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LensInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return analysisContent
+         */
+        public String getAnalysisContent() {
+            return this.analysisContent;
+        }
+
+        /**
+         * @return endTime
+         */
+        public EndTime getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public StartTime getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String analysisContent; 
+            private EndTime endTime; 
+            private StartTime startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LensInfos model) {
+                this.analysisContent = model.analysisContent;
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * AnalysisContent.
+             */
+            public Builder analysisContent(String analysisContent) {
+                this.analysisContent = analysisContent;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(EndTime endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(StartTime startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public LensInfos build() {
+                return new LensInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
+    public static class AnalysisResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LensInfos")
+        private java.util.List<LensInfos> lensInfos;
+
+        @com.aliyun.core.annotation.NameInMap("MediaId")
+        private String mediaId;
+
+        @com.aliyun.core.annotation.NameInMap("MediaName")
+        private String mediaName;
+
+        @com.aliyun.core.annotation.NameInMap("MediaUrl")
+        private String mediaUrl;
+
+        private AnalysisResults(Builder builder) {
+            this.lensInfos = builder.lensInfos;
+            this.mediaId = builder.mediaId;
+            this.mediaName = builder.mediaName;
+            this.mediaUrl = builder.mediaUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AnalysisResults create() {
+            return builder().build();
+        }
+
+        /**
+         * @return lensInfos
+         */
+        public java.util.List<LensInfos> getLensInfos() {
+            return this.lensInfos;
+        }
+
+        /**
+         * @return mediaId
+         */
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        /**
+         * @return mediaName
+         */
+        public String getMediaName() {
+            return this.mediaName;
+        }
+
+        /**
+         * @return mediaUrl
+         */
+        public String getMediaUrl() {
+            return this.mediaUrl;
+        }
+
+        public static final class Builder {
+            private java.util.List<LensInfos> lensInfos; 
+            private String mediaId; 
+            private String mediaName; 
+            private String mediaUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnalysisResults model) {
+                this.lensInfos = model.lensInfos;
+                this.mediaId = model.mediaId;
+                this.mediaName = model.mediaName;
+                this.mediaUrl = model.mediaUrl;
+            } 
+
+            /**
+             * LensInfos.
+             */
+            public Builder lensInfos(java.util.List<LensInfos> lensInfos) {
+                this.lensInfos = lensInfos;
+                return this;
+            }
+
+            /**
+             * MediaId.
+             */
+            public Builder mediaId(String mediaId) {
+                this.mediaId = mediaId;
+                return this;
+            }
+
+            /**
+             * MediaName.
+             */
+            public Builder mediaName(String mediaName) {
+                this.mediaName = mediaName;
+                return this;
+            }
+
+            /**
+             * MediaUrl.
+             */
+            public Builder mediaUrl(String mediaUrl) {
+                this.mediaUrl = mediaUrl;
+                return this;
+            }
+
+            public AnalysisResults build() {
+                return new AnalysisResults(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
     public static class ColorWords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -350,6 +797,198 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
             public ColorWords build() {
                 return new ColorWords(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
+    public static class ReferenceVideo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VideoId")
+        private String videoId;
+
+        @com.aliyun.core.annotation.NameInMap("VideoName")
+        private String videoName;
+
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
+        private String videoUrl;
+
+        private ReferenceVideo(Builder builder) {
+            this.videoId = builder.videoId;
+            this.videoName = builder.videoName;
+            this.videoUrl = builder.videoUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReferenceVideo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoId
+         */
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        /**
+         * @return videoName
+         */
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        /**
+         * @return videoUrl
+         */
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public static final class Builder {
+            private String videoId; 
+            private String videoName; 
+            private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferenceVideo model) {
+                this.videoId = model.videoId;
+                this.videoName = model.videoName;
+                this.videoUrl = model.videoUrl;
+            } 
+
+            /**
+             * VideoId.
+             */
+            public Builder videoId(String videoId) {
+                this.videoId = videoId;
+                return this;
+            }
+
+            /**
+             * VideoName.
+             */
+            public Builder videoName(String videoName) {
+                this.videoName = videoName;
+                return this;
+            }
+
+            /**
+             * VideoUrl.
+             */
+            public Builder videoUrl(String videoUrl) {
+                this.videoUrl = videoUrl;
+                return this;
+            }
+
+            public ReferenceVideo build() {
+                return new ReferenceVideo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAutoClipsTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAutoClipsTaskInfoResponseBody</p>
+     */
+    public static class SourceVideos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VideoId")
+        private String videoId;
+
+        @com.aliyun.core.annotation.NameInMap("VideoName")
+        private String videoName;
+
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
+        private String videoUrl;
+
+        private SourceVideos(Builder builder) {
+            this.videoId = builder.videoId;
+            this.videoName = builder.videoName;
+            this.videoUrl = builder.videoUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceVideos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoId
+         */
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        /**
+         * @return videoName
+         */
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        /**
+         * @return videoUrl
+         */
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public static final class Builder {
+            private String videoId; 
+            private String videoName; 
+            private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceVideos model) {
+                this.videoId = model.videoId;
+                this.videoName = model.videoName;
+                this.videoUrl = model.videoUrl;
+            } 
+
+            /**
+             * VideoId.
+             */
+            public Builder videoId(String videoId) {
+                this.videoId = videoId;
+                return this;
+            }
+
+            /**
+             * VideoName.
+             */
+            public Builder videoName(String videoName) {
+                this.videoName = videoName;
+                return this;
+            }
+
+            /**
+             * VideoUrl.
+             */
+            public Builder videoUrl(String videoUrl) {
+                this.videoUrl = videoUrl;
+                return this;
+            }
+
+            public SourceVideos build() {
+                return new SourceVideos(this);
             } 
 
         } 
@@ -860,6 +1499,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
      * <p>GetAutoClipsTaskInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AnalysisResults")
+        private java.util.List<AnalysisResults> analysisResults;
+
         @com.aliyun.core.annotation.NameInMap("CloseMusic")
         private Boolean closeMusic;
 
@@ -869,11 +1511,17 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloseVoice")
         private Boolean closeVoice;
 
+        @com.aliyun.core.annotation.NameInMap("ClosingCreditsUrl")
+        private String closingCreditsUrl;
+
         @com.aliyun.core.annotation.NameInMap("ColorWords")
         private java.util.List<ColorWords> colorWords;
 
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
+
+        @com.aliyun.core.annotation.NameInMap("CustomVoiceStyle")
+        private String customVoiceStyle;
 
         @com.aliyun.core.annotation.NameInMap("CustomVoiceUrl")
         private String customVoiceUrl;
@@ -896,8 +1544,20 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MusicVolume")
         private Integer musicVolume;
 
+        @com.aliyun.core.annotation.NameInMap("OpeningCreditsUrl")
+        private String openingCreditsUrl;
+
+        @com.aliyun.core.annotation.NameInMap("OutputVideoFileKey")
+        private String outputVideoFileKey;
+
         @com.aliyun.core.annotation.NameInMap("OutputVideoUrl")
         private String outputVideoUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ReferenceVideo")
+        private ReferenceVideo referenceVideo;
+
+        @com.aliyun.core.annotation.NameInMap("SourceVideos")
+        private java.util.List<SourceVideos> sourceVideos;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -924,11 +1584,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         private Integer voiceVolume;
 
         private Data(Builder builder) {
+            this.analysisResults = builder.analysisResults;
             this.closeMusic = builder.closeMusic;
             this.closeSubtitle = builder.closeSubtitle;
             this.closeVoice = builder.closeVoice;
+            this.closingCreditsUrl = builder.closingCreditsUrl;
             this.colorWords = builder.colorWords;
             this.content = builder.content;
+            this.customVoiceStyle = builder.customVoiceStyle;
             this.customVoiceUrl = builder.customVoiceUrl;
             this.customVoiceVolume = builder.customVoiceVolume;
             this.errorMessage = builder.errorMessage;
@@ -936,7 +1599,11 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             this.musicStyle = builder.musicStyle;
             this.musicUrl = builder.musicUrl;
             this.musicVolume = builder.musicVolume;
+            this.openingCreditsUrl = builder.openingCreditsUrl;
+            this.outputVideoFileKey = builder.outputVideoFileKey;
             this.outputVideoUrl = builder.outputVideoUrl;
+            this.referenceVideo = builder.referenceVideo;
+            this.sourceVideos = builder.sourceVideos;
             this.status = builder.status;
             this.step = builder.step;
             this.stickers = builder.stickers;
@@ -953,6 +1620,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return analysisResults
+         */
+        public java.util.List<AnalysisResults> getAnalysisResults() {
+            return this.analysisResults;
         }
 
         /**
@@ -977,6 +1651,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return closingCreditsUrl
+         */
+        public String getClosingCreditsUrl() {
+            return this.closingCreditsUrl;
+        }
+
+        /**
          * @return colorWords
          */
         public java.util.List<ColorWords> getColorWords() {
@@ -988,6 +1669,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return customVoiceStyle
+         */
+        public String getCustomVoiceStyle() {
+            return this.customVoiceStyle;
         }
 
         /**
@@ -1040,10 +1728,38 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return openingCreditsUrl
+         */
+        public String getOpeningCreditsUrl() {
+            return this.openingCreditsUrl;
+        }
+
+        /**
+         * @return outputVideoFileKey
+         */
+        public String getOutputVideoFileKey() {
+            return this.outputVideoFileKey;
+        }
+
+        /**
          * @return outputVideoUrl
          */
         public String getOutputVideoUrl() {
             return this.outputVideoUrl;
+        }
+
+        /**
+         * @return referenceVideo
+         */
+        public ReferenceVideo getReferenceVideo() {
+            return this.referenceVideo;
+        }
+
+        /**
+         * @return sourceVideos
+         */
+        public java.util.List<SourceVideos> getSourceVideos() {
+            return this.sourceVideos;
         }
 
         /**
@@ -1103,11 +1819,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AnalysisResults> analysisResults; 
             private Boolean closeMusic; 
             private Boolean closeSubtitle; 
             private Boolean closeVoice; 
+            private String closingCreditsUrl; 
             private java.util.List<ColorWords> colorWords; 
             private String content; 
+            private String customVoiceStyle; 
             private String customVoiceUrl; 
             private Integer customVoiceVolume; 
             private String errorMessage; 
@@ -1115,7 +1834,11 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             private String musicStyle; 
             private String musicUrl; 
             private Integer musicVolume; 
+            private String openingCreditsUrl; 
+            private String outputVideoFileKey; 
             private String outputVideoUrl; 
+            private ReferenceVideo referenceVideo; 
+            private java.util.List<SourceVideos> sourceVideos; 
             private Integer status; 
             private String step; 
             private java.util.List<Stickers> stickers; 
@@ -1129,11 +1852,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.analysisResults = model.analysisResults;
                 this.closeMusic = model.closeMusic;
                 this.closeSubtitle = model.closeSubtitle;
                 this.closeVoice = model.closeVoice;
+                this.closingCreditsUrl = model.closingCreditsUrl;
                 this.colorWords = model.colorWords;
                 this.content = model.content;
+                this.customVoiceStyle = model.customVoiceStyle;
                 this.customVoiceUrl = model.customVoiceUrl;
                 this.customVoiceVolume = model.customVoiceVolume;
                 this.errorMessage = model.errorMessage;
@@ -1141,7 +1867,11 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
                 this.musicStyle = model.musicStyle;
                 this.musicUrl = model.musicUrl;
                 this.musicVolume = model.musicVolume;
+                this.openingCreditsUrl = model.openingCreditsUrl;
+                this.outputVideoFileKey = model.outputVideoFileKey;
                 this.outputVideoUrl = model.outputVideoUrl;
+                this.referenceVideo = model.referenceVideo;
+                this.sourceVideos = model.sourceVideos;
                 this.status = model.status;
                 this.step = model.step;
                 this.stickers = model.stickers;
@@ -1151,6 +1881,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
                 this.voiceStyle = model.voiceStyle;
                 this.voiceVolume = model.voiceVolume;
             } 
+
+            /**
+             * AnalysisResults.
+             */
+            public Builder analysisResults(java.util.List<AnalysisResults> analysisResults) {
+                this.analysisResults = analysisResults;
+                return this;
+            }
 
             /**
              * CloseMusic.
@@ -1177,6 +1915,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * ClosingCreditsUrl.
+             */
+            public Builder closingCreditsUrl(String closingCreditsUrl) {
+                this.closingCreditsUrl = closingCreditsUrl;
+                return this;
+            }
+
+            /**
              * ColorWords.
              */
             public Builder colorWords(java.util.List<ColorWords> colorWords) {
@@ -1189,6 +1935,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * CustomVoiceStyle.
+             */
+            public Builder customVoiceStyle(String customVoiceStyle) {
+                this.customVoiceStyle = customVoiceStyle;
                 return this;
             }
 
@@ -1249,10 +2003,42 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * OpeningCreditsUrl.
+             */
+            public Builder openingCreditsUrl(String openingCreditsUrl) {
+                this.openingCreditsUrl = openingCreditsUrl;
+                return this;
+            }
+
+            /**
+             * OutputVideoFileKey.
+             */
+            public Builder outputVideoFileKey(String outputVideoFileKey) {
+                this.outputVideoFileKey = outputVideoFileKey;
+                return this;
+            }
+
+            /**
              * OutputVideoUrl.
              */
             public Builder outputVideoUrl(String outputVideoUrl) {
                 this.outputVideoUrl = outputVideoUrl;
+                return this;
+            }
+
+            /**
+             * ReferenceVideo.
+             */
+            public Builder referenceVideo(ReferenceVideo referenceVideo) {
+                this.referenceVideo = referenceVideo;
+                return this;
+            }
+
+            /**
+             * SourceVideos.
+             */
+            public Builder sourceVideos(java.util.List<SourceVideos> sourceVideos) {
+                this.sourceVideos = sourceVideos;
                 return this;
             }
 

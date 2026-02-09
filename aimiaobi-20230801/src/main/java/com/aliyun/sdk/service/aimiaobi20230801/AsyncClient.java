@@ -206,6 +206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMaterialByIdResponse> deleteMaterialById(DeleteMaterialByIdRequest request);
 
     /**
+     * @param request the request parameters of DeletePptArtifact  DeletePptArtifactRequest
+     * @return DeletePptArtifactResponse
+     */
+    CompletableFuture<DeletePptArtifactResponse> deletePptArtifact(DeletePptArtifactRequest request);
+
+    /**
      * @param request the request parameters of DeleteStyleLearningResult  DeleteStyleLearningResultRequest
      * @return DeleteStyleLearningResultResponse
      */
@@ -380,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCategoriesByTaskIdResponse> getCategoriesByTaskId(GetCategoriesByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of GetClipsBuildInResource  GetClipsBuildInResourceRequest
+     * @return GetClipsBuildInResourceResponse
+     */
+    CompletableFuture<GetClipsBuildInResourceResponse> getClipsBuildInResource(GetClipsBuildInResourceRequest request);
+
+    /**
      * @param request the request parameters of GetCustomHotTopicBroadcastJob  GetCustomHotTopicBroadcastJobRequest
      * @return GetCustomHotTopicBroadcastJobResponse
      */
@@ -512,6 +524,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMaterialByIdResponse> getMaterialById(GetMaterialByIdRequest request);
 
     /**
+     * @param request the request parameters of GetPptArtifact  GetPptArtifactRequest
+     * @return GetPptArtifactResponse
+     */
+    CompletableFuture<GetPptArtifactResponse> getPptArtifact(GetPptArtifactRequest request);
+
+    /**
      * @param request the request parameters of GetPptConfig  GetPptConfigRequest
      * @return GetPptConfigResponse
      */
@@ -606,6 +624,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAuditTermsResponse
      */
     CompletableFuture<ListAuditTermsResponse> listAuditTerms(ListAuditTermsRequest request);
+
+    /**
+     * @param request the request parameters of ListAutoClipsTask  ListAutoClipsTaskRequest
+     * @return ListAutoClipsTaskResponse
+     */
+    CompletableFuture<ListAutoClipsTaskResponse> listAutoClipsTask(ListAutoClipsTaskRequest request);
 
     /**
      * @param request the request parameters of ListBiddingDoc  ListBiddingDocRequest
@@ -738,6 +762,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPlanningProposalResponse
      */
     CompletableFuture<ListPlanningProposalResponse> listPlanningProposal(ListPlanningProposalRequest request);
+
+    /**
+     * @param request the request parameters of ListPptArtifacts  ListPptArtifactsRequest
+     * @return ListPptArtifactsResponse
+     */
+    CompletableFuture<ListPptArtifactsResponse> listPptArtifacts(ListPptArtifactsRequest request);
 
     /**
      * @param request the request parameters of ListSearchTaskDialogueDatas  ListSearchTaskDialogueDatasRequest

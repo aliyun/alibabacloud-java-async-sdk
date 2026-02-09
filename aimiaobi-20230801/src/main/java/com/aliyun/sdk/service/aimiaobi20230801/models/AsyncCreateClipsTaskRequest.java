@@ -34,8 +34,24 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private Boolean closeVoice;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClosingCreditsUrl")
+    private String closingCreditsUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ColorWords")
     private java.util.List<ColorWords> colorWords;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CosyVoiceAppKey")
+    private String cosyVoiceAppKey;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CosyVoiceToken")
+    private String cosyVoiceToken;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomVoiceStyle")
+    private String customVoiceStyle;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomVoiceUrl")
@@ -50,12 +66,24 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private Integer height;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HighDefSourceVideos")
+    private java.util.List<HighDefSourceVideos> highDefSourceVideos;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MusicStyle")
+    private String musicStyle;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MusicUrl")
     private String musicUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MusicVolume")
     private Integer musicVolume;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpeningCreditsUrl")
+    private String openingCreditsUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Stickers")
@@ -93,12 +121,19 @@ public class AsyncCreateClipsTaskRequest extends Request {
         this.closeMusic = builder.closeMusic;
         this.closeSubtitle = builder.closeSubtitle;
         this.closeVoice = builder.closeVoice;
+        this.closingCreditsUrl = builder.closingCreditsUrl;
         this.colorWords = builder.colorWords;
+        this.cosyVoiceAppKey = builder.cosyVoiceAppKey;
+        this.cosyVoiceToken = builder.cosyVoiceToken;
+        this.customVoiceStyle = builder.customVoiceStyle;
         this.customVoiceUrl = builder.customVoiceUrl;
         this.customVoiceVolume = builder.customVoiceVolume;
         this.height = builder.height;
+        this.highDefSourceVideos = builder.highDefSourceVideos;
+        this.musicStyle = builder.musicStyle;
         this.musicUrl = builder.musicUrl;
         this.musicVolume = builder.musicVolume;
+        this.openingCreditsUrl = builder.openingCreditsUrl;
         this.stickers = builder.stickers;
         this.subtitleFontSize = builder.subtitleFontSize;
         this.taskId = builder.taskId;
@@ -150,10 +185,38 @@ public class AsyncCreateClipsTaskRequest extends Request {
     }
 
     /**
+     * @return closingCreditsUrl
+     */
+    public String getClosingCreditsUrl() {
+        return this.closingCreditsUrl;
+    }
+
+    /**
      * @return colorWords
      */
     public java.util.List<ColorWords> getColorWords() {
         return this.colorWords;
+    }
+
+    /**
+     * @return cosyVoiceAppKey
+     */
+    public String getCosyVoiceAppKey() {
+        return this.cosyVoiceAppKey;
+    }
+
+    /**
+     * @return cosyVoiceToken
+     */
+    public String getCosyVoiceToken() {
+        return this.cosyVoiceToken;
+    }
+
+    /**
+     * @return customVoiceStyle
+     */
+    public String getCustomVoiceStyle() {
+        return this.customVoiceStyle;
     }
 
     /**
@@ -178,6 +241,20 @@ public class AsyncCreateClipsTaskRequest extends Request {
     }
 
     /**
+     * @return highDefSourceVideos
+     */
+    public java.util.List<HighDefSourceVideos> getHighDefSourceVideos() {
+        return this.highDefSourceVideos;
+    }
+
+    /**
+     * @return musicStyle
+     */
+    public String getMusicStyle() {
+        return this.musicStyle;
+    }
+
+    /**
      * @return musicUrl
      */
     public String getMusicUrl() {
@@ -189,6 +266,13 @@ public class AsyncCreateClipsTaskRequest extends Request {
      */
     public Integer getMusicVolume() {
         return this.musicVolume;
+    }
+
+    /**
+     * @return openingCreditsUrl
+     */
+    public String getOpeningCreditsUrl() {
+        return this.openingCreditsUrl;
     }
 
     /**
@@ -245,12 +329,19 @@ public class AsyncCreateClipsTaskRequest extends Request {
         private Boolean closeMusic; 
         private Boolean closeSubtitle; 
         private Boolean closeVoice; 
+        private String closingCreditsUrl; 
         private java.util.List<ColorWords> colorWords; 
+        private String cosyVoiceAppKey; 
+        private String cosyVoiceToken; 
+        private String customVoiceStyle; 
         private String customVoiceUrl; 
         private Integer customVoiceVolume; 
         private Integer height; 
+        private java.util.List<HighDefSourceVideos> highDefSourceVideos; 
+        private String musicStyle; 
         private String musicUrl; 
         private Integer musicVolume; 
+        private String openingCreditsUrl; 
         private java.util.List<Stickers> stickers; 
         private Integer subtitleFontSize; 
         private String taskId; 
@@ -269,12 +360,19 @@ public class AsyncCreateClipsTaskRequest extends Request {
             this.closeMusic = request.closeMusic;
             this.closeSubtitle = request.closeSubtitle;
             this.closeVoice = request.closeVoice;
+            this.closingCreditsUrl = request.closingCreditsUrl;
             this.colorWords = request.colorWords;
+            this.cosyVoiceAppKey = request.cosyVoiceAppKey;
+            this.cosyVoiceToken = request.cosyVoiceToken;
+            this.customVoiceStyle = request.customVoiceStyle;
             this.customVoiceUrl = request.customVoiceUrl;
             this.customVoiceVolume = request.customVoiceVolume;
             this.height = request.height;
+            this.highDefSourceVideos = request.highDefSourceVideos;
+            this.musicStyle = request.musicStyle;
             this.musicUrl = request.musicUrl;
             this.musicVolume = request.musicVolume;
+            this.openingCreditsUrl = request.openingCreditsUrl;
             this.stickers = request.stickers;
             this.subtitleFontSize = request.subtitleFontSize;
             this.taskId = request.taskId;
@@ -321,12 +419,48 @@ public class AsyncCreateClipsTaskRequest extends Request {
         }
 
         /**
+         * ClosingCreditsUrl.
+         */
+        public Builder closingCreditsUrl(String closingCreditsUrl) {
+            this.putBodyParameter("ClosingCreditsUrl", closingCreditsUrl);
+            this.closingCreditsUrl = closingCreditsUrl;
+            return this;
+        }
+
+        /**
          * ColorWords.
          */
         public Builder colorWords(java.util.List<ColorWords> colorWords) {
             String colorWordsShrink = shrink(colorWords, "ColorWords", "json");
             this.putBodyParameter("ColorWords", colorWordsShrink);
             this.colorWords = colorWords;
+            return this;
+        }
+
+        /**
+         * CosyVoiceAppKey.
+         */
+        public Builder cosyVoiceAppKey(String cosyVoiceAppKey) {
+            this.putBodyParameter("CosyVoiceAppKey", cosyVoiceAppKey);
+            this.cosyVoiceAppKey = cosyVoiceAppKey;
+            return this;
+        }
+
+        /**
+         * CosyVoiceToken.
+         */
+        public Builder cosyVoiceToken(String cosyVoiceToken) {
+            this.putBodyParameter("CosyVoiceToken", cosyVoiceToken);
+            this.cosyVoiceToken = cosyVoiceToken;
+            return this;
+        }
+
+        /**
+         * CustomVoiceStyle.
+         */
+        public Builder customVoiceStyle(String customVoiceStyle) {
+            this.putBodyParameter("CustomVoiceStyle", customVoiceStyle);
+            this.customVoiceStyle = customVoiceStyle;
             return this;
         }
 
@@ -358,6 +492,25 @@ public class AsyncCreateClipsTaskRequest extends Request {
         }
 
         /**
+         * HighDefSourceVideos.
+         */
+        public Builder highDefSourceVideos(java.util.List<HighDefSourceVideos> highDefSourceVideos) {
+            String highDefSourceVideosShrink = shrink(highDefSourceVideos, "HighDefSourceVideos", "json");
+            this.putBodyParameter("HighDefSourceVideos", highDefSourceVideosShrink);
+            this.highDefSourceVideos = highDefSourceVideos;
+            return this;
+        }
+
+        /**
+         * MusicStyle.
+         */
+        public Builder musicStyle(String musicStyle) {
+            this.putBodyParameter("MusicStyle", musicStyle);
+            this.musicStyle = musicStyle;
+            return this;
+        }
+
+        /**
          * MusicUrl.
          */
         public Builder musicUrl(String musicUrl) {
@@ -372,6 +525,15 @@ public class AsyncCreateClipsTaskRequest extends Request {
         public Builder musicVolume(Integer musicVolume) {
             this.putBodyParameter("MusicVolume", musicVolume);
             this.musicVolume = musicVolume;
+            return this;
+        }
+
+        /**
+         * OpeningCreditsUrl.
+         */
+        public Builder openingCreditsUrl(String openingCreditsUrl) {
+            this.putBodyParameter("OpeningCreditsUrl", openingCreditsUrl);
+            this.openingCreditsUrl = openingCreditsUrl;
             return this;
         }
 
@@ -627,6 +789,102 @@ public class AsyncCreateClipsTaskRequest extends Request {
 
             public ColorWords build() {
                 return new ColorWords(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AsyncCreateClipsTaskRequest} extends {@link TeaModel}
+     *
+     * <p>AsyncCreateClipsTaskRequest</p>
+     */
+    public static class HighDefSourceVideos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VideoId")
+        private String videoId;
+
+        @com.aliyun.core.annotation.NameInMap("VideoName")
+        private String videoName;
+
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
+        private String videoUrl;
+
+        private HighDefSourceVideos(Builder builder) {
+            this.videoId = builder.videoId;
+            this.videoName = builder.videoName;
+            this.videoUrl = builder.videoUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HighDefSourceVideos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoId
+         */
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        /**
+         * @return videoName
+         */
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        /**
+         * @return videoUrl
+         */
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public static final class Builder {
+            private String videoId; 
+            private String videoName; 
+            private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(HighDefSourceVideos model) {
+                this.videoId = model.videoId;
+                this.videoName = model.videoName;
+                this.videoUrl = model.videoUrl;
+            } 
+
+            /**
+             * VideoId.
+             */
+            public Builder videoId(String videoId) {
+                this.videoId = videoId;
+                return this;
+            }
+
+            /**
+             * VideoName.
+             */
+            public Builder videoName(String videoName) {
+                this.videoName = videoName;
+                return this;
+            }
+
+            /**
+             * VideoUrl.
+             */
+            public Builder videoUrl(String videoUrl) {
+                this.videoUrl = videoUrl;
+                return this;
+            }
+
+            public HighDefSourceVideos build() {
+                return new HighDefSourceVideos(this);
             } 
 
         } 

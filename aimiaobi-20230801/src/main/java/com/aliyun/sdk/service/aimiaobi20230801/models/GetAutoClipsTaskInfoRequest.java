@@ -22,6 +22,14 @@ public class GetAutoClipsTaskInfoRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowAnalysisResults")
+    private Boolean showAnalysisResults;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowResourceInfo")
+    private Boolean showResourceInfo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
@@ -34,6 +42,8 @@ public class GetAutoClipsTaskInfoRequest extends Request {
     private GetAutoClipsTaskInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.showAnalysisResults = builder.showAnalysisResults;
+        this.showResourceInfo = builder.showResourceInfo;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
     }
@@ -59,6 +69,20 @@ public class GetAutoClipsTaskInfoRequest extends Request {
     }
 
     /**
+     * @return showAnalysisResults
+     */
+    public Boolean getShowAnalysisResults() {
+        return this.showAnalysisResults;
+    }
+
+    /**
+     * @return showResourceInfo
+     */
+    public Boolean getShowResourceInfo() {
+        return this.showResourceInfo;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -74,6 +98,8 @@ public class GetAutoClipsTaskInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAutoClipsTaskInfoRequest, Builder> {
         private String regionId; 
+        private Boolean showAnalysisResults; 
+        private Boolean showResourceInfo; 
         private String taskId; 
         private String workspaceId; 
 
@@ -84,6 +110,8 @@ public class GetAutoClipsTaskInfoRequest extends Request {
         private Builder(GetAutoClipsTaskInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.showAnalysisResults = request.showAnalysisResults;
+            this.showResourceInfo = request.showResourceInfo;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
         } 
@@ -94,6 +122,24 @@ public class GetAutoClipsTaskInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ShowAnalysisResults.
+         */
+        public Builder showAnalysisResults(Boolean showAnalysisResults) {
+            this.putBodyParameter("ShowAnalysisResults", showAnalysisResults);
+            this.showAnalysisResults = showAnalysisResults;
+            return this;
+        }
+
+        /**
+         * ShowResourceInfo.
+         */
+        public Builder showResourceInfo(Boolean showResourceInfo) {
+            this.putBodyParameter("ShowResourceInfo", showResourceInfo);
+            this.showResourceInfo = showResourceInfo;
             return this;
         }
 

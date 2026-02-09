@@ -22,6 +22,10 @@ public class AsyncUploadVideoRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdaptiveThreshold")
+    private Float adaptiveThreshold;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AnlysisPrompt")
     private String anlysisPrompt;
 
@@ -47,6 +51,14 @@ public class AsyncUploadVideoRequest extends Request {
     private Integer splitInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    private String taskType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoRoles")
     private java.util.List<VideoRoles> videoRoles;
 
@@ -62,12 +74,15 @@ public class AsyncUploadVideoRequest extends Request {
     private AsyncUploadVideoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.adaptiveThreshold = builder.adaptiveThreshold;
         this.anlysisPrompt = builder.anlysisPrompt;
         this.faceIdentitySimilarityMinScore = builder.faceIdentitySimilarityMinScore;
         this.referenceVideo = builder.referenceVideo;
         this.removeSubtitle = builder.removeSubtitle;
         this.sourceVideos = builder.sourceVideos;
         this.splitInterval = builder.splitInterval;
+        this.taskName = builder.taskName;
+        this.taskType = builder.taskType;
         this.videoRoles = builder.videoRoles;
         this.videoShotFaceIdentityCount = builder.videoShotFaceIdentityCount;
         this.workspaceId = builder.workspaceId;
@@ -91,6 +106,13 @@ public class AsyncUploadVideoRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return adaptiveThreshold
+     */
+    public Float getAdaptiveThreshold() {
+        return this.adaptiveThreshold;
     }
 
     /**
@@ -136,6 +158,20 @@ public class AsyncUploadVideoRequest extends Request {
     }
 
     /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    /**
      * @return videoRoles
      */
     public java.util.List<VideoRoles> getVideoRoles() {
@@ -158,12 +194,15 @@ public class AsyncUploadVideoRequest extends Request {
 
     public static final class Builder extends Request.Builder<AsyncUploadVideoRequest, Builder> {
         private String regionId; 
+        private Float adaptiveThreshold; 
         private String anlysisPrompt; 
         private Double faceIdentitySimilarityMinScore; 
         private ReferenceVideo referenceVideo; 
         private Boolean removeSubtitle; 
         private java.util.List<SourceVideos> sourceVideos; 
         private Integer splitInterval; 
+        private String taskName; 
+        private String taskType; 
         private java.util.List<VideoRoles> videoRoles; 
         private Integer videoShotFaceIdentityCount; 
         private String workspaceId; 
@@ -175,12 +214,15 @@ public class AsyncUploadVideoRequest extends Request {
         private Builder(AsyncUploadVideoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.adaptiveThreshold = request.adaptiveThreshold;
             this.anlysisPrompt = request.anlysisPrompt;
             this.faceIdentitySimilarityMinScore = request.faceIdentitySimilarityMinScore;
             this.referenceVideo = request.referenceVideo;
             this.removeSubtitle = request.removeSubtitle;
             this.sourceVideos = request.sourceVideos;
             this.splitInterval = request.splitInterval;
+            this.taskName = request.taskName;
+            this.taskType = request.taskType;
             this.videoRoles = request.videoRoles;
             this.videoShotFaceIdentityCount = request.videoShotFaceIdentityCount;
             this.workspaceId = request.workspaceId;
@@ -192,6 +234,15 @@ public class AsyncUploadVideoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AdaptiveThreshold.
+         */
+        public Builder adaptiveThreshold(Float adaptiveThreshold) {
+            this.putBodyParameter("AdaptiveThreshold", adaptiveThreshold);
+            this.adaptiveThreshold = adaptiveThreshold;
             return this;
         }
 
@@ -248,6 +299,24 @@ public class AsyncUploadVideoRequest extends Request {
         public Builder splitInterval(Integer splitInterval) {
             this.putBodyParameter("SplitInterval", splitInterval);
             this.splitInterval = splitInterval;
+            return this;
+        }
+
+        /**
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.putBodyParameter("TaskName", taskName);
+            this.taskName = taskName;
+            return this;
+        }
+
+        /**
+         * TaskType.
+         */
+        public Builder taskType(String taskType) {
+            this.putBodyParameter("TaskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 
@@ -473,6 +542,10 @@ public class AsyncUploadVideoRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://123.mp4">http://123.mp4</a>
+             * 目前该接口只进行视频理解额和分析，并没有对文件进行转存。请保证视频地址在任务执行期间有效。</p>
              */
             public Builder videoUrl(String videoUrl) {
                 this.videoUrl = videoUrl;
