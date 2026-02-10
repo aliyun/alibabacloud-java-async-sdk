@@ -28,6 +28,10 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
     private Long beginTs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    private String channelId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTs")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long endTs;
@@ -49,6 +53,7 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.beginTs = builder.beginTs;
+        this.channelId = builder.channelId;
         this.endTs = builder.endTs;
         this.metricType = builder.metricType;
         this.os = builder.os;
@@ -83,6 +88,13 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
     }
 
     /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    /**
      * @return endTs
      */
     public Long getEndTs() {
@@ -113,6 +125,7 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeLiveInteractionMetricDataRequest, Builder> {
         private String appId; 
         private Long beginTs; 
+        private String channelId; 
         private Long endTs; 
         private String metricType; 
         private String os; 
@@ -126,6 +139,7 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.beginTs = request.beginTs;
+            this.channelId = request.channelId;
             this.endTs = request.endTs;
             this.metricType = request.metricType;
             this.os = request.os;
@@ -155,6 +169,15 @@ public class DescribeLiveInteractionMetricDataRequest extends Request {
         public Builder beginTs(Long beginTs) {
             this.putQueryParameter("BeginTs", beginTs);
             this.beginTs = beginTs;
+            return this;
+        }
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.putQueryParameter("ChannelId", channelId);
+            this.channelId = channelId;
             return this;
         }
 
