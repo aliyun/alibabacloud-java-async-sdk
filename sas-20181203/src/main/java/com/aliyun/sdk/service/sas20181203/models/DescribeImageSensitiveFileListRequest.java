@@ -49,6 +49,10 @@ public class DescribeImageSensitiveFileListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private java.util.List<String> scanRange;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SensitiveKeyList")
+    private java.util.List<String> sensitiveKeyList;
+
     private DescribeImageSensitiveFileListRequest(Builder builder) {
         super(builder);
         this.criteria = builder.criteria;
@@ -59,6 +63,7 @@ public class DescribeImageSensitiveFileListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.riskLevel = builder.riskLevel;
         this.scanRange = builder.scanRange;
+        this.sensitiveKeyList = builder.sensitiveKeyList;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class DescribeImageSensitiveFileListRequest extends Request {
         return this.scanRange;
     }
 
+    /**
+     * @return sensitiveKeyList
+     */
+    public java.util.List<String> getSensitiveKeyList() {
+        return this.sensitiveKeyList;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageSensitiveFileListRequest, Builder> {
         private String criteria; 
         private String criteriaType; 
@@ -139,6 +151,7 @@ public class DescribeImageSensitiveFileListRequest extends Request {
         private Integer pageSize; 
         private String riskLevel; 
         private java.util.List<String> scanRange; 
+        private java.util.List<String> sensitiveKeyList; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class DescribeImageSensitiveFileListRequest extends Request {
             this.pageSize = request.pageSize;
             this.riskLevel = request.riskLevel;
             this.scanRange = request.scanRange;
+            this.sensitiveKeyList = request.sensitiveKeyList;
         } 
 
         /**
@@ -383,6 +397,15 @@ public class DescribeImageSensitiveFileListRequest extends Request {
             String scanRangeShrink = shrink(scanRange, "ScanRange", "json");
             this.putQueryParameter("ScanRange", scanRangeShrink);
             this.scanRange = scanRange;
+            return this;
+        }
+
+        /**
+         * SensitiveKeyList.
+         */
+        public Builder sensitiveKeyList(java.util.List<String> sensitiveKeyList) {
+            this.putQueryParameter("SensitiveKeyList", sensitiveKeyList);
+            this.sensitiveKeyList = sensitiveKeyList;
             return this;
         }
 

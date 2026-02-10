@@ -296,6 +296,9 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filepath")
         private String filepath;
 
+        @com.aliyun.core.annotation.NameInMap("ImageDigest")
+        private String imageDigest;
+
         @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
@@ -353,6 +356,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RepoName")
+        private String repoName;
+
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
+        private String repoNamespace;
+
         @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
@@ -361,6 +370,9 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SkillsName")
         private String skillsName;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private String tag;
 
         @com.aliyun.core.annotation.NameInMap("TransportName")
         private String transportName;
@@ -386,6 +398,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             this.endPoint = builder.endPoint;
             this.file = builder.file;
             this.filepath = builder.filepath;
+            this.imageDigest = builder.imageDigest;
             this.imageName = builder.imageName;
             this.installationPath = builder.installationPath;
             this.instanceId = builder.instanceId;
@@ -405,9 +418,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             this.port = builder.port;
             this.processStarted = builder.processStarted;
             this.regionId = builder.regionId;
+            this.repoName = builder.repoName;
+            this.repoNamespace = builder.repoNamespace;
             this.serverType = builder.serverType;
             this.size = builder.size;
             this.skillsName = builder.skillsName;
+            this.tag = builder.tag;
             this.transportName = builder.transportName;
             this.usedByCount = builder.usedByCount;
             this.user = builder.user;
@@ -477,6 +493,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         public String getFilepath() {
             return this.filepath;
+        }
+
+        /**
+         * @return imageDigest
+         */
+        public String getImageDigest() {
+            return this.imageDigest;
         }
 
         /**
@@ -613,6 +636,20 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return repoName
+         */
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        /**
+         * @return repoNamespace
+         */
+        public String getRepoNamespace() {
+            return this.repoNamespace;
+        }
+
+        /**
          * @return serverType
          */
         public String getServerType() {
@@ -631,6 +668,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
          */
         public String getSkillsName() {
             return this.skillsName;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
         }
 
         /**
@@ -677,6 +721,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String endPoint; 
             private String file; 
             private String filepath; 
+            private String imageDigest; 
             private String imageName; 
             private String installationPath; 
             private String instanceId; 
@@ -696,9 +741,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String port; 
             private Long processStarted; 
             private String regionId; 
+            private String repoName; 
+            private String repoNamespace; 
             private String serverType; 
             private Integer size; 
             private String skillsName; 
+            private String tag; 
             private String transportName; 
             private Integer usedByCount; 
             private String user; 
@@ -717,6 +765,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
                 this.endPoint = model.endPoint;
                 this.file = model.file;
                 this.filepath = model.filepath;
+                this.imageDigest = model.imageDigest;
                 this.imageName = model.imageName;
                 this.installationPath = model.installationPath;
                 this.instanceId = model.instanceId;
@@ -736,9 +785,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
                 this.port = model.port;
                 this.processStarted = model.processStarted;
                 this.regionId = model.regionId;
+                this.repoName = model.repoName;
+                this.repoNamespace = model.repoNamespace;
                 this.serverType = model.serverType;
                 this.size = model.size;
                 this.skillsName = model.skillsName;
+                this.tag = model.tag;
                 this.transportName = model.transportName;
                 this.usedByCount = model.usedByCount;
                 this.user = model.user;
@@ -831,6 +883,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              */
             public Builder filepath(String filepath) {
                 this.filepath = filepath;
+                return this;
+            }
+
+            /**
+             * ImageDigest.
+             */
+            public Builder imageDigest(String imageDigest) {
+                this.imageDigest = imageDigest;
                 return this;
             }
 
@@ -1063,6 +1123,22 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
+             * RepoName.
+             */
+            public Builder repoName(String repoName) {
+                this.repoName = repoName;
+                return this;
+            }
+
+            /**
+             * RepoNamespace.
+             */
+            public Builder repoNamespace(String repoNamespace) {
+                this.repoNamespace = repoNamespace;
+                return this;
+            }
+
+            /**
              * <p>Web site type.</p>
              * <blockquote>
              * <p>Returned only when <strong>Biz</strong> is <strong>web_server</strong>.</p>
@@ -1095,6 +1171,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
              */
             public Builder skillsName(String skillsName) {
                 this.skillsName = skillsName;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
                 return this;
             }
 

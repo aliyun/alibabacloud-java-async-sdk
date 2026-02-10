@@ -98,6 +98,9 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
      * <p>GetCheckCountStatisticResponseBody</p>
      */
     public static class CheckCountStatisticItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheckShowName")
+        private String checkShowName;
+
         @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
@@ -140,10 +143,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
+        @com.aliyun.core.annotation.NameInMap("VendorShowName")
+        private String vendorShowName;
+
         @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private CheckCountStatisticItems(Builder builder) {
+            this.checkShowName = builder.checkShowName;
             this.cores = builder.cores;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -158,6 +165,7 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
             this.riskCount = builder.riskCount;
             this.uuid = builder.uuid;
             this.vendor = builder.vendor;
+            this.vendorShowName = builder.vendorShowName;
             this.vpcInstanceId = builder.vpcInstanceId;
         }
 
@@ -167,6 +175,13 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
 
         public static CheckCountStatisticItems create() {
             return builder().build();
+        }
+
+        /**
+         * @return checkShowName
+         */
+        public String getCheckShowName() {
+            return this.checkShowName;
         }
 
         /**
@@ -268,6 +283,13 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return vendorShowName
+         */
+        public String getVendorShowName() {
+            return this.vendorShowName;
+        }
+
+        /**
          * @return vpcInstanceId
          */
         public String getVpcInstanceId() {
@@ -275,6 +297,7 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String checkShowName; 
             private Integer cores; 
             private String instanceId; 
             private String instanceName; 
@@ -289,12 +312,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
             private Integer riskCount; 
             private String uuid; 
             private Integer vendor; 
+            private String vendorShowName; 
             private String vpcInstanceId; 
 
             private Builder() {
             } 
 
             private Builder(CheckCountStatisticItems model) {
+                this.checkShowName = model.checkShowName;
                 this.cores = model.cores;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -309,8 +334,17 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
                 this.riskCount = model.riskCount;
                 this.uuid = model.uuid;
                 this.vendor = model.vendor;
+                this.vendorShowName = model.vendorShowName;
                 this.vpcInstanceId = model.vpcInstanceId;
             } 
+
+            /**
+             * CheckShowName.
+             */
+            public Builder checkShowName(String checkShowName) {
+                this.checkShowName = checkShowName;
+                return this;
+            }
 
             /**
              * <p>The number of the CPU cores used by the host instance.</p>
@@ -536,6 +570,14 @@ public class GetCheckCountStatisticResponseBody extends TeaModel {
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
+                return this;
+            }
+
+            /**
+             * VendorShowName.
+             */
+            public Builder vendorShowName(String vendorShowName) {
+                this.vendorShowName = vendorShowName;
                 return this;
             }
 

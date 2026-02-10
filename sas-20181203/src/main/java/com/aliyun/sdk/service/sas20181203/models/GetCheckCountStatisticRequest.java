@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckCountStatisticRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatisticType")
     private String statisticType;
 
@@ -31,6 +35,7 @@ public class GetCheckCountStatisticRequest extends Request {
 
     private GetCheckCountStatisticRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.statisticType = builder.statisticType;
         this.taskSources = builder.taskSources;
         this.vendors = builder.vendors;
@@ -47,6 +52,13 @@ public class GetCheckCountStatisticRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -71,6 +83,7 @@ public class GetCheckCountStatisticRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCheckCountStatisticRequest, Builder> {
+        private String lang; 
         private String statisticType; 
         private java.util.List<String> taskSources; 
         private java.util.List<String> vendors; 
@@ -81,10 +94,20 @@ public class GetCheckCountStatisticRequest extends Request {
 
         private Builder(GetCheckCountStatisticRequest request) {
             super(request);
+            this.lang = request.lang;
             this.statisticType = request.statisticType;
             this.taskSources = request.taskSources;
             this.vendors = request.vendors;
         } 
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
 
         /**
          * <p>The type of the statistics. Valid values:</p>

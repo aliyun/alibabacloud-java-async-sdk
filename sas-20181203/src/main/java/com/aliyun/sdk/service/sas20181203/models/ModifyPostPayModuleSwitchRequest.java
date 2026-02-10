@@ -226,6 +226,9 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Agentless")
         private Integer agentless;
 
+        @com.aliyun.core.annotation.NameInMap("AiDigital")
+        private Integer aiDigital;
+
         @com.aliyun.core.annotation.NameInMap("AntiRansomware")
         private Integer antiRansomware;
 
@@ -261,6 +264,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
         private PostPayModuleSwitchObj(Builder builder) {
             this.agentless = builder.agentless;
+            this.aiDigital = builder.aiDigital;
             this.antiRansomware = builder.antiRansomware;
             this.basicService = builder.basicService;
             this.cspm = builder.cspm;
@@ -287,6 +291,13 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
          */
         public Integer getAgentless() {
             return this.agentless;
+        }
+
+        /**
+         * @return aiDigital
+         */
+        public Integer getAiDigital() {
+            return this.aiDigital;
         }
 
         /**
@@ -368,6 +379,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
         public static final class Builder {
             private Integer agentless; 
+            private Integer aiDigital; 
             private Integer antiRansomware; 
             private Integer basicService; 
             private Integer cspm; 
@@ -385,6 +397,7 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
             private Builder(PostPayModuleSwitchObj model) {
                 this.agentless = model.agentless;
+                this.aiDigital = model.aiDigital;
                 this.antiRansomware = model.antiRansomware;
                 this.basicService = model.basicService;
                 this.cspm = model.cspm;
@@ -410,6 +423,14 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
              */
             public Builder agentless(Integer agentless) {
                 this.agentless = agentless;
+                return this;
+            }
+
+            /**
+             * AiDigital.
+             */
+            public Builder aiDigital(Integer aiDigital) {
+                this.aiDigital = aiDigital;
                 return this;
             }
 

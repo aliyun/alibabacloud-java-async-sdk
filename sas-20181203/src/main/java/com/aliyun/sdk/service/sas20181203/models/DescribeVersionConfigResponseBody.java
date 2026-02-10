@@ -59,6 +59,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.NameInMap("IntelligentAnalysisFlow")
+    private Integer intelligentAnalysisFlow;
+
     @com.aliyun.core.annotation.NameInMap("IsNewContainerVersion")
     private Boolean isNewContainerVersion;
 
@@ -91,6 +94,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("NewThreatAnalysis")
     private Integer newThreatAnalysis;
+
+    @com.aliyun.core.annotation.NameInMap("OnboardedAssets")
+    private Integer onboardedAssets;
 
     @com.aliyun.core.annotation.NameInMap("OpenTime")
     private Long openTime;
@@ -170,6 +176,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.imageScanCapacity = builder.imageScanCapacity;
         this.instanceBuyType = builder.instanceBuyType;
         this.instanceId = builder.instanceId;
+        this.intelligentAnalysisFlow = builder.intelligentAnalysisFlow;
         this.isNewContainerVersion = builder.isNewContainerVersion;
         this.isNewMultiVersion = builder.isNewMultiVersion;
         this.isOverBalance = builder.isOverBalance;
@@ -181,6 +188,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.mergedVersion = builder.mergedVersion;
         this.multiVersion = builder.multiVersion;
         this.newThreatAnalysis = builder.newThreatAnalysis;
+        this.onboardedAssets = builder.onboardedAssets;
         this.openTime = builder.openTime;
         this.postPayHostVersion = builder.postPayHostVersion;
         this.postPayInstanceId = builder.postPayInstanceId;
@@ -315,6 +323,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return intelligentAnalysisFlow
+     */
+    public Integer getIntelligentAnalysisFlow() {
+        return this.intelligentAnalysisFlow;
+    }
+
+    /**
      * @return isNewContainerVersion
      */
     public Boolean getIsNewContainerVersion() {
@@ -389,6 +404,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getNewThreatAnalysis() {
         return this.newThreatAnalysis;
+    }
+
+    /**
+     * @return onboardedAssets
+     */
+    public Integer getOnboardedAssets() {
+        return this.onboardedAssets;
     }
 
     /**
@@ -553,6 +575,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long imageScanCapacity; 
         private Integer instanceBuyType; 
         private String instanceId; 
+        private Integer intelligentAnalysisFlow; 
         private Boolean isNewContainerVersion; 
         private Boolean isNewMultiVersion; 
         private Boolean isOverBalance; 
@@ -564,6 +587,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer mergedVersion; 
         private String multiVersion; 
         private Integer newThreatAnalysis; 
+        private Integer onboardedAssets; 
         private Long openTime; 
         private Integer postPayHostVersion; 
         private String postPayInstanceId; 
@@ -604,6 +628,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.imageScanCapacity = model.imageScanCapacity;
             this.instanceBuyType = model.instanceBuyType;
             this.instanceId = model.instanceId;
+            this.intelligentAnalysisFlow = model.intelligentAnalysisFlow;
             this.isNewContainerVersion = model.isNewContainerVersion;
             this.isNewMultiVersion = model.isNewMultiVersion;
             this.isOverBalance = model.isOverBalance;
@@ -615,6 +640,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.mergedVersion = model.mergedVersion;
             this.multiVersion = model.multiVersion;
             this.newThreatAnalysis = model.newThreatAnalysis;
+            this.onboardedAssets = model.onboardedAssets;
             this.openTime = model.openTime;
             this.postPayHostVersion = model.postPayHostVersion;
             this.postPayInstanceId = model.postPayInstanceId;
@@ -826,6 +852,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * IntelligentAnalysisFlow.
+         */
+        public Builder intelligentAnalysisFlow(Integer intelligentAnalysisFlow) {
+            this.intelligentAnalysisFlow = intelligentAnalysisFlow;
+            return this;
+        }
+
+        /**
          * <p>Indicates whether Security Center runs the latest version of the Ultimate edition.</p>
          * <ul>
          * <li><strong>true</strong>: yes</li>
@@ -970,6 +1004,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder newThreatAnalysis(Integer newThreatAnalysis) {
             this.newThreatAnalysis = newThreatAnalysis;
+            return this;
+        }
+
+        /**
+         * OnboardedAssets.
+         */
+        public Builder onboardedAssets(Integer onboardedAssets) {
+            this.onboardedAssets = onboardedAssets;
             return this;
         }
 

@@ -78,6 +78,10 @@ public class DescribePropertyScaDetailRequest extends Request {
     private String scaVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchCriteriaList")
+    private java.util.List<SearchCriteriaList> searchCriteriaList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchInfo")
     private String searchInfo;
 
@@ -122,6 +126,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         this.scaName = builder.scaName;
         this.scaNamePattern = builder.scaNamePattern;
         this.scaVersion = builder.scaVersion;
+        this.searchCriteriaList = builder.searchCriteriaList;
         this.searchInfo = builder.searchInfo;
         this.searchInfoSub = builder.searchInfoSub;
         this.searchItem = builder.searchItem;
@@ -250,6 +255,13 @@ public class DescribePropertyScaDetailRequest extends Request {
     }
 
     /**
+     * @return searchCriteriaList
+     */
+    public java.util.List<SearchCriteriaList> getSearchCriteriaList() {
+        return this.searchCriteriaList;
+    }
+
+    /**
      * @return searchInfo
      */
     public String getSearchInfo() {
@@ -314,6 +326,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         private String scaName; 
         private String scaNamePattern; 
         private String scaVersion; 
+        private java.util.List<SearchCriteriaList> searchCriteriaList; 
         private String searchInfo; 
         private String searchInfoSub; 
         private String searchItem; 
@@ -343,6 +356,7 @@ public class DescribePropertyScaDetailRequest extends Request {
             this.scaName = request.scaName;
             this.scaNamePattern = request.scaNamePattern;
             this.scaVersion = request.scaVersion;
+            this.searchCriteriaList = request.searchCriteriaList;
             this.searchInfo = request.searchInfo;
             this.searchInfoSub = request.searchInfoSub;
             this.searchItem = request.searchItem;
@@ -563,6 +577,15 @@ public class DescribePropertyScaDetailRequest extends Request {
         }
 
         /**
+         * SearchCriteriaList.
+         */
+        public Builder searchCriteriaList(java.util.List<SearchCriteriaList> searchCriteriaList) {
+            this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
+            this.searchCriteriaList = searchCriteriaList;
+            return this;
+        }
+
+        /**
          * <p>The search keyword. You must specify this parameter based on the value of the <strong>SearchItem</strong> parameter.</p>
          * <ul>
          * <li><p>If the <strong>SearchItem</strong> parameter is set to <strong>name</strong>, you must enter the name of an asset fingerprint.</p>
@@ -697,4 +720,85 @@ public class DescribePropertyScaDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyScaDetailRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyScaDetailRequest</p>
+     */
+    public static class SearchCriteriaList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SearchCriteriaList(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchCriteriaList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchCriteriaList model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The name of the middleware, database, or web service.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can ignore it.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SearchCriteriaList build() {
+                return new SearchCriteriaList(this);
+            } 
+
+        } 
+
+    }
 }

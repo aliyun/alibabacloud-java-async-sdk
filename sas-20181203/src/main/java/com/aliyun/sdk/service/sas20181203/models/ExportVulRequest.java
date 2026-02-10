@@ -86,6 +86,10 @@ public class ExportVulRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VpcInstanceIds")
     private String vpcInstanceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulEntityList")
+    private java.util.List<VulEntityList> vulEntityList;
+
     private ExportVulRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
@@ -105,6 +109,7 @@ public class ExportVulRequest extends Request {
         this.type = builder.type;
         this.uuids = builder.uuids;
         this.vpcInstanceIds = builder.vpcInstanceIds;
+        this.vulEntityList = builder.vulEntityList;
     }
 
     public static Builder builder() {
@@ -239,6 +244,13 @@ public class ExportVulRequest extends Request {
         return this.vpcInstanceIds;
     }
 
+    /**
+     * @return vulEntityList
+     */
+    public java.util.List<VulEntityList> getVulEntityList() {
+        return this.vulEntityList;
+    }
+
     public static final class Builder extends Request.Builder<ExportVulRequest, Builder> {
         private String aliasName; 
         private String attachTypes; 
@@ -257,6 +269,7 @@ public class ExportVulRequest extends Request {
         private String type; 
         private String uuids; 
         private String vpcInstanceIds; 
+        private java.util.List<VulEntityList> vulEntityList; 
 
         private Builder() {
             super();
@@ -281,6 +294,7 @@ public class ExportVulRequest extends Request {
             this.type = request.type;
             this.uuids = request.uuids;
             this.vpcInstanceIds = request.vpcInstanceIds;
+            this.vulEntityList = request.vulEntityList;
         } 
 
         /**
@@ -537,6 +551,15 @@ public class ExportVulRequest extends Request {
             return this;
         }
 
+        /**
+         * VulEntityList.
+         */
+        public Builder vulEntityList(java.util.List<VulEntityList> vulEntityList) {
+            this.putQueryParameter("VulEntityList", vulEntityList);
+            this.vulEntityList = vulEntityList;
+            return this;
+        }
+
         @Override
         public ExportVulRequest build() {
             return new ExportVulRequest(this);
@@ -544,4 +567,79 @@ public class ExportVulRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExportVulRequest} extends {@link TeaModel}
+     *
+     * <p>ExportVulRequest</p>
+     */
+    public static class VulEntityList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EntityName")
+        private String entityName;
+
+        @com.aliyun.core.annotation.NameInMap("EntityVersion")
+        private String entityVersion;
+
+        private VulEntityList(Builder builder) {
+            this.entityName = builder.entityName;
+            this.entityVersion = builder.entityVersion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VulEntityList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityName
+         */
+        public String getEntityName() {
+            return this.entityName;
+        }
+
+        /**
+         * @return entityVersion
+         */
+        public String getEntityVersion() {
+            return this.entityVersion;
+        }
+
+        public static final class Builder {
+            private String entityName; 
+            private String entityVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(VulEntityList model) {
+                this.entityName = model.entityName;
+                this.entityVersion = model.entityVersion;
+            } 
+
+            /**
+             * EntityName.
+             */
+            public Builder entityName(String entityName) {
+                this.entityName = entityName;
+                return this;
+            }
+
+            /**
+             * EntityVersion.
+             */
+            public Builder entityVersion(String entityVersion) {
+                this.entityVersion = entityVersion;
+                return this;
+            }
+
+            public VulEntityList build() {
+                return new VulEntityList(this);
+            } 
+
+        } 
+
+    }
 }
