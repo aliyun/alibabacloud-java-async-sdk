@@ -53,6 +53,10 @@ public class ListTrafficStatisticsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TrafficStatisticType")
     private String trafficStatisticType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrafficType")
+    private String trafficType;
+
     private ListTrafficStatisticsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
@@ -64,6 +68,7 @@ public class ListTrafficStatisticsRequest extends Request {
         this.trafficStatisticPeriod = builder.trafficStatisticPeriod;
         this.trafficStatisticPeriodType = builder.trafficStatisticPeriodType;
         this.trafficStatisticType = builder.trafficStatisticType;
+        this.trafficType = builder.trafficType;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class ListTrafficStatisticsRequest extends Request {
         return this.trafficStatisticType;
     }
 
+    /**
+     * @return trafficType
+     */
+    public String getTrafficType() {
+        return this.trafficType;
+    }
+
     public static final class Builder extends Request.Builder<ListTrafficStatisticsRequest, Builder> {
         private String lang; 
         private java.util.List<Long> logUserIds; 
@@ -152,6 +164,7 @@ public class ListTrafficStatisticsRequest extends Request {
         private String trafficStatisticPeriod; 
         private String trafficStatisticPeriodType; 
         private String trafficStatisticType; 
+        private String trafficType; 
 
         private Builder() {
             super();
@@ -168,6 +181,7 @@ public class ListTrafficStatisticsRequest extends Request {
             this.trafficStatisticPeriod = request.trafficStatisticPeriod;
             this.trafficStatisticPeriodType = request.trafficStatisticPeriodType;
             this.trafficStatisticType = request.trafficStatisticType;
+            this.trafficType = request.trafficType;
         } 
 
         /**
@@ -249,6 +263,15 @@ public class ListTrafficStatisticsRequest extends Request {
         public Builder trafficStatisticType(String trafficStatisticType) {
             this.putBodyParameter("TrafficStatisticType", trafficStatisticType);
             this.trafficStatisticType = trafficStatisticType;
+            return this;
+        }
+
+        /**
+         * TrafficType.
+         */
+        public Builder trafficType(String trafficType) {
+            this.putBodyParameter("TrafficType", trafficType);
+            this.trafficType = trafficType;
             return this;
         }
 
