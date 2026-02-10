@@ -43,6 +43,11 @@ public class ListUsersForResourceServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceServerScopeId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String resourceServerScopeId;
+
     private ListUsersForResourceServerRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -51,6 +56,7 @@ public class ListUsersForResourceServerRequest extends Request {
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceServerScopeId = builder.resourceServerScopeId;
     }
 
     public static Builder builder() {
@@ -108,6 +114,13 @@ public class ListUsersForResourceServerRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return resourceServerScopeId
+     */
+    public String getResourceServerScopeId() {
+        return this.resourceServerScopeId;
+    }
+
     public static final class Builder extends Request.Builder<ListUsersForResourceServerRequest, Builder> {
         private String regionId; 
         private String applicationId; 
@@ -115,6 +128,7 @@ public class ListUsersForResourceServerRequest extends Request {
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String resourceServerScopeId; 
 
         private Builder() {
             super();
@@ -128,6 +142,7 @@ public class ListUsersForResourceServerRequest extends Request {
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceServerScopeId = request.resourceServerScopeId;
         } 
 
         /**
@@ -192,6 +207,18 @@ public class ListUsersForResourceServerRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>权限唯一标识。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
+         */
+        public Builder resourceServerScopeId(String resourceServerScopeId) {
+            this.putQueryParameter("ResourceServerScopeId", resourceServerScopeId);
+            this.resourceServerScopeId = resourceServerScopeId;
             return this;
         }
 

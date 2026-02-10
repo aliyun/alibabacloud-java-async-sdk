@@ -38,7 +38,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String description;
 
     @com.aliyun.core.annotation.Query
@@ -181,7 +181,6 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
 
         /**
          * <p>描述</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_account_role_description</p>

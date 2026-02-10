@@ -107,6 +107,15 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationRuleName")
         private String authorizationRuleName;
 
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRuleSubjectId")
+        private String authorizationRuleSubjectId;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRuleSubjectScope")
+        private String authorizationRuleSubjectScope;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRuleSubjectType")
+        private String authorizationRuleSubjectType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -130,6 +139,9 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
             this.authorizationRuleCreationType = builder.authorizationRuleCreationType;
             this.authorizationRuleId = builder.authorizationRuleId;
             this.authorizationRuleName = builder.authorizationRuleName;
+            this.authorizationRuleSubjectId = builder.authorizationRuleSubjectId;
+            this.authorizationRuleSubjectScope = builder.authorizationRuleSubjectScope;
+            this.authorizationRuleSubjectType = builder.authorizationRuleSubjectType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
@@ -172,6 +184,27 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
          */
         public String getAuthorizationRuleName() {
             return this.authorizationRuleName;
+        }
+
+        /**
+         * @return authorizationRuleSubjectId
+         */
+        public String getAuthorizationRuleSubjectId() {
+            return this.authorizationRuleSubjectId;
+        }
+
+        /**
+         * @return authorizationRuleSubjectScope
+         */
+        public String getAuthorizationRuleSubjectScope() {
+            return this.authorizationRuleSubjectScope;
+        }
+
+        /**
+         * @return authorizationRuleSubjectType
+         */
+        public String getAuthorizationRuleSubjectType() {
+            return this.authorizationRuleSubjectType;
         }
 
         /**
@@ -221,6 +254,9 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
             private String authorizationRuleCreationType; 
             private String authorizationRuleId; 
             private String authorizationRuleName; 
+            private String authorizationRuleSubjectId; 
+            private String authorizationRuleSubjectScope; 
+            private String authorizationRuleSubjectType; 
             private Long createTime; 
             private String description; 
             private String instanceId; 
@@ -236,6 +272,9 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
                 this.authorizationRuleCreationType = model.authorizationRuleCreationType;
                 this.authorizationRuleId = model.authorizationRuleId;
                 this.authorizationRuleName = model.authorizationRuleName;
+                this.authorizationRuleSubjectId = model.authorizationRuleSubjectId;
+                this.authorizationRuleSubjectScope = model.authorizationRuleSubjectScope;
+                this.authorizationRuleSubjectType = model.authorizationRuleSubjectType;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.instanceId = model.instanceId;
@@ -285,6 +324,30 @@ public class GetAuthorizationRuleResponseBody extends TeaModel {
              */
             public Builder authorizationRuleName(String authorizationRuleName) {
                 this.authorizationRuleName = authorizationRuleName;
+                return this;
+            }
+
+            /**
+             * <p>授权规则主体ID，主体类型对应的主体ID。</p>
+             */
+            public Builder authorizationRuleSubjectId(String authorizationRuleSubjectId) {
+                this.authorizationRuleSubjectId = authorizationRuleSubjectId;
+                return this;
+            }
+
+            /**
+             * <p>授权规则主体范围，枚举类型：shared（共享型，即支持所有主体，包括账户、应用），exclusive（专属类型）</p>
+             */
+            public Builder authorizationRuleSubjectScope(String authorizationRuleSubjectScope) {
+                this.authorizationRuleSubjectScope = authorizationRuleSubjectScope;
+                return this;
+            }
+
+            /**
+             * <p>授权规则主体类型，枚举类型：application（应用)，user（账户)。</p>
+             */
+            public Builder authorizationRuleSubjectType(String authorizationRuleSubjectType) {
+                this.authorizationRuleSubjectType = authorizationRuleSubjectType;
                 return this;
             }
 

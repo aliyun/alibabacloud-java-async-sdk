@@ -26,6 +26,10 @@ public class ListApplicationsRequest extends Request {
     private String applicationCreationType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationIdentityType")
+    private String applicationIdentityType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
     private java.util.List<String> applicationIds;
 
@@ -76,6 +80,7 @@ public class ListApplicationsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.applicationCreationType = builder.applicationCreationType;
+        this.applicationIdentityType = builder.applicationIdentityType;
         this.applicationIds = builder.applicationIds;
         this.applicationName = builder.applicationName;
         this.authorizationType = builder.authorizationType;
@@ -113,6 +118,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getApplicationCreationType() {
         return this.applicationCreationType;
+    }
+
+    /**
+     * @return applicationIdentityType
+     */
+    public String getApplicationIdentityType() {
+        return this.applicationIdentityType;
     }
 
     /**
@@ -188,6 +200,7 @@ public class ListApplicationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
         private String regionId; 
         private String applicationCreationType; 
+        private String applicationIdentityType; 
         private java.util.List<String> applicationIds; 
         private String applicationName; 
         private String authorizationType; 
@@ -207,6 +220,7 @@ public class ListApplicationsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.applicationCreationType = request.applicationCreationType;
+            this.applicationIdentityType = request.applicationIdentityType;
             this.applicationIds = request.applicationIds;
             this.applicationName = request.applicationName;
             this.authorizationType = request.authorizationType;
@@ -234,6 +248,15 @@ public class ListApplicationsRequest extends Request {
         public Builder applicationCreationType(String applicationCreationType) {
             this.putQueryParameter("ApplicationCreationType", applicationCreationType);
             this.applicationCreationType = applicationCreationType;
+            return this;
+        }
+
+        /**
+         * ApplicationIdentityType.
+         */
+        public Builder applicationIdentityType(String applicationIdentityType) {
+            this.putQueryParameter("ApplicationIdentityType", applicationIdentityType);
+            this.applicationIdentityType = applicationIdentityType;
             return this;
         }
 

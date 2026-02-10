@@ -128,6 +128,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationIdentityType")
+        private String applicationIdentityType;
+
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
@@ -182,6 +185,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Applications(Builder builder) {
             this.applicationCreationType = builder.applicationCreationType;
             this.applicationId = builder.applicationId;
+            this.applicationIdentityType = builder.applicationIdentityType;
             this.applicationName = builder.applicationName;
             this.applicationSourceType = builder.applicationSourceType;
             this.applicationTemplateId = builder.applicationTemplateId;
@@ -221,6 +225,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        /**
+         * @return applicationIdentityType
+         */
+        public String getApplicationIdentityType() {
+            return this.applicationIdentityType;
         }
 
         /**
@@ -345,6 +356,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationCreationType; 
             private String applicationId; 
+            private String applicationIdentityType; 
             private String applicationName; 
             private String applicationSourceType; 
             private String applicationTemplateId; 
@@ -369,6 +381,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Builder(Applications model) {
                 this.applicationCreationType = model.applicationCreationType;
                 this.applicationId = model.applicationId;
+                this.applicationIdentityType = model.applicationIdentityType;
                 this.applicationName = model.applicationName;
                 this.applicationSourceType = model.applicationSourceType;
                 this.applicationTemplateId = model.applicationTemplateId;
@@ -404,6 +417,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
+                return this;
+            }
+
+            /**
+             * ApplicationIdentityType.
+             */
+            public Builder applicationIdentityType(String applicationIdentityType) {
+                this.applicationIdentityType = applicationIdentityType;
                 return this;
             }
 

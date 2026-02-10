@@ -33,7 +33,6 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Query
@@ -153,10 +152,7 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_account_description</p>
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

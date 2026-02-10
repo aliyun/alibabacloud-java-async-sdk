@@ -22,6 +22,10 @@ public class CreateApplicationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationIdentityType")
+    private String applicationIdentityType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationName")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationName;
@@ -58,6 +62,7 @@ public class CreateApplicationRequest extends Request {
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.applicationIdentityType = builder.applicationIdentityType;
         this.applicationName = builder.applicationName;
         this.applicationSourceType = builder.applicationSourceType;
         this.applicationTemplateId = builder.applicationTemplateId;
@@ -85,6 +90,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return applicationIdentityType
+     */
+    public String getApplicationIdentityType() {
+        return this.applicationIdentityType;
     }
 
     /**
@@ -138,6 +150,7 @@ public class CreateApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String regionId; 
+        private String applicationIdentityType; 
         private String applicationName; 
         private String applicationSourceType; 
         private String applicationTemplateId; 
@@ -153,6 +166,7 @@ public class CreateApplicationRequest extends Request {
         private Builder(CreateApplicationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.applicationIdentityType = request.applicationIdentityType;
             this.applicationName = request.applicationName;
             this.applicationSourceType = request.applicationSourceType;
             this.applicationTemplateId = request.applicationTemplateId;
@@ -168,6 +182,15 @@ public class CreateApplicationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ApplicationIdentityType.
+         */
+        public Builder applicationIdentityType(String applicationIdentityType) {
+            this.putQueryParameter("ApplicationIdentityType", applicationIdentityType);
+            this.applicationIdentityType = applicationIdentityType;
             return this;
         }
 
