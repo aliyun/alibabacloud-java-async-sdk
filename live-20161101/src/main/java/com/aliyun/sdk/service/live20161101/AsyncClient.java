@@ -3269,6 +3269,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRtcCloudRecordingFilesResponse> describeRtcCloudRecordingFiles(DescribeRtcCloudRecordingFilesRequest request);
 
     /**
+     * @param request the request parameters of DescribeRtcCloudTranscode  DescribeRtcCloudTranscodeRequest
+     * @return DescribeRtcCloudTranscodeResponse
+     */
+    CompletableFuture<DescribeRtcCloudTranscodeResponse> describeRtcCloudTranscode(DescribeRtcCloudTranscodeRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -4702,6 +4708,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRtcCloudRecordingResponse> startRtcCloudRecording(StartRtcCloudRecordingRequest request);
 
     /**
+     * @param request the request parameters of StartRtcCloudTranscode  StartRtcCloudTranscodeRequest
+     * @return StartRtcCloudTranscodeResponse
+     */
+    CompletableFuture<StartRtcCloudTranscodeResponse> startRtcCloudTranscode(StartRtcCloudTranscodeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation to create a production studio and call this operation to stop the production studio. When a production studio is stopped, its PVW and PGM scenes are stopped.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
@@ -4811,6 +4823,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopRtcCloudRecordingResponse
      */
     CompletableFuture<StopRtcCloudRecordingResponse> stopRtcCloudRecording(StopRtcCloudRecordingRequest request);
+
+    /**
+     * @param request the request parameters of StopRtcCloudTranscode  StopRtcCloudTranscodeRequest
+     * @return StopRtcCloudTranscodeResponse
+     */
+    CompletableFuture<StopRtcCloudTranscodeResponse> stopRtcCloudTranscode(StopRtcCloudTranscodeRequest request);
 
     /**
      * <b>description</b> :
