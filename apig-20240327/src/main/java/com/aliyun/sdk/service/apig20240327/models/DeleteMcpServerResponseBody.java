@@ -80,7 +80,7 @@ public class DeleteMcpServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -91,7 +91,7 @@ public class DeleteMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status message.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -102,7 +102,7 @@ public class DeleteMcpServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The MCP server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>393E2630-DBE7-5221-AB35-9E740675491A</p>

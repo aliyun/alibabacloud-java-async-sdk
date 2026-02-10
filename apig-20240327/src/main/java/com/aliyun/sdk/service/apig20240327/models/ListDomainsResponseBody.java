@@ -104,7 +104,7 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>Response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -218,7 +218,7 @@ public class ListDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the domain names.</p>
+             * <p>The list of domain information.</p>
              */
             public Builder items(java.util.List<DomainInfo> items) {
                 this.items = items;

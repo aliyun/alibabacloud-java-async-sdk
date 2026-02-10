@@ -23,6 +23,7 @@ public class DeployHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("httpApiConfig")
+    @Deprecated
     private HttpApiConfig httpApiConfig;
 
     @com.aliyun.core.annotation.Body
@@ -113,7 +114,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * httpApiConfig.
+         * <p>httpApiConfig</p>
          */
         public Builder httpApiConfig(HttpApiConfig httpApiConfig) {
             this.putBodyParameter("httpApiConfig", httpApiConfig);
@@ -122,7 +123,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</p>
+         * <p>The REST API deployment configuration. This parameter is required when you publish a REST API.</p>
          */
         public Builder restApiConfig(RestApiConfig restApiConfig) {
             this.putBodyParameter("restApiConfig", restApiConfig);
@@ -131,7 +132,7 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+         * <p>The route ID. You must specify this parameter when you publish an HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrl***</p>
@@ -202,7 +203,10 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-csrhgfmm1hknf0hu6o3g</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -210,7 +214,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * routeIds.
+             * <p>routeIds</p>
              */
             public Builder routeIds(java.util.List<String> routeIds) {
                 this.routeIds = routeIds;
@@ -329,7 +333,10 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>Configuration of matching conditions related to API deployment.</p>
+             * <p>The matching condition configurations related to API publishing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;change_order_revision&quot;:&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter&quot;}</p>
              */
             public Builder match(HttpApiBackendMatchConditions match) {
                 this.match = match;
@@ -337,7 +344,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Service port, do not provide for dynamic ports.</p>
+             * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -348,10 +355,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Service protocol:</p>
+             * <p>The service protocol. Valid values:</p>
              * <ul>
-             * <li>HTTP.</li>
-             * <li>HTTPS.</li>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -363,7 +370,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Service ID.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>svc-cr6pk4tlhtgm58e***</p>
@@ -374,7 +381,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Service version.</p>
+             * <p>The version of the microservice.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -385,7 +392,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Weight, range [1,100], valid only in the by-ratio scenario.</p>
+             * <p>The weight. Valid values: [1,100]. This parameter is valid only in proportional routing.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -410,15 +417,18 @@ public class DeployHttpApiRequest extends Request {
      */
     public static class Environment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("backendScene")
+        @Deprecated
         private String backendScene;
 
         @com.aliyun.core.annotation.NameInMap("customDomainIds")
         private java.util.List<String> customDomainIds;
 
         @com.aliyun.core.annotation.NameInMap("environmentId")
+        @Deprecated
         private String environmentId;
 
         @com.aliyun.core.annotation.NameInMap("serviceConfigs")
+        @Deprecated
         private java.util.List<ServiceConfigs> serviceConfigs;
 
         private Environment(Builder builder) {
@@ -481,7 +491,14 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>API publication scenario.</p>
+             * <p>The publishing scenario.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>SingleService</li>
+             * <li>MultiServiceByRatio</li>
+             * <li>MultiServiceByContent</li>
+             * <li>Mock</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>SingleService</p>
@@ -492,7 +509,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>List of user domains.</p>
+             * <p>The custom domain names.</p>
              */
             public Builder customDomainIds(java.util.List<String> customDomainIds) {
                 this.customDomainIds = customDomainIds;
@@ -500,7 +517,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Environment ID.</p>
+             * <p>The environment ID.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cpqnr6tlhtgubc***</p>
@@ -511,7 +528,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Existing service configurations. Only one entry is allowed in a single-service scenario, while multiple entries are allowed in scenarios such as by ratio or by content.</p>
+             * <p>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</p>
              */
             public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
@@ -520,6 +537,81 @@ public class DeployHttpApiRequest extends Request {
 
             public Environment build() {
                 return new Environment(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployHttpApiRequest} extends {@link TeaModel}
+     *
+     * <p>DeployHttpApiRequest</p>
+     */
+    public static class OperationDeployments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("action")
+        private String action;
+
+        @com.aliyun.core.annotation.NameInMap("operationId")
+        private String operationId;
+
+        private OperationDeployments(Builder builder) {
+            this.action = builder.action;
+            this.operationId = builder.operationId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperationDeployments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public String getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return operationId
+         */
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        public static final class Builder {
+            private String action; 
+            private String operationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationDeployments model) {
+                this.action = model.action;
+                this.operationId = model.operationId;
+            } 
+
+            /**
+             * action.
+             */
+            public Builder action(String action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * operationId.
+             */
+            public Builder operationId(String operationId) {
+                this.operationId = operationId;
+                return this;
+            }
+
+            public OperationDeployments build() {
+                return new OperationDeployments(this);
             } 
 
         } 
@@ -541,7 +633,11 @@ public class DeployHttpApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("operationDeployments")
+        private java.util.List<OperationDeployments> operationDeployments;
+
         @com.aliyun.core.annotation.NameInMap("operationIds")
+        @Deprecated
         private java.util.List<String> operationIds;
 
         @com.aliyun.core.annotation.NameInMap("revisionId")
@@ -551,6 +647,7 @@ public class DeployHttpApiRequest extends Request {
             this.description = builder.description;
             this.environment = builder.environment;
             this.gatewayId = builder.gatewayId;
+            this.operationDeployments = builder.operationDeployments;
             this.operationIds = builder.operationIds;
             this.revisionId = builder.revisionId;
         }
@@ -585,6 +682,13 @@ public class DeployHttpApiRequest extends Request {
         }
 
         /**
+         * @return operationDeployments
+         */
+        public java.util.List<OperationDeployments> getOperationDeployments() {
+            return this.operationDeployments;
+        }
+
+        /**
          * @return operationIds
          */
         public java.util.List<String> getOperationIds() {
@@ -602,6 +706,7 @@ public class DeployHttpApiRequest extends Request {
             private String description; 
             private Environment environment; 
             private String gatewayId; 
+            private java.util.List<OperationDeployments> operationDeployments; 
             private java.util.List<String> operationIds; 
             private String revisionId; 
 
@@ -612,15 +717,16 @@ public class DeployHttpApiRequest extends Request {
                 this.description = model.description;
                 this.environment = model.environment;
                 this.gatewayId = model.gatewayId;
+                this.operationDeployments = model.operationDeployments;
                 this.operationIds = model.operationIds;
                 this.revisionId = model.revisionId;
             } 
 
             /**
-             * <p>Publication description.</p>
+             * <p>The publish description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用户服务API发布。</p>
+             * <p>The user service API</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -628,7 +734,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Publication environment configuration.</p>
+             * <p>The environment configurations.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -636,7 +742,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-cvn2u46m1hkun04oll8g</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -644,7 +753,15 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * operationIds.
+             * operationDeployments.
+             */
+            public Builder operationDeployments(java.util.List<OperationDeployments> operationDeployments) {
+                this.operationDeployments = operationDeployments;
+                return this;
+            }
+
+            /**
+             * <p>operationIds</p>
              */
             public Builder operationIds(java.util.List<String> operationIds) {
                 this.operationIds = operationIds;
@@ -652,7 +769,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Historical version number. If this field is specified, the publication information will be based on the historical version information.</p>
+             * <p>The historical version of the API. If you specify this parameter, the corresponding version of the API is published.</p>
              * 
              * <strong>example:</strong>
              * <p>apr-xxx</p>

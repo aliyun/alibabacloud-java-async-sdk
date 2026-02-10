@@ -104,7 +104,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -218,7 +218,7 @@ public class ListServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The services.</p>
+             * <p>The list of services.</p>
              */
             public Builder items(java.util.List<Service> items) {
                 this.items = items;

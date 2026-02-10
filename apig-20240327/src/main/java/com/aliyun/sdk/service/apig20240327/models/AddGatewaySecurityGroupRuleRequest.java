@@ -101,7 +101,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * <p>Cloud-native API Gateway ID.</p>
+         * <p>The ID of the Cloud-native API Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdlh***</p>
@@ -113,10 +113,10 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>Description of the security group rule.</p>
+         * <p>The description of security group rule N.</p>
          * 
          * <strong>example:</strong>
-         * <p>商品中心访问安全组</p>
+         * <p>ProductCenterSG</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -125,7 +125,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>Port ranges.</p>
+         * <p>The port ranges.</p>
          */
         public Builder portRanges(java.util.List<String> portRanges) {
             this.putBodyParameter("portRanges", portRanges);
@@ -134,7 +134,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>Security group ID.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-wz929kxhcdp****</p>

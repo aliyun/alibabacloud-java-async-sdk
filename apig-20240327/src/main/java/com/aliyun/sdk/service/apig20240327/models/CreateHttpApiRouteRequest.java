@@ -197,7 +197,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The backend service configurations of the route.</p>
+         * <p>The backend service configurations for the route.</p>
          */
         public Builder backendConfig(BackendConfig backendConfig) {
             this.putBodyParameter("backendConfig", backendConfig);
@@ -206,7 +206,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * deployConfigs.
+         * <p>deployConfigs</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -227,7 +227,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The domain name IDs.</p>
+         * <p>The list of domain IDs.</p>
          */
         public Builder domainIds(java.util.List<String> domainIds) {
             this.putBodyParameter("domainIds", domainIds);
@@ -248,7 +248,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The rule for matching the route.</p>
+         * <p>The route match rule.</p>
          */
         public Builder match(HttpRouteMatch match) {
             this.putBodyParameter("match", match);
@@ -257,7 +257,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * mcpRouteConfig.
+         * <p>The MCP route configuration</p>
          */
         public Builder mcpRouteConfig(McpRouteConfig mcpRouteConfig) {
             this.putBodyParameter("mcpRouteConfig", mcpRouteConfig);
@@ -278,7 +278,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
-         * policyConfigs.
+         * <p>The route-level policy configurations</p>
          */
         public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
             this.putBodyParameter("policyConfigs", policyConfigs);
@@ -385,7 +385,7 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
+             * <p>The service port (omit for dynamic ports).</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -396,7 +396,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
+             * <p>The service protocol. Valid values:</p>
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
@@ -422,7 +422,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The service version. Pass this parameter for tag-based routing.</p>
+             * <p>The service version (valid only in tag-based scenarios).</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>
@@ -433,7 +433,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The percentage value of traffic.</p>
+             * <p>The traffic weight percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>49</p>
@@ -503,7 +503,7 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * <p>The scenario of the backend service.</p>
+             * <p>The backend service scenario. Valid values:</p>
              * <ul>
              * <li>SingleService</li>
              * <li>MultiServiceByRatio</li>
@@ -520,7 +520,7 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The backend services.</p>
+             * <p>The list of backend services.</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;
@@ -600,7 +600,10 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             /**
-             * exposedUriPath.
+             * <p>The exposed URI path</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/v1/chat/completions</p>
              */
             public Builder exposedUriPath(String exposedUriPath) {
                 this.exposedUriPath = exposedUriPath;
@@ -608,7 +611,10 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * mcpStatisticsEnable.
+             * <p>mcpStatisticsEnable</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder mcpStatisticsEnable(Boolean mcpStatisticsEnable) {
                 this.mcpStatisticsEnable = mcpStatisticsEnable;
@@ -616,14 +622,10 @@ public class CreateHttpApiRouteRequest extends Request {
             }
 
             /**
-             * <p>The protocol. Valid values:</p>
-             * <ul>
-             * <li>HTTP</li>
-             * <li>HTTPS</li>
-             * </ul>
+             * <p>The MCP protocol</p>
              * 
              * <strong>example:</strong>
-             * <p>HTTP</p>
+             * <p>HTTP,HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

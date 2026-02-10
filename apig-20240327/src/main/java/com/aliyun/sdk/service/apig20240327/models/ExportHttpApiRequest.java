@@ -60,7 +60,7 @@ public class ExportHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>HTTP API ID.</p>
+         * <p>The HTTP API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
+         * <p>The response message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListSslCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AADF7197-3384-52AF-A2DE-A66696734129</p>
@@ -218,7 +218,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of certificate information.</p>
+             * <p>The list of certificate information.</p>
              */
             public Builder items(java.util.List<SslCertMetaInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number of the returned page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +248,7 @@ public class ListSslCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

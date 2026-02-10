@@ -247,7 +247,7 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plug-in type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pls-dn82a9djd8z****</p>
@@ -259,7 +259,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plug-in ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inner-ai-search-cvd3mcum1hks660icn10</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("pluginId", pluginId);
@@ -268,7 +271,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * routeId.
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>route-xxx</p>
          */
         public Builder routeId(String routeId) {
             this.putQueryParameter("routeId", routeId);
@@ -292,7 +298,10 @@ public class GetDashboardRequest extends Request {
         }
 
         /**
-         * upstreamCluster.
+         * <p>The AI service identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outbound|443||ds.ai</p>
          */
         public Builder upstreamCluster(String upstreamCluster) {
             this.putQueryParameter("upstreamCluster", upstreamCluster);

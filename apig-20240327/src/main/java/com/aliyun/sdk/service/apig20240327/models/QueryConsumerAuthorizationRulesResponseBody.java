@@ -104,7 +104,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;

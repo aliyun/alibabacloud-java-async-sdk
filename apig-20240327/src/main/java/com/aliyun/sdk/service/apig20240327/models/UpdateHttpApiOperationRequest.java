@@ -89,7 +89,7 @@ public class UpdateHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID of the operation to be updated.</p>
+         * <p>The HTTP API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpdateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the operation to be updated.</p>
+         * <p>The operation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * <p>operation definition.</p>
+         * <p>The operation definition.</p>
          */
         public Builder operation(HttpApiOperation operation) {
             this.putBodyParameter("operation", operation);

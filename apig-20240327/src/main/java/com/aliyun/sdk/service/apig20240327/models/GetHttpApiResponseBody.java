@@ -104,7 +104,7 @@ public class GetHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>API information.</p>
+         * <p>The API information.</p>
          */
         public Builder data(HttpApiApiInfo data) {
             this.data = data;

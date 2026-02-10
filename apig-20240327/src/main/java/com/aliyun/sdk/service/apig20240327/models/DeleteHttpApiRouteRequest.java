@@ -73,7 +73,7 @@ public class DeleteHttpApiRouteRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the HTTP API to which the route belongs.</p>
+         * <p>The HTTP API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>api-cqoub6tlhtgv***</p>
@@ -85,7 +85,7 @@ public class DeleteHttpApiRouteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgr***</p>

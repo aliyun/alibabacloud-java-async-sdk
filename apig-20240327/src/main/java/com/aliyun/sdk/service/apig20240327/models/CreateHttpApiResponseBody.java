@@ -93,7 +93,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>API for testing</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The API information.</p>
+         * <p>A protocol.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The protocol list for API access.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The API description.</p>
          * 
          * <strong>example:</strong>
          * <p>A1994B10-C6A8-58FA-8347-6A08B0D4EFDE</p>
@@ -192,7 +192,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP API ID.</p>
+             * <p>HTTP API ID。</p>
              * 
              * <strong>example:</strong>
              * <p>api-xxx</p>
@@ -203,7 +203,7 @@ public class CreateHttpApiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API name.</p>
+             * <p>The API base path, which must start with a forward slash (/).</p>
              * 
              * <strong>example:</strong>
              * <p>test-api</p>

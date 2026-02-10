@@ -230,7 +230,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * sourceTypes.
+         * <p>List of service source types</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;K8S&quot;, &quot;FC3&quot;]</p>
          */
         public Builder sourceTypes(String sourceTypes) {
             this.putQueryParameter("sourceTypes", sourceTypes);

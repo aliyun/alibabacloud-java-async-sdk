@@ -87,7 +87,7 @@ public class CreateHttpApiOperationRequest extends Request {
         }
 
         /**
-         * <p>List of operation definitions.</p>
+         * <p>The operation definitions.</p>
          */
         public Builder operations(java.util.List<HttpApiOperation> operations) {
             this.putBodyParameter("operations", operations);

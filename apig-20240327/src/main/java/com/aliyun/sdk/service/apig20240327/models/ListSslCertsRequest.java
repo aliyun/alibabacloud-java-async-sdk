@@ -101,7 +101,7 @@ public class ListSslCertsRequest extends Request {
         } 
 
         /**
-         * <p>Name matching keyword.</p>
+         * <p>The name keyword for matching.</p>
          * 
          * <strong>example:</strong>
          * <p>ali</p>
@@ -113,7 +113,7 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * <p>Domain name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>fun.iot.evideocloud.com.cn</p>
@@ -125,7 +125,7 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * <p>Page number, default is 1</p>
+         * <p>The page number of the page to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +137,7 @@ public class ListSslCertsRequest extends Request {
         }
 
         /**
-         * <p>Page size, default is 10</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

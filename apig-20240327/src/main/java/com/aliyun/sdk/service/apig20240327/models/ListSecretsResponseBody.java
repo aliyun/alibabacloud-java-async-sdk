@@ -93,7 +93,10 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>Code of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,6 +124,9 @@ public class ListSecretsResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F270C0B-7D6A-5DA7-93E2-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -274,7 +283,10 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTimestamp.
+             * <p>Unix timestamp when the secret was created</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -282,7 +294,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayType.
+             * <p>Gateway type associated with the secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -290,7 +305,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * kmsConfig.
+             * <p>KMS configuration object</p>
              */
             public Builder kmsConfig(KMSConfig kmsConfig) {
                 this.kmsConfig = kmsConfig;
@@ -298,7 +313,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Name of the secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-secret</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +324,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * referenceCount.
+             * <p>Number of resources referencing this secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder referenceCount(Integer referenceCount) {
                 this.referenceCount = referenceCount;
@@ -314,7 +335,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * secretId.
+             * <p>Source of the ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -322,7 +346,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * secretSource.
+             * <p>Source of the secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KMS</p>
              */
             public Builder secretSource(String secretSource) {
                 this.secretSource = secretSource;
@@ -330,7 +357,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Current status of the secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +368,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTimestamp.
+             * <p>Unix timestamp when the secret was last updated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -431,7 +464,7 @@ public class ListSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * items.
+             * <p>Array of secret details</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -439,7 +472,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -447,7 +483,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of items per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -455,7 +494,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * totalSize.
+             * <p>Total number of records matching the query</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

@@ -93,7 +93,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Ok</p>
@@ -104,7 +104,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Policy template information.</p>
+         * <p>An array of policy template information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ResponseMessage</p>
+         * <p>The response message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23B45FA9-7208-5E55-B5CE-B6B2567DD822</p>
@@ -218,7 +218,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of policy templates</p>
+             * <p>The templates.</p>
              */
             public Builder items(java.util.List<PolicyClassInfo> items) {
                 this.items = items;
@@ -226,7 +226,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page number.</p>
+             * <p>The page number of the returned page.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -237,7 +237,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Page size</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +248,7 @@ public class ListPolicyClassesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total number of items.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

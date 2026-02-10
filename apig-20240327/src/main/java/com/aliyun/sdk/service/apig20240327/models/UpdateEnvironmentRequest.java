@@ -89,7 +89,7 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>Environment ID.</p>
+         * <p>Update Environment</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,11 +102,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Environment alias.</p>
+         * <p>Schema of Response</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试环境</p>
+         * <p>The request ID, which is used to trace the API call link.</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -115,10 +115,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Description of the environment, which can include information such as the purpose of the environment and its users.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是xx的xx项目测试环境</p>
+         * <p>The response message returned.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

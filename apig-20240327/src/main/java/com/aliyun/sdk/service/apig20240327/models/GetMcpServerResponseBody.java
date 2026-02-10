@@ -438,7 +438,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * port.
+             * <p>The service port</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -446,7 +449,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol. Valid values: HTTP and HTTPS.</p>
+             * <p>The service protocol</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -457,7 +460,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The gray service ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc-xxx</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -465,7 +471,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The service version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -473,7 +482,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The service weight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -540,7 +552,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * scene.
+             * <p>The backend scene type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SingleService</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -548,7 +563,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * services.
+             * <p>List of backend services</p>
              */
             public Builder services(java.util.List<Services> services) {
                 this.services = services;
@@ -628,7 +643,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             } 
 
             /**
-             * backendConfig.
+             * <p>The gray route backend configuration</p>
              */
             public Builder backendConfig(BackendConfig backendConfig) {
                 this.backendConfig = backendConfig;
@@ -636,7 +651,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * match.
+             * <p>The gray route matching rules</p>
              */
             public Builder match(HttpRouteMatch match) {
                 this.match = match;
@@ -644,7 +659,10 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * routeId.
+             * <p>The gray route ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gray-route-xxx</p>
              */
             public Builder routeId(String routeId) {
                 this.routeId = routeId;
@@ -1120,6 +1138,9 @@ public class GetMcpServerResponseBody extends TeaModel {
 
             /**
              * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample MCP server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1176,7 +1197,7 @@ public class GetMcpServerResponseBody extends TeaModel {
             }
 
             /**
-             * grayMcpServerConfigs.
+             * <p>List of gray MCP server configurations</p>
              */
             public Builder grayMcpServerConfigs(java.util.List<GrayMcpServerConfigs> grayMcpServerConfigs) {
                 this.grayMcpServerConfigs = grayMcpServerConfigs;
@@ -1196,6 +1217,9 @@ public class GetMcpServerResponseBody extends TeaModel {
 
             /**
              * <p>The HTTP-to-MCP configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>config-yaml-content</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;

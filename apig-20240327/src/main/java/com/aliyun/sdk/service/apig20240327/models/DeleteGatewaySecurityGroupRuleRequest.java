@@ -87,7 +87,7 @@ public class DeleteGatewaySecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * <p>Cloud-native API Gateway ID</p>
+         * <p>The ID of the Cloud-native API Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>
@@ -99,7 +99,7 @@ public class DeleteGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>Cloud-native API Gateway security rule ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gsgr-cpqnj1llht***</p>
@@ -111,7 +111,7 @@ public class DeleteGatewaySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>Whether to cascade delete the security group rules.</p>
+         * <p>Specifies whether to delete the cascaded security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

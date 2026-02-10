@@ -60,7 +60,7 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the domain.</p>
+         * <p>The domain name ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

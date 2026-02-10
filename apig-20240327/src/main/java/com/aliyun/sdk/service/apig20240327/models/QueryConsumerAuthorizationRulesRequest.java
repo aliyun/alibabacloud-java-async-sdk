@@ -319,7 +319,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
-         * resourceTypes.
+         * <p>The resource types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K8S</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("resourceTypes", resourceTypes);

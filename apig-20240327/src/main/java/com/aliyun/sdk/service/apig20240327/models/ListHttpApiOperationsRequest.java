@@ -267,7 +267,10 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * enableAuth.
+         * <p>Filter operations by authentication status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.putQueryParameter("enableAuth", enableAuth);
@@ -276,7 +279,10 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * forDeploy.
+         * <p>Whether to filter for deployment scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forDeploy(Boolean forDeploy) {
             this.putQueryParameter("forDeploy", forDeploy);
@@ -285,7 +291,10 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-001</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);

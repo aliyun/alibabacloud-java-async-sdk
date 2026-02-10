@@ -118,11 +118,11 @@ public class CreateEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>Environment alias.</p>
+         * <p>The request body.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试环境</p>
+         * <p>The environment name.</p>
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -131,10 +131,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Description of the environment, which can include information such as the purpose of the environment and its owner.</p>
+         * <p>The environment alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是xxx的xx项目测试环境</p>
+         * <p>Test environment</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +143,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The environment description, such as its purpose and owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>Environment name.</p>
+         * <p>Create environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,10 +169,10 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>Testing environment for xx project of xxx</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmycs5expl7oq</p>
+         * <p>rg-ahr5uil8raz0rq3b</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);

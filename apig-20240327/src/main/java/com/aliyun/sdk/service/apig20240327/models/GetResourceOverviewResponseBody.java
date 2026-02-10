@@ -104,7 +104,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Resource information.</p>
+         * <p>The resource information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -393,7 +393,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxxxxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -401,7 +404,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayName.
+             * <p>The gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-gateway</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -409,7 +415,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * riskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOW</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -417,7 +426,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * riskNames.
+             * <p>The risk name list.</p>
              */
             public Builder riskNames(java.util.List<String> riskNames) {
                 this.riskNames = riskNames;
@@ -425,7 +434,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>The risk score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -505,7 +517,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             } 
 
             /**
-             * count.
+             * <p>The number of instances at a risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -513,7 +528,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * riskDetails.
+             * <p>The risk details list.</p>
              */
             public Builder riskDetails(java.util.List<RiskDetails> riskDetails) {
                 this.riskDetails = riskDetails;
@@ -521,7 +536,10 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * riskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOW</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -617,7 +635,7 @@ public class GetResourceOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * riskOverview.
+             * <p>The risk overview.</p>
              */
             public Builder riskOverview(java.util.List<RiskOverview> riskOverview) {
                 this.riskOverview = riskOverview;

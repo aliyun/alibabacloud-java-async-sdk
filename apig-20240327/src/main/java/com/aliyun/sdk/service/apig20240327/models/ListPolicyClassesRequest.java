@@ -143,7 +143,10 @@ public class ListPolicyClassesRequest extends Request {
         } 
 
         /**
-         * attachResourceId.
+         * <p>The resource ID to attach the policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>route-001</p>
          */
         public Builder attachResourceId(String attachResourceId) {
             this.putQueryParameter("attachResourceId", attachResourceId);
@@ -152,15 +155,15 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * <p>Types of attachment points supported by the policy.</p>
+         * <p>The supported mount point type. Valid values:</p>
          * <ul>
-         * <li>HttpApi: HttpApi.</li>
-         * <li>Operation: Operation of HttpApi.</li>
-         * <li>GatewayRoute: Gateway route.</li>
-         * <li>GatewayService: Gateway service.</li>
-         * <li>GatewayServicePort: Gateway service port.</li>
-         * <li>Domain: Gateway domain.</li>
-         * <li>Gateway: Gateway.</li>
+         * <li>HttpApi: an HTTP API</li>
+         * <li>Operation: an operation in an HTTP API</li>
+         * <li>GatewayRoute: a route</li>
+         * <li>GatewayService: a service</li>
+         * <li>GatewayServicePort: a service port</li>
+         * <li>Domain: a domain name</li>
+         * <li>Gateway: an instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,11 +176,11 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * <p>Direction of the policy.</p>
+         * <p>The direction of traffic on which the policy takes effect. Valid values:</p>
          * <ul>
-         * <li>Outbound: OutBound.</li>
-         * <li>Inbound: InBound.</li>
-         * <li>Both directions: Both.</li>
+         * <li>OutBound</li>
+         * <li>InBound</li>
+         * <li>Both</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +193,10 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>The gateway ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-001</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("gatewayId", gatewayId);
@@ -199,7 +205,7 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * <p>Page number, default is 1.</p>
+         * <p>The page number of the page to return. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +217,7 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * <p>Page size</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -223,7 +229,7 @@ public class ListPolicyClassesRequest extends Request {
         }
 
         /**
-         * <p>Type of the policy template.</p>
+         * <p>The template type.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowControl</p>

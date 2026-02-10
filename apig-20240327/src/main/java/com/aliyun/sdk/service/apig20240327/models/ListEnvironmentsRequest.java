@@ -160,7 +160,7 @@ public class ListEnvironmentsRequest extends Request {
          * <p>Environment alias, fuzzy search.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>production</p>
          */
         public Builder aliasLike(String aliasLike) {
             this.putQueryParameter("aliasLike", aliasLike);
@@ -193,7 +193,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The gateway type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APIGateway</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);

@@ -80,10 +80,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ok</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -91,10 +88,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,10 +96,7 @@ public class UpdateEnvironmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, used for tracing the API call chain.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>52FB803B-3CD8-5FF8-AAE9-C2B841F6A483</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

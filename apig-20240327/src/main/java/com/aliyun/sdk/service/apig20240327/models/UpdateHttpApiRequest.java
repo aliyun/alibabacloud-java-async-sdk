@@ -243,7 +243,7 @@ public class UpdateHttpApiRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID.</p>
+         * <p>The API base path, which must start with a forward slash (/).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +256,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * agentProtocols.
+         * <p>The list of agent protocols</p>
          */
         public Builder agentProtocols(java.util.List<String> agentProtocols) {
             this.putBodyParameter("agentProtocols", agentProtocols);
@@ -265,7 +265,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The AI protocols.</p>
+         * <p>The status code.</p>
          */
         public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
@@ -274,7 +274,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The authentication configuration.</p>
+         * <p>The authentication configuration</p>
          */
         public Builder authConfig(AuthConfig authConfig) {
             this.putBodyParameter("authConfig", authConfig);
@@ -283,7 +283,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API base path, which must start with a forward slash (/).</p>
+         * <p>The list of API deployment configurations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The deployment configurations.</p>
+         * <p>The deployment configurations</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
@@ -305,10 +305,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The API description.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>API for testing</p>
+         * <p>The source ID.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -317,7 +317,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication.</p>
+         * <p>Whether authentication is enabled</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuth(Boolean enableAuth) {
             this.putBodyParameter("enableAuth", enableAuth);
@@ -326,7 +329,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * firstByteTimeout.
+         * <p>The first byte timeout in nanoseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30s</p>
          */
         public Builder firstByteTimeout(Integer firstByteTimeout) {
             this.putBodyParameter("firstByteTimeout", firstByteTimeout);
@@ -335,7 +341,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The HTTP Ingress API configurations.</p>
+         * <p>Specifies whether to enable authentication.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
             this.putBodyParameter("ingressConfig", ingressConfig);
@@ -344,7 +350,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * onlyChangeConfig.
+         * <p>Whether to only change configuration without redeployment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder onlyChangeConfig(Boolean onlyChangeConfig) {
             this.putBodyParameter("onlyChangeConfig", onlyChangeConfig);
@@ -353,7 +362,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The protocols that are used to access the API.</p>
+         * <p>The listened namespace.</p>
          */
         public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
@@ -362,7 +371,10 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * removeBasePathOnForward.
+         * <p>Whether to remove base path when forwarding</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder removeBasePathOnForward(Boolean removeBasePathOnForward) {
             this.putBodyParameter("removeBasePathOnForward", removeBasePathOnForward);
@@ -371,7 +383,7 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * <p>The versioning configurations.</p>
+         * <p>A deployment configuration.</p>
          */
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
@@ -478,7 +490,7 @@ public class UpdateHttpApiRequest extends Request {
             } 
 
             /**
-             * <p>The environment ID.</p>
+             * <p>The authentication configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>env-cr6ql0tlhtgmc****</p>
@@ -489,7 +501,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The Ingress class for listening.</p>
+             * <p>The response parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>mse</p>
@@ -500,7 +512,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to update the address in Ingress Status.</p>
+             * <p>The returned message.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -511,7 +523,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The source ID.</p>
+             * <p>json</p>
              * 
              * <strong>example:</strong>
              * <p>src-crdddallhtgtr****</p>
@@ -522,7 +534,7 @@ public class UpdateHttpApiRequest extends Request {
             }
 
             /**
-             * <p>The namespace for listening.</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

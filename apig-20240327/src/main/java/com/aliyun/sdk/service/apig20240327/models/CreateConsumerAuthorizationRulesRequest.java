@@ -164,7 +164,10 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * parentResourceId.
+             * <p>Parent resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-******</p>
              */
             public Builder parentResourceId(String parentResourceId) {
                 this.parentResourceId = parentResourceId;
@@ -183,7 +186,7 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             }
 
             /**
-             * resources.
+             * <p>List of resources</p>
              */
             public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;

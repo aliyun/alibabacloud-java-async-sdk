@@ -73,7 +73,7 @@ public class UpdateGatewayNameRequest extends Request {
         } 
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>Modify Gateway Name</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -85,10 +85,7 @@ public class UpdateGatewayNameRequest extends Request {
         }
 
         /**
-         * <p>Gateway name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dev-itemcenter-router</p>
+         * name.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

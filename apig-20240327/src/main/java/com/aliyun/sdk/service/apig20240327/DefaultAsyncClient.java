@@ -187,9 +187,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateEnvironment is deprecated  * @description Create environment.
-     * 
-     * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
+     * @deprecated OpenAPI CreateEnvironment is deprecated  * @param request  the request parameters of CreateEnvironment  CreateEnvironmentRequest
      * @return CreateEnvironmentResponse
      */
     @Deprecated
@@ -1714,6 +1712,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can update the listening Ingress only for sources whose types are <strong>ACK</strong>.</p>
+     * 
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
      */

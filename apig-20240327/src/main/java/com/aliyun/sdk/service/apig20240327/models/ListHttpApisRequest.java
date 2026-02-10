@@ -283,7 +283,7 @@ public class ListHttpApisRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Cloud-native API Gateway instance.</p>
+         * <p>Specifies whether to include policy configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllh****</p>
@@ -295,7 +295,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The API information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
@@ -304,7 +307,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The search keyword. You can fuzzy-search by API name or exact-search by API ID.</p>
+         * <p>The consumer authentication policy in the specified environment in each returned API.</p>
          * 
          * <strong>example:</strong>
          * <p>test-</p>
@@ -316,7 +319,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The API name that is used for the search. In this case, exact search is performed.</p>
+         * <p>Specifies whether authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>login</p>
@@ -328,7 +331,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * <p>The environment information.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -340,7 +343,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -352,7 +355,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ahr5uil8raz0rq3b</p>
@@ -364,13 +367,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The API type. You can specify multiple types and separate them with a comma (,).</p>
-         * <ul>
-         * <li>Http</li>
-         * <li>Rest</li>
-         * <li>WebSocket</li>
-         * <li>HttpIngress</li>
-         * </ul>
+         * <p>The Ingress information.</p>
          * 
          * <strong>example:</strong>
          * <p>Http,Rest</p>
@@ -382,7 +379,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withAPIsPublishedToEnvironment.
+         * <p>Whether to return all APIs published to a specific environment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withAPIsPublishedToEnvironment(Boolean withAPIsPublishedToEnvironment) {
             this.putQueryParameter("withAPIsPublishedToEnvironment", withAPIsPublishedToEnvironment);
@@ -391,7 +391,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The consumer authentication policy in the specified environment in each returned API.</p>
+         * <p>The gateway type to filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>env-xxx</p>
@@ -403,7 +403,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether authentication is enabled.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -415,7 +415,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The authorization rules of the specified consumer in each returned API.</p>
+         * <p>The response body.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxx</p>
@@ -427,7 +427,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment information.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -439,7 +439,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The environment ID.</p>
+         * <p>The APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>env-ctovu5mm1hksb4q8ln40</p>
@@ -451,7 +451,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The Ingress information.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -463,7 +463,7 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * <p>The plug-in ID. You can use the returned value of this parameter to query the plug-in.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-ct9qn3um1hktue8dqol0</p>
@@ -475,7 +475,10 @@ public class ListHttpApisRequest extends Request {
         }
 
         /**
-         * withPolicyConfigs.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withPolicyConfigs(Boolean withPolicyConfigs) {
             this.putQueryParameter("withPolicyConfigs", withPolicyConfigs);

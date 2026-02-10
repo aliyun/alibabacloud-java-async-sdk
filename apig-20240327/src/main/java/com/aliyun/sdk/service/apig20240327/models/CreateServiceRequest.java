@@ -148,16 +148,16 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>The service source. Valid values:</p>
+         * <p>The service source type. Valid values:</p>
          * <ul>
-         * <li>MSE_NACOS: a service in an MSE Nacos instance</li>
-         * <li>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</li>
-         * <li>VIP: a fixed IP address</li>
-         * <li>DNS: a Domain Name System (DNS) domain name</li>
-         * <li>FC3: a service in Function Compute</li>
-         * <li>SAE_K8S_SERVICE: a service in a K8s cluster in Serverless App Engine (SAE)</li>
+         * <li>MSE_NACOS: MSE Nacos instance services</li>
+         * <li>K8S: Container Service for Kubernetes (ACK) cluster services</li>
+         * <li>VIP: fixed IP addresses</li>
+         * <li>DNS: Domain Name System (DNS) domains</li>
+         * <li>FC3: Function Compute services</li>
+         * <li>SAE_K8S_SERVICE: Serverless App Engine (SAE) Kubernetes services</li>
          * </ul>
-         * <p>Enumerated values:</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>SAE_K8S_SERVICE</li>
          * <li>K8S</li>
@@ -177,7 +177,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>clientToken</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -232,7 +235,7 @@ public class CreateServiceRequest extends Request {
             } 
 
             /**
-             * skipVerifyAIChatCompletion.
+             * <p>Skip AI chat completion verification</p>
              */
             public Builder skipVerifyAIChatCompletion(Boolean skipVerifyAIChatCompletion) {
                 this.skipVerifyAIChatCompletion = skipVerifyAIChatCompletion;
@@ -416,7 +419,7 @@ public class CreateServiceRequest extends Request {
             } 
 
             /**
-             * <p>The list of domain names or fixed addresses.</p>
+             * <p>The list of domain names or fixed IP addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -424,7 +427,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * agentServiceConfig.
+             * <p>Agent service configuration</p>
              */
             public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
                 this.agentServiceConfig = agentServiceConfig;
@@ -448,7 +451,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * expressType.
+             * <p>Express type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder expressType(String expressType) {
                 this.expressType = expressType;
@@ -483,6 +489,7 @@ public class CreateServiceRequest extends Request {
              * <li>If sourceType is set to K8S, this parameter specifies the namespace where the K8s service resides.</li>
              * <li>If sourceType is set to MSE_NACOS, this parameter specifies a namespace in Nacos.</li>
              * </ul>
+             * <p>This parameter is required if sourceType is set to K8S or MSE_NACOS.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLIC</p>
@@ -493,7 +500,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * <p>The function version or alias.</p>
+             * <p>The function version/alias.</p>
              * 
              * <strong>example:</strong>
              * <p>LATEST</p>
@@ -504,7 +511,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * sourceId.
+             * <p>Service source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacos-instance-001</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -512,7 +522,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * validationOptions.
+             * <p>Validation options</p>
              */
             public Builder validationOptions(ValidationOptions validationOptions) {
                 this.validationOptions = validationOptions;

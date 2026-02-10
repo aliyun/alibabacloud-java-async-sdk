@@ -141,7 +141,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * gatewayType.
+         * <p>The gateway type to filter. Valid values: <strong>AI</strong> and <strong>API</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);

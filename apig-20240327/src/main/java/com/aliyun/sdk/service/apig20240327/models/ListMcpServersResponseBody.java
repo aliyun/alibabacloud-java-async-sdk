@@ -319,6 +319,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
             /**
              * <p>The synchronized MCP server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacos-mcp-001</p>
              */
             public Builder importMcpServerId(String importMcpServerId) {
                 this.importMcpServerId = importMcpServerId;
@@ -644,6 +647,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
             /**
              * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-xxx</p>
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -695,6 +701,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
             /**
              * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My MCP Server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -760,6 +769,9 @@ public class ListMcpServersResponseBody extends TeaModel {
 
             /**
              * <p>The HTTP-to-MCP configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp spec content</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;

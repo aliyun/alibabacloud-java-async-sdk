@@ -73,7 +73,7 @@ public class UpgradeGatewayRequest extends Request {
         } 
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllh****</p>
@@ -85,7 +85,7 @@ public class UpgradeGatewayRequest extends Request {
         }
 
         /**
-         * <p>Gateway version.</p>
+         * <p>The destination instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0.2</p>

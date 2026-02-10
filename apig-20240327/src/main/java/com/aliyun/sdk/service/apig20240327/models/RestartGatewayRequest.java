@@ -59,7 +59,7 @@ public class RestartGatewayRequest extends Request {
         } 
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllh****</p>

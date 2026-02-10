@@ -75,7 +75,7 @@ public class DeleteHttpApiOperationRequest extends Request {
         } 
 
         /**
-         * <p>The HTTP API ID of the operation to be deleted.</p>
+         * <p>The HTTP API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteHttpApiOperationRequest extends Request {
         }
 
         /**
-         * <p>Operation ID.</p>
+         * <p>The operation ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

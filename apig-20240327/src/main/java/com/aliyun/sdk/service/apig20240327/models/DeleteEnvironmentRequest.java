@@ -60,7 +60,7 @@ public class DeleteEnvironmentRequest extends Request {
         } 
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

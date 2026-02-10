@@ -59,7 +59,10 @@ public class GetResourceOverviewRequest extends Request {
         } 
 
         /**
-         * gatewayType.
+         * <p>The gateway type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);

@@ -59,7 +59,7 @@ public class DeleteGatewayRequest extends Request {
         } 
 
         /**
-         * <p>Cloud-native API gateway ID.</p>
+         * <p>The ID of the Cloud-native API Gateway instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>

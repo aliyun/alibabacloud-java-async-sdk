@@ -80,10 +80,7 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Ok</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -91,10 +88,7 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,10 +96,7 @@ public class UpdateGatewayNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

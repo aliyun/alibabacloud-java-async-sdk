@@ -139,7 +139,10 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * gatewayId.
+         * <p>Gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-cq7l5s5lhtg***</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -148,7 +151,10 @@ public class UndeployHttpApiRequest extends Request {
         }
 
         /**
-         * operationId.
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-d4favr6m1hk***</p>
          */
         public Builder operationId(String operationId) {
             this.putBodyParameter("operationId", operationId);

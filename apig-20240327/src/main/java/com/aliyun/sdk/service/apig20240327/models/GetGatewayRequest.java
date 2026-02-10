@@ -59,7 +59,7 @@ public class GetGatewayRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The environment information.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>

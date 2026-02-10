@@ -87,7 +87,7 @@ public class UpdateGatewayFeatureRequest extends Request {
         } 
 
         /**
-         * <p>Gateway ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cq2avtllh****</p>
@@ -99,7 +99,7 @@ public class UpdateGatewayFeatureRequest extends Request {
         }
 
         /**
-         * <p>Feature parameter name.</p>
+         * <p>The feature parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>enable-gzip</p>
@@ -111,7 +111,7 @@ public class UpdateGatewayFeatureRequest extends Request {
         }
 
         /**
-         * <p>Parameter value.</p>
+         * <p>The parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;true&quot;</p>

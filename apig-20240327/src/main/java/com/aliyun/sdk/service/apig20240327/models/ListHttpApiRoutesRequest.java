@@ -325,7 +325,10 @@ public class ListHttpApiRoutesRequest extends Request {
         }
 
         /**
-         * forDeploy.
+         * <p>Whether to filter for deployment scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forDeploy(Boolean forDeploy) {
             this.putQueryParameter("forDeploy", forDeploy);

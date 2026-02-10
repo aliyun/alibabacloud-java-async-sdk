@@ -104,7 +104,7 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -192,7 +192,10 @@ public class ListZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * supportQat.
+             * <p>Whether QAT (Quality Assurance Testing) is supported in this zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportQat(String supportQat) {
                 this.supportQat = supportQat;
@@ -200,7 +203,7 @@ public class ListZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>可用区ID。</p>
+             * <p>The zone identifier</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen-c</p>
@@ -257,7 +260,7 @@ public class ListZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of availability zones.</p>
+             * <p>The list of queried zones.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
