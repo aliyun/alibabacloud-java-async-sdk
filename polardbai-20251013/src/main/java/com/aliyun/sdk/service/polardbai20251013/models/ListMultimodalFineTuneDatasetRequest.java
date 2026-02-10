@@ -12,27 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMultimodalSearchTaskRequest} extends {@link RequestModel}
+ * {@link ListMultimodalFineTuneDatasetRequest} extends {@link RequestModel}
  *
- * <p>ListMultimodalSearchTaskRequest</p>
+ * <p>ListMultimodalFineTuneDatasetRequest</p>
  */
-public class ListMultimodalSearchTaskRequest extends Request {
+public class ListMultimodalFineTuneDatasetRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DatasetIds")
-    private java.util.List<String> datasetIds;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputField")
     private String inputField;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ModelMode")
-    private String modelMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -42,12 +34,10 @@ public class ListMultimodalSearchTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    private ListMultimodalSearchTaskRequest(Builder builder) {
+    private ListMultimodalFineTuneDatasetRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.datasetIds = builder.datasetIds;
         this.inputField = builder.inputField;
-        this.modelMode = builder.modelMode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -56,7 +46,7 @@ public class ListMultimodalSearchTaskRequest extends Request {
         return new Builder();
     }
 
-    public static ListMultimodalSearchTaskRequest create() {
+    public static ListMultimodalFineTuneDatasetRequest create() {
         return builder().build();
     }
 
@@ -73,24 +63,10 @@ public class ListMultimodalSearchTaskRequest extends Request {
     }
 
     /**
-     * @return datasetIds
-     */
-    public java.util.List<String> getDatasetIds() {
-        return this.datasetIds;
-    }
-
-    /**
      * @return inputField
      */
     public String getInputField() {
         return this.inputField;
-    }
-
-    /**
-     * @return modelMode
-     */
-    public String getModelMode() {
-        return this.modelMode;
     }
 
     /**
@@ -107,11 +83,9 @@ public class ListMultimodalSearchTaskRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder<ListMultimodalSearchTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListMultimodalFineTuneDatasetRequest, Builder> {
         private String DBClusterId; 
-        private java.util.List<String> datasetIds; 
         private String inputField; 
-        private String modelMode; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -119,12 +93,10 @@ public class ListMultimodalSearchTaskRequest extends Request {
             super();
         } 
 
-        private Builder(ListMultimodalSearchTaskRequest request) {
+        private Builder(ListMultimodalFineTuneDatasetRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.datasetIds = request.datasetIds;
             this.inputField = request.inputField;
-            this.modelMode = request.modelMode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -142,30 +114,11 @@ public class ListMultimodalSearchTaskRequest extends Request {
         }
 
         /**
-         * DatasetIds.
-         */
-        public Builder datasetIds(java.util.List<String> datasetIds) {
-            String datasetIdsShrink = shrink(datasetIds, "DatasetIds", "json");
-            this.putQueryParameter("DatasetIds", datasetIdsShrink);
-            this.datasetIds = datasetIds;
-            return this;
-        }
-
-        /**
          * InputField.
          */
         public Builder inputField(String inputField) {
             this.putQueryParameter("InputField", inputField);
             this.inputField = inputField;
-            return this;
-        }
-
-        /**
-         * ModelMode.
-         */
-        public Builder modelMode(String modelMode) {
-            this.putQueryParameter("ModelMode", modelMode);
-            this.modelMode = modelMode;
             return this;
         }
 
@@ -188,8 +141,8 @@ public class ListMultimodalSearchTaskRequest extends Request {
         }
 
         @Override
-        public ListMultimodalSearchTaskRequest build() {
-            return new ListMultimodalSearchTaskRequest(this);
+        public ListMultimodalFineTuneDatasetRequest build() {
+            return new ListMultimodalFineTuneDatasetRequest(this);
         } 
 
     } 

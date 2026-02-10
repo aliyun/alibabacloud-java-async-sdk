@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddOSSMultimodalFineTuneDataset  AddOSSMultimodalFineTuneDatasetRequest
+     * @return AddOSSMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<AddOSSMultimodalFineTuneDatasetResponse> addOSSMultimodalFineTuneDataset(AddOSSMultimodalFineTuneDatasetRequest request);
+
+    /**
      * @param request the request parameters of ChatBIConfigCreate  ChatBIConfigCreateRequest
      * @return ChatBIConfigCreateResponse
      */
@@ -172,10 +178,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMultimodalDatasetEmbeddingResponse> createMultimodalDatasetEmbedding(CreateMultimodalDatasetEmbeddingRequest request);
 
     /**
+     * @param request the request parameters of CreateMultimodalFineTuneDataset  CreateMultimodalFineTuneDatasetRequest
+     * @return CreateMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<CreateMultimodalFineTuneDatasetResponse> createMultimodalFineTuneDataset(CreateMultimodalFineTuneDatasetRequest request);
+
+    /**
+     * @param request the request parameters of CreateMultimodalLabelStudioService  CreateMultimodalLabelStudioServiceRequest
+     * @return CreateMultimodalLabelStudioServiceResponse
+     */
+    CompletableFuture<CreateMultimodalLabelStudioServiceResponse> createMultimodalLabelStudioService(CreateMultimodalLabelStudioServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateMultimodalSearchTask  CreateMultimodalSearchTaskRequest
      * @return CreateMultimodalSearchTaskResponse
      */
     CompletableFuture<CreateMultimodalSearchTaskResponse> createMultimodalSearchTask(CreateMultimodalSearchTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateMultimodalSearchTaskResultFineTuneDataset  CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+     * @return CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+     */
+    CompletableFuture<CreateMultimodalSearchTaskResultFineTuneDatasetResponse> createMultimodalSearchTaskResultFineTuneDataset(CreateMultimodalSearchTaskResultFineTuneDatasetRequest request);
 
     /**
      * @param request the request parameters of DeleteMultimodalDataset  DeleteMultimodalDatasetRequest
@@ -188,6 +212,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMultimodalEmbeddingResponse
      */
     CompletableFuture<DeleteMultimodalEmbeddingResponse> deleteMultimodalEmbedding(DeleteMultimodalEmbeddingRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMultimodalFineTuneDataset  DeleteMultimodalFineTuneDatasetRequest
+     * @return DeleteMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<DeleteMultimodalFineTuneDatasetResponse> deleteMultimodalFineTuneDataset(DeleteMultimodalFineTuneDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMultimodalLabelStudioService  DeleteMultimodalLabelStudioServiceRequest
+     * @return DeleteMultimodalLabelStudioServiceResponse
+     */
+    CompletableFuture<DeleteMultimodalLabelStudioServiceResponse> deleteMultimodalLabelStudioService(DeleteMultimodalLabelStudioServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOSSMultimodalFineTuneDataset  DeleteOSSMultimodalFineTuneDatasetRequest
+     * @return DeleteOSSMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<DeleteOSSMultimodalFineTuneDatasetResponse> deleteOSSMultimodalFineTuneDataset(DeleteOSSMultimodalFineTuneDatasetRequest request);
 
     /**
      * @param request the request parameters of DownloadMultimodalSearchTaskResultMetadata  DownloadMultimodalSearchTaskResultMetadataRequest
@@ -220,6 +262,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultimodalEmbeddingModelModeResponse> listMultimodalEmbeddingModelMode(ListMultimodalEmbeddingModelModeRequest request);
 
     /**
+     * @param request the request parameters of ListMultimodalFineTuneDataset  ListMultimodalFineTuneDatasetRequest
+     * @return ListMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<ListMultimodalFineTuneDatasetResponse> listMultimodalFineTuneDataset(ListMultimodalFineTuneDatasetRequest request);
+
+    /**
+     * @param request the request parameters of ListMultimodalLabelStudioService  ListMultimodalLabelStudioServiceRequest
+     * @return ListMultimodalLabelStudioServiceResponse
+     */
+    CompletableFuture<ListMultimodalLabelStudioServiceResponse> listMultimodalLabelStudioService(ListMultimodalLabelStudioServiceRequest request);
+
+    /**
      * @param request the request parameters of ListMultimodalSearchModel  ListMultimodalSearchModelRequest
      * @return ListMultimodalSearchModelResponse
      */
@@ -242,6 +296,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMultimodalDatasetResponse
      */
     CompletableFuture<UpdateMultimodalDatasetResponse> updateMultimodalDataset(UpdateMultimodalDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultimodalFineTuneDataset  UpdateMultimodalFineTuneDatasetRequest
+     * @return UpdateMultimodalFineTuneDatasetResponse
+     */
+    CompletableFuture<UpdateMultimodalFineTuneDatasetResponse> updateMultimodalFineTuneDataset(UpdateMultimodalFineTuneDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultimodalLabelStudioServiceWhiteList  UpdateMultimodalLabelStudioServiceWhiteListRequest
+     * @return UpdateMultimodalLabelStudioServiceWhiteListResponse
+     */
+    CompletableFuture<UpdateMultimodalLabelStudioServiceWhiteListResponse> updateMultimodalLabelStudioServiceWhiteList(UpdateMultimodalLabelStudioServiceWhiteListRequest request);
 
     /**
      * @param request the request parameters of UploadOSSMultimodalDataset  UploadOSSMultimodalDatasetRequest

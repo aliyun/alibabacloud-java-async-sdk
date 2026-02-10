@@ -41,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddOSSMultimodalFineTuneDataset  AddOSSMultimodalFineTuneDatasetRequest
+     * @return AddOSSMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<AddOSSMultimodalFineTuneDatasetResponse> addOSSMultimodalFineTuneDataset(AddOSSMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddOSSMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddOSSMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddOSSMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChatBIConfigCreate  ChatBIConfigCreateRequest
      * @return ChatBIConfigCreateResponse
      */
@@ -501,6 +519,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMultimodalFineTuneDataset  CreateMultimodalFineTuneDatasetRequest
+     * @return CreateMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultimodalFineTuneDatasetResponse> createMultimodalFineTuneDataset(CreateMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMultimodalLabelStudioService  CreateMultimodalLabelStudioServiceRequest
+     * @return CreateMultimodalLabelStudioServiceResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultimodalLabelStudioServiceResponse> createMultimodalLabelStudioService(CreateMultimodalLabelStudioServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMultimodalLabelStudioService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultimodalLabelStudioServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultimodalLabelStudioServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateMultimodalSearchTask  CreateMultimodalSearchTaskRequest
      * @return CreateMultimodalSearchTaskResponse
      */
@@ -513,6 +567,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateMultimodalSearchTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMultimodalSearchTaskResultFineTuneDataset  CreateMultimodalSearchTaskResultFineTuneDatasetRequest
+     * @return CreateMultimodalSearchTaskResultFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultimodalSearchTaskResultFineTuneDatasetResponse> createMultimodalSearchTaskResultFineTuneDataset(CreateMultimodalSearchTaskResultFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMultimodalSearchTaskResultFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultimodalSearchTaskResultFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultimodalSearchTaskResultFineTuneDatasetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -549,6 +621,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMultimodalEmbeddingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMultimodalFineTuneDataset  DeleteMultimodalFineTuneDatasetRequest
+     * @return DeleteMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMultimodalFineTuneDatasetResponse> deleteMultimodalFineTuneDataset(DeleteMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMultimodalLabelStudioService  DeleteMultimodalLabelStudioServiceRequest
+     * @return DeleteMultimodalLabelStudioServiceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMultimodalLabelStudioServiceResponse> deleteMultimodalLabelStudioService(DeleteMultimodalLabelStudioServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMultimodalLabelStudioService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMultimodalLabelStudioServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMultimodalLabelStudioServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteOSSMultimodalFineTuneDataset  DeleteOSSMultimodalFineTuneDatasetRequest
+     * @return DeleteOSSMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOSSMultimodalFineTuneDatasetResponse> deleteOSSMultimodalFineTuneDataset(DeleteOSSMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteOSSMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOSSMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOSSMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -645,6 +771,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListMultimodalFineTuneDataset  ListMultimodalFineTuneDatasetRequest
+     * @return ListMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<ListMultimodalFineTuneDatasetResponse> listMultimodalFineTuneDataset(ListMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListMultimodalLabelStudioService  ListMultimodalLabelStudioServiceRequest
+     * @return ListMultimodalLabelStudioServiceResponse
+     */
+    @Override
+    public CompletableFuture<ListMultimodalLabelStudioServiceResponse> listMultimodalLabelStudioService(ListMultimodalLabelStudioServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMultimodalLabelStudioService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMultimodalLabelStudioServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMultimodalLabelStudioServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListMultimodalSearchModel  ListMultimodalSearchModelRequest
      * @return ListMultimodalSearchModelResponse
      */
@@ -711,6 +873,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMultimodalDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultimodalFineTuneDataset  UpdateMultimodalFineTuneDatasetRequest
+     * @return UpdateMultimodalFineTuneDatasetResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultimodalFineTuneDatasetResponse> updateMultimodalFineTuneDataset(UpdateMultimodalFineTuneDatasetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMultimodalFineTuneDataset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultimodalFineTuneDatasetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultimodalFineTuneDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMultimodalLabelStudioServiceWhiteList  UpdateMultimodalLabelStudioServiceWhiteListRequest
+     * @return UpdateMultimodalLabelStudioServiceWhiteListResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMultimodalLabelStudioServiceWhiteListResponse> updateMultimodalLabelStudioServiceWhiteList(UpdateMultimodalLabelStudioServiceWhiteListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMultimodalLabelStudioServiceWhiteList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMultimodalLabelStudioServiceWhiteListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMultimodalLabelStudioServiceWhiteListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
