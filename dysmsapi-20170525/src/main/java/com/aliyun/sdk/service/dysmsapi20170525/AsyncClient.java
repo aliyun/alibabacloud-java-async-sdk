@@ -115,6 +115,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCardSmsTemplateResponse> createCardSmsTemplate(CreateCardSmsTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateDigitalSignOrder  CreateDigitalSignOrderRequest
+     * @return CreateDigitalSignOrderResponse
+     */
+    CompletableFuture<CreateDigitalSignOrderResponse> createDigitalSignOrder(CreateDigitalSignOrderRequest request);
+
+    /**
+     * @param request the request parameters of CreateDigitalSmsTemplate  CreateDigitalSmsTemplateRequest
+     * @return CreateDigitalSmsTemplateResponse
+     */
+    CompletableFuture<CreateDigitalSmsTemplateResponse> createDigitalSmsTemplate(CreateDigitalSmsTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateSmartShortUrl  CreateSmartShortUrlRequest
      * @return CreateSmartShortUrlResponse
      */
@@ -374,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryCardSmsTemplateReportResponse
      */
     CompletableFuture<QueryCardSmsTemplateReportResponse> queryCardSmsTemplateReport(QueryCardSmsTemplateReportRequest request);
+
+    /**
+     * @param request the request parameters of QueryDigitalSignByName  QueryDigitalSignByNameRequest
+     * @return QueryDigitalSignByNameResponse
+     */
+    CompletableFuture<QueryDigitalSignByNameResponse> queryDigitalSignByName(QueryDigitalSignByNameRequest request);
 
     /**
      * @param request the request parameters of QueryExtCodeSign  QueryExtCodeSignRequest
