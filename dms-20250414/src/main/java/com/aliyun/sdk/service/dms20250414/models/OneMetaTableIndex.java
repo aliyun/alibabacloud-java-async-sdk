@@ -29,11 +29,23 @@ public class OneMetaTableIndex extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IndexType")
     private String indexType;
 
+    @com.aliyun.core.annotation.NameInMap("Primary")
+    private Boolean primary;
+
+    @com.aliyun.core.annotation.NameInMap("RealColumnNames")
+    private java.util.List<String> realColumnNames;
+
+    @com.aliyun.core.annotation.NameInMap("Unique")
+    private Boolean unique;
+
     private OneMetaTableIndex(Builder builder) {
         this.columnNames = builder.columnNames;
         this.description = builder.description;
         this.indexName = builder.indexName;
         this.indexType = builder.indexType;
+        this.primary = builder.primary;
+        this.realColumnNames = builder.realColumnNames;
+        this.unique = builder.unique;
     }
 
     public static Builder builder() {
@@ -76,11 +88,35 @@ public class OneMetaTableIndex extends TeaModel {
         return this.indexType;
     }
 
+    /**
+     * @return primary
+     */
+    public Boolean getPrimary() {
+        return this.primary;
+    }
+
+    /**
+     * @return realColumnNames
+     */
+    public java.util.List<String> getRealColumnNames() {
+        return this.realColumnNames;
+    }
+
+    /**
+     * @return unique
+     */
+    public Boolean getUnique() {
+        return this.unique;
+    }
+
     public static final class Builder {
         private java.util.List<String> columnNames; 
         private String description; 
         private String indexName; 
         private String indexType; 
+        private Boolean primary; 
+        private java.util.List<String> realColumnNames; 
+        private Boolean unique; 
 
         private Builder() {
         } 
@@ -90,6 +126,9 @@ public class OneMetaTableIndex extends TeaModel {
             this.description = model.description;
             this.indexName = model.indexName;
             this.indexType = model.indexType;
+            this.primary = model.primary;
+            this.realColumnNames = model.realColumnNames;
+            this.unique = model.unique;
         } 
 
         /**
@@ -121,6 +160,30 @@ public class OneMetaTableIndex extends TeaModel {
          */
         public Builder indexType(String indexType) {
             this.indexType = indexType;
+            return this;
+        }
+
+        /**
+         * Primary.
+         */
+        public Builder primary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+
+        /**
+         * RealColumnNames.
+         */
+        public Builder realColumnNames(java.util.List<String> realColumnNames) {
+            this.realColumnNames = realColumnNames;
+            return this;
+        }
+
+        /**
+         * Unique.
+         */
+        public Builder unique(Boolean unique) {
+            this.unique = unique;
             return this;
         }
 

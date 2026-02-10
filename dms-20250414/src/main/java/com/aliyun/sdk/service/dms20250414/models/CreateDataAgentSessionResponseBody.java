@@ -170,6 +170,12 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSearch")
         private Boolean enableSearch;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
+        private String encryptKey;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
+        private String encryptType;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
@@ -179,6 +185,12 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
+        @com.aliyun.core.annotation.NameInMap("ReportPageWidth")
+        private Long reportPageWidth;
+
+        @com.aliyun.core.annotation.NameInMap("ReportWaterMark")
+        private String reportWaterMark;
+
         @com.aliyun.core.annotation.NameInMap("UserOssBucket")
         private String userOssBucket;
 
@@ -186,9 +198,13 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
             this.enableSearch = builder.enableSearch;
+            this.encryptKey = builder.encryptKey;
+            this.encryptType = builder.encryptType;
             this.language = builder.language;
             this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
+            this.reportPageWidth = builder.reportPageWidth;
+            this.reportWaterMark = builder.reportWaterMark;
             this.userOssBucket = builder.userOssBucket;
         }
 
@@ -222,6 +238,20 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return encryptKey
+         */
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        /**
+         * @return encryptType
+         */
+        public String getEncryptType() {
+            return this.encryptType;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -243,6 +273,20 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportPageWidth
+         */
+        public Long getReportPageWidth() {
+            return this.reportPageWidth;
+        }
+
+        /**
+         * @return reportWaterMark
+         */
+        public String getReportWaterMark() {
+            return this.reportWaterMark;
+        }
+
+        /**
          * @return userOssBucket
          */
         public String getUserOssBucket() {
@@ -253,9 +297,13 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             private String customAgentId; 
             private String customAgentStage; 
             private Boolean enableSearch; 
+            private String encryptKey; 
+            private String encryptType; 
             private String language; 
             private java.util.List<String> mcpServerIds; 
             private String mode; 
+            private Long reportPageWidth; 
+            private String reportWaterMark; 
             private String userOssBucket; 
 
             private Builder() {
@@ -265,9 +313,13 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
                 this.customAgentId = model.customAgentId;
                 this.customAgentStage = model.customAgentStage;
                 this.enableSearch = model.enableSearch;
+                this.encryptKey = model.encryptKey;
+                this.encryptType = model.encryptType;
                 this.language = model.language;
                 this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
+                this.reportPageWidth = model.reportPageWidth;
+                this.reportWaterMark = model.reportWaterMark;
                 this.userOssBucket = model.userOssBucket;
             } 
 
@@ -296,6 +348,22 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
             }
 
             /**
+             * EncryptKey.
+             */
+            public Builder encryptKey(String encryptKey) {
+                this.encryptKey = encryptKey;
+                return this;
+            }
+
+            /**
+             * EncryptType.
+             */
+            public Builder encryptType(String encryptType) {
+                this.encryptType = encryptType;
+                return this;
+            }
+
+            /**
              * Language.
              */
             public Builder language(String language) {
@@ -316,6 +384,22 @@ public class CreateDataAgentSessionResponseBody extends TeaModel {
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * ReportPageWidth.
+             */
+            public Builder reportPageWidth(Long reportPageWidth) {
+                this.reportPageWidth = reportPageWidth;
+                return this;
+            }
+
+            /**
+             * ReportWaterMark.
+             */
+            public Builder reportWaterMark(String reportWaterMark) {
+                this.reportWaterMark = reportWaterMark;
                 return this;
             }
 
