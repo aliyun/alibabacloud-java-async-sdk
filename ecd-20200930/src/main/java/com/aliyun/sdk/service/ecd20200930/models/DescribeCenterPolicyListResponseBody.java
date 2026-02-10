@@ -1121,6 +1121,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
      * <p>DescribeCenterPolicyListResponseBody</p>
      */
     public static class DescribePolicyGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AcademicProxy")
+        private String academicProxy;
+
         @com.aliyun.core.annotation.NameInMap("AdminAccess")
         private String adminAccess;
 
@@ -1138,6 +1141,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClientControlMenu")
         private String clientControlMenu;
+
+        @com.aliyun.core.annotation.NameInMap("ClientHibernate")
+        private String clientHibernate;
+
+        @com.aliyun.core.annotation.NameInMap("ClientRestart")
+        private String clientRestart;
+
+        @com.aliyun.core.annotation.NameInMap("ClientShutdown")
+        private String clientShutdown;
 
         @com.aliyun.core.annotation.NameInMap("ClientTypes")
         private java.util.List<ClientTypes> clientTypes;
@@ -1220,6 +1232,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HoverConfigMsg")
         private String hoverConfigMsg;
 
+        @com.aliyun.core.annotation.NameInMap("HoverHibernate")
+        private String hoverHibernate;
+
+        @com.aliyun.core.annotation.NameInMap("HoverRestart")
+        private String hoverRestart;
+
+        @com.aliyun.core.annotation.NameInMap("HoverShutdown")
+        private String hoverShutdown;
+
         @com.aliyun.core.annotation.NameInMap("Html5Access")
         private String html5Access;
 
@@ -1259,8 +1280,23 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MobileRestart")
         private String mobileRestart;
 
+        @com.aliyun.core.annotation.NameInMap("MobileSafeMenu")
+        private String mobileSafeMenu;
+
         @com.aliyun.core.annotation.NameInMap("MobileShutdown")
         private String mobileShutdown;
+
+        @com.aliyun.core.annotation.NameInMap("MobileWuyingKeeper")
+        private String mobileWuyingKeeper;
+
+        @com.aliyun.core.annotation.NameInMap("MobileWyAssistant")
+        private String mobileWyAssistant;
+
+        @com.aliyun.core.annotation.NameInMap("ModelLibrary")
+        private String modelLibrary;
+
+        @com.aliyun.core.annotation.NameInMap("MultiScreen")
+        private String multiScreen;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1285,6 +1321,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PortProxy")
+        private String portProxy;
 
         @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
@@ -1439,6 +1478,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WatermarkSecurity")
         private String watermarkSecurity;
 
+        @com.aliyun.core.annotation.NameInMap("WatermarkShadow")
+        private String watermarkShadow;
+
         @com.aliyun.core.annotation.NameInMap("WatermarkTransparencyValue")
         private Integer watermarkTransparencyValue;
 
@@ -1449,12 +1491,16 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         private String wyAssistant;
 
         private DescribePolicyGroups(Builder builder) {
+            this.academicProxy = builder.academicProxy;
             this.adminAccess = builder.adminAccess;
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
+            this.clientHibernate = builder.clientHibernate;
+            this.clientRestart = builder.clientRestart;
+            this.clientShutdown = builder.clientShutdown;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.colorEnhancement = builder.colorEnhancement;
@@ -1482,6 +1528,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.hoverConfigMsg = builder.hoverConfigMsg;
+            this.hoverHibernate = builder.hoverHibernate;
+            this.hoverRestart = builder.hoverRestart;
+            this.hoverShutdown = builder.hoverShutdown;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
@@ -1495,7 +1544,12 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.memorySampleDuration = builder.memorySampleDuration;
             this.memorySingleRateLimit = builder.memorySingleRateLimit;
             this.mobileRestart = builder.mobileRestart;
+            this.mobileSafeMenu = builder.mobileSafeMenu;
             this.mobileShutdown = builder.mobileShutdown;
+            this.mobileWuyingKeeper = builder.mobileWuyingKeeper;
+            this.mobileWyAssistant = builder.mobileWyAssistant;
+            this.modelLibrary = builder.modelLibrary;
+            this.multiScreen = builder.multiScreen;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
@@ -1504,6 +1558,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.policyGroupId = builder.policyGroupId;
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
+            this.portProxy = builder.portProxy;
             this.printerRedirection = builder.printerRedirection;
             this.qualityEnhancement = builder.qualityEnhancement;
             this.recordContent = builder.recordContent;
@@ -1555,6 +1610,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.watermarkPower = builder.watermarkPower;
             this.watermarkRowAmount = builder.watermarkRowAmount;
             this.watermarkSecurity = builder.watermarkSecurity;
+            this.watermarkShadow = builder.watermarkShadow;
             this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
             this.wyAssistant = builder.wyAssistant;
@@ -1566,6 +1622,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         public static DescribePolicyGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return academicProxy
+         */
+        public String getAcademicProxy() {
+            return this.academicProxy;
         }
 
         /**
@@ -1608,6 +1671,27 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getClientControlMenu() {
             return this.clientControlMenu;
+        }
+
+        /**
+         * @return clientHibernate
+         */
+        public String getClientHibernate() {
+            return this.clientHibernate;
+        }
+
+        /**
+         * @return clientRestart
+         */
+        public String getClientRestart() {
+            return this.clientRestart;
+        }
+
+        /**
+         * @return clientShutdown
+         */
+        public String getClientShutdown() {
+            return this.clientShutdown;
         }
 
         /**
@@ -1800,6 +1884,27 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return hoverHibernate
+         */
+        public String getHoverHibernate() {
+            return this.hoverHibernate;
+        }
+
+        /**
+         * @return hoverRestart
+         */
+        public String getHoverRestart() {
+            return this.hoverRestart;
+        }
+
+        /**
+         * @return hoverShutdown
+         */
+        public String getHoverShutdown() {
+            return this.hoverShutdown;
+        }
+
+        /**
          * @return html5Access
          */
         public String getHtml5Access() {
@@ -1891,10 +1996,45 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return mobileSafeMenu
+         */
+        public String getMobileSafeMenu() {
+            return this.mobileSafeMenu;
+        }
+
+        /**
          * @return mobileShutdown
          */
         public String getMobileShutdown() {
             return this.mobileShutdown;
+        }
+
+        /**
+         * @return mobileWuyingKeeper
+         */
+        public String getMobileWuyingKeeper() {
+            return this.mobileWuyingKeeper;
+        }
+
+        /**
+         * @return mobileWyAssistant
+         */
+        public String getMobileWyAssistant() {
+            return this.mobileWyAssistant;
+        }
+
+        /**
+         * @return modelLibrary
+         */
+        public String getModelLibrary() {
+            return this.modelLibrary;
+        }
+
+        /**
+         * @return multiScreen
+         */
+        public String getMultiScreen() {
+            return this.multiScreen;
         }
 
         /**
@@ -1951,6 +2091,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getPolicyStatus() {
             return this.policyStatus;
+        }
+
+        /**
+         * @return portProxy
+         */
+        public String getPortProxy() {
+            return this.portProxy;
         }
 
         /**
@@ -2311,6 +2458,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return watermarkShadow
+         */
+        public String getWatermarkShadow() {
+            return this.watermarkShadow;
+        }
+
+        /**
          * @return watermarkTransparencyValue
          */
         public Integer getWatermarkTransparencyValue() {
@@ -2332,12 +2486,16 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String academicProxy; 
             private String adminAccess; 
             private String appContentProtection; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
             private String cameraRedirect; 
             private String clientControlMenu; 
+            private String clientHibernate; 
+            private String clientRestart; 
+            private String clientShutdown; 
             private java.util.List<ClientTypes> clientTypes; 
             private String clipboard; 
             private String colorEnhancement; 
@@ -2365,6 +2523,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
             private String hoverConfigMsg; 
+            private String hoverHibernate; 
+            private String hoverRestart; 
+            private String hoverShutdown; 
             private String html5Access; 
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
@@ -2378,7 +2539,12 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private Integer memorySampleDuration; 
             private Integer memorySingleRateLimit; 
             private String mobileRestart; 
+            private String mobileSafeMenu; 
             private String mobileShutdown; 
+            private String mobileWuyingKeeper; 
+            private String mobileWyAssistant; 
+            private String modelLibrary; 
+            private String multiScreen; 
             private String name; 
             private String netRedirect; 
             private java.util.List<NetRedirectRule> netRedirectRule; 
@@ -2387,6 +2553,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
+            private String portProxy; 
             private String printerRedirection; 
             private String qualityEnhancement; 
             private String recordContent; 
@@ -2438,6 +2605,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String watermarkPower; 
             private Integer watermarkRowAmount; 
             private String watermarkSecurity; 
+            private String watermarkShadow; 
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
             private String wyAssistant; 
@@ -2446,12 +2614,16 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             } 
 
             private Builder(DescribePolicyGroups model) {
+                this.academicProxy = model.academicProxy;
                 this.adminAccess = model.adminAccess;
                 this.appContentProtection = model.appContentProtection;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
+                this.clientHibernate = model.clientHibernate;
+                this.clientRestart = model.clientRestart;
+                this.clientShutdown = model.clientShutdown;
                 this.clientTypes = model.clientTypes;
                 this.clipboard = model.clipboard;
                 this.colorEnhancement = model.colorEnhancement;
@@ -2479,6 +2651,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
                 this.hoverConfigMsg = model.hoverConfigMsg;
+                this.hoverHibernate = model.hoverHibernate;
+                this.hoverRestart = model.hoverRestart;
+                this.hoverShutdown = model.hoverShutdown;
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
                 this.internetCommunicationProtocol = model.internetCommunicationProtocol;
@@ -2492,7 +2667,12 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.memorySampleDuration = model.memorySampleDuration;
                 this.memorySingleRateLimit = model.memorySingleRateLimit;
                 this.mobileRestart = model.mobileRestart;
+                this.mobileSafeMenu = model.mobileSafeMenu;
                 this.mobileShutdown = model.mobileShutdown;
+                this.mobileWuyingKeeper = model.mobileWuyingKeeper;
+                this.mobileWyAssistant = model.mobileWyAssistant;
+                this.modelLibrary = model.modelLibrary;
+                this.multiScreen = model.multiScreen;
                 this.name = model.name;
                 this.netRedirect = model.netRedirect;
                 this.netRedirectRule = model.netRedirectRule;
@@ -2501,6 +2681,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.policyGroupId = model.policyGroupId;
                 this.policyGroupType = model.policyGroupType;
                 this.policyStatus = model.policyStatus;
+                this.portProxy = model.portProxy;
                 this.printerRedirection = model.printerRedirection;
                 this.qualityEnhancement = model.qualityEnhancement;
                 this.recordContent = model.recordContent;
@@ -2552,10 +2733,19 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.watermarkPower = model.watermarkPower;
                 this.watermarkRowAmount = model.watermarkRowAmount;
                 this.watermarkSecurity = model.watermarkSecurity;
+                this.watermarkShadow = model.watermarkShadow;
                 this.watermarkTransparencyValue = model.watermarkTransparencyValue;
                 this.watermarkType = model.watermarkType;
                 this.wyAssistant = model.wyAssistant;
             } 
+
+            /**
+             * AcademicProxy.
+             */
+            public Builder academicProxy(String academicProxy) {
+                this.academicProxy = academicProxy;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the admin permissions are granted to end users.</p>
@@ -2614,6 +2804,30 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder clientControlMenu(String clientControlMenu) {
                 this.clientControlMenu = clientControlMenu;
+                return this;
+            }
+
+            /**
+             * ClientHibernate.
+             */
+            public Builder clientHibernate(String clientHibernate) {
+                this.clientHibernate = clientHibernate;
+                return this;
+            }
+
+            /**
+             * ClientRestart.
+             */
+            public Builder clientRestart(String clientRestart) {
+                this.clientRestart = clientRestart;
+                return this;
+            }
+
+            /**
+             * ClientShutdown.
+             */
+            public Builder clientShutdown(String clientShutdown) {
+                this.clientShutdown = clientShutdown;
                 return this;
             }
 
@@ -2891,6 +3105,30 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
+             * HoverHibernate.
+             */
+            public Builder hoverHibernate(String hoverHibernate) {
+                this.hoverHibernate = hoverHibernate;
+                return this;
+            }
+
+            /**
+             * HoverRestart.
+             */
+            public Builder hoverRestart(String hoverRestart) {
+                this.hoverRestart = hoverRestart;
+                return this;
+            }
+
+            /**
+             * HoverShutdown.
+             */
+            public Builder hoverShutdown(String hoverShutdown) {
+                this.hoverShutdown = hoverShutdown;
+                return this;
+            }
+
+            /**
              * <p>The web client access policy.</p>
              * 
              * <strong>example:</strong>
@@ -3031,6 +3269,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
+             * MobileSafeMenu.
+             */
+            public Builder mobileSafeMenu(String mobileSafeMenu) {
+                this.mobileSafeMenu = mobileSafeMenu;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
              * <blockquote>
              * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
@@ -3041,6 +3287,38 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder mobileShutdown(String mobileShutdown) {
                 this.mobileShutdown = mobileShutdown;
+                return this;
+            }
+
+            /**
+             * MobileWuyingKeeper.
+             */
+            public Builder mobileWuyingKeeper(String mobileWuyingKeeper) {
+                this.mobileWuyingKeeper = mobileWuyingKeeper;
+                return this;
+            }
+
+            /**
+             * MobileWyAssistant.
+             */
+            public Builder mobileWyAssistant(String mobileWyAssistant) {
+                this.mobileWyAssistant = mobileWyAssistant;
+                return this;
+            }
+
+            /**
+             * ModelLibrary.
+             */
+            public Builder modelLibrary(String modelLibrary) {
+                this.modelLibrary = modelLibrary;
+                return this;
+            }
+
+            /**
+             * MultiScreen.
+             */
+            public Builder multiScreen(String multiScreen) {
+                this.multiScreen = multiScreen;
                 return this;
             }
 
@@ -3138,6 +3416,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
+                return this;
+            }
+
+            /**
+             * PortProxy.
+             */
+            public Builder portProxy(String portProxy) {
+                this.portProxy = portProxy;
                 return this;
             }
 
@@ -3675,6 +3961,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder watermarkSecurity(String watermarkSecurity) {
                 this.watermarkSecurity = watermarkSecurity;
+                return this;
+            }
+
+            /**
+             * WatermarkShadow.
+             */
+            public Builder watermarkShadow(String watermarkShadow) {
+                this.watermarkShadow = watermarkShadow;
                 return this;
             }
 
