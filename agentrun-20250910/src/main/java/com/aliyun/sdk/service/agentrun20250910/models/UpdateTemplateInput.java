@@ -35,6 +35,9 @@ public class UpdateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("enableAgent")
+    private Boolean enableAgent;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -46,6 +49,9 @@ public class UpdateTemplateInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("memory")
     private Integer memory;
+
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
 
     @com.aliyun.core.annotation.NameInMap("networkConfiguration")
     private NetworkConfiguration networkConfiguration;
@@ -72,10 +78,12 @@ public class UpdateTemplateInput extends TeaModel {
         this.cpu = builder.cpu;
         this.credentialConfiguration = builder.credentialConfiguration;
         this.description = builder.description;
+        this.enableAgent = builder.enableAgent;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.logConfiguration = builder.logConfiguration;
         this.memory = builder.memory;
+        this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.ossConfiguration = builder.ossConfiguration;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
@@ -138,6 +146,13 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return enableAgent
+     */
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
+    /**
      * @return environmentVariables
      */
     public java.util.Map<String, String> getEnvironmentVariables() {
@@ -163,6 +178,13 @@ public class UpdateTemplateInput extends TeaModel {
      */
     public Integer getMemory() {
         return this.memory;
+    }
+
+    /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     /**
@@ -207,10 +229,12 @@ public class UpdateTemplateInput extends TeaModel {
         private Float cpu; 
         private CredentialConfiguration credentialConfiguration; 
         private String description; 
+        private Boolean enableAgent; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private LogConfiguration logConfiguration; 
         private Integer memory; 
+        private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
         private java.util.List<OssConfiguration> ossConfiguration; 
         private Integer sandboxIdleTimeoutInSeconds; 
@@ -227,10 +251,12 @@ public class UpdateTemplateInput extends TeaModel {
             this.cpu = model.cpu;
             this.credentialConfiguration = model.credentialConfiguration;
             this.description = model.description;
+            this.enableAgent = model.enableAgent;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.logConfiguration = model.logConfiguration;
             this.memory = model.memory;
+            this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.ossConfiguration = model.ossConfiguration;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
@@ -287,6 +313,14 @@ public class UpdateTemplateInput extends TeaModel {
         }
 
         /**
+         * enableAgent.
+         */
+        public Builder enableAgent(Boolean enableAgent) {
+            this.enableAgent = enableAgent;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -315,6 +349,14 @@ public class UpdateTemplateInput extends TeaModel {
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
             return this;
         }
 

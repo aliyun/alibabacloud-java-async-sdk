@@ -39,6 +39,9 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("enableAgent")
+    private Boolean enableAgent;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -60,6 +63,9 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memory")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer memory;
+
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
 
     @com.aliyun.core.annotation.NameInMap("networkConfiguration")
     private NetworkConfiguration networkConfiguration;
@@ -111,6 +117,7 @@ public class Template extends TeaModel {
         this.credentialConfiguration = builder.credentialConfiguration;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.enableAgent = builder.enableAgent;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.lastUpdatedAt = builder.lastUpdatedAt;
@@ -118,6 +125,7 @@ public class Template extends TeaModel {
         this.mcpOptions = builder.mcpOptions;
         this.mcpState = builder.mcpState;
         this.memory = builder.memory;
+        this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.ossConfiguration = builder.ossConfiguration;
         this.resourceName = builder.resourceName;
@@ -195,6 +203,13 @@ public class Template extends TeaModel {
     }
 
     /**
+     * @return enableAgent
+     */
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
+    /**
      * @return environmentVariables
      */
     public java.util.Map<String, String> getEnvironmentVariables() {
@@ -241,6 +256,13 @@ public class Template extends TeaModel {
      */
     public Integer getMemory() {
         return this.memory;
+    }
+
+    /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     /**
@@ -342,6 +364,7 @@ public class Template extends TeaModel {
         private CredentialConfiguration credentialConfiguration; 
         private String description; 
         private Integer diskSize; 
+        private Boolean enableAgent; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private String lastUpdatedAt; 
@@ -349,6 +372,7 @@ public class Template extends TeaModel {
         private McpOptions mcpOptions; 
         private McpState mcpState; 
         private Integer memory; 
+        private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
         private java.util.List<OssConfiguration> ossConfiguration; 
         private String resourceName; 
@@ -374,6 +398,7 @@ public class Template extends TeaModel {
             this.credentialConfiguration = model.credentialConfiguration;
             this.description = model.description;
             this.diskSize = model.diskSize;
+            this.enableAgent = model.enableAgent;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.lastUpdatedAt = model.lastUpdatedAt;
@@ -381,6 +406,7 @@ public class Template extends TeaModel {
             this.mcpOptions = model.mcpOptions;
             this.mcpState = model.mcpState;
             this.memory = model.memory;
+            this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.ossConfiguration = model.ossConfiguration;
             this.resourceName = model.resourceName;
@@ -453,6 +479,14 @@ public class Template extends TeaModel {
         }
 
         /**
+         * enableAgent.
+         */
+        public Builder enableAgent(Boolean enableAgent) {
+            this.enableAgent = enableAgent;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -505,6 +539,14 @@ public class Template extends TeaModel {
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
             return this;
         }
 

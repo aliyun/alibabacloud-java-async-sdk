@@ -39,6 +39,9 @@ public class CreateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("enableAgent")
+    private Boolean enableAgent;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map<String, String> environmentVariables;
 
@@ -51,6 +54,9 @@ public class CreateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memory")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer memory;
+
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
+    private NASConfig nasConfig;
 
     @com.aliyun.core.annotation.NameInMap("networkConfiguration")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -87,10 +93,12 @@ public class CreateTemplateInput extends TeaModel {
         this.credentialConfiguration = builder.credentialConfiguration;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.enableAgent = builder.enableAgent;
         this.environmentVariables = builder.environmentVariables;
         this.executionRoleArn = builder.executionRoleArn;
         this.logConfiguration = builder.logConfiguration;
         this.memory = builder.memory;
+        this.nasConfig = builder.nasConfig;
         this.networkConfiguration = builder.networkConfiguration;
         this.ossConfiguration = builder.ossConfiguration;
         this.sandboxIdleTimeoutInSeconds = builder.sandboxIdleTimeoutInSeconds;
@@ -162,6 +170,13 @@ public class CreateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return enableAgent
+     */
+    public Boolean getEnableAgent() {
+        return this.enableAgent;
+    }
+
+    /**
      * @return environmentVariables
      */
     public java.util.Map<String, String> getEnvironmentVariables() {
@@ -187,6 +202,13 @@ public class CreateTemplateInput extends TeaModel {
      */
     public Integer getMemory() {
         return this.memory;
+    }
+
+    /**
+     * @return nasConfig
+     */
+    public NASConfig getNasConfig() {
+        return this.nasConfig;
     }
 
     /**
@@ -246,10 +268,12 @@ public class CreateTemplateInput extends TeaModel {
         private CredentialConfiguration credentialConfiguration; 
         private String description; 
         private Integer diskSize; 
+        private Boolean enableAgent; 
         private java.util.Map<String, String> environmentVariables; 
         private String executionRoleArn; 
         private LogConfiguration logConfiguration; 
         private Integer memory; 
+        private NASConfig nasConfig; 
         private NetworkConfiguration networkConfiguration; 
         private java.util.List<OssConfiguration> ossConfiguration; 
         private Integer sandboxIdleTimeoutInSeconds; 
@@ -269,10 +293,12 @@ public class CreateTemplateInput extends TeaModel {
             this.credentialConfiguration = model.credentialConfiguration;
             this.description = model.description;
             this.diskSize = model.diskSize;
+            this.enableAgent = model.enableAgent;
             this.environmentVariables = model.environmentVariables;
             this.executionRoleArn = model.executionRoleArn;
             this.logConfiguration = model.logConfiguration;
             this.memory = model.memory;
+            this.nasConfig = model.nasConfig;
             this.networkConfiguration = model.networkConfiguration;
             this.ossConfiguration = model.ossConfiguration;
             this.sandboxIdleTimeoutInSeconds = model.sandboxIdleTimeoutInSeconds;
@@ -340,6 +366,14 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
+         * enableAgent.
+         */
+        public Builder enableAgent(Boolean enableAgent) {
+            this.enableAgent = enableAgent;
+            return this;
+        }
+
+        /**
          * environmentVariables.
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
@@ -369,6 +403,14 @@ public class CreateTemplateInput extends TeaModel {
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * nasConfig.
+         */
+        public Builder nasConfig(NASConfig nasConfig) {
+            this.nasConfig = nasConfig;
             return this;
         }
 
