@@ -295,12 +295,342 @@ public class GetTaskResultResponseBody extends TeaModel {
      *
      * <p>GetTaskResultResponseBody</p>
      */
+    public static class Adaptive extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputTokens")
+        private Integer inputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("invokeCount")
+        private Integer invokeCount;
+
+        @com.aliyun.core.annotation.NameInMap("outputTokens")
+        private Integer outputTokens;
+
+        private Adaptive(Builder builder) {
+            this.inputTokens = builder.inputTokens;
+            this.invokeCount = builder.invokeCount;
+            this.outputTokens = builder.outputTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Adaptive create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputTokens
+         */
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
+         * @return invokeCount
+         */
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public static final class Builder {
+            private Integer inputTokens; 
+            private Integer invokeCount; 
+            private Integer outputTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(Adaptive model) {
+                this.inputTokens = model.inputTokens;
+                this.invokeCount = model.invokeCount;
+                this.outputTokens = model.outputTokens;
+            } 
+
+            /**
+             * inputTokens.
+             */
+            public Builder inputTokens(Integer inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
+             * invokeCount.
+             */
+            public Builder invokeCount(Integer invokeCount) {
+                this.invokeCount = invokeCount;
+                return this;
+            }
+
+            /**
+             * outputTokens.
+             */
+            public Builder outputTokens(Integer outputTokens) {
+                this.outputTokens = outputTokens;
+                return this;
+            }
+
+            public Adaptive build() {
+                return new Adaptive(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResultResponseBody</p>
+     */
+    public static class DialogSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputTokens")
+        private Integer inputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("invokeCount")
+        private Integer invokeCount;
+
+        @com.aliyun.core.annotation.NameInMap("outputTokens")
+        private Integer outputTokens;
+
+        private DialogSummary(Builder builder) {
+            this.inputTokens = builder.inputTokens;
+            this.invokeCount = builder.invokeCount;
+            this.outputTokens = builder.outputTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DialogSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputTokens
+         */
+        public Integer getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
+         * @return invokeCount
+         */
+        public Integer getInvokeCount() {
+            return this.invokeCount;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Integer getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public static final class Builder {
+            private Integer inputTokens; 
+            private Integer invokeCount; 
+            private Integer outputTokens; 
+
+            private Builder() {
+            } 
+
+            private Builder(DialogSummary model) {
+                this.inputTokens = model.inputTokens;
+                this.invokeCount = model.invokeCount;
+                this.outputTokens = model.outputTokens;
+            } 
+
+            /**
+             * inputTokens.
+             */
+            public Builder inputTokens(Integer inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
+             * invokeCount.
+             */
+            public Builder invokeCount(Integer invokeCount) {
+                this.invokeCount = invokeCount;
+                return this;
+            }
+
+            /**
+             * outputTokens.
+             */
+            public Builder outputTokens(Integer outputTokens) {
+                this.outputTokens = outputTokens;
+                return this;
+            }
+
+            public DialogSummary build() {
+                return new DialogSummary(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResultResponseBody</p>
+     */
+    public static class Rag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adaptive")
+        private Adaptive adaptive;
+
+        @com.aliyun.core.annotation.NameInMap("dialogSummary")
+        private DialogSummary dialogSummary;
+
+        private Rag(Builder builder) {
+            this.adaptive = builder.adaptive;
+            this.dialogSummary = builder.dialogSummary;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Rag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adaptive
+         */
+        public Adaptive getAdaptive() {
+            return this.adaptive;
+        }
+
+        /**
+         * @return dialogSummary
+         */
+        public DialogSummary getDialogSummary() {
+            return this.dialogSummary;
+        }
+
+        public static final class Builder {
+            private Adaptive adaptive; 
+            private DialogSummary dialogSummary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rag model) {
+                this.adaptive = model.adaptive;
+                this.dialogSummary = model.dialogSummary;
+            } 
+
+            /**
+             * adaptive.
+             */
+            public Builder adaptive(Adaptive adaptive) {
+                this.adaptive = adaptive;
+                return this;
+            }
+
+            /**
+             * dialogSummary.
+             */
+            public Builder dialogSummary(DialogSummary dialogSummary) {
+                this.dialogSummary = dialogSummary;
+                return this;
+            }
+
+            public Rag build() {
+                return new Rag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResultResponseBody</p>
+     */
+    public static class Usage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("rag")
+        private Rag rag;
+
+        private Usage(Builder builder) {
+            this.rag = builder.rag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Usage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rag
+         */
+        public Rag getRag() {
+            return this.rag;
+        }
+
+        public static final class Builder {
+            private Rag rag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.rag = model.rag;
+            } 
+
+            /**
+             * rag.
+             */
+            public Builder rag(Rag rag) {
+                this.rag = rag;
+                return this;
+            }
+
+            public Usage build() {
+                return new Usage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("asrResult")
         private java.util.List<AsrResult> asrResult;
 
         @com.aliyun.core.annotation.NameInMap("extra")
         private String extra;
+
+        @com.aliyun.core.annotation.NameInMap("ragErrorMessage")
+        private String ragErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("ragResult")
+        private String ragResult;
+
+        @com.aliyun.core.annotation.NameInMap("ragStatus")
+        private String ragStatus;
 
         @com.aliyun.core.annotation.NameInMap("taskErrorMessage")
         private String taskErrorMessage;
@@ -314,13 +644,20 @@ public class GetTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
+        @com.aliyun.core.annotation.NameInMap("usage")
+        private Usage usage;
+
         private Data(Builder builder) {
             this.asrResult = builder.asrResult;
             this.extra = builder.extra;
+            this.ragErrorMessage = builder.ragErrorMessage;
+            this.ragResult = builder.ragResult;
+            this.ragStatus = builder.ragStatus;
             this.taskErrorMessage = builder.taskErrorMessage;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.text = builder.text;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -343,6 +680,27 @@ public class GetTaskResultResponseBody extends TeaModel {
          */
         public String getExtra() {
             return this.extra;
+        }
+
+        /**
+         * @return ragErrorMessage
+         */
+        public String getRagErrorMessage() {
+            return this.ragErrorMessage;
+        }
+
+        /**
+         * @return ragResult
+         */
+        public String getRagResult() {
+            return this.ragResult;
+        }
+
+        /**
+         * @return ragStatus
+         */
+        public String getRagStatus() {
+            return this.ragStatus;
         }
 
         /**
@@ -373,13 +731,24 @@ public class GetTaskResultResponseBody extends TeaModel {
             return this.text;
         }
 
+        /**
+         * @return usage
+         */
+        public Usage getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private java.util.List<AsrResult> asrResult; 
             private String extra; 
+            private String ragErrorMessage; 
+            private String ragResult; 
+            private String ragStatus; 
             private String taskErrorMessage; 
             private String taskId; 
             private String taskStatus; 
             private String text; 
+            private Usage usage; 
 
             private Builder() {
             } 
@@ -387,10 +756,14 @@ public class GetTaskResultResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.asrResult = model.asrResult;
                 this.extra = model.extra;
+                this.ragErrorMessage = model.ragErrorMessage;
+                this.ragResult = model.ragResult;
+                this.ragStatus = model.ragStatus;
                 this.taskErrorMessage = model.taskErrorMessage;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
                 this.text = model.text;
+                this.usage = model.usage;
             } 
 
             /**
@@ -406,6 +779,30 @@ public class GetTaskResultResponseBody extends TeaModel {
              */
             public Builder extra(String extra) {
                 this.extra = extra;
+                return this;
+            }
+
+            /**
+             * ragErrorMessage.
+             */
+            public Builder ragErrorMessage(String ragErrorMessage) {
+                this.ragErrorMessage = ragErrorMessage;
+                return this;
+            }
+
+            /**
+             * ragResult.
+             */
+            public Builder ragResult(String ragResult) {
+                this.ragResult = ragResult;
+                return this;
+            }
+
+            /**
+             * ragStatus.
+             */
+            public Builder ragStatus(String ragStatus) {
+                this.ragStatus = ragStatus;
                 return this;
             }
 
@@ -438,6 +835,14 @@ public class GetTaskResultResponseBody extends TeaModel {
              */
             public Builder text(String text) {
                 this.text = text;
+                return this;
+            }
+
+            /**
+             * usage.
+             */
+            public Builder usage(Usage usage) {
+                this.usage = usage;
                 return this;
             }
 
