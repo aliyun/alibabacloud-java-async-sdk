@@ -275,7 +275,10 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6k+AtdhNE3kgQEK36GujZ5on+tWdc+4WoaoMP/kUNxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -347,7 +350,14 @@ public class DescribePropertyProcDetailRequest extends Request {
         }
 
         /**
-         * UseNextToken.
+         * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The NextToken method is used.</li>
+         * <li><strong>false</strong>: The NextToken method is not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

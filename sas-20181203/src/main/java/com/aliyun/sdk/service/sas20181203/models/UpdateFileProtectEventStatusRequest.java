@@ -227,7 +227,7 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         } 
 
         /**
-         * AlertLevels.
+         * <p>The severities of alerts.</p>
          */
         public Builder alertLevels(java.util.List<Integer> alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -236,7 +236,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649040221</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -254,7 +257,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -263,7 +269,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -272,7 +281,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.27.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -281,7 +293,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -290,7 +305,17 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>Type of operation on a file. eg:</p>
+         * <ul>
+         * <li><strong>DELETE</strong>: delete the file.</li>
+         * <li><strong>WRITE</strong>: write the file.</li>
+         * <li><strong>READ</strong>: read the file.</li>
+         * <li><strong>RENAME</strong>: rename the file.</li>
+         * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -299,7 +324,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tetsRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -308,7 +336,14 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * SelectAllAcrossPages.
+         * <p>Whether to choose all fields across industries.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selectAllAcrossPages(Boolean selectAllAcrossPages) {
             this.putQueryParameter("SelectAllAcrossPages", selectAllAcrossPages);
@@ -317,7 +352,10 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1680919232000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -343,7 +381,13 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>eb2c782e-64f2-4590-a86c-d90164df****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

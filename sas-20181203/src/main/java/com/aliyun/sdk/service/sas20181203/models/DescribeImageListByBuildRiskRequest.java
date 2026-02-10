@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageListByBuildRiskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
+    private String criteria;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CriteriaType")
+    private String criteriaType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
@@ -43,6 +51,8 @@ public class DescribeImageListByBuildRiskRequest extends Request {
 
     private DescribeImageListByBuildRiskRequest(Builder builder) {
         super(builder);
+        this.criteria = builder.criteria;
+        this.criteriaType = builder.criteriaType;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
@@ -62,6 +72,20 @@ public class DescribeImageListByBuildRiskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return criteria
+     */
+    public String getCriteria() {
+        return this.criteria;
+    }
+
+    /**
+     * @return criteriaType
+     */
+    public String getCriteriaType() {
+        return this.criteriaType;
     }
 
     /**
@@ -107,6 +131,8 @@ public class DescribeImageListByBuildRiskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeImageListByBuildRiskRequest, Builder> {
+        private String criteria; 
+        private String criteriaType; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
@@ -120,6 +146,8 @@ public class DescribeImageListByBuildRiskRequest extends Request {
 
         private Builder(DescribeImageListByBuildRiskRequest request) {
             super(request);
+            this.criteria = request.criteria;
+            this.criteriaType = request.criteriaType;
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
@@ -127,6 +155,34 @@ public class DescribeImageListByBuildRiskRequest extends Request {
             this.riskLevel = request.riskLevel;
             this.status = request.status;
         } 
+
+        /**
+         * <p>The attribute value of the condition parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
+         */
+        public Builder criteria(String criteria) {
+            this.putQueryParameter("Criteria", criteria);
+            this.criteria = criteria;
+            return this;
+        }
+
+        /**
+         * <p>The property name of the condition parameters. Values:</p>
+         * <ul>
+         * <li><strong>RepoNamespace</strong>: Namespace.</li>
+         * <li><strong>RepoName</strong>: Repository name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RepoNamespace</p>
+         */
+        public Builder criteriaType(String criteriaType) {
+            this.putQueryParameter("CriteriaType", criteriaType);
+            this.criteriaType = criteriaType;
+            return this;
+        }
 
         /**
          * <p>The page number. Default value: <strong>1</strong>.</p>

@@ -174,6 +174,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
+        @com.aliyun.core.annotation.NameInMap("BindFileProtectType")
+        private String bindFileProtectType;
+
         @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
@@ -334,6 +337,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.authVersion = builder.authVersion;
             this.authVersionName = builder.authVersionName;
             this.bind = builder.bind;
+            this.bindFileProtectType = builder.bindFileProtectType;
             this.clientStatus = builder.clientStatus;
             this.clientSubStatus = builder.clientSubStatus;
             this.clusterId = builder.clusterId;
@@ -455,6 +459,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         public Boolean getBind() {
             return this.bind;
+        }
+
+        /**
+         * @return bindFileProtectType
+         */
+        public String getBindFileProtectType() {
+            return this.bindFileProtectType;
         }
 
         /**
@@ -817,6 +828,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Integer authVersion; 
             private String authVersionName; 
             private Boolean bind; 
+            private String bindFileProtectType; 
             private String clientStatus; 
             private String clientSubStatus; 
             private String clusterId; 
@@ -881,6 +893,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
                 this.authVersion = model.authVersion;
                 this.authVersionName = model.authVersionName;
                 this.bind = model.bind;
+                this.bindFileProtectType = model.bindFileProtectType;
                 this.clientStatus = model.clientStatus;
                 this.clientSubStatus = model.clientSubStatus;
                 this.clusterId = model.clusterId;
@@ -1068,6 +1081,21 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
+                return this;
+            }
+
+            /**
+             * <p>Whether to bind tamper-proof authorization. Values:</p>
+             * <ul>
+             * <li><strong>block</strong>: Yes</li>
+             * <li><strong>none</strong>: No</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
+             */
+            public Builder bindFileProtectType(String bindFileProtectType) {
+                this.bindFileProtectType = bindFileProtectType;
                 return this;
             }
 

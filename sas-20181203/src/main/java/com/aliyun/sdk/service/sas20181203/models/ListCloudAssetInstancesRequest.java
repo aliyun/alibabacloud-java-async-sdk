@@ -144,7 +144,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         } 
 
         /**
-         * CloudAssetQueryData.
+         * <p>Query data list based on keywords.</p>
          */
         public Builder cloudAssetQueryData(java.util.List<CloudAssetQueryData> cloudAssetQueryData) {
             this.putQueryParameter("CloudAssetQueryData", cloudAssetQueryData);
@@ -300,7 +300,10 @@ public class ListCloudAssetInstancesRequest extends Request {
             } 
 
             /**
-             * Data.
+             * <p>Query content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>163.8.8.9</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -308,7 +311,10 @@ public class ListCloudAssetInstancesRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>Query operator, currently only supports: INCLUDE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INCLUDE</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;

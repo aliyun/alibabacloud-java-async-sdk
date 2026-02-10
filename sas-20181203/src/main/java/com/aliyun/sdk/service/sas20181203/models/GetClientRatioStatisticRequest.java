@@ -27,12 +27,10 @@ public class GetClientRatioStatisticRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeEnd")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeEnd;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeStart")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeStart;
 
     private GetClientRatioStatisticRequest(Builder builder) {
@@ -128,7 +126,6 @@ public class GetClientRatioStatisticRequest extends Request {
 
         /**
          * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1686412799999</p>
@@ -141,7 +138,6 @@ public class GetClientRatioStatisticRequest extends Request {
 
         /**
          * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1671382800000</p>

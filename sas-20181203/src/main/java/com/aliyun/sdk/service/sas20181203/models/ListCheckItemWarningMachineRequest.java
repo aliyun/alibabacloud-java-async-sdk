@@ -51,6 +51,10 @@ public class ListCheckItemWarningMachineRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskType")
     private String riskType;
 
@@ -76,6 +80,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskType = builder.riskType;
         this.source = builder.source;
         this.status = builder.status;
@@ -152,6 +157,13 @@ public class ListCheckItemWarningMachineRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskType
      */
     public String getRiskType() {
@@ -188,6 +200,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String riskType; 
         private String source; 
         private Integer status; 
@@ -207,6 +220,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskType = request.riskType;
             this.source = request.source;
             this.status = request.status;
@@ -317,6 +331,21 @@ public class ListCheckItemWarningMachineRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

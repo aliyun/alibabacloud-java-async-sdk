@@ -195,7 +195,10 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1426C575705AE8545E8360A6EFA3B***</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -240,7 +243,14 @@ public class DescribePropertyCronDetailRequest extends Request {
         }
 
         /**
-         * UseNextToken.
+         * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The NextToken method is used.</li>
+         * <li><strong>false</strong>: The NextToken method is not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

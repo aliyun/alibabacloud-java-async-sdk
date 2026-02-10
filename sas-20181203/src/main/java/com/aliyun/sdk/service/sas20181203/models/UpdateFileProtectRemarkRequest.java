@@ -241,7 +241,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
         } 
 
         /**
-         * AlertLevels.
+         * <p>Alert notification level list.</p>
          */
         public Builder alertLevels(java.util.List<Integer> alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -250,7 +250,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>End time timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649040221</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -271,7 +274,7 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * IdList.
+         * <p>Event ID list.</p>
          */
         public Builder idList(java.util.List<Long> idList) {
             this.putQueryParameter("IdList", idList);
@@ -280,7 +283,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Asset instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -289,7 +295,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>Asset instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -298,7 +307,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * <p>Public IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.132.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -307,7 +319,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * <p>Private IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -316,7 +331,17 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>File operation type. Values:</p>
+         * <ul>
+         * <li><strong>DELETE</strong>: File deletion operation.</li>
+         * <li><strong>WRITE</strong>: File write operation.</li>
+         * <li><strong>READ</strong>: File read operation.</li>
+         * <li><strong>RENAME</strong>: File rename operation.</li>
+         * <li><strong>CHOWN</strong>: Set file owner and associated group operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -334,7 +359,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -343,7 +371,14 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * SelectAllAcrossPages.
+         * <p>Cross-page select all indicator. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder selectAllAcrossPages(Boolean selectAllAcrossPages) {
             this.putQueryParameter("SelectAllAcrossPages", selectAllAcrossPages);
@@ -352,7 +387,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651290987000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -361,7 +399,10 @@ public class UpdateFileProtectRemarkRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>Server UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -42,6 +42,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
     private String subAccountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
+    private String vendor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VendorAuthAlias")
     private String vendorAuthAlias;
 
@@ -53,6 +57,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.status = builder.status;
         this.subAccountName = builder.subAccountName;
+        this.vendor = builder.vendor;
         this.vendorAuthAlias = builder.vendorAuthAlias;
     }
 
@@ -112,6 +117,13 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
     }
 
     /**
+     * @return vendor
+     */
+    public String getVendor() {
+        return this.vendor;
+    }
+
+    /**
      * @return vendorAuthAlias
      */
     public String getVendorAuthAlias() {
@@ -125,6 +137,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         private Integer pageSize; 
         private Integer status; 
         private String subAccountName; 
+        private String vendor; 
         private String vendorAuthAlias; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
             this.pageSize = request.pageSize;
             this.status = request.status;
             this.subAccountName = request.subAccountName;
+            this.vendor = request.vendor;
             this.vendorAuthAlias = request.vendorAuthAlias;
         } 
 
@@ -219,6 +233,15 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         public Builder subAccountName(String subAccountName) {
             this.putQueryParameter("SubAccountName", subAccountName);
             this.subAccountName = subAccountName;
+            return this;
+        }
+
+        /**
+         * Vendor.
+         */
+        public Builder vendor(String vendor) {
+            this.putQueryParameter("Vendor", vendor);
+            this.vendor = vendor;
             return this;
         }
 

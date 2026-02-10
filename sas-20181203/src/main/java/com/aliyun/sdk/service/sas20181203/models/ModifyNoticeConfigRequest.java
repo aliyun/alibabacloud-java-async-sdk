@@ -115,7 +115,13 @@ public class ModifyNoticeConfigRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>Notification configuration type, default is SMS/email/in-site message. Value:</p>
+         * <ul>
+         * <li><strong>cms</strong>: Cloud Monitor push</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);

@@ -115,7 +115,10 @@ public class DescribeSecureSuggestionRequest extends Request {
         } 
 
         /**
-         * CalType.
+         * <p>Choose to query the new or old version of the security score rules. When the value is <strong>home_security_score</strong>, it queries the new version of the security score rules; otherwise, it defaults to querying the old version of the security score rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home_security_score</p>
          */
         public Builder calType(String calType) {
             this.putQueryParameter("CalType", calType);
@@ -124,7 +127,14 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language type for request and response messages, default is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -133,9 +143,9 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <p>Resource directory member account ID (Alibaba Cloud account).</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * <p>You can obtain this parameter by calling the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> API.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -148,7 +158,16 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>Source of the security score. If left empty, it defaults to Cloud Security Center. Enumerated values:</p>
+         * <ul>
+         * <li><p>0: Cloud Security Center.</p>
+         * </li>
+         * <li><p>1: Yaochi Console.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder source(Integer source) {
             this.putQueryParameter("Source", source);
@@ -157,7 +176,10 @@ public class DescribeSecureSuggestionRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>The IP address of the access source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

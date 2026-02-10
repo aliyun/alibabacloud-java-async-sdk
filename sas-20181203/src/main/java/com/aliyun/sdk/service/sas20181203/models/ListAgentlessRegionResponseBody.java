@@ -99,7 +99,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
         }
 
         /**
-         * VendorRegionList.
+         * <p>The information about the regions.</p>
          */
         public Builder vendorRegionList(java.util.List<VendorRegionList> vendorRegionList) {
             this.vendorRegionList = vendorRegionList;
@@ -165,7 +165,10 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -173,7 +176,17 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Alibaba Cloud</li>
+             * <li><strong>3</strong>: Tencent Cloud</li>
+             * <li><strong>4</strong>: Huawei Cloud</li>
+             * <li><strong>5</strong>: Azure</li>
+             * <li><strong>7</strong>: AWS</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

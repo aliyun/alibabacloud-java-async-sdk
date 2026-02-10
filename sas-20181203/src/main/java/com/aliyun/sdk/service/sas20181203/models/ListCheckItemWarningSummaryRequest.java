@@ -62,6 +62,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskType")
     private String riskType;
 
@@ -90,6 +94,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.groupId = builder.groupId;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskType = builder.riskType;
         this.source = builder.source;
         this.startTime = builder.startTime;
@@ -187,6 +192,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return riskType
      */
     public String getRiskType() {
@@ -226,6 +238,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private Long groupId; 
         private String lang; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String riskType; 
         private String source; 
         private Long startTime; 
@@ -248,6 +261,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.groupId = request.groupId;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskType = request.riskType;
             this.source = request.source;
             this.startTime = request.startTime;
@@ -401,6 +415,21 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

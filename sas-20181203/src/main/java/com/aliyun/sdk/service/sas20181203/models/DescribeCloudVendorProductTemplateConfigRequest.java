@@ -73,7 +73,14 @@ public class DescribeCloudVendorProductTemplateConfigRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Set the language type for request and response messages, default is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +89,15 @@ public class DescribeCloudVendorProductTemplateConfigRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * <p>Cloud asset vendor. Values:</p>
+         * <ul>
+         * <li><strong>CHAITIN</strong>: Chaitin Technology</li>
+         * <li><strong>FORTINET</strong>: Fortinet</li>
+         * <li><strong>THREATBOOK</strong>: ThreatBook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CHAITIN</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

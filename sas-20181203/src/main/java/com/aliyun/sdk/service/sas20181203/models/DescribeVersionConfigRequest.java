@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeVersionConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
-    private String resourceDirectoryAccountId;
+    private Long resourceDirectoryAccountId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -47,7 +47,7 @@ public class DescribeVersionConfigRequest extends Request {
     /**
      * @return resourceDirectoryAccountId
      */
-    public String getResourceDirectoryAccountId() {
+    public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
     }
 
@@ -59,7 +59,7 @@ public class DescribeVersionConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVersionConfigRequest, Builder> {
-        private String resourceDirectoryAccountId; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -81,7 +81,7 @@ public class DescribeVersionConfigRequest extends Request {
          * <strong>example:</strong>
          * <p>127608589417****</p>
          */
-        public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;

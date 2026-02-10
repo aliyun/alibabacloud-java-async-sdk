@@ -226,7 +226,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B604532DEF982B875E8360A6EFA3B***</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

@@ -96,7 +96,7 @@ public class VerifyCheckResultRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>List of instance IDs for the check item assets.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

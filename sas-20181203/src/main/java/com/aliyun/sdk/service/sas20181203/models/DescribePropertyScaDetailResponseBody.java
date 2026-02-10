@@ -226,7 +226,10 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The value of NextToken that is returned when the NextToken method is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B60***</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

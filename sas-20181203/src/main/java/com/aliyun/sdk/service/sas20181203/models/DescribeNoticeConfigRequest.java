@@ -73,7 +73,14 @@ public class DescribeNoticeConfigRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>Notification configuration type, with values:</p>
+         * <ul>
+         * <li><strong>Default (not provided)</strong>: SMS/Email/Site Message </li>
+         * <li><strong>cms</strong>: Cloud Monitor Push</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cms</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
