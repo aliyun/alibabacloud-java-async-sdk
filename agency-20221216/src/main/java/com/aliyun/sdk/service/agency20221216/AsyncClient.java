@@ -225,6 +225,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCountriesResponse> listCountries(ListCountriesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>确保当前调用账号身份为分销伙伴 
+     * <notice>仅国际提供</p>
+     * 
      * @param request the request parameters of ListCouponUsage  ListCouponUsageRequest
      * @return ListCouponUsageResponse
      */

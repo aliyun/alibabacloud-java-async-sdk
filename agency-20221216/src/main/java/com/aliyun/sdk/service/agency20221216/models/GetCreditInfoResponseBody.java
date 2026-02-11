@@ -192,6 +192,9 @@ public class GetCreditInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutstandingBalance")
         private String outstandingBalance;
 
+        @com.aliyun.core.annotation.NameInMap("PAYGFreezeStatus")
+        private String PAYGFreezeStatus;
+
         @com.aliyun.core.annotation.NameInMap("ZeroCreditShutdownPolicy")
         private String zeroCreditShutdownPolicy;
 
@@ -205,6 +208,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             this.consumedUndeductedValue = builder.consumedUndeductedValue;
             this.creditLine = builder.creditLine;
             this.outstandingBalance = builder.outstandingBalance;
+            this.PAYGFreezeStatus = builder.PAYGFreezeStatus;
             this.zeroCreditShutdownPolicy = builder.zeroCreditShutdownPolicy;
             this.newBuyStatus = builder.newBuyStatus;
         }
@@ -260,6 +264,13 @@ public class GetCreditInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return PAYGFreezeStatus
+         */
+        public String getPAYGFreezeStatus() {
+            return this.PAYGFreezeStatus;
+        }
+
+        /**
          * @return zeroCreditShutdownPolicy
          */
         public String getZeroCreditShutdownPolicy() {
@@ -280,6 +291,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
             private String consumedUndeductedValue; 
             private String creditLine; 
             private String outstandingBalance; 
+            private String PAYGFreezeStatus; 
             private String zeroCreditShutdownPolicy; 
             private String newBuyStatus; 
 
@@ -293,6 +305,7 @@ public class GetCreditInfoResponseBody extends TeaModel {
                 this.consumedUndeductedValue = model.consumedUndeductedValue;
                 this.creditLine = model.creditLine;
                 this.outstandingBalance = model.outstandingBalance;
+                this.PAYGFreezeStatus = model.PAYGFreezeStatus;
                 this.zeroCreditShutdownPolicy = model.zeroCreditShutdownPolicy;
                 this.newBuyStatus = model.newBuyStatus;
             } 
@@ -365,6 +378,14 @@ public class GetCreditInfoResponseBody extends TeaModel {
              */
             public Builder outstandingBalance(String outstandingBalance) {
                 this.outstandingBalance = outstandingBalance;
+                return this;
+            }
+
+            /**
+             * PAYGFreezeStatus.
+             */
+            public Builder PAYGFreezeStatus(String PAYGFreezeStatus) {
+                this.PAYGFreezeStatus = PAYGFreezeStatus;
                 return this;
             }
 

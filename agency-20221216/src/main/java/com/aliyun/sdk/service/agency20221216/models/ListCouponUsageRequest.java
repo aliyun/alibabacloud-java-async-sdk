@@ -144,7 +144,10 @@ public class ListCouponUsageRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>阿里云客户账号</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -153,7 +156,10 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * CouponTemplateId.
+         * <p>优惠券模版id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5075915</p>
          */
         public Builder couponTemplateId(Long couponTemplateId) {
             this.putQueryParameter("CouponTemplateId", couponTemplateId);
@@ -162,7 +168,11 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>页码</br> 
+         *  默认值为1 最小值1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -171,7 +181,11 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>分页行数 </br>
+         *   默认值20 最大值50 最小值1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +194,14 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>优惠券状态 </br>
+         * AVAILABLE 正常 </br>
+         * EXHAUSTED 已用完 </br>
+         * EXPIRED 已过期 </br>
+         * ABANDONED 已作废 </br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -189,7 +210,11 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * T2PartnerUid.
+         * <p>T2伙伴uid
+         * 如：123456789</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456768</p>
          */
         public Builder t2PartnerUid(Long t2PartnerUid) {
             this.putQueryParameter("T2PartnerUid", t2PartnerUid);
@@ -198,7 +223,10 @@ public class ListCouponUsageRequest extends Request {
         }
 
         /**
-         * Uid.
+         * <p>阿里云账号uid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1133166938931507</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
