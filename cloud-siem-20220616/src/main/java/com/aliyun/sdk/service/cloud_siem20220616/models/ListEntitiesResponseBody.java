@@ -254,6 +254,18 @@ public class ListEntitiesResponseBody extends TeaModel {
      * <p>ListEntitiesResponseBody</p>
      */
     public static class ResponseData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentConfidence")
+        private String agentConfidence;
+
+        @com.aliyun.core.annotation.NameInMap("AgentDisposalMethod")
+        private String agentDisposalMethod;
+
+        @com.aliyun.core.annotation.NameInMap("AgentDisposalPlaybookUuid")
+        private String agentDisposalPlaybookUuid;
+
+        @com.aliyun.core.annotation.NameInMap("AgentDisposalSuggestion")
+        private String agentDisposalSuggestion;
+
         @com.aliyun.core.annotation.NameInMap("AlertNum")
         private Integer alertNum;
 
@@ -312,6 +324,10 @@ public class ListEntitiesResponseBody extends TeaModel {
         private String tags;
 
         private ResponseData(Builder builder) {
+            this.agentConfidence = builder.agentConfidence;
+            this.agentDisposalMethod = builder.agentDisposalMethod;
+            this.agentDisposalPlaybookUuid = builder.agentDisposalPlaybookUuid;
+            this.agentDisposalSuggestion = builder.agentDisposalSuggestion;
             this.alertNum = builder.alertNum;
             this.alertUuid = builder.alertUuid;
             this.aliuid = builder.aliuid;
@@ -339,6 +355,34 @@ public class ListEntitiesResponseBody extends TeaModel {
 
         public static ResponseData create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentConfidence
+         */
+        public String getAgentConfidence() {
+            return this.agentConfidence;
+        }
+
+        /**
+         * @return agentDisposalMethod
+         */
+        public String getAgentDisposalMethod() {
+            return this.agentDisposalMethod;
+        }
+
+        /**
+         * @return agentDisposalPlaybookUuid
+         */
+        public String getAgentDisposalPlaybookUuid() {
+            return this.agentDisposalPlaybookUuid;
+        }
+
+        /**
+         * @return agentDisposalSuggestion
+         */
+        public String getAgentDisposalSuggestion() {
+            return this.agentDisposalSuggestion;
         }
 
         /**
@@ -475,6 +519,10 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentConfidence; 
+            private String agentDisposalMethod; 
+            private String agentDisposalPlaybookUuid; 
+            private String agentDisposalSuggestion; 
             private Integer alertNum; 
             private String alertUuid; 
             private Long aliuid; 
@@ -499,6 +547,10 @@ public class ListEntitiesResponseBody extends TeaModel {
             } 
 
             private Builder(ResponseData model) {
+                this.agentConfidence = model.agentConfidence;
+                this.agentDisposalMethod = model.agentDisposalMethod;
+                this.agentDisposalPlaybookUuid = model.agentDisposalPlaybookUuid;
+                this.agentDisposalSuggestion = model.agentDisposalSuggestion;
                 this.alertNum = model.alertNum;
                 this.alertUuid = model.alertUuid;
                 this.aliuid = model.aliuid;
@@ -519,6 +571,38 @@ public class ListEntitiesResponseBody extends TeaModel {
                 this.subUserId = model.subUserId;
                 this.tags = model.tags;
             } 
+
+            /**
+             * AgentConfidence.
+             */
+            public Builder agentConfidence(String agentConfidence) {
+                this.agentConfidence = agentConfidence;
+                return this;
+            }
+
+            /**
+             * AgentDisposalMethod.
+             */
+            public Builder agentDisposalMethod(String agentDisposalMethod) {
+                this.agentDisposalMethod = agentDisposalMethod;
+                return this;
+            }
+
+            /**
+             * AgentDisposalPlaybookUuid.
+             */
+            public Builder agentDisposalPlaybookUuid(String agentDisposalPlaybookUuid) {
+                this.agentDisposalPlaybookUuid = agentDisposalPlaybookUuid;
+                return this;
+            }
+
+            /**
+             * AgentDisposalSuggestion.
+             */
+            public Builder agentDisposalSuggestion(String agentDisposalSuggestion) {
+                this.agentDisposalSuggestion = agentDisposalSuggestion;
+                return this;
+            }
 
             /**
              * AlertNum.

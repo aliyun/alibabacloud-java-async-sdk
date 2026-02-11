@@ -35,6 +35,10 @@ public class ListEntitiesRequest extends Request {
     private String entityUuid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityUuids")
+    private String entityUuids;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     @com.aliyun.core.annotation.Validation(required = true)
     private String incidentUuid;
@@ -74,6 +78,7 @@ public class ListEntitiesRequest extends Request {
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
         this.entityUuid = builder.entityUuid;
+        this.entityUuids = builder.entityUuids;
         this.incidentUuid = builder.incidentUuid;
         this.isMalwareEntity = builder.isMalwareEntity;
         this.malwareType = builder.malwareType;
@@ -123,6 +128,13 @@ public class ListEntitiesRequest extends Request {
      */
     public String getEntityUuid() {
         return this.entityUuid;
+    }
+
+    /**
+     * @return entityUuids
+     */
+    public String getEntityUuids() {
+        return this.entityUuids;
     }
 
     /**
@@ -186,6 +198,7 @@ public class ListEntitiesRequest extends Request {
         private String entityName; 
         private String entityType; 
         private String entityUuid; 
+        private String entityUuids; 
         private String incidentUuid; 
         private String isMalwareEntity; 
         private String malwareType; 
@@ -205,6 +218,7 @@ public class ListEntitiesRequest extends Request {
             this.entityName = request.entityName;
             this.entityType = request.entityType;
             this.entityUuid = request.entityUuid;
+            this.entityUuids = request.entityUuids;
             this.incidentUuid = request.incidentUuid;
             this.isMalwareEntity = request.isMalwareEntity;
             this.malwareType = request.malwareType;
@@ -251,6 +265,15 @@ public class ListEntitiesRequest extends Request {
         public Builder entityUuid(String entityUuid) {
             this.putBodyParameter("EntityUuid", entityUuid);
             this.entityUuid = entityUuid;
+            return this;
+        }
+
+        /**
+         * EntityUuids.
+         */
+        public Builder entityUuids(String entityUuids) {
+            this.putBodyParameter("EntityUuids", entityUuids);
+            this.entityUuids = entityUuids;
             return this;
         }
 

@@ -89,6 +89,10 @@ public class ListDisposeStrategyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
     private ListDisposeStrategyRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -108,6 +112,7 @@ public class ListDisposeStrategyRequest extends Request {
         this.roleType = builder.roleType;
         this.sophonTaskId = builder.sophonTaskId;
         this.startTime = builder.startTime;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -242,6 +247,13 @@ public class ListDisposeStrategyRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListDisposeStrategyRequest, Builder> {
         private Integer currentPage; 
         private Integer effectiveStatus; 
@@ -260,6 +272,7 @@ public class ListDisposeStrategyRequest extends Request {
         private Integer roleType; 
         private String sophonTaskId; 
         private Long startTime; 
+        private Integer status; 
 
         private Builder() {
             super();
@@ -284,6 +297,7 @@ public class ListDisposeStrategyRequest extends Request {
             this.roleType = request.roleType;
             this.sophonTaskId = request.sophonTaskId;
             this.startTime = request.startTime;
+            this.status = request.status;
         } 
 
         /**
@@ -521,6 +535,15 @@ public class ListDisposeStrategyRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putBodyParameter("Status", status);
+            this.status = status;
             return this;
         }
 

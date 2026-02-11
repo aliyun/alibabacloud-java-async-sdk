@@ -22,6 +22,10 @@ public class DescribeAlertsRequest extends Request {
     private String alertName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertStatus")
+    private java.util.List<String> alertStatus;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertTitle")
     private String alertTitle;
 
@@ -102,6 +106,7 @@ public class DescribeAlertsRequest extends Request {
     private DescribeAlertsRequest(Builder builder) {
         super(builder);
         this.alertName = builder.alertName;
+        this.alertStatus = builder.alertStatus;
         this.alertTitle = builder.alertTitle;
         this.alertType = builder.alertType;
         this.alertUuid = builder.alertUuid;
@@ -141,6 +146,13 @@ public class DescribeAlertsRequest extends Request {
      */
     public String getAlertName() {
         return this.alertName;
+    }
+
+    /**
+     * @return alertStatus
+     */
+    public java.util.List<String> getAlertStatus() {
+        return this.alertStatus;
     }
 
     /**
@@ -278,6 +290,7 @@ public class DescribeAlertsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAlertsRequest, Builder> {
         private String alertName; 
+        private java.util.List<String> alertStatus; 
         private String alertTitle; 
         private String alertType; 
         private String alertUuid; 
@@ -305,6 +318,7 @@ public class DescribeAlertsRequest extends Request {
         private Builder(DescribeAlertsRequest request) {
             super(request);
             this.alertName = request.alertName;
+            this.alertStatus = request.alertStatus;
             this.alertTitle = request.alertTitle;
             this.alertType = request.alertType;
             this.alertUuid = request.alertUuid;
@@ -332,6 +346,15 @@ public class DescribeAlertsRequest extends Request {
         public Builder alertName(String alertName) {
             this.putBodyParameter("AlertName", alertName);
             this.alertName = alertName;
+            return this;
+        }
+
+        /**
+         * AlertStatus.
+         */
+        public Builder alertStatus(java.util.List<String> alertStatus) {
+            this.putBodyParameter("AlertStatus", alertStatus);
+            this.alertStatus = alertStatus;
             return this;
         }
 

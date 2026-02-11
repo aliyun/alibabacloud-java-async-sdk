@@ -420,6 +420,9 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertSrcProdModule")
         private String alertSrcProdModule;
 
+        @com.aliyun.core.annotation.NameInMap("AlertStatus")
+        private String alertStatus;
+
         @com.aliyun.core.annotation.NameInMap("AlertTitle")
         private String alertTitle;
 
@@ -513,6 +516,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             this.alertNameEn = builder.alertNameEn;
             this.alertSrcProd = builder.alertSrcProd;
             this.alertSrcProdModule = builder.alertSrcProdModule;
+            this.alertStatus = builder.alertStatus;
             this.alertTitle = builder.alertTitle;
             this.alertTitleEn = builder.alertTitleEn;
             this.alertType = builder.alertType;
@@ -625,6 +629,13 @@ public class DescribeAlertsResponseBody extends TeaModel {
          */
         public String getAlertSrcProdModule() {
             return this.alertSrcProdModule;
+        }
+
+        /**
+         * @return alertStatus
+         */
+        public String getAlertStatus() {
+            return this.alertStatus;
         }
 
         /**
@@ -828,6 +839,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String alertNameEn; 
             private String alertSrcProd; 
             private String alertSrcProdModule; 
+            private String alertStatus; 
             private String alertTitle; 
             private String alertTitleEn; 
             private String alertType; 
@@ -871,6 +883,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
                 this.alertNameEn = model.alertNameEn;
                 this.alertSrcProd = model.alertSrcProd;
                 this.alertSrcProdModule = model.alertSrcProdModule;
+                this.alertStatus = model.alertStatus;
                 this.alertTitle = model.alertTitle;
                 this.alertTitleEn = model.alertTitleEn;
                 this.alertType = model.alertType;
@@ -1023,6 +1036,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
              */
             public Builder alertSrcProdModule(String alertSrcProdModule) {
                 this.alertSrcProdModule = alertSrcProdModule;
+                return this;
+            }
+
+            /**
+             * AlertStatus.
+             */
+            public Builder alertStatus(String alertStatus) {
+                this.alertStatus = alertStatus;
                 return this;
             }
 

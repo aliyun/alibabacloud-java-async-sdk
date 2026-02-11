@@ -176,7 +176,106 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
      *
      * <p>DescribeEventCountByThreatLevelResponseBody</p>
      */
+    public static class EventDailyNum extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Date")
+        private String date;
+
+        @com.aliyun.core.annotation.NameInMap("EventNum")
+        private Long eventNum;
+
+        @com.aliyun.core.annotation.NameInMap("UndealEventNum")
+        private Long undealEventNum;
+
+        private EventDailyNum(Builder builder) {
+            this.date = builder.date;
+            this.eventNum = builder.eventNum;
+            this.undealEventNum = builder.undealEventNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EventDailyNum create() {
+            return builder().build();
+        }
+
+        /**
+         * @return date
+         */
+        public String getDate() {
+            return this.date;
+        }
+
+        /**
+         * @return eventNum
+         */
+        public Long getEventNum() {
+            return this.eventNum;
+        }
+
+        /**
+         * @return undealEventNum
+         */
+        public Long getUndealEventNum() {
+            return this.undealEventNum;
+        }
+
+        public static final class Builder {
+            private String date; 
+            private Long eventNum; 
+            private Long undealEventNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventDailyNum model) {
+                this.date = model.date;
+                this.eventNum = model.eventNum;
+                this.undealEventNum = model.undealEventNum;
+            } 
+
+            /**
+             * Date.
+             */
+            public Builder date(String date) {
+                this.date = date;
+                return this;
+            }
+
+            /**
+             * EventNum.
+             */
+            public Builder eventNum(Long eventNum) {
+                this.eventNum = eventNum;
+                return this;
+            }
+
+            /**
+             * UndealEventNum.
+             */
+            public Builder undealEventNum(Long undealEventNum) {
+                this.undealEventNum = undealEventNum;
+                return this;
+            }
+
+            public EventDailyNum build() {
+                return new EventDailyNum(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeEventCountByThreatLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventCountByThreatLevelResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EventDailyNum")
+        private java.util.List<EventDailyNum> eventDailyNum;
+
         @com.aliyun.core.annotation.NameInMap("EventNum")
         private Long eventNum;
 
@@ -199,6 +298,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         private Long undealEventNum;
 
         private Data(Builder builder) {
+            this.eventDailyNum = builder.eventDailyNum;
             this.eventNum = builder.eventNum;
             this.highLevelEventNum = builder.highLevelEventNum;
             this.infoLevelEventNum = builder.infoLevelEventNum;
@@ -214,6 +314,13 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return eventDailyNum
+         */
+        public java.util.List<EventDailyNum> getEventDailyNum() {
+            return this.eventDailyNum;
         }
 
         /**
@@ -266,6 +373,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<EventDailyNum> eventDailyNum; 
             private Long eventNum; 
             private Long highLevelEventNum; 
             private Long infoLevelEventNum; 
@@ -278,6 +386,7 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.eventDailyNum = model.eventDailyNum;
                 this.eventNum = model.eventNum;
                 this.highLevelEventNum = model.highLevelEventNum;
                 this.infoLevelEventNum = model.infoLevelEventNum;
@@ -286,6 +395,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
                 this.seriousLevelEventNum = model.seriousLevelEventNum;
                 this.undealEventNum = model.undealEventNum;
             } 
+
+            /**
+             * EventDailyNum.
+             */
+            public Builder eventDailyNum(java.util.List<EventDailyNum> eventDailyNum) {
+                this.eventDailyNum = eventDailyNum;
+                return this;
+            }
 
             /**
              * <p>The total number of events.</p>

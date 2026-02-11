@@ -98,6 +98,12 @@ public class GetCapacityResponseBody extends TeaModel {
      * <p>GetCapacityResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentManagedAssetQuota")
+        private Long agentManagedAssetQuota;
+
+        @com.aliyun.core.annotation.NameInMap("AgentManagedAssetUsed")
+        private Long agentManagedAssetUsed;
+
         @com.aliyun.core.annotation.NameInMap("ExistLogStore")
         private Boolean existLogStore;
 
@@ -108,6 +114,8 @@ public class GetCapacityResponseBody extends TeaModel {
         private Double usedCapacity;
 
         private Data(Builder builder) {
+            this.agentManagedAssetQuota = builder.agentManagedAssetQuota;
+            this.agentManagedAssetUsed = builder.agentManagedAssetUsed;
             this.existLogStore = builder.existLogStore;
             this.preservedCapacity = builder.preservedCapacity;
             this.usedCapacity = builder.usedCapacity;
@@ -119,6 +127,20 @@ public class GetCapacityResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentManagedAssetQuota
+         */
+        public Long getAgentManagedAssetQuota() {
+            return this.agentManagedAssetQuota;
+        }
+
+        /**
+         * @return agentManagedAssetUsed
+         */
+        public Long getAgentManagedAssetUsed() {
+            return this.agentManagedAssetUsed;
         }
 
         /**
@@ -143,6 +165,8 @@ public class GetCapacityResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long agentManagedAssetQuota; 
+            private Long agentManagedAssetUsed; 
             private Boolean existLogStore; 
             private Long preservedCapacity; 
             private Double usedCapacity; 
@@ -151,10 +175,28 @@ public class GetCapacityResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.agentManagedAssetQuota = model.agentManagedAssetQuota;
+                this.agentManagedAssetUsed = model.agentManagedAssetUsed;
                 this.existLogStore = model.existLogStore;
                 this.preservedCapacity = model.preservedCapacity;
                 this.usedCapacity = model.usedCapacity;
             } 
+
+            /**
+             * AgentManagedAssetQuota.
+             */
+            public Builder agentManagedAssetQuota(Long agentManagedAssetQuota) {
+                this.agentManagedAssetQuota = agentManagedAssetQuota;
+                return this;
+            }
+
+            /**
+             * AgentManagedAssetUsed.
+             */
+            public Builder agentManagedAssetUsed(Long agentManagedAssetUsed) {
+                this.agentManagedAssetUsed = agentManagedAssetUsed;
+                return this;
+            }
 
             /**
              * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>

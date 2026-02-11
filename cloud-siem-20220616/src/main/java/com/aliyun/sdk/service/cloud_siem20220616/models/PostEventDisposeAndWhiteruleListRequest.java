@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PostEventDisposeAndWhiteruleListRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisposeStrategyIds")
+    private String disposeStrategyIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EventDispose")
     private String eventDispose;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    private String owner;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReceiverInfo")
@@ -36,6 +44,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseSource")
+    private String responseSource;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleFor")
@@ -55,11 +67,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
 
     private PostEventDisposeAndWhiteruleListRequest(Builder builder) {
         super(builder);
+        this.disposeStrategyIds = builder.disposeStrategyIds;
         this.eventDispose = builder.eventDispose;
         this.incidentUuid = builder.incidentUuid;
+        this.owner = builder.owner;
         this.receiverInfo = builder.receiverInfo;
         this.regionId = builder.regionId;
         this.remark = builder.remark;
+        this.responseSource = builder.responseSource;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
         this.status = builder.status;
@@ -80,6 +95,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     /**
+     * @return disposeStrategyIds
+     */
+    public String getDisposeStrategyIds() {
+        return this.disposeStrategyIds;
+    }
+
+    /**
      * @return eventDispose
      */
     public String getEventDispose() {
@@ -91,6 +113,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
      */
     public String getIncidentUuid() {
         return this.incidentUuid;
+    }
+
+    /**
+     * @return owner
+     */
+    public String getOwner() {
+        return this.owner;
     }
 
     /**
@@ -112,6 +141,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
      */
     public String getRemark() {
         return this.remark;
+    }
+
+    /**
+     * @return responseSource
+     */
+    public String getResponseSource() {
+        return this.responseSource;
     }
 
     /**
@@ -143,11 +179,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PostEventDisposeAndWhiteruleListRequest, Builder> {
+        private String disposeStrategyIds; 
         private String eventDispose; 
         private String incidentUuid; 
+        private String owner; 
         private String receiverInfo; 
         private String regionId; 
         private String remark; 
+        private String responseSource; 
         private Long roleFor; 
         private Integer roleType; 
         private Integer status; 
@@ -159,16 +198,28 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
 
         private Builder(PostEventDisposeAndWhiteruleListRequest request) {
             super(request);
+            this.disposeStrategyIds = request.disposeStrategyIds;
             this.eventDispose = request.eventDispose;
             this.incidentUuid = request.incidentUuid;
+            this.owner = request.owner;
             this.receiverInfo = request.receiverInfo;
             this.regionId = request.regionId;
             this.remark = request.remark;
+            this.responseSource = request.responseSource;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
             this.status = request.status;
             this.threatLevel = request.threatLevel;
         } 
+
+        /**
+         * DisposeStrategyIds.
+         */
+        public Builder disposeStrategyIds(String disposeStrategyIds) {
+            this.putBodyParameter("DisposeStrategyIds", disposeStrategyIds);
+            this.disposeStrategyIds = disposeStrategyIds;
+            return this;
+        }
 
         /**
          * <p>The configuration of event handling. The value is a JSON object.</p>
@@ -219,6 +270,15 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
+         * Owner.
+         */
+        public Builder owner(String owner) {
+            this.putBodyParameter("Owner", owner);
+            this.owner = owner;
+            return this;
+        }
+
+        /**
          * <p>The configuration of the alert recipient. The value is a JSON object.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +319,15 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResponseSource.
+         */
+        public Builder responseSource(String responseSource) {
+            this.putBodyParameter("ResponseSource", responseSource);
+            this.responseSource = responseSource;
             return this;
         }
 

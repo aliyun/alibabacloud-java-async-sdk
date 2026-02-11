@@ -164,12 +164,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAutomateResponseConfigFeatureResponse> describeAutomateResponseConfigFeature(DescribeAutomateResponseConfigFeatureRequest request);
 
     /**
-     * @param request the request parameters of DescribeAutomateResponseConfigPlayBooks  DescribeAutomateResponseConfigPlayBooksRequest
-     * @return DescribeAutomateResponseConfigPlayBooksResponse
-     */
-    CompletableFuture<DescribeAutomateResponseConfigPlayBooksResponse> describeAutomateResponseConfigPlayBooks(DescribeAutomateResponseConfigPlayBooksRequest request);
-
-    /**
      * @param request the request parameters of DescribeCloudSiemAssets  DescribeCloudSiemAssetsRequest
      * @return DescribeCloudSiemAssetsResponse
      */
