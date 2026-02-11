@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListDispatchRuleResponseBody</p>
  */
 public class ListDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("DispatchRules")
-    private java.util.List < DispatchRules> dispatchRules;
+    @com.aliyun.core.annotation.NameInMap("DispatchRules")
+    private java.util.List<DispatchRules> dispatchRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDispatchRuleResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dispatchRules
      */
-    public java.util.List < DispatchRules> getDispatchRules() {
+    public java.util.List<DispatchRules> getDispatchRules() {
         return this.dispatchRules;
     }
 
@@ -46,13 +55,21 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DispatchRules> dispatchRules; 
+        private java.util.List<DispatchRules> dispatchRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDispatchRuleResponseBody model) {
+            this.dispatchRules = model.dispatchRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DispatchRules.
          */
-        public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+        public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
             this.dispatchRules = dispatchRules;
             return this;
         }
@@ -71,14 +88,20 @@ public class ListDispatchRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDispatchRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDispatchRuleResponseBody</p>
+     */
     public static class DispatchRules extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private DispatchRules(Builder builder) {
@@ -120,6 +143,15 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             private String name; 
             private Long ruleId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(DispatchRules model) {
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+                this.state = model.state;
+            } 
 
             /**
              * Name.

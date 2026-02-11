@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlertTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAlertTemplateResponseBody</p>
  */
 public class CreateAlertTemplateResponseBody extends TeaModel {
-    @NameInMap("AlertTemplate")
+    @com.aliyun.core.annotation.NameInMap("AlertTemplate")
     private AlertTemplate alertTemplate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAlertTemplateResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
 
     public static CreateAlertTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private AlertTemplate alertTemplate; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAlertTemplateResponseBody model) {
+            this.alertTemplate = model.alertTemplate;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AlertTemplate.
@@ -71,14 +88,20 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAlertTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAlertTemplateResponseBody</p>
+     */
     public static class LabelMatchExpressions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LabelMatchExpressions(Builder builder) {
@@ -121,6 +144,15 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -152,9 +184,15 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAlertTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAlertTemplateResponseBody</p>
+     */
     public static class LabelMatchExpressionGroups extends TeaModel {
-        @NameInMap("LabelMatchExpressions")
-        private java.util.List < LabelMatchExpressions> labelMatchExpressions;
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressions")
+        private java.util.List<LabelMatchExpressions> labelMatchExpressions;
 
         private LabelMatchExpressionGroups(Builder builder) {
             this.labelMatchExpressions = builder.labelMatchExpressions;
@@ -171,17 +209,24 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         /**
          * @return labelMatchExpressions
          */
-        public java.util.List < LabelMatchExpressions> getLabelMatchExpressions() {
+        public java.util.List<LabelMatchExpressions> getLabelMatchExpressions() {
             return this.labelMatchExpressions;
         }
 
         public static final class Builder {
-            private java.util.List < LabelMatchExpressions> labelMatchExpressions; 
+            private java.util.List<LabelMatchExpressions> labelMatchExpressions; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressionGroups model) {
+                this.labelMatchExpressions = model.labelMatchExpressions;
+            } 
 
             /**
              * LabelMatchExpressions.
              */
-            public Builder labelMatchExpressions(java.util.List < LabelMatchExpressions> labelMatchExpressions) {
+            public Builder labelMatchExpressions(java.util.List<LabelMatchExpressions> labelMatchExpressions) {
                 this.labelMatchExpressions = labelMatchExpressions;
                 return this;
             }
@@ -193,9 +238,15 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAlertTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAlertTemplateResponseBody</p>
+     */
     public static class LabelMatchExpressionGrid extends TeaModel {
-        @NameInMap("LabelMatchExpressionGroups")
-        private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups;
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGroups")
+        private java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups;
 
         private LabelMatchExpressionGrid(Builder builder) {
             this.labelMatchExpressionGroups = builder.labelMatchExpressionGroups;
@@ -212,17 +263,24 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         /**
          * @return labelMatchExpressionGroups
          */
-        public java.util.List < LabelMatchExpressionGroups> getLabelMatchExpressionGroups() {
+        public java.util.List<LabelMatchExpressionGroups> getLabelMatchExpressionGroups() {
             return this.labelMatchExpressionGroups;
         }
 
         public static final class Builder {
-            private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups; 
+            private java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressionGrid model) {
+                this.labelMatchExpressionGroups = model.labelMatchExpressionGroups;
+            } 
 
             /**
              * LabelMatchExpressionGroups.
              */
-            public Builder labelMatchExpressionGroups(java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups) {
+            public Builder labelMatchExpressionGroups(java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups) {
                 this.labelMatchExpressionGroups = labelMatchExpressionGroups;
                 return this;
             }
@@ -234,47 +292,53 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAlertTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAlertTemplateResponseBody</p>
+     */
     public static class AlertTemplate extends TeaModel {
-        @NameInMap("AlertProvider")
+        @com.aliyun.core.annotation.NameInMap("AlertProvider")
         private String alertProvider;
 
-        @NameInMap("Annotations")
-        private java.util.Map < String, ? > annotations;
+        @com.aliyun.core.annotation.NameInMap("Annotations")
+        private java.util.Map<String, ?> annotations;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("LabelMatchExpressionGrid")
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGrid")
         private LabelMatchExpressionGrid labelMatchExpressionGrid;
 
-        @NameInMap("Labels")
-        private java.util.Map < String, ? > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.Map<String, ?> labels;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Integer parentId;
 
-        @NameInMap("Public")
+        @com.aliyun.core.annotation.NameInMap("Public")
         private Boolean _public;
 
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private String rule;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
-        @NameInMap("TemplateProvider")
+        @com.aliyun.core.annotation.NameInMap("TemplateProvider")
         private String templateProvider;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlertTemplate(Builder builder) {
@@ -312,7 +376,7 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.Map < String, ? > getAnnotations() {
+        public java.util.Map<String, ?> getAnnotations() {
             return this.annotations;
         }
 
@@ -333,7 +397,7 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.Map < String, ? > getLabels() {
+        public java.util.Map<String, ?> getLabels() {
             return this.labels;
         }
 
@@ -402,10 +466,10 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertProvider; 
-            private java.util.Map < String, ? > annotations; 
+            private java.util.Map<String, ?> annotations; 
             private Integer id; 
             private LabelMatchExpressionGrid labelMatchExpressionGrid; 
-            private java.util.Map < String, ? > labels; 
+            private java.util.Map<String, ?> labels; 
             private String message; 
             private String name; 
             private Integer parentId; 
@@ -415,6 +479,26 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
             private String templateProvider; 
             private String type; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertTemplate model) {
+                this.alertProvider = model.alertProvider;
+                this.annotations = model.annotations;
+                this.id = model.id;
+                this.labelMatchExpressionGrid = model.labelMatchExpressionGrid;
+                this.labels = model.labels;
+                this.message = model.message;
+                this.name = model.name;
+                this.parentId = model.parentId;
+                this._public = model._public;
+                this.rule = model.rule;
+                this.status = model.status;
+                this.templateProvider = model.templateProvider;
+                this.type = model.type;
+                this.userId = model.userId;
+            } 
 
             /**
              * AlertProvider.
@@ -427,7 +511,7 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
             /**
              * Annotations.
              */
-            public Builder annotations(java.util.Map < String, ? > annotations) {
+            public Builder annotations(java.util.Map<String, ?> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -451,7 +535,7 @@ public class CreateAlertTemplateResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.Map < String, ? > labels) {
+            public Builder labels(java.util.Map<String, ?> labels) {
                 this.labels = labels;
                 return this;
             }

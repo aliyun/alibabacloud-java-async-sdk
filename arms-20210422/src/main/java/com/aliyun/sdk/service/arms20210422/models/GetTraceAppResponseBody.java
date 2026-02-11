@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetTraceAppResponseBody</p>
  */
 public class GetTraceAppResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TraceApp")
+    @com.aliyun.core.annotation.NameInMap("TraceApp")
     private TraceApp traceApp;
 
     private GetTraceAppResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetTraceAppResponseBody extends TeaModel {
 
     public static GetTraceAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetTraceAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TraceApp traceApp; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTraceAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceApp = model.traceApp;
+        } 
 
         /**
          * RequestId.
@@ -71,35 +88,41 @@ public class GetTraceAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceAppResponseBody</p>
+     */
     public static class TraceApp extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Show")
+        @com.aliyun.core.annotation.NameInMap("Show")
         private Boolean show;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TraceApp(Builder builder) {
@@ -147,7 +170,7 @@ public class GetTraceAppResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -197,13 +220,29 @@ public class GetTraceAppResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private Long createTime; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String pid; 
             private String regionId; 
             private Boolean show; 
             private String type; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceApp model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.show = model.show;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * AppId.
@@ -232,7 +271,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }

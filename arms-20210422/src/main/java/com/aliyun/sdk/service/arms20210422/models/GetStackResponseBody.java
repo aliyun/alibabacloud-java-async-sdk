@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStackResponseBody} extends {@link TeaModel}
  *
  * <p>GetStackResponseBody</p>
  */
 public class GetStackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackInfo")
-    private java.util.List < StackInfo> stackInfo;
+    @com.aliyun.core.annotation.NameInMap("StackInfo")
+    private java.util.List<StackInfo> stackInfo;
 
     private GetStackResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class GetStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * @return stackInfo
      */
-    public java.util.List < StackInfo> getStackInfo() {
+    public java.util.List<StackInfo> getStackInfo() {
         return this.stackInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StackInfo> stackInfo; 
+        private java.util.List<StackInfo> stackInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStackResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackInfo = model.stackInfo;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * StackInfo.
          */
-        public Builder stackInfo(java.util.List < StackInfo> stackInfo) {
+        public Builder stackInfo(java.util.List<StackInfo> stackInfo) {
             this.stackInfo = stackInfo;
             return this;
         }
@@ -71,11 +88,17 @@ public class GetStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackResponseBody</p>
+     */
     public static class ExtInfo extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ExtInfo(Builder builder) {
@@ -109,6 +132,14 @@ public class GetStackResponseBody extends TeaModel {
             private String info; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtInfo model) {
+                this.info = model.info;
+                this.type = model.type;
+            } 
+
             /**
              * Info.
              */
@@ -132,29 +163,35 @@ public class GetStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStackResponseBody</p>
+     */
     public static class StackInfo extends TeaModel {
-        @NameInMap("Api")
+        @com.aliyun.core.annotation.NameInMap("Api")
         private String api;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Exception")
+        @com.aliyun.core.annotation.NameInMap("Exception")
         private String exception;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private ExtInfo extInfo;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("RpcId")
+        @com.aliyun.core.annotation.NameInMap("RpcId")
         private String rpcId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private StackInfo(Builder builder) {
@@ -241,6 +278,20 @@ public class GetStackResponseBody extends TeaModel {
             private String rpcId; 
             private String serviceName; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StackInfo model) {
+                this.api = model.api;
+                this.duration = model.duration;
+                this.exception = model.exception;
+                this.extInfo = model.extInfo;
+                this.line = model.line;
+                this.rpcId = model.rpcId;
+                this.serviceName = model.serviceName;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * Api.

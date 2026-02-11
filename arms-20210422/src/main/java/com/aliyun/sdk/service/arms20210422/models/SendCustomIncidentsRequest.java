@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendCustomIncidentsRequest} extends {@link RequestModel}
  *
  * <p>SendCustomIncidentsRequest</p>
  */
 public class SendCustomIncidentsRequest extends Request {
-    @Query
-    @NameInMap("Incidents")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Incidents")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidents;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private SendCustomIncidentsRequest(Builder builder) {
@@ -42,7 +47,7 @@ public class SendCustomIncidentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +90,7 @@ public class SendCustomIncidentsRequest extends Request {
         } 
 
         /**
-         * Incidents.
+         * <p>This parameter is required.</p>
          */
         public Builder incidents(String incidents) {
             this.putQueryParameter("Incidents", incidents);
@@ -94,7 +99,7 @@ public class SendCustomIncidentsRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>This parameter is required.</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -103,7 +108,7 @@ public class SendCustomIncidentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

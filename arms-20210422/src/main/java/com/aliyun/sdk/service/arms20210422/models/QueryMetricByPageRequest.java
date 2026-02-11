@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMetricByPageRequest} extends {@link RequestModel}
  *
  * <p>QueryMetricByPageRequest</p>
  */
 public class QueryMetricByPageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("CustomFilters")
-    private java.util.List < String > customFilters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFilters")
+    private java.util.List<String> customFilters;
 
-    @Query
-    @NameInMap("Dimensions")
-    private java.util.List < String > dimensions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private java.util.List<String> dimensions;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private java.util.List<Filters> filters;
 
-    @Query
-    @NameInMap("IntervalInSec")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalInSec")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer intervalInSec;
 
-    @Query
-    @NameInMap("Measures")
-    @Validation(required = true)
-    private java.util.List < String > measures;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Measures")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> measures;
 
-    @Query
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private QueryMetricByPageRequest(Builder builder) {
@@ -96,7 +101,7 @@ public class QueryMetricByPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,14 +123,14 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return customFilters
      */
-    public java.util.List < String > getCustomFilters() {
+    public java.util.List<String> getCustomFilters() {
         return this.customFilters;
     }
 
     /**
      * @return dimensions
      */
-    public java.util.List < String > getDimensions() {
+    public java.util.List<String> getDimensions() {
         return this.dimensions;
     }
 
@@ -139,7 +144,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -153,7 +158,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -195,12 +200,12 @@ public class QueryMetricByPageRequest extends Request {
     public static final class Builder extends Request.Builder<QueryMetricByPageRequest, Builder> {
         private String regionId; 
         private Integer currentPage; 
-        private java.util.List < String > customFilters; 
-        private java.util.List < String > dimensions; 
+        private java.util.List<String> customFilters; 
+        private java.util.List<String> dimensions; 
         private Long endTime; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer intervalInSec; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private String metric; 
         private String order; 
         private String orderBy; 
@@ -249,7 +254,7 @@ public class QueryMetricByPageRequest extends Request {
         /**
          * CustomFilters.
          */
-        public Builder customFilters(java.util.List < String > customFilters) {
+        public Builder customFilters(java.util.List<String> customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
             this.customFilters = customFilters;
             return this;
@@ -258,14 +263,14 @@ public class QueryMetricByPageRequest extends Request {
         /**
          * Dimensions.
          */
-        public Builder dimensions(java.util.List < String > dimensions) {
+        public Builder dimensions(java.util.List<String> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -276,7 +281,7 @@ public class QueryMetricByPageRequest extends Request {
         /**
          * Filters.
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -292,16 +297,16 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * Measures.
+         * <p>This parameter is required.</p>
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;
         }
 
         /**
-         * Metric.
+         * <p>This parameter is required.</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -337,7 +342,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -352,11 +357,17 @@ public class QueryMetricByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMetricByPageRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMetricByPageRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -389,6 +400,14 @@ public class QueryMetricByPageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

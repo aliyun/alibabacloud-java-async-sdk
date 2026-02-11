@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTraceResponseBody</p>
  */
 public class GetTraceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Spans")
-    private java.util.List < Spans> spans;
+    @com.aliyun.core.annotation.NameInMap("Spans")
+    private java.util.List<Spans> spans;
 
     private GetTraceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class GetTraceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class GetTraceResponseBody extends TeaModel {
     /**
      * @return spans
      */
-    public java.util.List < Spans> getSpans() {
+    public java.util.List<Spans> getSpans() {
         return this.spans;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Spans> spans; 
+        private java.util.List<Spans> spans; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTraceResponseBody model) {
+            this.requestId = model.requestId;
+            this.spans = model.spans;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * Spans.
          */
-        public Builder spans(java.util.List < Spans> spans) {
+        public Builder spans(java.util.List<Spans> spans) {
             this.spans = spans;
             return this;
         }
@@ -71,11 +88,17 @@ public class GetTraceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class TagEntryList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagEntryList(Builder builder) {
@@ -109,6 +132,14 @@ public class GetTraceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -132,11 +163,17 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class LogEventList extends TeaModel {
-        @NameInMap("TagEntryList")
-        private java.util.List < TagEntryList> tagEntryList;
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
+        private java.util.List<TagEntryList> tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private LogEventList(Builder builder) {
@@ -155,7 +192,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < TagEntryList> getTagEntryList() {
+        public java.util.List<TagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -167,13 +204,21 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TagEntryList> tagEntryList; 
+            private java.util.List<TagEntryList> tagEntryList; 
             private Long timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogEventList model) {
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * TagEntryList.
              */
-            public Builder tagEntryList(java.util.List < TagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<TagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }
@@ -193,11 +238,17 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class SpansTagEntryList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SpansTagEntryList(Builder builder) {
@@ -231,6 +282,14 @@ public class GetTraceResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpansTagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -254,47 +313,53 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class Spans extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("HaveStack")
+        @com.aliyun.core.annotation.NameInMap("HaveStack")
         private Boolean haveStack;
 
-        @NameInMap("LogEventList")
-        private java.util.List < LogEventList> logEventList;
+        @com.aliyun.core.annotation.NameInMap("LogEventList")
+        private java.util.List<LogEventList> logEventList;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ParentSpanId")
+        @com.aliyun.core.annotation.NameInMap("ParentSpanId")
         private String parentSpanId;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("RpcId")
+        @com.aliyun.core.annotation.NameInMap("RpcId")
         private String rpcId;
 
-        @NameInMap("RpcType")
+        @com.aliyun.core.annotation.NameInMap("RpcType")
         private Integer rpcType;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SpanId")
+        @com.aliyun.core.annotation.NameInMap("SpanId")
         private String spanId;
 
-        @NameInMap("TagEntryList")
-        private java.util.List < SpansTagEntryList> tagEntryList;
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
+        private java.util.List<SpansTagEntryList> tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private Spans(Builder builder) {
@@ -339,7 +404,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return logEventList
          */
-        public java.util.List < LogEventList> getLogEventList() {
+        public java.util.List<LogEventList> getLogEventList() {
             return this.logEventList;
         }
 
@@ -402,7 +467,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < SpansTagEntryList> getTagEntryList() {
+        public java.util.List<SpansTagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -423,7 +488,7 @@ public class GetTraceResponseBody extends TeaModel {
         public static final class Builder {
             private Long duration; 
             private Boolean haveStack; 
-            private java.util.List < LogEventList> logEventList; 
+            private java.util.List<LogEventList> logEventList; 
             private String operationName; 
             private String parentSpanId; 
             private String resultCode; 
@@ -432,9 +497,29 @@ public class GetTraceResponseBody extends TeaModel {
             private String serviceIp; 
             private String serviceName; 
             private String spanId; 
-            private java.util.List < SpansTagEntryList> tagEntryList; 
+            private java.util.List<SpansTagEntryList> tagEntryList; 
             private Long timestamp; 
             private String traceID; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spans model) {
+                this.duration = model.duration;
+                this.haveStack = model.haveStack;
+                this.logEventList = model.logEventList;
+                this.operationName = model.operationName;
+                this.parentSpanId = model.parentSpanId;
+                this.resultCode = model.resultCode;
+                this.rpcId = model.rpcId;
+                this.rpcType = model.rpcType;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.spanId = model.spanId;
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
 
             /**
              * Duration.
@@ -455,7 +540,7 @@ public class GetTraceResponseBody extends TeaModel {
             /**
              * LogEventList.
              */
-            public Builder logEventList(java.util.List < LogEventList> logEventList) {
+            public Builder logEventList(java.util.List<LogEventList> logEventList) {
                 this.logEventList = logEventList;
                 return this;
             }
@@ -527,7 +612,7 @@ public class GetTraceResponseBody extends TeaModel {
             /**
              * TagEntryList.
              */
-            public Builder tagEntryList(java.util.List < SpansTagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<SpansTagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }

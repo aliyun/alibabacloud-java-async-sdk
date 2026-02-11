@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListScenarioResponseBody} extends {@link TeaModel}
  *
  * <p>ListScenarioResponseBody</p>
  */
 public class ListScenarioResponseBody extends TeaModel {
-    @NameInMap("ArmsScenarios")
-    private java.util.List < ArmsScenarios> armsScenarios;
+    @com.aliyun.core.annotation.NameInMap("ArmsScenarios")
+    private java.util.List<ArmsScenarios> armsScenarios;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListScenarioResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class ListScenarioResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return armsScenarios
      */
-    public java.util.List < ArmsScenarios> getArmsScenarios() {
+    public java.util.List<ArmsScenarios> getArmsScenarios() {
         return this.armsScenarios;
     }
 
@@ -46,13 +55,21 @@ public class ListScenarioResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ArmsScenarios> armsScenarios; 
+        private java.util.List<ArmsScenarios> armsScenarios; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScenarioResponseBody model) {
+            this.armsScenarios = model.armsScenarios;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ArmsScenarios.
          */
-        public Builder armsScenarios(java.util.List < ArmsScenarios> armsScenarios) {
+        public Builder armsScenarios(java.util.List<ArmsScenarios> armsScenarios) {
             this.armsScenarios = armsScenarios;
             return this;
         }
@@ -71,32 +88,38 @@ public class ListScenarioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListScenarioResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScenarioResponseBody</p>
+     */
     public static class ArmsScenarios extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Extensions")
+        @com.aliyun.core.annotation.NameInMap("Extensions")
         private String extensions;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Sign")
+        @com.aliyun.core.annotation.NameInMap("Sign")
         private String sign;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ArmsScenarios(Builder builder) {
@@ -192,6 +215,21 @@ public class ListScenarioResponseBody extends TeaModel {
             private String sign; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArmsScenarios model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.extensions = model.extensions;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.sign = model.sign;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * AppId.

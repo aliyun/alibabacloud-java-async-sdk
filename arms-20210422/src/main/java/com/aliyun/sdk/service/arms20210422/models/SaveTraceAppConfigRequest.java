@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveTraceAppConfigRequest} extends {@link RequestModel}
  *
  * <p>SaveTraceAppConfigRequest</p>
  */
 public class SaveTraceAppConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("Settings")
-    private java.util.List < Settings> settings;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Settings")
+    private java.util.List<Settings> settings;
 
     private SaveTraceAppConfigRequest(Builder builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class SaveTraceAppConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +67,14 @@ public class SaveTraceAppConfigRequest extends Request {
     /**
      * @return settings
      */
-    public java.util.List < Settings> getSettings() {
+    public java.util.List<Settings> getSettings() {
         return this.settings;
     }
 
     public static final class Builder extends Request.Builder<SaveTraceAppConfigRequest, Builder> {
         private String regionId; 
         private String pid; 
-        private java.util.List < Settings> settings; 
+        private java.util.List<Settings> settings; 
 
         private Builder() {
             super();
@@ -92,7 +97,7 @@ public class SaveTraceAppConfigRequest extends Request {
         }
 
         /**
-         * Pid.
+         * <p>This parameter is required.</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -103,7 +108,7 @@ public class SaveTraceAppConfigRequest extends Request {
         /**
          * Settings.
          */
-        public Builder settings(java.util.List < Settings> settings) {
+        public Builder settings(java.util.List<Settings> settings) {
             this.putQueryParameter("Settings", settings);
             this.settings = settings;
             return this;
@@ -116,11 +121,17 @@ public class SaveTraceAppConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SaveTraceAppConfigRequest} extends {@link TeaModel}
+     *
+     * <p>SaveTraceAppConfigRequest</p>
+     */
     public static class Settings extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Settings(Builder builder) {
@@ -153,6 +164,14 @@ public class SaveTraceAppConfigRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

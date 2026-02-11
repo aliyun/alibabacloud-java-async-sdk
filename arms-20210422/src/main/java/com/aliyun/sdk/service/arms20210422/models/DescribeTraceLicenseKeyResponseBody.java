@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceLicenseKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceLicenseKeyResponseBody</p>
  */
 public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
-    @NameInMap("LicenseKey")
+    @com.aliyun.core.annotation.NameInMap("LicenseKey")
     private String licenseKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTraceLicenseKeyResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
 
     public static DescribeTraceLicenseKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String licenseKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTraceLicenseKeyResponseBody model) {
+            this.licenseKey = model.licenseKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LicenseKey.

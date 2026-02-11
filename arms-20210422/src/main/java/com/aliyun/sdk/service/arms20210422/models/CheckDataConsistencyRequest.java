@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDataConsistencyRequest} extends {@link RequestModel}
  *
  * <p>CheckDataConsistencyRequest</p>
  */
 public class CheckDataConsistencyRequest extends Request {
-    @Query
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Query
-    @NameInMap("CurrentTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentTimestamp")
     private Long currentTimestamp;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("ProxyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CheckDataConsistencyRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class CheckDataConsistencyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,7 @@ public class CheckDataConsistencyRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -131,7 +136,7 @@ public class CheckDataConsistencyRequest extends Request {
         }
 
         /**
-         * Pid.
+         * <p>This parameter is required.</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -149,7 +154,7 @@ public class CheckDataConsistencyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

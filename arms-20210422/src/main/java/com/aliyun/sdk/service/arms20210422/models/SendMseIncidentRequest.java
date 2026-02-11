@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMseIncidentRequest} extends {@link RequestModel}
  *
  * <p>SendMseIncidentRequest</p>
  */
 public class SendMseIncidentRequest extends Request {
-    @Query
-    @NameInMap("Incidents")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Incidents")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidents;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private SendMseIncidentRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class SendMseIncidentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class SendMseIncidentRequest extends Request {
         } 
 
         /**
-         * Incidents.
+         * <p>This parameter is required.</p>
          */
         public Builder incidents(String incidents) {
             this.putQueryParameter("Incidents", incidents);
@@ -79,7 +84,7 @@ public class SendMseIncidentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

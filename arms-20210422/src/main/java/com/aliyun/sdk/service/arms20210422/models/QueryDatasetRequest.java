@@ -1,84 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetRequest} extends {@link RequestModel}
  *
  * <p>QueryDatasetRequest</p>
  */
 public class QueryDatasetRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DatasetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long datasetId;
 
-    @Query
-    @NameInMap("DateStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateStr")
     private String dateStr;
 
-    @Query
-    @NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
+    private java.util.List<Dimensions> dimensions;
 
-    @Query
-    @NameInMap("HungryMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HungryMode")
     private Boolean hungryMode;
 
-    @Query
-    @NameInMap("IntervalInSec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalInSec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer intervalInSec;
 
-    @Query
-    @NameInMap("IsDrillDown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDrillDown")
     private Boolean isDrillDown;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("MaxTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long maxTime;
 
-    @Query
-    @NameInMap("Measures")
-    private java.util.List < String > measures;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Measures")
+    private java.util.List<String> measures;
 
-    @Query
-    @NameInMap("MinTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long minTime;
 
-    @Query
-    @NameInMap("OptionalDims")
-    private java.util.List < OptionalDims> optionalDims;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptionalDims")
+    private java.util.List<OptionalDims> optionalDims;
 
-    @Query
-    @NameInMap("OrderByKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByKey")
     private String orderByKey;
 
-    @Query
-    @NameInMap("ProxyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Query
-    @NameInMap("ReduceTail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReduceTail")
     private Boolean reduceTail;
 
-    @Query
-    @NameInMap("RequiredDims")
-    private java.util.List < RequiredDims> requiredDims;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequiredDims")
+    private java.util.List<RequiredDims> requiredDims;
 
     private QueryDatasetRequest(Builder builder) {
         super(builder);
@@ -108,7 +113,7 @@ public class QueryDatasetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,7 +142,7 @@ public class QueryDatasetRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < Dimensions> getDimensions() {
+    public java.util.List<Dimensions> getDimensions() {
         return this.dimensions;
     }
 
@@ -179,7 +184,7 @@ public class QueryDatasetRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -193,7 +198,7 @@ public class QueryDatasetRequest extends Request {
     /**
      * @return optionalDims
      */
-    public java.util.List < OptionalDims> getOptionalDims() {
+    public java.util.List<OptionalDims> getOptionalDims() {
         return this.optionalDims;
     }
 
@@ -221,7 +226,7 @@ public class QueryDatasetRequest extends Request {
     /**
      * @return requiredDims
      */
-    public java.util.List < RequiredDims> getRequiredDims() {
+    public java.util.List<RequiredDims> getRequiredDims() {
         return this.requiredDims;
     }
 
@@ -229,19 +234,19 @@ public class QueryDatasetRequest extends Request {
         private String regionId; 
         private Long datasetId; 
         private String dateStr; 
-        private java.util.List < Dimensions> dimensions; 
+        private java.util.List<Dimensions> dimensions; 
         private Boolean hungryMode; 
         private Integer intervalInSec; 
         private Boolean isDrillDown; 
         private Integer limit; 
         private Long maxTime; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private Long minTime; 
-        private java.util.List < OptionalDims> optionalDims; 
+        private java.util.List<OptionalDims> optionalDims; 
         private String orderByKey; 
         private String proxyUserId; 
         private Boolean reduceTail; 
-        private java.util.List < RequiredDims> requiredDims; 
+        private java.util.List<RequiredDims> requiredDims; 
 
         private Builder() {
             super();
@@ -277,7 +282,7 @@ public class QueryDatasetRequest extends Request {
         }
 
         /**
-         * DatasetId.
+         * <p>This parameter is required.</p>
          */
         public Builder datasetId(Long datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -297,7 +302,7 @@ public class QueryDatasetRequest extends Request {
         /**
          * Dimensions.
          */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
+        public Builder dimensions(java.util.List<Dimensions> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
@@ -313,7 +318,7 @@ public class QueryDatasetRequest extends Request {
         }
 
         /**
-         * IntervalInSec.
+         * <p>This parameter is required.</p>
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -340,7 +345,7 @@ public class QueryDatasetRequest extends Request {
         }
 
         /**
-         * MaxTime.
+         * <p>This parameter is required.</p>
          */
         public Builder maxTime(Long maxTime) {
             this.putQueryParameter("MaxTime", maxTime);
@@ -351,14 +356,14 @@ public class QueryDatasetRequest extends Request {
         /**
          * Measures.
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;
         }
 
         /**
-         * MinTime.
+         * <p>This parameter is required.</p>
          */
         public Builder minTime(Long minTime) {
             this.putQueryParameter("MinTime", minTime);
@@ -369,7 +374,7 @@ public class QueryDatasetRequest extends Request {
         /**
          * OptionalDims.
          */
-        public Builder optionalDims(java.util.List < OptionalDims> optionalDims) {
+        public Builder optionalDims(java.util.List<OptionalDims> optionalDims) {
             this.putQueryParameter("OptionalDims", optionalDims);
             this.optionalDims = optionalDims;
             return this;
@@ -405,7 +410,7 @@ public class QueryDatasetRequest extends Request {
         /**
          * RequiredDims.
          */
-        public Builder requiredDims(java.util.List < RequiredDims> requiredDims) {
+        public Builder requiredDims(java.util.List<RequiredDims> requiredDims) {
             this.putQueryParameter("RequiredDims", requiredDims);
             this.requiredDims = requiredDims;
             return this;
@@ -418,14 +423,20 @@ public class QueryDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetRequest</p>
+     */
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -468,6 +479,15 @@ public class QueryDatasetRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -499,14 +519,20 @@ public class QueryDatasetRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetRequest</p>
+     */
     public static class OptionalDims extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private OptionalDims(Builder builder) {
@@ -549,6 +575,15 @@ public class QueryDatasetRequest extends Request {
             private String type; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalDims model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -580,14 +615,20 @@ public class QueryDatasetRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetRequest</p>
+     */
     public static class RequiredDims extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequiredDims(Builder builder) {
@@ -629,6 +670,15 @@ public class QueryDatasetRequest extends Request {
             private String key; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequiredDims model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDashboardsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDashboardsResponseBody</p>
  */
 public class ListDashboardsResponseBody extends TeaModel {
-    @NameInMap("DashboardVos")
-    private java.util.List < DashboardVos> dashboardVos;
+    @com.aliyun.core.annotation.NameInMap("DashboardVos")
+    private java.util.List<DashboardVos> dashboardVos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class ListDashboardsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboardVos
      */
-    public java.util.List < DashboardVos> getDashboardVos() {
+    public java.util.List<DashboardVos> getDashboardVos() {
         return this.dashboardVos;
     }
 
@@ -46,13 +55,21 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DashboardVos> dashboardVos; 
+        private java.util.List<DashboardVos> dashboardVos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDashboardsResponseBody model) {
+            this.dashboardVos = model.dashboardVos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DashboardVos.
          */
-        public Builder dashboardVos(java.util.List < DashboardVos> dashboardVos) {
+        public Builder dashboardVos(java.util.List<DashboardVos> dashboardVos) {
             this.dashboardVos = dashboardVos;
             return this;
         }
@@ -71,47 +88,53 @@ public class ListDashboardsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDashboardsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDashboardsResponseBody</p>
+     */
     public static class DashboardVos extends TeaModel {
-        @NameInMap("DashboardType")
+        @com.aliyun.core.annotation.NameInMap("DashboardType")
         private String dashboardType;
 
-        @NameInMap("Exporter")
+        @com.aliyun.core.annotation.NameInMap("Exporter")
         private String exporter;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsArmsExporter")
+        @com.aliyun.core.annotation.NameInMap("IsArmsExporter")
         private Boolean isArmsExporter;
 
-        @NameInMap("Kind")
+        @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedUpdate")
+        @com.aliyun.core.annotation.NameInMap("NeedUpdate")
         private Boolean needUpdate;
 
-        @NameInMap("Tags")
-        private java.util.List < String > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DashboardVos(Builder builder) {
@@ -191,7 +214,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -245,13 +268,33 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String kind; 
             private String name; 
             private Boolean needUpdate; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String time; 
             private String title; 
             private String type; 
             private String uid; 
             private String url; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashboardVos model) {
+                this.dashboardType = model.dashboardType;
+                this.exporter = model.exporter;
+                this.id = model.id;
+                this.isArmsExporter = model.isArmsExporter;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.needUpdate = model.needUpdate;
+                this.tags = model.tags;
+                this.time = model.time;
+                this.title = model.title;
+                this.type = model.type;
+                this.uid = model.uid;
+                this.url = model.url;
+                this.version = model.version;
+            } 
 
             /**
              * DashboardType.
@@ -312,7 +355,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

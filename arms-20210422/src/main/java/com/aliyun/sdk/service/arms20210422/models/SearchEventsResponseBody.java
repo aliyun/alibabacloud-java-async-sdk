@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchEventsResponseBody} extends {@link TeaModel}
  *
  * <p>SearchEventsResponseBody</p>
  */
 public class SearchEventsResponseBody extends TeaModel {
-    @NameInMap("IsTrigger")
+    @com.aliyun.core.annotation.NameInMap("IsTrigger")
     private Integer isTrigger;
 
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchEventsResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class SearchEventsResponseBody extends TeaModel {
 
     public static SearchEventsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class SearchEventsResponseBody extends TeaModel {
         private Integer isTrigger; 
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchEventsResponseBody model) {
+            this.isTrigger = model.isTrigger;
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * IsTrigger.
@@ -91,32 +109,38 @@ public class SearchEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchEventsResponseBody</p>
+     */
     public static class Event extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertRule")
+        @com.aliyun.core.annotation.NameInMap("AlertRule")
         private String alertRule;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private Integer alertType;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Links")
-        private java.util.List < String > links;
+        @com.aliyun.core.annotation.NameInMap("Links")
+        private java.util.List<String> links;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Event(Builder builder) {
@@ -191,7 +215,7 @@ public class SearchEventsResponseBody extends TeaModel {
         /**
          * @return links
          */
-        public java.util.List < String > getLinks() {
+        public java.util.List<String> getLinks() {
             return this.links;
         }
 
@@ -210,8 +234,23 @@ public class SearchEventsResponseBody extends TeaModel {
             private String eventLevel; 
             private Long eventTime; 
             private Long id; 
-            private java.util.List < String > links; 
+            private java.util.List<String> links; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.alertRule = model.alertRule;
+                this.alertType = model.alertType;
+                this.eventLevel = model.eventLevel;
+                this.eventTime = model.eventTime;
+                this.id = model.id;
+                this.links = model.links;
+                this.message = model.message;
+            } 
 
             /**
              * AlertId.
@@ -272,7 +311,7 @@ public class SearchEventsResponseBody extends TeaModel {
             /**
              * Links.
              */
-            public Builder links(java.util.List < String > links) {
+            public Builder links(java.util.List<String> links) {
                 this.links = links;
                 return this;
             }
@@ -292,17 +331,23 @@ public class SearchEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchEventsResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("Event")
-        private java.util.List < Event> event;
+        @com.aliyun.core.annotation.NameInMap("Event")
+        private java.util.List<Event> event;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {
@@ -323,7 +368,7 @@ public class SearchEventsResponseBody extends TeaModel {
         /**
          * @return event
          */
-        public java.util.List < Event> getEvent() {
+        public java.util.List<Event> getEvent() {
             return this.event;
         }
 
@@ -349,15 +394,25 @@ public class SearchEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Event> event; 
+            private java.util.List<Event> event; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.event = model.event;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * Event.
              */
-            public Builder event(java.util.List < Event> event) {
+            public Builder event(java.util.List<Event> event) {
                 this.event = event;
                 return this;
             }

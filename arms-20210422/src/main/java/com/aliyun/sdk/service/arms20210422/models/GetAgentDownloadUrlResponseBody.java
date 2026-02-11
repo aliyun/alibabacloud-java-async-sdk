@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentDownloadUrlResponseBody</p>
  */
 public class GetAgentDownloadUrlResponseBody extends TeaModel {
-    @NameInMap("ArmsAgentDownloadUrl")
+    @com.aliyun.core.annotation.NameInMap("ArmsAgentDownloadUrl")
     private String armsAgentDownloadUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAgentDownloadUrlResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
 
     public static GetAgentDownloadUrlResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String armsAgentDownloadUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentDownloadUrlResponseBody model) {
+            this.armsAgentDownloadUrl = model.armsAgentDownloadUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ArmsAgentDownloadUrl.

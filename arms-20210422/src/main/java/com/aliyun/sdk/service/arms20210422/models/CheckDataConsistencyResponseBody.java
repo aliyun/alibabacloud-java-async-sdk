@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckDataConsistencyResponseBody} extends {@link TeaModel}
  *
  * <p>CheckDataConsistencyResponseBody</p>
  */
 public class CheckDataConsistencyResponseBody extends TeaModel {
-    @NameInMap("IsDataConsistency")
+    @com.aliyun.core.annotation.NameInMap("IsDataConsistency")
     private Boolean isDataConsistency;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDataConsistencyResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CheckDataConsistencyResponseBody extends TeaModel {
 
     public static CheckDataConsistencyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CheckDataConsistencyResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isDataConsistency; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckDataConsistencyResponseBody model) {
+            this.isDataConsistency = model.isDataConsistency;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * IsDataConsistency.

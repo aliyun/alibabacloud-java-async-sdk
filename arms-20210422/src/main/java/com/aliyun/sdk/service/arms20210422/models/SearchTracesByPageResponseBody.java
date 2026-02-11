@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesByPageResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTracesByPageResponseBody</p>
  */
 public class SearchTracesByPageResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchTracesByPageResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SearchTracesByPageResponseBody extends TeaModel {
 
     public static SearchTracesByPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTracesByPageResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PageBean.
@@ -71,23 +88,29 @@ public class SearchTracesByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesByPageResponseBody</p>
+     */
     public static class TraceInfos extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private TraceInfos(Builder builder) {
@@ -157,6 +180,18 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             private Long timestamp; 
             private String traceID; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraceInfos model) {
+                this.duration = model.duration;
+                this.operationName = model.operationName;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
+
             /**
              * Duration.
              */
@@ -212,18 +247,24 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTracesByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesByPageResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TraceInfos")
-        private java.util.List < TraceInfos> traceInfos;
+        @com.aliyun.core.annotation.NameInMap("TraceInfos")
+        private java.util.List<TraceInfos> traceInfos;
 
         private PageBean(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -264,7 +305,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         /**
          * @return traceInfos
          */
-        public java.util.List < TraceInfos> getTraceInfos() {
+        public java.util.List<TraceInfos> getTraceInfos() {
             return this.traceInfos;
         }
 
@@ -272,7 +313,17 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer total; 
-            private java.util.List < TraceInfos> traceInfos; 
+            private java.util.List<TraceInfos> traceInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.traceInfos = model.traceInfos;
+            } 
 
             /**
              * PageNumber.
@@ -301,7 +352,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             /**
              * TraceInfos.
              */
-            public Builder traceInfos(java.util.List < TraceInfos> traceInfos) {
+            public Builder traceInfos(java.util.List<TraceInfos> traceInfos) {
                 this.traceInfos = traceInfos;
                 return this;
             }

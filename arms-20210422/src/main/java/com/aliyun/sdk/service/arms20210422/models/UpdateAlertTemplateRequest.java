@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertTemplateRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlertTemplateRequest</p>
  */
 public class UpdateAlertTemplateRequest extends Request {
-    @Query
-    @NameInMap("Annotations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Annotations")
     private String annotations;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("MatchExpressions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpressions")
     private String matchExpressions;
 
-    @Query
-    @NameInMap("Message")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Message")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String message;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Rule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rule;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean status;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private UpdateAlertTemplateRequest(Builder builder) {
@@ -81,7 +86,7 @@ public class UpdateAlertTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,7 +201,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -223,7 +228,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -232,7 +237,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,7 +246,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,7 +255,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>This parameter is required.</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -259,7 +264,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);
@@ -268,7 +273,7 @@ public class UpdateAlertTemplateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

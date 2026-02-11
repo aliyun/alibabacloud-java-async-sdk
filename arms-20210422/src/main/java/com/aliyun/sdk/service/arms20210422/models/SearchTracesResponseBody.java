@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTracesResponseBody</p>
  */
 public class SearchTracesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TraceInfos")
-    private java.util.List < TraceInfos> traceInfos;
+    @com.aliyun.core.annotation.NameInMap("TraceInfos")
+    private java.util.List<TraceInfos> traceInfos;
 
     private SearchTracesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class SearchTracesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class SearchTracesResponseBody extends TeaModel {
     /**
      * @return traceInfos
      */
-    public java.util.List < TraceInfos> getTraceInfos() {
+    public java.util.List<TraceInfos> getTraceInfos() {
         return this.traceInfos;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TraceInfos> traceInfos; 
+        private java.util.List<TraceInfos> traceInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTracesResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceInfos = model.traceInfos;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class SearchTracesResponseBody extends TeaModel {
         /**
          * TraceInfos.
          */
-        public Builder traceInfos(java.util.List < TraceInfos> traceInfos) {
+        public Builder traceInfos(java.util.List<TraceInfos> traceInfos) {
             this.traceInfos = traceInfos;
             return this;
         }
@@ -71,23 +88,29 @@ public class SearchTracesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesResponseBody</p>
+     */
     public static class TraceInfos extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private TraceInfos(Builder builder) {
@@ -156,6 +179,18 @@ public class SearchTracesResponseBody extends TeaModel {
             private String serviceName; 
             private Long timestamp; 
             private String traceID; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceInfos model) {
+                this.duration = model.duration;
+                this.operationName = model.operationName;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
 
             /**
              * Duration.

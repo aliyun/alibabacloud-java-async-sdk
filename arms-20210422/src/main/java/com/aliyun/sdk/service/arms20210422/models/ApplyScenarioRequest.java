@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyScenarioRequest} extends {@link RequestModel}
  *
  * <p>ApplyScenarioRequest</p>
  */
 public class ApplyScenarioRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Config")
-    @Validation(required = true)
-    private java.util.Map < String, ? > config;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.Map<String, ?> config;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Scenario")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
     private String scenario;
 
-    @Query
-    @NameInMap("Sign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sign")
     private String sign;
 
-    @Query
-    @NameInMap("SnDump")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnDump")
     private Boolean snDump;
 
-    @Query
-    @NameInMap("SnForce")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnForce")
     private Boolean snForce;
 
-    @Query
-    @NameInMap("SnStat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnStat")
     private Boolean snStat;
 
-    @Query
-    @NameInMap("SnTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnTransfer")
     private Boolean snTransfer;
 
-    @Query
-    @NameInMap("UpdateOption")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateOption")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean updateOption;
 
     private ApplyScenarioRequest(Builder builder) {
@@ -83,7 +88,7 @@ public class ApplyScenarioRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,7 @@ public class ApplyScenarioRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public java.util.Map<String, ?> getConfig() {
         return this.config;
     }
 
@@ -167,7 +172,7 @@ public class ApplyScenarioRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyScenarioRequest, Builder> {
         private String appId; 
-        private java.util.Map < String, ? > config; 
+        private java.util.Map<String, ?> config; 
         private String name; 
         private String regionId; 
         private String scenario; 
@@ -198,7 +203,7 @@ public class ApplyScenarioRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -207,9 +212,9 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>This parameter is required.</p>
          */
-        public Builder config(java.util.Map < String, ? > config) {
+        public Builder config(java.util.Map<String, ?> config) {
             String configShrink = shrink(config, "Config", "json");
             this.putQueryParameter("Config", configShrink);
             this.config = config;
@@ -217,7 +222,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -289,7 +294,7 @@ public class ApplyScenarioRequest extends Request {
         }
 
         /**
-         * UpdateOption.
+         * <p>This parameter is required.</p>
          */
         public Builder updateOption(Boolean updateOption) {
             this.putQueryParameter("UpdateOption", updateOption);

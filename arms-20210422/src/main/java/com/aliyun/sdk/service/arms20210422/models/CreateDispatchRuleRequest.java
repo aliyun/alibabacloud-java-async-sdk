@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDispatchRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateDispatchRuleRequest</p>
  */
 public class CreateDispatchRuleRequest extends Request {
-    @Query
-    @NameInMap("DispatchRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispatchRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dispatchRule;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateDispatchRuleRequest(Builder builder) {
@@ -36,7 +41,7 @@ public class CreateDispatchRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -70,7 +75,7 @@ public class CreateDispatchRuleRequest extends Request {
         } 
 
         /**
-         * DispatchRule.
+         * <p>This parameter is required.</p>
          */
         public Builder dispatchRule(String dispatchRule) {
             this.putQueryParameter("DispatchRule", dispatchRule);
@@ -79,7 +84,7 @@ public class CreateDispatchRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

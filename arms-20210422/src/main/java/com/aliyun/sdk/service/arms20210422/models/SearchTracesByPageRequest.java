@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesByPageRequest} extends {@link RequestModel}
  *
  * <p>SearchTracesByPageRequest</p>
  */
 public class SearchTracesByPageRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("ExclusionFilters")
-    private java.util.List < ExclusionFilters> exclusionFilters;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusionFilters")
+    private java.util.List<ExclusionFilters> exclusionFilters;
 
-    @Query
-    @NameInMap("MinDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDuration")
     private Long minDuration;
 
-    @Query
-    @NameInMap("OperationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationName")
     private String operationName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Reverse")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
-    @Query
-    @NameInMap("ServiceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIp")
     private String serviceIp;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private SearchTracesByPageRequest(Builder builder) {
@@ -82,7 +87,7 @@ public class SearchTracesByPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +102,7 @@ public class SearchTracesByPageRequest extends Request {
     /**
      * @return exclusionFilters
      */
-    public java.util.List < ExclusionFilters> getExclusionFilters() {
+    public java.util.List<ExclusionFilters> getExclusionFilters() {
         return this.exclusionFilters;
     }
 
@@ -166,7 +171,7 @@ public class SearchTracesByPageRequest extends Request {
 
     public static final class Builder extends Request.Builder<SearchTracesByPageRequest, Builder> {
         private Long endTime; 
-        private java.util.List < ExclusionFilters> exclusionFilters; 
+        private java.util.List<ExclusionFilters> exclusionFilters; 
         private Long minDuration; 
         private String operationName; 
         private Integer pageNumber; 
@@ -197,7 +202,7 @@ public class SearchTracesByPageRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -208,7 +213,7 @@ public class SearchTracesByPageRequest extends Request {
         /**
          * ExclusionFilters.
          */
-        public Builder exclusionFilters(java.util.List < ExclusionFilters> exclusionFilters) {
+        public Builder exclusionFilters(java.util.List<ExclusionFilters> exclusionFilters) {
             this.putQueryParameter("ExclusionFilters", exclusionFilters);
             this.exclusionFilters = exclusionFilters;
             return this;
@@ -251,7 +256,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,7 +292,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -302,11 +307,17 @@ public class SearchTracesByPageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesByPageRequest} extends {@link TeaModel}
+     *
+     * <p>SearchTracesByPageRequest</p>
+     */
     public static class ExclusionFilters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExclusionFilters(Builder builder) {
@@ -339,6 +350,14 @@ public class SearchTracesByPageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExclusionFilters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppApiByPageResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppApiByPageResponseBody</p>
  */
 public class GetAppApiByPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAppApiByPageResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
     public static GetAppApiByPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppApiByPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -131,17 +151,23 @@ public class GetAppApiByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppApiByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppApiByPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Items")
-        private java.util.List < java.util.Map<String, ?>> items;
+        @com.aliyun.core.annotation.NameInMap("Items")
+        private java.util.List<java.util.Map<String, ?>> items;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private String total;
 
         private Data(Builder builder) {
@@ -162,7 +188,7 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < java.util.Map<String, ?>> getItems() {
+        public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
         }
 
@@ -188,15 +214,25 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> items; 
+            private java.util.List<java.util.Map<String, ?>> items; 
             private Integer page; 
             private Integer pageSize; 
             private String total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
              * Items.
              */
-            public Builder items(java.util.List < java.util.Map<String, ?>> items) {
+            public Builder items(java.util.List<java.util.Map<String, ?>> items) {
                 this.items = items;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDispatchRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDispatchRuleResponseBody</p>
  */
 public class CreateDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("DispatchRuleId")
+    @com.aliyun.core.annotation.NameInMap("DispatchRuleId")
     private Long dispatchRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDispatchRuleResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
 
     public static CreateDispatchRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Long dispatchRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDispatchRuleResponseBody model) {
+            this.dispatchRuleId = model.dispatchRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DispatchRuleId.

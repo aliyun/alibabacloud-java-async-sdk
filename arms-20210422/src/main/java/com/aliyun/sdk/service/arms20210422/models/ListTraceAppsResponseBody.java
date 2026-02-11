@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTraceAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTraceAppsResponseBody</p>
  */
 public class ListTraceAppsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceApps")
-    private java.util.List < TraceApps> traceApps;
+    @com.aliyun.core.annotation.NameInMap("TraceApps")
+    private java.util.List<TraceApps> traceApps;
 
     private ListTraceAppsResponseBody(Builder builder) {
         this.code = builder.code;
@@ -41,6 +46,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
     public static ListTraceAppsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     /**
      * @return traceApps
      */
-    public java.util.List < TraceApps> getTraceApps() {
+    public java.util.List<TraceApps> getTraceApps() {
         return this.traceApps;
     }
 
@@ -83,7 +92,18 @@ public class ListTraceAppsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TraceApps> traceApps; 
+        private java.util.List<TraceApps> traceApps; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTraceAppsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceApps = model.traceApps;
+        } 
 
         /**
          * Code.
@@ -120,7 +140,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         /**
          * TraceApps.
          */
-        public Builder traceApps(java.util.List < TraceApps> traceApps) {
+        public Builder traceApps(java.util.List<TraceApps> traceApps) {
             this.traceApps = traceApps;
             return this;
         }
@@ -131,35 +151,41 @@ public class ListTraceAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTraceAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTraceAppsResponseBody</p>
+     */
     public static class TraceApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Labels")
-        private java.util.List < String > labels;
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<String> labels;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Show")
+        @com.aliyun.core.annotation.NameInMap("Show")
         private Boolean show;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TraceApps(Builder builder) {
@@ -207,7 +233,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -257,13 +283,29 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private Long createTime; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String pid; 
             private String regionId; 
             private Boolean show; 
             private String type; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.show = model.show;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * AppId.
@@ -292,7 +334,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }

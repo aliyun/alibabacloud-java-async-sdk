@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
  *
  * <p>SearchAlertContactGroupResponseBody</p>
  */
 public class SearchAlertContactGroupResponseBody extends TeaModel {
-    @NameInMap("ContactGroups")
-    private java.util.List < ContactGroups> contactGroups;
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
+    private java.util.List<ContactGroups> contactGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchAlertContactGroupResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactGroups
      */
-    public java.util.List < ContactGroups> getContactGroups() {
+    public java.util.List<ContactGroups> getContactGroups() {
         return this.contactGroups;
     }
 
@@ -46,13 +55,21 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContactGroups> contactGroups; 
+        private java.util.List<ContactGroups> contactGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertContactGroupResponseBody model) {
+            this.contactGroups = model.contactGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ContactGroups.
          */
-        public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
+        public Builder contactGroups(java.util.List<ContactGroups> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
@@ -71,32 +88,38 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactGroupResponseBody</p>
+     */
     public static class Contacts extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Long contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DingRobot")
+        @com.aliyun.core.annotation.NameInMap("DingRobot")
         private String dingRobot;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("SystemNoc")
+        @com.aliyun.core.annotation.NameInMap("SystemNoc")
         private Boolean systemNoc;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Contacts(Builder builder) {
@@ -193,6 +216,21 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.createTime = model.createTime;
+                this.dingRobot = model.dingRobot;
+                this.email = model.email;
+                this.phone = model.phone;
+                this.systemNoc = model.systemNoc;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * ContactId.
              */
@@ -272,23 +310,29 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchAlertContactGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertContactGroupResponseBody</p>
+     */
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Long contactGroupId;
 
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        @com.aliyun.core.annotation.NameInMap("Contacts")
+        private java.util.List<Contacts> contacts;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ContactGroups(Builder builder) {
@@ -325,7 +369,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -353,10 +397,22 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Long contactGroupId; 
             private String contactGroupName; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
             private Long createTime; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroupId = model.contactGroupId;
+                this.contactGroupName = model.contactGroupName;
+                this.contacts = model.contacts;
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * ContactGroupId.
@@ -377,7 +433,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             /**
              * Contacts.
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }

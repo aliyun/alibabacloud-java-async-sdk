@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActivatedAlertsResponseBody} extends {@link TeaModel}
  *
  * <p>ListActivatedAlertsResponseBody</p>
  */
 public class ListActivatedAlertsResponseBody extends TeaModel {
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListActivatedAlertsResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     public static ListActivatedAlertsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     public static final class Builder {
         private Page page; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListActivatedAlertsResponseBody model) {
+            this.page = model.page;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Page.
@@ -71,11 +88,17 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActivatedAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActivatedAlertsResponseBody</p>
+     */
     public static class DispatchRules extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Integer ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private DispatchRules(Builder builder) {
@@ -109,6 +132,14 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private Integer ruleId; 
             private String ruleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DispatchRules model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
+
             /**
              * RuleId.
              */
@@ -132,53 +163,59 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActivatedAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActivatedAlertsResponseBody</p>
+     */
     public static class Alerts extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private String alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DispatchRules")
-        private java.util.List < DispatchRules> dispatchRules;
+        @com.aliyun.core.annotation.NameInMap("DispatchRules")
+        private java.util.List<DispatchRules> dispatchRules;
 
-        @NameInMap("EndsAt")
+        @com.aliyun.core.annotation.NameInMap("EndsAt")
         private Long endsAt;
 
-        @NameInMap("ExpandFields")
-        private java.util.Map < String, ? > expandFields;
+        @com.aliyun.core.annotation.NameInMap("ExpandFields")
+        private java.util.Map<String, ?> expandFields;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
-        @NameInMap("InvolvedObjectKind")
+        @com.aliyun.core.annotation.NameInMap("InvolvedObjectKind")
         private String involvedObjectKind;
 
-        @NameInMap("InvolvedObjectName")
+        @com.aliyun.core.annotation.NameInMap("InvolvedObjectName")
         private String involvedObjectName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("StartsAt")
+        @com.aliyun.core.annotation.NameInMap("StartsAt")
         private Long startsAt;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Alerts(Builder builder) {
@@ -246,7 +283,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return dispatchRules
          */
-        public java.util.List < DispatchRules> getDispatchRules() {
+        public java.util.List<DispatchRules> getDispatchRules() {
             return this.dispatchRules;
         }
 
@@ -260,7 +297,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return expandFields
          */
-        public java.util.Map < String, ? > getExpandFields() {
+        public java.util.Map<String, ?> getExpandFields() {
             return this.expandFields;
         }
 
@@ -326,9 +363,9 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String alertType; 
             private Integer count; 
             private Long createTime; 
-            private java.util.List < DispatchRules> dispatchRules; 
+            private java.util.List<DispatchRules> dispatchRules; 
             private Long endsAt; 
-            private java.util.Map < String, ? > expandFields; 
+            private java.util.Map<String, ?> expandFields; 
             private String integrationName; 
             private String integrationType; 
             private String involvedObjectKind; 
@@ -337,6 +374,28 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String severity; 
             private Long startsAt; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alerts model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.alertType = model.alertType;
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.dispatchRules = model.dispatchRules;
+                this.endsAt = model.endsAt;
+                this.expandFields = model.expandFields;
+                this.integrationName = model.integrationName;
+                this.integrationType = model.integrationType;
+                this.involvedObjectKind = model.involvedObjectKind;
+                this.involvedObjectName = model.involvedObjectName;
+                this.message = model.message;
+                this.severity = model.severity;
+                this.startsAt = model.startsAt;
+                this.status = model.status;
+            } 
 
             /**
              * AlertId.
@@ -381,7 +440,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             /**
              * DispatchRules.
              */
-            public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+            public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
                 this.dispatchRules = dispatchRules;
                 return this;
             }
@@ -397,7 +456,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             /**
              * ExpandFields.
              */
-            public Builder expandFields(java.util.Map < String, ? > expandFields) {
+            public Builder expandFields(java.util.Map<String, ?> expandFields) {
                 this.expandFields = expandFields;
                 return this;
             }
@@ -473,17 +532,23 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListActivatedAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActivatedAlertsResponseBody</p>
+     */
     public static class Page extends TeaModel {
-        @NameInMap("Alerts")
-        private java.util.List < Alerts> alerts;
+        @com.aliyun.core.annotation.NameInMap("Alerts")
+        private java.util.List<Alerts> alerts;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Page(Builder builder) {
@@ -504,7 +569,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return alerts
          */
-        public java.util.List < Alerts> getAlerts() {
+        public java.util.List<Alerts> getAlerts() {
             return this.alerts;
         }
 
@@ -530,15 +595,25 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Alerts> alerts; 
+            private java.util.List<Alerts> alerts; 
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.alerts = model.alerts;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
              * Alerts.
              */
-            public Builder alerts(java.util.List < Alerts> alerts) {
+            public Builder alerts(java.util.List<Alerts> alerts) {
                 this.alerts = alerts;
                 return this;
             }

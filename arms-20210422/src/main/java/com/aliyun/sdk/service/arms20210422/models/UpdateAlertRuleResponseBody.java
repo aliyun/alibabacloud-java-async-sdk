@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertRuleResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAlertRuleResponseBody</p>
  */
 public class UpdateAlertRuleResponseBody extends TeaModel {
-    @NameInMap("AlertId")
+    @com.aliyun.core.annotation.NameInMap("AlertId")
     private Long alertId;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateAlertRuleResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
 
     public static UpdateAlertRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         private Long alertId; 
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAlertRuleResponseBody model) {
+            this.alertId = model.alertId;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AlertId.

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceLinkedRoleForDeletingRequest} extends {@link RequestModel}
  *
  * <p>CheckServiceLinkedRoleForDeletingRequest</p>
  */
 public class CheckServiceLinkedRoleForDeletingRequest extends Request {
-    @Query
-    @NameInMap("DeletionTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deletionTaskId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RoleArn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleArn;
 
-    @Query
-    @NameInMap("SPIRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SPIRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SPIRegionId;
 
-    @Query
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
     private CheckServiceLinkedRoleForDeletingRequest(Builder builder) {
@@ -53,7 +58,7 @@ public class CheckServiceLinkedRoleForDeletingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +119,7 @@ public class CheckServiceLinkedRoleForDeletingRequest extends Request {
         } 
 
         /**
-         * DeletionTaskId.
+         * <p>This parameter is required.</p>
          */
         public Builder deletionTaskId(String deletionTaskId) {
             this.putQueryParameter("DeletionTaskId", deletionTaskId);
@@ -132,7 +137,7 @@ public class CheckServiceLinkedRoleForDeletingRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * <p>This parameter is required.</p>
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -141,7 +146,7 @@ public class CheckServiceLinkedRoleForDeletingRequest extends Request {
         }
 
         /**
-         * SPIRegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder SPIRegionId(String SPIRegionId) {
             this.putQueryParameter("SPIRegionId", SPIRegionId);
@@ -150,7 +155,7 @@ public class CheckServiceLinkedRoleForDeletingRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>This parameter is required.</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

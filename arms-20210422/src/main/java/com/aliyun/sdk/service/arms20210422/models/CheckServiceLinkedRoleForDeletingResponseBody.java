@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceLinkedRoleForDeletingResponseBody} extends {@link TeaModel}
  *
  * <p>CheckServiceLinkedRoleForDeletingResponseBody</p>
  */
 public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
-    @NameInMap("Deletable")
+    @com.aliyun.core.annotation.NameInMap("Deletable")
     private Boolean deletable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleUsages")
-    private java.util.List < RoleUsages> roleUsages;
+    @com.aliyun.core.annotation.NameInMap("RoleUsages")
+    private java.util.List<RoleUsages> roleUsages;
 
     private CheckServiceLinkedRoleForDeletingResponseBody(Builder builder) {
         this.deletable = builder.deletable;
@@ -33,6 +38,10 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
 
     public static CheckServiceLinkedRoleForDeletingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,14 +61,23 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
     /**
      * @return roleUsages
      */
-    public java.util.List < RoleUsages> getRoleUsages() {
+    public java.util.List<RoleUsages> getRoleUsages() {
         return this.roleUsages;
     }
 
     public static final class Builder {
         private Boolean deletable; 
         private String requestId; 
-        private java.util.List < RoleUsages> roleUsages; 
+        private java.util.List<RoleUsages> roleUsages; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckServiceLinkedRoleForDeletingResponseBody model) {
+            this.deletable = model.deletable;
+            this.requestId = model.requestId;
+            this.roleUsages = model.roleUsages;
+        } 
 
         /**
          * Deletable.
@@ -80,7 +98,7 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
         /**
          * RoleUsages.
          */
-        public Builder roleUsages(java.util.List < RoleUsages> roleUsages) {
+        public Builder roleUsages(java.util.List<RoleUsages> roleUsages) {
             this.roleUsages = roleUsages;
             return this;
         }
@@ -91,12 +109,18 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckServiceLinkedRoleForDeletingResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckServiceLinkedRoleForDeletingResponseBody</p>
+     */
     public static class RoleUsages extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Resources")
-        private java.util.List < String > resources;
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        private java.util.List<String> resources;
 
         private RoleUsages(Builder builder) {
             this.region = builder.region;
@@ -121,13 +145,21 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < String > getResources() {
+        public java.util.List<String> getResources() {
             return this.resources;
         }
 
         public static final class Builder {
             private String region; 
-            private java.util.List < String > resources; 
+            private java.util.List<String> resources; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoleUsages model) {
+                this.region = model.region;
+                this.resources = model.resources;
+            } 
 
             /**
              * Region.
@@ -140,7 +172,7 @@ public class CheckServiceLinkedRoleForDeletingResponseBody extends TeaModel {
             /**
              * Resources.
              */
-            public Builder resources(java.util.List < String > resources) {
+            public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchAlertHistoriesResponseBody</p>
  */
 public class SearchAlertHistoriesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchAlertHistoriesResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
     public static SearchAlertHistoriesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertHistoriesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PageBean.
@@ -71,38 +88,44 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertHistoriesResponseBody</p>
+     */
     public static class AlarmHistories extends TeaModel {
-        @NameInMap("AlarmContent")
+        @com.aliyun.core.annotation.NameInMap("AlarmContent")
         private String alarmContent;
 
-        @NameInMap("AlarmResponseCode")
+        @com.aliyun.core.annotation.NameInMap("AlarmResponseCode")
         private Integer alarmResponseCode;
 
-        @NameInMap("AlarmSources")
+        @com.aliyun.core.annotation.NameInMap("AlarmSources")
         private String alarmSources;
 
-        @NameInMap("AlarmTime")
+        @com.aliyun.core.annotation.NameInMap("AlarmTime")
         private Long alarmTime;
 
-        @NameInMap("AlarmType")
+        @com.aliyun.core.annotation.NameInMap("AlarmType")
         private Integer alarmType;
 
-        @NameInMap("Emails")
+        @com.aliyun.core.annotation.NameInMap("Emails")
         private String emails;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Phones")
+        @com.aliyun.core.annotation.NameInMap("Phones")
         private String phones;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlarmHistories(Builder builder) {
@@ -217,6 +240,23 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private String target; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlarmHistories model) {
+                this.alarmContent = model.alarmContent;
+                this.alarmResponseCode = model.alarmResponseCode;
+                this.alarmSources = model.alarmSources;
+                this.alarmTime = model.alarmTime;
+                this.alarmType = model.alarmType;
+                this.emails = model.emails;
+                this.id = model.id;
+                this.phones = model.phones;
+                this.strategyId = model.strategyId;
+                this.target = model.target;
+                this.userId = model.userId;
+            } 
+
             /**
              * AlarmContent.
              */
@@ -312,17 +352,23 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchAlertHistoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchAlertHistoriesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("AlarmHistories")
-        private java.util.List < AlarmHistories> alarmHistories;
+        @com.aliyun.core.annotation.NameInMap("AlarmHistories")
+        private java.util.List<AlarmHistories> alarmHistories;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {
@@ -343,7 +389,7 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         /**
          * @return alarmHistories
          */
-        public java.util.List < AlarmHistories> getAlarmHistories() {
+        public java.util.List<AlarmHistories> getAlarmHistories() {
             return this.alarmHistories;
         }
 
@@ -369,15 +415,25 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlarmHistories> alarmHistories; 
+            private java.util.List<AlarmHistories> alarmHistories; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alarmHistories = model.alarmHistories;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * AlarmHistories.
              */
-            public Builder alarmHistories(java.util.List < AlarmHistories> alarmHistories) {
+            public Builder alarmHistories(java.util.List<AlarmHistories> alarmHistories) {
                 this.alarmHistories = alarmHistories;
                 return this;
             }

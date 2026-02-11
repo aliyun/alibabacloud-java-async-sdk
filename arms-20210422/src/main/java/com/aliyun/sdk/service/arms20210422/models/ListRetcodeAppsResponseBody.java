@@ -1,22 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRetcodeAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRetcodeAppsResponseBody</p>
  */
 public class ListRetcodeAppsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetcodeApps")
-    private java.util.List < RetcodeApps> retcodeApps;
+    @com.aliyun.core.annotation.NameInMap("RetcodeApps")
+    private java.util.List<RetcodeApps> retcodeApps;
 
     private ListRetcodeAppsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -31,6 +36,10 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,13 +50,21 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
     /**
      * @return retcodeApps
      */
-    public java.util.List < RetcodeApps> getRetcodeApps() {
+    public java.util.List<RetcodeApps> getRetcodeApps() {
         return this.retcodeApps;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < RetcodeApps> retcodeApps; 
+        private java.util.List<RetcodeApps> retcodeApps; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRetcodeAppsResponseBody model) {
+            this.requestId = model.requestId;
+            this.retcodeApps = model.retcodeApps;
+        } 
 
         /**
          * RequestId.
@@ -60,7 +77,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         /**
          * RetcodeApps.
          */
-        public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
+        public Builder retcodeApps(java.util.List<RetcodeApps> retcodeApps) {
             this.retcodeApps = retcodeApps;
             return this;
         }
@@ -71,14 +88,20 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRetcodeAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRetcodeAppsResponseBody</p>
+     */
     public static class RetcodeApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
         private RetcodeApps(Builder builder) {
@@ -120,6 +143,15 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private String pid; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.pid = model.pid;
+            } 
 
             /**
              * AppId.

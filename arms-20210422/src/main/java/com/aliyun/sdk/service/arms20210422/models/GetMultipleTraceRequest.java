@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultipleTraceRequest} extends {@link RequestModel}
  *
  * <p>GetMultipleTraceRequest</p>
  */
 public class GetMultipleTraceRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TraceIDs")
-    private java.util.List < String > traceIDs;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceIDs")
+    private java.util.List<String> traceIDs;
 
     private GetMultipleTraceRequest(Builder builder) {
         super(builder);
@@ -35,7 +40,7 @@ public class GetMultipleTraceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -50,13 +55,13 @@ public class GetMultipleTraceRequest extends Request {
     /**
      * @return traceIDs
      */
-    public java.util.List < String > getTraceIDs() {
+    public java.util.List<String> getTraceIDs() {
         return this.traceIDs;
     }
 
     public static final class Builder extends Request.Builder<GetMultipleTraceRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > traceIDs; 
+        private java.util.List<String> traceIDs; 
 
         private Builder() {
             super();
@@ -69,7 +74,7 @@ public class GetMultipleTraceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -80,7 +85,7 @@ public class GetMultipleTraceRequest extends Request {
         /**
          * TraceIDs.
          */
-        public Builder traceIDs(java.util.List < String > traceIDs) {
+        public Builder traceIDs(java.util.List<String> traceIDs) {
             this.putQueryParameter("TraceIDs", traceIDs);
             this.traceIDs = traceIDs;
             return this;

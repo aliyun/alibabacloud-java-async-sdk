@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIntegrationTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetIntegrationTokenResponseBody</p>
  */
 public class GetIntegrationTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private GetIntegrationTokenResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetIntegrationTokenResponseBody extends TeaModel {
 
     public static GetIntegrationTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class GetIntegrationTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIntegrationTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * RequestId.

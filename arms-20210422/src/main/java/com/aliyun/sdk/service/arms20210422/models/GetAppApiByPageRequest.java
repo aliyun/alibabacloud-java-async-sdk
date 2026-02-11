@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppApiByPageRequest} extends {@link RequestModel}
  *
  * <p>GetAppApiByPageRequest</p>
  */
 public class GetAppApiByPageRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation()
     private Long endTime;
 
-    @Query
-    @NameInMap("IntervalMills")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalMills")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer intervalMills;
 
-    @Query
-    @NameInMap("PId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation()
     private Long startTime;
 
     private GetAppApiByPageRequest(Builder builder) {
@@ -66,7 +71,7 @@ public class GetAppApiByPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,7 +177,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * PId.
+         * <p>This parameter is required.</p>
          */
         public Builder pId(String pId) {
             this.putQueryParameter("PId", pId);
@@ -190,7 +195,7 @@ public class GetAppApiByPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

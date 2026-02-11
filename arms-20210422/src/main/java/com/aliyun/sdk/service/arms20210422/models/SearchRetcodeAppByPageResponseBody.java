@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
  *
  * <p>SearchRetcodeAppByPageResponseBody</p>
  */
 public class SearchRetcodeAppByPageResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchRetcodeAppByPageResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
     public static SearchRetcodeAppByPageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchRetcodeAppByPageResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * PageBean.
@@ -71,29 +88,35 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageResponseBody</p>
+     */
     public static class RetcodeApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RetcodeApps(Builder builder) {
@@ -181,6 +204,20 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RetcodeApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * AppId.
              */
@@ -252,17 +289,23 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchRetcodeAppByPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchRetcodeAppByPageResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RetcodeApps")
-        private java.util.List < RetcodeApps> retcodeApps;
+        @com.aliyun.core.annotation.NameInMap("RetcodeApps")
+        private java.util.List<RetcodeApps> retcodeApps;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {
@@ -297,7 +340,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         /**
          * @return retcodeApps
          */
-        public java.util.List < RetcodeApps> getRetcodeApps() {
+        public java.util.List<RetcodeApps> getRetcodeApps() {
             return this.retcodeApps;
         }
 
@@ -311,8 +354,18 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < RetcodeApps> retcodeApps; 
+            private java.util.List<RetcodeApps> retcodeApps; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.retcodeApps = model.retcodeApps;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * PageNumber.
@@ -333,7 +386,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             /**
              * RetcodeApps.
              */
-            public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
+            public Builder retcodeApps(java.util.List<RetcodeApps> retcodeApps) {
                 this.retcodeApps = retcodeApps;
                 return this;
             }

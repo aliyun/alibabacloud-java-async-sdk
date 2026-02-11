@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20210422.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceLocationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceLocationResponseBody</p>
  */
 public class DescribeTraceLocationResponseBody extends TeaModel {
-    @NameInMap("RegionConfigs")
-    private java.util.List < RegionConfigs> regionConfigs;
+    @com.aliyun.core.annotation.NameInMap("RegionConfigs")
+    private java.util.List<RegionConfigs> regionConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTraceLocationResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeTraceLocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionConfigs
      */
-    public java.util.List < RegionConfigs> getRegionConfigs() {
+    public java.util.List<RegionConfigs> getRegionConfigs() {
         return this.regionConfigs;
     }
 
@@ -46,13 +55,21 @@ public class DescribeTraceLocationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RegionConfigs> regionConfigs; 
+        private java.util.List<RegionConfigs> regionConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTraceLocationResponseBody model) {
+            this.regionConfigs = model.regionConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RegionConfigs.
          */
-        public Builder regionConfigs(java.util.List < RegionConfigs> regionConfigs) {
+        public Builder regionConfigs(java.util.List<RegionConfigs> regionConfigs) {
             this.regionConfigs = regionConfigs;
             return this;
         }
@@ -71,11 +88,17 @@ public class DescribeTraceLocationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTraceLocationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceLocationResponseBody</p>
+     */
     public static class RegionConfigs extends TeaModel {
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private RegionConfigs(Builder builder) {
@@ -108,6 +131,14 @@ public class DescribeTraceLocationResponseBody extends TeaModel {
         public static final class Builder {
             private String regionNo; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionConfigs model) {
+                this.regionNo = model.regionNo;
+                this.url = model.url;
+            } 
 
             /**
              * RegionNo.
