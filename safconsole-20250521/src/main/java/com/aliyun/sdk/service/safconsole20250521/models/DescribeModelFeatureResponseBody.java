@@ -106,7 +106,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -138,7 +147,14 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Call succeeded.</li>
+         * <li><strong>false</strong>: Call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultValue.
+             * <p>Default value of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -238,7 +257,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureName.
+             * <p>Feature mapping name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f1</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -246,7 +268,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureType.
+             * <p>Feature type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>double</p>
              */
             public Builder featureType(String featureType) {
                 this.featureType = featureType;
@@ -254,7 +279,10 @@ public class DescribeModelFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f1</p>
              */
             public Builder name(String name) {
                 this.name = name;

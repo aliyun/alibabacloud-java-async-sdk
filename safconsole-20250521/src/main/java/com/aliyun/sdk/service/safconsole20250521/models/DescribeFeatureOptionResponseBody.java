@@ -106,7 +106,10 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -138,7 +147,14 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Call succeeded.</li>
+         * <li><strong>false</strong>: Call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +207,10 @@ public class DescribeFeatureOptionResponseBody extends TeaModel {
             } 
 
             /**
-             * FeatureName.
+             * <p>Feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;

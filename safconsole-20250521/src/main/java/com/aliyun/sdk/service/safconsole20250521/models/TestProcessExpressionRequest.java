@@ -73,7 +73,10 @@ public class TestProcessExpressionRequest extends Request {
         } 
 
         /**
-         * Expression.
+         * <p>Expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>score</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -82,7 +85,10 @@ public class TestProcessExpressionRequest extends Request {
         }
 
         /**
-         * Params.
+         * <p>Parameter list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;score&quot;: &quot;1&quot;}</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);

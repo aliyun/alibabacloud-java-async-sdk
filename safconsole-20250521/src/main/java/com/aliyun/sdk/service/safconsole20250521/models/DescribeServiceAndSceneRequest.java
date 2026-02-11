@@ -73,7 +73,10 @@ public class DescribeServiceAndSceneRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * <p>Authorization type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -82,7 +85,10 @@ public class DescribeServiceAndSceneRequest extends Request {
         }
 
         /**
-         * CustomerModuleId.
+         * <p>Customer model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
          */
         public Builder customerModuleId(Integer customerModuleId) {
             this.putQueryParameter("CustomerModuleId", customerModuleId);

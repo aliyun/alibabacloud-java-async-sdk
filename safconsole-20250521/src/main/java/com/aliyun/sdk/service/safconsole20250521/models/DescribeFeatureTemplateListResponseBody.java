@@ -106,7 +106,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -138,7 +147,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Success flag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
             } 
 
             /**
-             * Label.
+             * <p>Parameter label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51维特征</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -212,7 +227,10 @@ public class DescribeFeatureTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FINANCE_51</p>
              */
             public Builder value(String value) {
                 this.value = value;

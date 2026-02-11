@@ -119,7 +119,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>055f1546-f465-4c92-a2da-bfb86abe6f56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -159,7 +171,14 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful, with possible values as follows:</p>
+         * <ul>
+         * <li>true, indicating the request was successful</li>
+         * <li>false, indicating the request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +257,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * FinalScoreFormat.
+             * <p>Number of decimal places for the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder finalScoreFormat(String finalScoreFormat) {
                 this.finalScoreFormat = finalScoreFormat;
@@ -246,7 +268,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessExpression.
+             * <p>Score processing logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>score</p>
              */
             public Builder processExpression(String processExpression) {
                 this.processExpression = processExpression;
@@ -254,7 +279,10 @@ public class DescribeCustomerModuleOutputInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TestFile.
+             * <p>Test file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer/xxxxxxxxx/xxxxxxxx.pmml</p>
              */
             public Builder testFile(String testFile) {
                 this.testFile = testFile;

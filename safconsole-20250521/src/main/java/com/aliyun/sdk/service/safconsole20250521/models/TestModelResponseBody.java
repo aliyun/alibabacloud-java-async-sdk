@@ -106,7 +106,10 @@ public class TestModelResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class TestModelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class TestModelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class TestModelResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -138,7 +147,14 @@ public class TestModelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Call succeeded.</li>
+         * <li><strong>false</strong>: Call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +246,10 @@ public class TestModelResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualResult.
+             * <p>Actual output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00</p>
              */
             public Builder actualResult(String actualResult) {
                 this.actualResult = actualResult;
@@ -238,7 +257,10 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * Consistency.
+             * <p>Whether it is consistent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consistency(Boolean consistency) {
                 this.consistency = consistency;
@@ -246,7 +268,10 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * TestResult.
+             * <p>Test output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00</p>
              */
             public Builder testResult(String testResult) {
                 this.testResult = testResult;
@@ -254,7 +279,10 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * TrainResult.
+             * <p>Training output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00</p>
              */
             public Builder trainResult(String trainResult) {
                 this.trainResult = trainResult;
@@ -347,7 +375,10 @@ public class TestModelResponseBody extends TeaModel {
             } 
 
             /**
-             * ConsistencyCount.
+             * <p>Number of consistencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49.0</p>
              */
             public Builder consistencyCount(Long consistencyCount) {
                 this.consistencyCount = consistencyCount;
@@ -355,7 +386,10 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistencyRate.
+             * <p>Consistency rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98.0</p>
              */
             public Builder consistencyRate(Double consistencyRate) {
                 this.consistencyRate = consistencyRate;
@@ -363,7 +397,7 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * TestResult.
+             * <p>Test results.</p>
              */
             public Builder testResult(java.util.List<TestResult> testResult) {
                 this.testResult = testResult;
@@ -371,7 +405,10 @@ public class TestModelResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder total(Long total) {
                 this.total = total;

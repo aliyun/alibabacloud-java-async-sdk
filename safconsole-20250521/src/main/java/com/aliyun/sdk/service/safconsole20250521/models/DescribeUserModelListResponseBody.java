@@ -169,7 +169,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -177,7 +180,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +191,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Pagination parameter: number of items per page, default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -193,7 +202,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +213,7 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Return result.</p>
          */
         public Builder resultObject(java.util.List<ResultObject> resultObject) {
             this.resultObject = resultObject;
@@ -209,7 +221,14 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful, with values as follows:</p>
+         * <ul>
+         * <li>true, request succeeded</li>
+         * <li>false, request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +236,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItem.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItem(Long totalItem) {
             this.totalItem = totalItem;
@@ -225,7 +247,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -421,7 +446,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthType.
+             * <p>Authorization type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READ</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -429,7 +457,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerModuleName.
+             * <p>Model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Model_A</p>
              */
             public Builder customerModuleName(String customerModuleName) {
                 this.customerModuleName = customerModuleName;
@@ -437,7 +468,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>备注。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +479,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureTemplate.
+             * <p>Associated features.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template_a</p>
              */
             public Builder featureTemplate(String featureTemplate) {
                 this.featureTemplate = featureTemplate;
@@ -453,7 +490,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1673578656000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -461,7 +501,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Primary key ID of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -469,7 +512,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * InnerDefineStatus.
+             * <p>Publication status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder innerDefineStatus(String innerDefineStatus) {
                 this.innerDefineStatus = innerDefineStatus;
@@ -477,7 +523,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * InnerModuleName.
+             * <p>Model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner_model_a</p>
              */
             public Builder innerModuleName(String innerModuleName) {
                 this.innerModuleName = innerModuleName;
@@ -485,7 +534,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllowIterate.
+             * <p>Whether iteration is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAllowIterate(Boolean isAllowIterate) {
                 this.isAllowIterate = isAllowIterate;
@@ -493,7 +545,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllowRollback.
+             * <p>Whether rollback is allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAllowRollback(Boolean isAllowRollback) {
                 this.isAllowRollback = isAllowRollback;
@@ -501,7 +556,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * IterationVersion.
+             * <p>Iteration version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder iterationVersion(Long iterationVersion) {
                 this.iterationVersion = iterationVersion;
@@ -509,7 +567,10 @@ public class DescribeUserModelListResponseBody extends TeaModel {
             }
 
             /**
-             * RootModuleId.
+             * <p>Root model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rootModuleId(Long rootModuleId) {
                 this.rootModuleId = rootModuleId;

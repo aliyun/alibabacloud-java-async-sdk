@@ -101,7 +101,10 @@ public class DescribeUserModelListRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * <p>Authorization type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -110,7 +113,10 @@ public class DescribeUserModelListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +125,10 @@ public class DescribeUserModelListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StudyX</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -128,7 +137,10 @@ public class DescribeUserModelListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Pagination parameter: number of items per page, default value 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

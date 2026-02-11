@@ -73,7 +73,10 @@ public class DescribeModelFeatureRequest extends Request {
         } 
 
         /**
-         * CustomerModuleId.
+         * <p>Customer model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
          */
         public Builder customerModuleId(Integer customerModuleId) {
             this.putQueryParameter("CustomerModuleId", customerModuleId);
@@ -82,7 +85,10 @@ public class DescribeModelFeatureRequest extends Request {
         }
 
         /**
-         * FeatureTemplate.
+         * <p>Feature template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINANCE_51</p>
          */
         public Builder featureTemplate(String featureTemplate) {
             this.putQueryParameter("FeatureTemplate", featureTemplate);

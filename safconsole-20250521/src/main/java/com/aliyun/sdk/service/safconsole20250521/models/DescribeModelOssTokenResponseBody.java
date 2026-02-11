@@ -184,7 +184,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessId.
+         * <p>AccessKeyId for uploading files to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -192,7 +195,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Status code. A return value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -200,7 +206,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>OSS domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://safxxxxxxxxx.aliyuncs.com">https://safxxxxxxxxx.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -208,7 +217,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Long httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -216,7 +228,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>Key required for file upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/xxxxxx/xxxxxx</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -224,7 +239,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>Authorization policy for security group control rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -232,7 +250,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A91D2D1-AEC9-1658-ABCE-5A39DE66A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +261,7 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ResultObject.
+         * <p>Returned result.</p>
          */
         public Builder resultObject(ResultObject resultObject) {
             this.resultObject = resultObject;
@@ -248,7 +269,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>OSS signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lUxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -256,7 +280,14 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +295,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
         }
 
         /**
-         * XOssSecurityToken.
+         * <p>Temporary authorization token for OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smxxxxxxxxxxx</p>
          */
         public Builder xOssSecurityToken(String xOssSecurityToken) {
             this.xOssSecurityToken = xOssSecurityToken;
@@ -382,7 +416,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessId.
+             * <p>AccessKeyId for uploading files to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lxxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -390,7 +427,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>OSS domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://safxxxxxxxxx.aliyuncs.com">https://safxxxxxxxxx.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -398,7 +438,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>Key required for file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>saf/xxxxxx/xxxxxx</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -406,7 +449,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>Authorization policy for security group control rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -414,7 +460,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>OSS signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lUxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -422,7 +471,10 @@ public class DescribeModelOssTokenResponseBody extends TeaModel {
             }
 
             /**
-             * XOssSecurityToken.
+             * <p>Temporary authorization token for OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smxxxxxxxxxxx</p>
              */
             public Builder xOssSecurityToken(String xOssSecurityToken) {
                 this.xOssSecurityToken = xOssSecurityToken;

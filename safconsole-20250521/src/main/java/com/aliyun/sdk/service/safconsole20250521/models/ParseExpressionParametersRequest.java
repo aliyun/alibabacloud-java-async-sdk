@@ -59,7 +59,10 @@ public class ParseExpressionParametersRequest extends Request {
         } 
 
         /**
-         * Expression.
+         * <p>Expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>score</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);

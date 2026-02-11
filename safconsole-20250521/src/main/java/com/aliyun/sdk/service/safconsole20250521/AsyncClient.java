@@ -20,6 +20,51 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ApplyBastionAccount  ApplyBastionAccountRequest
+     * @return ApplyBastionAccountResponse
+     */
+    CompletableFuture<ApplyBastionAccountResponse> applyBastionAccount(ApplyBastionAccountRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociatePocTask  AssociatePocTaskRequest
+     * @return AssociatePocTaskResponse
+     */
+    CompletableFuture<AssociatePocTaskResponse> associatePocTask(AssociatePocTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CompleteModelingProject  CompleteModelingProjectRequest
+     * @return CompleteModelingProjectResponse
+     */
+    CompletableFuture<CompleteModelingProjectResponse> completeModelingProject(CompleteModelingProjectRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomerModuleBasicInfo  CreateCustomerModuleBasicInfoRequest
      * @return CreateCustomerModuleBasicInfoResponse
      */
@@ -48,6 +93,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used for customers to create a modeling project for the first time.</li>
+     * <li><code>projectName</code> is a required field, with a maximum length of 50 characters.</li>
+     * <li><code>remark</code> and <code>instanceSpec</code> are optional, where <code>remark</code> has a maximum length of 200 characters.</li>
+     * <li>The available values for <code>instanceSpec</code> include <code>SECURE_ENV_LITE</code> and <code>SECURE_ENV_PRO</code>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateModelingProject  CreateModelingProjectRequest
+     * @return CreateModelingProjectResponse
+     */
+    CompletableFuture<CreateModelingProjectResponse> createModelingProject(CreateModelingProjectRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
      * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
      * <li><strong>Note</strong>: Deletion is irreversible, please use with caution.</li>
@@ -57,6 +117,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteModelResponse
      */
     CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeployModelFile  DeployModelFileRequest
+     * @return DeployModelFileResponse
+     */
+    CompletableFuture<DeployModelFileResponse> deployModelFile(DeployModelFileRequest request);
 
     /**
      * <b>description</b> :
@@ -70,8 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * @param request the request parameters of DescribeCustomerModuleMetaInfo  DescribeCustomerModuleMetaInfoRequest
      * @return DescribeCustomerModuleMetaInfoResponse
@@ -80,8 +155,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include but are not limited to &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * @param request the request parameters of DescribeCustomerModuleOutputInfo  DescribeCustomerModuleOutputInfoRequest
      * @return DescribeCustomerModuleOutputInfoResponse
@@ -90,11 +165,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeFeatureOption  DescribeFeatureOptionRequest
@@ -104,11 +179,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which consists of a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeFeatureTemplateList  DescribeFeatureTemplateListRequest
@@ -120,9 +195,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeFileDownloadUrl  DescribeFileDownloadUrlRequest
+     * @return DescribeFileDownloadUrlResponse
+     */
+    CompletableFuture<DescribeFileDownloadUrlResponse> describeFileDownloadUrl(DescribeFileDownloadUrlRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each including a label (label) and value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeModelFeature  DescribeModelFeatureRequest
@@ -139,11 +229,41 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>请求说明</h2>
-     * <p>该接口用于通过提供的<code>customerModuleId</code>来检查特定的模型服务是否已经存在。如果存在，则返回<code>true</code>；反之则返回<code>false</code>。</p>
-     * <h3>注意事项</h3>
      * <ul>
-     * <li><code>customerModuleId</code>是必须提供的参数，且为字符串类型。</li>
-     * <li>此API主要用于前端页面展示或逻辑判断时使用，以确认用户所选模型是否有对应的服务被创建。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeModelingProjectDetail  DescribeModelingProjectDetailRequest
+     * @return DescribeModelingProjectDetailResponse
+     */
+    CompletableFuture<DescribeModelingProjectDetailResponse> describeModelingProjectDetail(DescribeModelingProjectDetailRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定租户下的所有建模项目的概览信息。</li>
+     * <li>支持通过<code>pageSize</code>和<code>currentPage</code>参数进行分页查询，默认每页显示10条记录。</li>
+     * <li>可选地，使用<code>status</code>参数来过滤特定状态（如<code>active</code>, <code>released</code>等）的项目。</li>
+     * <li>返回结果中包含每个项目的ID、名称、环境状态、建模状态、开始时间及结束时间（如果有的话），以及创建该项目的登录账号。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeModelingProjectList  DescribeModelingProjectListRequest
+     * @return DescribeModelingProjectListResponse
+     */
+    CompletableFuture<DescribeModelingProjectListResponse> describeModelingProjectList(DescribeModelingProjectListRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This interface is used to check whether a specific model service exists by providing the <code>customerModuleId</code>. If it exists, it returns <code>true</code>; otherwise, it returns <code>false</code>.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li><code>customerModuleId</code> is a required parameter and must be of string type.</li>
+     * <li>This API is mainly used for front-end page display or logical judgment to confirm whether the service corresponding to the user\&quot;s selected model has been created.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeModuleServiceExist  DescribeModuleServiceExistRequest
@@ -153,13 +273,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>通过提供<code>customerModuleId</code>参数，可以查询指定客户模型的当前状态。状态值可能包括但不限于&quot;EDIT&quot;、&quot;ONLINE&quot;等。</p>
+     * <h2>Request Description</h2>
+     * <p>By providing the <code>customerModuleId</code> parameter, you can query the current status of a specified customer model. The status values may include, but are not limited to, &quot;EDIT&quot;, &quot;ONLINE&quot;, etc.</p>
      * 
      * @param request the request parameters of DescribeModuleStatus  DescribeModuleStatusRequest
      * @return DescribeModuleStatusResponse
      */
     CompletableFuture<DescribeModuleStatusResponse> describeModuleStatus(DescribeModuleStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribePocTaskList  DescribePocTaskListRequest
+     * @return DescribePocTaskListResponse
+     */
+    CompletableFuture<DescribePocTaskListResponse> describePocTaskList(DescribePocTaskListRequest request);
 
     /**
      * @param request the request parameters of DescribeSafRmmpOrder  DescribeSafRmmpOrderRequest
@@ -175,13 +301,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该 API 用于查询特定用户下的所有模型信息，并支持通过分页参数进行分页查询。可以通过 <code>name</code> 参数进行模糊搜索。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to query all model information under a specific user and supports pagination through page parameters. Fuzzy search can be performed using the <code>name</code> parameter.</p>
      * <ul>
-     * <li><code>regId</code>: 地域标识，必填。</li>
-     * <li><code>pageSize</code>: 每页显示的条目数，必填。</li>
-     * <li><code>currentPage</code>: 当前页码，从1开始计数，必填。</li>
-     * <li><code>userId</code>: 用户ID，必填。</li>
+     * <li><code>regId</code>: Region identifier, required.</li>
+     * <li><code>pageSize</code>: Number of items per page, required.</li>
+     * <li><code>currentPage</code>: Current page number, starting from 1, required.</li>
+     * <li><code>userId</code>: User ID, required.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeUserModelList  DescribeUserModelListRequest
@@ -191,10 +317,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DuplicateModel  DuplicateModelRequest
@@ -211,9 +337,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetBastionHostCertification  GetBastionHostCertificationRequest
+     * @return GetBastionHostCertificationResponse
+     */
+    CompletableFuture<GetBastionHostCertificationResponse> getBastionHostCertification(GetBastionHostCertificationRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
+     * <ul>
+     * <li><strong>Note</strong>: The deletion operation is irreversible, please use with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of IterateModel  IterateModelRequest
@@ -229,10 +370,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>本API用于从系统中删除指定的客户模型。调用时必须提供<code>customerModuleId</code>参数，该参数标识了要删除的具体模型。</p>
+     * <h2>Request Description</h2>
+     * <p>This API is used to delete a specified customer model from the system. When calling, you must provide the <code>customerModuleId</code> parameter, which identifies the specific model to be deleted.</p>
      * <ul>
-     * <li><strong>注意</strong>：删除操作不可逆，请谨慎使用。</li>
+     * <li><strong>Note</strong>: Deletion is irreversible, please use with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of OnlineModel  OnlineModelRequest
@@ -242,11 +383,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of ParseExpressionParameters  ParseExpressionParametersRequest
@@ -259,6 +400,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PrepublishModelResponse
      */
     CompletableFuture<PrepublishModelResponse> prepublishModel(PrepublishModelRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>本接口用于客户首次创建建模项目。</li>
+     * <li><code>projectName</code> 是必填项，长度不超过50个字符。</li>
+     * <li><code>remark</code> 和 <code>instanceSpec</code> 为可选项，其中 <code>remark</code> 长度不超过200个字符。</li>
+     * <li><code>instanceSpec</code> 可选值包括 <code>SECURE_ENV_LITE</code> 和 <code>SECURE_ENV_PRO</code>。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RequestModelFileSync  RequestModelFileSyncRequest
+     * @return RequestModelFileSyncResponse
+     */
+    CompletableFuture<RequestModelFileSyncResponse> requestModelFileSync(RequestModelFileSyncRequest request);
 
     /**
      * <b>description</b> :
@@ -275,11 +431,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of TestModel  TestModelRequest
@@ -289,11 +445,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of TestPreModel  TestPreModelRequest
@@ -303,11 +459,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request Description</h2>
      * <ul>
-     * <li>该接口用于查询系统中所有可用的特征模板。</li>
-     * <li>请求方式为 GET，无需提供额外参数。</li>
-     * <li>返回结果包含多个特征模板选项，每个选项包括标签（label）和值（value）。</li>
+     * <li>This interface is used to query all available feature templates in the system.</li>
+     * <li>The request method is GET, and no additional parameters are required.</li>
+     * <li>The returned result includes multiple feature template options, each of which includes a label (label) and a value (value).</li>
      * </ul>
      * 
      * @param request the request parameters of TestProcessExpression  TestProcessExpressionRequest

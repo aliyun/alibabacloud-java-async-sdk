@@ -60,6 +60,7 @@ public class DescribeFeatureOptionRequest extends Request {
         } 
 
         /**
+         * <p>Feature template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

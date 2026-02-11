@@ -59,7 +59,10 @@ public class OfflineModelRequest extends Request {
         } 
 
         /**
-         * CustomerModuleId.
+         * <p>Customer model ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
          */
         public Builder customerModuleId(Integer customerModuleId) {
             this.putQueryParameter("CustomerModuleId", customerModuleId);
