@@ -38,12 +38,20 @@ public class CreateHttpApiRequest extends Request {
     private String basePath;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("belongGatewayId")
+    private String belongGatewayId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
     private java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableAuth")
@@ -79,6 +87,10 @@ public class CreateHttpApiRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("strategy")
+    private String strategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -93,8 +105,10 @@ public class CreateHttpApiRequest extends Request {
         this.aiProtocols = builder.aiProtocols;
         this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
+        this.belongGatewayId = builder.belongGatewayId;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.enableAuth = builder.enableAuth;
         this.firstByteTimeout = builder.firstByteTimeout;
         this.ingressConfig = builder.ingressConfig;
@@ -103,6 +117,7 @@ public class CreateHttpApiRequest extends Request {
         this.protocols = builder.protocols;
         this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.resourceGroupId = builder.resourceGroupId;
+        this.strategy = builder.strategy;
         this.type = builder.type;
         this.versionConfig = builder.versionConfig;
     }
@@ -156,6 +171,13 @@ public class CreateHttpApiRequest extends Request {
     }
 
     /**
+     * @return belongGatewayId
+     */
+    public String getBelongGatewayId() {
+        return this.belongGatewayId;
+    }
+
+    /**
      * @return deployConfigs
      */
     public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
@@ -167,6 +189,13 @@ public class CreateHttpApiRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -226,6 +255,13 @@ public class CreateHttpApiRequest extends Request {
     }
 
     /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -245,8 +281,10 @@ public class CreateHttpApiRequest extends Request {
         private java.util.List<String> aiProtocols; 
         private AuthConfig authConfig; 
         private String basePath; 
+        private String belongGatewayId; 
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
+        private Boolean dryRun; 
         private Boolean enableAuth; 
         private Integer firstByteTimeout; 
         private IngressConfig ingressConfig; 
@@ -255,6 +293,7 @@ public class CreateHttpApiRequest extends Request {
         private java.util.List<String> protocols; 
         private Boolean removeBasePathOnForward; 
         private String resourceGroupId; 
+        private String strategy; 
         private String type; 
         private HttpApiVersionConfig versionConfig; 
 
@@ -269,8 +308,10 @@ public class CreateHttpApiRequest extends Request {
             this.aiProtocols = request.aiProtocols;
             this.authConfig = request.authConfig;
             this.basePath = request.basePath;
+            this.belongGatewayId = request.belongGatewayId;
             this.deployConfigs = request.deployConfigs;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.enableAuth = request.enableAuth;
             this.firstByteTimeout = request.firstByteTimeout;
             this.ingressConfig = request.ingressConfig;
@@ -279,6 +320,7 @@ public class CreateHttpApiRequest extends Request {
             this.protocols = request.protocols;
             this.removeBasePathOnForward = request.removeBasePathOnForward;
             this.resourceGroupId = request.resourceGroupId;
+            this.strategy = request.strategy;
             this.type = request.type;
             this.versionConfig = request.versionConfig;
         } 
@@ -332,6 +374,15 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
+         * belongGatewayId.
+         */
+        public Builder belongGatewayId(String belongGatewayId) {
+            this.putBodyParameter("belongGatewayId", belongGatewayId);
+            this.belongGatewayId = belongGatewayId;
+            return this;
+        }
+
+        /**
          * <p>$.parameters[0].schema.example</p>
          */
         public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
@@ -349,6 +400,15 @@ public class CreateHttpApiRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -440,6 +500,15 @@ public class CreateHttpApiRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * strategy.
+         */
+        public Builder strategy(String strategy) {
+            this.putBodyParameter("strategy", strategy);
+            this.strategy = strategy;
             return this;
         }
 

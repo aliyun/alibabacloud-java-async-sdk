@@ -595,7 +595,10 @@ public class DeployHttpApiRequest extends Request {
             } 
 
             /**
-             * action.
+             * <p>Operation type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Publish</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -603,7 +606,10 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * operationId.
+             * <p>Unique identifier of the operation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>op-xxx</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -753,7 +759,7 @@ public class DeployHttpApiRequest extends Request {
             }
 
             /**
-             * operationDeployments.
+             * <p>Operation-level deployment control list</p>
              */
             public Builder operationDeployments(java.util.List<OperationDeployments> operationDeployments) {
                 this.operationDeployments = operationDeployments;
