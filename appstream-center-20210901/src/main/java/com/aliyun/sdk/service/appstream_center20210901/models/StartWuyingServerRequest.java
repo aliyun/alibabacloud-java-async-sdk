@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WuyingServerIdList")
     private java.util.List<String> wuyingServerIdList;
 
     private StartWuyingServerRequest(Builder builder) {
         super(builder);
+        this.productType = builder.productType;
         this.wuyingServerIdList = builder.wuyingServerIdList;
     }
 
@@ -40,6 +45,13 @@ public class StartWuyingServerRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return wuyingServerIdList
      */
     public java.util.List<String> getWuyingServerIdList() {
@@ -47,6 +59,7 @@ public class StartWuyingServerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartWuyingServerRequest, Builder> {
+        private String productType; 
         private java.util.List<String> wuyingServerIdList; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class StartWuyingServerRequest extends Request {
 
         private Builder(StartWuyingServerRequest request) {
             super(request);
+            this.productType = request.productType;
             this.wuyingServerIdList = request.wuyingServerIdList;
         } 
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putBodyParameter("ProductType", productType);
+            this.productType = productType;
+            return this;
+        }
 
         /**
          * <p>The list of workstation IDs.</p>

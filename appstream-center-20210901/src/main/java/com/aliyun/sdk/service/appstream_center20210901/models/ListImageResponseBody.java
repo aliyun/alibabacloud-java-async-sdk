@@ -480,6 +480,189 @@ public class ListImageResponseBody extends TeaModel {
      *
      * <p>ListImageResponseBody</p>
      */
+    public static class SnapshotList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BindType")
+        private String bindType;
+
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
+        private String diskCategory;
+
+        @com.aliyun.core.annotation.NameInMap("DiskSubType")
+        private String diskSubType;
+
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
+        private String snapshotId;
+
+        @com.aliyun.core.annotation.NameInMap("VersionId")
+        private String versionId;
+
+        private SnapshotList(Builder builder) {
+            this.bindType = builder.bindType;
+            this.diskCategory = builder.diskCategory;
+            this.diskSubType = builder.diskSubType;
+            this.diskType = builder.diskType;
+            this.size = builder.size;
+            this.snapshotId = builder.snapshotId;
+            this.versionId = builder.versionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SnapshotList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bindType
+         */
+        public String getBindType() {
+            return this.bindType;
+        }
+
+        /**
+         * @return diskCategory
+         */
+        public String getDiskCategory() {
+            return this.diskCategory;
+        }
+
+        /**
+         * @return diskSubType
+         */
+        public String getDiskSubType() {
+            return this.diskSubType;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return snapshotId
+         */
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        /**
+         * @return versionId
+         */
+        public String getVersionId() {
+            return this.versionId;
+        }
+
+        public static final class Builder {
+            private String bindType; 
+            private String diskCategory; 
+            private String diskSubType; 
+            private String diskType; 
+            private Integer size; 
+            private String snapshotId; 
+            private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotList model) {
+                this.bindType = model.bindType;
+                this.diskCategory = model.diskCategory;
+                this.diskSubType = model.diskSubType;
+                this.diskType = model.diskType;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.versionId = model.versionId;
+            } 
+
+            /**
+             * BindType.
+             */
+            public Builder bindType(String bindType) {
+                this.bindType = bindType;
+                return this;
+            }
+
+            /**
+             * DiskCategory.
+             */
+            public Builder diskCategory(String diskCategory) {
+                this.diskCategory = diskCategory;
+                return this;
+            }
+
+            /**
+             * DiskSubType.
+             */
+            public Builder diskSubType(String diskSubType) {
+                this.diskSubType = diskSubType;
+                return this;
+            }
+
+            /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * SnapshotId.
+             */
+            public Builder snapshotId(String snapshotId) {
+                this.snapshotId = snapshotId;
+                return this;
+            }
+
+            /**
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iv-xxx</p>
+             */
+            public Builder versionId(String versionId) {
+                this.versionId = versionId;
+                return this;
+            }
+
+            public SnapshotList build() {
+                return new SnapshotList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -673,6 +856,9 @@ public class ListImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotList")
+        private java.util.List<SnapshotList> snapshotList;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -737,6 +923,7 @@ public class ListImageResponseBody extends TeaModel {
             this.resourceInstanceCategory = builder.resourceInstanceCategory;
             this.scene = builder.scene;
             this.sessionType = builder.sessionType;
+            this.snapshotList = builder.snapshotList;
             this.status = builder.status;
             this.supportedLanguageList = builder.supportedLanguageList;
             this.systemDiskSize = builder.systemDiskSize;
@@ -1029,6 +1216,13 @@ public class ListImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotList
+         */
+        public java.util.List<SnapshotList> getSnapshotList() {
+            return this.snapshotList;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1124,6 +1318,7 @@ public class ListImageResponseBody extends TeaModel {
             private String resourceInstanceCategory; 
             private String scene; 
             private String sessionType; 
+            private java.util.List<SnapshotList> snapshotList; 
             private String status; 
             private java.util.List<String> supportedLanguageList; 
             private Integer systemDiskSize; 
@@ -1176,6 +1371,7 @@ public class ListImageResponseBody extends TeaModel {
                 this.resourceInstanceCategory = model.resourceInstanceCategory;
                 this.scene = model.scene;
                 this.sessionType = model.sessionType;
+                this.snapshotList = model.snapshotList;
                 this.status = model.status;
                 this.supportedLanguageList = model.supportedLanguageList;
                 this.systemDiskSize = model.systemDiskSize;
@@ -1602,6 +1798,14 @@ public class ListImageResponseBody extends TeaModel {
              */
             public Builder sessionType(String sessionType) {
                 this.sessionType = sessionType;
+                return this;
+            }
+
+            /**
+             * SnapshotList.
+             */
+            public Builder snapshotList(java.util.List<SnapshotList> snapshotList) {
+                this.snapshotList = snapshotList;
                 return this;
             }
 

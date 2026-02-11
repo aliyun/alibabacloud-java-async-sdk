@@ -22,12 +22,17 @@ public class StopWuyingServerRequest extends Request {
     private Boolean force;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WuyingServerIdList")
     private java.util.List<String> wuyingServerIdList;
 
     private StopWuyingServerRequest(Builder builder) {
         super(builder);
         this.force = builder.force;
+        this.productType = builder.productType;
         this.wuyingServerIdList = builder.wuyingServerIdList;
     }
 
@@ -52,6 +57,13 @@ public class StopWuyingServerRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return wuyingServerIdList
      */
     public java.util.List<String> getWuyingServerIdList() {
@@ -60,6 +72,7 @@ public class StopWuyingServerRequest extends Request {
 
     public static final class Builder extends Request.Builder<StopWuyingServerRequest, Builder> {
         private Boolean force; 
+        private String productType; 
         private java.util.List<String> wuyingServerIdList; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class StopWuyingServerRequest extends Request {
         private Builder(StopWuyingServerRequest request) {
             super(request);
             this.force = request.force;
+            this.productType = request.productType;
             this.wuyingServerIdList = request.wuyingServerIdList;
         } 
 
@@ -86,6 +100,15 @@ public class StopWuyingServerRequest extends Request {
         public Builder force(Boolean force) {
             this.putBodyParameter("Force", force);
             this.force = force;
+            return this;
+        }
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putBodyParameter("ProductType", productType);
+            this.productType = productType;
             return this;
         }
 

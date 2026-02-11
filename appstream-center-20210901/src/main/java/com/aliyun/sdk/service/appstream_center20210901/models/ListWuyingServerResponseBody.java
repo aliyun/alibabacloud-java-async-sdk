@@ -173,6 +173,12 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
+        @com.aliyun.core.annotation.NameInMap("DataDiskId")
+        private String dataDiskId;
+
+        @com.aliyun.core.annotation.NameInMap("DataDiskNo")
+        private String dataDiskNo;
+
         @com.aliyun.core.annotation.NameInMap("DataDiskPerformanceLevel")
         private String dataDiskPerformanceLevel;
 
@@ -181,6 +187,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         private DataDisk(Builder builder) {
             this.dataDiskCategory = builder.dataDiskCategory;
+            this.dataDiskId = builder.dataDiskId;
+            this.dataDiskNo = builder.dataDiskNo;
             this.dataDiskPerformanceLevel = builder.dataDiskPerformanceLevel;
             this.dataDiskSize = builder.dataDiskSize;
         }
@@ -201,6 +209,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataDiskId
+         */
+        public String getDataDiskId() {
+            return this.dataDiskId;
+        }
+
+        /**
+         * @return dataDiskNo
+         */
+        public String getDataDiskNo() {
+            return this.dataDiskNo;
+        }
+
+        /**
          * @return dataDiskPerformanceLevel
          */
         public String getDataDiskPerformanceLevel() {
@@ -216,6 +238,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dataDiskCategory; 
+            private String dataDiskId; 
+            private String dataDiskNo; 
             private String dataDiskPerformanceLevel; 
             private Integer dataDiskSize; 
 
@@ -224,6 +248,8 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
             private Builder(DataDisk model) {
                 this.dataDiskCategory = model.dataDiskCategory;
+                this.dataDiskId = model.dataDiskId;
+                this.dataDiskNo = model.dataDiskNo;
                 this.dataDiskPerformanceLevel = model.dataDiskPerformanceLevel;
                 this.dataDiskSize = model.dataDiskSize;
             } 
@@ -236,6 +262,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
+                return this;
+            }
+
+            /**
+             * DataDiskId.
+             */
+            public Builder dataDiskId(String dataDiskId) {
+                this.dataDiskId = dataDiskId;
+                return this;
+            }
+
+            /**
+             * DataDiskNo.
+             */
+            public Builder dataDiskNo(String dataDiskNo) {
+                this.dataDiskNo = dataDiskNo;
                 return this;
             }
 
@@ -365,6 +407,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GpuMemory")
         private Integer gpuMemory;
 
+        @com.aliyun.core.annotation.NameInMap("GpuSpec")
+        private String gpuSpec;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
@@ -375,6 +420,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.cpu = builder.cpu;
             this.gpu = builder.gpu;
             this.gpuMemory = builder.gpuMemory;
+            this.gpuSpec = builder.gpuSpec;
             this.memory = builder.memory;
             this.serverInstanceType = builder.serverInstanceType;
         }
@@ -409,6 +455,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
          * @return memory
          */
         public Integer getMemory() {
@@ -426,6 +479,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String cpu; 
             private String gpu; 
             private Integer gpuMemory; 
+            private String gpuSpec; 
             private Integer memory; 
             private String serverInstanceType; 
 
@@ -436,6 +490,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.cpu = model.cpu;
                 this.gpu = model.gpu;
                 this.gpuMemory = model.gpuMemory;
+                this.gpuSpec = model.gpuSpec;
                 this.memory = model.memory;
                 this.serverInstanceType = model.serverInstanceType;
             } 
@@ -474,6 +529,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * GpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
              * <p>The memory size. Unit: MB.</p>
              * 
              * <strong>example:</strong>
@@ -508,9 +571,90 @@ public class ListWuyingServerResponseBody extends TeaModel {
      *
      * <p>ListWuyingServerResponseBody</p>
      */
+    public static class Sessions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceSessionStartTime")
+        private String resourceSessionStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        private Sessions(Builder builder) {
+            this.resourceSessionStartTime = builder.resourceSessionStartTime;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sessions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceSessionStartTime
+         */
+        public String getResourceSessionStartTime() {
+            return this.resourceSessionStartTime;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private String resourceSessionStartTime; 
+            private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sessions model) {
+                this.resourceSessionStartTime = model.resourceSessionStartTime;
+                this.userId = model.userId;
+            } 
+
+            /**
+             * ResourceSessionStartTime.
+             */
+            public Builder resourceSessionStartTime(String resourceSessionStartTime) {
+                this.resourceSessionStartTime = resourceSessionStartTime;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public Sessions build() {
+                return new Sessions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWuyingServerResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWuyingServerResponseBody</p>
+     */
     public static class WuyingServerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddVirtualNodePoolStatus")
         private String addVirtualNodePoolStatus;
+
+        @com.aliyun.core.annotation.NameInMap("AliUid")
+        private Long aliUid;
+
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private Integer bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("BizRegionId")
         private String bizRegionId;
@@ -526,6 +670,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
+
+        @com.aliyun.core.annotation.NameInMap("FotaVersion")
+        private String fotaVersion;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -554,11 +701,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupIdList")
+        private java.util.List<String> policyGroupIdList;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceSessionStatus")
+        private String resourceSessionStatus;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("ServerInstanceTypeInfo")
         private ServerInstanceTypeInfo serverInstanceTypeInfo;
+
+        @com.aliyun.core.annotation.NameInMap("Sessions")
+        private java.util.List<Sessions> sessions;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -569,11 +725,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDiskId")
+        private String systemDiskId;
+
         @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
         private String systemDiskPerformanceLevel;
 
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("TimerGroupId")
+        private String timerGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Users")
+        private java.util.List<String> users;
 
         @com.aliyun.core.annotation.NameInMap("VirtualKubeletIp")
         private String virtualKubeletIp;
@@ -589,11 +754,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         private WuyingServerList(Builder builder) {
             this.addVirtualNodePoolStatus = builder.addVirtualNodePoolStatus;
+            this.aliUid = builder.aliUid;
+            this.bandwidth = builder.bandwidth;
             this.bizRegionId = builder.bizRegionId;
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.dataDisk = builder.dataDisk;
             this.expiredTime = builder.expiredTime;
+            this.fotaVersion = builder.fotaVersion;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.instanceInfoList = builder.instanceInfoList;
@@ -603,13 +771,19 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
             this.osType = builder.osType;
+            this.policyGroupIdList = builder.policyGroupIdList;
+            this.resourceSessionStatus = builder.resourceSessionStatus;
             this.securityGroupIds = builder.securityGroupIds;
             this.serverInstanceTypeInfo = builder.serverInstanceTypeInfo;
+            this.sessions = builder.sessions;
             this.status = builder.status;
             this.subPayType = builder.subPayType;
             this.systemDiskCategory = builder.systemDiskCategory;
+            this.systemDiskId = builder.systemDiskId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
             this.systemDiskSize = builder.systemDiskSize;
+            this.timerGroupId = builder.timerGroupId;
+            this.users = builder.users;
             this.virtualKubeletIp = builder.virtualKubeletIp;
             this.virtualNodePoolId = builder.virtualNodePoolId;
             this.wuyingServerId = builder.wuyingServerId;
@@ -629,6 +803,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public String getAddVirtualNodePoolStatus() {
             return this.addVirtualNodePoolStatus;
+        }
+
+        /**
+         * @return aliUid
+         */
+        public Long getAliUid() {
+            return this.aliUid;
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         /**
@@ -664,6 +852,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return fotaVersion
+         */
+        public String getFotaVersion() {
+            return this.fotaVersion;
         }
 
         /**
@@ -730,6 +925,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyGroupIdList
+         */
+        public java.util.List<String> getPolicyGroupIdList() {
+            return this.policyGroupIdList;
+        }
+
+        /**
+         * @return resourceSessionStatus
+         */
+        public String getResourceSessionStatus() {
+            return this.resourceSessionStatus;
+        }
+
+        /**
          * @return securityGroupIds
          */
         public java.util.List<String> getSecurityGroupIds() {
@@ -741,6 +950,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public ServerInstanceTypeInfo getServerInstanceTypeInfo() {
             return this.serverInstanceTypeInfo;
+        }
+
+        /**
+         * @return sessions
+         */
+        public java.util.List<Sessions> getSessions() {
+            return this.sessions;
         }
 
         /**
@@ -765,6 +981,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDiskId
+         */
+        public String getSystemDiskId() {
+            return this.systemDiskId;
+        }
+
+        /**
          * @return systemDiskPerformanceLevel
          */
         public String getSystemDiskPerformanceLevel() {
@@ -776,6 +999,20 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        /**
+         * @return timerGroupId
+         */
+        public String getTimerGroupId() {
+            return this.timerGroupId;
+        }
+
+        /**
+         * @return users
+         */
+        public java.util.List<String> getUsers() {
+            return this.users;
         }
 
         /**
@@ -808,11 +1045,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addVirtualNodePoolStatus; 
+            private Long aliUid; 
+            private Integer bandwidth; 
             private String bizRegionId; 
             private String chargeType; 
             private String createTime; 
             private java.util.List<DataDisk> dataDisk; 
             private String expiredTime; 
+            private String fotaVersion; 
             private String imageId; 
             private String imageName; 
             private java.util.List<InstanceInfoList> instanceInfoList; 
@@ -822,13 +1062,19 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String officeSiteName; 
             private String officeSiteType; 
             private String osType; 
+            private java.util.List<String> policyGroupIdList; 
+            private String resourceSessionStatus; 
             private java.util.List<String> securityGroupIds; 
             private ServerInstanceTypeInfo serverInstanceTypeInfo; 
+            private java.util.List<Sessions> sessions; 
             private String status; 
             private String subPayType; 
             private String systemDiskCategory; 
+            private String systemDiskId; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
+            private String timerGroupId; 
+            private java.util.List<String> users; 
             private String virtualKubeletIp; 
             private String virtualNodePoolId; 
             private String wuyingServerId; 
@@ -839,11 +1085,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
             private Builder(WuyingServerList model) {
                 this.addVirtualNodePoolStatus = model.addVirtualNodePoolStatus;
+                this.aliUid = model.aliUid;
+                this.bandwidth = model.bandwidth;
                 this.bizRegionId = model.bizRegionId;
                 this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
                 this.dataDisk = model.dataDisk;
                 this.expiredTime = model.expiredTime;
+                this.fotaVersion = model.fotaVersion;
                 this.imageId = model.imageId;
                 this.imageName = model.imageName;
                 this.instanceInfoList = model.instanceInfoList;
@@ -853,13 +1102,19 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.officeSiteName = model.officeSiteName;
                 this.officeSiteType = model.officeSiteType;
                 this.osType = model.osType;
+                this.policyGroupIdList = model.policyGroupIdList;
+                this.resourceSessionStatus = model.resourceSessionStatus;
                 this.securityGroupIds = model.securityGroupIds;
                 this.serverInstanceTypeInfo = model.serverInstanceTypeInfo;
+                this.sessions = model.sessions;
                 this.status = model.status;
                 this.subPayType = model.subPayType;
                 this.systemDiskCategory = model.systemDiskCategory;
+                this.systemDiskId = model.systemDiskId;
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
                 this.systemDiskSize = model.systemDiskSize;
+                this.timerGroupId = model.timerGroupId;
+                this.users = model.users;
                 this.virtualKubeletIp = model.virtualKubeletIp;
                 this.virtualNodePoolId = model.virtualNodePoolId;
                 this.wuyingServerId = model.wuyingServerId;
@@ -871,6 +1126,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder addVirtualNodePoolStatus(String addVirtualNodePoolStatus) {
                 this.addVirtualNodePoolStatus = addVirtualNodePoolStatus;
+                return this;
+            }
+
+            /**
+             * AliUid.
+             */
+            public Builder aliUid(Long aliUid) {
+                this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(Integer bandwidth) {
+                this.bandwidth = bandwidth;
                 return this;
             }
 
@@ -923,6 +1194,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * FotaVersion.
+             */
+            public Builder fotaVersion(String fotaVersion) {
+                this.fotaVersion = fotaVersion;
                 return this;
             }
 
@@ -1017,6 +1296,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * PolicyGroupIdList.
+             */
+            public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
+                this.policyGroupIdList = policyGroupIdList;
+                return this;
+            }
+
+            /**
+             * ResourceSessionStatus.
+             */
+            public Builder resourceSessionStatus(String resourceSessionStatus) {
+                this.resourceSessionStatus = resourceSessionStatus;
+                return this;
+            }
+
+            /**
              * SecurityGroupIds.
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
@@ -1029,6 +1324,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder serverInstanceTypeInfo(ServerInstanceTypeInfo serverInstanceTypeInfo) {
                 this.serverInstanceTypeInfo = serverInstanceTypeInfo;
+                return this;
+            }
+
+            /**
+             * Sessions.
+             */
+            public Builder sessions(java.util.List<Sessions> sessions) {
+                this.sessions = sessions;
                 return this;
             }
 
@@ -1063,6 +1366,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
+             * SystemDiskId.
+             */
+            public Builder systemDiskId(String systemDiskId) {
+                this.systemDiskId = systemDiskId;
+                return this;
+            }
+
+            /**
              * <p>The performance level (PL) of the system disk.</p>
              * 
              * <strong>example:</strong>
@@ -1081,6 +1392,22 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * TimerGroupId.
+             */
+            public Builder timerGroupId(String timerGroupId) {
+                this.timerGroupId = timerGroupId;
+                return this;
+            }
+
+            /**
+             * Users.
+             */
+            public Builder users(java.util.List<String> users) {
+                this.users = users;
                 return this;
             }
 

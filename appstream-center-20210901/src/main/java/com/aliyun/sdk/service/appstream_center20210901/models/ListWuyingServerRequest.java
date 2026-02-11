@@ -26,6 +26,10 @@ public class ListWuyingServerRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private Integer bizType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
@@ -47,12 +51,20 @@ public class ListWuyingServerRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerInstanceType")
     private String serverInstanceType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    private java.util.List<String> users;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
@@ -70,13 +82,16 @@ public class ListWuyingServerRequest extends Request {
         super(builder);
         this.addVirtualNodePoolStatusList = builder.addVirtualNodePoolStatusList;
         this.bizRegionId = builder.bizRegionId;
+        this.bizType = builder.bizType;
         this.chargeType = builder.chargeType;
         this.imageId = builder.imageId;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.productType = builder.productType;
         this.serverInstanceType = builder.serverInstanceType;
         this.status = builder.status;
+        this.users = builder.users;
         this.virtualNodePoolId = builder.virtualNodePoolId;
         this.wuyingServerIdList = builder.wuyingServerIdList;
         this.wuyingServerNameOrId = builder.wuyingServerNameOrId;
@@ -107,6 +122,13 @@ public class ListWuyingServerRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    /**
+     * @return bizType
+     */
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -145,6 +167,13 @@ public class ListWuyingServerRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return serverInstanceType
      */
     public String getServerInstanceType() {
@@ -156,6 +185,13 @@ public class ListWuyingServerRequest extends Request {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return users
+     */
+    public java.util.List<String> getUsers() {
+        return this.users;
     }
 
     /**
@@ -182,13 +218,16 @@ public class ListWuyingServerRequest extends Request {
     public static final class Builder extends Request.Builder<ListWuyingServerRequest, Builder> {
         private java.util.List<String> addVirtualNodePoolStatusList; 
         private String bizRegionId; 
+        private Integer bizType; 
         private String chargeType; 
         private String imageId; 
         private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String productType; 
         private String serverInstanceType; 
         private String status; 
+        private java.util.List<String> users; 
         private String virtualNodePoolId; 
         private java.util.List<String> wuyingServerIdList; 
         private String wuyingServerNameOrId; 
@@ -201,13 +240,16 @@ public class ListWuyingServerRequest extends Request {
             super(request);
             this.addVirtualNodePoolStatusList = request.addVirtualNodePoolStatusList;
             this.bizRegionId = request.bizRegionId;
+            this.bizType = request.bizType;
             this.chargeType = request.chargeType;
             this.imageId = request.imageId;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.productType = request.productType;
             this.serverInstanceType = request.serverInstanceType;
             this.status = request.status;
+            this.users = request.users;
             this.virtualNodePoolId = request.virtualNodePoolId;
             this.wuyingServerIdList = request.wuyingServerIdList;
             this.wuyingServerNameOrId = request.wuyingServerNameOrId;
@@ -231,6 +273,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putBodyParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(Integer bizType) {
+            this.putBodyParameter("BizType", bizType);
+            this.bizType = bizType;
             return this;
         }
 
@@ -295,6 +346,15 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putBodyParameter("ProductType", productType);
+            this.productType = productType;
+            return this;
+        }
+
+        /**
          * <p>Workstation specifications.</p>
          * 
          * <strong>example:</strong>
@@ -315,6 +375,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Users.
+         */
+        public Builder users(java.util.List<String> users) {
+            this.putBodyParameter("Users", users);
+            this.users = users;
             return this;
         }
 

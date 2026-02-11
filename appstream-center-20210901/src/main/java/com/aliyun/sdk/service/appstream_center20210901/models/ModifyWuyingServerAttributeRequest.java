@@ -22,6 +22,10 @@ public class ModifyWuyingServerAttributeRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WuyingServerId")
     private String wuyingServerId;
 
@@ -32,6 +36,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
     private ModifyWuyingServerAttributeRequest(Builder builder) {
         super(builder);
         this.password = builder.password;
+        this.productType = builder.productType;
         this.wuyingServerId = builder.wuyingServerId;
         this.wuyingServerName = builder.wuyingServerName;
     }
@@ -57,6 +62,13 @@ public class ModifyWuyingServerAttributeRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return wuyingServerId
      */
     public String getWuyingServerId() {
@@ -72,6 +84,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyWuyingServerAttributeRequest, Builder> {
         private String password; 
+        private String productType; 
         private String wuyingServerId; 
         private String wuyingServerName; 
 
@@ -82,6 +95,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         private Builder(ModifyWuyingServerAttributeRequest request) {
             super(request);
             this.password = request.password;
+            this.productType = request.productType;
             this.wuyingServerId = request.wuyingServerId;
             this.wuyingServerName = request.wuyingServerName;
         } 
@@ -95,6 +109,15 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putBodyParameter("ProductType", productType);
+            this.productType = productType;
             return this;
         }
 
