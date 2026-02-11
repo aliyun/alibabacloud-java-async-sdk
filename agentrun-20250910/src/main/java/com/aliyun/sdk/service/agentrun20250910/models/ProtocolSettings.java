@@ -18,7 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ProtocolSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("A2AAgentCard")
+    @Deprecated
     private String a2AAgentCard;
+
+    @com.aliyun.core.annotation.NameInMap("a2aAgentCard")
+    private String a2aAgentCard;
+
+    @com.aliyun.core.annotation.NameInMap("a2aAgentCardUrl")
+    private String a2aAgentCardUrl;
 
     @com.aliyun.core.annotation.NameInMap("headers")
     private String headers;
@@ -49,6 +56,8 @@ public class ProtocolSettings extends TeaModel {
 
     private ProtocolSettings(Builder builder) {
         this.a2AAgentCard = builder.a2AAgentCard;
+        this.a2aAgentCard = builder.a2aAgentCard;
+        this.a2aAgentCardUrl = builder.a2aAgentCardUrl;
         this.headers = builder.headers;
         this.inputBodyJsonSchema = builder.inputBodyJsonSchema;
         this.method = builder.method;
@@ -77,6 +86,20 @@ public class ProtocolSettings extends TeaModel {
      */
     public String getA2AAgentCard() {
         return this.a2AAgentCard;
+    }
+
+    /**
+     * @return a2aAgentCard
+     */
+    public String getA2aAgentCard() {
+        return this.a2aAgentCard;
+    }
+
+    /**
+     * @return a2aAgentCardUrl
+     */
+    public String getA2aAgentCardUrl() {
+        return this.a2aAgentCardUrl;
     }
 
     /**
@@ -144,6 +167,8 @@ public class ProtocolSettings extends TeaModel {
 
     public static final class Builder {
         private String a2AAgentCard; 
+        private String a2aAgentCard; 
+        private String a2aAgentCardUrl; 
         private String headers; 
         private String inputBodyJsonSchema; 
         private String method; 
@@ -159,6 +184,8 @@ public class ProtocolSettings extends TeaModel {
 
         private Builder(ProtocolSettings model) {
             this.a2AAgentCard = model.a2AAgentCard;
+            this.a2aAgentCard = model.a2aAgentCard;
+            this.a2aAgentCardUrl = model.a2aAgentCardUrl;
             this.headers = model.headers;
             this.inputBodyJsonSchema = model.inputBodyJsonSchema;
             this.method = model.method;
@@ -175,6 +202,22 @@ public class ProtocolSettings extends TeaModel {
          */
         public Builder a2AAgentCard(String a2AAgentCard) {
             this.a2AAgentCard = a2AAgentCard;
+            return this;
+        }
+
+        /**
+         * a2aAgentCard.
+         */
+        public Builder a2aAgentCard(String a2aAgentCard) {
+            this.a2aAgentCard = a2aAgentCard;
+            return this;
+        }
+
+        /**
+         * a2aAgentCardUrl.
+         */
+        public Builder a2aAgentCardUrl(String a2aAgentCardUrl) {
+            this.a2aAgentCardUrl = a2aAgentCardUrl;
             return this;
         }
 

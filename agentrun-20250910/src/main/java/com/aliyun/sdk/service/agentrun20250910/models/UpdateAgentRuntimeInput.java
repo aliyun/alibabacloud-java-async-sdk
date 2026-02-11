@@ -79,6 +79,9 @@ public class UpdateAgentRuntimeInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutSeconds")
     private Integer sessionIdleTimeoutSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private UpdateAgentRuntimeInput(Builder builder) {
         this.agentRuntimeName = builder.agentRuntimeName;
         this.artifactType = builder.artifactType;
@@ -100,6 +103,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         this.protocolConfiguration = builder.protocolConfiguration;
         this.sessionConcurrencyLimitPerInstance = builder.sessionConcurrencyLimitPerInstance;
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -254,6 +258,13 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         return this.sessionIdleTimeoutSeconds;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String agentRuntimeName; 
         private String artifactType; 
@@ -275,6 +286,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
         private ProtocolConfiguration protocolConfiguration; 
         private Integer sessionConcurrencyLimitPerInstance; 
         private Integer sessionIdleTimeoutSeconds; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -300,6 +312,7 @@ public class UpdateAgentRuntimeInput extends TeaModel {
             this.protocolConfiguration = model.protocolConfiguration;
             this.sessionConcurrencyLimitPerInstance = model.sessionConcurrencyLimitPerInstance;
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -504,6 +517,14 @@ public class UpdateAgentRuntimeInput extends TeaModel {
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

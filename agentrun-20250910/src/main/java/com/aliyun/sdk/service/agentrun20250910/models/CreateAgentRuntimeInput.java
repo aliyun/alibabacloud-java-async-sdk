@@ -82,6 +82,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
     private ProtocolConfiguration protocolConfiguration;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    @Deprecated
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyLimitPerInstance")
@@ -90,6 +91,9 @@ public class CreateAgentRuntimeInput extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("sessionIdleTimeoutSeconds")
     private Integer sessionIdleTimeoutSeconds;
+
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
 
     private CreateAgentRuntimeInput(Builder builder) {
         this.agentRuntimeName = builder.agentRuntimeName;
@@ -114,6 +118,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         this.resourceGroupId = builder.resourceGroupId;
         this.sessionConcurrencyLimitPerInstance = builder.sessionConcurrencyLimitPerInstance;
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -282,6 +287,13 @@ public class CreateAgentRuntimeInput extends TeaModel {
         return this.sessionIdleTimeoutSeconds;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String agentRuntimeName; 
         private String artifactType; 
@@ -305,6 +317,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
         private String resourceGroupId; 
         private Integer sessionConcurrencyLimitPerInstance; 
         private Integer sessionIdleTimeoutSeconds; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -332,6 +345,7 @@ public class CreateAgentRuntimeInput extends TeaModel {
             this.resourceGroupId = model.resourceGroupId;
             this.sessionConcurrencyLimitPerInstance = model.sessionConcurrencyLimitPerInstance;
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -576,6 +590,17 @@ public class CreateAgentRuntimeInput extends TeaModel {
          */
         public Builder sessionIdleTimeoutSeconds(Integer sessionIdleTimeoutSeconds) {
             this.sessionIdleTimeoutSeconds = sessionIdleTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1234567890abcdef</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

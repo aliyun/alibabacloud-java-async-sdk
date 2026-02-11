@@ -87,6 +87,7 @@ public class AgentRuntime extends TeaModel {
     private ProtocolConfiguration protocolConfiguration;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    @Deprecated
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("sessionConcurrencyLimitPerInstance")
@@ -101,6 +102,9 @@ public class AgentRuntime extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
+
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
 
     private AgentRuntime(Builder builder) {
         this.agentRuntimeArn = builder.agentRuntimeArn;
@@ -131,6 +135,7 @@ public class AgentRuntime extends TeaModel {
         this.sessionIdleTimeoutSeconds = builder.sessionIdleTimeoutSeconds;
         this.status = builder.status;
         this.statusReason = builder.statusReason;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -341,6 +346,13 @@ public class AgentRuntime extends TeaModel {
         return this.statusReason;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
         private String agentRuntimeArn; 
         private String agentRuntimeId; 
@@ -370,6 +382,7 @@ public class AgentRuntime extends TeaModel {
         private Integer sessionIdleTimeoutSeconds; 
         private String status; 
         private String statusReason; 
+        private String workspaceId; 
 
         private Builder() {
         } 
@@ -403,6 +416,7 @@ public class AgentRuntime extends TeaModel {
             this.sessionIdleTimeoutSeconds = model.sessionIdleTimeoutSeconds;
             this.status = model.status;
             this.statusReason = model.statusReason;
+            this.workspaceId = model.workspaceId;
         } 
 
         /**
@@ -707,6 +721,17 @@ public class AgentRuntime extends TeaModel {
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
+            return this;
+        }
+
+        /**
+         * <p>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1234567890abcdef</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

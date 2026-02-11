@@ -23,6 +23,7 @@ public class ListAgentRuntimesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("discoveryResourceGroupId")
+    @Deprecated
     private String discoveryResourceGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -35,6 +36,7 @@ public class ListAgentRuntimesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    @Deprecated
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
@@ -45,6 +47,10 @@ public class ListAgentRuntimesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
     private ListAgentRuntimesRequest(Builder builder) {
         super(builder);
         this.agentRuntimeName = builder.agentRuntimeName;
@@ -54,6 +60,7 @@ public class ListAgentRuntimesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.searchMode = builder.searchMode;
         this.status = builder.status;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -118,6 +125,13 @@ public class ListAgentRuntimesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentRuntimesRequest, Builder> {
         private String agentRuntimeName; 
         private String discoveryResourceGroupId; 
@@ -126,6 +140,7 @@ public class ListAgentRuntimesRequest extends Request {
         private String resourceGroupId; 
         private String searchMode; 
         private String status; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -140,6 +155,7 @@ public class ListAgentRuntimesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.searchMode = request.searchMode;
             this.status = request.status;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -220,6 +236,18 @@ public class ListAgentRuntimesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>根据工作空间ID进行过滤，用于资源隔离和权限管理</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws-1234567890abcdef</p>
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
