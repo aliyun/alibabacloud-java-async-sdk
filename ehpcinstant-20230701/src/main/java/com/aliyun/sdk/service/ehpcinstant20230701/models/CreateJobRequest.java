@@ -1550,6 +1550,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
+        @com.aliyun.core.annotation.NameInMap("ImageRegistryOptions")
+        private String imageRegistryOptions;
+
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
@@ -1559,6 +1562,7 @@ public class CreateJobRequest extends Request {
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
             this.image = builder.image;
+            this.imageRegistryOptions = builder.imageRegistryOptions;
             this.workingDir = builder.workingDir;
         }
 
@@ -1606,6 +1610,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return imageRegistryOptions
+         */
+        public String getImageRegistryOptions() {
+            return this.imageRegistryOptions;
+        }
+
+        /**
          * @return workingDir
          */
         public String getWorkingDir() {
@@ -1618,6 +1629,7 @@ public class CreateJobRequest extends Request {
             private java.util.List<String> command; 
             private java.util.List<EnvironmentVars> environmentVars; 
             private String image; 
+            private String imageRegistryOptions; 
             private String workingDir; 
 
             private Builder() {
@@ -1629,6 +1641,7 @@ public class CreateJobRequest extends Request {
                 this.command = model.command;
                 this.environmentVars = model.environmentVars;
                 this.image = model.image;
+                this.imageRegistryOptions = model.imageRegistryOptions;
                 this.workingDir = model.workingDir;
             } 
 
@@ -1684,6 +1697,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder image(String image) {
                 this.image = image;
+                return this;
+            }
+
+            /**
+             * ImageRegistryOptions.
+             */
+            public Builder imageRegistryOptions(String imageRegistryOptions) {
+                this.imageRegistryOptions = imageRegistryOptions;
                 return this;
             }
 
